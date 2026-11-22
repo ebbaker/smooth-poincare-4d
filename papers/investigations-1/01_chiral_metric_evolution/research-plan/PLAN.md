@@ -1,13 +1,92 @@
 # Research plan — Chiral curvature and metric evolution
 
-Prepared for Edward B. Baker III with OpenAI Codex assistance, 21 November 2026 (America/New_York). The setup session’s actual model and effort were not independently recorded; recommendations below are not execution provenance.
+Prepared for Edward B. Baker III with OpenAI Codex assistance. Established
+21 November 2026; revised 22 November 2026 (America/New_York) to integrate
+the author's real twistor coordinate proposal. Actual selected model
+identifier and effort are unavailable. The selected lead is the sole writer;
+recommendations below are not execution provenance. See the
+[input and integration record](../reviews/RESEARCH_PLAN_INTEGRATION_20261122.md).
 
 This file specifies work; [REGISTER.md](../research-progress/REGISTER.md) alone owns live status. The setup has not activated these tasks. Default leadership is Astra/ultra, with bounded Sol 6.2/ultra execution helpers when research is authorized; author-selected settings take precedence. Record actual settings only from available session metadata.
+
+**Broader continuation authority:** the author's
+[subsequent 22 November prompt](../continuation-notes/BROAD_RESEARCH_CONTINUATION_20261122.md)
+authorizes a sustained run to explore new leads, revise this sequence and
+create or rescope tasks without renewed approval. When invoked, its scope
+authority supersedes this plan's narrow default sequence. Fixed packet
+limits still govern individual helper assignments, and mathematical
+dependencies still govern valid conclusions. Bounded analytical/example
+packets go to Sol 6.2; the selected lead owns conceptual decisions and
+integration. This pointer alone starts no research.
+
+## Author-directed priorities and proposed sequence
+
+Understand the nonlinear definite-connection defect-gradient flow first,
+keeping the full smooth Poincaré problem as the motivating objective.
+Let intermediate hypotheses emerge from evolution and continuation
+estimates; use already classified geometric cases as tests when useful.
+The earlier intrinsic small-Q proposal remains a candidate, not the
+selected target. The [decision](../brainstorm/notes/FLOW_FIRST_PRIORITY_20261122.md)
+and [explanation](../brainstorm/explanations/NONLINEAR_FLOW_AND_SINGULARITIES_20261122.md)
+state this ordering and its limits. Initial definite-data existence on
+arbitrary homotopy spheres remains a separate obligation.
+
+The generalized isothermal coordinate and reconstruction method is a
+central candidate for obtaining those estimates. Develop its real analogue
+on S(E), compare the Fine–Panov and metric twistor structures, and retain
+their nonintegrability and transport defects. The
+[overview](../research-overview/OVERVIEW.md) fixes the geometric objects;
+the [source record](../../../../references/SOURCE_NOTES_CME_REAL_TWISTOR_20261122.md)
+identifies exactly what is inherited. This is a proposed mechanism whose
+analytical value must be assessed, not an established theorem.
+
+| Order / task | Purpose and dependency specification |
+| --- | --- |
+| E01 | Existing six-claim foundation audit; unchanged claim set and first priority |
+| B01 → E02 | First exact nonlinear-flow calculation; assess the coordinate candidate when selecting variables, while keeping Fine's actual equation primary |
+| B02 → E03 | Specify and check the real two-patch chart/transport comparison on the round benchmark, informed by the first flow calculation |
+| B03 → E04 | Choose and test one noncircular distortion or overlap estimate coupled to that nonlinear evolution |
+| B04 → E05 | Address one geometric continuation, compactness or endpoint bottleneck, using known classifications as validation cases where useful |
+| B05 | Assess one initial-data construction route on arbitrary homotopy spheres; preserve this separate global obligation |
+
+This table specifies the intended dependencies, not live completion status.
+The [register](../research-progress/REGISTER.md) remains authoritative. No
+new scientific packet is activated or frozen by writing this plan.
+
+## Shared contract and evidence requirements
+
+Every frozen packet records input hashes, its exact manifold/bundle and
+chirality assumptions, K and time normalization, gauge, regularity, norms,
+constant dependencies, finite cases and calculation order. It names one
+writer and output paths. B decisions go in `brainstorm/notes/`; derivations
+in `notes/`; scoped assessments in `reviews/`; issued requests and returns
+in `research-progress/handoffs/`. Only the lead integrates shared status.
+
+The E03–E05 entries are reserved execution slots, not executable requests.
+Each becomes usable only after its named B decision freezes a question,
+method, permitted choices, limits, deliverables, success test and failure
+disposition. E02 retains the same gate. A failed estimate can complete a
+bounded packet if its exact obstruction and affected hypothesis class are
+recorded. Changed mechanisms or premises return to the named B task.
+
+The coordinate candidate has a concrete starting identity. For
+φ_x(u) = Q_x^{1/2}u/|Q_x^{1/2}u|, define D_x as the maximum over u of
+the ratio of the two tangent singular values at u, using the round
+direction-sphere metrics. Then
+\[
+ D_x=\sqrt{\lambda_{\max}(Q_x)/\lambda_{\min}(Q_x)},
+ \qquad \lambda_{\min}(Q_x)\geq D_x^{-2}.
+\]
+The [pointwise check](../notes/03_direction_distortion_check_20261122.md)
+verifies the normalization and definition. This identity is not an
+evolution estimate. Every proposed chart bound must expose whether its
+constants already assume equivalent eigenvalue control, as well as any
+scale, derivative, curvature or noncollapse bounds.
 
 ## [E] SP4-CME-E01 — Audit the hypotheses and normalization of the local-to-global starting claims
 
 - **Type and routing:** E — execution; Sol 6.2/ultra is recommended because the claims, source set, and audit method are fixed. The selected lead may perform the bounded audit or delegate it under the root workflow.
-- **Inputs:** the manuscript and reading list in [OVERVIEW.md](../research-overview/OVERVIEW.md); no premise imported from unrelated projects.
+- **Inputs:** the current manuscript and its two existing Riemannian derivation notes linked in [OVERVIEW.md](../research-overview/OVERVIEW.md), with the primary sources used in their six specified arguments. The added coordinate reading list does not enlarge this audit's fixed claim set; no premise is imported from unrelated projects.
 - **Question:** Check six fixed claims in the inherited manuscript: curvature reconstruction from definiteness; exact reconstructed metric velocity; the TT factor-four Ricci-flow correspondence; distinction from the fourth-order metric pullback gradient; the finite-density boundary example; and the ASD-existence characterization of the standard sphere.
 - **Deliverable:** One review table with exact source labels, hypotheses, conventions, derivation dependencies, evidence status, and unresolved steps for those six claims. Include a separate local-versus-global dependency list. Preserve the source wording when assigning status.
 - **Scope limit:** One bounded audit of these six claims and their cited proofs. Do not conduct a new literature campaign, numerical campaign, complete manuscript rewrite, or global existence argument. Record any unresolved proof premise rather than assuming it.
@@ -16,16 +95,18 @@ This file specifies work; [REGISTER.md](../research-progress/REGISTER.md) alone 
 - **Outputs and ownership:** one dated file in `reviews/`, with supporting derivations in `notes/` only if needed. Record the disposition in the sole register; no silent manuscript revision.
 - **B escalation:** a changed mathematical target, new mechanism, or unresolved premise that prevents this specified audit becomes a named decision for SP4-CME-B01 or a scoped new B task. Preserve the incomplete audit and its precise boundary.
 
-## [B] SP4-CME-B01 — Choose the first nonlinear estimate that could connect local decay to geometric control
+## [B] SP4-CME-B01 — Fix the first nonlinear flow calculation and its geometric control test
 
 - **Type and routing:** B — brainstorm; Astra/ultra is recommended because choosing a useful mechanism and its mathematical hypotheses remains a conceptual decision.
 - **Dependency:** the disposition and scope findings of SP4-CME-E01. A precisely recorded failure may still be informative enough to decide this task.
-- **Question:** Using the audit, compare a coupled evolution for the reconstructed metric and Levi–Civita compatibility defect with a quantitative estimate preserving the positive definite curvature region. Select one bounded next calculation, or state precisely why neither route yet gives a usable contract.
-- **Deliverable:** A decision note fixing the variables, gauge, domain, hypotheses, and success test for one next calculation, with its logical position between local perturbation theory and a possible global argument.
-- **Scope limit:** Compare these two routes only. Do not claim a global solution or start numerical exploration. Additional mechanisms require a separately named B decision.
-- **Completion condition:** one route is selected with an explicit acceptance test and bounded next calculation, or both the failed route and missing input are precisely scoped.
+- **Question:** Using the audit, choose the first exact nonlinear evolution calculation needed to understand the flow away from a perfect connection. The default candidate is the Q evolution, with metric and Levi–Civita compatibility dependence explicit. Determine what its principal and lower-order terms would need to establish about definiteness or geometric continuation. Treat a separate compatibility evolution as a dependency if needed, not an automatic addition to the packet.
+- **Coordinate assessment within this decision:** treat the real twistor direction method as the central proposed source of additional control. Identify which terms in the selected nonlinear equation might be measured by fiber distortion, whole-fiber reconstruction or overlap error, and which remain horizontal or scale terms. Make a preliminary sign/identification inventory for Q, b = A − Γ_A⁺ and W⁺; reserve the real chart protocol for B02. If a chart variable cannot yet be defined, proceed with the exact flow calculation and record the missing bridge rather than assuming it.
+- **Deliverable:** A decision note fixing the variables, gauge, domain, hypotheses, derivative order and success test for one next calculation. Identify its role in a future continuation criterion and a round or other justified benchmark. Let possible preserved intermediate hypotheses emerge from the calculation; do not assume small-Q pinching is sufficient.
+- **Scope limit:** Freeze one finite calculation or check. Do not attempt a full coupled-system theory, global solution or numerical campaign. Known sphere classifications may supply comparison cases, but do not substitute them for proving the behavior of this flow. Additional mechanisms require a separately named B decision.
+- **Completion condition:** one calculation has an explicit acceptance test and bounded scope, or the missing input preventing such a contract is precisely recorded. A useful outcome may identify an uncontrolled term rather than prove a favorable estimate.
 - **Outputs:** a dated decision in `brainstorm/notes/`; a concise explanation in `brainstorm/explanations/` only when useful; if viable, a fixed E packet in `research-progress/handoffs/`.
 - **Evidence standard:** make each new hypothesis visible; distinguish a reformulation of the final objective from an independently obtainable estimate. Do not elevate inherited draft claims during this decision.
+- **B escalation:** a change of flow, a hidden integrability assumption or a missing definition that changes the mathematical target must be resolved explicitly here or in B02 before dependent execution. Keep any usable independent-flow portion bounded.
 
 ## [E] SP4-CME-E02 — Execute the selected bounded calculation
 
@@ -34,6 +115,75 @@ This file specifies work; [REGISTER.md](../research-progress/REGISTER.md) alone 
 - **Intended scope:** Derive and assess the single nonlinear identity or estimate frozen by SP4-CME-B01; its equations, gauge, norms, and finite scope must be recorded before activation.
 - **Packet requirements:** input versions, equations, conventions, permitted routine choices, finite work limits, deliverables, acceptance test, failure disposition, and the trigger for returning to B.
 - **Completion condition:** assess the frozen test and preserve supporting evidence, including an unfavorable result. Do not expand scope automatically.
+- **Deliverable and evidence:** a derivation in `notes/` with the full principal/lower-order expression, the specified consistency checks and an inventory of uncontrolled quantities; a scoped assessment and return identify what B02/B03 can actually use. Recover the relevant round formula where the packet requires it, without treating that check as a nonlinear theorem.
+- **Failure / B escalation:** return a normalization or target ambiguity to B01; record an uncontrolled term for B03. A missing coordinate theorem is not silently assumed or added to this packet.
+
+## [B] SP4-CME-B02 — Specify the real twistor chart and transport comparison
+
+- **Type and routing:** B — Astra/ultra recommended because the real analogue, coefficient bundles, comparison maps and useful error quantities are not yet defined. Preserve the selected lead.
+- **Dependencies and inputs:** E01 disposition, B01's initial coordinate assessment and the first E02 disposition; an unresolved E02 return may suffice if it identifies the required variables. Read the exact earlier first-jet/descent passages and Fine–Panov/AHS passages in the source record. The audit and first nonlinear analysis retain priority.
+- **Question:** on the round S⁴ benchmark, choose two direction patches covering each complete S² over a local base patch and define the comparison between J_FP(A) and J_met(ĝ_A). Specify the curvature-ray relabelling φ, horizontal transport difference b, and the role of W⁺. Include derivatives of φ under base transport and time evolution. State how base-chart changes, fiber orientation, reality and any local spin lifts are handled.
+- **Deliverable:** one decision note and a frozen E03 protocol specifying chart domains, transition laws, first-jet comparison, coefficient bundle, fiberwise holomorphic degree-one projection, remainder/overlap error and norms. If c_A is a chosen directional coefficient and Π₁ the specified projection, a decomposition c_A = Π₁c_A + r_A is a candidate notation, not a previously established reconstruction theorem.
+- **Scope limit:** one comparison construction and the round benchmark, with at most one specified perturbation test if needed. Do not assume a global product M × S², a global holomorphic projection to CP¹, an ambient integrable complex structure, or one inverse chart over an entire fiber. Do not demand exact straightening of the metric twistor structure away from W⁺ = 0.
+- **Evidence / completion:** either supply an implementable protocol with its hypothesis and constant-dependence inventory, or identify a precise obstruction to this construction. Separate fiberwise holomorphicity from ambient integrability; the earlier O(1) descent hypotheses are explicit inputs, not automatic consequences of having sphere fibers.
+- **Failure / B escalation:** revise the comparison object or coefficient bundle here if the proposed construction is undefined. Record any needed new reality, regularity or bundle hypothesis for B03; a failure of this construction is not failure of all generalized-coordinate methods.
+
+## [E] SP4-CME-E03 — Check the frozen whole-fiber comparison on the round benchmark
+
+- **Type and routing:** reserved E — Sol 6.2/ultra recommended once B02 fixes the finite geometric calculation; selected lead may execute it.
+- **Dependencies:** E01/E02 dispositions and an accepted frozen B02 protocol. No execution is possible from this placeholder alone.
+- **Deliverable:** the specified two-patch chart and transport calculation, its overlap law, degree-one reconstruction or projection, and residual on round S⁴; execute only the one perturbation case/order if it is included in the protocol. Save derivation and a scoped return.
+- **Finite scope:** one benchmark construction with complete direction-fiber coverage over the specified base domains. Check the matching chirality, φ = id and b = W⁺ = 0 at round geometry. Do not infer a theorem on arbitrary smooth bases from that benchmark.
+- **Evidence / completion:** all specified patch, transition, reconstruction, reality and normalization checks are recorded, with either agreement or an exact discrepancy. Track which constants involve Q, its derivatives, metric scale or the chosen gauge.
+- **Failure / B escalation:** return an ill-defined chart or projection to B02; return a genuine obstruction to a quantitative estimate to B03. Preserve the checked domain and failed case rather than widening the claim.
+
+## [B] SP4-CME-B03 — Select one noncircular estimate joining coordinates to the nonlinear flow
+
+- **Type and routing:** B — Astra/ultra recommended because the coercive quantity, hypotheses and closure mechanism remain conceptual choices.
+- **Dependencies:** E02's nonlinear term inventory and E03's assessed chart comparison, including any scoped failures. Use B02 if the required error quantity is not yet well defined.
+- **Question:** can chart equations and Fine's actual nonlinear evolution bound D, a degree-one remainder, or an overlap error in a way that yields useful geometric control? Choose one quantity and one regime. An overlap estimate needs an explicit implication for distortion or another continuation quantity; regular-looking coordinates alone are not the success test.
+- **Deliverable:** one proposed inequality or reconstruction estimate and a frozen E04 packet with its derivation method, norms, allowed hypotheses, constant dependencies and exact acceptance test. Separate b, W⁺, moving scale and horizontal derivatives; do not identify distinct defects without deriving the relation.
+- **Scope limit:** one estimate and one specified hypothesis class. Do not assume the same lower eigenvalue bound that the estimate is supposed to prove. A strong near-round assumption may be used for calibration, but must be identified as such and compared with Fine's existing stability theorem.
+- **Evidence / completion:** a finite, noncircular test is frozen, or the circularity/uncontrolled term is explicitly demonstrated. Identify whether the result would be a new analytic statement, a known-regime check, or an equivalent reformulation.
+- **Failure / B escalation:** if inverse powers of λ_min(Q) or uncontrolled geometric constants prevent closure, isolate their origin and choose one added quantity or altered hypothesis for a subsequent bounded attempt. Do not silently treat the needed bound as established or discard the full coordinate program.
+
+## [E] SP4-CME-E04 — Execute the selected coordinate/flow estimate
+
+- **Type and routing:** reserved E — Sol 6.2/ultra recommended for the fixed derivation or estimate once B03 supplies it.
+- **Dependency:** a complete frozen B03 packet using assessed E02/E03 inputs.
+- **Deliverable:** the derivation, all constant dependencies, the specified limiting/round checks and an assessment against the written acceptance test, in `notes/` and the packet return.
+- **Finite scope:** only the chosen quantity, gauge, regularity class and parameter regime. No automatic numerical search, expansion to a full coupled-system theorem, or global claim.
+- **Evidence / completion:** prove the stated estimate under exactly the allowed hypotheses, or locate the precise unclosed term or counterexample within the examined class. Distinguish formal identities from a priori estimates for actual flow solutions.
+- **Failure / B escalation:** return to B03 with the exact missing estimate; a changed mechanism or hypothesis needs a new recorded decision before another execution packet.
+
+## [B] SP4-CME-B04 — Choose the next continuation or convergence bottleneck and a validation case
+
+- **Type and routing:** B — Astra/ultra recommended because geometric sufficiency and the limiting mechanism require judgment.
+- **Dependencies:** assessed nonlinear/coordinate estimates from E02–E04, or a documented failure that makes the next missing quantity precise. A distortion result alone is not presumed sufficient.
+- **Question:** select one next obligation: metric scale and horizontal regularity, finite-time continuation, noncollapse/compactness, infinite-time degeneration, or identification of a perfect stationary limit. State the exact implication sought and which previous bounds genuinely support it.
+- **Deliverable:** one conditional statement, hypothesis/dependency map and frozen E05 test; choose a round or already classified geometric case when it provides a useful check of the flow mechanism.
+- **Scope limit:** one bottleneck and one validation regime. The energy identity, fixed total volume and |F_A|²_ĝ = 6K² do not replace metric curvature, derivative or noncollapse estimates. An existing sphere theorem does not establish convergence of this connection flow.
+- **Evidence / completion:** all needed bounds are accounted for, a finite next test is specified, and the interpretation of a successful result is explicit. Record any singularity mechanism that remains unaddressed rather than asserting its occurrence.
+- **Failure / B escalation:** return an insufficient coordinate bound to B03, or select one additional geometric estimate here. If more than one independent gap remains, order them instead of freezing an unbounded global theorem.
+
+## [E] SP4-CME-E05 — Execute the selected continuation or benchmark test
+
+- **Type and routing:** reserved E — Sol 6.2/ultra recommended once B04 fixes the theorem/check, proof inputs and finite scope.
+- **Dependency:** complete B04 packet and every premise it explicitly uses.
+- **Deliverable:** the chosen continuation argument or validation calculation, premise trace, scoped assessment and return. State whether it gives a flow theorem, a classification consequence, or only a conditional reduction.
+- **Finite scope:** the single selected bottleneck/regime; no expansion to arbitrary initial data or an unproved compactness/surgery framework.
+- **Evidence / completion:** the acceptance test is settled or its missing premise is precisely identified. A known sphere conclusion is an acceptable validation outcome when the required flow argument has actually been supplied.
+- **Failure / B escalation:** return missing geometric estimates or endpoint assumptions to B04, or to B03 if their claimed coordinate control fails.
+
+## [B] SP4-CME-B05 — Assess initialization on an arbitrary smooth homotopy four-sphere
+
+- **Type and routing:** reserved B — Astra/ultra recommended because constructing the initial geometric structure is a separate global mechanism.
+- **Dependencies and priority:** the foundation audit and enough of B02/E03 to state a real coordinate/reconstruction proposal with valid domains and reality conditions. Keep the first nonlinear-flow work ahead of this strategic task; its exact activation depends on useful evidence, not on assuming every flow question is solved.
+- **Question:** assess one possible use of local real coordinate data and base/fiber patching to construct a definite connection of the required sign on an arbitrary smooth homotopy four-sphere, or identify the precise additional input it would require.
+- **Deliverable:** a construction-or-obstruction map for that one route, with smooth category, bundle topology, global compatibility and quantitative definiteness requirements explicit. If it supports a finite execution check, define a new E packet and register it before execution.
+- **Scope limit:** one proposed initialization mechanism. Do not assume a known round structure, an ASD metric, a definite connection, or exact integrable coordinates as the missing starting premise; none is supplied by importing the earlier complex/neutral manuscripts.
+- **Evidence / completion:** identify an independently obtainable next condition or demonstrate that the proposal only restates the missing existence problem. Preserve the distinction between this initialization obligation and conditional flow convergence.
+- **Failure / B escalation:** state the exact obstruction and the new input that would change it. Consider a different construction only through a named subsequent B decision; no global existence claim follows from a reformulation.
 
 ## Research continuity
 

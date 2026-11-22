@@ -25,12 +25,28 @@ The catalog below is inherited from the supplied [20 November overview](../paper
 | R14 | [Harnad.pdf](Harnad.pdf) — J. Harnad, J. Hurtubise, M. Légaré, S. Shnider, *Constraint equations and field equations in supersymmetric N = 3 Yang-Mills theory* (1985), 13 PDF pages | Proof of the relation between constrained superconnections and component field equations on complexified super-Minkowski space. |
 | R15 | [1111.5005v2.pdf](1111.5005v2.pdf) — Joel Fine, *A gauge theoretic approach to the anti-self-dual Einstein equations*, arXiv:1111.5005v2, 29 November 2011 | Definite-connection framework; selected definitions and theorem statements checked for the 21 November 2026 background revision, as recorded below. |
 | R16 | [arXiv:2301.00029](https://arxiv.org/abs/2301.00029) — Edward B. Baker III, *Generalized conformal maps as classical symmetries of Yang–Mills fields* (2023), v2 dated 26 January 2023 | Added 21 November 2026. The author's requested sole self-citation for the revised chiral metric evolution manuscript, with “and references within”; Sections 2 and 5 provide the flat-space motivation and proposed extension. |
+| R17 | [arXiv:0802.3648v2](https://arxiv.org/abs/0802.3648v2) — Joel Fine and Dmitri Panov, *Symplectic Calabi–Yau manifolds, minimal surfaces and the hyperbolic geometry of the conifold*, preprint v2 dated 5 March 2008; published JDG 82 (2009), 155–205 | Added 22 November 2026. Selected §2 passages checked for the real sphere-bundle coordinate proposal; remote reading only. Exact inspection and limitations are in the [real twistor source notes](SOURCE_NOTES_CME_REAL_TWISTOR_20261122.md). |
 
 ## Chiral metric evolution background revision, 21 November 2026
 
 The [source notes](SOURCE_NOTES_CME_BACKGROUND_20261121.md) distinguish newly checked primary passages from inherited metadata and record versions, hypotheses, and local-copy hashes. The revised manuscript draws on the two initial-investigation manuscripts without citing them. Its only citation to the author's papers is R16 and references within; the older draft entries remain historical provenance. This selected-passage check is not a full-paper audit or independent verification of the research program.
 
 ## Ownership and availability
+
+The [real twistor coordinate source notes](SOURCE_NOTES_CME_REAL_TWISTOR_20261122.md)
+record the Fine–Panov sphere-bundle construction, the AHS integrability
+theorem and the earlier first-jet/whole-fiber reconstruction hypotheses
+used in the revised CME research plan. The proposed real chart and
+nonlinear estimates remain unproved. The shared bibliography adds the
+Fine–Panov 2009 entry while retaining its inspected 2008 preprint version.
+
+The [22 November summary and special-case source notes](SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md)
+record the primary passages used to compare the chiral program with existing
+sphere theorems and positive definite connection conjectures. They include the
+Chang–Gursky–Yang norm conversion, Fine's local stability hypotheses,
+the circle-invariant classification, and the limits of the targeted novelty
+search. These checks support an explanation and candidate-target assessment,
+not a new convergence or classification theorem.
 
 The [Introduction progression source notes](SOURCE_NOTES_CME_INTRODUCTION_20261121.md)
 record the additional uniformization, Hamilton–Perelman, Smale, Milnor,
