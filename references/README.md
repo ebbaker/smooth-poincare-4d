@@ -23,7 +23,12 @@ The catalog below is inherited from the supplied [20 November overview](../paper
 | R12 | [Mason_2.pdf](Mason_2.pdf) — Yvonne Geyer, Arthur E. Lipstein, Lionel Mason, *Ambitwistor strings in 4-dimensions*, 4 pages | Spinorial incidence relations and amplitude constructions; background for possible later physical applications. |
 | R13 | [Skinner.pdf](Skinner.pdf) — Eduardo Casali, Piotr Tourkine, *On the null origin of the ambitwistor string*, 23 pages | Null-string origin of the ambitwistor model, with specific gauge and quantization choices. Despite the filename, it is not authored by Skinner. |
 | R14 | [Harnad.pdf](Harnad.pdf) — J. Harnad, J. Hurtubise, M. Légaré, S. Shnider, *Constraint equations and field equations in supersymmetric N = 3 Yang-Mills theory* (1985), 13 PDF pages | Proof of the relation between constrained superconnections and component field equations on complexified super-Minkowski space. |
-| R15 | [1111.5005v2.pdf](1111.5005v2.pdf) — Joel Fine, *A gauge theoretic approach to the anti-self-dual Einstein equations*, arXiv:1111.5005v2, as cited in the sphere manuscript | Definite-connection framework; exact version dates and passages need checking before new use. |
+| R15 | [1111.5005v2.pdf](1111.5005v2.pdf) — Joel Fine, *A gauge theoretic approach to the anti-self-dual Einstein equations*, arXiv:1111.5005v2, 29 November 2011 | Definite-connection framework; selected definitions and theorem statements checked for the 21 November 2026 background revision, as recorded below. |
+| R16 | [arXiv:2301.00029](https://arxiv.org/abs/2301.00029) — Edward B. Baker III, *Generalized conformal maps as classical symmetries of Yang–Mills fields* (2023), v2 dated 26 January 2023 | Added 21 November 2026. The author's requested sole self-citation for the revised chiral metric evolution manuscript, with “and references within”; Sections 2 and 5 provide the flat-space motivation and proposed extension. |
+
+## Chiral metric evolution background revision, 21 November 2026
+
+The [source notes](SOURCE_NOTES_CME_BACKGROUND_20261121.md) distinguish newly checked primary passages from inherited metadata and record versions, hypotheses, and local-copy hashes. The revised manuscript draws on the two initial-investigation manuscripts without citing them. Its only citation to the author's papers is R16 and references within; the older draft entries remain historical provenance. This selected-passage check is not a full-paper audit or independent verification of the research program.
 
 ## Ownership and availability
 

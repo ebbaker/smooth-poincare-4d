@@ -1,0 +1,2065 @@
+{
+  "date": "2026-11-21",
+  "timezone": "America/New_York",
+  "checked_at": "2026-11-21T21:59:23.389556-05:00",
+  "intended_author": "Edward Baker",
+  "assistance": "OpenAI Codex",
+  "actual_backend_model": "unavailable in independently verified metadata",
+  "actual_reasoning_effort": "unavailable",
+  "scope": "Integrity comparison only; no scientific revision",
+  "baseline": "/Users/ebbaker/Documents/ChatGPT/Generalized Isothermal Coordinates/smooth_poincare_4d_setup",
+  "reorganized_setup": "/Users/ebbaker/Documents/ChatGPT/Generalized Isothermal Coordinates/output/smooth_poincare_4d_setup",
+  "repository": "/Users/ebbaker/Documents/smooth-poincare-4d",
+  "repository_head_at_start": "956403f8ad37fd107b1287fce1c3e5bc294175c0",
+  "repository_tracked_files_at_start": 122,
+  "repository_status_at_start": "clean",
+  "comparison": {
+    "prepared_output": {
+      "original_files": 133,
+      "identical_after_moves": 100,
+      "moved_files": 45,
+      "missing": [],
+      "new_files": [
+        "ORGANIZATION_UPDATE.md",
+        "papers/initial-investigations/README.md",
+        "tools/tests/test_series_routing.py"
+      ],
+      "changed": [
+        {
+          "old": "CHANGELOG.md",
+          "new": "CHANGELOG.md",
+          "old_bytes": 1124,
+          "new_bytes": 1645
+        },
+        {
+          "old": "README.md",
+          "new": "README.md",
+          "old_bytes": 4108,
+          "new_bytes": 4176
+        },
+        {
+          "old": "MANIFEST.md",
+          "new": "MANIFEST.md",
+          "old_bytes": 1969,
+          "new_bytes": 1981
+        },
+        {
+          "old": "IMPORT_MANIFEST.json",
+          "new": "IMPORT_MANIFEST.json",
+          "old_bytes": 21250,
+          "new_bytes": 22662
+        },
+        {
+          "old": "INVESTIGATION_SETUP_WORKFLOW.md",
+          "new": "INVESTIGATION_SETUP_WORKFLOW.md",
+          "old_bytes": 5731,
+          "new_bytes": 6134
+        },
+        {
+          "old": "CONTINUATION.md",
+          "new": "CONTINUATION.md",
+          "old_bytes": 2014,
+          "new_bytes": 2160
+        },
+        {
+          "old": "AGENTS.md",
+          "new": "AGENTS.md",
+          "old_bytes": 4736,
+          "new_bytes": 4855
+        },
+        {
+          "old": "tools/TOOL_PORTABILITY.md",
+          "new": "tools/TOOL_PORTABILITY.md",
+          "old_bytes": 3304,
+          "new_bytes": 4500
+        },
+        {
+          "old": "tools/build_manuscripts.py",
+          "new": "tools/build_manuscripts.py",
+          "old_bytes": 2559,
+          "new_bytes": 2665
+        },
+        {
+          "old": "tools/record_Claude_cowork_chat.py",
+          "new": "tools/record_Claude_cowork_chat.py",
+          "old_bytes": 64154,
+          "new_bytes": 64822
+        },
+        {
+          "old": "tools/CHAT_HISTORY.md",
+          "new": "tools/CHAT_HISTORY.md",
+          "old_bytes": 6119,
+          "new_bytes": 6518
+        },
+        {
+          "old": "tools/README.md",
+          "new": "tools/README.md",
+          "old_bytes": 2169,
+          "new_bytes": 2560
+        },
+        {
+          "old": "tools/record_chat.py",
+          "new": "tools/record_chat.py",
+          "old_bytes": 14492,
+          "new_bytes": 14841
+        },
+        {
+          "old": "tools/check_repository_hygiene.py",
+          "new": "tools/check_repository_hygiene.py",
+          "old_bytes": 4619,
+          "new_bytes": 4773
+        },
+        {
+          "old": "tools/tests/test_portable_recorder.py",
+          "new": "tools/tests/test_portable_recorder.py",
+          "old_bytes": 2731,
+          "new_bytes": 3983
+        },
+        {
+          "old": "papers/README.md",
+          "new": "papers/README.md",
+          "old_bytes": 764,
+          "new_bytes": 1345
+        },
+        {
+          "old": "papers/investigations-1/README.md",
+          "new": "papers/investigations-1/README.md",
+          "old_bytes": 465,
+          "new_bytes": 672
+        },
+        {
+          "old": "papers/investigations-1/02_generalized_isothermal_coordinates/DRAFT_HISTORY.md",
+          "new": "papers/initial-investigations/01_generalized_isothermal_coordinates/DRAFT_HISTORY.md",
+          "old_bytes": 921,
+          "new_bytes": 1175
+        },
+        {
+          "old": "papers/investigations-1/02_generalized_isothermal_coordinates/README.md",
+          "new": "papers/initial-investigations/01_generalized_isothermal_coordinates/README.md",
+          "old_bytes": 3492,
+          "new_bytes": 3548
+        },
+        {
+          "old": "papers/investigations-1/02_generalized_isothermal_coordinates/manuscript/README.md",
+          "new": "papers/initial-investigations/01_generalized_isothermal_coordinates/manuscript/README.md",
+          "old_bytes": 900,
+          "new_bytes": 900
+        },
+        {
+          "old": "papers/investigations-1/02_generalized_isothermal_coordinates/research-overview/OVERVIEW.md",
+          "new": "papers/initial-investigations/01_generalized_isothermal_coordinates/research-overview/OVERVIEW.md",
+          "old_bytes": 3247,
+          "new_bytes": 3251
+        },
+        {
+          "old": "papers/investigations-1/02_generalized_isothermal_coordinates/research-plan/PLAN.md",
+          "new": "papers/initial-investigations/01_generalized_isothermal_coordinates/research-plan/PLAN.md",
+          "old_bytes": 5823,
+          "new_bytes": 5826
+        },
+        {
+          "old": "papers/investigations-1/02_generalized_isothermal_coordinates/research-progress/REGISTER.md",
+          "new": "papers/initial-investigations/01_generalized_isothermal_coordinates/research-progress/REGISTER.md",
+          "old_bytes": 2659,
+          "new_bytes": 2680
+        },
+        {
+          "old": "papers/investigations-1/02_generalized_isothermal_coordinates/continuation-notes/CONTINUATION.md",
+          "new": "papers/initial-investigations/01_generalized_isothermal_coordinates/continuation-notes/CONTINUATION.md",
+          "old_bytes": 3555,
+          "new_bytes": 3582
+        },
+        {
+          "old": "papers/investigations-1/03_chiral_descent_and_double_copy/DRAFT_HISTORY.md",
+          "new": "papers/initial-investigations/02_chiral_descent_and_double_copy/DRAFT_HISTORY.md",
+          "old_bytes": 912,
+          "new_bytes": 1166
+        },
+        {
+          "old": "papers/investigations-1/03_chiral_descent_and_double_copy/README.md",
+          "new": "papers/initial-investigations/02_chiral_descent_and_double_copy/README.md",
+          "old_bytes": 3308,
+          "new_bytes": 3364
+        },
+        {
+          "old": "papers/investigations-1/03_chiral_descent_and_double_copy/manuscript/README.md",
+          "new": "papers/initial-investigations/02_chiral_descent_and_double_copy/manuscript/README.md",
+          "old_bytes": 916,
+          "new_bytes": 916
+        },
+        {
+          "old": "papers/investigations-1/03_chiral_descent_and_double_copy/research-overview/OVERVIEW.md",
+          "new": "papers/initial-investigations/02_chiral_descent_and_double_copy/research-overview/OVERVIEW.md",
+          "old_bytes": 3044,
+          "new_bytes": 3048
+        },
+        {
+          "old": "papers/investigations-1/03_chiral_descent_and_double_copy/research-plan/PLAN.md",
+          "new": "papers/initial-investigations/02_chiral_descent_and_double_copy/research-plan/PLAN.md",
+          "old_bytes": 5644,
+          "new_bytes": 5647
+        },
+        {
+          "old": "papers/investigations-1/03_chiral_descent_and_double_copy/notes/algebraic_restrictions_and_generalizations.md",
+          "new": "papers/initial-investigations/02_chiral_descent_and_double_copy/notes/algebraic_restrictions_and_generalizations.md",
+          "old_bytes": 21783,
+          "new_bytes": 21783
+        },
+        {
+          "old": "papers/investigations-1/03_chiral_descent_and_double_copy/research-progress/REGISTER.md",
+          "new": "papers/initial-investigations/02_chiral_descent_and_double_copy/research-progress/REGISTER.md",
+          "old_bytes": 2644,
+          "new_bytes": 2665
+        },
+        {
+          "old": "papers/investigations-1/03_chiral_descent_and_double_copy/continuation-notes/CONTINUATION.md",
+          "new": "papers/initial-investigations/02_chiral_descent_and_double_copy/continuation-notes/CONTINUATION.md",
+          "old_bytes": 3491,
+          "new_bytes": 3518
+        },
+        {
+          "old": "papers/investigations-1/01_chiral_metric_evolution/research-plan/PLAN.md",
+          "new": "papers/investigations-1/01_chiral_metric_evolution/research-plan/PLAN.md",
+          "old_bytes": 5902,
+          "new_bytes": 5905
+        }
+      ]
+    },
+    "current_repository": {
+      "original_files": 133,
+      "identical_after_moves": 97,
+      "moved_files": 45,
+      "missing": [],
+      "new_files": [
+        "ORGANIZATION_UPDATE.md",
+        "chat-histories/UNREGISTERED_PARTIAL_ACCESS_AUDIT_20261121.md",
+        "papers/initial-investigations/README.md",
+        "reviews/README.md",
+        "reviews/REPOSITORY_AUDIT_20261121.json",
+        "reviews/REPOSITORY_AUDIT_20261121.md",
+        "tools/tests/test_series_routing.py"
+      ],
+      "changed": [
+        {
+          "old": "CHANGELOG.md",
+          "new": "CHANGELOG.md",
+          "old_bytes": 1124,
+          "new_bytes": 2401
+        },
+        {
+          "old": "CITATION.cff",
+          "new": "CITATION.cff",
+          "old_bytes": 692,
+          "new_bytes": 692
+        },
+        {
+          "old": "README.md",
+          "new": "README.md",
+          "old_bytes": 4108,
+          "new_bytes": 4281
+        },
+        {
+          "old": "MANIFEST.md",
+          "new": "MANIFEST.md",
+          "old_bytes": 1969,
+          "new_bytes": 2349
+        },
+        {
+          "old": "IMPORT_MANIFEST.json",
+          "new": "IMPORT_MANIFEST.json",
+          "old_bytes": 21250,
+          "new_bytes": 22662
+        },
+        {
+          "old": "SETUP_STATUS.md",
+          "new": "SETUP_STATUS.md",
+          "old_bytes": 3814,
+          "new_bytes": 4386
+        },
+        {
+          "old": "INVESTIGATION_SETUP_WORKFLOW.md",
+          "new": "INVESTIGATION_SETUP_WORKFLOW.md",
+          "old_bytes": 5731,
+          "new_bytes": 6134
+        },
+        {
+          "old": "CONTINUATION.md",
+          "new": "CONTINUATION.md",
+          "old_bytes": 2014,
+          "new_bytes": 2160
+        },
+        {
+          "old": "AGENTS.md",
+          "new": "AGENTS.md",
+          "old_bytes": 4736,
+          "new_bytes": 4855
+        },
+        {
+          "old": "tools/TOOL_PORTABILITY.md",
+          "new": "tools/TOOL_PORTABILITY.md",
+          "old_bytes": 3304,
+          "new_bytes": 4500
+        },
+        {
+          "old": "tools/build_manuscripts.py",
+          "new": "tools/build_manuscripts.py",
+          "old_bytes": 2559,
+          "new_bytes": 2665
+        },
+        {
+          "old": "tools/record_Claude_cowork_chat.py",
+          "new": "tools/record_Claude_cowork_chat.py",
+          "old_bytes": 64154,
+          "new_bytes": 64822
+        },
+        {
+          "old": "tools/CHAT_HISTORY.md",
+          "new": "tools/CHAT_HISTORY.md",
+          "old_bytes": 6119,
+          "new_bytes": 6518
+        },
+        {
+          "old": "tools/README.md",
+          "new": "tools/README.md",
+          "old_bytes": 2169,
+          "new_bytes": 2560
+        },
+        {
+          "old": "tools/record_chat.py",
+          "new": "tools/record_chat.py",
+          "old_bytes": 14492,
+          "new_bytes": 14841
+        },
+        {
+          "old": "tools/check_repository_hygiene.py",
+          "new": "tools/check_repository_hygiene.py",
+          "old_bytes": 4619,
+          "new_bytes": 5375
+        },
+        {
+          "old": "tools/tests/test_portable_recorder.py",
+          "new": "tools/tests/test_portable_recorder.py",
+          "old_bytes": 2731,
+          "new_bytes": 3983
+        },
+        {
+          "old": "papers/README.md",
+          "new": "papers/README.md",
+          "old_bytes": 764,
+          "new_bytes": 1345
+        },
+        {
+          "old": "papers/investigations-1/README.md",
+          "new": "papers/investigations-1/README.md",
+          "old_bytes": 465,
+          "new_bytes": 672
+        },
+        {
+          "old": "papers/investigations-1/02_generalized_isothermal_coordinates/DRAFT_HISTORY.md",
+          "new": "papers/initial-investigations/01_generalized_isothermal_coordinates/DRAFT_HISTORY.md",
+          "old_bytes": 921,
+          "new_bytes": 1175
+        },
+        {
+          "old": "papers/investigations-1/02_generalized_isothermal_coordinates/README.md",
+          "new": "papers/initial-investigations/01_generalized_isothermal_coordinates/README.md",
+          "old_bytes": 3492,
+          "new_bytes": 3548
+        },
+        {
+          "old": "papers/investigations-1/02_generalized_isothermal_coordinates/manuscript/README.md",
+          "new": "papers/initial-investigations/01_generalized_isothermal_coordinates/manuscript/README.md",
+          "old_bytes": 900,
+          "new_bytes": 900
+        },
+        {
+          "old": "papers/investigations-1/02_generalized_isothermal_coordinates/research-overview/OVERVIEW.md",
+          "new": "papers/initial-investigations/01_generalized_isothermal_coordinates/research-overview/OVERVIEW.md",
+          "old_bytes": 3247,
+          "new_bytes": 3251
+        },
+        {
+          "old": "papers/investigations-1/02_generalized_isothermal_coordinates/research-plan/PLAN.md",
+          "new": "papers/initial-investigations/01_generalized_isothermal_coordinates/research-plan/PLAN.md",
+          "old_bytes": 5823,
+          "new_bytes": 5826
+        },
+        {
+          "old": "papers/investigations-1/02_generalized_isothermal_coordinates/research-progress/REGISTER.md",
+          "new": "papers/initial-investigations/01_generalized_isothermal_coordinates/research-progress/REGISTER.md",
+          "old_bytes": 2659,
+          "new_bytes": 2680
+        },
+        {
+          "old": "papers/investigations-1/02_generalized_isothermal_coordinates/continuation-notes/CONTINUATION.md",
+          "new": "papers/initial-investigations/01_generalized_isothermal_coordinates/continuation-notes/CONTINUATION.md",
+          "old_bytes": 3555,
+          "new_bytes": 3631
+        },
+        {
+          "old": "papers/investigations-1/03_chiral_descent_and_double_copy/DRAFT_HISTORY.md",
+          "new": "papers/initial-investigations/02_chiral_descent_and_double_copy/DRAFT_HISTORY.md",
+          "old_bytes": 912,
+          "new_bytes": 1166
+        },
+        {
+          "old": "papers/investigations-1/03_chiral_descent_and_double_copy/README.md",
+          "new": "papers/initial-investigations/02_chiral_descent_and_double_copy/README.md",
+          "old_bytes": 3308,
+          "new_bytes": 3364
+        },
+        {
+          "old": "papers/investigations-1/03_chiral_descent_and_double_copy/manuscript/README.md",
+          "new": "papers/initial-investigations/02_chiral_descent_and_double_copy/manuscript/README.md",
+          "old_bytes": 916,
+          "new_bytes": 916
+        },
+        {
+          "old": "papers/investigations-1/03_chiral_descent_and_double_copy/research-overview/OVERVIEW.md",
+          "new": "papers/initial-investigations/02_chiral_descent_and_double_copy/research-overview/OVERVIEW.md",
+          "old_bytes": 3044,
+          "new_bytes": 3048
+        },
+        {
+          "old": "papers/investigations-1/03_chiral_descent_and_double_copy/research-plan/PLAN.md",
+          "new": "papers/initial-investigations/02_chiral_descent_and_double_copy/research-plan/PLAN.md",
+          "old_bytes": 5644,
+          "new_bytes": 5647
+        },
+        {
+          "old": "papers/investigations-1/03_chiral_descent_and_double_copy/notes/algebraic_restrictions_and_generalizations.md",
+          "new": "papers/initial-investigations/02_chiral_descent_and_double_copy/notes/algebraic_restrictions_and_generalizations.md",
+          "old_bytes": 21783,
+          "new_bytes": 21783
+        },
+        {
+          "old": "papers/investigations-1/03_chiral_descent_and_double_copy/research-progress/REGISTER.md",
+          "new": "papers/initial-investigations/02_chiral_descent_and_double_copy/research-progress/REGISTER.md",
+          "old_bytes": 2644,
+          "new_bytes": 2665
+        },
+        {
+          "old": "papers/investigations-1/03_chiral_descent_and_double_copy/continuation-notes/CONTINUATION.md",
+          "new": "papers/initial-investigations/02_chiral_descent_and_double_copy/continuation-notes/CONTINUATION.md",
+          "old_bytes": 3491,
+          "new_bytes": 3567
+        },
+        {
+          "old": "papers/investigations-1/01_chiral_metric_evolution/research-plan/PLAN.md",
+          "new": "papers/investigations-1/01_chiral_metric_evolution/research-plan/PLAN.md",
+          "old_bytes": 5902,
+          "new_bytes": 5905
+        },
+        {
+          "old": "papers/investigations-1/01_chiral_metric_evolution/continuation-notes/CONTINUATION.md",
+          "new": "papers/investigations-1/01_chiral_metric_evolution/continuation-notes/CONTINUATION.md",
+          "old_bytes": 3557,
+          "new_bytes": 3606
+        }
+      ]
+    }
+  },
+  "checks": {
+    "baseline_hygiene": {
+      "links": 252,
+      "errors": 0,
+      "import_hashes": "all 36 match"
+    },
+    "current_hygiene_before_this_record": {
+      "links": 280,
+      "errors": 0,
+      "import_hashes": "all 36 match"
+    },
+    "missing_baseline_files": 0,
+    "scientific_byte_identical": 35,
+    "scientific_exact_link_only_change": 1,
+    "previous_test_and_build_checks": "111 tool tests and all three builds passed in the preceding audit; not rerun because relevant code and manuscript contents were unchanged",
+    "chat_source": "source_unavailable; unregistered partial public record only"
+  },
+  "scientific_files": [
+    {
+      "source": "PROJECT_SUMMARY_2026-11-20.md",
+      "old_destination": "papers/research-overview/PROJECT_SUMMARY_2026-11-20.md",
+      "new_destination": "papers/research-overview/PROJECT_SUMMARY_2026-11-20.md",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "background-references/1111.5005v2.pdf",
+      "old_destination": "references/1111.5005v2.pdf",
+      "new_destination": "references/1111.5005v2.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "background-references/Atiyah.pdf",
+      "old_destination": "references/Atiyah.pdf",
+      "new_destination": "references/Atiyah.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "background-references/Fegan.pdf",
+      "old_destination": "references/Fegan.pdf",
+      "new_destination": "references/Fegan.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "background-references/Harnad.pdf",
+      "old_destination": "references/Harnad.pdf",
+      "new_destination": "references/Harnad.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "background-references/Kodaira-StabilityCompactSubmanifolds-1963.pdf",
+      "old_destination": "references/Kodaira-StabilityCompactSubmanifolds-1963.pdf",
+      "new_destination": "references/Kodaira-StabilityCompactSubmanifolds-1963.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "background-references/Kodaira-TheoremCompletenessCharacteristic-1962.pdf",
+      "old_destination": "references/Kodaira-TheoremCompletenessCharacteristic-1962.pdf",
+      "new_destination": "references/Kodaira-TheoremCompletenessCharacteristic-1962.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "background-references/Mason_2.pdf",
+      "old_destination": "references/Mason_2.pdf",
+      "new_destination": "references/Mason_2.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "background-references/Nonlinear_Graviton.pdf",
+      "old_destination": "references/Nonlinear_Graviton.pdf",
+      "new_destination": "references/Nonlinear_Graviton.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "background-references/Nonlinear_Gravitons.pdf",
+      "old_destination": "references/Nonlinear_Gravitons.pdf",
+      "new_destination": "references/Nonlinear_Gravitons.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "background-references/Skinner.pdf",
+      "old_destination": "references/Skinner.pdf",
+      "new_destination": "references/Skinner.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "background-references/W_T_Shaw_1986_Class._Quantum_Grav._3_753.pdf",
+      "old_destination": "references/W_T_Shaw_1986_Class._Quantum_Grav._3_753.pdf",
+      "new_destination": "references/W_T_Shaw_1986_Class._Quantum_Grav._3_753.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "background-references/green.pdf",
+      "old_destination": "references/green.pdf",
+      "new_destination": "references/green.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "background-references/mason2006.pdf",
+      "old_destination": "references/mason2006.pdf",
+      "new_destination": "references/mason2006.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "background-references/unfinished_notes/Curved_morphisms.pdf",
+      "old_destination": "references/unfinished_notes/Curved_morphisms.pdf",
+      "new_destination": "references/unfinished_notes/Curved_morphisms.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "background-references/unfinished_notes/Generalized_Isothermal.pdf",
+      "old_destination": "references/unfinished_notes/Generalized_Isothermal.pdf",
+      "new_destination": "references/unfinished_notes/Generalized_Isothermal.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "background-references/unfinished_notes/YM_sym.pdf",
+      "old_destination": "references/unfinished_notes/YM_sym.pdf",
+      "new_destination": "references/unfinished_notes/YM_sym.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "background-references/ward_1980.pdf",
+      "old_destination": "references/ward_1980.pdf",
+      "new_destination": "references/ward_1980.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "background-references/witten.pdf",
+      "old_destination": "references/witten.pdf",
+      "new_destination": "references/witten.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "double-copy/chiral_connection_descent_and_double_copy.pdf",
+      "old_destination": "output/pdf/03_chiral_descent_and_double_copy/chiral_connection_descent_and_double_copy.pdf",
+      "new_destination": "output/pdf/02_chiral_descent_and_double_copy/chiral_connection_descent_and_double_copy.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "double-copy/chiral_connection_descent_and_double_copy.tex",
+      "old_destination": "papers/investigations-1/03_chiral_descent_and_double_copy/manuscript/chiral_connection_descent_and_double_copy.tex",
+      "new_destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/manuscript/chiral_connection_descent_and_double_copy.tex",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "double-copy/notes/algebraic_restrictions_and_generalizations.md",
+      "old_destination": "papers/investigations-1/03_chiral_descent_and_double_copy/notes/algebraic_restrictions_and_generalizations.md",
+      "new_destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/notes/algebraic_restrictions_and_generalizations.md",
+      "byte_identical": false,
+      "difference": "exact one-link folder-number replacement"
+    },
+    {
+      "source": "double-copy/notes/descent_obstruction_derivation.tex",
+      "old_destination": "papers/investigations-1/03_chiral_descent_and_double_copy/notes/descent_obstruction_derivation.tex",
+      "new_destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/notes/descent_obstruction_derivation.tex",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "double-copy/notes/double_copy_derivations.tex",
+      "old_destination": "papers/investigations-1/03_chiral_descent_and_double_copy/notes/double_copy_derivations.tex",
+      "new_destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/notes/double_copy_derivations.tex",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "double-copy/notes/twistor_transfer_derivations.tex",
+      "old_destination": "papers/investigations-1/03_chiral_descent_and_double_copy/notes/twistor_transfer_derivations.tex",
+      "new_destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/notes/twistor_transfer_derivations.tex",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "generalized-isothermal-wave-metric/general_patch_audit.md",
+      "old_destination": "papers/investigations-1/02_generalized_isothermal_coordinates/reviews/general_patch_audit.md",
+      "new_destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/reviews/general_patch_audit.md",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "generalized-isothermal-wave-metric/generalized_isothermal_wave_metrics.tex",
+      "old_destination": "papers/investigations-1/02_generalized_isothermal_coordinates/manuscript/generalized_isothermal_wave_metrics.tex",
+      "new_destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/manuscript/generalized_isothermal_wave_metrics.tex",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "generalized-isothermal-wave-metric/geometry_audit.md",
+      "old_destination": "papers/investigations-1/02_generalized_isothermal_coordinates/reviews/geometry_audit.md",
+      "new_destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/reviews/geometry_audit.md",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "generalized-isothermal-wave-metric/references_audit.md",
+      "old_destination": "papers/investigations-1/02_generalized_isothermal_coordinates/reviews/references_audit.md",
+      "new_destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/reviews/references_audit.md",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "generalized-isothermal-wave-metric/verify_wave_formulas.py",
+      "old_destination": "papers/investigations-1/02_generalized_isothermal_coordinates/numerics/verify_wave_formulas.py",
+      "new_destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/numerics/verify_wave_formulas.py",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "notes/RESEARCH_OBSTRUCTIONS_2026-11-20.md",
+      "old_destination": "papers/investigations-1/02_generalized_isothermal_coordinates/notes/RESEARCH_OBSTRUCTIONS_2026-11-20.md",
+      "new_destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/notes/RESEARCH_OBSTRUCTIONS_2026-11-20.md",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "output/pdf/generalized_isothermal_wave_metrics.pdf",
+      "old_destination": "output/pdf/02_generalized_isothermal_coordinates/generalized_isothermal_wave_metrics.pdf",
+      "new_destination": "output/pdf/01_generalized_isothermal_coordinates/generalized_isothermal_wave_metrics.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "smooth_poincare_4d/chiral_curvature_and_metric_evolution.pdf",
+      "old_destination": "output/pdf/01_chiral_metric_evolution/chiral_curvature_and_metric_evolution.pdf",
+      "new_destination": "output/pdf/01_chiral_metric_evolution/chiral_curvature_and_metric_evolution.pdf",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "smooth_poincare_4d/chiral_curvature_and_metric_evolution.tex",
+      "old_destination": "papers/investigations-1/01_chiral_metric_evolution/manuscript/chiral_curvature_and_metric_evolution.tex",
+      "new_destination": "papers/investigations-1/01_chiral_metric_evolution/manuscript/chiral_curvature_and_metric_evolution.tex",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "smooth_poincare_4d/notes/01_riemannian_s4_exploration_20261121.md",
+      "old_destination": "papers/investigations-1/01_chiral_metric_evolution/notes/01_riemannian_s4_exploration_20261121.md",
+      "new_destination": "papers/investigations-1/01_chiral_metric_evolution/notes/01_riemannian_s4_exploration_20261121.md",
+      "byte_identical": true,
+      "difference": "none"
+    },
+    {
+      "source": "smooth_poincare_4d/notes/02_riemannian_s4_metric_evolution_20261121.md",
+      "old_destination": "papers/investigations-1/01_chiral_metric_evolution/notes/02_riemannian_s4_metric_evolution_20261121.md",
+      "new_destination": "papers/investigations-1/01_chiral_metric_evolution/notes/02_riemannian_s4_metric_evolution_20261121.md",
+      "byte_identical": true,
+      "difference": "none"
+    }
+  ],
+  "all_baseline_files": [
+    {
+      "baseline": ".github/ISSUE_TEMPLATE/formalization.md",
+      "destination": ".github/ISSUE_TEMPLATE/formalization.md",
+      "moved": false,
+      "baseline_sha256": "4d02ddcb271440213d398c5ffea5e0b88346dd5bd3fba73d41cd13028c8e134b",
+      "reorganized_setup_sha256": "4d02ddcb271440213d398c5ffea5e0b88346dd5bd3fba73d41cd13028c8e134b",
+      "current_repository_sha256": "4d02ddcb271440213d398c5ffea5e0b88346dd5bd3fba73d41cd13028c8e134b",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": ".github/ISSUE_TEMPLATE/possible-error.md",
+      "destination": ".github/ISSUE_TEMPLATE/possible-error.md",
+      "moved": false,
+      "baseline_sha256": "20a7c2b9eadaa692bd8957c5a0ffa07d29d13b4abef5c56629bb13622e150570",
+      "reorganized_setup_sha256": "20a7c2b9eadaa692bd8957c5a0ffa07d29d13b4abef5c56629bb13622e150570",
+      "current_repository_sha256": "20a7c2b9eadaa692bd8957c5a0ffa07d29d13b4abef5c56629bb13622e150570",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": ".github/ISSUE_TEMPLATE/verification.md",
+      "destination": ".github/ISSUE_TEMPLATE/verification.md",
+      "moved": false,
+      "baseline_sha256": "404392aeb2c6ec364fe811d46612d11e03b3c37314286ac3831917d1d729578b",
+      "reorganized_setup_sha256": "404392aeb2c6ec364fe811d46612d11e03b3c37314286ac3831917d1d729578b",
+      "current_repository_sha256": "404392aeb2c6ec364fe811d46612d11e03b3c37314286ac3831917d1d729578b",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": ".github/pull_request_template.md",
+      "destination": ".github/pull_request_template.md",
+      "moved": false,
+      "baseline_sha256": "8ec59780016cee7e816fed917bd8fa6ed9f55c91f433fe064ee1eef141b3b0b2",
+      "reorganized_setup_sha256": "8ec59780016cee7e816fed917bd8fa6ed9f55c91f433fe064ee1eef141b3b0b2",
+      "current_repository_sha256": "8ec59780016cee7e816fed917bd8fa6ed9f55c91f433fe064ee1eef141b3b0b2",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": ".github/workflows/build-latex.yml",
+      "destination": ".github/workflows/build-latex.yml",
+      "moved": false,
+      "baseline_sha256": "40826fd2fb8649cb65c90c9da6e0ccd6448a47a783048eb85c020c65f16ea2e6",
+      "reorganized_setup_sha256": "40826fd2fb8649cb65c90c9da6e0ccd6448a47a783048eb85c020c65f16ea2e6",
+      "current_repository_sha256": "40826fd2fb8649cb65c90c9da6e0ccd6448a47a783048eb85c020c65f16ea2e6",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": ".github/workflows/check-repository.yml",
+      "destination": ".github/workflows/check-repository.yml",
+      "moved": false,
+      "baseline_sha256": "2f7a48f13e7bcd0385143ba7d86a78d65012f2104912b26ec7d99f1238fc0b80",
+      "reorganized_setup_sha256": "2f7a48f13e7bcd0385143ba7d86a78d65012f2104912b26ec7d99f1238fc0b80",
+      "current_repository_sha256": "2f7a48f13e7bcd0385143ba7d86a78d65012f2104912b26ec7d99f1238fc0b80",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": ".gitignore",
+      "destination": ".gitignore",
+      "moved": false,
+      "baseline_sha256": "6c3435ce7881bf869afddc9b536645620a06c446239a41c9d70f6fb1ae7b5e0c",
+      "reorganized_setup_sha256": "6c3435ce7881bf869afddc9b536645620a06c446239a41c9d70f6fb1ae7b5e0c",
+      "current_repository_sha256": "6c3435ce7881bf869afddc9b536645620a06c446239a41c9d70f6fb1ae7b5e0c",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "AGENTS.md",
+      "destination": "AGENTS.md",
+      "moved": false,
+      "baseline_sha256": "1e364e1e2fa3ee6d377d96f76f43bc81782d8200cd8b3ec2603c88162010ed6d",
+      "reorganized_setup_sha256": "6da55071c2312c204bed5cb716bc2cc71bf86b81034147f888918692e885997b",
+      "current_repository_sha256": "6da55071c2312c204bed5cb716bc2cc71bf86b81034147f888918692e885997b",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "CHANGELOG.md",
+      "destination": "CHANGELOG.md",
+      "moved": false,
+      "baseline_sha256": "6fb6bcb36ce7f0222df14cade30319c15bdae77d8525fdc3f90018d3659771da",
+      "reorganized_setup_sha256": "a639088e7ca02935615670c18f8a47915800ba3cb9ab8be81aea7551604eedb4",
+      "current_repository_sha256": "bb2f7810013895522656092b27feca4a4c0a9ed56d3b63f5927b9328c70e1ca0",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "CITATION.cff",
+      "destination": "CITATION.cff",
+      "moved": false,
+      "baseline_sha256": "4ea35a305b47998afb46620f328c60e95368a5b008468df823ff851357ed10fa",
+      "reorganized_setup_sha256": "4ea35a305b47998afb46620f328c60e95368a5b008468df823ff851357ed10fa",
+      "current_repository_sha256": "cd80ef7c03751a6cccdfacbc4e8e5f7dffebfc0f95be35dc7c526ba248132275",
+      "reorganized_identical": true,
+      "current_identical": false
+    },
+    {
+      "baseline": "CONTINUATION.md",
+      "destination": "CONTINUATION.md",
+      "moved": false,
+      "baseline_sha256": "30da3734344f7ddb3a39e88e45722cacee48acc7a1b2dc979059e61d6de13ead",
+      "reorganized_setup_sha256": "14c165c098c578f7d281c057fe2b75173d7fcf8a1ff8285c2cdf1b8ce34ec62d",
+      "current_repository_sha256": "14c165c098c578f7d281c057fe2b75173d7fcf8a1ff8285c2cdf1b8ce34ec62d",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "CONTRIBUTING.md",
+      "destination": "CONTRIBUTING.md",
+      "moved": false,
+      "baseline_sha256": "c8583107e9241ddcfa0f850947b0c5dbc759817ba267dd58cff22e40fadca7ac",
+      "reorganized_setup_sha256": "c8583107e9241ddcfa0f850947b0c5dbc759817ba267dd58cff22e40fadca7ac",
+      "current_repository_sha256": "c8583107e9241ddcfa0f850947b0c5dbc759817ba267dd58cff22e40fadca7ac",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "GPT_RESEARCH_MODEL_WORKFLOW.md",
+      "destination": "GPT_RESEARCH_MODEL_WORKFLOW.md",
+      "moved": false,
+      "baseline_sha256": "e62039b694fbd4032fee9c003cd07b2391c3f4007a03e2c3511dcbac9277541a",
+      "reorganized_setup_sha256": "e62039b694fbd4032fee9c003cd07b2391c3f4007a03e2c3511dcbac9277541a",
+      "current_repository_sha256": "e62039b694fbd4032fee9c003cd07b2391c3f4007a03e2c3511dcbac9277541a",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "IMPORT_MANIFEST.json",
+      "destination": "IMPORT_MANIFEST.json",
+      "moved": false,
+      "baseline_sha256": "bb037b8830783bd62926d50827878d3da665f60d367aca7c3877b0e07c503364",
+      "reorganized_setup_sha256": "284a133a307e23beb8b2e3395793aff565bb9ea375e627451a4d925b944fc8c6",
+      "current_repository_sha256": "284a133a307e23beb8b2e3395793aff565bb9ea375e627451a4d925b944fc8c6",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "INVESTIGATION_SETUP_WORKFLOW.md",
+      "destination": "INVESTIGATION_SETUP_WORKFLOW.md",
+      "moved": false,
+      "baseline_sha256": "900df6234ad43852bafb468561318d64807aff9b1d3dbe54d64a6dd137b3d123",
+      "reorganized_setup_sha256": "2507cb0ea0a7d1e29e01afc499bae08aed98f66a59f3e0b91a77f7079ce2376b",
+      "current_repository_sha256": "2507cb0ea0a7d1e29e01afc499bae08aed98f66a59f3e0b91a77f7079ce2376b",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "LARGE_FILES.md",
+      "destination": "LARGE_FILES.md",
+      "moved": false,
+      "baseline_sha256": "8f58720826df819b8b3e008bd2f357b6e7ee02139a1d252dc746608a0b8b10f0",
+      "reorganized_setup_sha256": "8f58720826df819b8b3e008bd2f357b6e7ee02139a1d252dc746608a0b8b10f0",
+      "current_repository_sha256": "8f58720826df819b8b3e008bd2f357b6e7ee02139a1d252dc746608a0b8b10f0",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "LICENSE.txt",
+      "destination": "LICENSE.txt",
+      "moved": false,
+      "baseline_sha256": "e267f53b9d81dcf07ae7f25fe4f1aea0373ee594f8828c7f36c842fab95e13dc",
+      "reorganized_setup_sha256": "e267f53b9d81dcf07ae7f25fe4f1aea0373ee594f8828c7f36c842fab95e13dc",
+      "current_repository_sha256": "e267f53b9d81dcf07ae7f25fe4f1aea0373ee594f8828c7f36c842fab95e13dc",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "MANIFEST.md",
+      "destination": "MANIFEST.md",
+      "moved": false,
+      "baseline_sha256": "2bf4dfbae15ab6b4d63a6d5091e4d311bd94f1669f379b02c69fdeeeb92cc182",
+      "reorganized_setup_sha256": "15176d4844c12304f8f5b4cad27905c75329e8af89e91d602b2e7098e0ff6223",
+      "current_repository_sha256": "a3477c3b3b55dc403d48600bec957681895fba0b833f7b055fcd63c1d63c8a6a",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "README.md",
+      "destination": "README.md",
+      "moved": false,
+      "baseline_sha256": "1555476b83eb673c1ef251c5126dfdfe974f5f3308ce38619bbeabaa3ea20f73",
+      "reorganized_setup_sha256": "666e7a1c66378070d8187d9608623919fd88c459129b0e23c746cdf3f185faf1",
+      "current_repository_sha256": "87784334f9ce5a80f9180e211888b6bb1da5620daf5bff606edc0724d7b4ce6a",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "REFERENCE_WORKFLOW.md",
+      "destination": "REFERENCE_WORKFLOW.md",
+      "moved": false,
+      "baseline_sha256": "aa50161913f3d06eaaa892c75fcd39fe05089c084a64eb88785e225c66849a0e",
+      "reorganized_setup_sha256": "aa50161913f3d06eaaa892c75fcd39fe05089c084a64eb88785e225c66849a0e",
+      "current_repository_sha256": "aa50161913f3d06eaaa892c75fcd39fe05089c084a64eb88785e225c66849a0e",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "RELEASING.md",
+      "destination": "RELEASING.md",
+      "moved": false,
+      "baseline_sha256": "576bc767dc959b271fe1aeae6773f9578454a1e8e86a57bbebad3933d56fed98",
+      "reorganized_setup_sha256": "576bc767dc959b271fe1aeae6773f9578454a1e8e86a57bbebad3933d56fed98",
+      "current_repository_sha256": "576bc767dc959b271fe1aeae6773f9578454a1e8e86a57bbebad3933d56fed98",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "SETUP_STATUS.md",
+      "destination": "SETUP_STATUS.md",
+      "moved": false,
+      "baseline_sha256": "e3f33214dd3e667b003672842dc43e38673d702e5bfb430d2354cc075a76d235",
+      "reorganized_setup_sha256": "e3f33214dd3e667b003672842dc43e38673d702e5bfb430d2354cc075a76d235",
+      "current_repository_sha256": "2470b8cd0089bff5233ba1326f8e1a70fc70abf4fc71902543b7db81088a70d3",
+      "reorganized_identical": true,
+      "current_identical": false
+    },
+    {
+      "baseline": "chat-histories/README.md",
+      "destination": "chat-histories/README.md",
+      "moved": false,
+      "baseline_sha256": "ceda60fe10ab1b4a8e6082ca035c111cc068603f534d66b3d02c398110e758d9",
+      "reorganized_setup_sha256": "ceda60fe10ab1b4a8e6082ca035c111cc068603f534d66b3d02c398110e758d9",
+      "current_repository_sha256": "ceda60fe10ab1b4a8e6082ca035c111cc068603f534d66b3d02c398110e758d9",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "chat-histories/UNREGISTERED_PARTIAL_SETUP_20261121.md",
+      "destination": "chat-histories/UNREGISTERED_PARTIAL_SETUP_20261121.md",
+      "moved": false,
+      "baseline_sha256": "ddcb581dcf9490e1357cc46cc0e636417cba649897d033a8a866427285c4b6a1",
+      "reorganized_setup_sha256": "ddcb581dcf9490e1357cc46cc0e636417cba649897d033a8a866427285c4b6a1",
+      "current_repository_sha256": "ddcb581dcf9490e1357cc46cc0e636417cba649897d033a8a866427285c4b6a1",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "output/pdf/01_chiral_metric_evolution/chiral_curvature_and_metric_evolution.pdf",
+      "destination": "output/pdf/01_chiral_metric_evolution/chiral_curvature_and_metric_evolution.pdf",
+      "moved": false,
+      "baseline_sha256": "ce23735faab87199d20f10a4c7b7db24ee0e3a7267570324a1b3b8101c575e8f",
+      "reorganized_setup_sha256": "ce23735faab87199d20f10a4c7b7db24ee0e3a7267570324a1b3b8101c575e8f",
+      "current_repository_sha256": "ce23735faab87199d20f10a4c7b7db24ee0e3a7267570324a1b3b8101c575e8f",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "output/pdf/02_generalized_isothermal_coordinates/generalized_isothermal_wave_metrics.pdf",
+      "destination": "output/pdf/01_generalized_isothermal_coordinates/generalized_isothermal_wave_metrics.pdf",
+      "moved": true,
+      "baseline_sha256": "3a992cb916bc8d0526d48188715035d2871141fdeb98f6760b25596bfee0f5e5",
+      "reorganized_setup_sha256": "3a992cb916bc8d0526d48188715035d2871141fdeb98f6760b25596bfee0f5e5",
+      "current_repository_sha256": "3a992cb916bc8d0526d48188715035d2871141fdeb98f6760b25596bfee0f5e5",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "output/pdf/03_chiral_descent_and_double_copy/chiral_connection_descent_and_double_copy.pdf",
+      "destination": "output/pdf/02_chiral_descent_and_double_copy/chiral_connection_descent_and_double_copy.pdf",
+      "moved": true,
+      "baseline_sha256": "d41d64e16cb2e8cfeeefb5488f489b8db4b64ef581043ec8215388d559930848",
+      "reorganized_setup_sha256": "d41d64e16cb2e8cfeeefb5488f489b8db4b64ef581043ec8215388d559930848",
+      "current_repository_sha256": "d41d64e16cb2e8cfeeefb5488f489b8db4b64ef581043ec8215388d559930848",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/README.md",
+      "destination": "papers/README.md",
+      "moved": false,
+      "baseline_sha256": "3895b780a098cc7fa73454498906feddb45eb4dc2a29bf199eb2ce55d80bc493",
+      "reorganized_setup_sha256": "ba92a29c30e40a3184863627cabbbe2ce6baeafda1871b6d6c335311fa011da3",
+      "current_repository_sha256": "ba92a29c30e40a3184863627cabbbe2ce6baeafda1871b6d6c335311fa011da3",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "papers/investigations-1/01_chiral_metric_evolution/DRAFT_HISTORY.md",
+      "destination": "papers/investigations-1/01_chiral_metric_evolution/DRAFT_HISTORY.md",
+      "moved": false,
+      "baseline_sha256": "e462c206a6696e8f66831ca9b856df98bc4a581ffc5dd9d149cdfe0021f24e80",
+      "reorganized_setup_sha256": "e462c206a6696e8f66831ca9b856df98bc4a581ffc5dd9d149cdfe0021f24e80",
+      "current_repository_sha256": "e462c206a6696e8f66831ca9b856df98bc4a581ffc5dd9d149cdfe0021f24e80",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/01_chiral_metric_evolution/README.md",
+      "destination": "papers/investigations-1/01_chiral_metric_evolution/README.md",
+      "moved": false,
+      "baseline_sha256": "4098a2a812586967738af8712f3957ebf23caf0bf68a77d823156100c7aa853d",
+      "reorganized_setup_sha256": "4098a2a812586967738af8712f3957ebf23caf0bf68a77d823156100c7aa853d",
+      "current_repository_sha256": "4098a2a812586967738af8712f3957ebf23caf0bf68a77d823156100c7aa853d",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/01_chiral_metric_evolution/brainstorm/README.md",
+      "destination": "papers/investigations-1/01_chiral_metric_evolution/brainstorm/README.md",
+      "moved": false,
+      "baseline_sha256": "20bb4329d24f6e5a9c2865afa7af448c4243b8f9b8de22a884d153d87a3321e1",
+      "reorganized_setup_sha256": "20bb4329d24f6e5a9c2865afa7af448c4243b8f9b8de22a884d153d87a3321e1",
+      "current_repository_sha256": "20bb4329d24f6e5a9c2865afa7af448c4243b8f9b8de22a884d153d87a3321e1",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/01_chiral_metric_evolution/brainstorm/explanations/README.md",
+      "destination": "papers/investigations-1/01_chiral_metric_evolution/brainstorm/explanations/README.md",
+      "moved": false,
+      "baseline_sha256": "787f29ca938e4f11233748caf7ac593e07a53a9703f50aa08347ae50d8af8dd3",
+      "reorganized_setup_sha256": "787f29ca938e4f11233748caf7ac593e07a53a9703f50aa08347ae50d8af8dd3",
+      "current_repository_sha256": "787f29ca938e4f11233748caf7ac593e07a53a9703f50aa08347ae50d8af8dd3",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/01_chiral_metric_evolution/brainstorm/notes/README.md",
+      "destination": "papers/investigations-1/01_chiral_metric_evolution/brainstorm/notes/README.md",
+      "moved": false,
+      "baseline_sha256": "d315b6efc572acffca51cfe8f73c0883877f85f68070688893207d25d4b6c524",
+      "reorganized_setup_sha256": "d315b6efc572acffca51cfe8f73c0883877f85f68070688893207d25d4b6c524",
+      "current_repository_sha256": "d315b6efc572acffca51cfe8f73c0883877f85f68070688893207d25d4b6c524",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/01_chiral_metric_evolution/chat-histories/README.md",
+      "destination": "papers/investigations-1/01_chiral_metric_evolution/chat-histories/README.md",
+      "moved": false,
+      "baseline_sha256": "3f1202374370fa8464396ffbc56396e4e52a6b544cd6c9bbe3505f75a1535f4a",
+      "reorganized_setup_sha256": "3f1202374370fa8464396ffbc56396e4e52a6b544cd6c9bbe3505f75a1535f4a",
+      "current_repository_sha256": "3f1202374370fa8464396ffbc56396e4e52a6b544cd6c9bbe3505f75a1535f4a",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/01_chiral_metric_evolution/continuation-notes/CONTINUATION.md",
+      "destination": "papers/investigations-1/01_chiral_metric_evolution/continuation-notes/CONTINUATION.md",
+      "moved": false,
+      "baseline_sha256": "d00b81d47043e5c960d633014be7c89a92bfc2a728dc9c72eaca257252a840b9",
+      "reorganized_setup_sha256": "d00b81d47043e5c960d633014be7c89a92bfc2a728dc9c72eaca257252a840b9",
+      "current_repository_sha256": "55e91ad0f257ea4b19485c8a7df5811370febba2cd30230a93dd8cedf7394292",
+      "reorganized_identical": true,
+      "current_identical": false
+    },
+    {
+      "baseline": "papers/investigations-1/01_chiral_metric_evolution/manuscript/README.md",
+      "destination": "papers/investigations-1/01_chiral_metric_evolution/manuscript/README.md",
+      "moved": false,
+      "baseline_sha256": "911e1afc90285e40517b8b47b5bcb44ff337500e590f4cf6c2a28b0d419c0522",
+      "reorganized_setup_sha256": "911e1afc90285e40517b8b47b5bcb44ff337500e590f4cf6c2a28b0d419c0522",
+      "current_repository_sha256": "911e1afc90285e40517b8b47b5bcb44ff337500e590f4cf6c2a28b0d419c0522",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/01_chiral_metric_evolution/manuscript/chiral_curvature_and_metric_evolution.tex",
+      "destination": "papers/investigations-1/01_chiral_metric_evolution/manuscript/chiral_curvature_and_metric_evolution.tex",
+      "moved": false,
+      "baseline_sha256": "330b9faa2bb228684cec8c186eba1fe5f6f87d9e84a1cb19e094b2994f4a019a",
+      "reorganized_setup_sha256": "330b9faa2bb228684cec8c186eba1fe5f6f87d9e84a1cb19e094b2994f4a019a",
+      "current_repository_sha256": "330b9faa2bb228684cec8c186eba1fe5f6f87d9e84a1cb19e094b2994f4a019a",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/01_chiral_metric_evolution/notes/01_riemannian_s4_exploration_20261121.md",
+      "destination": "papers/investigations-1/01_chiral_metric_evolution/notes/01_riemannian_s4_exploration_20261121.md",
+      "moved": false,
+      "baseline_sha256": "472aa87038d7c6060ca6431c6b166b54110ed77005155eeb0094d131d7e6e416",
+      "reorganized_setup_sha256": "472aa87038d7c6060ca6431c6b166b54110ed77005155eeb0094d131d7e6e416",
+      "current_repository_sha256": "472aa87038d7c6060ca6431c6b166b54110ed77005155eeb0094d131d7e6e416",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/01_chiral_metric_evolution/notes/02_riemannian_s4_metric_evolution_20261121.md",
+      "destination": "papers/investigations-1/01_chiral_metric_evolution/notes/02_riemannian_s4_metric_evolution_20261121.md",
+      "moved": false,
+      "baseline_sha256": "fca4cad10ee49b497628932e7ee1b150bfe4e701a3422b6e3b1f2e764cd16347",
+      "reorganized_setup_sha256": "fca4cad10ee49b497628932e7ee1b150bfe4e701a3422b6e3b1f2e764cd16347",
+      "current_repository_sha256": "fca4cad10ee49b497628932e7ee1b150bfe4e701a3422b6e3b1f2e764cd16347",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/01_chiral_metric_evolution/notes/README.md",
+      "destination": "papers/investigations-1/01_chiral_metric_evolution/notes/README.md",
+      "moved": false,
+      "baseline_sha256": "f88c2a05896026b452b7a6eab52af3c02843ddd1d3f59ae166c8607affb6fcb9",
+      "reorganized_setup_sha256": "f88c2a05896026b452b7a6eab52af3c02843ddd1d3f59ae166c8607affb6fcb9",
+      "current_repository_sha256": "f88c2a05896026b452b7a6eab52af3c02843ddd1d3f59ae166c8607affb6fcb9",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/01_chiral_metric_evolution/numerics/README.md",
+      "destination": "papers/investigations-1/01_chiral_metric_evolution/numerics/README.md",
+      "moved": false,
+      "baseline_sha256": "9ff0265cb7ed29fa3903075d2fc0c47aea8d90a1a281659d2f453679742d816b",
+      "reorganized_setup_sha256": "9ff0265cb7ed29fa3903075d2fc0c47aea8d90a1a281659d2f453679742d816b",
+      "current_repository_sha256": "9ff0265cb7ed29fa3903075d2fc0c47aea8d90a1a281659d2f453679742d816b",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/01_chiral_metric_evolution/references/README.md",
+      "destination": "papers/investigations-1/01_chiral_metric_evolution/references/README.md",
+      "moved": false,
+      "baseline_sha256": "e89faa5665f15c5ffb8ced7c4bc0052f8fc943eca8bcf80cf29d38838c5687b1",
+      "reorganized_setup_sha256": "e89faa5665f15c5ffb8ced7c4bc0052f8fc943eca8bcf80cf29d38838c5687b1",
+      "current_repository_sha256": "e89faa5665f15c5ffb8ced7c4bc0052f8fc943eca8bcf80cf29d38838c5687b1",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/01_chiral_metric_evolution/research-overview/OVERVIEW.md",
+      "destination": "papers/investigations-1/01_chiral_metric_evolution/research-overview/OVERVIEW.md",
+      "moved": false,
+      "baseline_sha256": "4e67f25ca2a59ffab29ec602604860c615a0808f671f745ffb30c5f5dd57f640",
+      "reorganized_setup_sha256": "4e67f25ca2a59ffab29ec602604860c615a0808f671f745ffb30c5f5dd57f640",
+      "current_repository_sha256": "4e67f25ca2a59ffab29ec602604860c615a0808f671f745ffb30c5f5dd57f640",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/01_chiral_metric_evolution/research-plan/PLAN.md",
+      "destination": "papers/investigations-1/01_chiral_metric_evolution/research-plan/PLAN.md",
+      "moved": false,
+      "baseline_sha256": "d3d95c45fc455885cd3df24baaea73d16d426dd992bed9874ca5d53f4b292e0b",
+      "reorganized_setup_sha256": "0dc293cc5356ab3462608c0f60511c7d8bdf9ab91e150f93c7a3328a1d07ccfe",
+      "current_repository_sha256": "0dc293cc5356ab3462608c0f60511c7d8bdf9ab91e150f93c7a3328a1d07ccfe",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "papers/investigations-1/01_chiral_metric_evolution/research-progress/REGISTER.md",
+      "destination": "papers/investigations-1/01_chiral_metric_evolution/research-progress/REGISTER.md",
+      "moved": false,
+      "baseline_sha256": "2e40701af5407deac78a216f5ee23122decbd6dfa1e07cf6fac7f5de54d19735",
+      "reorganized_setup_sha256": "2e40701af5407deac78a216f5ee23122decbd6dfa1e07cf6fac7f5de54d19735",
+      "current_repository_sha256": "2e40701af5407deac78a216f5ee23122decbd6dfa1e07cf6fac7f5de54d19735",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/01_chiral_metric_evolution/research-progress/handoffs/README.md",
+      "destination": "papers/investigations-1/01_chiral_metric_evolution/research-progress/handoffs/README.md",
+      "moved": false,
+      "baseline_sha256": "2c0b6414aadefb40a1f28ac3eb072c8f83ed9562effd60bbc8bfd360a038c575",
+      "reorganized_setup_sha256": "2c0b6414aadefb40a1f28ac3eb072c8f83ed9562effd60bbc8bfd360a038c575",
+      "current_repository_sha256": "2c0b6414aadefb40a1f28ac3eb072c8f83ed9562effd60bbc8bfd360a038c575",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/01_chiral_metric_evolution/reviews/README.md",
+      "destination": "papers/investigations-1/01_chiral_metric_evolution/reviews/README.md",
+      "moved": false,
+      "baseline_sha256": "6af16d5c99d09dcb3f76a44b9b81bc696b4d15acf7f7869f55c48694538ba356",
+      "reorganized_setup_sha256": "6af16d5c99d09dcb3f76a44b9b81bc696b4d15acf7f7869f55c48694538ba356",
+      "current_repository_sha256": "6af16d5c99d09dcb3f76a44b9b81bc696b4d15acf7f7869f55c48694538ba356",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/DRAFT_HISTORY.md",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/DRAFT_HISTORY.md",
+      "moved": true,
+      "baseline_sha256": "4b56e31256a39df7159b6d826cb478f6b780041627d800762a1d93b16e34430d",
+      "reorganized_setup_sha256": "dd0ddbbf0300c997e19e875d36d98821818fffbae5b8be94b334f7a7920c3890",
+      "current_repository_sha256": "dd0ddbbf0300c997e19e875d36d98821818fffbae5b8be94b334f7a7920c3890",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/README.md",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/README.md",
+      "moved": true,
+      "baseline_sha256": "0a13c6b6740dddb4f46fd78ffd069a16e04ae515a1b8c645d0daeac87774ce48",
+      "reorganized_setup_sha256": "4e2402c77b752bf63242a474a574d7a764ef817e9a64ea4c7c1bebf6ff2c090a",
+      "current_repository_sha256": "4e2402c77b752bf63242a474a574d7a764ef817e9a64ea4c7c1bebf6ff2c090a",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/brainstorm/README.md",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/brainstorm/README.md",
+      "moved": true,
+      "baseline_sha256": "fbf47b829d8588af5ea93158c90a3770ce58350d2dd244e0116f174bc115a175",
+      "reorganized_setup_sha256": "fbf47b829d8588af5ea93158c90a3770ce58350d2dd244e0116f174bc115a175",
+      "current_repository_sha256": "fbf47b829d8588af5ea93158c90a3770ce58350d2dd244e0116f174bc115a175",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/brainstorm/explanations/README.md",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/brainstorm/explanations/README.md",
+      "moved": true,
+      "baseline_sha256": "787f29ca938e4f11233748caf7ac593e07a53a9703f50aa08347ae50d8af8dd3",
+      "reorganized_setup_sha256": "787f29ca938e4f11233748caf7ac593e07a53a9703f50aa08347ae50d8af8dd3",
+      "current_repository_sha256": "787f29ca938e4f11233748caf7ac593e07a53a9703f50aa08347ae50d8af8dd3",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/brainstorm/notes/README.md",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/brainstorm/notes/README.md",
+      "moved": true,
+      "baseline_sha256": "d315b6efc572acffca51cfe8f73c0883877f85f68070688893207d25d4b6c524",
+      "reorganized_setup_sha256": "d315b6efc572acffca51cfe8f73c0883877f85f68070688893207d25d4b6c524",
+      "current_repository_sha256": "d315b6efc572acffca51cfe8f73c0883877f85f68070688893207d25d4b6c524",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/chat-histories/README.md",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/chat-histories/README.md",
+      "moved": true,
+      "baseline_sha256": "3f1202374370fa8464396ffbc56396e4e52a6b544cd6c9bbe3505f75a1535f4a",
+      "reorganized_setup_sha256": "3f1202374370fa8464396ffbc56396e4e52a6b544cd6c9bbe3505f75a1535f4a",
+      "current_repository_sha256": "3f1202374370fa8464396ffbc56396e4e52a6b544cd6c9bbe3505f75a1535f4a",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/continuation-notes/CONTINUATION.md",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/continuation-notes/CONTINUATION.md",
+      "moved": true,
+      "baseline_sha256": "5f9cbc1830f56c6bb20d8412045314c669f5377bf22b25f4b2c7081642aca9cc",
+      "reorganized_setup_sha256": "20eba148db55842084f6f11641dac1b2aca2d6b6fecdd2180acef507288a9b12",
+      "current_repository_sha256": "c998241c66fd2c2cd9eadefcdf893e1bd3c196224483f8535be4d425d9a5925f",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/manuscript/README.md",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/manuscript/README.md",
+      "moved": true,
+      "baseline_sha256": "66fabae7749aa2dfae7ea6d49ca0aa2688fedd7448c93aa86eb5d016f2fad4bd",
+      "reorganized_setup_sha256": "8be7ad1b389368b6690d5c4b1ed9b289b497e2ed41494d3faed9bb85c88c4f32",
+      "current_repository_sha256": "8be7ad1b389368b6690d5c4b1ed9b289b497e2ed41494d3faed9bb85c88c4f32",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/manuscript/generalized_isothermal_wave_metrics.tex",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/manuscript/generalized_isothermal_wave_metrics.tex",
+      "moved": true,
+      "baseline_sha256": "493d81a7e8007aa0963e0ea9f5f1534e0073b7fc81da8268076c7a4d52902f7d",
+      "reorganized_setup_sha256": "493d81a7e8007aa0963e0ea9f5f1534e0073b7fc81da8268076c7a4d52902f7d",
+      "current_repository_sha256": "493d81a7e8007aa0963e0ea9f5f1534e0073b7fc81da8268076c7a4d52902f7d",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/notes/README.md",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/notes/README.md",
+      "moved": true,
+      "baseline_sha256": "833afa171e177c4cc50961cc26963caff622d533c5305a5902d238dd0d419e61",
+      "reorganized_setup_sha256": "833afa171e177c4cc50961cc26963caff622d533c5305a5902d238dd0d419e61",
+      "current_repository_sha256": "833afa171e177c4cc50961cc26963caff622d533c5305a5902d238dd0d419e61",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/notes/RESEARCH_OBSTRUCTIONS_2026-11-20.md",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/notes/RESEARCH_OBSTRUCTIONS_2026-11-20.md",
+      "moved": true,
+      "baseline_sha256": "2be900827f46ceb4c0b496f9a632c544b1a75a969a6ec1f1b849752395dbf71f",
+      "reorganized_setup_sha256": "2be900827f46ceb4c0b496f9a632c544b1a75a969a6ec1f1b849752395dbf71f",
+      "current_repository_sha256": "2be900827f46ceb4c0b496f9a632c544b1a75a969a6ec1f1b849752395dbf71f",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/numerics/README.md",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/numerics/README.md",
+      "moved": true,
+      "baseline_sha256": "9ff0265cb7ed29fa3903075d2fc0c47aea8d90a1a281659d2f453679742d816b",
+      "reorganized_setup_sha256": "9ff0265cb7ed29fa3903075d2fc0c47aea8d90a1a281659d2f453679742d816b",
+      "current_repository_sha256": "9ff0265cb7ed29fa3903075d2fc0c47aea8d90a1a281659d2f453679742d816b",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/numerics/verify_wave_formulas.py",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/numerics/verify_wave_formulas.py",
+      "moved": true,
+      "baseline_sha256": "6f3882ad8738d0bbafd37aa390b41db0017907dd52738ff147597769444eb066",
+      "reorganized_setup_sha256": "6f3882ad8738d0bbafd37aa390b41db0017907dd52738ff147597769444eb066",
+      "current_repository_sha256": "6f3882ad8738d0bbafd37aa390b41db0017907dd52738ff147597769444eb066",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/references/README.md",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/references/README.md",
+      "moved": true,
+      "baseline_sha256": "e89faa5665f15c5ffb8ced7c4bc0052f8fc943eca8bcf80cf29d38838c5687b1",
+      "reorganized_setup_sha256": "e89faa5665f15c5ffb8ced7c4bc0052f8fc943eca8bcf80cf29d38838c5687b1",
+      "current_repository_sha256": "e89faa5665f15c5ffb8ced7c4bc0052f8fc943eca8bcf80cf29d38838c5687b1",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/research-overview/OVERVIEW.md",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/research-overview/OVERVIEW.md",
+      "moved": true,
+      "baseline_sha256": "77322238c8067b270c3e1312b657957a88a0db9f6f2a9dec5756110cddf626d7",
+      "reorganized_setup_sha256": "2e3ffd4b5a9d7b23d3b323f14ae58f7ba6e74f51b5a78c96499d3fc018982842",
+      "current_repository_sha256": "2e3ffd4b5a9d7b23d3b323f14ae58f7ba6e74f51b5a78c96499d3fc018982842",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/research-plan/PLAN.md",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/research-plan/PLAN.md",
+      "moved": true,
+      "baseline_sha256": "20fde96fc0c17de76266d413d6a02ab7082363f8d0bac5b4a3ba59f5a4fd6746",
+      "reorganized_setup_sha256": "c3c2c97744d52a43bb56eb9ec9ea00e7bd6168cefe815948f4d301e112531299",
+      "current_repository_sha256": "c3c2c97744d52a43bb56eb9ec9ea00e7bd6168cefe815948f4d301e112531299",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/research-progress/REGISTER.md",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/research-progress/REGISTER.md",
+      "moved": true,
+      "baseline_sha256": "d051f80b91eed38d26f813e8d30b4186ea0c35c2d0c65bbaf687bf938155fcd4",
+      "reorganized_setup_sha256": "f442343e83b458afc392d59aa3f50ce556f2527610c0a8f927e9ef2f0624334c",
+      "current_repository_sha256": "f442343e83b458afc392d59aa3f50ce556f2527610c0a8f927e9ef2f0624334c",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/research-progress/handoffs/README.md",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/research-progress/handoffs/README.md",
+      "moved": true,
+      "baseline_sha256": "4b1bd292a700d2013a0572bdc55989b76780e53c21af50ae93bcd9a5324b50df",
+      "reorganized_setup_sha256": "4b1bd292a700d2013a0572bdc55989b76780e53c21af50ae93bcd9a5324b50df",
+      "current_repository_sha256": "4b1bd292a700d2013a0572bdc55989b76780e53c21af50ae93bcd9a5324b50df",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/reviews/README.md",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/reviews/README.md",
+      "moved": true,
+      "baseline_sha256": "6af16d5c99d09dcb3f76a44b9b81bc696b4d15acf7f7869f55c48694538ba356",
+      "reorganized_setup_sha256": "6af16d5c99d09dcb3f76a44b9b81bc696b4d15acf7f7869f55c48694538ba356",
+      "current_repository_sha256": "6af16d5c99d09dcb3f76a44b9b81bc696b4d15acf7f7869f55c48694538ba356",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/reviews/general_patch_audit.md",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/reviews/general_patch_audit.md",
+      "moved": true,
+      "baseline_sha256": "433812a72bff8e112ebaaa89d3ce9d89cfef1fdfeda4e9c494725b81668175a2",
+      "reorganized_setup_sha256": "433812a72bff8e112ebaaa89d3ce9d89cfef1fdfeda4e9c494725b81668175a2",
+      "current_repository_sha256": "433812a72bff8e112ebaaa89d3ce9d89cfef1fdfeda4e9c494725b81668175a2",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/reviews/geometry_audit.md",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/reviews/geometry_audit.md",
+      "moved": true,
+      "baseline_sha256": "64fd5fd22083622b55577efa00d5792f79d8480de5fdfa0dc846925eb8ad9eff",
+      "reorganized_setup_sha256": "64fd5fd22083622b55577efa00d5792f79d8480de5fdfa0dc846925eb8ad9eff",
+      "current_repository_sha256": "64fd5fd22083622b55577efa00d5792f79d8480de5fdfa0dc846925eb8ad9eff",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/02_generalized_isothermal_coordinates/reviews/references_audit.md",
+      "destination": "papers/initial-investigations/01_generalized_isothermal_coordinates/reviews/references_audit.md",
+      "moved": true,
+      "baseline_sha256": "5132fdffae44a476ce0d76237f90d1de2c471ff0f5e825d7ec783c664d48a02f",
+      "reorganized_setup_sha256": "5132fdffae44a476ce0d76237f90d1de2c471ff0f5e825d7ec783c664d48a02f",
+      "current_repository_sha256": "5132fdffae44a476ce0d76237f90d1de2c471ff0f5e825d7ec783c664d48a02f",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/DRAFT_HISTORY.md",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/DRAFT_HISTORY.md",
+      "moved": true,
+      "baseline_sha256": "5cbd1b96d520202c3c55b8fe9621f19414a1793d0d16706e5f4844d1fd4fef71",
+      "reorganized_setup_sha256": "dc080ed3844566d34dd0b7eae5d20e978f151a756820a4794d087bc014bbe1eb",
+      "current_repository_sha256": "dc080ed3844566d34dd0b7eae5d20e978f151a756820a4794d087bc014bbe1eb",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/README.md",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/README.md",
+      "moved": true,
+      "baseline_sha256": "264063a81ef763da38bef1887493ce83021fd6b5369594e89eedd4396e8a3794",
+      "reorganized_setup_sha256": "762c51a44fa52d48ed134839aac26ab788f382c7dd8d746e11164d19783292a6",
+      "current_repository_sha256": "762c51a44fa52d48ed134839aac26ab788f382c7dd8d746e11164d19783292a6",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/brainstorm/README.md",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/brainstorm/README.md",
+      "moved": true,
+      "baseline_sha256": "47cb003a2b4def7affe524dc1234c108db7ad098b706ea3d6dd5882738c5244c",
+      "reorganized_setup_sha256": "47cb003a2b4def7affe524dc1234c108db7ad098b706ea3d6dd5882738c5244c",
+      "current_repository_sha256": "47cb003a2b4def7affe524dc1234c108db7ad098b706ea3d6dd5882738c5244c",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/brainstorm/explanations/README.md",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/brainstorm/explanations/README.md",
+      "moved": true,
+      "baseline_sha256": "787f29ca938e4f11233748caf7ac593e07a53a9703f50aa08347ae50d8af8dd3",
+      "reorganized_setup_sha256": "787f29ca938e4f11233748caf7ac593e07a53a9703f50aa08347ae50d8af8dd3",
+      "current_repository_sha256": "787f29ca938e4f11233748caf7ac593e07a53a9703f50aa08347ae50d8af8dd3",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/brainstorm/notes/README.md",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/brainstorm/notes/README.md",
+      "moved": true,
+      "baseline_sha256": "d315b6efc572acffca51cfe8f73c0883877f85f68070688893207d25d4b6c524",
+      "reorganized_setup_sha256": "d315b6efc572acffca51cfe8f73c0883877f85f68070688893207d25d4b6c524",
+      "current_repository_sha256": "d315b6efc572acffca51cfe8f73c0883877f85f68070688893207d25d4b6c524",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/chat-histories/README.md",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/chat-histories/README.md",
+      "moved": true,
+      "baseline_sha256": "3f1202374370fa8464396ffbc56396e4e52a6b544cd6c9bbe3505f75a1535f4a",
+      "reorganized_setup_sha256": "3f1202374370fa8464396ffbc56396e4e52a6b544cd6c9bbe3505f75a1535f4a",
+      "current_repository_sha256": "3f1202374370fa8464396ffbc56396e4e52a6b544cd6c9bbe3505f75a1535f4a",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/continuation-notes/CONTINUATION.md",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/continuation-notes/CONTINUATION.md",
+      "moved": true,
+      "baseline_sha256": "fcb1f97b8a289ac86e7d7be4feb7dd3f8c67c461458c6d90815f5d24cbc5cf8c",
+      "reorganized_setup_sha256": "b65cbcaf4e86c9d03ac2728384f6ea6fd6c5ba9543e942894df193ec827f5cea",
+      "current_repository_sha256": "a56a6b763070318b6c4e1688ac5a388dae2448b1da40f9b7729da6dce54ed2ab",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/manuscript/README.md",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/manuscript/README.md",
+      "moved": true,
+      "baseline_sha256": "3226736e0a59fd39bad7e1d430bdc4fdbec990e43bcd008205d7a9ea4a38fc16",
+      "reorganized_setup_sha256": "354474e0ae0491534e41d6868402459fbbcefc2c35d53927cc99c30057fec789",
+      "current_repository_sha256": "354474e0ae0491534e41d6868402459fbbcefc2c35d53927cc99c30057fec789",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/manuscript/chiral_connection_descent_and_double_copy.tex",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/manuscript/chiral_connection_descent_and_double_copy.tex",
+      "moved": true,
+      "baseline_sha256": "cda9e01bbc2eee5d088409b1db7d08ab0f5a0dca99daf6d8dd076c8100686651",
+      "reorganized_setup_sha256": "cda9e01bbc2eee5d088409b1db7d08ab0f5a0dca99daf6d8dd076c8100686651",
+      "current_repository_sha256": "cda9e01bbc2eee5d088409b1db7d08ab0f5a0dca99daf6d8dd076c8100686651",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/notes/README.md",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/notes/README.md",
+      "moved": true,
+      "baseline_sha256": "cce356b1d7fd4bf873f44326f6c80fc7b89b483463e6e87c95f03ce481253f72",
+      "reorganized_setup_sha256": "cce356b1d7fd4bf873f44326f6c80fc7b89b483463e6e87c95f03ce481253f72",
+      "current_repository_sha256": "cce356b1d7fd4bf873f44326f6c80fc7b89b483463e6e87c95f03ce481253f72",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/notes/algebraic_restrictions_and_generalizations.md",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/notes/algebraic_restrictions_and_generalizations.md",
+      "moved": true,
+      "baseline_sha256": "f3beecf1a8e1434ce9cb508fa99ed7853241d2147d07f3c96174fd94d2a7e654",
+      "reorganized_setup_sha256": "5a803b0a83c59f47f2ffa2fc10055c0746cca65bbffb14c2355c875ae04a10d9",
+      "current_repository_sha256": "5a803b0a83c59f47f2ffa2fc10055c0746cca65bbffb14c2355c875ae04a10d9",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/notes/descent_obstruction_derivation.tex",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/notes/descent_obstruction_derivation.tex",
+      "moved": true,
+      "baseline_sha256": "55684f15548aeaaaf5f6fd45b3ac8adbebc2403567892261ac760831784b2bde",
+      "reorganized_setup_sha256": "55684f15548aeaaaf5f6fd45b3ac8adbebc2403567892261ac760831784b2bde",
+      "current_repository_sha256": "55684f15548aeaaaf5f6fd45b3ac8adbebc2403567892261ac760831784b2bde",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/notes/double_copy_derivations.tex",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/notes/double_copy_derivations.tex",
+      "moved": true,
+      "baseline_sha256": "20bf551d9e4f94eec822215ad5d1ff93adbb92fe69020828341ff975278c24e7",
+      "reorganized_setup_sha256": "20bf551d9e4f94eec822215ad5d1ff93adbb92fe69020828341ff975278c24e7",
+      "current_repository_sha256": "20bf551d9e4f94eec822215ad5d1ff93adbb92fe69020828341ff975278c24e7",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/notes/twistor_transfer_derivations.tex",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/notes/twistor_transfer_derivations.tex",
+      "moved": true,
+      "baseline_sha256": "dbdd47bfbdd70bfa7516ed3b1ba91b9911f496fd333a40bfe14e2729aa19cde0",
+      "reorganized_setup_sha256": "dbdd47bfbdd70bfa7516ed3b1ba91b9911f496fd333a40bfe14e2729aa19cde0",
+      "current_repository_sha256": "dbdd47bfbdd70bfa7516ed3b1ba91b9911f496fd333a40bfe14e2729aa19cde0",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/numerics/README.md",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/numerics/README.md",
+      "moved": true,
+      "baseline_sha256": "9ff0265cb7ed29fa3903075d2fc0c47aea8d90a1a281659d2f453679742d816b",
+      "reorganized_setup_sha256": "9ff0265cb7ed29fa3903075d2fc0c47aea8d90a1a281659d2f453679742d816b",
+      "current_repository_sha256": "9ff0265cb7ed29fa3903075d2fc0c47aea8d90a1a281659d2f453679742d816b",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/references/README.md",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/references/README.md",
+      "moved": true,
+      "baseline_sha256": "e89faa5665f15c5ffb8ced7c4bc0052f8fc943eca8bcf80cf29d38838c5687b1",
+      "reorganized_setup_sha256": "e89faa5665f15c5ffb8ced7c4bc0052f8fc943eca8bcf80cf29d38838c5687b1",
+      "current_repository_sha256": "e89faa5665f15c5ffb8ced7c4bc0052f8fc943eca8bcf80cf29d38838c5687b1",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/research-overview/OVERVIEW.md",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/research-overview/OVERVIEW.md",
+      "moved": true,
+      "baseline_sha256": "713ef935c38cc5a9bb435e1208bbcb611fc85326c07bfc911677fc9426967594",
+      "reorganized_setup_sha256": "bb45204b3b6640ebda4ef85be620f7c6a5a1c8a198788092c85a4fa573096939",
+      "current_repository_sha256": "bb45204b3b6640ebda4ef85be620f7c6a5a1c8a198788092c85a4fa573096939",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/research-plan/PLAN.md",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/research-plan/PLAN.md",
+      "moved": true,
+      "baseline_sha256": "7bff3a1e4a03102fd7f15d8e21bafdf92bc792818bc9d96ba165a409ecfb15ec",
+      "reorganized_setup_sha256": "a6b36e350a30343373833d18bfd7b464d0d3388e26361b1b49c7017b686e98d5",
+      "current_repository_sha256": "a6b36e350a30343373833d18bfd7b464d0d3388e26361b1b49c7017b686e98d5",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/research-progress/REGISTER.md",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/research-progress/REGISTER.md",
+      "moved": true,
+      "baseline_sha256": "117c8ccd31012c907866c1be793d46cc210f33f0df0976943762744031cf357b",
+      "reorganized_setup_sha256": "f46a367e814638fc214620bd5fdf7de6098c84f2e59e20083eb6e6cb274d7a8b",
+      "current_repository_sha256": "f46a367e814638fc214620bd5fdf7de6098c84f2e59e20083eb6e6cb274d7a8b",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/research-progress/handoffs/README.md",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/research-progress/handoffs/README.md",
+      "moved": true,
+      "baseline_sha256": "73314bf3dcfee4fe589e8149aa59f8f0cb7716057ce3a1e08715a19331a86c08",
+      "reorganized_setup_sha256": "73314bf3dcfee4fe589e8149aa59f8f0cb7716057ce3a1e08715a19331a86c08",
+      "current_repository_sha256": "73314bf3dcfee4fe589e8149aa59f8f0cb7716057ce3a1e08715a19331a86c08",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/03_chiral_descent_and_double_copy/reviews/README.md",
+      "destination": "papers/initial-investigations/02_chiral_descent_and_double_copy/reviews/README.md",
+      "moved": true,
+      "baseline_sha256": "6af16d5c99d09dcb3f76a44b9b81bc696b4d15acf7f7869f55c48694538ba356",
+      "reorganized_setup_sha256": "6af16d5c99d09dcb3f76a44b9b81bc696b4d15acf7f7869f55c48694538ba356",
+      "current_repository_sha256": "6af16d5c99d09dcb3f76a44b9b81bc696b4d15acf7f7869f55c48694538ba356",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/investigations-1/README.md",
+      "destination": "papers/investigations-1/README.md",
+      "moved": false,
+      "baseline_sha256": "54ba7f6bd90f0fce99605f396824f82fbe765c5b30c648cc84a4ea3c955fa13e",
+      "reorganized_setup_sha256": "ab01aba61f2919670653b7a217aca12f2bc14710539f234a19a03f5f004b451d",
+      "current_repository_sha256": "ab01aba61f2919670653b7a217aca12f2bc14710539f234a19a03f5f004b451d",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "papers/research-overview/PROJECT_SUMMARY_2026-11-20.md",
+      "destination": "papers/research-overview/PROJECT_SUMMARY_2026-11-20.md",
+      "moved": false,
+      "baseline_sha256": "3e716fe507cb85b8410356dd6d080b3aeecbdaf14a485c89b2320c150686af75",
+      "reorganized_setup_sha256": "3e716fe507cb85b8410356dd6d080b3aeecbdaf14a485c89b2320c150686af75",
+      "current_repository_sha256": "3e716fe507cb85b8410356dd6d080b3aeecbdaf14a485c89b2320c150686af75",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "papers/research-overview/README.md",
+      "destination": "papers/research-overview/README.md",
+      "moved": false,
+      "baseline_sha256": "173d7c87192e7733b5aedc47d1092005b5acfee370154a7912a92f39272bbfaf",
+      "reorganized_setup_sha256": "173d7c87192e7733b5aedc47d1092005b5acfee370154a7912a92f39272bbfaf",
+      "current_repository_sha256": "173d7c87192e7733b5aedc47d1092005b5acfee370154a7912a92f39272bbfaf",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/1111.5005v2.pdf",
+      "destination": "references/1111.5005v2.pdf",
+      "moved": false,
+      "baseline_sha256": "d92e0dca0fd864beab3f416ef80d998fa421c9fdf68854b3f21490c3da7139c8",
+      "reorganized_setup_sha256": "d92e0dca0fd864beab3f416ef80d998fa421c9fdf68854b3f21490c3da7139c8",
+      "current_repository_sha256": "d92e0dca0fd864beab3f416ef80d998fa421c9fdf68854b3f21490c3da7139c8",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/Atiyah.pdf",
+      "destination": "references/Atiyah.pdf",
+      "moved": false,
+      "baseline_sha256": "a4d55168994f0581232305d17397b8a69b5cf5a28b20a8dc8677a04e18394ee6",
+      "reorganized_setup_sha256": "a4d55168994f0581232305d17397b8a69b5cf5a28b20a8dc8677a04e18394ee6",
+      "current_repository_sha256": "a4d55168994f0581232305d17397b8a69b5cf5a28b20a8dc8677a04e18394ee6",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/Fegan.pdf",
+      "destination": "references/Fegan.pdf",
+      "moved": false,
+      "baseline_sha256": "1c32f8a540a4a46e10f49c37c8c902abfe24701a99aeec15222279ee70b98d2b",
+      "reorganized_setup_sha256": "1c32f8a540a4a46e10f49c37c8c902abfe24701a99aeec15222279ee70b98d2b",
+      "current_repository_sha256": "1c32f8a540a4a46e10f49c37c8c902abfe24701a99aeec15222279ee70b98d2b",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/Harnad.pdf",
+      "destination": "references/Harnad.pdf",
+      "moved": false,
+      "baseline_sha256": "52afd7b0a3a92cc0c1bfb2ea1859053b269925082594cd2effb8268e4a71bb87",
+      "reorganized_setup_sha256": "52afd7b0a3a92cc0c1bfb2ea1859053b269925082594cd2effb8268e4a71bb87",
+      "current_repository_sha256": "52afd7b0a3a92cc0c1bfb2ea1859053b269925082594cd2effb8268e4a71bb87",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/Kodaira-StabilityCompactSubmanifolds-1963.pdf",
+      "destination": "references/Kodaira-StabilityCompactSubmanifolds-1963.pdf",
+      "moved": false,
+      "baseline_sha256": "a0441218b592703aa0873eea5b2270cc85b5e7618b8b366dc9268fc1e1709397",
+      "reorganized_setup_sha256": "a0441218b592703aa0873eea5b2270cc85b5e7618b8b366dc9268fc1e1709397",
+      "current_repository_sha256": "a0441218b592703aa0873eea5b2270cc85b5e7618b8b366dc9268fc1e1709397",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/Kodaira-TheoremCompletenessCharacteristic-1962.pdf",
+      "destination": "references/Kodaira-TheoremCompletenessCharacteristic-1962.pdf",
+      "moved": false,
+      "baseline_sha256": "136e193800e25dacec36d7dc13d629f9f2e2cd55ea235792de9fdb813d4dd986",
+      "reorganized_setup_sha256": "136e193800e25dacec36d7dc13d629f9f2e2cd55ea235792de9fdb813d4dd986",
+      "current_repository_sha256": "136e193800e25dacec36d7dc13d629f9f2e2cd55ea235792de9fdb813d4dd986",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/Mason_2.pdf",
+      "destination": "references/Mason_2.pdf",
+      "moved": false,
+      "baseline_sha256": "864f285e8ba01f9488410a85f961d402ede59811627fe10538cea5841ac4a08b",
+      "reorganized_setup_sha256": "864f285e8ba01f9488410a85f961d402ede59811627fe10538cea5841ac4a08b",
+      "current_repository_sha256": "864f285e8ba01f9488410a85f961d402ede59811627fe10538cea5841ac4a08b",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/Nonlinear_Graviton.pdf",
+      "destination": "references/Nonlinear_Graviton.pdf",
+      "moved": false,
+      "baseline_sha256": "6c2c31155c8bd5ef61ee5a7949ae54c491265a60472e2fb552392362603d9816",
+      "reorganized_setup_sha256": "6c2c31155c8bd5ef61ee5a7949ae54c491265a60472e2fb552392362603d9816",
+      "current_repository_sha256": "6c2c31155c8bd5ef61ee5a7949ae54c491265a60472e2fb552392362603d9816",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/Nonlinear_Gravitons.pdf",
+      "destination": "references/Nonlinear_Gravitons.pdf",
+      "moved": false,
+      "baseline_sha256": "b38a75eb6fbb04182e66093a8ab7a5486ea00b31979ed1cc51f4b5a9a7e2539d",
+      "reorganized_setup_sha256": "b38a75eb6fbb04182e66093a8ab7a5486ea00b31979ed1cc51f4b5a9a7e2539d",
+      "current_repository_sha256": "b38a75eb6fbb04182e66093a8ab7a5486ea00b31979ed1cc51f4b5a9a7e2539d",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/README.md",
+      "destination": "references/README.md",
+      "moved": false,
+      "baseline_sha256": "fa8830a9fea706b755e3365d973521efed9bbf9f379fe2167fed986705b0186b",
+      "reorganized_setup_sha256": "fa8830a9fea706b755e3365d973521efed9bbf9f379fe2167fed986705b0186b",
+      "current_repository_sha256": "fa8830a9fea706b755e3365d973521efed9bbf9f379fe2167fed986705b0186b",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/Skinner.pdf",
+      "destination": "references/Skinner.pdf",
+      "moved": false,
+      "baseline_sha256": "e945f4d7c9490c3049eaa9f98b816f5ceff886a75879231c19f7ec68be287c9c",
+      "reorganized_setup_sha256": "e945f4d7c9490c3049eaa9f98b816f5ceff886a75879231c19f7ec68be287c9c",
+      "current_repository_sha256": "e945f4d7c9490c3049eaa9f98b816f5ceff886a75879231c19f7ec68be287c9c",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/W_T_Shaw_1986_Class._Quantum_Grav._3_753.pdf",
+      "destination": "references/W_T_Shaw_1986_Class._Quantum_Grav._3_753.pdf",
+      "moved": false,
+      "baseline_sha256": "8f42f50c61716b94a931e709262c2f1dbb548ac7595c6248d351fbf7fbcad412",
+      "reorganized_setup_sha256": "8f42f50c61716b94a931e709262c2f1dbb548ac7595c6248d351fbf7fbcad412",
+      "current_repository_sha256": "8f42f50c61716b94a931e709262c2f1dbb548ac7595c6248d351fbf7fbcad412",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/green.pdf",
+      "destination": "references/green.pdf",
+      "moved": false,
+      "baseline_sha256": "7945a50d517bb358db0323e57eda4511ee1d0d886841102333cf9e8f32aaa6b0",
+      "reorganized_setup_sha256": "7945a50d517bb358db0323e57eda4511ee1d0d886841102333cf9e8f32aaa6b0",
+      "current_repository_sha256": "7945a50d517bb358db0323e57eda4511ee1d0d886841102333cf9e8f32aaa6b0",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/mason2006.pdf",
+      "destination": "references/mason2006.pdf",
+      "moved": false,
+      "baseline_sha256": "d6f0ee10f369ca33b853b62a7023be948dff84240b6c25adb19a30023e567516",
+      "reorganized_setup_sha256": "d6f0ee10f369ca33b853b62a7023be948dff84240b6c25adb19a30023e567516",
+      "current_repository_sha256": "d6f0ee10f369ca33b853b62a7023be948dff84240b6c25adb19a30023e567516",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/references.bib",
+      "destination": "references/references.bib",
+      "moved": false,
+      "baseline_sha256": "e6e06d0c1f175e5fe96bb9538bd9cfe2c7cc3a9bd1dc4c5f47e90c18f5143cf6",
+      "reorganized_setup_sha256": "e6e06d0c1f175e5fe96bb9538bd9cfe2c7cc3a9bd1dc4c5f47e90c18f5143cf6",
+      "current_repository_sha256": "e6e06d0c1f175e5fe96bb9538bd9cfe2c7cc3a9bd1dc4c5f47e90c18f5143cf6",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/unfinished_notes/Curved_morphisms.pdf",
+      "destination": "references/unfinished_notes/Curved_morphisms.pdf",
+      "moved": false,
+      "baseline_sha256": "1ec237bde0f40c6eaaaee7c67d66c0e534f859885fd6d36f0be7e0f9d453faac",
+      "reorganized_setup_sha256": "1ec237bde0f40c6eaaaee7c67d66c0e534f859885fd6d36f0be7e0f9d453faac",
+      "current_repository_sha256": "1ec237bde0f40c6eaaaee7c67d66c0e534f859885fd6d36f0be7e0f9d453faac",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/unfinished_notes/Generalized_Isothermal.pdf",
+      "destination": "references/unfinished_notes/Generalized_Isothermal.pdf",
+      "moved": false,
+      "baseline_sha256": "755b582d3ed19821f72b61b9657954c9790b81c47543c7f96c53378cd262d282",
+      "reorganized_setup_sha256": "755b582d3ed19821f72b61b9657954c9790b81c47543c7f96c53378cd262d282",
+      "current_repository_sha256": "755b582d3ed19821f72b61b9657954c9790b81c47543c7f96c53378cd262d282",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/unfinished_notes/README.md",
+      "destination": "references/unfinished_notes/README.md",
+      "moved": false,
+      "baseline_sha256": "59858bf979a00853531924df05392ab004249646c611deee0423673856f6d542",
+      "reorganized_setup_sha256": "59858bf979a00853531924df05392ab004249646c611deee0423673856f6d542",
+      "current_repository_sha256": "59858bf979a00853531924df05392ab004249646c611deee0423673856f6d542",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/unfinished_notes/YM_sym.pdf",
+      "destination": "references/unfinished_notes/YM_sym.pdf",
+      "moved": false,
+      "baseline_sha256": "52f8802b752bbcaed39f9e764d723c48430188e3bc0572faa9d36c4b7be68f4c",
+      "reorganized_setup_sha256": "52f8802b752bbcaed39f9e764d723c48430188e3bc0572faa9d36c4b7be68f4c",
+      "current_repository_sha256": "52f8802b752bbcaed39f9e764d723c48430188e3bc0572faa9d36c4b7be68f4c",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/ward_1980.pdf",
+      "destination": "references/ward_1980.pdf",
+      "moved": false,
+      "baseline_sha256": "d2a6f373fde264ade73682cd71264193ffab975fb26b1898bb53078921843fa5",
+      "reorganized_setup_sha256": "d2a6f373fde264ade73682cd71264193ffab975fb26b1898bb53078921843fa5",
+      "current_repository_sha256": "d2a6f373fde264ade73682cd71264193ffab975fb26b1898bb53078921843fa5",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "references/witten.pdf",
+      "destination": "references/witten.pdf",
+      "moved": false,
+      "baseline_sha256": "5f20b2a5f92a1e51d6bf10802323ce23da3e994648921dc61442f6702fef6a76",
+      "reorganized_setup_sha256": "5f20b2a5f92a1e51d6bf10802323ce23da3e994648921dc61442f6702fef6a76",
+      "current_repository_sha256": "5f20b2a5f92a1e51d6bf10802323ce23da3e994648921dc61442f6702fef6a76",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "tools/CHAT_HISTORY.md",
+      "destination": "tools/CHAT_HISTORY.md",
+      "moved": false,
+      "baseline_sha256": "4ef7257ac247613d689f6175327895e5eb7c53660e631a870a6da8370d30c1fb",
+      "reorganized_setup_sha256": "e9b8feabc94979e47f3e8af468519373ff046df7beff2eb8c30873a0204b865c",
+      "current_repository_sha256": "e9b8feabc94979e47f3e8af468519373ff046df7beff2eb8c30873a0204b865c",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "tools/README.md",
+      "destination": "tools/README.md",
+      "moved": false,
+      "baseline_sha256": "9309ec58236cc02afb001457d7fa413dfbfa0f8fd0412c1e4ed5859cbb250fa0",
+      "reorganized_setup_sha256": "bd92d42e40d90fe1f06cf6e3339988056a8750fcaa9d0a7c4b4becf162e169b9",
+      "current_repository_sha256": "bd92d42e40d90fe1f06cf6e3339988056a8750fcaa9d0a7c4b4becf162e169b9",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "tools/RESEARCH_MODEL_WORKFLOW.md",
+      "destination": "tools/RESEARCH_MODEL_WORKFLOW.md",
+      "moved": false,
+      "baseline_sha256": "dbce2ac1d5dba82cdef292e42d526087c1c7a0f8a528befebc5695ea677c4c4a",
+      "reorganized_setup_sha256": "dbce2ac1d5dba82cdef292e42d526087c1c7a0f8a528befebc5695ea677c4c4a",
+      "current_repository_sha256": "dbce2ac1d5dba82cdef292e42d526087c1c7a0f8a528befebc5695ea677c4c4a",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "tools/TOOL_PORTABILITY.md",
+      "destination": "tools/TOOL_PORTABILITY.md",
+      "moved": false,
+      "baseline_sha256": "079b9d1e62cb27ebc2b4759cf33192c70085b3b9e8406097dbf700f74b6dd791",
+      "reorganized_setup_sha256": "f72e896b0de585845104cbf3e817ed78012cece059de101b946b46594bdccb1b",
+      "current_repository_sha256": "f72e896b0de585845104cbf3e817ed78012cece059de101b946b46594bdccb1b",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "tools/build_manuscripts.py",
+      "destination": "tools/build_manuscripts.py",
+      "moved": false,
+      "baseline_sha256": "9cfab12db565d3698217130bbc7213eaac89e94c33d53e3371c97ea294fbf67d",
+      "reorganized_setup_sha256": "ebd25244cb415b233f16b368e22bc2d13a9c935f52b3d1fde95704b2eb477b3d",
+      "current_repository_sha256": "ebd25244cb415b233f16b368e22bc2d13a9c935f52b3d1fde95704b2eb477b3d",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "tools/check_citations.py",
+      "destination": "tools/check_citations.py",
+      "moved": false,
+      "baseline_sha256": "712d52b4cbc43a6c6d43c0f7ed9ee8947a75f4a940ed623582ef20a75d3f3e36",
+      "reorganized_setup_sha256": "712d52b4cbc43a6c6d43c0f7ed9ee8947a75f4a940ed623582ef20a75d3f3e36",
+      "current_repository_sha256": "712d52b4cbc43a6c6d43c0f7ed9ee8947a75f4a940ed623582ef20a75d3f3e36",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "tools/check_repository_hygiene.py",
+      "destination": "tools/check_repository_hygiene.py",
+      "moved": false,
+      "baseline_sha256": "1a82ee83e45f5e0258362bda37a7818689d55f18cd2ac1dc281b454eaccdc2a8",
+      "reorganized_setup_sha256": "220ce6f14a9735082f52df2bd54037ae6d81fd7517c028c218474328f2257800",
+      "current_repository_sha256": "ce57c6f4b02bb77eb5013dd6e1003388b94e9d81d5d7c4967b5a3096374133d9",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "tools/extract_project_chats.py",
+      "destination": "tools/extract_project_chats.py",
+      "moved": false,
+      "baseline_sha256": "32e25d3943fbec794e1b28788e6e4185e6a04e8d1180c3607ea121c406c22137",
+      "reorganized_setup_sha256": "32e25d3943fbec794e1b28788e6e4185e6a04e8d1180c3607ea121c406c22137",
+      "current_repository_sha256": "32e25d3943fbec794e1b28788e6e4185e6a04e8d1180c3607ea121c406c22137",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "tools/install_setup.py",
+      "destination": "tools/install_setup.py",
+      "moved": false,
+      "baseline_sha256": "8a5be288c23de843afc30fdd2eb113578927b0bbb560d2640c17b3cacb04ad5e",
+      "reorganized_setup_sha256": "8a5be288c23de843afc30fdd2eb113578927b0bbb560d2640c17b3cacb04ad5e",
+      "current_repository_sha256": "8a5be288c23de843afc30fdd2eb113578927b0bbb560d2640c17b3cacb04ad5e",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "tools/paginated_chat_source.py",
+      "destination": "tools/paginated_chat_source.py",
+      "moved": false,
+      "baseline_sha256": "dbb4da8b6eb12cfb196d813490ec894ef7cecaa89949cf5c2d3e68e11e51d330",
+      "reorganized_setup_sha256": "dbb4da8b6eb12cfb196d813490ec894ef7cecaa89949cf5c2d3e68e11e51d330",
+      "current_repository_sha256": "dbb4da8b6eb12cfb196d813490ec894ef7cecaa89949cf5c2d3e68e11e51d330",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "tools/record_Claude_cowork_chat.py",
+      "destination": "tools/record_Claude_cowork_chat.py",
+      "moved": false,
+      "baseline_sha256": "ac3e5432cbb55dcdde364a20d47e007efc35ca4c7da2b23723dba422765fbd83",
+      "reorganized_setup_sha256": "34fccb378dae126d9d91ce47c2eed8cbc7b069f63235a0b079b8557b8a42fd9c",
+      "current_repository_sha256": "34fccb378dae126d9d91ce47c2eed8cbc7b069f63235a0b079b8557b8a42fd9c",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "tools/record_Claude_export_chat.py",
+      "destination": "tools/record_Claude_export_chat.py",
+      "moved": false,
+      "baseline_sha256": "2b8b9a31ad3b3425aea2ed89ea5a713975db65be8557e1cd310fec3a45df7cc0",
+      "reorganized_setup_sha256": "2b8b9a31ad3b3425aea2ed89ea5a713975db65be8557e1cd310fec3a45df7cc0",
+      "current_repository_sha256": "2b8b9a31ad3b3425aea2ed89ea5a713975db65be8557e1cd310fec3a45df7cc0",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "tools/record_chat.py",
+      "destination": "tools/record_chat.py",
+      "moved": false,
+      "baseline_sha256": "7e41e053984c6532a60fccca4e2525c3fb2b0bad95499ec38739609c0ba806b0",
+      "reorganized_setup_sha256": "4a72e92a2e836fda27586b06e438ba3d7f07c035af27e5d2efb85cce2eb8002b",
+      "current_repository_sha256": "4a72e92a2e836fda27586b06e438ba3d7f07c035af27e5d2efb85cce2eb8002b",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "tools/refresh_chat_history.py",
+      "destination": "tools/refresh_chat_history.py",
+      "moved": false,
+      "baseline_sha256": "f1b10131f166d0e7410fd6441f6207502243213f67b59f5765aae71fa16074d8",
+      "reorganized_setup_sha256": "f1b10131f166d0e7410fd6441f6207502243213f67b59f5765aae71fa16074d8",
+      "current_repository_sha256": "f1b10131f166d0e7410fd6441f6207502243213f67b59f5765aae71fa16074d8",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "tools/requirements_metadata.txt",
+      "destination": "tools/requirements_metadata.txt",
+      "moved": false,
+      "baseline_sha256": "c6510e2d2bfbd08ae31ee9d1042c91e2d748cca5b1c58a6fd879ae32f5fb073c",
+      "reorganized_setup_sha256": "c6510e2d2bfbd08ae31ee9d1042c91e2d748cca5b1c58a6fd879ae32f5fb073c",
+      "current_repository_sha256": "c6510e2d2bfbd08ae31ee9d1042c91e2d748cca5b1c58a6fd879ae32f5fb073c",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "tools/tests/test_install_setup.py",
+      "destination": "tools/tests/test_install_setup.py",
+      "moved": false,
+      "baseline_sha256": "146abebcf7844c41c5d3eb4aa90dc4ecbaf11d365a02945e84d5a23b1573603b",
+      "reorganized_setup_sha256": "146abebcf7844c41c5d3eb4aa90dc4ecbaf11d365a02945e84d5a23b1573603b",
+      "current_repository_sha256": "146abebcf7844c41c5d3eb4aa90dc4ecbaf11d365a02945e84d5a23b1573603b",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "tools/tests/test_paginated_chat_source.py",
+      "destination": "tools/tests/test_paginated_chat_source.py",
+      "moved": false,
+      "baseline_sha256": "5925b3ba259e4dbc1a100c652e66e73cbf2788eea670dc70d461f90a2758b737",
+      "reorganized_setup_sha256": "5925b3ba259e4dbc1a100c652e66e73cbf2788eea670dc70d461f90a2758b737",
+      "current_repository_sha256": "5925b3ba259e4dbc1a100c652e66e73cbf2788eea670dc70d461f90a2758b737",
+      "reorganized_identical": true,
+      "current_identical": true
+    },
+    {
+      "baseline": "tools/tests/test_portable_recorder.py",
+      "destination": "tools/tests/test_portable_recorder.py",
+      "moved": false,
+      "baseline_sha256": "2d6b18707a9efed6fac868c8ae1d8975ff5e6af6fdaf43b1f954a832d662149d",
+      "reorganized_setup_sha256": "e80fc0c13162419fad150aafbd6a1e951e5f491b04c69b5f1168cacc7ee3237b",
+      "current_repository_sha256": "e80fc0c13162419fad150aafbd6a1e951e5f491b04c69b5f1168cacc7ee3237b",
+      "reorganized_identical": false,
+      "current_identical": false
+    },
+    {
+      "baseline": "tools/tests/test_refresh_chat_history.py",
+      "destination": "tools/tests/test_refresh_chat_history.py",
+      "moved": false,
+      "baseline_sha256": "f5ba6c23027fd75711ec5bba6ad17950e504a8ef221b42c10176dc9301c79e60",
+      "reorganized_setup_sha256": "f5ba6c23027fd75711ec5bba6ad17950e504a8ef221b42c10176dc9301c79e60",
+      "current_repository_sha256": "f5ba6c23027fd75711ec5bba6ad17950e504a8ef221b42c10176dc9301c79e60",
+      "reorganized_identical": true,
+      "current_identical": true
+    }
+  ]
+}
