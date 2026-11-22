@@ -35,7 +35,7 @@
 
 \title{Chiral curvature and metric evolution\\near the round four-sphere}
 \author{Edward B. Baker III}
-\date{Working draft --- 21 November 2026}
+\date{Working draft --- 22 November 2026}
 % Background revision: 21 November 2026 (America/New_York), for Edward B. Baker III,
 % with OpenAI assistance. Actual model/effort not independently exposed.
 % Inputs, passage checks and editorial scope: ../reviews/BACKGROUND_REVISION_20261121.md.
@@ -43,6 +43,9 @@
 % Introduction progression revised 21 November 2026 (America/New_York),
 % for Edward B. Baker III with OpenAI assistance; actual model/effort unavailable.
 % Input versions and editorial scope: ../reviews/INTRODUCTION_REWRITE_20261121.md.
+% Citation style and paragraph structure revised 22 November 2026 (America/New_York),
+% for Edward B. Baker III with OpenAI assistance; actual model/effort unavailable.
+% Input version and editorial scope: SP4-CME-DOC-E03 in ../research-progress/REGISTER.md.
 
 \begin{document}
 \maketitle
@@ -68,12 +71,11 @@ so the metric determines a Riemann surface. If the underlying smooth
 surface is closed and homotopy equivalent to \(S^2\), it is orientable
 and simply connected. Uniformization then identifies this compact Riemann
 surface biholomorphically with \(\CP^1\); the resulting map is a
-diffeomorphism to the standard smooth two-sphere
-\cite[Chapter~10]{Donaldson2011}. This gives a geometric proof of the
-two-dimensional smooth Poincar\'e statement. Isothermal coordinates supply
-the local conformal description, while uniformization supplies the global
-identification; the existence of the local charts alone would not establish
-the conclusion.
+diffeomorphism to the standard smooth two-sphere~\cite{Donaldson2011}.
+This gives a geometric proof of the two-dimensional smooth Poincar\'e
+statement. Isothermal coordinates supply the local conformal description,
+while uniformization supplies the global identification; the existence of
+the local charts alone would not establish the conclusion.
 
 In three dimensions, the analogous statement is that every closed smooth
 three-manifold homotopy equivalent to \(S^3\) is diffeomorphic to the
@@ -85,43 +87,39 @@ by a geometric heat equation, the Ricci flow,
 After fixing the diffeomorphism freedom, this is a nonlinear parabolic
 evolution of the metric. Hamilton proved that in dimension three the
 volume-normalized flow starting from strictly positive Ricci curvature
-converges to a metric of constant positive sectional curvature
-\cite{Hamilton1982}. General initial metrics can develop
-singularities, so the broader program required both their analysis and a
-way to continue the evolution. Perelman's entropy and noncollapsing
-estimates supplied decisive control of singularity models
-\cite{Perelman2002}; his construction of Ricci flow with surgery removes
-appropriate neck regions and replaces them by controlled caps
-\cite{Perelman2003Surgery}. For a homotopy three-sphere, finite-time
-extinction together with the topology of these surgeries yields the smooth
-identification with \(S^3\) \cite{Perelman2003Extinction}. The lesson for
-higher dimensions is that a local smoothing equation must be accompanied
-by global control of degeneration and its topological consequences.
+converges to a metric of constant positive sectional
+curvature~\cite{Hamilton1982}. General initial metrics can develop
+singularities, so the broader program required both their analysis and
+a way to continue the evolution. Perelman's entropy and noncollapsing
+estimates supplied decisive control of singularity models~\cite{Perelman2002}.
+His construction of Ricci flow with surgery removes appropriate neck
+regions and replaces them by controlled caps~\cite{Perelman2003Surgery}.
+For a homotopy three-sphere, finite-time extinction together with the
+topology of these surgeries yields the smooth identification with
+\(S^3\)~\cite{Perelman2003Extinction}. The lesson for higher dimensions is
+that a local smoothing equation must be accompanied by global control of
+degeneration and its topological consequences.
 
 In higher dimensions, Smale's handle-cancellation methods, underlying
 $h$-cobordism theory, show that every closed smooth homotopy $n$-sphere
-with $n\geq5$ is homeomorphic to $S^n$ \cite[Theorem~A]{Smale1961}.
-This settles the topological recognition problem in that range for smooth
-manifolds, but smooth uniqueness has a different answer: Milnor's exotic
-seven-spheres are homeomorphic to $S^7$ without being diffeomorphic to it
-\cite[Theorem~3]{Milnor1956}. Dimension four lies outside the range of
-these smooth handle-cancellation arguments. Here Freedman's theorem
-identifies every closed topological
-homotopy four-sphere with \(S^4\) by a homeomorphism
-\cite[Theorem~1.6]{Freedman1982}, but the corresponding smooth statement
-remains open: must every closed smooth manifold homotopy equivalent to
-\(S^4\) be diffeomorphic to the standard sphere? Major approaches include
-handle calculus and surgery descriptions that seek to simplify homotopy
+with $n\geq5$ is homeomorphic to $S^n$~\cite{Smale1961}.
+Milnor's exotic seven-spheres show that the same topological sphere can
+admit distinct smooth structures~\cite{Milnor1956}.
+Dimension four lies outside the range of these smooth handle-cancellation
+arguments. Freedman proved that every closed topological homotopy
+four-sphere is homeomorphic to \(S^4\)~\cite{Freedman1982}. The smooth
+four-dimensional Poincar\'e conjecture asks whether every closed smooth
+homotopy four-sphere is diffeomorphic to the standard \(S^4\). This remains
+open. Major approaches include handle calculus and surgery descriptions
+that seek to simplify homotopy
 spheres, and knot-theoretic obstructions that could distinguish a candidate
-exotic sphere \cite[Sections~2--3]{FreedmanGompfMorrisonWalker2010}.
+exotic sphere~\cite{FreedmanGompfMorrisonWalker2010}.
 Geometric approaches seek a distinguished metric or connection
 whose existence would force the standard smooth structure. The present
-work pursues this direction, with anti-self-dual (ASD) conformal geometry as a
-possible target. A central antecedent is Fine's
-\emph{A gauge theoretic approach to the anti-self-dual Einstein equations},
-arXiv:1111.5005v2 \cite{Fine2011}, which formulates the nonzero-scalar-curvature
-ASD Einstein equations in terms of definite \(SO(3)\) connections and
-introduces a gradient flow toward their solutions. This offers a concrete
+work pursues this direction, with anti-self-dual (ASD) conformal geometry
+as a possible target. Fine~\cite{Fine2011} recast the ASD Einstein equations
+with nonzero scalar curvature in terms of definite \(SO(3)\) connections and
+introduced a gradient flow toward their solutions. This offers a concrete
 four-dimensional evolution framework; its application to the smooth
 Poincar\'e problem would still require suitable initial connections on
 arbitrary homotopy spheres and global control of the flow.
@@ -135,38 +133,36 @@ rank-three bundles,
 \[
  \Lambda^2T^*M=\Lambda_g^+\oplus\Lambda_g^-.
 \]
-This chiral splitting underlies the connection between conformal geometry
-and gauge fields developed by Atiyah, Hitchin and Singer in
-\emph{Self-duality in four-dimensional Riemannian geometry}
-\cite{AHS1978}. In our orientation convention, their twistor integrability
-criterion says that \(W^+=0\) precisely when the natural almost complex
-structure on the sphere bundle \(S(\Lambda_g^+)\) is integrable
-\cite[Theorem~4.1]{AHS1978}. The resulting complex threefold encodes a
-real four-dimensional conformal geometry through a family of projective
-lines. Penrose's nonlinear-graviton construction supplies the corresponding
-holomorphic picture and, with additional data, its Ricci-flat specialization
-\cite[Sections~4--5]{Penrose1976}. These are four-dimensional analogues of
+Atiyah, Hitchin, and Singer~\cite{AHS1978} used this chiral splitting to
+connect conformal geometry and gauge fields. In our orientation convention,
+their twistor integrability criterion says that \(W^+=0\) precisely when
+the natural almost complex
+structure on the sphere bundle \(S(\Lambda_g^+)\) is integrable.
+The resulting complex threefold encodes a real four-dimensional conformal
+geometry through a family of projective lines. Penrose's nonlinear-graviton
+construction supplies the corresponding
+holomorphic picture and, with additional data, its Ricci-flat
+specialization~\cite{Penrose1976}. These are four-dimensional analogues of
 the relation between conformal geometry and complex analysis on surfaces,
 with a curvature integrability condition in place of an automatic local
 complex structure.
 
 Gauge theory provides a complementary reason to work with connections.
 Donaldson invariants extract information about smooth four-manifolds from
-moduli spaces of anti-self-dual gauge connections
-\cite[Chapter~9]{DonaldsonKronheimer1990}. Their success motivates the use
-of gauge fields in smooth topology, although it does not settle the
+moduli spaces of anti-self-dual gauge connections~\cite{DonaldsonKronheimer1990}.
+Their success motivates the use of gauge fields in smooth topology,
+although it does not settle the
 homotopy-sphere case, where the second cohomology vanishes. Twistor methods
-also reach beyond the self-dual sector: Witten's
-\emph{An interpretation of classical Yang--Mills theory}
-\cite{Witten1978} describes the full classical Yang--Mills equations using
-holomorphic bundles on the space of complex null lines, with specified
-triviality and third-order formal extension conditions. This is a local
+also reach beyond the self-dual sector. Witten~\cite{Witten1978} describes
+the full classical Yang--Mills equations using holomorphic bundles on the
+space of complex null lines, with specified triviality and third-order
+formal extension conditions. This is a local
 complex flat-spacetime correspondence, not an existence theorem for curved
 Riemannian four-manifolds. Together these ideas motivate generalized
 coordinate descriptions in which maps depend on both a point and a chiral
-direction, and curvature is carried by connection data. A flat-space
-precursor is the action of generalized conformal maps on Yang--Mills
-fields in \cite{Baker2023}, and references within.
+direction, and curvature is carried by connection data. For a flat-space
+precursor based on generalized conformal maps acting on Yang--Mills fields,
+see~\cite{Baker2023} and references therein.
 Section~\ref{sec:ctx-isothermal} develops this background and its
 reconstruction requirements.
 
@@ -182,8 +178,7 @@ Levi--Civita connections. Thus setting one entire spin connection to zero,
 as can occur in an appropriate Ricci-flat chiral reduction, would exclude
 the target itself. Ward's extension of the nonlinear-graviton construction
 to Einstein metrics with cosmological constant already distinguishes this
-nonzero-scalar-curvature setting from the vacuum one
-\cite[Sections~1--2]{Ward1980}.
+nonzero-scalar-curvature setting from the vacuum one~\cite{Ward1980}.
 
 Definite connections provide such variables on an open set of Riemannian
 fields. The Levi--Civita connection induces an \(SO(3)\) connection
@@ -194,7 +189,7 @@ oriented real rank-three Euclidean bundle \(E\). Using
 orthonormal internal frame as \(F_A=\sum_iF_i e_i\). We restrict to the
 definite region where the matrix \((F_i\wedge F_j)\) is positive relative
 to the base orientation. Its curvature span determines a unique
-positive-definite conformal metric \cite[Definitions~1.3--1.4]{Fine2011}.
+positive-definite conformal metric~\cite{Fine2011}.
 With a fixed reference scale \(K>0\), our normalization is
 \begin{equation}\label{eq:intro-reconstruction}
  \mu_A=\frac13\sum_iF_i\wedge F_i,\qquad
@@ -213,17 +208,17 @@ topological constant, measures the departure from \(Q=I\):
 \end{equation}
 A connection with \(Q=I\) is called \emph{perfect}. In the component
 containing the round chiral connection, perfection gives an ASD Einstein
-metric with scalar curvature \(12K\); here ASD means \(W^+=0\)
-\cite[Theorem~2.1]{Fine2011}. This is a statement about the metric's Weyl
-tensor, distinct from the selfduality of the gauge curvature \(F_A\).
+metric with scalar curvature \(12K\)~\cite{Fine2011}. Here ASD means
+\(W^+=0\), a statement about the metric's Weyl tensor, distinct from the
+selfduality of the gauge curvature \(F_A\).
 We study the negative gradient of \(\mathcal P\) for the connection
 \(L^2\) pairing formed using \(\widehat g_A\) and the internal metric
 \(\delta_{ij}\). It is Fine's flow with a fixed time normalization.
 Fine proves short-time existence for definite initial data and, on a compact
 four-manifold, convergence modulo gauge and diffeomorphisms for sufficiently
-small $L^2_k$ perturbations ($k\geq3$) of a perfect connection
-\cite[Theorems~4.3 and~4.11]{Fine2011}; a broader pure-connection
-formulation of Einstein geometry appears in \cite{FineKrasnovPanov2014}.
+small $L^2_k$ perturbations ($k\geq3$) of a perfect connection~\cite{Fine2011}.
+A broader pure-connection formulation of Einstein geometry appears
+in~\cite{FineKrasnovPanov2014}.
 Our purpose is to make explicit how curvature reconstruction and the
 connection flow compare with metric evolution, including the first
 nonlinear discrepancies.
@@ -272,7 +267,7 @@ The distinction between evolving a connection and evolving a metric is essential
 \begin{equation}\label{eq:intro-fourth}
 \partial_th=-(L+2K)(L+4K)h.
 \end{equation}
-We derive this factorization from the connection calculation and an integration-by-parts identity. It agrees, with the appropriate norm conversion, with the known Hessian of the chiral Weyl energy \cite{GurskyViaclovsky2015}. The agreement of the two metric energies at quadratic order fails at cubic order through explicit Weyl--Ricci couplings.
+We derive this factorization from the connection calculation and an integration-by-parts identity. It agrees, with the appropriate norm conversion, with the known Hessian of the chiral Weyl energy~\cite{GurskyViaclovsky2015}. The agreement of the two metric energies at quadratic order fails at cubic order through explicit Weyl--Ricci couplings.
 
 The nonlinear reconstruction exhibits a separate issue. Its compatibility with the Levi--Civita connection is measured by the covariant derivative of a curvature-normalized selfdual triple. This quantity vanishes for perfect connections but is generally nonzero away from them. Moreover, the normalized curvature energy is bounded throughout the definite region and does not diverge at its boundary. An exact local family demonstrates how the reconstructed metric can become anisotropic while this energy density remains finite.
 
@@ -280,7 +275,7 @@ The link back to the smooth Poincar\'e question is a conformal rigidity
 argument. On a closed smooth homotopy four-sphere, the signature is zero, so an ASD
 Riemannian metric has both Weyl components zero. The conformal
 developing-map argument then identifies the manifold smoothly with the
-standard sphere \cite{Kuiper1949}; Section~\ref{sec:ctx-topology} gives
+standard sphere~\cite{Kuiper1949}. Section~\ref{sec:ctx-topology} gives
 the full argument. Obtaining an ASD metric on every such manifold is
 therefore an equivalent existence problem. The present calculations describe
 the behavior near the round target. They do not construct appropriate
@@ -345,9 +340,9 @@ with its usual complex structure as $\CP^1$. Its canonical
 almost complex structure uses the ordinary complex structure in each
 projective-line fiber and the Levi--Civita horizontal distribution.
 The Atiyah--Hitchin--Singer integrability theorem states that this almost
-complex structure is integrable exactly when $W^+=0$
-\cite[Theorem~4.1]{AHS1978}, with chirality labels adjusted to our orientation
-convention. When integrable, $Z$ is a complex threefold. The base $M$
+complex structure is integrable exactly when $W^+=0$~\cite{AHS1978},
+with chirality labels adjusted to our orientation convention. When
+integrable, $Z$ is a complex threefold. The base $M$
 remains a real four-manifold, and the projection to it is a smooth sphere
 bundle projection, not a holomorphic projection to a complex surface.
 No Einstein, scalar-curvature, real-analyticity or global spin assumption
@@ -371,9 +366,9 @@ The correspondence space
 therefore has complex dimension five and projective-line fibers. Horizontal
 lifts of the alpha planes form a complex rank-two distribution $D_\alpha$.
 With the chirality choice used here, its Frobenius integrability is equivalent
-to $W^+=0$. Its local leaf space is then a complex threefold
-\cite[Section~4]{Penrose1976}. In the smooth Riemannian description the
-corresponding involutivity condition is that of $T^{0,1}Z$ on the real
+to $W^+=0$. Its local leaf space is then a complex threefold~\cite{Penrose1976}.
+In the smooth Riemannian description the corresponding involutivity
+condition is that of $T^{0,1}Z$ on the real
 six-dimensional sphere bundle. These descriptions express the same curvature
 criterion in their respective categories; their underlying spaces have
 different dimensions and should not be identified.
@@ -388,14 +383,14 @@ $\CP^1$. The identities
 $H^1(L_x,N_{L_x/Z})=0$ and $\dim_{\mathbb C}H^0(L_x,N_{L_x/Z})=4$
 explain the four complex spacetime parameters: Kodaira's completeness theorem
 identifies nearby curves with a local deformation family whose tangent space
-is $H^0(N)$ \cite[Main Theorem, p.~150]{Kodaira1962}.
+is $H^0(N)$~\cite{Kodaira1962}.
 His stability theorem explains persistence of the compact curve under
 sufficiently small deformations of the ambient complex structure when
-$H^1(N)=0$ \cite[Theorem~1]{Kodaira1963}. Null tangent vectors are the
+$H^1(N)=0$~\cite{Kodaira1963}. Null tangent vectors are the
 normal sections that vanish at some point of the curve. This incidence
-condition reconstructs the conformal null cone
-\cite[Section~4]{Penrose1976}; choosing a metric scale and imposing a
-Riemannian real structure require further data. The curvature is encoded in
+condition reconstructs the conformal null cone~\cite{Penrose1976}.
+Choosing a metric scale and imposing a Riemannian real structure require
+further data. The curvature is encoded in
 the neighborhood and incidence of the family, not removed by choosing
 holomorphic coordinates on a single twistor patch.
 
@@ -412,22 +407,21 @@ the curve to first order corresponds to
 \]
 Here the flat conformal metric is represented by
 $2(dy^{00'}dy^{11'}-dy^{01'}dy^{10'})$. The formula for $y$ is the affine
-tangent-line construction of
-\cite[Section~2, equations~(8) and~(15)]{Shaw1986}, on a patch where the
+tangent-line construction of Shaw~\cite{Shaw1986}, on a patch where the
 projective direction can be used as parameter. As the direction varies,
 $\partial_\zeta y^{AA'}$ has rank at most one, so it describes a possibly
 stationary complex null trajectory. A curved point can thus acquire
 different flat representatives in different directions. The natural domain
 is correspondence space, and the resulting data must include the direction
 and its transition laws. The action on null surfaces and the associated
-nonlocal gauge pullback in \cite[Section~2]{Baker2023}, and references
-within, provide the flat-space motivation for studying such maps.
+nonlocal gauge pullback in~\cite{Baker2023} provide the flat-space
+motivation for studying such maps.
 
 The connection problem adds a second layer. Ward reconstruction uses a
 holomorphic bundle trivial on each \emph{complete} twistor line, together
-with the relevant incidence and partial-connection data; the Riemannian
-correspondence also requires the compatible positive reality structure
-\cite[Theorem~5.2]{AHS1978}. On flat complex correspondence space,
+with the relevant incidence and partial-connection data. The Riemannian
+correspondence also requires the compatible positive
+reality structure~\cite{AHS1978}. On flat complex correspondence space,
 the desired directional operators have the form
 \[
  \mathcal D_A(\pi)=\pi^{A'}
@@ -467,12 +461,12 @@ The Einstein condition is another independent issue. The curvature of a
 metric's positive chiral Levi--Civita connection contains both a Weyl-plus-scalar
 block and a trace-free Ricci block. Selfduality of this connection is
 equivalent to the vanishing of the Ricci block, hence to the Einstein
-condition \cite[Proposition~2.2]{AHS1978}. It is not equivalent to
+condition~\cite{AHS1978}. It is not equivalent to
 $W^+=0$. Penrose's Ricci-flat nonlinear-graviton construction requires
-additional twistor structures beyond the conformal line family
-\cite[Section~5]{Penrose1976}; Ward's construction retains Einstein
-geometry with nonzero cosmological constant through additional twistor
-forms \cite[Section~2]{Ward1980}. These distinctions matter for $S^4$:
+additional twistor structures beyond the conformal line family~\cite{Penrose1976}.
+Ward's construction retains Einstein geometry with nonzero cosmological
+constant through additional twistor
+forms~\cite{Ward1980}. These distinctions matter for $S^4$:
 the round metric has $W^+=W^-=0$ and $\Ric=3Kg$, but its two spin
 curvatures are $F_i^\pm=-K\Sigma_i^\pm$, as calculated in
 Section~\ref{sec:round-model}. Neither chiral connection can be made
@@ -485,12 +479,12 @@ small complex domain whose intersections with null lines are connected and
 simply connected. In the local analytic correspondence, holomorphic bundles
 trivial on the $\CP^1\times\CP^1$ of directions
 through each point encode gauge connections; the source-free Yang--Mills
-equations impose a third-order formal-neighborhood extension condition
-\cite[Theorem~5]{IsenbergYasskinGreen1978}\cite[p.~395]{Witten1978}.
-Mason--Skinner review this condition and develop a formulation on a
-Cauchy--Riemann submanifold selected by a Euclidean real slice
-\cite[Sections~2--3]{MasonSkinner2006}. The extension and reality conditions
-are substantive inputs. These gauge-theoretic constructions do not by
+equations impose a third-order formal-neighborhood extension
+condition~\cite{Witten1978,IsenbergYasskinGreen1978}.
+Mason and Skinner~\cite{MasonSkinner2006} review this condition and develop a
+formulation on a Cauchy--Riemann submanifold selected by a Euclidean real
+slice. The extension and reality conditions are substantive inputs.
+These gauge-theoretic constructions do not by
 themselves provide a gravitational connection or an evolution of arbitrary
 smooth Riemannian metrics.
 
@@ -1509,7 +1503,7 @@ The one-form metric in this formula, including its internal normalization,
 is part of the definition of the gradient.  Fine's canonical reconstructed
 metric has volume $\mu_A$, and is consequently
 $\sqrt2K\,\widehat g_A$.  Our flow differs from the corresponding flow
-in \cite{Fine2011} by this fixed time normalization.
+in~\cite{Fine2011} by this fixed time normalization.
 
 \begin{proposition}
 \label{flow:gradient}
@@ -1570,15 +1564,14 @@ Finally, pairing the gradient with its negative gives
 does not add a term to this directional derivative of the energy.
 \end{proof}
 
-This is the definite-connection gradient equation of
-\cite[Proposition~4.2]{Fine2011}, with the normalization stated above.
+This is Fine's definite-connection gradient equation~\cite{Fine2011},
+with the normalization stated above.
 The curvature is selfdual for its reconstructed metric at every point of
 the configuration space; the equation is consequently not Yang--Mills
 heat flow on an externally fixed metric.  Its internal gauge and
 diffeomorphism symmetries must be treated when proving parabolicity.
 Fine proves short-time existence and uniqueness, and local stability
-near perfect connections, by appropriate gauge fixing
-\cite[Sections~4.2--4.3]{Fine2011}.
+near perfect connections, by appropriate gauge fixing~\cite{Fine2011}.
 These results do not supply a general long-time theorem for arbitrary
 initial definite connections.
 
@@ -2273,7 +2266,7 @@ bilinear identity also gives the operator identity in
 
 The factorization agrees with the independently established
 quadratic-curvature Hessian formula of
-Gursky--Viaclovsky~\cite[Theorem 3.10]{GurskyViaclovsky2015}.
+Gursky and Viaclovsky~\cite{GurskyViaclovsky2015}.
 The proof above uses the connection and Bianchi identities already
 derived in this manuscript, and does not invoke that formula.
 
@@ -2755,20 +2748,9 @@ The immediate analytical objective is therefore a nonlinear estimate that couple
 
 
 
+% Bibliography entries follow the order of first citation.
 \begin{thebibliography}{99}
 \raggedright
-\bibitem{AHS1978}
-M.~F. Atiyah, N.~J. Hitchin, and I.~M. Singer,
-\emph{Self-duality in four-dimensional Riemannian geometry},
-Proc. Roy. Soc. London Ser. A \textbf{362} (1978), no.~1711, 425--461.
-\href{https://doi.org/10.1098/rspa.1978.0143}{doi:10.1098/rspa.1978.0143}.
-
-\bibitem{Baker2023}
-E.~B. Baker III,
-\emph{Generalized conformal maps as classical symmetries of Yang--Mills fields},
-arXiv:2301.00029 [math-ph] (2023), and references within.
-\url{https://arxiv.org/abs/2301.00029}.
-
 \bibitem{Donaldson2011}
 S.~K. Donaldson,
 \emph{Riemann Surfaces},
@@ -2776,92 +2758,11 @@ Oxford Graduate Texts in Mathematics, vol.~22,
 Oxford University Press, Oxford, 2011.
 \href{https://doi.org/10.1093/acprof:oso/9780198526391.001.0001}{doi:10.1093/acprof:oso/9780198526391.001.0001}.
 
-\bibitem{DonaldsonKronheimer1990}
-S.~K. Donaldson and P.~B. Kronheimer,
-\emph{The Geometry of Four-Manifolds},
-Oxford Mathematical Monographs,
-Clarendon Press, Oxford, 1990.
-\href{https://doi.org/10.1093/oso/9780198535539.001.0001}{doi:10.1093/oso/9780198535539.001.0001}.
-
-\bibitem{Fine2011}
-J. Fine,
-\emph{A gauge theoretic approach to the anti-self-dual Einstein equations},
-arXiv:1111.5005v2 [math.DG] (2011).
-\url{https://arxiv.org/abs/1111.5005v2}.
-
-\bibitem{FineKrasnovPanov2014}
-J. Fine, K. Krasnov, and D. Panov,
-\emph{A gauge theoretic approach to Einstein 4-manifolds},
-New York J. Math. \textbf{20} (2014), 293--323.
-\url{https://nyjm.albany.edu/j/2014/20-18.html}.
-
-\bibitem{Freedman1982}
-M.~H. Freedman,
-\emph{The topology of four-dimensional manifolds},
-J. Differential Geom. \textbf{17} (1982), no.~3, 357--453.
-\href{https://doi.org/10.4310/jdg/1214437136}{doi:10.4310/jdg/1214437136}.
-
-\bibitem{FreedmanGompfMorrisonWalker2010}
-M.~H. Freedman, R.~E. Gompf, S. Morrison, and K. Walker,
-\emph{Man and machine thinking about the smooth 4-dimensional Poincar\'e conjecture},
-Quantum Topol. \textbf{1} (2010), no.~2, 171--208.
-\href{https://doi.org/10.4171/QT/5}{doi:10.4171/QT/5}.
-
-\bibitem{GurskyViaclovsky2015}
-M.~J. Gursky and J.~A. Viaclovsky,
-\emph{Rigidity and stability of Einstein metrics for quadratic curvature functionals},
-J. Reine Angew. Math. \textbf{700} (2015), 37--91.
-Preprint: arXiv:1105.4648v2 [math.DG].
-\url{https://arxiv.org/abs/1105.4648}.
-
 \bibitem{Hamilton1982}
 R.~S. Hamilton,
 \emph{Three-manifolds with positive Ricci curvature},
 J. Differential Geom. \textbf{17} (1982), no.~2, 255--306.
 \href{https://doi.org/10.4310/jdg/1214436922}{doi:10.4310/jdg/1214436922}.
-
-\bibitem{IsenbergYasskinGreen1978}
-J. Isenberg, P.~B. Yasskin, and P.~S. Green,
-\emph{Non-self-dual gauge fields},
-Phys. Lett. B \textbf{78} (1978), 462--464.
-\href{https://doi.org/10.1016/0370-2693(78)90486-0}{doi:10.1016/0370-2693(78)90486-0}.
-
-\bibitem{Kodaira1962}
-K. Kodaira,
-\emph{A theorem of completeness of characteristic systems for analytic
-families of compact submanifolds of complex manifolds},
-Ann. of Math. (2) \textbf{75} (1962), 146--162.
-\href{https://doi.org/10.2307/1970424}{doi:10.2307/1970424}.
-
-\bibitem{Kodaira1963}
-K. Kodaira,
-\emph{On stability of compact submanifolds of complex manifolds},
-Amer. J. Math. \textbf{85} (1963), 79--94.
-\href{https://doi.org/10.2307/2373187}{doi:10.2307/2373187}.
-
-\bibitem{Kuiper1949}
-N.~H. Kuiper,
-\emph{On conformally-flat spaces in the large},
-Ann. of Math. (2) \textbf{50} (1949), no.~4, 916--924.
-\href{https://doi.org/10.2307/1969587}{doi:10.2307/1969587}.
-
-\bibitem{MasonSkinner2006}
-L.~J. Mason and D. Skinner,
-\emph{An ambitwistor Yang--Mills Lagrangian},
-Phys. Lett. B \textbf{636} (2006), 60--67.
-\href{https://doi.org/10.1016/j.physletb.2006.02.061}{doi:10.1016/j.physletb.2006.02.061}.
-
-\bibitem{Milnor1956}
-J. Milnor,
-\emph{On manifolds homeomorphic to the 7-sphere},
-Ann. of Math. (2) \textbf{64} (1956), no.~2, 399--405.
-\href{https://doi.org/10.2307/1969983}{doi:10.2307/1969983}.
-
-\bibitem{Penrose1976}
-R. Penrose,
-\emph{Nonlinear gravitons and curved twistor theory},
-Gen. Relativ. Gravit. \textbf{7} (1976), 31--52.
-\href{https://doi.org/10.1007/BF00762011}{doi:10.1007/BF00762011}.
 
 \bibitem{Perelman2002}
 G. Perelman,
@@ -2881,18 +2782,66 @@ G. Perelman,
 arXiv:math/0307245 [math.DG] (2003).
 \url{https://arxiv.org/abs/math/0307245}.
 
-\bibitem{Shaw1986}
-W.~T. Shaw,
-\emph{An ambitwistor description of bosonic or supersymmetric minimal
-surfaces and strings in four dimensions},
-Class. Quantum Grav. \textbf{3} (1986), 753--761.
-\href{https://doi.org/10.1088/0264-9381/3/5/006}{doi:10.1088/0264-9381/3/5/006}.
-
 \bibitem{Smale1961}
 S. Smale,
 \emph{Generalized Poincar\'e's conjecture in dimensions greater than four},
 Ann. of Math. (2) \textbf{74} (1961), no.~2, 391--406.
 \href{https://doi.org/10.2307/1970239}{doi:10.2307/1970239}.
+
+\bibitem{Milnor1956}
+J. Milnor,
+\emph{On manifolds homeomorphic to the 7-sphere},
+Ann. of Math. (2) \textbf{64} (1956), no.~2, 399--405.
+\href{https://doi.org/10.2307/1969983}{doi:10.2307/1969983}.
+
+\bibitem{Freedman1982}
+M.~H. Freedman,
+\emph{The topology of four-dimensional manifolds},
+J. Differential Geom. \textbf{17} (1982), no.~3, 357--453.
+\href{https://doi.org/10.4310/jdg/1214437136}{doi:10.4310/jdg/1214437136}.
+
+\bibitem{FreedmanGompfMorrisonWalker2010}
+M.~H. Freedman, R.~E. Gompf, S. Morrison, and K. Walker,
+\emph{Man and machine thinking about the smooth 4-dimensional Poincar\'e conjecture},
+Quantum Topol. \textbf{1} (2010), no.~2, 171--208.
+\href{https://doi.org/10.4171/QT/5}{doi:10.4171/QT/5}.
+
+\bibitem{Fine2011}
+J. Fine,
+\emph{A gauge theoretic approach to the anti-self-dual Einstein equations},
+arXiv:1111.5005v2 [math.DG] (2011).
+\url{https://arxiv.org/abs/1111.5005v2}.
+
+\bibitem{AHS1978}
+M.~F. Atiyah, N.~J. Hitchin, and I.~M. Singer,
+\emph{Self-duality in four-dimensional Riemannian geometry},
+Proc. Roy. Soc. London Ser. A \textbf{362} (1978), no.~1711, 425--461.
+\href{https://doi.org/10.1098/rspa.1978.0143}{doi:10.1098/rspa.1978.0143}.
+
+\bibitem{Penrose1976}
+R. Penrose,
+\emph{Nonlinear gravitons and curved twistor theory},
+Gen. Relativ. Gravit. \textbf{7} (1976), 31--52.
+\href{https://doi.org/10.1007/BF00762011}{doi:10.1007/BF00762011}.
+
+\bibitem{DonaldsonKronheimer1990}
+S.~K. Donaldson and P.~B. Kronheimer,
+\emph{The Geometry of Four-Manifolds},
+Oxford Mathematical Monographs,
+Clarendon Press, Oxford, 1990.
+\href{https://doi.org/10.1093/oso/9780198535539.001.0001}{doi:10.1093/oso/9780198535539.001.0001}.
+
+\bibitem{Witten1978}
+E. Witten,
+\emph{An interpretation of classical Yang--Mills theory},
+Phys. Lett. B \textbf{77} (1978), 394--398.
+\href{https://doi.org/10.1016/0370-2693(78)90585-3}{doi:10.1016/0370-2693(78)90585-3}.
+
+\bibitem{Baker2023}
+E.~B. Baker III,
+\emph{Generalized conformal maps as classical symmetries of Yang--Mills fields},
+arXiv:2301.00029 [math-ph] (2023), and references within.
+\url{https://arxiv.org/abs/2301.00029}.
 
 \bibitem{Ward1980}
 R.~S. Ward,
@@ -2900,11 +2849,56 @@ R.~S. Ward,
 Commun. Math. Phys. \textbf{78} (1980), 1--17.
 \href{https://doi.org/10.1007/BF01941967}{doi:10.1007/BF01941967}.
 
-\bibitem{Witten1978}
-E. Witten,
-\emph{An interpretation of classical Yang--Mills theory},
-Phys. Lett. B \textbf{77} (1978), 394--398.
-\href{https://doi.org/10.1016/0370-2693(78)90585-3}{doi:10.1016/0370-2693(78)90585-3}.
+\bibitem{FineKrasnovPanov2014}
+J. Fine, K. Krasnov, and D. Panov,
+\emph{A gauge theoretic approach to Einstein 4-manifolds},
+New York J. Math. \textbf{20} (2014), 293--323.
+\url{https://nyjm.albany.edu/j/2014/20-18.html}.
+
+\bibitem{GurskyViaclovsky2015}
+M.~J. Gursky and J.~A. Viaclovsky,
+\emph{Rigidity and stability of Einstein metrics for quadratic curvature functionals},
+J. Reine Angew. Math. \textbf{700} (2015), 37--91.
+Preprint: arXiv:1105.4648v2 [math.DG].
+\url{https://arxiv.org/abs/1105.4648}.
+
+\bibitem{Kuiper1949}
+N.~H. Kuiper,
+\emph{On conformally-flat spaces in the large},
+Ann. of Math. (2) \textbf{50} (1949), no.~4, 916--924.
+\href{https://doi.org/10.2307/1969587}{doi:10.2307/1969587}.
+
+\bibitem{Kodaira1962}
+K. Kodaira,
+\emph{A theorem of completeness of characteristic systems for analytic
+families of compact submanifolds of complex manifolds},
+Ann. of Math. (2) \textbf{75} (1962), 146--162.
+\href{https://doi.org/10.2307/1970424}{doi:10.2307/1970424}.
+
+\bibitem{Kodaira1963}
+K. Kodaira,
+\emph{On stability of compact submanifolds of complex manifolds},
+Amer. J. Math. \textbf{85} (1963), 79--94.
+\href{https://doi.org/10.2307/2373187}{doi:10.2307/2373187}.
+
+\bibitem{Shaw1986}
+W.~T. Shaw,
+\emph{An ambitwistor description of bosonic or supersymmetric minimal
+surfaces and strings in four dimensions},
+Class. Quantum Grav. \textbf{3} (1986), 753--761.
+\href{https://doi.org/10.1088/0264-9381/3/5/006}{doi:10.1088/0264-9381/3/5/006}.
+
+\bibitem{IsenbergYasskinGreen1978}
+J. Isenberg, P.~B. Yasskin, and P.~S. Green,
+\emph{Non-self-dual gauge fields},
+Phys. Lett. B \textbf{78} (1978), 462--464.
+\href{https://doi.org/10.1016/0370-2693(78)90486-0}{doi:10.1016/0370-2693(78)90486-0}.
+
+\bibitem{MasonSkinner2006}
+L.~J. Mason and D. Skinner,
+\emph{An ambitwistor Yang--Mills Lagrangian},
+Phys. Lett. B \textbf{636} (2006), 60--67.
+\href{https://doi.org/10.1016/j.physletb.2006.02.061}{doi:10.1016/j.physletb.2006.02.061}.
 \end{thebibliography}
 \end{document}
 

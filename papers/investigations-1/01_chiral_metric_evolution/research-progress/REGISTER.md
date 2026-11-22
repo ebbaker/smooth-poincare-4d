@@ -20,6 +20,7 @@ The research materials are inherited working drafts. Repository setup is complet
 | --- | --- | --- | --- | --- |
 | SP4-CME-DOC-E01 | E — fixed editorial revision; selected lead retained | Expand the CME introduction and background using the two initial manuscripts and checked primary passages; state the smooth Poincaré motivation; define dimension, field, bundles, variations and normalization before the central statement; cite Baker only through arXiv:2301.00029 and references within; compile and check citations and layout. A changed scientific claim or proof strategy is outside this packet. | Completed within scope, 2026-11-21 | [Revision record and input hashes](../reviews/BACKGROUND_REVISION_20261121.md); 37-page PDF builds cleanly, citations and affected page layouts checked. No helper or new scientific investigation activated. Actual model/effort not independently exposed. |
 | SP4-CME-DOC-E02 | E — author-specified editorial progression; selected lead retained | Rewrite the Introduction from isothermal coordinates and two-dimensional uniformization, through Hamilton–Perelman in three dimensions, to the smooth four-dimensional problem and relevant gauge/twistor methods; include the author's subsequent higher-dimensional comparison; retain the precise local method statements; check primary passages, bibliography, build and layout. New research claims or changed proof strategies are outside scope and require separate B work. | Completed within scope, 2026-11-21 | [Revision record](../reviews/INTRODUCTION_REWRITE_20261121.md); 39-page PDF builds cleanly, all 24 bibliography keys resolve, and affected layouts are checked. Includes Smale's higher-dimensional result and Milnor's distinction between topological and smooth classification. Actual model/effort unavailable; no helpers or research packets activated. |
+| SP4-CME-DOC-E03 | E — fixed editorial revision | Simplify in-text citations and order the bibliography by first citation. Follow the author's final paragraph preference for the higher-dimensional and four-dimensional discussion. | Completed within scope, 2026-11-22 | Successful PDF build and verified order of all 24 bibliography entries. |
 
 ## Default next action
 
@@ -48,3 +49,17 @@ The notation and Sections 2–14 are unchanged. No scientific validation status
 is promoted. The selected lead provided OpenAI assistance; actual model/effort
 were unavailable. Live capture remains unavailable; an explicitly unregistered
 partial public record preserves the request and completed commentary.
+
+### 2026-11-22 — SP4-CME-DOC-E03 citation style and paragraph structure
+
+Editorial revision for Edward B. Baker III with OpenAI assistance. Actual
+model and effort unavailable. The input was commit `ea004a9eeae11248595047437a2b8bd63cfb55c7`.
+The [manuscript](../manuscript/chiral_curvature_and_metric_evolution.tex)
+uses bracketed citation numbers in order of first appearance, with author
+surnames for attribution. Source locators are available in the input
+revision and [branch reference notes](../references/README.md). The
+author initially requested a split and then asked to recombine the
+higher-dimensional and four-dimensional discussion. The follow-up removed
+one paragraph break from the revised source. Verification covered citation
+order and the typeset Introduction. The next scientific task is SP4-CME-E01,
+awaiting activation. The exact public chat source was unavailable for capture.
