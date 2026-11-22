@@ -152,7 +152,14 @@ def find_registered(repo, thread_id, preferred=None):
     papers = repo / "papers"
     if not papers.is_dir():
         raise HistoryError("The repository has no papers directory")
-    for path in papers.rglob("index.json"):
+    # Shared setup/workflow conversations live at the repository root. Omitting
+    # them makes a registered chat look unregistered to refresh and Stop hooks,
+    # and can allow a second registration in a branch.
+    indices = [repo / name / "index.json" for name in ("chat-histories", "chat_histories")]
+    indices.extend(papers.rglob("index.json"))
+    for path in indices:
+        if not path.exists() and not path.is_symlink():
+            continue
         if path.parent.name not in {"chat-histories", "chat_histories"}:
             continue
         folder = safe_directory(repo, str(path.parent.relative_to(repo)))
@@ -846,8 +853,11 @@ def diagnose_source(repo, thread_id, rollout=None, history_dir=None):
     registration = {"status": "registered" if registered else "unregistered"}
     if registered is not None:
         registration["history_dir"] = str(registered.relative_to(repo))
+    local_mode = "not_inspected" if rollout is not None else "unresolved"
     try:
-        if rollout is None and paginated_source_mode(thread_id) == "paginated":
+        if rollout is None:
+            local_mode = paginated_source_mode(thread_id)
+        if local_mode == "paginated":
             _, info = load_paginated_source(thread_id)
             source = {"status": "available", "source_selection": "paginated_history",
                       "source_kind": info["source_kind"], "identity_validated": False}
@@ -859,6 +869,14 @@ def diagnose_source(repo, thread_id, rollout=None, history_dir=None):
     except HistoryError as exc:
         source = {"status": "unavailable" if exc.code == "source_unavailable" else "rejected",
                   "error_code": exc.code, "error": str(exc), "details": exc.details}
+    source["local_thread_history_mode"] = local_mode
+    if local_mode == "absent" and source["status"] == "unavailable":
+        source["next_step"] = (
+            "No exact local Codex thread metadata or JSONL source was found. "
+            "A completion hook cannot create that source. Obtain this exact "
+            "conversation through a supported app history reader or an authentic "
+            "export; do not substitute another thread or reconstruct source records."
+        )
     return {"status": "diagnostic", "thread_id": thread_id, "read_only": True,
             "capture_performed": False, "registration": registration, "source": source,
             "source_contract": {

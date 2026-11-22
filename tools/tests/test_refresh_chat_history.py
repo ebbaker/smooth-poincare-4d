@@ -379,6 +379,44 @@ class RefreshTests(unittest.TestCase):
         self.assertEqual(self.data_pair(), before)
         self.assertEqual(len(self.registry()['chats']), 1)
 
+    def test_root_registration_is_found_and_refreshed_without_destination(self):
+        original_name = self.entry()['file']
+        original_created = self.conversation()['create_time']
+        for offset, name in enumerate(('chat-histories', 'chat_histories')):
+            with self.subTest(folder=name):
+                destination = self.repo / name
+                self.history.rename(destination)
+                self.history = destination
+                self.append(seconds=10 + offset)
+                result = self.refresh()
+                self.assertEqual(result['status'], 'refreshed')
+                self.assertEqual(self.entry()['file'], original_name)
+                self.assertEqual(self.conversation()['create_time'], original_created)
+                self.assertEqual(self.entry()['message_count'], 3 + offset)
+                self.assert_registry_integrity()
+
+    def test_root_registration_prevents_second_registration_in_branch(self):
+        destination = self.repo / 'chat-histories'
+        self.history.rename(destination)
+        self.history = destination
+        before = self.data_pair()
+        with self.assertRaisesRegex(REFRESH.HistoryError, 'already registered'):
+            self.refresh(history_dir=HISTORY_REL, title='Duplicate must not be created')
+        self.assertEqual(self.data_pair(), before)
+        self.assertFalse((self.repo / HISTORY_REL / 'index.json').exists())
+
+    def test_root_registration_diagnostic_is_read_only(self):
+        destination = self.repo / 'chat-histories'
+        self.history.rename(destination)
+        self.history = destination
+        before = self.data_pair()
+        result = REFRESH.diagnose_source(self.repo, THREAD, rollout=self.rollout)
+        self.assertEqual(result['registration'],
+                         {'status': 'registered', 'history_dir': 'chat-histories'})
+        self.assertFalse(result['capture_performed'])
+        self.assertEqual(self.data_pair(), before)
+        self.assertFalse((self.history / REFRESH.LOCK_NAME).exists())
+
     def test_explicit_destination_registers_new_chat(self):
         for row in self.rows:
             payload = row['payload']
@@ -516,6 +554,32 @@ class RefreshTests(unittest.TestCase):
         self.assertIn('task_complete', result['source_contract']['final_capture'])
         self.assertEqual(self.data_pair(), before)
         self.assertFalse(lock.exists())
+
+    def test_diagnose_distinguishes_absent_thread_from_missing_rollout(self):
+        before = self.data_pair()
+        with mock.patch.object(REFRESH, 'paginated_source_mode', return_value='absent'), \
+             mock.patch.object(REFRESH, 'resolve_rollout', side_effect=REFRESH.SourcePending(
+                 'Synthetic exact-id source absence', code='source_unavailable')):
+            result = REFRESH.diagnose_source(self.repo, THREAD)
+        self.assertEqual(result['source']['local_thread_history_mode'], 'absent')
+        self.assertEqual(result['source']['status'], 'unavailable')
+        self.assertIn('export', result['source']['next_step'])
+        self.assertEqual(self.data_pair(), before)
+
+    def test_diagnose_absent_database_still_allows_exact_legacy_rollout(self):
+        with mock.patch.object(REFRESH, 'paginated_source_mode', return_value='absent'), \
+             mock.patch.object(REFRESH, 'resolve_rollout', return_value=self.rollout):
+            result = REFRESH.diagnose_source(self.repo, THREAD)
+        self.assertEqual(result['source']['local_thread_history_mode'], 'absent')
+        self.assertEqual(result['source']['status'], 'available')
+        self.assertNotIn('next_step', result['source'])
+
+    def test_diagnose_explicit_source_does_not_probe_local_thread_metadata(self):
+        with mock.patch.object(REFRESH, 'paginated_source_mode', side_effect=AssertionError(
+                'Explicit source diagnostics must not inspect another store')):
+            result = REFRESH.diagnose_source(self.repo, THREAD, rollout=self.rollout)
+        self.assertEqual(result['source']['local_thread_history_mode'], 'not_inspected')
+        self.assertEqual(result['source']['source_selection'], 'supplied_rollout')
 
     def test_incomplete_trailing_json_is_not_archived(self):
         self.append()
@@ -803,6 +867,8 @@ class RefreshTests(unittest.TestCase):
             result = REFRESH.diagnose_source(self.repo, THREAD)
         self.assertEqual(result['source']['status'], 'unavailable')
         self.assertEqual(result['source']['error_code'], 'source_unavailable')
+        self.assertEqual(result['source']['local_thread_history_mode'], 'paginated')
+        self.assertNotIn('next_step', result['source'])
         self.assertEqual(self.data_pair(), before)
 
     def test_store_switch_preserves_and_completes_recorded_turn_provenance(self):

@@ -50,3 +50,19 @@ The revised opening now connects the smooth Poincaré goal to the analysis near 
 ## Assistant — validation completed
 
 The checks are complete: the 37-page PDF builds without warnings, all citations and cross-references resolve, and the revised pages render cleanly. The manuscript now has fourteen references, with your work cited only through arXiv:2301.00029 and “references within.”
+
+## Continuation — user requests capture repair
+
+Can you look into the chat history capture to try to fix it?
+
+## Assistant — troubleshooting scope
+
+I’ll trace how the recorder locates this conversation, check the app’s available history sources, and try to repair the capture path. I’ll verify it against this thread’s actual public messages.
+
+## Assistant — findings
+
+I found two issues. The app logs confirm that its history tool calls end without returning a result, and this thread has no record in the local Codex stores. Separately, the recorder overlooks archives registered at the repository root. I’ll fix that lookup bug and improve the diagnostics, while checking whether the app exposes another supported source for this conversation.
+
+## Assistant — repair validation and remaining blocker
+
+The recorder fix passes all 117 tests. Live capture is still blocked: this thread has no local messages or turns, and the app’s history reader fails with “The app tool call ended before producing a result.” I’m saving the diagnostic evidence and repair details so the remaining app-side problem is reproducible.

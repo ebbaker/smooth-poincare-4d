@@ -35,6 +35,21 @@ The tool supports verified legacy JSONL and supported paginated SQLite source
 schemas. A source explicitly marked as paginated cannot silently fall back to
 a retained JSONL. Source database access is read-only.
 
+`source.local_thread_history_mode` reports the exact local metadata lookup:
+`paginated`, `legacy`, or `absent`. An explicit `--rollout` leaves that lookup
+`not_inspected`; a failed lookup is `unresolved`. An absent database entry
+does not exclude a valid exact-ID JSONL source, so inspect `source.status` too.
+When both are absent, diagnostics explain that a completion hook cannot
+create the missing source. A Work conversation's session ID alone does not
+establish that its messages are persisted in the local Codex stores.
+
+If local discovery fails, use the app's supported history reader or an
+authentic export of the exact conversation. Record app-reader errors
+separately from repository failures. Do not install or repeatedly adjust a
+hook as a substitute for obtaining the underlying history. The
+[21 November investigation](../reviews/CHAT_CAPTURE_DIAGNOSIS_20261121.md)
+records one such source/API failure and the separate root-registry repair.
+
 Do not guess a thread ID, turn ID, source path, native title, model, effort or
 creation timestamp. Do not use another chat's accessible source as evidence
 that this chat works. If the exact source is unavailable or unsupported,
@@ -71,6 +86,9 @@ python3 tools/refresh_chat_history.py --thread-id ACTUAL_THREAD_ID
 ```
 
 An unregistered chat is skipped; `skipped_unregistered` is not a capture.
+Automatic registration lookup covers both repository-root history folders
+and the investigation history folders under `papers/`; an explicit
+destination must not create a second registration for an existing chat.
 Verify the returned success status and the registry's recorded counts,
 source/configuration metadata, sizes and hashes. Hashes establish byte
 identity, not scientific validity. Never hand-edit a registered JSON archive.
