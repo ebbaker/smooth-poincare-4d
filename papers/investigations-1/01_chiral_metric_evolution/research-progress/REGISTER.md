@@ -19,7 +19,7 @@ The research materials are inherited working drafts. Repository setup is complet
 | Task | Type | Scope and completion test | Current status | Evidence / disposition |
 | --- | --- | --- | --- | --- |
 | SP4-CME-DOC-E01 | E — fixed editorial revision; selected lead retained | Expand the CME introduction and background using the two initial manuscripts and checked primary passages; state the smooth Poincaré motivation; define dimension, field, bundles, variations and normalization before the central statement; cite Baker only through arXiv:2301.00029 and references within; compile and check citations and layout. A changed scientific claim or proof strategy is outside this packet. | Completed within scope, 2026-11-21 | [Revision record and input hashes](../reviews/BACKGROUND_REVISION_20261121.md); 37-page PDF builds cleanly, citations and affected page layouts checked. No helper or new scientific investigation activated. Actual model/effort not independently exposed. |
-| SP4-CME-DOC-E02 | E — author-specified editorial progression; selected lead retained | Rewrite the Introduction from isothermal coordinates and two-dimensional uniformization, through Hamilton–Perelman in three dimensions, to the smooth four-dimensional problem and relevant gauge/twistor methods; include the author's subsequent higher-dimensional comparison; retain the precise local method statements; check primary passages, bibliography, build and layout. New research claims or changed proof strategies are outside scope and require separate B work. | Active follow-up, 2026-11-21 | Initial rewrite built and checked; incorporating Smale's higher-dimensional result and the topological/smooth distinction requested before delivery. [Revision record](../reviews/INTRODUCTION_REWRITE_20261121.md). Actual model/effort unavailable; no helpers or research packets activated. |
+| SP4-CME-DOC-E02 | E — author-specified editorial progression; selected lead retained | Rewrite the Introduction from isothermal coordinates and two-dimensional uniformization, through Hamilton–Perelman in three dimensions, to the smooth four-dimensional problem and relevant gauge/twistor methods; include the author's subsequent higher-dimensional comparison; retain the precise local method statements; check primary passages, bibliography, build and layout. New research claims or changed proof strategies are outside scope and require separate B work. | Completed within scope, 2026-11-21 | [Revision record](../reviews/INTRODUCTION_REWRITE_20261121.md); 39-page PDF builds cleanly, all 24 bibliography keys resolve, and affected layouts are checked. Includes Smale's higher-dimensional result and Milnor's distinction between topological and smooth classification. Actual model/effort unavailable; no helpers or research packets activated. |
 
 ## Default next action
 
@@ -39,8 +39,9 @@ Completed the author's requested background expansion and smooth Poincaré motiv
 
 ### 2026-11-21 — SP4-CME-DOC-E02 introduction progression
 
-Completed the author's requested dimensional progression and transition to
-the chiral methods. The [revision record](../reviews/INTRODUCTION_REWRITE_20261121.md)
+Completed the author's requested dimensional progression, including the
+higher-dimensional follow-up, and transition to the chiral methods.
+The [revision record](../reviews/INTRODUCTION_REWRITE_20261121.md)
 and [source notes](../../../../references/SOURCE_NOTES_CME_INTRODUCTION_20261121.md)
 record inputs, primary passages, access limits, bibliography and layout checks.
 The notation and Sections 2–14 are unchanged. No scientific validation status

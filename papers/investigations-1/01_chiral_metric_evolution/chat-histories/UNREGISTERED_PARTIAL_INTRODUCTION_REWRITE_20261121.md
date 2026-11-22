@@ -47,3 +47,15 @@ The rewritten opening now follows the requested progression. It leads into the e
 ---
 
 The revised manuscript builds cleanly, and the Introduction and bibliography render correctly. All 22 references resolve. I’m recording the revision and source checks; the analytical body remains unchanged.
+
+## User follow-up — completed public text
+
+Oh one thing, you might want to mention how it was also solved in higher dimensions within the same paragraph where you introduce the smooth Poincare conjecture in four dimensions, but after you discuss three dimensions. I think it will help set up why four dimensions is special and difficult.
+
+## Assistant follow-up commentary — completed public text, in order
+
+I’ll add that before introducing the four-dimensional case. The important distinction is that the higher-dimensional **topological** conjecture was proved, while the smooth analogue fails in some dimensions because of exotic spheres. I’ll use that contrast to explain why dimension four remains special.
+
+---
+
+The higher-dimensional comparison is now in the paragraph introducing dimension four, with references to Smale and Milnor. The revised PDF builds cleanly; I’m finishing the citation and layout checks.

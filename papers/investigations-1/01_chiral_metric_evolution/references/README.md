@@ -7,6 +7,6 @@ Follow [REFERENCE_WORKFLOW.md](../../../../REFERENCE_WORKFLOW.md). Distinguish a
 The [21 November background source notes](../../../../references/SOURCE_NOTES_CME_BACKGROUND_20261121.md) record passages checked for the revised introduction and Section 2. In this manuscript, the author's work is cited only as [arXiv:2301.00029](https://arxiv.org/abs/2301.00029) and references within. Earlier repository manuscripts informed the exposition but are not cited; their preservation in the shared collection does not change that citation policy.
 
 The subsequent [Introduction progression source notes](../../../../references/SOURCE_NOTES_CME_INTRODUCTION_20261121.md)
-record the uniformization, Hamilton–Perelman, topological four-sphere,
+record the uniformization, Hamilton–Perelman, higher-dimensional sphere and exotic-sphere, topological four-sphere,
 handle/knot-theoretic and Donaldson sources for the rewritten opening,
 with separate inspection levels and the revisited Fine, AHS and Witten passages.

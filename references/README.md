@@ -33,12 +33,12 @@ The [source notes](SOURCE_NOTES_CME_BACKGROUND_20261121.md) distinguish newly ch
 ## Ownership and availability
 
 The [Introduction progression source notes](SOURCE_NOTES_CME_INTRODUCTION_20261121.md)
-record the additional uniformization, Hamilton–Perelman, Freedman,
-handle/knot-theoretic and Donaldson references checked on 21 November 2026.
+record the additional uniformization, Hamilton–Perelman, Smale, Milnor,
+Freedman, handle/knot-theoretic and Donaldson references checked on 21 November 2026.
 They distinguish full-text passage checks, indexed passages and publisher
 abstracts, and preserve the distinction between the published Donaldson
 surface monograph and the accessible earlier draft. The shared bibliography
-contains the eight new entries. Existing Fine, Atiyah–Hitchin–Singer and
+contains the ten new entries. Existing Fine, Atiyah–Hitchin–Singer and
 Witten passages were revisited for the new opening narrative.
 
 All branches reuse this catalog and record branch-specific use in their own references folder. Published reading PDFs are copied locally and ignored by Git; their copyright remains with their owners. Original author-draft PDFs are tracked. A fresh Git clone therefore includes the author drafts but not the third-party reading collection. Missing reading copies should be retrieved from primary sources with recorded provenance; no download was performed during setup.

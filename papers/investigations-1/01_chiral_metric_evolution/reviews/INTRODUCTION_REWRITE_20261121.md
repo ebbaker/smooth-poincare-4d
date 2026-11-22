@@ -16,7 +16,10 @@ Rewrote the opening of the Introduction in the requested sequence:
 2. Hamilton's Ricci flow, his positive-Ricci convergence theorem, Perelman's
    noncollapsing and surgery, and finite extinction explain the
    three-dimensional smooth conclusion at a high level.
-3. Freedman's topological theorem is distinguished from the open smooth
+3. Smale's higher-dimensional sphere recognition and Milnor's exotic
+   seven-spheres distinguish topological classification from smooth
+   uniqueness, as requested in the author's follow-up. The same paragraph
+   introduces Freedman's topological theorem and the open smooth
    four-dimensional question. Handle/surgery and knot-theoretic approaches
    provide context before Fine's arXiv:1111.5005v2 and the geometric program.
 4. Four-dimensional chirality and the Atiyah–Hitchin–Singer twistor theorem
@@ -26,7 +29,7 @@ Rewrote the opening of the Introduction in the requested sequence:
    reasons for working away from twistor integrability, followed by the
    existing definite-connection reconstruction and precise local comparison.
 
-Eight references were added to both the manuscript bibliography and the
+Ten references were added to both the manuscript bibliography and the
 shared BibTeX file. Fine's link now identifies v2 explicitly. The sole
 Baker self-citation remains arXiv:2301.00029 and references within.
 The [shared source record](../../../../references/SOURCE_NOTES_CME_INTRODUCTION_20261121.md)
@@ -60,22 +63,22 @@ the working tree during this task and was left untouched.
   `latexmk -pdf` build after the final bibliography edit produced 39 pages,
   with no LaTeX warnings, unresolved references, or overfull/underfull boxes.
 - The delivered PDF is byte-identical to that final build.
-- All 22 bibliography keys are cited, with no missing or duplicate keys.
+- All 24 bibliography keys are cited, with no missing or duplicate keys.
   Cross-reference labels resolve and have no duplicates.
 - PDF pages 3–6 and 37–39 were rendered with macOS PDFKit and visually
-  inspected, covering the entire Introduction, transition to Section 2,
+  inspected, covering the entire Introduction, notation subsection,
   and bibliography. No clipping, overlap or broken equations were found.
 - The notation and Sections 2–14 are byte-for-byte unchanged from the input.
   No other manuscript was modified.
 - `git diff --check` and `python3 tools/check_repository_hygiene.py` passed.
 
 Revised source SHA-256:
-`70e96e0fe9fcf56fd3b7b5779728cfecb63b29587d8e7f1b3f00937dd70d68cc`.
+`2a56f665b74a476535cf0913b8a57d1fd2e9dfc937e59f10a05582f7784c5558`.
 
 The current PDF is
 `output/pdf/01_chiral_metric_evolution/chiral_curvature_and_metric_evolution.pdf`
-(523,542 bytes), SHA-256
-`884e57ce303091c95d8a9d5ad2a03689cf3010cd0d2782cb1544a6b58ae7007d`.
+(525,634 bytes), SHA-256
+`fdb37dce3936c3b11bfce7d6cd789fcbcaa3496abbed46cbc60f78205ca5aeca`.
 
 ## Public capture and continuation
 
