@@ -66,3 +66,15 @@ I found two issues. The app logs confirm that its history tool calls end without
 ## Assistant — repair validation and remaining blocker
 
 The recorder fix passes all 117 tests. Live capture is still blocked: this thread has no local messages or turns, and the app’s history reader fails with “The app tool call ended before producing a result.” I’m saving the diagnostic evidence and repair details so the remaining app-side problem is reproducible.
+
+## Continuation — user reports a parallel-session failure
+
+Chat capture still didn't work for a new session, can you look into what could be wrong? That session is still in progress in parallel.
+
+## Assistant — parallel-session check
+
+I’ll check the active session’s source and capture status without interrupting it, then compare the result with the failures we found here.
+
+## Assistant — installed-app finding
+
+I found a more specific cause in the installed app: its tool-capability check explicitly rejects ChatGPT-originated calls before the history tools run. That matches the failures from Work mode. The recorder cannot repair that app-side restriction, and the running session can continue while I document the finding.

@@ -40,6 +40,9 @@
 % with OpenAI assistance. Actual model/effort not independently exposed.
 % Inputs, passage checks and editorial scope: ../reviews/BACKGROUND_REVISION_20261121.md.
 % This revision does not constitute the separate audit of the research claims.
+% Introduction progression revised 21 November 2026 (America/New_York),
+% for Edward B. Baker III with OpenAI assistance; actual model/effort unavailable.
+% Input versions and editorial scope: ../reviews/INTRODUCTION_REWRITE_20261121.md.
 
 \begin{document}
 \maketitle
@@ -54,61 +57,127 @@ Motivated by the smooth four-dimensional Poincar\'e conjecture, we develop a sel
 
 \section{Introduction}\label{sec:introduction}
 
-The smooth four-dimensional Poincar\'e conjecture asks whether every smooth,
-closed four-manifold homotopy equivalent to \(S^4\) is diffeomorphic to the
-standard four-sphere. The long-term aim of this work is to make progress on
-that question through geometric evolution. A possible route is to construct
-a Riemannian metric on a given homotopy four-sphere and deform its geometry
-toward a class that forces the standard smooth structure. Anti-self-dual
-conformal geometry provides such a target, as explained below. Before a
-global deformation argument can be attempted, one needs to understand the
-variables, equations and stability mechanism near the round sphere. This
-paper develops that local comparison for chiral connection variables.
-
-Isothermal coordinates express a smooth Riemannian metric on a real
-two-dimensional surface locally as
-\(g=e^{2u}(dx^2+dy^2)\). In a fixed such chart, unnormalized Ricci flow is
+Isothermal coordinates provide a simple model for using geometry to
+recognize the smooth structure of a sphere. Every smooth Riemannian metric
+on an oriented real surface can be written locally as
 \[
-\partial_tu=e^{-2u}\Delta_{\mathrm{flat}}u.
+ g=e^{2u}(dx^2+dy^2)=e^{2u}|dz|^2,\qquad z=x+iy.
 \]
-The coordinates remove the local conformal degrees of freedom, leaving the
-conformal factor to evolve. In real dimension four, the Weyl tensor obstructs
-this reduction: a general metric cannot be made a scalar multiple of the flat
-metric by a coordinate change. The motivating question is whether another
-choice of geometric variables can retain this curvature while making its
-evolution more accessible.
+Orientation-preserving transitions between these charts are holomorphic,
+so the metric determines a Riemann surface. If the underlying smooth
+surface is closed and homotopy equivalent to \(S^2\), it is orientable
+and simply connected. Uniformization then identifies this compact Riemann
+surface biholomorphically with \(\CP^1\); the resulting map is a
+diffeomorphism to the standard smooth two-sphere
+\cite[Chapter~10]{Donaldson2011}. This gives a geometric proof of the
+two-dimensional smooth Poincar\'e statement. Isothermal coordinates supply
+the local conformal description, while uniformization supplies the global
+identification; the existence of the local charts alone would not establish
+the conclusion.
 
-The evolution problem in this paper is entirely \emph{real and Riemannian}.
-Its base is a smooth oriented real four-manifold with a positive-definite
-metric; all perturbative statements concern the closed standard sphere
-\(S^4\) near a round metric. Complex geometry enters the background through
-twistor theory, and is distinguished explicitly from this real problem.
-In particular, a holomorphic metric on a complex four-manifold is not a
-metric on a real four-manifold until an appropriate real structure has
-been specified.
+In three dimensions, the analogous statement is that every closed smooth
+three-manifold homotopy equivalent to \(S^3\) is diffeomorphic to the
+standard three-sphere. Hamilton's approach replaces conformal coordinates
+by a geometric heat equation, the Ricci flow,
+\[
+ \partial_t g=-2\Ric(g).
+\]
+After fixing the diffeomorphism freedom, this is a nonlinear parabolic
+evolution of the metric. Hamilton proved that in dimension three the
+volume-normalized flow starting from strictly positive Ricci curvature
+converges to a metric of constant positive sectional curvature
+\cite{Hamilton1982}. General initial metrics can develop
+singularities, so the broader program required both their analysis and a
+way to continue the evolution. Perelman's entropy and noncollapsing
+estimates supplied decisive control of singularity models
+\cite{Perelman2002}; his construction of Ricci flow with surgery removes
+appropriate neck regions and replaces them by controlled caps
+\cite{Perelman2003Surgery}. For a homotopy three-sphere, finite-time
+extinction together with the topology of these surgeries yields the smooth
+identification with \(S^3\) \cite{Perelman2003Extinction}. The lesson for
+higher dimensions is that a local smoothing equation must be accompanied
+by global control of degeneration and its topological consequences.
 
-Twistor theory suggests why connections might be useful variables. Penrose's
-nonlinear-graviton construction encodes a curved conformal geometry in a
-complex threefold containing a family of rational curves
-\cite[Sections~4--5]{Penrose1976}. The Riemannian formulation of
-Atiyah--Hitchin--Singer relates the integrability of the twistor almost
-complex structure to the vanishing of one Weyl component
-\cite[Theorem~4.1]{AHS1978}. The Ward correspondence then relates gauge
-connections satisfying a chiral curvature equation to holomorphic bundles
-with specified triviality and reality conditions
-\cite[Theorem~5.2]{AHS1978}. These constructions motivate a generalized
-coordinate description in which maps depend on a point and a chiral null
-direction, while curvature is represented by connection data. A flat-space
-precursor is the nonlocal action of generalized conformal maps on Yang--Mills
-fields in \cite{Baker2023}, and references within. Section~\ref{sec:ctx-isothermal}
-explains how these ideas lead to the present question and which extra
-conditions are needed to pass from a complex description to a Riemannian
-evolution.
+In higher dimensions, Smale's handle-cancellation methods, underlying
+$h$-cobordism theory, show that every closed smooth homotopy $n$-sphere
+with $n\geq5$ is homeomorphic to $S^n$ \cite[Theorem~A]{Smale1961}.
+This settles the topological recognition problem in that range for smooth
+manifolds, but smooth uniqueness has a different answer: Milnor's exotic
+seven-spheres are homeomorphic to $S^7$ without being diffeomorphic to it
+\cite[Theorem~3]{Milnor1956}. Dimension four lies outside the range of
+these smooth handle-cancellation arguments. Here Freedman's theorem
+identifies every closed topological
+homotopy four-sphere with \(S^4\) by a homeomorphism
+\cite[Theorem~1.6]{Freedman1982}, but the corresponding smooth statement
+remains open: must every closed smooth manifold homotopy equivalent to
+\(S^4\) be diffeomorphic to the standard sphere? Major approaches include
+handle calculus and surgery descriptions that seek to simplify homotopy
+spheres, and knot-theoretic obstructions that could distinguish a candidate
+exotic sphere \cite[Sections~2--3]{FreedmanGompfMorrisonWalker2010}.
+Geometric approaches seek a distinguished metric or connection
+whose existence would force the standard smooth structure. The present
+work pursues this direction, with anti-self-dual (ASD) conformal geometry as a
+possible target. A central antecedent is Fine's
+\emph{A gauge theoretic approach to the anti-self-dual Einstein equations},
+arXiv:1111.5005v2 \cite{Fine2011}, which formulates the nonzero-scalar-curvature
+ASD Einstein equations in terms of definite \(SO(3)\) connections and
+introduces a gradient flow toward their solutions. This offers a concrete
+four-dimensional evolution framework; its application to the smooth
+Poincar\'e problem would still require suitable initial connections on
+arbitrary homotopy spheres and global control of the flow.
 
-There are two reasons to develop variables that remain meaningful away from
-the integrable twistor setting. First, a metric flow must be able to change
-the Weyl curvature, rather than assume its desired vanishing at every time.
-Second, the round target has nonzero scalar curvature and two nonflat chiral
+The special geometry of four dimensions explains the appeal of these
+variables. Unlike a surface metric, a general four-dimensional metric has
+Weyl curvature that cannot be removed by conformal rescaling or a change
+of coordinates. At the same time, on an oriented Riemannian four-manifold
+the Hodge star satisfies \(*^2=1\) on real two-forms, producing two real
+rank-three bundles,
+\[
+ \Lambda^2T^*M=\Lambda_g^+\oplus\Lambda_g^-.
+\]
+This chiral splitting underlies the connection between conformal geometry
+and gauge fields developed by Atiyah, Hitchin and Singer in
+\emph{Self-duality in four-dimensional Riemannian geometry}
+\cite{AHS1978}. In our orientation convention, their twistor integrability
+criterion says that \(W^+=0\) precisely when the natural almost complex
+structure on the sphere bundle \(S(\Lambda_g^+)\) is integrable
+\cite[Theorem~4.1]{AHS1978}. The resulting complex threefold encodes a
+real four-dimensional conformal geometry through a family of projective
+lines. Penrose's nonlinear-graviton construction supplies the corresponding
+holomorphic picture and, with additional data, its Ricci-flat specialization
+\cite[Sections~4--5]{Penrose1976}. These are four-dimensional analogues of
+the relation between conformal geometry and complex analysis on surfaces,
+with a curvature integrability condition in place of an automatic local
+complex structure.
+
+Gauge theory provides a complementary reason to work with connections.
+Donaldson invariants extract information about smooth four-manifolds from
+moduli spaces of anti-self-dual gauge connections
+\cite[Chapter~9]{DonaldsonKronheimer1990}. Their success motivates the use
+of gauge fields in smooth topology, although it does not settle the
+homotopy-sphere case, where the second cohomology vanishes. Twistor methods
+also reach beyond the self-dual sector: Witten's
+\emph{An interpretation of classical Yang--Mills theory}
+\cite{Witten1978} describes the full classical Yang--Mills equations using
+holomorphic bundles on the space of complex null lines, with specified
+triviality and third-order formal extension conditions. This is a local
+complex flat-spacetime correspondence, not an existence theorem for curved
+Riemannian four-manifolds. Together these ideas motivate generalized
+coordinate descriptions in which maps depend on both a point and a chiral
+direction, and curvature is carried by connection data. A flat-space
+precursor is the action of generalized conformal maps on Yang--Mills
+fields in \cite{Baker2023}, and references within.
+Section~\ref{sec:ctx-isothermal} develops this background and its
+reconstruction requirements.
+
+For the evolution studied here, the base is a smooth oriented \emph{real}
+four-manifold and the metric is positive definite; all perturbative results
+concern the closed standard sphere near a round metric. The complex spaces
+above supply background and motivation. There are two reasons to develop
+variables that remain meaningful away from the integrable twistor setting.
+First, an evolution toward an ASD metric must be able to change the Weyl
+curvature, rather than assume its desired vanishing at every time. Second,
+the round target has nonzero scalar curvature and two nonflat chiral
 Levi--Civita connections. Thus setting one entire spin connection to zero,
 as can occur in an appropriate Ricci-flat chiral reduction, would exclude
 the target itself. Ward's extension of the nonlinear-graviton construction
@@ -116,11 +185,9 @@ to Einstein metrics with cosmological constant already distinguishes this
 nonzero-scalar-curvature setting from the vacuum one
 \cite[Sections~1--2]{Ward1980}.
 
-Definite connections provide a Riemannian formulation on an open set of
-fields. For an oriented Riemannian four-manifold the Hodge star satisfies
-\(*^2=1\) on real two-forms, giving real rank-three bundles
-\(\Lambda^2T^*M=\Lambda_g^+\oplus\Lambda_g^-\). The Levi--Civita
-connection induces an \(SO(3)\) connection \(A_g^+\) on \(\Lambda_g^+\).
+Definite connections provide such variables on an open set of Riemannian
+fields. The Levi--Civita connection induces an \(SO(3)\) connection
+\(A_g^+\) on the selfdual bundle \(\Lambda_g^+\).
 One may instead start with an independent metric connection \(A\) in an
 oriented real rank-three Euclidean bundle \(E\). Using
 \(\mathfrak{so}(E)\simeq E\), write its curvature in an oriented
@@ -209,8 +276,8 @@ We derive this factorization from the connection calculation and an integration-
 
 The nonlinear reconstruction exhibits a separate issue. Its compatibility with the Levi--Civita connection is measured by the covariant derivative of a curvature-normalized selfdual triple. This quantity vanishes for perfect connections but is generally nonzero away from them. Moreover, the normalized curvature energy is bounded throughout the definite region and does not diverge at its boundary. An exact local family demonstrates how the reconstructed metric can become anisotropic while this energy density remains finite.
 
-The global motivation is the smooth four-dimensional Poincar\'e question.
-On a closed smooth homotopy four-sphere, the signature is zero, so an ASD
+The link back to the smooth Poincar\'e question is a conformal rigidity
+argument. On a closed smooth homotopy four-sphere, the signature is zero, so an ASD
 Riemannian metric has both Weyl components zero. The conformal
 developing-map argument then identifies the manifold smoothly with the
 standard sphere \cite{Kuiper1949}; Section~\ref{sec:ctx-topology} gives
@@ -2702,11 +2769,25 @@ E.~B. Baker III,
 arXiv:2301.00029 [math-ph] (2023), and references within.
 \url{https://arxiv.org/abs/2301.00029}.
 
+\bibitem{Donaldson2011}
+S.~K. Donaldson,
+\emph{Riemann Surfaces},
+Oxford Graduate Texts in Mathematics, vol.~22,
+Oxford University Press, Oxford, 2011.
+\href{https://doi.org/10.1093/acprof:oso/9780198526391.001.0001}{doi:10.1093/acprof:oso/9780198526391.001.0001}.
+
+\bibitem{DonaldsonKronheimer1990}
+S.~K. Donaldson and P.~B. Kronheimer,
+\emph{The Geometry of Four-Manifolds},
+Oxford Mathematical Monographs,
+Clarendon Press, Oxford, 1990.
+\href{https://doi.org/10.1093/oso/9780198535539.001.0001}{doi:10.1093/oso/9780198535539.001.0001}.
+
 \bibitem{Fine2011}
 J. Fine,
 \emph{A gauge theoretic approach to the anti-self-dual Einstein equations},
 arXiv:1111.5005v2 [math.DG] (2011).
-\url{https://arxiv.org/abs/1111.5005}.
+\url{https://arxiv.org/abs/1111.5005v2}.
 
 \bibitem{FineKrasnovPanov2014}
 J. Fine, K. Krasnov, and D. Panov,
@@ -2714,12 +2795,30 @@ J. Fine, K. Krasnov, and D. Panov,
 New York J. Math. \textbf{20} (2014), 293--323.
 \url{https://nyjm.albany.edu/j/2014/20-18.html}.
 
+\bibitem{Freedman1982}
+M.~H. Freedman,
+\emph{The topology of four-dimensional manifolds},
+J. Differential Geom. \textbf{17} (1982), no.~3, 357--453.
+\href{https://doi.org/10.4310/jdg/1214437136}{doi:10.4310/jdg/1214437136}.
+
+\bibitem{FreedmanGompfMorrisonWalker2010}
+M.~H. Freedman, R.~E. Gompf, S. Morrison, and K. Walker,
+\emph{Man and machine thinking about the smooth 4-dimensional Poincar\'e conjecture},
+Quantum Topol. \textbf{1} (2010), no.~2, 171--208.
+\href{https://doi.org/10.4171/QT/5}{doi:10.4171/QT/5}.
+
 \bibitem{GurskyViaclovsky2015}
 M.~J. Gursky and J.~A. Viaclovsky,
 \emph{Rigidity and stability of Einstein metrics for quadratic curvature functionals},
 J. Reine Angew. Math. \textbf{700} (2015), 37--91.
 Preprint: arXiv:1105.4648v2 [math.DG].
 \url{https://arxiv.org/abs/1105.4648}.
+
+\bibitem{Hamilton1982}
+R.~S. Hamilton,
+\emph{Three-manifolds with positive Ricci curvature},
+J. Differential Geom. \textbf{17} (1982), no.~2, 255--306.
+\href{https://doi.org/10.4310/jdg/1214436922}{doi:10.4310/jdg/1214436922}.
 
 \bibitem{IsenbergYasskinGreen1978}
 J. Isenberg, P.~B. Yasskin, and P.~S. Green,
@@ -2752,11 +2851,35 @@ L.~J. Mason and D. Skinner,
 Phys. Lett. B \textbf{636} (2006), 60--67.
 \href{https://doi.org/10.1016/j.physletb.2006.02.061}{doi:10.1016/j.physletb.2006.02.061}.
 
+\bibitem{Milnor1956}
+J. Milnor,
+\emph{On manifolds homeomorphic to the 7-sphere},
+Ann. of Math. (2) \textbf{64} (1956), no.~2, 399--405.
+\href{https://doi.org/10.2307/1969983}{doi:10.2307/1969983}.
+
 \bibitem{Penrose1976}
 R. Penrose,
 \emph{Nonlinear gravitons and curved twistor theory},
 Gen. Relativ. Gravit. \textbf{7} (1976), 31--52.
 \href{https://doi.org/10.1007/BF00762011}{doi:10.1007/BF00762011}.
+
+\bibitem{Perelman2002}
+G. Perelman,
+\emph{The entropy formula for the Ricci flow and its geometric applications},
+arXiv:math/0211159 [math.DG] (2002).
+\url{https://arxiv.org/abs/math/0211159}.
+
+\bibitem{Perelman2003Surgery}
+G. Perelman,
+\emph{Ricci flow with surgery on three-manifolds},
+arXiv:math/0303109 [math.DG] (2003).
+\url{https://arxiv.org/abs/math/0303109}.
+
+\bibitem{Perelman2003Extinction}
+G. Perelman,
+\emph{Finite extinction time for the solutions to the Ricci flow on certain three-manifolds},
+arXiv:math/0307245 [math.DG] (2003).
+\url{https://arxiv.org/abs/math/0307245}.
 
 \bibitem{Shaw1986}
 W.~T. Shaw,
@@ -2764,6 +2887,12 @@ W.~T. Shaw,
 surfaces and strings in four dimensions},
 Class. Quantum Grav. \textbf{3} (1986), 753--761.
 \href{https://doi.org/10.1088/0264-9381/3/5/006}{doi:10.1088/0264-9381/3/5/006}.
+
+\bibitem{Smale1961}
+S. Smale,
+\emph{Generalized Poincar\'e's conjecture in dimensions greater than four},
+Ann. of Math. (2) \textbf{74} (1961), no.~2, 391--406.
+\href{https://doi.org/10.2307/1970239}{doi:10.2307/1970239}.
 
 \bibitem{Ward1980}
 R.~S. Ward,

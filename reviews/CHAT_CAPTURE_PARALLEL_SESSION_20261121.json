@@ -1,0 +1,84 @@
+{
+  "scope": "Read-only parallel-session capture investigation; no thread interrupted or reconfigured",
+  "observed_at_utc": "2026-11-22T04:44:41.321664+00:00",
+  "new_thread_identity_scope": "Exact ID observed in desktop thread/read routing log; native title and correspondence to the author-reported parallel session could not be confirmed through the failing app reader",
+  "app_version": "26.1117.41037",
+  "app_build": "29803",
+  "installed_code_evidence": {
+    "module": "webview/assets/async/911644.eaf037cac0.js",
+    "sha256": "0d3393b090dc0d1b6134be4ec10bafa0c58c5e3986b2f91ffca559579cd56a5d",
+    "condition": "if(\"chatgpt\"===t.callerSource)return!1;",
+    "function": "canCallTool",
+    "precedes_thread_lookup": true,
+    "actual_request_caller_source_inspected": false
+  },
+  "app_reader_result": {
+    "recent_thread_list": "MCP -32000: Codex app tool request failed",
+    "chatgpt_history_list": "MCP -32000: Codex app tool request failed",
+    "new_thread_metadata_read": "MCP -32000: Codex app tool request failed",
+    "native_dispatcher_log": "The app tool call ended before producing a result"
+  },
+  "local_new_thread_counts": {
+    "state_metadata_rows": 0,
+    "turn_rows": 0,
+    "item_rows": 0,
+    "active_jsonl_candidates": 0,
+    "archived_jsonl_candidates": 0
+  },
+  "diagnostics": {
+    "current_conversation": {
+      "status": "diagnostic",
+      "thread_id": "6b0266d2-f9b8-83ea-9958-13f41a4ea0fb",
+      "read_only": true,
+      "capture_performed": false,
+      "registration": {
+        "status": "unregistered"
+      },
+      "source": {
+        "status": "unavailable",
+        "error_code": "source_unavailable",
+        "error": "No exact-id local Codex rollout is available in the configured sessions directory; waiting for its real source, or supply an authoritative --rollout stored elsewhere",
+        "details": {
+          "source_selection": "exact_id_discovery",
+          "candidate_count": 0
+        },
+        "local_thread_history_mode": "absent",
+        "next_step": "No exact local Codex thread metadata or JSONL source was found. A completion hook cannot create that source. Obtain this exact conversation through a supported app history reader or an authentic export; do not substitute another thread or reconstruct source records."
+      },
+      "source_contract": {
+        "format": "Explicit JSONL override, otherwise the recorded history mode: canonical paginated SQLite when marked, exact-id JSONL discovery otherwise",
+        "public_text": "event_msg/item_completed UserMessage or AgentMessage with exact thread, turn and message IDs; text only; assistant commentary or final_answer",
+        "final_capture": "Real final_answer and task_complete for the exact requested turn",
+        "validation": "Available is source discovery only; public prefix and capture integrity checks still apply. An unavailable marked-paginated source never falls back to a retained JSONL",
+        "unsupported_stores": "Remote-only histories and unverified schemas require a separately verified exporter; no metadata or public text is synthesized"
+      }
+    },
+    "new_thread_observed_in_app_log": {
+      "status": "diagnostic",
+      "thread_id": "6b0271e4-e374-83ea-b200-b8f4d6af50d0",
+      "read_only": true,
+      "capture_performed": false,
+      "registration": {
+        "status": "unregistered"
+      },
+      "source": {
+        "status": "unavailable",
+        "error_code": "source_unavailable",
+        "error": "No exact-id local Codex rollout is available in the configured sessions directory; waiting for its real source, or supply an authoritative --rollout stored elsewhere",
+        "details": {
+          "source_selection": "exact_id_discovery",
+          "candidate_count": 0
+        },
+        "local_thread_history_mode": "absent",
+        "next_step": "No exact local Codex thread metadata or JSONL source was found. A completion hook cannot create that source. Obtain this exact conversation through a supported app history reader or an authentic export; do not substitute another thread or reconstruct source records."
+      },
+      "source_contract": {
+        "format": "Explicit JSONL override, otherwise the recorded history mode: canonical paginated SQLite when marked, exact-id JSONL discovery otherwise",
+        "public_text": "event_msg/item_completed UserMessage or AgentMessage with exact thread, turn and message IDs; text only; assistant commentary or final_answer",
+        "final_capture": "Real final_answer and task_complete for the exact requested turn",
+        "validation": "Available is source discovery only; public prefix and capture integrity checks still apply. An unavailable marked-paginated source never falls back to a retained JSONL",
+        "unsupported_stores": "Remote-only histories and unverified schemas require a separately verified exporter; no metadata or public text is synthesized"
+      }
+    }
+  }
+}

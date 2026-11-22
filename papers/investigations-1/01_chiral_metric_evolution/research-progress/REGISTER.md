@@ -6,7 +6,7 @@ This is the only current task-status register for this branch. The [plan](../res
 
 ## Setup state
 
-The research materials are inherited working drafts. Repository setup is complete as organization only; the three scientific tasks below remain unactivated. The separately authorized editorial task is recorded after the scientific task table. No scientific validation status is upgraded by an editorial revision.
+The research materials are inherited working drafts. Repository setup is complete as organization only; the three scientific tasks below remain unactivated. The separately authorized editorial tasks are recorded after the scientific task table. No scientific validation status is upgraded by an editorial revision.
 
 | Task | Type | Recommendation and reason | Readiness / dependency | Current status | Evidence / disposition |
 | --- | --- | --- | --- | --- | --- |
@@ -19,6 +19,7 @@ The research materials are inherited working drafts. Repository setup is complet
 | Task | Type | Scope and completion test | Current status | Evidence / disposition |
 | --- | --- | --- | --- | --- |
 | SP4-CME-DOC-E01 | E — fixed editorial revision; selected lead retained | Expand the CME introduction and background using the two initial manuscripts and checked primary passages; state the smooth Poincaré motivation; define dimension, field, bundles, variations and normalization before the central statement; cite Baker only through arXiv:2301.00029 and references within; compile and check citations and layout. A changed scientific claim or proof strategy is outside this packet. | Completed within scope, 2026-11-21 | [Revision record and input hashes](../reviews/BACKGROUND_REVISION_20261121.md); 37-page PDF builds cleanly, citations and affected page layouts checked. No helper or new scientific investigation activated. Actual model/effort not independently exposed. |
+| SP4-CME-DOC-E02 | E — author-specified editorial progression; selected lead retained | Rewrite the Introduction from isothermal coordinates and two-dimensional uniformization, through Hamilton–Perelman in three dimensions, to the smooth four-dimensional problem and relevant gauge/twistor methods; include the author's subsequent higher-dimensional comparison; retain the precise local method statements; check primary passages, bibliography, build and layout. New research claims or changed proof strategies are outside scope and require separate B work. | Active follow-up, 2026-11-21 | Initial rewrite built and checked; incorporating Smale's higher-dimensional result and the topological/smooth distinction requested before delivery. [Revision record](../reviews/INTRODUCTION_REWRITE_20261121.md). Actual model/effort unavailable; no helpers or research packets activated. |
 
 ## Default next action
 
@@ -35,3 +36,14 @@ Created the branch scaffold and bounded continuation tasks from the existing geo
 ### 2026-11-21 — SP4-CME-DOC-E01 editorial revision
 
 Completed the author's requested background expansion and smooth Poincaré motivation. The [revision record](../reviews/BACKGROUND_REVISION_20261121.md) identifies input versions, scope, source checks, and validation; [shared source notes](../../../../references/SOURCE_NOTES_CME_BACKGROUND_20261121.md) identify the primary passages. OpenAI assistance was provided by the selected lead; actual model and effort were not independently exposed. Sections 3–14 and the two earlier manuscripts remain unchanged. The separate scientific audit SP4-CME-E01 remains the next research task and is not activated by this editorial completion.
+
+### 2026-11-21 — SP4-CME-DOC-E02 introduction progression
+
+Completed the author's requested dimensional progression and transition to
+the chiral methods. The [revision record](../reviews/INTRODUCTION_REWRITE_20261121.md)
+and [source notes](../../../../references/SOURCE_NOTES_CME_INTRODUCTION_20261121.md)
+record inputs, primary passages, access limits, bibliography and layout checks.
+The notation and Sections 2–14 are unchanged. No scientific validation status
+is promoted. The selected lead provided OpenAI assistance; actual model/effort
+were unavailable. Live capture remains unavailable; an explicitly unregistered
+partial public record preserves the request and completed commentary.
