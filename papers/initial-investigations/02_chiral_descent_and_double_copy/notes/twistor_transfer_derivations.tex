@@ -1,0 +1,391 @@
+% Supporting derivations for the companion manuscript, 21 November 2026.
+% This is a section proposal, not a standalone document.
+% Assumes amsmath, amssymb, amsthm and theorem/proposition/lemma/remark environments.
+
+\section{Hamiltonian gluing and its derivative bundle}
+
+Let $\rho:Z\to\mathbb{CP}^1$ be a holomorphic submersion with
+two-dimensional fibers. Write $\zeta$ and $\mu=\zeta^{-1}$ for coordinates
+on two direction discs whose union is $\mathbb{CP}^1$. We work on a
+neighborhood of a section $L\subset Z$. After choosing fiber coordinates,
+write $\xi=(p,q)$ on the northern chart and $\Xi=(P,Q)$ on the southern
+chart. A subscript $p$ or $q$ denotes partial differentiation at fixed
+$\zeta$. The operator $d_{\mathrm{vert}}$ also differentiates only in
+the fiber variables. The line bundle $\mathcal O(k)$ has degree $k$ on
+$\mathbb{CP}^1$.
+
+\subsection{The shear reduction}
+
+\begin{proposition}[Fixed-projection symplectic rigidity]
+Suppose the first transition coordinate is $P=p/\zeta$. The condition
+\begin{equation}\label{eq:audit-symplectic-scaling}
+d_{\mathrm{vert}}P\wedge d_{\mathrm{vert}}Q
+=\zeta^{-2}dp\wedge dq
+\end{equation}
+holds if and only if
+\begin{equation}\label{eq:audit-shear-transition}
+Q=\frac q\zeta+\mathcal T(p,\zeta)
+\end{equation}
+for a holomorphic function $\mathcal T$ independent of $q$.
+\end{proposition}
+\begin{proof}
+At fixed $\zeta$, the left side of
+\eqref{eq:audit-symplectic-scaling} is
+$\zeta^{-1}Q_q\,dp\wedge dq$. Thus $Q_q=\zeta^{-1}$.
+Integrating in $q$ gives \eqref{eq:audit-shear-transition}; the converse
+follows by substitution.
+\end{proof}
+
+The proposition concerns the exact prescribed projection $P=p/\zeta$.
+It does not exclude different quotient surfaces, different projections,
+or more general symplectic gluing.
+
+Set $s(p,\zeta)=\zeta\mathcal T(p,\zeta)$ and remove the standard
+line-bundle scaling. The resulting fiber map is
+\begin{equation}\label{eq:audit-normalized-shear}
+S_\zeta(p,q)=(p,q+s(p,\zeta)).
+\end{equation}
+At fixed $\zeta$, define
+\[
+\{f,g\}_{\mathrm{vert}}=f_pg_q-f_qg_p,
+\qquad
+X_K=\{K,\cdot\}_{\mathrm{vert}}
+=-K_q\partial_p+K_p\partial_q.
+\]
+A local primitive $K$ with $K_p=s$ and $K_q=0$ generates
+$S_\zeta$ as its exact time-one flow. It is determined up to a function
+of $\zeta$, which generates the zero vector field. The direction parameter
+is not differentiated in this Poisson bracket.
+
+\begin{proposition}[The two abelian reductions]
+The Hamiltonians depending only on $(p,\zeta)$ form a Poisson-commutative
+family. Their normalized derivative transitions are
+\begin{equation}\label{eq:audit-normalized-jacobian}
+G=DS_\zeta=I+\beta N,
+\qquad
+N=\begin{pmatrix}0&0\\1&0\end{pmatrix},
+\qquad
+\beta=s_p=K_{pp}=\zeta\mathcal T_p,
+\end{equation}
+where $D$ denotes the fiber Jacobian and $I$ the identity matrix.
+They lie in the one-dimensional abelian subgroup
+$\{I+tN:t\in\mathbb C\}\subset SL(2,\mathbb C)$.
+\end{proposition}
+\begin{proof}
+If $(K_1)_q=(K_2)_q=0$, their vertical Poisson bracket vanishes.
+The flows are translations of $q$ by functions of the fixed coordinate
+$p$, so $S_s\circ S_t=S_{s+t}$. Differentiation gives
+\eqref{eq:audit-normalized-jacobian}. The identity $N^2=0$ gives
+$(I+\beta_1N)(I+\beta_2N)=I+(\beta_1+\beta_2)N$.
+\end{proof}
+
+The Hamiltonian family is infinite-dimensional; the matrix Lie algebra
+$\mathbb C N$ is one-dimensional. Pointwise commutativity, nilpotency of
+the chosen matrix, and linearity of a spacetime field equation are
+different statements. In particular, the connection $A=\alpha N$, for
+a scalar one-form $\alpha$, can have nonzero curvature
+$F_A=d\alpha\,N$ despite its abelian color algebra.
+
+If a scalar transition coefficient splits along a complete twistor line
+as $\beta=h_0-h_\infty$, with $h_0,h_\infty$ holomorphic on the two
+direction discs, then
+\[
+I+\beta N=(I+h_\infty N)^{-1}(I+h_0N).
+\]
+Thus the nilpotent matrix representation reduces factorization to scalar
+additive splitting. The wave construction supplies explicit factors;
+general matrix transitions do not admit this reduction.
+
+\subsection{What the common surface accomplishes}
+
+Let $B$ be a neighborhood of the zero section of $\operatorname{Tot}
+\mathcal O(1)$, with coordinates $(p,\zeta)$ and $(P,\mu)$ and transition
+$P=p/\zeta$. The shear twistor space and flat twistor space both project
+to $B$ by forgetting their second fiber coordinate. Because the matrix
+$G$ in \eqref{eq:audit-normalized-jacobian} is independent of $q$, it
+defines a bundle $E_B$ on $B$. Pullback gives bundles on both twistor
+spaces. This is a geometric common-base transfer, rather than the
+identification of the two nonlinear base manifolds.
+
+On a curved wave line and its flat counterpart, the common coordinate is
+$p=z-\zeta u=a+\zeta b$ after $a=z$, $b=-u$. Hence the same scalar
+factorization reconstructs the curved and flat connections. Equality
+of the full pulled-back connection in the wave case is a further fact:
+the source connection depends only on the coordinates $u,z$ recovered
+independently of direction. It does not follow from equality of a
+transition matrix alone.
+
+\subsection{The tangent action of general symplectic gluing}
+
+For a general fiber symplectomorphism $\Phi_\zeta$, both fiber coordinates
+may move. An infinitesimal symplectic deformation is locally Hamiltonian.
+A general finite symplectomorphism need not be the time-one flow of a
+single autonomous holomorphic Hamiltonian; one may instead use a
+Hamiltonian isotopy, or work directly with symplectic transition maps.
+
+For a holomorphic vector field $X=X^i(\xi)\partial_{\xi^i}$, define its
+tangent lift to the fiber tangent bundle by
+\[
+\widehat X
+=X^i\partial_{\xi^i}
++(\partial_jX^i)v^j\partial_{v^i},
+\]
+where $\xi^1=p$, $\xi^2=q$, and $v^1,v^2$ are tangent-vector components.
+Repeated indices $i,j$ range over $1,2$ and are summed. Direct
+differentiation gives
+\begin{equation}\label{eq:audit-tangent-lift-bracket}
+[\widehat X,\widehat Y]=\widehat{[X,Y]}.
+\end{equation}
+In particular,
+$[\widehat X_K,\widehat X_L]=\widehat X_{\{K,L\}_{\mathrm{vert}}}$.
+However, $X\mapsto DX$ alone is not a homomorphism into pointwise
+matrix-valued functions. Its exact identity is
+\[
+D[X,Y]=X(DY)-Y(DX)+(DY)(DX)-(DX)(DY).
+\]
+Here $X(DY)$ means applying the derivation $X$ to every matrix entry.
+The finite counterpart is the chain rule
+\begin{equation}\label{eq:audit-chain-rule}
+D(\Phi\circ\Psi)(\xi)=D\Phi(\Psi(\xi))D\Psi(\xi).
+\end{equation}
+The evaluation-point transport disappears in the shear reduction because
+every map preserves $p$ and every Jacobian depends only on $p$.
+
+For example, $K_1=p^3/3$ and $K_2=q^3/3$ give
+\[
+\{K_1,K_2\}_{\mathrm{vert}}=p^2q^2,
+\qquad
+[X_{K_1},X_{K_2}]
+=-2p^2q\,\partial_p+2pq^2\,\partial_q.
+\]
+This algebraic example illustrates the additional terms; it is not by
+itself a complete twistor-space construction. The direction dependence,
+patch domains and normal bundles must still satisfy the geometric
+hypotheses below.
+
+\section{Derivative bundles beyond the shear family}
+
+\begin{proposition}[General patchwise tangent-line charts]
+Let $\rho:Z\to\mathbb{CP}^1$ be a holomorphic submersion with a complete
+local four-parameter family of sections $L_x$, $x\in M$, whose normal
+bundles are $\mathcal O(1)^{\oplus2}$. On a direction disc choose fiber
+coordinates $w^A$, $A=0,1$, and write the sections as
+$w^A=w^A(x,\zeta)$. Then
+\begin{equation}\label{eq:audit-general-tangent-chart}
+y^{A0'}=w^A-\zeta\partial_\zeta w^A,
+\qquad
+y^{A1'}=\partial_\zeta w^A,
+\qquad \zeta\longmapsto\zeta
+\end{equation}
+defines a local biholomorphism from the curved correspondence space
+to flat correspondence space. It preserves the alpha distributions.
+At a fixed source point its flat spacetime image is a possibly stationary
+null curve with indicated primed direction $(-\zeta,1)$.
+\end{proposition}
+\begin{proof}
+Completeness identifies $T_xM$ with $H^0(L_x,N_{L_x/Z})$. Differentiating
+the section in a parameter direction gives the normal section whose
+local components are $\delta w^A$. At a fixed $\zeta$, the differential
+of \eqref{eq:audit-general-tangent-chart} is an invertible triangular
+linear transformation of its first jet $(\delta w,\partial_\zeta\delta w)$.
+The first-jet evaluation
+\[
+H^0(L_x,N_{L_x/Z})\longrightarrow J^1_\zeta N_{L_x/Z}
+\]
+is an isomorphism: its kernel is
+$H^0(L_x,N_{L_x/Z}(-2\zeta))=H^0(\mathcal O(-1)^{\oplus2})=0$,
+and both spaces have dimension four. Here $-2\zeta$ denotes vanishing
+to order two at the specified point, and $J^1_\zeta$ is the space of
+value and first-derivative jets there. Thus the four spacetime
+coordinates in \eqref{eq:audit-general-tangent-chart} have invertible
+parameter differential; retaining $\zeta$ gives a correspondence-space
+local biholomorphism.
+
+The curved twistor projection has coordinates $(\zeta,w^A(x,\zeta))$.
+The flat twistor projection has coordinates
+$(\zeta,y^{A0'}+\zeta y^{A1'})$, which are exactly the same functions
+under \eqref{eq:audit-general-tangent-chart}. Their kernels, the alpha
+distributions, therefore correspond.
+
+Finally, at fixed $x$,
+\[
+\frac{\partial y^{AA'}}{\partial\zeta}
+=\partial_\zeta^2w^A\,(-\zeta,1)^{A'}.
+\]
+This has rank at most one, hence is null for the flat determinant metric
+$\eta=2(dy^{00'}dy^{11'}-dy^{01'}dy^{10'})$, and it may vanish.
+\end{proof}
+
+The proposition uses no common surface $B$ and no relative symplectic
+form. It therefore separates the local existence of generalized
+isothermal charts from the much stronger full-connection descent
+requirement. The direction disc is essential; the statement does not
+glue the inverse charts over complete target projective fibers.
+
+\begin{proposition}[Line triviality of the twisted vertical tangent]
+Let $\rho:Z\to\mathbb{CP}^1$ be a holomorphic submersion, and let
+$L\subset Z$ be a section whose normal bundle is
+$N_{L/Z}\simeq\mathcal O(1)\oplus\mathcal O(1)$. Then
+\[
+E=T_{Z/\mathbb{CP}^1}\otimes\rho^*\mathcal O(-1),
+\qquad T_{Z/\mathbb{CP}^1}=\ker d\rho,
+\]
+restricts to the trivial rank-two bundle on $L$. If $Z$ also has a
+fiberwise nondegenerate relative two-form with values in
+$\rho^*\mathcal O(2)$, then $E$ carries a nondegenerate holomorphic
+alternating form with scalar values and has structure group $SL(2,\mathbb C)$.
+\end{proposition}
+\begin{proof}
+Since $\rho|_L$ is an isomorphism, $TL$ is complementary to
+$T_{Z/\mathbb{CP}^1}|_L$ inside $TZ|_L$. Projection to the quotient by
+$TL$ identifies the latter bundle with $N_{L/Z}$. Twisting by
+$\mathcal O(-1)$ therefore gives $E|_L\simeq\mathcal O^{\oplus2}$.
+The relative two-form is a section of
+$\Lambda^2T_{Z/\mathbb{CP}^1}^*\otimes\rho^*\mathcal O(2)
+=\Lambda^2E^*$, proving the last assertion.
+\end{proof}
+
+The nonlinear-graviton/hyperk\"ahler correspondence applies when the
+twistor space has this relative symplectic structure and a suitable
+four-complex-dimensional local family of sections with normal bundle
+$\mathcal O(1)^{\oplus2}$. Its real form additionally requires the
+appropriate reality structure. This standard correspondence supplies
+the broader gravitational setting; the preceding line-triviality proof
+itself is elementary and uses no field equation.
+
+\begin{lemma}[Openness of line triviality]
+Let $\mathcal V$ be a holomorphic rank-$r$ vector bundle on
+$U\times\mathbb{CP}^1$, where $U$ is a connected complex neighborhood of
+$0$, and suppose $\mathcal V|_{\{0\}\times\mathbb{CP}^1}$ is trivial.
+After shrinking $U$, every fiber restriction is trivial and
+\[
+\mathcal V\simeq p_U^*(p_{U*}\mathcal V),
+\]
+where $p_U$ is projection to $U$.
+\end{lemma}
+\begin{proof}
+The degree of the restriction is locally constant and equals zero.
+At $0$, the bundle $\mathcal V(-1)$ has no global holomorphic sections.
+Upper semicontinuity for the proper projection $p_U$ implies
+$H^0(\mathbb{CP}^1,\mathcal V_y(-1))=0$ for nearby $y$.
+By the Birkhoff--Grothendieck theorem,
+$\mathcal V_y\simeq\bigoplus_{j=1}^r\mathcal O(k_j)$.
+The vanishing says every $k_j\leq0$, while degree zero says
+$\sum_jk_j=0$. Therefore all $k_j=0$.
+The dimensions $h^0=r$, $h^1=0$ are now constant. Direct image and base
+change give a rank-$r$ bundle $p_{U*}\mathcal V$, and its evaluation map
+is an isomorphism on every fiber, hence an isomorphism of bundles.
+\end{proof}
+
+\begin{proposition}[A chart-dependent auxiliary flat Ward bundle]
+Assume that a neighborhood of a section $L\subset Z$ admits two
+fiber-coordinate charts over the direction discs, with $L$ represented
+by $(p,q)=0$ and $(P,Q)=0$. Suppose the overlap has the form
+\begin{equation}\label{eq:audit-general-transition}
+\begin{pmatrix}P\\Q\end{pmatrix}
+=\zeta^{-1}\Phi_\zeta(p,q),
+\qquad \Phi_\zeta(0)=0,
+\end{equation}
+where $\Phi_\zeta$ is holomorphic and locally invertible on a uniform
+neighborhood of zero over a slightly smaller closed overlap annulus.
+Suppose $N_{L/Z}\simeq\mathcal O(1)^{\oplus2}$. Then the matrix
+\[
+G(p,q,\zeta)=D\Phi_\zeta(p,q)
+\]
+can also be used as the transition of a holomorphic rank-two bundle
+$E_{\mathrm{flat}}$ on a sufficiently small neighborhood of the zero
+section in flat twistor space
+$Z_{\mathrm{flat}}=\operatorname{Tot}(\mathcal O(1)\oplus\mathcal O(1))$.
+It is trivial on every flat twistor line over a sufficiently small
+spacetime neighborhood and therefore reconstructs a local holomorphic
+ASD connection. If the transition preserves the relative symplectic
+form, the bundle and connection can be taken with structure group
+$SL(2,\mathbb C)$.
+\end{proposition}
+\begin{proof}
+In the flat charts the base transition is
+$(P,Q)=\zeta^{-1}(p,q)$. Regard $G(p,q,\zeta)$ as a matrix function in
+the northern coordinates of this flat overlap, rather than using the
+curved base transition \eqref{eq:audit-general-transition}. After
+shrinking the fiber domains, it is holomorphic and invertible throughout
+the overlap. There are only two patches; gluing by $G$ and $G^{-1}$
+therefore defines a holomorphic bundle without a further triple-overlap
+condition.
+
+Its restriction to the zero section has transition $G(0,0,\zeta)$.
+The same matrix is the transition of
+$T_{Z/\mathbb{CP}^1}|_L\otimes\mathcal O(-1)$, so the preceding
+proposition makes that restriction trivial.
+
+Write $y=(a,b,c,d)$ for flat spacetime coordinates, and use the flat
+incidence map
+\[
+q_{\mathrm{flat}}(y,\zeta)
+=(p,q,\zeta)=(a+\zeta b,c+\zeta d,\zeta).
+\]
+For sufficiently small $y$, its complete projective fibers lie in the
+chosen twistor neighborhood. Apply the openness lemma to
+$\mathcal V=q_{\mathrm{flat}}^*E_{\mathrm{flat}}$ on
+$U\times\mathbb{CP}^1$. Every fiber is then trivial. The pullback from
+twistor space has a canonical flat partial connection along the kernel
+of $dq_{\mathrm{flat}}$, the flat alpha distribution. The standard
+Ward reconstruction therefore gives an ordinary ASD connection on $U$.
+Equivalently, in a frame from $p_{U*}\mathcal V$, its alpha-direction
+coefficients are sections of $\mathcal O(1)$ on each projective fiber,
+so they are linear in the homogeneous direction spinor and are the
+restrictions of a unique spacetime connection.
+
+If the relative symplectic condition holds, then
+$\det D\Phi_\zeta=1$. Hence the determinant bundle has its canonical
+trivialization, and reconstruction respects it after choosing a
+determinant-one spacetime frame.
+\end{proof}
+
+\begin{remark}[Scope of the auxiliary construction]
+The proposition is an existence statement relative to the specified
+two-chart presentation. It does not assert invariance under changes of
+the curved fiber coordinates. Indeed, the southern derivative of a
+coordinate change is evaluated at the curved southern point
+$\zeta^{-1}\Phi_\zeta(p,q)$, while on flat twistor space that point is
+$\zeta^{-1}(p,q)$. The resulting factors need not extend as an ordinary
+flat-twistor bundle gauge transformation. The construction also does not
+identify its reconstructed connection with the full source spin
+connection pulled back through a generalized chart.
+
+The assertion that some auxiliary flat ASD bundle exists is therefore
+strictly weaker than geometric full-connection descent. The shear model
+has the additional common-surface mechanism and an explicit equality of
+full connection one-forms. Those properties require separate proofs in
+any extension.
+\end{remark}
+
+% Bibliographic entries for integration into the main manuscript.
+% Known theorems are cited below; the elementary propositions above are
+% derivations from their stated hypotheses, not novelty claims.
+\begin{thebibliography}{9}
+\bibitem{HKLR}
+N.~J. Hitchin, A. Karlhede, U. Lindstr\"om and M. Ro\v cek,
+\emph{Hyperk\"ahler metrics and supersymmetry},
+Commun. Math. Phys. \textbf{108} (1987), 535--589.
+\href{https://doi.org/10.1007/BF01214418}{doi:10.1007/BF01214418}.
+Theorem 3.3 states the twistor reconstruction with reality data;
+the holomorphic local form omits the reality requirement.
+
+\bibitem{Grothendieck}
+A. Grothendieck,
+\emph{Sur la classification des fibr\'es holomorphes sur la sph\`ere de Riemann},
+Amer. J. Math. \textbf{79} (1957), 121--138.
+\href{https://doi.org/10.2307/2372388}{doi:10.2307/2372388}.
+
+\bibitem{Grauert}
+H. Grauert,
+\emph{Ein Theorem der analytischen Garbentheorie und die Modulr\"aume
+komplexer Strukturen}, Publ. Math. IH\'ES \textbf{5} (1960), 5--64;
+correction, \textbf{16} (1963), 35--36.
+\href{https://doi.org/10.1007/BF02684746}{doi:10.1007/BF02684746}.
+
+\bibitem{Ward}
+R.~S. Ward, \emph{On self-dual gauge fields},
+Phys. Lett. A \textbf{61} (1977), 81--82.
+\href{https://doi.org/10.1016/0375-9601(77)90842-8}{doi:10.1016/0375-9601(77)90842-8}.
+\end{thebibliography}

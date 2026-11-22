@@ -1,0 +1,452 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Ric}{\operatorname{Ric}}
+\newcommand{\Riem}{\operatorname{Riem}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\rank}{\operatorname{rank}}
+
+\title{Full-connection descent and chiral curvature nullity\\
+\large Proposed section with derivation and hypothesis audit}
+\author{Working research notes}
+\date{21 November 2026}
+
+\begin{document}
+\maketitle
+
+\noindent\textbf{Status.}
+The obstruction below is derived in these notes from curvature horizontality
+and two-spinor linear algebra. It is not attributed to a published theorem,
+and no claim of bibliographic novelty is made. The cited Eguchi--Hanson
+calculation supplies an example to which the derived obstruction applies.
+The notes distinguish this full-connection statement from the weaker
+transfer of alpha-partial connections or auxiliary Ward bundles.
+
+\section{Conventions and the meaning of full descent}
+
+All manifolds, bundles, connections, and maps are holomorphic and local.
+Let $(M,g)$ be a four-complex-dimensional spin metric manifold, with
+\[
+ TM\simeq S\otimes S',\qquad \rank S=\rank S'=2.
+\]
+The spin bundles carry symplectic forms $\epsilon_{AB}$ and
+$\epsilon_{A'B'}$. An alpha plane is a totally null plane of the form
+$S_x\otimes\langle\pi^{A'}\rangle$; its unprimed factor varies and its
+primed factor is fixed. Let $\gamma,\gamma'$ be the Levi--Civita spin
+connections and write
+\[
+ F^S=\dd\gamma+\gamma\wedge\gamma,
+ \qquad F^{S'}=\dd\gamma'+\gamma'\wedge\gamma'.
+\]
+Here $F^S$ denotes spin curvature, $\Riem$ denotes the curvature of the
+Levi--Civita connection on $TM$, and $\Ric$ denotes its Ricci contraction.
+These three objects are not denoted by the same symbol.
+
+We use the chirality convention
+\begin{equation}\label{obs:eq:vacuum-asd}
+ \Ric(g)=0,\qquad \widetilde\Psi_{A'B'C'D'}=0.
+\end{equation}
+Then $F^{S'}=0$, while the potentially nonzero curvature is
+\begin{equation}\label{obs:eq:spin-curvature}
+ (F^S)_{AA'BB'CD}=\epsilon_{A'B'}\Psi_{ABCD},
+ \qquad \Psi_{ABCD}=\Psi_{(ABCD)}.
+\end{equation}
+The last endomorphism index has been lowered with the spin symplectic form.
+An alternative curvature or lowering convention can multiply the right
+side by a nonzero constant; none of the nullity statements changes.
+As endomorphism-valued two-forms,
+\begin{equation}\label{obs:eq:riemann-spin}
+ \Riem=F^S\otimes\id_{S'}+\id_S\otimes F^{S'}
+       =F^S\otimes\id_{S'}.
+\end{equation}
+In particular, under \eqref{obs:eq:vacuum-asd}, vanishing $F^S$ is equivalent
+to vanishing $\Riem$.
+
+Let $\varpi:\mathbb P(S')\to M$ be the curved correspondence projection,
+and let $D_g$ be the rank-two alpha distribution. The projection
+$\dd\varpi$ identifies $D_g$ at $(x,[\pi])$ with the alpha plane
+$S_x\otimes\langle\pi\rangle$. On a flat four-dimensional neighborhood
+$(U,\eta)$, use the flat correspondence space $U\times\CP^1$, projection
+$p$, and its standard distribution $D_\eta$.
+
+Suppose
+\begin{equation}\label{obs:eq:inverse-chart}
+ \Phi:W\longrightarrow\mathbb P(S'),
+ \qquad W\subset U\times\CP^1,
+\end{equation}
+is a local biholomorphism satisfying
+$\dd\Phi(D_\eta)=D_g$. Put $r=\varpi\circ\Phi$. No preservation of either
+spacetime projection is assumed. After shrinking around a chosen point,
+$W$ can be taken to be a product $U_0\times D$, where $D$ is a direction
+disc with coordinate $\zeta$.
+
+\begin{definition}\label{obs:def:full-descent}
+The full spin connection descends through $\Phi$ if there are a holomorphic
+bundle $E_0\to U_0$ with connection $\nabla^A$ and a bundle isomorphism over
+$W$ that identifies the entire connection $r^*\nabla^S$ with
+$p^*\nabla^A$. Equivalently, in local frames, $r^*\gamma$ is gauge-equivalent
+to a one-form $A_i(y)\dd y^i$ with no direction component and no direction
+dependence. The gauge transformation may depend on $(y,\zeta)$.
+\end{definition}
+
+This is equality of full connections in all five correspondence-space
+directions. Equality only after restriction to $D_\eta$ is a different and
+weaker requirement.
+
+\section{The exact local gauge criterion}
+
+\begin{lemma}[Local descent up to gauge]\label{obs:lem:basicness}
+Let $\nabla^B$ be a holomorphic connection on a vector bundle over a product
+$U_0\times D$. After shrinking around any chosen point, it is
+gauge-equivalent to the pullback of a connection on $U_0$ if and only if
+\begin{equation}\label{obs:eq:horizontal-curvature}
+ \iota_V F_B=0\qquad\text{for every }V\in\ker\dd p.
+\end{equation}
+The condition includes all mixed curvature components, not just the
+restriction of the curvature to two vertical vectors.
+\end{lemma}
+
+\begin{proof}
+Necessity follows because the curvature of a pullback is $p^*F_A$ and
+curvature changes by conjugation under a gauge transformation.
+
+For sufficiency, choose a local frame and write
+\[
+ B=B_\zeta(y,\zeta)\dd\zeta+\sum_i B_i(y,\zeta)\dd y^i.
+\]
+Solve the holomorphic matrix ordinary differential equation with parameters
+\begin{equation}\label{obs:eq:vertical-ode}
+ \partial_\zeta h=-B_\zeta h,
+ \qquad h(y,\zeta_0)=I.
+\end{equation}
+After shrinking, its solution is holomorphic and invertible. With the gauge
+convention
+\[
+ B^h=h^{-1}Bh+h^{-1}\dd h,
+\]
+equation \eqref{obs:eq:vertical-ode} gives $B^h_\zeta=0$.
+Condition \eqref{obs:eq:horizontal-curvature} is gauge-invariant, hence
+\[
+ 0=(F_{B^h})_{\zeta i}=\partial_\zeta B^h_i.
+\]
+Thus $B^h_i=A_i(y)$, as required. If $B$ is traceless, the initial condition
+also gives $\det h=1$, so the proof can use $SL(2,\C)$ gauges for the spin
+connection rather than requiring the larger group $GL(2,\C)$.
+\end{proof}
+
+\begin{remark}
+The lemma is local on a direction disc. It is not a statement that a chosen
+gauge extends holomorphically over a complete $\CP^1$, nor that a single
+inverse correspondence chart exists over that fiber. Those global
+questions require additional hypotheses. Also, in complex dimension one
+the curvature on pairs of vertical vectors vanishes automatically; that
+vacuous condition is much weaker than \eqref{obs:eq:horizontal-curvature}.
+\end{remark}
+
+\begin{proposition}[Curvature-nullity criterion for a fixed chart]
+\label{obs:prop:fixed-chart}
+For the map \eqref{obs:eq:inverse-chart}, define
+\begin{equation}\label{obs:eq:nullity}
+ \mathcal K_x=\{v\in T_xM:F^S_x(v,w)=0\text{ for all }w\in T_xM\}.
+\end{equation}
+Locally, full descent through $\Phi$ is equivalent to
+\begin{equation}\label{obs:eq:vertical-nullity}
+ \dd r(\ker\dd p)\subset\mathcal K.
+\end{equation}
+No constant-rank hypothesis on $\mathcal K$ is needed for this equivalence.
+\end{proposition}
+
+\begin{proof}
+Because $\Phi$ is a local biholomorphism and $\varpi$ is a submersion,
+$\dd r=\dd\varpi\circ\dd\Phi$ is surjective. The curvature of the full
+pullback is $r^*F^S$, so for a target-vertical vector $V$ and any $Y\in TW$,
+\[
+ (r^*F^S)(V,Y)=F^S(\dd r(V),\dd r(Y)).
+\]
+Surjectivity of $\dd r$ makes its vanishing for every $Y$ equivalent to
+$\dd r(V)\in\mathcal K$. Apply Lemma~\ref{obs:lem:basicness}.
+\end{proof}
+
+\section{Chiral curvature nullity and the local obstruction}
+
+\begin{lemma}[Pointwise spinor nullity]\label{obs:lem:spinor-nullity}
+Under \eqref{obs:eq:vacuum-asd}, let
+\[
+ T_\Psi:S_x\longrightarrow\Sym^3S_x^*,
+ \qquad (T_\Psi\lambda)_{BCD}=\lambda^A\Psi_{ABCD}.
+\]
+Then
+\begin{equation}\label{obs:eq:kernel-tensor}
+ \mathcal K_x=(\ker T_\Psi)\otimes S'_x.
+\end{equation}
+Consequently:
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item if $\Psi_x=0$, then $\dim_\C\mathcal K_x=4$;
+\item if $\Psi_x=\psi\,\kappa_A\kappa_B\kappa_C\kappa_D\ne0$
+      (Petrov type N), then $\dim_\C\mathcal K_x=2$;
+\item for every other nonzero algebraic type, $\mathcal K_x=0$.
+\end{enumerate}
+In case \textup{(ii)}, $\mathcal K_x=(\ker\kappa)\otimes S'_x$ is totally
+null. With our convention for alpha planes, it belongs to the opposite
+ruling, often called the beta ruling.
+\end{lemma}
+
+\begin{proof}
+Contracting \eqref{obs:eq:spin-curvature} in the first tangent argument
+shows that $v\in\mathcal K_x$ exactly when
+\[
+ v^{AA'}\epsilon_{A'B'}\Psi_{ABCD}=0
+ \qquad\text{for every }B',B,C,D.
+\]
+Invertibility of $\epsilon_{A'B'}$ says precisely that each column
+$v^{AA'}$, viewed as an unprimed spinor, lies in $\ker T_\Psi$.
+This proves \eqref{obs:eq:kernel-tensor}.
+
+If $0\ne\lambda\in\ker T_\Psi$, choose a basis of $S_x$ with
+$\lambda=e_1$. Then $\Psi_{1BCD}=0$. Complete symmetry implies that every
+component with any index equal to $1$ vanishes. The only possible nonzero
+component is $\Psi_{0000}$, so $\Psi=\psi\,(e^0)^4$. Conversely, a nonzero
+fourth power has the one-dimensional kernel $\ker\kappa$. If
+$\dim\ker T_\Psi=2$, all components vanish. Tensoring with $S'_x$ gives
+the stated dimensions. The plane $(\ker\kappa)\otimes S'_x$ is totally
+null since its unprimed factors are proportional and $\epsilon$ is
+alternating.
+\end{proof}
+
+\begin{lemma}[An open family of alpha planes determines the conformal class]
+\label{obs:lem:alpha-conformal}
+Let $f$ be a local biholomorphism from a flat four-manifold $(U_0,\eta)$
+to $(M,g)$. Suppose that, for every $y$, $\dd f_y$ maps the flat alpha
+planes in a nonempty open set of projective directions to totally null
+planes for $g$. Then $f^*g=c\eta$ for a nowhere-zero holomorphic function
+$c$.
+\end{lemma}
+
+\begin{proof}
+At fixed $y$, write a flat null vector as $v^{AA'}=\lambda^A\pi^{A'}$.
+The quadratic form $q_y(v)=(f^*g)_y(v,v)$ vanishes for every $\lambda$ and
+for $[\pi]$ in the specified open set. As a polynomial, $q_y(\lambda\pi)$
+has degree two in each spinor and therefore vanishes for all $\lambda,\pi$.
+Thus $q_y$ vanishes on the entire flat null quadric. The determinant
+polynomial defining that quadric is irreducible over $\C$, so the two
+quadratic forms are proportional. Nondegeneracy gives $c(y)\ne0$.
+Comparing any fixed nonzero component of $\eta$ makes $c$ holomorphic.
+\end{proof}
+
+\begin{theorem}[Local algebraic obstruction to full spin-connection descent]
+\label{obs:thm:petrov-obstruction}
+Assume \eqref{obs:eq:vacuum-asd} and let $\Phi$ satisfy
+\eqref{obs:eq:inverse-chart}, including alpha-distribution preservation.
+If the full connection $r^*\nabla^S$ descends in the sense of
+Definition~\ref{obs:def:full-descent}, then at every point of $r(W)$ the
+Weyl spinor $\Psi$ is of Petrov type N or is zero (type O).
+
+The conclusion allows arbitrary holomorphic direction-dependent gauges,
+requires no complete projective direction fiber, and does not require the
+descended connection to be stipulated ASD in advance.
+\end{theorem}
+
+\begin{proof}
+Suppose, to the contrary, that $\Psi$ has a nonzero type other than N at
+$x_0=r(y_0,\zeta_0)$. Lemma~\ref{obs:lem:spinor-nullity} says that
+$T_\Psi$ is injective at $x_0$. Injectivity is an open condition on a
+holomorphic matrix (some two-by-two minor is nonzero), so
+$\mathcal K=0$ on an open neighborhood $M_0$ of $x_0$.
+
+Shrink to a product neighborhood $U_0\times D$ of $(y_0,\zeta_0)$ whose
+image under $r$ lies in $M_0$. Proposition~\ref{obs:prop:fixed-chart} gives
+$\partial_\zeta r=0$. Hence
+\[
+ r(y,\zeta)=f(y).
+\]
+Since $r$ is a submersion, $\dd f$ has rank four; shrinking again makes
+$f$ a local biholomorphism.
+
+For each $(y,\zeta)$, the equality
+$\dd\Phi(D_\eta)=D_g$ and the identity $\varpi\circ\Phi=f\circ p$
+imply that $\dd f_y$ maps the flat alpha plane labelled by $\zeta$ to the
+source alpha plane labelled by $\Phi(y,\zeta)$. The disc $D$ supplies a
+nonempty open family of flat directions. Lemma~\ref{obs:lem:alpha-conformal}
+gives $f^*g=c\eta$, so $g$ is conformally flat on $f(U_0)$.
+Its Weyl tensor therefore vanishes there, in particular at $x_0$,
+contradicting the choice of $x_0$. Since no such point exists, the only
+possibilities throughout $r(W)$ are N and O.
+\end{proof}
+
+\begin{remark}[Scope of the conclusion]
+Type N is necessary, not sufficient. The argument does not produce an
+alpha-preserving chart with its vertical motion in $\mathcal K$, a
+parallel frame of that null plane, or one-dimensional holonomy. Nor does
+it assert that Petrov type N cannot change to O on a zero locus. The proof
+uses openness only near a point where $T_\Psi$ is injective; it does not
+divide by a Weyl component or assume a globally constant Petrov type.
+\end{remark}
+
+\begin{remark}[Why the selected chirality matters]
+The theorem concerns the potentially nonflat connection $\gamma$ on $S$.
+The other connection has $F^{S'}=0$ under our hypotheses and can be made
+locally zero. Transporting only that flat chiral connection cannot retain
+the gravitational curvature and does not give the stated obstruction.
+Exchanging the primed and unprimed conventions exchanges all the chiral
+labels but leaves the theorem unchanged.
+\end{remark}
+
+\section{The wave model and Eguchi--Hanson}
+
+For the manuscript's wave metric
+\[
+ g_H=2\dd u\dd v+2\dd z\dd w+H(u,z)\dd u^2,
+\]
+the nonflat spin curvature is
+\[
+ F^S=\tfrac12H_{zz}\,\dd z\wedge\dd u\,N,
+ \qquad N=\begin{pmatrix}0&0\\1&0\end{pmatrix}.
+\]
+Where $H_{zz}\ne0$, its common tangent nullity is
+$\mathcal K=\operatorname{span}\{\partial_v,\partial_w\}$.
+The inverse generalized charts recover $u=-b$ and $z=a$ independently of
+direction, so their vertical motion lies exactly in that nullity plane.
+The local criterion explains why the full spin-connection pullback can
+descend in this example. Where $H_{zz}=0$, the pointwise nullity becomes
+larger, and the displayed construction remains regular.
+
+\begin{corollary}[Eguchi--Hanson excludes literal full descent]
+\label{obs:cor:eh}
+On a nonflat Eguchi--Hanson neighborhood, after choosing chirality as in
+\eqref{obs:eq:vacuum-asd}, no alpha-preserving local inverse correspondence
+chart can make the full potentially nonflat Levi--Civita spin connection
+gauge-equivalent to a connection pulled back from flat spacetime.
+\end{corollary}
+
+\begin{proof}
+The nonzero Weyl spinor of Eguchi--Hanson is type D. For an explicit check,
+Luna et al.~\cite[Section 5.1, equation (5.8)]{LMNO} write its Weyl quartic,
+in the opposite chiral notation, as a nonzero multiple of
+\[
+ \ell_1(\xi)^2\ell_2(\xi)^2,
+\]
+where, on their regular chart with $\Delta=uv-XY\ne0$,
+\[
+ \ell_1=-iX(\xi^1-\xi^2)+v(\xi^1+\xi^2),\qquad
+ \ell_2=u(\xi^1-\xi^2)+iY(\xi^1+\xi^2).
+\]
+The determinant of the two coefficient rows is $-2\Delta$, so the two
+linear factors are distinct. For their nonzero deformation parameter,
+this is type D rather than N or O. Apply
+Theorem~\ref{obs:thm:petrov-obstruction}.
+\end{proof}
+
+This result does not obstruct the known Eguchi--Hanson Kerr--Schild or Weyl
+double copies. It excludes the particular identification of the full
+curved spin connection with a basic flat-side connection through an
+alpha-preserving correspondence-space local biholomorphism. Transfer of
+an auxiliary Ward bundle, or comparison only along the alpha distribution,
+does not impose that full identification and remains outside the no-go
+statement.
+
+\section{Internal audit and integration notes}
+
+\begin{enumerate}[leftmargin=*,label=\arabic*.]
+\item \textbf{Rank is explicit.}
+The proof uses local biholomorphicity only to obtain
+$\rank\dd r=4$ and, after $\partial_\zeta r=0$, $\rank\dd f=4$.
+A lower-rank or singular correspondence map is not covered.
+
+\item \textbf{The relevant curvature is a full two-form.}
+The condition is $F(\partial_\zeta,Y)=0$ for every $Y$, not merely
+$F|_{D_\eta\wedge D_\eta}=0$. Dropping the mixed components would remove
+the obstruction.
+
+\item \textbf{Gauge freedom cannot remove the obstruction.}
+It conjugates $F(\partial_\zeta,Y)$, so its vanishing is invariant even
+under direction-dependent gauges. The ODE lemma also proves local
+sufficiency, not only necessity, for a fixed correspondence map.
+
+\item \textbf{No full-fiber or compactness assumption.}
+The theorem needs only a direction disc. It is logically separate from
+the compactness obstruction to a full inverse chart over $\CP^1$.
+
+\item \textbf{Reality is unused.}
+The proof is complex holomorphic. Petrov type here means the factorization
+type of a binary quartic, not a restriction to a Lorentzian real slice.
+
+\item \textbf{Vacuum is essential to the spinor reduction.}
+$\Ric=0$ and the vanishing opposite chirality are what reduce spin
+curvature to \eqref{obs:eq:spin-curvature}. Nonzero Ricci or cosmological
+constant terms require a separate nullity calculation.
+
+\item \textbf{Conformal flatness is sufficient for the contradiction.}
+Alpha-plane preservation gives conformal equivalence to the flat metric,
+so the Weyl tensor is zero. Vacuum additionally gives $\Riem=0$, but the
+contradiction already follows from the nonzero Weyl spinor.
+
+\item \textbf{An open direction family suffices.}
+Polynomial continuation on the null quadric replaces any appeal to all
+of $\CP^1$. The source direction coordinate need not equal the target
+coordinate $\zeta$.
+
+\item \textbf{Zero loci are allowed.}
+There is no division by curvature and no assumption that $\mathcal K$
+is a bundle globally. The constant-rank step is used only on the open
+injectivity locus of $T_\Psi$.
+
+\item \textbf{Pointwise type N is weaker than the wave holonomy class.}
+A type-N spinor has a one-dimensional algebraic kernel, but its kernel
+line need not be parallel. The theorem does not prove strict Walker
+normal form or classify the admissible type-N metrics.
+
+\item \textbf{The descended connection need not be prescribed ASD.}
+The impossibility statement allows any ordinary base connection. In the
+given setting, alpha-flatness of $F^S$ and alpha preservation would in
+fact make a descended $A$ ASD, by the same polynomial-in-direction
+argument; this extra fact is not needed for the no-go proof.
+
+\item \textbf{Auxiliary flat Ward bundles are not excluded.}
+Line-triviality and a flat alpha-partial connection can reconstruct an
+ordinary flat-side ASD connection without identifying its full pullback
+with $r^*\gamma$. The resulting connection may therefore survive when
+the full-pullback criterion fails.
+
+\item \textbf{Eguchi--Hanson citation and chirality.}
+The precise source is Luna--Monteiro--Nicholson--O'Connell,
+\emph{Classical and Quantum Gravity} \textbf{36} (2019), 065003,
+doi:10.1088/1361-6382/ab03e6, Section 5.1, equation (5.8).
+The paragraph following equations (5.24)--(5.25) explicitly identifies
+the two double principal spinors. Their nonzero component is written
+with dotted indices; our convention exchanges the two chiral labels.
+The source was checked against its peer-reviewed repository PDF and
+arXiv:1810.08183v3. Its current v3 is dated 1 June 2026; the publication
+year remains 2019.
+
+\item \textbf{Status of the derived theorem.}
+The proof is supplied in full so it can be checked independently. An
+eventual manuscript should call this a proposition or theorem proved
+there, not cite it as an established literature result or describe it as
+a demonstrated novel theorem without a further literature review.
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{LMNO}
+A.~Luna, R.~Monteiro, I.~Nicholson and D.~O'Connell,
+\emph{Type D spacetimes and the Weyl double copy},
+Class. Quantum Grav. \textbf{36} (2019), 065003.
+\href{https://doi.org/10.1088/1361-6382/ab03e6}{doi:10.1088/1361-6382/ab03e6}.
+\href{https://arxiv.org/abs/1810.08183}{arXiv:1810.08183}.
+\end{thebibliography}
+
+\end{document}

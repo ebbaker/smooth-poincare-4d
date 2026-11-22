@@ -1,0 +1,2428 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{enumitem,booktabs,array,xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!40!black,citecolor=blue!40!black,urlcolor=blue!40!black]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Chiral curvature and metric evolution}
+\fancyhead[R]{\small Working draft}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{2em}
+\setcounter{tocdepth}{2}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\Ric}{Ric}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Vol}{Vol}
+\newcommand{\R}{\mathbb R}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\id}{\operatorname{id}}
+
+\title{Chiral curvature and metric evolution\\near the round four-sphere}
+\author{Edward B. Baker III}
+\date{Working draft --- 21 November 2026}
+
+\begin{document}
+\maketitle
+\thispagestyle{plain}
+\begin{abstract}
+We develop a self-contained comparison between chiral connection evolution and Riemannian metric evolution near the round four-sphere. A definite connection determines a conformal metric through its curvature span and a representative through a curvature volume form. We derive the differential of this reconstruction, its exact velocity for an arbitrary connection path, and the first nonlinear corrections when the connection is induced by a source metric. For Fine's definite-connection gradient flow, the linearized normalized curvature defect satisfies a closed heat equation. A contracted Bianchi identity shows that the flow preserves the image of transverse-traceless metric variations under the linearized chiral Levi--Civita map; the reconstructed metric then obeys four times the linearization of volume-normalized Ricci flow. The same identities give a direct factorization of the round Weyl-energy Hessian and distinguish the second-order connection evolution from the fourth-order metric gradient of the pulled-back energy. We compute the cubic discrepancy between the metric energies, identify the Levi--Civita compatibility defect of the reconstructed geometry, and exhibit finite energy density at the boundary of metric nondegeneracy. The final discussion separates these local results from the existence, preservation, and compactness estimates required for a global application to smooth homotopy four-spheres.
+\end{abstract}
+\tableofcontents
+\newpage
+
+
+
+\section{Introduction}\label{sec:introduction}
+
+Isothermal coordinates make the geometry of a surface locally scalar:
+\(g=e^{2u}(dx^2+dy^2)\). In such a chart, unnormalized Ricci flow is
+\[
+\partial_tu=e^{-2u}\Delta_{\mathrm{flat}}u.
+\]
+The coordinates remove the local conformal degrees of freedom, leaving the conformal factor to evolve. In dimension four, the Weyl tensor obstructs this form of conformal flattening. The corresponding geometric problem is therefore to find variables that retain the conformal curvature while exposing an evolution with a manageable principal part.
+
+Chiral connections provide such variables in a neighborhood of the round four-sphere. An oriented Riemannian four-manifold has a splitting of two-forms into selfdual and anti-selfdual summands. A definite connection in an oriented rank-three Euclidean bundle has three curvature forms spanning a positive three-plane for the wedge pairing. This plane determines a conformal metric. A curvature volume form then selects its scale. The resulting metric makes the connection curvature selfdual by construction; it does not, in general, make the connection Levi--Civita.
+
+This paper develops the comparison between that curvature reconstruction and metric evolution. The underlying functional and connection flow are those of Fine's definite-connection formulation of the anti-self-dual Einstein equations \cite{Fine2011}; a broader pure-connection treatment of Einstein geometry is given in \cite{FineKrasnovPanov2014}. We derive the reconstruction map, its exact velocity, its linearization at the round metric, and its first nonlinear correction. A contracted Bianchi identity then identifies a transverse-traceless sector of the connection flow with the linearization of volume-normalized Ricci flow.
+
+Here is the central statement, with precise conventions and proofs supplied below. Let \(g_0\) be the round metric with sectional curvature \(K>0\), let \(A_0=A^+_{g_0}\), and put \(L=\nabla^*\nabla\). If \(h\) is transverse-traceless and \(a=\mathcal Hh\) is its induced chiral connection variation, then
+\begin{equation}\label{eq:intro-main}
+\widehat h=\frac{L+4K}{2K}h,\qquad
+\partial_ta=\mathcal H[-4(L+2K)h],\qquad
+\partial_t\widehat h=-4(L+2K)\widehat h.
+\end{equation}
+The factor four is fixed by the connection inner product used here. With \(\tau=4t\), the final equation is the transverse-traceless linearization of normalized Ricci flow. These identities include the curvature terms, not merely the principal symbols.
+
+The distinction between evolving a connection and evolving a metric is essential. If the same connection energy is first pulled back by \(g\mapsto A_g^+\), its metric gradient has the fourth-order linearization
+\begin{equation}\label{eq:intro-fourth}
+\partial_th=-(L+2K)(L+4K)h.
+\end{equation}
+We derive this factorization from the connection calculation and an integration-by-parts identity. It agrees, with the appropriate norm conversion, with the known Hessian of the chiral Weyl energy \cite{GurskyViaclovsky2015}. The agreement of the two metric energies at quadratic order fails at cubic order through explicit Weyl--Ricci couplings.
+
+The nonlinear reconstruction exhibits a separate issue. Its compatibility with the Levi--Civita connection is measured by the covariant derivative of a curvature-normalized selfdual triple. This quantity vanishes for perfect connections but is generally nonzero away from them. Moreover, the normalized curvature energy is bounded throughout the definite region and does not diverge at its boundary. An exact local family demonstrates how the reconstructed metric can become anisotropic while this energy density remains finite.
+
+These results supply a local analytical framework, not a global convergence theorem. In particular, the transverse-traceless correspondence does not identify the complete nonlinear connection flow with Ricci flow. The smooth four-dimensional Poincar\'e question motivates the choice of target geometry, but it adds global existence and compactness requirements that the perturbative calculation does not settle.
+
+The development is self-contained at the level of the differential-geometric calculations. Standard results used for orientation---the twistor integrability criterion, characteristic-number identities, and the conformal developing-map construction---are stated where needed. We give analytical proofs of the perturbative and reconstruction identities; secondary perturbation examples follow the main evolution theory. No numerical computation is needed for any proposition.
+
+\subsection{Notation and analytical conventions}\label{sec:notation}
+All manifolds and fields are smooth and real unless a complexification is explicitly mentioned. The base is an oriented four-manifold, closed whenever an integral is used. The standard sphere is used for perturbation and spectral statements. We use the curvature convention in which a round orthonormal coframe has
+\[
+R_{ab}=K e^a\wedge e^b,\qquad
+\operatorname{Ric}(g_0)=3Kg_0,\qquad s(g_0)=12K.
+\]
+The scalar Laplacian is \(\Delta=\nabla^a\nabla_a\), while \(L=\nabla^*\nabla=-\Delta\) denotes the nonnegative rough Laplacian on tensors. A tensor \(h\) is transverse-traceless, abbreviated TT, if
+\(\nabla^a h_{ab}=0\) and \(\operatorname{tr}_{g_0}h=0\).
+
+The internal bundle \(E\) is oriented, Euclidean, and of rank three, with bracket
+\([u,v]_i=\epsilon_{ijk}u_jv_k\). Locally it is the adjoint bundle of a chiral spin bundle. The adjoint formulation itself does not require a global spin structure. We write \(F_A=dA+\tfrac12[A\wedge A]\), or \(dA+A\wedge A\) in matrix notation. Gauge and frame identifications are made explicitly when taking variations.
+
+Weyl curvature is regarded as an endomorphism of two-forms; its norm is the Hilbert--Schmidt operator norm. The squared norm of the full four-index tensor is four times this squared operator norm. Selfdual triples \(\Sigma_i\) have norm squared \(2\), so
+\(\Sigma_i\wedge\Sigma_j=2\delta_{ij}dV\). These normalizations account for the constants in the energy and Hessian identities.
+
+For a symmetric matrix, \([X]_0=X-\tfrac13\operatorname{tr}(X)I\); \(\operatorname{sym}_0\) also takes its symmetric part. The same subscript denotes removal of the metric trace of a symmetric two-tensor. In asymptotic expansions \(X_\varepsilon=\varepsilon X_1+\varepsilon^2X_2+\cdots\), the coefficients do not include factorials. Remainders refer to a smooth family on a fixed compact domain, or to any fixed differentiability norm for which the displayed operations are defined.
+
+
+
+\section{Isothermal coordinates and the twistor integrability condition}
+\label{sec:ctx-isothermal}
+
+In four dimensions a conformal change $\widehat g=e^{2u}g$ preserves the
+Weyl tensor as a tensor of type $(1,3)$.  It also preserves the Hodge star
+on two-forms.  Thus the conditions $W=0$ and $W^+=0$ are properties of
+the conformal class, and a flow of the conformal factor cannot turn a
+non-ASD class into an ASD class.  Here and below ASD means $W^+=0$;
+reversing orientation interchanges the two chiralities.  The corresponding
+conformal invariant is
+\begin{equation}\label{eq:ctx-Weyl-energy}
+ \mathcal E_+(g)=\int_X|W^+_g|^2\,dV_g,
+ \qquad \mathcal E_+(e^{2u}g)=\mathcal E_+(g).
+\end{equation}
+For the signature formula below, the norm is the Hilbert--Schmidt norm
+of the Weyl endomorphism of $\Lambda^+$.
+
+The Riemannian twistor space is the sphere bundle
+$Z=S(\Lambda^+)$, equivalently the bundle of orthogonal complex
+structures compatible with the chosen orientation.  Its canonical
+almost complex structure uses the ordinary complex structure in each
+projective-line fiber and the Levi--Civita horizontal distribution.
+The Atiyah--Hitchin--Singer integrability theorem states that this almost
+complex structure is integrable exactly when $W^+=0$
+\cite[Theorem~4.1]{AHS1978}.  No Einstein or scalar-curvature assumption is required.
+
+For a real-analytic conformal metric, the equivalent complexified
+description uses the projective spin correspondence space and its
+rank-two alpha distribution $D_\alpha$.  Frobenius integrability of
+$D_\alpha$ is again equivalent to $W^+=0$.  In the smooth Riemannian
+description the corresponding involutive distribution is
+$T^{0,1}Z$.  These are equivalent formulations in their respective
+categories, rather than identifications of their underlying spaces.
+
+\begin{proposition}[An obstruction to exact flat distribution charts]
+\label{prop:ctx-flat-distribution}
+Suppose a complexified correspondence-space chart is a local
+biholomorphism carrying $D_\alpha$ to the alpha distribution of flat
+space.  Then $W^+=0$ on the projected source domain.  In the smooth
+Riemannian formulation, an exact local identification of the canonical
+twistor almost complex structure with an integrable one has the same
+consequence.
+\end{proposition}
+\begin{proof}
+For any distribution $D$, its Frobenius tensor is
+\[
+ \mathfrak F_D:\Lambda^2D\longrightarrow T/D,
+ \qquad \mathfrak F_D(U,V)=[U,V]\bmod D.
+\]
+Lie brackets commute with pushforward by a local diffeomorphism.
+Consequently an exact equivalence of distributions preserves the
+vanishing of $\mathfrak F_D$.  The flat alpha distribution is
+involutive, so the source one is involutive.  The curvature integrability
+criterion gives $W^+=0$.  The smooth assertion follows in the same way
+from naturality of the Nijenhuis tensor.
+\end{proof}
+
+An enlarged system intended to evolve arbitrary Riemannian metrics
+must therefore retain the nonintegrability tensor, or another variable
+encoding $W^+$.  It cannot be an exact flat-distribution equivalence
+at every time.  In particular, a construction that starts with an
+integrable curved twistor space describes an already restricted
+conformal class; its holomorphic coordinates do not by themselves
+provide coordinates for a general metric flow.
+
+
+
+\section{Chiral Riemannian geometry and the round model}
+\label{sec:round-model}
+
+The round four-sphere supplies a nonzero-scalar-curvature model in which
+connection descent, metric reconstruction, and global bundle patching can all
+be examined explicitly.  Its role is structural: it identifies which features
+of a chiral description persist in positive-definite geometry and which
+features of a vacuum reduction must be abandoned.
+
+\subsection{Curvature conventions and the two chiral connections}
+\label{subsec:round-conventions}
+
+Let $(M,g)$ be an oriented Riemannian spin four-manifold; all formulas in this
+subsection are also valid locally without a global spin assumption.  Choose
+an oriented orthonormal coframe $(e^1,e^2,e^3,e^4)$, with
+$e^{1234}=dV_g>0$.  The Levi--Civita connection and curvature forms satisfy
+\begin{equation}
+ de^a+\omega^a{}_b\wedge e^b=0,
+ \qquad R^a{}_b=d\omega^a{}_b+\omega^a{}_c\wedge\omega^c{}_b.
+ \label{eq:round-cartan-conventions}
+\end{equation}
+Our sectional-curvature convention is
+$R_{ijkl}=\langle R(e_i,e_j)e_l,e_k\rangle$, so a metric of constant
+sectional curvature $K$ has $R_{1212}=K$ and
+$R_{ab}=K e^a\wedge e^b$.
+
+For $i,j,k\in\{1,2,3\}$, define the two sets of symbols
+\begin{equation}
+ \eta^\pm_{i,jk}=\epsilon_{ijk},\qquad
+ \eta^\pm_{i,j4}=\pm\delta_{ij},\qquad
+ \eta^\pm_{i,4j}=\mp\delta_{ij},\qquad
+ \eta^\pm_{i,44}=0.
+ \label{eq:round-eta}
+\end{equation}
+Set
+\begin{equation}
+ \Sigma_i^\pm=\frac12\eta^\pm_{i,ab}e^a\wedge e^b,
+ \qquad T_i=-\frac{i}{2}\sigma_i,
+ \label{eq:round-sigma-generators}
+\end{equation}
+where $\sigma_i$ are the Pauli matrices.  Then
+\begin{align}
+ *\Sigma_i^\pm&=\pm\Sigma_i^\pm,
+ &\langle\Sigma_i^\pm,\Sigma_j^\pm\rangle&=2\delta_{ij},
+ \label{eq:round-sigma-norms}\\
+ \Sigma_i^\pm\wedge\Sigma_j^\pm&=\pm2\delta_{ij}dV_g,
+ &\Sigma_i^+\wedge\Sigma_j^-&=0,
+ \label{eq:round-sigma-wedges}\\
+ [T_i,T_j]&=\epsilon_{ijk}T_k,
+ &\operatorname{tr}(T_iT_j)&=-\frac12\delta_{ij}.
+ \label{eq:round-generator-norms}
+\end{align}
+As skew $4\times4$ matrices, the $\eta_i^\pm$ obey
+$[\eta_i^\pm,\eta_j^\pm]=-2\epsilon_{ijk}\eta_k^\pm$, and the two
+sets commute with one another.  Thus $-\eta_i^\pm/2$ give the two
+$\mathfrak{su}(2)$ ideals in $\mathfrak{so}(4)$.  With these conventions,
+the two spin connections are
+\begin{equation}
+ A^\pm=A_i^\pm T_i,\qquad
+ A_i^\pm=-\frac12\eta^\pm_{i,ab}\omega_{ab},\qquad
+ F_i^\pm=-\frac12\eta^\pm_{i,ab}R_{ab}.
+ \label{eq:round-spin-projection}
+\end{equation}
+The last equality follows because the projections are Lie algebra
+homomorphisms, with $F^\pm=dA^\pm+A^\pm\wedge A^\pm$.
+
+Use $\Sigma_i^\pm/\sqrt2$ as orthonormal bases of $\Lambda^\pm$.
+The curvature operator has the block decomposition
+\begin{equation}
+ \mathcal R_g=
+ \begin{pmatrix}
+ C_+&B\\ B^T&C_-
+ \end{pmatrix},
+ \qquad C_\pm=W^\pm+\frac{s}{12}I.
+ \label{eq:round-curvature-blocks}
+\end{equation}
+Here $s$ is scalar curvature and $B:\Lambda^-\to\Lambda^+$ is the
+block corresponding to trace-free Ricci curvature.  In particular, $B=0$
+if and only if $g$ is Einstein.  Equation~\eqref{eq:round-spin-projection}
+becomes
+\begin{align}
+ F_i^+&=-(C_+)_{ij}\Sigma_j^+-B_{ij}\Sigma_j^-,
+ \label{eq:round-plus-block}\\
+ F_i^-&=-(B^T)_{ij}\Sigma_j^+-(C_-)_{ij}\Sigma_j^-.
+ \label{eq:round-minus-block}
+\end{align}
+The labels $+$ and $-$ refer to form chirality.  Thus $A^+$ is self-dual
+as a gauge connection precisely when $B=0$, whereas $A^-$ is anti-self-dual
+precisely when $B=0$.  This Einstein condition is distinct from the
+half-conformal-flatness condition $W^+=0$.  All norms of $W^\pm$ used here
+are Hilbert--Schmidt norms of curvature operators: the squared four-index
+tensor norm is four times the squared operator norm.
+
+\subsection{An explicit positive-curvature model}
+\label{subsec:round-explicit}
+
+Let $g_0$ be the round metric of radius $\ell>0$ on $S^4$, and write
+$K=\ell^{-2}$.  On a stereographic patch, put
+\begin{equation}
+ r^2=\sum_{a=1}^4(x^a)^2,\qquad
+ D=\ell^2+r^2,\qquad
+ \Omega=\frac{2\ell^2}{D},\qquad
+ g_0=\Omega^2\sum_{a=1}^4(dx^a)^2,
+ \qquad e^a=\Omega\,dx^a.
+ \label{eq:round-stereographic}
+\end{equation}
+
+\begin{proposition}[Round chiral connections]
+\label{prop:round-chiral-connections}
+In the coframe~\eqref{eq:round-stereographic},
+\begin{align}
+ \omega_{ab}&=\frac{2(x_a\,dx_b-x_b\,dx_a)}{D},
+ &R_{ab}&=K e^a\wedge e^b,
+ \label{eq:round-omega-curvature}\\
+ A_i^\pm&=\frac{2\eta^\pm_{i,ab}x_b\,dx^a}{D},
+ &F_i^\pm&=-K\Sigma_i^\pm.
+ \label{eq:round-A-F}
+\end{align}
+Consequently $\operatorname{Ric}(g_0)=3K g_0$, $s(g_0)=12K$, and
+$W^+=W^-=0$, while both spin connections have nonzero curvature.  Relative
+to the flat stereographic metric as well as to $g_0$, their curvatures obey
+$*F^\pm=\pm F^\pm$.
+\end{proposition}
+
+\begin{proof}
+Since $d\log\Omega=-2x_a dx^a/D$, the displayed skew connection matrix
+satisfies the torsion equation~\eqref{eq:round-cartan-conventions}.  It is
+therefore the Levi--Civita connection.  Write $\theta=x_a dx^a$ and
+$\alpha_{ab}=x_a dx_b-x_b dx_a$.  Direct differentiation and multiplication
+give
+\begin{align*}
+ d\omega_{ab}
+ &=\frac4D dx_a\wedge dx_b-
+   \frac4{D^2}\theta\wedge\alpha_{ab},\\
+ \omega_{ac}\wedge\omega_{cb}
+ &=\frac4{D^2}\bigl(
+   \theta\wedge\alpha_{ab}-r^2dx_a\wedge dx_b\bigr).
+\end{align*}
+Their sum is
+\[
+ R_{ab}=\frac{4\ell^2}{D^2}dx_a\wedge dx_b
+       =\ell^{-2}e^a\wedge e^b.
+\]
+Projecting by~\eqref{eq:round-spin-projection} proves both chiral formulas.
+In coordinate components they read
+\begin{equation}
+ F_{i,\mu\nu}^\pm=-\frac{4\ell^2}{D^2}\eta^\pm_{i,\mu\nu},
+ \qquad
+ F_i^\pm=\frac12F_{i,\mu\nu}^\pm dx^\mu\wedge dx^\nu.
+ \label{eq:round-F-components}
+\end{equation}
+The curvature identities give the stated Ricci, scalar, and Weyl tensors.
+Finally, Hodge star on two-forms in four dimensions is unchanged by conformal
+rescaling, so the chiral gauge equations hold for the flat metric as well.
+\end{proof}
+
+The quadratic term \(A^\pm\wedge A^\pm\) is essential: these are nonabelian chiral fields. The stereographic chart represents them as ordinary selfdual and anti-selfdual gauge connections on a flat coordinate domain. It does not make either connection flat. Indeed each \(\Sigma_i^\pm\) is a nondegenerate two-form, so the common curvature kernel is zero. A description that imposes flatness of the opposite chiral connection would therefore exclude the round target.
+
+\subsection{Global patching and characteristic forms}
+\label{subsec:round-global}
+
+Identify $x$ with the quaternion
+$x=x^4+x^1\mathbf i+x^2\mathbf j+x^3\mathbf k$, and identify the imaginary
+quaternion units with $2T_1,2T_2,2T_3$.  The local formulas take the form
+\begin{equation}
+ A^+=\frac{\operatorname{Im}(\bar x\,dx)}{\ell^2+|x|^2},
+ \qquad
+ A^-=\frac{\operatorname{Im}(x\,d\bar x)}{\ell^2+|x|^2}.
+ \label{eq:round-quaternion-connections}
+\end{equation}
+The second chart is $y=\ell^2x^{-1}$.  This is an orientation-preserving
+transition between oriented stereographic coordinate domains, and the round
+metric has the same expression~\eqref{eq:round-stereographic} in $y$.
+
+\begin{proposition}[Extension across the omitted pole]
+\label{prop:round-patching}
+On the overlap, put $q=x/|x|$.  With gauge convention
+$A^h=h^{-1}Ah+h^{-1}dh$, the changes
+\begin{equation}
+ h^+=q^{-1},\qquad h^-=q
+ \label{eq:round-clutching}
+\end{equation}
+transform~\eqref{eq:round-quaternion-connections} into the same regular
+formulas in $y$.  Thus both fields extend smoothly as connections on their
+chiral spin bundles over $S^4$.
+\end{proposition}
+
+\begin{proof}
+Write $x=rq$, and set $f=r^2/(\ell^2+r^2)$.  Then
+$A^+=f q^{-1}dq$ and $A^-=f q\,d(q^{-1})$.  Their gauge transforms are
+\[
+ (A^+)^{q^{-1}}=-(1-f)dq\,q^{-1},
+ \qquad
+ (A^-)^q=(1-f)q^{-1}dq.
+\]
+On the other hand $y=(\ell^2/r)q^{-1}$, and
+\[
+ \frac{|y|^2}{\ell^2+|y|^2}
+ =\frac{\ell^2}{\ell^2+r^2}=1-f.
+\]
+Substitution into the two expressions in~\eqref{eq:round-quaternion-connections}
+gives exactly the transformed fields.  They are smooth at $y=0$.
+These gauge factors are the spin lifts, up to constant central signs, of
+the coframe transition: in quaternion notation it is
+$e_y=-q^{-1}e_xq^{-1}$.  Thus the extension agrees with the global
+Levi--Civita spin connections.
+\end{proof}
+
+Use the Chern--Weil convention
+\begin{equation}
+ c_2(S^\pm)[S^4]
+ =\frac1{8\pi^2}\int_{S^4}\operatorname{tr}(F^\pm\wedge F^\pm).
+ \label{eq:round-c2-convention}
+\end{equation}
+Equations~\eqref{eq:round-sigma-wedges} and
+\eqref{eq:round-generator-norms} give
+\begin{equation}
+ \operatorname{tr}(F^\pm\wedge F^\pm)=\mp3K^2dV_{g_0},
+ \qquad
+ -\operatorname{tr}(F^\pm\wedge *F^\pm)=3K^2dV_{g_0}.
+ \label{eq:round-characteristic-densities}
+\end{equation}
+Since $\operatorname{Vol}(S^4,g_0)=8\pi^2/(3K^2)$, the chosen labels give
+\begin{equation}
+ c_2(S^+)[S^4]=-1,\qquad c_2(S^-)[S^4]=+1,
+ \qquad
+ -\int_{S^4}\operatorname{tr}(F^\pm\wedge *F^\pm)=8\pi^2.
+ \label{eq:round-charge-energy}
+\end{equation}
+The signs of the characteristic numbers depend on the stated orientation
+and labels; the nontriviality of both bundles does not.  A regular local
+connection form therefore cannot replace the nontrivial overlap data.
+
+For later comparison with definite connections, the positive four-form
+associated to $A^+$ in our component normalization is
+\begin{equation}
+ \mu_{A^+}:=\frac13\sum_iF_i^+\wedge F_i^+
+ =2K^2dV_{g_0},
+ \qquad
+ \int_{S^4}\mu_{A^+}=\frac{16\pi^2}{3}.
+ \label{eq:round-curvature-volume}
+\end{equation}
+It is independent of the radius after integration.  Using the negative of
+the corresponding expression for $A^-$ gives the same positive four-form.
+The span of the three $F_i^+$ recovers $\Lambda^+$ and hence the conformal
+class of $g_0$; a volume convention fixes a representative.  In particular,
+the curvature-volume convention~\eqref{eq:round-curvature-volume} fixes a
+normalization, rather than recovering an independently specified original
+radius.
+
+\subsection{Scale normalization}
+\label{subsec:round-scale-twistor}
+
+There is a separate loss of scale in a connection-only description.
+Multiplying a metric by a positive spatially constant factor leaves its
+Levi--Civita connection unchanged.  For the round sphere, unnormalized
+Ricci flow is
+\begin{equation}
+ g(t)=(1-6Kt)g_0,\qquad 0\leq t<(6K)^{-1}.
+ \label{eq:round-ricci-flow}
+\end{equation}
+Its two spin connections remain fixed under the natural identifications
+of the orthonormal frame bundles, even though the sphere shrinks.  Any
+comparison between metric evolution and connection evolution must
+therefore supply a scale variable or a scale normalization.  This issue
+is already present in the exact round solution and is independent of
+perturbative or singularity questions.
+
+
+\section{Curvature reconstruction and its differential}
+\label{rec:section}
+
+Let $M$ be an oriented smooth four-manifold and let $E\to M$ be an
+oriented Euclidean bundle of rank three.  Its oriented orthonormal frames
+identify its Lie bracket with
+$[e_i,e_j]=\epsilon_{ijk}e_k$.  A metric connection $A$ on $E$ has curvature
+$F_A=F_i e_i\in\Omega^2(M,E)$.  Repeated internal indices are summed.
+The normalization of the internal metric is the one for which
+$\langle e_i,e_j\rangle=\delta_{ij}$; in an $\mathfrak{su}(2)$ realization
+it is $-2\operatorname{tr}(T_iT_j)=\delta_{ij}$.
+
+We call $A$ \emph{definite with positive curvature plane} if the matrix of four-forms
+$(F_i\wedge F_j)$ is positive definite relative to the prescribed
+orientation.  Equivalently, for any positive four-form $\nu$, the matrix
+$(F_i\wedge F_j)/\nu$ is positive definite.  Define
+\begin{equation}
+ \mu_A=\frac13\sum_iF_i\wedge F_i,
+ \qquad F_i\wedge F_j=Q_{ij}\mu_A.
+ \label{rec:mu-Q}
+\end{equation}
+Then $\mu_A>0$, $Q=Q^T>0$, and $\operatorname{tr}Q=3$.  The four-form is frame independent and the matrix is equivariant under internal orthonormal changes of frame. This wedge-positivity convention is distinct from the orientation sign of the curvature map, which is fixed separately below.
+
+\subsection{Positive three-planes and the graph map}
+
+We first record the linear algebra, including the normalization that will
+enter all variation formulas.  Fix an oriented Euclidean four-space
+$(V,g)$ and an oriented orthonormal coframe $(e^1,e^2,e^3,e^4)$, and use
+the two-form bases
+\begin{equation}
+ \begin{split}
+ (\Sigma_1^+,\Sigma_2^+,\Sigma_3^+)
+   &=(e^{12}+e^{34},\ e^{13}-e^{24},\ e^{14}+e^{23}),\\
+ (\Sigma_1^-,\Sigma_2^-,\Sigma_3^-)
+   &=(e^{12}-e^{34},\ e^{13}+e^{24},\ e^{14}-e^{23}).
+ \end{split}
+ \label{rec:form-bases}
+\end{equation}
+Thus $|\Sigma_i^\pm|^2=2$ and
+\begin{equation}
+ \Sigma_i^\pm\wedge\Sigma_j^\pm
+    =\pm2\delta_{ij}\,dV_g,
+ \qquad \Sigma_i^+\wedge\Sigma_j^-=0.
+ \label{rec:wedge-normalization}
+\end{equation}
+In particular, $\Sigma_i^\pm/\sqrt2$ are orthonormal; the unnormalized
+bases in \eqref{rec:form-bases} are used in all matrix formulas below.
+We use a row convention for graph matrices: a matrix $T=(T_{ij})$
+represents the plane spanned by
+$\Sigma_i^++T_{ij}\Sigma_j^-$.  It represents a linear map from
+$\Lambda_g^+$ to $\Lambda_g^-$, with the source index written first.
+
+For a $g$-self-adjoint trace-free endomorphism $H$ of $V$, set
+$g_H=g(e^H\,\cdot,\cdot)$.  The positive symmetric coframe
+identification is $e_H=e^{H/2}e$.  Its infinitesimal action on two-forms is
+the self-adjoint operator
+\begin{equation}
+ \mathscr D_H(\alpha\wedge\gamma)
+   =\frac12\bigl(H^*\alpha\wedge\gamma
+                         +\alpha\wedge H^*\gamma\bigr).
+ \label{rec:D-H}
+\end{equation}
+Define $\beta_g(H)$ by
+\begin{equation}
+ \mathscr D_H\Sigma_i^+=\beta_g(H)_{ij}\Sigma_j^-.
+ \label{rec:beta-definition}
+\end{equation}
+The absence of a self-dual component in this definition is part of the
+following lemma.  When applying $\beta_g$ to a trace-free symmetric
+two-tensor, we raise one index using $g$.
+
+\begin{lemma}[The logarithmic graph map]
+\label{rec:graph-lemma}
+The map
+\[
+ \beta_g:\operatorname{Sym}_0(V,g)\longrightarrow
+                  \operatorname{Hom}(\Lambda_g^+,\Lambda_g^-)
+\]
+is an isomorphism and satisfies
+\begin{equation}
+ |\beta_g(H)|^2=\frac14|H|^2.
+ \label{rec:beta-norm}
+\end{equation}
+For diagonal $H=\operatorname{diag}(h_1,h_2,h_3,h_4)$ with
+$\sum_a h_a=0$, the bases \eqref{rec:form-bases} give
+\begin{equation}
+ \beta_g(H)=\operatorname{diag}
+ \left(\frac{h_1+h_2}{2},\frac{h_1+h_3}{2},
+                         \frac{h_1+h_4}{2}\right).
+ \label{rec:beta-diagonal}
+\end{equation}
+If $T(H)$ is the graph matrix of $\Lambda_{g_H}^+$ over
+$\Lambda_g^+$, then
+\begin{equation}
+ T(H)=\beta_g(H)-\frac13\beta_g(H)\beta_g(H)^T\beta_g(H)
+                         +O(|H|^5).
+ \label{rec:graph-cubic}
+\end{equation}
+In particular, the quadratic term of the logarithmic graph map vanishes.
+\end{lemma}
+
+\begin{proof}
+Diagonalize $H$ in an oriented orthonormal coframe.  The operator
+$\mathscr D_H$ multiplies $e^{ab}$ by $(h_a+h_b)/2$.  Complementary pairs
+have opposite eigenvalues because $\operatorname{tr}H=0$.  It follows
+directly that $\mathscr D_H$ interchanges $\Lambda_g^+$ and
+$\Lambda_g^-$ and that its matrix, acting on the ordered column of basis
+forms, is
+\begin{equation}
+ \mathscr D_H\begin{pmatrix}\Sigma^+\\\Sigma^-\end{pmatrix}
+ =\begin{pmatrix}0&\beta_g(H)\\\beta_g(H)^T&0\end{pmatrix}
+                       \begin{pmatrix}\Sigma^+\\\Sigma^-\end{pmatrix}.
+ \label{rec:block-generator}
+\end{equation}
+The lower-left block is the transpose because $\mathscr D_H$ is
+self-adjoint and both bases have the same norm.  Formula
+\eqref{rec:beta-diagonal} follows.  In that formula
+$\sum_{j=2}^4(h_1+h_j)^2/4=\sum_{a=1}^4h_a^2/4$.
+Orthogonal equivariance proves \eqref{rec:beta-norm} for every $H$.
+Both spaces have dimension nine, so the norm identity proves that
+$\beta_g$ is an isomorphism.
+
+The full coframe action on two-forms is $\exp(\mathscr D_H)$.  Writing
+$b=\beta_g(H)$, its first three rows have the form
+$A\Sigma^++B\Sigma^-$, where
+\[
+ A=I+\frac12bb^T+O(|b|^4),\qquad
+ B=b+\frac16bb^Tb+O(|b|^5).
+\]
+Consequently the graph matrix is $A^{-1}B$, which gives
+\eqref{rec:graph-cubic}.  More exactly,
+\[
+ T(H)=
+ \frac{\tanh\sqrt{bb^T}}{\sqrt{bb^T}}\,b,
+\]
+where the quotient has its analytic value $1$ at zero.  This also
+exhibits the oddness of the graph map in $H$.
+\end{proof}
+
+\begin{lemma}[Conformal metric from a positive plane]
+\label{rec:positive-plane}
+A positive three-plane in $\Lambda^2V^*$, for the wedge pairing and a
+fixed orientation of $V$, is $\Lambda_{\widetilde g}^+$ for a unique
+positive-definite conformal class $[\widetilde g]$.
+\end{lemma}
+
+\begin{proof}
+Choose a reference metric $g$.  Projection of a positive plane $P$ to
+$\Lambda_g^+$ is injective: a nonzero element in its kernel would lie in
+the negative plane $\Lambda_g^-$.  The projection is therefore an
+isomorphism.  Write $P$ as the graph of $T$.  By
+\eqref{rec:wedge-normalization}, positivity is equivalent to
+$I-TT^T>0$, or to all singular values of $T$ being less than one.
+
+Independent rotations of the two chiral bases can be induced by an
+oriented orthogonal change of coframe.  Indeed the action
+$\operatorname{SO}(4)\to\operatorname{SO}(3)\times\operatorname{SO}(3)$
+has differential given by the two chiral summands of
+$\mathfrak{so}(4)$; that differential is an isomorphism.  Its image is
+thus open, and it is all of the connected target.  Apply a signed
+singular-value decomposition to arrange
+$T=\operatorname{diag}(t_1,t_2,t_3)$, with $|t_i|<1$, in such coframes.
+Put $r_i=\operatorname{arctanh}t_i$ and set
+\[
+ (h_1,h_2,h_3,h_4)
+  =(r_1+r_2+r_3,\ r_1-r_2-r_3,
+                  -r_1+r_2-r_3,\ -r_1-r_2+r_3).
+\]
+Then $\operatorname{tr}H=0$ and \eqref{rec:beta-diagonal} gives
+$\beta_g(H)=\operatorname{diag}(r_1,r_2,r_3)$.
+The exact graph formula in Lemma~\ref{rec:graph-lemma} gives
+$T(H)=T$, establishing existence with $\widetilde g=g(e^H\cdot,\cdot)$.
+Equivalently, without choosing singular vectors, the inverse formula is
+\[
+ \beta_g(H)=
+   \frac{\operatorname{arctanh}\sqrt{TT^T}}{\sqrt{TT^T}}\,T.
+\]
+The quotient is analytic at zero and on the domain $I-TT^T>0$.
+This also proves smooth dependence of the normalized metric on $P$.
+
+For uniqueness, suppose two metrics have the same self-dual plane.
+Their anti-self-dual planes are its wedge-orthogonal complement, so
+their Hodge stars on two-forms agree.  Diagonalize one metric relative
+to the other, with positive eigenvalues $\lambda_1,\ldots,\lambda_4$.
+Equality of the self-dual planes implies
+\[
+ \lambda_1\lambda_2=\lambda_3\lambda_4,\quad
+ \lambda_1\lambda_3=\lambda_2\lambda_4,\quad
+ \lambda_1\lambda_4=\lambda_2\lambda_3.
+\]
+Positivity implies $\lambda_1=\lambda_2=\lambda_3=\lambda_4$.
+The metrics are conformally related.
+\end{proof}
+
+\subsection{Reconstruction with a fixed scale}
+
+Fix a constant $K>0$.  Apply Lemma~\ref{rec:positive-plane} to the span
+of $F_1,F_2,F_3$, and fix its conformal scale by
+\begin{equation}
+ \Lambda_{\widehat g_A}^+=\operatorname{span}\{F_1,F_2,F_3\},
+ \qquad dV_{\widehat g_A}=\frac{\mu_A}{2K^2}.
+ \label{rec:metric-definition}
+\end{equation}
+Uniqueness makes this construction global.  It is smooth on the open
+set of definite connections, as follows from the graph
+description and the positive matrix functions used above.  If $g_0$ is
+round with sectional curvature $K$ and its chiral connection satisfies
+$F_{0i}=-K\Sigma_{0i}^+$, then
+$\mu_{A_0}=2K^2dV_{g_0}$ and $\widehat g_{A_0}=g_0$.
+
+There are two choices for the orientation of the curvature map
+$E\to\Lambda_{\widehat g_A}^+$.  From now on we use the component
+containing the round connection just described.  Its curvature map
+reverses the internal orientation.  Define
+\begin{equation}
+ S=Q^{1/2},\qquad
+ \Sigma_A=-K^{-1}S^{-1}F_A.
+ \label{rec:adapted-frame}
+\end{equation}
+Then
+\begin{equation}
+ F_A=-KS\Sigma_A,
+ \qquad (\Sigma_A)_i\wedge(\Sigma_A)_j
+       =2\delta_{ij}\,dV_{\widehat g_A}.
+ \label{rec:adapted-frame-wedge}
+\end{equation}
+Thus $\Sigma_A/\sqrt2$ identifies $E$ isometrically and with the
+appropriate orientation with $\Lambda_{\widehat g_A}^+$.  This is an
+adapted bundle identification, not an assertion that a prescribed
+self-dual coframe can always be put into this form by an internal
+gauge transformation alone.  All formulas are local in frames and
+patch tensorially.
+
+\subsection{Exact metric velocity}
+
+\begin{proposition}[Metric and normalized-curvature velocities]
+\label{rec:velocity-proposition}
+Let $A(t)$ be a smooth path of definite connections in the
+chosen component, with $v=\partial_tA$.  In the adapted self-dual frame
+$\Sigma_A$ and any normalized anti-self-dual frame $\Sigma^-$ for
+$\widehat g_A$, write
+\begin{equation}
+ d_Av=U\Sigma_A+V\Sigma^-.
+ \label{rec:velocity-decomposition}
+\end{equation}
+Let $h=\partial_t\widehat g_A$ and
+$h_0=\widehat g_A^{-1}h-\tfrac14\operatorname{tr}_{\widehat g_A}(h)I$.
+Then
+\begin{align}
+ \beta_{\widehat g_A}(h_0)&=-K^{-1}S^{-1}V,
+ \label{rec:velocity-traceless}\\
+ \operatorname{tr}_{\widehat g_A}h
+       &=-\frac4{3K}\operatorname{tr}(SU),
+ \label{rec:velocity-trace}\\
+ \partial_tQ
+       &=-K^{-1}(US+SU^T)
+           +\frac2{3K}\operatorname{tr}(SU)Q.
+ \label{rec:velocity-Q}
+\end{align}
+In particular,
+\begin{equation}
+ \partial_t\widehat g_A
+ =\widehat g_A\left(
+       -K^{-1}\beta_{\widehat g_A}^{-1}(S^{-1}V)
+       -\frac1{3K}\operatorname{tr}(SU)I
+                  \,\cdot,\cdot\right).
+ \label{rec:velocity-metric}
+\end{equation}
+Equation~\eqref{rec:velocity-Q} uses a fixed internal frame; in a
+time-dependent internal frame its left side is the corresponding
+covariant time derivative.
+\end{proposition}
+
+\begin{proof}
+Differentiate $F=-KS\Sigma_A$.  Changing the normalization or rotating
+the self-dual frame produces only self-dual terms.  By the definition
+of $\beta$, the anti-self-dual component of
+$\partial_t\Sigma_A$ is $\beta(h_0)\Sigma^-$.  Since
+$\partial_tF=d_Av$, comparison of the anti-self-dual components gives
+$V=-KS\beta(h_0)$, proving \eqref{rec:velocity-traceless}.
+
+For the remaining identities, differentiation of
+$F_i\wedge F_j=Q_{ij}\mu_A$ and
+\eqref{rec:adapted-frame-wedge} gives
+\[
+ (\partial_tQ)\mu_A+Q\partial_t\mu_A
+       =-2K(US+SU^T)dV_{\widehat g_A}
+       =-K^{-1}(US+SU^T)\mu_A.
+\]
+Taking the trace and using $\operatorname{tr}Q=3$ yields
+\begin{equation}
+ \frac{\partial_t\mu_A}{\mu_A}
+       =-\frac2{3K}\operatorname{tr}(SU).
+ \label{rec:mu-velocity}
+\end{equation}
+Because $dV_{\widehat g_A}=\mu_A/(2K^2)$ and $K$ is fixed, the
+left side is $\tfrac12\operatorname{tr}_{\widehat g_A}h$.
+This proves \eqref{rec:velocity-trace}, and substitution back into
+the matrix identity proves \eqref{rec:velocity-Q}.
+\end{proof}
+
+For an invariant version of the same calculation, set
+$Z_{ij}=((d_Av)_i\wedge F_j)/\mu_A$.  Then $Z=-US/K$ and
+\begin{equation}
+ \partial_tQ=Z+Z^T-\frac23\operatorname{tr}(Z)Q,
+ \qquad
+ \partial_t\mu_A=\frac23\operatorname{tr}(Z)\mu_A
+                =\frac23d\left(\sum_i v_i\wedge F_i\right).
+ \label{rec:invariant-velocities}
+\end{equation}
+The last equality follows from $d_AF_A=0$.
+If $M$ is closed, the reconstructed total volume is therefore constant
+along every such path on the fixed bundle.  This fixes total scale,
+not the pointwise volume density.  For the round component on $S^4$,
+\[
+ \int_{S^4}\mu_A=\frac{16\pi^2}{3},\qquad
+ \operatorname{Vol}(S^4,\widehat g_A)=\frac{8\pi^2}{3K^2}.
+\]
+The anti-self-dual matrix $V$ controls the trace-free metric velocity
+but does not occur directly in $\partial_tQ$.  Thus these identities
+alone do not turn a bound on $Q-I$ into a bound on metric derivatives.
+
+\subsection{The Levi--Civita compatibility defect}
+
+Use \eqref{rec:adapted-frame} to transport the chiral Levi--Civita
+connection of $\widehat g_A$ to $E$, and denote the resulting connection
+by $\Gamma_A^+$.  In particular, $d_{\Gamma_A^+}\Sigma_A=0$.
+
+\begin{proposition}[Compatibility with the reconstructed metric]
+\label{rec:compatibility}
+The $E$-valued three-form
+\begin{equation}
+ \mathcal T_A=d_A\Sigma_A
+   =-K^{-1}(d_AQ^{-1/2})\wedge F_A
+ \label{rec:torsion-defect}
+\end{equation}
+determines the difference $b=A-\Gamma_A^+$.  More precisely,
+\begin{equation}
+ \mathcal T_A=[b,\Sigma_A],
+ \qquad \mathcal T_A=0\ \Longleftrightarrow\ A=\Gamma_A^+.
+ \label{rec:compatibility-equivalence}
+\end{equation}
+With the stated form and internal norms, one also has the pointwise
+estimate
+\begin{equation}
+ |b|\leq |\mathcal T_A|\leq2|b|.
+ \label{rec:compatibility-norm}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Differentiate \eqref{rec:adapted-frame} covariantly and use the Bianchi
+identity to obtain \eqref{rec:torsion-defect}.  Subtracting
+$d_{\Gamma_A^+}\Sigma_A=0$ gives the first identity in
+\eqref{rec:compatibility-equivalence}.
+
+For completeness, the needed pointwise invertibility can be checked
+without a differential equation.  Choose a coframe in which
+$(\Sigma_A)_{i,ab}=\eta_{i,ab}$, with
+\[
+ \eta_{i,jk}=\epsilon_{ijk},\qquad
+ \eta_{i,j4}=\delta_{ij},\qquad
+ \eta_{i,4j}=-\delta_{ij}.
+\]
+Define an endomorphism of $E$-valued one-forms by
+$\mathscr Cb=*_{\widehat g_A}[b,\Sigma_A]$.  Its components are
+\[
+ (\mathscr Cb)_{ic}
+       =\epsilon_{ijk}\eta_{k,dc}b_{jd}.
+\]
+The elementary contraction identity
+\[
+ \eta_{i,ab}\eta_{j,cb}
+       =\delta_{ij}\delta_{ac}+\epsilon_{ijk}\eta_{k,ac}
+\]
+gives $\mathscr C^2+\mathscr C-2I=0$.  Also $\mathscr C$ is
+self-adjoint, since both the internal epsilon tensor and the eta
+matrix change sign when their paired indices are exchanged.
+Its only possible eigenvalues are $1$ and $-2$, so it is invertible and
+\[
+ \mathscr C^{-1}=\frac12(\mathscr C+I),\qquad
+ b=\frac12(\mathscr C+I)*_{\widehat g_A}\mathcal T_A.
+\]
+This proves the equivalence and the norm bounds.
+\end{proof}
+
+If $Q=I$, then $\mathcal T_A=0$, and the reconstructed connection has
+$F_A=-K\Sigma_A$.  The usual chiral curvature decomposition then gives
+$\Ric_0(\widehat g_A)=0$, $W^+(\widehat g_A)=0$, and
+$s(\widehat g_A)=12K$.  More generally, $\mathcal T_A=0$ implies that
+$\widehat g_A$ is Einstein: the curvature of its chiral Levi--Civita
+connection is self-dual by construction, so its opposite-chirality
+Ricci block vanishes.
+
+This compatibility condition is stronger than requiring that $A$ be
+the chiral Levi--Civita connection of some other metric $g$.
+It does not assert that an arbitrary $A_g^+$ is Levi--Civita for its
+curvature-reconstructed metric.  It instead gives an exact additional
+variable that measures this discrepancy.  In particular, the formulas
+above do not establish a closed nonlinear evolution equation in
+$\widehat g_A$ alone.
+
+\section{Reconstruction from a metric's chiral connection}
+\label{rec:source-metric-section}
+
+We now start with a Riemannian metric $g$ on $S^4$ near its round metric
+$g_0$ of sectional curvature $K$.  Use its oriented orthonormal coframes to
+identify the internal bundle with its chiral bundle, and write
+\begin{equation}
+ F_{A_g^+}=-C\Sigma_g^+-B\Sigma_g^-,\qquad
+ C=W^++\frac{s}{12}I.
+ \label{rec:chiral-curvature}
+\end{equation}
+Here $W^+$ is the curvature-operator Weyl block, so its norm is the
+Hilbert--Schmidt norm of a three-by-three symmetric trace-free matrix.
+For either Weyl component, the squared four-index tensor norm is four
+times the squared curvature-operator norm.  The sign in
+\eqref{rec:chiral-curvature} agrees with $F_{A_0}=-K\Sigma_0^+$.
+
+\begin{lemma}[The Ricci block and the curvature graph]
+\label{rec:ricci-block}
+With the row and form conventions above,
+\begin{equation}
+ B=\beta_g(g^{-1}\Ric_0(g)),\qquad
+ |B|^2=\frac14|\Ric_0(g)|^2.
+ \label{rec:Ricci-beta}
+\end{equation}
+Set $M=C^2-BB^T$.  Wherever the connection is definite,
+\begin{equation}
+ \mu_{A_g^+}=\frac23\operatorname{tr}(M)dV_g,\qquad
+ Q=\frac{3M}{\operatorname{tr}M}.
+ \label{rec:source-Q}
+\end{equation}
+If $C$ is invertible, the curvature plane is the graph
+\begin{equation}
+ T=C^{-1}B
+ \label{rec:curvature-graph}
+\end{equation}
+over $\Lambda_g^+$.  In particular, all of these formulas hold in a
+sufficiently small $C^2$ neighborhood of $g_0$.
+\end{lemma}
+
+\begin{proof}
+The curvature operator has blocks
+\[
+ \mathcal R_g=
+ \begin{pmatrix}W^++sI/12&B\\B^T&W^-+sI/12\end{pmatrix}.
+\]
+To check the normalization of $B$, diagonalize
+$g^{-1}\Ric_0=\operatorname{diag}(r_1,r_2,r_3,r_4)$, with
+$\sum r_a=0$.  The trace-free Ricci part of the curvature operator has
+sectional entries $(r_a+r_b)/2$.  Its off-diagonal chiral entries in
+\eqref{rec:form-bases} are therefore
+$(r_1+r_2)/2,(r_1+r_3)/2,(r_1+r_4)/2$.  These agree with
+\eqref{rec:beta-diagonal}.  Equivariance proves
+\eqref{rec:Ricci-beta} in general.
+
+Taking wedge products of \eqref{rec:chiral-curvature} gives
+$F_i\wedge F_j=2(C^2-BB^T)_{ij}dV_g$ and hence
+\eqref{rec:source-Q}.  Finally, multiplying the column of curvature
+forms on the left by $-C^{-1}$ does not change its span and yields
+$\Sigma_g^++C^{-1}B\Sigma_g^-$, proving
+\eqref{rec:curvature-graph}.  At round, $C=KI$ and $M=K^2I$;
+invertibility and positive definiteness persist for small $C^2$
+perturbations.
+\end{proof}
+
+\subsection{Linear reconstruction at the round metric}
+
+Let $\mathscr R(g)=\widehat g_{A_g^+}$, with the fixed normalization
+\eqref{rec:metric-definition}.  Primes below denote derivatives at
+$g_0$ along $g_\varepsilon=g_0+\varepsilon h+O(\varepsilon^2)$.
+For $\Ric_0'$ we differentiate the trace-free Ricci tensor as a
+covariant two-tensor; because $\Ric_0(g_0)=0$, raising one index at
+$g_0$ gives the same first-order endomorphism used in the graph map.
+
+\begin{proposition}[The linear reconstruction operator]
+\label{rec:linear-reconstruction}
+The first variation $k=\mathscr R'_{g_0}h$ is
+\begin{equation}
+ k=h+\frac1K\Ric_0'+\frac{s'}{12K}g_0
+   =\frac1K\Ric'-2h-\frac{s'}{6K}g_0.
+ \label{rec:linear-reconstruction-formula}
+\end{equation}
+On transverse-traceless tensors, with
+$L=\nabla^*\nabla=-\nabla^a\nabla_a$,
+\begin{equation}
+ \Ric_0'=\frac12(L+2K)h,\qquad s'=0,\qquad
+ k=\frac{L+4K}{2K}h.
+ \label{rec:linear-TT}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Write pointwise
+\begin{equation}
+ \mathscr R(g_\varepsilon)
+    =g_\varepsilon(c_\varepsilon e^{H_\varepsilon}\cdot,\cdot),
+ \qquad \operatorname{tr}H_\varepsilon=0.
+ \label{rec:logmetric-representation}
+\end{equation}
+The volume condition and \eqref{rec:source-Q} imply
+\begin{equation}
+ c_\varepsilon^2=\frac{\operatorname{tr}M}{3K^2}.
+ \label{rec:scale-c}
+\end{equation}
+At round, $C=KI$, $B=0$, and $C'=W^{+\prime}+s'I/12$.
+Thus $\operatorname{tr}M'=Ks'/2$ and $c'=s'/(12K)$.
+The graph formula gives $T'=B'/K$; applying
+Lemma~\ref{rec:graph-lemma} and \eqref{rec:Ricci-beta} yields
+$H'=g_0^{-1}\Ric_0'/K$.  Differentiating
+\eqref{rec:logmetric-representation} proves the first equality in
+\eqref{rec:linear-reconstruction-formula}.  The identity
+$\Ric_0'=\Ric'-(s'/4)g_0-3Kh$ proves the second.
+
+For the TT formula, the variation of the Christoffel symbols gives
+\[
+ 2\Ric'_{ij}=
+ \nabla^a\nabla_i h_{ja}+\nabla^a\nabla_j h_{ia}
+             -\nabla^a\nabla_a h_{ij}
+             -\nabla_i\nabla_j\operatorname{tr}h.
+\]
+When $\nabla^a h_{aj}=0$ and $\operatorname{tr}h=0$, commuting
+derivatives on the round metric gives
+$\nabla^a\nabla_i h_{ja}=4Kh_{ij}$ and the same term with $i,j$
+interchanged.  Therefore $\Ric'=\tfrac12(L+8K)h$.
+The scalar variation
+$s'=\nabla^i\nabla^j h_{ij}-\nabla^a\nabla_a\operatorname{tr}h
+      -\langle\Ric,h\rangle$
+vanishes.  Subtraction of $3Kh$ proves the formula for $\Ric_0'$,
+and substitution proves \eqref{rec:linear-TT}.
+\end{proof}
+
+Three checks clarify what reconstruction retains.  Constant rescaling
+$h=2cg_0$ gives $k=0$, since the Levi--Civita connection does not change
+under a spatially constant scale change.  Naturality gives $k=h$ for
+$h=\mathcal L_Xg_0$.  For a conformal perturbation $h=2fg_0$, set
+$\Delta f=\nabla^a\nabla_af$.  The conformal Ricci formula gives
+\[
+ \Ric'=-2\nabla^2f-(\Delta f)g_0,\qquad
+ s'=-6\Delta f-24Kf,
+\]
+so
+\begin{equation}
+ \mathscr R'_{g_0}(2fg_0)
+        =-\frac2K\nabla^2f
+        =-\frac1K\mathcal L_{\nabla f}g_0.
+ \label{rec:conformal-check}
+\end{equation}
+Thus conformal source variations disappear modulo diffeomorphisms
+at first order.  This does not assert a nonlinear conformal symmetry
+of reconstruction or of a metric pullback functional.
+
+On TT tensors, forward reconstruction is an elliptic operator of
+order two and amplifies high-frequency modes.  Its inverse on this
+sector is $2K(L+4K)^{-1}$.  For comparison, the vector field of
+volume-normalized Ricci flow is
+$\mathcal F_{\rm RF}(g)=-2\Ric(g)+(\overline s/2)g$ in dimension four.
+At round its TT derivative is $-(L+2K)$, since
+$\overline s'=0$.  Consequently
+\begin{equation}
+ \mathscr R'_{g_0}=I-\frac1{2K}\mathcal F_{\rm RF}'
+                  \qquad\hbox{on TT tensors}.
+ \label{rec:resolvent-comparison}
+\end{equation}
+This operator identity alone does not identify nonlinear flows.
+
+For later use, denote by
+$\mathcal Hh=(A_g^+)'_{g_0}h$ the linearized chiral Levi--Civita map
+in the symmetric coframe identification.  Under the same
+identifications the normalized triple in
+\eqref{rec:adapted-frame} has, for TT data, the first-order variation
+of the coframe triple associated with $k=\mathscr R'_{g_0}h$; the
+$W^{+\prime}$ contribution is cancelled by $Q^{-1/2}$.
+Indeed $Q'=2W^{+\prime}/K$, and the anti-self-dual coefficient of
+the triple variation is
+$\beta(h)+B'/K=\beta(k)$, with no scalar or skew self-dual term.
+Linearizing \eqref{rec:compatibility-equivalence} therefore gives
+\begin{equation}
+ \mathcal T'=[\mathcal H(h-k),\Sigma_0^+]
+     =-K^{-1}[\mathcal H(\Ric_0'),\Sigma_0^+]
+                     \qquad\hbox{for TT }h.
+ \label{rec:linear-compatibility}
+\end{equation}
+In particular, belonging to the linearized image of
+$g\mapsto A_g^+$ does not imply vanishing compatibility defect with
+the reconstructed metric.
+
+\subsection{Second-order reconstruction}
+
+All expansions in this subsection are pointwise in moving
+$g_\varepsilon$-orthonormal frames and use coefficients without
+factorials.  In particular, the symbols for $\Ric_0$ below denote
+its matrix with one index raised; this convention keeps the moving
+frame corrections in its coefficients.  Write
+\begin{align}
+ g_\varepsilon^{-1}\Ric_0(g_\varepsilon)
+     &=\varepsilon\rho_1+\varepsilon^2\rho_2+O(\varepsilon^3),
+ &B&=\varepsilon B_1+\varepsilon^2B_2+O(\varepsilon^3),
+ \label{rec:rho-expansion}\\
+ W^+&=\varepsilon W_1+\varepsilon^2W_2+O(\varepsilon^3),
+ &s&=12K+\varepsilon s_1+\varepsilon^2s_2+O(\varepsilon^3),
+ \label{rec:W-s-expansion}
+\end{align}
+where $B_j=\beta(\rho_j)$.  The matrices $\rho_j$ and $W_j$ are
+symmetric and trace-free, whereas $B_j$ need not be symmetric.
+
+\begin{proposition}[Second-order metric and scale]
+\label{rec:second-order}
+In \eqref{rec:logmetric-representation}, write
+$H_\varepsilon=\varepsilon H_1+\varepsilon^2H_2+O(\varepsilon^3)$.
+Then
+\begin{align}
+ H_1&=\frac{\rho_1}{K},
+ \label{rec:H-first}\\
+ H_2&=\frac{\rho_2}{K}
+       -\frac{s_1\rho_1}{12K^2}
+       -\frac{\beta^{-1}(W_1B_1)}{K^2},
+ \label{rec:H-second}\\
+ c_\varepsilon
+   &=1+\frac{\varepsilon s_1}{12K}
+       +\varepsilon^2\left(
+           \frac{s_2}{12K}
+           +\frac{|W_1|^2-|B_1|^2}{6K^2}\right)
+       +O(\varepsilon^3).
+ \label{rec:c-second}
+\end{align}
+Equivalently, the relative metric endomorphism is
+\begin{align}
+ c_\varepsilon e^{H_\varepsilon}
+  ={}&I+\varepsilon\left(\frac{\rho_1}{K}
+                                +\frac{s_1}{12K}I\right)\notag\\
+    &+\varepsilon^2\left[
+       \frac{\rho_2}{K}+\frac{s_2}{12K}I
+       -\frac{\beta^{-1}(W_1B_1)}{K^2}
+       +\frac{\rho_1^2}{2K^2}
+       +\frac{|W_1|^2-|B_1|^2}{6K^2}I
+                       \right]+O(\varepsilon^3).
+ \label{rec:relative-metric-second}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+Put $a_j=s_j/12$.  Expanding the matrix inverse at $C=KI$ gives
+\[
+ C^{-1}B
+  =\frac{\varepsilon}{K}B_1
+    +\varepsilon^2\left[
+           \frac{B_2}{K}
+           -\frac{(W_1+a_1I)B_1}{K^2}\right]
+    +O(\varepsilon^3).
+\]
+By Lemma~\ref{rec:graph-lemma}, the graph of the logarithmic metric
+has expansion $\beta(H_\varepsilon)+O(\varepsilon^3)$, with no
+quadratic correction.  Applying $\beta^{-1}$ to the first two
+coefficients proves \eqref{rec:H-first}--\eqref{rec:H-second}.
+The product $W_1B_1$ is an arbitrary graph matrix; its lack of
+symmetry causes no problem because $\beta$ maps onto all
+three-by-three graph matrices.
+
+For the scale, $\operatorname{tr}W^+=0$ gives the exact identity
+\[
+ \operatorname{tr}M
+     =3(s/12)^2+|W^+|^2-|B|^2.
+\]
+Inserting the expansions into \eqref{rec:scale-c} and taking the
+positive square root proves \eqref{rec:c-second}.  In particular,
+the $s_1^2$ term cancels when the square root is expanded.
+Finally,
+$e^{H_\varepsilon}
+ =I+\varepsilon H_1+\varepsilon^2(H_2+H_1^2/2)+O(\varepsilon^3)$.
+Multiplication by \eqref{rec:c-second} cancels
+$-s_1\rho_1/(12K^2)$ against the product of the first-order scalar
+and trace-free terms, giving \eqref{rec:relative-metric-second}.
+\end{proof}
+
+The remainder statements are pointwise Taylor statements for a
+smooth family; on a compact manifold they are uniform in any fixed
+finite norm when the corresponding family and derivatives are
+controlled.  They are not estimates along an arbitrary evolution.
+In particular, \eqref{rec:relative-metric-second} describes the
+nonlinear reconstruction map, not the complete quadratic part of a
+connection-induced metric flow.  Determining that flow also requires
+the evolution of the independent connection and the compatibility
+defect \eqref{rec:torsion-defect}.
+
+
+\section{The definite-connection functional and its gradient}
+\label{sec:definite-flow}
+
+Retain the bundle, definite curvature, and reconstructed metric of Section~\ref{rec:section}. The orientation component is the one containing the round chiral connection. In particular,
+\[
+F_{0i}=-K\Sigma_i^+,\qquad Q_0=I,\qquad
+\mu_0=2K^2dV_{g_0},\qquad \widehat g_{A_0}=g_0.
+\]
+The constant \(K\) remains fixed.
+
+Consider the energy and the metric on its space of connections
+\begin{equation}
+ \mathcal P(A)=\int_M\operatorname{tr}\bigl((Q-I)^2\bigr)\mu_A,
+ \qquad
+ \langle a,b\rangle_A=
+ \int_M\sum_i\langle a_i,b_i\rangle_{\widehat g_A}
+          dV_{\widehat g_A}.
+ \label{flow:energy-and-metric}
+\end{equation}
+The one-form metric in this formula, including its internal normalization,
+is part of the definition of the gradient.  Fine's canonical reconstructed
+metric has volume $\mu_A$, and is consequently
+$\sqrt2K\,\widehat g_A$.  Our flow differs from the corresponding flow
+in \cite{Fine2011} by this fixed time normalization.
+
+\begin{proposition}
+\label{flow:gradient}
+With adjoints taken using \eqref{flow:energy-and-metric}, the negative
+gradient flow is
+\begin{align}
+ A_t&=-d_A^*\left[
+      \left(4Q-\frac23\operatorname{tr}(Q^2)I\right)F_A\right]
+       \label{flow:gradient-equation}\\
+    &=-4d_A^*\left[
+      \left(q-\frac16\lvert q\rvert^2I\right)F_A\right],
+       \qquad q=Q-I.\nonumber
+\end{align}
+For every smooth solution,
+\begin{equation}
+ \frac{d}{dt}\mathcal P(A(t))=-\lVert A_t\rVert_A^2.
+ \label{flow:energy-dissipation}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+For a connection variation $a$, write $\dot F=d_Aa$.  Differentiating
+\eqref{rec:mu-Q} gives
+\begin{equation}
+ \dot\mu=\frac23\sum_i(d_Aa)_i\wedge F_i,
+ \qquad
+ \dot Q_{ij}\mu=(d_Aa)_i\wedge F_j+F_i\wedge(d_Aa)_j
+                         -Q_{ij}\dot\mu.
+ \label{flow:elementary-variation}
+\end{equation}
+The Bianchi identity implies
+$\dot\mu=\frac23d\sum_i(a_i\wedge F_i)$, so $\int_M\mu_A$ is
+constant on the space of connections on this fixed bundle.
+Since $\operatorname{tr}Q=3$, we can therefore vary
+$\int\operatorname{tr}(Q^2)\mu$ instead of $\mathcal P$.
+Using \eqref{flow:elementary-variation}, symmetry of $Q$, and symmetry
+of the wedge pairing on two-forms, we obtain
+\begin{align}
+ \delta\mathcal P(a)
+ &=4\int_M\sum_{i,j}Q_{ij}(d_Aa)_i\wedge F_j
+       -\frac23\int_M\operatorname{tr}(Q^2)
+                     \sum_i(d_Aa)_i\wedge F_i\nonumber\\
+ &=\int_M\sum_i(d_Aa)_i\wedge
+        \left[\left(4Q-\frac23\operatorname{tr}(Q^2)I\right)F_A\right]_i.
+ \label{flow:first-variation}
+\end{align}
+Each form in the second factor is selfdual for $\widehat g_A$.
+Thus the last integral is the ordinary $L^2$ pairing of two-forms,
+and integration by parts gives \eqref{flow:gradient-equation}.
+There is no additional factor $2K^2$ in this step: the wedge pairing
+already incorporates the volume form used in the two-form pairing.
+
+Since $*_AF_A=F_A$ and $d_AF_A=0$, one has $d_A^*F_A=0$.
+Writing $Q=I+q$ and $\operatorname{tr}q=0$ in the first line of
+\eqref{flow:gradient-equation} now yields the second line.
+Finally, pairing the gradient with its negative gives
+\eqref{flow:energy-dissipation}.  Dependence of the metric on $A$
+does not add a term to this directional derivative of the energy.
+\end{proof}
+
+This is the definite-connection gradient equation of
+\cite[Proposition~4.2]{Fine2011}, with the normalization stated above.
+The curvature is selfdual for its reconstructed metric at every point of
+the configuration space; the equation is consequently not Yang--Mills
+heat flow on an externally fixed metric.  Its internal gauge and
+diffeomorphism symmetries must be treated when proving parabolicity.
+Fine proves short-time existence and uniqueness, and local stability
+near perfect connections, by appropriate gauge fixing
+\cite[Sections~4.2--4.3]{Fine2011}.
+These results do not supply a general long-time theorem for arbitrary
+initial definite connections.
+
+The exact matrix, volume, and metric velocities for this flow are obtained by inserting its velocity into Proposition~\ref{rec:velocity-proposition}. In particular, equations~\eqref{rec:velocity-Q} and~\eqref{rec:invariant-velocities} retain the trace-normalization term in \(Q_t\); total reconstructed volume is constant while its density may vary.
+
+\section{The closed defect equation at the round connection}
+\label{sec:round-defect}
+
+Write
+\begin{equation}
+ A=A_0+\varepsilon a+O(\varepsilon^2),\qquad
+ Q=I+\varepsilon q+O(\varepsilon^2),\qquad
+ q\in\Gamma(\operatorname{Sym}^2_0E).
+\end{equation}
+In this section $q$ denotes the linearized defect, rather than the full
+nonlinear matrix $Q-I$.  Because the nonlinear right-hand side of
+\eqref{flow:gradient-equation} vanishes at $A_0$, its linearization is
+\begin{equation}
+ a_t=-4d_0^*(qF_0),\qquad d_0=d_{A_0}.
+ \label{flow:linear-connection}
+\end{equation}
+There is no variation of the adjoint in this expression: in the second
+line of \eqref{flow:gradient-equation}, that variation multiplies a
+factor which is zero at the background.
+
+We use the selfdual symbols
+\begin{equation}
+ \eta_{i,jk}=\epsilon_{ijk},\qquad
+ \eta_{i,j4}=\delta_{ij},\qquad
+ \eta_{i,4j}=-\delta_{ij},\qquad
+ \Sigma_i^+=\frac12\eta_{i,ab}e^a\wedge e^b.
+ \label{flow:eta-convention}
+\end{equation}
+They are parallel for the combined tangent and chiral connections.
+All covariant derivatives in this section use those round connections.
+If $(d_0a)_i=U(a)_{ij}\Sigma_j^++V(a)_{ij}\Sigma_j^-$, then
+\begin{equation}
+ U(a)_{ik}=\frac14\eta_{k,ab}(d_0a)_{i,ab}
+          =\frac12\eta_{k,ab}\nabla_a a_{ib},
+ \qquad
+ q=-\frac2K\operatorname{sym}_0U(a).
+ \label{flow:linear-Q-map}
+\end{equation}
+Here $\operatorname{sym}_0$ means symmetric trace-free part in the
+internal indices.
+
+\begin{proposition}
+\label{flow:round-heat}
+The linearized defect satisfies
+\begin{equation}
+ \boxed{q_t=-4(L_E+6K)q,\qquad
+ L_E=\nabla_{A_0}^*\nabla_{A_0}
+       \quad\hbox{on }\operatorname{Sym}^2_0E.}
+ \label{flow:round-defect-heat}
+\end{equation}
+The linearized local volume velocity vanishes.
+\end{proposition}
+
+\begin{proof}
+Since $(F_{0j})_{ab}=-K\eta_{j,ab}$, equation
+\eqref{flow:linear-connection} is
+\begin{equation}
+ (a_t)_{ib}=-4K\eta_{j,ab}\nabla_aq_{ij}.
+ \label{flow:linear-velocity-components}
+\end{equation}
+Applying \eqref{flow:linear-Q-map} gives
+\begin{equation}
+ q_{t,ik}=4\operatorname{sym}_0
+  \left[\eta_{k,ab}\eta_{j,cb}\nabla_a\nabla_cq_{ij}\right].
+ \label{flow:q-second-derivatives}
+\end{equation}
+The algebraic identity
+\begin{equation}
+ \eta_{k,ab}\eta_{j,cb}
+   =\delta_{kj}\delta_{ac}+\epsilon_{kjl}\eta_{l,ac}
+ \label{flow:eta-product}
+\end{equation}
+separates this into a rough Laplacian and a curvature term.
+The curvature action on the two internal indices is
+\begin{equation}
+ [\nabla_a,\nabla_c]q_{ij}
+   =-K\eta_{t,ac}
+      (\epsilon_{itm}q_{mj}+\epsilon_{jtm}q_{im}).
+ \label{flow:q-curvature-action}
+\end{equation}
+Using $\eta_{l,ac}\eta_{t,ac}=4\delta_{lt}$, symmetry of $q$, and
+$\operatorname{tr}q=0$, the antisymmetric part of the second derivatives
+in \eqref{flow:q-second-derivatives} is
+\begin{align}
+ \frac12\epsilon_{kjl}\eta_{l,ac}
+       [\nabla_a,\nabla_c]q_{ij}
+ &=-2K\epsilon_{kjl}
+       (\epsilon_{ilm}q_{mj}+\epsilon_{jlm}q_{im})\nonumber\\
+ &=-2K\bigl(q_{ki}-\delta_{ik}\operatorname{tr}q+2q_{ik}\bigr)
+   =-6Kq_{ik}.
+ \label{flow:q-curvature-contraction}
+\end{align}
+Consequently $q_t=4(\nabla^a\nabla_a-6K)q$, proving the asserted
+formula with the nonnegative rough-Laplacian convention.
+
+For the volume assertion, apply \eqref{flow:linear-Q-map} to the
+velocity \eqref{flow:linear-velocity-components} and take its trace:
+\begin{equation}
+ \operatorname{tr}U(a_t)
+ =-2K\left[
+     \nabla^a\nabla_a\operatorname{tr}q
+     +\epsilon_{ijl}\eta_{l,ac}\nabla_a\nabla_cq_{ij}\right]=0.
+\end{equation}
+The first term vanishes by trace-freeness, and the second by symmetry
+in $i,j$.  Equation \eqref{rec:mu-velocity} therefore has no term of
+order $\varepsilon$ in its volume velocity.
+\end{proof}
+
+The pointwise and integrated consequences are
+\begin{align}
+ (\partial_t-4\Delta_{g_0})\lvert q\rvert^2
+    &=-8\lvert\nabla q\rvert^2-48K\lvert q\rvert^2,
+      \label{flow:linear-pointwise-decay}\\
+ \frac{d}{dt}\lVert q\rVert_{L^2(g_0)}^2
+    &=-8\lVert\nabla q\rVert_{L^2(g_0)}^2
+      -48K\lVert q\rVert_{L^2(g_0)}^2.\nonumber
+\end{align}
+Here $\Delta=\nabla^a\nabla_a$ on functions.  On the compact sphere,
+the scalar maximum principle gives
+\begin{equation}
+ \sup_M\lvert q(t)\rvert
+       \leq e^{-24Kt}\sup_M\lvert q(0)\rvert.
+ \label{flow:linear-sup-bound}
+\end{equation}
+These are estimates for the linear equation.  They do not constitute a
+nonlinear maximum principle for $Q$, nor do they prove preservation of
+a uniform lower bound for its eigenvalues along the nonlinear flow.
+
+\section{The Bianchi identity and the Ricci-flow linearization}
+\label{sec:chiral-bianchi}
+
+Let $g$ now be an arbitrary oriented Riemannian four-metric, with its
+chiral Levi--Civita connection $A_g^+$.  Local orthonormal frames for
+nearby metrics are identified by the symmetric coframe variation
+$\dot e^a=\frac12h^a{}_be^b$.  The linearized chiral connection map
+$\mathcal H_g h=(A_g^+)'h$ then has the local formula
+\begin{equation}
+ (\mathcal H_g h)_{ib}
+       =\frac12\eta_{i,cd}\nabla_ch_{bd}.
+ \label{flow:H-definition}
+\end{equation}
+Indeed, linearizing the torsion equations gives
+$\dot\omega_{ab}=\frac12(\nabla_bh_{ac}-\nabla_ah_{bc})e^c$;
+contracting with $-\eta_{i,ab}/2$ gives
+\eqref{flow:H-definition}.  This choice of identification fixes the
+otherwise available internal gauge term in the variation.
+
+Put $\Ric_0=\operatorname{Ric}-\frac{s}{4}g$.  The Weyl tensor is
+viewed either as a four-index tensor or as an endomorphism of two-forms,
+with $W^+$ denoting its selfdual block.  Define the $E$-valued two-form
+$\Psi=W^+\Sigma^+$.  With the ordinary two-form normalization,
+\begin{equation}
+ \Psi_{i,ab}=W^+_{ij}\eta_{j,ab}
+           =\frac12\eta_{i,cd}W_{abcd}.
+ \label{flow:W-projection}
+\end{equation}
+
+\begin{lemma}
+\label{flow:bianchi-lemma}
+For the chiral Levi--Civita connection and adjoint defined by $g$,
+\begin{equation}
+ \boxed{
+ d_{A_g^+}^*(W^+\Sigma^+)
+    =-\mathcal H_g(\Ric_0)
+      -\frac1{12}\mathcal H_g(sg).
+ }
+ \label{flow:full-bianchi-identity}
+\end{equation}
+In this identity the metric is $g$, not the generally different
+curvature-reconstructed metric $\widehat g_{A_g^+}$.
+\end{lemma}
+
+\begin{proof}
+We use $R_{abcd}=K(g_{ac}g_{bd}-g_{ad}g_{bc})$ on the round sphere.
+The curvature decomposition in this convention is
+\begin{align}
+ R_{abcd}=W_{abcd}
+  &+\frac12(g_{ac}(\Ric_0)_{bd}+g_{bd}(\Ric_0)_{ac}
+              -g_{ad}(\Ric_0)_{bc}-g_{bc}(\Ric_0)_{ad})\nonumber\\
+  &+\frac{s}{12}(g_{ac}g_{bd}-g_{ad}g_{bc}).
+\end{align}
+Contracted Bianchi gives
+$\nabla^aR_{abcd}=\nabla_c\operatorname{Ric}_{bd}
+                    -\nabla_d\operatorname{Ric}_{bc}$ and
+$\nabla^a(\Ric_0)_{ab}=\frac14\nabla_bs$.
+Taking the divergence of the decomposition therefore gives
+\begin{equation}
+ \nabla^aW_{abcd}
+ =\frac12(\nabla_c(\Ric_0)_{bd}-\nabla_d(\Ric_0)_{bc})
+    +\frac1{24}(g_{bd}\nabla_cs-g_{bc}\nabla_ds).
+ \label{flow:W-divergence}
+\end{equation}
+The symbols $\eta$ are parallel for the combined connections, so
+\eqref{flow:W-projection} and \eqref{flow:W-divergence} imply
+\begin{align}
+ (d_{A_g^+}^*\Psi)_{ib}
+ &=-\frac12\eta_{i,cd}\nabla^aW_{abcd}\nonumber\\
+ &=-\frac12\eta_{i,cd}\nabla_c(\Ric_0)_{bd}
+       -\frac1{24}\eta_{i,cb}\nabla_cs.
+\end{align}
+The first term is $-\mathcal H_g(\Ric_0)$ by
+\eqref{flow:H-definition}; the second is
+$-\mathcal H_g(sg)/12$.  This proves the identity, including its
+scalar-curvature term, without an Einstein assumption.
+\end{proof}
+
+\subsection{The Ricci-flow comparison on transverse-traceless variations}
+\label{sec:ricci-comparison}
+
+Return to $g_0$, and write $\mathcal H=\mathcal H_{g_0}$ and
+$\mathcal D h=(W^+)'_{g_0}h$.  Set $L=\nabla^*\nabla$ on symmetric tensors.
+We restrict to transverse-traceless (TT) tensors,
+\begin{equation}
+ \nabla^ah_{ab}=0,\qquad \operatorname{tr}_{g_0}h=0.
+ \label{flow:TT}
+\end{equation}
+For these tensors,
+\begin{equation}
+ s'=0,\qquad
+ \operatorname{Ric}'=\frac12(L+8K)h,\qquad
+ \Ric_0'=\frac12(L+2K)h.
+ \label{flow:linear-Ricci}
+\end{equation}
+These variation formulas were derived in Proposition~\ref{rec:linear-reconstruction}.
+
+The metric-induced curvature has the block expression
+$F=-C\Sigma_g^+-B\Sigma_g^-$, with
+$C=W^++sI/12$ and $B$ the trace-free Ricci block.  Consequently,
+\begin{equation}
+ Q=\frac{3(C^2-BB^T)}{\operatorname{tr}(C^2-BB^T)},\qquad
+ \left.\delta Q\right|_{a=\mathcal Hh}=\frac2K\mathcal D h.
+ \label{flow:Q-W-intertwining}
+\end{equation}
+The second identity follows by differentiating at $C=KI$, $B=0$:
+the scalar variation cancels under trace normalization, and $BB^T$
+has no linear term.
+
+\begin{proposition}
+\label{flow:ricci-intertwining}
+Let $a=\mathcal Hh$ with $h$ TT.  The linearized independent connection
+flow satisfies
+\begin{equation}
+ \boxed{
+ a_t=\mathcal H[-4(L+2K)h].
+ }
+ \label{flow:ricci-intertwining-equation}
+\end{equation}
+Thus it preserves the image of TT tensors under $\mathcal H$.
+The identity is exact in the stated symmetric coframe identification;
+no additional internal gauge term is required there.
+\end{proposition}
+
+\begin{proof}
+At round, $W^+=0$, $\Ric_0=0$, and $s$ is constant.
+Linearizing \eqref{flow:full-bianchi-identity} therefore gives
+\begin{equation}
+ d_0^*(\mathcal D h\,\Sigma^+)
+   =-\mathcal H(\Ric_0')
+      -\frac1{12}\mathcal H(s'g_0).
+ \label{flow:linear-bianchi}
+\end{equation}
+In particular, variations of the adjoint and of the triple on the left
+multiply the zero Weyl tensor.  On the right,
+$\mathcal H_g(sg)$ depends only on $ds$, so the constant background
+scalar curvature creates no additional term.
+For TT $h$ the scalar term vanishes.
+Substituting \eqref{flow:Q-W-intertwining} and $F_0=-K\Sigma^+$ into
+\eqref{flow:linear-connection}, and then using
+\eqref{flow:linear-Ricci}, gives
+\begin{equation}
+ a_t=8d_0^*(\mathcal D h\,\Sigma^+)
+     =-8\mathcal H(\Ric_0')
+     =\mathcal H[-4(L+2K)h].
+\end{equation}
+On constant curvature, $L$ preserves TT tensors, proving the image
+preservation assertion.  This argument uses the full Bianchi identity,
+not a projection of the connection flow onto the Levi--Civita image.
+\end{proof}
+
+Volume-normalized Ricci flow in dimension four is
+$g_t=-2\operatorname{Ric}+\overline s\,g/2$.
+Its TT linearization at $g_0$ is $h_t=-(L+2K)h$ by
+\eqref{flow:linear-Ricci}.  The metric parameter $h$ in
+Proposition~\ref{flow:ricci-intertwining} therefore obeys four times
+that equation.  This factor is removed by the time change $\tau=4t$.
+
+The same comparison holds for the reconstructed metric perturbation.
+Indeed, differentiating the curvature plane and the volume normalization
+at a metric-induced connection gives
+\begin{equation}
+ \widehat h=h+\frac1K\Ric_0'+\frac{s'}{12K}g_0,
+ \qquad
+ \widehat h=\frac{L+4K}{2K}h\quad\hbox{on TT tensors}.
+ \label{flow:reconstruction-linear}
+\end{equation}
+This is the reconstruction formula of Proposition~\ref{rec:linear-reconstruction}.
+The TT reconstruction operator is a polynomial in $L$, so it commutes
+with the generator in \eqref{flow:ricci-intertwining-equation} and yields
+\begin{equation}
+ \boxed{\widehat h_t=-4(L+2K)\widehat h.}
+ \label{flow:reconstructed-Ricci}
+\end{equation}
+This assertion concerns the reconstructed perturbations arising from
+the metric-induced TT data just considered.
+
+For a general metric variation, the same Bianchi calculation gives
+\begin{equation}
+ a_t=\mathcal H\left[-8\Ric_0'-\frac23s'g_0\right].
+ \label{flow:general-linear-metric-image}
+\end{equation}
+In particular, for $h=2fg_0$ one has $\mathcal D h=0$, hence $q=a_t=0$.
+Thus the comparison with normalized Ricci flow is a TT statement,
+and does not identify their general conformal variations.
+Changing the identification of spin frames changes the component
+connection variation by an infinitesimal internal gauge transformation;
+the statements above specify the identification in which the operator
+identity holds.  Diffeomorphism and internal gauge directions lie in the
+kernel of the linearized defect at $Q=I$.
+
+\subsection{An independent norm identity for the Levi--Civita variation}
+
+\begin{proposition}
+\label{flow:H-norm}
+Using $g_0$ for both the tensor and connection $L^2$ pairings and the
+internal metric $\delta_{ij}$, one has
+\begin{equation}
+ \mathcal H^*\mathcal Hh=\frac14(L+4K)h
+       \quad\hbox{for every TT tensor }h.
+ \label{flow:H-norm-equation}
+\end{equation}
+In particular, $\mathcal H$ is injective on TT tensors on the round
+sphere.
+\end{proposition}
+
+\begin{proof}
+Let $h$ be TT and let $k$ be any smooth symmetric tensor.  The identity
+\begin{equation}
+ \sum_i\eta_{i,ab}\eta_{i,de}
+      =\delta_{ad}\delta_{be}-\delta_{ae}\delta_{bd}
+          +\epsilon_{abde}
+\end{equation}
+and \eqref{flow:H-definition} give
+\begin{align}
+ 4\langle\mathcal Hh,\mathcal Hk\rangle_{L^2}
+  =\int_M\bigl(&\nabla_ah_{cb}\nabla_ak_{cb}
+           -\nabla_ah_{cb}\nabla_bk_{ca}\nonumber\\
+           &+\epsilon_{abde}\nabla_ah_{cb}\nabla_dk_{ce}\bigr)dV_{g_0}.
+ \label{flow:H-bilinear}
+\end{align}
+The mixed derivative integral is
+\begin{align}
+ \int_M\nabla_ah_{cb}\nabla_bk_{ca}\,dV
+   &=-\int_Mk_{ca}\nabla^b\nabla_ah_{cb}\,dV\nonumber\\
+   &=-\int_Mk_{ca}[\nabla^b,\nabla_a]h_{cb}\,dV
+    =-4K\int_M\langle h,k\rangle\,dV.
+ \label{flow:H-mixed-term}
+\end{align}
+Here the TT conditions and the constant-curvature action give
+$[\nabla^b,\nabla_a]h_{cb}=4Kh_{ca}$.
+For the epsilon term, integrate in $d$ and use its antisymmetry in
+$a,d$:
+\begin{equation}
+ \int_M\epsilon_{abde}\nabla_ah_{cb}\nabla_dk_{ce}\,dV
+   =-\frac12\int_M\epsilon_{abde}k_{ce}
+                         [\nabla_d,\nabla_a]h_{cb}\,dV=0.
+ \label{flow:H-epsilon-term}
+\end{equation}
+To verify the last equality explicitly, the commutator is
+\begin{equation}
+ [\nabla_d,\nabla_a]h_{cb}
+   =-K\bigl(\delta_{ca}h_{db}-\delta_{cd}h_{ab}
+               +\delta_{ba}h_{cd}-\delta_{bd}h_{ca}\bigr).
+\end{equation}
+In the first two terms, the epsilon tensor contracts a symmetric pair
+of indices of $h$; in the last two it has a repeated index.
+Each contribution is zero.  Finally, the first term in
+\eqref{flow:H-bilinear} integrates to $\langle Lh,k\rangle$.
+Combining these identities proves
+$4\langle\mathcal Hh,\mathcal Hk\rangle
+ =\langle(L+4K)h,k\rangle$ for every symmetric $k$, and hence the
+claimed operator identity.  Positivity of $K$ gives injectivity.
+\end{proof}
+
+This identity also checks the time normalization without using a
+Weyl-energy Hessian formula.  Let $\mathscr B a=\delta Q(a)$ and give
+its target the pairing $\int\operatorname{tr}(q_1q_2)\mu_0$.
+We identify each Hessian with its self-adjoint operator using the stated
+configuration-space $L^2$ metric when it is applied to a single argument.
+At the perfect connection,
+\begin{equation}
+ \operatorname{Hess}_{A_0}\mathcal P(a,b)
+      =2\int_M\operatorname{tr}(\mathscr B a\,\mathscr B b)\mu_0,
+ \qquad
+ \operatorname{Hess}_{A_0}\mathcal P(\mathcal Hh)
+      =4\mathcal H(L+2K)h.
+ \label{flow:connection-hessian}
+\end{equation}
+The second formula follows from the independently established negative
+gradient linearization in Proposition~\ref{flow:ricci-intertwining}.
+The metric pullback Hessian will be derived from these identities in Section~\ref{sec:metric-hessian}. This derivation separates the choice of configuration-space inner product from the energy itself. No linear intertwining identity here asserts preservation of the nonlinear Levi--Civita image or equality with nonlinear Ricci flow.
+
+
+\section{Metric energies and their first nonlinear discrepancy}
+\label{sec:metric-energy}
+
+Fix the round metric $g_0$ on $S^4$, with sectional curvature $K>0$.
+All Weyl norms in this section are Hilbert--Schmidt norms as curvature
+operators on two-forms. In particular, the squared four-index tensor norm
+is four times the squared operator norm. We use the metric $L^2$ pairing
+on symmetric two-tensors unless a connection pairing is explicitly named.
+
+For a metric $g$ sufficiently close to $g_0$, write the curvature of its
+positive chiral Levi--Civita connection in orthogonal chiral frames as
+\begin{equation}\label{metric:curvature-blocks}
+ F_i=-C_{ij}\Sigma_j^+-B_{ij}\Sigma_j^- ,\qquad
+ C=aI+W,\qquad a=\frac{s_g}{12},\qquad W=W_g^+.
+\end{equation}
+Here $B$ is the off-diagonal curvature block, encoding trace-free Ricci
+curvature, and
+$\Sigma_i^\pm\wedge\Sigma_j^\pm=\pm2\delta_{ij}\,dV_g$.
+Define
+\begin{equation}\label{metric:M-Q}
+ M=C^2-BB^T,\qquad t=\operatorname{tr}M,\qquad
+ \mu_A=\frac23t\,dV_g,\qquad Q=\frac{3M}{t}.
+\end{equation}
+The connection is definite on the neighborhood under consideration.
+At $g_0$, one has $a=K$, $W=B=0$, $M=K^2I$, and $Q=I$.
+
+We distinguish the connection functional and its pullback to metrics:
+\begin{equation}\label{metric:functionals}
+ \mathcal P_{\mathrm{conn}}(A)=\mathcal P(A),
+ \qquad
+ \mathcal P_{\mathrm{met}}(g)=\mathcal P_{\mathrm{conn}}(A_g^+),
+ \qquad
+ \mathcal E_+(g)=\int_{S^4}\|W_g^+\|^2dV_g.
+\end{equation}
+The two appearances of $\mathcal P$ have different gradient flows because
+their domains and $L^2$ pairings differ. Pulling back a functional is not
+the same operation as pushing forward its gradient vector field.
+
+\subsection{An exact algebraic formula}
+
+For an internal matrix $T$, let $T_0=T-\tfrac13\operatorname{tr}(T)I$.
+
+\begin{proposition}\label{prop:metric-exact-energy}
+On the definite neighborhood of the round metric,
+\begin{equation}\label{metric:exact-energy}
+ \mathcal P_{\mathrm{met}}(g)
+ =6\int_{S^4}
+ \frac{\|[2aW+W^2-BB^T]_0\|^2}
+ {\operatorname{tr}[(aI+W)^2-BB^T]}\,dV_g.
+\end{equation}
+More explicitly, set
+\[
+ w_2=\operatorname{tr}W^2,\qquad
+ b_2=\operatorname{tr}BB^T,\qquad
+ N_2=(W^2-BB^T)_0,
+\]
+and
+\[
+ C_3=\operatorname{tr}W^3-\operatorname{tr}(WBB^T).
+\]
+Then $t=3a^2+w_2-b_2$, and
+\begin{equation}\label{metric:exact-discrepancy}
+ \frac18\mathcal P_{\mathrm{met}}(g)-\mathcal E_+(g)
+ =\int_{S^4}
+ \frac{3aC_3+\tfrac34\|N_2\|^2-w_2^2+b_2w_2}{t}\,dV_g.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The wedge identities give
+$F_i\wedge F_j=2M_{ij}\,dV_g$. Since
+$Q-I=3M_0/t$ and $\mu_A=2t\,dV_g/3$, the integrand in
+$\mathcal P_{\mathrm{met}}$ is $6\|M_0\|^2/t$.
+Now $M_0=2aW+N_2$, proving \eqref{metric:exact-energy}.
+Expanding its numerator gives
+\[
+ \|2aW+N_2\|^2=4a^2w_2+4aC_3+\|N_2\|^2.
+\]
+After division by eight and subtraction of $w_2$, the first term becomes
+$(3a^2-t)w_2/t=(-w_2^2+b_2w_2)/t$. This proves
+\eqref{metric:exact-discrepancy}.
+\end{proof}
+
+For example, if $|a-K|\leq K/2$ and $t\geq cK^2$ for a fixed
+$c>0$, the exact identity implies
+\begin{equation}\label{metric:discrepancy-bound}
+ \left|\frac18\mathcal P_{\mathrm{met}}-\mathcal E_+\right|
+ \leq \frac{C_c}{K}\int |W|(|W|^2+|B|^2)\,dV_g
+ +\frac{C_c}{K^2}\int (|W|^2+|B|^2)^2\,dV_g.
+\end{equation}
+This is a local curvature estimate with an explicit denominator
+condition. It does not control the discrepancy from the Weyl $L^2$
+energy alone.
+
+\subsection{Second-order defects and the cubic energy difference}
+
+Consider a smooth metric path $g_\varepsilon=g_0+\varepsilon h+
+O(\varepsilon^2)$. Use moving orthonormal frames and write
+\begin{align}
+ W&=\varepsilon W_1+\varepsilon^2W_2+O(\varepsilon^3),&
+ a&=K+\varepsilon a_1+\varepsilon^2a_2+O(\varepsilon^3),
+ \label{metric:expansions}\\
+ B&=\varepsilon B_1+\varepsilon^2B_2+O(\varepsilon^3),&
+ dV_{g_\varepsilon}&=(1+\varepsilon v_1+O(\varepsilon^2))dV_{g_0}.
+ \nonumber
+\end{align}
+These are coefficient expansions, without factorials; in particular
+$v_1=\tfrac12\operatorname{tr}_{g_0}h$.
+
+\begin{proposition}\label{prop:metric-cubic}
+The normalized curvature matrix has expansion
+\begin{equation}\label{metric:Q-second-order}
+ Q-I=\frac{2\varepsilon}{K}W_1
+ +\varepsilon^2\left[
+ \frac2K W_2-\frac{2a_1}{K^2}W_1
+ +\frac{(W_1^2-B_1B_1^T)_0}{K^2}\right]
+ +O(\varepsilon^3).
+\end{equation}
+Moreover,
+\begin{equation}\label{metric:cubic-discrepancy}
+ \frac18\mathcal P_{\mathrm{met}}(g_\varepsilon)
+ -\mathcal E_+(g_\varepsilon)
+ =\frac{\varepsilon^3}{K}\int_{S^4}
+ \left[\operatorname{tr}W_1^3
+ -\operatorname{tr}(W_1B_1B_1^T)\right]dV_{g_0}
+ +O(\varepsilon^4).
+\end{equation}
+In particular the cubic coefficient is independent of the acceleration
+of the chosen metric path.
+\end{proposition}
+
+\begin{proof}
+Expansion of $M$ gives
+\begin{align*}
+ M_0={}&2K\varepsilon W_1
+ +\varepsilon^2\left[2KW_2+2a_1W_1
+ +(W_1^2-B_1B_1^T)_0\right]+O(\varepsilon^3),\\
+ t={}&3K^2+6Ka_1\varepsilon+O(\varepsilon^2).
+\end{align*}
+Multiplying $M_0$ by $3/t$ proves \eqref{metric:Q-second-order}.
+For the energy calculation,
+\[
+ \mu_A=2K^2\left[1+\varepsilon\left(\frac{2a_1}{K}+v_1\right)
+ +O(\varepsilon^2)\right]dV_{g_0}.
+\]
+Consequently
+\begin{align*}
+ \mathcal P_{\mathrm{met}}(g_\varepsilon)
+ ={}&8\varepsilon^2\int |W_1|^2dV_{g_0}\\
+ &+8\varepsilon^3\int\left[
+ 2\langle W_1,W_2\rangle+v_1|W_1|^2
+ +K^{-1}\langle W_1,(W_1^2-B_1B_1^T)_0\rangle
+ \right]dV_{g_0}+O(\varepsilon^4).
+\end{align*}
+The terms containing $a_1$ have canceled.
+The corresponding expansion of $\mathcal E_+$ consists of the first two
+terms inside the brackets, with the same quadratic coefficient after
+division by eight. This proves \eqref{metric:cubic-discrepancy}.
+The trace-free property of $W_1$ removes the subscript zero in its final
+pairing. These traces are unchanged by the orthogonal changes of chiral
+frames. Neither $W_2$ nor $v_1$ occurs in the difference.
+\end{proof}
+
+Let
+\begin{equation}\label{metric:D-J-definitions}
+ \mathcal D h=(W^+)'_{g_0}h,\qquad
+ \mathcal J h=B'_{g_0}h.
+\end{equation}
+Both are second-order differential operators. Their formal adjoints use
+the background metric pairing and Hilbert--Schmidt matrix pairings.
+
+\begin{corollary}\label{cor:metric-gradient-discrepancy}
+Under any smooth identification of the varying tensor bundles with the
+background bundles, the metric gradients satisfy
+\begin{align}
+ &\operatorname{grad}\left(\frac18\mathcal P_{\mathrm{met}}
+ -\mathcal E_+\right)(g_0+\varepsilon h+O(\varepsilon^2))
+ \label{metric:gradient-discrepancy}\\
+ &\quad=\frac{\varepsilon^2}{K}
+ \left\{\mathcal D^*\left[3(W_1^2)_0-(B_1B_1^T)_0\right]
+ -2\mathcal J^*(W_1B_1)\right\}+O(\varepsilon^3),
+ \nonumber
+\end{align}
+where $W_1=\mathcal Dh$ and $B_1=\mathcal Jh$.
+\end{corollary}
+
+\begin{proof}
+The difference of the functionals has vanishing Taylor coefficients
+through degree two. Its homogeneous cubic coefficient is
+\[
+ \mathcal C(h)=\frac1K\int
+ \left[\operatorname{tr}(\mathcal Dh)^3
+ -\operatorname{tr}\left((\mathcal Dh)(\mathcal Jh)(\mathcal Jh)^T\right)
+ \right]dV_{g_0}.
+\]
+Differentiating in a direction $v$ gives
+\[
+ d\mathcal C_h(v)=\frac1K\int
+ \left\langle3(W_1^2)_0-(B_1B_1^T)_0,\mathcal Dv\right\rangle
+ -2\left\langle W_1B_1,\mathcal Jv\right\rangle\,dV_{g_0}.
+\]
+Integration by parts proves the formula. Since this gradient begins in
+degree two, variation of its $L^2$ pairing contributes only in degree
+three and higher. The two metric flows thus agree to linear order and
+first differ quadratically. Each term in their difference is a nonlinear
+fourth-order differential expression; the product of two curvature
+variations does not make the equation sixth order.
+\end{proof}
+
+\section{A self-contained factorization of the round metric Hessian}
+\label{sec:metric-hessian}
+
+We derive the round Weyl-energy factorization from the connection
+identities proved above. In particular, it is not used as an input to
+the connection calculation. This also checks the relative normalization
+of the two configuration spaces.
+
+Write $\mathcal Hh=(A_g^+)'_{g_0}h$. In the symmetric-frame
+identification its components are
+\begin{equation}\label{metric:H-definition}
+ (\mathcal Hh)_{ib}=\frac12\eta_{i,cd}\nabla_ch_{bd}.
+\end{equation}
+Let $L=\nabla^*\nabla$ on symmetric tensors. For transverse-traceless
+tensors, the integrated connection-variation identity
+\eqref{flow:H-norm-equation} and the Bianchi intertwining identity
+\eqref{flow:ricci-intertwining-equation} state, in the present normalizations,
+\begin{equation}\label{metric:H-identities}
+ \mathcal H^*\mathcal H=\frac14(L+4K),\qquad
+ \mathcal L_{\mathrm{conn}}\mathcal Hh
+ =4\mathcal H(L+2K)h.
+\end{equation}
+Here $\mathcal L_{\mathrm{conn}}$ is the Hessian of
+$\mathcal P_{\mathrm{conn}}$ at the round connection for the connection
+pairing based on the reconstructed metric normalized to equal $g_0$.
+These identities follow from variation of torsion,
+the curvature Bianchi identity, and integration by parts.
+
+\begin{theorem}\label{thm:metric-Hessian-factorization}
+For every transverse-traceless symmetric tensor $h$ on round $S^4$,
+\begin{equation}\label{metric:D-factorization}
+ \mathcal D^*\mathcal D h
+ =\frac1{16}(L+2K)(L+4K)h.
+\end{equation}
+Equivalently, the metric Hessians are
+\begin{equation}\label{metric:Hessian-pair}
+ \mathcal L_{\mathcal P_{\mathrm{met}}}
+ =(L+2K)(L+4K),\qquad
+ \mathcal L_{\mathcal E_+}
+ =\frac18(L+2K)(L+4K)
+ \quad\text{on TT tensors}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+At the round connection, $Q=I$, so
+$d\mathcal P_{\mathrm{conn}}=0$. The ordinary Hessian chain rule for
+$\mathcal P_{\mathrm{met}}=\mathcal P_{\mathrm{conn}}\circ(g\mapsto A_g^+)$
+therefore has no term involving the second derivative of $g\mapsto A_g^+$:
+\[
+ \operatorname{Hess}_{g_0}\mathcal P_{\mathrm{met}}(h,k)
+ =\left\langle\mathcal Hh,
+ \mathcal L_{\mathrm{conn}}\mathcal Hk\right\rangle_{L^2}.
+\]
+Use \eqref{metric:H-identities}, noting that $L$ preserves TT tensors on
+the round sphere, to obtain
+\begin{align*}
+ \mathcal L_{\mathcal P_{\mathrm{met}}}h
+ &=4\mathcal H^*\mathcal H(L+2K)h\\
+ &=(L+4K)(L+2K)h.
+\end{align*}
+On the other hand, Proposition~\ref{prop:metric-cubic} gives
+\[
+ \operatorname{Hess}_{g_0}\mathcal P_{\mathrm{met}}(h,k)
+ =16\langle\mathcal Dh,\mathcal Dk\rangle_{L^2},
+ \qquad
+ \operatorname{Hess}_{g_0}\mathcal E_+(h,k)
+ =2\langle\mathcal Dh,\mathcal Dk\rangle_{L^2}.
+\]
+Comparison proves the stated identities on the TT subspace. Since
+$\mathcal D$ annihilates infinitesimal conformal and diffeomorphism
+variations, $\mathcal D^*\mathcal D$ takes values in TT tensors, so the
+bilinear identity also gives the operator identity in
+\eqref{metric:D-factorization}.
+\end{proof}
+
+The factorization agrees with the independently established
+quadratic-curvature Hessian formula of
+Gursky--Viaclovsky~\cite[Theorem 3.10]{GurskyViaclovsky2015}.
+The proof above uses the connection and Bianchi identities already
+derived in this manuscript, and does not invoke that formula.
+
+The linear negative metric-gradient equations are thus
+\begin{equation}\label{metric:linear-flows}
+ h_t^{(\mathcal P_{\mathrm{met}})}=-(L+2K)(L+4K)h,
+ \qquad
+ h_t^{(\mathcal P_{\mathrm{met}}/8)}
+ =h_t^{(\mathcal E_+)}=-\frac18(L+2K)(L+4K)h.
+\end{equation}
+The positivity of both factors gives coercivity on TT tensors and shows
+that the kernel of $\mathcal D$ consists precisely of infinitesimal
+diffeomorphism and conformal variations, after the standard orthogonal
+decomposition of symmetric tensors. In particular a nonzero tensor in
+the image of $\mathcal D^*$ cannot lie in $\ker\mathcal D$.
+
+For the connection functional with the stated normalization, the independent
+connection flow instead has a second-order linear equation for
+$q=Q-I$. Its time variable has length-squared scaling, whereas the
+metric equations \eqref{metric:linear-flows} have length-to-the-fourth
+scaling. Their numerical rates are not directly comparable without a
+choice of time normalization.
+
+\subsection{A TT spectral gap and explicit linear decay}
+\label{subsec:metric-gap}
+
+The following estimate needs no tabulation of spherical harmonics.
+
+\begin{lemma}\label{lem:metric-TT-gap}
+For every smooth TT tensor $h$ on the round four-sphere,
+\begin{equation}\label{metric:TT-gap}
+ \langle Lh,h\rangle_{L^2}=\|\nabla h\|_{L^2}^2
+ \geq 8K\|h\|_{L^2}^2.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Define the fully symmetrized covariant derivative, without averaging, by
+\[
+ S_{abc}=\nabla_a h_{bc}+\nabla_b h_{ca}+\nabla_c h_{ab}.
+\]
+Symmetry of $h$ and renaming the summed indices give
+\[
+ \|S\|_{L^2}^2=3\|\nabla h\|_{L^2}^2+6I,
+ \qquad I=\int (\nabla_a h_{bc})(\nabla^b h^{ca})\,dV_{g_0}.
+\]
+Integrating the first derivative by parts and using
+$\nabla^a h_{ca}=0$ yields
+\[
+ I=-\int h^{bc}\nabla^a\nabla_b h_{ca}\,dV_{g_0}
+   =-\int h^{bc}[\nabla^a,\nabla_b]h_{ca}\,dV_{g_0}.
+\]
+The round curvature commutator on a symmetric tensor is
+\[
+ [\nabla^a,\nabla_b]h_{ca}
+ =4Kh_{bc}-K(\operatorname{tr}h)g_{bc}.
+\]
+As $h$ is trace-free, $I=-4K\|h\|_{L^2}^2$. Consequently
+\begin{equation}\label{metric:symmetrized-derivative-identity}
+ \|S\|_{L^2}^2
+ =3\|\nabla h\|_{L^2}^2-24K\|h\|_{L^2}^2.
+\end{equation}
+Nonnegativity of the left-hand side proves the claim.
+\end{proof}
+
+\begin{corollary}\label{cor:metric-linear-decay}
+For the linearized negative metric gradient flow of either
+$\mathcal E_+$ or $\mathcal P_{\mathrm{met}}/8$, a TT rough-Laplacian
+eigenmode with eigenvalue $\lambda$ evolves by
+\begin{equation}\label{metric:mode-decay}
+ h(t)=\exp\!\left[-\frac{(\lambda+2K)(\lambda+4K)}8t\right]h(0).
+\end{equation}
+Every TT solution satisfies
+\begin{equation}\label{metric:TT-decay}
+ \|h(t)\|_{L^2}\leq e^{-15K^2t}\|h(0)\|_{L^2}.
+\end{equation}
+For the independent connection flow, restricted to $a=\mathcal Hh$
+with $h$ TT, the corresponding bounds are
+\begin{equation}\label{metric:connection-TT-decay}
+ \|h(t)\|_{L^2}\leq e^{-40Kt}\|h(0)\|_{L^2},\qquad
+ \|a(t)\|_{L^2}\leq e^{-40Kt}\|a(0)\|_{L^2}.
+\end{equation}
+These are bounds for the linear equations; no assertion that the lower
+bound $\lambda=8K$ is attained is needed.
+\end{corollary}
+
+\begin{proof}
+Equation~\eqref{metric:linear-flows} gives
+\eqref{metric:mode-decay}. Since $L$ is self-adjoint and preserves TT
+tensors, its orthonormal TT eigenmode expansion and
+Lemma~\ref{lem:metric-TT-gap} give $\lambda\geq8K$ on every mode.
+Thus $(\lambda+2K)(\lambda+4K)/8\geq15K^2$, proving
+\eqref{metric:TT-decay}. The independent connection equation
+\eqref{flow:ricci-intertwining-equation} gives
+$h_t=-4(L+2K)h$ in this parametrization. Its modal rate is
+$4(\lambda+2K)\geq40K$. Finally,
+\eqref{metric:H-identities} gives
+\[
+ \|\mathcal Hh\|_{L^2}^2
+ =\frac14\langle h,(L+4K)h\rangle_{L^2};
+\]
+the same exponential bound therefore holds with the positive mode
+weights $(\lambda+4K)/4$, proving the bound for $a$.
+\end{proof}
+
+\subsection{Conformal coordinates for the quadratic Weyl energy}
+\label{subsec:metric-stereographic}
+
+There is also a direct conformal-coordinate simplification. In a
+stereographic chart write
+\[
+ g_0=\Omega^2\delta,\qquad
+ \Omega(x)=\frac{2}{1+K|x|^2},
+\]
+and express a compactly supported symmetric variation as
+$h=\Omega^2 k$. Here $k$ is a symmetric two-tensor on the Euclidean
+chart, not a scalar conformal factor. Let
+$\mathcal D_{\mathrm{flat}}k=(W^+)'_\delta k$.
+
+\begin{proposition}\label{prop:metric-conformal-covariance}
+In corresponding oriented orthonormal chiral frames,
+\begin{equation}\label{metric:conformal-D}
+ \mathcal D_{g_0}(\Omega^2k)=\Omega^{-2}\mathcal D_{\mathrm{flat}}k.
+\end{equation}
+Consequently the quadratic Weyl energy satisfies
+\begin{equation}\label{metric:flat-quadratic-energy}
+ \int_{S^4}|\mathcal D_{g_0}h|^2dV_{g_0}
+ =\int_{\mathbb R^4}|\mathcal D_{\mathrm{flat}}k|^2dx.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+For a fixed conformal factor $\Omega$, Weyl curvature as a curvature
+operator transforms by
+$W^+_{\Omega^2g}=\Omega^{-2}W^+_g$ in the corresponding orthonormal
+frames. The self-dual splitting is conformally invariant in four
+dimensions. Apply this identity to
+$g_\varepsilon=\Omega^2(\delta+\varepsilon k)$ and differentiate at
+$\varepsilon=0$. Since the background Weyl curvature vanishes, changes
+of frames introduce no additional term. This proves
+\eqref{metric:conformal-D}. The squared norm contributes
+$\Omega^{-4}$ and $dV_{g_0}=\Omega^4dx$, giving
+\eqref{metric:flat-quadratic-energy}. Compact support makes extension
+by zero across the missing stereographic pole smooth.
+\end{proof}
+
+Thus conformal coordinates remove the background conformal factor from
+this quadratic curvature energy. They retain the tensorial degrees of
+freedom of $k$; in particular the TT conditions on $h$ need not become
+Euclidean TT conditions on $k$. The identity alone does not reduce the
+metric evolution to a scalar equation.
+
+\section{An analytical distinction between the metric flows}
+\label{subsec:metric-conformal-test}
+
+The cubic discrepancy already distinguishes the nonlinear metric
+gradient vector fields. The following explicit example requires no
+numerical evaluation.
+
+\begin{proposition}\label{prop:metric-nonpreservation}
+There are real-analytic conformal metrics arbitrarily close to the round
+metric for which the negative metric $L^2$-gradient of
+$\mathcal P_{\mathrm{met}}/8$ is not tangent to the conformally flat
+locus. The Weyl-energy gradient vanishes at all of these metrics.
+\end{proposition}
+
+\begin{proof}
+Realize the radius-$\ell=K^{-1/2}$ sphere in $\mathbb R^5$, choose its north pole
+$p$, and let $X^1,X^2$ be the first two ambient coordinate functions.
+Set
+\[
+ f=\frac12(X^1)^2X^2,\qquad g_\varepsilon=e^{2\varepsilon f}g_0.
+\]
+This is a globally defined real-analytic family and is conformally flat.
+For sufficiently small $\varepsilon$, its chiral connection remains
+definite by openness on the compact sphere. In round normal coordinates
+$y$ at $p$,
+\[
+ f=\frac12(y^1)^2y^2+O(|y|^5).
+\]
+The first variation of trace-free Ricci curvature is
+$-2(\nabla^2f)_0$. In the chiral bases
+\[
+ \frac1{\sqrt2}(e^{12}\pm e^{34},\ e^{13}\mp e^{24},\ e^{14}\pm e^{23}),
+\]
+its off-diagonal block has the spatial jet
+\begin{equation}\label{metric:conformal-B-jet}
+ B_1(y)=y^1S-\frac{y^2}{2}I+O(|y|^3),\qquad
+ S=\begin{pmatrix}0&0&0\\0&0&1\\0&-1&0\end{pmatrix}.
+\end{equation}
+For completeness, the Hessian of the displayed cubic at leading order is
+\[
+ \nabla^2f=
+ \begin{pmatrix}y^2&y^1&0&0\\y^1&0&0&0\\0&0&0&0\\0&0&0&0\end{pmatrix}
+ +O(|y|^3).
+\]
+Using $\operatorname{Ric}_0'=-2(\nabla^2 f)_0$ in the curvature decomposition and projecting to the
+opposite chiral blocks gives \eqref{metric:conformal-B-jet}.
+As $S^T=-S$,
+\begin{equation}\label{metric:conformal-N-jet}
+ N:=(B_1B_1^T)_0
+ =(y^1)^2T+O(|y|^4),\qquad
+ T=\operatorname{diag}(-2/3,1/3,1/3).
+\end{equation}
+In particular $N(p)=\nabla N(p)=0$, so only the flat principal part of
+$\mathcal D^*$ contributes to $\mathcal D^*N(p)$.
+
+We compute that principal part explicitly. For a flat variation $k$,
+\[
+ R'(k)_{ijkl}=\frac12\left(
+ \partial_j\partial_k k_{il}+\partial_i\partial_l k_{jk}
+ -\partial_j\partial_l k_{ik}-\partial_i\partial_k k_{jl}\right).
+\]
+Remove its Ricci and scalar traces and take its positive chiral block.
+Let $E^{aa}$ denote the diagonal tensor with its sole nonzero entry in
+position $(a,a)$, and set $\phi=(y^1)^2/2$. The four results are
+\begin{align*}
+ \mathcal D_{\mathrm{flat}}(E^{11}\phi)&=0,\\
+ \mathcal D_{\mathrm{flat}}(E^{22}\phi)
+ &=\operatorname{diag}(-1/6,1/12,1/12),\\
+ \mathcal D_{\mathrm{flat}}(E^{33}\phi)
+ &=\operatorname{diag}(1/12,-1/6,1/12),\\
+ \mathcal D_{\mathrm{flat}}(E^{44}\phi)
+ &=\operatorname{diag}(1/12,1/12,-1/6).
+\end{align*}
+The corresponding off-diagonal symmetric tensors give matrices whose
+diagonal entries vanish. Since $\partial_1^2N(p)=2T$ and all other
+second derivatives of $N$ vanish at $p$, the adjoint pairing therefore
+gives
+\begin{equation}\label{metric:nonzero-transverse-source}
+ \mathcal D^*N(p)=\operatorname{diag}(0,1/3,-1/6,-1/6)\ne0.
+\end{equation}
+
+For the conformal family, $W_1=0$ and the full Weyl energy vanishes
+identically. Corollary~\ref{cor:metric-gradient-discrepancy} consequently
+gives
+\begin{equation}\label{metric:conformal-velocity}
+ -\operatorname{grad}(\mathcal P_{\mathrm{met}}/8)(g_\varepsilon)
+ =\frac{\varepsilon^2}{K}\mathcal D^*N+O(\varepsilon^3).
+\end{equation}
+The global tensor $\mathcal D^*N$ is TT because $\mathcal D$
+annihilates conformal and diffeomorphism directions. It is nonzero by
+\eqref{metric:nonzero-transverse-source}. The adjoint identity
+\[
+ 0<\|\mathcal D^*N\|_{L^2}^2
+ =\langle N,\mathcal D\mathcal D^*N\rangle_{L^2}
+\]
+therefore shows that $\mathcal D\mathcal D^*N\ne0$, independently of the
+Hessian factorization. Applying the linearization of $W^+$ at
+$g_\varepsilon$ to \eqref{metric:conformal-velocity} thus gives a
+nonzero result for all sufficiently small nonzero $\varepsilon$.
+The gradient vector field is not tangent to $W^+=0$, and hence is not
+tangent to the conformally flat locus. Meanwhile
+$\operatorname{grad}\mathcal E_+=0$ at a metric with $W^+=0$.
+\end{proof}
+
+There is no conflict with the quartic onset of the connection energy
+along a conformal family. For any such family,
+\begin{equation}\label{metric:conformal-quartic-energy}
+ \mathcal P_{\mathrm{met}}(g_\varepsilon)
+ =\frac{2\varepsilon^4}{K^2}\int\|(B_1B_1^T)_0\|^2dV_{g_0}
+ +O(\varepsilon^5).
+\end{equation}
+The derivative along the conformal family tests only conformal
+directions; the quadratic leading gradient in
+\eqref{metric:conformal-velocity} is transverse to them. This proposition
+concerns the metric pullback functional and its gradient. It makes no
+nonpreservation assertion about an independent connection flow with its
+different pairing and reconstruction map.
+
+
+\section{Energy bounds and the boundary of definiteness}\label{sec:boundary}
+
+The defect functional measures the failure of a definite connection to be perfect. Its algebraic normalization also limits what estimates can follow from energy monotonicity.
+
+\begin{proposition}[The defect is bounded on the definite cone]\label{prop:bounded-defect}
+If \(Q>0\) and \(\operatorname{tr}Q=3\), then
+\[
+0\leq |Q-I|^2<6.
+\]
+For a connection on the fixed round chiral bundle,
+\[
+0\leq\mathcal P(A)<32\pi^2.
+\]
+If \(m=\lambda_{\min}(Q)\), the pointwise estimate
+\begin{equation}\label{eq:min-eigen-defect}
+m\geq1-\sqrt{\frac23}\,|Q-I|
+\end{equation}
+holds. In particular, a sufficiently small \emph{uniform} defect yields a positive eigenvalue bound; a finite upper bound on the integrated energy does not provide such a conclusion.
+\end{proposition}
+\begin{proof}
+Write the positive eigenvalues as \(\lambda_1,\lambda_2,\lambda_3\), with sum \(3\). Then
+\[
+|Q-I|^2=\sum_i\lambda_i^2-3<9-3.
+\]
+Integrating against \(\mu_A\) and using
+\(\int\mu_A=16\pi^2/3\) gives the energy bound. Since \(m\leq1\), minimizing the other two squared deviations at fixed sum gives
+\[
+|Q-I|^2\geq(m-1)^2+
+2\left(\frac{3-m}{2}-1\right)^2
+=\frac32(1-m)^2.
+\]
+This is \eqref{eq:min-eigen-defect}. Neither inequality controls the spatial concentration of the defect.
+\end{proof}
+
+\begin{proposition}[Finite energy density at a degenerate reconstruction]\label{prop:boundary-example}
+There is a smooth local conformal family of source metrics whose chiral curvatures approach the boundary of definiteness at a point while the source metrics remain regular and the defect energy density has a finite limit. The curvature-reconstructed metric becomes arbitrarily anisotropic at that point.
+\end{proposition}
+\begin{proof}
+Choose round normal coordinates \(y\) at \(p\), and set
+\[
+f=\tfrac12\bigl((y^1)^2-(y^2)^2\bigr),\qquad
+g_\varepsilon=e^{2\varepsilon f}g_0,\qquad z=\varepsilon/K.
+\]
+At \(p\), \(f=df=0\), so \(g_\varepsilon(p)=g_0(p)\). The conformal Ricci formula gives, exactly at this point,
+\[
+s=12K,\qquad
+\operatorname{Ric}_0=\operatorname{diag}(-2\varepsilon,2\varepsilon,0,0).
+\]
+The Weyl curvature vanishes identically. In the paired chiral bases
+\[
+(e^{12}+e^{34},e^{13}-e^{24},e^{14}+e^{23}),\qquad
+(e^{12}-e^{34},e^{13}+e^{24},e^{14}-e^{23}),
+\]
+the curvature blocks are
+\[
+C=KI,\qquad B=\varepsilon\operatorname{diag}(0,-1,-1).
+\]
+Consequently,
+\[
+M=K^2\operatorname{diag}(1,1-z^2,1-z^2),\qquad
+Q=\frac{3}{3-2z^2}\operatorname{diag}(1,1-z^2,1-z^2).
+\]
+The positive range at \(p\) is \(|z|<1\).
+
+To reconstruct the conformal metric, write its determinant-one part as
+\(\operatorname{diag}(e^\alpha,e^{-\alpha},1,1)\). Its selfdual graph has entries
+\(0,\tanh(\alpha/2),\tanh(\alpha/2)\), and must equal
+\(C^{-1}B=\operatorname{diag}(0,-z,-z)\). Therefore
+\(e^\alpha=(1-z)/(1+z)\). The volume normalization gives
+\begin{equation}\label{eq:degenerate-metric}
+\widehat g_A(p)=
+\sqrt{1-\frac23z^2}\,
+\operatorname{diag}\left(
+\frac{1-z}{1+z},\frac{1+z}{1-z},1,1
+\right).
+\end{equation}
+As \(z\to1\), one eigenvalue tends to zero and another to infinity. Meanwhile,
+\[
+Q\longrightarrow\operatorname{diag}(3,0,0),\qquad
+|Q-I|^2=\frac{6z^4}{(3-2z^2)^2},
+\]
+and hence
+\begin{equation}\label{eq:bounded-density}
+|Q-I|^2\,\frac{\mu_A}{dV_g}
+=\frac{4K^2z^4}{3-2z^2}\longrightarrow4K^2.
+\end{equation}
+Every expression follows from the exact curvature jet at \(p\), so no limiting numerical argument is involved.
+\end{proof}
+
+The proposition is a local family of curvature data realized by metrics, not a solution of the connection flow. A cutoff extends the source family to smooth metrics on the sphere, but it need not preserve definiteness everywhere up to the parameter at which the displayed point degenerates. Thus the example proves a failure of pointwise algebraic coercivity; it does not construct a global singular trajectory or disprove a flow-specific preservation theorem.
+
+
+
+\section{The topological consequence of reaching the ASD locus}
+\label{sec:ctx-topology}
+
+Let $X$ be a closed smooth manifold homotopy equivalent to $S^4$.
+Then $X$ is orientable and simply connected, and
+\begin{equation}\label{eq:ctx-sphere-topology}
+ \chi(X)=2,\qquad \tau(X)=0,\qquad H^2(X;\mathbb Z)=0.
+\end{equation}
+The next result separates the geometric existence problem from the
+topological conclusion once the required geometry has been obtained.
+
+\begin{theorem}[ASD existence on a smooth homotopy four-sphere]
+\label{thm:ctx-ASD-sphere}
+For such an $X$, the following statements are equivalent:
+\begin{enumerate}
+ \item $X$ is diffeomorphic to the standard $S^4$;
+ \item $X$ admits a locally conformally flat Riemannian metric;
+ \item $X$ admits an ASD Riemannian metric.
+\end{enumerate}
+Moreover every ASD Riemannian metric on $X$ is conformally
+diffeomorphic to the round sphere.
+\end{theorem}
+\begin{proof}
+Pulling back the round metric proves the first implication, and local
+conformal flatness implies ASD.  For the converse, the
+Chern--Weil signature identity is
+\begin{equation}\label{eq:ctx-signature}
+ 12\pi^2\tau(X)
+ =\int_X\bigl(|W^+|^2-|W^-|^2\bigr)\,dV_g.
+\end{equation}
+If $W^+=0$, equation~\eqref{eq:ctx-sphere-topology} forces
+$\int_X|W^-|^2\,dV_g=0$.  Positivity and continuity imply $W^-=0$
+pointwise.  In dimension four, $W=0$ is equivalent to local conformal
+flatness.
+
+For completeness, the global step is the developing-map argument
+underlying Kuiper's theorem~\cite{Kuiper1949}.  Regard each local
+conformal chart as taking values in $S^4$, using stereographic
+projection.  Liouville's theorem in dimension at least three makes
+each transition the restriction of a unique M\"obius transformation.
+Continuing one chart along paths therefore defines a conformal local
+diffeomorphism from the universal cover to $S^4$; continuation around
+homotopic paths agrees.  Since $X$ is simply connected, this gives
+$\mathrm{dev}:X\to S^4$.  Its image is open, and compactness makes it
+closed, hence all of $S^4$.  A proper local diffeomorphism is a
+covering map.  Both spaces are connected and the target is simply
+connected, so this covering is a diffeomorphism.  The local conformal
+factors agree, giving the asserted conformal diffeomorphism.
+\end{proof}
+
+The theorem requires no Einstein equation and no sign condition on
+scalar curvature.  It is a classical consequence of the signature
+formula and conformal developing theory, not a new classification
+theorem.  The unresolved statement is the existence of an ASD metric
+on an arbitrary smooth homotopy four-sphere.  By
+Theorem~\ref{thm:ctx-ASD-sphere}, proving that statement for all such
+$X$ would prove the smooth four-dimensional Poincar\'e conjecture.
+
+\begin{corollary}[Exclusions for vacuum and neutral geometry]
+\label{cor:ctx-wave-exclusions}
+A smooth homotopy four-sphere admits neither a Ricci-flat ASD
+Riemannian metric nor a pseudo-Riemannian metric of signature $(2,2)$.
+\end{corollary}
+\begin{proof}
+In the first case, the preceding signature argument gives $W=0$.
+Ricci-flatness then gives the full curvature tensor
+$\operatorname{Rm}=0$.  The Euler form of a flat tangent connection
+vanishes, contradicting $\chi(X)=2$.
+
+In the second case, a neutral metric supplies a splitting
+$TX=E_+\oplus E_-$ into positive and negative rank-two subbundles.
+Since $H^1(X;\mathbb Z_2)=0$, both are orientable.  Their Euler
+classes lie in $H^2(X;\mathbb Z)=0$, so the Whitney product formula
+gives $e(TX)=e(E_+)e(E_-)=0$, again contradicting $\chi(X)=2$.
+\end{proof}
+
+Thus neither a Ricci-flat ASD target nor a neutral-signature metric can supply the desired geometry on a smooth homotopy four-sphere. The round Riemannian model retains the nonzero scalar curvature needed for this target.
+
+
+
+\section{Outstanding analytical and global challenges}\label{sec:challenges}
+
+The calculations identify a stable linear mechanism and the variables that must be controlled beyond it. They leave the following problems unresolved.
+
+\subsection{A nonlinear equation for the reconstructed geometry}
+The exact velocity formula determines \(\widehat g_t\) from \(d_AA_t\), but it is not a closed equation in \(\widehat g\). The compatibility defect
+\[
+\mathcal T_A=d_A\Sigma_A
+=-K^{-1}(d_AQ^{-1/2})\wedge F_A
+\]
+measures the difference between \(A\) and the chiral Levi--Civita connection of \(\widehat g_A\). A natural next calculation is to derive a coupled evolution for \(\widehat g_A\), \(Q\), and this defect, in a specified diffeomorphism and bundle gauge. Its quadratic expansion should determine exactly which nonlinear terms depart from Ricci flow. The cubic comparison of metric energies does not answer this independent-connection question.
+
+\subsection{Preservation of a quantitative definite region}
+A useful continuation estimate would include
+\[
+\lambda_{\min}(Q)\geq\kappa>0.
+\]
+Equation~\eqref{eq:min-eigen-defect} explains why a uniform small-defect estimate would suffice locally. The linear heat equation provides such decay for its linearized variable. A nonlinear analogue requires control of the derivative terms and of the moving reconstructed metric. No tensor maximum principle providing this bound is proved here. The finite-density example shows that finiteness of the defect density supplies no pointwise algebraic barrier to degeneration; no nonlinear preservation theorem follows from the energy identity proved here.
+
+\subsection{Regularity, concentration, and geometric compactness}
+Even a lower eigenvalue bound for \(Q\) is not a complete regularity statement. One must control the scale and spatial concentration of curvature, the derivatives entering \(\mathcal T_A\), and the geometry of \(\widehat g_A\), modulo diffeomorphisms. Fixed total volume does not imply local noncollapse or a curvature bound. A global argument would need estimates that exclude concentration or describe its possible limits and continuation.
+
+\subsection{The conformal sector and the metric pullback functional}
+The metric pullback energy agrees to second order with the Weyl energy, but its conformal kernel at the round metric is not an exact nonlinear conformal invariance. Its unrestricted metric gradient can leave the conformally flat locus. A well-posed nonlinear metric formulation therefore cannot remove every conformal variation as though it were a gauge direction. The connection and metric formulations require separate gauge analysis and separate existence theorems.
+
+\subsection{Initial data and the topology of the four-sphere}
+For an arbitrary smooth homotopy four-sphere, this work does not construct a definite connection in the component needed for a positive perfect limit. Nor does it show that every suitable initial connection reaches the round neighborhood. The distinction between an arbitrary definite connection and the chiral Levi--Civita connection of a chosen metric may provide useful flexibility, but it does not remove the existence problem.
+
+If an appropriate flow existed globally, retained definiteness and compactness, and converged smoothly to a perfect connection of the required sign, its reconstructed metric would give the desired geometric conclusion. Each hypothesis contains substantive work. The local Ricci correspondence proved here specifies the behavior near the target and the nonlinear quantities requiring estimates; it does not supply those global hypotheses.
+
+\subsection{Generalized isothermal representations away from integrability}
+An extension of the generalized-coordinate idea must retain the obstruction \(W^+\) rather than demand an exact equivalence to a flat integrable twistor distribution. The curvature matrix and compatibility defect provide concrete connection variables near round geometry. What remains is to relate these variables to a canonical almost-twistor or generalized-coordinate construction with suitable domains, transition laws, and reconstruction estimates. Such a construction should preserve the information carried by the conformal scale and trace-free Ricci curvature.
+
+The immediate analytical objective is therefore a nonlinear estimate that couples decay of the curvature defect to quantitative control of the reconstructed metric. The preceding identities isolate that objective without presupposing the global regularity that a four-dimensional uniformization argument would require.
+
+
+
+\begin{thebibliography}{9}
+\bibitem{AHS1978}
+M.~F. Atiyah, N.~J. Hitchin, and I.~M. Singer,
+\emph{Self-duality in four-dimensional Riemannian geometry},
+Proc. Roy. Soc. London Ser. A \textbf{362} (1978), no.~1711, 425--461.
+\href{https://doi.org/10.1098/rspa.1978.0143}{doi:10.1098/rspa.1978.0143}.
+
+\bibitem{Fine2011}
+J. Fine,
+\emph{A gauge theoretic approach to the anti-self-dual Einstein equations},
+arXiv:1111.5005v2 [math.DG] (2011).
+\url{https://arxiv.org/abs/1111.5005}.
+
+\bibitem{FineKrasnovPanov2014}
+J. Fine, K. Krasnov, and D. Panov,
+\emph{A gauge theoretic approach to Einstein 4-manifolds},
+New York J. Math. \textbf{20} (2014), 293--323.
+\url{https://nyjm.albany.edu/j/2014/20-18.html}.
+
+\bibitem{GurskyViaclovsky2015}
+M.~J. Gursky and J.~A. Viaclovsky,
+\emph{Rigidity and stability of Einstein metrics for quadratic curvature functionals},
+J. Reine Angew. Math. \textbf{700} (2015), 37--91.
+Preprint: arXiv:1105.4648v2 [math.DG].
+\url{https://arxiv.org/abs/1105.4648}.
+
+\bibitem{Kuiper1949}
+N.~H. Kuiper,
+\emph{On conformally-flat spaces in the large},
+Ann. of Math. (2) \textbf{50} (1949), no.~4, 916--924.
+\href{https://doi.org/10.2307/1969587}{doi:10.2307/1969587}.
+\end{thebibliography}
+\end{document}
+

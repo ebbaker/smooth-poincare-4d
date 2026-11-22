@@ -1,0 +1,33 @@
+name: Build working manuscripts
+on:
+  push:
+    paths:
+      - 'papers/**/*.tex'
+      - 'tools/build_manuscripts.py'
+      - '.github/workflows/build-latex.yml'
+  pull_request:
+    paths:
+      - 'papers/**/*.tex'
+      - 'tools/build_manuscripts.py'
+      - '.github/workflows/build-latex.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install TeX build dependencies
+        run: sudo apt-get update && sudo apt-get install -y latexmk texlive-latex-extra texlive-fonts-recommended texlive-science
+      - name: Build manuscripts
+        run: python3 tools/build_manuscripts.py
+      - name: Retain reading copies
+        uses: actions/upload-artifact@v4
+        with:
+          name: working-manuscripts
+          path: output/pdf/**/*.pdf
+          if-no-files-found: error

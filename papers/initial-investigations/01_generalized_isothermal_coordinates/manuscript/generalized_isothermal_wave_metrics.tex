@@ -1,0 +1,673 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Generalized isothermal coordinates}
+\fancyhead[R]{\small Working manuscript}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\C}{\mathbb C}
+\newcommand{\OO}{\mathcal O}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Hol}{\operatorname{Hol}}
+\newcommand{\Ric}{\operatorname{Ric}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Mat}{\operatorname{Mat}}
+\newcommand{\Tot}{\operatorname{Tot}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\spn}{\operatorname{span}}
+\newcommand{\flatF}{\mathbf F}
+\newcommand{\flatZ}{\mathbf Z}
+\newcommand{\NN}{\mathsf N}
+\newcommand{\II}{I_2}
+\newcommand{\calT}{\mathcal T}
+\DeclareMathOperator{\rank}{rank}
+
+\title{Generalized isothermal coordinates and chiral connection descent\\[3pt]
+\large A construction for holomorphic wave metrics}
+\author{Edward B. Baker III}
+\date{Working manuscript --- 20 November 2026}
+
+\begin{document}
+\maketitle
+\thispagestyle{plain}
+
+\begin{abstract}
+We construct generalized isothermal charts for holomorphic four-dimensional metrics admitting two independent parallel vector fields spanning a totally null plane. Such metrics have a local wave form with an arbitrary holomorphic profile. Their curved twistor charts, interpreted as flat twistor charts, determine locally invertible maps of correspondence spaces by the tangent-line construction. In an adapted spin frame, the transported chiral Levi--Civita connection is an ordinary anti-self-dual connection on flat spacetime, independent of the projective direction. We derive explicit transition functions on two direction patches and factor the associated rank-two bundle over every complete projective fiber. The same factorization establishes the normal bundle of the curved twistor lines and reconstructs the original spin connection. Incidence recovers the conformal metric, while the framed flat connection recovers the wave profile up to a coordinate freedom. A compactness argument explains why the geometric inverse charts cannot, in general, extend over complete target fibers even though the bundle and connection do. We conclude by separating this existence result from the unresolved questions of canonicity, tangent-spinor identification, and extension to larger holonomy classes.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}
+
+Classical isothermal coordinates express a two-dimensional metric as a scalar multiple of a flat metric. In four dimensions, the Weyl tensor obstructs the corresponding local conformal flattening. A more flexible question is whether curved null geometry can be described through maps to flat spacetime while its curvature remains in a connection. Such maps need not send a curved point to a single flat point. They may depend on a null direction, and therefore belong naturally to a correspondence space.
+
+The nonlinear-graviton correspondence supplies the geometric setting in the anti-self-dual conformal case \cite{Penrose,AHS}. A spacetime point determines a rational curve in a three-dimensional twistor space. A holomorphic chart on that space can be interpreted as a chart in flat twistor space. Applying the tangent-line construction to the image curve then produces a null trajectory in flat spacetime \cite{Shaw}. The resulting map is local on correspondence space and generally depends on direction at the level of its spacetime projection.
+
+The essential connection problem is to turn the induced directional transport into operators
+\begin{equation}\label{eq:target}
+\mathcal D_A(\pi)=\pi^{A'}\bigl(\partial_{AA'}+A_{AA'}(y)\bigr)
+\end{equation}
+whose matrix coefficients depend only on the flat spacetime point. This is a descent problem. A connection written in any coordinate system already has coefficients independent of an auxiliary direction; the additional requirement here is compatibility with the nonlocal chart construction and its null incidence. The flat Yang--Mills precursor uses holomorphic bundle splitting to obtain such a connection \cite{Baker}. For curved geometry, the transported bundle, its regularity over complete direction fibers, and its relation to the spin connection must all be established.
+
+This paper gives an explicit construction for a definite special-holonomy class. The metrics themselves are familiar wave geometries. Their intrinsic characterization is the existence of two independent parallel vector fields spanning a totally null plane, a condition often called strict Walker geometry in the neutral setting \cite{DRGV}. We prove that the holomorphic version has the local form
+\begin{equation}\label{eq:wave-intro}
+g_H=2\,\dd u\,\dd v+2\,\dd z\,\dd w+H(u,z)\,\dd u^2,
+\end{equation}
+with arbitrary holomorphic $H$. Related half-flat wave metrics occur in \cite{BGS}. Our purpose is to derive their correspondence-space charts and connection descent as one coherent construction.
+
+\begin{theorem}[Main construction]\label{thm:main}
+Let $(M,g)$ be a holomorphic four-manifold with a nondegenerate metric and two independent parallel vector fields spanning a totally null plane. After shrinking to a simply connected neighborhood and choosing adapted coordinates and spin frames, the following hold.
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=*]
+\item The metric is $g_H$ in \eqref{eq:wave-intro}. With a choice of chirality it is Ricci-flat and anti-self-dual.
+\item Two curved twistor charts covering the projective direction sphere produce generalized isothermal charts by the tangent-line construction. These maps preserve the alpha distributions, and the spacetime image of each source direction fiber is a possibly stationary null curve.
+\item Writing flat coordinates as $y^{AA'}=\left(\begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right)$, the transported unprimed spin connection is
+\begin{equation}\label{eq:main-A}
+A_H=-\frac12 H_z(-b,a)\,\dd b\,\NN,
+\qquad \NN=\begin{pmatrix}0&0\\1&0\end{pmatrix}.
+\end{equation}
+It is independent of the projective direction and has anti-self-dual curvature relative to the flat metric $2(\dd a\,\dd d-\dd b\,\dd c)$.
+\item A single holomorphic rank-two bundle on a neighborhood of the zero section of $\Tot\OO(1)$ pulls back to bundles on the curved and flat twistor spaces. Explicit splittings over their complete twistor lines reconstruct, respectively, the curved spin connection and $A_H$.
+\item The curved twistor lines have normal bundle $\OO(1)\oplus\OO(1)$ and form a complete local four-parameter family. Their incidence recovers $[g_H]$. In the displayed coordinates and bundle gauge, $A_H$ recovers $H$ up to a removable function of $u$.
+\end{enumerate}
+\end{theorem}
+
+The choices in this statement are part of its scope. The result establishes existence for this holonomy class. It does not identify arbitrary gauge-equivalence classes of flat connections with metrics, nor does it assert a globally regular identification of the transported spinors with flat tangent spinors. The latter distinction is explicit even in the simplest example.
+
+The construction proceeds from the metric and its parallel fields to the twistor charts, then to the correspondence maps and the transported connection. The bundle factorization subsequently proves that the affine-direction calculation extends over the entire projective sphere. Finally, a rigidity result explains why the analogous extension of a single inverse coordinate map is too strong in curved examples.
+
+\section{The geometric class and its spin connection}
+
+\subsection{Conventions}
+
+All spaces, fields, and maps are holomorphic. Statements are local or concern germs near the indicated compact twistor line. A product such as $2\,\dd u\,\dd v$ denotes the symmetric metric term with $g_{uv}=g_{vu}=1$. Locally choose rank-two spin bundles $S,S'$ with symplectic forms and an identification $TM\simeq S\otimes S'$. Uppercase unprimed and primed indices each range over two values.
+
+We use the chirality convention in which the anti-self-dual conformal condition is $\widetilde\Psi_{A'B'C'D'}=0$. An alpha plane consists of vectors $\lambda^A\pi^{A'}$ with the primed factor fixed. A connection is called ASD when its curvature vanishes on every alpha plane. This operational convention also fixes the chirality of the flat connection in \eqref{eq:main-A}.
+
+\begin{definition}\label{def:strict}
+A holomorphic metric is \emph{strict Walker} on a neighborhood if it admits two pointwise independent parallel vector fields whose span is totally null.
+\end{definition}
+
+This is stronger than preserving a totally null plane distribution: the distribution is required to have a parallel frame. The terminology agrees with the neutral real setting discussed in \cite[Remark 3]{DRGV}; the following local argument applies directly in the holomorphic category.
+
+\subsection{A normal form from parallel null fields}
+
+\begin{proposition}\label{prop:normalform}
+A holomorphic metric satisfies Definition~\ref{def:strict} if and only if it can locally be written as $g_H$ in \eqref{eq:wave-intro}.
+\end{proposition}
+\begin{proof}
+Let $V_1,V_2$ be a parallel null frame. Their metric duals are independent parallel one-forms and are closed because the connection is torsion-free. Choose functions $u,z$ such that $g(V_1,\cdot)=\dd u$ and $g(V_2,\cdot)=\dd z$. Total nullity says that both forms annihilate both fields. Moreover $[V_1,V_2]=0$. Thus flow coordinates $v,w$ can be chosen with $V_1=\partial_v$, $V_2=\partial_w$, keeping $u,z$ as transverse coordinates.
+
+The duality relations fix the mixed metric coefficients. Parallel fields are Killing, so the remaining coefficients are independent of $v,w$. Consequently
+\begin{equation}\label{eq:strict-general}
+g=2\dd u\dd v+2\dd z\dd w+\mathsf A(u,z)\dd u^2
+  +2\mathsf C(u,z)\dd u\dd z+\mathsf B(u,z)\dd z^2.
+\end{equation}
+Set $v'=v+F(u,z)$ and $w'=w+G(u,z)$. The last three coefficients become
+\[
+\mathsf A-2F_u,\qquad \mathsf C-F_z-G_u,\qquad \mathsf B-2G_z.
+\]
+Choose holomorphic primitives satisfying $G_z=\mathsf B/2$ and $F_z=\mathsf C-G_u$. This eliminates the mixed and $\dd z^2$ terms, leaving $H=\mathsf A-2F_u$.
+
+Conversely, for $g_H$ the vectors $\partial_v,\partial_w$ are parallel, as follows either from the constant mixed coefficients or from the connection computed below. Their span is totally null.
+\end{proof}
+
+\subsection{Curvature and holonomy}
+
+An adapted spin coframe and its dual frame are
+\begin{equation}\label{eq:coframe}
+(\theta^{AA'})=
+\begin{pmatrix}\dd u&\dd z\\-\dd w&\dd v+\frac12H\dd u\end{pmatrix},
+\qquad
+(e_{AA'})=
+\begin{pmatrix}\partial_u-\frac12H\partial_v&\partial_z\\
+-\partial_w&\partial_v\end{pmatrix}.
+\end{equation}
+In particular $g_H=2(\theta^{00'}\theta^{11'}-\theta^{01'}\theta^{10'})$.
+
+\begin{proposition}\label{prop:spin}
+The Levi--Civita spin connections in \eqref{eq:coframe} are
+\begin{equation}\label{eq:spinconn}
+\gamma=\frac12H_z\,\dd u\,\NN,\qquad \gamma'=0.
+\end{equation}
+The metric is Ricci-flat and ASD, with nonzero coordinate curvature components generated by
+\begin{equation}\label{eq:metriccurv}
+R_{uzuz}=-\frac12H_{zz}.
+\end{equation}
+It is flat precisely when $H_{zz}=0$.
+\end{proposition}
+\begin{proof}
+Both connection matrices preserve the spin symplectic forms. The only nontrivial torsion equation is
+\[
+\dd\theta^{11'}+\gamma^1{}_0\wedge\theta^{01'}
+=\frac12H_z\,\dd z\wedge\dd u+
+  \frac12H_z\,\dd u\wedge\dd z=0.
+\]
+The other three vanish immediately. Uniqueness of the torsion-free metric connection proves \eqref{eq:spinconn}. Its curvature is
+\begin{equation}\label{eq:spincurv}
+R^S=\frac12H_{zz}\,\dd z\wedge\dd u\,\NN,\qquad R^{S'}=0.
+\end{equation}
+The vanishing primed curvature removes the primed Weyl, trace-free Ricci, and scalar-curvature components. Thus the metric is ASD and Ricci-flat.
+
+For a direct coordinate check, the only nonzero Christoffel symbols are
+\[
+\Gamma^v{}_{uu}=\frac12H_u,\quad
+\Gamma^v{}_{uz}=\Gamma^v{}_{zu}=\frac12H_z,\quad
+\Gamma^w{}_{uu}=-\frac12H_z.
+\]
+Using $R^a{}_{bcd}=\partial_c\Gamma^a{}_{db}-\partial_d\Gamma^a{}_{cb}
++\Gamma^a{}_{ce}\Gamma^e{}_{db}-\Gamma^a{}_{de}\Gamma^e{}_{cb}$ gives \eqref{eq:metriccurv} and its curvature symmetries. All Ricci contractions vanish.
+\end{proof}
+
+\begin{corollary}\label{cor:holonomy}
+Locally, strict Walker geometry is equivalent to restricted complex spin holonomy contained, after choosing chirality, in
+\begin{equation}\label{eq:holonomy}
+\{\exp(t\NN):t\in\C\}\times\{\II\}
+\subset SL(2,\C)\times SL(2,\C).
+\end{equation}
+For a connected nonflat germ the restricted holonomy is the indicated one-dimensional subgroup. In the flat case it is trivial.
+\end{corollary}
+\begin{proof}
+Equation \eqref{eq:spinconn} takes values in $\C\NN$, so parallel transport lies in \eqref{eq:holonomy}. A nonzero curvature value spans this one-dimensional Lie algebra. Conversely, the group in \eqref{eq:holonomy} fixes pointwise the two-plane $\ker\NN\otimes S'$ in the tangent representation. This plane is totally null. On a simply connected neighborhood its fixed vectors extend to two independent parallel fields.
+\end{proof}
+
+The real metric obtained from real coordinates and a real profile has neutral signature. The nontrivial unipotent holonomy in \eqref{eq:holonomy} is incompatible with a positive-definite real form. Thus the class is smaller than general complexified hyperkähler geometry and does not supply nonflat Riemannian examples.
+
+\section{Twistor charts for an arbitrary holomorphic profile}
+
+\subsection{The alpha distribution and its first integrals}
+
+Because the primed connection vanishes, the correspondence space is locally $F=M\times\CP^1$. On an affine direction chart with coordinate $\zeta$, its alpha distribution is generated by
+\begin{equation}\label{eq:L}
+L_0=\partial_u-\frac12H\partial_v+\zeta\partial_z,
+\qquad L_1=-\partial_w+\zeta\partial_v.
+\end{equation}
+They commute. Near the other direction, put $\mu=\zeta^{-1}$ and use the regular generators $\mu L_0,\mu L_1$.
+
+Fix $R>1$. Work on the two direction discs $|\zeta|<R$ and $|\mu|<R$. If $H$ is holomorphic for $|u|,|z|<r$, shrink the spacetime neighborhood so that the following integrals remain in that bidisc:
+\begin{align}
+J(u,z,\zeta)&=\frac12\int_0^u H(t,z+\zeta(t-u))\,\dd t,
+\label{eq:J}\\
+I(u,z,\mu)&=\frac{\mu^2}{2}\int_0^z H(u+\mu(t-z),t)\,\dd t.
+\label{eq:I}
+\end{align}
+The contours may be taken to be radial segments. For example, $(1+R)\delta<r$ suffices when $|u|,|z|<\delta$. After parametrizing the segment by a fixed real interval, holomorphy in all parameters is immediate. Differentiation along the characteristics gives
+\begin{equation}\label{eq:transport-JI}
+J_u+\zeta J_z=\frac12H,
+\qquad I_z+\mu I_u=\frac{\mu^2}{2}H.
+\end{equation}
+
+The northern and southern first integrals are respectively
+\begin{align}
+&\zeta,\qquad p=z-\zeta u,\qquad q=v+\zeta w+J,
+\label{eq:north}\\
+&\mu,\qquad P=\mu z-u,\qquad Q=w+\mu v+I.
+\label{eq:south}
+\end{align}
+Equations \eqref{eq:transport-JI} verify that the relevant alpha generators annihilate them. Their differentials have rank three: $p_z=1,q_v=1$ in the north and $P_u=-1,Q_w=1$ in the south. They therefore give local coordinates on the leaf space.
+
+\subsection{The twistor transition}
+
+\begin{proposition}\label{prop:twistortransition}
+On the overlap, the quotient coordinates are related by
+\begin{equation}\label{eq:twistortransition}
+\mu=\zeta^{-1},\qquad P=\zeta^{-1}p,\qquad
+Q=\zeta^{-1}q+\calT(p,\zeta),
+\end{equation}
+where
+\begin{equation}\label{eq:shear}
+\calT(p,\zeta)=\frac1{2\zeta^2}
+\int_0^p H((t-p)/\zeta,t)\,\dd t.
+\end{equation}
+These transitions define a germ of a twistor threefold $Z_H$ near the rational curve corresponding to the origin.
+\end{proposition}
+\begin{proof}
+Along a point of correspondence space, $p=z-\zeta u$. Changing variable in \eqref{eq:J} gives
+\[
+\mu J=\frac{\mu^2}{2}\int_p^z H(\mu(t-p),t)\,\dd t,
+\qquad
+I=\frac{\mu^2}{2}\int_0^z H(\mu(t-p),t)\,\dd t.
+\]
+Subtracting yields $I-\mu J=\calT(p,\zeta)$ and proves the transition. All contours can be deformed within a sufficiently small convex holomorphic domain. On the overlap annulus $R^{-1}<|\zeta|<R$, choose $\varepsilon$ with $R\varepsilon<r$ and then shrink $\delta$ so that $(1+R)\delta<\varepsilon$. The formula is holomorphic for $|p|<\varepsilon$, and the relevant line segments remain in the domain of $H$. The transition is invertible: $p$ is recovered from $P$, and $q$ occurs in $Q$ with nonzero linear coefficient. Gluing sufficiently small neighborhoods of the zero sections gives the stated local threefold.
+\end{proof}
+
+The projection $\rho:Z_H\to\CP^1$ is well defined. For each spacetime point $x=(u,v,z,w)$, equations \eqref{eq:north}--\eqref{eq:south} define a section $L_x$ of $\rho$, hence an embedded rational curve. We will prove its normal-bundle splitting in Section~\ref{sec:bundle}.
+
+There is also a second projection, essential to the connection construction. Let $B$ be a neighborhood of the zero section in $\Tot\OO(1)$, with coordinates $(\zeta,p)$ and $(\mu,P)$, $P=p/\zeta$. Since the shear in \eqref{eq:twistortransition} is independent of $q$, both $Z_H$ and a suitable flat twistor neighborhood $\flatZ\subset\Tot(\OO(1)\oplus\OO(1))$ project to $B$. The curved transition in the second coordinate is affine; the flat transition has $\calT=0$.
+
+\section{Generalized charts and direct connection descent}
+
+\subsection{The tangent-line construction}
+
+In flat twistor coordinates, use incidence
+\begin{equation}\label{eq:flatincidence}
+p=a+\zeta b,\qquad q=c+\zeta d,
+\qquad
+(y^{AA'})=\begin{pmatrix}a&b\\c&d\end{pmatrix}.
+\end{equation}
+The conventional factor of $i$ is absorbed into the flat coordinates. A curve $(\zeta,\omega^0(\zeta),\omega^1(\zeta))$ determines the flat spacetime point whose twistor line agrees with its first jet:
+\begin{equation}\label{eq:Shaw}
+y^{A0'}=\omega^A-\zeta\dot\omega^A,
+\qquad y^{A1'}=\dot\omega^A.
+\end{equation}
+This is the affine form of the tangent-line construction in \cite{Shaw}. It uses a curve and its tangent, rather than an inverse of the twistor projection on individual points. The parameter $\zeta$ makes the projective-spinor denominator nonzero on this chart.
+
+Apply \eqref{eq:Shaw} to $L_x$ using \eqref{eq:north}. The resulting correspondence map $f_0$ is
+\begin{equation}\label{eq:f0}
+a=z,\qquad b=-u,\qquad
+c=v+J-\zeta J_\zeta,\qquad d=w+J_\zeta,
+\end{equation}
+with direction $\zeta$ retained. In the southern chart, incidence reads $P=b+\mu a$, $Q=d+\mu c$. The analogous map $f_\infty$ is
+\begin{equation}\label{eq:finfty}
+a=z,\qquad b=-u,\qquad
+c=v+I_\mu,\qquad d=w+I-\mu I_\mu,
+\end{equation}
+with direction $\mu$ retained.
+
+\begin{definition}\label{def:genchart}
+In this paper a generalized isothermal chart is a local biholomorphism from an open subset of curved correspondence space to flat correspondence space that preserves the alpha distributions and whose projection maps each source direction fiber to a possibly stationary null curve with the indicated target direction.
+\end{definition}
+
+The definition does not require the map to preserve the spacetime projection or a single inverse to extend over every target direction. The bundle descent proved below supplies the additional connection structure for the present class.
+
+\begin{proposition}\label{prop:charts}
+The maps \eqref{eq:f0} and \eqref{eq:finfty} are generalized isothermal charts on their stated domains.
+\end{proposition}
+\begin{proof}
+For either map, $u=-b,z=a$, while the equations for $c,d$ are affine in $v,w$ with identity linear part. Thus the maps are locally invertible, including at points where a projected fiber trajectory is stationary.
+
+For the northern chart, the flat alpha generators are
+\begin{equation}\label{eq:K}
+K_0=\partial_b-\zeta\partial_a,
+\qquad K_1=\partial_d-\zeta\partial_c.
+\end{equation}
+Differentiating the first identity in \eqref{eq:transport-JI} with respect to $\zeta$ gives $L_0J_\zeta=-J_z$. Direct differentiation of \eqref{eq:f0} now yields
+\begin{equation}\label{eq:pushforward}
+(f_0)_*L_0=-K_0-J_zK_1,
+\qquad (f_0)_*L_1=-K_1.
+\end{equation}
+Hence the alpha distributions are preserved. The southern statement follows either by the same computation or from its quotient incidence and local invertibility.
+
+At a fixed source point, the derivative of the flat spacetime trajectory is
+\begin{equation}\label{eq:nulltrajectory}
+\frac{\dd}{\dd\zeta}(a,b,c,d)
+=J_{\zeta\zeta}(0,0,-\zeta,1).
+\end{equation}
+It is null for $\eta=2(\dd a\,\dd d-\dd b\,\dd c)$ and has target primed factor $(-\zeta,1)$. It is immersed where $J_{\zeta\zeta}\ne0$. In the south the corresponding derivative is $I_{\mu\mu}(0,0,1,-\mu)$, with the same projective direction on the overlap.
+\end{proof}
+
+\subsection{Transport in the adapted spin frame}
+
+The source spin frame in \eqref{eq:coframe} fixes an identification of the spinor fibers in the domain of each inverse chart. Pull back the source connection \eqref{eq:spinconn} by that inverse. Both maps have $u=-b,z=a$, independently of direction, so
+\begin{equation}\label{eq:pullbackA}
+(f_i^{-1})^*\gamma=-\frac12H_z(-b,a)\,\dd b\,\NN=A_H,
+\qquad i=0,\infty.
+\end{equation}
+This is a full one-form on the target correspondence domain with no direction component; it is the pullback of an ordinary connection on the flat base.
+
+\begin{proposition}\label{prop:directdescent}
+The connection $A_H$ satisfies
+\begin{align}
+F_{A_H}&=-\frac12H_{zz}(-b,a)\,\dd a\wedge\dd b\,\NN,
+\label{eq:flatcurvature}\\
+\mathcal D_0&=\partial_b-\zeta\partial_a-\frac12H_z(-b,a)\NN,
+\qquad
+\mathcal D_1=\partial_d-\zeta\partial_c.
+\label{eq:flatoperators}
+\end{align}
+It is ASD relative to $\eta$. With $\pi^{A'}=(-\zeta,1)$, the operators have the form \eqref{eq:target}; the only nonzero coefficient is $A_{01'}=-H_z(-b,a)\NN/2$.
+\end{proposition}
+\begin{proof}
+Since $\NN^2=0$, the quadratic term $A_H\wedge A_H$ vanishes. Differentiating the scalar coefficient proves \eqref{eq:flatcurvature}. This two-form vanishes on the span of $K_0,K_1$ for every direction, which gives ASD curvature and \eqref{eq:flatoperators}. The southern representatives are $\mu\mathcal D_A$, holomorphic at $\mu=0$.
+\end{proof}
+
+The two chart outputs need not represent the same flat spacetime point on their overlap. Nevertheless their transition preserves $a,b$, and hence preserves the one-form $A_H$, including its extension to correspondence space. Thus the equality in \eqref{eq:pullbackA} is compatible with the generalized chart transitions. The curvature survives because the source connection depends only on $u,z$, precisely the two source coordinates recovered independently of direction.
+
+\section{Bundle reconstruction over complete direction fibers}\label{sec:bundle}
+
+The explicit formula has already produced an ordinary connection. We now show that its extension over the entire direction sphere is supported by holomorphic bundle data, and derive the original metric's twistor-line geometry from the same calculation.
+
+\subsection{A general descent criterion}
+
+Let $p_U:U\times\CP^1\to U$ denote the flat correspondence projection and $D_\alpha$ its alpha distribution. A holomorphic partial connection along $D_\alpha$ differentiates sections only in those directions and has the usual Leibniz rule there.
+
+\begin{lemma}\label{lem:descent}
+Let $E$ be a holomorphic vector bundle on $U\times\CP^1$ whose restriction to every projective fiber is trivial. A holomorphic partial connection on $E$ along the standard flat $D_\alpha$ determines, after shrinking $U$, a unique ordinary holomorphic connection on a bundle $E_0\to U$. If the partial connection is flat, the ordinary connection is ASD.
+\end{lemma}
+\begin{proof}
+Fiberwise $H^0(E)$ has dimension $\rank E$ and $H^1(E)=0$. The direct-image and base-change theorem gives a locally free bundle $E_0=(p_U)_*E$, and evaluation is an isomorphism $p_U^*E_0\simeq E$ \cite{Grauert}. Choose a local frame of $E_0$. The difference between the given partial connection and the ordinary derivative restricted to $D_\alpha$ is a section of $D_\alpha^*\otimes\End(E_0)$. Along a direction fiber, $D_\alpha\simeq\OO(-1)\oplus\OO(-1)$. Therefore each matrix coefficient is a global holomorphic section of $\OO(1)$ and has the form $\pi^{A'}A_{AA'}(y)$. This yields \eqref{eq:target}.
+
+The coefficients are unique because the global sections of $\OO(1)$ are the linear homogeneous polynomials in $\pi$. Two descended frames differ by a function of $y$ alone and produce the ordinary connection transformation law. Finally, flatness along $D_\alpha$ says that the resulting curvature vanishes on every alpha plane, precisely the ASD condition.
+\end{proof}
+
+The flat derivative part and global holomorphic partial connection are hypotheses of the lemma. Fiber triviality alone does not supply them. Likewise, flatness is needed for the curvature conclusion, not for the linearity conclusion.
+
+\subsection{The derivative bundle and a common base}
+
+Differentiate the twistor transition \eqref{eq:twistortransition} in the vertical coordinates, keeping the projective direction fixed:
+\begin{equation}\label{eq:verticaljacobian}
+\frac{\partial(P,Q)}{\partial(p,q)}
+=\zeta^{-1}\bigl(\II+\beta(p,\zeta)\NN\bigr),
+\qquad \beta=\zeta\calT_p.
+\end{equation}
+It follows that the rank-two bundle
+\begin{equation}\label{eq:derivativebundle}
+\mathcal E_H=\ker(\dd\rho)\otimes\rho^*\OO(-1)
+\end{equation}
+has component transition
+\begin{equation}\label{eq:bundlecocycle}
+G=\II+\beta(p,\zeta)\NN.
+\end{equation}
+The factor $\zeta^{-1}$ in \eqref{eq:verticaljacobian} is the standard $\OO(1)$ component transition; the twist removes it.
+
+Since $G$ is independent of $q$, it defines a bundle $\mathcal E_B$ on the common surface $B$. Its pullback to $Z_H$ is \eqref{eq:derivativebundle}. Its pullback to $\flatZ$ is a bundle $\mathcal E_{\mathrm{flat}}$ on flat twistor space. This construction transfers a bundle through a common base. It does not assume a holomorphic map from the whole curved twistor neighborhood to the flat one.
+
+Pulling a bundle back from twistor space gives a canonical flat partial connection along the twistor fibers: in each twistor frame it is ordinary differentiation along the alpha distribution. The splitting below expresses that partial connection in frames descending to spacetime.
+
+\subsection{An explicit splitting for every holomorphic profile}
+
+Along the curved line $L_x$, the shear identity is
+\begin{equation}\label{eq:shear-on-line}
+\calT(z-\zeta u,\zeta)=I(u,z,\mu)-\mu J(u,z,\zeta).
+\end{equation}
+Differentiate in $z$ and use \eqref{eq:transport-JI}. The result is
+\begin{equation}\label{eq:betasplit}
+\beta=\zeta I_z-J_z=\frac\mu2H-I_u-J_z=h_0-h_\infty,
+\end{equation}
+where
+\begin{equation}\label{eq:h}
+h_0=-J_z,\qquad h_\infty=I_u-\frac\mu2H.
+\end{equation}
+The function $h_0$ is holomorphic on the complete northern direction disc. The function $h_\infty$ is holomorphic on the complete southern disc and vanishes at $\mu=0$. Therefore
+\begin{equation}\label{eq:factor}
+G=\Psi_\infty^{-1}\Psi_0,
+\qquad \Psi_0=\II+h_0\NN,
+\qquad \Psi_\infty=\II+h_\infty\NN
+\end{equation}
+is a holomorphic splitting. Both factors have determinant one and inverse $\II-h_i\NN$. No convergence of a formal Laurent factorization is being assumed: these are explicit holomorphic functions on the two covering discs.
+
+\begin{proposition}\label{prop:two-reconstructions}
+The bundle $\mathcal E_H$ is trivial on every curved twistor line $L_x$, and the bundle $\mathcal E_{\mathrm{flat}}$ is trivial on every flat twistor line over a sufficiently small base neighborhood. Their reconstructed connections are respectively $\gamma$ and $A_H$.
+\end{proposition}
+\begin{proof}
+Triviality on the curved lines follows from \eqref{eq:factor}. On a flat line $p=a+\zeta b$, substitute $u=-b,z=a$ into \eqref{eq:h}. This gives holomorphic factors for the same cocycle, since $z-\zeta u=a+\zeta b$.
+
+Fix the component convention $s_\infty=Gs_0$. The common spacetime components are
+\begin{equation}\label{eq:componentconvention}
+s=\Psi_0s_0=\Psi_\infty s_\infty.
+\end{equation}
+Thus the component evaluation matrices are $C_i=\Psi_i^{-1}=\II-h_i\NN$, with $C_\infty=GC_0$. The induced connection in a direction $X$ has coefficient $C_i^{-1}X(C_i)=-(Xh_i)\NN$.
+
+On the curved correspondence space, differentiation of \eqref{eq:transport-JI} gives
+\[
+L_0h_0=-\frac12H_z,\qquad L_1h_0=0.
+\]
+The same holds for $h_\infty$, because $\beta$ is a twistor function annihilated by the alpha fields. Hence the reconstruction gives $\gamma(L_0)=H_z\NN/2$ and $\gamma(L_1)=0$, the restrictions of \eqref{eq:spinconn}.
+
+On flat correspondence space, with $u=-b,z=a$, one instead has
+\begin{equation}\label{eq:flat-h-derivatives}
+K_0h_i=\frac12H_z(-b,a),\qquad K_1h_i=0,
+\qquad i=0,\infty.
+\end{equation}
+For $i=0$ this is the $z$ derivative of the first equation in \eqref{eq:transport-JI}; equality for $i=\infty$ follows because $K_A\beta=0$. The reconstructed coefficients are exactly \eqref{eq:flatoperators}. This is the explicit Ward reconstruction \cite{Ward}, and agrees with the direct pullback \eqref{eq:pullbackA}.
+\end{proof}
+
+\subsection{The normal bundle and conformal recovery}
+
+\begin{proposition}\label{prop:normalbundle}
+Every $L_x$ has normal bundle $\OO(1)\oplus\OO(1)$. The sections $L_x$ form a complete local four-parameter family, and their incidence recovers the conformal metric $[g_H]$.
+\end{proposition}
+\begin{proof}
+Since $L_x$ is a section of $\rho$, the quotient by its tangent bundle identifies its normal bundle with $\ker(\dd\rho)|_{L_x}$. Proposition~\ref{prop:two-reconstructions} trivializes \eqref{eq:derivativebundle} on $L_x$, so
+\begin{equation}\label{eq:normalbundle}
+N_{L_x/Z_H}\simeq\OO(1)\oplus\OO(1).
+\end{equation}
+This establishes the splitting itself, rather than inferring it from its cohomological dimensions.
+
+The infinitesimal parameter map into $H^0(N_{L_x/Z_H})$ is injective. Indeed, a zero normal section has $\delta p=\delta z-\zeta\delta u=0$ for every $\zeta$, so $\delta u=\delta z=0$. Then $\delta q=\delta v+\zeta\delta w=0$ gives $\delta v=\delta w=0$. Since $h^0(N)=4$ and $H^1(N)=0$, the map is an isomorphism and the local family is complete by deformation theory \cite{Kodaira}.
+
+To recover the null cone, ask when the infinitesimal section associated with a tangent vector $\delta x$ vanishes at a point of $L_x$. In the north this is
+\[
+\delta z=\zeta\delta u,\qquad
+\delta v+\zeta\delta w+(J_u+\zeta J_z)\delta u=0.
+\]
+Using \eqref{eq:transport-JI}, these become the homogeneous system
+\begin{equation}\label{eq:incidence-null}
+\begin{pmatrix}
+\delta z&-\delta u\\
+\delta v+\frac12H\delta u&\delta w
+\end{pmatrix}
+\begin{pmatrix}s\\t\end{pmatrix}=0,
+\qquad [s:t]\in\CP^1.
+\end{equation}
+The north has $\zeta=t/s$; the south covers $s=0$. A nonzero solution exists precisely when the determinant vanishes, namely
+\[
+2\delta u\delta v+2\delta z\delta w+H\delta u^2=0.
+\]
+Thus the incidence cone is exactly the null cone of $g_H$.
+\end{proof}
+
+\section{Rigidity of full inverse charts and the role of spin frames}\label{sec:rigidity}
+
+\subsection{A compactness obstruction}
+
+Bundle extension over a projective direction sphere is compatible with curvature. Requiring a single geometric inverse over that sphere has a different consequence.
+
+\begin{theorem}[Full inverse chart rigidity]\label{thm:rigidity}
+Let $M_0$ lie in one holomorphic coordinate neighborhood of a conformal four-manifold, and set $F_0=\mathbb P(S')|_{M_0}$. Suppose
+\[
+\Psi:U\times\CP^1\longrightarrow F_0
+\]
+is a holomorphic local biholomorphism carrying the standard flat alpha distribution to the curved twistor distribution. Then the conformal structure is locally conformally flat on its projected image. Conversely, conformally flat geometry admits such maps locally.
+\end{theorem}
+\begin{proof}
+For fixed $y$, the coordinate functions of $p_M\Psi(y,\cdot)$ are holomorphic functions on $\CP^1$ and hence constant. Therefore $p_M\Psi=f\circ p_U$ for a holomorphic map $f:U\to M_0$. Since $\Psi$ is locally invertible, $\dd p_M\circ\dd\Psi$ has rank four and so $\dd f$ is invertible. On each direction fiber, $\Psi$ is a local biholomorphism of projective lines and therefore a Möbius isomorphism. Preservation of the distributions now makes $\dd f$ carry every flat alpha plane to a curved alpha plane. It preserves the null cones, hence is conformal. The domain conformal structure is flat. Conversely, ordinary conformal coordinates and their lift to projective spin bundles supply $\Psi$ in the conformally flat case.
+\end{proof}
+
+Thus this precise inverse-chart requirement is equivalent to $W=0$. Within Ricci-flat geometry it forces the full curvature to vanish. It does not exclude the charts constructed above: they are defined on separate direction patches, and their inverses do not generally glue into one map of the form required by the theorem. Coverage by the range of a forward map alone does not imply the existence of such an inverse.
+
+\subsection{Transported spinors and flat tangent spinors}
+
+The connection $A_H$ acts on the bundle transferred in Section~\ref{sec:bundle}. The differential of the correspondence map supplies another, direction-dependent, identification with the target tangent spinors. Equation \eqref{eq:pushforward} gives its matrix
+\begin{equation}\label{eq:tangentmatrix}
+T=-\II-J_z\NN.
+\end{equation}
+This is not generally the pullback of a change of spin frame on the flat base.
+
+Write $h=-J_z$. With the convention that target components equal $T$ times source components, the transformed connection is
+\begin{equation}\label{eq:tangentconnection}
+T\gamma T^{-1}-\dd T\,T^{-1}
+=\left(\frac12H_z\,\dd u+\dd h\right)\NN.
+\end{equation}
+Because $L_0h=-H_z/2$ and $L_1h=0$, its restriction to the transported alpha distribution vanishes on this patch. This is compatible with the nonzero curvature of $A_H$: an ASD connection is locally trivial along its alpha leaves, while the corresponding frames need not extend holomorphically across the entire direction sphere.
+
+For $H=z^2$, $h=ab+\zeta b^2/2$ in flat coordinates, and \eqref{eq:tangentconnection} becomes
+\begin{equation}\label{eq:tangentquadratic}
+\left[b(\dd a+\zeta\dd b)+\frac12b^2\dd\zeta\right]\NN.
+\end{equation}
+The direction term is essential to this change of frame on correspondence space. The matrix $T$ has a pole at $\zeta=\infty$ for generic $b$. Discarding that term and treating the patchwise zero alpha coefficients as one globally trivial spacetime connection changes the bundle extension. The distinction between the regular transferred bundle and the tangent-spinor identification is therefore explicit.
+
+\section{A worked example and reconstruction}
+
+\subsection{The quadratic profile}
+
+Take $H=z^2$. The integrals and shear are
+\begin{align}
+J&=\frac12uz^2-\frac12\zeta u^2z+\frac16\zeta^2u^3,
+& I&=\frac16\mu^2z^3,
+&\calT&=\frac{p^3}{6\zeta^2}.
+\label{eq:quadraticdata}
+\end{align}
+The northern generalized chart is
+\begin{equation}\label{eq:quadraticchart}
+a=z,\quad b=-u,\quad
+c=v+\frac12uz^2-\frac16u^3\zeta^2,\quad
+d=w-\frac12u^2z+\frac13u^3\zeta.
+\end{equation}
+The inverse has direction-dependent polynomial corrections in $v,w$, hence poles in the coordinate $\mu$ at zero when $u\ne0$. By contrast, the southern chart is regular there:
+\[
+a=z,\quad b=-u,\quad c=v+\frac13\mu z^3,\quad d=w-\frac16\mu^2z^3.
+\]
+The two target spacetime points differ on the overlap, while their $a,b$ coordinates agree.
+
+The bundle cocycle and flat-line splitting reduce to
+\begin{equation}\label{eq:quadraticsplit}
+G=\II+\frac{p^2}{2\zeta}\NN,
+\qquad h_0=ab+\frac12\zeta b^2,
+\qquad h_\infty=-\frac12\mu a^2.
+\end{equation}
+They reconstruct
+\begin{equation}\label{eq:quadraticA}
+A=-a\,\dd b\,\NN,\qquad F_A=-\dd a\wedge\dd b\,\NN.
+\end{equation}
+The source has $R_{uzuz}=-1$, so the source metric and the descended connection are both nonflat. This example exhibits all three distinct features: a curved metric, a direction-dependent geometric chart, and a direction-independent connection with a regular complete-fiber splitting.
+
+For $H=0$, the integrals and shear vanish, the bundle is trivial with zero connection, and the correspondence maps reduce to $(a,b,c,d)=(z,-u,v,w)$. Source fibers then project to points. This explains the inclusion of stationary null trajectories in Definition~\ref{def:genchart}.
+
+\subsection{What the connection reconstructs}
+
+\begin{proposition}\label{prop:recovery}
+In the displayed coordinates and fixed matrix frame, the connection $A_H$ determines the metric profile $H$ up to an additive function of $u$. Metrics differing by that function are locally isometric by a shift of $v$.
+\end{proposition}
+\begin{proof}
+The coefficient of $\dd b\,\NN$ in \eqref{eq:main-A} determines $H_z(u,z)$ under $u=-b,z=a$. Integrating in $z$ recovers $H$ up to $f(u)$. Choose $V=v+\tfrac12\int f(u)\,\dd u$. Then
+\[
+2\dd u\dd V+H\dd u^2
+=2\dd u\dd v+(H+f(u))\dd u^2.
+\]
+The other metric terms are unchanged.
+\end{proof}
+
+This is framed reconstruction within the strict Walker normal form. It does not identify an arbitrary gauge-equivalence class of flat ASD connections with a unique metric. The full twistor family gives a separate, conformally invariant recovery of the null cones by Proposition~\ref{prop:normalbundle}. A chosen scale and adapted parallel frame retain the additional metric data used by the explicit formulas.
+
+\begin{proof}[Completion of the proof of Theorem~\ref{thm:main}]
+Propositions~\ref{prop:normalform} and \ref{prop:spin} establish the geometric class and its spin connection. Proposition~\ref{prop:charts} supplies the generalized charts, and Proposition~\ref{prop:directdescent} proves their direct connection descent. Proposition~\ref{prop:two-reconstructions} identifies that calculation with a bundle transfer and reconstruction over complete direction fibers. Propositions~\ref{prop:normalbundle} and \ref{prop:recovery} establish the two stated forms of recovery.
+\end{proof}
+
+\section{Outstanding challenges}
+
+\subsection{Intrinsic choices and equivalence}
+
+The construction is an existence theorem for an intrinsic special-holonomy class, but its formulas use an adapted parallel null frame, a normal-form gauge, and a projection to the common surface $B$. Different choices can alter the resulting flat coordinates and bundle frame. A natural next step is to determine their transformation laws and identify the data that should be regarded as part of a generalized isothermal structure. In particular, one needs an equivalence relation under which the metric, the generalized atlas, and the transferred connection describe the same object.
+
+The connection alone is not yet an invariant replacement for all of the geometry. Proposition~\ref{prop:recovery} fixes the coordinates, nilpotent generator, and bundle gauge. Extending it to a gauge-independent inverse requires a precise account of the accompanying incidence or soldering data, which identify spinor tensors with tangent vectors.
+
+\subsection{Regular tangent-spinor identification}
+
+Section~\ref{sec:rigidity} gives a concrete regular connection whose geometrically induced tangent-spinor frame becomes singular at one direction. A complete geometric formulation must decide whether the transferred bundle is an auxiliary chiral bundle, a modification of the tangent spin bundle, or part of a larger bundle with additional structure. The required statement is stronger than line triviality: the spinor interpretation must also be compatible with the generalized chart transitions. The full inverse-chart rigidity theorem limits how much compatibility can be imposed on the geometric maps themselves.
+
+\subsection{Larger holonomy classes}
+
+The present holonomy group fixes an entire null two-plane pointwise. Generic ASD Ricci-flat metrics have larger complex spin holonomy, and the common-surface mechanism used here need not be available. A less symmetric complexified hyperkähler example, such as an Eguchi--Hanson metric, would test whether the method extends beyond strict Walker geometry. Success would require replacing the explicit unipotent splitting by a more general holomorphic factorization and proving the appropriate domain and bundle-extension statements.
+
+For ASD geometries with nonzero Ricci curvature, the choice of transported connection becomes an additional issue. The curvature of the unprimed Levi--Civita spin connection decomposes schematically as
+\[
+R^S_{AA'BB'}=\epsilon_{A'B'}X_{AB}+\epsilon_{AB}\Phi_{A'B'},
+\]
+where $\Phi$ is the trace-free Ricci part. Its restriction to every alpha plane is flat precisely when
+\[
+\pi^{A'}\pi^{B'}R^S_{AA'BB'}
+=\epsilon_{AB}\pi^{A'}\pi^{B'}\Phi_{A'B'}=0
+\quad\text{for all }\pi,
+\]
+equivalently when the selected metric is Einstein \cite[Proposition 2.2]{AHS}. This is a condition on curved-side transport, not a sufficient condition for flat-side descent. If the conformal scale is free, existence of an Einstein representative is itself a separate requirement.
+
+The rank-four local-twistor connection offers another route. Its curvature is ASD for an ASD conformal structure without requiring an Einstein representative \cite[Proposition 4.2]{DT}. This removes the Ricci restriction at the transport stage, at the cost of using four-component local twistors. Establishing its transfer and recovering the conformal geometry on the flat side remain open within the proposed coordinate framework.
+
+\subsection{General conformal geometry and reality conditions}
+
+Outside the ASD class the alpha distribution is not integrable, so the three-dimensional twistor leaf space used here is unavailable. General holomorphic conformal geometry instead admits a null-geodesic or ambitwistor description \cite{LeBrun}. A generalization of the present construction would have to account for both chiral directions and identify the conditions that replace the explicit two-patch factorization. Existing ambitwistor reconstruction does not directly provide the flat-base operator \eqref{eq:target} with the desired geometric interpretation.
+
+Finally, the present analysis is holomorphic. Neutral real forms are compatible with the strict Walker class; nonflat positive-definite real forms are excluded by its unipotent holonomy. Reality conditions for larger classes must be imposed on the twistor charts, bundle splittings, and reconstructed fields together. These questions delimit the extension of the construction, while the strict Walker case provides a complete local model in which chart formation, connection descent, complete-fiber splitting, and conformal recovery can all be calculated explicitly.
+
+\begin{thebibliography}{99}
+\raggedright
+
+\bibitem{AHS}
+M.~F. Atiyah, N.~J. Hitchin and I.~M. Singer,
+\emph{Self-duality in four-dimensional Riemannian geometry},
+Proc. Roy. Soc. London Ser. A \textbf{362} (1978), 425--461.
+\href{https://doi.org/10.1098/rspa.1978.0143}{doi:10.1098/rspa.1978.0143}.
+
+\bibitem{Baker}
+E.~B. Baker III,
+\emph{Generalized conformal maps as classical symmetries of Yang--Mills fields},
+unpublished manuscript, 10 September 2024.
+
+\bibitem{BGS}
+G.~R. Brown, J. Gowdy and B. Spence,
+\emph{Self-dual fields on self-dual backgrounds and the double copy},
+Phys. Rev. D \textbf{109} (2024), 026009.
+\href{https://doi.org/10.1103/PhysRevD.109.026009}{doi:10.1103/PhysRevD.109.026009}.
+
+\bibitem{DRGV}
+J.~C. D\'iaz-Ramos, E. Garc\'ia-R\'io and R. V\'azquez-Lorenzo,
+\emph{Four-dimensional Osserman metrics with nondiagonalizable Jacobi operators},
+J. Geom. Anal. \textbf{16} (2006), 39--52.
+\href{https://doi.org/10.1007/BF02930986}{doi:10.1007/BF02930986}.
+
+\bibitem{DT}
+M. Dunajski and P. Tod,
+\emph{Self-dual conformal gravity},
+Comm. Math. Phys. \textbf{331} (2014), 351--373.
+\href{https://doi.org/10.1007/s00220-014-2046-5}{doi:10.1007/s00220-014-2046-5}.
+
+\bibitem{Grauert}
+H. Grauert,
+\emph{Ein Theorem der analytischen Garbentheorie und die Modulr\"aume komplexer Strukturen},
+Publ. Math. IH\'ES \textbf{5} (1960), 5--64; correction, \textbf{16} (1963), 35--36.
+\href{https://doi.org/10.1007/BF02684746}{doi:10.1007/BF02684746}.
+
+\bibitem{Kodaira}
+K. Kodaira,
+\emph{A theorem of completeness of characteristic systems for analytic families of compact submanifolds of complex manifolds},
+Ann. of Math. (2) \textbf{75} (1962), 146--162.
+\href{https://doi.org/10.2307/1970424}{doi:10.2307/1970424}.
+
+\bibitem{LeBrun}
+C.~R. LeBrun,
+\emph{Spaces of complex null geodesics in complex-Riemannian geometry},
+Trans. Amer. Math. Soc. \textbf{278} (1983), 209--231.
+\href{https://doi.org/10.1090/S0002-9947-1983-0697071-9}{doi:10.1090/S0002-9947-1983-0697071-9}.
+
+\bibitem{Penrose}
+R. Penrose,
+\emph{Nonlinear gravitons and curved twistor theory},
+Gen. Relativ. Gravit. \textbf{7} (1976), 31--52.
+\href{https://doi.org/10.1007/BF00762011}{doi:10.1007/BF00762011}.
+
+\bibitem{Shaw}
+W.~T. Shaw,
+\emph{An ambitwistor description of bosonic or supersymmetric minimal surfaces and strings in four dimensions},
+Class. Quantum Grav. \textbf{3} (1986), 753--761.
+\href{https://doi.org/10.1088/0264-9381/3/5/006}{doi:10.1088/0264-9381/3/5/006}.
+
+\bibitem{Ward}
+R.~S. Ward,
+\emph{On self-dual gauge fields},
+Phys. Lett. A \textbf{61} (1977), 81--82.
+\href{https://doi.org/10.1016/0375-9601(77)90842-8}{doi:10.1016/0375-9601(77)90842-8}.
+
+\end{thebibliography}
+\end{document}

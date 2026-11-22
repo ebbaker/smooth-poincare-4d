@@ -1,0 +1,443 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,citecolor=blue!45!black]{hyperref}
+\usepackage{xcolor}
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}[proposition]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[proposition]{Remark}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\NN}{\mathsf N}
+\newcommand{\Ric}{\operatorname{Ric}}
+\newcommand{\Id}{\mathrm I}
+
+\title{Wave metrics, classical copies, and heavenly perturbations\\
+\large Derivation notes for the double-copy theory draft}
+\author{}
+\date{21 November 2026}
+\begin{document}
+\maketitle
+
+These notes separate established constructions in the literature from direct
+calculations for the wave family. The Kerr--Schild prescription, mixed Weyl
+factorization, and heavenly potential formulation are established background.
+The comparisons with the manuscript's descended connection, the explicit
+adapted-frame factorization below, and the displayed perturbation recursion
+are calculations within that background. No novelty claim is made for these
+specializations. All fields are holomorphic and local. The word ASD follows
+the wave manuscript's convention: curvature vanishes on alpha planes.
+References may use the opposite orientation and call the same sector SD.
+
+\section{Fixed backgrounds, the Kerr--Schild copy, and the descended field}
+
+Let
+\begin{equation}\label{dc:wave}
+ g_H=2\dd u\dd v+2\dd z\dd w+H(u,z)\dd u^2,
+ \qquad
+ \eta_0=2\dd u\dd v+2\dd z\dd w,
+ \qquad
+ \NN=\begin{pmatrix}0&0\\1&0\end{pmatrix}.
+\end{equation}
+The symmetric-product convention is $g_{uv}=g_{vu}=1$.
+Here $\eta_0$ is the auxiliary flat background defined by the chosen
+normal-form coordinates on the same coordinate domain. The one-form
+$k=\dd u$ is null and parallel for $\eta_0$; its raised vector is
+$k^\sharp=\partial_v$ and $k^\sharp(H)=0$. Thus
+$g_H=\eta_0+Hk\otimes k$ is in Kerr--Schild form.
+
+The manuscript's target metric is
+$\eta=2(\dd a\dd d-\dd b\dd c)$. The fixed relabeling
+\begin{equation}\label{dc:relabel}
+ U=-b,\qquad V=c,\qquad Z=a,\qquad W=d
+\end{equation}
+puts it in the form $2\dd U\dd V+2\dd Z\dd W$.
+The background comparison map sends
+$(u,v,z,w)$ to $(U,V,Z,W)=(u,v,z,w)$. This is an explicitly chosen
+coordinate comparison, not the direction-dependent generalized chart in the
+manuscript. Flat-side formulas below use $u,v,z,w$ as labels after this
+comparison; reinstating capital letters gives their target versions.
+
+\begin{proposition}[Kerr--Schild copy in the chosen background]
+The scalar $H$ and matrix-valued potential
+\begin{equation}\label{dc:KS}
+ \mathcal A_{\mathrm{KS}}=H\,\dd u\,\NN
+\end{equation}
+solve the flat massless scalar and source-free ASD Yang--Mills equations,
+respectively. Their field equations reduce to linear equations in this
+ansatz.
+\end{proposition}
+\begin{proof}
+The scalar wave operator is
+\begin{equation}\label{dc:flatbox}
+ \Box_0=2(\partial_u\partial_v+\partial_z\partial_w),
+ \qquad \Box_0 H=0.
+\end{equation}
+All matrix coefficients lie in the abelian subalgebra $\mathbb C\NN$, so
+\begin{equation}\label{dc:FKS}
+ F_{\mathrm{KS}}=\dd\mathcal A_{\mathrm{KS}}
+ =H_z\,\dd z\wedge\dd u\,\NN.
+\end{equation}
+For a flat alpha plane use the generators
+\begin{equation}\label{dc:flat-alpha}
+ \ell_0(\zeta)=\partial_u+\zeta\partial_z,
+ \qquad
+ \ell_1(\zeta)=-\partial_w+\zeta\partial_v.
+\end{equation}
+Equation~\eqref{dc:FKS} vanishes on their span for every direction,
+including the second projective chart. It is therefore ASD.
+Its closedness and the ASD condition imply the source-free Maxwell
+equations. Equivalently, the only possibly nonzero divergences differentiate
+$H_z$ in $v$ or $w$, and hence vanish. The Yang--Mills equations reduce to
+these Maxwell equations because all color commutators vanish.
+\end{proof}
+
+This is the pp-wave Kerr--Schild prescription of
+\cite[Sec.~5.1, Eqs.~(72)--(74)]{DC-MOW}. The gravitational profile and
+gauge profile are both $H$; the tensor structure changes from $k\otimes k$
+to $k\NN$. Coupling and constant color normalizations have been suppressed.
+The scalar $H$ is also a zeroth-copy profile: if $c^a$ and
+$\widetilde c^{\tilde a}$ are fixed color vectors, the biadjoint field
+$\Phi^{a\tilde a}=c^a\widetilde c^{\tilde a}H$ has vanishing quadratic
+color interaction by antisymmetry of the structure constants, and satisfies
+its field equation by \eqref{dc:flatbox}.
+
+\begin{proposition}[Derivative relation; a fixed-frame calculation]
+After \eqref{dc:relabel}, the manuscript's descended connection satisfies
+\begin{equation}\label{dc:derivative}
+ A_H=\frac12 H_z\,\dd u\,\NN
+     =\frac12\partial_z\mathcal A_{\mathrm{KS}},
+ \qquad
+ F_{A_H}=\frac12 H_{zz}\,\dd z\wedge\dd u\,\NN.
+\end{equation}
+Here $\partial_z$ differentiates coefficients in the fixed coordinate and
+matrix frames.
+\end{proposition}
+\begin{proof}
+The manuscript gives
+$A_H=-H_z(-b,a)\dd b\,\NN/2$.
+Substituting \eqref{dc:relabel} gives \eqref{dc:derivative}.
+Taking an exterior derivative proves the curvature formula.
+\end{proof}
+
+Both potentials are ASD Maxwell embeddings, but they are different fields.
+In this fixed Kerr--Schild presentation $A_H$ is the conventional single
+copy of the profile $H_z/2$, not of $H$. Its relation to the original
+gravitational metric includes a transverse integration. In the displayed
+frame this integration recovers $H$ up to $f(u)$, removable from $g_H$ by
+a shift of $v$. Differentiation of a potential is not an invariant
+operation on arbitrary gauge-equivalence classes; \eqref{dc:derivative}
+therefore makes no such assertion.
+
+\section{An adapted-frame mixed Weyl factorization}
+
+\subsection{Separating color, spacetime spinors, and frame comparison}
+
+The matrix $\NN$ acts on the transferred rank-two bundle. To obtain a
+Maxwell two-form, choose its displayed generator and write
+\begin{equation}\label{dc:strip}
+ F_{A_H}=\mathcal F\,\NN,
+ \qquad
+ \mathcal F=\kappa\,\dd u\wedge\dd z,
+ \qquad
+ \kappa=-\frac12H_{zz}.
+\end{equation}
+This is a choice of color normalization. The spinor associated with
+$\mathcal F$ is obtained using the \emph{flat spacetime} spin coframe; it
+is not obtained by interpreting the two indices of $\NN$ as spacetime
+spinor indices.
+
+Choose the curved and flat spin coframes, respectively,
+\begin{equation}\label{dc:two-coframes}
+ (\theta^{AA'})=
+ \begin{pmatrix}\dd u&\dd z\\-\dd w&\dd v+\frac12H\dd u\end{pmatrix},
+ \qquad
+ (\vartheta^{AA'})=
+ \begin{pmatrix}\dd u&\dd z\\-\dd w&\dd v\end{pmatrix}.
+\end{equation}
+Each represents its metric as twice the determinant of the displayed
+matrix of one-forms. The flat coframe is compatible with the target
+coframe in the manuscript: after \eqref{dc:relabel},
+\begin{equation}
+ \begin{pmatrix}\dd a&\dd b\\\dd c&\dd d\end{pmatrix}
+ =\begin{pmatrix}\dd U&\dd Z\\-\dd W&\dd V\end{pmatrix}
+ \begin{pmatrix}0&-1\\1&0\end{pmatrix}.
+\end{equation}
+This constant primed-frame change does not identify the transferred
+internal bundle with the tangent spin bundle.
+
+For the following component comparison, identify the \emph{unprimed}
+spin frames in \eqref{dc:two-coframes} by matching their labels.
+Let $o_A=(1,0)$ in each frame and set $\epsilon_{0'1'}=1$.
+Fix the component normalizations by
+\begin{align}
+ \mathcal F_{AA'BB'}&=\epsilon_{A'B'}f_{AB},
+ \label{dc:Maxwell-spinor-convention}\\
+ R_{AA'BB'CC'DD'}&=
+ \epsilon_{A'B'}\epsilon_{C'D'}\Psi_{ABCD}
+ \quad\hbox{for the Ricci-flat ASD metric }g_H.
+ \label{dc:Weyl-spinor-convention}
+\end{align}
+The coordinate curvature convention is the manuscript's
+$R_{uzuz}=-H_{zz}/2$. These equations fix any sign or numerical
+normalization needed below; other curvature conventions merely change
+the constant normalization of one factor or of the scalar.
+
+\begin{lemma}[Aligned Maxwell fields]
+For every holomorphic $r(u,z)$, the two-form
+$r\,\dd u\wedge\dd z$ is a source-free ASD Maxwell field on both
+$\eta_0$ and $g_H$. Every such $r$ also satisfies the scalar wave
+equation on both backgrounds.
+\end{lemma}
+\begin{proof}
+The two-form is closed. It vanishes on the flat alpha planes
+\eqref{dc:flat-alpha} and on the curved alpha planes generated by
+\[
+ \partial_u-\frac12H\partial_v+\zeta\partial_z,
+ \qquad -\partial_w+\zeta\partial_v.
+\]
+It is therefore ASD on both metrics, so its closedness gives the Maxwell
+equations on each. The determinant of $g_H$ is constant, and its inverse
+differs from $\eta_0^{-1}$ only by
+$g_H^{vv}=-H$. Consequently
+\begin{equation}\label{dc:curvedbox}
+ \Box_{g_H}=\Box_0-H\partial_v^2,
+\end{equation}
+which, like $\Box_0$, annihilates $r(u,z)$.
+\end{proof}
+
+\begin{proposition}[Mixed Weyl relation in the specified frames]
+With \eqref{dc:Maxwell-spinor-convention}--\eqref{dc:Weyl-spinor-convention},
+the color-stripped descended field and gravitational curvature are
+\begin{equation}\label{dc:aligned-spinors}
+ f_{AB}=\kappa o_Ao_B,
+ \qquad
+ \Psi_{ABCD}=\kappa o_Ao_Bo_Co_D.
+\end{equation}
+Let $\sigma_{AB}=o_Ao_B$ be the Maxwell spinor of
+$\dd u\wedge\dd z$ and let $S_{\mathrm{mix}}=1$. Then
+\begin{equation}\label{dc:mixed-Weyl}
+ \Psi_{ABCD}
+ =\frac{f_{(AB}\sigma_{CD)}}{S_{\mathrm{mix}}}.
+\end{equation}
+Both Maxwell factors and the scalar satisfy their field equations on
+the chosen flat background. The same component fields also satisfy
+those equations on $g_H$.
+\end{proposition}
+\begin{proof}
+In either coframe, $\dd u\wedge\dd z$ occupies the component
+$(00',01')$, so \eqref{dc:strip} gives $f_{00}=\kappa$ with the other
+components zero. All coordinate Riemann components are generated by
+$R_{uzuz}=\kappa$ and curvature symmetries. Changing to the curved
+dual frame introduces only multiples of $\partial_v$, which annihilate
+the curvature, so the sole independent Weyl component is
+$\Psi_{0000}=\kappa$. This proves \eqref{dc:aligned-spinors}; its
+symmetrized product gives \eqref{dc:mixed-Weyl}. The preceding lemma
+establishes the differential equations, including for $r=1$.
+\end{proof}
+
+The metric is Petrov type N where $\kappa\ne0$ and type O where
+$\kappa=0$. Equation~\eqref{dc:mixed-Weyl} remains regular at both kinds
+of points. It is a mixed Weyl factorization in the established sense of
+\cite[Sec.~5.2, Eq.~(110)]{DC-LMNO}, specialized by a direct calculation
+to the descended field. It is not a gauge-independent identification of
+the transferred bundle with flat tangent spinors: it uses color
+stripping, background coordinates, and the expressly chosen spin-frame
+comparison. The manuscript's direction-dependent tangent-spinor map is
+a different object.
+
+On an open set where $\kappa$ is nonzero there is also a same-copy
+factorization
+\begin{equation}\label{dc:same-Weyl}
+ \Psi_{ABCD}=\frac{f_{(AB}f_{CD)}}{S_{\mathrm{same}}},
+ \qquad S_{\mathrm{same}}=\kappa.
+\end{equation}
+The scalar is a wave solution by the lemma. The quotient in
+\eqref{dc:same-Weyl} is not defined at zeros of $\kappa$, although its
+simplified expression extends. The mixed relation needs no division
+by a varying field. Neither Weyl scalar here is asserted to be the
+Kerr--Schild zeroth-copy profile $H$. Weyl copies of pp-waves have
+functional freedom; see \cite[Sec.~IV]{DC-GGMPP}. Thus this
+factorization is an exact compatibility result in an aligned sector,
+not by itself evidence for a canonical correspondence or an interacting
+color--kinematics construction.
+
+\section{Heavenly potentials and the three different prepotentials}
+
+\subsection{Conventions and direct comparison with SDYM}
+
+For a scalar potential $\Theta(u,v,z,w)$ put
+\begin{align}
+ g_\Theta&=2\dd u\dd v+2\dd z\dd w
+ +\Theta_{zz}\dd u^2+\Theta_{vv}\dd w^2
+ -2\Theta_{vz}\dd u\dd w,
+ \label{dc:heavenlymetric}\\
+ \mathcal E(\Theta)&=
+ \Box_0\Theta-\Theta_{zz}\Theta_{vv}+(\Theta_{vz})^2.
+ \label{dc:heavenlyeq}
+\end{align}
+The equation $\mathcal E(\Theta)=0$ is a second-heavenly potential
+formulation of Ricci-flat ASD gravity in this gauge. These conventions
+are obtained from \cite[Eqs.~(2.14)--(2.20)]{DC-BGS} by $X=z$, $Y=-w$.
+Choose a local double primitive $\Theta_0(u,z)$ satisfying
+\begin{equation}\label{dc:primitive}
+ \Theta_{0,zz}=H.
+\end{equation}
+Then $g_{\Theta_0}=g_H$. The linear term and the quadratic determinant
+term in \eqref{dc:heavenlyeq} vanish separately.
+
+For clarity, the corresponding SDYM potential equation can also be
+checked directly. Let $\phi$ be matrix-valued, with
+\begin{equation}\label{dc:YMpotential}
+ \mathcal A(\phi)=\phi_z\dd u-\phi_v\dd w,
+ \qquad A_v=A_z=0.
+\end{equation}
+The curvature components obey
+\begin{equation}
+ F_{zv}=0,\qquad F_{uv}=F_{zw}=-\phi_{vz},\qquad
+ F_{uw}=-\phi_{uv}-\phi_{zw}+[\phi_v,\phi_z].
+\end{equation}
+Evaluation on \eqref{dc:flat-alpha} shows that ASD is equivalent to
+\begin{equation}\label{dc:SDYM}
+ \Box_0\phi-2[\phi_v,\phi_z]=0,
+\end{equation}
+the convention of \cite[Eqs.~(2.4)--(2.8)]{DC-BGS} under the same
+coordinate change.
+
+Define the spacetime Poisson bracket
+\begin{equation}\label{dc:kinbracket}
+ \{f,g\}_{\mathrm{kin}}=f_vg_z-f_zg_v.
+\end{equation}
+Then the gravitational equation becomes
+\begin{equation}
+ \Box_0\Theta-\{\Theta_v,\Theta_z\}_{\mathrm{kin}}=0.
+\end{equation}
+Up to the fixed factor of two in \eqref{dc:SDYM}, the nonlinear color
+commutator is replaced by a kinematic Poisson bracket. This is an
+equation-level comparison; a map between individual solutions requires
+its own data and is not supplied merely by replacing notation.
+
+In particular, the following three gauge prepotentials all solve
+\eqref{dc:SDYM} but produce distinct fields:
+\begin{align}
+ \phi_{\mathrm{pot}}&=\Theta_0\NN,
+ &\mathcal A(\phi_{\mathrm{pot}})&=\Theta_{0,z}\dd u\,\NN,
+ \label{dc:potential-copy}\\
+ \phi_{\mathrm{KS}}&=\Theta_{0,z}\NN,
+ &\mathcal A(\phi_{\mathrm{KS}})&=H\dd u\,\NN,
+ \label{dc:KS-potential}\\
+ \phi_{\mathrm{desc}}&=\frac12\Theta_{0,zz}\NN=\frac12H\NN,
+ &\mathcal A(\phi_{\mathrm{desc}})&=\frac12H_z\dd u\,\NN=A_H.
+ \label{dc:desc-potential}
+\end{align}
+The first uses the same coefficient function as the gravitational
+heavenly potential. The second is the conventional Kerr--Schild copy.
+The third is the connection descended in the manuscript. They differ
+by transverse differentiation, and must not be conflated. Additions
+$a(u)z+b(u)$ to the double primitive change neither $H$ nor the metric;
+where they affect a displayed fixed-color potential, they contribute
+only a locally exact multiple of $\dd u$.
+
+\subsection{A systematic perturbation calculation}
+
+Write
+\begin{equation}
+ Q(f,g)=f_{vz}g_{vz}
+ -\frac12(f_{zz}g_{vv}+f_{vv}g_{zz}),
+ \qquad \mathcal E(\Theta)=\Box_0\Theta+Q(\Theta,\Theta).
+\end{equation}
+This symmetric bilinear form gives the direct expansion
+\begin{equation}\label{dc:one-perturbation}
+ \mathcal E(\Theta_0+\varepsilon\chi)
+ =\varepsilon\mathcal L_H\chi
+ +\varepsilon^2\big((\chi_{vz})^2-\chi_{zz}\chi_{vv}\big),
+ \qquad
+ \mathcal L_H=\Box_0-H\partial_v^2=\Box_{g_H}.
+\end{equation}
+Indeed, $2Q(\Theta_0,\chi)=-H\chi_{vv}$ by
+\eqref{dc:primitive}, and \eqref{dc:curvedbox} identifies the operator.
+An arbitrary $\chi$ is not automatically a solution.
+
+For a formal series
+\begin{equation}
+ \Theta=\Theta_0+\sum_{n\ge1}\varepsilon^n\chi_n,
+\end{equation}
+the first two equations are
+\begin{equation}\label{dc:second-order}
+ \mathcal L_H\chi_1=0,
+ \qquad
+ \mathcal L_H\chi_2=
+ \chi_{1,zz}\chi_{1,vv}-(\chi_{1,vz})^2.
+\end{equation}
+More generally, equating coefficients gives
+\begin{equation}\label{dc:all-orders}
+ \mathcal L_H\chi_n
+ =\sum_{j=1}^{n-1}
+ \left(\chi_{j,zz}\chi_{n-j,vv}
+       -\chi_{j,vz}\chi_{n-j,vz}\right),
+ \qquad n\ge2.
+\end{equation}
+These are formal necessary and sufficient coefficient equations; no
+claim about convergence or a choice of initial data is included.
+Already the first equation couples the perturbation to the background.
+The second tests the perturbation's quadratic self-interaction, which
+is absent when every $\chi_n$ depends only on $u,z$.
+
+For a momentum covector $k$ and $x=(u,v,z,w)$, the plane wave
+$e^{ik\cdot x}$ satisfies
+\begin{equation}
+ \{e^{ik_1\cdot x},e^{ik_2\cdot x}\}_{\mathrm{kin}}
+ =X(k_1,k_2)e^{i(k_1+k_2)\cdot x},
+ \qquad
+ X(k_1,k_2)=k_{1z}k_{2v}-k_{1v}k_{2z}.
+\end{equation}
+Modes of $\Theta_0(u,z)$ have $k_v=k_w=0$, so $X$ vanishes on every
+pair of modes in this sector. Hence this family cannot distinguish
+nonzero Yang--Mills cubic factors proportional to $f^{abc}X$ from
+gravitational factors proportional to $X^2$; both vanish here.
+Allowing suitable $v$-dependent perturbations turns on this test.
+Such a perturbation remains within the heavenly gravity formulation
+provided the recursion is solved. It does not establish that the
+manuscript's stronger full-connection transport extends to it.
+
+\begin{thebibliography}{9}
+
+\bibitem{DC-MOW}
+R.~Monteiro, D.~O'Connell and C.~D. White,
+\emph{Black holes and the double copy},
+JHEP \textbf{12} (2014), 056.
+\href{https://doi.org/10.1007/JHEP12(2014)056}{doi:10.1007/JHEP12(2014)056};
+\href{https://arxiv.org/abs/1410.0239}{arXiv:1410.0239}.
+The pp-wave prescription used here is Sec.~5.1, Eqs.~(72)--(74).
+
+\bibitem{DC-LMNO}
+A.~Luna, R.~Monteiro, I.~Nicholson and D.~O'Connell,
+\emph{Type D spacetimes and the Weyl double copy},
+Class. Quantum Grav. \textbf{36} (2019), 065003.
+\href{https://doi.org/10.1088/1361-6382/ab03e6}{doi:10.1088/1361-6382/ab03e6};
+\href{https://arxiv.org/abs/1810.08183}{arXiv:1810.08183}.
+Mixed Weyl factorization is defined in Sec.~5.2, Eq.~(110).
+
+\bibitem{DC-GGMPP}
+H.~Godazgar, M.~Godazgar, R.~Monteiro, D.~Peinador Veiga and C.~N. Pope,
+\emph{The Weyl double copy for gravitational waves},
+Phys. Rev. Lett. \textbf{126} (2021), 101103.
+\href{https://doi.org/10.1103/PhysRevLett.126.101103}{doi:10.1103/PhysRevLett.126.101103};
+\href{https://arxiv.org/abs/2010.02925}{arXiv:2010.02925}.
+The functional freedom of type N and pp-wave copies is discussed in Sec.~IV.
+
+\bibitem{DC-BGS}
+G.~R. Brown, J.~Gowdy and B.~Spence,
+\emph{Self-dual fields on self-dual backgrounds and the double copy},
+Phys. Rev. D \textbf{109} (2024), 026009.
+\href{https://doi.org/10.1103/PhysRevD.109.026009}{doi:10.1103/PhysRevD.109.026009};
+\href{https://arxiv.org/abs/2307.11063}{arXiv:2307.11063}.
+Coordinate and potential conventions are in Sec.~2, especially
+Eqs.~(2.4)--(2.8) and (2.14)--(2.23).
+
+\end{thebibliography}
+\end{document}
