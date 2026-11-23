@@ -94,11 +94,14 @@ zero limiting energy gives convergence of the actual trajectory
 to one fixed round pullback. A stationary spectral theorem forces
 perfection of critical connections in the selected positive
 round-compatible class when the eigenvalue ratio of $Q$ is at
-most $9/4$. The same closed bound on the limsup of spatial
+most $7/2$. The same closed bound on the limsup of spatial
 suprema along that bounded late sequence therefore gives
-convergence of the actual original flow. An explicit gradient
-bound also controls energy by the accumulated time spent in
-this spectral region.
+convergence of the actual original flow. On each fixed strict
+spectral subregion, a gradient bound controls energy by the
+accumulated time spent there; explicit numerical constants are
+available for ratio at most $9/4$.
+An effective linear bound in the spectral margin gives a
+weighted energy estimate using its accumulated time integral.
 
 Separately, a smooth embedded regular holomorphic sphere,
 whose fixed $W^{1,8}\to L^8$ linearization has a bounded right
@@ -391,12 +394,14 @@ limiting energy either zero and a fixed round tail, or at least
 the uniform threshold $\delta(P_0,D_0)$ for those bounds.
 Theorem~\ref{thm:stationary-spectral-pinching} excludes nonperfect
 critical connections in the positive round-compatible class
-with $Q$ eigenvalue ratio at most $9/4$.
+with $Q$ eigenvalue ratio at most $7/2$.
 Corollary~\ref{cor:late-spectral-convergence} transfers the same
 closed limsup bound at the selected unshifted times through the
 continuous trace and positive-time Lie transport, giving a fixed
-round tail. Proposition~\ref{prop:pinched-gradient-domination}
-gives an explicit static gradient bound on the same class.
+round tail. Proposition~\ref{prop:strict-spectral-gradient}
+gives static gradient control on each fixed strict subregion,
+with explicit numerical constants for ratio at most $9/4$ in
+Proposition~\ref{prop:pinched-gradient-domination}.
 Corollary~\ref{cor:intermittent-spectral-return} then uses
 accumulated pinched time, without aligning it to the geometric
 sequence, as a sufficient energy-entry criterion.
@@ -2311,6 +2316,109 @@ Thus
 \]
 \end{proof}
 
+\begin{lemma}[Sharp ratio for the stationary derivative form]
+\label{lem:sharp-stationary-form}
+In the pointwise conventions of
+Lemma~\ref{lem:stationary-spectral-form}, assume
+\(1\le u\le v\le\sqrt{7/2}\).
+On the actual twelve-dimensional zero-speed space,
+\(\mathfrak R_Q\) is nonnegative. It is positive definite
+except at \((u,v)=(1,\sqrt{7/2})\), where its inertia is
+\((8,4,0)\) in positive, zero, negative order.
+At that endpoint, writing \(t=\sqrt{7/2}\), its radical in
+\eqref{eq:stationary-edge-kernel} is exactly
+\[
+ (Z_{12},Z_{13},Z_{23})=(-tW/2,W,-W),\qquad W\in(\mathbb R^4)^*.
+\]
+The bound \(\lambda_{\max}(Q)/\lambda_{\min}(Q)\le7/2\)
+is sharp for this universal pointwise nonnegativity statement.
+\end{lemma}
+\begin{proof}
+The rank-eight velocity map, its edge-coordinate inverse,
+and \(\mathfrak R_Q=4c^2\sum_a Z_a^TGZ_a\) in the previous
+proof are identities for all positive \(u,v\): their
+Sylvester, Bianchi and diagonal denominators are positive.
+The earlier \(9/4\) sign estimate is not used outside its
+range. The positive polynomial scale
+\(M=2LG\) in \eqref{eq:stationary-cleared-block} therefore
+reduces the new sign test to a symmetric three-by-three matrix.
+
+Set \(h=(\sqrt{14}-2)/2\), \(v=1+ha\), \(u=1+hab\).
+The closed unit square maps onto the full stated triangle;
+\(a=0\) collapses to \(u=v=1\), and elsewhere
+\(a=(v-1)/h\), \(b=(u-1)/(v-1)\).
+Let \(P_1=M_{11}\), \(P_2=\det M_{\{1,2\},\{1,2\}}\)
+and \(P_3=\det M\), with indices in edge order \(12,13,23\).
+Their exact tensor Bernstein certificates after substitution are
+\[
+\begin{array}{c|c|r|r|r}
+ &\text{bidegree}&\text{positive}&\text{zero}&\text{negative}\\\hline
+ P_1&(13,9)&140&0&0\\
+ P_2&(26,16)&459&0&0\\
+ P_3&(37,23)&911&1&0
+\end{array}
+\]
+The sole zero coefficient is that of \(P_3\) at \((37,0)\).
+No subdivision or degree elevation is used. All coefficients
+lie in \(\mathbb Q(\sqrt{14})\). For opposite nonzero signs
+in \(x+y\sqrt{14}\), its sign is determined exactly by
+\(\operatorname{sgn}(x)\operatorname{sgn}(x^2-14y^2)\);
+like signs and zero terms are immediate.
+
+For reproducibility, substituting a term \(c_{mn}u^mv^n\)
+contributes the power coefficient
+\(c_{mn}\binom mi\binom nj h^{i+j}\) at
+\(a^{i+j}b^i\); contributions with the same powers are added.
+The standard power-to-Bernstein conversion
+used above, now over this quadratic field, gives positive
+common denominators
+\[
+ \begin{split}
+ D_1&=53137244160,\\
+ D_2&=143870213580210044928000,\\
+ D_3&=4311134142332645259085973815296000.
+ \end{split}
+\]
+The corrected generator
+\texttt{e218\_stationary\_spectral\_range\_v2.py} retains the
+exact coefficient computation and endpoint specialization;
+its small record is
+\path{e218_stationary_spectral_range.json}.
+The independent verifier
+\texttt{e219\_sharp\_stationary\_verify.py} substitutes the
+matrix entries first, takes Leibniz minors, solves the
+triangular Bernstein-to-power equations, and expands back to
+check every power coefficient. It verifies all \(1511\)
+coefficient signs and the actual endpoint kernel coordinates.
+
+The Bernstein basis is nonnegative and sums to one.
+Thus \(P_1,P_2>0\) on the entire square. The weight of
+\(P_3\)'s sole zero coefficient is \(a^{37}(1-b)^{23}\).
+It equals one only at \((a,b)=(1,0)\); at every other point
+some positive coefficient has positive weight. The leading
+two-by-two block is therefore positive definite, and its
+scalar Schur complement \(P_3/P_2\) is positive except at
+that corner, where it is zero. Congruence gives scalar
+inertia \((3,0,0)\) or \((2,1,0)\), respectively. The four
+identical blocks give the stated full inertia, including
+all edges and the collapsed round edge.
+
+At the corner direct substitution gives
+\(M(1,t)(-t/2,1,-1)^T=0\). The positive leading block
+makes this the whole scalar kernel, giving the asserted
+covector radical. Finally, for \(k(v)=(-v/2,1,-1)^T\),
+coefficientwise specialization at \(u=1\) gives
+\[
+ (2k(v))^TM(1,v)(2k(v))=8L(1,v)v^2(7-2v^2).
+\]
+Hence \(k(v)^TG(1,v)k(v)=v^2(7-2v^2)<0\) when
+\(v^2>7/2\). One nonzero covector component supplies a
+negative stationary direction at each such axial spectrum.
+This proves sharpness of the pointwise statement.
+\end{proof}
+% Assessed algebra: E218/E219; corrected v2 preserves the frozen v1.
+
+
 \begin{theorem}[Stationary spectral pinching]
 \label{thm:stationary-spectral-pinching}
 Let $A$ be a smooth definite connection on a smooth principal
@@ -2320,7 +2428,7 @@ round-compatible sign of Section~\ref{rec:section}.
 If $A$ is critical for $\mathcal P$ under independent
 connection variations and
 \[
- \sup_M\frac{\lambda_{\max}(Q)}{\lambda_{\min}(Q)}\le\frac94,
+ \sup_M\frac{\lambda_{\max}(Q)}{\lambda_{\min}(Q)}\le\frac72,
 \]
 then $Q=I$. Its reconstructed Riemannian metric is ASD
 Einstein of scalar curvature $12K$ in the older normalization.
@@ -2352,7 +2460,7 @@ The ordered square roots give
 $d=(1,\sqrt{\lambda_2/\lambda_1},\sqrt{\lambda_3/\lambda_1})$
 in the closed triangle. The common $K$ cancels from Bianchi
 and multiplies the speed by a positive scalar. Thus the sign
-of Lemma~\ref{lem:stationary-spectral-form} holds for every
+of Lemma~\ref{lem:sharp-stationary-form} holds for every
 fixed $K>0$ in the orthonormal coefficients of
 $\widehat g_A$.
 
@@ -2363,7 +2471,8 @@ The constant critical path and
        -48K\int_M\sqrt{\det Q}|Q-I|^2\,\mu_A.
 \]
 The first integrand is nonnegative, and the reaction weight
-is strictly positive. Hence $Q=I$ everywhere.
+is strictly positive, including at the semidefinite axial endpoint.
+Hence $Q=I$ everywhere.
 Compatibility gives $A=\Gamma^+$, $\Ric_0=0$, $W^+=0$
 and scalar curvature $12K$.
 For the native negative-Killing pairing,
@@ -2508,6 +2617,349 @@ bound on its stated smooth interval and supplies no
 preservation or continuation theorem by itself.
 % Assessed inputs: E209/E210; native and older measures kept distinct.
 
+\begin{proposition}[Gradient control on each strict spectral subregion]
+\label{prop:strict-spectral-gradient}
+Fix \(1\le r<7/2\). For every supplied smooth definite connection on a smooth
+principal $SO(3)$ bundle over a closed connected smooth
+oriented four-manifold, with positive curvature planes,
+the round-compatible sign and $\sup_M\rho(Q)\le r$,
+use the native quantities of
+Proposition~\ref{prop:pinched-gradient-domination}.
+There are positive constants
+\(\gamma(r),\beta(r)\), depending only on \(r\), such that
+\begin{equation}\label{eq:strict-spectral-gradient}
+ \mathscr D\ge\gamma(r)\mathscr E+\beta(r)\mathscr G.
+\end{equation}
+More precisely, in the fixed model frames put
+\[
+ \kappa(r)=\min\left\{\mathfrak R_Q(X):
+  1\le u\le v\le\sqrt r,\ |X|=1,\ W_Q(X)=0\right\},
+\]
+where \(Q=3\operatorname{diag}(1,u^2,v^2)/(1+u^2+v^2)\)
+and \(W_Q\) is the scaled velocity map in the stationary
+kernel proof. This minimum is positive, and one may take
+\begin{equation}\label{eq:strict-spectral-constants}
+ \begin{split}
+ L_0&=120,\qquad
+ C(r)=\tfrac12\left(\frac{2L_0^2}{\kappa(r)}+L_0+
+                                  \frac{\kappa(r)}2\right),\\
+ \gamma(r)&=\frac{24}{5(1+4C(r))},\qquad
+ \beta(r)=\frac{\kappa(r)}{1+4C(r)}.
+ \end{split}
+\end{equation}
+On a supplied smooth original native interval pinched at
+this fixed \(r\),
+\[
+ e^{\gamma(r)(t-t_0)}\mathscr E(t)+
+ \beta(r)\int_{t_0}^t e^{\gamma(r)(s-t_0)}\mathscr G(s)\,ds
+ \le\mathscr E(t_0).
+\]
+\end{proposition}
+\begin{proof}
+In the ordered frames the velocity map has constant rank
+eight and a twelve-dimensional kernel. Its coefficients
+and the full form are continuous in \((u,v,X)\):
+the positive eigenvalue floor keeps the Sylvester inversion
+continuous, and the Bianchi inverse is fixed.
+The unit-kernel set in the definition is a nonempty closed
+subset of a compact parameter set times a finite-dimensional
+unit sphere. Lemma~\ref{lem:sharp-stationary-form} is strictly
+positive there when \(r<7/2\), so \(\kappa(r)>0\).
+This uses fixed model frames and pointwise covariance;
+it requires no continuous choice of eigenvectors through
+multiplicities. At \(r=1\), \(\kappa(1)=4\).
+
+On even the closed region \(\rho\le7/2\), the ordered
+normalization gives \(c^2=m\ge3/8\) and \(M_*/m\le7/2\).
+The same diagonal right inverse as before gives the
+least-norm speed preimage
+\[
+ |X_\perp|^2\le3|W|^2
+       =\frac{3}{16K^2c^2}|V_{\rm o}|^2
+       \le\frac1{2K^2}|V_{\rm o}|^2.
+\]
+The unrestricted Sylvester, Bianchi and commutator bounds
+in the previous proof give
+\[
+ |\mathfrak R_Q(X)|\le
+ \bigl[12+4\sqrt6(\sqrt{7/2}+\sqrt6\,7/2)\bigr]|X|^2
+ =(96+4\sqrt{21})|X|^2\le L_0|X|^2.
+\]
+The symmetric polarization has operator norm at most \(L_0\).
+Splitting \(X=X_0+X_\perp\) orthogonally along the stationary
+kernel and applying Young's inequality gives
+\[
+ \mathfrak R_Q(X)\ge\tfrac{\kappa(r)}2|X|^2
+                   -\frac{C(r)}{K^2}|V_{\rm o}|^2.
+\]
+Also \(\det Q\ge27/512>1/25\), so
+\(\sqrt{\det Q}\ge1/5\). The instantaneous old identity,
+evaluated on \(A+\sigma V_{\rm o}(A)\) as in the preceding
+proof, yields
+\[
+ (1+4C(r))\mathscr D_{\rm o}
+   \ge\kappa(r)\mathscr G_{\rm o}+\frac{48K}{5}\mathcal P.
+\]
+Here \(\mathscr D_{\rm o}\) uses \(dV_{\widehat g}\),
+whereas \(\mathscr G_{\rm o}\) uses
+\(\mu_{\rm o}=2K^2dV_{\widehat g}\); in particular the
+negative speed cost is exactly \(4C(r)\mathscr D_{\rm o}\).
+Divide by \(K\) and use
+\(\mathscr D=\mathscr D_{\rm o}/K\),
+\(\mathscr G=\mathscr G_{\rm o}/K\),
+\(\mathscr E=2\mathcal P\) to obtain
+\eqref{eq:strict-spectral-gradient} with
+\eqref{eq:strict-spectral-constants}.
+Native dissipation and the integrating factor give the
+interval statement.
+\end{proof}
+
+The explicit \(9/4\) constants in
+Proposition~\ref{prop:pinched-gradient-domination} remain
+available as a certified subcase. The compact minimum at
+\(r=7/2\) is zero because of the endpoint radical, so this
+argument asserts quantitative control only for fixed
+strict subregions. It neither proves nor disproves an
+endpoint energy-gradient inequality by another argument.
+% Assessed sharp applications: E220/E222, H_sharp discharged separately.
+
+
+\begin{proposition}[Effective dependence on the spectral margin]
+\label{prop:effective-spectral-margin}
+In the model conventions of
+Lemma~\ref{lem:sharp-stationary-form}, put
+\begin{equation}\label{eq:spectral-margin-k}
+ k_*:=\frac{3}{704\cdot27648^3\cdot880^2}
+     =\frac1{3840678118509930086400}.
+\end{equation}
+For every $1\le r\le7/2$ and every zero-speed derivative array
+at a spectrum with $\rho(Q)\le r$,
+\[
+ \mathfrak R_Q(X)\ge k_*(7/2-r)|X|^2.
+\]
+For a supplied smooth connection in the general closed-base,
+positive-plane, round-compatible native setting of
+Proposition~\ref{prop:strict-spectral-gradient},
+if $\sup_M\rho(Q)\le r<7/2$ and $\epsilon=7/2-r$, then
+\begin{equation}\label{eq:native-spectral-margin}
+ \mathscr D\ge\gamma_*\epsilon\,\mathscr E
+                    +\beta_*\epsilon^2\mathscr G,
+\end{equation}
+where the universal positive constants are
+\begin{equation}\label{eq:spectral-margin-constants}
+ H_*:=\frac{1205}{2}+\frac{57600}{k_*}+\frac{25k_*}{4},
+ \qquad \gamma_*:=\frac{24}{5H_*},\qquad
+ \beta_*:=\frac{k_*}{H_*}.
+\end{equation}
+These constants are not asserted to be optimal.
+\end{proposition}
+\begin{proof}
+In the determinant certificate of
+Lemma~\ref{lem:sharp-stationary-form}, every one of the
+$911$ positive Bernstein coefficients is at least one.
+This stronger exact comparison is obtained by subtracting
+its common denominator $D_3$ from the rational numerator
+part and applying the same quadratic-field sign test.
+The sole zero remains at $(37,0)$. The small reproducible
+record is \path{e229_linear_spectral_coercivity.json};
+the independent determinant-first verifier is
+\path{e230_linear_spectral_verify.py}.
+The Bernstein partition therefore gives
+\[
+ P_3\ge 1-a^{37}(1-b)^{23}\ge1-a.
+\]
+Let $\alpha=\sqrt{7/2}$ and $\epsilon=7/2-r$. For $v^2\le r$,
+\[
+ 1-a=\frac{\alpha-v}{\alpha-1}
+ \ge\frac{\epsilon}{2\alpha(\alpha-1)}
+ \ge\frac{\epsilon}{4},
+\]
+since $2\alpha(\alpha-1)=7-\sqrt{14}<4$.
+Throughout the closed triangle, $L\le27648$ and $c^2\ge3/8$.
+The edge reconstruction gives
+\[
+ \sum_i|H_{ii}|^2
+ \le2\sum_{i<j}\big[(d_j/d_i)^2+(d_i/d_j)^2\big]|Z_{ij}|^2
+ \le9|Z|^2.
+\]
+Its off-diagonal slots contribute $2|Z|^2$, and ordinary
+trace-free projection contracts the norm. Thus
+$|X|^2\le11|Z|^2$ on the whole sharp triangle.
+The full-form bound $|\mathfrak R_Q(X)|\le120|X|^2$
+from Proposition~\ref{prop:strict-spectral-gradient},
+applied to one arbitrary scalar edge vector in one coframe
+component, yields $\lambda_{\max}(G)\le880$.
+Since $G$ is positive semidefinite and $M=2LG$,
+\[
+ \lambda_{\min}(G)\ge\frac{\det G}{880^2}
+ =\frac{P_3}{8L^3\,880^2}
+ \ge\frac{\epsilon}{32\cdot27648^3\cdot880^2}.
+\]
+Combining this with
+$\mathfrak R_Q(X)=4c^2\sum_aZ_a^TGZ_a$
+and $|X|^2\le11|Z|^2$ gives the asserted $k_*$.
+The argument includes repeated spectra and the collapsed
+round edge; at the closed endpoint it gives only zero.
+
+For the static native estimate, substitute
+$\kappa=k_*\epsilon$ in the proof of
+Proposition~\ref{prop:strict-spectral-gradient}.
+The full polarization bound used there is the operator bound
+$|B_Q(X,Y)|\le120|X||Y|$ for the Frobenius jet pairing.
+Its speed complement and old/native conversion give
+\[
+ (1+4C)\mathscr D\ge k_*\epsilon\mathscr G+\tfrac{24}{5}\mathscr E,
+ \qquad C=\tfrac12\left(\frac{28800}{k_*\epsilon}
+                           +120+\frac{k_*\epsilon}{2}\right).
+\]
+For $0<\epsilon\le5/2$,
+\[
+ \epsilon(1+4C)=241\epsilon+\frac{57600}{k_*}+k_*\epsilon^2
+ \le H_*.
+\]
+Taking reciprocals gives \eqref{eq:native-spectral-margin}.
+The bound on the stationary kernel transfers to every fixed
+old $K>0$: the common curvature factor cancels in Bianchi
+and leaves the same zero-speed space. The native estimate
+has exactly the metric, volume, internal pairing and time
+factors already verified in that proposition.
+\end{proof}
+% Assessed effective lower bound: E229/E230.
+% Analytical combination: E231/E232, H_linear discharged separately.
+
+
+\begin{proposition}[Degeneration of pointwise absorption]
+\label{prop:spectral-absorption-limit}
+Use the old $K=1$ pointwise conventions of
+Lemma~\ref{lem:stationary-spectral-form}, and put
+\[
+ Q_s=\frac{3}{s+2}\operatorname{diag}(1,1,s),\qquad 3<s\le7/2.
+\]
+At $s=7/2$, no finite coefficient $C$ gives
+$\mathfrak R_{Q_s}(X)\ge-C|V_{Q_s}(X)|^2$ for all derivative
+arrays $X$. For $3<s<7/2$, every such coefficient $C(s)$ satisfies
+\begin{equation}\label{eq:spectral-absorption-lower}
+ C(s)\ge
+ \frac{(s+2)(s-2)^2}{16(5s+1)(7-2s)}-\frac14,
+ \qquad
+ \liminf_{s\uparrow7/2}(7/2-s)C(s)\ge\frac{99}{4736}.
+\end{equation}
+The strict-region stationary minimum in
+Proposition~\ref{prop:strict-spectral-gradient} satisfies
+\begin{equation}\label{eq:spectral-kappa-upper}
+ 0<\kappa(r)\le\frac{12r(7-2r)}{(r+2)(r+4)},
+ \qquad 3<r<7/2.
+\end{equation}
+Each finite witness is realized at the center of a smooth local
+positive definite connection. For each strict $s<7/2$, the
+witness can be realized on a ball with $\sup\rho(Q)<7/2$.
+No common ball size is asserted.
+\end{proposition}
+\begin{proof}
+Set $t=\sqrt{s}$, $\lambda=3/(s+2)$, and $w=dx^1$.
+Regard $X_{ij}$ as covectors in the base slot. Let $Y$ have
+$Y_{11}=w$, $Y_{22}=0$, $Y_{33}=-w$, with zero off-diagonal
+entries, and let $N$ have diagonal $(t/2,-t/2,0)w$ and
+\[
+ N_{12}=\tfrac t2J_3w,\qquad N_{13}=J_2w,\qquad N_{23}=J_1w.
+\]
+This is the edge array $(-t/2,1,-1)w$. Its ordinary and
+$Q_s$-weighted traces vanish, and the quaternion identities
+in the velocity formula give $V(N)=0$ and $|N|^2=s+4$.
+The full derivative form, including both skew terms, gives
+\begin{equation}\label{eq:spectral-absorption-pairings}
+ \begin{aligned}
+ \mathfrak R(N)&=4\lambda s(7-2s),&
+ B(N,Y)&=2\lambda t(2-s),\\
+ \mathfrak R(Y)&=\frac{12(5s+1)}{(s+2)^2},&
+ |V(Y)|^2&=4\mathfrak R(Y),
+ \end{aligned}
+\end{equation}
+where $B$ is the symmetric polarization of $\mathfrak R$.
+Here $Y$ commutes with $Q_s$, so its own skew contraction
+vanishes. Its trace-corrected diagonal is
+$(2s+1,s-1,-3)w/(s+2)$, giving the displayed actual velocity
+norm with its curvature factor $\lambda$ restored.
+
+For the mixed term, solve the full Bianchi equation on $Y$.
+Writing the mismatch as $b_i=\eta_iJ_iw$, the solution is
+\[
+ (\eta_1,\eta_2,\eta_3)
+ =\frac{1}{4\lambda}(-1-s^{-1},1-s^{-1},1+s^{-1}).
+\]
+The Sylvester skew term on $Y$ vanishes, and its mismatch
+term gives
+$\Xi_{13}(Y)=t(1-s^{-1})J_2w$ and
+$\Xi_{23}(Y)=t(1+s^{-1})J_1w$.
+Thus $\sum_a\langle q,[N_a,\Xi_a(Y)]\rangle
+=4\lambda t(s-1)$; the opposite order is zero.
+The principal mixed pairing is $2\lambda t$, so subtracting
+half the first contraction gives $B(N,Y)$ above.
+One may also check the axial value directly: its principal
+part is $12\lambda s+8\lambda$, while its full skew
+contraction is $8\lambda(s-1)^2$. Their difference is the
+first line of \eqref{eq:spectral-absorption-pairings}.
+
+At $s=7/2$, these identities give
+\[
+ \mathfrak R(Y+\sigma N)=\frac{888}{121}
+                  -\frac{18\sqrt{14}}{11}\sigma,
+ \qquad |V(Y+\sigma N)|^2=\frac{3552}{121}.
+\]
+This proves the endpoint failure. For $s<7/2$, the same
+quadratic is minimized at
+$\sigma_*=(s-2)/(2t(7-2s))$, where
+\[
+ \mathfrak R(Y+\sigma_*N)
+ =\mathfrak R(Y)-\frac{\lambda(s-2)^2}{7-2s}.
+\]
+Divide its negative by $|V(Y)|^2$ to obtain the necessary
+bound in \eqref{eq:spectral-absorption-lower}. Multiplication
+by $7/2-s$ gives the exact limit $99/4736$ for that lower
+bound, hence the stated liminf for any admissible $C(s)$.
+The optimal full-space coefficient is not identified.
+Testing the stationary minimum on $N/\sqrt{s+4}$ with
+$s=r$ gives \eqref{eq:spectral-kappa-upper}.
+
+For local realization fix any finite array $X$ used above,
+let $s_i=\sqrt{(Q_s)_{ii}}$, and set $F_i^*=-s_i\Sigma_i$
+in an oriented Euclidean chart on a trivial $SO(3)$ bundle.
+Define constant one-forms
+$U_i^a=-\sum_j(X_a)_{ij}J_jdx^a/s_j$ and the connection
+\[
+ A=\tfrac12\sum_a x^a\iota_{\partial_a}F^*
+                  +\tfrac12\sum_a(x^a)^2U^a.
+\]
+Then $A(0)=0$, $F_A(0)=F^*$ and
+$\partial_aF_A(0)=dx^a\wedge U^a$.
+For $\mathcal M_{ij}=F_i\wedge F_j/(2dV_{\rm eucl})$,
+orthonormality of $J_jdx^a$ and symmetry of $X_a$ give
+$\partial_a\mathcal M(0)=X_a$. Since
+$Q=3\mathcal M/\tr\mathcal M$ and $\tr X_a=0$,
+$(\nabla_a^AQ)(0)=X_a$. The reconstructed old metric is
+Euclidean at the center, and actual curvature satisfies
+Bianchi. Positivity and sign persist on a sufficiently small
+ball. When $s<7/2$, continuity of the extreme eigenvalue ratio
+also gives any chosen bound $s<r'<7/2$ on a smaller closed
+ball. The radius may shrink as $s\uparrow7/2$.
+\end{proof}
+
+Together with Proposition~\ref{prop:effective-spectral-margin},
+\eqref{eq:spectral-kappa-upper} bounds \(\kappa(r)\) above and
+below by positive multiples of \(7/2-r\) near the endpoint.
+No limiting or optimal leading coefficient is asserted.
+These witnesses obstruct a uniform pointwise absorption
+argument even on strictly locally pinched data without a fixed
+spectral margin. They do not disprove an integrated gradient
+inequality by a different argument, and supply no closed
+initial datum or singular trajectory. Fixed positive changes
+of the old scale and native clock preserve this qualitative
+pointwise obstruction.
+% Assessed local pointwise inputs: E223/E225 and E227/E228.
+% Integrated 23 November 2026 for Edward B. Baker III with OpenAI
+% assistance; actual selected lead model and effort unavailable.
+
+
 Theorem~\ref{thm:stationary-spectral-pinching} is a stationary
 result under a pointwise spectral hypothesis. Fine's inspected v2 asks about nonperfect
 connection-energy critical points in general
@@ -2517,11 +2969,13 @@ concerns positive definite connections on compact four-manifolds
 satisfying its Einstein equation $d_A\Phi_A=0$
 \cite[Theorem~4.14]{FineKrasnovPanov2014}. Neither that comparison
 nor the present estimates supply a spectral preservation law
-or initial definite data. The exact axial classification in the research
-notes also gives a larger stationary sign region when two
-eigenvalues coincide; that separate calculation is not needed
-for Theorem~\ref{thm:stationary-spectral-pinching}.
-% Assessed inputs: E199/E201 (axial comparison), E202/E203/E204.
+or initial definite data. Sharpness of the derivative-form bound
+concerns pointwise stationary jets; it does not construct
+nonperfect critical connections above the bound. The separate
+axial classification also treats spectra outside this general
+ratio class.
+% Assessed inputs: E199/E201 (axial), E202--E204 (earlier 9/4 range),
+% E218/E219 (sharp form), E220/E222 (closed 7/2 applications).
 % Integrated 23 November 2026 for Edward B. Baker III with OpenAI
 % assistance; actual selected lead model and effort unavailable.
 
@@ -6278,7 +6732,7 @@ in Theorem~\ref{thm:late-critical-accumulation}, assume also
 \begin{equation}\label{eq:late-spectral-hypothesis}
  \limsup_{n\to\infty}\sup_M
  \frac{\lambda_{\max}(Q(A(t_n)))}
-      {\lambda_{\min}(Q(A(t_n)))}\le\frac94.
+      {\lambda_{\min}(Q(A(t_n)))}\le\frac72.
 \end{equation}
 Then $T_*=\infty$ and the actual original connection--curvature
 pair converges smoothly and exponentially to one fixed round
@@ -6314,7 +6768,7 @@ bound and $\lambda_{\max}\le3$ give
 \]
 The normalized unshifted convergence and
 \eqref{eq:late-spectral-hypothesis} consequently imply
-$\sup_M\rho(Q(F_*))\le9/4$.
+$\sup_M\rho(Q(F_*))\le7/2$.
 The strong $C^0$ pair trace of the compatible adjusted
 limit also gives
 \[
@@ -6337,7 +6791,7 @@ isotopy. Pullback differentiation yields
 \]
 The spectral suprema are equal. Passing $\epsilon\downarrow0$
 in this scalar equality gives
-$\sup_M\rho(Q(\mathcal A_*(s_0)))\le9/4$.
+$\sup_M\rho(Q(\mathcal A_*(s_0)))\le7/2$.
 This step takes no limit of the maps $k_\epsilon$ and
 requires no original-flow pinching preservation.
 
@@ -6368,19 +6822,23 @@ its strong value trace, and does not assert a spectral
 inequality along the original intervening trajectory.
 The existence of qualifying initial definite data remains
 a separate requirement.
-% Assessed inputs: E205/E206, with H_gap discharged by E202--E204.
+% Assessed inputs: E205/E206 (trace, transport and fixed tail),
+% E218/E219 and E220/E222 (closed 7/2 critical input).
+
 
 \begin{corollary}[Intermittent spectral return]
 \label{cor:intermittent-spectral-return}
 For a supplied maximal smooth original native flow with
 positive curvature planes and the round-compatible sign on
-a closed connected smooth oriented four-manifold, let
+a closed connected smooth oriented four-manifold, fix
+$1<r<7/2$ and let
 \[
- S=\left\{t:\sup_M\rho(Q(A(t)))\le9/4\right\},\qquad
+ S=\left\{t:\sup_M\rho(Q(A(t)))\le r\right\},\qquad
  \Theta_{t_0}(t)=\int_{t_0}^t\mathbf1_S(s)\,ds.
 \]
-For $0\le t_0\le t<T_*$, the constants of
-Proposition~\ref{prop:pinched-gradient-domination} give
+For $0\le t_0\le t<T_*$, write $\gamma=\gamma(r)$ and
+$\beta=\beta(r)$ from
+Proposition~\ref{prop:strict-spectral-gradient}. Then
 \begin{equation}\label{eq:intermittent-spectral-energy}
  e^{\gamma\Theta_{t_0}(t)}\mathscr E(t)
  +\beta\int_{S\cap[t_0,t]}e^{\gamma\Theta_{t_0}(s)}\mathscr G(s)\,ds
@@ -6417,7 +6875,7 @@ $\Theta_{t_0}'=\mathbf1_S$ almost everywhere.
 
 The native identity $\mathscr E'=-\mathscr D$ holds at all
 smooth times. On $S$ apply
-\eqref{eq:pinched-gradient-domination}; outside $S$ use
+\eqref{eq:strict-spectral-gradient}; outside $S$ use
 $\mathscr D\ge0$. This gives
 \[
  \mathscr E'+\mathbf1_S(\gamma\mathscr E+\beta\mathscr G)\le0.
@@ -6451,12 +6909,102 @@ translation preserve the available native round exponent.
 The finite test uses only accumulated pinched time up to
 $t_n$ and assumes nothing about future pinched time.
 Once the round conclusion holds, uniform $Q\to I$ in fact
-puts all sufficiently late times in $S$.
+puts all sufficiently late times in $S$: for
+$\epsilon=(r-1)/(2(r+1))$, the eventual bound
+$\|Q-I\|_{\rm op}\le\epsilon$ gives
+$\rho(Q)\le(1+\epsilon)/(1-\epsilon)<r$.
 Neither test establishes that the required visits occur or
 bounds the actual waiting time. The occupation-time energy
 rate $\gamma$ is distinct from the eventual native round
 pair decay exponent.
-% Assessed inputs: E212/E213, with H_grad supplied by E209/E210.
+% Assessed inputs: E212/E213 (occupation argument),
+% E220/E222 (strict-region gradient bound).
+
+
+At $r=9/4$, the explicit constants of
+Proposition~\ref{prop:pinched-gradient-domination} may be used
+in the same criterion.
+% Explicit 9/4 constants: assessed E209/E210.
+
+\begin{corollary}[Accumulated spectral margin]
+\label{cor:accumulated-spectral-margin}
+Let $A(t)$, $0\le t<T_*$, be a supplied maximal smooth
+original native flow with positive curvature planes and the
+round-compatible sign on a closed connected smooth oriented
+four-manifold. With the constants in
+\eqref{eq:spectral-margin-constants}, set
+\[
+ w(t):=\left(\frac72-\sup_M\rho(Q(A(t)))\right)_+,
+ \qquad \Theta(t):=\int_0^t w(s)\,ds.
+\]
+Then throughout its actual lifespan,
+\begin{equation}\label{eq:accumulated-margin-energy}
+ e^{\gamma_*\Theta(t)}\mathscr E(t)
+ +\beta_*\int_0^t e^{\gamma_*\Theta(s)}w(s)^2
+                  \mathscr G(s)\,ds\le\mathscr E(0).
+\end{equation}
+If the base is a homotopy four-sphere and the same unshifted
+sequence $t_n\uparrow T_*$ has
+$\sup_M\Psi(A(t_n))\le P_0$ and
+$\operatorname{diam}(M,g_{A(t_n)})\le D_0$ as in
+Theorem~\ref{thm:late-critical-accumulation}, then
+$T_*=\infty$. Either $\Theta(t)\to\infty$, or the finite test
+\begin{equation}\label{eq:finite-margin-entry-test}
+ \mathscr E(0)e^{-\gamma_*\Theta(t_n)}<\delta(P_0,D_0)
+\end{equation}
+at one qualifying unshifted slice, suffices for smooth
+exponential convergence of the actual original pair to one
+fixed round pullback. The available native exponent is
+$\lambda_1(G_0)/2$, with datum-dependent constants at each
+fixed spatial order.
+\end{corollary}
+\begin{proof}
+On every compact smooth time slab, the positive curvature
+quotient has a positive minimum eigenvalue. The extreme
+Rayleigh quotients and compactness of the base make the
+spatial supremum of $\rho$ continuous. Hence $w$ is
+continuous, $0\le w\le5/2$, and $\Theta'=w$.
+At times with $w>0$, apply
+\eqref{eq:native-spectral-margin} with
+$r=\sup_M\rho(Q(A(t)))$ and $\epsilon=w(t)$.
+At times with $w=0$, including ratios above $7/2$, use
+$\mathscr D\ge0$. The native energy identity yields
+\[
+ \mathscr E'+\gamma_*w\mathscr E+\beta_*w^2\mathscr G\le0.
+\]
+Multiplication by $e^{\gamma_*\Theta}$ and integration
+prove \eqref{eq:accumulated-margin-energy}. No derivative
+of $w$ or division by the energy is used. The round and
+zero-energy cases are included.
+
+The geometric sequence alone gives infinite original
+lifespan by Theorem~\ref{thm:late-critical-accumulation}.
+Divergent $\Theta$ gives zero limiting energy, so that
+theorem supplies the actual fixed round tail. In the
+finite test, the actual smooth datum $A(t_n)$ is strictly
+below the uniform energy threshold and has the supplied
+geometric bounds. Theorem~\ref{thm:uniform-intrinsic-entry}
+and recentered original smooth uniqueness identify its
+entire global round-convergent tail with the supplied
+trajectory. The fixed bundle pullback and time translation
+preserve the native exponent and the stated dependence of
+the higher-norm constants.
+\end{proof}
+
+This test observes accumulated past margin, and requires no
+positive margin at the finite observation slice. Its round
+conclusion implies $\sup_M\rho(Q(t))\to1$ and $w(t)\to5/2$,
+so total weighted occupation is then infinite. At the level
+of scalar time conditions, the profile
+$\widehat R(t)=7/2-(1+t)^{-1}$ has divergent integrated margin
+but finite occupation below each fixed $r<7/2$. This compares
+the assumptions only; it is not a constructed flow. Neither
+criterion establishes that its spectral or geometric
+hypotheses occur, supplies a waiting time, or constructs
+initial definite data.
+% Assessed margin combination: E231/E232 with H_linear discharged
+% by E229/E230; inherited entry and fixed-tail scope unchanged.
+
 
 \subsection{A critical initial norm controlling the whole-time strain budget}
 \label{subsec:critical-budget}
@@ -9909,8 +10457,15 @@ The last identity also follows from self-adjointness of
  \langle G,q_*\rangle=\frac{385}{432}.
 \]
 
-Use the normalized self-dual triple and quaternion conventions
-of this subsection. With \(F_i^*=-s_i\Sigma_i^*\), take
+Use the ordered self-dual triple
+\[
+ (\Sigma_1^*,\Sigma_2^*,\Sigma_3^*)
+  =(dx^{14}+dx^{23},dx^{24}+dx^{31},dx^{34}+dx^{12}).
+\]
+It obeys \(\Sigma_i^*\wedge\Sigma_j^*=2\delta_{ij}dV_{\rm eucl}\)
+and \(J_iJ_j=-\delta_{ij}I+\epsilon_{ijk}J_k\), with
+\(J_i\xi=\iota_{\xi^\sharp}\Sigma_i^*\).
+With \(F_i^*=-s_i\Sigma_i^*\), take
 \[
  U=-\tfrac d2q_*-G+10Y,\qquad
  A_b=\tfrac12x^aF^*_{ab}
@@ -9930,9 +10485,17 @@ To check it at this specified spectrum, for
 \]
 For \(\delta F_i=dx^a\wedge V_i^a\), orthonormality of
 \(J_jdx^a\) gives \(\delta\mathcal M=\delta Q=U\).
-The affine bracket contraction gives
+For \(\alpha_a=\iota_{\partial_a}F^*/2\), the affine
+curvature Hessian is \([\alpha_a\wedge\alpha_b]\). The
+symmetrized pairing of its internal component \(i\) with
+\(\Sigma_j^*\) is
+\[
+ \tfrac14\sum_{r,t}\epsilon_{irt}\epsilon_{jrt}s_rs_t\delta_{ab}
+       =\tfrac{d}{2s_i}\delta_{ij}\delta_{ab}.
+\]
+The quotient differential therefore gives
 \(\partial_a\partial_b\mathcal M=-dI\delta_{ab}/2\),
-hence its quotient Hessian is \(dq_*\delta_{ab}/2\).
+and its trace correction gives \(dq_*\delta_{ab}/2\).
 This identity uses only the quaternion products and positive
 \(s_i\), with \(\sum_i s_i^2=3\). Thus the full connection has
 \[
@@ -9941,6 +10504,8 @@ This identity uses only the quaternion products and positive
  \qquad
  \partial_a\partial_bQ(0)=\delta_{ab}(-G+10Y).
 \]
+The center plane and volume give
+\(\widehat g(0)=g_{\rm eucl}\).
 Its exact curvature satisfies Bianchi. The additional
 covariant Hessian term
 \(\tfrac12[\operatorname{ad}(F^*_{ab}),Q_*]\) is skew in
@@ -9949,6 +10514,10 @@ covariant Hessian term
 Taylor's theorem and openness of the positive simple-spectrum
 class give the asserted strict maximum on a whole smaller ball.
 
+Evaluate the derivative at \(\sigma=0\) on the local
+variation \(A+\sigma V_{\rm old}(A)\), whose first curvature
+derivative is \(d_A V_{\rm old}(A)\). The instantaneous
+identity uses this tangent and the spatial identities at the datum.
 At this zero-first-derivative jet, the full old flow equation
 \eqref{flow:nonlinear-Q} gives
 \(Q_t=4\mathscr L_{Q_*}(-G+10Y)-24dq_*\).
@@ -9983,7 +10552,7 @@ commutator and the native scaling.
 \subsection{Concentration on the closed round bundle}
 \label{subsec:closed-concentration}
 
-The preceding pointwise distinction has a separate global static example.
+The following global static example concerns concentration of the defect and strain.
 On the standard round $S^4$ with $K=1$, choose radial gauge near $p$ and
 one smooth cutoff $\chi\in C_c^\infty(B_1)$ equal to one near zero.
 Set $c=(1,-1,0)$ and

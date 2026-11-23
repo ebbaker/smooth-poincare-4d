@@ -597,13 +597,47 @@ refresh procedure.
 | SP4-CME-E216 | E | Sol 6.2/ultra — rendered spectral manuscript QA | [Request](handoffs/SP4-CME-E216_REQUEST_v1.md) | Assessed; repair verified, 2026-11-23 | [148-page disposition](../reviews/E208_E216_SPECTRAL_MANUSCRIPT_DISPOSITION_20261123.md); all-page visual coverage |
 
 | SP4-CME-B104 | B | Selected lead — sharp stationary spectral region | [Decision](../brainstorm/notes/B104_STATIONARY_SPECTRAL_RANGE_20261123.md) | Decided, 2026-11-23 | Candidate rho≤7/2 from exact axial endpoint |
-| SP4-CME-E218 | E | Sol 6.2/ultra — bounded stationary region certificate | [Request](handoffs/SP4-CME-E218_REQUEST_v1.md) | Returned; E219 audit issued, 2026-11-23 | [E218 note](../notes/218_STATIONARY_SPECTRAL_RANGE_TEST_20261123.md); full region certificate, algebra only |
+| SP4-CME-E218 | E | Sol 6.2/ultra — bounded stationary region certificate | [Request](handoffs/SP4-CME-E218_REQUEST_v1.md) | Assessed with corrected v2, 2026-11-23 | [E218/E219 assessment](../reviews/E218_E219_SHARP_STATIONARY_ASSESSMENT_20261123.md); sharp algebraic region only |
 
 | SP4-CME-E217 | E | Sol 6.2/ultra — independent spectral-ratio jet audit | [Request](handoffs/SP4-CME-E217_REQUEST_v1.md) | Assessed, 2026-11-23 | [E215/E217 assessment](../reviews/E215_E217_SPECTRAL_RATIO_ASSESSMENT_20261123.md); direct reaction independently checked |
 
 | SP4-CME-B105 | B | Selected lead — sharp-boundary applications | [Decision](../brainstorm/notes/B105_SHARP_STATIONARY_APPLICATIONS_20261123.md) | Framed conditionally, 2026-11-23 | Closed stationary/late theorem; strict subregion quantitative estimates |
 
-| SP4-CME-E219 | E | Sol 6.2/ultra — independent sharp certificate audit | [Request](handoffs/SP4-CME-E219_REQUEST_v1.md) | Issued, 2026-11-23 | Independent exact polynomial conversion and equality locus |
-| SP4-CME-E220 | E | Sol 6.2/ultra — conditional sharp spectral applications | [Request](handoffs/SP4-CME-E220_REQUEST_v1.md) | Issued, 2026-11-23 | H_sharp retained; closed stationary/late and strict quantitative scopes |
+| SP4-CME-E219 | E | Sol 6.2/ultra — independent sharp certificate audit | [Request](handoffs/SP4-CME-E219_REQUEST_v1.md) | Assessed, 2026-11-23 | [E218/E219 assessment](../reviews/E218_E219_SHARP_STATIONARY_ASSESSMENT_20261123.md); all1511 coefficients verified |
+| SP4-CME-E220 | E | Sol 6.2/ultra — conditional sharp spectral applications | [Request](handoffs/SP4-CME-E220_REQUEST_v1.md) | Assessed, 2026-11-23 | [E220/E222 assessment](../reviews/E220_E222_SHARP_APPLICATIONS_ASSESSMENT_20261123.md); H_sharp discharged |
 
-| SP4-CME-E221 | E | Sol 6.2/ultra — local spectral-ratio manuscript audit | [Request](handoffs/SP4-CME-E221_REQUEST_v1.md) | Issued, 2026-11-23 | Frozen new local proposition; normal PDF remains verified148-page checkpoint |
+| SP4-CME-E221 | E | Sol 6.2/ultra — local spectral-ratio manuscript audit | [Request](handoffs/SP4-CME-E221_REQUEST_v1.md) | Assessed; precision repairs applied, 2026-11-23 | [E221 audit](../reviews/E221_SPECTRAL_RATIO_MANUSCRIPT_AUDIT_20261123.md); normal PDF remains verified148-page checkpoint |
+
+| SP4-CME-E222 | E | Sol 6.2/ultra — independent sharp applications audit | [Request](handoffs/SP4-CME-E222_REQUEST_v1.md) | Assessed, 2026-11-23 | [E220/E222 assessment](../reviews/E220_E222_SHARP_APPLICATIONS_ASSESSMENT_20261123.md); scopes and native factors checked |
+
+| SP4-CME-B106 | B | Selected lead — endpoint speed-only absorption | [Decision](../brainstorm/notes/B106_ENDPOINT_SPEED_ABSORPTION_TEST_20261123.md) | Decided, 2026-11-23 | Test radical mixed form at one sharp endpoint |
+| SP4-CME-E223 | E | Sol 6.2/ultra — endpoint radical mixed-form test | [Request](handoffs/SP4-CME-E223_REQUEST_v1.md) | Assessed, 2026-11-23 | [E223/E225 assessment](../reviews/E223_E225_ENDPOINT_ABSORPTION_ASSESSMENT_20261123.md); pointwise fixed-speed obstruction only |
+
+| SP4-CME-E224 | E | Sol 6.2/ultra — sharp spectral manuscript audit | [Request](handoffs/SP4-CME-E224_REQUEST_v1.md) | Assessed; precision repairs applied, 2026-11-23 | [E224 audit](../reviews/E224_SHARP_SPECTRAL_MANUSCRIPT_AUDIT_20261123.md); final combined PDF verification pending |
+
+| SP4-CME-E225 | E | Sol 6.2/ultra — independent endpoint absorption audit | [Request](handoffs/SP4-CME-E225_REQUEST_v1.md) | Assessed, 2026-11-23 | [E223/E225 assessment](../reviews/E223_E225_ENDPOINT_ABSORPTION_ASSESSMENT_20261123.md); independent exterior reconstruction |
+
+| SP4-CME-B107 | B | Selected lead — strict-interior absorption limit | [Decision](../brainstorm/notes/B107_STRICT_INTERIOR_ABSORPTION_LIMIT_20261123.md) | Decided, 2026-11-23 | Distinguish endpoint-only jets from locally pinched interior data |
+| SP4-CME-E227 | E | Sol 6.2/ultra — one-parameter absorption degeneration | [Request](handoffs/SP4-CME-E227_REQUEST_v1.md) | Assessed, 2026-11-23 | [E227/E228 assessment](../reviews/E227_E228_STRICT_INTERIOR_ASSESSMENT_20261123.md); local strictly pinched witnesses and necessary blow-up |
+
+| SP4-CME-E228 | E | Sol 6.2/ultra — independent strict-interior audit | [Request](handoffs/SP4-CME-E228_REQUEST_v1.md) | Assessed, 2026-11-23 | [E227/E228 assessment](../reviews/E227_E228_STRICT_INTERIOR_ASSESSMENT_20261123.md); direct independent Bianchi check |
+
+| SP4-CME-B108 | B | Selected lead — effective spectral margin | [Decision](../brainstorm/notes/B108_LINEAR_SPECTRAL_MARGIN_20261123.md) | Decided, 2026-11-23 | Quantify the existing Bernstein support; no new region search |
+| SP4-CME-E229 | E | Sol 6.2/ultra — linear stationary coercivity | [Request](handoffs/SP4-CME-E229_REQUEST_v1.md) | Assessed, 2026-11-23 | [E229/E230 assessment](../reviews/E229_E230_LINEAR_COERCIVITY_ASSESSMENT_20261123.md); effective linear coefficient with delta0=1 |
+
+| SP4-CME-E231 | E | Sol 6.2/ultra — conditional margin-weighted flow | [Request](handoffs/SP4-CME-E231_REQUEST_v1.md) | Assessed; H_linear discharged, 2026-11-23 | [E231/E232 assessment](../reviews/E231_E232_MARGIN_FLOW_ASSESSMENT_20261123.md); native margin-weighted energy and conditional geometric entry |
+
+| SP4-CME-E230 | E | Sol 6.2/ultra — independent linear coercivity audit | [Request](handoffs/SP4-CME-E230_REQUEST_v1.md) | Assessed, 2026-11-23 | [E229/E230 assessment](../reviews/E229_E230_LINEAR_COERCIVITY_ASSESSMENT_20261123.md); independent determinant-first floor verification |
+
+| SP4-CME-E232 | E | Sol 6.2/ultra — independent margin-weighted flow audit | [Request](handoffs/SP4-CME-E232_REQUEST_v1.md) | Assessed; wording precision in consumers, 2026-11-23 | [E231/E232 assessment](../reviews/E231_E232_MARGIN_FLOW_ASSESSMENT_20261123.md); H_linear discharged separately |
+
+| SP4-CME-E233 | E | Sol 6.2/ultra — absorption manuscript integration audit | [Request](handoffs/SP4-CME-E233_REQUEST_v1.md) | Assessed; source released, 2026-11-23 | [E233 audit](../reviews/E233_ABSORPTION_MANUSCRIPT_AUDIT_20261123.md); no repair needed |
+
+| SP4-CME-B109 | B | Selected lead — all-ratio local scalar test | [Decision](../brainstorm/notes/B109_ALL_RATIO_LOCAL_MAXIMUM_TEST_20261123.md) | Decided, 2026-11-23 | One explicit simple-spectrum family at every r>1 |
+| SP4-CME-E235 | E | Sol 6.2/ultra — all-ratio local maximum derivation | [Request](handoffs/SP4-CME-E235_REQUEST_v1.md) | Returned; E236 audit issued, 2026-11-23 | [E235](../notes/235_ALL_RATIO_LOCAL_MAXIMUM_TEST_20261123.md); exact cubic local family only |
+
+| SP4-CME-E234 | E | Sol 6.2/ultra — effective margin manuscript audit | [Request](handoffs/SP4-CME-E234_REQUEST_v1.md) | Issued, 2026-11-23 | Source frozen; mathematical integration and static checks |
+
+| SP4-CME-E236 | E | Sol 6.2/ultra — independent all-ratio local audit | [Request](handoffs/SP4-CME-E236_REQUEST_v1.md) | Issued, 2026-11-23 | Exact general-r scalar/curvature/velocity computation and local scope |
+
+| SP4-CME-E226 | E | Sol 6.2/ultra — rendered margin manuscript QA | [Request](handoffs/SP4-CME-E226_REQUEST_v1.md) | Issued, 2026-11-23 | Frozen155-page PDF; all-page coverage plus detailed additions |

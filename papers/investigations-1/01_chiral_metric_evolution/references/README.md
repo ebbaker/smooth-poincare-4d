@@ -97,3 +97,7 @@ The [E200 primary comparison](../reviews/E200_SOURCE_COMPARISON_ASSESSMENT_20261
 The [23 November E207 comparison](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#stationary-spectral-comparison--e207-23-november-2026) records exact Fine defect-energy passages and distinguishes volume-action, hypersymplectic and fixed-metric Yang–Mills results. New R43/R44 are adjacent/historical records, not theorem inputs. The stationary and late spectral manuscript statements use the separately assessed branch proofs.
 
 The quantitative and occupation-time consumers E209–E214 are recorded in the [canonical special-case source notes](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#quantitative-and-occupation-time-consumers--e209-through-e214). They reuse the inspected Fine gradient and assessed branch arguments, with no new source version or proof-inspection claim.
+
+The [sharp spectral consumer record](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#sharp-spectral-consumers--e218-through-e224) distinguishes the new branch7/2 certificate and analytical consequences from the unchanged Fine/FKP source inputs.
+
+The [endpoint absorption consumer record](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#endpoint-absorption-consumers--e223-through-e228) links the branch pointwise/local results to the unchanged inspected Fine gradient; no integrated failure or new source inspection is asserted.

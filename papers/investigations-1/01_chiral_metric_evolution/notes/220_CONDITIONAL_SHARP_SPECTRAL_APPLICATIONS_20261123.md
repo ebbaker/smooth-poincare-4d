@@ -213,12 +213,14 @@ one sequence \(t_n\uparrow T_*\) has
 \[
  \sup_M\Psi(A(t_n))\le P_0,\qquad
  \operatorname{diam}(M,g_{A(t_n)})\le D_0,
- \qquad P_0\ge0,\quad 0<D_0<\infty,\quad P_0<\infty .
+ \qquad 0\le P_0<\infty,\quad 0<D_0<\infty .
  \tag{6}
 \]
 Here \(\Psi\) is E179's native real transport density
 \(\|D_\Gamma\mathcal R\|_{L_f^2}+\|\mathcal R\|_{L_f^2}^2\)
-with unit internal sphere of area \(4\pi\), chiral
+with \(\mathcal R_Y(f)=P_{f^\perp}T_Y f\) and
+\(T_Y=(Q^{-1/2}D_Y^AQ\,Q^{-1/2})_0/2\),
+on the unit internal sphere of area \(4\pi\), using the chiral
 Levi–Civita horizontal derivative and live base covector
 derivative. These bounds already give \(T_*=\infty\) by
 the assessed finite-endpoint continuation implication.
@@ -413,11 +415,12 @@ gives
  |\Xi|\le4\sqrt{M_*}|D^AS|+4\sqrt2 M_*|b|
        \le 2\left(\sqrt{M_*/m}+\sqrt6\,M_*/m\right)|X| .
 \]
-The weighted trace projection gives
-\(0\le\langle X_a,\mathscr L_QX_a\rangle
-\le4M_*|X_a|^2\le12|X_a|^2\) by subtracting the
-nonnegative weighted trace square from the unprojected
-principal pairing. Since \(|q|^2=\operatorname{tr}Q^2-3
+In terms of \(C_a\) from (2), the principal pairing is
+\(4\sum_{i,j}\lambda_i |(C_a)_{ij}|^2\). Equivalently,
+it is \(4\sum_{i,j}\lambda_i |(X_a)_{ij}|^2\) minus
+\(4\operatorname{tr}(QX_a)^2/3\). Thus it is nonnegative
+and bounded by \(4M_*|X_a|^2\le12|X_a|^2\). Since
+\(|q|^2=\operatorname{tr}Q^2-3
 \le6\), the full commutator bound is
 \(2|q||X||\Xi|\). In particular
 \[

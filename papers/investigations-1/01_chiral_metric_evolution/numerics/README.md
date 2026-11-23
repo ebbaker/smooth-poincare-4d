@@ -5,3 +5,7 @@ Keep branch-specific symbolic or numerical code and small reproducible execution
 Before a new run, record a finite question, fixed inputs, equations and normalization, method, work limit, expected failure modes, and acceptance test in a task or packet. Record versions, actual outputs, and errors afterward. A pre-existing verification script is inherited evidence, not a new run or independent review during setup.
 
 Large outputs follow [LARGE_FILES.md](../../../../LARGE_FILES.md). Live task status belongs in [REGISTER.md](../research-progress/REGISTER.md).
+
+### Sharp stationary certificate — 23 November 2026
+
+Use [e218_stationary_spectral_range_v2.py](e218_stationary_spectral_range_v2.py) for the sharp7/2 Bernstein certificate and endpoint check, with the single canonical [JSON record](e218_stationary_spectral_range.json). The frozen [v1](e218_stationary_spectral_range.py) preserves the original E218 input; two intermediate endpoint basis coefficients are corrected in v2, with the same final certificate output. The [independent E219 verifier](e219_sharp_stationary_verify.py) reconstructs all1511 coefficients, their inverse expansion and all actual endpoint basis/radical checks. The [assessment](../reviews/E218_E219_SHARP_STATIONARY_ASSESSMENT_20261123.md) records exact identities, correction and scope. The finite grid is a screen, while the polynomial coefficients prove the closed-region sign.
