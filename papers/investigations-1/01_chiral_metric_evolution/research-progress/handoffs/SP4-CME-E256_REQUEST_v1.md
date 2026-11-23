@@ -1,0 +1,15 @@
+# SP4-CME-E256 request v1 — All-cap integration and convention audit
+
+23 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Fixed E packet under B116, configured gpt-6.2-sol/ultra. Selected lead model/effort preserved/unavailable; independent runtime attestation unavailable.
+
+Audit frozen manuscript labels prop:fixed-ratio-cap-crossing and cor:strict-ratio-cap-crossing, their proof compression and new abstract/introduction summaries against assessed E248–E252. Independently inspect the new E252 continuity argument (you did not author it), especially common graph-H6 bootstrap, high-order bounds, cutoff removal, fixed-reference L2 differences/interpolation, order-two generators, C1 recovery maps and original curvature continuity, fixed time/lower parameter quantifiers. Check static corner/complement transfer and all six quotients, no arbitrary-r global conclusion. Also execute external-review C2/C3 only: derive relation of the Section3 eta basis to Section4 displayed graph bases, orientations/quaternion signs and the round-compatible versus Fine-positive language; give minimal located clarifications, without rewriting formula conventions globally. C1 and C6 editorial/source actions are root-owned. The manuscript source is frozen during your audit; no edits, renders or new external theorem search. Check references and canonical consumer scopes (new R45 comparison not yet inserted), preserve protected round section4501bytes SHA c0e411175c77e13e96aa8ab41f55e2c2593f30e72a5c44560e1baf65068a3fab. Record prior authorship and what is independently checked. Write only reviews/E256_ALL_CAP_MANUSCRIPT_AND_CONVENTION_AUDIT_20261123.md and research-progress/handoffs/SP4-CME-E256_RETURN_v1.md. Return located repairs/pass and release frozen source at completion.
+
+| Frozen input | SHA-256 |
+| --- | --- |
+| [B116_EXTERNAL_REVIEW_RESPONSE_20261123.md](../../brainstorm/notes/B116_EXTERNAL_REVIEW_RESPONSE_20261123.md) | 9cb30b05b6b6747986c9659ae0a07fdb81931016a89bbb32a34a267e5d0893a1 |
+| [EXTERNAL_MANUSCRIPT_REVIEW_20261123.md](../../reviews/EXTERNAL_MANUSCRIPT_REVIEW_20261123.md) | cf05c05f100feaa709e2e7ffd7f288a88939427b71a0c68177b5dcf39358b404 |
+| [chiral_curvature_and_metric_evolution.tex](../../manuscript/chiral_curvature_and_metric_evolution.tex) | 88553fd2f9d66740b6b236b0adcdbf3da2cf0a8f2c47085e7e54f232e3fa4808 |
+| [E248_E250_FIXED_RATIO_CAP_ASSESSMENT_20261123.md](../../reviews/E248_E250_FIXED_RATIO_CAP_ASSESSMENT_20261123.md) | e740bb27791bf82eac9c160dc7f41570282d989c11cde67a18380382e34cfa19 |
+| [E251_E252_STRICT_CAP_ASSESSMENT_20261123.md](../../reviews/E251_E252_STRICT_CAP_ASSESSMENT_20261123.md) | ebd7c5bbfffb322b2c8e824e307a441188586d0ed76cf8e41fd706d58667e1bb |
+| [251_UNIFORM_PARAMETER_CAP_FAMILY_20261123.md](../../notes/251_UNIFORM_PARAMETER_CAP_FAMILY_20261123.md) | 04b4730a801c9eb789142deec7263f5d413b2887a7f728e3e7fbf4a6661956fa |
+| [252_CONDITIONAL_PRESCRIBED_STRICT_CAP_FLOW_20261123.md](../../notes/252_CONDITIONAL_PRESCRIBED_STRICT_CAP_FLOW_20261123.md) | 877c8b9ad4e4aa37f3907d268055b973b238771ccb20f8a69b2722722beadb1e |

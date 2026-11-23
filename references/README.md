@@ -119,3 +119,4 @@ The [E207 canonical receipt](SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#stationa
 | --- | --- | --- |
 | R43 | Hanwen Liu, *A Self-Dual Frame Formalism of the SO(3) Yang-Mills Theory*, arXiv:2607.14204v2, 8 September 2026 | Selected fixed-metric Yang–Mills equation and frame passages; [canonical record](SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#r43--liu-self-dual-frame-comparison). |
 | R44 | Joel Fine, joint work credited with Dmitri Panov, Oberwolfach Report33/2011, p.1891 | Historical contributed abstract, separately from R15; [canonical record](SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#r44--fine-oberwolfach-historical-abstract). |
+| R45 | Fine–He–Yao, *Convergence of the hypersymplectic flow on T4 with T3-symmetry*, arXiv2404.15016v1,23April2024 | Selected symmetric-normal-form equation and statement; [canonical comparison](SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#r45--fineheyao-symmetric-hypersymplectic-comparison). |

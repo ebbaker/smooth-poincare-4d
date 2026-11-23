@@ -1,0 +1,9 @@
+# E258 — Closing PDF layout verification, amended request v2
+
+23 November 2026, America/New_York. For Edward B. Baker III with OpenAI assistance. Lead selected model/effort preserved and unavailable. Helper configured gpt-6.2-sol/ultra, independent runtime attestation unavailable. This is final verification before the author-requested research pause.
+
+Frozen TeX: 607705 bytes SHA256 8129fc53f5e4e0af38d8598caff867c5d8997f7246ec7a30fcafbee74d0a6b06, [source](../../manuscript/chiral_curvature_and_metric_evolution.tex). Frozen scratch PDF /private/tmp/cme-broad-20261122-build/chiral_curvature_and_metric_evolution.pdf: 164 pages, 1398426 bytes, SHA256 57fb44a07a8f369b7d18e86895d889d7dc8e4a60456b872f77da3449f518f556. Build has no warnings or over/underfull boxes. E257 has returned and the lead applied exactly its two localized corrections (Fine Conjecture1.7 existence versus deformation route; phi endpoint argument). This v2 supersedes v1 only as the final QA input. Preserve v1 as provenance; if hashes change, stop and report.
+
+Read applicable PDF skill, render and visually inspect every page for layout, optionally use exact pixel comparisons with the previously inspected global-cap-final-all-001..159 images in the same scratch directory. Inspect new or materially changed pages at readable resolution, particularly front matter/convention bridge, all-cap proofs and comparison, and effective static recognition. Report coverage and issues honestly. You may create scratch images/records outside repo under the build directory. Do not edit TeX, rebuild or promote the PDF, or touch shared records. No mathematical research or external sources.
+
+Write only reviews/E258_FINAL_REVIEW_PDF_QA_20261123.md and research-progress/handoffs/SP4-CME-E258_RETURN_v1.md, with exact input hashes, image paths and coverage. Stop on return.

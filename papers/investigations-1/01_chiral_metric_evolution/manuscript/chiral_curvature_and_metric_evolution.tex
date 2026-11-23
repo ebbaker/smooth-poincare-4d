@@ -33,7 +33,7 @@
 \newcommand{\dd}{\mathrm d}
 \newcommand{\id}{\operatorname{id}}
 
-\title{Chiral curvature and metric evolution\\near the round four-sphere}
+\title{Chiral curvature and metric evolution\\on oriented four-manifolds}
 \author{Edward B. Baker III}
 \date{Working draft --- 23 November 2026}
 % Background revision: 21 November 2026 (America/New_York), for Edward B. Baker III,
@@ -70,14 +70,11 @@ curvature without an assumed eigenvalue floor.
 
 A compatible parabolic connection--curvature formulation gives
 local adjusted solutions for small continuous pairs, smooth at
-positive times. Its value radii are uniform on compact positive
-ranges. Smooth original flow extends at finite endpoints with
+positive times. Smooth original flow extends at finite endpoints with
 finite temporal strain budget, or with positive uniform pair
 accumulation modulo bundle automorphisms. On a homotopy
 four-sphere, bounded intrinsic transport density and diameter
-along one late sequence suffice: a harmonic-radius argument,
-a smooth ALE core obstruction and a topological positivity
-test supply the required compactness.
+along one late sequence suffice.
 
 On smooth homotopy four-spheres, sufficiently small initial
 defect energy within a family of
@@ -95,12 +92,12 @@ round-compatible class when the eigenvalue ratio of $Q$ is at
 most $7/2$. The same closed bound on the limsup of spatial
 suprema along that bounded late sequence therefore gives
 convergence of the actual original flow. On each fixed strict
-spectral subregion, a gradient bound controls energy by the
-accumulated time spent there; explicit numerical constants are
-available for ratio at most $9/4$.
-Effective spectral margins give a weighted energy estimate.
-Every finite ratio cap above one nevertheless fails under smooth
-short-time original evolution on the standard four-sphere.
+spectral subregion, an effective gradient bound gives a
+margin-weighted energy estimate.
+Every prescribed finite closed or strict ratio cap above one fails
+under smooth short-time original evolution on the standard four-sphere.
+An explicit small-strain condition also recognizes a supplied smooth
+homotopy four-sphere by a static sphere theorem.
 
 Separately, a smooth embedded regular holomorphic sphere,
 whose fixed $W^{1,8}\to L^8$ linearization has a bounded right
@@ -294,6 +291,22 @@ four-manifold, convergence modulo gauge and diffeomorphisms for sufficiently
 small $L^2_k$ perturbations ($k\geq3$) of a perfect connection~\cite{Fine2011}.
 A broader pure-connection formulation of Einstein geometry appears
 in~\cite{FineKrasnovPanov2014}.
+Fine's Conjecture~1.7 asks whether a compact four-manifold carrying a
+positive definite connection admits an ASD Einstein metric of positive
+scalar curvature. Deformation to a perfect connection is discussed as one
+possible route \cite[Conjecture 1.7 and Section 1.5]{Fine2011}. Fine--Krasnov--Panov's Conjecture~4.8
+includes both the resulting base classification and a stronger
+classification of the associated symplectic Fano six-manifold
+\cite[Conjecture 4.8]{FineKrasnovPanov2014}. Our conditional recognition
+statements concern the base conclusion. They keep separate the existence
+of suitable initial data on an arbitrary smooth homotopy four-sphere.
+Their metric counterpart, Conjecture~4.10, assumes
+$(s/12+W^+)^2>\Ric_0^*\Ric_0$ and $s/12+W^+>0$;
+Theorem~4.9 identifies the first inequality as definiteness of the
+positive chiral Levi--Civita connection, with sign determined by
+$\det(s/12+W^+)$ \cite[Theorem 4.9 and Conjecture 4.10]{FineKrasnovPanov2014}.
+Here the projective-plane alternative has the noncomplex orientation.
+These are the conjectures as stated in the cited versions.
 Our purpose is to make explicit how curvature reconstruction and the
 connection flow compare with metric evolution, including the first
 nonlinear discrepancies.
@@ -477,7 +490,13 @@ establish global preservation, compactness and convergence outside the
 stated intrinsic and round-basin hypotheses. In particular, the transverse-traceless correspondence
 does not identify the complete nonlinear connection flow with Ricci flow.
 
-The development is self-contained at the level of the differential-geometric calculations. Standard results used for orientation---the twistor integrability criterion, characteristic-number identities, and the conformal developing-map construction---are stated where needed. We give analytical proofs of the perturbative and reconstruction identities; secondary perturbation examples follow the main evolution theory. No numerical computation is needed for any proposition.
+We give the differential-geometric calculations and the perturbative and
+reconstruction identities explicitly. Analytical and classification inputs
+are cited at their points of use. Some spectral positivity arguments also
+use finite exact computer-algebra certificates over $\mathbb Q$ or
+$\mathbb Q(\sqrt{14})$, with their reductions and coefficient signs
+specified below. Floating-point experiments are separate checks and do
+not supply those proofs.
 
 \subsection{Notation and analytical conventions}\label{sec:notation}
 All manifolds and fields are smooth and real unless another regularity class or a complexification is explicitly stated. In particular, Section~\ref{subsec:rough-local} specifies continuous initial pairs and their weak derivatives. The base is an oriented four-manifold, closed whenever an integral is used. The standard sphere is used for perturbation and spectral statements. We use the curvature convention in which a round orthonormal coframe has
@@ -1024,7 +1043,16 @@ the two-form bases
  \end{split}
  \label{rec:form-bases}
 \end{equation}
-Thus $|\Sigma_i^\pm|^2=2$ and
+Relative to the eta triples displayed in Section~3, these graph triples are
+\[
+ \Sigma_{\rm gr}^+=(\Sigma_{\eta,3}^+,-\Sigma_{\eta,2}^+,\Sigma_{\eta,1}^+),
+ \qquad
+ \Sigma_{\rm gr}^-=(\Sigma_{\eta,3}^-,-\Sigma_{\eta,2}^-,-\Sigma_{\eta,1}^-).
+\]
+Their signed permutation matrices have determinants $+1$ and $-1$.
+For the contraction maps $J_i\alpha=\iota_{\alpha^\sharp}\Sigma_i$,
+the quaternion epsilon term therefore reverses in the anti-self-dual
+triple. The wedge normalizations are unchanged. Thus $|\Sigma_i^\pm|^2=2$ and
 \begin{equation}
  \Sigma_i^\pm\wedge\Sigma_j^\pm
     =\pm2\delta_{ij}\,dV_g,
@@ -1032,7 +1060,8 @@ Thus $|\Sigma_i^\pm|^2=2$ and
  \label{rec:wedge-normalization}
 \end{equation}
 In particular, $\Sigma_i^\pm/\sqrt2$ are orthonormal; the unnormalized
-bases in \eqref{rec:form-bases} are used in all matrix formulas below.
+bases in \eqref{rec:form-bases} are used in the graph-coordinate
+formulas unless an adapted frame is specified.
 We use a row convention for graph matrices: a matrix $T=(T_{ij})$
 represents the plane spanned by
 $\Sigma_i^++T_{ij}\Sigma_j^-$.  It represents a linear map from
@@ -1196,10 +1225,12 @@ round with sectional curvature $K$ and its chiral connection satisfies
 $F_{0i}=-K\Sigma_{0i}^+$, then
 $\mu_{A_0}=2K^2dV_{g_0}$ and $\widehat g_{A_0}=g_0$.
 
-There are two choices for the orientation of the curvature map
-$E\to\Lambda_{\widehat g_A}^+$.  From now on we use the component
-containing the round connection just described.  Its curvature map
-reverses the internal orientation.  Define
+In the displayed self-dual coframe orientation the round curvature map
+$E\to\Lambda_{\widehat g_A}^+$ has matrix $-KI$. For the Lie-algebra
+orientation of the target chiral ideal, represented by the ordered
+$-\eta_i^+/2$, it has the positive sign of Fine's Definition~1.6
+\cite[Definition 1.6]{Fine2011}. We use this sign and call it
+round-compatible. Define
 \begin{equation}
  S=Q^{1/2},\qquad
  \Sigma_A=-K^{-1}S^{-1}F_A.
@@ -6487,7 +6518,9 @@ $M$ and smooth principal $SO(3)$ bundles $P\to M$ carrying
 the selected native definite data. There is also one
 $\varepsilon_{\rm univ}>0$, independent of $M,P$, such that
 $\sup_M\Psi(A)<\varepsilon_{\rm univ}$ alone gives those
-conclusions. Both thresholds are non-effective.
+conclusions. Both dynamical thresholds are non-effective.
+Corollary~\ref{cor:effective-static-recognition} gives a separate explicit
+threshold for the static conclusion that the base is standard $S^4$.
 \end{theorem}
 \begin{proof}
 The implication is vacuous for an empty bounded family.
@@ -10658,7 +10691,9 @@ smooth local datum. It is not asserted to solve the flow.
 The result excludes a nonpositive scalar contact-direction
 inference based only on a local ratio maximum at any of
 these thresholds. The next proposition addresses the global questions
-for a separate near-round family.
+for a separate near-round family; Proposition~\ref{prop:fixed-ratio-cap-crossing}
+and Corollary~\ref{cor:strict-ratio-cap-crossing} then give actual short-time
+crossings for every prescribed finite cap above one.
 % Assessed all-r local family: E235/E236, 23 November 2026.
 
 
@@ -11092,8 +11127,9 @@ $\min_I|G_r|^2>0$. Uniform continuity of that Hessian gives
 one ball with a common strictly negative Hessian bound.
 For the annular model the Gram floor, corner gaps and positive
 partial derivatives have positive minima on $I$; one closed
-convex corner works for all parameters. On its compact
-complement the continuous difference $r-\rho(Q_{\rm mod})$
+convex corner works for all parameters. On the compact complement
+$\mathcal P\setminus U_\eta$ of the relatively open corner from the
+preceding proof, the continuous difference $r-\rho(Q_{\rm mod})$
 has a positive minimum. The actual-curvature error and its
 $u,v$ derivatives are $O_I(R)$. Thus one small radius meets
 all the core, corner and complement requirements. It gives
@@ -11116,16 +11152,17 @@ of one fixed bundle Laplacian. Choose $b>0$ so the graph
 $H^6$ ball of radius $b$ lies in the cutoff-one region, and
 shrink $I$ so every initial difference has norm at most
 $b/2$. The spectral approximations preserve this initial
-bound. On their bootstrap region
-$Y=\|\widehat A_r-\bar A\|_{H^6}^2\le b^2$, the estimate
+bound. For a spectral approximation $a_{r,N}$ use the graph energy
+$Y=\|\Lambda^6a_{r,N}\|_2^2$. On its bootstrap region
+$Y\le b^2$, the estimate
 in Section~\ref{subsec:fixed-adjoint} gives
 $Y'\le K(1+Y)$ uniformly. Choosing one sufficiently short
 $T>0$ keeps $Y\le b^2/2$ before any possible exit. Higher
 even Sobolev bounds use the same $C^2$ bound and the
 uniformly bounded smooth traces, hence hold on this same
 interval. Passing the spectral approximations to the
-smooth limits preserves these bounds and removes the
-cutoff uniformly.
+smooth limits, strongly in $H^7$ using the even $s=8$ estimate,
+preserves the $H^6$ bound and removes the cutoff uniformly.
 
 All these norms use the fixed reference geometry. For two
 adjusted solutions, their difference $w$ satisfies a linear
@@ -11174,6 +11211,24 @@ The interval and all estimates may depend on $r_0$ and
 its chosen compact parameter neighborhood.
 \end{proof}
 
+
+The distinction from hypersymplectic flow is concrete. For a smooth closed
+hypersymplectic triple on $T^4$ with the standard $T^3$ symmetry and the
+symmetric normal form of Fine--He--Yao's Definition~1.4, the
+determinant-one Gram matrix satisfies
+\[
+ \partial_tQ_{ij}=\Delta_gQ_{ij}-\tfrac13\mathcal T Q_{ij},
+\]
+where $\mathcal T\ge0$ is twice the squared torsion norm
+\cite[Proposition 2.15, equation (2.6)]{FineHeYao2024SymmetricHypersymplecticFlow}.
+It follows directly from that equation that a closed ratio cap is preserved
+on every smooth compact time slab in this symmetry class: for fixed
+Euclidean unit vectors $a,b$, the function
+$a^TQa-rb^TQb$ satisfies the same scalar equation. Initially nonpositive
+values remain nonpositive by the scalar maximum principle, for every
+$a,b$. This is our comparison inference from their equation. The evolving
+closed triple and its fixed labels differ from the definite-connection
+system examined here.
 
 \subsection{Concentration on the closed round bundle}
 \label{subsec:closed-concentration}
@@ -13254,6 +13309,85 @@ Thus the condition cannot be obtained by changing the normalization.
 Existence of such data and a flow argument producing this condition remain
 separate unresolved questions.
 
+\begin{corollary}[An effective static small-strain recognition criterion]
+\label{cor:effective-static-recognition}
+Let $M$ be a smooth closed oriented homotopy four-sphere carrying a smooth
+positive-plane, round-compatible definite $SO(3)$ connection. Use the
+native reconstructed Riemannian metric, the negative Killing pairing,
+and $\mathcal G=|\nabla^AT|+|T|^2$. Set
+\[
+ \varepsilon_{\rm static}
+   =\frac{3}{4(2+\sqrt3)(78+8\sqrt3)}.
+\]
+Either of the conditions
+\[
+ \sup_M\mathcal G\le\varepsilon_{\rm static},\qquad
+ \sup_M\Psi\le\frac{4\pi}{5(1+4\sqrt3)}\varepsilon_{\rm static}
+\]
+implies that $M$ is diffeomorphic to standard smooth $S^4$.
+The density $\Psi$ uses the complete direction sphere of area $4\pi$
+and the chiral horizontal derivative specified above.
+\end{corollary}
+\begin{proof}
+We first evaluate the minimum $p_*$ left in the proof of
+Proposition~\ref{prop:small-intrinsic-strain}. On its compact set,
+$\lambda_i\ge0$, $\sum\lambda_i=3$, $\max\lambda_i\le5/2$, and
+$t=|\lambda-I|\ge1/2$. If $m=\max\lambda_i\in[1,5/2]$, then
+\[
+ \sum\lambda_i^2\le m^2+(3-m)^2\le13/2,
+ \qquad 1/2\le t\le\sqrt{7/2}.
+\]
+For $z=\lambda-I$, $\sum z_i=0$ and
+$z_1z_2z_3\le t^3/(3\sqrt6)$. When the product is positive,
+write $z=(a,-b,-c)$ up to permutation, where $a=b+c>0$;
+$b c\le a^2/4$ and $t^2\ge3a^2/2$ prove the bound. A nonpositive
+product already satisfies it. Therefore
+\[
+ \mathcal P(\lambda)=3t^2-9z_1z_2z_3
+       \ge\phi(t):=3t^2(1-t/\sqrt6).
+\]
+The derivative $\phi'(t)=3t(2-3t/\sqrt6)$ changes from positive
+to negative at its unique interior zero, so $\phi$ takes its minimum
+at an endpoint of the indicated interval. At the lower endpoint,
+$\phi(1/2)=(12-\sqrt6)/16<3/4$; at the upper endpoint,
+$\phi(\sqrt{7/2})=\tfrac{21}{2}(1-\sqrt{7/12})>21/10$.
+The spectrum $I+(2,-1,-1)/(2\sqrt6)$ is admissible and attains
+the lower bound, so
+\[
+ p_*=(12-\sqrt6)/16.
+\]
+The three entries defining $\varepsilon_0$ in that proposition obey
+\[
+ \varepsilon_{\rm static}<\frac1{312}<\frac1{288}
+ <\frac{\sqrt{p_*}}{72\sqrt6}<\frac1{72}
+ <\frac1{36}<\frac{\sqrt5}{36}.
+\]
+Indeed $\sqrt3>3/2$ makes the first denominator greater than $936$,
+while $p_*>9/16>3/8$ and $p_*<1$ give the middle comparisons.
+Thus $\varepsilon_0=\varepsilon_{\rm static}$ is permitted.
+
+That proposition yields $|q|\le72\mathcal G$. At the earlier
+normalization $K=1/2$, the reconstructed metric equals the native
+metric, and the constant internal rescaling leaves the endomorphism
+norms of $q,T,\nabla^AT$ unchanged. Hence
+\[
+ \mathfrak R_{1/2}
+ \le(78+8\sqrt3)\mathcal G
+ \le\frac{3}{4(2+\sqrt3)}<\frac12.
+\]
+Corollary~\ref{cor:static-transport-sphere} applies Chang--Gursky--Yang's
+sphere theorem with its stated norm conversion and positive Yamabe
+hypothesis \cite[Theorem A and Remarks 1--2]{ChangGurskyYang2003}.
+Finally, $\mathcal G\le5(1+4\sqrt3)\Psi/(4\pi)$ gives the alternative
+condition.
+\end{proof}
+
+This explicit criterion recognizes the base from supplied data. It does
+not assert that the supplied metric is round or the connection perfect,
+and its constant is not a dynamical convergence threshold.
+% Combination suggested by N4 of EXTERNAL_MANUSCRIPT_REVIEW_20261123.md;
+% exact minimum and normalization checked independently in E254/E255.
+
 \subsection{A Yamabe bound from critical strain}
 \label{subsec:strain-yamabe}
 
@@ -14268,6 +14402,12 @@ J. Fine and C. Yao,
 \emph{A report on the hypersymplectic flow},
 arXiv:2001.11755v2, 6 February 2020.
 \url{https://arxiv.org/abs/2001.11755v2}.
+
+\bibitem{FineHeYao2024SymmetricHypersymplecticFlow}
+J. Fine, W. He, and C. Yao,
+\emph{Convergence of the hypersymplectic flow on $T^4$ with $T^3$-symmetry},
+arXiv:2404.15016v1, 23 April 2024.
+\url{https://arxiv.org/abs/2404.15016v1}.
 
 \bibitem{Ludewig2019}
 M. Ludewig,

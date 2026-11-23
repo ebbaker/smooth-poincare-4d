@@ -1,0 +1,11 @@
+# E253 — Cap-crossing source comparison assessment
+
+23 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Selected lead model/effort preserved and unavailable; helper configured gpt-6.2-sol/ultra, independent runtime attestation unavailable.
+
+Accept the [bounded E253 comparison](E253_CAP_CROSSING_PRIMARY_COMPARISON_20261123.md), SHA4ca0f72ec3ae1a6e7f3a9522450385e626ed221241df87d7832e1354cf20eb7c; return SHA963455f8178f9aa92bd7f171c2ee1950f6306f1f498fb85a06eb5e63f0e54910. The lead read the full receipt and independently checked the newly identified Fine–He–Yao v1 metadata, symmetric normal form and Theorem1.5, Proposition2.15/(2.6) and its direct proof. The author bibliography independently confirms the R26 journal citation. Existing Fine/FKP dependencies retain their earlier assessed scopes.
+
+Four queries and six selected passages do not establish priority. None in that finite set asserts the branch's actual all-fixed-r closed-cap result for Fine's original connection defect flow. Fine–He–Yao's det-one matrix has the same scalar Laplacian and scalar reaction on fixed triple entries; applying the scalar maximum principle to a^TQa-r b^TQb for fixed unit pairs proves ratio-cap preservation within that symmetric-normal-form triple equation. This is a displayed inference, not a theorem quoted as such from the paper. It neither supplies a comparison theorem for the connection flow nor contradicts the branch counterexamples.
+
+One canonical adjacent record R45 and one BibTeX entry are added. The inspected source is arXiv2404.15016v1, posted23April2024; its HTML display date24August2026 is separately recorded. ArXiv supplies JLMS111(2025), no.6, but final journal text/DOI/article number remain unverified. R26 retains the inspected 2020v2 body while the author-verified PAMQ15(4)(2019),1219–1260 citation is appended. Its journal body/DOI remain unverified; a publisher issue route failed. No new reading copy is retained.
+
+[Canonical comparison and R45](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#r45--fineheyao-symmetric-hypersymplectic-comparison) · [R26 update](../../../../references/SOURCE_NOTES_CME_CONTINUATION_COMPARISON_20261122.md#r26-publication-metadata-follow-up--e253).

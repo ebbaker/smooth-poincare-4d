@@ -1,0 +1,9 @@
+# E257 — Final bounded review integration check
+
+23 November 2026, America/New_York. For Edward B. Baker III with OpenAI assistance. Lead selected model/effort preserved and unavailable; fixed E helper configured gpt-6.2-sol/ultra, independent runtime attestation unavailable. User has requested a pause: this is closing verification, not renewed research.
+
+Check the final source compression of E254/E255 static recognition, C1/C2/C3/C5/C6 editorial repairs, all-cap E256 precisions, and the R45 symmetric hypersymplectic comparison. No new research, external browsing, numerical optimization, or broad theorem audit. Source is frozen at 607522 bytes, SHA256 20e3aedb1332d69e579c7f3dbd4d875de72b12104a74c683f32fbec411df5133: [TeX](../../manuscript/chiral_curvature_and_metric_evolution.tex). Lead owns all shared edits.
+
+Read [E254/E255 assessment](../../reviews/E254_E255_EFFECTIVE_STATIC_ASSESSMENT_20261123.md), [E256 audit](../../reviews/E256_ALL_CAP_MANUSCRIPT_AND_CONVENTION_AUDIT_20261123.md), and the canonical [B116/R45 source records](../../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md). Audit your E254 compression honestly as author checking, not independent derivation. Check exact rational separators and old/native norm use. Confirm projected graph-energy and compact-complement repairs from E256. Check source support and separation of the static recognition constant from dynamical thresholds. Protected round block must remain 4501 bytes, SHA256 c0e411175c77e13e96aa8ab41f55e2c2593f30e72a5c44560e1baf65068a3fab. Do not edit TeX or shared records.
+
+Write only reviews/E257_FINAL_REVIEW_INTEGRATION_AUDIT_20261123.md and research-progress/handoffs/SP4-CME-E257_RETURN_v1.md. Report exact inputs, evidence scope, findings and hashes. Release freeze at return. Stop at this checkpoint.

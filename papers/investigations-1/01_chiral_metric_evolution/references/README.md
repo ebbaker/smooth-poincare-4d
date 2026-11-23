@@ -114,3 +114,9 @@ The [global near-round cap consumer](../../../../references/SOURCE_NOTES_CME_SPE
 The [fixed-ratio cap consumer](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#fixed-ratio-cap-consumers--e248-through-e250) records the all-finite-r short-time result and exact inherited Fine/Taylor dependencies, with no new primary inspection.
 
 The [prescribed strict-cap consumer](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#prescribed-strict-cap-consumers--e251e252) records the compact-family and common-time continuity extension with unchanged source inputs.
+
+The [E253 comparison and R45](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#r45--fineheyao-symmetric-hypersymplectic-comparison) adds one versioned adjacent triple-flow record. [R26 metadata](../../../../references/SOURCE_NOTES_CME_CONTINUATION_COMPARISON_20261122.md#r26-publication-metadata-follow-up--e253) distinguishes the inspected preprint from author-reported journal details.
+
+The [effective static recognition consumer](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#effective-static-recognition-consumer--e254e255) retains the exact CGY hypotheses and credits the external-review observation separately from the new exact algebra. [Review context checks](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#external-review-context-checks--b116) register Fine/FKP conjecture, sign and historical attribution passages.
+
+The [closing manuscript consumer record](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#closing-manuscript-consumers--review-checkpoint-23-november-2026) identifies the actual R45, conjecture-context and effective-static uses after review integration.

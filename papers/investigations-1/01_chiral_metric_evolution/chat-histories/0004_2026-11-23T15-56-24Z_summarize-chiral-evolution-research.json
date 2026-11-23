@@ -1,0 +1,182 @@
+[
+  {
+    "title": "Summarize chiral evolution research",
+    "create_time": 1795449384.881,
+    "update_time": 1795449643.265,
+    "mapping": {
+      "root": {
+        "id": "root",
+        "message": null,
+        "parent": null,
+        "children": [
+          "01a2091f-76b2-7773-951b-fb03c4e2d0a8"
+        ]
+      },
+      "01a2091f-76b2-7773-951b-fb03c4e2d0a8": {
+        "id": "01a2091f-76b2-7773-951b-fb03c4e2d0a8",
+        "message": {
+          "id": "01a2091f-76b2-7773-951b-fb03c4e2d0a8",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795449386.675,
+          "update_time": 1795449386.675,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Please read /smooth-poincare-4d/papers/investigations-1/01_chiral_metric_evolution/brainstorm/notes/PAUSE_AND_BRAINSTORM_AGENDA_20261123.md. Can you summarize the research at the present moment, and outline the main bottlenecks currently. Please use relevant equations when necessary, and feel free to reference the manuscript for further details.\n"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a2091f-709d-7293-9ad8-892803e0160b",
+            "phase": null,
+            "created_at_utc": "2026-11-23T15:56:26.675Z",
+            "completed_at_utc": "2026-11-23T15:56:26.675Z",
+            "created_at_local": "2026-11-23T10:56:26.675-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "root",
+        "children": [
+          "msg_0bf30273dfc084f0016b04622cb5cc87d295c05daee5d08f08"
+        ]
+      },
+      "msg_0bf30273dfc084f0016b04622cb5cc87d295c05daee5d08f08": {
+        "id": "msg_0bf30273dfc084f0016b04622cb5cc87d295c05daee5d08f08",
+        "message": {
+          "id": "msg_0bf30273dfc084f0016b04622cb5cc87d295c05daee5d08f08",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795449388.741,
+          "update_time": 1795449389.577,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "I’ll read the pause agenda, the progress register, and the manuscript sections it points to, then summarize what the investigation has established and where it is blocked."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a2091f-709d-7293-9ad8-892803e0160b",
+            "phase": "commentary",
+            "created_at_utc": "2026-11-23T15:56:28.741Z",
+            "completed_at_utc": "2026-11-23T15:56:29.577Z",
+            "created_at_local": "2026-11-23T10:56:28.741-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "01a2091f-76b2-7773-951b-fb03c4e2d0a8",
+        "children": [
+          "msg_0bf30273dfc084f0016b04627d475487d2a3c6f5652c7f1380"
+        ]
+      },
+      "msg_0bf30273dfc084f0016b04627d475487d2a3c6f5652c7f1380": {
+        "id": "msg_0bf30273dfc084f0016b04627d475487d2a3c6f5652c7f1380",
+        "message": {
+          "id": "msg_0bf30273dfc084f0016b04627d475487d2a3c6f5652c7f1380",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795449469.352,
+          "update_time": 1795449471.424,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The agenda identifies two results that change the picture. Every fixed curvature-ratio cap can be crossed by the flow, while a separate explicit small-strain criterion can recognize the standard sphere from a single connection. I’ll check the precise hypotheses for both."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a2091f-709d-7293-9ad8-892803e0160b",
+            "phase": "commentary",
+            "created_at_utc": "2026-11-23T15:57:49.352Z",
+            "completed_at_utc": "2026-11-23T15:57:51.424Z",
+            "created_at_local": "2026-11-23T10:57:49.352-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "msg_0bf30273dfc084f0016b04622cb5cc87d295c05daee5d08f08",
+        "children": [
+          "msg_0bf30273dfc084f0016b0463293e1487d28611c35999722672"
+        ]
+      },
+      "msg_0bf30273dfc084f0016b0463293e1487d28611c35999722672": {
+        "id": "msg_0bf30273dfc084f0016b0463293e1487d28611c35999722672",
+        "message": {
+          "id": "msg_0bf30273dfc084f0016b0463293e1487d28611c35999722672",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795449641.676,
+          "update_time": 1795449643.265,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The manuscript separates finite-time continuation from convergence. A bound on accumulated strain can extend a smooth solution, while a round limit also requires a way to exclude nonperfect critical limits."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a2091f-709d-7293-9ad8-892803e0160b",
+            "phase": "commentary",
+            "created_at_utc": "2026-11-23T16:00:41.676Z",
+            "completed_at_utc": "2026-11-23T16:00:43.265Z",
+            "created_at_local": "2026-11-23T11:00:41.676-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "msg_0bf30273dfc084f0016b04627d475487d2a3c6f5652c7f1380",
+        "children": []
+      }
+    },
+    "current_node": "msg_0bf30273dfc084f0016b0463293e1487d28611c35999722672",
+    "conversation_id": "01a2091f-6faf-79e1-8f17-85abb3ead1d7",
+    "id": "01a2091f-6faf-79e1-8f17-85abb3ead1d7",
+    "archive_metadata": {
+      "format": "ChatGPT-style conversation mapping; local conversion, not an official provider export",
+      "source_kind": "Local Codex paginated SQLite history; canonical public-text adapter",
+      "message_timestamps": "Recorded source start/completion times, in seconds since Unix epoch and ISO 8601",
+      "coverage": "All completed user and assistant text messages recorded through capture, including commentary; current response may still be in progress",
+      "omitted_record_types": [
+        "system and developer instructions",
+        "internal reasoning",
+        "tool calls and outputs",
+        "subagent messages",
+        "binary and runtime state"
+      ],
+      "source_public_message_records": 4,
+      "model_configurations": [],
+      "turns": {
+        "01a2091f-709d-7293-9ad8-892803e0160b": {
+          "status": "in_progress",
+          "started_at": 1795449385
+        }
+      },
+      "source_create_time": 1795449384.881,
+      "latest_source_kind": "Local Codex paginated SQLite history; canonical public-text adapter",
+      "first_captured_at_utc": "2026-11-23T15:57:41.719Z",
+      "first_captured_at_local": "2026-11-23T10:57:41.719-05:00",
+      "history_number": 4,
+      "captured_at_utc": "2026-11-23T16:02:56.136Z",
+      "captured_at_local": "2026-11-23T11:02:56.136-05:00"
+    }
+  }
+]

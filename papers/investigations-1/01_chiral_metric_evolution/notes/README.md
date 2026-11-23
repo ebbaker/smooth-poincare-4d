@@ -159,3 +159,5 @@ The [sole register](../research-progress/REGISTER.md) owns status and links lead
 - [248 — Fixed-ratio radial model](248_FIXED_RATIO_RADIAL_MODEL_20261123.md) and [250 — Conditional fixed-cap local flow](250_CONDITIONAL_FIXED_CAP_LOCAL_FLOW_20261123.md), with [E248–E250 assessment](../reviews/E248_E250_FIXED_RATIO_CAP_ASSESSMENT_20261123.md): H_fixedcap discharged; every fixed finite closed cap r>1 fails under actual short-time original evolution. Arbitrary-r global behavior remains open.
 
 - [251 — Uniform parameter cap family](251_UNIFORM_PARAMETER_CAP_FAMILY_20261123.md) and [252 — Conditional prescribed strict-cap flow](252_CONDITIONAL_PRESCRIBED_STRICT_CAP_FLOW_20261123.md), with [assessment](../reviews/E251_E252_STRICT_CAP_ASSESSMENT_20261123.md): H_family discharged; every prescribed finite strict cap r0>1 fails in short time.
+
+- [254 — Effective static recognition](254_EFFECTIVE_STATIC_RECOGNITION_20261123.md), with [E254/E255 assessment](../reviews/E254_E255_EFFECTIVE_STATIC_ASSESSMENT_20261123.md): exact simplex minimum and explicit supplied-data G/Psi thresholds, prompted by external review N4; dynamical thresholds remain separate.

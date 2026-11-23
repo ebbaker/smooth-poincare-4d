@@ -1,5 +1,7 @@
 # Chiral curvature and metric evolution
 
+**23 November review checkpoint:** final review integration and verification are complete; research is paused at the author's request. Do not continue automatically. The [brainstorm agenda](brainstorm/notes/PAUSE_AND_BRAINSTORM_AGENDA_20261123.md) distinguishes the new all-finite closed/strict cap crossings and effective static recognition from the remaining initialization and global-control problems. Historical checkpoints below retain their original evidence scope; the sole register owns current status.
+
 **Primary smooth four-sphere investigation.** Understand the nonlinear
 definite-connection flow, using generalized isothermal coordinate and
 reconstruction methods on the real sphere bundle as a central candidate
@@ -49,4 +51,6 @@ The [verified 148-page spectral checkpoint](reviews/E208_E216_SPECTRAL_MANUSCRIP
 
 The [verified157-page sharp-margin checkpoint](reviews/E224_E239_SHARP_MARGIN_MANUSCRIPT_DISPOSITION_20261123.md) extends the stationary/late bound to7/2, quantifies its strict margin, and adds pointwise absorption limits and all-ratio local tests. The accumulated positive margin gives conditional round convergence with the stated late geometric bounds. [E238](reviews/E238_SOURCE_COMPARISON_ASSESSMENT_20261123.md) records bounded primary comparisons without a novelty claim. B111 tests closed near-round realizations separately.
 
-The [verified159-page cap-crossing checkpoint](reviews/E246_E247_GLOBAL_CAP_MANUSCRIPT_DISPOSITION_20261123.md) adds actual smooth original flows whose exact initial near-round ratio caps are immediately exceeded. These trajectories still lie in the global round-attracting basin. The [fixed-r assessment](reviews/E248_E250_FIXED_RATIO_CAP_ASSESSMENT_20261123.md) now establishes actual short-time failure of every finite closed cap r>1; manuscript integration is pending. B114 tests every prescribed strict threshold using a compact parameter family.
+The [verified159-page cap-crossing checkpoint](reviews/E246_E247_GLOBAL_CAP_MANUSCRIPT_DISPOSITION_20261123.md) adds actual smooth original flows whose exact initial near-round ratio caps are immediately exceeded. These trajectories still lie in the global round-attracting basin. The [fixed-r assessment](reviews/E248_E250_FIXED_RATIO_CAP_ASSESSMENT_20261123.md) now establishes actual short-time failure of every finite closed cap r>1; the new manuscript integration also includes E251/E252 crossing of every prescribed strict threshold. The final164-page review checkpoint is verified; see the sole register.
+
+The [final164-page review checkpoint](reviews/FINAL_REVIEW_CHECKPOINT_DISPOSITION_20261123.md) integrates every prescribed finite closed/strict cap crossing, the effective static recognition criterion and the scoped Claude review corrections. References, build, protected source and all-page layout checks passed. Research is paused for [brainstorming](brainstorm/notes/PAUSE_AND_BRAINSTORM_AGENDA_20261123.md).

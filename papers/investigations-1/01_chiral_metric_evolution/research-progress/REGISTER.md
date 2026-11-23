@@ -4,9 +4,11 @@ Prepared for Edward B. Baker III with OpenAI Codex assistance, 21 November 2026 
 
 This is the only current task-status register for this branch. The [plan](../research-plan/PLAN.md) owns task specifications; overviews, handoffs, and continuation notes route here rather than maintaining competing status ledgers. Re-read this file before updating it.
 
-## Research activation — 22 November 2026
+## Research activation and requested pause — 22–23 November 2026
 
-The author explicitly invoked the broad continuation prompt in the current research chat. The foundation, nonlinear equation and real transport packets have been assessed; successive bounded Sol 6.2/ultra checks continue; the selected lead owns review, B decisions and shared integration. Actual lead model/effort unavailable. Prior setup entries below remain historical.
+The author explicitly invoked the broad continuation prompt in the current research chat. The foundation, nonlinear equation and real transport packets have been assessed; successive bounded Sol 6.2/ultra checks were completed; the selected lead owns review, B decisions and shared integration. Actual lead model/effort unavailable. Prior setup entries below remain historical.
+
+The author requested a pause after the Claude Fable 5.2 review checkpoint on 23 November. Final source/PDF verification and handoff are complete; research is paused and no new research packets are to be opened. See the [review response](../reviews/EXTERNAL_REVIEW_RESPONSE_20261123.md) and [brainstorm agenda](../brainstorm/notes/PAUSE_AND_BRAINSTORM_AGENDA_20261123.md). This instruction overrides automatic broad continuation.
 
 ## Setup state
 
@@ -671,9 +673,17 @@ refresh procedure.
 | SP4-CME-E249 | E | Sol 6.2/ultra — independent fixed-r model verification | [Request](handoffs/SP4-CME-E249_REQUEST_v1.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E248_E250_FIXED_RATIO_CAP_ASSESSMENT_20261123.md); independent derivation without E248 access |
 | SP4-CME-E250 | E | Sol 6.2/ultra — conditional fixed-cap local evolution | [Request](handoffs/SP4-CME-E250_REQUEST_v1.md) | Assessed; H_fixedcap discharged, 2026-11-23 | [Assessment](../reviews/E248_E250_FIXED_RATIO_CAP_ASSESSMENT_20261123.md); actual local crossing for each finite r |
 
-| SP4-CME-B114 | B | Selected lead — prescribed strict caps | [Decision](../brainstorm/notes/B114_PRESCRIBED_STRICT_CAPS_20261123.md) | Proposed, 2026-11-23 | Compact-parameter static family and common-time local continuity |
-| SP4-CME-E251 | E | Sol 6.2/ultra — uniform static parameter family | [Request](handoffs/SP4-CME-E251_REQUEST_v1.md) | Issued, 2026-11-23 | One fixed cutoff radius on a compact interval about each r0>1 |
-| SP4-CME-E252 | E | Sol 6.2/ultra — conditional prescribed strict-cap flow | [Request](handoffs/SP4-CME-E252_REQUEST_v1.md) | Issued, 2026-11-23 | H_family pending; derive common-time continuity from local estimates |
+| SP4-CME-B114 | B | Selected lead — prescribed strict caps | [Decision](../brainstorm/notes/B114_PRESCRIBED_STRICT_CAPS_20261123.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E251_E252_STRICT_CAP_ASSESSMENT_20261123.md); every prescribed strict cap crossed in short time |
+| SP4-CME-E251 | E | Sol 6.2/ultra — uniform static parameter family | [Request](handoffs/SP4-CME-E251_REQUEST_v1.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E251_E252_STRICT_CAP_ASSESSMENT_20261123.md); common-radius smooth family |
+| SP4-CME-E252 | E | Sol 6.2/ultra — conditional prescribed strict-cap flow | [Request](handoffs/SP4-CME-E252_REQUEST_v1.md) | Assessed; H_family discharged, 2026-11-23 | [Assessment](../reviews/E251_E252_STRICT_CAP_ASSESSMENT_20261123.md); common-time original-curvature continuity; E256 independent follow-up |
 
-| SP4-CME-B115 | B | Selected lead — actual cap-crossing literature comparison | [Decision](../brainstorm/notes/B115_CAP_CROSSING_PRIMARY_COMPARISON_20261123.md) | Decided, 2026-11-23 | Bounded attribution check for the stronger actual-flow scope |
-| SP4-CME-E253 | E | Sol 6.2/ultra — primary cap-crossing comparison | [Request](handoffs/SP4-CME-E253_REQUEST_v1.md) | Issued, 2026-11-23 | Four queries, at most six primary passages; root owns canonical integration |
+| SP4-CME-B115 | B | Selected lead — actual cap-crossing literature comparison | [Decision](../brainstorm/notes/B115_CAP_CROSSING_PRIMARY_COMPARISON_20261123.md) | Assessed, 2026-11-23 | [Source assessment](../reviews/E253_CAP_SOURCE_ASSESSMENT_20261123.md); bounded attribution scope |
+| SP4-CME-E253 | E | Sol 6.2/ultra — primary cap-crossing comparison | [Request](handoffs/SP4-CME-E253_REQUEST_v1.md) | Assessed and canonical records integrated, 2026-11-23 | [Assessment](../reviews/E253_CAP_SOURCE_ASSESSMENT_20261123.md); R45 comparison and R26 metadata recorded |
+
+| SP4-CME-B116 | B | Selected lead — external Claude review response | [Decision](../brainstorm/notes/B116_EXTERNAL_REVIEW_RESPONSE_20261123.md) | Completed; research paused by author, 2026-11-23 | [Final disposition](../reviews/FINAL_REVIEW_CHECKPOINT_DISPOSITION_20261123.md); review response,164-page verified PDF and brainstorming handoff |
+| SP4-CME-E254 | E | Sol 6.2/ultra — effective static recognition | [Request](handoffs/SP4-CME-E254_REQUEST_v1.md) | Assessed and integrated, 2026-11-23 | [Assessment](../reviews/E254_E255_EFFECTIVE_STATIC_ASSESSMENT_20261123.md); effective static recognition only |
+| SP4-CME-E255 | E | Sol 6.2/ultra — independent static recognition audit | [Request](handoffs/SP4-CME-E255_REQUEST_v1.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E254_E255_EFFECTIVE_STATIC_ASSESSMENT_20261123.md); independent exact check without E254 access |
+| SP4-CME-E256 | E | Sol 6.2/ultra — all-cap integration and convention audit | [Request](handoffs/SP4-CME-E256_REQUEST_v1.md) | Assessed; local repairs integrated, 2026-11-23 | [Audit](../reviews/E256_ALL_CAP_MANUSCRIPT_AND_CONVENTION_AUDIT_20261123.md); E252 continuity and C2/C3 conventions checked |
+
+| SP4-CME-E257 | E | Sol 6.2/ultra — final review integration check | [Request](handoffs/SP4-CME-E257_REQUEST_v1.md) | Assessed; two wording repairs integrated, 2026-11-23 | [Audit](../reviews/E257_FINAL_REVIEW_INTEGRATION_AUDIT_20261123.md); Fine existence conjecture and cubic minimum clarified |
+| SP4-CME-E258 | E | Sol 6.2/ultra — final PDF layout check | [Final amended request](handoffs/SP4-CME-E258_REQUEST_v3.md) | Assessed and promoted, 2026-11-23 | [Final disposition](../reviews/FINAL_REVIEW_CHECKPOINT_DISPOSITION_20261123.md); all164 pages covered; research paused |
