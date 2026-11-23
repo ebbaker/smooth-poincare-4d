@@ -1,0 +1,22 @@
+# SP4-CME-E205 request v1 — Conditional late spectral convergence
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Bounded E proof under B99, configured gpt-6.2-sol/ultra. Actual lead settings and independent runtime attestation unavailable.
+
+Execute only B99's conditional late-sequence theorem. Own notes/205_CONDITIONAL_LATE_SPECTRAL_CONVERGENCE_20261122.md and research-progress/handoffs/SP4-CME-E205_RETURN_v1.md. No shared edits, source search, numerics, subdelegation or new general flow claim. Disclose E179/E203 authorship. Keep H_gap explicit: every smooth positive-plane round-compatible definite critical connection on the stated closed base with sup eigenvalue ratio Q <=9/4 is perfect. E202/E203 are not yet independently assessed, and their sign claims are not assumptions to silently discharge.
+
+Work in E179's native negative-Killing internal pairing, native metric/time, positive Riemannian signature and full sphere area4pi real transport density Psi. Let A(t), t in [0,T*), be a supplied maximal smooth original flow on a fixed smooth closed connected oriented homotopy four-sphere and principal SO3 bundle, with positive curvature plane and round-compatible sign. Assume t_n increases to T*, sup_M Psi(A(t_n))<=P0 and diam(g_A(t_n))<=D0, with fixed finite constants, and limsup_n sup_M rho(Q_A(t_n))<=9/4, rho=lambda_max/lambda_min. Prove T*=infinity and smooth exponential convergence of the actual original connection/curvature pair to one fixed smooth round pullback, conditional only on H_gap in addition to these supplied assumptions.
+
+Use the assessed E179/E181 extraction and positive-time critical limit, including its uniform continuous positive pair trace at zero and exact adjusted equation. Detail why natural normalization preserves the spectral supremum and why algebraic Q continuity on a common positive value tube passes the limsup bound to the continuous trace. At every positive time V=0 but the adjusted representative may have a nonzero Lie derivative. For arbitrary epsilon>0, integrate the smooth invariant generator only on [epsilon,s0]; compactness of the principal bundle and positive orientation yield actual automorphisms there. Pullback covariance preserves rho and its supremum, so the latter is constant on all positive times in the common interval. Let epsilon decrease to zero using uniform positive trace convergence, without constructing a gauge map at zero or assuming a generator bound there. Establish native/older normalization compatibility for H_gap (Q unchanged, positive constant scaling of energy and metrics) if invoking E203 as its conditional provenance.
+
+Apply H_gap only to the smooth positive slice s0, infer E_infinity=0, and invoke the already assessed E179 fixed-round tail argument with actual map composition and native exponential rate/datum-dependent higher constants. Do not assume spectral preservation along the actual original flow, small initial or limiting energy, uniform higher derivative or map bounds, or qualifying initial data on arbitrary homotopy spheres. Check all quantifiers, common interval order, closed spectral threshold and finite-endpoint alternative. Return strongest conditional proof or exact obstruction, frozen identities and own output hashes. Stop at packet boundary.
+
+## Frozen inputs
+
+| Artifact | SHA-256 |
+| --- | --- |
+| [B99_LATE_SPECTRAL_PINCHING_CONVERGENCE_20261122](../../brainstorm/notes/B99_LATE_SPECTRAL_PINCHING_CONVERGENCE_20261122.md) | 5edfaea404f188ebb96ed51f96b76146c7f6410bffa8991a439666f3fca02a0d |
+| [179_BOUNDED_LATE_SEQUENCE_STATIONARY_LIMITS_20261122](../../notes/179_BOUNDED_LATE_SEQUENCE_STATIONARY_LIMITS_20261122.md) | 7bc0ab37b5b6a787159aaaede0aceed413306049925d965b92fbc3436f7bd5da |
+| [E179_E181_STATIONARY_ACCUMULATION_ASSESSMENT_20261122](../../reviews/E179_E181_STATIONARY_ACCUMULATION_ASSESSMENT_20261122.md) | 0c9eb889bb10092e631fb3bea7d06e0120934e6a80682e9f3a05b2d1ff7d3881 |
+| [E181_STATIONARY_ACCUMULATION_AUDIT_20261122](../../reviews/E181_STATIONARY_ACCUMULATION_AUDIT_20261122.md) | faceb91fb05e65a0f71f92749bf8a4f7fb18e0a7f6c3949d65ab042cae7e20a4 |
+| [203_CONDITIONAL_STATIONARY_PINCHING_GAP_20261122](../../notes/203_CONDITIONAL_STATIONARY_PINCHING_GAP_20261122.md) | 6b75c027d6bedd25be4b4d2be16de3c091d16577bc2b228ae04e776371a397c1 |
+| [E01_FOUNDATION_ASSESSMENT_20261122](../../reviews/E01_FOUNDATION_ASSESSMENT_20261122.md) | 83e1daa219c826454c9201776dd94542095a026d223976c3820dfe6c759045c6 |

@@ -1,0 +1,11 @@
+# E200 — Lead disposition of the bounded primary comparison
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Selected lead model/effort unavailable; E200 configured gpt-6.2-sol/ultra with independent runtime attestation unavailable. The lead read the full comparison and return and verified their hashes. The helper's inherited E186/E197 and Anderson work is disclosed in the comparison.
+
+Accepted as a two-source passage comparison, not a novelty determination. Fine v2 Theorem 3 requires supplied pointed C2 convergence and metric taming. Corollary 4 instead concerns normalized nonzero-scalar ASD Einstein metrics and gives smooth compactness, with no added Euler ceiling in its statement. The branch's stronger range of metric hypotheses requires its own extraction and C0 persistence arguments, and gives the explicitly weaker general-metric conclusion. Anderson's fixed-base Theorem 2.2 retains its injectivity hypothesis; its nearby Theorem 2.6 permits orbifold singularities. Neither selected statement alone supplies the branch's varying-base smooth comparisons under metric taming.
+
+The exact version/locator receipt is retained in the [comparison](E200_TAMED_COMPACTNESS_SOURCE_COMPARISON_20261122.md) and integrated into the [canonical record](../../../../references/SOURCE_NOTES_CME_CONTINUATION_COMPARISON_20261122.md#bounded-primary-compactness-comparison--e200). The original source-body access scope is not enlarged beyond the actual E200 passages. Anderson (2.16) is an equation in Example 2.5, not a second numbered example. Its printed injectivity coefficient is unnecessary and is not used by the branch. The older request's loose example reference remains historical; consumers use the corrected locator.
+
+The E196/E197 theorem remains assessed at its own stated hypotheses and explicit R41/R42 classification provenance. No new source supplies native metric taming or smooth Poincaré initialization. No manuscript theorem needed mathematical repair from this comparison; E195/E198 integration and rendered QA remain separate.
+
+Verified comparison SHA-256: 935435040e9e0e1fc689e3162c709edd73fbf6fbfb060305f04fdfb1fe63809c. Verified return SHA-256: 6ac33d9d5ae7732a99bfc71755976b7f460abc73dd3785c2ade122512f310f01. [Return](../research-progress/handoffs/SP4-CME-E200_RETURN_v1.md).

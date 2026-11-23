@@ -1,0 +1,9 @@
+# SP4-CME-E110 request v1 — static defect and Coulomb example manuscript audit
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Fixed E integration audit, configured gpt-6.2-sol/ultra; actual lead identifiers unavailable. Own reviews/E110_STATIC_DEFECT_MANUSCRIPT_AUDIT_20261122.md and research-progress/handoffs/SP4-CME-E110_RETURN_v1.md only.
+
+Frozen working TeX SHA-256 afa298c3f68cb8c813b3ab7074805710e1ec72d4a4e46d0219c26c8385e1041f. Consume it and notify lead that further edits may proceed. Check subsection subsec:static-defect-residual, especially prop:no-slice-defect and prop:coulomb-curvature-oscillation, against E102 hash 783daa8875728a6265b0632829d57dae4f72522897bb8f052c79cdf841260c3b, E105 audit 92a4978bd9b77bd83ce7c248dbcfc45c817dee0580eac16685f6edea51e37534, E103 hash 765a5e8870e2fb9867cae50b1220535fc75a8b374cd5efb45fd354a7eb6b5f79, and E106 audit 52d1f31836881fb18fe691b8f9cfc5f2e6d0034717f48bec38f1c58f24048ed2. The lead assessments resolve E103's historical provisional dependency status.
+
+Check native live metric notation, actual rank-five kernel/inverse change, strain inversion and fixed/live comparison, absorption and no-slice scope. Separately check actual bundle shear, nonzero window amplitude, genuine dyadic phase, first-moment error bounds requiring only C1 gauges, fixed-atlas comparison, Coulomb application and explicit full placement. Preserve the quantifier over each fixed gauge constant and large n. No inference about temporal strain or general finite placement failure is allowed.
+
+Also verify that both E107 precision edits are present: Feehan quotient versus representative hypotheses and adjoint weak/strong multiplier bounds. Check labels and citations, without building or editing the manuscript. Return precise corrections or a scoped pass with hashes and relevant authorship overlap. No new source search.

@@ -1,0 +1,11 @@
+# SP4-CME-E95 request v1 — actual round-orbit derivative and flow example
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Fixed E example under B56; configured gpt-6.2-sol/ultra, actual lead identifiers unavailable. Own notes/95_CURVED_ORBIT_DERIVATIVE_TEST_20261122.md and research-progress/handoffs/SP4-CME-E95_RETURN_v1.md only.
+
+Read B56 and verify its prescribed construction on the smooth compact oriented round S4 with the fixed positive chiral SO(3) bundle and native Riemannian normalization. Frozen inputs: E79 note SHA-256 1a88243342f6b805b82d4297043adde37e66bef632c7ca09a71f5449f52c5560; E53 note SHA-256 6c30a73e93b435c9a6414628b2125235c0d72d58a93b5919608afb67b882c312; E91 note SHA-256 d566e2d9594c1ab42af2523ebd74c25b403e58fa4146a3f9e761a964a082a7f0; E94 note SHA-256 7181861c247b0a63a70743072031e6966a24bef274d0177f75c23115861e7f5b. E91/E94 are model precedents, not a substitute for actual curvature compatibility.
+
+Construct the compactly supported base flow and equivariant bundle lift rigorously, including chart-boundary gluing and the exact inner shear. Establish uniform C0 displacement, C1 closeness and C2 growth of the maps and inverses. Prove the coefficient-pair and forcing-pair critical convergence using fixed-chart pullback formulas and a justified dyadic L8/W(1,8) interpolation bound; include all fixed frame/cutoff contributions. Use covariant exterior derivative naturality for d_A_n r_n. Identify the exact E79 solution with phi=0 and residual=0 and prove a C1 lower bound on u_n in fixed global norms.
+
+Check perfectness/Q=I/T=0, distinguishing the stationary original Fine evolution from the auxiliary horizontal flow. Derive the exact auxiliary bundle-flow conjugacy and C1 convergence to the fixed reference flow, uniformly on bounded time intervals for direct and inverse maps. State precisely the joint critical topology in which this particular solver's horizontal output is not C1-continuous. Do not claim failure of other solvers, finite slice placement, or all nonlinear critical formulations.
+
+Routine choices of nested cubes and cutoffs are allowed. No unspecified family, new strategy or source import is needed. Return full derivation or precise obstruction, hashes, metadata and limitations; no shared edits.

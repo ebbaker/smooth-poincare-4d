@@ -1,0 +1,11 @@
+# SP4-CME-E102 request v1 — intrinsic defect pinching in the value tube
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Fixed E derivation, configured gpt-6.2-sol/ultra; actual lead identifiers unavailable. Own notes/102_STRAIN_DEFECT_PINCHING_20261122.md and research-progress/handoffs/SP4-CME-E102_RETURN_v1.md only.
+
+Execute the first test in B58_DEFECT_PINCHING_AND_VERTICAL_RESIDUAL_20261122.md. Read and record its hash. Frozen inputs: E66 09ff98b37c5c4b3b84db9bc32e8745ce93b73efdc6e720a5c7d6a5b9393d0a66; E88 91277aa9a194c8ee83b4ce6434619722202844ff4400b687a842b559f709f274; E89 audit 0f3e17807d50c6c35be82c2c442a3f3fce0bc139dfbb1cd83074ced88b371484. These are fixed method inputs, not an automatic theorem on a different representation.
+
+Setting: smooth closed oriented round Riemannian S4, positive perfect chiral SO(3) reference A0, native metric, fixed negative-Killing internal norm and E88 Lorentz convention. Actual smooth A=A0+a with beta=FA-F0, ||a||C0+||beta||C0<=rho. No slice equation. Prove or precisely reject a fixed-reference estimate ||q||W1,(4,1)+||q||C0<=C ||T(A)||L4,1(g_A), q=Q(A)-I, for a sufficiently small value tube. Constants may use the round reference and tube radius, not derivatives of A or beta.
+
+Check the absence of parallel trace-free symmetric endomorphisms by the actual curvature representation. Establish the ordinary covariant inverse endpoint for that rank-five bundle, giving the actual principal symbol, kernel/coercivity, needed lower-block changes and common weak inverse identification; cite the exact checked E88/E89 method rather than claiming it automatically. Check the commutator term, fixed/live norm and volume comparison, and explicit absorption order. State the pointwise eigenvalue consequence for sufficiently small strain, including zero strain. Clarify what is internally gauge invariant and how the pointwise claim transfers to a supplied fixed smooth pullback; do not assert uniform derivative bounds under arbitrary base pullbacks.
+
+No new source or theorem import is necessary. Do not infer a full critical-pair estimate, finite slice, temporal J estimate, preserved pinching or arbitrary-sphere initialization. Return derivation and hashes, with any conceptual obstruction referred to lead. Disclose E88 authorship overlap.

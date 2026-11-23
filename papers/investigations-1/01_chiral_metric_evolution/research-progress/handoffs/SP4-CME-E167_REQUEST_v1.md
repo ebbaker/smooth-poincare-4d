@@ -1,0 +1,14 @@
+# SP4-CME-E167 request v1 — Independent minimum harmonic-radius extraction audit
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Bounded E audit under B84, configured gpt-6.2-sol/ultra; actual lead and runtime attestation unavailable. Own reviews/E167_MINIMUM_HARMONIC_RADIUS_EXTRACTION_AUDIT_20261122.md and research-progress/handoffs/SP4-CME-E167_RETURN_v1.md only. No shared edits or further delegation.
+
+Independently audit the complete E165 pre-ALE construction, not just its agreement with R29. Exact input is smooth metrics on a fixed smooth closed oriented homotopy four-sphere, bounded absolute Ricci and W+, volume lower bound and diameter upper bound, and minimum harmonic radius tending to zero. Scrutinize near-minimal normalization and radius quantifiers; local chart image ball margins and both intrinsic distance directions; packing and proper GH limit; chart injection/surjection/overlaps; weak then strong W2,p via the Ricci harmonic equation; smooth limit and transition regularity; actual globally injective smooth compact comparison embeddings and coverage of metric balls; all domains/compact margins in the cutoff-coordinate/tubular projection construction; finite total energy and volume passage; completeness; classification of flat full-volume-growth manifolds and the screw-quotient volume bound; and the Dirichlet harmonic chart contradiction without assuming convergence of harmonic radii. Identify any hidden use of injectivity or a compactness theorem whose hypotheses were not proved. A detailed gap is a useful result and must not be smoothed over by calling the construction standard. Report exact needed repairs or pass with substantive independent derivations. R29 existing primary text may be revisited; no new source campaign. Do not import BKN or assert combined no-collapse. Disclose E163/E164 source authorship and verify all frozen hashes. Stop at packet boundary.
+
+## Frozen inputs
+
+| Input | SHA-256 |
+| --- | --- |
+| [notes/165_MINIMUM_HARMONIC_RADIUS_EXTRACTION_TEST_20261122.md](../../notes/165_MINIMUM_HARMONIC_RADIUS_EXTRACTION_TEST_20261122.md) | 3d209fb8ae59fce264e641b9d655d40cffa3f73dc825b1cb55a02dbdd3ee93a2 |
+| [brainstorm/notes/B84_MINIMUM_HARMONIC_RADIUS_ALTERNATIVE_20261122.md](../../brainstorm/notes/B84_MINIMUM_HARMONIC_RADIUS_ALTERNATIVE_20261122.md) | b76959efa4ed2f4f6207a9b6b897f0f52b286adc735d2a0569a9c54ce02f13b6 |
+| [reviews/E154_METRIC_COMPACTNESS_SOURCE_ASSESSMENT_20261122.md](../../reviews/E154_METRIC_COMPACTNESS_SOURCE_ASSESSMENT_20261122.md) | ea4b36e70a665ade7fa143e97be1f3f2238db7657591f729b22b27802e4594ec |
+| [reviews/E163_TERMINAL_ALE_EXTRACTION_SOURCE_TEST_20261122.md](../../reviews/E163_TERMINAL_ALE_EXTRACTION_SOURCE_TEST_20261122.md) | fd599325e0e154f1feea7c392aafd2eaeaf7feb8282711d5df129e84b625e9c8 |

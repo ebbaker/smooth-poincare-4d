@@ -1,0 +1,7 @@
+# SP4-CME-E105 request v1 — independent static defect audit
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Fixed E audit, configured gpt-6.2-sol/ultra; actual lead identifiers unavailable. Own reviews/E105_STRAIN_DEFECT_PINCHING_AUDIT_20261122.md and research-progress/handoffs/SP4-CME-E105_RETURN_v1.md only.
+
+Audit E102 notes/102_STRAIN_DEFECT_PINCHING_20261122.md, frozen SHA-256 783daa8875728a6265b0632829d57dae4f72522897bb8f052c79cdf841260c3b, in its exact closed oriented round Riemannian S4, positive perfect chiral SO(3), native normalization and smooth value-tube setting. Read E102's request and B58 for scope. Inherited E66 hash 09ff98b37c5c4b3b84db9bc32e8745ce93b73efdc6e720a5c7d6a5b9393d0a66, E88 91277aa9a194c8ee83b4ce6434619722202844ff4400b687a842b559f709f274, E89 0f3e17807d50c6c35be82c2c442a3f3fce0bc139dfbb1cd83074ced88b371484. Check actual rank-five representation and kernel removal, local divergence blocks and endpoint extension, exact strain inversion/operator norm, fixed/live metric and measure conversion, commutator symmetry and absorption order. Neither slice equation may be used. Check all invariant and non-invariant conclusions, including zero strain. No temporal persistence or full critical-pair conclusion is allowed.
+
+Return a scoped pass with derivations or precise corrections and hashes. Disclose prior related work; you did not author E102 but authored E99's similar fixed first-order estimates. Do not edit shared files or audited sources. No new source search is needed.

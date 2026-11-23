@@ -34,3 +34,67 @@ hypotheses retain the canonical records in
 The proposed new work concerns quantitative real chart/transport comparison
 and its coupling to that flow. It does not import the different volume
 functional or hypersymplectic flow.
+
+## Activated-run source reinspection — 22 November 2026
+
+The selected lead, with actual model/effort unavailable, re-read Fine–Panov
+v2 §2.1 Proposition 2.1, §2.2 Definition 2.6, §2.3 Definition 2.9 and
+Remark 2.10 through the primary arXiv HTML. The horizontal almost complex
+structure is selected by the curvature ray. The sphere identification can
+reverse fiber orientation, so the sign must be calibrated against the
+round model before comparing complex structures. The definition alone
+supplies neither a holomorphic direction projection nor a controlled
+first-jet chart.
+
+The same local AHS PDF identified above was rendered with Poppler, PDF
+pages 12–13 (journal pp. 435–436), and read visually. Theorem 4.1 and the
+following geometric description use the Levi–Civita horizontal splitting;
+projectivization does not require global spin. The subsequent remark makes
+clear that the spin bundle and the degree-one line bundle themselves need
+the spin obstruction to vanish. Thus projective twistor geometry and a
+chosen degree-one coefficient bundle must not be conflated. On a contractible
+base patch the necessary spin lift is available; overlap covariance remains
+part of a new comparison protocol.
+
+The lead also read the earlier chiral descent manuscript's
+`prop:general-chart` and proof and the generalized isothermal manuscript's
+`lem:descent` and proof. Their holomorphic fibration, complete line family,
+and flat-partial-connection premises remain as stated above. This reinspection
+supports the forthcoming B01/B02 decisions; it does not upgrade those drafts
+to a general real reconstruction theorem.
+
+## Along-flow real comparison consumers — E137/E139/E141
+
+22 November 2026. The selected lead integrated the
+[E137 derivation](../papers/investigations-1/01_chiral_metric_evolution/notes/137_REAL_COMPARISON_TIME_CONTROL_20261122.md),
+[E139 audit](../papers/investigations-1/01_chiral_metric_evolution/reviews/E139_REAL_COMPARISON_TIME_AUDIT_20261122.md)
+and [assessment](../papers/investigations-1/01_chiral_metric_evolution/reviews/E137_E139_REAL_COMPARISON_ASSESSMENT_20261122.md)
+in manuscript subsection “Time control of the real direction-sphere comparison.”
+[E141](../papers/investigations-1/01_chiral_metric_evolution/reviews/E141_REAL_COMPARISON_MANUSCRIPT_AUDIT_20261122.md)
+checks that integration. These are new consumers of the exact Fine–Panov
+and AHS passages recorded above; no primary source was re-inspected for
+these packets, and no reading copy, source version or inspection level
+has changed.
+
+The inherited sphere-bundle construction and distinction between
+connection and metric twistor structures support the comparison's
+definitions. The time-integrated estimates are branch derivations for
+smooth actual native Fine flows in one fixed round connection/curvature
+value basin on the standard oriented four-sphere. They use the independently
+assessed intrinsic temporal strain budget. They control complete-fiber
+direction maps, inverse maps and transported vertical complex structures
+through two vertical derivatives, horizontal mismatch with one specified
+Levi–Civita base derivative, and the positive chiral curvature error.
+All sphere fibers have unit round area \(4\pi\); the native internal metric
+is the negative Killing form, \(g=2K\widehat g\), and \(\tau=2Kt\).
+The time derivative of the direction map uses fixed original \(E\)-labels,
+not an arbitrary moving self-dual frame. Exact stretch discrepancy uses
+the operator norm; derivative estimates use full component norms.
+
+The result neither imports an off-integrable holomorphic first-jet theorem
+from the initial manuscripts nor asserts pointwise \(W^+=0\). AHS retains
+its Riemannian integrability hypothesis and chirality translation. The
+smooth two-chart vertical transition is of degree two; a global degree-one
+line bundle or spin lift is not inferred. The earlier table's section
+numbers describe its historical input manuscript; the named labels are
+the stable locators for the current working manuscript.

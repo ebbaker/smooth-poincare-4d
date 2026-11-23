@@ -1,0 +1,69 @@
+# E166 — Independent audit of the smooth ALE core obstruction
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Bounded E audit under B82, configured `gpt-6.2-sol` / ultra. Independent runtime and lead setting attestation unavailable. I did not author E162, its lead assessment or B82. My prior E159 and E161 work concerned the separate geometric continuation criterion. The arguments checked here begin with the exact frozen E162 hypotheses.
+
+## Disposition
+
+Pass. A supplied connected complete smooth oriented nonflat Ricci-flat ASD four-manifold, with \(W^+=0\) in the selected orientation and a Wright ALE end, has no orientation-preserving smooth embedding of a sufficiently large full compact truncation into a closed connected smooth oriented integral homology four-sphere. The statement also holds for a supplied smooth compact core whose whole exterior is a product on its boundary. The topology argument requires this full-core hypothesis. In particular it leaves open an extraction producing only the regular part of a singular orbifold core.
+
+## Ends, separation and homology
+
+For a standard sufficiently large truncation the compact region has boundary \(Y=S^3/\Gamma_\infty\) and the whole exterior is its radial collar. Collapsing that product is a strong deformation retraction onto the core. For a full core given by a different product, interpret the product as a diffeomorphism of manifolds with boundary \(X\setminus\operatorname{int}K\simeq\partial K\times[0,\infty)\). The same retraction gives connectedness of \(K\), and one-endedness gives connectedness of \(\partial K\). The compact strips in each product make its tails cofinal. For nested tails \(A_1\supset B_1\supset A_2\supset B_2\), fix a basepoint in \(B_2\). The map \(\pi_1(A_2)\to\pi_1(B_1)\) is injective because its composition to \(\pi_1(A_1)\) is an isomorphism. It is surjective because the composition from \(\pi_1(B_2)\) is an isomorphism. This gives the needed end-group identification without identifying the two cross-section metrics or parameterizations. [Wright v2, §2][wright]
+
+For an embedded image \(U\), the complement exterior is smooth with boundary by local codimension-zero embedding charts and compactness. The connected exterior collar of \(Y=\partial U\) belongs to one component. Every component of \(\Sigma\setminus U\) is open in \(\Sigma\), is relatively closed in \(\Sigma\setminus U\), and must have closure meeting \(Y\) by connectedness of \(\Sigma\). In an exterior collar chart such a component meets the connected exterior collar, so there is only one. Thus \(V=\overline{\Sigma\setminus U}\) is a connected compact second side with the boundary orientation opposite to that on \(U\). Small open thickenings of the sides retract onto them and their intersection onto \(Y\).
+
+All groups in the two-sided calculation are integral. Finite \(\pi_1(Y)\) makes \(H_1(Y)\) finite. Oriented closed three-dimensional duality and degree-one UCT, using \(H_0(Y)=\mathbb Z\), give
+
+\[
+H_2(Y)\cong H^1(Y)\cong\operatorname{Hom}(H_1(Y),\mathbb Z)=0.
+\]
+
+The Mayer–Vietoris terms on the two sides of \(H_2(U)\oplus H_2(V)\) vanish, so each summand vanishes integrally. In degree one the vanishing \(H_2(\Sigma)=H_1(\Sigma)=0\) makes \((i_{U*},-i_{V*}):H_1(Y)\to H_1(U)\oplus H_1(V)\) an isomorphism. In particular \(\ker i_{U*}\cong H_1(V)\). In the pair LES the map \(H_2(U,Y)\to H_1(Y)\) is injective, since \(H_2(U)=0\), and its image is exactly this kernel. Integral Poincaré–Lefschetz duality gives \(H_2(U,Y)\cong H^2(U)\). In degree two UCT the Hom term vanishes, so this group is \(\operatorname{Ext}^1_{\mathbb Z}(H_1(U),\mathbb Z)\). By finite cyclic decomposition and the length-one \(\mathbb Z\)-resolution of each cyclic summand, this last group is abstractly isomorphic to \(G=H_1(U)\). Therefore \(H_1(Y)\cong G\oplus G\). For \(|G|>1\), \(\exp(G\oplus G)=\exp G\le |G|<|G|^2\), whereas a cyclic group has exponent equal to its order. The trivial \(G\) case yields only trivial \(H_1(Y)\).
+
+Positive \(b_2(X)=b_2(K)\) immediately contradicts \(H_2(U)=0\). The intersection calculation in E162 also works. The boundary is a rational homology three-sphere, so \(H_2(K;\mathbb Q)\to H_2(K,Y;\mathbb Q)\) is an isomorphism. Duality and UCT give a nonsingular symmetric rational intersection form. If the space is nonzero, polarization gives a class of nonzero self-pairing, and a multiple comes from integral homology modulo torsion. Its real Poincaré–Lefschetz dual lies in \(H^2(K,Y;\mathbb R)=H_c^2(\operatorname{int}K;\mathbb R)\), via the collar identification. A compactly supported closed representative extends smoothly by zero to \(\Sigma\) and the square integral is preserved by the oriented embedding. On \(\Sigma\) the form is exact, so the integral vanishes by Stokes. No choice of homology class represented by an embedded surface is required. The proof of nonsingularity needs only the rational homology of the boundary, so it goes through independently of the definite sign of the intersection lattice.
+
+## Classified quotient and the oriented circle
+
+Ricci flatness and the selected chirality put the restricted holonomy in \(SU(2)\). In the simply connected case it coincides with the full holonomy. Wright's account of Kronheimer's classification then gives positive \(b_2\) for each nontrivial group at infinity, by the exceptional curves of the minimal resolution. The trivial-group case is the one-monopole Gibbons–Hawking model \(\mathbb R^4\). The zero-\(b_2\), nonflat case is thus non-simply-connected. Theorem A and its proof apply to precisely the supplied smooth complete oriented Ricci-flat ASD ALE model. They identify the universal cover as a Gibbons–Hawking space and its finite deck group as \(D=C_d\), \(d>1\). Its induced base action is by rotations about a common origin. No converse to the quotient classification is needed. [Wright v2, Theorem A, §§2–3 and §8][wright]
+
+For \(k>2\), §7.2 uses the one-dimensional Lie algebra of the identity component of the triholomorphic isometry group in §7.1 to get \(f_*\partial_\theta=\pm\partial_\theta\) for each deck element. For the Eguchi–Hanson case \(k=2\), the triholomorphic Lie algebra has dimension three. The sole \((-2)\)-sphere is preserved and the free finite action on that sphere forces \(d=2\) for a nontrivial deck group, since the covering degree divides its Euler characteristic. The involution on the triholomorphic Killing fields has a real eigenline with eigenvalue \(\pm1\). The triholomorphic \(SO(3)\) rotates the eigenline to the Gibbons–Hawking generator by a conjugation of the entire order-two group. This is the circle presentation used in the computation. Once a deck map preserves the circle direction up to sign, it induces a finite-order affine isometry of the base. Averaging a finite orbit gives a fixed base point even before the positive sign is shown. A fixed monopole would fix its unique lift. Over any fixed regular base point a negative sign reverses the fiber circle, which also gives a fixed lift. Freeness therefore forces the positive sign. Preservation of the positively parametrized flow of \(\partial_\theta\) gives commutation with the principal \(S^1\) action, as needed for the fiber class. [Wright v2, §7.1 and §7.2, preprint pp. 16–19][wright]
+
+## Actual spherical end group
+
+On the cover choose a large centered sphere enclosing all \(k\) monopoles. Its circle bundle \(\widetilde Y_R\) has Chern number \(-k\) from the outward sphere relation and the \(-1\) Chern numbers around the individual monopoles. In the homotopy sequence the boundary \(\pi_2(S^2)\to\pi_1(S^1)\) is multiplication by this Chern number up to sign. Thus \(\pi_1(\widetilde Y_R)=C_k\) with positive fiber generator. The section is connected, and the free deck action gives a connected regular degree-\(d\) covering \(p:\widetilde Y_R\to Y_R\). [Wright v2, §7.1 Theorem 2][wright]
+
+There is a whole product tail on these quotiented sections. Average a connection on the circle bundle over \(D\) to retain the generator normalization and get deck-invariant horizontal lifts. The radial base field lifts equivariantly and its flow traverses each finite compact annulus. Closed bounded base regions have compact completed inverse images. Away from monopoles the fibers are compact in a locally trivial bundle. Near a monopole, \(V\asymp s^{-1}\) for base distance \(s\), and the radial horizontal length down to its unique completion point is \(O(\sqrt s)\). This gives sequential compactness across the completion points. Consequently the radial product tail is cofinal with the ALE tail, and the earlier argument identifies \(\pi_1(Y_R)\cong\Gamma_\infty\). In particular the regular cover gives the concrete extension
+
+\[
+1\longrightarrow C_k\longrightarrow\pi_1(Y_R)
+  \longrightarrow C_d\longrightarrow1.
+\]
+
+This is compatible with Wright's end extension and gives the fiber representative of its kernel. [Wright v2, §3 Proposition 1 and §7.1 Theorem 2][wright]
+
+Let \(c\) be any based loop downstairs and \(\lambda\) its lift from \(x\) to \(\delta x\). The cylinder \((z,t)\mapsto z\cdot\lambda(t)\) connects the positive fiber loops \(\beta_x\) and \(\beta_{\delta x}\), with basepoint path \(\lambda\). Since \(\delta\) commutes with \(S^1\), \(p\beta_{\delta x}=p\delta\beta_x=p\beta_x\) pointwise. Projecting the cylinder gives the based relation \([c][p\beta_x][c]^{-1}=[p\beta_x]\). This proves centrality for the actual extension. A lift of a generator of the cyclic quotient and elements of the central kernel generate the group, so it is abelian. Use its ALE representation as a finite subgroup of \(SO(4)\) acting freely on \(S^3\). The commuting unitary matrices after complexification admit a common eigenline. The character on that line is faithful, since any kernel element fixes a nonzero real or imaginary part of a common eigenvector and hence a point of \(S^3\). Its finite image in \(S^1\) is cyclic. Thus \(\Gamma_\infty\cong C_{kd}\), and the boundary of any full product core has \(H_1\cong C_{kd}\).
+
+Wright's Remark 3 gives \(\chi(X)=1+b_2(X)=1\). Table 1 gives \(\chi(\widetilde X)=k\), since the circle computation identifies the cyclic end group of the cover and the \(A_{k-1}\) row applies. The finite cover over the compact truncation lifts its strong deformation retraction and has degree \(d\), so Euler-characteristic multiplicativity follows by lifting a finite CW structure. Hence \(k=d\) and \(H_1(Y)\cong C_{d^2}\). Under the hypothetical embedding there is also a check on \(\chi(X)=1\) without Remark 3. Mayer–Vietoris makes \(H_3(Y)\to H_3(U)\) onto because \(H_3(\Sigma)=0\), while the pair fundamental class maps to the generator \([Y]\) of \(H_3(Y)\), forcing the inclusion map to be zero. Together with \(H_2(U)=0\), finite \(H_1(U)\), and \(H_4(U)=0\) for the connected compact side with boundary, this gives \(\chi(U)=1\). The nontrivial cyclic result contradicts the two-sided splitting. In fact \(G\cong C_d\) by the retraction and deck classification, so the proposed splitting would have exponent \(d\), whereas \(C_{d^2}\) has exponent \(d^2\). [Wright v2, Table 1, Remark 3 and §8][wright]
+
+## Source record and boundary of the result
+
+I reopened Evan P. Wright, *Quotients of gravitational instantons*, arXiv:1102.2442v2, 29 April 2011, on 22 November 2026. The versioned PDF and arXiv metadata were accessible. I checked Theorem A (preprint pp. 1–2), the ALE definition and Table 1 (§2, pp. 2–3), Remark 3 and Proposition 1 with proof (§3, pp. 4–5), the circle ansatz (§7.1 Theorem 2, p. 16), Corollary 1 and the free-action argument with the \(k=2\) reduction (§§7.1–7.2, pp. 17–19), and §8's proof of Corollary B (pp. 19–20). The phrase giving \(k-1\) monopoles there conflicts with §7.1 and the same proof's degree and Betti formulas. E162 consistently counts \(k\) actual monopole points. The canonical R31 separately records *Annals of Global Analysis and Geometry* 41 (2012), 91–108, DOI 10.1007/s10455-011-9272-2. The published edition's wording was outside this reinspection. One primary work, versioned PDF text and metadata, zero discovery queries and no local reading copy. [PDF][wright] · [Version record][version] · [Canonical R31][r31]
+
+Kronheimer and Gibbons–Hawking are used as stated in Wright, with Wright's quotient theorem and proof as the direct inputs. Their original works were outside E166. The argument starts with the given smooth ALE end and uses neither an ALE improvement theorem nor an energy quantization threshold. Its contradiction applies to the full compact side of each sufficiently large standard truncation, and to a specified full product core. A truncation around punctures of a singular orbifold has internal boundaries, and the integral argument for the one full end does not supply its topology. No metric compactness, injectivity estimate or extraction is established here.
+
+## Frozen inputs
+
+| Input | SHA-256 |
+| --- | --- |
+| [E166 request][req] | `3a1c8042aadf29b2faec32e86e779ce17f4aa8ff1814ebd4846d1dc8f7ad6245` |
+| [E162 note][note] | `c99bc41b15e828f54e717b9eb8250927586d2aa277c6160a6b323fd12fdddf54` |
+| [E162 assessment][assessment] | `2af867adb243f960c689967a443dc8d78279c38cd6b0c7afe4b4b611a0ab4345` |
+| [B82][b82] | `7ad5aff3e23ba3e21fbe14fd2ad5adb591831118090a6581794c0acae67abe7c` |
+
+[req]: ../research-progress/handoffs/SP4-CME-E166_REQUEST_v1.md
+[note]: ../notes/162_ALE_CORE_TOPOLOGY_TEST_20261122.md
+[assessment]: E162_ALE_CORE_TOPOLOGY_ASSESSMENT_20261122.md
+[b82]: ../brainstorm/notes/B82_ALE_CORE_TOPOLOGY_TEST_20261122.md
+[wright]: https://arxiv.org/pdf/1102.2442v2
+[version]: https://arxiv.org/abs/1102.2442v2
+[r31]: ../../../../references/SOURCE_NOTES_CME_CONTINUATION_COMPARISON_20261122.md#r31--wright-ale-quotients

@@ -1,0 +1,9 @@
+# SP4-CME-E93 request v1 — critical Coulomb theorem applicability
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Fixed E source audit under B54; configured gpt-6.2-sol/ultra. Actual lead identifiers unavailable. Own reviews/E93_CRITICAL_GAUGE_SOURCE_AUDIT_20261122.md and research-progress/handoffs/SP4-CME-E93_RETURN_v1.md only.
+
+Read B54, REFERENCE_WORKFLOW and canonical R25 in references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md. Primary published source: https://msp.org/pjm/2001/200-1/pjm-v200-n1-p05-s.pdf, Feehan, Pacific J. Math. 200(1), September 2001, 71–118, DOI 10.2140/pjm.2001.200.71. The lead checked introductory §§1.1–1.2 only. No retained reading copy. Do not replace this version with an arXiv revision without a separate record.
+
+Inspect the exact source action and regularity definitions, Theorems1.1–1.2, the critical norm definitions in §4, and the assumptions/action map of Theorems8.2/8.4 needed to delimit applicability. Read enough adjacent proof to resolve action or hypothesis ambiguity; this is not a full-paper proof audit. Compare with frozen E79 (SHA-256 1a88243342f6b805b82d4297043adde37e66bef632c7ca09a71f5449f52c5560), E88 (91277aa9a194c8ee83b4ce6434619722202844ff4400b687a842b559f709f274), and E53 critical-pair norm (6c30a73e93b435c9a6414628b2125235c0d72d58a93b5919608afb67b882c312).
+
+Return a concise original applicability assessment, exact locators and hypothesis checklist by reference rather than lengthy paraphrase. Identify fixed-base gauge versus base diffeomorphism action, the normalization/metric regime, input smallness and constants, regularity of output, and any unproved norm or quotient-distance implication. No theorem from this source is to be applied on the strength of analogous terminology. Give metadata/provenance corrections and selected inspection scope to the lead for canonical integration. No shared edits or claim of full proof verification.

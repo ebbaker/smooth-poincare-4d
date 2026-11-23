@@ -1,0 +1,24 @@
+# SP4-CME-E138 request v1 — Uniform value radius with reference-dependent time
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Bounded E analytic refinement under B72, configured gpt-6.2-sol/ultra; actual lead identifiers unavailable. Own notes/138_UNIFORM_VALUE_RADIUS_LOCAL_THEOREM_20261122.md and research-progress/handoffs/SP4-CME-E138_RETURN_v1.md only. Disclose inherited overlap. No shared edits, build or original-flow endpoint theorem.
+
+Test the following precise refinement of E41/E42 for the actual E36 coupled system on an arbitrary fixed smooth compact closed oriented four-manifold with supplied smooth positive definite references. Fix background charts/bundle and a prescribed compact positive range of reference connection/curvature values, with a uniform native metric/pairing equivalence, bounded principal array, and a uniform positive rank-one margin (choose one admissible diffusion lambda for this range). Is there a C0 datum radius epsilon>0 and X-ball radius R>0 depending only on this algebraic range and fixed background, not higher reference derivatives, such that each smooth reference has some T_ref>0 on which all continuous pairs in that radius have the E42 adjusted solution and compatibility/positive-time regularity? T_ref and smoothing constants may depend on any finite reference derivatives needed. The radius must be uniform in those derivatives. The same fixed background C0 norms or explicitly uniform equivalent norms must be used when comparing references.
+
+Audit and, if valid, prove the quantitative separation in E41: frozen Gaussian/CZ constants use only ellipticity and bounded matrices; parametrix error constants, Gårding mass costs, connection/density derivatives and cutoffs can be absorbed into the positive time. Cover multiplicity/partition counts must not force an uncontrolled radius dependence as chart scales shrink. Explicitly bound the linear Cauchy and Duhamel constants uniformly after choosing T_ref sufficiently small; do not cite the existing derivative-dependent statement as already sufficient. Work with the actual closed-slab completions, strong trace and source norms. Give a concrete finite-jet/time dependency where possible, or a precise obstruction.
+
+Then check the actual E36 coefficient inventory under reference changes: L_P and the quadratic-gradient h2 bounds and value derivatives relevant for contraction must depend only on the prescribed value range; derivative-dependent h0,h1 terms must carry T or sqrt(T) factors. Explain reference metric/connection/density derivatives and that the genuine nonstationary reference has h0(x,0) possibly nonzero. Show fixed radius choices and subsequent reference-dependent T choices in the correct order. Preserve the actual gauge, parabolicity region, distributional compatibility and uniqueness class. No arbitrary rough coefficient heat theorem is presumed.
+
+This packet has one fixed proof question. Return the fully quantified refinement or identify exactly why a uniform radius cannot be obtained by this construction. Do not infer any extension of an incoming original flow; that geometric implication is a separate packet. No new primary source expected: existing Koch–Lamm/Taylor attribution remains methodological/inherited at recorded inspection levels. If a genuinely new theorem is needed, give its exact required hypotheses to lead rather than importing it without primary verification.
+
+## Frozen inputs
+
+| Input | SHA-256 |
+| --- | --- |
+| [brainstorm/notes/B72_UNIFORM_RADIUS_ENDPOINT_RESTART_20261122.md](../../brainstorm/notes/B72_UNIFORM_RADIUS_ENDPOINT_RESTART_20261122.md) | 705449cfd3c2e25aab117d3c0402e47146a5edb8c70f77f59312f228b010e74f |
+| [notes/41_COMPACT_LINEAR_ESTIMATES_20261122.md](../../notes/41_COMPACT_LINEAR_ESTIMATES_20261122.md) | 8a35523c145e5781f2bac77163cb7f7a2972e10a69deb37f0c69c26adf573ca3 |
+| [notes/42_SMALL_VALUE_ROUGH_SYSTEM_20261122.md](../../notes/42_SMALL_VALUE_ROUGH_SYSTEM_20261122.md) | 4e1f0bcf6d9b4dd0fbd1a0c49f416154ff2b92a256502ce0bba2d7a14e36fd77 |
+| [notes/36_COUPLED_CURVATURE_SYSTEM_20261122.md](../../notes/36_COUPLED_CURVATURE_SYSTEM_20261122.md) | a1adab7273967261379aca8045d17a9773943adf1cdb8ca510b9ee2b8829097a |
+| [reviews/E41_E44_ROUGH_LOCAL_ASSESSMENT_20261122.md](../../reviews/E41_E44_ROUGH_LOCAL_ASSESSMENT_20261122.md) | cd4081efe286ebe299a911b4a79c3fe9904ec84601c9a1e6ddc0209c1fb6eb75 |
+| [reviews/E43_COMPACT_LINEAR_AUDIT_20261122.md](../../reviews/E43_COMPACT_LINEAR_AUDIT_20261122.md) | c649f1c7deef0c63acb48a37a21bf61cead23bdf9be9299287a3e0451924a43f |
+| [reviews/E44_ROUGH_SYSTEM_AUDIT_20261122.md](../../reviews/E44_ROUGH_SYSTEM_AUDIT_20261122.md) | ec0a69b82089c2c50230b590e5fcc03e57c47ce520fad78e951081133f1217b8 |
+| [notes/45_ADJUSTED_VALUE_CONTINUATION_20261122.md](../../notes/45_ADJUSTED_VALUE_CONTINUATION_20261122.md) | c42a64b67c95ae8c4e04b2cedc53936cb933dac89195344c53eaa59ba432976d |

@@ -1,0 +1,7 @@
+# B100 — Compare the stationary pinching result with primary literature
+
+23 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Conceptual B decision by the selected lead; actual model and effort unavailable.
+
+E202/E204 have returned an exact general stationary derivative certificate, and E203 applies it to critical connections with Q eigenvalue ratio at most 9/4. E205 proposes a conditional late-sequence flow consequence. Before manuscript integration, a bounded primary-source comparison should identify whether the existing connection-energy literature already states a matching pinching theorem, and keep the different connection-volume and definite-triple flows separate. This is a scope and attribution check; failure to find a theorem is not a novelty proof or a claim that a question is presently open.
+
+Issue E207 to recheck the exact inspected Fine2011 v2 critical-point question and gradient equation, then compare at most six directly relevant primary candidates found in at most four targeted searches. The helper records exact source/version/access/locator receipts in its own audit for lead integration into the canonical reference records. Existing canonical identities are reused. No new theorem is imported and no primary copy is overwritten. The selected algebraic threshold and convergence hypotheses remain fixed. The lead decides any subsequent scientific direction.

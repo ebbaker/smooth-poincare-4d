@@ -1,0 +1,7 @@
+# B27 — Test a curvature symbol completed by the Bianchi identity
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Selected lead settings preserved; actual identifiers unavailable. Conceptual B decision.
+
+The corrected gauge depends algebraically on connection and curvature values, but the endpoint still needs regularity. A possible next object is a curvature equation supplemented by a multiple of d_A* d_A F, which vanishes for actual curvatures by Bianchi. Before claiming a nonlinear parabolic curvature system, test its frozen symbol on all eighteen two-form components. On the closed-symbol subspace im(wedge zeta), the physical gradient and horizontal gauge should give coercivity. On its orthogonal complement a Bianchi term can supply diffusion and absorb the remaining off-diagonal block.
+
+E34 is one finite-dimensional symbol calculation in Fine’s native conventions at a definite reference. Its proposed block form is [D C;0 lambda I] for unit zeta, with D positive on im(wedge zeta). A sufficiently large fixed lambda on a compact definite curvature set gives negative Hermitian evolution symbol. The vertical connection gauge contributes no curvature term of this derivative order because d_A squared is curvature multiplication. Success would motivate a subsequent full nonlinear curvature/connection constraint calculation. It would not itself provide a closed PDE, constraint propagation, regularity or continuation.

@@ -281,3 +281,8 @@ small-defect region with geometric continuation estimates. The
 [bounded assessment](../notes/SPECIAL_CASE_TARGETS_20261122.md) records
 the proposed success and failure tests; no such estimate has yet been
 established.
+
+
+## Subsequent research correction — 22 November 2026
+
+The activated [E02 calculation](../../reviews/E02_NONLINEAR_ASSESSMENT_20261122.md) derives the exact nonlinear Q equation and shows that Fine's unadjusted flow preserves the curvature volume form pointwise in a fixed base identification. Earlier statements here about possibly changing density describe general connection paths and must be qualified for this specific flow. Fixed volume density still gives no anisotropy, curvature or noncollapse estimate. The original explanation and its input hash above remain historical evidence.

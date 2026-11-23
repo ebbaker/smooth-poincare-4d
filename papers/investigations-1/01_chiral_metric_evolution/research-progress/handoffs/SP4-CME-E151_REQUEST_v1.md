@@ -1,0 +1,18 @@
+# SP4-CME-E151 request v1 — Continuation corollaries and precision integration
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Bounded E integration audit, configured gpt-6.2-sol/ultra; actual lead and independent helper runtime unavailable. Own reviews/E151_CONTINUATION_COROLLARIES_MANUSCRIPT_AUDIT_20261122.md and research-progress/handoffs/SP4-CME-E151_RETURN_v1.md only. No shared edits/build. Current TeX frozen until final release.
+
+Read cor:sequential-value-continuation and cor:real-transport-continuation with their full proofs and adjacent limitations. Compare each to the assessed derivation and audit. Check one common original lifespan, exact sequence quantifiers/positive compatibility/reference order/inverse-pullback signs/full overlap, no hidden map derivative bounds and the compatible positive-strip recovery qualifier. For the real criterion check complete target area, all ordered base slots and specified horizontal derivative, native b/commutator constants, both pointwise inequalities and sup-then-time order, full positive cone and same-slice naturality. Check that neither is presented as a new a priori or compactness theorem. Independently verify that every E146 precision item has been applied to the uniform-radius proof and original endpoint theorem, including the front matter, causal residual, kernel derivative, upper-cylinder scaled estimate, Duhamel-weighted choices and independent density argument. Do not re-audit all inherited E41/E42 mathematics. Check static labels/references/citations/environments and protected round section (4501 bytes, SHA c0e411175c77e13e96aa8ab41f55e2c2593f30e72a5c44560e1baf65068a3fab). Existing canonical source roles unchanged; new R26/R27 are comparison records and not manuscript citations. Disclose authorship/audit overlap, especially E140/E142/E147. Return exact corrections or supported pass and release the freeze. No primary reinspection or novelty assessment expected.
+
+## Frozen inputs
+
+| Input | SHA-256 |
+| --- | --- |
+| [manuscript/chiral_curvature_and_metric_evolution.tex](../../manuscript/chiral_curvature_and_metric_evolution.tex) | 939b707d742be295da8a4a87a32ee5625fb4d1ae74471f145b02cb12caa9e045 |
+| [reviews/E146_GENERAL_CONTINUATION_MANUSCRIPT_AUDIT_20261122.md](../../reviews/E146_GENERAL_CONTINUATION_MANUSCRIPT_AUDIT_20261122.md) | e969f60e157447b37c87cc48bfc3a598c96c15d72eeead4bdc0b6077ce5bb1c4 |
+| [notes/145_REAL_TRANSPORT_TEMPORAL_EQUIVALENCE_20261122.md](../../notes/145_REAL_TRANSPORT_TEMPORAL_EQUIVALENCE_20261122.md) | 544d6d1299560adcd99327d206ca737d44e4a1449567efac8795176ef34833f4 |
+| [reviews/E147_REAL_TRANSPORT_EQUIVALENCE_AUDIT_20261122.md](../../reviews/E147_REAL_TRANSPORT_EQUIVALENCE_AUDIT_20261122.md) | e2de16964ee6fe87fd2955d4518d0dc0a936ab0c64fa8f8367929adbbc35f228 |
+| [reviews/E145_E147_REAL_CONTINUATION_ASSESSMENT_20261122.md](../../reviews/E145_E147_REAL_CONTINUATION_ASSESSMENT_20261122.md) | a891f7d4ac95406b0ca065e34df1eb848c384296917d620f7376cff943448675 |
+| [notes/148_SEQUENTIAL_VALUE_COMPACTNESS_CONTINUATION_20261122.md](../../notes/148_SEQUENTIAL_VALUE_COMPACTNESS_CONTINUATION_20261122.md) | 526fa0a48fe414989549172efc4c2c71b3093b8a4b22ae537c2035e0709ee894 |
+| [reviews/E150_SEQUENTIAL_CONTINUATION_AUDIT_20261122.md](../../reviews/E150_SEQUENTIAL_CONTINUATION_AUDIT_20261122.md) | 0732d9906ed0ef46044a3f9f0523d793077f34ae4b266794ad4b9320943b57c3 |
+| [reviews/E148_E150_SEQUENTIAL_CONTINUATION_ASSESSMENT_20261122.md](../../reviews/E148_E150_SEQUENTIAL_CONTINUATION_ASSESSMENT_20261122.md) | 6c9480a6dfaedbff17156541faa9c350e61bcf7925d5ae4cec88e8a7d93d4557 |

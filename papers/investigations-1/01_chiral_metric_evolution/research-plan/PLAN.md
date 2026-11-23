@@ -7,7 +7,7 @@ identifier and effort are unavailable. The selected lead is the sole writer;
 recommendations below are not execution provenance. See the
 [input and integration record](../reviews/RESEARCH_PLAN_INTEGRATION_20261122.md).
 
-This file specifies work; [REGISTER.md](../research-progress/REGISTER.md) alone owns live status. The setup has not activated these tasks. Default leadership is Astra/ultra, with bounded Sol 6.2/ultra execution helpers when research is authorized; author-selected settings take precedence. Record actual settings only from available session metadata.
+This file specifies work; [REGISTER.md](../research-progress/REGISTER.md) alone owns live status. The author explicitly activated the broad run on 22 November; the original setup itself had not activated research. Default leadership is Astra/ultra, with bounded Sol 6.2/ultra execution helpers when research is authorized; author-selected settings take precedence. Record actual settings only from available session metadata.
 
 **Broader continuation authority:** the author's
 [subsequent 22 November prompt](../continuation-notes/BROAD_RESEARCH_CONTINUATION_20261122.md)
@@ -19,14 +19,73 @@ dependencies still govern valid conclusions. Bounded analytical/example
 packets go to Sol 6.2; the selected lead owns conceptual decisions and
 integration. This pointer alone starts no research.
 
+## Broad-run decisions and revised execution map
+
+The table below records specifications and evidence dependencies, not live statuses. The original starting-map specifications are retained below for provenance; issued requests supersede their placeholders within the named scopes. The author’s broad prompt controls continuation beyond those original slots.
+
+| Decision / execution | Frozen question and evidence dependency |
+| --- | --- |
+| B01 / E02A–C | Exact nonlinear Q equation, principal coercivity, pointwise volume and actual connection jets; foundation E01 first |
+| B02 / E03A–B | Real O(2) horizontal comparison and moment reconstruction; O(1) first jets as round calibration, with real and sign conditions |
+| B03 / E04 | Energy anchor plus a supplied whole-fiber transport path cost, without assuming an eigenvalue floor |
+| B04 / E05 | Divergence cancellation, energy decay under interval pinching and a stationary gap; E02 suffices to execute this alongside E04 |
+| B05 / E06 | One affine gluing test on gauge-equivalent round endpoints; no conclusion against every gluing method |
+| B06 / E07 | One realizable pointwise speed-to-strain kernel |
+| B07 / E08 and B10 / E11 | Scalar defect maximum and the specified C³ invariant scalar repair class, using actual cubic connection jets |
+| B08 / E09 | Differentiate the compatibility inverse and control W+, Ric0 and scalar curvature; keep W− separate |
+| B09 / E10 and B11 / E12 | Actual shrinking and logarithmic global perturbations; test scalar integral and critical spatial-norm control |
+| B12 / E13 | One static transport threshold calibrated against the precise known Chang–Gursky–Yang theorem |
+| B13 / E14 | Relative curvature velocity and conditional temporal control from the integral of sup(|∇A T|+|T|²) |
+| B14 / E15 | Exact strain time chain rule, principal symbol and derivative-Laplacian commutator; do not promote this to a full coupled-gauge theorem |
+| B15 / E16A–B and B17 / E19 | Round strain reaction and nonlinear L2/L4 energies; derive critical-norm persistence from its initial size under pinching and uniform Sobolev hypotheses |
+| B16 / E17 | Fixed-round Lorentz endpoint control of spatial distortion |
+| E18 / E20 | Bounded manuscript transcription audit and reproducible exact finite checks |
+| B18 / E21 | Flat Lorentz heat estimate for the temporal strain integral |
+| B19 / E22–E23 | Actual round bundle heat estimate and separately fixed flat semilinear contraction; retain variable-principal gap |
+| B20 / E24 | A temporal budget supplies pinching and Sobolev bounds; finite J gives continuous definite finite-time limits; E138–E143 later upgrades them to smooth original extension |
+| B21 / E25 | One periodic frequency family tests the direct L1-time Lorentz second-derivative forcing estimate |
+| B22 / E26 and B23 / E27 | Audit Fine’s actual gauge formula, derivative order and endpoint premises; independently test one fixed-adjoint adjustment |
+| B24 / E28–E29 | Corrected gauge correspondence and primary local-system input; smooth local construction, not a continuous endpoint restart |
+| B25 / E30 | Identify principal coefficients from connection and curvature values; keep lower-order reference derivatives and adjusted-path bounds separate |
+| B26 / E31–E32 | Static L2 CGY threshold and an energy-selected time slice; combine into finite-time recognition under explicit interval hypotheses |
+| E33 | Bounded transcription/derivation audit of the fixed gauge and finite-time corollary |
+| B27 / E34 | Complete the full curvature symbol with a term vanishing on the Bianchi constraint |
+| B28 / E35 | Integrate the scalar divergence identity to obtain positive Yamabe constant from critical strain |
+| B29 / E36 | Specify independent connection/curvature equations and prove smooth propagation of curvature compatibility |
+| B30 / E37 | Exact Koch–Lamm source hypotheses and compact strongly coupled bundle applicability gap |
+| B31 / E38 | Smooth density and closure of continuous connections with continuous distributional curvature |
+| B32 / E39 | Dini sufficient heat estimate and continuous bump family testing one gauge-derivative bound |
+| E40 | Author-requested reference workflow audit and canonical metadata integration |
+| B33 / E41–E44 | Fixed-reference compact linear X/Y estimate and globally C0-small nonlinear contraction with compatibility; focused proof audits |
+| B34 / E45 | Continuation while a trajectory of the same adjusted system stays in a fixed small value tube |
+| E46 | Manuscript compression audit for the rough local construction |
+| B35 / E47–E48 | Round positive fixed stability operator, exact half-line trace estimate, corrected fixed-reference gauge and tame nonlinear remainder |
+| B36 / E49–E50 | Weighted nonlinear stability in the new fixed gauge, then a separately conditional transfer from smooth initial connections small in connection/curvature sup norms |
+| E51–E52 | Focused round linear, nonlinear and original-flow transfer audits |
+| B37 / E53–E54 | Full-gradient critical Besov embedding and damped heat, then a specified quasilinear flat model with small value-dependent principal perturbation |
+| E55–E56 | Manuscript stability transcription and independent critical linear checks |
+| B38 / E57 | Fixed compact-bundle critical linear estimate with matrix symbols, localization and construction |
+| E58 | Focused nonlinear critical model audit |
+| B39 / E59 | Covariant real-strain dictionary and naturality of the temporal budget |
+| B40 / E60 | Critical local construction for the actual independent A,F equation and identification for smooth compatible inputs |
+| E61 | Independent compact critical linear audit |
+| B41 / E62 | Whole-time original-flow strain budget from critical initial data, conditional on the exact E60 path estimate |
+
+Each B decision is in `brainstorm/notes/`, each issued self-contained request and return in [handoffs](../research-progress/handoffs/README.md), and each derivation in [notes](../notes/README.md). The register links the exact artifacts and assessed disposition. Future estimates must address the actual strain derivative and moving geometry, or explicitly justify a different quantity. The static and local counterexamples do not prohibit spacetime or neighborhood estimates.
+
+The later critical route is specified by B38/E57 (fixed compact linear estimate), B39/E59 (path-to-strain dictionary), B40/E60 (actual compatible critical solution), B41/E62 (whole-time combination) and B42/E63 (quantitative smoothing). E61/E64/E65/E67 check those dependencies. E68 audits the reference records and E69 the manuscript integration. B43/E66/E70 tests the static strain estimate under an imposed exact round slice; B44/E71 constructs only its linear projection and records the nonlinear derivative issue. B45/E74/E75 controls the critical recovery in C1; B46/E76/E77 studies smooth limits using one fixed low-order basin. E78 checks their manuscript integration. B47/E79/E80 tests the actual varying orbit inverse, keeping the restricted complement and finite-dimensional residual separate. B48/E81 audits exact primary tame inverse and submersion hypotheses. B49/E82/E83 supplies the pointed smooth local section, with E85 checking the combined argument. B50/E84/E86 transfers the critical budget to small intrinsic Lorentz strain on its smooth orbit saturation; E87 checks manuscript integration. B51/E88/E89 supplies the value-uniform Lorentz infinitesimal estimate. B52/E90/E92 extracts round metric, exact-volume and variational consequences. B53/E91/E92 and B55/E94 separate frozen instantaneous derivative loss from finite-flow cancellation; B56/E95/E96 realizes the joint critical loss and controlled auxiliary transport on the actual round orbit. B54/E93 records the missing implications for Feehan's fixed-base critical gauge theorem. B57/E98/E99 separates a direct finite internal Lorentz gauge construction from a static Coulomb regularity estimate. E101 independently checks those two derivations and their combined C1 gauge bound. B58/E102 tests a static strain-to-defect bound without either slice equation; B58/E103 tests critical curvature oscillation remaining in the supplied vertical Coulomb gauge. B59/E104/E108 globalizes the integrated quadratic and quartic strain energies after reducing the value threshold and imposing separate initial L4 smallness. E107/E110/E113 check the corresponding manuscript integrations. B60/E109/E111 tests the insufficiency of L4 strain for the full-derivative budget in a frozen multiscale model; B61/E112/E114 transfers the test to actual round tangent data and the compact linearized flow. B62/E115 tests the resulting obstruction to a uniform linear nonlinear estimate by fixed-N differentiation on positive-time windows, and E116 computes the exact initial Lorentz-index scaling. These last steps distinguish a derivative obstruction from nonlinear unboundedness. E97/E100 check the earlier manuscript integration. None of these steps silently supplies finite horizontal placement throughout the value-small basin. These are separately bounded questions, with their current status exclusively in REGISTER.md.
+
+B63/E119/E122 and B64/E123/E124 are assessed and integrated in the 100-page checkpoint, with E126 review. They supply the additional uniform remainder and actual nonlinear unbounded family beyond E115's fixed-window argument. E121 preserves the exact Koch–Lamm source scope. B65/E125/E127 supplies the adjusted defect structure; B66/E128/E130 the coefficient products and third weighted jet; B67/E129/E132 the fixed intrinsic head; and B68/E131/E134 the uniform defect-sensitive tail. These are now assessed and prove the whole-time intrinsic endpoint on one fixed smaller value basin without a separate strain threshold. B69/E133/E135 adds the quantitative joint round comparison. B70/E136 checks manuscript integration. B71/E137 tests finite time-integrated consequences for the central real direction-sphere comparison and the positive chiral curvature block. Current execution status remains solely in REGISTER.md.
+
+## Original starting map (retained specification)
+
 ## Author-directed priorities and proposed sequence
 
 Understand the nonlinear definite-connection defect-gradient flow first,
 keeping the full smooth Poincaré problem as the motivating objective.
 Let intermediate hypotheses emerge from evolution and continuation
 estimates; use already classified geometric cases as tests when useful.
-The earlier intrinsic small-Q proposal remains a candidate, not the
-selected target. The [decision](../brainstorm/notes/FLOW_FIRST_PRIORITY_20261122.md)
+The earlier intrinsic small-Q proposal has now supplied a conditional stationary gap and energy estimate; its preservation is not established. The [decision](../brainstorm/notes/FLOW_FIRST_PRIORITY_20261122.md)
 and [explanation](../brainstorm/explanations/NONLINEAR_FLOW_AND_SINGULARITIES_20261122.md)
 state this ordering and its limits. Initial definite-data existence on
 arbitrary homotopy spheres remains a separate obligation.
@@ -62,7 +121,7 @@ writer and output paths. B decisions go in `brainstorm/notes/`; derivations
 in `notes/`; scoped assessments in `reviews/`; issued requests and returns
 in `research-progress/handoffs/`. Only the lead integrates shared status.
 
-The E03–E05 entries are reserved execution slots, not executable requests.
+In the original starting map, the E03–E05 entries were reserved slots rather than executable requests. The broad run issued their actual contracts and subsequent revisions through the decision notes above.
 Each becomes usable only after its named B decision freezes a question,
 method, permitted choices, limits, deliverables, success test and failure
 disposition. E02 retains the same gate. A failed estimate can complete a
@@ -187,4 +246,57 @@ scale, derivative, curvature or noncollapse bounds.
 
 ## Research continuity
 
-Once the author activates this branch for sustained work, continue through authorized ready dependent tasks under the root workflow. Research in initial investigations is a separate selection, not an automatic consequence of importing their papers. Maintain one writer per artifact, record actual provenance, and end at an assessed milestone with a concrete continuation.
+Once the author activates this branch for sustained work, continue through authorized ready dependent tasks under the root workflow. Research in initial investigations is a separate selection, not an automatic consequence of importing their papers. Maintain one writer per artifact, record actual provenance, and use assessed milestones for integration. Under the invoked broad authority, continue through useful ready work until the author stops the run, the substantive objective is achieved, a genuine blocker remains, or an actual execution/resource limit is reached.
+
+B72/E138/E142 separates uniform value radii from reference-dependent local times. Combined with E140/E143, it proves original continuation from a positive continuous pair endpoint and hence from finite J at any finite time in the chosen positive component, with no round or small-budget hypothesis. B73/E145/E147 supplies the equivalent complete-fiber real transport budget. B74/E148/E150 supplies the normalized accumulation-sequence criterion. E146/E151 checks their manuscript integration in the verified 117-page checkpoint; E144 checks the preceding source-consumer records. B75/E149 compares primary continuation literature with bounded scope. B76/E152/E153 tests the determinant-normalized trace against the existing actual local scalar jets. B77/E154 verifies a proposed Ricci/injectivity/diameter compactness input. B78/E155 tests the independent static connection-bundle implication conditional on a supplied C1 metric limit, keeping the source premise separate. These criteria do not supply a general a priori bound or arbitrary-sphere initialization. Current status remains solely in REGISTER.md.
+
+
+## Geometric continuation and extraction dependencies
+
+The [E155–E159 chain](../reviews/E157_E159_GEOMETRIC_CONTINUATION_ASSESSMENT_20261122.md)
+supplies positive pair compactness from positive metric compactness and
+strain bounds. On simply connected H²=0 bases, its topology test removes
+the separate Q floor. The late-sequence criterion and E152 determinant
+trace specialization are integrated in the 120-page checkpoint with E161
+precision edits. These are conditional on supplied geometric bounds.
+
+B81/E160 and B83/E163 separate orbifold convergence, smooth terminal
+extraction and known classification. B82/E162 tests the topology of an
+already embedded smooth full ALE core, with E166 as independent audit.
+B84 separates the BKN Ricci-flat ALE theorem (E164) from the proposed
+minimum harmonic-radius pre-ALE extraction (E165). The latter must supply
+a smooth nonflat complete limit and actual compact-core embeddings; a
+source's Einstein hypothesis may not be silently dropped. Only after
+these dependencies are assessed may a stronger metric or flow criterion
+be formulated. Live status remains solely in REGISTER.md.
+
+
+## Compactness and intrinsic smallness follow-up — 22 November 2026
+
+The assessed E168/E169 chain now supplies the two-bound homotopy-sphere
+continuation criterion. Integrate its actual compact embeddings and unscaled
+smooth-reference proof with the exact R29/R31/R37 references, then verify the
+rendered manuscript. E170 records the reference consistency corrections.
+The assessed E171/E173 static calculation supplies a universal small-G
+spectral and Ricci estimate. B87/E174 uses common adjusted smoothing and
+invariant defect energy to test fixed-M/P positive-time round entry;
+E176 is the independent combination audit. Further claims depend on that
+assessment. Preserve the separate initialization problem and the limitation
+that the proposed threshold is non-effective, on a fixed smooth base and
+bundle. Consult REGISTER.md for current status rather than this dated map.
+
+
+## Intrinsic-entry integration and stationary limits — 22 November 2026
+
+E174/E176 and E177/E178 are assessed and integrated with E180/E184 precision edits in the verified 133-page checkpoint. The native energy identity, common reference/time order, positive smooth slice and fixed original tail are explicit. Historical conditional notes remain unchanged.
+
+E179/E181 is assessed and integrated: bounded late-sequence Psi and diameter imply an infinite original lifespan and smooth critical accumulation after a fixed positive shift and bundle normalization. E177 on one unshifted late slice gives the energy alternative: zero and a fixed round tail, or energy at least the family threshold and a nonperfect critical accumulation point. B90/E182–E185 checks uniform thresholds across varying bases; B91/E186 compares the twistor bubble obstruction, and B92/E187 tests the exact stationary derivative form on a finite spectral set. Consult the sole register before assigning work. A priori bounds, nonperfect critical classification and initialization remain separate.
+
+
+The varying-base extension E182/E183/E185 is assessed and included in the verified 135-page checkpoint after E188. The stationary E187/E189 finite tests and B93/E190/E192 compact curve-persistence proof have since been assessed. Their successors are specified below; consult the sole register for current readiness.
+
+## Metric twistor compactness and stationary algebra — 22 November 2026
+
+B94/E191/E194 uses the assessed C0 persistence lemma to lower the metric comparison requirement to strong pointed C1, retaining strict metric twistor taming. B95/E193 supplies the needed ALE cover sphere through checked period/resolution passages and explicitly attributed Kronheimer metric classification. B96/E196/E197 replaces the homotopy-sphere core obstruction by this twistor contradiction and retains the exact Euler energy bound, actual compact comparisons and smooth global maps. Its bounded-class compactness and finite oriented types do not supply native metric taming or arbitrary initial connections. E195 and E198 check manuscript integration; E200 compares exactly the stated Fine and Anderson primary passages, without an exhaustive novelty assertion.
+
+[B97](../brainstorm/notes/B97_AXIAL_STATIONARY_SIGN_REGION_20261122.md) and [E199](../research-progress/handoffs/SP4-CME-E199_REQUEST_v1.md) replace the seven axial spectral samples by an exact one-parameter stationary derivative-kernel sign problem. Algebraic nonnegativity, actual critical realization and flow preservation remain different questions. Helpers own bounded derivations/audits; the lead chooses any broader spectral or dynamical application after assessment.

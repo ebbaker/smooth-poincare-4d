@@ -1,0 +1,11 @@
+# E54 — Lead assessment of the critical quasilinear calibration
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Selected lead settings preserved; actual identifiers unavailable. Helper configured gpt-6.2-sol/ultra.
+
+The lead read the complete [E54 proof](../notes/54_CRITICAL_QUASILINEAR_MODEL_20261122.md), SHA-256 34924ef4445b1fc479b79c0f9d5452243c12ae399220e1e077b6e21bfed8073a. Accept the stated small-data global mild theorem for this fixed damped flat vector system, subject to the separate focused E58 check. Its exact source space is L1-time B^(1/2)_(8,1); its path norm is the sum of dyadic time suprema at order 1/2 and L1 norms at order 5/2.
+
+The two-way translation-difference characterization is proved from periodized kernels, including the low block and lattice tails. At positive order 1/2 it gives the product and Lipschitz composition estimates using the proved critical embedding into continuous bounded functions. Interpolation on each block followed by Cauchy–Schwarz in the block index yields L2-time B^(3/2) control. Its derivative factors therefore multiply in L1-time B^(1/2). The principal term places D²U in the L1 higher norm and the coefficient in the time-uniform critical norm. Both nonlinear difference contributions retain the correct time norms and are quadratic on the small ball.
+
+A(0)=0 gives a fixed uniformly parabolic value tube. The explicit radius and initial threshold give image radius 3R/8 and contraction factor at most 1/4. E53 provides the complete strong-trace space and linear uniqueness, so the fixed point is a distributional as well as mild solution, unique within the stated ball, with Lipschitz dependence. The integrated Hessian estimate applies to this actual solution. The theorem does not assert positive-time smoothness or geometric-flow applicability.
+
+E56 independently recalculated the E53 embedding, low-mode heat bound, completed spaces and trace. The lead read its complete audit, SHA-256 f74a9f546e40cb1881ba8e7185f69b1507c0bd50329a9264eaf17185f2185635, and accepts it. The forced strong trace is Besov/uniform; graph-norm trace belongs only to the homogeneous statement. No external theorem or new source version is imported in E53/E54/E56.

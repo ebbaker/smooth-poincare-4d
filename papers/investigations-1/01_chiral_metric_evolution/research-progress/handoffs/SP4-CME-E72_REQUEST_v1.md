@@ -1,0 +1,7 @@
+# SP4-CME-E72 request v1 — fixed-slice manuscript integration audit
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Fixed E packet; helper configured gpt-6.2-sol/ultra, actual lead settings unavailable. Own reviews/E72_SLICE_MANUSCRIPT_AUDIT_20261122.md and research-progress/handoffs/SP4-CME-E72_RETURN_v1.md only.
+
+Frozen manuscript SHA-256 6eecda61e6da4435bd27bb73c9f022bdc5de6971943975d1f6e04f8183ef7eae. Consume and report before lead build corrections. Frozen note E66 SHA-256 09ff98b37c5c4b3b84db9bc32e8745ce93b73efdc6e720a5c7d6a5b9393d0a66; E70 SHA-256 d9d1ace690255fa6af7c7a37e5852e991538e24988e003636929573cb768272c.
+
+Audit the new subsec:fixed-slice-strain in full against E66 and E70, with all changes of norm, matrix inverse and Lorentz proof compression, native factors, derivative and smallness conditions, and the final conditional J bound using thm:critical-global-budget. Check all internal references and exact slice scope. Also confirm the E69 preliminary precision fixes in subsec:critical-budget: input/source spaces, master-chart uniformity, fixed A0 individual smooth lift and short-time X norm, and whole-tail value tube. Disclose your E70 authorship; this is integration review, not a new independent E66 proof. Report omitted necessary details or concrete corrections with labels/lines. No shared edits or rebuilding. No primary reinspection needed unless a genuine new dependence arises; preserve exact source status.

@@ -1,0 +1,7 @@
+# B10 — Can a smooth scalar correction repair the maximum argument?
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Selected lead model and effort preserved; actual settings unavailable. Active broad continuation; bounded helper execution configured Sol 6.2/ultra.
+
+E08 defeats the Frobenius defect maximum argument, but that alone does not exclude a better scalar. Test exactly the class of C³, SO(3)-conjugation-invariant functions f(Q) near I with f(I)=0, df(I)=0 and positive-definite Hessian there. Irreducibility forces the Hessian to be a scalar multiple of the identity on Sym²_0. A pointwise maximum-principle closure based only on this scalar requires df to be an eigen-covector of the self-adjoint principal operator L_Q: at ∇Q=0, freely adjustable Hessian directions tangent to the scalar level otherwise change the sign of its flow derivative.
+
+The expansion L_Q df−4df=4a(q²)_0+O(|q|³), where df=aq+O(q²), suggests that cubic corrections to f cannot fix the obstruction. Along q=epsilon diag(1,0,−1), (q²)_0 is nonzero and perpendicular to q. Freeze this local Taylor test. Its conclusion must be restricted to smooth scalar functions of Q with a nondegenerate minimum and this principal maximum-principle mechanism. It does not exclude nonsmooth tensor barriers, degenerate functions, derivative quantities or nonlocal estimates. Delegate E11.

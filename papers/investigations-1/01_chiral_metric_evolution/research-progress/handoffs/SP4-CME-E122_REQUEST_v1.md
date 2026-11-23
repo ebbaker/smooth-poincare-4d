@@ -1,0 +1,10 @@
+# SP4-CME-E122 request v1 — uniform parabolic remainder audit
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Fixed E audit, configured gpt-6.2-sol/ultra; actual lead identifiers unavailable. Own reviews/E122_UNIFORM_PARABOLIC_REMAINDER_AUDIT_20261122.md and research-progress/handoffs/SP4-CME-E122_RETURN_v1.md only.
+
+Independently audit E119 notes/119_UNIFORM_PARABOLIC_REMAINDER_20261122.md at SHA-256 4f95593842c04f25d45535912cc91c032cb1588e5fd3892d33cbc194382988ea. Read B63 and E119 request; verify E41/E42/E63 hashes there. You authored E41 but not E119/E42/E63; disclose all actual overlap. The audit concerns the new scale-uniform consequence, not a fresh independent audit of all inherited rough theory.
+
+Check the exact time-local lift, every transformed divergence/density/frame coefficient and sign, both inverse Jacobians, principal flux and band-speed terms; all smaller/comparable/larger cylinders in both upper and tent norms; uniform completed-space lift/action and products; stationary zero and initial trace; uniform parameter/datum radii and actual E42 contraction margin; distributional residual-to-mild identification; all mixed derivatives through total order four with bounded Neumann inverse; no compactness of infinite-dimensional data or r→0 assumption; weighted extraction of full ordered Hessian from transported directional jets with fixed curvature; linear lower-order terms in D_u S(0); and quadratic datum Taylor estimate uniform for 0<t<=T/4.
+
+The key property is constants independent of all initial derivatives and of r, for smooth value-small data in the exact E42 spaces. Investigate any hidden derivative, changing-space or weak-uniqueness assumption. Do not replace a failed step by a generic parabolic regularity citation. E121 is separately checking primary attribution and may be read once returned; it is not a proof premise. No nonlinear multiscale implication is part of this audit. Return derivation-level pass or precise corrections, hashes and scope. No shared edits or build.
+

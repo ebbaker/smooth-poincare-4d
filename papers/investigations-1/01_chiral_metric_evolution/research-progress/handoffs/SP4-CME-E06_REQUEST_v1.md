@@ -1,0 +1,13 @@
+# SP4-CME-E06 request v1 — gauge-equivalent definite endpoints and failed affine gluing
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. User authorized broad research and bounded Sol 6.2/ultra delegation. Configured helper settings unchanged; lead actual settings unavailable. Read root instructions/workflows and B05 decision. Fixed E example, no new strategy. Own only notes/08_AFFINE_GLUiNG_COUNTEREXAMPLE_20261122.md and research-progress/handoffs/SP4-CME-E06_RETURN_v1.md within this investigation. Do not edit shared files or references; no chat capture.
+
+Question: verify or correct the B05 candidate using the standard smooth closed oriented round S⁴, K>0, chosen self-dual SO(3) bundle E and round A0 with F0=−K Sigma, bracket [e_i,e_j]=epsilon_ijk e_k. Choose p and a local normal gauge A0(p)=0 with Sigma3,12=1. Let A1=g⁻¹A0g+g⁻¹dg for a smooth gauge transformation equal to identity at p, supported in a trivializing ball, prescribed first derivatives a1(p)=2sqrt(K)e1, a2(p)=−2sqrt(K)e2, a3=a4=0 for a=A1−A0. Derive F_t=(1−t)F0+tF1−t(1−t)[a wedge a]/2 in the manuscript bracket convention. Verify that at t=1/2 curvature annihilates the plane spanned by ∂1,∂2 at p. Construct g by exponential of a smooth compactly supported Lie-algebra function with the given first jet, so endpoint existence and smooth global gauge are actually verified. Both endpoints must be definite of the same sign, gauge-equivalent, with their Q=I and identical volume. Explain exactly why this defeats the unqualified affine-averaging argument and why it says nothing against gauge-aligned gluing or other initialization routes. No actual flow, no unknown-manifold claim, no numerical campaign, only this finite example.
+
+Acceptance: explicit smooth global endpoint construction on the standard sphere, verified curvature/sign/factor and precise limitation. If signs fail, correct coefficients within this one fixed example. Return any change of target to B05. Include input versions and return at the packet boundary.
+
+## Frozen inputs
+
+- `papers/investigations-1/01_chiral_metric_evolution/brainstorm/notes/B05_INITIALIZATION_GLUiNG_20261122.md` SHA-256 `136075a8bd33a4601a07e4a34bc2ee3845dd8153c86f2a9dcfa895a8eb4501d8`
+- `papers/investigations-1/01_chiral_metric_evolution/reviews/E01_FOUNDATION_ASSESSMENT_20261122.md` SHA-256 `83e1daa219c826454c9201776dd94542095a026d223976c3820dfe6c759045c6`
+- `papers/investigations-1/01_chiral_metric_evolution/notes/05B_REAL_TWISTOR_COMPARISON_20261122.md` SHA-256 `27a2eaa0e5c7a06179525a6c67cdcfee5277d8e172ad2e5b436bbbf0fd242815`

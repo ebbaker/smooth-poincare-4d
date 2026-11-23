@@ -1,0 +1,17 @@
+# E30–E32 — Coefficient control and finite-time sphere recognition
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Selected lead settings preserved; actual model/effort unavailable. Helpers configured gpt-6.2-sol / ultra, not independently introspected. Lead assessment of the displayed derivations and already checked primary theorem; no external peer review or novelty claim.
+
+E30 is accepted for its coefficient inventory. The fixed vertical adjoint makes the connection operator second-order quasilinear, and its principal coefficients depend on connection and curvature values, not the symmetric first jet. The identities d_A a=F_A−F_bar+[a wedge a]/2 and the exact self-dual expression for the physical speed account for all higher derivatives. Compact definite value sets give a uniform reference-symbol gap in each reference pairing. Higher derivatives of a varying reference still enter lower orders. The finite-J continuous endpoint values therefore improve the algebraic coefficient information only; the original fields are not themselves a solution of the adjusted equation. No restart or spatial regularity follows.
+
+E31 is accepted as an application of Chang–Gursky–Yang Theorem A, not a new classification theorem. The lead checked the Yamabe coefficient 6, the scalar error factor 4 sqrt(3), the exact signature norm and the factor 4 between the full Weyl tensor norm and curvature-operator Hilbert–Schmidt norm. On a homotopy sphere the full Weyl integral is at most 8 times the squared L2 norm of R_K. Thus the strict threshold min(2 pi, sqrt(3)/(2 C_S)) gives both positive Yamabe constant and the theorem's strict 32 pi² bound. Simple connectivity excludes RP4. The normalized threshold is scale invariant.
+
+E32 is accepted under its full interval premises. The common constant C absorbs the two energy remainders, and the strict initial squared-L4 size persists by the quartic inequality while pinching and C_S are assumed. Integrating E2' <= −D2/2−K E2/2 on an interval of length 1/K selects one gradient slice. The q L2 rate is 18K, the squared-L4 rate is K/4, and the selected gradient rate is K/4. These rates yield the exact displayed R_K estimate; no pointwise-in-time gradient estimate is inferred.
+
+Combining the two packets gives a finite-time conditional recognition corollary. With A_* = K||q(0)||2 + 6 sqrt(2K)||T(0)||2 + (42+8 sqrt(3))||T(0)||4² and theta=min(2 pi,sqrt(3)/(2 C_S)), set t_*=(4/K) max(0,log(2 A_*/theta)), or zero when A_*=0. A smooth actual solution through t_*+1/K, with the common small pointwise q bound, one C_S and initially small squared-L4 strain, has a time slice below theta/2 and hence lies on the standard smooth sphere. This removes the need to prove convergence of the entire flow for this conditional conclusion. Smooth existence, interval pinching and Sobolev control are still hypotheses; initialization on arbitrary homotopy spheres is separate. E24's small temporal budget can supply the two geometric interval bounds but its persistence has not been proved.
+
+## Assessed inputs
+
+- `notes/30_CURVATURE_COEFFICIENT_REGION_20261122.md` SHA-256 `426b99a3e5cda892f192fc43a4e4efd8736bd44d11695daa3e44bef559fcf1cd`
+- `notes/31_L2_TRANSPORT_SPHERE_CRITERION_20261122.md` SHA-256 `bee7184d0bc257b4d173e105e75e25bd74349776d103c55db9777bcacb3451c8`
+- `notes/32_ENERGY_SELECTED_SLICE_20261122.md` SHA-256 `98cfa4baaa4e3ba64dc9293888376660fab779e0bd395fcb8e4bab465ae4470e`

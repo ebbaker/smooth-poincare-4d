@@ -1,0 +1,18 @@
+# E155/E156 — Static pair compactness assessment
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Selected lead assessment; actual lead identifiers unavailable. Helpers configured gpt-6.2-sol/ultra without independent runtime attestation. Lead read the complete derivation and audit, independently checked the directions of the metric and bundle maps, and the projection bound for the covariant Q derivative. Authorship/audit overlaps with E09/E137/E145/E148 are disclosed in the frozen artifacts. No new source inspection or numerical experiment entered this static assessment.
+
+Accepted with exactly the supplied positive C1 metric limit, uniform Q floor and live sup bounds on T and its full A derivative. The fixed smooth compact closed oriented base, fixed SO(3) bundle and positive-plane round-compatible sign are retained. The curvature isometry sigma=−Fsharp S^-1 transports the live positive chiral connection. The forward tangent isometry C=(g_b^-1 g')^-1/2 induces the forward form map J=(C^-1)*, so U=tilde_sigma^-1 J sigma_b maps E_x to E_phi(x). Its frame action gives a smooth equivariant bundle automorphism covering each supplied orientation-preserving phi.
+
+The exact identity sigma'=J sigma_b cancels the derivatives of the varying curvature identification in the pulled-back chiral connection. Consequently Gamma' depends only on the normalized metric and its first derivative, and converges uniformly from C1 metric convergence. The floor-free native bounds |b|<=2sqrt(6)|T| and |nabla^Gamma b|<=sqrt(2)[6|nabla^A T|+(36+8sqrt(3))|T|²] yield bounded first coordinate derivatives of b after the bounded connection and Christoffel terms are included. The Q identity and the positive operator factorization give |nabla^A Q|<=6|T|, likewise yielding coordinate equicontinuity. No second derivative of the metric, W− bound or uniform derivative of the normalizing maps is used.
+
+Finite-chart compactness produces uniform b and Q limits. A=Gamma+b and F=−sqrt(Q) sigma then converge on one fixed smooth bundle. The supplied Q floor makes the limiting curvature positive; its oriented self-dual plane and trace wedge volume reconstruct precisely the supplied metric limit. The affine curvature identity passes to distributions. This supplies the assessed E148 hypothesis for actual late slices and yields original smooth continuation in the old identification.
+
+The whole-fiber distortion bound is equivalent to a positive Q floor on the trace-three cone. The supplied real transport quantity Psi is equivalent to |nabla^A T|+|T|² by E145/E147. These are static translations of hypotheses, not estimates along the flow. The [E154 source assessment](E154_METRIC_COMPACTNESS_SOURCE_ASSESSMENT_20261122.md) separately provides a possible metric normalization premise from geometric bounds. The proposed removal of the Q floor on homotopy-sphere topology is E157 and is not asserted by this assessment.
+
+| Assessed input | SHA-256 |
+| --- | --- |
+| [notes/155_PAIR_COMPACTNESS_FROM_METRIC_LIMIT_20261122.md](../notes/155_PAIR_COMPACTNESS_FROM_METRIC_LIMIT_20261122.md) | e8533973ae350ab1c887633212fa942fbfbd0b453a0a3949af5051de8d783ce6 |
+| [reviews/E156_STATIC_PAIR_COMPACTNESS_AUDIT_20261122.md](../reviews/E156_STATIC_PAIR_COMPACTNESS_AUDIT_20261122.md) | eb1a352516cf70ebb0ff0fdc9bce7efe72808c67af189944fde83b20326a6e33 |
+| [research-progress/handoffs/SP4-CME-E155_RETURN_v1.md](../research-progress/handoffs/SP4-CME-E155_RETURN_v1.md) | e50f3afc721a8cbcd2acb1db1dfcfea9a33e3334e1c949dac399cf00a90191d7 |
+| [research-progress/handoffs/SP4-CME-E156_RETURN_v1.md](../research-progress/handoffs/SP4-CME-E156_RETURN_v1.md) | 5acf6cb5f9569e80f21ce77fca078a2795b19114165725fa0262a4a9ed83d003 |

@@ -1,0 +1,17 @@
+# E95/E96 — Actual round-orbit derivative loss with controlled finite transport
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Selected lead settings preserved; actual identifiers unavailable. Helpers configured gpt-6.2-sol/ultra; independent runtime attestation unavailable.
+
+The lead read [E95](../notes/95_CURVED_ORBIT_DERIVATIVE_TEST_20261122.md), SHA-256 1a5930ba2052e2f97d0c8fe869cc0f9a0407509ad9182c33a6efbea60e4b59af, and [E96's independent audit](E96_CURVED_ORBIT_EXAMPLE_AUDIT_20261122.md), SHA-256 4d46618e45e51902f81bbc8c180f183005bbea376dd9ee572945636f1f0f7747. E95 authored E79/E53/E94; E96 authored none of those or E95 and disclosed earlier related audits. The actual construction is accepted without correction.
+
+A compactly supported base flow gives exact inner shears, with globally glued equivariant lifts G_n on the actual nontrivial round bundle. Their C0 displacement is O(n^(−7/4)), C1 distance from identity O(n^(−3/4)), and C2 difference comparable to n^(1/4). Pullback produces actual perfect connections A_n=G_n*A0 and compatible curvatures. With fixed r0=S0u0 and varying r_n=G_n*r0, naturality gives d_A_n r_n=G_n*d0r0 and r_n=S_A_n(psi_n*u0).
+
+Both coefficient-pair and forcing-pair differences converge in the fixed localized B^(1/2)_(8,1) norm at rate O(n^(−1/4)). The proof derives the required dyadic interpolation bound from fixed block kernels and retains chart, cutoff and frame terms. The E79 restricted inverse selects exactly phi=0, residual=0 and u_n=psi_n*u0. Its C1 difference from u0 is comparable to n^(1/4), detected at an inner point where the value difference vanishes. Thus this particular inverse fails C1 continuity in the specified joint critical topology. The forcing genuinely varies; the fixed-forcing claim belongs only to the earlier frozen model.
+
+The actual horizontal lifts are pullbacks of one fixed smooth lift. Their auxiliary finite flows and inverse flows are conjugates by G_n and converge in C1 uniformly on every bounded time interval. This comparison needs only first derivatives of G_n and fixed second derivatives of the reference flow. Every original Fine trajectory is stationary because Q=I and T=0. The two kinds of evolution must remain distinct.
+
+The explicit finite automorphisms already place this family on the round orbit. The example therefore gives no obstruction to other right inverses, finite slice placement or all critical formulations. No new primary source was imported. The frozen E91/E94 records remain separate and retain their original compatibility limitations.
+# E100 integration disposition
+
+22 November 2026. The lead read [E100](E100_CURVED_EXAMPLE_MANUSCRIPT_AUDIT_20261122.md) in full (SHA-256 bf679136a4bddc14ada36b7c595fbd8c5ef1c28078b05f0de932fd350ad14e80). Its frozen TeX b67333a7ddb094365d1836a8a2822ad7e03d98ed950fd08d808763fa18658bf4 preserved the actual bundle construction, varying-forcing scope, exact selected inverse and auxiliary/original-flow distinction. The suggested smooth-cutoff, field-value and high-block j>=1 precision edits, plus the optional literal forcing-variation identity, were integrated. Its E97 cross-check also passed. This helper authored E96 and disclosed the overlap; E100 is an integration check, not a new independent derivation. Final build and visual verification belong to the 83-page checkpoint in [the integration record](BROAD_RUN_INTEGRATION_20261122.md).
+

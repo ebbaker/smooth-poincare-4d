@@ -1,0 +1,11 @@
+# B41 — Combine the initial critical estimate with the stable tail
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Selected lead settings preserved; actual identifiers unavailable.
+
+E59 supplies the exact geometric output of a critical path estimate. E60 is testing that estimate for the actual adjusted system. If E60 closes, the already established round stability theorem allows a whole-time strain budget from a small initial **full pair** norm. This is a useful nonlinear calibration of the temporal criterion, while preserving the stronger initial assumption and fixed standard-sphere reference.
+
+On a common short interval, the critical estimate and E59 should bound J by C(delta+delta²), where delta is the localized B^(1/2)_(8,1) norm of (a,F_A−F0). At a fixed interior time, E42's all-derivative continuous dependence at the stationary reference puts the smoothed connection into the stable H^m basin. Do not replace that continuity by a quantitative Lipschitz derivative estimate without proving it. It is enough to introduce a monotone modulus omega(delta)→0 for its H^m norm.
+
+On the stable tail, m≥6 controls three fixed derivatives of a. Since F_A−F0 has one derivative of a, E59's pointwise dictionary then bounds the geometric strain integrand by C(||a||H^m+||a||H^m²). E49's exponential bound gives a finite tail contribution C(omega+omega²). E50's exact splice and E59's naturality transport this estimate to the original flow. The desired whole-time modulus is therefore C(delta+delta²+omega(delta)+omega(delta)²), tending to zero.
+
+Freeze E62 on this implication with E60's exact path estimate as an explicit premise until assessed. Use fixed native time and translate the budget once into E14's clock and norms. An arbitrary prescribed small budget should follow by reducing the initial critical threshold. State any relative-metric/Q consequence by the already proved E14 inequality, with its quantifiers and initial conditions. Do not assert a linear modulus, limiting automorphism, higher-order original convergence, or an intrinsic-strain-only hypothesis. If using a full-gradient L^(4,1) sufficient condition, derive its localized cutoff/connection terms and the low-frequency norm, rather than transferring the flat embedding by name.

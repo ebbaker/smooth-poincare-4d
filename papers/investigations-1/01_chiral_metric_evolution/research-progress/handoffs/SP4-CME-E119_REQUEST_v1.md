@@ -1,0 +1,16 @@
+# SP4-CME-E119 request v1 — parabolic-scale quadratic remainder
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Fixed E proof test, configured gpt-6.2-sol/ultra; actual lead identifiers unavailable. Own notes/119_UNIFORM_PARABOLIC_REMAINDER_20261122.md and research-progress/handoffs/SP4-CME-E119_RETURN_v1.md only.
+
+Read B63. Freeze E41 notes/41_COMPACT_LINEAR_ESTIMATES_20261122.md at 8a35523c145e5781f2bac77163cb7f7a2972e10a69deb37f0c69c26adf573ca3, E42 at 4e1f0bcf6d9b4dd0fbd1a0c49f416154ff2b92a256502ce0bba2d7a14e36fd77, and E63 at 427b413cf2e4aaf4cee52d721014bb932fa1e5db8d0cc6db92649bd6aa73c1eb. Verify identities and their assessed completed-space interpretation. At the stationary native positive round Riemannian reference on S4, let S(u) be the centered E42 independent-pair solution map on its fixed time interval. Test whether constants epsilon,T,C>0 independent of smooth initial derivatives give
+sup_(0<t<=T/4) sum_(k=0)^2 t^(k/2)||D^k S(u)(t)||_infinity <= C||u||_infinity
+and
+sup_(0<t<=T/4) sum_(k=0)^2 t^(k/2)||D^k(S(u)-D_u S(0)[u])(t)||_infinity <= C||u||_infinity²
+for all ||u||_infinity<epsilon. The second expression uses the full derivative of the nonlinear map at the stationary pair, with any linear lower terms, not E41's principal H alone. Keep original E42 fixed bundle, density, p>6, Bianchi diffusion and cutoff conventions. Smooth input is enough for this packet, but constants cannot use its derivatives.
+
+Use the specific time-local parabolically scaled spatial lift in B63: at r=sqrt(t0), t0<=T/4, flow time r eta(t/r²) for fixed spanning fields with small finite parameters s, fixed fiber transport, eta supported (1/2,2) and equal one near 1. Prove uniform action and transformed-residual bounds in the exact X/Y completions. Explicitly treat speed coefficients O(1/r) supported in the band, in both upper-slab and tent terms, including radii smaller, comparable and larger than r. Track the transformed divergence, fixed density/frame, principal coefficients, centered zero solution and initial trace. Uniform small parameter radius must preserve the contraction margin independently of r.
+
+Prove uniform operator bounds for the needed mixed parameter/datum derivatives, through two spatial parameters and two datum derivatives (and any finite lower orders needed), on one fixed ball. Use the actual implicit fixed-point derivatives or uniformly bounded Neumann inverses rather than compactness in r near zero. Extract weighted spatial jets at t=r², exploiting spanning fields and the fixed transport, with all constants uniform in the base point; then prove the Taylor remainder and the first inequality. An equally rigorous local rescaling proof in these same fixed spaces is allowed if it explicitly supplies every uniform constant and compatibility with the original construction.
+
+No nonlinear multiscale lower bound, recovery estimate, manuscript change or new conceptual route is part of this packet. If a uniform source/lift/derivative estimate fails, identify the exact obstruction and return the strongest justified finite statement. No new external theorem may be silently assumed. Disclose your E63 authorship and exact input overlap; record hashes and any source access. Lead owns all shared files.
+

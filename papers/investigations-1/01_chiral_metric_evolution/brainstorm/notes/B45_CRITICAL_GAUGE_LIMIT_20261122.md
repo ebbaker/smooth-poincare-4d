@@ -1,0 +1,13 @@
+# B45 — Test a limiting automorphism using the critical budget
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Selected lead model/effort preserved; actual identifiers unavailable.
+
+The accepted [critical-budget combination](../../reviews/E62_E67_GLOBAL_CRITICAL_ASSESSMENT_20261122.md) controls the integrated uniform Hessian of the compatible pair on the initial interval and yields a stable Hm tail. This suggests a concrete improvement to the current statement, which asserts convergence modulo time-dependent automorphisms without constructing a limit.
+
+For the local gauge, write beta=F_A−F0, a=A−A0 and d_A a=beta+[a wedge a]/2. Its horizontal recovery generator S_A* delta_A^g d_Aa therefore contains only first derivatives of the pair, despite containing two derivatives of a in connection notation. One spatial derivative of that generator should cost D0²U, |D0U|² and lower terms, all integrable in the accepted critical path norm. The vertical generator is the fixed codifferential of a. In a fixed trivialization of the compact principal frame bundle, include the coefficients of the A-horizontal lift; they depend on a and multiply the base generator.
+
+On the stable tail the generator is −delta0 b−chi_B(Delta0 S0*b), and its C1 norm should be at most C(||b||Hm+||b||Hm²) for m≥6 by Hm→C3. Thus the total C1 norm of the piecewise recovery vector field may be at most C delta. The compact-bundle ODE then has a C1 limit with C1 inverse, since its derivative and inverse derivative obey integrable coefficient bounds. Prove the actual convergence of maps and inverses, not just a bound on their norms.
+
+E74 is a fixed test of this route. If it closes, formulate a precise C1 principal-bundle automorphism limit, closeness to identity in a specified fixed C1 distance, and C0 convergence of the recovered connection and curvature to the corresponding pullbacks of the round pair. Preserve the ordering of the constant splice factor c and the stable recovery. The limiting curvature identity must be interpreted with its actual regularity; C1 pullback gives a continuous connection, not automatically a smooth one.
+
+Do not infer a C1 convergence rate for inverse maps merely from a C1 rate for the direct maps: evaluating derivatives at moving inverse points can require an additional derivative or a modulus of continuity. A finite-order conclusion without such a rate is sufficient. No C-infinity limit, original continuous-data initialization, nonlinear slice, or new sphere classification is sought. This is a potential consequence of existing estimates, not an accepted theorem before its derivation and audit.

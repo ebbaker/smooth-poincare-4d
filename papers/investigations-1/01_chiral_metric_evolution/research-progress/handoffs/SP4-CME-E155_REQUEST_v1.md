@@ -1,0 +1,18 @@
+# SP4-CME-E155 request v1 — Static pair compactness from a supplied metric limit
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Bounded E proof test under B78; configured gpt-6.2-sol/ultra, actual lead and independent runtime unavailable. Own notes/155_PAIR_COMPACTNESS_FROM_METRIC_LIMIT_20261122.md and research-progress/handoffs/SP4-CME-E155_RETURN_v1.md only. No shared writes or source theorem import.
+
+Prove or identify the precise gap in the B78 static lemma: on one fixed compact closed oriented smooth four-manifold and smooth SO(3) bundle, smooth native definite A_n in the positive-plane round-compatible component; g_n=g_A_n; smooth orientation-preserving phi_n with phi_n* g_n converging in C1 to a positive C1 metric; lambda_min(Q_n)>=m>0; uniform live sup bounds |T_n|+|nabla^A_n T_n|<=C. Seek smooth equivariant H_n covering phi_n such that a subsequence of (H_n*A_n,H_n*F_A_n) converges uniformly in one fixed smooth affine pair background to a positive compatible pair. A C1 metric limit suffices as proposed; do not silently upgrade to smooth convergence or assume curvature bounds beyond the exact inputs.
+
+Give explicit curvature-normalized chiral isomorphisms and canonical positive metric isometry to one fixed Lambda+ bundle; account for the sign/orientation and the SO(3) frame-bundle interpretation. Verify the direction of maps E to phi_n*E and their relation to pullback. Express the transformed chiral connection solely through normalized g_n and its first derivative. Use native E137/E145 b and nabla^Gamma b bounds plus Q derivative identity; convert full covariant derivatives to fixed-coordinate equicontinuity, with no hidden differentiation of eigenframes or unknown gauge estimates. Take finite charts and subsequences, use F=−sqrt(Q)sigma, check definite positivity, trace/volume and distributional curvature compatibility. State precisely how the already assessed E148 criterion applies to such a late-slice sequence. Compare the floor with supplied direction distortion and the strain bounds with supplied Psi through E145, without claiming those bounds arise along the flow. No metric compactness theorem from literature is assumed or proved; E154 handles that separately. No numerics or fresh literature required. Return scoped proof or precise gap, hashes and provenance, then stop.
+
+## Frozen inputs
+
+| Input | SHA-256 |
+| --- | --- |
+| [brainstorm/notes/B78_BUNDLE_COMPACTNESS_FROM_METRIC_LIMIT_20261122.md](../../brainstorm/notes/B78_BUNDLE_COMPACTNESS_FROM_METRIC_LIMIT_20261122.md) | e5a9b33906e6b5fa8879098c5f57478411d84c47569f02485a44ce5aa9e8c63e |
+| [notes/11_TRANSPORT_CURVATURE_COMPARISON_20261122.md](../../notes/11_TRANSPORT_CURVATURE_COMPARISON_20261122.md) | c5e66058a3c73e13d6582a5f84c3e297080c67ae2ee6458c0a8bf5ac30e266ae |
+| [notes/137_REAL_COMPARISON_TIME_CONTROL_20261122.md](../../notes/137_REAL_COMPARISON_TIME_CONTROL_20261122.md) | 8b2622b44a5a46106f28f67e2a37b2e1a129d238281a7be1f811498a48d95193 |
+| [notes/145_REAL_TRANSPORT_TEMPORAL_EQUIVALENCE_20261122.md](../../notes/145_REAL_TRANSPORT_TEMPORAL_EQUIVALENCE_20261122.md) | 544d6d1299560adcd99327d206ca737d44e4a1449567efac8795176ef34833f4 |
+| [notes/148_SEQUENTIAL_VALUE_COMPACTNESS_CONTINUATION_20261122.md](../../notes/148_SEQUENTIAL_VALUE_COMPACTNESS_CONTINUATION_20261122.md) | 526fa0a48fe414989549172efc4c2c71b3093b8a4b22ae537c2035e0709ee894 |
+| [reviews/E148_E150_SEQUENTIAL_CONTINUATION_ASSESSMENT_20261122.md](../../reviews/E148_E150_SEQUENTIAL_CONTINUATION_ASSESSMENT_20261122.md) | 6c9480a6dfaedbff17156541faa9c350e61bcf7925d5ae4cec88e8a7d93d4557 |

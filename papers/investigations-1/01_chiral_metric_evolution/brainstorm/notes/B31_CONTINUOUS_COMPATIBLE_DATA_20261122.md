@@ -1,0 +1,7 @@
+# B31 — Approximate the continuous curvature graph by smooth compatible pairs
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Selected lead settings preserved; actual identifiers unavailable. Lead B decision; bounded E38 execution by configured Sol6.2/ultra.
+
+E24 yields continuous A_star,F_star with F_star=F_Astar distributionally and positive definite limiting curvature. E36 propagates the compatibility constraint for supplied smooth pairs. A prospective rough-data construction therefore needs smooth compatible approximations converging in both values, not just arbitrary independent approximations of A and F. In local smooth frames d a_star is continuous because distributional curvature is continuous and all other terms are algebraic. Local convolution should approximate both a and its exterior derivative uniformly; partitioning the affine difference from a fixed smooth connection then gives a global construction. This uses no bound on the full first derivative.
+
+Freeze E38 to prove that density lemma, preservation of the definite component and a common continuity modulus for the approximants. Also check distributional closure of the curvature graph under C0 convergence. No parabolic existence or limiting constraint propagation follows merely from this density result; those require the source stability theorem and positive-time convergence separately.

@@ -1,0 +1,10 @@
+# SP4-CME-E120 request v1 — multiscale manuscript integration audit
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Fixed E audit, configured gpt-6.2-sol/ultra; actual lead identifiers unavailable. Own reviews/E120_MULTISCALE_MANUSCRIPT_AUDIT_20261122.md and research-progress/handoffs/SP4-CME-E120_RETURN_v1.md only.
+
+Freeze the current working manuscript at SHA-256 716548123cc50e862cf04fcc30fe56335376b652d9442ad86169ed3f93297907 (334633 bytes). Notify the lead after consuming it, so shared work can resume; do not edit it. Audit the new subsections subsec:round-multiscale / subsec:nonlinear-linear-budget and new abstract/introduction summaries against E112/E114, E116/E117 and E115/E118, all now lead-assessed. Verify exact note/audit hashes from their three lead assessments, retaining the corrected E118 authorship. You authored E22, E47, E114 and E117 but not E112/E116/E115; this is an integration check, not a new proof audit of all inputs.
+
+Check actual tangent realization and native clock, annular coefficient errors, fixed primary compact-pair hypotheses, full Hessian own-scale asymptotic, absolute off-scale bounds, constants independent of N and arbitrary fixed T_* radius choice, exact rearrangement convention and all Lorentz indices, matching upper derivative bound from the actual E22 operator, finite full budget versus no matching square-term order. In the nonlinear proposition verify compact-parameter derivative extraction, k=3 equation passage, continuous trace, killed gauge tangent, original-flow naturality and fixed-N limit order. Check statements cannot imply nonlinear unboundedness or general modulus failure. The new abstract's 'threshold' claim is only for the fixed round linear derivative estimate.
+
+Verify cross-references/labels, point-of-dependence citations, bibliography order and any compressed-proof gap. Return exact precision fixes or a scoped pass with hashes and inspected scope. No manuscript build, shared changes or new source search required.
+

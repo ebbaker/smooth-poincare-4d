@@ -1,0 +1,17 @@
+# E28–E29 — Local smooth flow with a fixed vertical adjoint
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Selected lead settings preserved; actual identifiers unavailable. Helpers configured Sol6.2/ultra. Lead review of source, derivation and compact-bundle construction; not external peer review or novelty certification.
+
+E28 and E29 together close the smooth short-time local construction for the specified modified gauge. In a smooth bundle automorphism chart the reverse equation is second-order quasilinear: the curvature identity removes the apparent extra derivative, and all chart conversion factors are smooth functions of values or first jets. The vertical second-order block is −|zeta|²I and the horizontal block is −S* w* w S; the mixed terms have order at most one. The exact-sequence injection proves strict negative Hermitian part on the compact unit cosphere. The smooth prescribed original path provides a common short-time coefficient neighborhood.
+
+The lead opened and read Taylor’s author-hosted revised monograph, Chapter7 pp147–149. Proposition7.3.A is a vector-system theorem with the negative Hermitian-part hypothesis; Proposition7.3.B specializes to first-jet quasilinear coefficients. The cited 2011 Proposition8.1 was not accessible and is not claimed verified. E29 provides the needed compact-bundle extension for smooth data explicitly, using a fixed elliptic spectral projection, local frozen-coefficient Gårding bounds and tame commutator estimates. The H6 bound controls C2 in dimension4, supplies a common short interval, and higher even Sobolev estimates persist on that interval. Compactness yields the smooth solution with strong initial trace. L2 difference energy gives uniqueness in the stated H6/H4 class. The cutoff in the small definite first-jet region is removed using C1 continuity at the initial slice. Smooth time dependence covers the reverse chart equation.
+
+Apply this construction first with reference equal to the smooth definite initial connection. It yields a smooth adjusted solution. Integrating the smooth invariant generator on the compact frame bundle recovers an unadjusted solution. Conversely any supplied smooth unadjusted solution admits the short reverse adjustment; the product identity and adjusted uniqueness give unadjusted uniqueness. Recenter at matching smooth times to obtain uniqueness on the common smooth interval. Thus the intended smooth local existence/uniqueness conclusion has a checked implementation with the frozen vertical adjoint. The native clock converts to the manuscript clock by the already assessed constant rescaling.
+
+This repairs the specific operator implementation rather than announcing a new local existence result. It proves no uniform lifespan from curvature values alone, no restart from continuous endpoint data, no global solution and no convergence theorem. The separate stability gauge of Fine’s Theorem4.11 was not audited by this local construction. E24’s finite-J endpoint remains below the verified restart regularity.
+
+## Assessed inputs
+
+- `notes/27_FIXED_ADJOINT_GAUGE_TEST_20261122.md` SHA-256 `755dbe5d1956bdc895f8da2214e9d6e0e9aa405d28f87958373a7d4c59fb1590`
+- `notes/28_FIXED_GAUGE_CORRESPONDENCE_20261122.md` SHA-256 `b5bc0ba6f3981370f29027481a8293083e3fc93e9fa013e4494ab86767f74175`
+- `notes/29_LOCAL_PARABOLIC_INPUT_20261122.md` SHA-256 `f39b671825c8ba2c6b7a22f0c829587e9d04c3de1bb4ce2b18ae5c696ffaa5b5`

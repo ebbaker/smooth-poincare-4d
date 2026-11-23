@@ -1,0 +1,22 @@
+# SP4-CME-E42 request v1 — conditional small-value contraction and compatible limit
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Authorized helper configuration gpt-6.2-sol / ultra; lead actual settings unavailable. No shared-file edits. Smooth compact closed real four-manifold, fixed smooth vector bundle and metric connection D, fixed positive density/metric and fiber pairing. All constants may depend on fixed smooth coefficients, atlas and finitely many required derivatives; do not assert uniformity from value bounds alone.
+
+Use n=4 and fixed p>6 (p=8 allowed). For T small and r<=sqrt(T) below a fixed injectivity/chart scale, set X_T norm to sup|u| plus sup_{x,r} r (r^{-6} integral_{r²/2}^{r²} integral_{B_r(x)} |Du|^p)^{1/p} plus sup_{x,r}(r^{-4} integral_0^{r²} integral_{B_r(x)}|Du|²)^{1/2}. Define Y0_T norm of f by sup r²(r^{-6} integral_{r²/2}^{r²} integral_B |f|^{p/2})^{2/p} plus sup r^{-4} integral_0^{r²} integral_B |f|. Define Y1_T norm of a bundle-valued covector G by the two gradient seminorm expressions with G in place of Du. Fixed metric balls and volume. These are dimensionally scaled KL-type norms; inspect the primary PDF before asserting literal equality with its printed notation. Source: arXiv:1310.3658v1, Theorem1.1 and §§2–4, exact source status in E37/canonical records.
+
+Own only notes/42_SMALL_VALUE_ROUGH_SYSTEM_20261122.md and research-progress/handoffs/SP4-CME-E42_RETURN_v1.md.
+
+Assume exactly the two fixed compact-bundle linear estimates stated in E41 request (not yet proved). For U=(A−bar A,F−bar F), E36/E37 give a smooth value-dependent uniformly parabolic P(x,U) in a reference-centered tube, and after covariant divergence rewriting lower forcing h0(x,U)+h1(x,U)DU+h2(x,U)[DU,DU]. Freeze L at P0=P(x,0). Prove explicit small-ball product/difference estimates in X_T and Y0/Y1 for div((P(U)−P0)DU) and these three h terms. Track T||h0||, sqrt(T)||h1||, and quadratic terms, fixed background derivatives, cutoff margin and possible connection/volume lower terms. Choose small R, small ||U0||C0 and T>0 yielding a contraction. State the resulting independent-pair solution class, strong initial trace for continuous data, Lipschitz dependence in X_T, and precisely justified positive-time smoothness. Any regularity theorem imported must be inspected at its exact primary hypotheses; KL §3 parameter argument may be adapted explicitly with globally defined smooth vector fields and bundle lifts. Do not silently assume nonlinear differentiability at the rough initial slice.
+
+Then use E38 smooth compatible approximations and E36 smooth constraint propagation to determine whether compatibility passes for the constructed rough solution. Need common time from the contraction, positive-time convergence/regularity and uniqueness identifying each smooth local E29 solution with the fixed-point solution on an initial interval. Uniform convergence of both entries gives distributional curvature closure, but justify every needed existence/uniqueness step. If a step cannot be proved within these inputs, retain it explicitly as an additional premise rather than announcing a rough compatible theorem.
+
+Finite scope conditional contraction and compatibility passage for globally C0-small data around one fixed smooth definite reference, conditional on E41. No arbitrary-size local-modulus theorem, no unadjusted gauge recovery/restart, no global convergence. Give a self-contained conditional statement with constants dependencies and distinguish solved lemmas from unresolved regularity. Exact versions and available model settings required.
+
+## Frozen inputs
+
+- `brainstorm/notes/B33_COMPACT_ROUGH_SYSTEM_20261122.md` SHA-256 `fd2f7557e141a15479daecbdd331ddec0207ca5be035bfa8180db24b6d9cb734`
+- `notes/36_COUPLED_CURVATURE_SYSTEM_20261122.md` SHA-256 `a1adab7273967261379aca8045d17a9773943adf1cdb8ca510b9ee2b8829097a`
+- `notes/37_ROUGH_DATA_SOURCE_TEST_20261122.md` SHA-256 `de2c9c2887a6df86d32c0c40f8ae2ce8da6bfc16a7c2a0158a2c3a8862ed424d`
+- `notes/38_CONTINUOUS_COMPATIBLE_DATA_20261122.md` SHA-256 `cbc7dc854602fe2271503663900e35d2ad874116ccb1871ec4bbccdb802e73c7`
+- `notes/29_LOCAL_PARABOLIC_INPUT_20261122.md` SHA-256 `f39b671825c8ba2c6b7a22f0c829587e9d04c3de1bb4ce2b18ae5c696ffaa5b5`
+- `research-progress/handoffs/SP4-CME-E41_REQUEST_v1.md` SHA-256 `b431ac9d4b3d14ab3651b78cc995bd87a9d1fc0f795725067f6e18bd180743c1`

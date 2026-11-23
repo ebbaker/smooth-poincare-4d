@@ -1,0 +1,70 @@
+SP4-CME-E20 exact finite execution
+
+Prepared for Edward B. Baker III with OpenAI Codex assistance.
+Execution timestamp: 2026-11-22T12:51:56-0500 EST (America/New_York).
+Helper launch configured gpt-6.2-sol / ultra. Independent runtime
+introspection and selected lead settings were unavailable.
+
+Command from the repository root:
+python3 -B papers/investigations-1/01_chiral_metric_evolution/numerics/broad_run_exact_checks.py
+Runtime: Python 3.10.0 (v3.10.0:b494f5935c, Oct 4 2021, 14:59:19),
+Clang 12.0.5 (clang-1205.0.22.11). Exit status: 0.
+The four checks use standard-library Fraction and integer operations.
+
+Fixed cases
+
+E08:
+  epsilon = 1/16, q = diag(epsilon, 0, -epsilon),
+  H = diag(1, -2, 1) - q/2, Q = I+q.
+  The pairings match both the symbolic expressions evaluated at
+  epsilon and the fixed rational values. The analytic note supplies d < 1.
+
+E09:
+  S = diag(1/3, 5/3, 1/3), Q = S^2 = diag(1/9, 25/9, 1/9).
+  S_X = ((1, 2, 0), (2, -1, 1), (0, 1, 0)).
+  S_Y = ((0, 1, 1), (1, 2, 0), (1, 0, -1)).
+  R   = ((2, 0, -1), (0, 1, 3), (-1, 3, 0)).
+  The first derivatives are symmetric and noncommuting. The mixed
+  derivative is symmetric. The trace-three normalization holds at the
+  base point. The derivatives are free symmetric data for this identity.
+
+E15:
+  The same S,Q and their conjugates by
+  rotation = ((3/5, -4/5, 0), (4/5, 3/5, 0), (0, 0, 1)).
+  The same fixed internal ordered basis is used in both cases:
+  diag(1, 0, -1), diag(0, 1, -1), E12+E21, E13+E31, E23+E32.
+
+E16A:
+  Basis ordered first by the four orthonormal covector slots and then
+  by the five internal basis elements above. The Gram matrix is four
+  copies of diag([[2, 1], [1, 2]], 2I_3) along the diagonal, with zero
+  cross-slot blocks. The normalized action A = sum_i J_i tensor R_i
+  is constructed from the oriented eta pairs and R_i(X)=[ad(e_i),X].
+  Its multiplicities follow from its quadratic polynomial, dimension,
+  and trace. Z/K = -36I + 8A.
+
+Actual script stdout
+
+E08 PASS: epsilon=1/16, pairings -1/256, 385/24576
+E09 PASS: relative Sylvester identity with noncommuting first derivatives
+E15 PASS: G M=Id and G L M=L on all five basis matrices at diagonal Q
+E15 PASS: G M=Id and G L M=L on all five basis matrices at rotated Q
+E16A PASS: 20 x 20 Gram self-adjoint, A^2=A+6I, tr(A)=0
+E16A spectrum of Z/K: -52 (12), -12 (8)
+
+SHA-256 identities
+
+SP4-CME-E20_REQUEST_v1.md  6239e4d715e78739bcbef487e1fb4659368f393020b7e4fc5758efac390a4edd
+10_SCALAR_PINCHING_JET_20261122.md  2689bc30072a5ff95823aba189bc1c1c002074cac90da46dfa2485261f411f06
+11_TRANSPORT_CURVATURE_COMPARISON_20261122.md  c5e66058a3c73e13d6582a5f84c3e297080c67ae2ee6458c0a8bf5ac30e266ae
+17_STRAIN_EVOLUTION_STRUCTURE_20261122.md  d8caa4e811178ba1357552526f311e5d283ec5e04ffd18851c7e378bfcfd5ec3
+18A_ROUND_STRAIN_REACTION_20261122.md  eb12c9f24b25d0ae8ed99eaa65485218ad8caed3c6497a9fb44e8dfa94c0dd4d
+broad_run_exact_checks.py  c85d4de5aafd2d10287d3d0790d762355e18d6d86d174a2e257d39af3d0f4eb1
+
+Evidence boundary
+
+E08 and E09 use one rational sample each. E15 checks full basis
+actions at the two specified matrices. E16A checks the entire fixed
+20-dimensional round algebraic operator. The sample checks support
+the recorded derivations. General matrix identities and all nonlinear
+PDE claims require their analytical arguments.

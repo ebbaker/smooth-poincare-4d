@@ -1,0 +1,20 @@
+# SP4-CME-E03A request v1 — canonical real horizontal comparison and O(2) remainder
+
+Date: 22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Authorized broad research. Lead model/effort unavailable and unchanged. Helper configured gpt-6.2-sol/ultra. Fixed E execution from B02, no independent strategy. Read root instructions and workflow and B02/E02 assessment. Do not edit shared register, plan, overview, manuscript, references or other helper outputs. No root chat capture.
+
+Category: smooth real oriented Riemannian dimension four, smooth definite SO(3) connection on oriented Euclidean rank-three E; internal bracket epsilon and delta norm, chosen round-compatible F=−K S Sigma, K>0 fixed, Q>0 trace3, S=Q^(1/2), mu=2K²dVhat, Sigma wedge Sigma=2delta dVhat. b=A−Gamma_A^+ transported by Sigma. Local base patches are contractible; no global trivialization or spin structure is presumed. Complete fibers carry unit round metrics, total area 4pi. All derivative bounds must expose eigenvalue and scale dependence; no assumed eigenvalue floor may be claimed as an output.
+
+Primary inputs: Fine–Panov arXiv:0802.3648v2 Def 2.9/Remark 2.10; AHS Theorem 4.1 journal pp435–436 (local PDF references/Atiyah.pdf); earlier manuscript passages and source notes named in B02. Browse/read primary passages at dependence and distinguish inspected text from inherited claims. At most one round benchmark and one specified anisotropic algebraic fiber test. No global PDE, nonlinear chart theorem or numerical campaign. Give exact derivations and explicit scope; return an ill-defined comparison to B02, an uncontrolled estimate to B03. Stop at packet boundary.
+
+## Fixed question
+
+Verify or correct all proposed H_X, L_X, T_X and projection formulas in B02. Derive horizontal differentiation by comparing A lifts to Gamma lifts before/after phi; derive vertical and time differentials. Show transformation under a base-dependent SO(3) frame and valid two-stereographic-patch transition for the vertical tangent bundle O(2), while retaining a global fiberwise tensor definition. Decompose H_X(f)=Omega_X f+P_f T_X f. Show whether its fiberwise holomorphic-vector-field L² projection is exactly the rotation Omega_X f; use real metric pairing and specify the identification with (1,0) sections, including factors. Compute the real remainder norm and moment inversion, proposed integral |P_f T f|²=(4pi/5)|T|². Prove T=(1/2)(S⁻¹(∇_A Q)S⁻¹)_0 and state inverse relation from tr∇Q=0, including uniform upper constants not using a lower eigenvalue bound. Check round Q=I, b=0 gives zero H. Include vertical complex-structure discrepancy of dphi (can state through dphi j dphi⁻¹−j) separately, not subsumed by H. Treat identification with Fine–Panov only with B02's round-calibrated sign; E03B owns primary sign audit. This is a transport comparison/reconstruction identity, not existence of generalized isothermal charts.
+
+Sole output ownership: `papers/investigations-1/01_chiral_metric_evolution/notes/05A_REAL_TWISTOR_COMPARISON_20261122.md` and `papers/investigations-1/01_chiral_metric_evolution/research-progress/handoffs/SP4-CME-E03A_RETURN_v1.md`. Acceptance: explicit equations, full-fiber transition/reality checks applicable to assigned scope, every assumption/constant, round agreement or scoped discrepancy, and an evidence-based return.
+
+## Input identities
+
+- `papers/investigations-1/01_chiral_metric_evolution/brainstorm/notes/B02_REAL_TRANSPORT_DECISION_20261122.md` SHA-256 `d371354e77d0d2604673d456a53713ce0e9076ecdbc455fd8b766546045656cc`
+- `papers/investigations-1/01_chiral_metric_evolution/reviews/E02_NONLINEAR_ASSESSMENT_20261122.md` SHA-256 `4e996d702dc711f4c3416d296718d5082eef9856853de989e698345e964b4fde`
+- `papers/investigations-1/01_chiral_metric_evolution/notes/04A_NONLINEAR_Q_20261122.md` SHA-256 `4568aff07ef8678e66b87c099fcabe787ef0c07afb5ef8873dfc80e2e99b3a19`
+- `references/SOURCE_NOTES_CME_REAL_TWISTOR_20261122.md` SHA-256 `e4da6fceda70bb2286813eede60142535dcb54ddb933c1c06019959dc4c248f9`

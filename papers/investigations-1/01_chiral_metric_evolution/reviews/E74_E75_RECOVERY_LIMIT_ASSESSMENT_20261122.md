@@ -1,0 +1,15 @@
+# E74–E75 — Quantitative C1 recovery-limit assessment
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Selected lead model and effort preserved; actual identifiers unavailable. Helpers configured gpt-6.2-sol/ultra.
+
+The lead read the complete [E74 derivation](../notes/74_CRITICAL_RECOVERY_LIMIT_20261122.md), SHA-256 b2178fb149712df61c6b660bca00e10451c1d38c5434bb562607d9ba369139fa, and [E75 audit](E75_RECOVERY_LIMIT_AUDIT_20261122.md), SHA-256 6b499ac9696dedcb9c4147e6a61e35fdb7e50c0bf947185e160666de586b6d92. E75 discloses E60/E67 authorship and independently checks the E74 extension. The result is accepted for smooth compatible data sufficiently small in the fixed native round critical pair norm delta.
+
+The actual direct inverse-flow generator W in j'=W composed with j is integrable in a fixed C1 norm on the compact frame bundle, with integral at most C delta. On the local graph d_Aa=beta+[a wedge a]/2. The two base slots in the live codifferential, the covariant fiber chain rule for the metric, and the coefficients of the A-horizontal lift give the bound C(h0+h1+h2+h1²). Here h_l is the uniform reference derivative of the pair of order l. The critical norm integrates this bound. The words “reference-parallel frames” in E74 mean a frame parallel at an individual point or the covariant tensor chain rule, not a parallel frame on an open curved set.
+
+On the stable tail, fixed differential operators and Hm→C3 for m≥6 bound the C1 generator by C(q+q²), with q exponentially decaying. The constant splice order is j=j_st c^−1, g=c g_st. These are the actual direct vector fields for j; a C1 estimate is not transferred to the conjugated Eulerian generator of g without extra derivatives.
+
+The compact-chart ODE controls the maps, their first derivatives and their Jacobians. The direct maps converge in C1. Uniform inverse derivative bounds give injectivity of the limit; compactness gives surjectivity; the inverse function theorem then gives a C1 inverse. Evaluating the uniformly convergent derivative matrices at moving inverse points uses continuity of the limiting derivative, and gives qualitative C1 convergence of the inverses. Both limits are O(delta) from identity in the fixed chart neighborhood; no higher initial norm enters that bound.
+
+The original connection and curvature converge uniformly to j_infinity*(A0,F0). Uniform potentials and curvatures pass the curvature identity to distributions; the resulting curvature has the continuous representative j_infinity*F0. This finite-order result by itself asserts no smooth limiting map or inverse convergence rate. E76 separately tests a higher-order consequence using the stable H6 decay and smoothness of each input, with data-dependent higher constants. The manuscript's verified 74-page checkpoint does not yet contain either limiting-gauge extension.
+
+No primary source was newly inspected or imported. E75 also reconstructed the original E67 bytes in memory from the recorded typesetting repair, confirming the original consumed hash. Earlier requests and return records retain their actual version identities.

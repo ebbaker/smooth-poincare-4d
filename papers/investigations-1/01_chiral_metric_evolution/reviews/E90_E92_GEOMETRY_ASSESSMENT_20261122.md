@@ -1,0 +1,13 @@
+# E90/E92 — Intrinsic almost-round geometry
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Selected lead settings preserved; actual identifiers unavailable. Helpers configured gpt-6.2-sol/ultra; independent runtime attestation unavailable.
+
+The lead read [E90](../notes/90_INTRINSIC_ALMOST_ROUND_GEOMETRY_20261122.md), SHA-256 6d67f6bc601df3dc0940ee8815be30f26c83c2849f6153913deb61569ef69395, and the separate geometry check in [E92](E92_GEOMETRY_AND_FROZEN_MODEL_AUDIT_20261122.md), SHA-256 3093463d094a65495b6e40abce8ccb09fd6144c0b2455c7fef90bd53d86d82c4. E90 authored E02C/E84; E92 authored E14 and earlier recovery derivations, not E90. The new endpoint combination and variational consequences were independently checked and are accepted without correction.
+
+For initial data in the assessed smooth invariant neighborhood W with sufficiently small intrinsic strain ell, put D=4512 sqrt(2) C_budget ell. In the fixed unadjusted identification, the limiting round metric h and initial metric g satisfy e^(−D)h≤g≤e^D h, exactly equal volume forms, and e^(−D)I≤Q_initial≤e^D I. The same statement holds at native and normalized scales. The limit is supplied by the assessed flow theorem; no separate compactness assumption is inferred from the metric comparison.
+
+Lengths and diameter have factors e^(±D/2). All scalar eigenvalues, with multiplicity, have factors e^(±D), because the two Rayleigh quotients use the identical measure and denominator. A supplied round Sobolev pair (C_gradient,C_2) transfers as (e^D C_gradient,C_2). Native g=2K times normalized g has curvature 1/2 at the round limit; the L2 Sobolev coefficient divides by 2K and eigenvalues divide by 2K in this direction. Zero strain makes the original flow stationary at a round pullback.
+
+E92 verified the historical manuscript input by subtracting only the exact subsequent E88/E89 fragment in memory and matching the frozen SHA-256. No manuscript snapshot or historical-byte edit was made. The result adds no positive-strain curvature, injectivity-radius or higher-coordinate-derivative bound and does not extend W. No new primary source was imported.
+
+E97 integration check: the lead read the full audit, SHA-256 0ce1aa618f1c477ebfcf1ab4e65d2b121bece955ae160ae5fdb107bbfaaa2825, against frozen TeX 1cc4f80cb6c61b2292e4cfe808d792876c88544d4e9d3dde1fc3a8a2d17a0c9f. Its scoped pass is accepted. The working proof now explicitly calls D1 zeroth order, states cutoff/frame absorption before the global interpolation absorption, specifies the nonnegative scalar spectrum, and reverses both endpoint form comparisons. No new source was imported. Later build and visual checks are recorded separately.

@@ -1,0 +1,19 @@
+# E66–E70 — Static strain control in the imposed round slice
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Selected lead settings preserved; actual identifiers unavailable. Helpers configured gpt-6.2-sol/ultra. The lead read the full derivation and audit. This assessment accepts their bounded static conclusion; it is not external review or a novelty claim.
+
+Frozen [E66](../notes/66_FIXED_SLICE_STRAIN_ESTIMATE_20261122.md): SHA-256 09ff98b37c5c4b3b84db9bc32e8745ce93b73efdc6e720a5c7d6a5b9393d0a66. Frozen [E70 audit](E70_FIXED_SLICE_AUDIT_20261122.md): SHA-256 d9d1ace690255fa6af7c7a37e5852e991538e24988e003636929573cb768272c. E70 authored E47 and checks its use as an assessed input, not E47 independently; E51 supplies the earlier distinct audit. The E66 extensions are checked independently.
+
+On the native positive round bundle, impose S0*a=0 and d0*a=0 on the given smooth a=A−A0. For sufficiently small fixed sup values of a and beta=F_A−F0, the live L^(4,1) norm of T controls the reference W^(2,(4,1)) norm of a and the localized B^(1/2)_(8,1) norm of (a,beta), linearly. The threshold has no higher derivative smallness.
+
+The proof first establishes a fixed Lorentz inverse for G0. The frozen matrix multiplier has degree zero, L2 boundedness and off-support kernel bounds of orders −4/−5. The vector dyadic decomposition, cancellation and adjoint duality give L8 bounds. Freezing/patching and interpolation remove the first-order remainder, while the L2 inverse and the summable Bessel kernels give H2→L8 and remove the value remainder. Arbitrary vector layers then interpolate the same inverse between L2 and L8, with the constant 12 before the layer identity and 3 per derivative after it. The completeness and common inverse are explicitly justified.
+
+The exact normalized curvature expansion is q=2M beta+R(beta), M=tf L0, with D0R bounded by C|beta||D0 beta|. On the imposed slice, G0a=4d0*M*(q−R−2M[a wedge a]/2). Since D0q=nabla_A Q−[ad a,q], the strain bound for nabla_A Q leaves errors at most C rho times the W^(2,(4,1)) norm. The live/reference metric and measure comparison uses values alone. Choosing C_G C_err rho≤1/2 absorbs those errors. The high dyadic estimate uses the full Lorentz gradient; its finite low block is bounded by L1. Partition, frame and curvature derivatives are retained in the pair estimate.
+
+Combining this static result with the [accepted global critical theorem](E62_E67_GLOBAL_CRITICAL_ASSESSMENT_20261122.md) gives a whole-time budget bounded by C||T(Ain)||L(4,1) for smooth initial connections satisfying the exact slice, the fixed value tube, and sufficiently small strain. The slice is an initial hypothesis, not asserted to persist along the original flow. No automorphism putting a general input into the slice has been constructed. [B44](../brainstorm/notes/B44_LINEAR_SLICE_AND_REGULARITY_20261122.md) and E71 separately examine only the linear projection.
+
+The manuscript integration is a separate compressed proof and requires its own audit and build checks. No new primary source was inspected or imported here; all fixed elliptic estimates beyond E47 are derived in E66.
+
+## E72 manuscript disposition
+
+The lead read [E72](E72_SLICE_MANUSCRIPT_AUDIT_20261122.md), SHA-256 a1b3a9f3de641d1c40058931855e08944b5d4e52a5f37f8eff1055ac6e780d01, against its frozen TeX 6eecda61e6da4435bd27bb73c9f022bdc5de6971943975d1f6e04f8183ef7eae. Its integration check passes, with E70 authorship disclosed. The reference-volume norm, direct strain equation citation and separate volume/covector comparisons were made explicit. Strong measurability of the vector layers is proved in full in E66/E70; the manuscript retains the compressed layer proof and completeness argument. All four requested E69 corrections are present. Final build identities and visual scope are recorded separately in the broad integration record.

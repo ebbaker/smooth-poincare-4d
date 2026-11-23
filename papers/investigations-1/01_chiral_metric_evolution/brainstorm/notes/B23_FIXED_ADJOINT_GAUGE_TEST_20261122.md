@@ -1,0 +1,7 @@
+# B23 — Audit the moving-adjoint order and one possible gauge adjustment
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Selected lead settings preserved; actual identifiers unavailable. Conceptual B decision.
+
+Inspection during E26 identifies a specific derivative-order concern in the printed gauge term −d_A d_A^{*g_A}(A−Abar). The metric depends on curvature, hence first derivatives of A. A live codifferential on a one-form differentiates that metric; the outer exterior derivative may then introduce a third derivative multiplied by A−Abar. Those terms vanish at the reference point used in the printed linearization. This concern must be checked explicitly, rather than using a reference-point symbol to certify a nonlinear second-order neighborhood.
+
+E27 independently checks that highest derivative and tests one concrete adjustment: freeze only the metric in the vertical-gauge codifferential at g_Abar. Leave the physical flow and diffeomorphism-gauge term as printed. The new vertical generator remains a legitimate bundle gauge direction and the reference-point second-order symbol should agree, while the third derivatives are absent by direct order counting. This is a finite operator test; it neither refutes the published existence theorem nor supplies all regularity and gauge-equivalence arguments for a replacement proof. Published-version comparison is a separate source dependency.

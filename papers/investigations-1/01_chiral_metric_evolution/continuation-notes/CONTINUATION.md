@@ -1,80 +1,124 @@
 # Continuation — Chiral curvature and metric evolution
 
-Prepared for Edward B. Baker III with OpenAI Codex assistance. Established
-21 November 2026; revised 22 November 2026 (America/New_York) for the real
-twistor coordinate integration. Actual selected model identifier and effort
-are unavailable; recommendations below are not execution provenance.
-This is a dated routing snapshot; the register owns live status.
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Selected lead model and effort preserved; actual identifiers unavailable. Helpers configured gpt-6.2-sol / ultra, without independent backend introspection. This is a routing snapshot, not a second task ledger: consult the [sole register](../research-progress/REGISTER.md) before assigning work.
 
-## Broad continuation authority
+## Authority and reading
 
-The author's subsequent 22 November instruction requests greater discretion
-than the overview and plan's default sequence. The
-[broad research continuation prompt](BROAD_RESEARCH_CONTINUATION_20261122.md)
-is the default prompt for a sustained run. When explicitly invoked, it
-authorizes the selected lead to follow new leads, revise hypotheses and
-tasks, compare alternatives and continue through successive packets without
-renewed permission. Bounded analytical and example-based work is delegated
-to `gpt-6.2-sol` with ultra effort; the lead retains conceptual decisions,
-review and integration. The routing below supplies starting priorities,
-not an exhaustive boundary on that run. Mathematical dependencies and
-evidence requirements remain in force. Saving or reading the prompt as
-background does not itself activate research.
+The author explicitly invoked the [broad continuation prompt](BROAD_RESEARCH_CONTINUATION_20261122.md) and authorized successive Sol 6.2/ultra packets. Research is activated. The author subsequently emphasized REFERENCE_WORKFLOW compliance and explicitly welcomed manuscript updates as results are obtained. The lead owns conceptual B work, review and all shared integration. Continue useful ready dependencies without renewed permission; a helper boundary or compaction does not end the broad session. Preserve the author-selected lead settings.
 
-## Next-task routing
+Read root AGENTS, README and workflows; then the [overview](../research-overview/OVERVIEW.md), [plan](../research-plan/PLAN.md), register and [research explanation](../brainstorm/explanations/BROAD_RUN_RESULTS_20261122.md). The foundation and nonlinear packets have already been assessed: do not restart E01. The working manuscript is [here](../manuscript/chiral_curvature_and_metric_evolution.tex), with the built PDF under root output/pdf/01_chiral_metric_evolution/.
 
-Read [REGISTER.md](../research-progress/REGISTER.md) for live status; the setup activated no research.
+## Current frontier — intrinsic entry and late limits
 
-The author-directed priority of 22 November is to understand the nonlinear
-flow first, allow intermediate hypotheses to emerge from estimates, and
-use known special cases as tests. Read the
-[decision](../brainstorm/notes/FLOW_FIRST_PRIORITY_20261122.md) and
-[explanation](../brainstorm/explanations/NONLINEAR_FLOW_AND_SINGULARITIES_20261122.md).
-The initial small-Q proposal is a candidate rather than a selected target.
-The initial-data existence problem on arbitrary homotopy spheres remains
-separate. This reprioritization did not itself execute the foundation audit
-or nonlinear calculation.
+The metric compactness and small-strain chains E162–E173 are assessed. E172/E175's manuscript precision changes are applied. The stronger [E177/E178 theorem](../reviews/E177_E178_COMPACT_FAMILY_ENERGY_ASSESSMENT_20261122.md) now gives global smooth original round convergence for small total native defect energy in a fixed-M/P initial family with bounded sup Psi and diameter. Small initial sup Psi alone is a corollary. It subsumes the separately assessed E174/E176 combination, with historical Hsmall discharged. Initial data on arbitrary homotopy spheres remain unconstructed.
 
-The generalized isothermal coordinate method is now the central candidate
-for additional control: first-jet comparison and complete-fiber two-patch
-reconstruction on the real S(E) bundle, retaining b = A − Γ_A⁺ and W⁺.
-Read the [expanded overview](../research-overview/OVERVIEW.md),
-[real twistor source record](../../../../references/SOURCE_NOTES_CME_REAL_TWISTOR_20261122.md)
-and [pointwise distortion check](../notes/03_direction_distortion_check_20261122.md).
-A real chart theorem, an along-flow estimate and a continuation result
-remain open. The [integration record](../reviews/RESEARCH_PLAN_INTEGRATION_20261122.md)
-identifies the exact planning inputs; this setup did not activate research.
+The verified normal manuscript PDF now has141 pages. E195/E198 repairs are complete, including the new twistor/metric compactness section; all final pages were visually covered directly or by pixel identity to inspected intermediates. Exact hashes and scope are in the [latest integration disposition](../reviews/E195_E198_TWISTOR_MANUSCRIPT_DISPOSITION_20261122.md). Earlier135-page validation remains historical.
 
-| Next task | Type | Recommended model | Dependency / purpose | Expected output |
-| --- | --- | --- | --- | --- |
-| SP4-CME-E01 | E | Sol 6.2/ultra | Primary next task; ready to start when research is activated. | Bounded audit with source labels, assumptions, and disposition |
-| SP4-CME-B01 | B | Astra/ultra | Use E01 to fix one nonlinear flow calculation and preliminarily assess its coordinate-control variables | Decision and, if viable, a frozen E02 packet |
-| SP4-CME-E02 | E | Sol 6.2/ultra | Requires the B01 packet; not executable yet | The specified calculation and an evidence-based assessment |
-| SP4-CME-B02 → E03 | B then E | Astra/ultra → Sol 6.2/ultra | Audit, B01 assessment and first nonlinear-flow disposition | Frozen real comparison protocol, then one round whole-fiber benchmark |
-| SP4-CME-B03 → E04 | B then E | Astra/ultra → Sol 6.2/ultra | Assessed nonlinear terms and chart comparison | One noncircular coordinate/flow estimate or scoped obstruction |
-| SP4-CME-B04 → E05 | B then E | Astra/ultra → Sol 6.2/ultra | Assessed bounds or a precise missing quantity | One continuation, compactness or endpoint test, with a justified validation regime |
-| SP4-CME-B05 | B | Astra/ultra | Foundation and usable real chart geometry; after the first nonlinear-flow work | One initial-data construction-or-obstruction assessment |
+The [E179/E181 assessment](../reviews/E179_E181_STATIONARY_ACCUMULATION_ASSESSMENT_20261122.md) is integrated: smooth critical accumulation follows after one fixed positive shift and bundle normalization, and E177 on one unshifted late slice gives zero energy with an actual round tail or energy at least the family threshold with a nonperfect critical accumulation point. B90/E182/E183/E185 is assessed and integrated, making the energy and small-Psi thresholds uniform across the stated bases and bundles. B91/E186 is assessed as a source comparison, retaining separate taming and C2 hypotheses. E187/E189 is assessed: five indefinite and two positive sampled stationary derivative kernels, with no actual critical realization. B93/E190/E192 is assessed: compact C0 persistence of a supplied regular sphere, with no perturbation derivative bound in the threshold and individual smoothness. B94/E191/E194 is assessed: H_pers is discharged and strong pointed C1 metrics suffice with strict metric twistor taming. B95/E193 supplies the ALE cover sphere using the explicitly attributed Kronheimer classification in checked Wright/Lyu–Xu passages; original classification bodies remain uninspected. B96/E196/E197 then gives general bounded metric-tamed compactness and finite oriented types. The current TeX and verified141-page PDF include these results. E200 has an assessed bounded primary comparison. B97/E199 returned exact axial stationary signs under independent E201 review; B98/E202 tests a general spectral ratio region and E203 checks its conditional stationary application. These assignments do not create new native-flow or initialization conclusions. Consult the sole register; shared files remain root-owned. This is an ongoing authorized run, not a stopping boundary.
 
-Begin with [E] SP4-CME-E01. The next conceptual task is [B] SP4-CME-B01 after its audit input is available.
+## Mathematical state to preserve
 
-## What must remain clear
+Use a smooth closed oriented real four-manifold, positive Riemannian signature, round-compatible positive definite SO(3) curvature, internal delta=−2tr, fixed K>0 and fixed unadjusted base/bundle identification. Q>0 has trace three, S=sqrt(Q), F=−KS Sigma, and mu=2K²dV. Fine’s native negative-Killing and metric/time normalization differ; consult E01 before converting.
 
-The correspondence with Ricci flow is linearized near the round metric and has a specified factor-four time rescaling. It does not identify the full nonlinear flows. The fourth-order metric gradient of the pulled-back energy is a different evolution. The manuscript’s ASD-existence characterization of standard smooth four-spheres is an equivalent target based on classical results, not an existence proof. Initial definite connections on arbitrary homotopy four-spheres, quantitative definiteness preservation, curvature and noncollapse estimates, compactness, and global convergence remain open. The finite-density degeneration example establishes an algebraic limitation, not a singular flow trajectory.
+The exact nonlinear Q equation, self-adjoint principal matrix L_Q, and pointwise mu_t=0 are derived in E02. The whole-fiber comparison is an O(2) vertical transport remainder, with T=(S^−1 nablaQ S^−1)_0/2; O(1) first jets remain a round calibration. Strain controls nablaQ, A−Gamma+ and the derivative-dependent chiral curvature block with constants independent of an assumed eigenvalue floor. W− is absent from that block.
 
-The branch contains inherited working research, not independently reverified results. No task completion, numerical run, or authentic chat capture should be inferred from repository setup. Preserve author-selected settings; record actual model and effort only when metadata establishes them.
+Interval small-Q pinching gives energy decay and excludes nonperfect critical connections in that region. The actual strain equation has principal L_Q and round reaction eigenvalues −52K and −12K. Its L2 and quartic energies, under pointwise pinching and a uniform Sobolev constant, propagate and decay small initial L4 strain. Neither scalar maximum arguments nor spatial L4 strain alone provide the missing pointwise control; exact local and global examples establish the scoped failures.
 
-## Pasteable activation prompt
+The central control quantity is J(t)=integral_0^t sup(|nabla_A T|+|T|²). E14 bounds relative metric distortion and the Q eigenvalue floor by exp(±4512 sqrt(2) J). E24 turns a small J budget into the pinching and Sobolev hypotheses of the energy estimates. At a finite endpoint, finite J gives uniform continuous connection, curvature and positive metric limits, with distributional curvature compatibility. The assessed E138–E143 radius and smooth-slice recovery argument now upgrades this to smooth original extension, without a small-J or round-basin assumption.
 
-Use the full self-contained text in the
-[broad continuation file](BROAD_RESEARCH_CONTINUATION_20261122.md), or paste:
+The L^{4,1} norm controls spatial distortion on a supplied round reference and J for the actual round linear bundle equation. A separate flat semilinear model closes globally for small Lorentz data. E25 disproves one crude L1-time L^{4,1} second-derivative forcing estimate by a periodic frequency family; it does not rule out adapted principal operators. The actual nonlinear variable principal coefficient and evolving gauge remain untreated by those model theorems.
+
+The fixed-vertical-adjoint gauge has a checked smooth local construction (E26–E29). E30 shows value-only dependence of its principal coefficients. E34/E36 introduce independent A,F variables with a Bianchi completion and a correction delta(F−F_A). The reference symbol is strongly parabolic in the fixed pairing; smooth curvature compatibility is propagated by a covariant Hodge heat equation. E41–E44 now give the additional small continuous-data theorem in a fixed reference value tube, with uniform initial trace in the closed-slab smooth completion, positive-time smoothness and preserved distributional compatibility. E45 gives smooth continuation while an adjusted trajectory stays in its small initial-data tube. Neither proves preservation of that tube or unadjusted endpoint recovery.
+
+E31/E32 give finite-time conditional sphere recognition. With supplied common pinching/Sobolev bounds and small initial squared-L4 strain, energy selects a slice below the strict CGY L2 curvature threshold after an explicit waiting time. Convergence of the whole flow is unnecessary for that conditional conclusion. E35 separately proves Y>=3/C_S−(48+24 sqrt(3))||T||4² from an exact scalar divergence identity, with no small q or quantitative eigenvalue floor.
+
+E37 audits Koch–Lamm's exact inspected 2013 v1 and preserves its systems/manifold/uniqueness hypotheses. E38 proves uniform smooth approximation of continuous compatible A,F with a common continuity modulus. E39 proves a Dini sufficient heat Hessian bound and a continuous scalar example with infinite integrated uniform Hessian but finite integrated velocity. This limits one sufficient gauge-derivative estimate, not actual geometric recovery.
+
+Initialization on arbitrary smooth homotopy four-spheres remains separate. The static transport criterion is an application of Chang–Gursky–Yang under explicit hypotheses. ASD existence is an equivalent classical endpoint. The fixed round small-value basin below supplies global original-flow existence and smooth exponential convergence to a fixed bundle pullback of the round connection on standard S4. E76/E77 use the single H6 entrance threshold; higher-order constants depend on the smooth datum. No general convergence theorem or smooth Poincaré proof is claimed.
+
+The [critical-budget assessment](../reviews/E62_E67_GLOBAL_CRITICAL_ASSESSMENT_20261122.md) now gives J(infinity)≤C delta for smooth compatible full-pair critical input near the fixed round reference. E60 supplies the exact local premise; E63 controls smoothing linearly; E67 checks the combination. The [E66–E70 assessment](../reviews/E66_E70_FIXED_SLICE_ASSESSMENT_20261122.md) controls this initial norm by intrinsic Lorentz strain only when the given initial connection already satisfies both fixed slice equations and the small value tube. The assessed B44/E71/E73 result gives the linear projection; E82–E85 now supplies finite representatives on a smooth neighborhood, as described below. B45/E74/E75 bounds the limiting recovery and inverse by O(delta) in C1 for critical data. B46/E76/E77 upgrades the limit to smoothness in the wider smooth value basin, with exponential decay in each fixed spatial order. The verified 80-page local-section checkpoint includes E78's distinct-splice clarification and E87's common-threshold precision. Exact TeX/PDF hashes and all-page visual coverage are in BROAD_RUN_INTEGRATION. Earlier 74- and 77-page checks remain historical. Consult the sole register for subsequent work.
+
+B47/E79/E80 gives an assessed varying infinitesimal inverse using the actual A-horizontal lift, uniform at H1/L2 under value smallness. Its restricted orbit image complements the fixed slice; excluded reference stabilizer directions leave an explicitly identified finite-dimensional residual. B48/E81 checks Hamilton's primary smooth-tame inverse/submersion hypotheses and Fine's exact automorphism discussion. B49/E82/E83/E85 supplies a pointed smooth local section of the full action map F(g,b)=g*(A0+b), with b in the fixed slice. The actual augmented elliptic family and full equivariant exponential chart satisfy the theorem's hypotheses. There is no uniqueness or placement throughout the value-small or critical basin.
+
+B50/E84/E86 combines this smooth local section with the fixed-slice estimate and critical theorem. On an open smooth invariant neighborhood W of the whole round orbit, sufficiently small intrinsic live Lorentz strain yields global original flow, a linear J(infinity) bound and smooth exponential convergence to a fixed round pullback. Norm and budget are exactly pullback invariant, so the budget constant is uniform throughout W. Higher convergence constants may depend on the datum. W may require higher finite-norm smallness. E87 checks the manuscript integration; subsection 6.13 is in the verified 80-page checkpoint. Canonical Hamilton source records retain selected indexed primary inspection and direct-PDF 403, with no retained copy.
+
+B51/E88/E89 gives the assessed value-uniform Lorentz inverse: vertical W(1,(4,1))/C0 and horizontal/residual L(4,1), with no varying coefficient derivatives in the constant. Its distinct fixed divergence estimate and finite-kernel terms are proved explicitly. B52/E90/E92 gives endpoint round metric and Q bounds, exact volume equality, distance factors e^(±D/2), scalar spectral factors e^(±D) and a supplied-round Sobolev comparison, still only on W.
+
+B53/E91/E92 and B55/E94 give a frozen shear with critical pair smallness and large instantaneous horizontal C1 output but uniformly controlled finite flow. B56/E95/E96 realizes the analogous joint critical failure on actual perfect round connections by compactly supported equivariant pullbacks. In the actual example the forcing varies and its covariant exterior-derivative pair converges too. The selected E79 output has C1 growth; the auxiliary horizontal flows/inverses converge in C1 on bounded intervals by conjugacy. Original Fine flows are stationary. Neither example rules out another inverse or finite placement.
+
+B54/E93 checks Feehan's published 2001 critical Coulomb theorem, now canonical R25. The supplied pair bounds do not yet establish its divergence or quotient-distance hypotheses, and its action is fixed-base gauge only. No theorem was imported. B57/E98/E99 derive a direct finite internal gauge from small L(4,1) connection difference and, independently, a W(1,8) gain for a supplied smooth Coulomb representative with small L4 value and sup curvature difference. The finite-gauge note supplies a smoothness bootstrap; E101 independently audits both results and their combined representative bound. These packets do not impose the horizontal equation. E97 and E100 integration checks are assessed with precision edits applied. Consult REGISTER.md for all live status before assigning work. E98/E99/E101 is assessed, as are E102/E105 static defect pinching without either slice equation and E103/E106 actual perfect curvature oscillation after C1-small internal gauges. B59/E104/E108 supplies global quadratic/quartic strain-energy decay in the reduced value basin with separate initial live L4 smallness. E107/E110/E113 integration checks are assessed and their precision edits applied. These three subsections were verified in the 91-page checkpoint; the newer 100-page checkpoint below also contains the assessed nonlinear multiscale transfer. Exact hashes and visual coverage are in reviews/BROAD_RUN_INTEGRATION_20261122.md.
+
+B60/E109/E111 gives an assessed frozen multiscale lower bound: values and initial L4 strain tend to zero, but the damped heat full-derivative budget grows like sqrt(N). Here DT is the full derivative, not exterior derivative. B61/E112 extends the construction to attained tangent data and the genuine compact round linearization, using only the fixed local differentiated kernel from R18. E112/E114 is assessed. B62/E115/E118 excludes a uniform nonlinear J bound linear in initial live L4 strain by finite-window differentiation; E116/E117 gives exact annular Lorentz sizes and the matching linear derivative upper bound at index one from E22. These are assessed, and E120 checks their manuscript integration with all precision edits applied. That earlier nonlinear argument takes fixed N, epsilon to zero, then N large. The separate stronger result below uses a uniform remainder; that work was integrated in the historical 100-page checkpoint.
+
+B63/E119/E122 is assessed: the exact E42 completed-space solution map has a uniform weighted two-jet quadratic remainder. E121's selected primary follow-up is assessed and canonical R20 updated; it supplies method attribution, not an imported datum-Hessian bound. B64/E123/E124 is assessed after that premise is discharged: actual initial Lorentz sizes and signed windows give J>=c N delta−C N delta² for actual smooth global round flows, with each J finite. The stated sequences have vanishing initial values and L4, or any fixed L4,q with q>1, while J grows; their L4,1 sizes grow. E126 checks the 100-page manuscript integration. Exact hashes and visual coverage are in reviews/BROAD_RUN_INTEGRATION_20261122.md.
+
+B65/E125/E127 and B66/E128/E130 are assessed: the exact compatible adjusted defect equation has only first pair jets outside its Hessian, and mixed critical products plus the full third weighted jet control its coefficients. The adjusted volume is advected and cancels from the normalized quotient. The [head E129/E132](../reviews/E129_E132_INTRINSIC_HEAD_ASSESSMENT_20261122.md) and [tail E131/E134](../reviews/E131_E134_WHOLE_TIME_ENDPOINT_ASSESSMENT_20261122.md) are now assessed. They prove J <= C ell on one fixed smaller smooth round connection/curvature value basin, without a separate strain threshold, slice condition or initial higher-derivative bound. The finite H5 defect and uniform H10 background estimates are essential. [E133/E135](../reviews/E133_E135_ROUND_COMPARISON_ASSESSMENT_20261122.md) adds the unsquared strain integral, native physical velocity bounds, fixed-reference pair distance Ce^(C ell) ell to one joint round pullback and exact-volume/relative geometry comparisons. Frozen conditional notes remain historical. B70/E136 checks the new manuscript integration; B71/E137 returns to finite time-integrated real direction-sphere and chiral curvature comparisons. Consult REGISTER.md before assigning work. The latest verified normal PDF is the 135-page uniform-entry checkpoint; exact hashes, static checks and changed-page visual coverage are in BROAD_RUN_INTEGRATION. E137/E139 and E141 supply the assessed real comparison consequences. E138/E142 proves a uniform local value radius with reference-dependent time; E140/E143 supplies the original smooth-slice restart. Their [combined assessment](../reviews/E138_E143_GENERAL_CONTINUATION_ASSESSMENT_20261122.md) proves general original extension at finite J, or a positive continuous pair endpoint. E146/E151 precision edits are integrated and visually verified. B73/E145/E147 gives a general real-sphere transport norm equivalent to J. B74/E148/E150 gives smooth extension equivalently from one positive uniform normalized pair accumulation sequence, with no uniform derivatives of its normalizing maps required. No general a priori J bound is supplied. E144 reference corrections are integrated. E149 records a bounded primary comparison, not novelty certification; B76/E152/E153 specializes the scalar obstruction to the determinant-normalized trace. B77/E154 checks the exact primary metric compactness premise before any separate bundle compactness proof. Consult REGISTER.md for those later packet statuses.
+
+## Current route and evidence
+
+| Routing item | B/E and configured recommendation | Dependency and output |
+| --- | --- | --- |
+| E41–E45 assessment | Lead integration | Small continuous-data local theorem and adjusted no-exit continuation are assessed; keep fixed-reference and completed-space uniqueness qualifications |
+| E46 | Sol6.2/ultra fixed E | Compressed proof corrections integrated; verified historical 63-page manuscript checkpoint in the integration record |
+| B35 / E47 | Lead B; Sol6.2/ultra fixed E | Round fixed stability operator: Hessian normalization, positive spectrum, half-line energy estimate and exact trace |
+| B35 / E48 | Lead B; Sol6.2/ultra fixed E | New stability gauge with fixed inner differential operators: second order, exact generator and H^m tame nonlinear remainder |
+| B36 / E49 | Lead B; Sol6.2/ultra fixed E | Assessed weighted nonlinear stability, including smoothness through zero and common H6-controlled restart |
+| B36 / E50 | Sol6.2/ultra fixed E | Assessed small-value transfer for smooth input via E42 smoothing, recovery and exact splice; E49 supplies H_st |
+| E51–E52 | Sol6.2/ultra fixed E | Focused round stability and transfer audits assessed; combined theorem in the manuscript |
+| B37 / E53–E54 | Lead B; Sol6.2/ultra fixed E | Critical finite-p embedding/heat input and specified quasilinear flat calibration |
+| E55–E56 | Sol6.2/ultra fixed E | Manuscript stability corrections and critical linear audit assessed; final 67-page checkpoint recorded |
+| B38 / E57 | Lead B; Sol6.2/ultra fixed E | Fixed compact-bundle critical linear estimate, actual localization and complete solution class |
+| E58 | Sol6.2/ultra fixed E | Focused critical nonlinear model audit |
+| B39 / E59 | Lead B; Sol6.2/ultra fixed E | Assessed covariant dictionary from a critical path norm to the real temporal strain budget |
+| B40 / E60 | Lead B; Sol6.2/ultra fixed E | Actual compact critical nonlinear application and weak–smooth solution identification |
+| E61 | Sol6.2/ultra fixed E | Independent compact critical linear audit |
+| B41 / E62 | Lead B; Sol6.2/ultra fixed E | Conditional whole-time budget using E60, E59 and the assessed stable tail |
+
+Read [E49–E52 round stability assessment](../reviews/E49_E52_ROUND_STABILITY_ASSESSMENT_20261122.md) and [E53 critical heat assessment](../reviews/E53_CRITICAL_HEAT_ASSESSMENT_20261122.md), then [E41–E44 rough local assessment](../reviews/E41_E44_ROUGH_LOCAL_ASSESSMENT_20261122.md) and [E45 adjusted continuation](../reviews/E45_ADJUSTED_CONTINUATION_ASSESSMENT_20261122.md), then [E28–E29 local flow](../reviews/E28_E29_LOCAL_FLOW_ASSESSMENT_20261122.md), [E30–E32 recognition](../reviews/E30_E32_RECOGNITION_ASSESSMENT_20261122.md), [E36 coupled system](../reviews/E36_COUPLED_SYSTEM_ASSESSMENT_20261122.md), [E37–E39 rough dependencies](../reviews/E37_E39_ROUGH_DEPENDENCIES_ASSESSMENT_20261122.md), and [E40 reference audit](../reviews/E40_REFERENCE_AUDIT_20261122.md), then [E19–E21 assessment](../reviews/E19_E21_ENDPOINT_ASSESSMENT_20261122.md) and [E22–E25 assessment](../reviews/E22_E25_TRANSFER_ASSESSMENT_20261122.md), plus earlier assessments linked in the register. Fine arXiv:1111.5005v2 is a preprint, revised 29 November 2011. Primary source records are shared at root references/. Record literature immediately in the canonical catalog/BibTeX/source notes; preserve unknown retrieval fields, exact inspected versions and access limitations. E40 metadata corrections were integrated; the published Koch–Lamm text was not obtained. Taylor’s inspected author file is undated and repaginated, not dated by its URL. Ludewig2019 supplies the exact compact-bundle kernel inputs; no uniform theorem for evolving geometry is imported.
+
+Frozen requests retain historical input hashes. Cosmetic changes after input consumption are recorded in the [typesetting correction record](../reviews/BROAD_RUN_TYPESETTING_CORRECTIONS_20261122.md); never overwrite a frozen request to hide a correction. In particular E24’s request has a Hodge-star sign typo, corrected in note24 and the lead assessment: v=+4*(C wedge F). Its absolute estimates are unaffected. E27 consumed manuscript hash c3858e3ae0f1f0c5a5ab28bcbda461bf0070277a76d120c6da3225b0aa5b910b before later integration.
+
+## Capture and validation
+
+Canonical research chat: 01a20426-15fb-75d0-8328-6c49cb6e1ae2, verified title “Continue chiral metric research”. Refresh the existing branch registration at turn start with tools/refresh_chat_history.py; do not register it again. The run’s actual turn ID is 01a20426-1718-7841-8e05-74ed5848a5db. At an actual turn end, refresh completed public text and arrange the bounded after-turn deferred follow-up as the last tool action, using the actual current turn ID if different. Never save an unsent response as authentic history.
+
+Exact checks are in numerics/e02b_principal_checks.py and numerics/broad_run_exact_checks.py. They are finite algebraic checks, not universal proofs. Run repository hygiene and git diff --check after integration. Rebuild and visually inspect a changed manuscript; the current compilation scratch path is /private/tmp/cme-broad-20261122-build. Do not infer the current PDF’s verification state from a prior build; consult the integration record/register.
+
+## Pasteable continuation
 
 ```text
-Read /Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/01_chiral_metric_evolution/continuation-notes/BROAD_RESEARCH_CONTINUATION_20261122.md
-and execute its “Pasteable prompt” as my instructions for this research run.
-I authorize the broad continuation and Sol 6.2 delegation described there.
-Begin now, preserving my selected lead model and effort.
+Continue the already activated broad research run in /Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/01_chiral_metric_evolution. Preserve my selected lead model and effort and the authorized Sol6.2/ultra bounded delegation. Read CONTINUATION.md, the overview, plan and sole REGISTER.md, then the current intrinsic-entry and stationary-accumulation frontier B88–B94/E177–E192 and its assessed metric/strain/local/round dependencies. Respect the author’s explicit reminders to maintain REFERENCE_WORKFLOW records and update the working manuscript with supported new results. Do not rerun the foundation. The actual nonlinear critical theorem is now distinct from its earlier model calibrations; preserve its stronger full-pair and fixed-reference hypotheses. Follow the broad prompt’s authority through useful ready dependencies, keeping the full initialization, regularity and convergence gaps explicit. Maintain shared-file ownership, frozen inputs, primary-source checks and authentic chat capture.
 ```
 
-For an explicitly bounded session instead, append: “This run is limited
-to E01; complete its assessed disposition and stop.” A current narrower
-author instruction overrides the sustained-run default.
+
+### Geometric compactness and the next analytic dependency
+
+E154–E159 are assessed and integrated with E161 repairs. The
+[geometric criterion](../reviews/E157_E159_GEOMETRIC_CONTINUATION_ASSESSMENT_20261122.md)
+uses one late sequence with bounded real transport density, positive
+injectivity and bounded diameter on a homotopy four-sphere. For general
+bases also bound the complete-fiber distortion. Topology excludes a
+semidefinite Q limit only after positive metric convergence is supplied.
+The exact determinant trace obstruction is local and does not transfer
+the different hypersymplectic-flow maximum argument.
+
+The E160/E163 source checks did not supply the missing extraction theorem.
+The later branch argument is now assessed: [E165/E167](../reviews/E165_E167_PRE_ALE_EXTRACTION_ASSESSMENT_20261122.md)
+constructs the smooth nonflat pre-ALE limit and actual compact embeddings;
+[E164](../reviews/E164_RICCI_FLAT_ALE_SOURCE_ASSESSMENT_20261122.md)
+supplies the exact Ricci-flat ALE theorem; E162/E166 supplies the full-core
+obstruction. The complementary unscaled global chart argument is assessed
+in [E168/E169](../reviews/E168_E169_METRIC_COMPACTNESS_ASSESSMENT_20261122.md).
+Together they remove the supplied injectivity bound on a homotopy sphere:
+Psi and diameter on one late sequence suffice for original continuation.
+The E172/E175, E180/E184 and E188 precision checks are integrated in the verified
+135-page PDF; exact build and visual evidence is in the integration record.
+
+The [E171/E173 static result](../reviews/E171_E173_SMALL_STRAIN_ASSESSMENT_20261122.md)
+proves universal small-strain pinching and positive Ricci by excluding the
+rank-one neighborhood with induced SO(2) curvature and Stokes. B87 uses
+this in the assessed fixed-M/P positive-time entry theorem. E174 keeps
+its historical Hsmall premise; E176 checks the smoothing/energy/round-tail
+combination, and E177/E178 gives the stronger bounded-family energy form. Consult the sole register
+before assigning further work. No initial definite data on an arbitrary
+homotopy sphere have been constructed.

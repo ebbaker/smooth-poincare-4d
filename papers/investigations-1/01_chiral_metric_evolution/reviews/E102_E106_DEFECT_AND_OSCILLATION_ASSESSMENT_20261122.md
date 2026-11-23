@@ -1,0 +1,27 @@
+# E102–E106 — Static defect pinching and the remaining curvature oscillation
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Selected lead settings preserved; actual identifiers unavailable. Helpers configured gpt-6.2-sol/ultra without independent runtime attestation. The lead read both derivations and their separate independent audits in full, checked the representation, absorption, dyadic lower bound and actual orbit identities, and accepts both results without mathematical correction. This is local analytical evidence and an actual example, not a global intrinsic-flow theorem or a novelty claim.
+
+## Defect pinching without a slice
+
+[E102](../notes/102_STRAIN_DEFECT_PINCHING_20261122.md), SHA-256 783daa8875728a6265b0632829d57dae4f72522897bb8f052c79cdf841260c3b, and [E105](E105_STRAIN_DEFECT_PINCHING_AUDIT_20261122.md), SHA-256 92a4978bd9b77bd83ce7c248dbcfc45c817dee0580eac16685f6edea51e37534, establish the following. For every actual smooth A=A0+a in a sufficiently small fixed connection/curvature value tube at the native positive perfect round SO(3) reference,
+
+    ||Q(A)-I||W1,(4,1);0 + ||Q(A)-I||C0 <= C ||T(A)||L4,1(g_A).
+
+No slice equation is used. On the rank-five Sym0(E) bundle, a parallel section commutes with all curvature actions; each eigenspace of a symmetric commuting matrix is invariant under every rotation, forcing a scalar matrix, and trace-freeness forces zero. The ordinary covariant Laplacian has scalar top symbol and no kernel. Its exact fixed divergence estimate at L2/L8, with common weak inverse and arbitrary Lorentz layers, gives ||q||W1,(4,1)<=C||D0q||4,1. The ray endpoint supplies continuity. The derivative identity D0q=nabla^A Q-[ad(a),q], the norm bound |nabla^A Q|<=6|T|, and fixed/live comparison factor 2^(1/4)sqrt(3/2) then close by small ||a||infinity absorption. Constants use no derivatives of a or its curvature difference.
+
+Pointwise eigenvalues lie in [1-C ell,1+C ell], where ell is the live Lorentz strain; zero strain gives Q=I. This pointwise assertion and ell are invariant under internal gauges and supplied orientation-preserving smooth bundle pullbacks. The fixed D0 derivative bound is tied to the chosen reference and representative. E105 did not author E102; E99 and E103 authorship was disclosed but neither was a proof premise. No temporal persistence or full critical-pair estimate follows.
+
+## Curvature oscillation survives internal Coulomb placement
+
+[E103](../notes/103_COULOMB_CURVATURE_OSCILLATION_20261122.md), SHA-256 765a5e8870e2fb9867cae50b1220535fc75a8b374cd5efb45fd354a7eb6b5f79, and [E106](E106_COULOMB_CURVATURE_OSCILLATION_AUDIT_20261122.md), SHA-256 52d1f31836881fb18fe691b8f9cfc5f2e6d0034717f48bec38f1c58f24048ed2, give an actual round-orbit family. Set epsilon_n=n^(-1/4) for dyadic n and use E95's compactly supported shear with displacement epsilon_n/n. Its equivariant lift G_n gives A_n=G_n*A0, with connection and curvature sup errors O(epsilon_n), Q=I and T=0.
+
+In an inner window the curvature is F0+epsilon_n cos(nx1)H+O(epsilon_n/n), where H=dx1 wedge i_(e2)F0 has a nonzero scalar component. For each fixed M*, every internal u_n with ||u_n-I||C1<=M* epsilon_n leaves a critical curvature lower bound c epsilon_n sqrt(n)=c n^(1/4), for sufficiently large n. The unit-torus rescaling keeps the carrier an exact dyadic eigenmode. The annular kernel's first moment is O(1/n); it bounds both the varying amplitude commutator and the reference-curvature gauge correction using only C1. The residual uses only its value bound. Fixed L8/W4,8 coordinate operators compare the inner window to the original atlas norm by summing single blocks, without requiring higher derivatives of the varying gauge.
+
+The accepted [E98/E99/E101 combination](E98_E101_VERTICAL_GAUGE_ASSESSMENT_20261122.md) supplies such gauges and smooth exact Coulomb representatives b_n with W1,8 and C0,1/2 size O(epsilon_n). Their connection part of the critical pair is O(epsilon_n), but their curvature part grows. Thus E66's conclusion fails if only its horizontal equation S0*b=0 is removed, even with these stronger vertical regularity properties. The provisional wording in frozen E103 records the input status when issued; E101's assessed disposition now supplies that premise. The family still has explicit full round placement: A0+b_n=(G_n composed with U_n)*A0, where U_n implements the internal action. Its inverse is an actual finite placement. No general obstruction to finite horizontal placement follows.
+
+E106 did not author E103 but authored inherited E95/E98 and E53/E59 inputs; that overlap is disclosed. Its new lower-bound recomputation is separate from those inherited derivations. No external source was newly inspected or imported by these results.
+
+## E110 integration disposition
+
+The lead read [E110](E110_STATIC_DEFECT_MANUSCRIPT_AUDIT_20261122.md) in full, SHA-256 4b04ff4408c2ed3c55066a6494d26122b8c75a8edb977c88bfcb2170a42a1f43. It checked frozen TeX afa298c3f68cb8c813b3ab7074805710e1ec72d4a4e46d0219c26c8385e1041f against both notes and independent audits. The window zero extension, conjugation/amplitude comparison and optional self-dual nonzero coefficient explanation were added. Both E107 edits were verified present. The helper disclosed related inherited audits and E66 authorship; it did not author E102/E103/E105/E106. Final build and visual coverage remain a separate checkpoint.

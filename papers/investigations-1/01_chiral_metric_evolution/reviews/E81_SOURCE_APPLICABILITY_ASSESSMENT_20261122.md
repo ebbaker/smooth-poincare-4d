@@ -1,0 +1,9 @@
+# E81 — Nonlinear theorem applicability assessment
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Selected lead settings preserved; actual identifiers unavailable. Source helper configured gpt-6.2-sol/ultra, without independent runtime attestation.
+
+The lead read the complete [E81 source audit](E81_NONLINEAR_SLICE_SOURCE_AUDIT_20261122.md), SHA-256 79a114526efdbb770be36f2629c787d55766282ac5614df1e8b36eab627717db, and return c4c85dd13fdf9969d113cdff77e62cacb0764c22db5c620385004e5c4ac643e8. The source applicability distinctions are accepted. E81 discloses prior E79/E48/E73 authorship. The canonical reference records preserve its selected primary passages and access mode; this is not a full-paper audit.
+
+The lead independently read Hamilton III.1.1.3 and the surrounding hypotheses in an indexed excerpt of the exact AMS publisher PDF. The lead's direct fetch also returned HTTP 403. The theorem requires a smooth tame family of derivative right inverses throughout an open domain, and gives a smooth tame local right inverse. A single infinitesimal inverse is insufficient. The helper additionally inspected the finite-dimensional augmented elliptic theorem, tame section/composition/diffeomorphism results and exact Fine passages as recorded in E81. No Hamilton file was retained and no new Fine copy was fetched.
+
+The algebraic augmentation for K_A fits the candidate finite-dimensional format, and E79/E80 now establish its invertibility and smooth output for each smooth A in the value tube. The joint tame family and group chart remain separate dependencies. B49 selects the full-action right-inverse route, avoiding an unsupported claim that the moving restricted parameter complement integrates to a finite group chart. E82/E83 will check those exact dependencies. No nonlinear slice existence, uniqueness modulo stabilizers, or quantitative value-only placement is certified by E81.

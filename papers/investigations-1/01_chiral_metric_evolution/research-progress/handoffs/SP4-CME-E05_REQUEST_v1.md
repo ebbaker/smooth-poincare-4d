@@ -1,0 +1,16 @@
+# SP4-CME-E05 request v1 — conditional intrinsic pinching energy gap
+
+22 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Authorized research, selected lead settings unavailable and unchanged; helper configured gpt-6.2-sol/ultra. Fixed E packet, no strategic expansion. Read root instructions/workflow, relevant decision and assessments. Do not edit shared register, plan, overview, manuscript, references or another helper's outputs. No chat capture. Smooth closed connected oriented real four-manifold, positive Riemannian reconstruction, smooth definite SO(3) connections in round-compatible sign, internal delta, F=−K Q^(1/2) Sigma, K>0 fixed, tr Q=3, mu=2K² dVhat. Fixed internal/base identification, actual unadjusted Fine equation. Distinguish exact identities, conditional estimates, stationary consequences and evolution theorems. Primary source at dependence: Fine v2 Prop 4.2 and Theorem 4.11. No numerical campaign; proof plus at most finite exact arithmetic checks if helpful. No new unproved regularity, topology, spin, integrability or curvature hypothesis.
+
+## Fixed question
+
+Prove or refute the proposed E05 integrated identity and conservative constants in B04. Derive the derivative of L_Q and check cancellation explicitly, using mu=2K²dVhat at each time and closedness. Track the commutator pairing, Xi bound, m and M under Frobenius |q|≤1/8. Provide an explicit differential inequality, exponential energy conclusion only while pinching holds, and rigidity of smooth definite critical connections in this region. Verify the critical equation is the independent-connection gradient, not an Einstein assumption or metric pullback. Read Fine v2 discussion of critical points and local stability for comparison; no blanket novelty claim. State what additional compactness and preservation are needed to apply the endpoint. If proposed constants fail, return corrected positive constants or exact obstruction. Own notes/07_PINCHED_ENERGY_GAP_20261122.md and handoffs/SP4-CME-E05_RETURN_v1.md. Optional exact arithmetic check only in numerics/e05_constants.py and numerics/E05_CHECKS_20261122.txt.
+
+Acceptance: complete proof or precise scoped failure, all premise dependencies and constants, round consistency, input versions and concise return. Return altered hypotheses to the named B decision; stop at this packet boundary. Paths above are relative to this investigation; handoffs means research-progress/handoffs.
+
+## Frozen inputs
+
+- `papers/investigations-1/01_chiral_metric_evolution/brainstorm/notes/B04_PINCHED_ENDPOINT_DECISION_20261122.md` SHA-256 `61a13e15a1742c903baf6fb89330364fb2a7163a8af5d61fe1f356c16de8daed`
+- `papers/investigations-1/01_chiral_metric_evolution/notes/04A_NONLINEAR_Q_20261122.md` SHA-256 `4568aff07ef8678e66b87c099fcabe787ef0c07afb5ef8873dfc80e2e99b3a19`
+- `papers/investigations-1/01_chiral_metric_evolution/notes/05A_REAL_TWISTOR_COMPARISON_20261122.md` SHA-256 `ffae9af03ae0f42c6578abac85f275015cba23efbffef843b230a0a4e546bbf2`
+- `papers/investigations-1/01_chiral_metric_evolution/reviews/E03_COORDINATE_ASSESSMENT_20261122.md` SHA-256 `5fab1e7aeea9e368c5d6233492d14aee3edda29a3017b4108653cf322ca5b1ed`
