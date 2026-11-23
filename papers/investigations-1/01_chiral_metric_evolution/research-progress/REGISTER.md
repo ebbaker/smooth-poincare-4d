@@ -636,11 +636,13 @@ refresh procedure.
 | SP4-CME-B109 | B | Selected lead — all-ratio local scalar test | [Decision](../brainstorm/notes/B109_ALL_RATIO_LOCAL_MAXIMUM_TEST_20261123.md) | Decided, 2026-11-23 | One explicit simple-spectrum family at every r>1 |
 | SP4-CME-E235 | E | Sol 6.2/ultra — all-ratio local maximum derivation | [Request](handoffs/SP4-CME-E235_REQUEST_v1.md) | Assessed, 2026-11-23 | [E235/E236 assessment](../reviews/E235_E236_ALL_RATIO_LOCAL_ASSESSMENT_20261123.md); every finite r>1, local direction only |
 
-| SP4-CME-E234 | E | Sol 6.2/ultra — effective margin manuscript audit | [Request](handoffs/SP4-CME-E234_REQUEST_v1.md) | Issued, 2026-11-23 | Source frozen; mathematical integration and static checks |
+| SP4-CME-E234 | E | Sol 6.2/ultra — effective margin manuscript audit | [Request](handoffs/SP4-CME-E234_REQUEST_v1.md) | Assessed; optional precisions applied, 2026-11-23 | [E234 audit](../reviews/E234_MARGIN_MANUSCRIPT_AUDIT_20261123.md); final all-r integration checked separately |
 
 | SP4-CME-E236 | E | Sol 6.2/ultra — independent all-ratio local audit | [Request](handoffs/SP4-CME-E236_REQUEST_v1.md) | Assessed, 2026-11-23 | [E235/E236 assessment](../reviews/E235_E236_ALL_RATIO_LOCAL_ASSESSMENT_20261123.md); independent direct curvature reaction |
 
-| SP4-CME-E226 | E | Sol 6.2/ultra — rendered margin manuscript QA | [Request](handoffs/SP4-CME-E226_REQUEST_v1.md) | Issued, 2026-11-23 | Frozen155-page PDF; all-page coverage plus detailed additions |
+| SP4-CME-E226 | E | Sol 6.2/ultra — rendered margin manuscript QA | [Request](handoffs/SP4-CME-E226_REQUEST_v1.md) | Completed; three layout repairs applied, 2026-11-23 | [E226 QA](../reviews/E226_MARGIN_PDF_QA_20261123.md); final157-page verification separate |
 
 | SP4-CME-B110 | B | Selected lead — sharp-result primary comparison | [Decision](../brainstorm/notes/B110_SHARP_SPECTRAL_SOURCE_COMPARISON_20261123.md) | Decided, 2026-11-23 | Bounded attribution search after the new spectral results |
 | SP4-CME-E238 | E | Sol 6.2/ultra — sharp spectral primary comparison | [Request](handoffs/SP4-CME-E238_REQUEST_v1.md) | Issued, 2026-11-23 | At most four searches/four primary passages; no novelty certification |
+
+| SP4-CME-E237 | E | Sol 6.2/ultra — all-ratio manuscript integration audit | [Request](handoffs/SP4-CME-E237_REQUEST_v1.md) | Issued, 2026-11-23 | Frozen157-page source; new local proposition and E234 precision edits |

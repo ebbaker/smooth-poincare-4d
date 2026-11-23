@@ -5,7 +5,7 @@
 \usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
 \usepackage{enumitem,booktabs,array,xcolor}
 \usepackage[colorlinks=true,linkcolor=blue!40!black,citecolor=blue!40!black,urlcolor=blue!40!black]{hyperref}
-\usepackage{fancyhdr}
+\usepackage{fancyhdr,needspace}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\small Chiral curvature and metric evolution}
@@ -85,9 +85,7 @@ bounded intrinsic transport density and diameter gives global
 smooth definite original flow and exponential convergence to
 one fixed round pullback. Sufficiently small initial supremum of this transport density
 alone also suffices. The non-effective thresholds are uniform
-over the stated bases and bundles. The small-density conclusion uses induced plane
-curvature to exclude the rank-one alternative before applying
-the energy-entry theorem. After a fixed positive time shift
+over the stated bases and bundles. After a fixed positive time shift
 and bundle normalization, a bounded late sequence gives a
 smooth critical accumulation pair at the limiting energy;
 zero limiting energy gives convergence of the actual trajectory
@@ -101,7 +99,7 @@ spectral subregion, a gradient bound controls energy by the
 accumulated time spent there; explicit numerical constants are
 available for ratio at most $9/4$.
 An effective linear bound in the spectral margin gives a
-weighted energy estimate using its accumulated time integral.
+weighted energy estimate using the time integral of its positive part.
 
 Separately, a smooth embedded regular holomorphic sphere,
 whose fixed $W^{1,8}\to L^8$ linearization has a bounded right
@@ -2383,7 +2381,9 @@ The corrected generator
 \texttt{e218\_stationary\_spectral\_range\_v2.py} retains the
 exact coefficient computation and endpoint specialization;
 its small record is
-\path{e218_stationary_spectral_range.json}.
+\begin{center}
+\texttt{e218\_stationary\_spectral\_range.json}.
+\end{center}
 The independent verifier
 \texttt{e219\_sharp\_stationary\_verify.py} substitutes the
 matrix entries first, takes Leibniz minors, solves the
@@ -2419,6 +2419,7 @@ This proves sharpness of the pointwise statement.
 % Assessed algebra: E218/E219; corrected v2 preserves the frozen v1.
 
 
+\Needspace{6\baselineskip}
 \begin{theorem}[Stationary spectral pinching]
 \label{thm:stationary-spectral-pinching}
 Let $A$ be a smooth definite connection on a smooth principal
@@ -2799,7 +2800,7 @@ Combining this with
 $\mathfrak R_Q(X)=4c^2\sum_aZ_a^TGZ_a$
 and $|X|^2\le11|Z|^2$ gives the asserted $k_*$.
 The argument includes repeated spectra and the collapsed
-round edge; at the closed endpoint it gives only zero.
+round edge; at $r=7/2$ it gives the lower bound zero.
 
 For the static native estimate, substitute
 $\kappa=k_*\epsilon$ in the proof of
@@ -6943,8 +6944,8 @@ Then throughout its actual lifespan,
  +\beta_*\int_0^t e^{\gamma_*\Theta(s)}w(s)^2
                   \mathscr G(s)\,ds\le\mathscr E(0).
 \end{equation}
-If the base is a homotopy four-sphere and the same unshifted
-sequence $t_n\uparrow T_*$ has
+If the base is a homotopy four-sphere and one unshifted
+sequence $t_n\uparrow T_*$ satisfies both bounds
 $\sup_M\Psi(A(t_n))\le P_0$ and
 $\operatorname{diam}(M,g_{A(t_n)})\le D_0$ as in
 Theorem~\ref{thm:late-critical-accumulation}, then
@@ -6954,7 +6955,9 @@ $T_*=\infty$. Either $\Theta(t)\to\infty$, or the finite test
 \end{equation}
 at one qualifying unshifted slice, suffices for smooth
 exponential convergence of the actual original pair to one
-fixed round pullback. The available native exponent is
+fixed round pullback. Here $\delta(P_0,D_0)$ is the
+non-effective threshold of Theorem~\ref{thm:uniform-intrinsic-entry}.
+The available native exponent is
 $\lambda_1(G_0)/2$, with datum-dependent constants at each
 fixed spatial order.
 \end{corollary}
@@ -10547,6 +10550,107 @@ affine reaction directly from the velocity and the full
 curvature quotient, retaining the differentiated connection
 commutator and the native scaling.
 % Assessed local boundary calculation: E215/E217.
+
+
+\begin{proposition}[A local ratio test at every nonround threshold]
+\label{prop:all-ratio-local-maximum}
+For every finite $r>1$, there is a smooth positive definite,
+round-compatible $SO(3)$ connection on an oriented real
+four-ball whose reconstructed ratio $\rho(Q)$ is $r$ at its
+center and strictly smaller elsewhere on a sufficiently small
+closed ball. At the center the directional derivative of
+$\log\rho$ on the actual original native vector field is
+exactly $1/2$, and that of $\rho$ is $r/2$.
+The radius and all coefficient sizes may depend on $r$.
+\end{proposition}
+\begin{proof}
+Work first in the old $K=1$ conventions and self-dual frame of
+Proposition~\ref{prop:spectral-ratio-local-maximum}.
+Put
+\[
+ a=\frac2{1+r},\quad b=\frac{2r}{1+r},\quad
+ Q_r=\operatorname{diag}(a,1,b),\quad q=Q_r-I,\quad
+ d=\sqrt{\det Q_r}=\frac{2\sqrt r}{r+1}.
+\]
+The spectrum is positive, simple and trace three.
+For $f=\log\rho$, its trace-free Frobenius gradient and a
+tangent direction to its level set are
+\[
+ G=\frac{r+1}{6r}\operatorname{diag}(-2r-1,r-1,r+2),
+ \qquad T=\operatorname{diag}(a,-2,b).
+\]
+Differentiating the simple eigenvalues gives
+$df[X]=-X_{11}/a+X_{33}/b$ and $df[T]=0$.
+The principal operator satisfies
+\[
+ \begin{aligned}
+ \mathscr L_{Q_r}G&=\operatorname{diag}(-4,0,4),&
+ df[\mathscr L_{Q_r}T]&=\frac{8(r-1)}{r+1},\\
+ \langle G,\mathscr L_{Q_r}G\rangle&=\frac{2(r+1)^2}{r},&
+ df[q]&=\frac{r^2-1}{2r}.
+ \end{aligned}
+\]
+Choose
+\[
+ \mu_r=\frac{r+1}{32(r-1)}
+       \left(\frac{8(r+1)^2}{r}+\frac{24(r-1)}{\sqrt r}+1\right),
+ \qquad B=-G+\mu_rT,\qquad U=B-\frac d2q.
+\]
+Thus $df[B]=-|G|^2<0$ and the coefficients are finite for
+this fixed $r$.
+
+The curvature-jet calculation in the preceding proof uses
+only positive $s_i$ and trace three, so it applies with
+$s_i=\sqrt{(Q_r)_{ii}}$, $F_i^*=-s_i\Sigma_i$ and
+\[
+ V_i^j=-\sum_k\frac{U_{ik}}{s_k}J_kdx^j,
+ \qquad
+ A=\frac12\sum_jx^j\iota_{\partial_j}F^*
+                    +\frac16\sum_j(x^j)^3V^j.
+\]
+The affine quotient Hessian is $(d/2)q\delta_{jk}$ and the
+cubic adds $U\delta_{jk}$. At the center $A=0$, $F=F^*$,
+$\widehat g=g_{\rm eucl}$, and all first curvature, metric
+and quotient derivatives vanish. Therefore
+\[
+ \partial_j\partial_kQ=B\delta_{jk},\qquad
+ \nabla_j^A\nabla_k^AQ
+ =B\delta_{jk}+\tfrac12[\operatorname{ad}(F^*_{jk}),Q_r].
+\]
+The internal correction has zero scalar pairing with $G$
+and zero metric trace. Hence
+$\operatorname{Hess}(f\circ Q)(0)=-|G|^2g_{\rm eucl}$.
+Continuity, simple spectrum and Taylor's theorem give the
+stated strict local maximum on a sufficiently small ball,
+with positivity and sign retained.
+
+Evaluate the actual original velocity on the local affine
+curve $A+\sigma V_{\rm old}(A)$. The direct differentiated
+velocity calculation in the preceding proof gives
+\[
+ \left.\frac{d}{d\sigma}Q(A+\sigma V_{\rm old}(A))\right|_0
+       =4\mathscr L_{Q_r}B-24dq
+\]
+at the center. In particular the differentiated internal
+connection contributes the reaction $-24dq$ even though
+the first spatial quotient derivative vanishes. Pairing with
+$df$ and the chosen $\mu_r$ gives
+\[
+ -\frac{8(r+1)^2}{r}
+ +\frac{32(r-1)}{r+1}\mu_r-\frac{24(r-1)}{\sqrt r}=1.
+\]
+Native $g=2\widehat g$ and time $\tau=2t$ halve the
+geometric velocity and this directional derivative, leaving
+$Q$ unchanged. Finally $d\rho=\rho\,df$ gives $r/2$.
+\end{proof}
+
+The affine curve evaluates the original vector field on a
+smooth local datum. It is not asserted to solve the flow.
+The result excludes a nonpositive scalar contact-direction
+inference based only on a local ratio maximum at any of
+these thresholds. A closed datum, an evolved trajectory and
+global failure of preservation remain separate questions.
+% Assessed all-r local family: E235/E236, 23 November 2026.
 
 
 \subsection{Concentration on the closed round bundle}
