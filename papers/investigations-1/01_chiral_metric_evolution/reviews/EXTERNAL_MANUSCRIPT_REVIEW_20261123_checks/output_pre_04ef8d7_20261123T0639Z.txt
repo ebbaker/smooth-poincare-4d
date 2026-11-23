@@ -1,0 +1,192 @@
+# Check run for EXTERNAL_MANUSCRIPT_REVIEW_20261123
+# date (UTC): 2026-11-23T06:39:02Z
+# python 3.13.18 | numpy 2.5.3 | scipy 1.18.1 | jax 0.12.1
+
+===== check_01_pointwise_algebra.py =====
+PASS  *Sigma^+ = +Sigma^+                                                    err=0.00e+00
+PASS  <Sigma_i,Sigma_j> = 2 delta (+)                                        err=0.00e+00
+PASS  [eta_i,eta_j] = -2 eps_ijk eta_k (+)                                   err=0.00e+00
+PASS  *Sigma^- = -Sigma^-                                                    err=0.00e+00
+PASS  <Sigma_i,Sigma_j> = 2 delta (-)                                        err=0.00e+00
+PASS  [eta_i,eta_j] = -2 eps_ijk eta_k (-)                                   err=0.00e+00
+PASS  eta^+ and eta^- commute                                                err=0.00e+00
+PASS  Sigma^+_i ^ Sigma^+_j = +2 delta dV                                    err=0.00e+00
+PASS  Sigma^-_i ^ Sigma^-_j = -2 delta dV                                    err=0.00e+00
+PASS  Sigma^+_i ^ Sigma^-_j = 0                                              err=0.00e+00
+PASS  (7.8) eta_k,ab eta_j,cb = d_kj d_ac + eps_kjl eta_l,ac                 err=0.00e+00
+PASS  sum_i eta_i,ab eta_i,de = d d - d d + eps_abde  (before (8.18))        err=0.00e+00
+     basis (4.2)^+ in terms of Section-3 Sigma^+:
+ [[ 0.  0.  1.]
+ [ 0. -1.  0.]
+ [ 1.  0.  0.]]  det = 1
+     basis (4.2)^- in terms of Section-3 Sigma^-:
+ [[ 0.  0.  1.]
+ [ 0. -1.  0.]
+ [-1.  0.  0.]]  det = -1
+PASS  (4.6) |beta(H)|^2 = |H|^2/4                                            err=8.88e-16
+PASS  (4.7) diagonal beta                                                    err=1.11e-16
+PASS  Lemma 4.1 exact graph T = tanh(sqrt(bb^T))/sqrt(bb^T) b                err=2.22e-16
+     (4.8) cubic truncation errors at scale 0.1,0.05,0.025: ['2.52e-06', '7.90e-08', '2.47e-09'] ratios ['31.9', '32.0'] (expect ~32 for O(H^5))
+PASS  Lemma 4.2 inverse beta = arctanh(sqrt(TT^T))/sqrt(TT^T) T              err=6.66e-16
+PASS  C^2 + C - 2 = 0                                                        err=0.00e+00
+PASS  C self-adjoint                                                         err=0.00e+00
+     spectrum of C: {-2.0: 4, 1.0: 8}
+PASS  C b equals the Hodge dual of [b ^ Sigma] (sign as in the manuscript)   err=4.44e-16
+PASS  C_+ symmetric, tr C_+ = s/4                                            err=0.00e+00
+PASS  (5.2) B = beta(Ric_0) in Section-3 paired bases                        err=4.44e-16
+PASS  (5.2) B = beta(Ric_0) in the (4.2) paired bases                        err=4.44e-16
+PASS  (5.2) |B|^2 = |Ric_0|^2/4                                              err=7.11e-15
+PASS  (5.3) F_i^F_j = 2 (C^2 - B B^T)_ij dV                                  err=4.26e-14
+PASS  Weyl part is totally trace-free                                        err=8.88e-16
+PASS  |W|^2_tensor = 4(|W^+|^2+|W^-|^2)_operator                             err=1.14e-13
+PASS  (9.4) integrand 6|[2aW+W^2-BB^T]_0|^2/t                                err=0.00e+00
+PASS  (9.5) exact discrepancy integrand                                      err=5.68e-14
+PASS  (12.1) m >= 1 - sqrt(2/3)|Q-I| (random spectra)                        err=0.00e+00
+PASS  Prop 12.2 z=0.3: density 4K^2 z^4/(3-2z^2), graph diag(0,-z,-z)        err=5.55e-17
+PASS  Prop 12.2 z=0.3: B = beta(Ric_0) with Ric_0=diag(-2e,2e,0,0)           err=0.00e+00
+PASS  Prop 12.2 z=0.9: density 4K^2 z^4/(3-2z^2), graph diag(0,-z,-z)        err=6.66e-16
+PASS  Prop 12.2 z=0.9: B = beta(Ric_0) with Ric_0=diag(-2e,2e,0,0)           err=0.00e+00
+PASS  Prop 12.2 z=0.999: density 4K^2 z^4/(3-2z^2), graph diag(0,-z,-z)      err=1.11e-15
+PASS  Prop 12.2 z=0.999: B = beta(Ric_0) with Ric_0=diag(-2e,2e,0,0)         err=0.00e+00
+PASS  (3.15) quaternionic A^+, A^- agree with (3.13) (units = 2T_i)          err=0.00e+00
+PASS  Prop 3.2: gauge changes h^+ = q^{-1}, h^- = q give the same formulas in y = l^2 x^{-1} err=2.22e-16
+(exit status 0)
+
+===== check_02_linear_flow_k2_modes.py =====
+PASS  (3.13) A_i = 2 eta_i,ab x_b dx^a / D                                                   err=2.13e-16
+PASS  (3.13) F_i = -K Sigma_i^+                                                              err=1.16e-16
+PASS  (3.20) mu = 2K^2 dV, Q = I                                                             err=1.21e-16
+PASS  reconstructed metric of the round connection is g0 (Urbantke route)                    err=7.40e-16
+PASS  flow vector field vanishes at the round connection                                     err=9.32e-16
+PASS  TT mode: trace-free                                                                    err=3.86e-17
+PASS  TT mode: divergence-free                                                               err=1.53e-16
+PASS  TT mode: L h = 8K h  (lowest TT eigenvalue, Lemma 10.2 is sharp)                       err=3.86e-16
+PASS  (1.3a)/(5.6) reconstructed variation  hhat = (L+4K)/(2K) h = 6 h                       err=6.18e-16
+PASS  (1.3b)/(8.10) linearised flow  a_t = H[-4(L+2K)h] = -40K (H h)                         err=2.92e-16
+     |q| = 20.12697404231319  tr q = 8.881784197001252e-16  time 10.8s
+PASS  (8.1) (H h)_ib = (1/2) eta_i,cd nabla_c h_bd  vs AD of g -> A_g^+                      err=9.73e-17
+PASS  (8.8) TT: Ric' = (1/2)(L+8K)h, s' = 0, Ric_0' = (1/2)(L+2K)h                           err=6.66e-15
+(exit status 0)
+
+===== check_03_linear_flow_generic.py =====
+PASS  local TT tensor: trace-free and divergence-free for the round metric                         err=7.70e-17
+     |Lh|/|h| = 2.7111290336542093 (not an eigentensor: generic frequency content)
+PASS  (5.6)/(1.3a) hhat = (L+4K)h/(2K), generic local TT h                                         err=1.08e-15
+PASS  (8.8) Ric_0' = (L+2K)h/2, s' = 0, generic local TT h                                         err=6.52e-16
+PASS  (8.10)/(1.3b) a_t = H[-4(L+2K)h] exactly in the symmetric coframe gauge, generic local TT h  err=1.55e-15
+PASS  (8.16) H^*H h = (L+4K)h/4, generic local TT h                                                err=7.10e-16
+     time 16.9s
+PASS  (5.5) hhat = h + Ric_0'/K + s' g0/(12K) = Ric'/K - 2h - s' g0/(6K), arbitrary h              err=9.32e-16
+PASS  (8.15) a_t = H[-8 Ric_0' - (2/3) s' g0], arbitrary h                                         err=6.21e-16
+PASS  (8.1) H h (formula) = AD of g -> A_g^+ in symmetric gauge, arbitrary h                       err=1.43e-16
+PASS  2Ric'_ij = nabla^a nabla_i h_ja + nabla^a nabla_j h_ia - nabla^a nabla_a h_ij - nabla_i nabla_j tr h err=4.68e-16
+PASS  (8.9) dQ = (2/K) dW^+ for metric-induced variations, arbitrary h                             err=2.92e-16
+PASS  (7.4) q symmetric and trace-free                                                             err=1.30e-16
+PASS  (7.5) q_t = -4 (L_E + 6K) q for an ARBITRARY connection variation a                          err=1.48e-15
+PASS  Prop 7.1: linearised local volume velocity vanishes                                          err=3.79e-15
+     time 4.4s
+(exit status 0)
+
+===== check_04_nonlinear_identities.py =====
+     sizes: |d^*(W^+Sigma^+)| = 1.098, |H_g(Ric_0)| = 1.003, |H_g(s g)/12| = 0.3131
+     non-round test metric: |W^+| = 0.20979673714210845  |Ric_0| = 1.9715088818860917  s = 11.727508580771634
+PASS  Lemma 8.1 (8.3)  d^*_{A_g}(W^+ Sigma^+) = -H_g(Ric_0) - H_g(s g)/12, fully nonlinear           err=8.09e-16
+     raw values for (6.5): d[tr(Q^2)mu](dF) = -8.77427064711839 ; sum_i dF_i^Phi_i = -8.77427064711839
+PASS  (6.5) pointwise: d[tr(Q^2)mu](dF) = sum_i dF_i ^ [(4Q - (2/3)tr(Q^2))F]_i                      err=0.00e+00
+PASS  Urbantke metric: F_i self-dual for ghat, dV_ghat = mu/(2K^2), ghat > 0                         err=6.66e-16
+PASS  (4.12) Sigma_A,i ^ Sigma_A,j = 2 delta dV_ghat                                                 err=4.44e-15
+PASS  (4.13) dF = U Sigma_A + V Sigma^-  (decomposition complete)                                    err=1.18e-15
+PASS  (4.15) tr_ghat(dghat) = -(4/(3K)) tr(S U)                                                      err=2.98e-15
+PASS  (4.16) dQ = -(U S + S U^T)/K + (2/(3K)) tr(S U) Q                                              err=6.88e-16
+PASS  (4.18) dmu/mu = -(2/(3K)) tr(S U)                                                              err=4.44e-16
+PASS  (4.14) beta_ghat(h_0) = -K^{-1} S^{-1} V   (and D_{h_0} has no self-dual block)                err=4.55e-16
+PASS  (5.17) first-order coefficient of c e^H                                                        err=3.37e-16
+PASS  (5.17) second-order coefficient of c e^H (incl. beta^{-1}(W1 B1), rho1^2/2, (|W1|^2-|B1|^2)/6) err=4.70e-16
+PASS  (9.8) second-order coefficient of Q                                                            err=1.92e-16
+(exit status 0)
+
+===== check_05_metric_gradient.py =====
+     finite connection perturbation: eigenvalues of Q = [0.9294 1.0316 1.039 ]
+PASS  Prop 6.1 (6.2): -d_A^*[(4Q-(2/3)trQ^2)F] (ghat adjoint) = -(L^2(ghat) gradient of P), finite perturbation err=8.07e-16
+PASS  grad P_met vanishes at the round metric                                                        err=1.25e-15
+PASS  Thm 10.1 (10.4): Hess P_met = (L+2K)(L+4K) on k=2 TT mode (= 120 K^2 h), from first principles err=4.14e-16
+     time 98.1s
+     dimension of the space of Weyl tensors on R^5: 35
+     raw Schur sums: sum|Dh|^2 = 11.25, sum|Hh|^2 = 5.625, sum|h|^2 = 2.34375
+PASS  Thm 10.1 (10.3): int |D h|^2 / int |h|^2 = (L+2K)(L+4K)/16 = 7.5 K^2 on k=2 modes (Schur average) err=0.00e+00
+PASS  Prop 8.3: int |H h|^2 / int |h|^2 = (L+4K)/4 = 3K on k=2 modes (Schur average)                 err=4.44e-16
+PASS  Prop 11.1: D_flat(E^aa phi) = 0, diag(-1/6,1/12,1/12), diag(1/12,-1/6,1/12), diag(1/12,1/12,-1/6) err=2.78e-17
+PASS  Prop 11.1: off-diagonal E^(ab) phi give matrices with vanishing diagonal                       err=0.00e+00
+     eps^2 coefficient of -grad(P_met/8) at p, orthonormal frame, times K:
+ [[ 0.          0.          0.          0.        ]
+ [ 0.          0.33333333  0.          0.        ]
+ [ 0.          0.         -0.16666667  0.        ]
+ [ 0.          0.          0.         -0.16666667]]
+PASS  Prop 11.1: grad P_met(g_eps) = O(eps^2) along the conformal family                             err=0.00e+00
+PASS  (11.3)-(11.4): -grad(P_met/8)(g_eps)(p) = (eps^2/K) diag(0,1/3,-1/6,-1/6) + O(eps^3), first principles err=5.55e-17
+     time 35.0s
+(exit status 0)
+
+===== check_06_special_variations.py =====
+PASS  (5.9) R'(2 f g0) = -(2/K) Hess f                                                               err=1.84e-16
+PASS  conformal source variation: q = 0 and a_t = 0                                                  err=2.04e-14
+PASS  reviewer remark: H(2 f g0) = -(1/K) i_{grad f} F_0  (a diffeomorphism direction, no gauge term) err=1.85e-16
+PASS  naturality: R'(L_X g0) = L_X g0, q = 0, a_t = 0                                                err=3.03e-14
+PASS  d_A Sigma_A = 0 at the round connection                                                        err=8.88e-16
+PASS  (5.11) T' = [H(h - hhat), Sigma_0]  (TT h; here hhat = 6h so b' = -5 H h)                      err=8.33e-16
+     (5.11): max|T'| = 238.749, max|h| = 20.089  -> the linearised defect of metric-induced TT data is nonzero
+(exit status 0)
+
+===== check_07_reviewer_remarks.py =====
+     finite perturbation: eigenvalues of Q = [0.8904 1.005  1.1045]
+PASS  (R1) exact nonlinear velocity formula in terms of d_A S                                        err=1.87e-15
+PASS  (R2) T_A = -S^{-1}(d_A S) ^ Sigma_A  [equivalent to (4.20)]                                    err=1.59e-15
+PASS  (R3) a_t = 8K * T'(a) for an arbitrary connection variation a                                  err=1.02e-15
+PASS  (R3) *T' lies in the +1 eigenspace of the operator C of Prop 4.4, hence b' = a_t/(8K)          err=9.33e-16
+PASS  (R4) Schouten tensor of the round metric is (K/2) g0                                           err=5.92e-16
+PASS  (R4) hhat = (2/K) P'(h)  for arbitrary h   [equivalent to (5.5)]                               err=5.34e-16
+PASS  (R4) a_t = H[-16 (P - (K/2) g)'] = H[-8K (hhat - h)]  for arbitrary h   [equivalent to (8.15)] err=7.48e-16
+PASS  (R1') d_A G - G S^{-1} d_A S = 4[(d_A S)S^2 + S(d_A S)S] - (8/3) tr(S^3 d_A S) S               err=5.95e-16
+PASS  (R1') tr(S d_A S) = 0  (from tr Q = 3)                                                         err=2.18e-15
+(exit status 0)
+
+===== check_08_nonlinear_Q_equation.py =====
+     eigenvalues of Q at the test point: [0.8914 1.0148 1.0937]
+PASS  velocity:  v_ib = 4 (C^c)_ik F_k,cb                                                                err=8.58e-16
+PASS  sum_i v_i ^ F_i = 0 pointwise                                                                      err=1.73e-15
+PASS  (pointwise volume) d mu_A/dt = 0 along the flow                                                    err=7.06e-16
+PASS  tr_ghat (d ghat/dt) = 0 along the flow                                                             err=2.73e-15
+     sizes: |Q_t| = 1.921, |L_Q(Delta Q)| = 2.929, reaction = 1.633, |[X,Xi]| = 0.4694
+PASS  exact nonlinear Q equation (flow:nonlinear-Q), all terms, finite perturbation                      err=4.16e-15
+PASS  (transport:inverse-bounds) nabla Q = 2 S T S - (2/3) tr(Q T) Q                                     err=1.38e-15
+     |nabla Q| / (6|T|) = 0.3295 (<=1),   |b| / (2 sqrt3 |T|) = 0.2919 (<=1)
+PASS  inequalities |nabla Q| <= 6|T| and |b| <= 2 sqrt3 |T| hold at the sample point                     err=0.00e+00
+(exit status 0)
+
+===== check_09_stationary_spectral_form.py =====
+ranks/kernel dimensions found on the closed triangle 1<=u<=v<=3/2: {(8, 12)} (manuscript: rank 8, kernel 12)
+minimum over a 351-point grid of  min_{ker V} R_Q/|X|^2 = 2.541176 at (u,v) = (1.0, 1.5) ; manuscript's certified lower bound = 0.014859
+PASS  Lemma (stationary derivative form): rank 8, kernel 12, R_Q >= (32768/2205225)|X|^2 on the kernel (grid test)
+     at Q = I: min on kernel = 4.000000, min on all X = 4.000000 (principal term 4|X|^2 only)
+     at (u,v)=(1.2,1.45): min on kernel = 3.020214 ; min WITHOUT the zero-speed constraint = 2.174771
+     u = 1        first v (step 0.05) with min_{ker V} R_Q <= 0: 1.90   -> eigenvalue ratio of Q = v^2 = 3.61
+     u = v        first v (step 0.05) with min_{ker V} R_Q <= 0: 2.65   -> eigenvalue ratio of Q = v^2 = 7.02
+     u = sqrt(v)  first v (step 0.05) with min_{ker V} R_Q <= 0: 2.30   -> eigenvalue ratio of Q = v^2 = 5.29
+PASS  manuscript's edge parametrisation lies in ker V (20 random samples)                     err=1.67e-15
+PASS  scalar-block identity (eq:stationary-scalar-block) equals the directly computed R_Q      err=6.37e-16
+reviewer: min over an 861-point grid of the UNCONSTRAINED  min_X R_Q/|X|^2 = 1.406867 at (u,v) = (1.0, 1.5)
+reviewer: u = 1 (two equal small eigenvalues)    positivity is lost at eigenvalue ratio v^2 = 3.5000 (on ker V) and 3.0000 (unconstrained)
+reviewer: u = sqrt(v)                            positivity is lost at eigenvalue ratio v^2 = 5.0973 (on ker V) and 4.3796 (unconstrained)
+reviewer: u = v (two equal large eigenvalues)    positivity is lost at eigenvalue ratio v^2 = 6.7944 (on ker V) and 6.7906 (unconstrained)
+(exit status 0)
+
+===== check_10_strain_curvature.py =====
+     c_+^2 from the connection Gamma = 0.0987378762 ;  from the Riemann tensor of ghat = 0.0987378762   [ |W+|^2=0.0587, |Ric0|^2/4=0.0379, (s-12K)^2/48=0.0021 ]
+PASS  (transport:curvature-block) (1/2)|F_Gamma + K Sigma|^2 = |W+|^2 + |Ric0|^2/4 + (s-12K)^2/48 with Gamma = A - b err=4.22e-16
+     c_+ = 0.3142  <=  K|q| + 6|nabla T| + (42+8 sqrt3)|T|^2 = 11.6120   (ratio 0.027)
+PASS  (transport:curvature) holds at the sample point                                                    err=0.00e+00
+     |Q-I| = 0.1442 ,  native G = |nabla T| + |T|^2 = 0.7115 ,  ratio |Q-I|/G = 0.203  (manuscript: <= 72 once sup G <= eps_0 on H^2=0 bases)
+PASS  A = sum J_i (x) R_i is self-adjoint with A^2 = A + 6                                               err=2.66e-15
+     spectrum of A: {-2.0: 12, 3.0: 8}  (manuscript: -2 with multiplicity 12, 3 with multiplicity 8)
+     sum_i R_i^2 = -6.0 I  (manuscript: -6 I)
+(exit status 0)
