@@ -12,6 +12,7 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 BRANCHES = ('investigations-1/01_chiral_metric_evolution',
+            'investigations-1/02_bach_flow',
             'initial-investigations/01_generalized_isothermal_coordinates',
             'initial-investigations/02_chiral_descent_and_double_copy')
 

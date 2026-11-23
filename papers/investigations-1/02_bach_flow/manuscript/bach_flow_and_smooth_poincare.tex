@@ -1,0 +1,202 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!40!black,citecolor=blue!40!black,urlcolor=blue!40!black]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Bach flow and smooth Poincar\'e}
+\fancyhead[R]{\small Working draft}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\DeclareMathOperator{\Ric}{Ric}
+\newcommand{\CP}{\mathbb{CP}}
+
+\title{Bach flow and the smooth four-dimensional\\Poincar\'e conjecture}
+\author{Edward B. Baker III}
+\date{Working draft --- 23 November 2026}
+% Prepared for Edward B. Baker III with OpenAI Codex assistance,
+% 23 November 2026 (America/New_York). The selected model and effort were unavailable.
+% The common opening is copied from the companion chiral metric evolution draft.
+% The exact source identity and evidence scope are recorded in ../DRAFT_HISTORY.md.
+% This draft contains the introduction and its cited background.
+
+\begin{document}
+\maketitle
+\thispagestyle{plain}
+
+\section{Introduction}\label{sec:introduction}
+
+Isothermal coordinates provide a simple model for using geometry to
+recognize the smooth structure of a sphere. Every smooth Riemannian metric
+on an oriented real surface can be written locally as
+\[
+ g=e^{2u}(dx^2+dy^2)=e^{2u}|dz|^2,\qquad z=x+iy.
+\]
+Orientation-preserving transitions between these charts are holomorphic,
+so the metric determines a Riemann surface. If the underlying smooth
+surface is closed and homotopy equivalent to \(S^2\), it is orientable
+and simply connected. Uniformization then identifies this compact Riemann
+surface biholomorphically with \(\CP^1\); the resulting map is a
+diffeomorphism to the standard smooth two-sphere~\cite{Donaldson2011}.
+This gives a geometric proof of the two-dimensional smooth Poincar\'e
+statement. Isothermal coordinates supply the local conformal description,
+while uniformization supplies the global identification; the existence of
+the local charts alone would not establish the conclusion.
+
+In three dimensions, the analogous statement is that every closed smooth
+three-manifold homotopy equivalent to \(S^3\) is diffeomorphic to the
+standard three-sphere. Hamilton's approach replaces conformal coordinates
+by a geometric heat equation, the Ricci flow,
+\[
+ \partial_t g=-2\Ric(g).
+\]
+After fixing the diffeomorphism freedom, this is a nonlinear parabolic
+evolution of the metric. Hamilton proved that in dimension three the
+volume-normalized flow starting from strictly positive Ricci curvature
+converges to a metric of constant positive sectional
+curvature~\cite{Hamilton1982}. General initial metrics can develop
+singularities, so the broader program required both their analysis and
+a way to continue the evolution. Perelman's entropy and noncollapsing
+estimates supplied decisive control of singularity models~\cite{Perelman2002}.
+His construction of Ricci flow with surgery removes appropriate neck
+regions and replaces them by controlled caps~\cite{Perelman2003Surgery}.
+For a homotopy three-sphere, finite-time extinction together with the
+topology of these surgeries yields the smooth identification with
+\(S^3\)~\cite{Perelman2003Extinction}. The lesson for higher dimensions is
+that a local smoothing equation must be accompanied by global control of
+degeneration and its topological consequences.
+
+In higher dimensions, Smale's handle-cancellation methods, underlying
+$h$-cobordism theory, show that every closed smooth homotopy $n$-sphere
+with $n\geq5$ is homeomorphic to $S^n$~\cite{Smale1961}.
+Milnor's exotic seven-spheres show that the same topological sphere can
+admit distinct smooth structures~\cite{Milnor1956}.
+Dimension four lies outside the range of these smooth handle-cancellation
+arguments. Freedman proved that every closed topological homotopy
+four-sphere is homeomorphic to \(S^4\)~\cite{Freedman1982}. The smooth
+four-dimensional Poincar\'e conjecture asks whether every closed smooth
+homotopy four-sphere is diffeomorphic to the standard \(S^4\). This remains
+open. Major approaches include handle calculus and surgery descriptions
+that seek to simplify homotopy
+spheres, and knot-theoretic obstructions that could distinguish a candidate
+exotic sphere~\cite{FreedmanGompfMorrisonWalker2010}.
+Geometric approaches seek a distinguished metric or connection
+whose existence would force the standard smooth structure. The present
+work pursues this direction, with anti-self-dual (ASD) conformal geometry
+as a possible target. Fine~\cite{Fine2011} introduced a gradient flow for
+definite \(SO(3)\) connections aimed at producing ASD Einstein metrics of
+nonzero scalar curvature. This offers a concrete
+four-dimensional evolution framework; its application to the smooth
+Poincar\'e problem would still require suitable initial connections on
+arbitrary homotopy spheres and global control of the flow.
+
+The special geometry of four dimensions explains the appeal of these
+variables. Unlike a surface metric, a general four-dimensional metric has
+Weyl curvature that cannot be removed by conformal rescaling or a change
+of coordinates. At the same time, on an oriented Riemannian four-manifold
+the Hodge star satisfies \(*^2=1\) on real two-forms, producing two real
+rank-three bundles,
+\[
+ \Lambda^2T^*M=\Lambda_g^+\oplus\Lambda_g^-.
+\]
+Atiyah, Hitchin, and Singer~\cite{AHS1978} used this chiral splitting to
+connect conformal geometry and gauge fields. In our orientation convention,
+their twistor integrability criterion says that \(W^+=0\) precisely when
+the natural almost complex
+structure on the sphere bundle \(S(\Lambda_g^+)\) is integrable.
+The resulting complex threefold encodes a real four-dimensional conformal
+geometry through a family of projective lines. Penrose's nonlinear-graviton
+construction supplies the corresponding
+holomorphic picture and, with additional data, its Ricci-flat
+specialization~\cite{Penrose1976}. These are four-dimensional analogues of
+the relation between conformal geometry and complex analysis on surfaces,
+with a curvature integrability condition in place of an automatic local
+complex structure.
+
+Gauge theory provides a complementary reason to work with connections.
+Donaldson invariants extract information about smooth four-manifolds from
+moduli spaces of anti-self-dual gauge connections~\cite{DonaldsonKronheimer1990}.
+Their success motivates the use of gauge fields in smooth topology,
+although it does not settle the
+homotopy-sphere case, where the second cohomology vanishes. Twistor methods
+also reach beyond the self-dual sector. Witten~\cite{Witten1978} describes
+the full classical Yang--Mills equations using holomorphic bundles on the
+space of complex null lines, with specified triviality and third-order
+formal extension conditions. This is a local
+complex flat-spacetime correspondence, not an existence theorem for curved
+Riemannian four-manifolds. Together these ideas motivate generalized
+coordinate descriptions in which maps depend on both a point and a chiral
+direction, and curvature is carried by connection data. For a flat-space
+precursor based on generalized conformal maps acting on Yang--Mills fields,
+see~\cite{Baker2023} and references therein.
+
+The evolution considered here starts with a smooth Riemannian metric
+\(g_0\) on a closed oriented real four-manifold. On a homotopy
+four-sphere the conformal condition \(W_g^+=0\) already suffices to
+identify the smooth type. To see this, define the chiral Weyl energies
+using Hilbert--Schmidt norms on the curvature operators
+\(W^\pm_g:\Lambda_g^\pm\to\Lambda_g^\pm\). The signature formula gives
+\begin{equation}\label{eq:chiral-weyl-energy}
+ E_\pm(g)=\int_M |W^\pm_g|^2_{\mathrm{op,HS}}\,dV_g,
+ \qquad E_+(g)-E_-(g)=12\pi^2\tau(M).
+\end{equation}
+When \(M\) is a homotopy four-sphere, \(\tau(M)=0\), so \(W^+=0\)
+forces \(W^-=0\) as well. The metric is then locally conformally flat.
+Compactness and simple connectivity make its conformal developing map
+to \(S^4\) a diffeomorphism~\cite{Hirzebruch1971Signature,Kuiper1949}.
+
+This suggests evolving the metric by descent for \(E_+\). The
+four-index Weyl energy is
+\(\mathcal W(g)=\int_M|W_g|_{\mathrm{tensor}}^2\,dV_g=4(E_+(g)+E_-(g))\).
+Thus \(E_+=\mathcal W/8+6\pi^2\tau(M)\). On the fixed oriented
+four-manifold, their metric gradients differ by a fixed positive factor.
+The negative \(L^2\) gradient of \(\mathcal W\) is proportional to the
+Bach tensor \(B_g\). Since \(E_+\) is invariant under conformal
+rescaling, decreasing it requires an evolution of the conformal
+class itself~\cite[\S1 and \S2.3]{BahuaudGuentherIsenbergMazzeo2025Bach}.
+
+We consider the modified Bach flow, the four-dimensional ambient
+obstruction flow in the following normalization~\cite[eq.~(1.2)]{BahuaudGuentherIsenbergMazzeo2025Bach}.
+\begin{equation}\label{eq:modified-bach}
+ \partial_t g=B_g+\frac{1}{12}(\Delta_g s_g)g,\qquad g(0)=g_0 .
+\end{equation}
+Here \(s_g\) is scalar curvature, \(\Delta_g=\operatorname{tr}_g\nabla^2\),
+and \(B_g\) is normalized as in equation~(1.1) of the cited work.
+This is fourth order in the metric. The scalar-curvature term addresses
+the conformal degeneracy in the short-time existence argument. After
+a diffeomorphism gauge adjustment in the proof, the theorem of Bahuaud
+and Helliwell gives a smooth short-time solution for every smooth
+Riemannian metric \(g_0\) on a closed four-manifold~\cite[Theorem C]{BahuaudHelliwell2011HigherOrder}.
+Trace-freeness of \(B_g\) makes the scalar term orthogonal to the
+Weyl-energy gradient. Consequently a smooth solution satisfies
+\begin{equation}\label{eq:weyl-dissipation}
+ \frac{d}{dt}E_+(g(t))=-c_B\int_M |B_g|^2\,dV_g,\qquad c_B>0 ,
+\end{equation}
+where \(c_B\) accounts for the normalization~\cite[\S2.3]{BahuaudGuentherIsenbergMazzeo2025Bach}.
+
+A single smooth time slice can suffice to recognize the sphere.
+Chang, Gursky, and Yang's sphere theorem applies when the Yamabe
+constant of the conformal class is positive and
+\(\mathcal W(g)<16\pi^2\chi(M)\). On a homotopy four-sphere,
+\(\chi(M)=2\) and \(\mathcal W=8E_+\). Thus
+\(Y(M,[g])>0\) and \(E_+(g)<4\pi^2\) force the standard smooth
+type, since simple connectivity excludes
+\(\mathbb{RP}^4\)~\cite[Theorem A]{ChangGurskyYang2003}.
+
+It remains to determine whether the flow can reach this threshold or a
+smooth conformally flat limit from broader initial data. The
+dissipation identity controls the time integral of the squared Bach
+tensor. The continuation criterion of Lopez involves the full Riemann
+tensor, and a smooth critical metric satisfies \(B_g=0\).
+A global argument must control curvature concentration and show that
+the evolution attains a recognition condition~\cite[Theorem 1.2]{Lopez2018AmbientObstruction}.
+
+\bibliographystyle{unsrturl}
+\bibliography{references}
+\end{document}

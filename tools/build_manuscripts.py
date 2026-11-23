@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2026 Edward B. Baker III
-"""Build the three working manuscripts with latexmk; keep temporary files out of research folders."""
+"""Build working manuscripts with latexmk and keep temporary files out of research folders."""
 from __future__ import annotations
 import argparse
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -12,6 +13,7 @@ import tempfile
 ROOT = Path(__file__).resolve().parents[1]
 MANUSCRIPTS = {
     '01_chiral_metric_evolution': ('investigations-1', 'chiral_curvature_and_metric_evolution.tex'),
+    '02_bach_flow': ('investigations-1', 'bach_flow_and_smooth_poincare.tex'),
     '01_generalized_isothermal_coordinates': ('initial-investigations', 'generalized_isothermal_wave_metrics.tex'),
     '02_chiral_descent_and_double_copy': ('initial-investigations', 'chiral_connection_descent_and_double_copy.tex'),
 }
@@ -28,6 +30,10 @@ def main():
         parser.error('Unknown branch: ' + ', '.join(sorted(unknown)))
     if not args.list and not shutil.which('latexmk'):
         parser.error('latexmk is required; install a TeX distribution first.')
+    build_env = os.environ.copy()
+    build_env['BIBINPUTS'] = os.pathsep.join(
+        (str(ROOT / 'references'), build_env.get('BIBINPUTS', ''))
+    )
     for branch in selected:
         series, filename = MANUSCRIPTS[branch]
         source = ROOT / 'papers' / series / branch / 'manuscript' / filename
@@ -37,7 +43,9 @@ def main():
         with tempfile.TemporaryDirectory(prefix='poincare-tex-') as temporary:
             command = ['latexmk', '-pdf', '-interaction=nonstopmode', '-halt-on-error',
                        '-file-line-error', '-outdir=' + temporary, str(source)]
-            result = subprocess.run(command, cwd=source.parent, capture_output=True, text=True)
+            result = subprocess.run(
+                command, cwd=source.parent, env=build_env, capture_output=True, text=True
+            )
             if result.returncode:
                 print(result.stdout[-12000:])
                 print(result.stderr[-3000:])

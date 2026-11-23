@@ -3,11 +3,13 @@ on:
   push:
     paths:
       - 'papers/**/*.tex'
+      - 'references/references.bib'
       - 'tools/build_manuscripts.py'
       - '.github/workflows/build-latex.yml'
   pull_request:
     paths:
       - 'papers/**/*.tex'
+      - 'references/references.bib'
       - 'tools/build_manuscripts.py'
       - '.github/workflows/build-latex.yml'
   workflow_dispatch:
@@ -22,7 +24,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install TeX build dependencies
-        run: sudo apt-get update && sudo apt-get install -y latexmk texlive-latex-extra texlive-fonts-recommended texlive-science
+        run: sudo apt-get update && sudo apt-get install -y latexmk texlive-latex-extra texlive-fonts-recommended texlive-science texlive-bibtex-extra
       - name: Build manuscripts
         run: python3 tools/build_manuscripts.py
       - name: Retain reading copies

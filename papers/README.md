@@ -5,6 +5,7 @@ The repository separates the direct smooth Poincaré program from the earlier ge
 | Collection | Investigation | Purpose |
 | --- | --- | --- |
 | [investigations-1](investigations-1/README.md) | [01 — Chiral metric evolution](investigations-1/01_chiral_metric_evolution/README.md) | Direct smooth Poincaré investigation through chiral curvature and metric evolution |
+| [investigations-1](investigations-1/README.md) | [02 — Bach flow](investigations-1/02_bach_flow/README.md) | Metric evolution toward vanishing positive Weyl curvature |
 | [initial-investigations](initial-investigations/README.md) | [01 — Generalized isothermal coordinates](initial-investigations/01_generalized_isothermal_coordinates/README.md) | Earlier coordinate and reconstruction study |
 | [initial-investigations](initial-investigations/README.md) | [02 — Chiral descent and double copy](initial-investigations/02_chiral_descent_and_double_copy/README.md) | Earlier descent and double-copy study |
 

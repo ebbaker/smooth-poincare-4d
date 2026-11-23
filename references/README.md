@@ -120,3 +120,13 @@ The [E207 canonical receipt](SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#stationa
 | R43 | Hanwen Liu, *A Self-Dual Frame Formalism of the SO(3) Yang-Mills Theory*, arXiv:2607.14204v2, 8 September 2026 | Selected fixed-metric Yang–Mills equation and frame passages; [canonical record](SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#r43--liu-self-dual-frame-comparison). |
 | R44 | Joel Fine, joint work credited with Dmitri Panov, Oberwolfach Report33/2011, p.1891 | Historical contributed abstract, separately from R15; [canonical record](SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#r44--fine-oberwolfach-historical-abstract). |
 | R45 | Fine–He–Yao, *Convergence of the hypersymplectic flow on T4 with T3-symmetry*, arXiv2404.15016v1,23April2024 | Selected symmetric-normal-form equation and statement; [canonical comparison](SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#r45--fineheyao-symmetric-hypersymplectic-comparison). |
+
+## Bach-flow setup, 23 November 2026
+
+The [Bach-flow source notes](SOURCE_NOTES_BACH_FLOW_20261123.md) record the inspected versions and passages for the [new investigation](../papers/investigations-1/02_bach_flow/README.md). The signature, twistor, and conformal sphere-theorem inputs retain their existing records.
+
+| ID | Source | Use |
+| --- | --- | --- |
+| R46 | Eric Bahuaud and Dylan Helliwell, *Short-Time Existence for Some Higher-Order Geometric Flows* (2011) | [Theorem C and the modified equation](SOURCE_NOTES_BACH_FLOW_20261123.md#r46--short-time-existence). |
+| R47 | Eric Bahuaud, Christine Guenther, James Isenberg, and Rafe Mazzeo, *Linear and nonlinear stability for the Bach flow, I*, arXiv:2508.06633v1 (2025) | [Bach convention, dissipation, and linear stability scope](SOURCE_NOTES_BACH_FLOW_20261123.md#r47--energy-dissipation-and-stability-scope). |
+| R48 | Christopher Lopez, *Ambient obstruction flow* (2018) | [Full-curvature continuation criterion and conditional compactness](SOURCE_NOTES_BACH_FLOW_20261123.md#r48--continuation-and-compactness). |

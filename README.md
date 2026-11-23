@@ -11,10 +11,11 @@ The main working manuscript develops a local and perturbative framework near the
 | Collection | Investigation | Role |
 | --- | --- | --- |
 | `investigations-1` | [01 — Chiral metric evolution](papers/investigations-1/01_chiral_metric_evolution/README.md) | Direct smooth Poincaré study |
+| `investigations-1` | [02 — Bach flow](papers/investigations-1/02_bach_flow/README.md) | Direct study through the evolution of chiral Weyl curvature |
 | `initial-investigations` | [01 — Generalized isothermal coordinates](papers/initial-investigations/01_generalized_isothermal_coordinates/README.md) | Earlier coordinate and reconstruction study |
 | `initial-investigations` | [02 — Chiral descent and double copy](papers/initial-investigations/02_chiral_descent_and_double_copy/README.md) | Earlier descent and double-copy study |
 
-Each investigation has an overview, plan, one live progress register, derivation notes, reviews, bounded computations, brainstorm notes, references, chat histories, and a continuation prompt. Plans are prepared but research is not activated by this setup.
+Each investigation has an overview, plan, one progress register, and dedicated locations for notes, reviews, computations, references, chat histories, and continuation prompts. The investigation README links its current material and scope.
 
 ## Start here
 
