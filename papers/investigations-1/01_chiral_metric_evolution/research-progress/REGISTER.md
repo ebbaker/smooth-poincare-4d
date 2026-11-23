@@ -634,10 +634,13 @@ refresh procedure.
 | SP4-CME-E233 | E | Sol 6.2/ultra — absorption manuscript integration audit | [Request](handoffs/SP4-CME-E233_REQUEST_v1.md) | Assessed; source released, 2026-11-23 | [E233 audit](../reviews/E233_ABSORPTION_MANUSCRIPT_AUDIT_20261123.md); no repair needed |
 
 | SP4-CME-B109 | B | Selected lead — all-ratio local scalar test | [Decision](../brainstorm/notes/B109_ALL_RATIO_LOCAL_MAXIMUM_TEST_20261123.md) | Decided, 2026-11-23 | One explicit simple-spectrum family at every r>1 |
-| SP4-CME-E235 | E | Sol 6.2/ultra — all-ratio local maximum derivation | [Request](handoffs/SP4-CME-E235_REQUEST_v1.md) | Returned; E236 audit issued, 2026-11-23 | [E235](../notes/235_ALL_RATIO_LOCAL_MAXIMUM_TEST_20261123.md); exact cubic local family only |
+| SP4-CME-E235 | E | Sol 6.2/ultra — all-ratio local maximum derivation | [Request](handoffs/SP4-CME-E235_REQUEST_v1.md) | Assessed, 2026-11-23 | [E235/E236 assessment](../reviews/E235_E236_ALL_RATIO_LOCAL_ASSESSMENT_20261123.md); every finite r>1, local direction only |
 
 | SP4-CME-E234 | E | Sol 6.2/ultra — effective margin manuscript audit | [Request](handoffs/SP4-CME-E234_REQUEST_v1.md) | Issued, 2026-11-23 | Source frozen; mathematical integration and static checks |
 
-| SP4-CME-E236 | E | Sol 6.2/ultra — independent all-ratio local audit | [Request](handoffs/SP4-CME-E236_REQUEST_v1.md) | Issued, 2026-11-23 | Exact general-r scalar/curvature/velocity computation and local scope |
+| SP4-CME-E236 | E | Sol 6.2/ultra — independent all-ratio local audit | [Request](handoffs/SP4-CME-E236_REQUEST_v1.md) | Assessed, 2026-11-23 | [E235/E236 assessment](../reviews/E235_E236_ALL_RATIO_LOCAL_ASSESSMENT_20261123.md); independent direct curvature reaction |
 
 | SP4-CME-E226 | E | Sol 6.2/ultra — rendered margin manuscript QA | [Request](handoffs/SP4-CME-E226_REQUEST_v1.md) | Issued, 2026-11-23 | Frozen155-page PDF; all-page coverage plus detailed additions |
+
+| SP4-CME-B110 | B | Selected lead — sharp-result primary comparison | [Decision](../brainstorm/notes/B110_SHARP_SPECTRAL_SOURCE_COMPARISON_20261123.md) | Decided, 2026-11-23 | Bounded attribution search after the new spectral results |
+| SP4-CME-E238 | E | Sol 6.2/ultra — sharp spectral primary comparison | [Request](handoffs/SP4-CME-E238_REQUEST_v1.md) | Issued, 2026-11-23 | At most four searches/four primary passages; no novelty certification |

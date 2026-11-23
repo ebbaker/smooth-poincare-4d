@@ -101,3 +101,5 @@ The quantitative and occupation-time consumers E209–E214 are recorded in the [
 The [sharp spectral consumer record](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#sharp-spectral-consumers--e218-through-e224) distinguishes the new branch7/2 certificate and analytical consequences from the unchanged Fine/FKP source inputs.
 
 The [endpoint absorption consumer record](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#endpoint-absorption-consumers--e223-through-e228) links the branch pointwise/local results to the unchanged inspected Fine gradient; no integrated failure or new source inspection is asserted.
+
+The [effective margin consumer record](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#effective-margin-consumers--e229-through-e234) keeps the exact coefficient proof and new native time weight separate from the unchanged primary gradient and geometric-entry inputs.

@@ -146,3 +146,6 @@ The [sole register](../research-progress/REGISTER.md) owns status and links lead
 
 - [223 — Endpoint speed-only absorption](223_ENDPOINT_SPEED_ABSORPTION_TEST_20261123.md), with [E223/E225 assessment](../reviews/E223_E225_ENDPOINT_ABSORPTION_ASSESSMENT_20261123.md): fixed-speed full-form obstruction at one endpoint spectrum, realized at a local center.
 - [227 — Strict-interior absorption degeneration](227_STRICT_INTERIOR_ABSORPTION_LIMIT_20261123.md), with [E227/E228 assessment](../reviews/E227_E228_STRICT_INTERIOR_ASSESSMENT_20261123.md): necessary pointwise coefficient blow-up and individually strictly pinched local witnesses; integrated estimates remain open.
+
+- [229 — Effective linear stationary coercivity](229_LINEAR_SPECTRAL_COERCIVITY_20261123.md), with [E229/E230 assessment](../reviews/E229_E230_LINEAR_COERCIVITY_ASSESSMENT_20261123.md): exact coefficient floor and explicit kernel lower bound proportional to the spectral margin.
+- [231 — Conditional margin-weighted flow](231_CONDITIONAL_MARGIN_WEIGHTED_FLOW_20261123.md), with [E231/E232 assessment](../reviews/E231_E232_MARGIN_FLOW_ASSESSMENT_20261123.md): H_linear discharged; native accumulated-margin energy and geometric late-sequence entry, preserving the frozen conditional derivation.

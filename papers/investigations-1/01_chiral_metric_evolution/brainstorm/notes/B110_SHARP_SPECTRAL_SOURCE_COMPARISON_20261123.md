@@ -1,0 +1,9 @@
+# B110 — Bounded primary comparison of the sharp spectral results
+
+23 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Conceptual B decision by the selected lead; actual model/effort unavailable and preserved. [Sole register](../../research-progress/REGISTER.md).
+
+The earlier E207 comparison addressed the initial 9/4 stationary/gradient work. The assessed sharp 7/2 stationary range, explicit margin dependence, and all-r>1 local scalar obstruction now give more precise search targets. Perform one bounded primary-literature comparison, following the root REFERENCE_WORKFLOW. Its purpose is to identify relevant attribution or adjacent mechanisms, not to certify novelty or infer that no matching result exists.
+
+Use at most four targeted search queries and inspect at most four relevant primary works/passages beyond the inherited record. The literal 7/2 threshold, definite-connection defect energy, and spectral maximum mechanism are useful terms. Compare the actual functional, evolving metric, sign, stationarity and ratio hypotheses. Keep fixed-metric Yang--Mills, negative definite Einstein rigidity, volume-action flow and definite triples separate. Existing R43/R44 records must not be duplicated. Record exact primary URLs, source version/date, passage locator, inspection level and actual date; metadata and inaccessible bodies stay explicitly unknown.
+
+E238 is a fixed discovery/comparison packet with a short source receipt and return, no theorem import or shared-source editing. The lead will read returned primary passages and integrate any canonical metadata before using a new theorem. If a promising theorem needs a deeper audit, name that dependency and stop within the packet. No downloads or large files are required. Bounded absence of a match is not a novelty result.
