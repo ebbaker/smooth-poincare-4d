@@ -1,0 +1,8 @@
+# SP4-CME-E216 request v1 — Rendered spectral manuscript audit
+
+23 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Fixed E visual check, configured gpt-6.2-sol/ultra; actual lead settings and independent runtime attestation unavailable.
+
+Own reviews/E216_SPECTRAL_PDF_QA_20261123.md and research-progress/handoffs/SP4-CME-E216_RETURN_v1.md only. Review the frozen 148-page scratch PDF for layout: all-page visual coverage, with full-size inspection of the new stationary/quantitative and late spectral/occupation-time statements and proofs, front matter and bibliography. Existing rendered page PNGs spectral-all-001.png through spectral-all-148.png are in /private/tmp/cme-broad-20261122-build at height850. You may make scratch contact sheets and higher-resolution renders there. Do not alter source, PDF, canonical records or shared artifacts; no new theorem audit or source retrieval. Record exact pages actually inspected, image method, any overflow/clipping/collisions/orphans and precise repairs. Do not use build success alone as visual evidence. Source is under E214's separate mathematical audit. Stop after the finite visual review.
+
+Frozen TeX: /Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/01_chiral_metric_evolution/manuscript/chiral_curvature_and_metric_evolution.tex, SHA256 334b666e5a0058048154d3a3e60e094ea02764f99c74f9e1e5eb536d787531fd.
+Frozen PDF: /private/tmp/cme-broad-20261122-build/chiral_curvature_and_metric_evolution.pdf, 1298023 bytes, SHA256 6e99d6f4c71bfebd60a033e78ff96409c06bd55b5da6d1fdb91cebd7df78da1d.

@@ -237,3 +237,7 @@ TeX 493034 bytes, SHA b7aa8ff156277cf72629ff802458b75360e4850265bc162248c2af6853
 ## Twistor compactness checkpoint — 22 November 2026
 
 The [E195/E198 disposition](E195_E198_TWISTOR_MANUSCRIPT_DISPOSITION_20261122.md) records the verified141-page manuscript, exact source/PDF hashes, all scope repairs, clean static/build checks and complete visual coverage. The current normal PDF includes the C0 persistence and C1 twistor arguments with their explicitly attributed ALE classification input and the separately assessed bounded metric-tamed compactness theorem. The [E200 comparison](E200_SOURCE_COMPARISON_ASSESSMENT_20261122.md) preserves precise primary-source differences without claiming novelty. Further stationary algebra continues separately.
+
+### Spectral and occupation-time checkpoint — 23 November 2026
+
+The [E208–E216 disposition](E208_E216_SPECTRAL_MANUSCRIPT_DISPOSITION_20261123.md) records the verified 148-page normal PDF, exact source/PDF identities, all required mathematical and visual repairs, resolved citations and complete rendered coverage. The manuscript now includes assessed stationary perfection at ratio≤9/4, explicit native gradient domination, a closed late spectral-limsup criterion, and accumulated-good-time energy and round-entry criteria. The finite occupation test requires past observations only; its round conclusion implies eventual full occupation. The local spectral-ratio test and sharper algebraic region remain outside this checkpoint pending independent review.

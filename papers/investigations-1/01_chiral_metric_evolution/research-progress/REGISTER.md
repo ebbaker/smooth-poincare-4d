@@ -563,15 +563,47 @@ refresh procedure.
 
 | SP4-CME-E201 | E | Sol 6.2/ultra — independent axial sign audit | [Request](handoffs/SP4-CME-E201_REQUEST_v1.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E199_E201_AXIAL_STATIONARY_SIGN_ASSESSMENT_20261123.md); independent degree-certified verification passed |
 | SP4-CME-B98 | B | Selected lead — general stationary pinching test | Accepted E187/E189 algebra | Decision recorded, 2026-11-22 | [B98](../brainstorm/notes/B98_GENERAL_STATIONARY_PINCHING_TEST_20261122.md); proposed eigenvalue ratio 9/4 |
-| SP4-CME-E202 | E | Sol 6.2/ultra — exact general spectral-region test | [Request](handoffs/SP4-CME-E202_REQUEST_v1.md) | Returned; E204 independent audit issued, 2026-11-22 | One closed ordered region; no global flow inference |
+| SP4-CME-E202 | E | Sol 6.2/ultra — exact general spectral-region test | [Request](handoffs/SP4-CME-E202_REQUEST_v1.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E202_E204_STATIONARY_PINCHING_ASSESSMENT_20261123.md); exact full-kernel coercivity on the closed triangle |
 
-| SP4-CME-E203 | E | Sol 6.2/ultra — conditional stationary identity application | [Request](handoffs/SP4-CME-E203_REQUEST_v1.md) | Returned; E204 independent audit issued, 2026-11-22 | H_axial/H_ratio retained; frame, scale and endpoint checks only |
+| SP4-CME-E203 | E | Sol 6.2/ultra — conditional stationary identity application | [Request](handoffs/SP4-CME-E203_REQUEST_v1.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E202_E204_STATIONARY_PINCHING_ASSESSMENT_20261123.md) discharges H_ratio and H_axial; frozen note stays conditional |
 
 | SP4-CME-B99 | B | Selected lead — late spectral transfer through smoothing | Assessed E179/E181; stationary gap conditional | Decision recorded, 2026-11-22 | [B99](../brainstorm/notes/B99_LATE_SPECTRAL_PINCHING_CONVERGENCE_20261122.md); integrate the limiting gauge only at positive times |
-| SP4-CME-E205 | E | Sol 6.2/ultra — conditional late spectral convergence | [Request](handoffs/SP4-CME-E205_REQUEST_v1.md) | Returned; E206 audit issued, 2026-11-23 | [E205 proof](../notes/205_CONDITIONAL_LATE_SPECTRAL_CONVERGENCE_20261122.md); H_gap retained pending lead assessment |
+| SP4-CME-E205 | E | Sol 6.2/ultra — conditional late spectral convergence | [Request](handoffs/SP4-CME-E205_REQUEST_v1.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E205_E206_LATE_SPECTRAL_ASSESSMENT_20261123.md); H_gap discharged by assessed stationary theorem |
 
-| SP4-CME-E204 | E | Sol 6.2/ultra — general positivity and stationary application audit | [Request](handoffs/SP4-CME-E204_REQUEST_v1.md) | Issued, 2026-11-22 | Independent full certificate, geometry, scale and integrated sign |
+| SP4-CME-E204 | E | Sol 6.2/ultra — general positivity and stationary application audit | [Request](handoffs/SP4-CME-E204_REQUEST_v1.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E202_E204_STATIONARY_PINCHING_ASSESSMENT_20261123.md); independent reconstruction, inverse certificate and stationary application pass |
 
-| SP4-CME-E206 | E | Sol 6.2/ultra — independent late spectral audit | [Request](handoffs/SP4-CME-E206_REQUEST_v1.md) | Issued, 2026-11-23 | C0 traces, positive-strip transport and fixed tail maps |
+| SP4-CME-E206 | E | Sol 6.2/ultra — independent late spectral audit | [Request](handoffs/SP4-CME-E206_REQUEST_v1.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E205_E206_LATE_SPECTRAL_ASSESSMENT_20261123.md); both traces, positive-strip transport and fixed tail maps pass |
 | SP4-CME-B100 | B | Selected lead — stationary source comparison | E202/E204 returned; E205 conditional | Decision recorded, 2026-11-23 | [B100](../brainstorm/notes/B100_STATIONARY_PINCHING_SOURCE_COMPARISON_20261123.md); bounded comparison without novelty inference |
-| SP4-CME-E207 | E | Sol 6.2/ultra — primary stationary source comparison | [Request](handoffs/SP4-CME-E207_REQUEST_v1.md) | Issued, 2026-11-23 | Exact functional and theorem hypotheses; canonical receipts |
+| SP4-CME-E207 | E | Sol 6.2/ultra — primary stationary source comparison | [Request](handoffs/SP4-CME-E207_REQUEST_v1.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E207_SOURCE_COMPARISON_ASSESSMENT_20261123.md); exact functional comparison and canonical R43/R44 registered |
+
+| SP4-CME-E208 | E | Sol 6.2/ultra — stationary and late spectral manuscript audit | [Request](handoffs/SP4-CME-E208_REQUEST_v1.md) | Assessed with precision repairs applied, 2026-11-23 | [E208 audit](../reviews/E208_STATIONARY_SPECTRAL_MANUSCRIPT_AUDIT_20261123.md); final build and visual disposition pending |
+
+| SP4-CME-B101 | B | Selected lead — pinched gradient domination | Assessed E202–E204 | Decision recorded, 2026-11-23 | [B101](../brainstorm/notes/B101_PINCHED_GRADIENT_DOMINATION_20261123.md); explicit speed complement and full-form absorption |
+| SP4-CME-E209 | E | Sol 6.2/ultra — quantitative pinched gradient inequality | [Request](handoffs/SP4-CME-E209_REQUEST_v1.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E209_E210_PINCHED_GRADIENT_ASSESSMENT_20261123.md); explicit static native gradient inequality and interval energy decay |
+
+| SP4-CME-E210 | E | Sol 6.2/ultra — independent gradient inequality audit | [Request](handoffs/SP4-CME-E210_REQUEST_v1.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E209_E210_PINCHED_GRADIENT_ASSESSMENT_20261123.md); full complementary estimate and old/native factors pass |
+
+| SP4-CME-B102 | B | Selected lead — intermittent spectral return | E209 conditional; E179 and uniform entry assessed | Decision recorded, 2026-11-23 | [B102](../brainstorm/notes/B102_INTERMITTENT_SPECTRAL_RETURN_20261123.md); accumulated pinched time controls energy |
+| SP4-CME-E212 | E | Sol 6.2/ultra — conditional occupation-time energy criterion | [Request](handoffs/SP4-CME-E212_REQUEST_v1.md) | Assessed with explicit wording correction, 2026-11-23 | [Assessment](../reviews/E212_E213_INTERMITTENT_RETURN_ASSESSMENT_20261123.md); H_grad discharged and false finite-total claim superseded |
+
+| SP4-CME-E211 | E | Sol 6.2/ultra — quantitative spectral manuscript audit | [Request](handoffs/SP4-CME-E211_REQUEST_v1.md) | Assessed with repairs applied, 2026-11-23 | [E211 audit](../reviews/E211_QUANTITATIVE_SPECTRAL_MANUSCRIPT_AUDIT_20261123.md); delimiter, zero-vector bound and source scope repaired |
+| SP4-CME-E213 | E | Sol 6.2/ultra — independent intermittent return audit | [Request](handoffs/SP4-CME-E213_REQUEST_v1.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E212_E213_INTERMITTENT_RETURN_ASSESSMENT_20261123.md); finite test concerns past occupation only |
+
+| SP4-CME-E214 | E | Sol 6.2/ultra — final spectral manuscript integration audit | [Request](handoffs/SP4-CME-E214_REQUEST_v1.md) | Assessed and integrated, 2026-11-23 | [148-page disposition](../reviews/E208_E216_SPECTRAL_MANUSCRIPT_DISPOSITION_20261123.md) |
+
+| SP4-CME-B103 | B | Selected lead — spectral-ratio boundary decision | [Decision](../brainstorm/notes/B103_SPECTRAL_RATIO_MAXIMUM_TEST_20261123.md) | Decided, 2026-11-23 | One actual local jet test, no global extension |
+| SP4-CME-E215 | E | Sol 6.2/ultra — spectral-ratio boundary maximum test | [Request](handoffs/SP4-CME-E215_REQUEST_v1.md) | Assessed, 2026-11-23 | [E215/E217 assessment](../reviews/E215_E217_SPECTRAL_RATIO_ASSESSMENT_20261123.md); exact local test only |
+
+| SP4-CME-E216 | E | Sol 6.2/ultra — rendered spectral manuscript QA | [Request](handoffs/SP4-CME-E216_REQUEST_v1.md) | Assessed; repair verified, 2026-11-23 | [148-page disposition](../reviews/E208_E216_SPECTRAL_MANUSCRIPT_DISPOSITION_20261123.md); all-page visual coverage |
+
+| SP4-CME-B104 | B | Selected lead — sharp stationary spectral region | [Decision](../brainstorm/notes/B104_STATIONARY_SPECTRAL_RANGE_20261123.md) | Decided, 2026-11-23 | Candidate rho≤7/2 from exact axial endpoint |
+| SP4-CME-E218 | E | Sol 6.2/ultra — bounded stationary region certificate | [Request](handoffs/SP4-CME-E218_REQUEST_v1.md) | Returned; E219 audit issued, 2026-11-23 | [E218 note](../notes/218_STATIONARY_SPECTRAL_RANGE_TEST_20261123.md); full region certificate, algebra only |
+
+| SP4-CME-E217 | E | Sol 6.2/ultra — independent spectral-ratio jet audit | [Request](handoffs/SP4-CME-E217_REQUEST_v1.md) | Assessed, 2026-11-23 | [E215/E217 assessment](../reviews/E215_E217_SPECTRAL_RATIO_ASSESSMENT_20261123.md); direct reaction independently checked |
+
+| SP4-CME-B105 | B | Selected lead — sharp-boundary applications | [Decision](../brainstorm/notes/B105_SHARP_STATIONARY_APPLICATIONS_20261123.md) | Framed conditionally, 2026-11-23 | Closed stationary/late theorem; strict subregion quantitative estimates |
+
+| SP4-CME-E219 | E | Sol 6.2/ultra — independent sharp certificate audit | [Request](handoffs/SP4-CME-E219_REQUEST_v1.md) | Issued, 2026-11-23 | Independent exact polynomial conversion and equality locus |
+| SP4-CME-E220 | E | Sol 6.2/ultra — conditional sharp spectral applications | [Request](handoffs/SP4-CME-E220_REQUEST_v1.md) | Issued, 2026-11-23 | H_sharp retained; closed stationary/late and strict quantitative scopes |
+
+| SP4-CME-E221 | E | Sol 6.2/ultra — local spectral-ratio manuscript audit | [Request](handoffs/SP4-CME-E221_REQUEST_v1.md) | Issued, 2026-11-23 | Frozen new local proposition; normal PDF remains verified148-page checkpoint |

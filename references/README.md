@@ -110,3 +110,12 @@ These are selected-passage inspections, not full-paper audits or novelty certifi
 
 
 Later consumers on 22 November 2026: the [intrinsic energy-entry record](SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#intrinsic-energy-entry-consumers--e174-through-e180) tracks the native Fine gradient, E01C signature normalization and developing-map method in E174/E176, E177/E178 and the working manuscript. It does not claim fresh primary inspection or exclusion of nonperfect critical connections. The [compactness manuscript record](SOURCE_NOTES_CME_CONTINUATION_COMPARISON_20261122.md#compactness-manuscript-consumers--e172e175) separately identifies R29/R31/R37 theorem use and preserves the source-versus-branch-proof boundary.
+
+## Stationary comparison follow-up, 23 November 2026
+
+The [E207 canonical receipt](SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#stationary-spectral-comparison--e207-23-november-2026) updates R15 and the existing volume-action/triple/metric comparators at their exact inspection levels. Two adjacent sources are registered without importing a theorem.
+
+| ID | Source/version | Use and inspection |
+| --- | --- | --- |
+| R43 | Hanwen Liu, *A Self-Dual Frame Formalism of the SO(3) Yang-Mills Theory*, arXiv:2607.14204v2, 8 September 2026 | Selected fixed-metric Yang–Mills equation and frame passages; [canonical record](SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#r43--liu-self-dual-frame-comparison). |
+| R44 | Joel Fine, joint work credited with Dmitri Panov, Oberwolfach Report33/2011, p.1891 | Historical contributed abstract, separately from R15; [canonical record](SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#r44--fine-oberwolfach-historical-abstract). |
