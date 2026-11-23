@@ -98,8 +98,9 @@ convergence of the actual original flow. On each fixed strict
 spectral subregion, a gradient bound controls energy by the
 accumulated time spent there; explicit numerical constants are
 available for ratio at most $9/4$.
-An effective linear bound in the spectral margin gives a
-weighted energy estimate using the time integral of its positive part.
+Effective spectral margins give a weighted energy estimate.
+Every finite ratio cap above one nevertheless fails under smooth
+short-time original evolution on the standard four-sphere.
 
 Separately, a smooth embedded regular holomorphic sphere,
 whose fixed $W^{1,8}\to L^8$ linearization has a bounded right
@@ -403,6 +404,13 @@ Proposition~\ref{prop:pinched-gradient-domination}.
 Corollary~\ref{cor:intermittent-spectral-return} then uses
 accumulated pinched time, without aligning it to the geometric
 sequence, as a sufficient energy-entry criterion.
+These spectral classes are not automatically preserved:
+Proposition~\ref{prop:fixed-ratio-cap-crossing} and
+Corollary~\ref{cor:strict-ratio-cap-crossing} give actual
+short-time crossings of every finite closed or strict ratio
+cap above one on standard $S^4$. The separate near-round
+family of Proposition~\ref{prop:global-ratio-cap-crossing}
+still converges globally to round modulo automorphisms.
 Section~\ref{sec:c0-twistor-limits}
 proves $C^0$ persistence for an embedded regular sphere with
 a supplied bounded right inverse, and uses the real first metric jet to compare metric twistor
@@ -10867,10 +10875,304 @@ with a base diffeomorphism, preserving the spatial supremum.
 The crossing is therefore independent of such comparisons.
 \end{proof}
 
-The proposition supplies a family near ratio one. It makes
-no assertion about preservation at every larger ratio, a
-uniform crossing time or formation of a singularity. The
-same trajectories lie in a global round-attracting basin.
+The proposition supplies a family near ratio one with a
+global round-attracting conclusion. The following result
+treats every fixed finite ratio, with only a short-time
+conclusion and no uniform crossing time or singularity claim.
+
+
+% Assessed E248--E250; arbitrary fixed-r short-time result.
+\begin{proposition}[Failure of every finite closed spectral cap]
+\label{prop:fixed-ratio-cap-crossing}
+Fix the standard oriented smooth round four-sphere and its
+positive chiral $\mathrm{SO}(3)$ bundle. For every fixed finite
+$r>1$ there is a smooth round-compatible positive definite
+connection $A_r$ with
+\[
+ \max_{S^4}\rho(Q_{A_r})=r,
+\]
+uniquely attained at a fixed center $x_0$. Its original native
+solution is smooth on a positive interval and satisfies
+\[
+ \max_{S^4}\rho(Q_{A_r(t)})
+       \ge \rho(Q_{A_r(t)})(x_0)\ge r e^{t/4}>r
+                       \qquad(0<t<\delta_r)
+\]
+for some datum-dependent $\delta_r>0$. Consequently no closed
+class $\max\rho\le r$ with finite $r>1$ is forward invariant
+under the original flow in this supplied standard-sphere class.
+\end{proposition}
+
+\begin{proof}
+Use the same round chart, radial frame and smooth cutoff $c$
+as in Proposition~\ref{prop:global-ratio-cap-crossing}, now
+with a radius $R>0$ chosen after fixing $r$. Put
+\[
+ p=\sqrt{\frac2{1+r}},\qquad
+ q=\sqrt{\frac{2r}{1+r}},\qquad
+ (s_1,s_2,s_3)=(p,1,q),\qquad d_i=s_i-1.
+\]
+Here $p$ is a spectral number, distinct from the center $x_0$.
+Thus $0<p<1<q<\sqrt2$, $p^2+q^2=2$ and $r=q^2/p^2$.
+Let $A_L$ be the polynomial in
+Proposition~\ref{prop:all-ratio-local-maximum}, so
+$F_i^*=-s_i\Sigma_i$ at $x_0$, and put
+$a=A_L-A_{\rm rd}$, $\Delta F=F^*-F_0$.
+The connection is $A_r=A_{\rm rd}+c(|x|/R)a$ in the chart
+and $A_{\rm rd}$ outside it.
+
+Write $\ell=|x|$, $n=x/\ell$, $u=c(\ell/R)$ and
+$v=(\ell/R)c'(\ell/R)$. These parameters belong to
+$\mathcal P=[0,1]\times[-5/2,0]$. The leading annular
+curvature at fixed $(u,v,n)$ is
+\[
+ F_{\rm mod}=F_0+u\Delta F
+                  +\tfrac v2 n^\flat\wedge\iota_n\Delta F.
+\]
+All stars and flat operations in this model are Euclidean.
+For the reflection $\mathfrak r_n$ negating $n$ and fixing
+$n^\perp$, set
+\[
+ \Omega_i=2(n^\flat\wedge\iota_n\Sigma_i)^-
+          =-\mathfrak r_n^*\Sigma_i.
+\]
+It is an anti-self-dual triple with
+$\Omega_i\wedge\Omega_j=-2\delta_{ij}\,dV_{\rm e}$,
+and has zero wedge pairing with every $\Sigma_j$. Hence
+\[
+ F_{{\rm mod},i}
+   =-(1+(u+v/4)d_i)\Sigma_i-(v/4)d_i\Omega_i.
+\]
+The full wedge Gram, relative to $2dV_{\rm e}$, is diagonal:
+\begin{equation}\label{eq:fixed-ratio-model-gram}
+ M_i=(1+ud_i)(1+(u+v/2)d_i),\qquad M_2=1.
+\end{equation}
+In particular it is independent of the angular direction.
+The two factors for $M_1$ are at least $p$; those for
+$M_3$ are at least $1$ and $(9-5q)/4>0$. There is a
+positive Gram floor for this fixed $r$.
+
+Both partial derivatives of $M_1$ are negative, and those
+of $M_3$ are positive. With $b_z=(9-5z)/4$, their ranges
+are $p^2\le M_1\le b_p$ and $b_q\le M_3\le q^2$.
+All six possible quotients obey
+\[
+ \begin{aligned}
+ \frac{M_3}{M_1}&\le r,&
+ \frac1{M_1}&\le\frac1{p^2}<r,&
+ M_3&\le q^2<r,\\
+ M_1&\le b_p<r,&
+ \frac1{M_3}&\le\frac1{b_q}<r,&
+ \frac{M_1}{M_3}&\le\frac{b_p}{b_q}<r.
+ \end{aligned}
+\]
+For the fourth and fifth strict comparisons, the function
+$13z^2-5z^3$ increases on $(0,\sqrt2)$ and equals $8$ at
+$z=1$. For the last one, clearing positive denominators gives
+\[
+ q^2(9-5q)-p^2(9-5p)
+ =(q-p)\bigl(9(p+q)-5(2+pq)\bigr)>0.
+\]
+Indeed, with $z=p+q\in(\sqrt2,2)$, the bracket is the
+concave polynomial $9z-5-(5/2)z^2$, positive at both
+endpoints. Equality in the first quotient requires
+$(u,v)=(1,0)$ by strict monotonicity. Thus the normalized
+model quotient has ratio at most $r$, with precisely this
+one equality parameter, including all possible orderings
+of its eigenvalues.
+
+For fixed $r$, the exact annular formula
+\eqref{eq:radial-cutoff-curvature} gives
+\[
+ \sup_{\substack{R/2\le\ell\le R,\ n\in S^3\\(u,v)\in\mathcal P}}
+ \left(|F-F_{\rm mod}|+
+       |\partial_u(F-F_{\rm mod})|+
+       |\partial_v(F-F_{\rm mod})|\right)\le C_rR.
+\]
+To see this, use $F_{\rm rd}=F_0+O(\ell)$,
+$F_L=F^*+O_r(\ell^2)$,
+$a=\ell\iota_n\Delta F/2+O_r(\ell^2)$ and
+$[a\wedge a]=O_r(\ell^2)$ in that formula. Parameter
+derivatives are taken at fixed $x$, on the entire rectangle.
+The compact positive model Gram and the quadratic Gram map
+keep the segment between model and actual curvature in a
+positive neighborhood for small $R$. Smoothness of the
+normalized quotient there transfers this estimate to $Q$
+and its first $u,v$ derivatives.
+
+At $(1,0)$ the model eigenvalues are $p^2<1<q^2$ and,
+for $f_{\rm mod}=\log\rho(Q_{\rm mod})$,
+\[
+ \partial_u f_{\rm mod}=2(1/p-1/q)>0,
+ \qquad \partial_v f_{\rm mod}=(1/p-1/q)/2>0.
+\]
+Choose a small closed convex corner
+$C_\eta=[1-\eta,1]\times[-\eta,0]$ with uniform simple
+gaps and positive derivatives. The quotient convergence
+and simple eigenvalue derivative formula preserve those
+properties for the actual parameter matrices when $R$
+is small. Along the segment from $(1,0)$ to $(u,v)$ in
+this corner both coordinate displacements are nonpositive.
+Consequently
+\[
+ \log\rho(Q(u,v,x))\le\log\rho(Q(1,0,x))
+             =\log\rho(Q_{A_L}(x))<\log r
+\]
+for annular $x$, after reducing $R$ below the strict local
+maximum radius of the fixed polynomial. Let
+$U_\eta=\{u>1-\eta,\ v>-\eta\}\cap\mathcal P$.
+The compact complement $\mathcal P\setminus U_\eta$
+omits the unique equality parameter. Its model ratio has
+a strict gap below $r$. Uniform convergence of extreme
+eigenvalues and their common positive lower bound transfer
+this gap to the actual quotient, without a simplicity
+assumption there. The closed corner and that complement
+cover $\mathcal P$.
+
+The inner ball has the exact local polynomial, and the
+exterior is round. Shrinking $R$ also ensures positivity
+on the core; the annular Gram floor supplies it on the
+transition. The smooth cutoff difference extends by zero
+as an adjoint-valued one-form on the same global bundle.
+Connectedness and the nonempty round exterior fix the
+round-compatible definite sign. The global maximum is
+therefore exactly $r$, only at $x_0$, and the germ there
+still has native log-ratio derivative $1/2$.
+
+Take $A_r$ itself as reference in
+Section~\ref{subsec:fixed-adjoint}. The fixed-adjoint
+parabolic construction gives a smooth adjusted solution
+on a datum-dependent interval. On the compact frame
+bundle solve $j'=-\xi_{\rm fixed}(\widehat A)\circ j$
+from the identity and set $A=j^*\widehat A$. The Cartan
+pullback derivative cancels the subtracted gauge term,
+so $A$ is the original native solution, smooth through
+zero. This uses the original gradient and action in
+\cite[Proposition 4.2 and Section 4.2]{Fine2011} and the
+local system estimates in
+\cite[Chapter 7, Propositions 7.3.A--B]{Taylor1991Nonlinear}
+through the displayed compact-bundle construction.
+The simple eigenvalues at the fixed point $x_0$ persist
+for short time. Continuity of the native derivative,
+whose initial value is $1/2$, gives the lower bound
+$\log\rho(Q_{A(t)})(x_0)\ge\log r+t/4$ on a smaller
+interval. This proves the crossing. Spatial suprema are
+unchanged by smooth bundle automorphisms.
+\end{proof}
+
+The radius and the crossing interval in this proposition
+may depend on $r$. It supplies no arbitrary-ratio global
+lifetime or round-convergence statement. The near-round
+family in Proposition~\ref{prop:global-ratio-cap-crossing}
+retains its separate global conclusion.
+
+% Assessed E251/E252; fixed compact family and derived local continuity.
+\begin{corollary}[Failure of every prescribed strict spectral cap]
+\label{cor:strict-ratio-cap-crossing}
+For each prescribed finite $r_0>1$ there are smooth positive
+definite round-compatible data on the same standard sphere
+and bundle, with
+\[
+ \max_{S^4}\rho(Q_{A(0)})<r_0
+       <\max_{S^4}\rho(Q_{A(t_*)})
+\]
+at a positive time $t_*$ of their original native smooth flow.
+\end{corollary}
+
+\begin{proof}
+First fix a compact interval $I\subset(1,\infty)$ containing
+$r_0$ in its interior. The construction of
+Proposition~\ref{prop:fixed-ratio-cap-crossing} can use one
+radius $R>0$ on all of $I$. Indeed the polynomial coefficients
+are smooth in $r>1$, so every fixed derivative is bounded on
+$I$. The center quotient has uniform positive eigenvalue and
+simple-gap bounds there. Its local log ratio is jointly smooth
+in $(r,x)$ and has Hessian $-|G_r|^2I$ at the center, with
+$\min_I|G_r|^2>0$. Uniform continuity of that Hessian gives
+one ball with a common strictly negative Hessian bound.
+For the annular model the Gram floor, corner gaps and positive
+partial derivatives have positive minima on $I$; one closed
+convex corner works for all parameters. On its compact
+complement the continuous difference $r-\rho(Q_{\rm mod})$
+has a positive minimum. The actual-curvature error and its
+$u,v$ derivatives are $O_I(R)$. Thus one small radius meets
+all the core, corner and complement requirements. It gives
+$\max\rho(Q_{A_r})=r$ uniquely at the same $x_0$ for all
+$r\in I$. With this radius fixed,
+\[
+ A_r-A_{r_0}=\sum_{\nu=1}^N
+          (a_\nu(r)-a_\nu(r_0))s_\nu
+\]
+for fixed global smooth supported one-forms $s_\nu$ and
+smooth scalar coefficients $a_\nu$. Hence $A_r$ is a smooth
+family of connections with every finite spatial seminorm
+bounded on $I$.
+
+We give the common-time continuity argument needed here.
+Fix the single reference $\bar A=A_{r_0}$ in
+\eqref{flow:fixed-adjoint}. The uniformly parabolic first-jet
+neighborhood and its cutoff are now fixed. Use graph norms
+of one fixed bundle Laplacian. Choose $b>0$ so the graph
+$H^6$ ball of radius $b$ lies in the cutoff-one region, and
+shrink $I$ so every initial difference has norm at most
+$b/2$. The spectral approximations preserve this initial
+bound. On their bootstrap region
+$Y=\|\widehat A_r-\bar A\|_{H^6}^2\le b^2$, the estimate
+in Section~\ref{subsec:fixed-adjoint} gives
+$Y'\le K(1+Y)$ uniformly. Choosing one sufficiently short
+$T>0$ keeps $Y\le b^2/2$ before any possible exit. Higher
+even Sobolev bounds use the same $C^2$ bound and the
+uniformly bounded smooth traces, hence hold on this same
+interval. Passing the spectral approximations to the
+smooth limits preserves these bounds and removes the
+cutoff uniformly.
+
+All these norms use the fixed reference geometry. For two
+adjusted solutions, their difference $w$ satisfies a linear
+system whose leading coefficient has the common Hermitian
+margin and $C^1$ bound, and whose first- and zeroth-order
+coefficients are uniformly bounded by the common $C^2$
+solution bounds. The localized G{\aa}rding estimate and
+Young's inequality give
+\[
+ \sup_{0\le t\le T}\|w(t)\|_{L^2}
+       \le C\|A_r-A_s\|_{L^2}.
+\]
+Interpolation with the common high Sobolev bounds gives,
+for each integer $k\ge0$ and a larger even $m$,
+\[
+ \sup_{0\le t\le T}\|w(t)\|_{H^k}
+       \le C_{k,m}\|A_r-A_s\|_{L^2}^{1-k/m}.
+\]
+Thus the adjusted family is continuous through time zero
+in every fixed spatial $C^k$ norm. This is a consequence
+of the local estimates, without an additional imported
+parameter-dependence theorem.
+
+The recovery vector fields
+$X_r=-\xi_{\rm fixed}(\widehat A_r)$ on the compact frame
+bundle have spatial order at most two. Adjusted $C^3$
+convergence and common $C^4$ bounds give $C^1$ convergence
+and common $C^2$ bounds for $X_r$. On a common shorter
+interval the ODEs for $j_r$ and $Dj_r$, starting from the
+identity, give $C^1$ convergence of $j_r$ by Gronwall in
+finite nested charts. The original solutions are
+$B_r=j_r^*\widehat A_r$, with
+$F_{B_r}=j_r^*F_{\widehat A_r}$. Their curvatures therefore
+converge uniformly on this common time interval. The
+positive quotient map and extreme eigenvalues are
+continuous, so the original pointwise ratios are also
+continuous in the parameter.
+
+At $r=r_0$, the native initial log-ratio derivative at
+$x_0$ is $1/2$. Choose one fixed $0<t_*<T$ with
+$\rho(Q_{B_{r_0}(t_*)})(x_0)>r_0$. Continuity preserves
+this strict inequality for all sufficiently close lower
+parameters $r<r_0$, whose initial global supremum is
+exactly $r$. These data prove the claimed strict crossing.
+The interval and all estimates may depend on $r_0$ and
+its chosen compact parameter neighborhood.
+\end{proof}
 
 
 \subsection{Concentration on the closed round bundle}
