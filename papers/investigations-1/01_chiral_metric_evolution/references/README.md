@@ -103,3 +103,10 @@ The [sharp spectral consumer record](../../../../references/SOURCE_NOTES_CME_SPE
 The [endpoint absorption consumer record](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#endpoint-absorption-consumers--e223-through-e228) links the branch pointwise/local results to the unchanged inspected Fine gradient; no integrated failure or new source inspection is asserted.
 
 The [effective margin consumer record](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#effective-margin-consumers--e229-through-e234) keeps the exact coefficient proof and new native time weight separate from the unchanged primary gradient and geometric-entry inputs.
+
+
+The [E238 sharp-result comparison](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#sharp-spectral-primary-comparison--e238) adds exact primary passages to existing records only. [All-ratio local consumers](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#all-ratio-local-consumer--e235-through-e237) and the [R26 scalar preservation comparison](../../../../references/SOURCE_NOTES_CME_CONTINUATION_COMPARISON_20261122.md#r26-scalar-preservation-comparison--e238) preserve the different equations and evidence scopes. Four searches do not certify novelty.
+
+The [closed local flow consumer record](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#closed-local-flow-consumers--e240-through-e242) links the new cutoff/application to the already inspected gradient, recovery and smooth local inputs.
+
+The [global near-round cap consumer](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#global-cap-crossing-consumers--e243-through-e245) records the exact supplied-data evolution scope and unchanged primary dependencies.

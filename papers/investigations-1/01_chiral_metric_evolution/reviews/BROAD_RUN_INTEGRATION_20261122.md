@@ -241,3 +241,9 @@ The [E195/E198 disposition](E195_E198_TWISTOR_MANUSCRIPT_DISPOSITION_20261122.md
 ### Spectral and occupation-time checkpoint — 23 November 2026
 
 The [E208–E216 disposition](E208_E216_SPECTRAL_MANUSCRIPT_DISPOSITION_20261123.md) records the verified 148-page normal PDF, exact source/PDF identities, all required mathematical and visual repairs, resolved citations and complete rendered coverage. The manuscript now includes assessed stationary perfection at ratio≤9/4, explicit native gradient domination, a closed late spectral-limsup criterion, and accumulated-good-time energy and round-entry criteria. The finite occupation test requires past observations only; its round conclusion implies eventual full occupation. The local spectral-ratio test and sharper algebraic region remain outside this checkpoint pending independent review.
+
+### Sharp stationary margin checkpoint — 23 November2026
+
+The [E224–E239 disposition](E224_E239_SHARP_MARGIN_MANUSCRIPT_DISPOSITION_20261123.md) records the verified157-page normal PDF and exact identities, all integration repairs,543resolved references and complete final visual coverage. The source is579519bytes (fdce3e4ce268a410ab97cc2650a6e1110b74c8237b895c522f04aabd288319e3); the byte-verified delivered PDF is1352720bytes (9fe90901633f5bae5ec927946a25aed7b1be6ad96b6f4821cc2783a129667d01). E238 updates existing canonical primary records. The closed near-round germ realization under B111 is separate ongoing work.
+
+Post-integration repository validation on23November2026 passed:3branches,4330relative links and0errors; git diff --check passed. Authentic public chat capture refreshed the canonical research conversation to160messages. No final reply or private/tool traffic was fabricated.

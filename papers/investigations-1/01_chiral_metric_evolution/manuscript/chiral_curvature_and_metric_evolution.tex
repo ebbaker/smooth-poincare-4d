@@ -10600,7 +10600,7 @@ Thus $df[B]=-|G|^2<0$ and the coefficients are finite for
 this fixed $r$.
 
 The curvature-jet calculation in the preceding proof uses
-only positive $s_i$ and trace three, so it applies with
+$s_i>0$, $\sum_i s_i^2=3$ and symmetric trace-free $U$, so it applies with
 $s_i=\sqrt{(Q_r)_{ii}}$, $F_i^*=-s_i\Sigma_i$ and
 \[
  V_i^j=-\sum_k\frac{U_{ik}}{s_k}J_kdx^j,
@@ -10625,8 +10625,9 @@ stated strict local maximum on a sufficiently small ball,
 with positivity and sign retained.
 
 Evaluate the actual original velocity on the local affine
-curve $A+\sigma V_{\rm old}(A)$. The direct differentiated
-velocity calculation in the preceding proof gives
+curve $A+\sigma V_{\rm old}(A)$. Applying the exact identity
+\eqref{flow:nonlinear-Q} to this tangent, with $\nabla^AQ(0)=0$
+and $\Delta_AQ(0)=4B$, gives
 \[
  \left.\frac{d}{d\sigma}Q(A+\sigma V_{\rm old}(A))\right|_0
        =4\mathscr L_{Q_r}B-24dq
@@ -10648,9 +10649,219 @@ The affine curve evaluates the original vector field on a
 smooth local datum. It is not asserted to solve the flow.
 The result excludes a nonpositive scalar contact-direction
 inference based only on a local ratio maximum at any of
-these thresholds. A closed datum, an evolved trajectory and
-global failure of preservation remain separate questions.
+these thresholds. The next proposition addresses the global questions
+for a separate near-round family.
 % Assessed all-r local family: E235/E236, 23 November 2026.
+
+
+% Assessed E240--E245; exact scopes and identities in the dated reviews.
+\begin{proposition}[Failure of near-round spectral cap preservation]
+\label{prop:global-ratio-cap-crossing}
+Fix the standard oriented round four-sphere and its positive
+chiral $\mathrm{SO}(3)$ bundle, with perfect connection
+$A_{\rm rd}$. There are $\epsilon_0,C>0$ such that for every
+$0<\epsilon<\epsilon_0$ there is a smooth round-compatible
+positive definite connection $A_\epsilon$ with
+\[
+ \|A_\epsilon-A_{\rm rd}\|_{C^1}
+       +\|F_{A_\epsilon}-F_{\rm rd}\|_{C^0}\le C\epsilon,
+ \qquad \max_{S^4}\rho(Q_{A_\epsilon})=1+\epsilon.
+\]
+The norms use the fixed round background. The maximum is
+attained only at one point $p$. The original native flow from
+$A_\epsilon$ is global and smooth, but
+\[
+ \max_{S^4}\rho(Q_{A_\epsilon(t)})>1+\epsilon
+                 \qquad(0<t<t_\epsilon)
+\]
+for some datum-dependent $t_\epsilon>0$. It nevertheless has
+the exponential round convergence modulo time-dependent
+bundle automorphisms of Corollary~\ref{cor:round-small-values},
+with $m=6$. Strict global ratio caps also fail to be preserved
+for thresholds arbitrarily close to one.
+\end{proposition}
+
+\begin{proof}
+Use the old $K=1$ oriented normal chart and radial internal
+gauge at $p$, with $F_0=F_{\rm rd}(0)=-\Sigma$. Radial
+parallel transport gives
+\[
+ A_{\rm rd}(x)=\int_0^1t\,\iota_xF_{\rm rd}(tx)\,dt
+             =\tfrac12\iota_xF_0+E_{\rm rd}(x),
+ \qquad |E_{\rm rd}|\le C|x|^2,\quad |DE_{\rm rd}|\le C|x|.
+\]
+Let $A_{\rm loc}=L+C_3$ be the polynomial of
+Proposition~\ref{prop:all-ratio-local-maximum} at
+$r=1+\epsilon$, where $L=\iota_xF^*/2$ and $C_3$ is
+its cubic term. Its coefficients satisfy
+\[
+ |F^*-F_0|=O(\epsilon),\qquad
+ |B|+|U|+\max_a|V^a|=O(\epsilon^{-1}).
+\]
+All constants below are independent of sufficiently small
+$\epsilon$, position, angular direction and the stated
+compact parameter ranges. Set $R=\epsilon^2$ and choose
+one smooth nonincreasing $c$ with $c=1$ on $[0,1/2]$,
+$c=0$ on $[1,\infty)$ and $0\le-c'\le5/2$. For example,
+integrate from $s$ to infinity the density
+$(5/2)(\mathbf 1_{[11/20,19/20]}*\eta)$, where $\eta$
+is a nonnegative smooth integral-one mollifier supported
+in $(-1/20,1/20)$. Define
+\[
+ a=A_{\rm loc}-A_{\rm rd},\qquad
+ A_\epsilon=A_{\rm rd}+c(|x|/R)a
+\]
+in the chart, extending the difference by zero. A difference
+of connection forms is an adjoint-valued one-form, so this
+is a smooth connection on the given bundle. The product rule gives
+\[
+ \|A_\epsilon-A_{\rm rd}\|_{C^0}=O(\epsilon R+R^2+R^3/\epsilon)
+          =O(\epsilon^3),\qquad
+ \|A_\epsilon-A_{\rm rd}\|_{C^1}
+          =O(\epsilon+R+R^2/\epsilon)=O(\epsilon).
+\]
+The exact curvature difference is
+$d_{A_{\rm rd}}(A_\epsilon-A_{\rm rd})+
+[(A_\epsilon-A_{\rm rd})\wedge(A_\epsilon-A_{\rm rd})]/2$,
+hence is $O(\epsilon)$. The curvature wedge Gram matrix
+stays positive along its pointwise segment to the round
+one, so positivity and the round-compatible sign follow.
+
+An exact ratio cap needs more than this closeness estimate.
+Use fixed Euclidean volume in
+$\mathcal M_{ij}(F)=F_i\wedge F_j/(2dV_{\rm e})$ and
+$\mathcal Q(F)=3\mathcal M/\tr\mathcal M$.
+On one fixed coefficient ball about $F_0$, the trace
+has a positive lower bound and $\mathcal Q$ has bounded
+first two derivatives. The local polynomial curvature is
+\[
+ F_{\rm loc}=F^*+F_2+F_4+F_6,
+ \quad F_2=dC_3+\tfrac12[L\wedge L],\quad
+ F_4=[L\wedge C_3],\quad F_6=\tfrac12[C_3\wedge C_3].
+\]
+Writing $\ell=|x|\le R$, these terms have sizes
+$O(\epsilon^{-1}\ell^2)$,
+$O(\epsilon^{-1}\ell^4)$ and
+$O(\epsilon^{-2}\ell^6)$, respectively. The quotient
+Hessian already computed in the preceding proposition gives
+\[
+ Q_{\rm loc}(x)=Q_r+\tfrac12B\ell^2
+                         +O(\epsilon^{-2}\ell^4).
+\]
+The two spectral gaps of $Q_r$ are $\epsilon/(2+\epsilon)$.
+Since $|Q_{\rm loc}-Q_r|=O(\epsilon^3)$ on this ball,
+the gaps on the matrix segment remain bounded below by
+$a_0\epsilon$ for a fixed $a_0>0$. Differentiating a
+normalized eigenpair gives
+\[
+ D^2\lambda_i[Y,Y]
+       =2\sum_{j\ne i}\frac{|Y_{ji}|^2}{\lambda_i-\lambda_j}.
+\]
+Thus $D^2f=O(\epsilon^{-1})$ there for $f=\log\rho$,
+while $df[B]=-|G|^2$ and $|G|^2\ge2$. Consequently
+\begin{equation}\label{eq:uniform-local-ratio-cap}
+ f(Q_{\rm loc}(x))=\log r-\tfrac12|G|^2\ell^2
+                              +O(\epsilon^{-3}\ell^4)<\log r
+                  \qquad(0<\ell\le R)
+\end{equation}
+for small $\epsilon$: the remainder is at most
+$C\epsilon\ell^2$. This establishes a uniform full-ball
+radius for this family, beyond the fixed-$r$ local statement.
+
+On the annulus $R/2\le\ell\le R$, set
+$s=\ell/R$, $n=x/\ell$, $u=c(s)$, $v=sc'(s)$.
+The actual curvature is the following pointwise expression:
+\begin{equation}\label{eq:radial-cutoff-curvature}
+ F(u,v,x)=F_{\rm rd}+u(F_{\rm loc}-F_{\rm rd})
+       +\tfrac12u(u-1)[a\wedge a]
+       +\frac v\ell n^\flat\wedge a.
+\end{equation}
+Consider its parameters on $0\le u\le1$, $-5/2\le v\le0$.
+Here $F_{\rm rd}=F_0+O(\ell)$ and
+\[
+ a=\tfrac\ell2\iota_n(F^*-F_0)+O(\ell^2+\ell^3/\epsilon).
+\]
+Equation~\eqref{eq:radial-cutoff-curvature} therefore has a
+remainder $O(\epsilon^2)$, including its first $u,v$
+derivatives, after subtracting
+$F_0+u(F^*-F_0)+(v/2)n^\flat\wedge\iota_n(F^*-F_0)$.
+The full anti-self-dual part is retained in this expression.
+For a self-dual form $\omega$,
+$(n^\flat\wedge\iota_n\omega)^+=\omega/2$.
+The derivative $D\mathcal Q_{F_0}$ annihilates anti-self-dual
+variations. With $D=\operatorname{diag}(-1/2,0,1/2)$ and
+$h=u+v/4$, the uniform quotient expansions are therefore
+\begin{equation}\label{eq:cutoff-quotient-parameters}
+ \begin{aligned}
+ Q(u,v,x)&=I+\epsilon hD+O(\epsilon^2),\\
+ \partial_uQ&=\epsilon D+O(\epsilon^2),\qquad
+ \partial_vQ=\epsilon D/4+O(\epsilon^2).
+ \end{aligned}
+\end{equation}
+The parameter derivatives follow by the chain rule and the
+fixed bound on $D^2\mathcal Q$; no shrinking denominator
+is used in this quotient step.
+
+If $h\ge1/2$, the ordered gaps in the leading diagonal
+matrix are at least $\epsilon/4$. The $O(\epsilon^2)$
+perturbation keeps the actual gaps at least $\epsilon/8$.
+The eigenvector equation projected off each coordinate line
+then bounds the transverse eigenvector component by
+$C\epsilon$. Eigenpair differentiation in
+\eqref{eq:cutoff-quotient-parameters} gives
+\[
+ \partial_uf=\epsilon+O(\epsilon^2)\ge\epsilon/2,
+ \qquad
+ \partial_vf=\epsilon/4+O(\epsilon^2)\ge\epsilon/8.
+\]
+The straight segment from $(1,0)$ to $(u,v)$ keeps
+$h\ge1/2$. Since $u-1\le0$ and $v\le0$, integration yields
+\[
+ f(Q(u,v,x))\le f(Q_{\rm loc}(x))
+                -\tfrac\epsilon2\big((1-u)+|v|/4\big)<\log r
+\]
+by \eqref{eq:uniform-local-ratio-cap}. If $h\le1/2$,
+then $-5/8\le h\le1/2$. The eigenvalue min--max bound in
+\eqref{eq:cutoff-quotient-parameters}, valid also at repeated
+eigenvalues, instead gives
+\[
+ \rho(Q(u,v,x))\le1+\tfrac58\epsilon+C\epsilon^2
+                  \le1+\tfrac34\epsilon<r.
+\]
+Together with the inner ball and the exactly round exterior,
+this proves the claimed unique global maximum.
+
+The pair values tend uniformly to round, so
+Corollary~\ref{cor:round-small-values} applies for small
+$\epsilon$. Its individual smooth comparison and recovery
+from the identity make the original solution smooth through
+zero. The unchanged germ gives
+$\partial_t\log\rho(Q(A_\epsilon(t)))(p)|_{t=0}=1/2$
+in native time. For this datum, continuity makes that
+fixed-point derivative at least $1/4$ on a short positive
+interval, so the value at $p$, and hence the spatial
+supremum, exceeds $r$. Alternatively, the negative spatial
+Hessian and the implicit-function theorem continue the
+strict local maximum along a smooth short curve, with the
+same initial derivative. No uniform interval is claimed.
+
+Finally take $\epsilon_j\downarrow0$. On each trajectory
+choose a sufficiently small positive time at which the
+value at $p$ lies strictly between $1+\epsilon_j$ and
+$1+2\epsilon_j$. A threshold strictly between that value
+and the initial global supremum is initially satisfied
+strictly and later crossed. These thresholds tend to one.
+This proves the stated strict-cap consequence without any
+parameter-dependent solution theorem. Bundle automorphisms
+conjugate the internal quotient and compose its eigenvalues
+with a base diffeomorphism, preserving the spatial supremum.
+The crossing is therefore independent of such comparisons.
+\end{proof}
+
+The proposition supplies a family near ratio one. It makes
+no assertion about preservation at every larger ratio, a
+uniform crossing time or formation of a singularity. The
+same trajectories lie in a global round-attracting basin.
 
 
 \subsection{Concentration on the closed round bundle}

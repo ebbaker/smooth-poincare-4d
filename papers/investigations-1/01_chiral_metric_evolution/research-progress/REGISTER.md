@@ -613,7 +613,7 @@ refresh procedure.
 | SP4-CME-B106 | B | Selected lead — endpoint speed-only absorption | [Decision](../brainstorm/notes/B106_ENDPOINT_SPEED_ABSORPTION_TEST_20261123.md) | Decided, 2026-11-23 | Test radical mixed form at one sharp endpoint |
 | SP4-CME-E223 | E | Sol 6.2/ultra — endpoint radical mixed-form test | [Request](handoffs/SP4-CME-E223_REQUEST_v1.md) | Assessed, 2026-11-23 | [E223/E225 assessment](../reviews/E223_E225_ENDPOINT_ABSORPTION_ASSESSMENT_20261123.md); pointwise fixed-speed obstruction only |
 
-| SP4-CME-E224 | E | Sol 6.2/ultra — sharp spectral manuscript audit | [Request](handoffs/SP4-CME-E224_REQUEST_v1.md) | Assessed; precision repairs applied, 2026-11-23 | [E224 audit](../reviews/E224_SHARP_SPECTRAL_MANUSCRIPT_AUDIT_20261123.md); final combined PDF verification pending |
+| SP4-CME-E224 | E | Sol 6.2/ultra — sharp spectral manuscript audit | [Request](handoffs/SP4-CME-E224_REQUEST_v1.md) | Assessed; precision repairs applied, 2026-11-23 | [E224 audit](../reviews/E224_SHARP_SPECTRAL_MANUSCRIPT_AUDIT_20261123.md); [157-page disposition](../reviews/E224_E239_SHARP_MARGIN_MANUSCRIPT_DISPOSITION_20261123.md) |
 
 | SP4-CME-E225 | E | Sol 6.2/ultra — independent endpoint absorption audit | [Request](handoffs/SP4-CME-E225_REQUEST_v1.md) | Assessed, 2026-11-23 | [E223/E225 assessment](../reviews/E223_E225_ENDPOINT_ABSORPTION_ASSESSMENT_20261123.md); independent exterior reconstruction |
 
@@ -640,9 +640,24 @@ refresh procedure.
 
 | SP4-CME-E236 | E | Sol 6.2/ultra — independent all-ratio local audit | [Request](handoffs/SP4-CME-E236_REQUEST_v1.md) | Assessed, 2026-11-23 | [E235/E236 assessment](../reviews/E235_E236_ALL_RATIO_LOCAL_ASSESSMENT_20261123.md); independent direct curvature reaction |
 
-| SP4-CME-E226 | E | Sol 6.2/ultra — rendered margin manuscript QA | [Request](handoffs/SP4-CME-E226_REQUEST_v1.md) | Completed; three layout repairs applied, 2026-11-23 | [E226 QA](../reviews/E226_MARGIN_PDF_QA_20261123.md); final157-page verification separate |
+| SP4-CME-E226 | E | Sol 6.2/ultra — rendered margin manuscript QA | [Request](handoffs/SP4-CME-E226_REQUEST_v1.md) | Completed; three layout repairs applied, 2026-11-23 | [E226 QA](../reviews/E226_MARGIN_PDF_QA_20261123.md); [final157-page verification](../reviews/E224_E239_SHARP_MARGIN_MANUSCRIPT_DISPOSITION_20261123.md) complete |
 
 | SP4-CME-B110 | B | Selected lead — sharp-result primary comparison | [Decision](../brainstorm/notes/B110_SHARP_SPECTRAL_SOURCE_COMPARISON_20261123.md) | Decided, 2026-11-23 | Bounded attribution search after the new spectral results |
-| SP4-CME-E238 | E | Sol 6.2/ultra — sharp spectral primary comparison | [Request](handoffs/SP4-CME-E238_REQUEST_v1.md) | Issued, 2026-11-23 | At most four searches/four primary passages; no novelty certification |
+| SP4-CME-E238 | E | Sol 6.2/ultra — sharp spectral primary comparison | [Request](handoffs/SP4-CME-E238_REQUEST_v1.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E238_SOURCE_COMPARISON_ASSESSMENT_20261123.md); existing canonical records updated, no novelty certification |
 
-| SP4-CME-E237 | E | Sol 6.2/ultra — all-ratio manuscript integration audit | [Request](handoffs/SP4-CME-E237_REQUEST_v1.md) | Issued, 2026-11-23 | Frozen157-page source; new local proposition and E234 precision edits |
+| SP4-CME-E237 | E | Sol 6.2/ultra — all-ratio manuscript integration audit | [Request](handoffs/SP4-CME-E237_REQUEST_v1.md) | Assessed; source precision repaired, 2026-11-23 | [E237 audit](../reviews/E237_ALL_RATIO_MANUSCRIPT_AUDIT_20261123.md); [final PDF verified](../reviews/E224_E239_SHARP_MARGIN_MANUSCRIPT_DISPOSITION_20261123.md) |
+
+| SP4-CME-E239 | E | Sol 6.2/ultra — final rendered sharp-margin QA | [Request](handoffs/SP4-CME-E239_REQUEST_v1.md) | Assessed and integrated, 2026-11-23 | [157-page disposition](../reviews/E224_E239_SHARP_MARGIN_MANUSCRIPT_DISPOSITION_20261123.md); final PDF promoted and byte-verified |
+
+| SP4-CME-B111 | B | Selected lead — closed realization of local ratio germs | [Decision](../brainstorm/notes/B111_CLOSED_REALIZATION_OF_LOCAL_RATIO_GERMS_20261123.md) | Decided, 2026-11-23 | Fixed near-round cutoff on standard S4; no global cap claim |
+| SP4-CME-E240 | E | Sol 6.2/ultra — closed cutoff realization | [Request](handoffs/SP4-CME-E240_REQUEST_v1.md) | Assessed, 2026-11-23 | [E240–E242 assessment](../reviews/E240_E242_CLOSED_LOCAL_FLOW_ASSESSMENT_20261123.md); near-round closed realization |
+| SP4-CME-E241 | E | Sol 6.2/ultra — conditional actual-flow local maxima | [Request](handoffs/SP4-CME-E241_REQUEST_v1.md) | Assessed; H_cutoff discharged, 2026-11-23 | [Assessment](../reviews/E240_E242_CLOSED_LOCAL_FLOW_ASSESSMENT_20261123.md); actual growing local maximum |
+
+| SP4-CME-E242 | E | Sol 6.2/ultra — independent closed-realization audit | [Request](handoffs/SP4-CME-E242_REQUEST_v1.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E240_E242_CLOSED_LOCAL_FLOW_ASSESSMENT_20261123.md); independent new calculations pass |
+
+| SP4-CME-B112 | B | Selected lead — exact radial cutoff cap | [Decision](../brainstorm/notes/B112_RADIAL_CUTOFF_GLOBAL_RATIO_CAP_20261123.md) | Assessed, 2026-11-23 | [Global-cap assessment](../reviews/E243_E245_GLOBAL_RATIO_CAP_ASSESSMENT_20261123.md); near-round actual cap crossing |
+| SP4-CME-E243 | E | Sol 6.2/ultra — prescribed global cap derivation | [Request](handoffs/SP4-CME-E243_REQUEST_v1.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E243_E245_GLOBAL_RATIO_CAP_ASSESSMENT_20261123.md); exact global cap and unique maximizing point |
+
+| SP4-CME-E244 | E | Sol 6.2/ultra — independent radial cap verification | [Request](handoffs/SP4-CME-E244_REQUEST_v1.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E243_E245_GLOBAL_RATIO_CAP_ASSESSMENT_20261123.md); independent proof without E243 access |
+
+| SP4-CME-E245 | E | Sol 6.2/ultra — conditional global cap crossing | [Request](handoffs/SP4-CME-E245_REQUEST_v1.md) | Assessed; H_cap discharged, 2026-11-23 | [Assessment](../reviews/E243_E245_GLOBAL_RATIO_CAP_ASSESSMENT_20261123.md); actual closed and strict cap crossings |

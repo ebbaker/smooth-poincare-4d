@@ -1,0 +1,13 @@
+# SP4-CME-E240 request v1 — Closed cutoff realization of local ratio germs
+
+23 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Selected lead model and effort preserved; actual settings unavailable. B work is lead-owned; fixed E helpers are configured gpt-6.2-sol/ultra, with independent runtime attestation unavailable.
+
+Derive exactly the fixed B111 cutoff construction on the standard smooth closed round S4 and its positive chiral SO(3) bundle. Use the real Riemannian orientation, old K=1 chart and native time/pairing conversion of E235. For r=1+epsilon sufficiently close to1, prove the uniform coefficient bounds for the explicit E235 G,T,mu,U,V, fix the normal radial gauge of A_rd, and prove the stated cutoff C0/C1 estimates with R=epsilon^2. Show the difference is a globally smooth adjoint-valued one-form, compute F(A_rd+a)-F_rd=d_A_rd a+[a wedge a]/2, and infer global positive definiteness/round sign from actual curvature closeness. Verify exact germ agreement, scalar strict local maximum and native original velocity derivative at p. State sup rho=1+O(epsilon), with no prescribed cap r in the annulus. No flow theorem is requested here. Finite work: one explicit family and cutoff scale, no search or alternate gluing mechanism. Detail all constants and epsilon dependencies. Return a failed estimate rather than altering the target. Write only notes/240_CLOSED_CUTOFF_RATIO_REALIZATION_20261123.md and research-progress/handoffs/SP4-CME-E240_RETURN_v1.md; optional scratch algebra stays outside tracked files. Acceptance is a displayed proof of the actual connection and uniform C1 estimate, not abstract jet extension or numerical samples.
+
+Only the assigned helper outputs may be written. Shared artifacts, references and manuscript remain lead-owned. Record input identities, derivation, limitations, metadata and output hashes. Return at the finite packet boundary. Existing source records remain canonical; do not claim a fresh external inspection without one.
+
+| Frozen input | SHA-256 |
+| --- | --- |
+| [B111_CLOSED_REALIZATION_OF_LOCAL_RATIO_GERMS_20261123.md](../../brainstorm/notes/B111_CLOSED_REALIZATION_OF_LOCAL_RATIO_GERMS_20261123.md) | 15db8371803239f8e98f739b43100ca743909bce983fa3c922291268d3e094ca |
+| [E235_E236_ALL_RATIO_LOCAL_ASSESSMENT_20261123.md](../../reviews/E235_E236_ALL_RATIO_LOCAL_ASSESSMENT_20261123.md) | c8f229dbc5421449ccc1e548af0502d5524a8bf771d7e9544efed5ce846a7c50 |
+| [235_ALL_RATIO_LOCAL_MAXIMUM_TEST_20261123.md](../../notes/235_ALL_RATIO_LOCAL_MAXIMUM_TEST_20261123.md) | 4d056ffb196cc3847245d2753888d30deed5076bfbd12e3b6ff4eca17fc7833d |

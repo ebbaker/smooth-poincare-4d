@@ -149,3 +149,7 @@ The [sole register](../research-progress/REGISTER.md) owns status and links lead
 
 - [229 — Effective linear stationary coercivity](229_LINEAR_SPECTRAL_COERCIVITY_20261123.md), with [E229/E230 assessment](../reviews/E229_E230_LINEAR_COERCIVITY_ASSESSMENT_20261123.md): exact coefficient floor and explicit kernel lower bound proportional to the spectral margin.
 - [231 — Conditional margin-weighted flow](231_CONDITIONAL_MARGIN_WEIGHTED_FLOW_20261123.md), with [E231/E232 assessment](../reviews/E231_E232_MARGIN_FLOW_ASSESSMENT_20261123.md): H_linear discharged; native accumulated-margin energy and geometric late-sequence entry, preserving the frozen conditional derivation.
+
+- [235 — All-ratio local maximum test](235_ALL_RATIO_LOCAL_MAXIMUM_TEST_20261123.md), with [E235/E236 assessment](../reviews/E235_E236_ALL_RATIO_LOCAL_ASSESSMENT_20261123.md): every finite r>1, exact local connection and positive native direction; no global flow conclusion in this proposition.
+
+- [240 — Closed cutoff realization](240_CLOSED_CUTOFF_RATIO_REALIZATION_20261123.md) and [241 — Conditional flow local maximum](241_CONDITIONAL_FLOW_LOCAL_MAXIMUM_REALIZATION_20261123.md), with [E240–E242 assessment](../reviews/E240_E242_CLOSED_LOCAL_FLOW_ASSESSMENT_20261123.md): H_cutoff discharged, actual global smooth near-round flow with an increasing strict local ratio maximum; no exact global cap in this result.
