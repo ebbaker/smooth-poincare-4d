@@ -3,6 +3,13 @@
 
 Adapted for the smooth four-dimensional Poincare research repository.
 The shared archive serializer is tools/record_chat.py.
+
+Runtime note, 23 November 2026 (Claude Fable 5.2, Claude Cowork): the Cowork
+cloud runtime of that date keeps no transcript file in the workspace (there is
+no ~/.claude/projects), so `spool` and `capture` have nothing to read there.
+Cowork sessions are recorded from their claude.ai event log instead, with
+tools/record_Claude_browser_chat.py. This script still serves wherever a
+transcript file exists, for example Claude Code run on the computer (`record`).
 This script supplies the Cowork side:
 
   spool        Add the transcript's new records to the session's spool and
@@ -1179,7 +1186,7 @@ def main():
                        help="Extra archive_metadata.session field (repeatable)")
         p.add_argument("--delivered", action="append", metavar="PATH",
                        help="Delivered file not detected automatically (repeatable)")
-        p.add_argument("--repo-name", default=ROOT.name if (ROOT / "papers").is_dir() else "smooth_poincare_4d",
+        p.add_argument("--repo-name", default=ROOT.name if (ROOT / "papers").is_dir() else "smooth-poincare-4d",
                        help="Folder name used to shorten device paths to repository paths")
 
     def registry_options(p):

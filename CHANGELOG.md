@@ -1,5 +1,15 @@
 # Change log
 
+## 2026-11-23 — Claude Cowork chat capture from the claude.ai event log
+
+- Found that the Cowork runtime keeps no transcript file in the session workspace, so `record_Claude_cowork_chat.py` has nothing to read there. Noted this in the script and corrected its stale `smooth_poincare_4d` folder default.
+- Added `tools/record_Claude_browser_chat.py`: a session reads its own claude.ai event log in a signed-in browser, keeps the public records, and registers them through `record_Claude_export_chat.py` and `record_chat.py`, with SHA-256 checks on the transfer, the reader text and the session identity. Added 21 synthetic tests (138 in all).
+- `record_Claude_export_chat.py` now keeps progress updates, which the log holds as condensed narration, as labelled commentary, and renders question-card answers in the card's order.
+- Opened the Claude registries at `chat-histories/claude-cowork/` (chat 1 is this setup conversation) and under `01_chiral_metric_evolution`. Wrote the procedure into `tools/CHAT_HISTORY.md` and the standing rule into `AGENTS.md`.
+- Limits: the two claude.ai endpoints are internal to the web app and were observed answering for one session on this date; a turn's reply enters its record at the next read.
+
+Prepared for Edward B. Baker III with LLM assistance: Claude Fable 5.2 (`claude-fable-5-2`), Claude Cowork, effort max as configured. An operational change, not a research result.
+
 ## 2026-11-21 — Verify the local transfer and restore infrastructure
 
 - Verified working-tree write access and all 36 original source mappings/hashes.

@@ -10,13 +10,18 @@ Use Python 3.10 or later on macOS or Linux for the chat refresh suite.
 | `paginated_chat_source.py` | Read-only adapter for supported local paginated history schemas |
 | `record_chat.py` | Shared archive serializer and explicit single-conversation import |
 | `extract_project_chats.py` | Select exact conversations from an author-provided account export |
-| `record_Claude_cowork_chat.py` | Convert or capture supported Cowork transcripts with declared coverage |
+| `record_Claude_cowork_chat.py` | Convert or capture supported Cowork transcripts with declared coverage, where a transcript file exists |
 | `record_Claude_export_chat.py` | Convert supported Claude export/event records with declared coverage |
+| `record_Claude_browser_chat.py` | Record a Cowork session from its claude.ai event log, turn by turn, through a signed-in browser |
 | `check_citations.py` | Validate every repository `CITATION.cff` against a supplied official CFF schema |
 | `build_manuscripts.py` | Build working manuscripts from both investigation series into output/pdf/<branch>/ |
 | `check_repository_hygiene.py` | Check the repository's navigation, file and provenance conventions |
 
 Read [CHAT_HISTORY.md](CHAT_HISTORY.md) before capturing or importing a chat.
+Claude Cowork sessions follow its
+[Claude section](CHAT_HISTORY.md#claude-cowork-sessions): the Cowork runtime of
+23 November 2026 keeps no transcript file, so they are recorded from the
+session's claude.ai event log into `chat-histories/claude-cowork/` registries.
 Defaults are relative to this checkout: the shared recorder is
 `tools/record_chat.py`, the base archive is `chat-histories/`, and the
 `--project` option selects a direct folder under `papers/investigations-1/` by default.
@@ -31,6 +36,9 @@ Run focused tests from the repository root:
 ```sh
 python3 -m unittest discover -s tools/tests -p 'test_*.py'
 ```
+
+Three of the event-log capture tests run the browser reader under Node and are
+skipped where Node is not installed.
 
 For citation checks, install `requirements_metadata.txt` in a chosen environment
 and supply the official CFF 1.2.0 schema as a local file. The checker itself

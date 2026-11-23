@@ -5,3 +5,5 @@ Use this directory for authentic public conversation records about this branch, 
 No earlier conversation transcript was present in the imported visible geometry materials, and setup does not fabricate one. No capture or completion hook is claimed active by this README. If a session’s authentic source is unavailable, report that limitation and distinguish any explicitly partial public-text record from an authentic full transcript.
 
 Exclude private instructions, internal reasoning, tool traffic, subagent correspondence, and binary runtime data. A captured conversation preserves provenance; it does not validate mathematical claims.
+
+Claude Cowork conversations about this branch belong in [claude-cowork/](claude-cowork/README.md), under the [Claude section of the workflow](../../../../tools/CHAT_HISTORY.md#claude-cowork-sessions). None is registered yet; that README lists one earlier session as awaiting capture. Routing note added 23 November 2026 for Edward B. Baker III with LLM assistance, Claude Fable 5.2 (`claude-fable-5-2`), Claude Cowork.

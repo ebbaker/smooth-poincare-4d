@@ -82,3 +82,38 @@ If the exact source is unavailable, report that limitation and use an explicitly
 unregistered partial public record only when useful. Passing tests or having a
 hook template does not establish live capture. Hook installation must follow
 the platform's actual trust process and preserve existing integrations.
+
+### Claude Cowork sessions
+
+Added 23 November 2026 at the author's request, with LLM assistance: Claude
+Fable 5.2 (`claude-fable-5-2`), Claude Cowork, effort max as configured.
+
+The author authorizes Claude Cowork sessions that work on this repository to
+record and refresh their own conversation without asking each time. Use
+`tools/record_Claude_browser_chat.py` and follow the Claude section of
+[tools/CHAT_HISTORY.md](tools/CHAT_HISTORY.md#claude-cowork-sessions). The
+source is the session's event log on claude.ai, read in a browser signed in
+to claude.ai. The workspace transcript that `record_Claude_cowork_chat.py`
+read is not present in the Cowork runtime of this date.
+
+Register the session once its destination is known: the investigation's
+`chat-histories/claude-cowork/` for branch work, root
+`chat-histories/claude-cowork/` for shared work. Refresh it as the last
+repository action of every turn. Use the actual session id, SDK session id
+and project, never a guessed one.
+
+A turn's reply can enter a record only at a later read, so a session's last
+reply stays out of its record until its log is read again; `pending` lists
+such records. Completing or recording another session means reading that
+session's event log. The authorization above covers a session's own log
+only, so ask the author before reading another session's.
+
+A session reads nothing else on claude.ai. It does not sign in, enter
+credentials or change account settings; signing the browser in is the
+author's step. If the browser route is unavailable or an endpoint fails,
+report it, list the session under "Awaiting capture" in the registry
+README, leave a clearly labelled unregistered partial record when that is
+useful, and do not seek another route to the log. Keep the event log and
+the reduced store out of the repository, do not hand-edit a registered
+record, and write only in the Claude registries: the Codex registries
+beside them belong to `refresh_chat_history.py`.

@@ -4,9 +4,11 @@
 Adapted for the smooth four-dimensional Poincare research repository.
 
 tools/record_Claude_cowork_chat.py captures a Cowork session from inside that
-session, using the session's own transcript. This script recovers the
-conversations from before that practice began, from two sources kept outside
-the repository:
+session, using the session's own transcript, where the runtime keeps one;
+tools/record_Claude_browser_chat.py does so from the session's claude.ai event
+log, read turn by turn in the signed-in browser, and uses this script's
+converter. This script recovers the conversations from before either practice
+began, from two sources kept outside the repository:
 
   cowork  A Cowork cloud session, from a session-events file written in the
           signed-in browser by the extractor that `extractor` prints. The
@@ -101,6 +103,9 @@ RENDERING = {
     "answer": "the option the person selected in the question card",
     "SendUserMessage": "verbatim message shown to the person between tool calls",
     "SendUserFile": "caption of a file card shown to the person",
+    "progress update": "progress update between tool calls as the event log records it (flagged there as "
+                       "narration): a condensed rewrite of what the assistant wrote, kept by the runtime "
+                       "for display, not the assistant's verbatim wording",
 }
 OMITTED = [
     "system, developer and harness text (reminders, date notes, memory snapshots, "
@@ -149,8 +154,10 @@ EXTRACTOR_JS = r'''async function (id) {
       if (p.parent_tool_use_id) { subagent++; continue; }
       const m = p.message || {};
       const c = m.content;
-      const blocks = typeof c === 'string' ? [{type: 'text', text: strip(c)}] : (c || []).map(k => {
+      const narrated = new Set(Array.isArray(p.narration_block_indexes) ? p.narration_block_indexes : []);
+      const blocks = typeof c === 'string' ? [{type: 'text', text: strip(c)}] : (c || []).map((k, i) => {
         if (k.type === 'text') return {type: 'text', text: strip(k.text)};
+        if (t === 'assistant' && k.type === 'thinking' && narrated.has(i) && strip(k.thinking)) return {type: 'text', text: strip(k.thinking), narration: true};
         if (k.type === 'tool_use') return KEEP_INPUT.has(k.name) ? {type: 'tool_use', id: k.id, name: k.name, input: k.input} : {type: 'tool_use', id: k.id, name: k.name};
         if (k.type === 'tool_result') { const n = names[k.tool_use_id]; const o = {type: 'tool_result', tool_use_id: k.tool_use_id, name: n || null, is_error: !!k.is_error}; if (KEEP_RESULT.has(n)) o.content = k.content; return o; }
         return {type: k.type};
@@ -238,7 +245,11 @@ def answer_text(result):
         return None
     annotations = result.get("annotations") or {}
     lines = []
-    for question, answer in answers.items():
+    # The card's own question order, which a JSON object does not carry reliably.
+    asked = [q.get("question") for q in result.get("questions", [])]
+    ordered = [q for q in asked if q in answers] + [q for q in answers if q not in asked]
+    for question in ordered:
+        answer = answers[question]
         header = next((q.get("header") for q in result.get("questions", [])
                        if q.get("question") == question), None)
         line = answer if len(answers) == 1 else "%s: %s" % (header or question, answer)
@@ -397,9 +408,15 @@ def cowork_conversation(doc, data, path, session_id, options):
                 models.add(record["model"])
             for number, block in enumerate(record["blocks"]):
                 if block["type"] == "text" and (block.get("text") or "").strip():
-                    items.append({"t": when(record), "seq": record["seq"], "role": "assistant", "kind": "text",
+                    # A progress update is the runtime's displayed rewrite of the text written
+                    # between tool calls; it is commentary and never a turn's final answer.
+                    update = bool(block.get("narration"))
+                    items.append({"t": when(record), "seq": record["seq"], "role": "assistant",
+                                  "kind": "update" if update else "text",
                                   "id": ids.claim(record["uuid"], "%s-%d" % (record["uuid"], number)),
-                                  "text": block["text"], "extra": {}})
+                                  "text": block["text"],
+                                  "extra": {"rendered_from": "progress update",
+                                            "rendering": RENDERING["progress update"]} if update else {}})
                 elif block["type"] == "tool_use" and block["name"] in RENDERED_TOOLS:
                     name, tool_input = block["name"], block.get("input") or {}
                     if name == "SendUserMessage":
@@ -519,7 +536,7 @@ def cowork_conversation(doc, data, path, session_id, options):
         phase = item.get("phase") or ("commentary" if item["role"] == "assistant" else None)
         metadata = {"source": COWORK_SOURCE, "source_turn_id": item["turn"], "source_event_seq": item["seq"]}
         metadata.update(stamps(item["t"], item["t"]))
-        if item["kind"] in ("queued", "interrupt", "answer"):
+        if item["kind"] in ("queued", "interrupt", "answer", "update"):
             metadata["kind"] = item["kind"]
         metadata.update(item["extra"])
         entry = node(item["id"], item["role"], item["t"], item["t"], item["text"], metadata, phase)
