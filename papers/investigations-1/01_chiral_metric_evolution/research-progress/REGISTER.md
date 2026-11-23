@@ -661,3 +661,19 @@ refresh procedure.
 | SP4-CME-E244 | E | Sol 6.2/ultra — independent radial cap verification | [Request](handoffs/SP4-CME-E244_REQUEST_v1.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E243_E245_GLOBAL_RATIO_CAP_ASSESSMENT_20261123.md); independent proof without E243 access |
 
 | SP4-CME-E245 | E | Sol 6.2/ultra — conditional global cap crossing | [Request](handoffs/SP4-CME-E245_REQUEST_v1.md) | Assessed; H_cap discharged, 2026-11-23 | [Assessment](../reviews/E243_E245_GLOBAL_RATIO_CAP_ASSESSMENT_20261123.md); actual closed and strict cap crossings |
+
+| SP4-CME-E246 | E | Sol 6.2/ultra — global cap manuscript audit | [Request](handoffs/SP4-CME-E246_REQUEST_v1.md) | Assessed and integrated, 2026-11-23 | [159-page disposition](../reviews/E246_E247_GLOBAL_CAP_MANUSCRIPT_DISPOSITION_20261123.md); source precisions applied |
+| SP4-CME-E247 | E | Sol 6.2/ultra — global cap rendered QA | [Request](handoffs/SP4-CME-E247_REQUEST_v1.md) | Assessed; final repair rechecked, 2026-11-23 | [159-page disposition](../reviews/E246_E247_GLOBAL_CAP_MANUSCRIPT_DISPOSITION_20261123.md); normal output promoted |
+
+| SP4-CME-B113 | B | Selected lead — exact fixed-r radial model | [Decision](../brainstorm/notes/B113_FIXED_RATIO_RADIAL_MODEL_20261123.md) | Assessed, 2026-11-23 | [E248–E250 assessment](../reviews/E248_E250_FIXED_RATIO_CAP_ASSESSMENT_20261123.md); each finite closed cap fails in short time |
+| SP4-CME-E248 | E | Sol 6.2/ultra — exact radial model and transfer | [Request](handoffs/SP4-CME-E248_REQUEST_v1.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E248_E250_FIXED_RATIO_CAP_ASSESSMENT_20261123.md); static exact cap at each fixed r |
+
+| SP4-CME-E249 | E | Sol 6.2/ultra — independent fixed-r model verification | [Request](handoffs/SP4-CME-E249_REQUEST_v1.md) | Assessed, 2026-11-23 | [Assessment](../reviews/E248_E250_FIXED_RATIO_CAP_ASSESSMENT_20261123.md); independent derivation without E248 access |
+| SP4-CME-E250 | E | Sol 6.2/ultra — conditional fixed-cap local evolution | [Request](handoffs/SP4-CME-E250_REQUEST_v1.md) | Assessed; H_fixedcap discharged, 2026-11-23 | [Assessment](../reviews/E248_E250_FIXED_RATIO_CAP_ASSESSMENT_20261123.md); actual local crossing for each finite r |
+
+| SP4-CME-B114 | B | Selected lead — prescribed strict caps | [Decision](../brainstorm/notes/B114_PRESCRIBED_STRICT_CAPS_20261123.md) | Proposed, 2026-11-23 | Compact-parameter static family and common-time local continuity |
+| SP4-CME-E251 | E | Sol 6.2/ultra — uniform static parameter family | [Request](handoffs/SP4-CME-E251_REQUEST_v1.md) | Issued, 2026-11-23 | One fixed cutoff radius on a compact interval about each r0>1 |
+| SP4-CME-E252 | E | Sol 6.2/ultra — conditional prescribed strict-cap flow | [Request](handoffs/SP4-CME-E252_REQUEST_v1.md) | Issued, 2026-11-23 | H_family pending; derive common-time continuity from local estimates |
+
+| SP4-CME-B115 | B | Selected lead — actual cap-crossing literature comparison | [Decision](../brainstorm/notes/B115_CAP_CROSSING_PRIMARY_COMPARISON_20261123.md) | Decided, 2026-11-23 | Bounded attribution check for the stronger actual-flow scope |
+| SP4-CME-E253 | E | Sol 6.2/ultra — primary cap-crossing comparison | [Request](handoffs/SP4-CME-E253_REQUEST_v1.md) | Issued, 2026-11-23 | Four queries, at most six primary passages; root owns canonical integration |

@@ -153,3 +153,9 @@ The [sole register](../research-progress/REGISTER.md) owns status and links lead
 - [235 — All-ratio local maximum test](235_ALL_RATIO_LOCAL_MAXIMUM_TEST_20261123.md), with [E235/E236 assessment](../reviews/E235_E236_ALL_RATIO_LOCAL_ASSESSMENT_20261123.md): every finite r>1, exact local connection and positive native direction; no global flow conclusion in this proposition.
 
 - [240 — Closed cutoff realization](240_CLOSED_CUTOFF_RATIO_REALIZATION_20261123.md) and [241 — Conditional flow local maximum](241_CONDITIONAL_FLOW_LOCAL_MAXIMUM_REALIZATION_20261123.md), with [E240–E242 assessment](../reviews/E240_E242_CLOSED_LOCAL_FLOW_ASSESSMENT_20261123.md): H_cutoff discharged, actual global smooth near-round flow with an increasing strict local ratio maximum; no exact global cap in this result.
+
+- [243 — Exact radial cutoff cap](243_RADIAL_CUTOFF_GLOBAL_RATIO_CAP_20261123.md) and [245 — Conditional global cap crossing](245_CONDITIONAL_GLOBAL_RATIO_CAP_CROSSING_20261123.md), with [E243–E245 assessment](../reviews/E243_E245_GLOBAL_RATIO_CAP_ASSESSMENT_20261123.md): H_cap discharged; closed cap crossing for every sufficiently small positive margin and strict caps at thresholds tending to1.
+
+- [248 — Fixed-ratio radial model](248_FIXED_RATIO_RADIAL_MODEL_20261123.md) and [250 — Conditional fixed-cap local flow](250_CONDITIONAL_FIXED_CAP_LOCAL_FLOW_20261123.md), with [E248–E250 assessment](../reviews/E248_E250_FIXED_RATIO_CAP_ASSESSMENT_20261123.md): H_fixedcap discharged; every fixed finite closed cap r>1 fails under actual short-time original evolution. Arbitrary-r global behavior remains open.
+
+- [251 — Uniform parameter cap family](251_UNIFORM_PARAMETER_CAP_FAMILY_20261123.md) and [252 — Conditional prescribed strict-cap flow](252_CONDITIONAL_PRESCRIBED_STRICT_CAP_FLOW_20261123.md), with [assessment](../reviews/E251_E252_STRICT_CAP_ASSESSMENT_20261123.md): H_family discharged; every prescribed finite strict cap r0>1 fails in short time.

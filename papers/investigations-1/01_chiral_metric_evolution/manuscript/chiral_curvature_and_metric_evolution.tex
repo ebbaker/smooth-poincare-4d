@@ -10723,9 +10723,10 @@ is a smooth connection on the given bundle. The product rule gives
 The exact curvature difference is
 $d_{A_{\rm rd}}(A_\epsilon-A_{\rm rd})+
 [(A_\epsilon-A_{\rm rd})\wedge(A_\epsilon-A_{\rm rd})]/2$,
-hence is $O(\epsilon)$. The curvature wedge Gram matrix
-stays positive along its pointwise segment to the round
-one, so positivity and the round-compatible sign follow.
+hence is $O(\epsilon)$. The wedge Gram matrix stays positive along the pointwise
+curvature segment from $F_{\rm rd}$ to $F_{A_\epsilon}$
+by this uniform closeness. Positivity and the round-compatible
+sign therefore follow.
 
 An exact ratio cap needs more than this closeness estimate.
 Use fixed Euclidean volume in
@@ -10770,7 +10771,9 @@ radius for this family, beyond the fixed-$r$ local statement.
 
 On the annulus $R/2\le\ell\le R$, set
 $s=\ell/R$, $n=x/\ell$, $u=c(s)$, $v=sc'(s)$.
-The actual curvature is the following pointwise expression:
+Here $n^\flat$ and the self-dual projections below use the
+fixed Euclidean metric and orientation. The actual curvature is
+the following pointwise expression:
 \begin{equation}\label{eq:radial-cutoff-curvature}
  F(u,v,x)=F_{\rm rd}+u(F_{\rm loc}-F_{\rm rd})
        +\tfrac12u(u-1)[a\wedge a]
@@ -10789,8 +10792,13 @@ The full anti-self-dual part is retained in this expression.
 For a self-dual form $\omega$,
 $(n^\flat\wedge\iota_n\omega)^+=\omega/2$.
 The derivative $D\mathcal Q_{F_0}$ annihilates anti-self-dual
-variations. With $D=\operatorname{diag}(-1/2,0,1/2)$ and
-$h=u+v/4$, the uniform quotient expansions are therefore
+variations. With $D=\operatorname{diag}(-1/2,0,1/2)$, Taylor
+expansion gives
+\[
+ D\mathcal Q_{F_0}[F^*-F_0]=Q_r-I+O(\epsilon^2)
+                           =\epsilon D+O(\epsilon^2).
+\]
+For $h=u+v/4$, the uniform quotient expansions are therefore
 \begin{equation}\label{eq:cutoff-quotient-parameters}
  \begin{aligned}
  Q(u,v,x)&=I+\epsilon hD+O(\epsilon^2),\\
@@ -10837,8 +10845,9 @@ $\epsilon$. Its individual smooth comparison and recovery
 from the identity make the original solution smooth through
 zero. The unchanged germ gives
 $\partial_t\log\rho(Q(A_\epsilon(t)))(p)|_{t=0}=1/2$
-in native time. For this datum, continuity makes that
-fixed-point derivative at least $1/4$ on a short positive
+in native time. The simple spectrum at $p$ persists for a
+short time. For this datum, continuity makes the fixed-point
+derivative at least $1/4$ on a short positive
 interval, so the value at $p$, and hence the spatial
 supremum, exceeds $r$. Alternatively, the negative spatial
 Hessian and the implicit-function theorem continue the

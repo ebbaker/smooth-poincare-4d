@@ -247,3 +247,7 @@ The [E208–E216 disposition](E208_E216_SPECTRAL_MANUSCRIPT_DISPOSITION_20261123
 The [E224–E239 disposition](E224_E239_SHARP_MARGIN_MANUSCRIPT_DISPOSITION_20261123.md) records the verified157-page normal PDF and exact identities, all integration repairs,543resolved references and complete final visual coverage. The source is579519bytes (fdce3e4ce268a410ab97cc2650a6e1110b74c8237b895c522f04aabd288319e3); the byte-verified delivered PDF is1352720bytes (9fe90901633f5bae5ec927946a25aed7b1be6ad96b6f4821cc2783a129667d01). E238 updates existing canonical primary records. The closed near-round germ realization under B111 is separate ongoing work.
 
 Post-integration repository validation on23November2026 passed:3branches,4330relative links and0errors; git diff --check passed. Authentic public chat capture refreshed the canonical research conversation to160messages. No final reply or private/tool traffic was fabricated.
+
+### Near-round global cap checkpoint — 23 November2026
+
+The [E246/E247 disposition](E246_E247_GLOBAL_CAP_MANUSCRIPT_DISPOSITION_20261123.md) records the verified159-page normal PDF, E246 precision repairs and final visual check. TeX588454bytes, SHAc1ceaeb56302076007290ddce61d5fccebd0d14c36d3073039f3217319c82feb; PDF1367178bytes, SHA5a052b353a978f6238a2f83acf02132d363f8dd8a15af292ff3de6d6acc7894b. All159pages are visually covered directly or by exact pixel identity after the final repair. Existing source records identify the new consumers. The proposed every-fixed-r static construction and its conditional short-time application remain separate.

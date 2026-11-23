@@ -1,0 +1,5 @@
+# B115 — Primary comparison for actual cap crossing
+
+23 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. Conceptual B decision by the selected lead, model/effort preserved and unavailable. Helpers configured gpt-6.2-sol/ultra; independent attestation unavailable.
+
+The [E248–E250 assessment](../../reviews/E248_E250_FIXED_RATIO_CAP_ASSESSMENT_20261123.md) now concerns actual short-time original-flow crossing at every closed spectral threshold on standard S4. That scope differs from the local tangent results compared by E238. Perform one bounded primary-literature comparison for this stronger scope, preserving the exact native defect functional and distinct volume-action and hypersymplectic flows. Four targeted queries and at most six relevant primary passages suffice for this packet; no absence-of-search-result novelty inference is allowed. Root owns canonical reference integration. The purpose is attribution and comparison, not a full literature review or priority claim.

@@ -110,3 +110,7 @@ The [E238 sharp-result comparison](../../../../references/SOURCE_NOTES_CME_SPECI
 The [closed local flow consumer record](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#closed-local-flow-consumers--e240-through-e242) links the new cutoff/application to the already inspected gradient, recovery and smooth local inputs.
 
 The [global near-round cap consumer](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#global-cap-crossing-consumers--e243-through-e245) records the exact supplied-data evolution scope and unchanged primary dependencies.
+
+The [fixed-ratio cap consumer](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#fixed-ratio-cap-consumers--e248-through-e250) records the all-finite-r short-time result and exact inherited Fine/Taylor dependencies, with no new primary inspection.
+
+The [prescribed strict-cap consumer](../../../../references/SOURCE_NOTES_CME_SPECIAL_CASES_20261122.md#prescribed-strict-cap-consumers--e251e252) records the compact-family and common-time continuity extension with unchanged source inputs.
