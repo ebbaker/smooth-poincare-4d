@@ -17,3 +17,9 @@ never fabricate records or save an unsent final answer as authentic history.
 24 November DIR activation: the [unregistered partial public text](PARTIAL_UNREGISTERED_DIR_20261124.md) records the source limitation and the public research invocation and updates. If an authentic export later becomes available, verify its native identity, title and original timestamps before the canonical registration.
 
 24 November research discussion and manuscript. The local source and app history reader were unavailable. The [unregistered partial public record](PARTIAL_UNREGISTERED_DIR_DISCUSSION_20261124.md) preserves the completed discussion reply, requests and visible progress updates.
+
+24 November Claude Cowork session. Claude conversations about this
+investigation are registered separately in
+[claude-cowork](claude-cowork/README.md), from the session's claude.ai event
+log, under the standing rule in [AGENTS.md](../../../../../AGENTS.md). Its
+first record is the session that took B23 and executed E48–E50.

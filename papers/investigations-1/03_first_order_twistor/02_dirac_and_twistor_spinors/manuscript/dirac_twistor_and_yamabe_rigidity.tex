@@ -33,6 +33,10 @@
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\ind}{ind}
 \DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\Hess}{Hess}
+\DeclareMathOperator{\sn}{sn}
+\DeclareMathOperator{\cn}{cn}
+\DeclareMathOperator{\dn}{dn}
 \newcommand{\rd}{\mathrm{rd}}
 \newcommand{\dd}{\mathrm{d}}
 \newcommand{\e}{\varepsilon}
@@ -51,6 +55,12 @@ Yamabe spectral rigidity in dimension four}
 \date{Working draft --- 24 November 2026}
 % Prepared for Edward B. Baker III with OpenAI Codex assistance.
 % Actual selected model identifier and reasoning effort were unavailable.
+% Revised 24 November 2026 for Edward B. Baker III with LLM assistance:
+% Claude Fable 5.2 (claude-fable-5-2), Claude Cowork, reasoning effort max
+% as configured. That revision added Section 7.3 on local minimizers and
+% conformal vector fields, Section 10 on the flat neck, the Delaunay
+% minimizers and the integral Ricci criterion, and the matching changes to
+% the abstract, the introduction, Section 9 and the last section.
 % Source versions and proof scope are recorded in ../DRAFT_HISTORY.md.
 
 \begin{document}
@@ -76,9 +86,17 @@ satisfy \(\frac35\sum_{i=1}^5\lambda_i\ge s\), with equality exactly for
 a scaled round four-sphere. The fourth-order minimizing inequality
 gives a sharp directional moment bound and recovers the metric at
 equality. Relative near equality forces the joint law of the five
-modes to become spherical. Constructing the required minimizing
-metrics and controlling the geometry of vanishing-volume regions remain
-open.
+modes to become spherical, but it does not determine the manifold.
+On \(S^1\times S^3\) the Yamabe minimizers are explicit Delaunay
+metrics with \(s=3\lambda_1\), and their relative five-eigenvalue gap
+tends to zero as the circle lengthens. Attaching a round region across
+a conformally flat neck leaves the conformal class unchanged. On a
+homotopy four-sphere, a volume-one Yamabe metric whose trace-free Ricci
+tensor satisfies \(\int\abs{\Ric_0}^2<s^2/12-16\pi^2\) recognizes the
+standard sphere by the theorem of Chang, Gursky, and Yang.
+Constructing suitable conformal classes on an arbitrary homotopy
+four-sphere and controlling the geometry of vanishing-volume regions
+remain open.
 \end{abstract}
 
 \tableofcontents
@@ -117,6 +135,20 @@ for Yamabe minimizers on arbitrary closed four-manifolds, with no spin
 assumption. Its stability has a probabilistic conclusion on the
 eigenfunction values and a separate geometric requirement for smooth
 recognition.
+
+The last analytical section tests the construction problem on explicit
+cases. Attaching a round sphere to a punctured core across a
+conformally flat neck returns the original conformal class, so the
+minimizing metrics and their spectra are unchanged. On
+\(S^1\times S^3\) the Yamabe minimizers, described by
+Schoen~\cite[\S2]{Schoen1989Variational}, are Delaunay metrics that we
+write with Jacobian elliptic functions. They satisfy the scalar
+equality \(s=3\lambda_1\) at every length, and their relative
+five-eigenvalue gap tends to zero on a manifold that is not a sphere.
+Finally the Chern--Gauss--Bonnet formula turns the hypothesis of
+Chang, Gursky, and Yang into a bound on the trace-free Ricci tensor of
+a Yamabe metric, and the Delaunay metrics sit exactly at equality in
+that bound.
 
 \section{Chiral recognition and the twistor equation}\label{sec:twistor}
 
@@ -1457,6 +1489,73 @@ minimizer, its least covariance eigenvalue must tend to zero. The
 full covariance criterion is independent of the Jacobian criterion
 in Theorem~\ref{thm:degree}.
 
+\subsection{Local minimizers and conformal vector fields}\label{sec:local}
+
+The proof of Theorem~\ref{thm:spectral} uses the minimizing inequality
+only along curves \(u_t=1+t\phi+t^2w\) with \(t\to0\). Call a smooth
+volume-one metric \(g\) of constant scalar curvature \(s\) a
+\emph{local Yamabe minimizer} if, for all smooth \(\phi\) and \(w\),
+the Yamabe quotient
+\(\int_M(6\abs{\dd u_t}^2+su_t^2)\,\dv/\norm{u_t}_{4,g}^2\)
+is at least \(s\) for all sufficiently small \(\abs t\).
+Yamabe minimizers have this property, and so do local minima of the
+Yamabe quotient of the class in the smooth topology.
+
+\begin{proposition}\label{prop:local}
+Let \(g\) be a local Yamabe minimizer on a closed connected
+four-manifold. Then \(s\le3\lambda_1\) and \(A(g)\ge0\), and every
+statement of Theorem~\ref{thm:spectral} holds for \(g\).
+\end{proposition}
+
+\begin{proof}
+The expansion of the quotient of \(1+t\phi\) used for
+\eqref{eq:balance-chain} gives \(s\le3\lambda_1\). Hence
+\(A(g)\ge3\lambda_1-s\ge0\), and \(A(g)>0\) unless \(s=3\lambda_1>0\).
+At \(s=3\lambda_1\) the inequality \eqref{eq:sharp-yamabe} holds for
+\(u=u_t\) and small \(\abs t\), for each first eigenfunction \(\phi\)
+and each smooth \(w\) of mean zero. The proof of
+Theorem~\ref{thm:spectral} uses it only for these tests. The cubic
+and quartic coefficients give the vanishing triple products and
+\(\mathcal C_\phi(w)\ge0\). The equality case uses the first variation
+of \(\mathcal C_\phi\) at the smooth function \(\phi^2-1\), and the
+remaining steps are pointwise.
+\end{proof}
+
+Let \(X\) be a conformal vector field for a metric \(g\) of constant
+scalar curvature \(s\) on a closed four-manifold, and write
+\(\mathcal L_Xg=2\sigma g\), so that
+\(\sigma=\tfrac14\operatorname{div}X\). Its flow \(\Phi_\tau\) satisfies
+\(\Phi_\tau^*g=a_\tau^2g\) with \(a_\tau=1+\tau\sigma+O(\tau^2)\), and
+\(\Phi_\tau^*g\) has scalar curvature \(s\). By
+\eqref{eq:conformal-L} without the map potential,
+\(s\,a_\tau^3=6\Delta_ga_\tau+s\,a_\tau\). The first-order term in
+\(\tau\) is
+\begin{equation}\label{eq:conformal-eigen}
+ \Delta_g\sigma=\tfrac{s}{3}\sigma .
+\end{equation}
+
+\begin{proposition}\label{prop:broken}
+Let \(g\) be a local Yamabe minimizer on a closed connected
+four-manifold, not homothetic to the round sphere. If \(g\) has a
+conformal vector field that is not Killing, then \(s=3\lambda_1>0\).
+The quotient of the Lie algebra of conformal vector fields of \(g\) by
+its Killing fields has dimension at most four.
+\end{proposition}
+
+\begin{proof}
+A conformal field with \(\sigma=0\) is Killing, so \(X\mapsto\sigma\)
+is injective on the quotient. Its image lies in the eigenspace of
+\(s/3\) by \eqref{eq:conformal-eigen}. A nonzero \(\sigma\) has mean
+zero and is not constant, so \(s/3\) is a positive eigenvalue, and
+Proposition~\ref{prop:local} gives \(s/3=\lambda_1\). The first
+eigenspace has dimension at most five, and dimension five would make
+\(g\) round.
+\end{proof}
+
+The Delaunay metrics of Theorem~\ref{thm:necklace} are minimizers with
+a conformal field that is not Killing, so the scalar equality
+\(s=3\lambda_1\) does occur on nonround minimizers.
+
 \section{Lower-dimensional eigenmaps and metric variations}
 \label{sec:lower}
 
@@ -1832,6 +1931,9 @@ They bound the volume of the set where \(\abs X^2\) differs
 from one by a fixed amount, and test the differential Gram
 matrix in a dual energy norm. They leave pointwise rank and
 the geometry of small-volume subsets uncontrolled.
+Theorem~\ref{thm:necklace} gives volume-one minimizers on
+\(S^1\times S^3\) with \(\e\to0\), so relative pinching alone does
+not identify the manifold.
 
 An additional Ricci lower bound gives a separate smooth
 recognition criterion. Suppose
@@ -1846,29 +1948,628 @@ It gives diffeomorphism to the standard sphere and a
 Gromov--Hausdorff estimate~\cite[Theorem~1]{Aubry2005Pincement}.
 In particular this route applies for \(\e,\delta\to0\).
 The bound on \(\Ric_g\) is an independent geometric premise.
+Proposition~\ref{prop:budget} gives a second criterion on a homotopy
+four-sphere, in which an integral bound on the trace-free Ricci
+tensor replaces both the pointwise bound and the spectral pinching.
+
+\section{A flat neck, Delaunay minimizers, and an integral curvature criterion}
+\label{sec:tests}
+
+The construction problem asks for conformal classes on a homotopy
+four-sphere whose Yamabe minimizers are relatively pinched, together
+with enough geometric control to recognize the manifold. This section
+records three exact statements that delimit it. Attaching a round
+region across a conformally flat neck does not change the conformal
+class. On \(S^1\times S^3\) the minimizers are explicit and become
+relatively pinched as the circle lengthens. At a Yamabe metric the
+hypothesis of Chang, Gursky, and Yang is a bound on the trace-free
+Ricci tensor, and the minimizers on \(S^1\times S^3\) give equality in
+it. Throughout, \(Y(\Sphere)=8\sqrt6\,\pi\) is the Yamabe constant of
+the round class, so \(Y(\Sphere)^2=384\pi^2\).
+
+\subsection{A round region across a conformally flat neck}
+\label{sec:flat-neck}
+
+Let \((M,g_0)\) be a closed Riemannian four-manifold that is flat on a
+coordinate ball \(\{\abs y<2\rho\}\) centered at \(p\).
+Proposition~\ref{prop:green} supplies such metrics on every smooth
+homotopy four-sphere. Let \(z\) be a stereographic coordinate on the
+unit round sphere, so that
+\(h_{\rd}=4\abs{\dd z}^2/(1+\abs z^2)^2\), and let \(q^*\) be the point
+\(z=\infty\). Fix \(\kappa>0\) and a reflection \(S\) of \(\RR^4\), and
+put
+\[
+ \iota(y)=\frac{\kappa\,Sy}{\abs y^2},\qquad
+ M_{\rho,\kappa}=\bigl(M\setminus\{\abs y\le\rho\}\bigr)\cup_{\iota}
+        \bigl(\Sphere\setminus\{\abs z\le\kappa/(2\rho)\}\bigr),
+\]
+where \(\iota\) identifies the collar \(\{\rho<\abs y<2\rho\}\) with the
+collar \(\{\kappa/(2\rho)<\abs z<\kappa/\rho\}\). The map \(\iota\) is
+an inversion composed with a reflection and a dilation. It preserves
+orientation and is conformal from \(\abs{\dd y}^2\) to
+\(\abs{\dd z}^2\). Since \(g_0=\abs{\dd y}^2\) on the first collar and
+\(h_{\rd}\) is a positive multiple of \(\abs{\dd z}^2\) on the second,
+the two conformal classes agree under the identification. They define
+a conformal class on \(M_{\rho,\kappa}\), which we write
+\([g_{\rho,\kappa}]\). A partition of unity applied to the conformal
+factors gives representatives that are homothetic to \(g_0\) on the
+core \(M\setminus\{\abs y<2\rho\}\), round on
+\(\{\abs z\ge\kappa/\rho\}\), and conformally flat on the neck between
+them. The parameter \(\kappa\) fixes the size of the hole in the round
+region, and the homothety factor on the core fixes the relative scale
+of the two pieces.
+
+\begin{proposition}\label{prop:flat-neck}
+Define \(\Psi:M\to M_{\rho,\kappa}\) to be the identity on
+\(M\setminus\{\abs y\le\rho\}\), the map \(y\mapsto\iota(y)\) on
+\(\{0<\abs y<2\rho\}\), and \(\Psi(p)=q^*\). Then \(\Psi\) is a
+diffeomorphism and \(\Psi^*[g_{\rho,\kappa}]=[g_0]\). Consequently
+\(Y([g_{\rho,\kappa}])=Y([g_0])\) for all \(\rho\) and \(\kappa\), and
+\(\Psi\) carries the volume-one Yamabe minimizers of \([g_0]\)
+isometrically onto those of \([g_{\rho,\kappa}]\). Their scalar
+curvature, their Laplace spectrum, and the quantities \(A\) and \(\e\)
+do not depend on \(\rho\), on \(\kappa\), or on the representative
+chosen on the neck.
+\end{proposition}
+
+\begin{proof}
+On the collar the two definitions give points that the gluing
+identifies, so \(\Psi\) is well defined. The formula for \(\iota\) maps
+\(\{0<\abs y<2\rho\}\) diffeomorphically onto
+\(\{\abs z>\kappa/(2\rho)\}\). In the chart \(w=z/\abs z^2\) at \(q^*\)
+it reads \(w=Sy/\kappa\), which is linear, so the extension over \(p\)
+is smooth with smooth inverse. The two pieces of \(M_{\rho,\kappa}\)
+are the images of \(M\setminus\{\abs y\le\rho\}\) and of
+\(\{\abs y<2\rho\}\), which gives bijectivity. On the first piece
+\(\Psi\) is the identity. On the second it is conformal from
+\(\abs{\dd y}^2\) to \(\abs{\dd z}^2\), hence to \(h_{\rd}\). The Yamabe
+constant and the set of minimizing metrics are determined by the
+conformal class, which gives the remaining statements.
+\end{proof}
+
+The minimizing metric therefore does not register the round region.
+Let \(g=u^2g_0\) be a volume-one Yamabe minimizer of \([g_0]\), with
+\(0<u_-\le u\le u_+\) on \(\{\abs y\le2\rho\}\). Under \(\Psi\) the
+round region and the neck correspond to the ball
+\(\{\abs y<2\rho\}\), whose \(g\)-volume is at most
+\(8\pi^2u_+^4\rho^4\). Let \(\phi\) be a Lipschitz function on \(M\)
+that is constant outside this ball, with mean \(\bar\phi\) for
+\(\dv\). Then
+\begin{equation}\label{eq:chamber-rayleigh}
+ \int_M\abs{\dd\phi}_g^2\,\dv\ \ge\
+ \frac{u_-^2}{u_+^4}\,\frac{\mu_1}{4\rho^2}
+ \int_M(\phi-\bar\phi)^2\,\dv ,
+\end{equation}
+where \(\mu_1\) is the first Dirichlet eigenvalue of the unit ball of
+\(\RR^4\). Indeed, let \(c\) be the constant value. The mean minimizes
+the \(L^2\) distance to constants, so the integral on the right is at
+most \(u_+^4\int_{\abs y<2\rho}(\phi-c)^2\,\dd y\). The function
+\(\phi-c\) vanishes on the boundary of the ball, and
+\(\abs{\dd\phi}_g^2\,\dv=u^2\abs{\dd\phi}^2\,\dd y\) in dimension four.
+The coordinate functions of the round region have Rayleigh quotients
+near the round value in a representative that is round there. In the
+minimizing representative every function carried by the round region
+has Rayleigh quotient of order at least \(\rho^{-2}\), on a set of
+volume \(O(\rho^4)\). Trial quotients computed in a glued
+representative give no information about \(3\lambda_5/s\) on the
+minimizer.
+
+A change of the conformal class inside a small ball cannot raise the
+Yamabe constant appreciably, whatever is placed in the ball.
+
+\begin{proposition}\label{prop:small-ball}
+Let \(g\) be a volume-one Yamabe minimizer on a closed four-manifold
+\(M\), and let \(p\in M\). There are constants \(C\) and \(r_0>0\),
+depending on \(g\), with the following property for \(0<r\le r_0\).
+Let \((M',g')\) be a closed Riemannian four-manifold, and let \(\Phi\)
+be a diffeomorphism from \(M\setminus\overline{B_r(p)}\) onto the
+complement of a compact subset of \(M'\) such that \(\Phi^*g'\) is
+conformal to \(g\). Then
+\[
+ Y([g'])\le Y([g])+\frac{C\,r}{\log^2(1/r)} .
+\]
+\end{proposition}
+
+\begin{proof}
+Let \(d\) be the \(g\)-distance to \(p\), put \(R=\sqrt r\), and let
+\(\chi\) equal \(0\) on \(B_{2r}(p)\), \(1\) outside \(B_R(p)\), and
+\(\log(d/2r)/\log(R/2r)\) in between. For small \(R\) the geodesic
+spheres of radius \(d\le R\) have volume at most \(Cd^3\), so the
+coarea formula gives
+\[
+ \int_M\abs{\dd\chi}^2\,\dv
+ \le\frac{C}{\log^2(R/2r)}\int_{2r}^R d\,\dd d
+ \le\frac{C'\,r}{\log^2(1/r)},\qquad
+ \int_M\chi^4\,\dv\ge1-C'r^2 .
+\]
+Since \(s_g=Y([g])\) is constant and \(1-C'r^2\le\int\chi^2\,\dv\le1\),
+the Yamabe quotient of \(\chi\) for \(g\) is at most
+\(Y([g])+C''r/\log^2(1/r)\), for either sign of \(Y([g])\). The
+support of \(\chi\) is a compact subset of the domain of \(\Phi\). If
+\(\Phi^*g'=a^2g\) there, the function equal to
+\((\chi/a)\circ\Phi^{-1}\) on the image of \(\Phi\) and to zero
+elsewhere has the same Yamabe quotient for \(g'\), by the covariance
+\eqref{eq:conformal-L}. It is an admissible test function for
+\(Y([g'])\).
+\end{proof}
+
+Consequently a sequence of conformal classes that agree with one fixed
+class \([g_0]\) outside balls shrinking to a point has
+\(\limsup Y\le Y([g_0])\), however the balls are filled, and
+\(Y([g_0])<Y(\Sphere)\) unless \([g_0]\) is the round
+class~\cite{LeeParker1987Yamabe,Schoen1984Yamabe}. The gluing of
+Proposition~\ref{prop:flat-neck} is the case in which nothing changes
+at all.
+
+\subsection{Delaunay minimizers on \texorpdfstring{\(S^1\times S^3\)}{S1 x S3}}
+\label{sec:necklace}
+
+Let \(g_0=\dd t^2+g_{S^3}\) on \(S^1(\ell)\times S^3\), where the circle
+has length \(\ell\) and \(g_{S^3}\) is the unit round metric. Its
+scalar curvature is \(6\). For a positive function \(u\) of \(t\),
+\eqref{eq:conformal-L} without the map potential gives
+\begin{equation}\label{eq:cyl-scalar}
+ s_{u^2g_0}=u^{-3}(-6u''+6u).
+\end{equation}
+Fix \(m\in(0,1)\) and write \(m_1=1-m\). Let \(\sn\), \(\cn\), \(\dn\)
+be the Jacobian elliptic functions of modulus \(\sqrt m\), and let
+\(K\), \(E\) be the complete elliptic integrals of the first and second
+kind of the same modulus. The function \(\dn\) is even, has minimal
+period \(2K\), and decreases from \(1\) at \(0\) to \(\sqrt{m_1}\) at
+\(K\). It satisfies
+\begin{equation}\label{eq:dn-ode}
+ (\dn')^2=(1-\dn^2)(\dn^2-m_1),\qquad
+ \dn''=(2-m)\dn-2\dn^3 ,
+\end{equation}
+by \cite[(22.13.3)]{DLMF} and differentiation. Put
+\begin{equation}\label{eq:delaunay}
+ u_m(t)=\dn\Bigl(\frac{t}{\sqrt{2-m}}\Bigr),\qquad
+ g_m=u_m^2g_0,\qquad T(m)=2K\sqrt{2-m}.
+\end{equation}
+Then \(u_m''=u_m-2u_m^3/(2-m)\). By \eqref{eq:cyl-scalar} the metric
+\(g_m\) has constant scalar curvature \(s=12/(2-m)\) on every circle
+whose length is a multiple of the minimal period \(T(m)\) of \(u_m\).
+In the arclength \(r\) along the axis, \(g_m=\dd r^2+u_m^2g_{S^3}\) is
+a periodic chain of bulges with equators of radius \(1\), joined by
+necks of radius \(\sqrt{m_1}\). As \(m\to1\) the profile tends to
+\(1/\cosh t\), the unit round sphere in cylindrical coordinates. As
+\(m\to0\) it tends to the product metric.
+
+Let \(I_{2j}=\int_0^K\dn^{2j}\,\dd x\). The substitution
+\(\sn x=\sin\varphi\) gives \(I_0=K\) and \(I_2=E\). Integrating the
+derivative of \(\dn^{2j-1}\dn'\) over \([0,K]\) and using
+\eqref{eq:dn-ode} gives
+\((2j+1)I_{2j+2}=2j(2-m)I_{2j}-(2j-1)m_1I_{2j-2}\). Hence
+\begin{align}
+ I_4&=\tfrac13\bigl(2(2-m)E-m_1K\bigr),\qquad
+ I_6=\tfrac15\bigl(4(2-m)I_4-3m_1E\bigr),\notag\\
+ R(m)&=\frac{4(2-m)I_4-I_6-m_1E}{4I_6}.
+ \label{eq:I4I6}
+\end{align}
+
+\begin{theorem}\label{thm:necklace}
+The function \(T\) is an increasing bijection from \((0,1)\) onto
+\((\sqrt2\,\pi,\infty)\). Let \(\ell>\sqrt2\,\pi\) and let \(m\) be the
+solution of \(T(m)=\ell\). On \(S^1(\ell)\times S^3\) the following
+hold.
+\begin{enumerate}
+\item[(i)] The Yamabe minimizers of \([g_0]\) are exactly the metrics
+\(c\,u_m(t-t_0)^2g_0\) with \(c>0\) and \(t_0\in\RR\). They are
+homothetic to \(g_m\), and
+\[
+ Y([g_0])=24\pi\,(2-m)^{-3/4}I_4^{1/2}<Y(\Sphere).
+\]
+\item[(ii)] Every minimizer satisfies \(s=3\lambda_1\), and
+\(u_m'/u_m\) is a first eigenfunction of \(g_m\).
+\item[(iii)] Every minimizer \(g\) satisfies
+\[
+ 0\le\frac{3\lambda_5}{s}-1\le R(m)-1,\qquad
+ \frac{A(g)}{s}\le\tfrac45\bigl(R(m)-1\bigr).
+\]
+\item[(iv)] Every minimizer \(g\) satisfies
+\(\int\abs{\Ric_0}^2\,\dv=s^2\Vol(g)/12\), where \(\Ric_0\) is the
+trace-free Ricci tensor.
+\item[(v)] As \(\ell\to\infty\), with \(\Lambda=\log(16/m_1)\),
+\[
+ \ell=\Lambda+O(m_1\Lambda),\qquad
+ R(m)-1=\tfrac{15}{16}m_1+O(m_1^2\Lambda),\qquad
+ 1-\frac{Y([g_0])}{Y(\Sphere)}=\tfrac38m_1+O(m_1^2\Lambda).
+\]
+\end{enumerate}
+In particular the volume-one minimizers \(g_\ell\) of
+\(S^1(\ell)\times S^3\) have \(\e(g_\ell)\to0\) and
+\(A(g_\ell)/s\to0\) as \(\ell\to\infty\), with
+\(\e(g_\ell)\le(\tfrac52+o(1))\bigl(1-Y([g_0])/Y(\Sphere)\bigr)\).
+For \(\ell\le\sqrt2\,\pi\) the minimizers are the multiples of \(g_0\).
+\end{theorem}
+
+\begin{proof}
+\emph{Reduction to an ordinary differential equation.}
+The class \([g_0]\) contains a metric of positive scalar curvature, so
+a metric \(u^2g_0\) of constant scalar curvature \(s\) in it has
+\(s>0\). Lift \(u\) to \(\RR\times S^3\) and identify this cylinder
+with \(\RR^4\setminus\{0\}\) by \(y=e^t\theta\), so that
+\(\abs{\dd y}^2=e^{2t}g_0\). By \eqref{eq:conformal-L} the function
+\(v=u/\abs y\) satisfies \(6\Delta v=sv^3\) for the flat Laplacian.
+It is unbounded at the origin because \(u\) is periodic and positive.
+The symmetry theorem of Caffarelli, Gidas, and
+Spruck~\cite[Theorem~8.1]{CaffarelliGidasSpruck1989}, applied with the
+nonlinearity \(sv^3/6\), shows that \(v\) is radially symmetric about
+the origin. Thus \(u\) is a positive \(\ell\)-periodic function of
+\(t\) with \(-6u''+6u=su^3\). This reduction is due to
+Schoen~\cite[\S2]{Schoen1989Variational}.
+
+\emph{Periodic solutions.}
+The quantity \(u'^2-u^2+su^4/12\) is constant along solutions. Let
+\(u\) be a nonconstant positive periodic solution. After a translation
+and multiplication of \(u\) by a constant, which rescales \(s\), its
+maximum is \(u(0)=1\). Equating the first integral at the maximum and
+at the minimum \(u_{\min}\in(0,1)\) gives \(u_{\min}^2=12/s-1\). Hence
+\(6<s<12\), and \(s=12/(2-m)\) for a unique \(m\in(0,1)\). By
+\eqref{eq:dn-ode}, \(u_m\) solves the same initial value problem, so
+\(u=u_m\). The metrics of constant scalar curvature in \([g_0]\) are
+therefore the multiples of \(g_0\) and of the metrics
+\(u_m(t-t_0)^2g_0\) with \(T(m)=\ell/j\) for an integer \(j\ge1\).
+
+\emph{The period.}
+By \cite[(19.4.1), (19.4.2)]{DLMF}, written in the variable \(m\),
+\(2mm_1\,\dd K/\dd m=E-m_1K\) and \(2m\,\dd E/\dd m=E-K\). Therefore
+\[
+ T'(m)=\frac{F(m)}{mm_1\sqrt{2-m}},\qquad
+ F(m)=(2-m)E-2m_1K,\qquad F'(m)=\tfrac32(K-E),
+\]
+and \(F(0)=0\). The integrand of \(K\) exceeds that of \(E\), so
+\(F'>0\) and \(T\) is increasing. Its limit at \(m=0\) is
+\(\sqrt2\,\pi\), because \(K=\pi/2\) there, and its limit at \(m=1\)
+is infinite. The count of solutions in
+\cite[\S2]{Schoen1989Variational} depends on this monotonicity.
+
+\emph{Stability.}
+A Yamabe minimizer exists and is a smooth metric of constant scalar
+curvature~\cite{LeeParker1987Yamabe,Schoen1984Yamabe}. It satisfies
+\(s\le3\lambda_1\) by the second variation used for
+\eqref{eq:balance-chain}. The product \(g_0\) has \(s=6\) and
+\(\lambda_1\le(2\pi/\ell)^2<2\) when \(\ell>\sqrt2\,\pi\), so it is not
+a minimizer. Let \(u=u_m\) with \(T(m)=\ell/j\). For a function
+\(\phi\) of \(t\) alone,
+\[
+ \Delta_{u^2g_0}\phi=-u^{-4}(u^2\phi')',\qquad
+ \frac{\int\abs{\dd\phi}^2\,\dd V_{u^2g_0}}{\int\phi^2\,\dd V_{u^2g_0}}
+ =\frac{\int u^2\phi'^2\,\dd t}{\int u^4\phi^2\,\dd t}.
+\]
+The field \(\partial_t\) is conformal for \(u^2g_0\), with
+\(\mathcal L_{\partial_t}(u^2g_0)=2\sigma\,u^2g_0\) and
+\(\sigma=u'/u\). By \eqref{eq:conformal-eigen},
+\begin{equation}\label{eq:sigma-mode}
+ -(u^2\sigma')'=\tfrac{s}{3}u^4\sigma .
+\end{equation}
+The zeros of \(\sigma\) on the circle are the \(2j\) critical points
+of \(u\). Suppose \(j\ge2\). Let \(J_1,J_2,J_3\) be three of the
+\(2j\) arcs between consecutive zeros, and let \(\sigma_i\) equal
+\(\sigma\) on \(J_i\) and zero elsewhere. Multiplying
+\eqref{eq:sigma-mode} by \(\sigma\) and integrating over \(J_i\) gives
+\(\int u^2\sigma_i'^2\,\dd t=(s/3)\int u^4\sigma_i^2\,\dd t\).
+Choose \((a_1,a_2)\ne0\) so that \(\psi=a_1\sigma_1+a_2\sigma_2\)
+satisfies \(\int u^4\psi\,\dd t=0\). Then \(\psi\) is a nonzero
+Lipschitz function of mean zero with Rayleigh quotient \(s/3\). If
+\(\lambda_1\ge s/3\), it would minimize the Rayleigh quotient among
+functions of mean zero and so would be a first eigenfunction. A
+solution of the linear equation \eqref{eq:sigma-mode} that vanishes on
+the arc \(J_3\) is zero, a contradiction. Hence \(3\lambda_1<s\) for
+\(j\ge2\), and these metrics are not minimizers. The minimizers are
+therefore the metrics with \(j=1\), which are translates and multiples
+of \(g_m\) with \(T(m)=\ell\) and are isometric up to scale. For
+\(\ell\le\sqrt2\,\pi\) no \(m\) and \(j\) satisfy \(T(m)=\ell/j\), and
+only the multiples of \(g_0\) remain.
+
+\emph{Energy and the first eigenvalue.}
+The volume of \(g_m\) on the circle of length \(T(m)\) is
+\(2\pi^2\int_0^{T(m)}u_m^4\,\dd t=4\pi^2\sqrt{2-m}\,I_4\), and
+\(Y([g_0])=s\Vol(g_m)^{1/2}\), which is the formula in (i). The
+strict inequality holds because the class is not that of the round
+sphere~\cite{LeeParker1987Yamabe,Schoen1984Yamabe}. For (ii), the
+minimizer has \(s\le3\lambda_1\), and \(\sigma\) is a nonconstant
+eigenfunction with eigenvalue \(s/3\) by \eqref{eq:sigma-mode}.
+
+\emph{The transverse trial functions.}
+Let \(\theta_1,\ldots,\theta_4\) be the restrictions to \(S^3\) of the
+coordinates of \(\RR^4\). They satisfy
+\(\Delta_{S^3}\theta_i=3\theta_i\), and \(1,\theta_1,\ldots,\theta_4\)
+are orthogonal in \(L^2(S^3)\). For \(\phi=f(t)\theta_i\) and
+\(g=u^2g_0\),
+\[
+ \frac{\int\abs{\dd\phi}_g^2\,\dv}{\int\phi^2\,\dv}
+ =\frac{\int u^2(f'^2+3f^2)\,\dd t}{\int u^4f^2\,\dd t}.
+\]
+Take \(u=f=u_m\) and \(x=t/\sqrt{2-m}\). By \eqref{eq:dn-ode},
+\(\int_0^K\dn^2(\dn')^2\,\dd x=(2-m)I_4-I_6-m_1E\), and the quotient
+equals \((s/3)R(m)\). The five functions \(\sigma\) and
+\(u_m\theta_i\) have mean zero and are mutually orthogonal, both in
+\(L^2(\dv)\) and in the Dirichlet form, by the orthogonality on
+\(S^3\). On the span of the four functions \(u_m\theta_i\) the Rayleigh
+quotient is identically \((s/3)R(m)\). The min--max principle gives
+\(\lambda_4\le(s/3)R(m)\), and so \(R(m)\ge1\) by (ii). On the span of
+all five functions the Rayleigh quotient is then at most
+\((s/3)R(m)\), which gives \(\lambda_5\le(s/3)R(m)\). The bound for
+\(A(g)\) follows from
+\(A(g)/s=\tfrac15\sum_{i\le5}(3\lambda_i/s-1)\) and (ii).
+
+\emph{Curvature and asymptotics.}
+The metric \(g_m\) is locally conformally flat and
+\(\chi(S^1\times S^3)=0\), so (iv) is the Chern--Gauss--Bonnet formula
+\eqref{eq:gauss-bonnet} below. For (v), the expansions
+\cite[(19.12.1), (19.12.2)]{DLMF} give
+\(K=\tfrac12\Lambda+O(m_1\Lambda)\) and
+\(E=1+\tfrac14m_1(\Lambda-1)+O(m_1^2\Lambda)\). The logarithms cancel
+at first order in
+\[
+ I_4=\tfrac23+\tfrac12m_1+O(m_1^2\Lambda),\qquad
+ I_6=\tfrac8{15}+\tfrac13m_1+O(m_1^2\Lambda).
+\]
+Then \eqref{eq:I4I6} gives the expansion of \(R(m)\), and (i) gives
+\(Y([g_0])^2=384\pi^2(1-\tfrac34m_1)+O(m_1^2\Lambda)\). The first
+relation in (v) is \(\ell=T(m)\). The final assertions follow from
+(ii), (iii), and (v).
+\end{proof}
+
+Theorem~\ref{thm:necklace} shows that relative near equality in
+Theorem~\ref{thm:spectral} occurs on a closed four-manifold with
+infinite fundamental group. The hypotheses of Theorem~\ref{thm:near}
+hold along \(g_\ell\), so the joint law of the five lowest modes
+converges to the round law while the manifold remains
+\(S^1\times S^3\). The supremum of the Yamabe constants of the classes
+\([g_0]\) is \(Y(\Sphere)\) and is not attained, in agreement with
+Schoen's description~\cite[\S2]{Schoen1989Variational}.
+
+\paragraph{Separation of variables and a numerical complement.}
+The eigenvalue problem of \(g_m\) separates exactly. For
+\(\phi=f(x)Y(\theta)\), with \(x=t/\sqrt{2-m}\) and \(Y\) a spherical
+harmonic of degree \(n\) on \(S^3\), the function \(h=\dn\cdot f\) and
+the scaled eigenvalue \(\nu=3\lambda/s\) of Theorem~\ref{thm:near}
+satisfy the Lam\'e equation
+\begin{equation}\label{eq:lame}
+ -h''+(2-m)(n+1)^2h=(4\nu+2)\dn^2h\qquad\text{on }\RR/2K\mathbb Z .
+\end{equation}
+Three solutions are elementary. They are \(h=\dn\) with \(n=0\) and
+\(\nu=0\), the constants; \(h=\sn\cn\) with \(n=0\) and \(\nu=1\), the
+mode \(\sigma\); and \(h=\sn\cn\dn\) with \(n=1\) and
+\(\nu=\tfrac52\). The remaining statements in this paragraph and the
+entries of Table~\ref{tab:necklace} are double-precision computations.
+They are not used in any proof. A Fourier--Galerkin discretization of
+\eqref{eq:lame}, checked against a finite-difference scheme, was run on
+93 values of \(m\) between \(0.002\) and \(1-10^{-7}\). It indicates
+that the other eigenvalues below \(\tfrac52\) are a simple eigenvalue
+\(\nu_e(m)\) in the sector \(n=0\), which increases from \(1\) to
+\(\tfrac52\) with \(m\), and the ground state \(\nu_1(m)\) of the
+sector \(n=1\), of multiplicity four, which decreases from
+\(\tfrac32\) to \(1\). In either order of these two,
+\(\e(g_m)=\nu_1(m)-1\). The computed values satisfy
+\((\nu_1-1)/m_1=0.9375-0.387\,m_1+\cdots\) for small \(m_1\). The bound
+in (iii) is thus attained to first order, and
+\(\e\approx\tfrac52(1-Y([g_0])/Y(\Sphere))\) for a thin neck.
+
+\begin{table}[ht]
+\centering\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{ccccccccc}
+\hline
+\(m_1\) & \(\ell\) & \(\e\) & \(\e/m_1\) & \(D/m_1\)
+ & \(\max\abs{q-\tfrac{15}{7}}\) & \(\norm{\abs X^2-1}_2\)
+ & \(\inf\abs X\) & \(\int e^2\)\\
+\hline
+\(10^{-1}\) & \(5.4079\) & \(9.0072\times10^{-2}\) & \(0.9007\) & \(0.2962\)
+ & \(2.7\times10^{-1}\) & \(1.2\times10^{-1}\) & \(0.154\) & \(1.1690\)\\
+\(10^{-2}\) & \(7.4281\) & \(9.3367\times10^{-3}\) & \(0.9337\) & \(0.3633\)
+ & \(3.9\times10^{-2}\) & \(1.8\times10^{-2}\) & \(0.0494\) & \(1.0535\)\\
+\(10^{-4}\) & \(11.9838\) & \(9.3746\times10^{-5}\) & \(0.93746\) & \(0.37482\)
+ & \(4.3\times10^{-4}\) & \(2.6\times10^{-4}\) & \(0.0050\) & \(1.0430\)\\
+\(10^{-6}\) & \(16.5881\) & \(9.3750\times10^{-7}\) & \(0.937500\) & \(0.374998\)
+ & \(4.3\times10^{-6}\) & \(3.2\times10^{-6}\) & \(0.0005\) & \(1.0429\)\\
+\hline
+\end{tabular}
+\caption{Computed quantities for the volume-one Delaunay minimizers.
+Here \(D=1-Y([g_0])/Y(\Sphere)\), \(X\) is the map of
+Theorem~\ref{thm:near}, \(q=\int(\sum_ia_iu_i)^4\,\dv\) is evaluated
+for unit vectors \(a\) in the axial direction, a transverse direction,
+and their diagonal, and \(e=\sum_i\Gamma(X_i,X_i)\).}
+\label{tab:necklace}
+\end{table}
+
+The fourth moments and the radial error converge as
+Theorem~\ref{thm:near} requires, with room in its rates. Three
+quantities do not converge to their round values. First, the ground
+state of the sector \(n=1\) is positive, so \(X\) has no zeros and
+\(X/\abs X\) omits the two poles of the axis. This map from
+\(S^1\times S^3\) to \(S^4\) has degree zero, and
+\(\inf\abs X\approx\tfrac12\sqrt{m_1}\). The bulge covers the sphere
+once and the neck returns along a thin tube around the axis. Second,
+the energy density \(e\), which is identically \(1\) for the round
+sphere, has \(\int e^2\,\dv\to1.043\). The Gram defect
+\(\Gamma(X_1,X_1)-\tfrac14(1-X_1^2)\) of the axial coordinate tends to
+zero in \(L^1\), while its \(L^2\) norm tends to \(0.207\). Third, the
+curvature does not converge. In the notation of \eqref{eq:delaunay},
+a direct calculation gives
+\begin{equation}\label{eq:necklace-ricci}
+ \Ric_0=\frac{c}{u_m^2}\bigl(-3\,\dd t^2+g_{S^3}\bigr),\qquad
+ \abs{\Ric_0}^2=\frac{12c^2}{u_m^8},\qquad c=\frac{m_1}{2-m},
+\end{equation}
+which is exact. The least Ricci eigenvalue is attained at the necks
+and equals \((s/4)(1-1/m_1)\). It is negative for every \(m\), so the
+Ricci hypothesis of Aubry's theorem fails there, and the mass of
+\(\abs{\Ric_0}^2\) in (iv) sits in the necks as \(m_1\to0\). Thus
+convergence of the law of \(X\) does not
+control the degree of \(X/\abs X\), the \(L^2\) norm of the Gram
+defect, or the curvature. Each is affected by a region whose volume
+tends to zero.
+
+\subsection{An integral Ricci criterion at a Yamabe metric}
+\label{sec:budget}
+
+Write \(\Ric_0=\Ric-(s_g/4)g\) for the trace-free Ricci tensor. On a
+closed four-manifold the Chern--Gauss--Bonnet formula is
+\begin{equation}\label{eq:gauss-bonnet}
+ 8\pi^2\chi(M)=\int_M\Bigl(\tfrac14\abs{W}_{4\mathrm{ind}}^2
+   -\tfrac12\abs{\Ric_0}^2+\tfrac1{24}s_g^2\Bigr)\,\dv ,
+\end{equation}
+as in \cite[Eq.~(1.2)]{ChangQingYang2006Gap}. On an oriented manifold,
+\(\tfrac14\int\abs{W}_{4\mathrm{ind}}^2\,\dv=E_++E_-\) and
+\eqref{eq:signature} give
+\begin{equation}\label{eq:eplus}
+ E_+(g)=2\pi^2\bigl(2\chi(M)+3\tau(M)\bigr)
+   +\tfrac14\int_M\abs{\Ric_0}^2\,\dv-\tfrac1{48}\int_Ms_g^2\,\dv .
+\end{equation}
+
+\begin{proposition}\label{prop:budget}
+Let \(g\) be a volume-one metric of constant scalar curvature \(s>0\)
+on a closed four-manifold \(M\). If
+\begin{equation}\label{eq:ricci-budget}
+ \int_M\abs{\Ric_0}^2\,\dv<\frac{s^2}{12}-8\pi^2\chi(M),
+\end{equation}
+then \(M\) is diffeomorphic to \(\Sphere\) or \(\mathbb{RP}^4\). If
+\(M\) is a smooth homotopy four-sphere, the condition reads
+\(\int_M\abs{\Ric_0}^2\,\dv<s^2/12-16\pi^2\), the conclusion is that
+\(M\) is diffeomorphic to \(\Sphere\), and
+\begin{equation}\label{eq:eplus-sphere}
+ E_+(g)=\frac{Y(\Sphere)^2-s^2}{48}
+        +\tfrac14\int_M\abs{\Ric_0}^2\,\dv .
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+A metric of positive scalar curvature lies in a class of positive
+Yamabe constant. By \eqref{eq:gauss-bonnet}, the inequality
+\eqref{eq:ricci-budget} is equivalent to
+\(\int\abs{W}_{4\mathrm{ind}}^2\,\dv<16\pi^2\chi(M)\), which is the
+hypothesis of~\cite[Theorem~A]{ChangGurskyYang2003}. On a homotopy
+sphere \(\chi=2\) and \(\tau=0\), simple connectivity excludes
+\(\mathbb{RP}^4\), and \eqref{eq:eplus} with
+\(Y(\Sphere)^2=384\pi^2\) is \eqref{eq:eplus-sphere}.
+\end{proof}
+
+With \(s^2\) replaced by \(\int s_g^2\,\dv\), the difference of the two
+sides of \eqref{eq:ricci-budget} is a conformal invariant, so the
+criterion may be tested on any representative. A Yamabe minimizer
+gives it the form above with \(s=\Y\). On a homotopy four-sphere the
+threshold \(s^2/12-16\pi^2\) is then positive exactly when
+\(\Y>8\sqrt3\,\pi=Y(\Sphere)/\sqrt2\), and it increases to
+\(16\pi^2\) as \(\Y\to Y(\Sphere)\). By \eqref{eq:eplus-sphere}, every
+class on a homotopy four-sphere has
+\(E_+\ge(Y(\Sphere)^2-\Y^2)/48\), with equality exactly when a
+minimizer is Einstein. This is the form taken here by the bound of
+\cite[Eq.~(1.7)]{ChangQingYang2006Gap}. On a homotopy four-sphere that
+is not diffeomorphic to \(\Sphere\), every volume-one Yamabe minimizer
+with \(s>0\) would satisfy
+\(\int\abs{\Ric_0}^2\,\dv\ge s^2/12-16\pi^2\).
+
+When equality holds in the hypothesis of Chang, Gursky, and Yang and
+\(M\) is neither \(\Sphere\) nor \(\mathbb{RP}^4\), the class is that
+of the Fubini--Study metric or of a quotient of the product
+\(S^3\times S^1\)~\cite[Theorem~1.1]{ChangQingYang2006Gap}. The
+Delaunay metrics are in this equality case, since \(\chi=0\) and
+\(\int\abs{\Ric_0}^2\,\dv=s^2\Vol/12\) by Theorem~\ref{thm:necklace}.
+The family with \(\e\to0\) therefore misses \eqref{eq:ricci-budget} by
+exact equality at every length.
+
+A pointwise Ricci bound implies the integral bound without spectral
+input. Suppose \(\Ric_g\ge(1-\delta)(s/4)g\) for a volume-one metric
+of constant scalar curvature \(s>0\). The eigenvalues of \(\Ric_0\)
+are at least \(-\delta s/4\) and sum to zero, so
+\(\abs{\Ric_0}^2\le\tfrac34\delta^2s^2\), the extreme case being
+\((3,-1,-1,-1)\delta s/4\). Hence \eqref{eq:ricci-budget} holds when
+\[
+ \delta^2<\frac19-\frac{32\pi^2\chi(M)}{3s^2}.
+\]
+On a homotopy four-sphere this is
+\(\delta^2<\tfrac19-64\pi^2/(3s^2)\), which allows \(\delta\) up to
+\(1/(3\sqrt2)\approx0.236\) as \(s\to Y(\Sphere)\). The route through
+Aubry's theorem in Section~\ref{sec:near} needs both \(\delta\) and
+\(\e\) small and gives a Gromov--Hausdorff estimate as well. The
+integral criterion uses the Euler characteristic, and on a homotopy
+four-sphere it needs \(s>8\sqrt3\,\pi\).
+
+Relative pinching does not imply \eqref{eq:ricci-budget}, and the
+Bochner formula shows why. Let \(g\) have constant scalar curvature
+\(s\), let \(\Delta_g\phi=\lambda\phi\), and write
+\(\nabla^2\phi=\Hess_0\phi-\tfrac14(\Delta_g\phi)g\) and
+\(\nu=3\lambda/s\). The integrated Bochner formula
+\(\int\abs{\nabla^2\phi}^2\,\dv+\int\Ric(\nabla\phi,\nabla\phi)\,\dv
+=\int(\Delta_g\phi)^2\,\dv\) gives
+\begin{equation}\label{eq:bochner-pinch}
+ \int_M\abs{\Hess_0\phi}^2\,\dv
+ +\int_M\Ric_0(\nabla\phi,\nabla\phi)\,\dv
+ =\frac{s^2}{12}\,\nu(\nu-1)\int_M\phi^2\,\dv .
+\end{equation}
+For the first five modes of a volume-one Yamabe minimizer, normalized
+in \(L^2\), the right side lies between \(0\) and
+\(\tfrac{s^2}{12}\e(1+\e)\). Relative pinching thus controls the sum
+of the two terms on the left. The first is nonnegative and the second
+has no sign. For the mode \(\sigma=u_m'/u_m\) of the Delaunay metric,
+\(\nu=1\) and a direct calculation gives
+\(\Hess_0\sigma=\sigma\Ric_0\). The function \(\sqrt{m_1}/\dn\) solves
+the second equation in \eqref{eq:dn-ode} with the initial data of
+\(\dn(\cdot+K)\), so \(u_m(t+T(m)/2)=\sqrt{m_1}/u_m(t)\). With
+\eqref{eq:necklace-ricci} this symmetry gives
+\[
+ \int\abs{\Hess_0\sigma}^2\,\dv
+ =-\int\Ric_0(\nabla\sigma,\nabla\sigma)\,\dv
+ =\int\sigma^2\abs{\Ric_0}^2\,\dv=\frac{s^2}{12}\int\sigma^2\,\dv
+\]
+at every length. A pinched mode can therefore have a trace-free
+Hessian of fixed size in \(L^2\), carried by the region where
+\(\Ric_0\) is large.
 
 \section{Outstanding challenges}\label{sec:open}
 
 \paragraph{Construction on an arbitrary smooth homotopy sphere.}
-Attaining \(A(g)=0\) would give the smooth
-identification directly. A less rigid construction would produce
-actual smooth volume-one Yamabe minimizers with \(s_j>0\) and
-\(3\lambda_5(g_j)/s_j\to1\).
-One possible test is to attach a shrinking punctured core to a round
-region across a neck. The trial eigenfunctions must be evaluated
-in the minimizing conformal representative. In dimension four the
-Yamabe quotient of a test supported in the core is unchanged by
-homothetic rescaling there. A fixed low-energy core test can compete
-with round tests even when its support has vanishing volume in the
-glued metric. The analysis must control the minimizing conformal
-factor, the locations of the low modes, and the scalar scale
-appearing in the relative spectral gap.
+Attaining \(A(g)=0\) at a local Yamabe minimizer would give the smooth
+identification directly, by Proposition~\ref{prop:local}. A less rigid
+construction would produce actual smooth volume-one Yamabe minimizers
+with \(s_j>0\) and \(3\lambda_5(g_j)/s_j\to1\), together with the
+geometric control discussed in the next paragraph.
+Attaching a round region to a punctured core across a conformally flat
+neck does not produce them. By Proposition~\ref{prop:flat-neck} the
+conformal class and its minimizers are unchanged, and
+\eqref{eq:chamber-rayleigh} places the round region at high frequency
+and small volume in the minimizing representative. By
+Proposition~\ref{prop:small-ball}, no change confined to a small ball
+raises the Yamabe constant appreciably. A construction must therefore
+change the conformal class on a region that carries a definite part of
+the minimizer. On \(S^1\times S^3\) the relative gap and the Yamabe
+deficit tend to zero together, by Theorem~\ref{thm:necklace}. Whether
+\(\e\to0\) forces \(\Y\to Y(\Sphere)\) for volume-one Yamabe
+minimizers, and whether the converse holds, are open questions. It is
+also open whether every smooth homotopy four-sphere carries conformal
+classes with Yamabe constant close to \(Y(\Sphere)\). Surgery gives
+partial information. Positive scalar curvature survives surgery in
+codimension at least three, by the theorem of Gromov and Lawson and of
+Schoen and Yau as stated
+in~\cite[Theorem~1.1]{BamlerLiMantoulidis2023Decomposing}. If
+\(\sigma(M)\) denotes the supremum of the Yamabe constants of the
+conformal classes on \(M\), surgery on a circle in a closed
+four-manifold \(M\) gives a manifold \(N\) with
+\(\sigma(N)\ge\min\{\sigma(M),\Lambda_{4,1}\}\) and
+\(\Lambda_{4,1}>38.9\)~\cite[Theorem~1.2, Example~4.7]{AmmannDahlHumbert2015LowDim}.
+A connected sum of copies of \(S^1\times S^3\) has
+\(\sigma=Y(\Sphere)\), by Theorem~\ref{thm:necklace} and Kobayashi's
+inequality for connected
+sums~\cite{Kobayashi1987UnitVolume}\cite[Eq.~(14)]{LeBrun2021Scalar4}.
+For a homotopy four-sphere obtained from such a sum by surgery on
+circles, the resulting lower bound \(38.9\) is below the level
+\(8\sqrt3\,\pi\approx43.5\) at which \eqref{eq:ricci-budget} can hold,
+and well below \(Y(\Sphere)\approx61.6\).
 
 \paragraph{Smooth recognition under approximation.}
 Theorem~\ref{thm:near} gives the round law of five values under
-relative pinching. A smooth conclusion needs geometric information
-on the same manifold, including regions of small measure.
-A uniform route through the Ricci comparison would suffice.
+relative pinching. The Delaunay metrics of
+Theorem~\ref{thm:necklace} show that this law, the radial estimate,
+and the weak Gram estimate are compatible with a handle of vanishing
+volume. The estimates use no topological property of the manifold,
+and near equality does not constrain one. A smooth conclusion needs
+geometric information on the same manifold, including regions of small
+measure. A uniform route through the Ricci comparison would suffice.
+On a homotopy four-sphere the integral bound \eqref{eq:ricci-budget}
+would also suffice. It needs no spectral input, it requires
+\(\Y>8\sqrt3\,\pi\), and it is not implied by relative pinching.
 Alternatively, smooth nondegenerate convergence after
 diffeomorphisms of the original manifold would pass the Yamabe
 minimality and spectral equalities to a limit and give

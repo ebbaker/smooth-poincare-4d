@@ -1,0 +1,15 @@
+1. max residual of the exact Lame solutions dn, sn cn, sn cn dn: 7.89e-31
+2. finite differences (variable f, half period) against Galerkin (variable h, full period)
+   m=0.5    nu(1,even): 1.3734351375 vs 1.3734351375   nu(0,odd): 1.0000000000 vs 0.9999999999   nu(0,even): 1.0895443201 vs 1.0895443202
+   m=0.9    nu(1,even): 1.0900720299 vs 1.0900720299   nu(0,odd): 1.0000000000 vs 1.0000000001   nu(0,even): 1.8337999249 vs 1.8337999250
+   m=0.99   nu(1,even): 1.0093367489 vs 1.0093367489   nu(0,odd): 1.0000000000 vs 1.0000000000   nu(0,even): 2.4311213209 vs 2.4311213214
+   m=0.999  nu(1,even): 1.0009371139 vs 1.0009371139   nu(0,odd): 1.0000000000 vs 1.0000000002   nu(0,even): 2.4933826182 vs 2.4933826198
+3. Yamabe energy: closed form against quadrature of the quotient
+   m=0.2    0.913766931341  0.913766931341
+   m=0.7    0.937545972421  0.937545972421
+   m=0.99   0.996366861960  0.996366861960
+4. 30-digit Galerkin at small 1-m: (nu_1 - 1)/(1-m) and (trial bound - 1)/(1-m)
+   1-m=1e-6  modes=128  (nu_1-1)/(1-m) = 0.937499613282491   15/16 = 0.9375
+   1-m=1e-10  modes=199  (nu_1-1)/(1-m) = 0.937499999961328   15/16 = 0.9375
+5. ordering on 93 values of m in [0.002, 1-1e-7]: smallest eigenvalue other than 0, 1, nu_e, nu_1 (sectors k<=3) = 2.500000000000 at m=0.99999
+   min nu_e = 1.0000007515   nu_1 in [1.0000000937, 1.4999984970]   nu_1 decreasing in m: True

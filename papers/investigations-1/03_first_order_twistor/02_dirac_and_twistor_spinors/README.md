@@ -2,7 +2,7 @@
 
 24 November 2026 (America/New_York). Prepared for Edward B. Baker III with
 OpenAI Codex assistance; actual selected model/effort unavailable.
-The author activated broad research on 24 November. The [five-eigenfunction theorem](reviews/DIR_B22_FIVE_EIGENFUNCTIONS_20261124.md) and [punctured Dirac assessment](reviews/DIR_B19_GREEN_BOUNDARY_ASSESSMENT_20261124.md) give the current results. The [next decision](continuation-notes/02_AFTER_FIVE_EIGENFUNCTION_RIGIDITY_20261124.md) concerns constructing the required Yamabe metrics.
+The author activated broad research on 24 November. The [five-eigenfunction theorem](reviews/DIR_B22_FIVE_EIGENFUNCTIONS_20261124.md), the [punctured Dirac assessment](reviews/DIR_B19_GREEN_BOUNDARY_ASSESSMENT_20261124.md) and the [core-and-chamber and necklace assessment](reviews/DIR_B23_CORE_CHAMBER_AND_NECKLACE_20261124.md) give the current results; the last was added in a Claude Cowork session with Claude Fable 5.2, which also put its results into the [manuscript](manuscript/dirac_twistor_and_yamabe_rigidity.tex) as Sections 7.3 and 10. The [next decision](continuation-notes/03_AFTER_CORE_CHAMBER_AND_NECKLACE_20261124.md) concerns the aim of the spectral route now that relative pinching is known not to recognize a sphere on a general closed four-manifold.
 
 Can a variable Riemannian metric and a twistor-spinor or precisely coupled Dirac equation produce nontrivial recognizing data on every smooth homotopy four-sphere?
 

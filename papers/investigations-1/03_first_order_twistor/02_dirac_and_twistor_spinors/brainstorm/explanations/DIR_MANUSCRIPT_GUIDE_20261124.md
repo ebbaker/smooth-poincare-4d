@@ -165,3 +165,73 @@ compete with the round region even as its volume shrinks. A
 successful construction needs both relative spectral pinching
 on the minimizing metrics and geometric control that retains the
 smooth structure of the whole manifold (§10).
+
+## Addendum, 24 November 2026: Sections 7.3 and 10 of the revised draft
+
+Added for Edward B. Baker III with LLM assistance: Claude Fable 5.2
+(`claude-fable-5-2`), Claude Cowork, reasoning effort max as configured,
+when the author asked for the results of E48–E50 to be included in the
+manuscript. The text above reads the 25-page draft with the hash stated
+there and was not changed. The revised draft has TeX SHA-256
+`71dfada5256b2e33425c12d835bed57e66dc85cb87db6f89e4edabf18c0b198d` and 35 pages. Sections 1–9 keep their numbers. The outstanding
+challenges are now Section 11, so the reference to §10 in the last
+paragraph above means §11, and the gluing test described there is settled
+by Proposition 10.1. The [draft history](../../DRAFT_HISTORY.md) lists
+the changes and the [E49 supplement](../../notes/DIR_E49_SUPPLEMENT_20261124.md)
+the arguments completed for them.
+
+**Local minimizers (§7.3).** The proof of Theorem 7.1 expands the Yamabe
+quotient of $1+t\phi+t^2w$ to fourth order in $t$ and uses nothing else, so
+the theorem holds wherever the quotient has a local minimum along these
+curves (Proposition 7.2). A conformal vector field $X$ with
+$\mathcal L_Xg=2\sigma g$ on a metric of constant scalar curvature gives an
+eigenfunction, $\Delta_g\sigma=\tfrac s3\sigma$. At a local minimizer that
+is not round, a conformal field that is not Killing therefore forces
+$s=3\lambda_1$, and at most four independent ones exist (Proposition 7.3).
+
+**Why a round region does not help (§10.1).** Glue the punctured core of
+$(M,g_0)$, flat near $p$, to a round sphere with a hole, using an inversion
+on a conformally flat collar. Following the inversion from $p$ outward gives
+a conformal diffeomorphism from $(M,[g_0])$ to the glued manifold. The
+conformal class is the one we started with, so its Yamabe constant, its
+minimizing metrics and their spectra are unchanged for every neck size and
+relative scale (Proposition 10.1). In a minimizing metric the round region
+is a ball of volume $O(\rho^4)$, and functions living on it have Rayleigh
+quotient of order $\rho^{-2}$. More generally, changing a class inside a
+ball of radius $r$ raises its Yamabe constant by at most $Cr/\log^2(1/r)$
+(Proposition 10.2).
+
+**The Delaunay minimizers (§10.2).** On $S^1(\ell)\times S^3$ with
+$\ell>\sqrt2\,\pi$ the Yamabe minimizer is
+$\operatorname{dn}^2(t/\sqrt{2-m})\,(dt^2+g_{S^3})$, a bulge joined to
+itself by a neck of relative radius $\sqrt{m_1}$, $m_1=1-m\approx16e^{-\ell}$.
+Rotation of the circle is conformal and not isometric, which gives
+$s=3\lambda_1$ exactly. The profile times the four coordinate functions of
+$S^3$ gives four trial functions whose Rayleigh quotient is a closed form
+$\tfrac s3R(m)$, so $3\lambda_5/s-1\le R(m)-1=\tfrac{15}{16}m_1+\cdots$,
+while the Yamabe deficit is $\tfrac38m_1+\cdots$ (Theorem 10.3). Relative
+near equality therefore occurs on a manifold with infinite fundamental
+group. The computed table shows what Theorem 9.1 sees, the round law of the
+five values, and what it cannot see: the map $X/|X|$ has degree zero, the
+Gram defect does not tend to zero in $L^2$, and the Ricci curvature is
+negative in the neck.
+
+**The integral Ricci criterion (§10.3).** By the Chern–Gauss–Bonnet
+formula, the hypothesis of Chang, Gursky and Yang at a volume-one metric of
+constant scalar curvature $s>0$ reads
+$\int|{\rm Ric}_0|^2<s^2/12-8\pi^2\chi(M)$ (Proposition 10.4). On a homotopy
+four-sphere the right side is $s^2/12-16\pi^2$, positive only above
+$s=8\sqrt3\,\pi$. A Ricci lower bound $(1-\delta)(s/4)g$ implies it for
+$\delta^2<\tfrac19-64\pi^2/(3s^2)$, with no eigenvalue involved. The
+Delaunay metrics give exact equality, and the Bochner identity (10.13) shows
+why pinching cannot supply the bound: it controls the sum of
+$\int|{\rm Hess}_0\phi|^2$ and $\int{\rm Ric}_0(\nabla\phi,\nabla\phi)$ and
+neither term.
+
+**What Section 11 now asks.** A construction must change the conformal
+class on a region carrying a definite part of the minimizer. Whether
+relative pinching and a Yamabe constant near that of the round sphere imply
+one another is open, as is the existence of such classes on an arbitrary
+homotopy four-sphere. Recognition needs information that reaches regions of
+small volume: a Ricci bound, the integral bound above, or smooth
+convergence.

@@ -1,0 +1,21 @@
+# SP4-FOT-DIR-E49 · Minimizers and pinching on the circle product · request v1
+
+24 November 2026, America/New_York. For Edward B. Baker III. Lead in this session: Claude Fable 5.2 (`claude-fable-5-2`), Claude Cowork, reasoning effort max as configured. Recommended E routing is gpt-6.2-sol / ultra; that helper was not available, so the lead executes the packet itself and the return is not independent of the [B23 decision](../../brainstorm/notes/DIR_B23_CORE_AND_CHAMBER_20261124.md). The question, the method, the limits and the completion test below were fixed before the return was written; exploratory calculation in the same session preceded this text. [Owning register](../REGISTER.md).
+
+On $S^1(L)\times S^3$ with the unit round $S^3$ and the class of the product: (i) write the rotationally symmetric constant scalar curvature metrics in closed form, with period, scalar curvature, volume and Yamabe energy, and identify the unit-volume Yamabe minimizer for each $L$, importing the symmetry and classification from Schoen's lecture notes with the passages recorded; (ii) reduce the Laplace eigenvalue problem of the minimizer to ordinary differential equations by sector, find exact solutions where they exist, and determine $\nu=3\lambda/s$ for the five lowest positive eigenvalues, hence $\epsilon=3\lambda_5/s-1$ and $A/s$; (iii) give a closed upper bound for $\epsilon$ and the leading behaviour of $\epsilon$ and of $1-Y/Y(S^4)$ as $L\to\infty$; (iv) for the first five eigenfunctions evaluate the quantities of the manuscript's near-equality theorem: fourth moments in at least three directions, $\lVert\lvert X\rvert^2-1\rVert_2$, extreme values of $\lvert X\rvert$, the integrated squared energy density and one entry of the Gram residual in $L^1$ and $L^2$; (v) compute $\int\lvert{\rm Ric}_0\rvert^2$ and the radial Ricci curvature at the neck.
+
+Numerical limits: IEEE double precision with NumPy and mpmath only; elliptic parameter $1-m$ from $0.999$ down to $10^{-8}$ for the spectrum and to $10^{-6}$ for the law; at most 1,200 Fourier modes; one evaluation in thirty-digit arithmetic at $1-m=10^{-6}$ and $10^{-10}$. Acceptance: the eigenvalues agree to $10^{-7}$ with a second method that uses a different unknown, a different discretization and a different source for the elliptic function; the closed form of the energy agrees with quadrature to ten digits; the exact solutions have residual below $10^{-25}$. Report double-precision values as diagnostics. Escalate to B23 if the classification cannot be confirmed in the source or if the second method disagrees.
+
+## Frozen repository inputs
+HEAD 3fb565b70247a57e4fcc7e65886c57ce0ca0e1ab, working-tree bytes.
+- papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/continuation-notes/02_AFTER_FIVE_EIGENFUNCTION_RIGIDITY_20261124.md  `548ef536ac2cfb7e4b2ad48083145c4da7f585186ed75f2438dc1eee8b705433`
+- papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/reviews/DIR_B22_FIVE_EIGENFUNCTIONS_20261124.md  `7ac8da041a6832117ab7369cbd1cd8f1d625577b2ecfcc704cd9320e038de97d`
+- papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/manuscript/dirac_twistor_and_yamabe_rigidity.tex  `35b9c19b26c7ba68755fce831551dd75c169d0fc8356cb349994c6ec3a29aaee`
+- papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/notes/DIR_E44_20261124.md  `ff7c72f913bb1ad7f3999bc729cea36614c90497ecb08ed20ec8dfc9bb2371a9`
+- papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/notes/DIR_E45_20261124.md  `2f5fe6014cf7bf4a979e6dd7e0c3e79b3604418036ebae368464f7b307865186`
+- papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/notes/DIR_E47_20261124.md  `9d861c8e86938117cfdb044175e465b6f7da6123ff5a14be44e84a9329a4e44b`
+
+External: Richard M. Schoen, *Variational theory for the total scalar curvature functional for Riemannian metrics and related topics*, Lecture Notes in Mathematics 1365 (1989), §2. Record the passages actually seen and the inspection level.
+
+## Ownership and return
+Write `notes/DIR_E49_20261124.md`, `research-progress/handoffs/SP4-FOT-DIR-E49_RETURN_v1.md`, and scripts and small outputs named `e49_*` / `E49_*` in `numerics/`. No manuscript edits. Register, plan and source records are integrated by the lead after assessment.

@@ -35,3 +35,7 @@ when the root catalog links them with the required metadata.
 The [canonical continuation records R60–R79](../../../../../references/SOURCE_NOTES_DIRAC_CONTINUATION_20261124.md) give the inspected passages behind the Hopf obstructions, degree concentration and flat-ended Dirac problem, together with their geometric hypotheses.
 
 The same record includes the comparison with cubic Yamabe degeneracy and Obata rigidity, Moser normalization, and Aubry’s Ricci-pinched smooth sphere theorem. [R73–R79](../../../../../references/SOURCE_NOTES_DIRAC_CONTINUATION_20261124.md)
+
+## Core-and-chamber test and the necklace
+
+The [canonical records R99–R108](../../../../../references/SOURCE_NOTES_DIRAC_B23_20261124.md) give the passages behind [E49](../notes/DIR_E49_20261124.md) (Schoen's classification on $S^1\times S^{n-1}$), [E50](../notes/DIR_E50_20261124.md) (the Chang–Gursky–Yang hypothesis as quoted by Chang, Qing and Yang) and the [assessment](../reviews/DIR_B23_CORE_CHAMBER_AND_NECKLACE_20261124.md) (surgery, positive scalar curvature and the Yamabe invariant of homotopy four-spheres). Added 24 November 2026 with LLM assistance, Claude Fable 5.2 (`claude-fable-5-2`); every passage was read through a text extraction and none from a retained copy. Records R107–R108 in the same file, added for the [manuscript revision](../DRAFT_HISTORY.md) of the same day, give the Caffarelli–Gidas–Spruck symmetry theorem and the elliptic-function formulas behind the [E49 supplement](../notes/DIR_E49_SUPPLEMENT_20261124.md).

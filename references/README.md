@@ -158,3 +158,7 @@ The [section and connection source notes, R80–R86](SOURCE_NOTES_SEC_20261124.m
 The [exterior prescription source record](SOURCE_NOTES_SEC_20261124.md#exterior-curvature-prescription--24-november-2026) identifies the conformal weights, round rigidity and unobstructedness, and the compact Sobolev estimates used in the new full-domain curvature calculation.
 
 [Fixed-margin Bach concentration sources, R91–R98](SOURCE_NOTES_SEC_20261124.md#fixed-margin-bach-concentration--24-november-2026) cover the ALE boundary formulas, spherical links, Bach-flat compactification, closed gap, exact critical compactness and Sobolev smoothing.
+
+## Core-and-chamber test and the necklace, 24 November 2026
+
+The [source records R99–R108](SOURCE_NOTES_DIRAC_B23_20261124.md) cover Schoen's analysis of the Yamabe problem on a circle times a sphere, the Kobayashi inequality, low-dimensional surgery bounds for the Yamabe invariant, the Chang–Qing–Yang statement of the conformally invariant sphere theorem with its equality case, and the surgery descriptions of positive scalar curvature and of homotopy four-spheres from balanced presentations. All were read through text extraction on that date; the inspection level of each is stated in its record. Records R107–R108, added the same day for the manuscript revision, cover the Caffarelli–Gidas–Spruck symmetry theorem and the passages of the NIST Digital Library of Mathematical Functions on Jacobian elliptic functions and complete elliptic integrals.
