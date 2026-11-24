@@ -24,7 +24,7 @@ SEC; global twistor-spinor and coupled Dirac existence belong to DIR.
 
 Read the [spherical transmission calculation](reviews/SEC_SPHERICAL_TRANSMISSION_20261124.md), [Weyl-energy threshold and compactness assessment](reviews/SEC_CAP_COMPACTNESS_AND_YAMABE_WALL_20261124.md) and [preceding handoff](continuation-notes/02_AFTER_SPHERICAL_TRANSMISSION_AND_YAMABE_WALL_20261124.md). The [prior construction assessment](reviews/SEC_B05_GLOBAL_CONSTRUCTION_20261124.md) and [two-sided section estimate](reviews/SEC_SECTION_ENERGY_20261124.md) give the earlier dependencies.
 
-The [branch manuscript](manuscript/twistor_sections_and_chiral_weyl_curvature.tex) derives the analytical results through E39 from local sections through the sharp marked Yamabe-zero threshold. Its [build instructions and source record](manuscript/README.md) accompany the draft.
+The [branch manuscript](manuscript/twistor_sections_and_chiral_weyl_curvature.tex) derives the assessed analytical results through E58, including the equal-energy exterior construction, its radial strain near the Yamabe wall, the conditional smooth ALE limit classification, the closed critical-value gap, and the compact-gauge and shrinking-cap results. Its [build instructions and source record](manuscript/README.md) accompany the draft.
 
 The [exterior prescription assessment](reviews/SEC_EXTERIOR_REGULARITY_AND_RADIAL_COST_20261124.md) proves local prescription after an energy-preserving exterior change, and gives a quantitative limitation on radial strain. [Handoff after E48](continuation-notes/03_AFTER_EXTERIOR_REGULARITY_AND_RADIAL_COST_20261124.md).
 

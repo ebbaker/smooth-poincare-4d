@@ -199,3 +199,5 @@ session; merely saving or reading the prompt does not.
 ## Latest assessed handoff
 
 The active branch handoff is [subcritical Bach concentration and the annular residual](04_AFTER_SUBCRITICAL_BACH_CONCENTRATION_20261124.md).
+
+The [working manuscript](../manuscript/twistor_sections_and_chiral_weyl_curvature.tex) includes the proofs through SEC-E58. Its final section states the annular estimate proposed for SEC-B34.

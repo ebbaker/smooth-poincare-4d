@@ -23,3 +23,5 @@ The continuation ran the exact-id diagnostic and checked the app history reader 
 The exterior-curvature session used runtime thread ID `6b05ddcd-08b0-83ea-9898-a0951389e0da`. Its [unregistered public excerpt](UNREGISTERED_PARTIAL_SEC_EXTERIOR_20261124.md) contains the request and completed public updates. Both local checks found no source, and the app reader did not supply the conversation.
 
 The [same unregistered public excerpt](UNREGISTERED_PARTIAL_SEC_EXTERIOR_20261124.md#continuation-on-subcritical-concentration--partial-public-excerpt) also contains completed messages from the subcritical-concentration continuation. Its exact source and native title were still unavailable.
+
+The same [partial public excerpt](UNREGISTERED_PARTIAL_SEC_EXTERIOR_20261124.md#manuscript-revision-through-sec-e58--partial-public-excerpt) includes the request and completed progress updates for the manuscript revision through SEC-E58.

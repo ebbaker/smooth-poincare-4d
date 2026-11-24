@@ -57,3 +57,7 @@ Assessed SEC-B24–B28 and E40–E48. The [research assessment](reviews/SEC_EXTE
 ## 24 November 2026 · fixed-margin Bach concentration
 
 Assessed SEC-B29–B33 and E49–E58. The [research assessment](reviews/SEC_SUBCRITICAL_BACH_CONCENTRATION_20261124.md) proves the one-Euclidean-end and uniform residual results, establishes a first closed critical value if the subcritical spectrum is nonempty, and tests compact Sobolev gauges and shrinking marks. The [continuation](continuation-notes/04_AFTER_SUBCRITICAL_BACH_CONCENTRATION_20261124.md) turns to annular energy loss.
+
+## 24 November 2026 · manuscript through SEC-E58
+
+Integrated the exterior prescription, fixed-reference sign criterion, radial strain examples, smooth ALE limit restrictions, energy gap and compact-gauge results in the [working manuscript](manuscript/twistor_sections_and_chiral_weyl_curvature.tex). Earlier derivations now include the mixed-order linearization, fixed-end corrections, and both Yamabe-wall estimates. The closing section states the long-annulus problem for sequences with small total Bach norm. The [input record](manuscript/README.md) identifies both sets of assessed results and pins the 58 derivation notes.

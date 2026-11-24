@@ -135,3 +135,7 @@ reopens its named B decision rather than satisfying the failed premise.
 | SP4-FOT-SEC-E58 | B33 | Assessed. [If the set of subcritical nonzero closed critical energies is nonempty, its least value is attained and exceeds 4π².](../notes/SEC_E58_20261124.md) |
 | SP4-FOT-SEC-B34 | E55–E58 | Ready. [Select a length-independent annular energy estimate.](../continuation-notes/04_AFTER_SUBCRITICAL_BACH_CONCENTRATION_20261124.md) |
 | SP4-FOT-SEC-E59 | B34 and its issued request | Reserved for the first annular test. |
+
+## Manuscript integration · 24 November 2026
+
+The [working manuscript](../manuscript/twistor_sections_and_chiral_weyl_curvature.tex) now incorporates the assessed results through SEC-E58. Its [source record](../manuscript/README.md) identifies the derivations, assessments and bibliography used. SEC-B34 remains the next conceptual decision on annular energy. SEC-E59 awaits a fixed problem and an issued request. [Research handoff](../continuation-notes/04_AFTER_SUBCRITICAL_BACH_CONCENTRATION_20261124.md)

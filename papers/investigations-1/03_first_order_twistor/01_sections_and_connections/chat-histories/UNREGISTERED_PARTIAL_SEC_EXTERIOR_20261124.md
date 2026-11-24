@@ -37,3 +37,19 @@ The fixed energy margin rules out a smooth limit with two or more ALE ends. The 
 The one-ended case is now much narrower. Its link must be \(S^3\), and any nonflat limit uses more than \(4\pi^2\) in each chirality while leaving positive energy elsewhere. I’m checking whether that leftover energy gives a uniform gap and what happens when the marked metrics converge on the original manifold.
 
 For exactly Bach-flat metrics, the compactness argument gives a gap above \(4\pi^2\). If any positive critical energy lies below \(8\pi^2\), the least such value is attained. The remaining question is whether metrics with merely small total Bach norm can lose energy along a long neck. I’m recording that as the next test.
+
+## Manuscript revision through SEC-E58 · partial public excerpt
+
+24 November 2026, America/New_York. The exact-thread diagnostic again found no local source, and the app history reader was unavailable. The native title, turn ID and original timestamps could not be verified. This excerpt contains the request and completed public updates visible during the revision.
+
+### User
+
+Please include all of the results in the manuscript
+
+### Assistant · completed public updates
+
+I’ll check where the manuscript stops, then integrate the later results in proof order, with the hypotheses for the exact and approximately Bach-flat cases stated separately. I’ll also rebuild and check the PDF.
+
+The manuscript now connects two results that were previously in separate notes: an exterior perturbation can make the radial Weyl equation solvable at exactly the original energy, yet the strain of that solution can diverge near the Yamabe-zero threshold. I’m checking the later energy-gap proofs against the earlier sections and restoring a few estimates that the first draft had only summarized.
+
+The manuscript now covers the assessed results through SEC-E58. Its final section identifies exactly where the compactness argument stops for sequences with small total Bach norm. I’m checking the compiled equations, references, and page layout.
