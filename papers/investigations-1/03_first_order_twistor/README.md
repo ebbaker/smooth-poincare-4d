@@ -33,3 +33,5 @@ manuscript copies or duplicate live task rows.
 Use the [reference guide](references/README.md), [draft history](DRAFT_HISTORY.md),
 [chat provenance](chat-histories/README.md), and [continuation guide](continuation-notes/CONTINUATION.md).
 Each child has its own full planning scaffold and activation prompt.
+
+The activated SEC session obtained a [fixed-metric section-energy comparison](01_sections_and_connections/reviews/SEC_B05_GLOBAL_CONSTRUCTION_20261124.md), then a [sharp spherical transmission calculation](01_sections_and_connections/reviews/SEC_SPHERICAL_TRANSMISSION_20261124.md) and [marked variational assessment](01_sections_and_connections/reviews/SEC_CAP_COMPACTNESS_AND_YAMABE_WALL_20261124.md). Its [continuation](01_sections_and_connections/continuation-notes/02_AFTER_SPHERICAL_TRANSMISSION_AND_YAMABE_WALL_20261124.md) studies the exterior correction on the given manifold.

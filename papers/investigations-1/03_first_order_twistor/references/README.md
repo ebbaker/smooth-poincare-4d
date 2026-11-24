@@ -56,3 +56,5 @@ link these canonical records. No duplicate bibliography, reading-copy
 collection, or new primary-source inspection claim is created by setup.
 
 The active DIR investigation rechecked the [shared conventions](../notes/SH_E00_20261124.md) and [recognition hypotheses](../notes/SH_E01_20261124.md). The [additional spinorial and scalar sources](../../../../references/SOURCE_NOTES_DIRAC_20261124.md) are cataloged at root.
+
+The [section and connection primary records](../../../../references/SOURCE_NOTES_SEC_20261124.md) supplement the source inventory with the core, index, conformal jets, tractor geometry and Sobolev composition inputs used in the activated SEC session.

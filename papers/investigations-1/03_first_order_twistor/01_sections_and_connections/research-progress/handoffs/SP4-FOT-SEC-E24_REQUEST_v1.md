@@ -1,0 +1,9 @@
+# SP4-FOT-SEC-E24 · issued request v1
+
+24 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. The author-selected lead was retained. The lead's actual model identifier and effort are unavailable. Execution helpers are requested/configured as gpt-6.2-sol/ultra. A configuration is not independent backend attestation.
+
+Exact common inputs pinned in brainstorm/notes/SEC_B17_STATIONARITY_WITH_A_RETAINED_CAP_20261124.md and its linked B16 manifest.
+
+Fixed variational test. M any closed oriented smooth real Riemannian homotopy four-sphere. K a smoothly embedded closed coordinate 4-ball with a given smooth ASD metric extending across its boundary as a metric germ; differentiate E₊ among smooth metrics fixed on K by all exterior-supported trace-free variations. Derive exterior stationary ⇒ Bach-flat globally (including why ASD cap Bach-flat), then check local analytic conformal representatives and the identity theorem for W⁺, using Lassas–Liimatainen arXiv:1912.08030v2 Thm 1.3(c), §3; do not apply Thm 1.4 directly to a single chirality. Conclude dichotomy for a round versus genuinely nonflat ASD core, quantify the strict local descent direction with compact support and note missing uniformity. Use BGI+M arXiv:2508.06633v1 §1, shared signature and E07. One smooth closed problem, no flow or estimates along a sequence. Escalate if propagation requires extra hypotheses.
+
+Write only notes/SEC_E24_20261124.md and research-progress/handoffs/SP4-FOT-SEC-E24_RETURN_v1.md under this owner. Include date, intended author, assistance, verified versions, requested/configured vs actually visible metadata, source passages, hypotheses, evidence and missing premises. The lead assesses and integrates shared files. Read the owning register and AGENTS.md. No numerical runs, additional helpers, shared-file edits or chat registration.

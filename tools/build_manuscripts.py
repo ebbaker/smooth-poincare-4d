@@ -15,6 +15,12 @@ MANUSCRIPTS = {
     '01_chiral_metric_evolution': ('investigations-1', 'chiral_curvature_and_metric_evolution.tex'),
     '02_bach_flow': ('investigations-1', 'bach_flow_and_smooth_poincare.tex'),
     '03_first_order_twistor': ('investigations-1', 'first_order_twistor_and_smooth_poincare.tex'),
+    '03_first_order_twistor/01_sections_and_connections': (
+        'investigations-1', 'twistor_sections_and_chiral_weyl_curvature.tex'
+    ),
+    '03_first_order_twistor/02_dirac_and_twistor_spinors': (
+        'investigations-1', 'dirac_twistor_and_yamabe_rigidity.tex'
+    ),
     '01_generalized_isothermal_coordinates': ('initial-investigations', 'generalized_isothermal_wave_metrics.tex'),
     '02_chiral_descent_and_double_copy': ('initial-investigations', 'chiral_connection_descent_and_double_copy.tex'),
 }

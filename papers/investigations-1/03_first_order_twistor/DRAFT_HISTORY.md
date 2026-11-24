@@ -124,3 +124,13 @@ The selected lead integrated SH-B01 under the author's DIR invocation. SH-E00 ve
 SH-B03 [assessed the global quantifier](reviews/SH_B03_SPINORIAL_GLOBAL_PREMISE_20261124.md) after DIR-B05. The two recognizing criteria have explicit additional premises for which arbitrary-sphere existence is open.
 
 The DIR continuation established [five-eigenfunction round rigidity and its weak near-equality law](02_dirac_and_twistor_spinors/reviews/DIR_B22_FIVE_EIGENFUNCTIONS_20261124.md) and [an unconditional punctured Dirac boundary construction with scoped obstructions](02_dirac_and_twistor_spinors/reviews/DIR_B19_GREEN_BOUNDARY_ASSESSMENT_20261124.md). The [next metric-construction question](02_dirac_and_twistor_spinors/continuation-notes/02_AFTER_FIVE_EIGENFUNCTION_RIGIDITY_20261124.md) is owned by DIR.
+
+## 24 November 2026 · section estimates, interfaces and the cross-branch comparison
+
+[SH-B02](brainstorm/notes/SH_B02_SECTIONS_AND_SPINOR_20261124.md) and [SH-E02](notes/SH_E02_20261124.md) identify the projective directions and their first-order residuals furnished by a nonvanishing positive spinor. The [SEC assessment](01_sections_and_connections/reviews/SEC_B05_GLOBAL_CONSTRUCTION_20261124.md) records the updated existence dependency. SH-E01 remains the canonical smooth recognition audit.
+
+## 24 November 2026 · spherical transmission and the Yamabe sign boundary
+
+SEC obtained a [sharp angular measurement on a round patch with arbitrary exterior](01_sections_and_connections/reviews/SEC_SPHERICAL_TRANSMISSION_20261124.md) and a [variational compactness criterion](01_sections_and_connections/reviews/SEC_CAP_COMPACTNESS_AND_YAMABE_WALL_20261124.md) with explicit degenerating examples on the standard sphere. The exact and strict recognizing alternatives remain in SH-E01. The new [exterior balancing problem](01_sections_and_connections/continuation-notes/02_AFTER_SPHERICAL_TRANSMISSION_AND_YAMABE_WALL_20261124.md) has one owner in SEC.
+
+On standard smooth S⁴ the infimum in the marked Yamabe-zero class is exactly 8π² and is unattained. The [distinct proof check](01_sections_and_connections/notes/SEC_E38_20261124.md) confirmed the scaled neck bounds and placement of the round marking.

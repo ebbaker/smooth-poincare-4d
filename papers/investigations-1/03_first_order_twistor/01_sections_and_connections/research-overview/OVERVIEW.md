@@ -11,7 +11,7 @@ is invoked, it supersedes the initial scope and sequencing recommendations.
 The lead may pursue new leads and revise or add B/E tasks without renewed
 permission; bounded analytical and example-based execution is delegated to
 gpt-6.2-sol/ultra. Existing evidence standards and packet boundaries remain.
-Preparing that grant has not activated research.
+The author activated broad SEC research on 24 November 2026. The original planning sections below preserve the starting questions.
 
 This branch owns SP4-FOT-SEC-* tasks. Read the [plan](../research-plan/PLAN.md)
 and [sole register](../research-progress/REGISTER.md), together with the
@@ -148,3 +148,19 @@ The round Hessian and deformation complex are calibration inputs only.
 Their TT kernel control supplies neither an arbitrary-metric inverse nor
 a boundary theorem. Failed gauges or estimates return to the named B
 decision and preserve the tested scope. No global result is claimed at setup.
+
+## Assessed results from the activated session
+
+The [section-energy comparison](../reviews/SEC_SECTION_ENERGY_20261124.md) measures what free local triples can detect on a fixed metric. The [global assessment](../reviews/SEC_B05_GLOBAL_CONSTRUCTION_20261124.md) distinguishes a conditional smooth continuation theorem, exact and corrected collar problems, and the failure of a flat product torus collar to fit any global ASD endpoint. [Next interface problem](../continuation-notes/01_AFTER_SECTION_ENERGY_AND_COLLARS_20261124.md).
+
+## Spherical interface and the global variational problem
+
+A chiral perturbation supported in a cap forces a calculable response in the opposite Weyl curvature. Five angular projections are fixed inside a round annulus even with an arbitrary exterior. The [transmission assessment](../reviews/SEC_SPHERICAL_TRANSMISSION_20261124.md) also identifies exactly which signed radial sources have compact linear metric lifts. Smooth recognition follows from a marked Weyl-energy minimizing sequence if it is strongly compact in gauges on the original manifold and an open piece of the cap survives. The [variational assessment](../reviews/SEC_CAP_COMPACTNESS_AND_YAMABE_WALL_20261124.md) tests the limits of that criterion on the standard sphere and separates the subcritical energy range from the Yamabe-zero boundary.
+
+## Removing the finite exterior correction
+
+Every marked reference admits arbitrarily close regular references on the same Weyl-energy level. An exact radial deformation exists for a short interval through each regular center. At a singular original center an explicit condition on its adjoint fields suffices for a lift smooth in the square root of the contraction parameter. Even at regular centers the specific direction can become arbitrarily expensive at the Yamabe wall. [Integrated theorem, sign condition and degeneration](../reviews/SEC_EXTERIOR_REGULARITY_AND_RADIAL_COST_20261124.md)
+
+## Concentration below the Yamabe wall
+
+A supplied nonflat smooth ALE component has one Euclidean end and a smooth compactification, consumes over half the available two-sided energy budget and leaves a uniformly positive residual in each chirality. A compact Sobolev gauge on the original manifold instead produces an actual closed critical class with shrinking marks. [Fixed-margin results and hypotheses](../reviews/SEC_SUBCRITICAL_BACH_CONCENTRATION_20261124.md)

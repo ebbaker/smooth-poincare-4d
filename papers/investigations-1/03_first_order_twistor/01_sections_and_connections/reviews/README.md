@@ -6,3 +6,9 @@ the reviewer, actual settings, exact inputs, shared premises, independent
 recomputation and limitations. A model change is not independent specialist
 review. Setup creates no mathematical review outcome. See the
 [sole register](../research-progress/REGISTER.md).
+
+The [sharp spherical transfer](SEC_SPHERICAL_TRANSMISSION_20261124.md) and the [marked variational problem](SEC_CAP_COMPACTNESS_AND_YAMABE_WALL_20261124.md) assess the second SEC research milestone.
+
+The [exterior regularity and radial cost assessment](SEC_EXTERIOR_REGULARITY_AND_RADIAL_COST_20261124.md) integrates E40–E48, including the E45 check and the independent longitudinal calculation in E47.
+
+The [subcritical concentration assessment](SEC_SUBCRITICAL_BACH_CONCENTRATION_20261124.md) integrates E49–E58 and distinguishes exact closed critical compactness from the supplied convergence hypotheses for approximately critical sequences.

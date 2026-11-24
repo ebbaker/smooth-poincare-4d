@@ -1,0 +1,9 @@
+# SP4-FOT-SEC-E33 · issued request v1
+
+24 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. The author-selected lead was retained. The lead's actual model identifier and effort are unavailable. Execution helpers are requested/configured as gpt-6.2-sol/ultra. A configuration is not independent backend attestation.
+
+All exact inputs listed in brainstorm/notes/SEC_B20_EXACT_ANGULAR_OBSERVATION_20261124.md and the linked B18/B16 manifests.
+
+Fixed flat-ball radial class f=χ(r)Z with arbitrary signed smooth radial χ supported in B_{1/2}, Z any fixed nonzero real STF polarization. Prove iff compactly supported smooth tracefree metric lift in B exactly when m₀=m₂=0: test with constant and |x|²Z adjoint modes, and use u=16D₊*(G*χ Z), Δ²G=δ, E22 exterior bi-potential for sufficiency, local metric weights on round ball. For a general background round in the chart, pair f_round with any global cokernel field. Transform the latter to its flat representative, note Δ²z=0 on B and use the spherical mean m₀ z(0)+(m₂/8)Δz(0) in dimension four to identify at most ten center data on all radial-polarized inputs. State whether nonzero exterior signal forces a global cokernel obstruction. Optionally note exact F(th) with compactly supported O(t²) change of source, not exact t f. Both aspects depend only on E03, E21–E23 and B20. No uniqueness or nonlinear fixed-chord assertion. Escalate any missing jet or weight.
+
+Write only notes/SEC_E33_20261124.md and research-progress/handoffs/SP4-FOT-SEC-E33_RETURN_v1.md under this owner. Include date, intended author, assistance, verified versions, requested/configured vs actually visible metadata, source passages, hypotheses, evidence and missing premises. The lead assesses and integrates shared files. Read the owning register and AGENTS.md. No numerical runs, additional helpers, shared-file edits or chat registration.

@@ -146,3 +146,15 @@ owns the inspected versions, passages, and limitations for this comparison.
 [R54–R59 and rechecked earlier passages](SOURCE_NOTES_DIRAC_20261124.md) cover Listing’s twisted comparison, the fixed-spin-bundle metric identification, and the ordinary and modified Yamabe functionals. The individual derivations distinguish sphere rigidity from production of the required geometry.
 
 The [continued spinorial source checks, R60–R79](SOURCE_NOTES_DIRAC_CONTINUATION_20261124.md) cover Hopf bundles, eigenmap examples, signed degree concentration, compact Dirac invertibility, the Green pole and the boundary integral.
+
+## Activated first-order section research, 24 November 2026
+
+The [section and connection source notes, R80–R86](SOURCE_NOTES_SEC_20261124.md) cover the Taub–NUT core, conformal normal two-jet and the off-ASD symbol index, conformal transport and finite-regularity gauge arguments. They also link earlier primary records used in the recognition and operator comparisons.
+
+[R87–R88, spherical interfaces](SOURCE_NOTES_SEC_20261124.md#spherical-cap-and-exterior-variation--24-november-2026) cover conformal analyticity at Bach-flat metrics and simultaneous approximation of Weyl energy and the Yamabe constant by classes with a flat germ.
+
+[R89–R90](SOURCE_NOTES_SEC_20261124.md#spherical-cap-and-exterior-variation--24-november-2026) add the obstruction-tensor normalization and the circle-bundle curvature formula used in the Yamabe-sign test.
+
+The [exterior prescription source record](SOURCE_NOTES_SEC_20261124.md#exterior-curvature-prescription--24-november-2026) identifies the conformal weights, round rigidity and unobstructedness, and the compact Sobolev estimates used in the new full-domain curvature calculation.
+
+[Fixed-margin Bach concentration sources, R91–R98](SOURCE_NOTES_SEC_20261124.md#fixed-margin-bach-concentration--24-november-2026) cover the ALE boundary formulas, spherical links, Bach-flat compactification, closed gap, exact critical compactness and Sobolev smoothing.

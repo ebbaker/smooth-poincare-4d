@@ -1,0 +1,9 @@
+# SP4-FOT-SEC-E36 · issued request v1
+
+24 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. The author-selected lead was retained. The lead's actual model identifier and effort are unavailable. Execution helpers are requested/configured as gpt-6.2-sol/ultra. A configuration is not independent backend attestation.
+
+Exact input versions in brainstorm/notes/SEC_B22_POSITIVE_SUBCRITICAL_GAUGES_20261124.md.
+
+One conditional class only, positive Y and E₊≤8π²−δ, δ>0. In its unit-volume Yamabe gauge derive Y≥√(48δ), the inhomogeneous 4D Sobolev inequality and curvature L² bounds using E10/CGB and universal sphere upper bound. In a separate unit-volume CGY σ₂ gauge inspect Chang–Gursky–Yang IHÉS 98 (2003), §1 Thm 1.2, p.112, and hypotheses incl positive scalar branch. Normalize Schouten A=(Ric−Rg/6)/2; convert CGY's A twice this A, compute σ₂(A)=(8π²−E₊)/2 and σ₁=R/6. Prove Ric_min≥2σ₂/σ₁ by sharp eigenvalue algebra. Derive quantitative positive lower Ricci, diameter and relative ball volume estimate if a separate uniform upper scalar bound in this second gauge is supplied. Verify no bound on R there has been deduced from the first gauge; say if some stronger assertion fails by pointwise algebra. Note interval below 4π² is covered by SH-E01 when Y>0. No flow, compactness theorem or existence on arbitrary M to infer. One proof, no numerics. Escalate normalization, admissibility or source-hypothesis failure.
+
+Write only notes/SEC_E36_20261124.md and research-progress/handoffs/SP4-FOT-SEC-E36_RETURN_v1.md under this owner. Include date, intended author, assistance, verified versions, requested/configured vs actually visible metadata, source passages, hypotheses, evidence and missing premises. The lead assesses and integrates shared files. Read the owning register and AGENTS.md. No numerical runs, additional helpers, shared-file edits or chat registration.

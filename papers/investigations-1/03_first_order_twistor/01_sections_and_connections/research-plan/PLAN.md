@@ -11,7 +11,7 @@ is invoked, it supersedes the initial scope and sequencing recommendations.
 The lead may pursue new leads and revise or add B/E tasks without renewed
 permission; bounded analytical and example-based execution is delegated to
 gpt-6.2-sol/ultra. Existing evidence standards and packet boundaries remain.
-Preparing that grant has not activated research.
+The author subsequently invoked this grant. The initial specifications below retain the setup boundary. Issued packets and assessed decisions govern their executed forms.
 
 This file specifies work. The [sole register](../research-progress/REGISTER.md)
 owns live status; the [overview](../research-overview/OVERVIEW.md) states
@@ -218,3 +218,43 @@ a real external dependency or author decision, an author stop, or a
 genuine execution limit. Do not invent further work once the requested
 scope is complete. A conditional endpoint with unproved premises is
 reported as conditional, even if its last implication is elementary.
+
+## Activated extensions
+
+SEC-B06 fixes two independent quantitative questions about simultaneous section separation and retention of a local ASD core. SEC-E06 tests a sharp algebraic power for three nearly coincident directions. SEC-E07 tests the topological energy cost of a prescribed Taub–NUT ball. The [decision](../brainstorm/notes/SEC_B01_B06_ACTIVATION_20261124.md) and versioned requests give the data, finite bounds and escalation.
+
+SEC-B07 fixes the infimum of the weighted differential defect over freely refined orthogonal section triples for a fixed metric. SEC-E08 tests the proposed upper bound by a conformal normal two-jet, radial chiral gauge and localization. See the [decision](../brainstorm/notes/SEC_B07_RELAXED_SECTION_ENERGY_20261124.md).
+
+SEC-B08 and SEC-E09 test the Fredholm index of the transported Weyl derivative on the fixed TT slice at an arbitrary reference, including the actual conformal Killing space. A symbol calculation does not require an ASD reference.
+
+SEC-B09 and SEC-E10 examine a finite recognition time on the fixed-volume radial path, including the sign of the Yamabe constant at the scalar-flat wall.
+
+SEC-B10 and SEC-E11/E12 test two different requirements of the full metric domain, the entire adjoint spectrum on embedded flat torus collars, and the actual radial tangent on the equal-curvature Einstein product.
+
+SEC-B11/E13 test a two-ended nonlinear boundary problem for the particular radial forcing on an embeddable volume-preserving T³ collar. Both end collars are required to match exactly.
+
+SEC-B12 permits prescribed interior changes of forcing with unchanged endpoint target. E14 tests one spectral correction for even axial data of arbitrary size. E15 tests ten moment corrections and a nonlinear image theorem for small general torus-orbit matrices.
+
+SEC-B13 tests unrestricted four-dimensional variations against the actual axial forcing at the flat endpoint (E16) and against infinitely many tangential adjoint tests (E17). Support at the two ends is retained.
+
+SEC-B14/E18 test the full nonlinear image near the flat end by periodic completion of the fixed-end collar, accounting for diffeomorphism, conformal and flat-moduli freedom. A distinct fixed proof audit is required before accepting the stronger exclusion.
+
+SEC-B15/E20 test global compatibility of the exact flat product conformal data left by a successful local correction. A contractible loop and its normal tractor transport probe both the qualitative obstruction and the geometric price of filling it.
+
+For the original B02–B05 chain, the activated choices use a full-domain fixed-volume curvature target, a one-chart contraction with a verified round neighborhood, and same-manifold completion at finite regularity. The [sole register](../research-progress/REGISTER.md) links the underlying decisions and their evidence.
+
+## Next interface question
+
+SEC-B16 selects a two-sided transmission problem at a simply connected spherical interface. SEC-E21 is reserved for one specific cap mode after the gauge and retained data are fixed. The [dated continuation](../continuation-notes/01_AFTER_SECTION_ENERGY_AND_COLLARS_20261124.md) gives the stopping tests, candidate calibration and limits of transfer to an unknown exterior.
+
+## Spherical transmission and exterior control · 24 November 2026
+
+The round calibration and the arbitrary-exterior test are [assessed together](../reviews/SEC_SPHERICAL_TRANSMISSION_20261124.md). The full local field equation fixes five spherical projections in a round buffer, including their sharp annular norm. At an arbitrary background with a round patch, a global local-in-target inverse introduces finitely many exterior source coefficients. The new construction problem is to remove those coefficients or to supply an independent compact minimizing sequence. The [variational assessment](../reviews/SEC_CAP_COMPACTNESS_AND_YAMABE_WALL_20261124.md) gives the compactness test, the Yamabe energy barrier and the estimates presently available strictly below it. The [sole register](../research-progress/REGISTER.md) records all packet assessments.
+
+## Exterior prescription and continuation cost
+
+B24–B28 and E40–E48 test an exterior change of reference, a fixed-reference kernel balance, and loss of directional estimates at the Yamabe wall. The [assessment](../reviews/SEC_EXTERIOR_REGULARITY_AND_RADIAL_COST_20261124.md) records the exact local theorem and the remaining global estimate. The [next handoff](../continuation-notes/03_AFTER_EXTERIOR_REGULARITY_AND_RADIAL_COST_20261124.md) selects the positive subcritical band for B29; E49 is reserved.
+
+## Fixed-margin concentration and residual energy
+
+B29–B33 and E49–E58 address the complete smooth ALE alternatives, critical closed classes and compact conformal gauges. The [assessment](../reviews/SEC_SUBCRITICAL_BACH_CONCENTRATION_20261124.md) and [dated continuation](../continuation-notes/04_AFTER_SUBCRITICAL_BACH_CONCENTRATION_20261124.md) specify how an annular estimate could narrow the remaining failure of energy accounting.

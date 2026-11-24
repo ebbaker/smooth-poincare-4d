@@ -1,0 +1,9 @@
+# SEC-B10 · two global tests of the full metric domain
+
+24 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. The author-selected lead was retained. The lead's actual model identifier and effort are unavailable. Execution helpers are requested/configured as gpt-6.2-sol/ultra. A configuration is not independent backend attestation.
+
+The removal of the TT restriction in B02 calls for separate tests of two claims. A uniform bound on a right inverse for all targets would be sufficient for openness with estimates. The particular field W_r could be substantially easier or harder than the least singular test field. Preserve the distinction by running one test of each on a specified family.
+
+For the first, choose an embedded torus hypersurface T³ inside a coordinate ball: the boundary of a tubular neighborhood of a product torus T² in R⁴. Insert an arbitrarily long **flat product** T³ collar with fixed caps. A parallel self-dual Weyl test tensor in the collar, cut off over its length, probes the bottom of LL* in curvature units. The background W vanishes there. E11 tests a volume-normalized family on every M and whether projection off a possibly nonzero exact kernel affects the claim. Prefer an arbitrarily large test space for a fixed number of eigenvalues over assuming an uncontrolled kernel dimension.
+
+For the second choose the equal-curvature Einstein product S²×S², in its product orientation. It is closed, simply connected, spin and signature zero. Its Euler characteristic and intersection form differ from those of a homotopy sphere. E12 asks whether the radial tangent itself is obstructed on this example through the stationarity of its nonzero Weyl energy. This example tests attempts using only the shared geometric/topological properties just listed. The given construction problem still quantifies specifically over homotopy four-spheres. Both tests have smooth metrics on their original manifolds.

@@ -35,3 +35,25 @@ a3c0c5a3f5e3fc3c89b3abd5d740cee0294e074d83c3138220aaf761309559cd. Actual selecte
 the lead alone prepared this documentation revision. No research, helper
 or numerical packet was launched. Manuscripts and scientific source
 records are unchanged.
+
+## 24 November 2026 · first activated SEC research milestone
+
+Recorded the [two-sided energy estimate](reviews/SEC_SECTION_ENERGY_20261124.md), [full metric continuation and gluing assessment](reviews/SEC_B05_GLOBAL_CONSTRUCTION_20261124.md) and [next two-sided interface problem](continuation-notes/01_AFTER_SECTION_ENERGY_AND_COLLARS_20261124.md). The inputs, model configuration and scope of the analytical checks are preserved with the frozen requests and returns. The current manuscript retains its earlier evidence status.
+
+## 24 November 2026 · spherical transmission and variational compactness
+
+The branch assessed the [round multiplier, sharp interior observation and localized exterior controls](reviews/SEC_SPHERICAL_TRANSMISSION_20261124.md). The [variational results](reviews/SEC_CAP_COMPACTNESS_AND_YAMABE_WALL_20261124.md) connect a surviving round cap and same-manifold compactness to SH-E01, and analyze almost-stationary doubled Taub–NUT metrics with both signs of the Yamabe constant. The [next handoff](continuation-notes/02_AFTER_SPHERICAL_TRANSMISSION_AND_YAMABE_WALL_20261124.md) returns to the actual exterior coefficients. Research notes, issued packets and the lead assessments retain separate evidence records.
+
+On standard smooth S⁴ the infimum in the marked Yamabe-zero class is exactly 8π² and is unattained. The [distinct proof check](notes/SEC_E38_20261124.md) confirmed the scaled neck bounds and placement of the round marking.
+
+## 24 November 2026 · analytical manuscript
+
+Prepared [*Twistor sections and chiral Weyl curvature on homotopy four-spheres*](manuscript/twistor_sections_and_chiral_weyl_curvature.tex) for Edward B. Baker III. The draft derives the fixed-metric Frobenius bounds, the metric prescription and boundary results, the conditional recognition criteria, and the sharp unattained marked Yamabe-zero infimum on the standard sphere. The last section identifies the global exterior and compactness estimates still needed. [Manuscript provenance and build](manuscript/README.md) records working inputs and available model metadata. The research continuation remains SEC-B24.
+
+## 24 November 2026 · regular exterior references and radial strain
+
+Assessed SEC-B24–B28 and E40–E48. The [research assessment](reviews/SEC_EXTERIOR_REGULARITY_AND_RADIAL_COST_20261124.md) proves local prescription through an equal-energy exterior change of reference, gives a conditional lift through the original metric, and identifies regular marked Yamabe-wall sequences on which the radial tangent diverges. The [next research handoff](continuation-notes/03_AFTER_EXTERIOR_REGULARITY_AND_RADIAL_COST_20261124.md) asks what a fixed subcritical margin buys. The current manuscript records the earlier E39 milestone.
+
+## 24 November 2026 · fixed-margin Bach concentration
+
+Assessed SEC-B29–B33 and E49–E58. The [research assessment](reviews/SEC_SUBCRITICAL_BACH_CONCENTRATION_20261124.md) proves the one-Euclidean-end and uniform residual results, establishes a first closed critical value if the subcritical spectrum is nonempty, and tests compact Sobolev gauges and shrinking marks. The [continuation](continuation-notes/04_AFTER_SUBCRITICAL_BACH_CONCENTRATION_20261124.md) turns to annular energy loss.

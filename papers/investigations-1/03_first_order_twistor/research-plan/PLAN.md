@@ -19,7 +19,7 @@ They authorize new leads, alternative approaches and revised or new B/E
 tasks connected to the selected question, with all bounded analytical and
 example-based execution delegated to gpt-6.2-sol/ultra. This includes necessary
 shared work; the lead preserves task ownership, packet bounds and scientific
-hypotheses. Preparing the grants has not activated any research task.
+hypotheses. The later author invocations are recorded in the respective registers.
 
 The parent owns conventions, inherited endpoint implications and genuine
 cross-branch comparisons. Construction tasks belong to the
@@ -115,3 +115,9 @@ not exclude an entire proposal. The [continuation note](../continuation-notes/CO
 supplies routing and activation instructions; saving it starts no work.
 
 **SH-E00 (24 November).** Before closing SH-B01, check the actual named AHS, GHN, Fine and companion conventions and versions. Return passage-specific evidence or mark a source unavailable. The [request](../research-progress/handoffs/SP4-FOT-SH-E00_REQUEST_v1.md) fixes the six checks. The result limits shared imports.
+
+## Sections and spinor comparison, 24 November
+
+SH-B02 compares the assessed round operators and freezes one implication from a chiral spinor to three local section defects. [SH-E02](../notes/SH_E02_20261124.md) gives the estimate on the nonzero locus. Each branch retains its own metric construction problem.
+
+The new SEC work is owned by its [spherical-interface assessment](../01_sections_and_connections/reviews/SEC_SPHERICAL_TRANSMISSION_20261124.md) and [marked variational problem](../01_sections_and_connections/reviews/SEC_CAP_COMPACTNESS_AND_YAMABE_WALL_20261124.md). The shared existence test remains SH-E01. In particular the sign of a Yamabe class and control of the limiting smooth structure must each be verified before applying recognition.

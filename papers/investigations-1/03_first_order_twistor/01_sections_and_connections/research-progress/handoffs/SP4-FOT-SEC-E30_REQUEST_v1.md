@@ -1,0 +1,9 @@
+# SP4-FOT-SEC-E30 · issued request v1
+
+24 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. The author-selected lead was retained. The lead's actual model identifier and effort are unavailable. Execution helpers are requested/configured as gpt-6.2-sol/ultra. A configuration is not independent backend attestation.
+
+Exact files, SHA-256 and prior evidence in brainstorm/notes/SEC_B19_COMPACTNESS_AND_TAUB_NUT_DOUBLE_20261124.md and its linked B16 manifest.
+
+Independent local 4D estimate. At a fixed point in a smooth metric germ, or a sequence with the identical smooth germ in the same coordinates, in normal coordinates replace g by δ on |x|≤ε and restore g beyond 2ε using a fixed rescaled cutoff. Bound the chiral energy change O(ε⁴) and total ∫|B| change O(ε²) using derivative orders 0–4, curvature and its first two derivatives on the transition, with constants for that germ. Include the signs and conformal invariance of ∫|B| under arbitrary smooth positive scales in 4D (0,2 Bach has weight −2), and use E25 to mark an exact preassigned round coordinate ball by diffeo and conformal change. Clarify support after marking, original smooth manifold and need for common germ for uniform constants. One radius→0 analytical family, no experiments, no scalar sign assumption. Escalate failed weight or fourth-derivative scaling.
+
+Write only notes/SEC_E30_20261124.md and research-progress/handoffs/SP4-FOT-SEC-E30_RETURN_v1.md under this owner. Include date, intended author, assistance, verified versions, requested/configured vs actually visible metadata, source passages, hypotheses, evidence and missing premises. The lead assesses and integrates shared files. Read the owning register and AGENTS.md. No numerical runs, additional helpers, shared-file edits or chat registration.

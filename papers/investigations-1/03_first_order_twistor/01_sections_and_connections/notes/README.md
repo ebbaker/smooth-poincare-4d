@@ -6,3 +6,7 @@ Save incremental proofs and analytical records here with date, author,
 actual settings, exact inputs, source hypotheses and evidence scope.
 Conceptual decisions go in brainstorm/notes. Use the [plan](../research-plan/PLAN.md)
 and [sole register](../research-progress/REGISTER.md).
+
+The [exterior prescription assessment](../reviews/SEC_EXTERIOR_REGULARITY_AND_RADIAL_COST_20261124.md) links the E40–E48 derivations by claim, including the distinct exterior proof audit and the fixed-reference sign test.
+
+The [fixed-margin assessment](../reviews/SEC_SUBCRITICAL_BACH_CONCENTRATION_20261124.md) links E49–E58, including the smooth ALE tests, closed critical gap, and weak compact-gauge proof.

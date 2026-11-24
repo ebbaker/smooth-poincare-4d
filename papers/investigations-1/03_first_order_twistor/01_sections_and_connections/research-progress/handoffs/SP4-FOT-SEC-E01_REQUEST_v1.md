@@ -1,0 +1,9 @@
+# SP4-FOT-SEC-E01 · issued request v1
+
+24 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. The author-selected lead was retained. The lead's actual model identifier and effort are unavailable. Execution helpers are requested/configured as gpt-6.2-sol/ultra. A configuration is not independent backend attestation.
+
+Baseline HEAD e76752648b69969b1234d0295530c87fce9fcdcb. Use the seven SHA-256 pins of the parent brainstorm/notes/SETUP_AND_TASK_CROSSWALK_20261124.md. Parent SH-B01 SHA-256 4619a16de34b8138d1c499a60c447697752dc12862c808a506ef4b7d2dac70c3, SH-E01 10b7b2b71d8d693d6aab079b04a3fbd8954cbc1db2f44dd47f619e1e9ef1f62f. Use the issued 24 November SEC-B01/B06 decisions in brainstorm/notes/SEC_B01_B06_ACTIVATION_20261124.md. Shared SH-B01 and SH-E01 are assessed. Smooth real Riemannian data, curvature-operator Hilbert–Schmidt conventions, W⁺=0 for ASD.
+
+Audit PRE §§4.1–4.4 via null Koszul and ∇⁰ splitting. For smooth common g and three positive local orthogonal J on a finite cover separated modulo antipodes by a uniform positive sine, prove or refute the proposed full projected Frobenius estimate, including the exterior covariant derivative torsion sign, Hermitian vs bilinear norms, quartic and weighted integration. Check regularity actually used, one orthogonal calibration and frame invariance. No optimization, weak limit or numerics. Return an exact scoped statement with all terms or exhibit the failure; changed defect goes to B01.
+
+Write only notes/SEC_E01_20261124.md and research-progress/handoffs/SP4-FOT-SEC-E01_RETURN_v1.md under this owner. Include date, intended author, assistance, verified versions, requested/configured vs actually visible metadata, source passages, hypotheses, evidence and missing premises. The lead assesses and integrates shared files. Read the owning register and AGENTS.md. No numerical runs, additional helpers, shared-file edits or chat registration.

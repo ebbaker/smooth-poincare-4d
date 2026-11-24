@@ -20,10 +20,10 @@ They authorize new leads, alternative approaches and revised or new B/E
 tasks connected to the selected question, with all bounded analytical and
 example-based execution delegated to gpt-6.2-sol/ultra. This includes necessary
 shared work; the lead preserves task ownership, packet bounds and scientific
-hypotheses. Preparing the grants has not activated any research task.
+hypotheses. The author subsequently activated both child investigations in their own sessions.
 
 The two-branch setup was authorized and completed on 24 November.
-At setup scientific research was unactivated. On 24 November the author activated DIR and the necessary shared prerequisites. Ready means executable
+At setup scientific research was unactivated. On 24 November the author activated DIR and its shared prerequisites, then activated SEC in its own session. Ready means executable
 after activation; dependent means named inputs must be assessed first.
 Reserved E work also needs a fixed issued request. The earlier setup activated no helpers. The DIR invocation subsequently authorized the shared and branch packets recorded in their owning registers.
 
@@ -56,9 +56,9 @@ completion tests and escalation rules are in the [shared plan](../research-plan/
 | SP4-FOT-SH-E00 | E / gpt-6.2-sol/ultra; bounded primary passage inventory | Setup pins; supports SH-B01 | Assessed; [primary inspection and scope](../research-progress/handoffs/SP4-FOT-SH-E00_RETURN_v1.md) |
 | SP4-FOT-SH-B01 | B / Astra/ultra; common import choices | Setup inputs and named source reading | Assessed; [common convention and import decision](../brainstorm/notes/SH_B01_CONVENTIONS_20261124.md) |
 | SP4-FOT-SH-E01 | E / gpt-6.2-sol/ultra; fixed endpoint audit | Assessed SH-B01 | Assessed both conditional endpoints; [audit](../notes/SH_E01_20261124.md) |
-| SP4-FOT-SH-B02 | B / Astra/ultra; operator comparison | SH-B01, assessed SEC-E02 and DIR-E01 | Dependent; unactivated |
-| SP4-FOT-SH-E02 | E / gpt-6.2-sol/ultra; one frozen bridge | SH-B02 and issued request | Reserved; unactivated |
-| SP4-FOT-SH-B03 | B / Astra/ultra; global premise audit | SH-E01 and assessed SEC-B05 or DIR-B05 | DIR-B05 chain assessed; [global existence gap](../reviews/SH_B03_SPINORIAL_GLOBAL_PREMISE_20261124.md). Future constructions separate |
+| SP4-FOT-SH-B02 | B / Astra/ultra; operator comparison | SH-B01, assessed SEC-E02 and DIR-E01 | Assessed. [Operator domains and one quaternionic bridge](../brainstorm/notes/SH_B02_SECTIONS_AND_SPINOR_20261124.md). |
+| SP4-FOT-SH-E02 | E / gpt-6.2-sol/ultra; one frozen bridge | SH-B02 and issued request | Assessed. [Quaternionic triples and the first-order defect](../notes/SH_E02_20261124.md), on the nonzero locus only. |
+| SP4-FOT-SH-B03 | B / Astra/ultra; global premise audit | SH-E01 and assessed SEC-B05 or DIR-B05 | DIR-B05 [spinorial premise audit](../reviews/SH_B03_SPINORIAL_GLOBAL_PREMISE_20261124.md) and SEC-B05 [metric and interface assessment](../01_sections_and_connections/reviews/SEC_B05_GLOBAL_CONSTRUCTION_20261124.md) assessed. The later [SEC compactness criterion](../01_sections_and_connections/reviews/SEC_CAP_COMPACTNESS_AND_YAMABE_WALL_20261124.md) reaches SH-E01 through a positive cap-surviving limit on the same manifold. Existence of an appropriate sequence or a recognizing metric on arbitrary M remains open. |
 
 Initial setup issued no requests. The activated DIR session issues versioned shared requests below the handoffs directory. Re-read before
 integration; preserve completed identities and use the [handoffs](handoffs/README.md)

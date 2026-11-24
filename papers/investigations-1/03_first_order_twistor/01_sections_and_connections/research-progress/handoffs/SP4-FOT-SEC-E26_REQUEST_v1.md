@@ -1,0 +1,9 @@
+# SP4-FOT-SEC-E26 · issued request v1
+
+24 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. The author-selected lead was retained. The lead's actual model identifier and effort are unavailable. Execution helpers are requested/configured as gpt-6.2-sol/ultra. A configuration is not independent backend attestation.
+
+Exact inputs and assessed dependencies are in brainstorm/notes/SEC_B18_LOCAL_RESPONSE_AND_EXTERIOR_CONTROLS_20261124.md and its linked B16 manifest.
+
+On the oriented flat unit ball B, take any smooth metric variation u with D₊u=tf+e, f=χZ fixed B16, e in L²(B), q=D₋u. Set A={2/3<|x|<1}. Derive ||q||_A+||e||_B≥|t|d for explicit d>0 independent of all exterior data. Use the E21 exact symbols D₋*D₋=D₊*D₊ and D₋D₋*=(Δ²/16)I. Extend e by zero, use E21 multiplier to subtract its L² particular field, justify in distributions that the residual after also subtracting tTf is biharmonic on all B. Project onto angular Y(n)=M(n)Z. Derive regular radial powers 4,6, give d as a weighted distance (Gram formula, HS and sphere measure included), strict positivity and scope of any sharpness claim. Transfer to a round conformal patch with weights and, if direct Taylor expansion suffices, a C²-small fixed-volume h with exact F_r(h)=tf_round there: bound with O(||h||²_C²). No numerical evaluation. Stop if local compatibility/ellipticity fails; do not assume unknown exterior geometry.
+
+Write only notes/SEC_E26_20261124.md and research-progress/handoffs/SP4-FOT-SEC-E26_RETURN_v1.md under this owner. Include date, intended author, assistance, verified versions, requested/configured vs actually visible metadata, source passages, hypotheses, evidence and missing premises. The lead assesses and integrates shared files. Read the owning register and AGENTS.md. No numerical runs, additional helpers, shared-file edits or chat registration.

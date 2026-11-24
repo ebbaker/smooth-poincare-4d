@@ -1,0 +1,9 @@
+# SP4-FOT-SEC-E32 · issued request v1
+
+24 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. The author-selected lead was retained. The lead's actual model identifier and effort are unavailable. Execution helpers are requested/configured as gpt-6.2-sol/ultra. A configuration is not independent backend attestation.
+
+All exact inputs listed in brainstorm/notes/SEC_B20_EXACT_ANGULAR_OBSERVATION_20261124.md and the linked B18/B16 manifests.
+
+Fixed sharpness check on the same flat unit ball and annulus A as E26. For e=0 prove or disprove equality of the spherical projection onto Y(n)=M(n)Z for every solution q=D₋h with the particular tTf=t a(r)Y from E22. For h arbitrary and error e use z=q−tTf−T e_ext and show D₋*z=0 on B. To annihilate its projected spherical mean, realize any radial shell probe η(r)Y as D₋h_test, where h_test=D₊*(φ(|x|²)Z) has compact support in B: use D₋D₊*=(1/16)H₄(∂), the fourth derivative of φ(s) equals η(√s)/s² on the shell, backwards integration to zero outside yields a smooth polynomial near the origin. Track normalization. Deduce optimal flat/round estimate ||q||_A+||e||_B≥|t| ||aY||_A with equality for e=0 and the restricted round solution; if exact, identify equality meaning for angular measurements (including cross-polarizations if immediate). Preserve E26 as earlier weaker bound, state conditional nonlinear C² Taylor corollary and no arbitrary global existence. One sector, no numerics. Escalate failure of compact dual test.
+
+Write only notes/SEC_E32_20261124.md and research-progress/handoffs/SP4-FOT-SEC-E32_RETURN_v1.md under this owner. Include date, intended author, assistance, verified versions, requested/configured vs actually visible metadata, source passages, hypotheses, evidence and missing premises. The lead assesses and integrates shared files. Read the owning register and AGENTS.md. No numerical runs, additional helpers, shared-file edits or chat registration.

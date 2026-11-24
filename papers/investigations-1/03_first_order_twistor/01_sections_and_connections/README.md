@@ -2,11 +2,11 @@
 
 24 November 2026 (America/New_York). Prepared for Edward B. Baker III with
 OpenAI Codex assistance; actual selected model/effort unavailable.
-Author-approved setup is complete; research is unactivated.
+The author activated broad research on 24 November 2026.
 
 Can local integrable twistor directions or independent metric/connection equations construct a common global Riemannian conformal metric with W⁺ = 0 on every smooth homotopy four-sphere?
 
-The mixed continuity and overlap-correction mechanisms remain proposals. Their gauges, admissible data, solvability and global estimates must be fixed and checked. No round atlas or definite curvature connection on the unknown sphere is supplied.
+The branch now has a two-sided section-energy estimate, a conditional Weyl continuation theorem and nonlinear tests of local gluing. The unresolved step is constructing a recognizing conformal metric on an arbitrary smooth homotopy sphere.
 
 Read the [overview](research-overview/OVERVIEW.md), [plan](research-plan/PLAN.md),
 and [sole SEC register](research-progress/REGISTER.md). The
@@ -21,3 +21,11 @@ Use the [references](references/README.md), [continuation prompt](continuation-n
 The lead owns this task family. Shared tasks stay in the parent; the
 sibling's tasks stay in its register. Local projective spinors belong to
 SEC; global twistor-spinor and coupled Dirac existence belong to DIR.
+
+Read the [spherical transmission calculation](reviews/SEC_SPHERICAL_TRANSMISSION_20261124.md), [Weyl-energy threshold and compactness assessment](reviews/SEC_CAP_COMPACTNESS_AND_YAMABE_WALL_20261124.md) and [preceding handoff](continuation-notes/02_AFTER_SPHERICAL_TRANSMISSION_AND_YAMABE_WALL_20261124.md). The [prior construction assessment](reviews/SEC_B05_GLOBAL_CONSTRUCTION_20261124.md) and [two-sided section estimate](reviews/SEC_SECTION_ENERGY_20261124.md) give the earlier dependencies.
+
+The [branch manuscript](manuscript/twistor_sections_and_chiral_weyl_curvature.tex) derives the analytical results through E39 from local sections through the sharp marked Yamabe-zero threshold. Its [build instructions and source record](manuscript/README.md) accompany the draft.
+
+The [exterior prescription assessment](reviews/SEC_EXTERIOR_REGULARITY_AND_RADIAL_COST_20261124.md) proves local prescription after an energy-preserving exterior change, and gives a quantitative limitation on radial strain. [Handoff after E48](continuation-notes/03_AFTER_EXTERIOR_REGULARITY_AND_RADIAL_COST_20261124.md).
+
+The [subcritical concentration assessment](reviews/SEC_SUBCRITICAL_BACH_CONCENTRATION_20261124.md) gives the smooth bubble energy bounds, first closed critical level and compact-gauge alternative. The [current continuation](continuation-notes/04_AFTER_SUBCRITICAL_BACH_CONCENTRATION_20261124.md) tests the remaining energy on long annuli.

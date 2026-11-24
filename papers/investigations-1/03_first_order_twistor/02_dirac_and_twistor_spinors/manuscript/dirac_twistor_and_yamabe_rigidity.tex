@@ -1,0 +1,1907 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{needspace}
+\usepackage[colorlinks=true,linkcolor=blue!42!black,citecolor=blue!42!black,
+  urlcolor=blue!42!black]{hyperref}
+\hypersetup{
+  pdftitle={Twistor spinors, Dirac concentration, and Yamabe spectral rigidity in dimension four},
+  pdfauthor={Edward B. Baker III},
+  bookmarksdepth=2
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Twistor spinors and Yamabe spectral rigidity}
+\fancyhead[R]{\small Working draft}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{2em}
+\allowdisplaybreaks[1]
+\setcounter{tocdepth}{1}
+\numberwithin{equation}{section}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+
+\DeclareMathOperator{\Ric}{Ric}
+\DeclareMathOperator{\Vol}{Vol}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\dist}{dist}
+\newcommand{\rd}{\mathrm{rd}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\e}{\varepsilon}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\Sphere}{S^4}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\abs}[1]{\lvert #1\rvert}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\dv}{\dd V_g}
+\newcommand{\Y}{Y([g])}
+\newcommand{\Yf}{Y_f([g])}
+
+\title{Twistor spinors, Dirac concentration, and\\
+Yamabe spectral rigidity in dimension four}
+\author{Edward B. Baker III}
+\date{Working draft --- 24 November 2026}
+% Prepared for Edward B. Baker III with OpenAI Codex assistance.
+% Actual selected model identifier and reasoning effort were unavailable.
+% Source versions and proof scope are recorded in ../DRAFT_HISTORY.md.
+
+\begin{document}
+\maketitle
+\thispagestyle{plain}
+
+\begin{abstract}
+We study geometric conditions that recognize the standard smooth
+four-sphere. A nontrivial chiral twistor spinor on a closed Riemannian
+homotopy four-sphere forces conformal roundness. The least twistor
+energy has infimum zero in every conformal class, with concentration of
+actual eigenspinors possible. A Dirac Green spinor gives unconditional
+boundary data on a punctured homotopy sphere. An exact identity locates
+chiral Weyl curvature in a projected derivative of the twistor defect,
+and an oscillatory family shows that the first-order error of these
+Green fields can tend to zero while the Weyl energy diverges. For a
+degree-one map to the round sphere, a modified Yamabe quotient gives a
+second variational problem whose unrestricted supremum is approached
+by concentrating degree. Imposing moment constraints leads to a
+spectral theorem. For a volume-one Yamabe minimizer with scalar
+curvature \(s\), the first five positive scalar Laplace eigenvalues
+satisfy \(\frac35\sum_{i=1}^5\lambda_i\ge s\), with equality exactly for
+a scaled round four-sphere. The fourth-order minimizing inequality
+gives a sharp directional moment bound and recovers the metric at
+equality. Relative near equality forces the joint law of the five
+modes to become spherical. Constructing the required minimizing
+metrics and controlling the geometry of vanishing-volume regions remain
+open.
+\end{abstract}
+
+\tableofcontents
+\clearpage
+
+\section{Introduction}\label{sec:intro}
+
+A geometric approach to the smooth four-dimensional Poincar\'e conjecture
+seeks a structure whose existence can be established on an arbitrary
+smooth homotopy four-sphere and whose local equations determine its
+global smooth type. Freedman's theorem gives the topological
+identification~\cite{Freedman1982}. In the smooth Riemannian setting,
+the two chiral Weyl blocks give a natural starting point. The twistor
+construction of Atiyah, Hitchin, and Singer identifies the vanishing of
+one block with integrability of the corresponding complex structure on
+the twistor sphere bundle~\cite[Theorem~4.1]{AHS1978}. On a homotopy
+sphere the signature identity then removes the other block, and the
+conformally flat geometry develops onto the round sphere.
+
+We investigate the first-order spinorial version of this condition.
+The ordinary twistor equation recognizes the desired structure through
+a global half-spinor. Its variational formulation exposes a loss of
+compactness in the metric and spinor. Prescribing a Dirac Green pole
+gives a different starting point, with a fixed nonzero boundary value
+on a Euclidean end. This formulation identifies the derivative estimate
+that a construction would have to supply.
+
+A second use of the Dirac operator couples it to a map to the round
+sphere. Its index produces a kernel for every nonzero-degree map, and
+scalar comparison turns the geometric condition into a modified
+Yamabe problem. Unrestricted maps concentrate their degree in the
+same local geometry that gives the sharp quotient. Requiring centered
+coordinates brings the first scalar eigenspace into the problem.
+Controlling five independent directions leads to a rigidity theorem
+for Yamabe minimizers on arbitrary closed four-manifolds, with no spin
+assumption. Its stability has a probabilistic conclusion on the
+eigenfunction values and a separate geometric requirement for smooth
+recognition.
+
+\section{Chiral recognition and the twistor equation}\label{sec:twistor}
+
+\subsection{The exact geometric condition}
+
+All metrics are smooth and Riemannian unless a limiting regularity is
+specified. On an oriented four-manifold let \(\Lambda^\pm\) be the
+eigenspaces of the Hodge star on real two-forms. We write \(W^\pm\) for
+the blocks of the Weyl operator on these spaces, with \(W^+=0\) the
+anti-self-dual condition. Set
+\[
+ E_\pm(g)=\int_M\abs{W^\pm}_{\mathrm{HS}}^2\,\dv ,
+\]
+where the norm is the Hilbert--Schmidt norm of the operator in an
+orthonormal two-form basis. The full four-index tensor satisfies
+\(\abs{W}_{4\mathrm{ind}}^2=4(\abs{W^+}_{\mathrm{HS}}^2+
+\abs{W^-}_{\mathrm{HS}}^2)\), since its ordered indices count each
+unordered pair twice in each slot. These energies are conformally
+invariant in dimension four. In the same convention the signature
+formula is
+\begin{equation}\label{eq:signature}
+ E_+(g)-E_-(g)=12\pi^2\tau(M).
+\end{equation}
+See Hirzebruch and Gover--Gursky~\cite[\S4]{Hirzebruch1971Signature}
+\cite[pp.~293--294]{GoverGursky2024}.
+
+A smooth closed homotopy four-sphere is simply connected, with
+\(\tau(M)=0\) and \(\chi(M)=2\). It is spin because \(H^2(M;\mathbb Z/2)=0\),
+and its spin structure is unique because \(H^1(M;\mathbb Z/2)=0\).
+If \(W^+=0\), \eqref{eq:signature} gives \(W^-=0\). The metric is then
+locally conformally flat. In dimension at least three the transition
+maps of conformally flat charts are restrictions of M\"obius
+transformations. Simple connectivity makes continuation of these charts
+a single conformal developing map \(M\to\Sphere\)~\cite[\S1]{SchoenYau1988Conformal}.
+It is a local diffeomorphism. Its image is open and, by compactness,
+closed in \(\Sphere\). It is therefore a covering, with one sheet
+because the target is simply connected. There is also a strict energy
+criterion due to Chang, Gursky, and Yang~\cite[Theorem~A]{ChangGurskyYang2003}.
+If the conformal class has positive Yamabe constant and
+\(E_+(g)<4\pi^2\), then
+\(\int\abs{W}_{4\mathrm{ind}}^2\,\dv=8E_+(g)<16\pi^2\chi(M)\).
+Their theorem gives a diffeomorphism to \(\Sphere\) or
+\(\mathbb{RP}^4\), and simple connectivity selects \(\Sphere\).
+
+\subsection{Spinorial formulation and zeros}
+
+Use \(S^+\) for the complex rank-two half-spin bundle on which the
+real self-dual forms act, and \(S^-\) for the opposite chirality.
+Write \(c(X)\) for Clifford multiplication, with
+\(c(X)^2=-\abs{X}^2 I\), and \(D=\sum_i c(e_i)\nabla_{e_i}\)
+for the ordinary spin Dirac operator. The positive twistor operator is
+\begin{equation}\label{eq:twistor}
+ P_X\psi=\nabla_X\psi+\tfrac14c(X)D\psi .
+\end{equation}
+Here \(D\) reverses chirality, whereas \(P\) preserves it. If
+\(C(T)=\sum_i c(e_i)T_i\), then \(C^*\eta=-\sum_i e^i\otimes c(e_i)\eta\)
+and \(CC^*=4I\), so \(P=(I-C^*C/4)\nabla\).
+The Schr\"odinger--Lichnerowicz formula and this orthogonal projection
+give the identities
+\begin{equation}\label{eq:energy}
+ \abs{P\psi}^2=\abs{\nabla\psi}^2-\tfrac14\abs{D\psi}^2,\qquad
+ P^*P=\tfrac34D^2-\tfrac14s_g,\qquad
+ \sigma_2(P^*P)(\zeta)=\tfrac34\abs{\zeta}_g^2 I .
+\end{equation}
+In particular, ordinary harmonic spinors on closed metrics with
+\(s_g>0\) vanish. A pure half-spinor cannot satisfy
+\(D\psi=\lambda\psi\) with \(\lambda\ne0\). On the unit round sphere,
+Killing spinors satisfy \(\nabla_X\Psi=\kappa c(X)\Psi\) for either
+\(\kappa=\pm\tfrac12\)~\cite[\S2]{Bar1996SphereDirac}. Their chiral
+projections are nonzero twistor spinors and satisfy
+\(D^2\psi=4\psi\). For comparison, the full round Dirac spectrum is
+\(\pm(2+k)\), \(k\ge0\). Equation~\eqref{eq:energy} shows that the
+higher eigenmodes have strictly positive twistor energy.
+
+Let \(\psi\) be a solution of \eqref{eq:twistor} with \(P\psi=0\).
+Set \(\eta=D\psi\) and \(A=\tfrac12(\Ric^\sharp-(s_g/6)I)\).
+The prolongation equations are
+\begin{equation}\label{eq:prolongation}
+ \nabla_X\psi=-\tfrac14c(X)\eta,\qquad
+ \nabla_X\eta=-2c(A X)\psi .
+\end{equation}
+Indeed, taking the covariant trace of the first equation gives
+\(\nabla^*\nabla\psi=D\eta/4\), so \(D\eta=s_g\psi/3\).
+Commuting the first equation and Clifford-contracting in the second
+slot gives
+\[
+ -\tfrac12 c(\Ric^\sharp X)\psi
+   =\sum_i c(e_i)R^S(X,e_i)\psi
+   =\tfrac14(2\nabla_X\eta-c(X)D\eta).
+\]
+The first equality follows by contracting the spin curvature formula
+and using the first Bianchi identity. Substitution gives the second
+equation in \eqref{eq:prolongation}. In the uncontracted commutator,
+its substitution cancels the Schouten part of the spin curvature.
+The result is \(W^S(X,Y)\psi=0\), where \(W^S\) denotes the spin
+action of the Weyl tensor. The same equations and the zero analysis
+appear in Friedrich~\cite[\S2]{Friedrich1990TwistorSpinors}.
+At any point where \(\psi\ne0\) a real self-dual form annihilating
+\(\psi\) must vanish. Its nonzero action is an invertible traceless
+skew-Hermitian matrix on a complex two-plane. Thus \(W^+=0\) on the
+nonzero locus.
+
+The pair \((\psi,\eta)\) solves a linear parallel-transport equation
+by \eqref{eq:prolongation}. If it vanishes at a point, it vanishes on
+the connected manifold. At a zero of a nontrivial \(\psi\),
+\(\eta\ne0\) and \(X\mapsto-c(X)\eta/4\) is a real isomorphism from
+the tangent space to \(S^+\). The zeros are isolated and \(W^+=0\)
+extends across them by continuity.
+
+\begin{proposition}\label{prop:exact-recognition}
+On a smooth closed oriented homotopy four-sphere, the existence of a
+metric carrying a nontrivial positive chiral twistor spinor is equivalent
+to being diffeomorphic to the standard smooth sphere. For a supplied
+metric carrying such a spinor, its conformal class is round.
+\end{proposition}
+
+\begin{proof}
+The forward implication follows from \eqref{eq:prolongation},
+the signature formula, and conformal development. For the converse
+pull back the round metric and a chiral Killing projection along
+an oriented diffeomorphism. Composing with a reflection if necessary
+chooses the orientation.
+\end{proof}
+
+\subsection{The derivative that contains Weyl curvature}\label{sec:weyl}
+
+There is an exact defect identity for any smooth positive half-spinor.
+Let \(T=P\psi\), and use
+\[
+ m:\Lambda^+\otimes S^+\longrightarrow S^+,\qquad
+ m(\omega\otimes v)=c(\omega)v,\qquad \Pi=I-m^*m/6 .
+\]
+For a real orthonormal self-dual basis \((\omega_a)_{a=1}^3\), put
+\(C_a=c(\omega_a)|_{S^+}\). The Clifford relations give
+\(C_a C_b+C_b C_a=-4\delta_{ab}I\), so \(mm^*=6I\) and \(\Pi\)
+projects to \(\ker m\). For example, with
+\(\omega_1=(e^{12}+e^{34})/\sqrt{2}\) the action on \(S^+\) is
+\(\sqrt{2}c(e_1)c(e_2)\), and the two other basis elements give the
+remaining anticommuting generators.
+
+\begin{proposition}\label{prop:weyl-defect}
+With \(\mathcal W(\psi)=\sum_a\omega_a\otimes c(W^+\omega_a)\psi\),
+the self-dual projection in the form slot of the exterior covariant
+derivative satisfies
+\begin{equation}\label{eq:weyl-defect}
+ (d^\nabla T)^+=-\tfrac12\mathcal W(\psi)-\tfrac16m^*(P^*T),
+ \qquad
+ \abs{\Pi(d^\nabla T)^+}^2
+   =\tfrac12\abs{W^+}_{\mathrm{HS}}^2\abs{\psi}^2 .
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Use the positive curvature-operator convention
+\(\ip{\mathcal R(X\wedge Y)}{Z\wedge U}=\ip{R(X,Y)U}{Z}\).
+The spin curvature equals \(-c(\mathcal R(X\wedge Y))/2\), by the
+spin curvature formula~\cite[\S2]{Bar1996SphereDirac}. In a normal frame,
+\[
+ (d^\nabla T)_{ij}
+  =R^S(e_i,e_j)\psi+\tfrac14(c(e_j)\nabla_iD\psi-c(e_i)\nabla_jD\psi).
+\]
+On contracting the second term with \(\omega_a\), use
+\([c(\omega_a),c(e_i)]=2c(\iota_{e_i}\omega_a)\) and
+\(c(\omega_a)D\psi=0\) to get \(\tfrac18 C_aD^2\psi\).
+The first term contributes \(-\mathcal W(\psi)/2+(s_g/24)m^*\psi\).
+The positive curvature block is \(W^++(s_g/12)I\), and the
+negative output acts trivially on \(S^+\). Since \(W^+\) is symmetric
+and trace-free, the anticommutator implies \(m\mathcal W(\psi)=0\).
+Combining the terms with \eqref{eq:energy} proves the first formula.
+For a real self-dual \(\omega\) the same algebra gives
+\(\abs{c(\omega)\psi}^2=2\abs{\omega}^2\abs{\psi}^2\), so summing
+over \(a\) proves the norm identity.
+\end{proof}
+
+In particular the adjoint equation \(P^*T=0\) tests the component
+orthogonal to the one containing \(W^+\). When the zero set of \(\psi\)
+has measure zero, integrating the squared projected derivative divided
+by \(\abs{\psi}^2\) gives \(E_+(g)/2\). The integrand has a smooth
+extension through isolated zeros by \eqref{eq:weyl-defect}. On a
+homotopy sphere, an integral strictly below \(2\pi^2\) in a
+positive Yamabe class is sufficient for smooth recognition.
+
+\section{Variational twistor energy and concentration}\label{sec:twistor-variation}
+
+For a smooth closed spin four-manifold define
+\[
+ \mu(g)=\inf_{\psi\in H^1(S^+),\ \psi\ne0}
+   \frac{\norm{P_g\psi}_{2,g}^2}{\norm{\psi}_{2,g}^2}.
+\]
+By \eqref{eq:energy} this is the least eigenvalue of a nonnegative
+elliptic operator with compact resolvent, attained by a smooth field.
+If \(h=a^2g\) and \(\beta:S_g\to S_h\) is the isometry of spin bundles
+from orthonormal frame rescaling, then the twistor and Dirac
+covariances in four dimensions are
+\begin{equation}\label{eq:conformal-spin}
+ P_h(a^{1/2}\beta\psi)=a^{-1/2}\mathcal B_a(P_g\psi),\qquad
+ D_h(a^{-3/2}\beta\psi)=a^{-5/2}\beta D_g\psi .
+\end{equation}
+Here \(\mathcal B_a\) is the isometric tensor identification using
+the rescaled coframe and \(\beta\). For \(\varphi=\log a\), the
+connection on an identified spinor changes in the \(X\)-direction
+by \(-c(X)c(\nabla\varphi)/2-X(\varphi)/2\), before replacing the
+orthonormal vector by \(a^{-1}X\). Clifford tracing gives the
+Dirac weight. Differentiating \(a^{1/2}\beta\psi\) cancels the
+terms in the twistor projection. See Hitchin and
+Friedrich~\cite[\S1.4]{Hitchin1974Harmonic}\cite[\S1]{Friedrich1990TwistorSpinors}.
+
+\subsection{Zero infimum in every conformal class}
+
+\begin{theorem}\label{thm:twistor-inf}
+For every smooth conformal class on a closed connected spin four-manifold,
+\[
+ \inf_{h\in[g],\ \Vol_h M=1}\mu(h)=0.
+\]
+The infimum is attained precisely in classes with a nonzero chiral
+twistor kernel. In a kernel-free class there are metrics \(h_r\) for
+which the mass measures of normalized first eigenspinors converge to
+a point mass, and \(\mu(h_r)=O(r^3)\).
+\end{theorem}
+
+\begin{proof}
+Fix a normal ball at \(p\). Take \(a_r=A_rf_r\), where \(f_r=r^{-1}\)
+on \(B_r\), \(f_r=1\) off \(B_{2r}\), and \(1\le f_r\le r^{-1}\).
+The factor \(A_r=(\int f_r^4\,\dv)^{-1/4}\) stays between positive
+constants by the volume of a small ball. Let \(h_r=a_r^2g\).
+A radially parallel unit spinor \(\xi\) satisfies
+\(\abs{\nabla^g\xi}=O(\dist_g(\cdot,p))\). In radial gauge the
+connection matrix is
+\(A_i(x)=\int_0^1 t x^j F_{ji}(tx)\,\dd t\), where \(F\) is its
+curvature, giving this bound. Multiply \(\xi\) by a cutoff equal to
+one on \(B_{2r}\), supported in \(B_{4r}\), with gradient bounded by
+\(C/r\), to obtain \(v_r\). For the field \(a_r^{1/2}\beta v_r\),
+the squared numerator and denominator of the Rayleigh quotient
+are \(\int a_r^3\abs{P_gv_r}^2\,\dv\) and
+\(\int a_r^5\abs{v_r}^2\,\dv\), respectively. The inner ball
+contributes \(O(r^3)\) to the numerator and at least \(c/r\) to
+the denominator. The cutoff annulus, where \(a_r=A_r\), contributes
+\(O(r^2)\) to the numerator. Thus \(\mu(h_r)\le Cr^3\).
+Covariance identifies the exact kernels throughout the class.
+
+To check concentration for actual eigenspinors, write a normalized
+one as \(a_r^{1/2}\beta u_r\). In a kernel-free class,
+\[
+ \int_{M\setminus B_{2r}}\abs{a_r^{1/2}\beta u_r}_{h_r}^2\,\dd V_{h_r}
+  = A_r^5\int_{M\setminus B_{2r}}\abs{u_r}_g^2\,\dv
+  \le C\mu(g)^{-1}\norm{P_gu_r}_{2,g}^2
+  \le C'\mu(h_r).
+\]
+The final bound uses the uniform positive lower bound for \(a_r\).
+The measures have mass one and the ball shrinks to \(p\).
+\end{proof}
+
+If \(E_+(g)>0\), the family in Theorem~\ref{thm:twistor-inf} has no
+positive \(C^2\) limit even after orientation-preserving spin
+diffeomorphisms. A limiting metric would have this same Weyl energy
+by conformal invariance and \(C^2\) continuity. After the symmetric
+frame identifications, the elliptic estimate for \(P\) and
+\(C^2\) convergence give a nontrivial weak twistor spinor at the
+limit. To see the regularity needed here, \eqref{eq:prolongation}
+holds in distributions for a \(C^2\) metric and an \(H^1\) solution,
+by approximation in the commutation and contraction identities.
+It first gives \(D\psi\in H^1_{\mathrm{loc}}\). The pair then obeys
+\(\partial_i U=B_iU\) with continuous local coefficients. Sobolev
+embedding improves \(H^1\) first to \(W^{1,4}\) and then to \(W^{1,p}\)
+for finite \(p>4\). The continuous pair has continuous first
+derivatives by the same equation. The curvature compatibility and
+the isolated-zero argument therefore give \(E_+=0\), a contradiction.
+
+\subsection{A conformally invariant relative error}
+
+For a nonzero smooth half-spinor set
+\begin{equation}\label{eq:relative}
+ J_g(\psi)=\left(\int_{\{\psi\ne0\}}
+            \frac{\abs{P_g\psi}^4}{\abs{\psi}^4}\,\dv\right)^{1/4},
+\end{equation}
+with the empty zero set allowed and the integral permitted to be
+infinite. Equation~\eqref{eq:conformal-spin} makes \(J\) invariant
+under the twistor transport and under constant rescaling of \(\psi\).
+On a fixed kernel-free class, ellipticity, the spectral gap, and
+Sobolev embedding give \(\norm{\psi}_4\le C_g\norm{P_g\psi}_2\).
+For a field with isolated transverse zeros, H\"older gives
+\(\norm{P_g\psi}_2\le J_g(\psi)\norm{\psi}_4\).
+Thus \(J\ge C_g^{-1}>0\) throughout that class.
+
+Finite-cost fields exist for every metric on a smooth oriented homotopy
+four-sphere. The relation
+\(p_1(\Lambda^+)=-4c_2(S^+)=p_1(TM)+2e(TM)\)
+follows from the adjoint representation of \(\mathrm{SU}(2)\) and
+the sum of the rotation angles of the two tangent planes. It gives
+\(\langle c_2(S^+),[M]\rangle=-1\). The real linear model
+\(x\mapsto c(x)\eta\), \(0\ne\eta\in S^-_p\), has local index \(-1\).
+Indeed \(\mathrm{Spin}(4)\) acts on \(\mathbb H\) by
+\(x\mapsto a x b^{-1}\) and may be represented on the half-spinors by
+\((s_+,s_-)\mapsto(a s_+,b s_-)\), with Clifford action
+\((s_+,s_-)\mapsto(x s_-,-\bar x s_+)\). Complex multiplication on
+the right by \(i\) makes the orientation of \(S^+\), represented
+by \((1,i,j,-k)\), opposite to the tangent orientation.
+Each zero of an exact solution has this index by
+\eqref{eq:prolongation}, so the index sum gives exactly one zero.
+To extend the local model with only its prescribed zero, remove
+a small coordinate ball. Its complement is simply connected and
+acyclic by van Kampen and the relative homology sequence, hence
+contractible. The local spinor direction in an exterior
+trivialization on the boundary has degree zero, since that degree
+is the total Euler number minus the local index. Contracting the
+direction in a collar, preserving the local data near the seam,
+and extending the positive length gives the field. At its zero
+\(\abs{\psi}\asymp r\) and \(P\psi(p)=0\) by Clifford trace, so
+\(\abs{P\psi}=O(r)\). A transverse zero with incompatible first
+jet has \(P\psi(p)\ne0\) and logarithmically divergent cost.
+
+The metric \(\abs{\psi}^{-4}g\) on the punctured manifold carries
+the transported unit spinor \(\phi=\abs{\psi}^{-1}\beta\psi\).
+Its twistor norm in \(L^4\) equals \(J_g(\psi)\).
+For a unit field \(\nabla\phi\) takes values in the real orthogonal
+complement of \(\phi\). The Clifford contraction on the complementary
+line tensored with covectors is a real isometry to \(S^-\).
+Since \(CC^*=4I\), the contraction restricted to the real orthogonal
+complement has squared operator norm \(3\). Therefore
+\[
+ \abs{P\phi}\le\abs{\nabla\phi}\le2\abs{P\phi}.
+\]
+The quaternionic partner of \(\phi\) completes it to a unit spin
+frame. In the matrix norm \(-\tr(A^2)/2\) on the chiral connection,
+its connection one-form has norm \(\abs{\nabla\phi}\).
+The prescribed zero gives \(\abs{\psi}=\kappa r+O(r^2)\).
+In inverted coordinates of radius \(R=r^{-1}\) the metric is
+\(\kappa^{-4}\delta+O(R^{-1})\) with derivatives of order \(j\)
+bounded by \(O(R^{-1-j})\). In particular the end is complete.
+This scale controls the chiral connection in \(L^4\), which controls
+its quadratic curvature term in \(L^2\). For an exact solution,
+the unit spinor and its quaternionic partner are parallel in this
+scale. The vanished positive spin curvature contains the trace-free
+Ricci block and \(W^++(s/12)I\), so the punctured metric is Ricci flat.
+The derivative in
+\eqref{eq:weyl-defect} specifies the separate curvature requirement.
+
+\subsection{A conditional attainment criterion}
+
+Suppose metrics \(g_j\) on a fixed closed spin manifold converge
+uniformly and strongly in \(W^{1,4}\) to a smooth positive metric
+\(g\), after orientation-preserving spin identifications if needed.
+If \(\norm{\psi_j}_{2,g_j}=1\) and either
+\(\norm{P_{g_j}\psi_j}_{2,g_j}\to0\) or \(J_{g_j}(\psi_j)\to0\)
+with zero sets of measure zero in the relative case, then \(g\)
+carries a nontrivial smooth twistor spinor.
+Indeed, the symmetric frame comparison identifies the bundles
+isometrically~\cite{BourguignonGauduchon1992}. In the fixed bundle
+the leading coefficients of \(P\) depend smoothly on the metric and
+converge uniformly, and the lower coefficients depend linearly on
+its first derivatives with smooth metric-dependent factors.
+They converge in \(L^4\). Since \(H^1\) embeds in \(L^4\),
+the operators converge in \(H^1\to L^2\). The fixed elliptic estimate
+\(\norm{v}_{H^1}\le C(\norm{P_g v}_2+\norm v_2)\) absorbs the difference
+for large \(j\). In the relative case one further absorbs
+\(C J_{g_j}(\psi_j)\norm{v_j}_{H^1}\) by H\"older and the uniform volume
+comparison. The spinors are then bounded in \(H^1\), with a
+subsequence strongly convergent in \(L^2\) to a norm-one field.
+The weak limiting equation and elliptic regularity give a smooth
+solution. Thus the needed metric compactness is independent of the
+vanishing scalar residual.
+
+\section{The Dirac boundary problem on a punctured sphere}\label{sec:green}
+
+\subsection{Canonical boundary data and the compact zero}
+
+\begin{proposition}\label{prop:green}
+Let \(M\) be a smooth closed oriented homotopy four-sphere and \(p\in M\).
+There is a smooth metric \(g\), flat in a ball at \(p\), with invertible
+ordinary Dirac operator. For a positive conformal factor \(\omega\) on
+\(N=M\setminus\{p\}\) equal to \(r^{-2}\) near \(p\), the metric
+\(h=\omega^2g\) has an exactly Euclidean end. Each nonzero constant
+positive spinor in an oriented Euclidean end frame is the limit of a
+unique harmonic positive spinor with \(O(R^{-3})\) error. Twistor
+transport of this field to the compact metric extends smoothly and
+has a prescribed transverse zero at \(p\).
+\end{proposition}
+
+\begin{proof}
+Choose \(g\) flat on a coordinate ball. The complex chiral index is
+\(-\tau(M)/8=0\), by the degree-four term of the spin index
+formula~\cite{AtiyahSinger1963Index}. In dimension four this gives
+vanishing of the index obstruction to invertibility. The relative
+metric deformation theorem of Ammann, Dahl, and Humbert gives a metric
+with invertible \(D_g\) by changing it in a ball disjoint from the chosen
+flat germ~\cite[Theorem~1.1]{AmmannDahlHumbert2011Local}.
+
+Write \(\omega_3=\Vol(S^3)=2\pi^2\) and let
+\(\eta\in S^-_p\) be a nonzero source in the parallel spin frame.
+The Euclidean fundamental solution of the nonnegative scalar Laplacian
+is \(1/(2\omega_3 r^2)\). Applying the flat Dirac operator to this
+times \(\eta\) produces its Dirac fundamental solution. Cutting off
+that pole and subtracting the inverse Dirac image of the smooth
+cutoff error gives the unique compact Green spinor
+\begin{equation}\label{eq:green-pole}
+ D_gG_\eta=\delta_p\eta,\qquad
+ G_\eta(x)=-\frac{c(x)\eta}{\omega_3 r^4}+\gamma(x),
+ \qquad D_g\gamma=0\ \text{near }p .
+\end{equation}
+The remainder is smooth and the field has positive chirality.
+This local construction uses only the flat germ and compact
+invertibility, as in Ammann, Humbert, and Morel~\cite[\S2]{AmmannHumbertMorel2006Mass}.
+
+By \eqref{eq:conformal-spin}, the field
+\(\Psi=\omega^{-3/2}\beta G_\eta\) is \(D_h\)-harmonic. Invert using
+\(y=S_a x/r^2\), where \(S_a\) reflects across \(a^\perp\) for a unit vector
+\(a\). The reflected inversion preserves orientation, takes the end
+to a Euclidean exterior, and has radial coordinate \(R=r^{-1}\).
+If \(u=x/r\), its orthonormal frame transition lifts to \(c(a)c(u)\).
+In the corresponding end frame
+\begin{equation}\label{eq:green-end}
+ \Psi_y(y)=\omega_3^{-1}c(a)\eta+
+    R^{-3}c(a)c(u)\gamma(S_a y/R^2).
+\end{equation}
+The map from \(\eta\) to the constant term is an isomorphism. The
+error and its derivatives of order \(j\) are \(O(R^{-3-j})\).
+If two fields have this asymptotic constant, the inverse harmonic
+transport of their difference is bounded near \(p\). Cutting off
+a radius-\(\epsilon\) ball when testing its Dirac equation produces
+a boundary error of order \(\epsilon^3\). The weak equation holds on
+the compact manifold, and elliptic regularity and invertibility give
+uniqueness.
+
+The inverse twistor transport uses the different weight in
+\eqref{eq:conformal-spin}. It yields
+\begin{equation}\label{eq:green-jet}
+ \psi=\omega^{-1/2}\beta^{-1}\Psi=\omega^{-2}G_\eta
+       =-\omega_3^{-1}c(x)\eta+r^4\gamma(x)
+       \quad\text{near }p .
+\end{equation}
+The leading term is a flat twistor spinor, so the jet is transverse
+and \(P_g\psi=O(r^3)\) there.
+\end{proof}
+
+We normalize \(\abs{\Psi_\infty}=1\). The complete end has zero ADM
+mass and \(\nabla^h\Psi=O(R^{-4})\). Applying the
+Schr\"odinger--Lichnerowicz identity to the harmonic field gives
+\[
+ \tfrac12\Delta_h\abs{\Psi}^2
+ =-\abs{\nabla^h\Psi}^2-\tfrac14s_h\abs{\Psi}^2 .
+\]
+Throughout, \(\Delta=d^*d\) is the nonnegative scalar Laplacian.
+Integrate over \(R\le L\). The outward flux of \(\frac12\dd\abs{\Psi}^2\)
+is \(O(L^{-1})\), giving
+\begin{equation}\label{eq:green-flux}
+ \int_N s_h\abs{\Psi}^2\,\dd V_h=-4\int_N\abs{\nabla^h\Psi}^2\,\dd V_h .
+\end{equation}
+In particular an independently established nonnegative weighted scalar
+integral forces parallelism. Equation~\eqref{eq:green-jet} would then
+supply an exact compact twistor spinor, including at its zero, and
+Proposition~\ref{prop:exact-recognition} would apply. The prescribed
+Euclidean end permits this flux calculation without a scalar
+curvature sign on the starting conformal class. The positive-mass
+construction of Ammann and Humbert uses a scalar-flat end obtained
+from a positive Yamabe class~\cite[Theorem~2.2]{AmmannHumbert2005PositiveMass}.
+
+\subsection{Interior zeros and a unit harmonic gauge}
+
+Because \(P_h\Psi=\nabla^h\Psi\), the critical integral on the end
+converges. An interior zero makes the same integral infinite.
+Indeed, suppose \(f=\abs{\Psi}\) vanishes at the center of a small
+coordinate ball. Weak unique continuation for \(D_h^2\) gives a
+nearby ball where \(f\) is positive~\cite{Aronszajn1957Continuation}.
+If the critical integral were finite, the functions
+\(u_L=\log(\max(f,e^{-L}))\) would have uniformly bounded
+\(L^4\) gradient by \(\abs{\dd f}\le\abs{\nabla\Psi}\).
+Poincar\'e's inequality and the nearby ball on which their values are
+bounded give a uniform \(W^{1,4}\) bound. Fatou and weak compactness
+give \(u=\log f\in W^{1,4}\) almost everywhere, including that the
+zero set has measure zero. If \(\bar u(r)\) is the spherical mean,
+H\"older on the radial integral gives
+\[
+ \abs{\bar u(r)-\bar u(r_0)}
+ \le C\norm{\dd u}_{L^4(B)}\bigl(\log(r_0/r)\bigr)^{3/4}.
+\]
+Smoothness of \(\Psi\) gives \(f\le Cr\) and hence
+\(\bar u(r)\le \log(Cr)\), contradicting this estimate.
+Conversely, a zero-free field has finite critical integral by
+smoothness, positivity on the compact part and the end decay.
+By twistor covariance this is also the criterion for finite
+\(J_g(\psi)\) for the compact field \eqref{eq:green-jet}.
+
+Each half-spin fiber is a quaternionic line, and the Dirac Green
+operator intertwines the invariant quaternionic structures. Evaluation
+of \(G_\eta\) at a point off the pole is therefore a quaternionic-linear
+map of lines. Changing the unit source multiplies the result on
+the right by a unit quaternion. Its norm, zero set and relative
+energy are unchanged. If the interior zeros are transverse, their
+signed sum is zero because the pole in \eqref{eq:green-jet} already
+accounts for \(\langle c_2(S^+),[M]\rangle=-1\).
+Both signs are possible for local ordinary harmonic spinors.
+For example, in quaternionic tangent axes
+\(e_\mu=(1,i,j,k)\), a diagonal linear field
+\(\sum_\mu d_\mu x_\mu e_\mu\) is harmonic when
+\(\sum_\mu d_\mu=0\). The choices \((1,1,1,-3)\) and
+\((1,1,-1,-1)\) have opposite transverse indices.
+
+For a zero-free field put \(\sigma=\abs{\Psi}_h\) and
+\[
+ k=\sigma^{4/3}h,\qquad \xi=\sigma^{-1}\beta_{h,k}\Psi,\qquad
+ V=\abs{\nabla^k\xi}^2 .
+\]
+The harmonic weight makes \(\xi\) a unit \(D_k\)-harmonic spinor,
+and the norm identity gives \(s_k=-4V\).
+In the end coordinates \(k_{ij}=\delta_{ij}+O_2(R^{-3})\) and
+\(V=O(R^{-8})\), with \(O_\ell\) indicating corresponding derivative
+decay through order \(\ell\). For \(v>0\) equal to one off a compact
+set take \(k_v=v^{-4}k\) and \(\xi_v=v^3\beta_{k,k_v}\xi\).
+The energy and the critical cost are then
+\begin{equation}\label{eq:harmonic-energy}
+ \int_N\abs{\nabla^{k_v}\xi_v}^2\,\dd V_{k_v}
+ = Q(v):=\int_N (Vv^2+12\abs{\dd v}^2)\,\dd V_k,\qquad
+ J_{k_v}(\xi_v)^4=\int_N (V+12\abs{\dd\log v}^2)^2\,\dd V_k .
+\end{equation}
+For the coefficient \(12\), put \(A=\nabla^k\log v\).
+In the rescaled orthonormal frame the differentiated spinor,
+after removing the factor \(v^5\), has components
+\(\nabla^k_i\xi+c(e_i)c(A)\xi+4A_i\xi\).
+The cross term with the first component sums to zero by \(D_k\xi=0\)
+and the unit norm. The square of the correction sums to
+\((4+16-8)\abs A^2\), since
+\(\operatorname{Re}\ip{c(e_i)c(A)\xi}{\xi}=-A_i\).
+Using \(\dd V_{k_v}=v^{-8}\dd V_k\) and \(\abs{\xi_v}=v^3\) gives
+both formulas.
+
+\subsection{Fixed-geometry optimization and loss of core scale}
+
+For fixed \(k\) and \(V\) as above, the infimum \(P_0\) of \(Q(v)\)
+over the positive compact variations in \eqref{eq:harmonic-energy}
+is positive if \(V\) is nonzero. Let \(\dot H^1(N)\) be the closure
+of compactly supported smooth functions in the gradient norm. The
+homogeneous inequality \(\norm{w}_4\le S\norm{\dd w}_2\) holds on
+\(N\). To see this, cut off to the end and use the Euclidean Sobolev
+inequality. The cutoff error in the fixed transition annulus is
+controlled by the gradient via integration to infinity on rays
+and Cauchy--Schwarz with weight \(R^3\). A compact Poincar\'e
+inequality with the mean anchored on that annulus controls the
+remaining compact contribution. If \(V\ge c>0\) on a ball of
+volume \(b>0\), then every \(v\in1+\dot H^1(N)\) satisfies
+\[
+ b^{1/2}\le b^{1/4}S\norm{\dd v}_2+
+    c^{-1/2}\Big(\int Vv^2\,\dd V_k\Big)^{1/2}.
+\]
+This proves the positive lower bound.
+
+The bilinear form \(12\int\ip{\dd w}{\dd z}+\int Vwz\) is continuous
+and coercive on \(\dot H^1\). Solving there with the linear functional
+\(\int Vz\) gives a unique smooth relaxed minimizer \(v_*=1-w\)
+with
+\begin{equation}\label{eq:cap-eqn}
+ 12\Delta_k v_*+Vv_*=0,\qquad
+ P_0=Q(v_*)=\int_N Vv_*\,\dd V_k .
+\end{equation}
+Truncation to \([0,1]\) reduces the form and the strong maximum
+principle gives \(0<v_*\le1\), with \(v_*<1\) everywhere if \(V\ne0\).
+Smooth compact truncations of \(w\) approximate in \(\dot H^1\)
+by the \(L^4\) control of the shell cutoff error. The corresponding
+positive \(v\)'s converge in energy. The identity for \(P_0\) follows
+by testing with \(1-v_*\). Thus the relaxed minimum equals the
+original infimum, and the original class attains it exactly for \(V=0\).
+
+The asymptotic expansion and its first derivative are
+\begin{equation}\label{eq:cap-mass}
+ v_*=1-\frac{P_0}{24\omega_3}R^{-2}+O_1(R^{-3}),\qquad
+ m_{\mathrm{ADM}}(v_*^{-4}k)=\frac{P_0}{6\omega_3}.
+\end{equation}
+For the expansion, \(w=1-v_*\) solves
+\(\Delta_k w=Vv_*/12=O(R^{-8})\). A multiple of \(R^{-2}-R^{-3}\)
+is an exterior supersolution at large \(R\). The weak maximum
+principle in \(\dot H^1\) gives \(w=O(R^{-2})\), and interior
+elliptic estimates on rescaled annuli give \(\dd w=O(R^{-3})\).
+After an exterior cutoff to \(\RR^4\), the Euclidean equation has
+the form \(\Delta_0 w=F+\partial_i G_i\) with
+\(F=O(R^{-8})\), \(G=O(R^{-6})\). The flux of
+\(\dd v_*\) is \(P_0/12\) by \eqref{eq:cap-eqn}, so
+\(\int F=P_0/12\). Convolution with \(1/(2\omega_3 R^2)\)
+gives \(P_0/(24\omega_3 R^2)+O(R^{-3})\). The scalar source has
+finite first moment and the divergence source contributes
+\(O(R^{-3})\). These estimates follow by splitting each convolution
+at half the observation radius and using the stated decay on the
+tail. The difference from this convolution is harmonic and decays
+at infinity. Rescaled elliptic estimates for the remainder give
+the first derivative decay, and annular \(W^{2,p}\) bounds follow
+from the same equation. With the normalization
+\[
+ m_{\mathrm{ADM}}(\gamma)
+ =\frac{1}{6\omega_3}\lim_{L\to\infty}
+ \int_{S_L}(\partial_j\gamma_{ij}-\partial_i\gamma_{jj})
+              \nu^i\,\dd S ,
+\]
+the scalar coefficient of \(R^{-2}\delta\) in \(v_*^{-4}k\)
+is \(P_0/(6\omega_3)\) and equals its mass. The decay bounds and
+the scalar transformation law give integrable scalar curvature
+for this metric, as required for the usual coordinate invariance
+of this flux~\cite[\S4]{Bartnik1986Mass}. In fact
+\(s_{k_{v_*}}=-3Vv_*^4-36v_*^2\abs{\dd v_*}^2\).
+Compact variations keep zero mass. At the relaxed minimizer the
+spinor boundary term in the integrated identity is
+\(3\lim_{L\to\infty}\int_{S_L}v_*\partial_\nu v_*=P_0/4\).
+This agrees with Dirichlet energy \(P_0\) and weighted scalar
+integral \(-3P_0\).
+
+Allowing the metric to vary destroys a uniform positive lower bound
+for this Dirichlet energy even at fixed end normalization. For
+\(0<t\le1\), choose an orientation-preserving radial diffeomorphism
+\(\Phi_t\) equal to the identity on the core and to \(y\mapsto y/t\)
+far out in the Euclidean end. A nondecreasing radial interpolation
+gives a positive radial derivative for all \(t\). Take
+\(h_t=t^2\Phi_t^*h\) and transport \(\Phi_t^*\Psi\) by the unitary
+spin identification for the constant scale. Then \(h_t\) is exactly
+Euclidean in the same exterior chart and
+\(\Psi_t(y)=\Psi(y/t)\) there, with the same constant term. In the
+compact chart \(\Phi_t\) extends smoothly across \(p\) as \(x\mapsto tx\).
+The metric \(g_t=\omega^{-2}h_t\) has the same flat germ and is
+conformal to \(\Phi_t^*g\). The compact Green field has the same
+singular term in \eqref{eq:green-pole} and remainder \(t^3\gamma(tx)\)
+near the pole, by uniqueness. Change of variables gives
+\[
+ \int\abs{\nabla^{h_t}\Psi_t}^2\,\dd V_{h_t}
+   =t^2\int\abs{\nabla^h\Psi}^2\,\dd V_h,\qquad
+ \int \frac{\abs{\nabla^{h_t}\Psi_t}^4}{\abs{\Psi_t}^4}\,\dd V_{h_t}
+   =\int \frac{\abs{\nabla^h\Psi}^4}{\abs{\Psi}^4}\,\dd V_h ,
+\]
+where the second integral is over the respective nonzero loci.
+The core volume and its spinor \(L^2\) mass both scale by \(t^4\).
+Thus the unrestricted Dirichlet infimum is zero on every input,
+and zero-energy attainment would furnish an exact compact solution.
+
+\subsection{An oscillatory obstruction for the actual Green fields}
+
+\begin{proposition}\label{prop:oscillation}
+On the standard smooth \(\Sphere\) there are compact metrics \(g_n\)
+with a common flat pole germ and invertible Dirac operator whose
+normalized positive Green fields have no interior zeros. Their compact
+twistor transports \(\psi_n\) have the same transverse pole jet and
+\[
+ g_n\longrightarrow g_b\quad\text{in }C^{1,1/4},\qquad
+ J_{g_n}(\psi_n)=O(n^{-1/2}),\qquad E_+(g_n)\ge c n .
+\]
+The scalar curvature in the corresponding unit harmonic scales
+has \(L^2\) norm \(O(n^{-1})\).
+\end{proposition}
+
+\begin{proof}
+Use \(N\cong\RR^4\) and choose the compact metric \(g_b=\omega^{-2}\delta\),
+where \(\omega\) equals \(1\) on a bounded open patch \(U\) and
+equals the square of the Euclidean radius at infinity.
+Then \(g_b\) is conformal to round and smooth and flat near the
+pole. Its Dirac operator is invertible by conformal covariance of
+the round kernel, and the punctured Green field is the constant unit
+spinor \(\kappa\).
+
+In \(U\) take \(H=(\dd x^2)^2-(\dd x^3)^2\),
+\(T=(\dd x^1)^2\circledast H\), and \(C=2T-H\circledast\delta\),
+where \(\circledast\) is the Kulkarni--Nomizu product and
+\(T_{1a1b}=H_{ab}\) for \(a,b>1\). The tensor \(C\) is
+algebraic Weyl, with \(C_{i1j1}=H_{ij}\). For a nonzero smooth
+real cutoff \(\chi\) supported in \(U\), set
+\[
+ F_n=\chi\cos(nx^1),\qquad
+ (b_n)_{ij}=-n^{-7/2}\sum_{k,l}C_{ikjl}\partial_k\partial_l F_n,
+ \qquad g_n=g_b+b_n .
+\]
+The algebraic symmetries make \(b_n\) trace-free and divergence-free
+on the Euclidean patch. Its leading term is \(n^{-3/2}F_n H\)
+with a remainder \(O(n^{-5/2})\) whose \(j\)-th derivatives are
+\(O(n^{j-5/2})\) for \(j\le2\). In particular \(g_n\to g_b\) in
+\(C^{1,1/4}\) by interpolation of the first and second derivative
+bounds. These metrics are positive for large \(n\).
+
+Identify the spinors by the symmetric frame maps. The difference of
+the identified \(D_n\) from \(D_b\) is \(O(n^{-1/4})\) from
+\(C^{1,1/4}\) to \(C^{0,1/4}\) and \(O(n^{-1/2})\) from \(W^{1,4}\)
+to \(L^4\), by the first-order coefficient bounds. The inverse of
+\(D_b\) on both scales is bounded by elliptic regularity. Neumann's
+series gives invertibility and uniform bounds for the two inverses
+of \(D_n\). Use the same cutoff parametrix \(Q\) for the pole.
+If \(G_b-Q=S_b\) is smooth and \(G_n-G_b=u_n\) in the identified
+bundle, then
+\[
+ D_n u_n=-(D_n-D_b)S_b,\qquad
+ \norm{u_n}_{C^{1,1/4}}=O(n^{-1/4}),\qquad
+ \norm{u_n}_{W^{1,4}}=O(n^{-1/2}).
+\]
+On a smaller pole ball \(u_n\) is flat Dirac-harmonic, and interior
+estimates there give fixed-order derivatives \(O(n^{-1/2})\).
+It follows from \eqref{eq:green-end} and the compact estimates that
+the end fields \(\Psi_n\) converge uniformly to \(\kappa\).
+The connection difference on the perturbation patch is
+\(O(n^{-1/2})\) and the end derivative has bound
+\(O(n^{-1/2}R^{-4})\). Thus
+\(\norm{\nabla\Psi_n}_{L^2}+\norm{\nabla\Psi_n}_{L^4}=O(n^{-1/2})\).
+Uniform nonvanishing and twistor covariance give the asserted bound
+for \(J\). The unit harmonic scales have the same \(L^4\) bound on
+their spinor derivatives, by the conformal connection law and
+\(\abs{\dd\abs{\Psi_n}}\le\abs{\nabla\Psi_n}\).
+The relation \(s_k=-4V\) gives the scalar bound.
+
+In the curvature calculation, both differentiations falling on the
+leading cosine give the linear contribution
+\(\frac12 n^{1/2}F_n T\), by the flat curvature formula
+\(R'_{1a1b}=-\partial_1^2(b_n)_{ab}/2\) at this order.
+Its Weyl projection is \(\frac14n^{1/2}F_n C\).
+All cutoff terms and differentiated remainders are \(O(n^{-1/2})\).
+The nonlinear curvature error is
+\(O(\abs{b_n}\abs{\partial^2b_n}+\abs{\partial b_n}^2)=O(n^{-1})\).
+Since \(\int F_n^2\to\frac12\int\chi^2>0\), the full four-index
+Weyl energy is bounded below by a positive multiple of \(n\).
+Equation~\eqref{eq:signature} and the norm convention give \(E_+\)
+as one eighth of that energy. This proves the claimed failure
+of first-order control even for the canonical boundary fields.
+\end{proof}
+
+\section{Twisted Dirac comparison and the modified Yamabe quotient}\label{sec:twisted}
+
+Let \((M,g)\) be a closed connected oriented spin four-manifold.
+Let \(h_{\rd}\) be the unit round metric on \(\Sphere\), and let
+\(f:M\to\Sphere\) have nonzero degree. Such maps of degree one exist
+on every oriented \(M\) by collapsing the complement of an oriented
+coordinate ball, using a smooth representative constant on a collar.
+Write
+\begin{align}
+ V_f&=3\abs{df}_{g,h_{\rd}}^2,\qquad
+ L_{g,f}=6\Delta_g+s_g-V_f,\notag\\
+ Q_f(u)&=\int_M \bigl(6\abs{\dd u}^2+(s_g-V_f)u^2\bigr)\,\dv,\qquad
+ \Yf=\inf_{u\in H^1(M)\setminus\{0\}}\frac{Q_f(u)}{\norm{u}_{4,g}^2}.
+ \label{eq:modified}
+\end{align}
+All differential norms of maps are Hilbert--Schmidt norms.
+The ordinary Yamabe constant \(\Y\) uses the same quotient with
+\(V_f=0\). The conformal scalar formula in dimension four gives,
+for \(k=a^2g\),
+\begin{equation}\label{eq:conformal-L}
+ L_{k,f}(u)=a^{-3}L_{g,f}(au),\qquad
+ s_k-V_{k,f}=a^{-3}L_{g,f}a .
+\end{equation}
+The form and \(L^4\) norm transform by multiplication of the test
+function by \(a\). In particular \(\Yf\) depends only on the class
+and the fixed map. See Lee--Parker and Listing for the Yamabe
+covariance and the fixed-potential functional~\cite[\S2]{LeeParker1987Yamabe}
+\cite[\S2.2]{Listing2012ScalarBundles}.
+
+\subsection{Index, curvature inequality, and spectral sign}
+
+Twist the domain spin connection by the pullback of the spin
+connection on \(S_{h_{\rd}}=S_{h_{\rd}}^+\oplus S_{h_{\rd}}^-\).
+For \(E^\pm=f^*S_{h_{\rd}}^\pm\), the degree-four term of the target
+Chern character is \((p_1\pm 2e)/4\). This follows by squaring the
+formal half-spin weights \(\pm(x_1\pm x_2)/2\).
+On the sphere \(p_1=0\) by stable triviality and \(\langle e,[S^4]\rangle=2\).
+The product-graded index is consequently
+\[
+ \ind D^{E^+,+}-\ind D^{E^-,+}=2\deg f
+\]
+by the spin index formula~\cite{AtiyahSinger1963Index}. On a
+homotopy sphere the untwisted chiral index is zero, and the two
+individual indices are \(\deg f\) and \(-\deg f\), respectively.
+The product index gives a nonzero twisted harmonic spinor for
+every such map and every supplied metric.
+
+We use the sphere comparison of Listing~\cite[Theorem~3]{Listing2010ScalarSymmetric}.
+Here is a direct proof for the scalar bound \(s_g\ge V_f\).
+In singular frames let \(\sigma_1,\ldots,\sigma_4\) be the singular
+values of \(df\). The twist curvature is
+\(\sum_{i<j}c(e_i)c(e_j)\otimes R^E_{ij}\). Each summand has operator
+norm \(\sigma_i\sigma_j/2\) by round curvature one. Thus the
+Schr\"odinger--Lichnerowicz formula for a twisted harmonic spinor
+\(\Phi\) gives
+\[
+ 0\ge \int_M\left(\abs{\nabla\Phi}^2+
+              \frac{s_g-b}{4}\abs{\Phi}^2\right)\,\dv,\qquad
+ b=\sqrt{24\sum_{i<j}\sigma_i^2\sigma_j^2}\le 3\sum_i\sigma_i^2.
+\]
+The first bound uses Cauchy--Schwarz on the six summands.
+The second follows from
+\(\sum_{i<j}a_i a_j\le 3(\sum_i a_i)^2/8\) for \(a_i=\sigma_i^2\).
+If \(s_g\ge V_f\ge b\), the spinor is parallel with positive constant
+norm and all scalar bounds are equalities. Hence the singular
+values coincide and \(f^*h_{\rd}=\alpha g\), with
+\(s_g=12\alpha\) for a smooth nonnegative \(\alpha\).
+Where \(\alpha>0\), the pulled back metric is round locally, so the
+scalar formula gives \(\Delta_g\sqrt{\alpha}=0\).
+Equivalently \(2\alpha\Delta_g\alpha+\abs{\dd\alpha}^2=0\) there.
+The latter identity holds on \(\{\alpha=0\}\) as well because
+\(\dd\alpha=0\) at a zero. Integrating gives
+\(3\int_M\abs{\dd\alpha}^2\,\dv=0\). The degree ensures
+\(\alpha>0\) somewhere. Thus \(\alpha\) is positive and constant
+and the map is a homothetic covering of the simply connected sphere.
+
+Let \(\ell_f(g)\) be the least eigenvalue of \(L_{g,f}\).
+For its positive ground state \(a\), \eqref{eq:conformal-L} gives
+\(s_{a^2g}-V_{a^2g,f}=\ell_f(g)a^{-2}\).
+If \(\ell_f(g)\ge0\), the preceding rigidity forces a homothety in
+the new representative and the deficit vanishes. Conversely, when
+\(g\) is conformal to the pullback by a diffeomorphism, the constant
+ground state for the round pullback transports to a positive
+zero eigenfunction. Consequently
+\begin{equation}\label{eq:sign}
+ \ell_f(g)\le0,\qquad
+ \ell_f(g)=0\quad\Longleftrightarrow\quad
+ f\text{ is a conformal diffeomorphism}.
+\end{equation}
+A ground-state test also gives \(\Yf\le0\), with equality
+precisely in the equality case of \eqref{eq:sign}.
+
+\subsection{Sharp optimization with the map fixed}
+
+\begin{proposition}\label{prop:fixed-map}
+For a fixed nonzero-degree \(f\),
+\[
+ \max_{\widetilde g\in[g],\ \Vol_{\widetilde g}M=1}
+       \ell_f(\widetilde g)=\Yf .
+\]
+If \(\Yf<0\), there is a unique maximizing representative, and
+it has constant scalar deficit \(s_{\widetilde g}-V_{\widetilde g,f}=\Yf\).
+If \(\Yf=0\), every volume-one representative maximizes the
+eigenvalue, and the normalized round pullback is the unique
+representative with identically zero pointwise deficit.
+\end{proposition}
+
+\begin{proof}
+For \(Y_f<0\), a nonnegative minimizing sequence with
+\(\norm{u_j}_4=1\) is bounded in \(H^1\) by boundedness of the potential
+and compactness of \(M\). Pass to a weak \(H^1\) and strong \(L^2\)
+limit \(u\). Lower semicontinuity gives
+\(Y_f\le Y_f\norm u_4^2\le Q_f(u)\le Y_f<0\), so the full critical
+norm survives. The Euler equation is \(L_{g,f}u=Y_f u^3\).
+Its right-hand cubic term is nonpositive. In particular \(u\)
+is a nonnegative subsolution of \((6\Delta_g+1)u\le Cu\) for
+a constant \(C\). The solution of \((6\Delta_g+1)v=Cu\)
+belongs to \(W^{2,4}\) and is bounded. Testing with \((u-v)_+\)
+gives \(u\le v\). Thus elliptic bootstrap and the strong maximum
+principle give a smooth positive \(u\). For \(Y_f=0\), use a
+positive ground state normalized in \(L^4\).
+
+In both cases \(u^2g\) has volume one and constant deficit \(Y_f\)
+by \eqref{eq:conformal-L}. For \(a^2g\) of volume one, test the
+ordinary eigenvalue quotient with \(u/a\) to obtain
+\[
+ \ell_f(a^2g)\le\frac{Y_f}{\int_M a^2u^2\,\dv}\le Y_f ,
+ \qquad 0<\int_Ma^2u^2\,\dv\le1 .
+\]
+For \(Y_f<0\), equality in Cauchy--Schwarz gives \(a=u\).
+For \(Y_f=0\), the spectral equality is conformally invariant by
+\eqref{eq:sign}. A representative with zero pointwise deficit is a
+homothetic pullback by the fixed \(f\), and its scale is fixed by
+the volume.
+\end{proof}
+
+\subsection{The sharp unrestricted supremum over degree-one maps}
+
+\begin{theorem}\label{thm:map-sup}
+For any conformal class on a closed connected oriented spin four-manifold,
+\[
+ \sup_{\deg f=1}\Yf=\min\{\Y,0\}.
+\]
+Attainment is equivalent to the class being conformally round. The
+maximizers are the orientation-preserving conformal diffeomorphisms.
+There is a maximizing sequence whose signed Jacobian measures
+converge to \(\Vol(S^4,h_{\rd})\delta_p\), for any fixed \(p\).
+\end{theorem}
+
+\begin{proof}
+The upper bound follows from \eqref{eq:sign} and \(Q_f\le Q_0\),
+where \(Q_0\) denotes the ordinary form without the map.
+For the lower bound, use inverse stereographic projection in
+normal coordinates at \(p\), with
+\[
+ F_\e(x)=\left(\frac{2\e x}{\e^2+r^2},
+               \frac{\e^2-r^2}{\e^2+r^2}\right),\qquad
+ b_\e(x)=\frac{2\e}{\e^2+r^2}.
+\]
+It has conformal factor \(b_\e\) in the Euclidean chart. For
+\(\rho=\e^{1/2}\) and \(R=\e^{1/4}\), use the exact map inside
+\(B_\rho\). Cut it off on \(\rho<r<2\rho\) in the south-pole coordinates
+by multiplying \(\e x/r^2\) by a radial cutoff, and continue by
+the south pole. The cutoff map \(f_\e\) has degree one by the north
+pole preimage, with the orientation chosen there. Its derivative
+on the cutoff annulus is \(O(\e/\rho^2)\).
+The model potential is \(p_\e=12b_\e^2\), and
+\(6\Delta_0b_\e=p_\e b_\e\). The ground-state identity gives
+\begin{equation}\label{eq:bubble-form}
+ \int_{\RR^4}(6\abs{\dd v}^2-p_\e v^2)\,\dd x
+   =6\int_{\RR^4}b_\e^2\abs{\dd(v/b_\e)}^2\,\dd x\ge0
+\end{equation}
+for compactly supported tests.
+
+The model potential has bounded \(L^2\) norm, with
+\(L^2\) norm \(O((\e/\rho)^2)\) outside \(B_\rho\).
+The annular derivative bound gives the same error for the actual
+potential there. In \(B_\rho\) the normal-coordinate metric and
+volume introduce a factor \(1+O(R^2)\). Thus on \(B_R\) the
+actual potential times the volume density differs from \(p_\e\)
+in \(L^2\) by \(O(R^2+(\e/\rho)^2)\). The scalar-curvature term
+has \(L^2\) norm \(O(R^2)\). In comparing the local kinetic energy
+keep the factor \(1-CR^2\) on the full nonnegative form in
+\eqref{eq:bubble-form}. H\"older bounds the remaining potential
+error uniformly in the test gradient. Consequently, for
+\(v\in H^1_0(B_R)\),
+\begin{equation}\label{eq:local-bubble}
+ Q_{f_\e}(v)\ge -C\bigl(R^2+(\e/\rho)^2\bigr)\norm v_{4,g}^2 .
+\end{equation}
+
+Write a partition of squared cutoffs as
+\(\chi^2+\theta^2=1\), where \(\chi=1\) for \(r\le2\rho\)
+and \(\chi=0\) for \(r\ge R\). Taking the sine and cosine of a
+cutoff varying on the logarithmic radial interval gives
+\(\norm{\dd\chi}_4^4+\norm{\dd\theta}_4^4=O(\log(R/(2\rho))^{-3})\).
+The gradient cross terms cancel because
+\(\chi\,\dd\chi+\theta\,\dd\theta=0\). The localized exterior
+test has potential zero, so
+\[
+ Q_{f_\e}(u)=Q_{f_\e}(\chi u)+Q_0(\theta u)
+     -6\int_M(\abs{\dd\chi}^2+\abs{\dd\theta}^2)u^2\,\dv
+ \ge \Y\norm{\theta u}_4^2-o(1)\norm u_4^2 .
+\]
+For \(\Y\ge0\) the exterior term is nonnegative. For \(\Y<0\) it
+is bounded below by \(\Y\norm u_4^2\). This proves the limit
+uniformly over the \(L^4\) unit sphere. The inner Jacobian is
+\(b_\e^4\,\dd x\), whose integral tends to the sphere volume by
+\(x=\e z\). The annulus contributes \(O((\e/\rho)^4)\), so
+the degree measure concentrates at \(p\).
+The same scaling gives
+\(V_{f_\e}^2\,\dv\rightharpoonup144\Vol(S^4,h_{\rd})\delta_p\).
+
+If \(\Y<0\), test \(Q_f\) with a positive ordinary Yamabe minimizer.
+Since \(f\) has nonzero degree, the subtraction is strict, so
+\(\Yf<\Y\). Existence and positivity of the ordinary Yamabe
+minimizer follow from the Yamabe theorem~\cite{LeeParker1987Yamabe,Schoen1984Yamabe}.
+If \(\Y\ge0\), attainment means \(\Yf=0\), hence \eqref{eq:sign}
+gives a conformal diffeomorphism. Such a map realizes zero
+and its class has positive Yamabe constant.
+\end{proof}
+
+\section{Balanced maps, spectral limits, and degree}\label{sec:balanced}
+
+Fix a smooth volume-one Yamabe minimizer \(g\), so its constant
+scalar curvature is \(s=\Y\). Unless specified otherwise, all
+integrals in the fixed-metric arguments use \(\dv\), and
+\(\lambda_i\) denotes the \(i\)-th positive eigenvalue of
+\(\Delta_g=d^*d\), counted with multiplicity. We first assume
+\(M\) oriented and spin for the degree comparison. A map
+\(f:M\to S^4\subset\RR^5\) is called balanced when
+\(\int_M f\,\dv=0\). Balanced degree-one maps exist for every
+smooth positive volume form after normalization, as shown in
+Section~\ref{sec:moment-normalization}.
+
+For an \(L^2\)-normalized first eigenfunction \(\phi\), the Yamabe
+inequality applied to \(1+t\phi\) gives \(6\lambda_1-2s\ge0\)
+at order \(t^2\). In fact the numerator is
+\(s+(6\lambda_1+s)t^2\), and the squared \(L^4\) norm is
+\(1+3t^2+O(t^3)\). It follows that
+\begin{equation}\label{eq:balance-chain}
+ \Yf\le s-3\int_M\abs{df}^2\,\dv\le s-3\lambda_1\le0
+ \quad\text{for balanced } f .
+\end{equation}
+The first comparison uses the constant test and the second
+uses Poincar\'e on each coordinate and \(\abs f=1\).
+If \(3\lambda_1>s\), this gives a strict uniform gap on the
+balanced class.
+
+\subsection{Characterization at zero balanced supremum}
+
+\begin{theorem}\label{thm:balance}
+On the supplied minimizing metric, the supremum of \(\Yf\)
+over balanced degree-one maps is zero if and only if
+\(s=3\lambda_1\) and there exists a smooth
+\(F:M\to S^4\) satisfying \(\Delta_g F=\lambda_1 F\)
+componentwise. Every balanced degree-one maximizing sequence at
+zero has a subsequence converging strongly in ambient \(W^{1,2}\)
+to such an eigenmap. A nonzero-degree limit is a homothetic
+diffeomorphism. If the absolute Jacobians of the sequence are
+uniformly integrable, the limit has degree one.
+\end{theorem}
+
+\begin{proof}
+When \(\Yf\to0\), \eqref{eq:balance-chain} gives
+\(s=3\lambda_1>0\) and \(\int\abs{df}^2\to\lambda_1\).
+On the orthogonal complement of the constants and first
+eigenspace, the spectral gap bounds the \(H^1\) norm squared
+of that part of \(f\) by a fixed multiple of
+\(\int\abs{df}^2-\lambda_1\). The projections onto the first
+eigenspace admit a convergent subsequence because it is finite
+dimensional. Thus the limit \(F\) is smooth, has \(\abs F=1\),
+and satisfies the stated eigenvalue equation. The product rule
+for \(\abs F^2\) gives \(\abs{dF}^2=\lambda_1\). Therefore
+\(s=3\abs{dF}^2\), and the scalar comparison in
+Section~\ref{sec:twisted} gives homothety when \(\deg F\ne0\).
+The determinant formula for the signed Jacobian is continuous
+in \(F,dF\), so the Jacobians converge in measure.
+Uniform integrability upgrades this to \(L^1\) convergence,
+preserving the degree. For example, a uniform \(L^{4+\eta}\)
+derivative bound for any \(\eta>0\) suffices by
+\(\abs{J_f}\le\abs{df}^4/16\).
+
+For the converse, a supplied first eigenmap at \(s=3\lambda_1\)
+is balanced and has pointwise zero modified deficit. Its degree
+is \(0,1\), or \(-1\) by the scalar comparison. If the degree
+is one, it attains zero. Otherwise set \(k=1-\deg F\) and
+choose \(k\) disjoint coordinate balls.
+In target normal coordinates flatten \(F\) to \(F(p_i)\) through
+radius \(3\rho\) around each center, restoring \(F\) at \(4\rho\).
+This is a homotopy with bounded derivative on the flattened
+annulus, since in the target chart the original coordinate
+distance is \(O(\rho)\). Insert the degree-one bubbles of
+Theorem~\ref{thm:map-sup}, rotated to have the same constant
+on the insertion collars. The resulting maps \(G_\e\) have
+degree one. Each bubble has square derivative integral
+\(O(\e^2(1+\log(\rho/\e)))\), by integration of \(b_\e^2\),
+so \(G_\e\to F\) strongly in \(W^{1,2}\).
+Their mean is \(O(\rho^4)\).
+
+On each localization ball \(B_R(p_i)\) the bubble-potential
+estimate leading to \eqref{eq:local-bubble} still holds. The
+bounded derivatives on the outer part contribute \(O(R^2)\)
+in the \(L^2\) potential comparison. Off the insertion and
+flattening balls the unmodified deficit is zero. A squared
+partition with the same logarithmic cutoffs therefore gives
+\(Q_{G_\e}(u)\ge-o(1)\norm u_4^2\) uniformly, and
+\(\norm{V_{G_\e}}_2\) is bounded.
+
+To impose exact balance, use the time-one conformal flow
+\(\Phi_b\) of \(b-(b\cdot y)y\) on \(S^4\) for \(b\in\RR^5\)
+near zero. The field is the spherical gradient of \(b\cdot y\),
+whose Hessian is \(-(b\cdot y)h_{\rd}\).
+The derivative at \(b=0\) of the mean map
+\(b\mapsto\int\Phi_b(F)\,\dv\) is
+\(I-\int FF^{\mathsf T}\,\dv\). It is positive definite because
+equality in a direction would confine the connected image of
+the nonconstant \(F\) to two antipodal points.
+The mean maps for \(G_\e\) converge in \(C^1\) on a small parameter
+ball and their mean errors at zero are \(O(\rho^4)\). Quantitative
+local inversion thus gives \(b_\e=O(\rho^4)\) with
+\(\int\Phi_{b_\e}(G_\e)\,\dv=0\).
+The target conformal factor is \(1+O(\abs{b_\e})\) in \(C^0\),
+so the potential changes by \(o(1)\) in \(L^2\). This preserves
+the uniform lower form bound. Thus \(f_\e=\Phi_{b_\e}\circ G_\e\)
+is balanced of degree one, converges strongly to \(F\), and
+has \(\Yf\to0\) along this family.
+\end{proof}
+
+When the balanced zero supremum is attained, the maximizing map
+is an orientation-preserving homothetic diffeomorphism for the
+supplied metric. In fact \eqref{eq:sign} first makes it conformal.
+Equality in \eqref{eq:balance-chain} then makes it a first eigenmap
+with \(s=3\abs{df}^2\). On the volume-one round sphere one can instead
+choose a reflection as \(F\) in the converse and insert two positive
+bubbles. The maximizing sequence has degree one even though its
+strong \(W^{1,2}\) limit has degree \(-1\).
+
+\subsection{The critical energy required to lose degree}
+
+Let \(\Omega\) be the oriented unit-round volume form on \(S^4\)
+and \(v_4=\int_{S^4}\Omega\). The pointwise determinant inequality
+\(\abs{J_f}\le\abs{df}^4/16\) is the arithmetic--geometric mean
+inequality on the squared singular values. Thus a degree-one map
+has fourth energy at least \(16v_4\). A stronger estimate applies
+to the defect of a strongly converging sequence.
+
+\begin{theorem}\label{thm:degree}
+Let \(f_j:M\to S^4\) be smooth degree-one maps on a fixed
+closed oriented Riemannian four-manifold, with bounded fourth
+energy and strong ambient \(W^{1,2}\) limit a smooth map \(F\).
+Along any subsequence for which the energy and signed Jacobian
+measures converge weakly, write their limits as
+\(\abs{dF}^4\,\dv+\nu\) and \(F^*\Omega+\eta\). Then
+\begin{equation}\label{eq:atoms}
+ \eta=v_4\sum_{\ell=1}^{N}k_\ell\delta_{p_\ell},\qquad
+ k_\ell\in\mathbb Z\setminus\{0\},\qquad
+ 16\abs{\eta}\le\nu,\qquad
+ \sum_\ell k_\ell=1-\deg F .
+\end{equation}
+In particular
+\begin{equation}\label{eq:energy-gap}
+ \liminf_j\int_M\abs{df_j}^4\,\dv
+ \ge \int_M\abs{dF}^4\,\dv+16v_4\abs{1-\deg F}.
+\end{equation}
+If every atom of the limiting energy measure has mass strictly
+below \(16v_4\), then \(\deg F=1\).
+\end{theorem}
+
+\begin{proof}
+Put \(G_j=df_j-dF\). Interpolation gives \(G_j\to0\) in \(L^p\)
+for \(p<4\). Expanding the fourth power shows
+\(\abs{df_j}^4-\abs{dF}^4-\abs{G_j}^4\to0\) in \(L^1\),
+so \(\nu\) is the nonnegative limit of \(\abs{G_j}^4\,\dv\).
+The determinant expansion in an oriented orthonormal frame gives
+\[
+ J_{f_j}-J_F
+ =\det(f_j,G_j(e_1),G_j(e_2),G_j(e_3),G_j(e_4))+o_{L^1}(1).
+\]
+All other terms have at most three \(G_j\) columns, or the bounded
+columns of \(dF\) and the error \(f_j-F\).
+Projecting the \(G_j\) columns onto \(f_j^\perp\) bounds the
+displayed determinant by \(\abs{G_j}^4/16\). Taking limits
+gives \(16\abs{\eta}\le\nu\) as measures.
+
+For the integer statement fix a center \(x\) and geodesic spheres
+of radius below the injectivity radius. On a subsequence with
+summable squared \(L^2\) errors, coarea gives \(L^2\) convergence
+on almost every sphere. Fatou gives a bounded tangential \(W^{1,4}\)
+subsequence on each such sphere, since the bulk fourth energies are
+bounded. Morrey compactness on the three-dimensional sphere gives
+uniform convergence there. Exclude radii at which the limiting
+energy has boundary mass. At a remaining radius the signed
+Jacobians converge on the ball by the energy bound on boundary
+neighborhoods. Join \(f_j|_{\partial B}\) to \(F|_{\partial B}\)
+by the shortest geodesic homotopy. Its swept volume is bounded by
+\[
+ C\sup_{\partial B}\dist(f_j,F)
+   \int_{\partial B}(\abs{d_\tau f_j}+\abs{d_\tau F})^3\,\dd A
+ \longrightarrow 0 .
+\]
+The map on the double of the ball with this joining collar gives
+an integer multiple of \(v_4\) by the degree formula. It can be
+made smooth by making the ball maps constant in the normal
+direction near the seams through a homotopy relative to the
+boundary, which preserves their integrals. Hence
+\(\eta(B_r(x))\in v_4\mathbb Z\) for good radii. Continuity from
+below extends this to all small open balls. This is the local
+degree argument underlying integer concentration for critical
+Sobolev maps. See Hardt--Rivi\`ere~\cite{HardtRiviere2008Connecting}
+for related concentration results.
+
+Shrinking the balls gives integer point masses. Away from the
+finitely many nonzero atoms, sufficiently small balls have total
+variation \(<v_4\) and so signed mass zero. On every compact
+set avoiding the atoms these radii can be chosen uniformly
+by a finite covering. Averaging a continuous test over the small
+balls then yields zero pairing with \(\eta\) on that set, by
+Fubini and convergence of the normalized ball averages.
+Thus the signed defect is supported on the stated atoms.
+The degree integral gives the sum in \eqref{eq:atoms}.
+The bound on total energy follows along a subsequence realizing
+the liminf. The local cap excludes all the nonzero integers.
+\end{proof}
+
+A sufficient sequence-level cap is
+\(\lim_{r\downarrow0}\limsup_j\int_{B_r(x)}\abs{df_j}^4\,\dv<16v_4\)
+at every \(x\), since the energy atom of any extracted limit
+obeys this bound. The coefficient is sharp. Each inserted conformal bubble
+in the recovery of Theorem~\ref{thm:balance} contributes fourth
+energy \(16v_4+o(1)\) by the integral of \(16b_\e^4\).
+The cutoff and flattened portions contribute \(o(1)\), and the
+small final conformal correction preserves this limit. The
+remaining energy converges to the energy of \(F\). Thus the
+recovery realizes the coefficient in \eqref{eq:energy-gap},
+including the balanced reflection example. The energy defect
+may additionally have a diffuse part, even though the signed
+Jacobian defect is atomic.
+
+\section{A sharp spectral criterion for a round Yamabe metric}\label{sec:rigidity}
+
+We now drop the spin and orientation assumptions. Let \(g\) be any
+smooth volume-one Yamabe minimizer on a closed connected Riemannian
+four-manifold. When \(s=3\lambda_1\), the conformal second variation
+vanishes in every first-eigenfunction direction. The fourth variation
+at that degenerate minimum gives the following rigidity.
+
+\begin{theorem}\label{thm:spectral}
+With the positive eigenvalues counted with multiplicity,
+\[
+ A(g):=\frac35\sum_{i=1}^5\lambda_i(g)-s\ \ge 0 .
+\]
+Equality holds exactly when \((M,g)\) is homothetic to the round
+four-sphere. At \(s=3\lambda_1\) the first eigenspace has dimension at
+most five, and dimension five suffices for equality. Its orthonormal
+basis, rescaled by \(1/\sqrt{5}\), gives a homothetic diffeomorphism to
+the unit sphere.
+\end{theorem}
+
+\begin{proof}
+The second variation in \eqref{eq:balance-chain} gives \(s\le3\lambda_1\),
+so it suffices to study \(s=3\lambda\), \(\lambda=\lambda_1>0\).
+For every real Sobolev test \(u\), the minimizing inequality is
+\begin{equation}\label{eq:sharp-yamabe}
+ \left[\int_M\left(u^2+\tfrac2\lambda\abs{\dd u}^2\right)\dv\right]^2
+ \ge \int_M u^4\,\dv .
+\end{equation}
+The inequality extends to signed \(u\) by taking absolute values
+in the Sobolev form. Let \(\phi\) be a real first eigenfunction with
+\(\int\phi^2=1\). For \(w\) smooth of mean zero put
+\(u=1+t\phi+t^2w\). The bracket in \eqref{eq:sharp-yamabe} is
+\(1+3t^2+6t^3\int\phi w+t^4\int(w^2+2\abs{\dd w}^2/\lambda)\).
+Writing \(z=t\phi+t^2w\), the right side is
+\(1+6\int z^2+4\int z^3+\int z^4\).
+Subtracting gives the cubic term \(-4t^3\int\phi^3\) and
+the quartic term \(t^4\mathcal C_\phi(w)\), where
+\begin{equation}\label{eq:quartic}
+ \mathcal C_\phi(w)
+ =9-\int\phi^4+\frac4\lambda\int\abs{\dd w}^2
+            -4\int w^2-12\int\phi^2 w .
+\end{equation}
+The cubic term vanishes by the two signs of \(t\), and
+\(\mathcal C_\phi(w)\ge0\) for every mean-zero \(w\).
+Polarization shows that all triple products of first
+eigenfunctions integrate to zero. The cubic degeneracy calculation
+is related to that of Carlotto, Chodosh, and Rubinstein
+\cite[Proposition~7]{CarlottoChodoshRubinstein2015Yamabe}.
+
+Let \(b=\phi^2-1\) and \(q=\int\phi^4\).
+Testing \(\Delta\phi=\lambda\phi\) with \(\phi^3\) gives
+\(\int\abs{\dd b}^2=4\lambda q/3\), and
+\(\int b^2=\int\phi^2 b=q-1\). Hence
+\begin{equation}\label{eq:quartic-sharp}
+ \mathcal C_\phi(b)=25-\tfrac{35}{3}q\ge0,\qquad
+ q\le\tfrac{15}{7}.
+\end{equation}
+If equality holds, \(b\) minimizes the nonnegative functional
+\(\mathcal C_\phi\), so its first variation against each mean-zero
+test is zero. From \eqref{eq:quartic} this is
+\(\Delta b=(5\lambda/2)b\). The product rule now gives
+\[
+ \abs{\dd\phi}^2=\tfrac{\lambda}{4}(5-\phi^2).
+\]
+Conversely the centered-square equation implies saturation by
+testing with \(b\).
+
+For an orthonormal first basis \(\phi_1,\ldots,\phi_d\), put
+\(S=\sum_{i=1}^d\phi_i^2\). A unit coefficient vector \(a\),
+averaged uniformly on \(S^{d-1}\), has
+\(\mathbb E_a(a\cdot z)^4=3\abs z^4/(d(d+2))\). This follows
+from rotation invariance and \(\sum_i a_i^2=1\).
+Use \eqref{eq:quartic-sharp} for every direction \(a\) and
+\(\int S=d\) to obtain
+\[
+ \frac{3d}{d+2}\le\frac{3}{d(d+2)}\int S^2\,\dv\le\frac{15}{7}.
+\]
+It follows that \(d\le5\). When \(d=5\) both inequalities
+are equalities, so \(S=5\) everywhere and every direction has
+quartic equality. Let \(X=(\phi_1,\ldots,\phi_5)/\sqrt5\).
+By polarization of the gradient identity,
+\begin{equation}\label{eq:point-gram}
+ \ip{\dd X_i}{\dd X_j}_g
+       =\tfrac{\lambda}{4}(\delta_{ij}-X_iX_j),\qquad
+ X^*h_{\rd}=\tfrac{\lambda}{4}g .
+\end{equation}
+Indeed \(X\) is sphere-valued by \(S=5\), and the matrix on
+the right in the first formula is \(\lambda/4\) times the
+orthogonal tangent projection. The four nonzero singular
+values of \(dX\) are therefore equal to \(\sqrt{\lambda/4}\).
+The resulting local homothety is a covering by compactness,
+and the target is simply connected. This derives the metric
+from the quartic Yamabe inequality through the five coordinates.
+Obata's classical sphere theorem uses a prescribed
+Hessian equation for one function~\cite[Theorem~A]{Obata1962Sphere}.
+
+For the round converse, if the sectional curvature is \(K\),
+then \(s=12K\) and the five coordinate eigenfunctions have
+eigenvalue \(4K\). The integrated Bochner identity with
+\(\Ric=3Kg\) and \(\abs{\nabla^2 u}^2\ge(\Delta u)^2/4\)
+gives \(\lambda_1\ge4K\). Hence the first five eigenvalues
+have the stated value and \(A(g)=0\).
+\end{proof}
+
+If \(F:M\to S^4\) is a first eigenmap at \(s=3\lambda_1\),
+its image spans \(\RR^5\) exactly when its five coordinates
+are independent. In that case the dimension is five and
+\(F=B X\) for some real \(5\times5\) matrix \(B\).
+Since \(X\) is surjective and \(\abs{BX}=1\), we have
+\(B^{\mathsf T}B=I\). Thus every full-span first eigenmap in
+this setting is a homothetic diffeomorphism. In particular a
+degree-zero limit in Theorem~\ref{thm:balance} must lie in a
+proper great subsphere.
+
+\subsection{Simultaneous normalization of mean and covariance}
+\label{sec:moment-normalization}
+
+For a smooth degree-one map \(f\) from a closed connected oriented four-manifold
+with a smooth positive probability volume form \(\dd v\),
+we can impose
+\[
+ \int f\circ T\,\dd v=0,\qquad
+ \int (f\circ T)(f\circ T)^{\mathsf T}\,\dd v=I/5
+\]
+by an orientation-preserving diffeomorphism \(T\) of the domain.
+To prove this, consider
+\(\Phi(y)=(y,yy^{\mathsf T}-I/5)\) in
+\(\RR^5\oplus\operatorname{Sym}_0(5)\). The image has full affine
+span because a trace-free quadratic plus a linear function
+constant on the unit sphere must be zero.
+Its round mean is zero. Thus every nonzero linear functional
+on this space takes both signs on the image. The measure
+\(\mu=f_*\dd v\) has full support by nonzero degree and positivity
+of the volume form. Define
+\[
+ \mathcal L(b)=\log\int_{S^4}\exp\ip{b}{\Phi(y)}\,\dd\mu(y).
+\]
+Its derivative is the tilted mean and its Hessian is the tilted
+covariance, positive definite by full support and the affine span.
+For every unit \(b\), the maximum of \(\ip{b}{\Phi(y)}\) is positive.
+Compactness of the unit parameter sphere gives a uniform positive
+lower bound on these maxima. Finite neighborhoods in parameter
+space and full support then give
+\(\mathcal L(tb)\ge c t+\log m\) for constants \(c,m>0\) and \(t\ge0\).
+Consequently a unique minimizing tilt gives mean zero for \(\Phi\).
+It has the smooth positive density
+\(\rho(x)=\exp(\ip{b_*}{\Phi(f(x))}-\mathcal L(b_*))\)
+on the domain. Moser transport gives \(T^*(\rho\,\dd v)=\dd v\)
+\cite{Moser1965Volume}. Indeed, on a closed connected oriented
+manifold with equal total volume, the difference of the volume
+forms is an exact top form \(\dd\alpha\). Along their linear
+interpolation \(\omega_t\), the flow of the time-dependent field
+satisfying \(\iota_{V_t}\omega_t=-\alpha\) has constant pulled back
+volume form. At \(t=1\) this is the claimed transport. It preserves
+degree and gives the two stated moments. The construction
+establishes feasibility of the constraints for each map, with
+derivative bounds depending on the map and the transport.
+
+\subsection{A covariance bound for the coupled deficit}
+
+For a balanced map \(f\) on the supplied Yamabe minimizer, set
+\(C_f=\int ff^{\mathsf T}\,\dv\), so \(\tr C_f=1\).
+Suppose \(C_f\ge\delta I\) for \(0<\delta\le1/5\).
+The coordinates of \(\varphi=C_f^{-1/2}f\) have mean zero
+and are orthonormal in \(L^2\). The matrix
+\(G_{ij}=\int\ip{\dd\varphi_i}{\dd\varphi_j}\,\dv\)
+satisfies \(G\ge\lambda_1 I\) by Poincar\'e,
+and \(\tr G\ge\sum_{i=1}^5\lambda_i\) by the variational trace
+principle. For the latter, expand the orthonormal functions in a
+Laplace eigenbasis. The summed squared coefficient at each mode
+is in \([0,1]\), and all weights sum to five.
+Consequently
+\[
+ \int\abs{df}^2\,\dv=\tr(C_fG)
+ \ge \lambda_1+\delta\sum_{i=2}^5(\lambda_i-\lambda_1).
+\]
+Combining with the scalar constant test gives
+\begin{equation}\label{eq:covariance-gap}
+ \Yf\le s-3\lambda_1-3\delta\sum_{i=2}^5(\lambda_i-\lambda_1).
+\end{equation}
+On a fixed nonround minimizing metric, this bound is strictly
+negative by Theorem~\ref{thm:spectral}. In particular the supremum
+over balanced degree-one maps with \(C_f=I/5\) is zero exactly for
+a homothetically round metric, where an oriented homothety attains
+it. If \(f_j\) is balanced with \(Y_{f_j}([g])\to0\) on a fixed nonround
+minimizer, its least covariance eigenvalue must tend to zero. The
+full covariance criterion is independent of the Jacobian criterion
+in Theorem~\ref{thm:degree}.
+
+\section{Lower-dimensional eigenmaps and metric variations}
+\label{sec:lower}
+
+The degree-zero alternatives at \(s=3\lambda_1\) lie in lower
+great spheres by Theorem~\ref{thm:spectral}. We record the
+geometric restrictions supplied by the fixed-metric equations.
+In this section \(M\) is a smooth oriented homotopy four-sphere,
+\(g\) is a volume-one Yamabe minimizer at \(s=3\lambda_1(g)\),
+\(\lambda=\lambda_1(g)\), and \(F\) is a supplied first eigenmap.
+
+\subsection{Rank and the circle Hopf bundle}
+
+The equation \(\Delta_g F=\lambda F\), \(\abs F=1\) gives
+\(\abs{dF}^2=\lambda>0\). On an open set of rank one the
+constant-rank theorem gives \(F=\gamma\circ u\) for a local
+unit-speed curve \(\gamma\). Then \(\abs{\dd u}^2=\lambda\)
+and
+\(\gamma'\Delta_g u-\gamma''\abs{\dd u}^2=\lambda\gamma\).
+The tangent part gives \(\Delta_g u=0\), so \(\gamma''=-\gamma\)
+and the image there lies in a great circle. Unique continuation
+for the scalar eigenfunctions implies that the image lies in
+that circle globally~\cite{Aronszajn1957Continuation}.
+A global angle lift exists by simple connectivity, and its
+harmonic equation on the closed manifold makes it constant.
+Thus rank at least two occurs on an open dense set. A map
+to a great \(S^2\) cannot be a submersion everywhere. Its
+kernel and orthogonal complement would be oriented two-plane
+bundles with zero Euler classes because \(H^2(M;\mathbb Z)=0\),
+contradicting \(\chi(M)=2\). For a great \(S^3\), an everywhere
+submersion would give an oriented tangent line subbundle and
+a nowhere-zero vector field, with the same contradiction.
+
+For a map to a great \(S^2\), pull back the circle Hopf bundle and
+choose a smooth lift \(z:M\to S^3\subset\mathbb C^2\), possible
+because the first Chern obstruction is zero. With the unit-radius
+target, the Hopf connection \(a=\operatorname{Im}(z^*\dd z)\)
+satisfies
+\begin{equation}\label{eq:circle-hopf}
+ \abs{\dd z}^2=\lambda/4+\abs a^2,\qquad
+ \dd a=\tfrac12F^*\Omega_2 ,
+\end{equation}
+where \(\Omega_2\) is the unit sphere area form with the standard
+Hopf orientation. At \(z=(1,0)\) the differential on the complex
+horizontal line doubles lengths and the exterior derivative of
+the connection has value \(2\) on its oriented orthonormal basis.
+The pulled-back area has value \(4\). Equivariance gives
+\eqref{eq:circle-hopf} everywhere. Change the phase by solving
+\(\Delta_g\varphi=-d^*a\) so that \(a+\dd\varphi\) is coclosed.
+It is then coexact because \(H^1(M;\RR)=0\). Use this lift below.
+
+Set \(m=\int z\,\dv\). The Hopf formula expresses \(zz^*\)
+as \(I/2\) plus a trace-free matrix linear in \(F\). Balance gives
+\(\int zz^*\,\dv=I/2\), and
+\(\int\abs{v^*z-v^*m}^2\,\dv=1/2-\abs{v^*m}^2\) for a unit
+\(v\in\mathbb C^2\). Taking \(v=m/\abs m\) when \(m\ne0\) gives
+\(\abs m^2\le1/2\). At equality, \(v^*z\) would be constant with
+modulus \(1/\sqrt2\), so the Hopf image would be orthogonal to
+the Hopf image of \(v\). The resulting great-circle map was
+excluded above. Hence \(\abs m^2<1/2\).
+Scalar Poincar\'e and \eqref{eq:circle-hopf} now give
+\[
+ \norm a_2^2\ge\lambda(3/4-\abs m^2)>\lambda/4,\qquad
+ \norm{\dd a}_2^2
+ \le \lambda^2/16 ,
+\]
+since the product of the two singular values of \(dF\) is at
+most \(\lambda/2\). The Rayleigh quotient of \(a\) bounds the
+first positive coexact one-form eigenvalue by
+\[
+ \lambda_{\mathrm{coex}}^{(1)}
+ \le \frac{\lambda}{16(3/4-\abs m^2)}
+ <\lambda/4=s/12 .
+\]
+The last equality uses \(s=3\lambda\). The area pullback is a
+nonzero exact decomposable form, so its two chiral parts have
+equal norm pointwise, and it cannot be coclosed by integration
+by parts. The obstruction here requires an independent coexact
+gap to exclude the target on a given metric. For comparison, the
+round product \(S^2(a)\times S^2(a/\sqrt2)\) has \(s=3\lambda_1\)
+and a rank-two first eigenmap by projection to the first factor.
+Its pulled-back Hopf class is nonzero on that factor, as is
+seen by integrating \(F^*\Omega_2\). This comparison uses
+a supplied constant-scalar product metric
+\cite[\S4.2]{DeLimaPiccioneZedda2012Yamabe}.
+
+\subsection{The quaternionic lift of a degree-zero map}
+
+The Hopf lift for \(S^4\cong\mathbb{HP}^1\) gives a related
+bound for the great \(S^3\) alternative. For a unit quaternionic
+column \(z\) represent the target point by
+\[
+ P=zz^*=\tfrac12(I+T(F)),\qquad
+ T(q,t)=
+ \begin{pmatrix}t&q\\\bar q&-t\end{pmatrix},\qquad
+ q=2z_1\bar z_2,\quad t=\abs{z_1}^2-\abs{z_2}^2 .
+\]
+The tautological quaternionic line has top Chern number of
+absolute value one, by the Hopf clutching map of degree one.
+On a four-dimensional base the pulled-back unit sphere bundle
+has a section exactly when its top Chern class vanishes. The
+fiber \(S^3\) is two-connected, so its only obstruction is in
+degree four~\cite[\S3]{Hatcher2017VectorBundles}. Thus
+\(\deg F=0\) is precisely the condition for a lift.
+
+For any smooth lift put \(a=z^*\dd z\), \(b=(I-P)\dd z\).
+The relation \(T(v)^2=\abs v^2 I\) gives
+\(\abs{b(X)}=\abs{dF(X)}/2\), hence
+\[
+ \abs{\dd z}^2=\lambda/4+\abs a^2,\qquad
+ F_a=\dd a+a\wedge a=b^*\wedge b.
+\]
+In a unit frame of the orthogonal quaternionic line the last
+form acts as \(2\operatorname{Im}(\bar b(X)b(Y))\), with norm
+\(\abs{dF(X)\wedge dF(Y)}/2\).
+In particular \(\abs{F_a}^2\le 3\lambda^2/32\) by the same
+singular-value inequality used in Section~\ref{sec:twisted}.
+Equality everywhere would force a full-rank map, incompatible
+with degree zero. As in the complex case,
+\(\int P\,\dv=I/2\) and \(\abs{\int z\,\dv}^2\le1/2\).
+Poincar\'e gives \(\int\abs a^2\,\dv\ge\lambda/4\).
+If \(F\) has full linear span this lower bound is strict
+uniformly over lifts of this fixed map. In fact
+\[
+ \abs{\int z\,\dv}\le \max_{\abs v=1}\int\abs{Pv}\,\dv
+                 <1/\sqrt2.
+\]
+Equality in the last comparison would require \(\abs{Pv}\) to
+be constant, which by the projector formula confines \(F\) to a
+great \(S^3\). Conversely if the image lies there and \(v\) is a
+unit column projecting to its normal, \(z=\sqrt2 Pv\) is a unit
+lift with mean \(v/\sqrt2\). It is affine-linear in \(F\), so it
+attains the Poincar\'e inequality and \(\int\abs a^2\,\dv=\lambda/4\).
+The connection equation now includes \(a\wedge a\), so the
+linear coexact argument for \eqref{eq:circle-hopf} leaves a
+separate gauge estimate to be established.
+
+\subsection{Bochner and stress identities at scalar equality}
+
+At \(s=3\lambda\), let \(B=F^*h_{\rd}\), \(H=B-\lambda g/4\),
+and let \(D_0=\abs{\nabla dF}^2\) use the target Levi--Civita
+connection. The eigenmap is harmonic with constant energy.
+Commuting the two covariant derivatives of \(dF\) gives the
+Bochner identity
+\begin{equation}\label{eq:map-bochner}
+ 0=-\tfrac12\Delta_g\abs{dF}^2
+   =D_0+\ip{\Ric}{B}+\abs B^2-\lambda^2 ,
+ \qquad D_0+\abs H^2=-\ip{\Ric_0}{H}.
+\end{equation}
+The target-curvature contribution is
+\(\sum_{i,j}(B_{ij}^2-B_{ii}B_{jj})\) by round curvature one.
+The trace terms in the Ricci and pullback contractions cancel
+\(\lambda^2\).
+At rank \(k\), \(\abs B^2\ge\lambda^2/k\), so
+\[
+ \Ric_{\min}\le (1-1/k)\lambda-D_0/\lambda,\qquad
+ \abs{\Ric_0}\ge\lambda\sqrt{1/k-1/4}\quad(k<4).
+\]
+At rank one with \(B=\lambda u^\flat\otimes u^\flat\), its
+Ricci direction satisfies \(\Ric(u,u)=-D_0/\lambda\).
+Positive Ricci therefore excludes the compulsory rank-one
+point for a great \(S^2\). A lower bound strictly above
+\(\lambda/2\) excludes the compulsory rank drop for a great
+\(S^3\). Full rank everywhere gives a covering and hence
+a diffeomorphism.
+
+There is also a finite stress criterion, with the map held fixed
+when varying the metric. Put \(T_0=\Ric-3B=\Ric_0-3H\).
+The tensors \(H,T_0\) are trace-free and divergence-free.
+The divergence of \(B\) is the tension contraction plus
+\(\tfrac12\dd\abs{dF}^2\), and the scalar curvature is constant.
+The ground state of \(L_{g,F}\) at this pair is the constant
+simple eigenfunction with eigenvalue zero, because \(s=3\lambda\).
+Along \(g+tK\), differentiating the smooth simple eigenpair
+and integrating at \(t=0\) gives
+\begin{equation}\label{eq:stress}
+ \dot\ell_F[K]=-\int_M\ip{T_0}{K}\,\dv,\qquad
+ \dot\ell_F[H]=\int_M(D_0+4\abs H^2)\,\dv .
+\end{equation}
+Indeed, the metric derivative of the Laplacian annihilates
+constants. The derivative of the scalar term is
+\(-\ip{\Ric}{K}+\nabla^j\nabla^i K_{ij}+
+\Delta_g\tr_g K\), whose last terms integrate to zero.
+The derivative of \(-3\abs{dF}^2\) is \(3\ip{B}{K}\).
+Equation~\eqref{eq:map-bochner} then gives the second identity.
+The test \(H\) has zero first volume variation. Its derivative
+vanishes only for \(B=(\lambda/4)g\), yielding a homothetic
+diffeomorphism.
+
+For a sequence \(f_j\to F\) strongly in \(W^{1,2}\) on a fixed
+\(g\), the same criterion can be tested by finitely many moments.
+Choose a real orthonormal basis \((\phi_a)\) of the first
+eigenspace and take
+\(K_{ab}=(\dd\phi_a\odot\dd\phi_b)_0\), where
+\(\odot\) denotes the symmetric product and the subscript is
+the trace-free part. If every pairing of
+\(\Ric_0-3(f_j^*h_{\rd})_0\) with \(K_{ab}\) tends to zero,
+the pullback tensors converge in \(L^1\) by strong derivative
+convergence. Thus the pairings of \(T_0\) with all \(K_{ab}\)
+vanish. Since \(H\) is a linear combination of the \(K_{ab}\)
+by the first eigenfunction expansion of \(F\),
+\eqref{eq:stress} gives homothety. Obtaining those metric
+stationarity conditions from a geometrically constructed
+sequence remains a separate premise.
+
+\Needspace{15\baselineskip}
+\section{Relative pinching and the joint law of five modes}
+\label{sec:near}
+
+Consider smooth volume-one Yamabe minimizers, now allowing the
+manifold and metric to vary. Assume \(s>0\), and write
+\[
+ \e=\frac{3\lambda_5}{s}-1,\qquad
+ \frac{\e}{5}\le \frac{A(g)}{s}\le\e
+\]
+by \(s\le3\lambda_1\) and the monotonicity of the eigenvalues.
+The scale in this comparison is essential when \(s\) can tend to
+zero.
+
+\begin{theorem}\label{thm:near}
+Let \(u_1,\ldots,u_5\) be an \(L^2\)-orthonormal family of the first
+five positive Laplace eigenfunctions, in eigenvalue order,
+and put \(X=(u_1,\ldots,u_5)/\sqrt5\).
+There is a universal bound on \(\abs X\) for \(0\le\e\le1\).
+For a sequence of such minimizers with \(\e\to0\),
+the probability measures \(X_*(\dd V_g)\) on \(\RR^5\) converge
+weakly to uniform probability on the unit \(S^4\).
+In the scale
+\[
+ L=\tfrac3s\Delta_g,\qquad
+ \Gamma(a,b)=\tfrac3s\ip{\dd a}{\dd b}_g,\qquad
+ \norm{w}_{\mathcal H}^2=\int_M(w^2+\Gamma(w,w))\,\dv ,
+\]
+one has
+\begin{align}
+ \norm{\abs X^2-1}_{2,g}&\le C\e^{1/4},\notag\\
+ \left\|\Gamma(X_i,X_j)-\tfrac14(\delta_{ij}-X_iX_j)\right\|_{\mathcal H^*}
+ &\le C\e^{1/4}.
+ \label{eq:near-gram}
+\end{align}
+\end{theorem}
+
+\begin{proof}
+It suffices to treat \(0<\e\le1\), since the case \(\e=0\)
+is Theorem~\ref{thm:spectral}. Define
+\(\mathcal Q(v)=\int(v^2+2\Gamma(v,v))\,\dv\).
+By the minimizing inequality,
+\begin{equation}\label{eq:near-sob}
+ \norm v_4^2\le\mathcal Q(v)\le2\norm v_{\mathcal H}^2.
+\end{equation}
+This holds for signed \(v\) by taking absolute values.
+The eigenvalues \(\nu_i\) of \(L\) on the \(u_i\) satisfy
+\(1\le\nu_i\le1+\e\). For a normalized eigenfunction \(u_i\),
+testing with \(u_i^{p-1}\) for dyadic \(p\ge2\) gives
+\(\int\Gamma(u_i^{p/2},u_i^{p/2})=
+\nu_i p^2\norm{u_i}_p^p/(4(p-1))\).
+Applying \eqref{eq:near-sob} to \(u_i^{p/2}\) yields
+\[
+ \norm{u_i}_{2p}\le
+ \left(1+\frac{\nu_i p^2}{2(p-1)}\right)^{1/p}\norm{u_i}_p .
+\]
+The product over dyadic \(p\) converges uniformly in
+\(\nu_i\le2\). Thus all five modes have a universal
+\(L^\infty\) bound.
+
+For a unit coefficient vector take \(\phi=\sum_i a_i u_i\).
+Then \(\int\phi=0\), \(\norm{\phi}_2=1\),
+\(r=(L-1)\phi\) has \(\norm r_\infty\le C\e\), and
+\(\alpha=\int\phi r\in[0,\e]\).
+For a smooth mean-zero \(w\) use the two tests
+\(v_\pm=1\pm t\phi+t^2w\).
+Write \(q=\int\phi^4\), \(a_0=3+2\alpha\),
+\(J_w=\mathcal Q(w)\) and \(B_w=\int(\phi w+2\Gamma(\phi,w))\).
+The sign average of the nonnegative deficits
+\(\mathcal Q(v_\pm)^2-\int v_\pm^4\) is
+\begin{align}
+ 4\alpha t^2
+ &+\bigl(\mathcal C_\phi(w)+12\alpha+4\alpha^2\bigr)t^4\notag\\
+ &+\left(2a_0J_w+4B_w^2-4\int w^3-6\int\phi^2w^2\right)t^6
+  +\left(J_w^2-\int w^4\right)t^8 ,
+ \label{eq:averaged-quartic}
+\end{align}
+where \(\mathcal C_\phi(w)=9-q+4\int\Gamma(w,w)
+-4\int w^2-12\int\phi^2w\).
+Indeed, the quadratic bracket for the two signs is
+\(1+a_0t^2\pm2B_wt^3+J_wt^4\), and the average of the
+fourth powers uses \((1+t^2w)^4+6t^2\phi^2(1+t^2w)^2+t^4\phi^4\).
+The last two coefficients in \eqref{eq:averaged-quartic} are
+bounded for \(\norm w_{\mathcal H}\le K\), by
+\eqref{eq:near-sob}, Cauchy--Schwarz, and the sup norm of \(\phi\).
+With \(t=\e^{1/4}\) this proves
+\(\mathcal C_\phi(w)\ge-C_K\sqrt\e\) uniformly on these bounded sets.
+
+Put \(b=\phi^2-1\). The chain rule gives
+\(\int\Gamma(b,b)=\frac43\int\phi^3L\phi\).
+It follows that \(\norm b_{\mathcal H}\) is uniformly bounded and
+\[
+ \mathcal C_\phi(b)=25-\tfrac{35}{3}q+\tfrac{16}{3}\int\phi^3r .
+\]
+In particular \(q\le15/7+C\sqrt\e\).
+Average over the coefficient sphere as in the exact proof, now
+with \(S=\sum_i u_i^2\). The average is
+\((3/35)\int S^2=15/7+(3/35)\int(S-5)^2\).
+This implies the radial estimate in \eqref{eq:near-gram}.
+It also gives a lower bound in every direction. Indeed,
+\((15/7+C\sqrt\e)\abs a^4-q(a)\) is a nonnegative homogeneous
+quartic on the unit coefficient sphere and has
+\(L^1\) norm \(O(\sqrt\e)\). Equivalence of the \(L^\infty\) and
+\(L^1\) norms on the finite-dimensional space of spherical quartics
+then gives
+\begin{equation}\label{eq:near-moment}
+ \abs{q-15/7}\le C\sqrt\e
+\end{equation}
+uniformly in the direction \(a\).
+
+Now let \(\zeta\) be smooth with mean zero and
+\(\norm{\zeta}_{\mathcal H}\le1\). The change from \(b\) to
+\(b+\tau\zeta\) in \(\mathcal C_\phi\) is
+\[
+ 8\tau\int ((L-\tfrac52)b)\zeta\,\dv+
+    4\tau^2\int(\Gamma(\zeta,\zeta)-\zeta^2)\,\dv .
+\]
+The value at \(b\) is \(O(\sqrt\e)\) by \eqref{eq:near-moment}.
+Use the lower bound on \(\mathcal C_\phi(b+\tau\zeta)\) for the
+two signs \(\tau=\pm\e^{1/4}\).
+The quadratic term is \(O(\sqrt\e)\), giving
+\(\norm{(L-\tfrac52)b}_{\mathcal H^*}\le C\e^{1/4}\).
+This residual annihilates constants, so the estimate holds also
+for tests with nonzero mean, by subtracting the mean.
+The nonnegative Laplacian product rule gives
+\[
+ \Gamma(\phi,\phi)-\tfrac14(5-\phi^2)
+       =\phi r-\tfrac12(L-\tfrac52)b .
+\]
+The \(L^2\) norm of \(\phi r\) is \(O(\e)\).
+Polarization and division by five now give the dual Gram
+estimate in \eqref{eq:near-gram}.
+
+It remains to identify the law. The vectors \(X\) take values
+in a common compact ball \(K\). For any fixed smooth \(F\)
+of the target variables,
+\[
+ \norm{F(X)}_{\mathcal H}^2\le
+  \sup_K\abs F^2+(1+\e)\sup_K\abs{\nabla_{\RR^5}F}^2 .
+\]
+In fact the pointwise Gram matrix \((\Gamma(X_i,X_j))\) is
+positive semidefinite with integrated trace
+\(\sum_i\nu_i/5\le1+\e\). Thus each \((\partial_jF)(X)\)
+is a valid uniform test in the dual estimate.
+By the chain rule and integration by parts for
+\(LX_i=\nu_iX_i\), every limiting law \(\mu\) satisfies
+\begin{equation}\label{eq:sphere-law}
+ 4\int x_i F(x)\,\dd\mu=
+    \sum_j\int(\delta_{ij}-x_ix_j)\partial_jF(x)\,\dd\mu .
+\end{equation}
+The radial bound gives support on \(S^4\).
+The tangent field \(e_i-x_i x\) on the unit sphere has
+divergence \(-4x_i\), so round probability satisfies
+\eqref{eq:sphere-law}. To check uniqueness, take
+\(F=\partial_i P\) and sum in \(i\) for each homogeneous
+polynomial \(P\) of degree \(m\ge1\).
+Euler's identity gives
+\[
+ m(m+3)\int P\,\dd\mu=\int\sum_i\partial_{ii}P\,\dd\mu.
+\]
+The right side is a moment of degree \(m-2\), or zero.
+Starting from total mass one, this determines all moments.
+Polynomials are dense on the compact sphere, giving a unique
+limit and hence convergence of the entire sequence.
+\end{proof}
+
+The estimates use only the scaled Yamabe inequality.
+They bound the volume of the set where \(\abs X^2\) differs
+from one by a fixed amount, and test the differential Gram
+matrix in a dual energy norm. They leave pointwise rank and
+the geometry of small-volume subsets uncontrolled.
+
+An additional Ricci lower bound gives a separate smooth
+recognition criterion. Suppose
+\(\Ric_g\ge(1-\delta)(s/4)g\) with \(0\le\delta<1\).
+For \(k=(1-\delta)sg/12\), one has \(\Ric_k\ge3k\), and
+\[
+ \lambda_4(k)-4\le\frac{4(\e+\delta)}{1-\delta}.
+\]
+Aubry's sphere theorem assumes \(\Ric_k\ge3k\) in dimension four
+and sufficiently small pinching of the fourth positive eigenvalue.
+It gives diffeomorphism to the standard sphere and a
+Gromov--Hausdorff estimate~\cite[Theorem~1]{Aubry2005Pincement}.
+In particular this route applies for \(\e,\delta\to0\).
+The bound on \(\Ric_g\) is an independent geometric premise.
+
+\section{Outstanding challenges}\label{sec:open}
+
+\paragraph{Construction on an arbitrary smooth homotopy sphere.}
+Attaining \(A(g)=0\) would give the smooth
+identification directly. A less rigid construction would produce
+actual smooth volume-one Yamabe minimizers with \(s_j>0\) and
+\(3\lambda_5(g_j)/s_j\to1\).
+One possible test is to attach a shrinking punctured core to a round
+region across a neck. The trial eigenfunctions must be evaluated
+in the minimizing conformal representative. In dimension four the
+Yamabe quotient of a test supported in the core is unchanged by
+homothetic rescaling there. A fixed low-energy core test can compete
+with round tests even when its support has vanishing volume in the
+glued metric. The analysis must control the minimizing conformal
+factor, the locations of the low modes, and the scalar scale
+appearing in the relative spectral gap.
+
+\paragraph{Smooth recognition under approximation.}
+Theorem~\ref{thm:near} gives the round law of five values under
+relative pinching. A smooth conclusion needs geometric information
+on the same manifold, including regions of small measure.
+A uniform route through the Ricci comparison would suffice.
+Alternatively, smooth nondegenerate convergence after
+diffeomorphisms of the original manifold would pass the Yamabe
+minimality and spectral equalities to a limit and give
+Theorem~\ref{thm:spectral}. Establishing such control for a
+constructed family is a separate problem from producing trial
+Rayleigh quotients.
+
+\paragraph{Spinorial curvature and zeros.}
+The canonical boundary fields give data on every input,
+with a fixed end value and a smooth compact transverse pole jet.
+Their interior zeros are unaffected by changing the unit source at
+a fixed pole. Varying the pole or metric to control these zeros is
+open. A first-order smallness argument must also supply
+a derivative bound such as \eqref{eq:weyl-defect}, or produce a
+nondegenerate limit of the kind in
+Section~\ref{sec:twistor-variation}. The explicit oscillatory
+family in Proposition~\ref{prop:oscillation} and the fixed-end
+scaling of the Dirichlet energy give two independent obstructions
+to deriving such control from the residual size alone.
+
+\paragraph{Degree and the remaining eigenspaces.}
+For a supplied minimizing metric, recognition from a near-zero
+sequence can use retention of nonzero degree, a uniform covariance
+bound in five directions, or a stress condition as in \eqref{eq:stress}.
+The analytic degree cap in Theorem~\ref{thm:degree} identifies
+one possible sufficient estimate. At scalar equality, the
+existence or exclusion of a first eigenmap into a great
+\(S^2\) or \(S^3\) on a nonround homotopy sphere remains unresolved.
+The Hopf and Ricci identities delimit these cases. Even their
+exclusion would leave the construction of a minimizing metric
+and an eigenmap on every \(M\) to be established.
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}

@@ -47,3 +47,25 @@ The [unregistered public record](chat-histories/PARTIAL_UNREGISTERED_DIR_2026112
 Continued the first handoff through B12–B22. A sharp fourth-moment bound at scalar equality gives round recognition at first multiplicity five. Near equality produces the round joint law without a Ricci premise. Hopf, signed degree concentration, and normalized map tests delimit degree loss. The compact Dirac Green construction initializes on every smooth homotopy four-sphere; scaling and actual zero-free oscillatory fields delimit the estimates it supplies. Fixed packets E18–E47 include independent reviews. The original E35 request is retained alongside v2 after an input digest changed. [Spectral assessment](reviews/DIR_B22_FIVE_EIGENFUNCTIONS_20261124.md) · [Boundary assessment](reviews/DIR_B19_GREEN_BOUNDARY_ASSESSMENT_20261124.md) · [Continuation](continuation-notes/02_AFTER_FIVE_EIGENFUNCTION_RIGIDITY_20261124.md)
 
 Verification at integration matched all seven shared setup digests and checked 300 frozen input entries from DIR requests E01–E47 (including both E35 versions). The sole mismatch was the retained E35 v1 pin, superseded by v2. All 30 continued E tasks have a request, return, note and assessment. Repository hygiene passed with 5,878 relative links, and the repository test suite ran 138 cases with three skips. Native capture remained unavailable; the [unregistered public record](chat-histories/PARTIAL_UNREGISTERED_DIR_20261124.md) includes the continuation request and delivered updates.
+
+## 24 November 2026 — Analytical manuscript
+
+Prepared for Edward B. Baker III with OpenAI Codex assistance. The selected
+model identifier and reasoning effort were unavailable. The
+[editable manuscript](manuscript/dirac_twistor_and_yamabe_rigidity.tex)
+develops the assessed results through DIR-E47, with explicit examples
+supporting the concentration and curvature obstructions. It derives the
+chiral and punctured Dirac identities, the modified Yamabe optimizations,
+the critical degree defect, and exact and approximate five-mode
+rigidity. The last section states the remaining construction and
+smooth compactness problems.
+
+The [continuations](continuation-notes/CONTINUATION.md),
+[DIR register](research-progress/REGISTER.md), branch derivations and
+assessments, and [shared recognition audit](../notes/SH_E01_20261124.md)
+were checked against repository revision
+`e76752648b69969b1234d0295530c87fce9fcdcb`. The bibliography follows
+the [pinned source passages](references/README.md). The manuscript
+synthesizes the assessed branch work and its stated hypotheses.
+Reproduce the ignored reading PDF using the
+[manuscript build instructions](manuscript/README.md).

@@ -1,0 +1,5 @@
+# SEC-B09 · recognition before an exact endpoint
+
+24 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. The author-selected lead was retained. The lead's actual model identifier and effort are unavailable. Execution helpers are requested/configured as gpt-6.2-sol/ultra. A configuration is not independent backend attestation.
+
+Fix the zero-compatibility radial path in the pointwise volume and fiber isometry of B01. Its transported Weyl field is prescribed, so its squared integral can be tracked before t=1. Along the portion below 8π² test whether the scalar-flat wall is excluded by Gauss–Bonnet at a unit-volume Yamabe representative. This could replace exact completion by finite-time recognition *when a positive class is obtained independently in that portion*. Check what is known if the incoming sign is negative. The construction must still reach the interval with smooth metrics on the same M. E10 tests this single control problem, independently of constructing a path.

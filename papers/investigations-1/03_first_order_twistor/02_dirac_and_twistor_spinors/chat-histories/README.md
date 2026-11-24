@@ -15,3 +15,5 @@ registrations are refreshed in place. Include completed public text only;
 never fabricate records or save an unsent final answer as authentic history.
 
 24 November DIR activation: the [unregistered partial public text](PARTIAL_UNREGISTERED_DIR_20261124.md) records the source limitation and the public research invocation and updates. If an authentic export later becomes available, verify its native identity, title and original timestamps before the canonical registration.
+
+24 November research discussion and manuscript. The local source and app history reader were unavailable. The [unregistered partial public record](PARTIAL_UNREGISTERED_DIR_DISCUSSION_20261124.md) preserves the completed discussion reply, requests and visible progress updates.

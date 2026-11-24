@@ -174,7 +174,7 @@ before branch execution and later compares actual evidence. The
 and [spinorial plan](../02_dirac_and_twistor_spinors/research-plan/PLAN.md)
 own their distinct construction programs. The [dated crosswalk](../brainstorm/notes/SETUP_AND_TASK_CROSSWALK_20261124.md)
 preserves completed preparation identities and maps earlier unissued
-outline IDs. Setup is complete; scientific tasks remain unactivated.
+outline IDs. Both child programs were subsequently activated by the author on 24 November. Their own registers give live scientific status.
 
 The author's 24 November **broad continuation grants** in the
 [sections continuation](../01_sections_and_connections/continuation-notes/CONTINUATION.md)
@@ -184,4 +184,8 @@ They authorize new leads, alternative approaches and revised or new B/E
 tasks connected to the selected question, with all bounded analytical and
 example-based execution delegated to gpt-6.2-sol/ultra. This includes necessary
 shared work; the lead preserves task ownership, packet bounds and scientific
-hypotheses. Preparing the grants has not activated any research task.
+hypotheses. The later invocations activated research and are recorded in the owning registers.
+
+The [SEC assessment](../01_sections_and_connections/reviews/SEC_B05_GLOBAL_CONSTRUCTION_20261124.md) now supplies its fixed-metric equivalence, perturbative construction class and obstructions to preserving local collar data. The common quantitative spinor-to-section implication is in [SH-E02](../notes/SH_E02_20261124.md).
+
+The later SEC [spherical transmission result](../01_sections_and_connections/reviews/SEC_SPHERICAL_TRANSMISSION_20261124.md) gives a sharp local observable with an arbitrary exterior. Its [variational compactness criterion](../01_sections_and_connections/reviews/SEC_CAP_COMPACTNESS_AND_YAMABE_WALL_20261124.md) reaches the SH-E01 endpoint when a positive-definite same-manifold limit retains an open piece of the cap.

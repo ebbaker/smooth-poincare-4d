@@ -1,0 +1,2663 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,mathrsfs}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem,needspace}
+\usepackage{xcolor,fancyhdr}
+\usepackage[backend=biber,style=numeric,sorting=none,giveninits=true,
+ maxbibnames=8,isbn=false,url=false,doi=true,eprint=true]{biblatex}
+\addbibresource{references.bib}
+\renewcommand*{\bibfont}{\small}
+\AtEveryBibitem{%
+ \iffieldequalstr{entrykey}{Fine2011}{\clearfield{note}}{}%
+ \iffieldequalstr{entrykey}{BahuaudGuentherIsenbergMazzeo2025Bach}{\clearfield{note}}{}%
+ \iffieldequalstr{entrykey}{Baker2026ChiralMetricEvolution}{\def\currentnote{Working manuscript}%
+   \restorefield{note}{\currentnote}}{}%
+}
+\usepackage[colorlinks=true,linkcolor=blue!40!black,citecolor=blue!40!black,
+  urlcolor=blue!40!black]{hyperref}
+\hypersetup{pdftitle={Twistor sections and chiral Weyl curvature on homotopy four-spheres},
+ pdfauthor={Edward B. Baker III},bookmarksdepth=2}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Twistor sections and chiral Weyl curvature}
+\fancyhead[R]{\small Edward B. Baker III}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{2em}
+\setcounter{tocdepth}{1}
+\allowdisplaybreaks[1]
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\Ric}{Ric}
+\DeclareMathOperator{\Vol}{Vol}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Scal}{Scal}
+\DeclareMathOperator{\Rm}{Rm}
+\newcommand{\rd}{\mathrm{rd}}
+\newcommand{\HS}{\mathrm{HS}}
+
+\title{Twistor sections and chiral Weyl curvature\\on homotopy four-spheres}
+\author{Edward B. Baker III}
+\date{Working draft, 24 November 2026}
+% Prepared for Edward B. Baker III with OpenAI Codex assistance.
+% The author-selected lead was retained. Its exact model identifier and effort
+% were unavailable. Bounded analytical work and editorial assistance were
+% configured as gpt-6.2-sol/ultra; backend settings were not independently attested.
+% Working inputs at e76752648b69969b1234d0295530c87fce9fcdcb plus the
+% 24 November 2026 SEC working files. Exact digests in the manuscript README.
+\begin{document}
+\maketitle
+\thispagestyle{plain}
+\begin{abstract}
+On an oriented Riemannian four-manifold the self-dual Weyl curvature
+obstructs integrability of the positive twistor space. We give a
+quantitative description using triples of local twistor sections. On a
+fixed metric the optimized differentiated Frobenius defect lies between
+\(2/9\) and \(4\) times the self-dual Weyl energy \(E_+\).
+We then vary the metric. If a reference metric is round near a closed ball, sufficiently small
+changes in \(W^+\) can be prescribed up to finitely many correction
+fields outside that ball. For a radial source of fixed polarization in
+a round chart, the linearized equation fixes five angular projections
+of the opposite Weyl curvature on a surrounding annulus, independently
+of the exterior metric variation. A smooth linearized variation
+supported in the chart realizes the source precisely when its zeroth
+and second radial moments vanish.
+
+A complementary variational problem fixes a round metric on a marked
+ball. For Yamabe-zero conformal classes admitting such a representative
+on the standard smooth \(S^4\), we prove that \(\inf E_+=8\pi^2\) and
+that the infimum is unattained. We construct a minimizing sequence by
+joining oppositely oriented Taub--NUT regions. Its scalar-flat
+representatives have Ricci curvature tending to zero in \(L^2\).
+On any smooth homotopy four-sphere, a sequence of marked metrics
+minimizing \(E_+\) over all metrics gives smooth recognition if its
+conformal representatives converge in \(C^4\) to a positive metric
+on the same manifold and a common open part of the moved caps survives.
+Obtaining such compactness or a global uncorrected deformation remains open.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}\label{sec:introduction}
+
+In two real dimensions an oriented conformal metric determines rotation
+by a right angle in every tangent plane. The corresponding complex line
+distribution is involutive, and its local holomorphic coordinates are
+isothermal coordinates for the metric. In four real dimensions the
+choice of an orthogonal complex structure of positive orientation at a
+point is a two-sphere. These spheres form the positive twistor bundle.
+Atiyah, Hitchin and Singer showed that the natural almost complex
+structure on its total space is integrable precisely when one chiral
+block of the Weyl tensor vanishes~\cite[Theorem 4.1]{AHS1978}.
+We choose the orientation convention in which this block is \(W^+\)
+and call \(W^+=0\) anti-self-duality (ASD). The resulting question about
+coordinates has two parts. How much of \(W^+\) can be recovered from
+the failure of locally chosen complex structures to be integrable?
+Can the underlying conformal metric itself be changed so that this
+failure disappears?
+
+The smooth four-dimensional Poincar\'e conjecture gives a setting in
+which this distinction matters. Let \(M\) be a closed smooth manifold
+homotopy equivalent to \(S^4\). Its topological type is known by
+Freedman's theorem~\cite{Freedman1982}. To recognize its smooth
+structure by twistor geometry it suffices to produce one smooth
+Riemannian ASD metric on the given \(M\). Simple connectivity and
+the signature formula then give a global conformal developing map to
+the round sphere. A coordinate ball in \(M\) gives a place to begin
+this construction. The smooth structure and the curvature of its
+complement remain part of the problem.
+
+\subsection{Normalization and smooth recognition}
+
+Let \(g\) be an oriented positive-definite metric on a real
+four-manifold. Its Hodge operator splits
+\(\Lambda^2=\Lambda_g^+\oplus\Lambda_g^-\), with each summand of real
+rank three. We regard \(W^\pm\) as symmetric trace-free endomorphisms
+of these summands. Set
+\begin{equation}\label{eq:energies}
+ E_\pm(g)=\int_M |W^\pm_g|_{\mathrm{HS}}^2\,dV_g,\qquad
+ Y([g])=\inf_{u\in C^\infty(M),\ u>0}
+ \frac{\int_M(6|du|_g^2+s_g u^2)\,dV_g}
+      {(\int_M u^4\,dV_g)^{1/2}},
+\end{equation}
+where \(s_g\) is scalar curvature. The first definition uses the
+Hilbert--Schmidt norm of the curvature operator. In the full
+four-index tensor norm each unordered pair appears twice in each
+of the two skew slots. Consequently
+\(|W|_{\mathrm{tens}}^2=4(|W^+|_{\mathrm{HS}}^2+
+|W^-|_{\mathrm{HS}}^2)\). Under \(g\mapsto u^2g\), the splitting
+of two-forms is fixed, the Weyl endomorphism has weight \(-2\), and
+the volume form has weight \(4\). Both energies and the Yamabe
+constant in \eqref{eq:energies} depend only on the conformal class.
+
+The signature and Gauss--Bonnet formulas in these conventions
+are~\cite{Hirzebruch1971Signature,ChangGurskyYang2003}
+\begin{align}
+12\pi^2\tau(M)&=E_+(g)-E_-(g),\label{eq:sign}\\
+8\pi^2\chi(M)&=E_+(g)+E_-(g)
+ -\tfrac12\int_M|\Ric_0|^2\,dV_g
+ +\tfrac1{24}\int_M s_g^2\,dV_g .\label{eq:GB}
+\end{align}
+Here \(\Ric_0=\Ric-\tfrac14 s_g g\). On a homotopy four-sphere
+\(\pi_1(M)=0\), \(H^2(M;\mathbb Z)=0\), \(\chi=2\), and \(\tau=0\).
+
+\begin{proposition}[Two sufficient conditions for smooth recognition]\label{prop:recognition}
+Let \(M\) be an oriented smooth homotopy four-sphere.
+If \(E_+(g)=0\), then \((M,[g])\) is conformally diffeomorphic to the
+round sphere. If \(Y([g])>0\) and \(E_+(g)<4\pi^2\), then \(M\)
+is diffeomorphic to the standard \(S^4\).
+\end{proposition}
+\begin{proof}
+In the first case \eqref{eq:sign} gives \(E_-=0\). Smoothness and
+nonnegativity give \(W=0\) everywhere. The locally conformally flat
+charts have M\"obius transition maps. Development along paths is
+single-valued by simple connectivity~\cite{SchoenYau1988Conformal}.
+The developing map is a local diffeomorphism to \(S^4\). Its image is
+open and compact, hence the whole sphere. The map is proper and is a
+covering, so simple connectivity of the target gives a diffeomorphism.
+In the second case the full four-index integral is \(8E_+<32\pi^2
+=16\pi^2\chi(M)\). With the positive Yamabe hypothesis these are the
+assumptions of Chang, Gursky and Yang~\cite[Theorem A and Remark 2]{ChangGurskyYang2003}.
+Their two possibilities for the smooth type are \(S^4\) and
+\(\mathbb{RP}^4\). Simple connectivity selects \(S^4\).
+\end{proof}
+
+\subsection{Local data, global metric}
+
+A positive orthogonal almost complex structure \(J\) defines a two-form
+\(\omega_J(X,Y)=g(JX,Y)\) of norm \(\sqrt2\). Its unit axis is
+\(\omega_J/\sqrt2\in\Lambda_g^+\). Where spin frames are used, the
+same sphere is the complex projective line \(\mathbb P(S^+_x)\).
+The two descriptions agree under the covering
+\(\mathrm{SU}(2)\to\mathrm{SO}(3)\).
+In particular a projective spinor representative is free up to
+nonzero complex scale. On overlaps the Hodge and spin frames transform
+by their bundle transition maps. All local sections used below belong to
+the bundle of a \emph{single} metric. A global positively oriented almost complex structure
+on a homotopy four-sphere would give
+\(c_1=0\) and \(\langle c_2,[M]\rangle=2\), while
+\(p_1=c_1^2-2c_2\) and the signature theorem give
+\(\langle p_1,[M]\rangle=0\). Local sections therefore carry exactly
+the kind of data one can choose without a topological existence
+assumption.
+
+The section estimate in Section~\ref{sec:sections} gives a curvature
+measurement for each fixed metric. Section~\ref{sec:lift} turns this
+into a prescription problem by coupling a chiral connection to a
+normalized triple of two-forms. A local inverse on the original closed manifold uses finitely many
+correction fields vanishing on a chosen smaller ball.
+For a source of fixed polarization and radial profile inside a round
+patch, Section~\ref{sec:transmission} determines five angular
+projections of the opposite linearized curvature in a surrounding
+annulus, independently of the exterior variation.
+Section~\ref{sec:collars} examines what happens when the metric and
+its normal derivatives are fixed at both ends of a collar.
+
+Sections~\ref{sec:variation} and~\ref{sec:wall} return to the global
+functional \(E_+\). A round metric can be installed on a marked coordinate
+ball at arbitrarily small cost to both \(E_+\) and \(Y\). A positive stationary limit in which an open part
+of this cap survives must be conformally round. On the standard smooth sphere the doubled Taub--NUT construction gives
+marked Yamabe-zero classes with energy arbitrarily close
+to \(8\pi^2\) from above. This sharp lower bound is unattained, and
+the constructed sequence has no positive same-manifold \(C^4\) limit
+in conformal gauges retaining a common open part of the caps.
+
+\section{The Weyl energy measured by twistor sections}
+\label{sec:sections}
+
+Fix a smooth closed oriented Riemannian four-manifold \((M,g)\).
+Write \(n_J=g(J\,\cdot,\cdot)/\sqrt 2\) for the unit self-dual axis of
+a positive orthogonal almost complex structure \(J\). For each smooth local section
+put
+\[
+ P=\tfrac12(1+\mathrm iJ),\qquad Q=1-P,\qquad
+ \mathcal D=P T_{\mathbb C}M=T^{0,1}_J,\qquad F_J(X,Y)=Q[PX,PY].
+\]
+We take Hermitian norms on complexified tensors. In the skew input pair
+of \(F_J\) and \(\nabla F_J\), we use exterior norms, counting each
+unordered pair once. The real norm of \(\nabla J\) is the usual tensor
+norm.
+
+Choose a finite open cover with a smooth nonnegative subordinate
+partition of unity \((\rho_a)\), and on each \(U_a\) choose three smooth
+sections \(J_{ai}\) whose axes are orthonormal. All sections are for the
+same metric \(g\). Define
+\begin{equation}
+ \label{secjet:energy}
+ I(g)=\inf\sum_{a,i}\int_{U_a}\rho_a
+   \bigl(|\nabla F_{J_{ai}}|^2+|\nabla J_{ai}|^2|F_{J_{ai}}|^2\bigr)
+ \,dV_g ,
+\end{equation}
+where the cover, partition, and sections may all vary. The sections on
+different sets are chosen independently. Let \(I_0(g)\) be the
+corresponding infimum with density \(|F_{J_{ai}}|^4\).
+
+\begin{theorem}[Energy measured by three local sections]
+ \label{secjet:comparison}
+ Under these conventions,
+ \[
+      \tfrac29 E_+(g)\le I(g)\le 4E_+(g),\qquad I_0(g)=0 .
+ \]
+\end{theorem}
+
+\subsection{The null curvature component and the lower bound}
+
+The bracket in \(F_J\) is tensorial after projection because the
+terms differentiating scalar multipliers lie in \(\mathcal D\). With
+the Levi--Civita connection \(\nabla\), torsion freeness gives
+\begin{equation}
+ \label{secjet:bracket}
+ F_J(X,Y)=Q\bigl((\nabla_{PX}P)Y-(\nabla_{PY}P)X\bigr).
+\end{equation}
+Its inputs are projected by \(P\wedge P\), its value lies in
+\(\overline{\mathcal D}\), and it vanishes precisely when
+\(\mathcal D\) is involutive. Denote the complex-bilinear extension of
+the metric by \(g_{\mathbb C}\). Both \(\mathcal D\) and
+\(\overline{\mathcal D}\) are totally null for \(g_{\mathbb C}\), and
+they pair nondegenerately with one another.
+
+\begin{lemma}
+ \label{secjet:null}
+ Let \(X,Y\) be a Hermitian-orthonormal basis of \(\mathcal D\) at a
+ point. Lower the indices of \(X\wedge Y\) to obtain the Hermitian-unit
+ self-dual null form \(\xi\). Then
+ \begin{equation}
+  \label{secjet:nullestimate}
+  |\langle W_g^+\xi,\xi\rangle_{\mathbb C}|^2
+       \le \tfrac94\bigl(|\nabla F_J|^2+|\nabla J|^2|F_J|^2\bigr),
+ \end{equation}
+ where the Weyl pairing is complex bilinear.
+\end{lemma}
+
+\begin{proof}
+ Write \(F=F_J\) and \(B(X,Y)=Q\nabla_XY\) for \(X,Y\) in
+ \(\mathcal D\). The metric-derivative terms in Koszul vanish on the
+ null distribution, giving
+ \begin{equation}
+  \label{secjet:koszul}
+  2g_{\mathbb C}(B(X,Y),Z)=g_{\mathbb C}(F(X,Y),Z)
+    -g_{\mathbb C}(F(Y,Z),X)+g_{\mathbb C}(F(Z,X),Y).
+ \end{equation}
+ Use the metric connection
+ \(\nabla^0_X s=P\nabla_X(Ps)+Q\nabla_X(Qs)\), which preserves the
+ splitting. The difference
+ \(K_X=\nabla_X-\nabla^0_X=(\nabla_XP)(P-Q)\) interchanges the
+ summands, and \(|K|=\tfrac12|\nabla J|\). Its contribution to
+ the torsion of \(\nabla^0\) on \(\mathcal D\times\mathcal D\) is
+ \(T^0(X,Y)=P[X,Y]-[X,Y]=-F(X,Y)\). In the convention
+ \(R(X,Y)=[\nabla_X,\nabla_Y]-\nabla_{[X,Y]}\), the curvature
+ comparison reads
+ \[
+ R(X,Y)=R^0(X,Y)+[K_X,K_Y]
+        +(\nabla_X^0K)_Y-(\nabla_Y^0K)_X+K_{T^0(X,Y)} .
+ \]
+ The last term comes from the difference between the alternating
+ tensor derivative and the exterior covariant derivative of \(K\).
+ Both \(R^0\) and the commutator preserve \(\mathcal D\), so they
+ vanish in the null pairing \(g_{\mathbb C}(R(X,Y)Y,X)\).
+ On \(\mathcal D\), \(K_YZ=B(Y,Z)\). Moreover, for \(U,V\in
+ \mathcal D\) and any \(L\),
+ \[
+    (\nabla^0_LF)(U,V)=Q(\nabla_LF)(U,V).
+ \]
+ Indeed the input correction terms contain a \(K_LU\) or \(K_LV\)
+ in \(\overline{\mathcal D}\), and the output correction
+ \(K_L F(U,V)\) lies in \(\mathcal D\).
+
+ In a positive orthonormal frame with \(e_2=Je_1\) and \(e_4=Je_3\),
+ a unit representative of \(\Lambda^2\mathcal D\) is
+ \((e^{13}-e^{24}+\mathrm i(e^{14}+e^{23}))/2\), which is self-dual.
+ The Schouten part of the curvature vanishes on the four null
+ arguments. Hence the null curvature pairing is the stated Weyl
+ evaluation, with the curvature operator normalized by
+ \(\langle\mathcal R(X\wedge Y),U\wedge V\rangle_{\mathbb C}
+ =g_{\mathbb C}(R(X,Y)V,U)\). Differentiating
+ \eqref{secjet:koszul} with \(\nabla^0\), which preserves the null
+ pairing, and substituting the projected derivative gives
+ \begin{align*}
+ \langle W_g^+\xi,\xi\rangle_{\mathbb C}
+  &=g_{\mathbb C}((\nabla_XF)(X,Y),Y)
+    -g_{\mathbb C}((\nabla_YF)(X,Y),X)\\
+  &\quad-g_{\mathbb C}(K_{F(X,Y)}Y,X).
+ \end{align*}
+ The derivative terms have orthogonal Hermitian unit inputs
+ \(X\otimes(X\wedge Y)\) and \(Y\otimes(X\wedge Y)\). Their
+ combined magnitude is bounded by \(\sqrt2|\nabla F|\). The torsion
+ term is bounded by \(\tfrac12|\nabla J||F|\). Applying
+ Cauchy--Schwarz to these two bounds proves \eqref{secjet:nullestimate}.
+ This null curvature identity is the intrinsic version of the
+ derivative and connection terms in the Newman--Penrose calculation
+ \cite[eq.~(13) and Appendix eq.~(74)]{GoverHillNurowski2011GoldbergSachs}.
+\end{proof}
+
+For an orthonormal real basis \(n_1,n_2,n_3\) of \(\Lambda^+\),
+use the cyclic null representatives
+\(\xi_i=(n_j+\mathrm i n_k)/\sqrt2\) for the three axes.
+Conjugation or a unit phase leaves the magnitudes
+\(q_i=|\langle W^+\xi_i,\xi_i\rangle_{\mathbb C}|\) unchanged.
+Write the diagonal entries of \(W^+\) as \(d_i\) and its off-diagonal
+entries as \(w_{ij}\). Direct expansion gives
+\begin{equation}
+ \label{secjet:orthogonal}
+ \sum_{i=1}^3 q_i^2=\tfrac34\sum_i d_i^2+\sum_{i<j}w_{ij}^2
+       \ge \tfrac12 |W^+|_{\mathrm{HS}}^2 .
+\end{equation}
+Here the differences of the three diagonal entries contribute
+\(\tfrac34\sum_i d_i^2\) because \(\sum_i d_i=0\).
+Applying \eqref{secjet:nullestimate} to the triple proves the pointwise
+lower bound for its density in \eqref{secjet:energy}. Multiplication by
+the partition weights and summation give
+\(E_+(g)\le \tfrac92 I(g)\).
+
+\subsection{Conformal normal jets and free refinement}
+
+Fix \(p\in M\). Let \(\mathsf P_g=\tfrac12(\mathrm{Ric}_g-\tfrac16s_g g)\)
+be the Schouten tensor. Choose \(f\) with \(f(p)=0\), \(df(p)=0\)
+and \(\nabla_g^2 f(p)=\mathsf P_g(p)\), for instance a quadratic
+in \(g\)-normal coordinates. For \(h=e^{2f}g\), the Schouten
+transformation law
+\[
+ \mathsf P_h=\mathsf P_g-\nabla_g^2 f+df\otimes df-\tfrac12|df|_g^2g
+\]
+gives \(\mathsf P_h(p)=0\) \cite[(6.7) and proof of Proposition 8.4]{FeffermanGraham2008Ambient}.
+Thus the curvature operator of \(h\) at \(p\) is \(W_h^+\oplus W_h^-\).
+The Hodge splitting is conformally invariant, and \(W_h^+=W_g^+\)
+at \(p\) as an operator since \(f(p)=0\).
+
+Radially parallel transport an orthonormal basis \((\omega_i)\) of
+\(\Lambda^+_h\) along the \(h\)-normal rays. This gives a smooth frame
+near \(p\). Define \(h(J_i\,\cdot,\cdot)=\sqrt2\,\omega_i\). The
+\(J_i\) are also orthogonal for \(g\), with axes \(e^{-2f}\omega_i\)
+still orthonormal. Let \(A_b\) be the connection matrices in the radial
+frame, and let \(\Omega_{ab}\) be their curvature matrix components.
+The radial identity \(x^b A_b=0\) implies
+\(A_b(p)=0\) and
+\(\partial_a A_b(p)+\partial_b A_a(p)=0\).
+Consequently \(\partial_a A_b(p)=\tfrac12\Omega_{ab}(p)\).
+The \(J_i\) are mutually orthogonal for the endomorphism pairing
+and each has squared norm \(4\). Therefore
+\begin{equation}
+ \label{secjet:radial}
+ \nabla^h J_i(p)=0,\qquad
+ \sum_i |(\nabla^h)^2J_i|^2(p)
+       =2\sum_{a<b}|\Omega_{ab}|_{\mathrm{HS}}^2(p)
+       =8|W_g^+|_{\mathrm{HS}}^2(p).
+\end{equation}
+For the last equality, identify a two-form \(\alpha\) with the skew
+endomorphism \(K_\alpha\) given by \(h(K_\alpha X,Y)=\alpha(X,Y)\).
+The curvature on \(\Lambda^+\) acts by the commutator with
+\(K_\alpha\), where \(\alpha\) is the curvature row in the
+\(e_a\wedge e_b\) direction, up to its overall sign. The
+anti-self-dual ideal acts trivially. A unit self-dual generator
+corresponds to left multiplication by a unit imaginary quaternion
+divided by \(\sqrt2\). Its commutator acts on the other two unit
+generators with coefficients of magnitude \(\sqrt2\). Thus the
+action on \(\Lambda^+\) has squared norm \(4|\pi_+\alpha|^2\),
+where \(\pi_+\) is the self-dual projection. Summing in \(a<b\)
+gives \(4|W_h^+|^2\) since the positive curvature row is
+\(W_h^+\pi_+\) at \(p\)
+\cite[\S1, pp.~427--429]{AHS1978}.
+
+Since \(\nabla^hP_i(p)=0\), \eqref{secjet:bracket} gives \(F_{J_i}(p)=0\).
+Suppressing the index \(i\), differentiation at the center gives
+\[
+ (\nabla^h_ZF)(X,Y)
+   =Q((\nabla^h)^2P)(Z,PX)Y-Q((\nabla^h)^2P)(Z,PY)X .
+\]
+With ordered skew input slots, each term has norm at most
+\(\tfrac12|(\nabla^h)^2J|\). Passing to the exterior-pair
+norm divides the squared norm of the alternating tensor by two.
+The metrics give the same \(F\) because its bracket definition uses
+only \(J\), and they have the same connections and norms at \(p\)
+because \(f(p)=df(p)=0\). By \eqref{secjet:radial}, the density for
+these sections at \(p\), in the fixed metric \(g\), satisfies
+\begin{equation}
+ \label{secjet:center}
+ \sum_i\bigl(|\nabla F_{J_i}|^2+|\nabla J_i|^2|F_{J_i}|^2\bigr)(p)
+      \le 4|W_g^+|_{\mathrm{HS}}^2(p).
+\end{equation}
+
+For any \(\epsilon>0\), choose the sections at each center as
+above and shrink its open neighborhood until the density in
+\eqref{secjet:center} is at most
+\(4|W_g^+|_{\mathrm{HS}}^2+\epsilon/\operatorname{Vol}_g(M)\) throughout the
+neighborhood. At the same time arrange
+\(\sum_i|F_{J_i}|^4\le\epsilon/\operatorname{Vol}_g(M)\) by the
+vanishing at the center. Use a finite subcover and a subordinate
+partition of unity. Both pointwise inequalities persist under
+the weighted sum and integrate to the claimed upper bounds within
+\(\epsilon\). Derivatives are taken on each patch before weighting.
+Taking the infima and letting \(\epsilon\) tend to zero completes
+the proof of Theorem~\ref{secjet:comparison}.
+
+In particular \(I(g)=0\) is equivalent to \(W_g^+=0\). For a smooth
+homotopy four-sphere, if the same conformal class has positive Yamabe
+constant then \(I(g)<8\pi^2/9\) gives the strict conformal sphere
+criterion. Indeed it yields \(E_+(g)<4\pi^2\), and the vanishing
+signature gives \(\int_M|W_g|_{(0,4)}^2\,dV_g=8E_+(g)\)
+\cite{Hirzebruch1971Signature,ChangGurskyYang2003}. The relaxation in
+\eqref{secjet:energy} concerns the auxiliary sections of a supplied
+metric. Its value can be approached by refining the cover without
+any assertion of attainment.
+
+\subsection{Separated axes and the sharp loss}
+
+For a real Euclidean three-space, write \(d([n],[m])=|n\times m|\)
+for the sine distance between unoriented unit axes. For any three
+axes with minimum pairwise distance \(\delta>0\) and any real
+symmetric trace-free \(W\), the Hermitian-unit null evaluations satisfy
+\begin{equation}
+ \label{secjet:separation}
+ |W|_{\mathrm{HS}}^2
+       \le \tfrac{128}{3}\delta^{-4}
+               \sum_i|\langle W\xi_i,\xi_i\rangle_{\mathbb C}|^2 .
+\end{equation}
+To prove this, diagonalize \(W\ne0\) with eigenvalues
+\(\lambda_1\ge\lambda_2\ge\lambda_3\). Put \(D=\lambda_1-\lambda_3\),
+\(c=-3\lambda_2/D\), so \(|c|\le1\). The two real unit vectors
+\[
+ a=\sqrt{\tfrac{1+c}{2}}e_1+\sqrt{\tfrac{1-c}{2}}e_3,\qquad
+ b=\sqrt{\tfrac{1+c}{2}}e_1-\sqrt{\tfrac{1-c}{2}}e_3
+\]
+satisfy
+\[
+ W=D\bigl(\tfrac12(a\otimes b+b\otimes a)-\tfrac c3 I\bigr),
+ \qquad |W|_{\mathrm{HS}}^2\le\tfrac23D^2 .
+\]
+For the null line of the axis \(n\), take an orthonormal basis
+\(u,v\) of \(n^\perp\) and \(\xi=(u+\mathrm i v)/\sqrt2\).
+Nullity removes the scalar term and gives
+\[
+ |\langle W\xi,\xi\rangle_{\mathbb C}|
+        =\tfrac D2 d([a],[n])\,d([b],[n]).
+\]
+Equivalently the Weyl evaluation is a quartic on the null conic because
+its representative \((z^2-w^2,\mathrm i(z^2+w^2),2zw)\) is quadratic
+in the projective parameter \([z:w]\). For a real \(W\) the
+roots include both null lines of each zero axis
+\cite[Prop.~5.3]{GoverHillNurowski2011GoldbergSachs}.
+The function \(d\) is a distance because it equals
+\(|n\otimes n-m\otimes m|_{\mathrm{HS}}/\sqrt2\).
+Each open ball of radius \(\delta/2\) about either factor axis
+contains at most one of the three sample axes. At least one
+sample therefore has evaluation of magnitude at least
+\(D\delta^2/8\). This proves \eqref{secjet:separation}.
+
+For sharpness take \(W=e_3\otimes e_3-I/3\) and three axes
+at a common angle \(t\) from \(e_3\), with azimuths
+\(0,2\pi/3,4\pi/3\). Their squared separation is
+\(3\sin^2 t-\tfrac94\sin^4t\), and the sum of squared evaluations is
+\(\tfrac34\sin^4t\). Thus the fourth power in
+\eqref{secjet:separation} is sharp as \(t\to0\). Combining
+\eqref{secjet:separation} and \eqref{secjet:nullestimate}
+gives the sufficient factor \(96\delta^{-4}\) for the differential
+density. Sharpness here concerns reconstruction from the null
+evaluations.
+
+\subsection{The quaternionic spinor description}
+
+On a smooth spin four-manifold, choose the untwisted positive
+half-spin bundle \(S^+\) so that self-dual two-forms act on it.
+Use the parallel Hermitian identification \(T_{\mathbb C}M
+\simeq S^-\otimes S^+\) and let \(j\) be the parallel antiunitary
+quaternionic structure on \(S^+\)
+\cite[\S1]{AHS1978}. For a smooth positive-chirality spinor
+\(\psi\), on \(\{\psi\ne0\}\) consider the lines of
+\[
+ \pi_1=\psi,\qquad
+ \pi_2=(\psi+j\psi)/\sqrt2,\qquad
+ \pi_3=(\psi+\mathrm i j\psi)/\sqrt2 .
+\]
+A line \(\mathbb C\pi\) defines \(\mathcal D=S^-\otimes\mathbb C\pi\),
+with conjugate plane \(S^-\otimes\mathbb C j\pi\). The
+projectors of unit representatives \(u_i\) give twistor axes
+with \(\langle n_i,n_k\rangle=2|\langle u_i,u_k\rangle|^2-1\).
+The pairwise squared inner products of these representatives
+are \(1/2\), so the axes are orthogonal.
+
+Write \(P_{\mathrm{tw},X}\pi=\nabla_X\pi+\tfrac14 c(X)D\pi\),
+where \(D\) is the Levi--Civita Dirac operator and
+\(c(X)^2=-|X|^2\) for real \(X\)
+\cite[eq.~(1.1)]{Friedrich1990TwistorSpinors}. For a single line
+write \(u=\pi/|\pi|\), with \(p\) the orthogonal projector onto
+\(\mathbb C u\) and \(q=1-p\). For \(X\in \mathcal D\) the
+Clifford term \(c(X)D\pi\) belongs to \(\mathbb C u\), since
+the action of \(a\otimes u\) on \(S^-\) contracts the
+negative factor by its alternating form. For \(X=a\otimes u\)
+and \(Y=b\otimes u\), torsion freeness gives
+\[
+ F_J(X,Y)=b\otimes v_X-a\otimes v_Y,\qquad
+ v_X=q\nabla_Xu=|\pi|^{-1}q P_{\mathrm{tw},X}\pi .
+\]
+Only one exterior pair contributes when \(a,b\) form a unitary
+basis. The two output terms are orthogonal, so
+\(|F_J|^2\le |P_{\mathrm{tw}}\pi|^2/|\pi|^2\).
+The real even Clifford action and the connection commute with
+\(j\), and each spinor is orthogonal to its quaternionic image.
+For each \(i\), \(|\pi_i|=|\psi|\) and
+\(|P_{\mathrm{tw}}\pi_i|=|P_{\mathrm{tw}}\psi|\). Summing the
+three projective bounds gives
+\[
+ \sum_i|F_{J_i}|^2\le 3\,\frac{|P_{\mathrm{tw}}\psi|^2}{|\psi|^2}
+       \qquad\text{on }\{\psi\ne0\}.
+\]
+Each Frobenius tensor depends only on its projective line. The two
+auxiliary lines are chosen using the supplied spinor \(\psi\).
+An exact twistor spinor supplies involutive directions on its
+nonzero locus. Control of \(\nabla F_{J_i}\) or of the sections
+across spinor zeros requires further hypotheses.
+
+\subsection{Projective variations on a round patch}
+\label{secjet:germ-projective}
+
+Write the round metric on a stereographic patch as \(r=\Omega^2\delta\)
+and a metric variation as \(g_t=r+th+O(t^2)\). Use the fixed flat
+representative, so the variation there is \(\widehat h=\Omega^{-2}h\).
+Choose three constant positive orthogonal complex structures for
+\(\delta\), with distinct axes modulo sign. The metric variation is
+common to all three structures, while their projective lines may vary
+independently.
+
+For one structure \(J\), choose linear complex coordinates with
+\(\delta=\sum_j|dz_j|^2\). Write \(U_j=\partial_{\bar z_j}\),
+\(Z_j=\partial_{z_j}\), so that \(\delta(U_a,Z_b)=\delta_{ab}/2\).
+The varying null plane is spanned to first order by
+\(U_a+t\sum_b B_a{}^b Z_b\). Nullity gives
+\((B_a{}^b+B_b{}^a)/2=-\widehat h(U_a,U_b)=H_{ab}\).
+This symmetric part is the one furnished by the positive symmetric
+frame transport, whose velocity is \(-\widehat h^\sharp/2\).
+The remaining skew entries are \(B_1{}^2-H_{12}=v\) and
+\(B_2{}^1-H_{21}=-v\), with \(v\) complex. These are the two real
+degrees of freedom of the line, and reality fixes the conjugate
+plane variation.
+
+The coordinate fields commute at the baseline. The two \(Z_b\)
+coefficients of the first variation of \(F_J(U_1,U_2)\), viewed as
+a \((0,1)\)-form in the \(d\bar z_j\) basis, are
+\begin{equation}
+ \label{secjet:germ-graph}
+ \mathcal F_J(h,v)=M_J(h)-\bar\partial_Jv,\qquad
+ M_J(h)=(U_1H_{21}-U_2H_{11},\,U_1H_{22}-U_2H_{12}).
+\end{equation}
+Let \(m=U_1\wedge U_2\), of Hermitian norm \(1/2\). The coefficient
+of \(d\bar z_1\wedge d\bar z_2\) in \(\bar\partial_J\mathcal F_J\) is
+\begin{equation}
+ \label{secjet:germ-compatibility}
+ U_1^2H_{22}-2U_1U_2H_{12}+U_2^2H_{11}
+ =2\langle (W^+)'_\delta[\widehat h]m,m\rangle_{\mathbb C}.
+\end{equation}
+Indeed the flat variation of \(g(R(U_1,U_2)U_2,U_1)\) is
+\(U_1U_2\widehat h(U_1,U_2)
+-\tfrac12\bigl(U_1^2\widehat h(U_2,U_2)+
+U_2^2\widehat h(U_1,U_1)\bigr)\). The Schouten terms vanish
+in these null slots. For the unit representative \(2m\), the right
+side of \eqref{secjet:germ-compatibility} is half the corresponding
+Weyl evaluation. The flat and round Weyl operator variations are
+related by the nonzero factor \(\Omega^2\) in the common Hodge
+splitting.
+
+For a smooth metric germ with \((W^+)'_r[h]=0\), each \(M_{J_i}(h)\)
+is \(\bar\partial_{J_i}\)-closed. The local \(\bar\partial\) Poincar\'e
+lemma solves \(\bar\partial_{J_i}v_i=M_{J_i}(h)\) on small polydisks,
+which can be restricted to a common neighborhood. Conversely, the
+three homogeneous equations make the three null evaluations vanish
+by \eqref{secjet:germ-compatibility}. Reconstruction from distinct
+axes gives \((W^+)'_r[h]=0\). Each lift is determined up to an
+arbitrary \(J_i\)-holomorphic function, including functions vanishing
+at a prescribed base point if the value of \(v_i\) is fixed there.
+
+For a real nonzero covector \(\xi\), the pair \(p_j=\xi(U_j)\)
+is nonzero. The vertical symbol \(-vp\) is injective, with complex
+line image. The quotient map \(c\mapsto p_1c_2-p_2c_1\) sends the
+metric symbol to \(p_1^2H_{22}-2p_1p_2H_{12}+p_2^2H_{11}\), the
+symbol of \eqref{secjet:germ-compatibility}. On the transverse
+trace-free symbol slice the metric Weyl symbol identifies its five
+real components with the trace-free self-dual Weyl block. The three
+null evaluations embed that block into \(\mathbb C^3\), so the full
+section symbol has rank \(5+6=11\) in a real twelve-dimensional
+target. In cyclic unit null frames for orthogonal axes, the one
+real relation on the three normalized quotient components is that
+their real parts sum to zero. These statements concern smooth local
+germs and their symbols. A global inverse would also have to
+address the holomorphic freedom, patch overlaps, and any boundary
+or support requirements.
+
+\section{Prescribing chiral curvature}\label{sec:lift}
+
+Let \(M\) be an oriented smooth closed connected four-manifold with a
+smooth Riemannian reference metric \(r\). We use curvature-operator
+Hilbert--Schmidt norms and the convention \(W^+=0\) for ASD. Set
+\(\nu=dV_r\) and \(E=\Lambda_r^+\). The curvature source will be specified
+in this fixed bundle. The exterior correction below applies to a reference
+which is round on one coordinate patch, with its geometry elsewhere
+supplied independently.
+
+\subsection{Metric two-forms and compatibility}
+
+An \(E\)-valued two-form \(\Sigma\) is normalized when in every oriented
+orthonormal \(E\)-frame its components satisfy
+\begin{equation}\label{lift:normalization}
+ \Sigma_i\wedge\Sigma_j=2\delta_{ij}\nu .
+\end{equation}
+Choose the component in which \((\Sigma_i/\sqrt2)\) is oriented
+by its projection to \(\Lambda_r^+\). This convention agrees
+with the natural orientation of the reconstructed self-dual bundle.
+To see the reconstruction, divide the wedge pairing on two-forms by
+\(\nu\). It has signature \((3,3)\), and the span of the triple is a
+maximal positive plane. The action of \(\mathrm{SL}(4,\mathbb R)\) on
+two-forms surjects onto \(\mathrm{SO}_0(3,3)\), since its differential is
+injective and the groups have the same dimension. This action is
+transitive on maximal positive planes. The stabilizer in
+\(\mathrm{SL}(4,\mathbb R)\) of the standard self-dual plane is
+\(\mathrm{SO}(4)\). Polar decomposition reduces the assertion to a positive
+diagonal matrix of determinant one, and preservation of the plane
+equates the products of diagonal entries in every complementary pair.
+Those equalities force all four entries to be one. Thus a positive
+plane determines a unique metric of volume \(\nu\), smoothly in the
+plane, and \(\Sigma/\sqrt2\) identifies \(E\) isometrically with
+\(\Lambda_g^+\). Since oriented coframe changes act on \(\Lambda_g^+\)
+through \(\mathrm{SO}(3)\) surjectively, choose a local coframe with
+\(\Sigma_i=e^i\wedge e^4+\tfrac12\epsilon_{ijk}e^j\wedge e^k\).
+Changing the oriented internal frame rotates the triple and changes the
+connection by its usual gauge transformation. The triple itself is a
+bundle-valued field~\cite[Sections~1.3 and~1.6]{Fine2011}.
+
+Use \([T_i,T_j]=\epsilon_{ijk}T_k\) for the internal generators. For a
+metric connection \(A\) on \(E\), define the matrix \(C\) by
+\begin{equation}\label{lift:projection}
+ C_{ij}\nu=-\tfrac12 F_A^i\wedge\Sigma_j .
+\end{equation}
+The equation \(d_A\Sigma=0\) makes \(A\) the transported chiral
+Levi--Civita connection \(\Gamma^+(g)\). Indeed, writing
+\(b=A-\Gamma^+(g)\) gives \(d_A\Sigma=[b,\Sigma]\), since
+Levi--Civita compatibility gives \(d_{\Gamma^+}\Sigma=0\).
+In the adapted coframe let \(\eta_{i,ab}\) be the components of
+\(\Sigma_i\). Then the map \(\mathscr C b=*[b,\Sigma]\) has components
+\((\mathscr C b)_{ic}=\epsilon_{ijk}\eta_{k,dc}b_{jd}\).
+Contracting with
+\(\eta_{i,ab}\eta_{j,cb}=\delta_{ij}\delta_{ac}
++\epsilon_{ijk}\eta_{k,ac}\) gives
+\(\mathscr C^2+\mathscr C-2I=0\), so its inverse is
+\((\mathscr C+I)/2\). This computation uses the normalized coframe
+alone~\cite[compatibility proposition]{Baker2026ChiralMetricEvolution}.
+
+For the sign in \eqref{lift:projection}, let \(K_\alpha\) be defined by
+\(g(K_\alpha X,Y)=\alpha(X,Y)\). The generators
+\(K_{\Sigma_i}/2\) have the stated brackets, and the \(\Lambda^-\)
+summand commutes with their action on \(\Lambda^+\). With positive
+sectional curvature on the round sphere, the two-form of \(R(X,Y)\)
+is \(-\mathcal R(X^\flat\wedge Y^\flat)\), where \(\mathcal R\) is the
+curvature operator. Its projection gives
+\(F_{\Gamma^+}^i=-\mathcal R\Sigma_i\), since \(|\Sigma_i|^2=2\)
+and the generators are \(K_{\Sigma_i}/2\). Consequently
+\[
+ F_{\Gamma^+}=-(W^++s_g I/12)\Sigma-B_{\mathrm{Ric}}\Sigma^- ,
+\]
+with \(B_{\mathrm{Ric}}\) the off-diagonal trace-free Ricci block
+in this row convention and \(\Sigma^-\) an equally normalized
+anti-self-dual frame. The \(\Sigma^-\) term drops out of
+\eqref{lift:projection}, giving \(C=W^++s_g I/12\).
+Thus \(d_A\Sigma=0\) and a prescribed \(\operatorname{Sym}_0 C\)
+give a first-order mixed system whose elimination is the second-order
+metric equation for \(W^+\). Positivity is imposed on the metric
+triple, and the construction admits all smooth Riemannian metrics,
+including ones with degenerate chiral curvature~\cite[Section~1]{GoverGursky2024}
+\cite[chiral curvature decomposition]{Baker2026ChiralMetricEvolution}.
+
+\subsection{Fixed target and the linearized range}
+
+Write \(V=S^2_0T^*M\), \(B=S^2_0E\), and \(h^\sharp=r^{-1}h\).
+Use the fixed-volume chart and symmetric comparison
+\begin{equation}\label{lift:chart}
+ g_h=r(e^{h^\sharp}\cdot,\cdot),\quad
+ S_h=e^{-h^\sharp/2}:(TM,r)\longrightarrow(TM,g_h),\quad
+ F_r(h)=I_hW^+_{g_h}I_h^{-1},\qquad
+ I_h=\Lambda^2S_h^*\big|_{\Lambda_{g_h}^+}.
+\end{equation}
+The metric is positive and \(dV_{g_h}=\nu\) because
+\(\operatorname{tr}_r h=0\).
+The isometry \(S_h\) preserves orientation and makes \(I_h\) a fiber
+isometry. All local expressions agree across the fixed bundle
+transitions. Put \(W=F_r(0)=W_r^+\) and \(L=dF_r(0)\). In a fixed atlas,
+\(F_r\) is a smooth function of the two-jet of \(h\), with background
+coefficients determined by \(r\). In particular it is smooth from
+\(H^{s+2}(V)\) to \(H^s(B)\) for any fixed integer \(s\ge5\), and from
+\(C^{k+2,\alpha}(V)\) to \(C^{k,\alpha}(B)\) for \(k\ge2\),
+\(0<\alpha<1\), by multiplication and composition in those spaces.
+
+Let \(\mathcal KX=(\mathcal L_X r)_0\). For a flow
+\(\varphi_\epsilon\) generated by \(X\), the metric
+\(g_\epsilon=\rho_\epsilon\varphi_\epsilon^*r\),
+\(\rho_\epsilon=(\nu/\varphi_\epsilon^*\nu)^{1/2}\), has volume
+\(\nu\) and derivative \(\mathcal KX\). The comparison from \(r\) to
+itself at \(\varphi_\epsilon(x)\) is the isometry
+\(O_\epsilon=\rho_\epsilon^{1/2}d\varphi_\epsilon S_\epsilon\),
+where \(S_\epsilon\) is the map in \eqref{lift:chart} for \(g_\epsilon\).
+Conformal covariance of the Weyl endomorphism gives
+\(\rho_\epsilon^{-1} O_\epsilon^*W(\varphi_\epsilon(x))(O_\epsilon^*)^{-1}\)
+for the transported field. The derivative of \(S_\epsilon\) cancels
+the symmetric trace-free part of \(\nabla X\), and that of
+\(\rho_\epsilon^{1/2}\) cancels its trace. Thus if \(\Theta_X\) is the
+infinitesimal pullback on two-forms of \(\operatorname{skew}\nabla X\),
+\begin{equation}\label{lift:gauge}
+ L\mathcal KX=\nabla_X W+[\Theta_X,W]+\tfrac12(\operatorname{div}_r X)W .
+\end{equation}
+The normalized pullback also transforms a transported source. A source
+fixed as a section of \(B\) can therefore constrain these directions
+off ASD~\cite[discussion after (6.7)]{FeffermanGraham2008Ambient}.
+
+The principal symbol is computed by freezing a flat orthonormal
+coframe. In the real symbol convention \(\partial\mapsto\xi\), take
+\(\xi=|\xi|e^0\). A symbol transverse-traceless tensor has
+\(h_{0a}=0\) and a trace-free \(3\times3\) spatial block. The curvature
+variation then has only entries of type
+\(\mathcal R'_{0i,0j}=-|\xi|^2h_{ij}/2\). Projection to the orthonormal
+self-dual frame gives \(-|\xi|^2(h_{ij})/4\), and the scalar symbol is zero.
+The orthogonal complement of this five-dimensional domain fiber is
+\(\operatorname{im}\sigma_\xi(\mathcal K)\), since
+\(\mathcal K^*=-2\delta_r\), with
+\((\delta_r h)_j=\nabla^i h_{ij}\). The symbol of \(\mathcal K\) is
+injective for \(\xi\ne0\), and \eqref{lift:gauge} shows that \(L\)
+annihilates its image at principal order. In particular
+\begin{equation}\label{lift:normal}
+ P=LL^*,\qquad \sigma_\xi(P)=|\xi|_r^4I_B/16 .
+\end{equation}
+This is an elliptic self-adjoint operator on the closed manifold.
+Let \(\mathcal C=\ker L^*=\ker P\), the equality following by pairing
+\(Pu\) against \(u\). Elliptic regularity makes \(\mathcal C\) finite
+dimensional and smooth. The generalized inverse \(G_P\) maps
+\(H^s(B)\) to \(H^{s+4}(B)\cap\mathcal C^\perp\) and satisfies
+\(PG_P=I-\pi_{\mathcal C}\), with the reference \(L^2\) projection.
+Thus the full range of \(L\) is \(H^s(B)\cap\mathcal C^\perp\), and
+\begin{equation}\label{lift:split}
+ H^{s+2}(V)=\ker L\ \oplus\
+ L^*(H^{s+4}(B)\cap\mathcal C^\perp).
+\end{equation}
+The projection onto the second summand is \(L^*G_P L\).
+When \(\mathcal C=0\), \(Q=L^*P^{-1}\) is a bounded right inverse
+gaining two derivatives. At any reference a differentiable lift of
+\(F_r(h(t))=(1-t)W\) through \(h(0)=0\) requires \(W\perp\mathcal C\),
+by its tangent equation \(Lh'(0)=-W\).
+
+\paragraph{The fixed transverse-traceless slice.}
+Write \(\mathrm{TT}_r=\ker\delta_r\) in \(V\). On a homotopy
+four-sphere the Fredholm index of \(L|_{\mathrm{TT}_r}\) is
+\begin{equation}\label{lift:index}
+ \operatorname{ind}(L|_{\mathrm{TT}_r})
+     =\dim\ker\mathcal K-15 .
+\end{equation}
+For the index, the operator \((\delta_r,L)\) is elliptic with row
+orders one and two, as is seen by multiplying the divergence row
+by an elliptic isomorphism of order one with symbol \(|\xi|I\).
+The adjoint of this augmented symbol folds the universal conformal
+deformation symbol from the even bundles to the odd bundle. Its
+index is \((15\chi+29\tau)/2\). For clarity, this number uses the
+symbol even at an off-ASD reference. On the spin lift, let \(x,y\)
+be the half-spin representations, \(x\) corresponding to
+\(\Lambda^+\). The even-minus-odd representation is
+\[
+ xy+\operatorname{Sym}^4x-\operatorname{Sym}^2x\,\operatorname{Sym}^2y
+ =(x-y)(\operatorname{Sym}^3x+\operatorname{Sym}^2x\,y).
+\]
+With half-spin weights \(\pm u,\pm v\), the oriented Euler and
+Pontryagin classes are \(e=u^2-v^2\), \(p_1=2(u^2+v^2)\).
+The Atiyah--Singer character formula divides the character of this
+difference by \(e\) before evaluating on \(M\) and multiplies by
+\(\operatorname{Td}(TM_{\mathbb C})\). The degree-four term is
+\(18u^2+3v^2-10p_1/24=(15/2)e+(29/6)p_1\). The augmented operator
+has the opposite index, hence \(-15\) at \(\chi=2,\tau=0\).
+The divergence has range \((\ker\mathcal K)^\perp\), using the elliptic
+inverse of \(\delta_r\mathcal K=-\mathcal K^*\mathcal K/2\) on that
+complement. If \(R_\delta\) is its resulting right inverse for
+\(\delta_r\), remove the \(\ker\mathcal K\) part of the first target
+and subtract \(LR_\delta\) of the first output from the second.
+The resulting operator splits into the identity on the divergence
+range and \(L|_{\mathrm{TT}_r}\). This proves \eqref{lift:index}~\cite[Section~2]{AtiyahSinger1968IndexIII}
+\cite[Section~1.1]{GoverGursky2024}.
+
+The conformal Killing equation determines a field by its value,
+skew derivative, divergence and derivative of the divergence at
+one point. Indeed the variations of the Levi--Civita connection
+and the Schouten tensor under \(\mathcal L_X r=2fr\) express
+\(\nabla^2 X\) in these data and \(\nabla^2 f\) in \(X,\nabla X\).
+They give a homogeneous first-order system along curves.
+Thus \(\dim\ker\mathcal K\le4+6+1+4=15\). Equality would realize
+every skew first jet at a point with \(X=0\) as a conformal Killing
+field. By \eqref{lift:gauge}, this would make \(W\) commute with all
+rotations of the positive bundle, forcing \(W=0\). Hence the fixed
+slice has nontrivial cokernel at every off-ASD reference on a
+homotopy sphere. The index leaves undecided membership of the
+particular target \(-W\) in that range.
+
+\paragraph{Round inverse and gap.}
+On the standard round sphere \(r_0\) of curvature \(K>0\), write
+\(D_0=L_{r_0}\) and \(\Delta_\nabla=\nabla^*\nabla\). The round
+factorization on TT tensors in the operator norm convention is
+\[
+ D_0^*D_0=\tfrac1{16}(\Delta_\nabla+2K)(\Delta_\nabla+4K).
+\]
+The rough Laplacian preserves TT. For a TT tensor, integrating the
+cross terms in the square of
+\(S_{abc}=\nabla_a h_{bc}+\nabla_b h_{ca}+\nabla_c h_{ab}\)
+and using \([\nabla^a,\nabla_b]h_{ca}=4Kh_{bc}\) gives
+\(\|S\|_2^2=3\|\nabla h\|_2^2-24K\|h\|_2^2\).
+Thus \(\Delta_\nabla\ge8K\) and
+\(\|D_0h\|_2^2\ge(15/2)K^2\|h\|_2^2\).
+The round ASD cokernel vanishes and \(D_0\mathcal K=0\). Thus \(Q_0=D_0^*(D_0D_0^*)^{-1}\) is the inverse on the round
+TT slice with gain two~\cite[round metric Hessian and TT gap]{Baker2026ChiralMetricEvolution}
+\cite[Section~1.1, round unobstructedness]{GoverGursky2024}.
+
+\subsection{A quantitative one-chart lift}
+
+\begin{proposition}[A whole curvature chord in one metric chart]\label{lift:radial}
+Let \(X,Y\) be the metric and target Banach spaces at either of the
+grades stated above. Suppose \(L\) has a bounded right inverse
+\(Q:Y\to X\), and \(DF_r\) is \(H\)-Lipschitz in the radius-\(\rho\)
+ball in \(X\). Set \(\eta=\|QW\|\), \(q=\|Q\|H\rho\).
+If \(q<1\) and \(\eta+q\rho/2\le\rho\), there is a unique
+path in the closed radius-\(\rho\) ball of \(\operatorname{im}Q\)
+with \(F_r(h(t))=(1-t)W\), \(0\le t\le1\). It is smooth in the
+fixed Banach grade, and
+\[
+ \|h(t)-h(u)\|\le\eta|t-u|/(1-q),\qquad
+ \|h(t)\|\le t\eta/(1-q/2).
+\]
+\end{proposition}
+
+\begin{proof}
+For \(N(h)=F_r(h)-W-Lh\), integration on segments gives
+\(\|N(h)\|\le H\|h\|^2/2\) and Lipschitz constant \(H\rho\)
+on the ball. The map \(h\mapsto-tQW-QN(h)\) is a
+\(q\)-contraction of the stated ball into itself. The ball is
+complete because \(QL\) is a bounded projection onto
+\(\operatorname{im}Q\). Its fixed point solves the equation, and
+conversely \(QL=I\) on this range. The two bounds follow by subtracting
+fixed point equations and by estimating the quadratic remainder,
+respectively. The derivative of the fixed point equation on
+this range is the identity plus an operator of norm at most \(q\).
+The implicit function theorem gives parameter smoothness.
+The chart bound gives two-sided uniform comparison to \(r\) by
+exponentiating the pointwise eigenvalue bounds on \(h^\sharp\),
+as well as the coefficient bounds in the given grade.
+\end{proof}
+
+On the known standard \(S^4\), this criterion holds at every sufficiently
+close smooth reference to the unit round metric in \(C^{k+2,\alpha}\).
+Identify the metric and Weyl targets with those of \(r_0\) by the
+positive symmetric isometry between \(r_0\) and \(r\), and put tildes
+on the compared operators. The smooth finite-jet expression gives
+\(\|\widetilde L_r-D_0\|+\|\widetilde W\|
+\le C\|r-r_0\|_{C^{k+2,\alpha}}\) and a common local Lipschitz bound
+for the derivative. The inverse
+\(Q_0(\widetilde L_rQ_0)^{-1}\) exists by a Neumann series,
+has bounded norm and a fixed range. Choose a common radius with
+\(q\le1/2\), then shrink the reference neighborhood to make
+\(\eta\le\rho/2\). Smooth spatial regularity in this differential
+range is verified below. An abstract right inverse in
+Proposition~\ref{lift:radial} gives the stated Banach regularity.
+
+\subsection{Exterior corrections on the given manifold}
+
+\begin{theorem}[Local prescription with exterior corrections]\label{lift:exterior}
+Suppose \(r\) is isometric, orientation-preservingly, to the round
+model on a coordinate ball \(O\subset M\), and let \(K\Subset O\)
+be a closed coordinate subball. Take a reference \(L^2\)-orthonormal
+basis \(Z_1,\ldots,Z_m\) of \(\mathcal C=\ker L^*\) and a smooth
+function \(w\) zero on \(K\) and positive on \(M\setminus K\).
+Let
+\[
+ \mathcal Wc=\sum_i c_i wZ_i,\quad
+ b(y)_i=\langle Z_i,y\rangle_{L^2(r)},\quad
+ \Gamma_{ij}=\langle Z_i,wZ_j\rangle_{L^2(r)} .
+\]
+Then \(\Gamma\) is positive definite. For any fixed \(s\ge5\), every
+sufficiently small \(y\in H^s(B)\) has a unique small pair \((u,c)\)
+in \((H^{s+4}(B)\cap\mathcal C^\perp)\times\mathbb R^m\) giving
+\begin{equation}\label{lift:corrected}
+ h=L^*u,\qquad F_r(h)=W+y-\mathcal Wc,\qquad
+ c=\Gamma^{-1}b(y)+O(\|y\|_{H^s}^2).
+\end{equation}
+For smooth \(y\), the metric and its compatible chiral connection
+are smooth. In particular \(F_r(h)=y\) on \(K\).
+\end{theorem}
+
+\begin{proof}
+Any \(Z\in\mathcal C\) vanishing on \(M\setminus K\) can be
+transplanted from the round patch to the standard round sphere
+and extended by zero. The extension is smooth because it vanishes
+in a collar before the patch boundary, and it solves the round
+adjoint equation since the differential operator and pairings
+agree there. Round adjoint injectivity gives \(Z=0\).
+Positive definiteness of \(\Gamma\) follows by writing its quadratic
+form as \(\int_M w|\sum_i c_i Z_i|^2\,dV_r\). If it vanishes,
+the combination vanishes on the exterior. For example \(w\) can
+be chosen flat at \(\partial K\) by using \(e^{-1/d^2}\) for
+positive outward collar parameter \(d\) and joining to a strictly
+positive function farther out. Its support may touch the boundary.
+A slightly larger subball in \(O\) gives the same argument with an
+intervening collar of zero correction.
+
+The derivative at zero of
+\((u,c)\mapsto F_r(L^*u)-W+\mathcal Wc\) is \(P\dot u+\mathcal W\dot c\).
+For output \(z\) its inverse is
+\[
+ \dot c=\Gamma^{-1}b(z),\qquad
+ \dot u=G_P\bigl(z-\mathcal W\Gamma^{-1}b(z)\bigr).
+\]
+The target for \(G_P\) is orthogonal to \(\mathcal C\), and the
+inverse is bounded in the displayed grades. The Banach inverse
+function theorem gives the local lift and the expansion of the
+coefficient. The sign of the realized exterior change is
+\(-\mathcal Wc\). If \(\mathcal C=0\), the finite moment and correction
+rows are empty. The metric has volume \(\nu\), and the restrictions
+of the global metric and compatible connection have matching jets
+in common coordinates across the interface. The prescribed datum
+on \(K\) is the curvature source. Its realization can change the
+metric on \(K\).
+\end{proof}
+
+\paragraph{Spatial regularity.}
+For the exterior theorem, work on the full potential space and
+adjoin the finite row \(b(u)=0\). The derivative at zero sends
+\((v,d)\) to \((Pv+\mathcal Wd,b(v))\). Its inverse is the one
+above with the addition of \(\sum_i a_i Z_i\) to \(v\) for a
+prescribed moment output \(a\). This derivative remains invertible
+at the small solution. The fourth-order spatial row is a
+finite-jet differential map. Conjugate it by local component
+pullbacks \(T_\epsilon\) that are translations on a smaller
+framed ball and the identity outside a larger one. Conjugation
+makes the coefficients smooth in the translation parameter at
+the same Sobolev grades. The moment row is \(b(T_\epsilon^{-1}v)\)
+and is smooth in \(\epsilon\) by transferring the pullback to
+the smooth basis and reference density. For smooth \(y\) the translated
+source is smooth in the parameter. The implicit function theorem
+and strong continuity of \(T_\epsilon\) identify \(T_\epsilon u\)
+with the smooth solution branch. Differentiating translations yields
+all local spatial derivatives in the frozen Sobolev grade.
+
+The round neighborhood uses the same argument without finite rows
+in the fixed potential range \(h=D_0^*u\) in compared coordinates.
+The derivative of its potential equation, composed with
+\((D_0D_0^*)^{-1}\), equals
+\(D\widetilde F_r(h)\widetilde Q_r\,\widetilde L_rQ_0\), where
+\(\widetilde Q_r=Q_0(\widetilde L_rQ_0)^{-1}\). Both factors
+\(D\widetilde F_r(h)\widetilde Q_r\) and \(\widetilde L_rQ_0\)
+are invertible by the two Neumann series.
+For the H\"older proof restrict to the closures of smooth sections
+in those grades. Elliptic inverses, the Neumann series and the
+contraction iterates from zero preserve these closures, on which
+translations are strongly continuous. This gives spatial smoothness
+for smooth references and sources. The same differential-potential
+argument applies to \(Q=L^*(LL^*)^{-1}\) at a smooth reference
+where it is defined and satisfies Proposition~\ref{lift:radial}.
+
+\paragraph{The exact balance.}
+On the slice of Theorem~\ref{lift:exterior}, taking moments gives
+\begin{equation}\label{lift:balance}
+ \Gamma c(y)=b\bigl(y-N(h(y))\bigr),\qquad
+ N(h)=F_r(h)-W-Lh .
+\end{equation}
+The corrected solution is an uncorrected lift exactly when this
+right-hand side vanishes. For \(y=-tW\) the linear coefficient is
+\(-t\Gamma^{-1}b(W)\), with \(W\) including the original exterior
+Weyl curvature. The splitting \eqref{lift:split} also permits
+\(h=k+L^*u\) with small \(k\in\ker L\) as a parameter in the augmented
+implicit function theorem. The corresponding uncorrected condition
+uses its own \(N(k+L^*u)\). Thus a failure of balance on the chosen
+slice leaves the other kernel parameters open.
+
+If \(M\) is a homotopy four-sphere, the actual exterior
+\(M\setminus\operatorname{int}K\) is contractible with boundary \(S^3\).
+Van Kampen gives simple connectivity by using a collar along the
+boundary. Mayer--Vietoris gives reduced acyclicity, since the
+connecting map sends the fundamental class of \(M\) to the
+boundary orientation class. The smooth exterior has CW type,
+so the simply connected homology form of Whitehead's theorem
+gives contractibility. The proof of Theorem~\ref{lift:exterior}
+uses its given smooth structure and a fixed reference. Extending
+the lift to a recognizing metric would require control of the
+inverse and metric beyond the small chart and a mechanism to
+achieve the uncorrected balance.
+
+\section{Transmission across a round spherical interface}\label{sec:transmission}
+
+Let \(r\) be the unit round metric on the oriented standard \(S^4\).
+Use oriented stereographic coordinates \(x\) from the south pole,
+\(\rho=|x|\), and \(r=\Omega^2\delta\), where
+\(\Omega=2/(1+\rho^2)\) and \(\delta\) is Euclidean. The northern
+hemisphere is \(B=\{\rho<1\}\). Denote the closed southern hemisphere,
+including the removed pole, by \(S_-\). We use the curvature-operator
+Hilbert--Schmidt norms and the convention that \(W^+=0\) is ASD.
+
+At a reference metric \(g\) use trace-free covariant logarithmic
+variations \(h\), with \(h^\sharp=g^{-1}h\), and write
+\[
+ g_h=g(e^{h^\sharp}\,\cdot,\cdot),\qquad
+ F_{g,\pm}(h)=I_{h,\pm}W_{g_h}^{\pm}I_{h,\pm}^{-1}.
+\]
+Here \(I_{h,\pm}\) is the pullback on chiral two-forms induced by
+the positive symmetric isometry \(e^{-h^\sharp/2}\) from \(g\) to
+\(g_h\). These identifications preserve the chiral norms, and
+\(dV_{g_h}=dV_g\). Write \(D_{\pm,g}=dF_{g,\pm}(0)\) for \(g=r\)
+or \(\delta\). At these conformally flat backgrounds the derivative is
+independent of the infinitesimal target frame change.
+
+\subsection{The relative chiral operator}
+
+In an oriented flat orthonormal coframe \(e^0,e^1,e^2,e^3\), put
+\(\omega_i^\pm=(e^0\wedge e^i\pm e^j\wedge e^k)/\sqrt2\) for cyclic
+\((i,j,k)\) in \((1,2,3)\). The round coframes on chiral two-forms
+are \(\Omega^2\omega_i^\pm\). For a unit covector \(n\), let
+\(R_n=I-2n\otimes n^\sharp\) and
+\(C_n=\Lambda^2R_n|_{\Lambda_\delta^+}:\Lambda_\delta^+\to\Lambda_\delta^-\).
+Orientation reversal exchanges the two Hodge eigenspaces. Define the
+isometric conjugation \(M(n)V=C_nVC_n^{-1}\) on the Weyl targets.
+
+\begin{proposition}\label{xfer:multiplier}
+Use the Fourier transform with phase \(e^{-ix\cdot\xi}\) and inverse
+measure \((2\pi)^{-4}d\xi\). Let \(T\) be the flat multiplier with
+symbol \(M(\xi/|\xi|)\). If
+\(Q_r=(D_{+,r}|_{\mathrm{TT}_r})^{-1}\) is the round inverse, then
+\[
+ D_{-,r}Q_r=\mathcal C_-^{-1}T\mathcal C_+,\qquad
+ \mathcal C_\pm f=\Omega^2 f
+\]
+in the induced orthonormal frames. Each \(\mathcal C_\pm\) is an
+onto \(L^2\) isometry, and so is the relative round operator.
+\end{proposition}
+
+\begin{proof}
+The inverse \(Q_r\) from Section~\ref{sec:lift} uses round ASD
+unobstructedness~\cite[\S1.1]{GoverGursky2024} and the round TT
+kernel statement. For the flat symbols first substitute real
+derivatives \(\partial\mapsto\xi=\ell e^0\). The TT symbol
+fiber consists of the trace-free spatial components \(h_{ij}\).
+The linearized curvature operator has entries
+\(\mathcal R'_{0i,0j}=-\ell^2h_{ij}/2\), with entries involving
+purely spatial pairs zero. Its two diagonal chiral compressions
+are therefore both \(-\ell^2(h_{ij})/4\) in the respective
+\(\omega_i^\pm\) frames. Their traces vanish, so the scalar
+subtraction in \(W^\pm\) does not affect these matrices.
+Fourier differentiation changes both signs together.
+The symbol of the trace-free Lie derivative spans the
+orthogonal complement of the TT symbol fiber in trace-free
+tensors. Both chiral symbols vanish there by diffeomorphism and
+conformal invariance, and both vanish on pure trace variations.
+At \(\xi=\ell e^0\), \(C_n\omega_i^+=-\omega_i^-\), and the two minus
+signs cancel in conjugation. Rotation equivariance consequently gives,
+for the full Fourier symbols \(d_\pm\) and \(\xi\ne0\),
+\begin{equation}\label{xfer:symbol}
+ \begin{gathered}
+ d_-=M d_+,\qquad d_-^*M=d_+^*,\\
+ d_-^*d_-=d_+^*d_+,\qquad d_\pm d_\pm^*=\tfrac{|\xi|^4}{16}I .
+ \end{gathered}
+\end{equation}
+
+The Hodge star on two-forms is conformally invariant in four
+dimensions. The covariant Weyl tensor scales with weight \(2\),
+so its endomorphism in the induced orthonormal frame has
+weight \(-2\)~\cite[Ch.~6]{FeffermanGraham2008Ambient}. For a
+round covariant variation \(h\) this gives
+\begin{equation}\label{xfer:weights}
+ u=\Omega^{-2}h,\qquad D_{\pm,\delta}u=\Omega^2D_{\pm,r}h,
+ \qquad dV_r=\Omega^4\,dx .
+\end{equation}
+No Euclidean divergence condition on \(u\) is required. For smooth
+round \(h=Q_r f\), \(u\) is bounded in the flat frame, and the two
+fields in \eqref{xfer:weights} are in \(L^2(\mathbb R^4)\).
+Apply \eqref{xfer:symbol} to their Fourier transforms away from
+zero. The difference is an \(L^2\) field supported at a single
+frequency and therefore vanishes. This determines the relative
+operator on smooth round fields. The volume transformation gives
+the isometries \(\mathcal C_\pm\), and Plancherel and the
+pointwise orthogonality of \(M\) give the asserted extension.
+\end{proof}
+
+\subsection{Angular harmonicity, radial moments, and the pole}
+
+\begin{lemma}\label{xfer:harmonic}
+For any constant self-dual Weyl endomorphism \(V\),
+\[
+ Y_V(n)=M(n)V,\qquad H_V(x)=\rho^4Y_V(x/\rho)
+\]
+extend in the second formula to a componentwise homogeneous
+harmonic quartic on \(\mathbb R^4\).
+\end{lemma}
+
+\begin{proof}
+Identify the oriented Euclidean space with the quaternions in
+the frame \((1,\mathbf i,\mathbf j,\mathbf k)\).
+Left and right multiplication by an imaginary quaternion correspond
+to the indicated positive and negative two-form bases with the same
+normalization. For example, multiplication by \(\mathbf i\) takes
+\(1\) to \(\mathbf i\) in both cases and takes \(\mathbf j\)
+to \(\mathbf k\) on the left and \(-\mathbf k\) on the right.
+Reflection acts by \(R_n(q)=-n\bar qn\), so conjugating
+left multiplication by \(v\) with \(R_n\) gives right multiplication
+by \(-\bar nvn\). Thus \(C_n=-O(n)\) in the indexed bases, where
+\(O(n)v=\bar nvn\), and \(M(n)V=O(n)VO(n)^{\mathsf T}\).
+Writing \(x=x_0+b\) with \(b\) imaginary, define the quadratic
+matrix \(L(x)v=\bar xvx\). With \([b]_\times v=b\times v\),
+\[
+ L(x)=(x_0^2-|b|^2)I+2bb^{\mathsf T}-2x_0[b]_\times.
+\]
+It satisfies \(\Delta L=0\) for \(\Delta=\sum_j\partial_j^2\),
+and \(H_V=L V L^{\mathsf T}\).
+At \(x=1\) the first derivatives of \(L\) are \(2I,-2J_i\),
+where \(J_i v=e_i\times v\). Contracting the alternating symbols
+gives \(\sum_i J_i VJ_i^{\mathsf T}=(\operatorname{tr}V)I-V^{\mathsf T}\).
+Thus \(\Delta H_V(1)=8(V+(\operatorname{tr}V)I-V^{\mathsf T})=0\).
+For unit \(a\), \(L(xa)=O(a)L(x)\), and right multiplication by
+\(a\) is orthogonal. The Laplacian has the same equivariance, so
+it vanishes on the unit sphere and hence by homogeneity everywhere.
+\end{proof}
+
+Write \(H_4(\xi)V=H_V(\xi)\) for the polynomial numerator of \(M\).
+The fundamental solution of \(\Delta^2\) in these conventions is
+\(G(x)=-\log\rho/(8\pi^2)\). Indeed
+\(\Delta\log\rho=2\rho^{-2}\) distributionally with zero atom,
+and the flux of \(\nabla\rho^{-2}\) is \(-2|S^3|=-4\pi^2\),
+giving \(\Delta^2G=\delta_0\). The order-four differentiation
+has phase factor \(i^4=1\). Thus the Fourier transform of
+\(H_4(\partial)G\) is \(M\) away from zero. Exact homogeneity of
+\(H_4(\partial)G\) of degree \(-4\) gives homogeneity of degree
+zero for its transform, excluding a discrepancy supported at the
+origin~\cite[Theorem~4.19]{Dyatlov2022Elliptic}.
+For a scalar function \(\Phi\) of \(\rho^2\), the trace-free
+quartic coefficient tensor gives
+\begin{equation}\label{xfer:radial-derivative}
+ H_V(\partial)\Phi(\rho^2)=16H_V(x)\Phi^{(4)}(\rho^2).
+\end{equation}
+Indeed all second derivatives of the radial argument pair two
+indices of the coefficient tensor and drop out. The derivatives
+on \(\log\rho\) and \(\rho^{-2}\) are therefore
+\(-48H_V(x)\rho^{-8}\) and \(384H_V(x)\rho^{-10}\).
+The physical kernel acting on \(V\) is the spherical principal
+value of \(6H_V(x)/(\pi^2\rho^8)\). The angular mean vanishes
+by harmonicity. The possible point mass in a homogeneous
+extension of degree \(-4\) is absent, since both this principal
+value and \(H_V(\partial)G\) pair to zero with radial tests.
+
+For a smooth signed radial \(\chi\) supported in \(\{\rho\le R\}\),
+write \(m_j=\int_{\mathbb R^4}|x|^j\chi(|x|)\,dx\) for \(j=0,2\).
+For \(s<\rho\), the normalized sphere average in \(n\) of
+\(\log|x-sn|\) is \(\log\rho+s^2/(4\rho^2)\). To see this,
+its radial Laplacian in \(s\) is the mean of
+\(2|x-sn|^{-2}\), which is \(2/\rho^2\) by harmonicity, and
+the initial value and derivative are \(\log\rho\) and zero.
+Integration and \eqref{xfer:radial-derivative} then yield
+\begin{equation}\label{xfer:radial}
+ \begin{gathered}
+ G*\chi=-\frac1{8\pi^2}\left(m_0\log\rho+\frac{m_2}{4\rho^2}\right),
+ \qquad T(\chi V)=a(\rho)Y_V(n),\\
+ a(\rho)=\frac6{\pi^2}\left(m_0\rho^{-4}-2m_2\rho^{-6}\right)
+ \qquad(\rho>R).
+ \end{gathered}
+\end{equation}
+Both identities extend continuously to \(\rho=R>0\) for the
+smooth source. For \(V\ne0\) the exterior field vanishes
+identically exactly when both moments vanish.
+
+From now on take \(f=\chi Z\) with \(Z=\operatorname{diag}(1,1,-2)\)
+and the positive seed
+\[
+ \chi(\rho)=
+ \begin{cases}
+ \exp\bigl(-1/(1-4\rho^2)\bigr),&\rho<1/2,\\
+ 0,&\rho\ge1/2 .
+ \end{cases}
+ \qquad f_r=\Omega^{-2}f .
+\]
+The source \(f_r\) extends by zero at the south pole.
+Here \(a(\rho)>0\) for \(\rho\ge1/2\). Indeed, with \(v=4s^2\),
+\(m_2/m_0\) is one quarter of the mean of \(v\) for density
+\(v e^{-1/(1-v)}\,dv\) on \((0,1)\). For \(v>1/2\) the logarithm
+of the ratio of this density to its value at \(1-v\) is
+\(\log b-b+1/b<0\), with \(b=v/(1-v)>1\). The mean is therefore
+less than \(1/2\), so \(2m_2/m_0<1/4\).
+
+The first-order round field \(U=D_{-,r}Q_r f_r\) has components
+\(\Omega^{-2}a(\rho)Y_Z(x/\rho)\) for \(\rho\ge1/2\). In the
+opposite oriented pole chart \(y=Jx/\rho^2\), \(J=R_{e^0}\), the
+orthonormal frame transition has orthogonal factor \(JR_n\),
+since \(dy=\rho^{-2}JR_n\,dx\) and \(\Omega(y)=\rho^2\Omega(x)\).
+The composition of \(\Lambda^2(JR_n)\) on the negative frame
+with \(C_n\) equals \(\Lambda^2J|_{\Lambda_\delta^+}\), represented
+by \(-I\). Thus the angular conjugation cancels, and the
+components of \(U\) in the \(y\) frame are
+\begin{equation}\label{xfer:pole}
+ \frac{3}{2\pi^2}(1+w)^2(m_0-2m_2w)Z,\qquad w=|y|^2 .
+\end{equation}
+In particular the equatorial and southern pole norms are
+\(6\sqrt6(m_0-2m_2)/\pi^2\) and \(3\sqrt6\,m_0/(2\pi^2)\),
+respectively. For \(0\le w\le1\) the scalar derivative in
+\eqref{xfer:pole} is proportional to
+\((1+w)(m_0-m_2-3m_2w)>0\), since \(m_2<m_0/4\).
+Hence the pole norm is the positive minimum of \(|U|_r\) on \(S_-\).
+
+\subsection{The sharp observation inside a supplied collar}
+
+Let \(A=\{2/3<\rho<1\}\) and let \(\mathcal Y\) be the
+five-dimensional angular subspace
+\(\{Y_V:V\in S^2_0(\Lambda_\delta^+)\}\) in
+\(L^2(S^3,dS)\) of negative Weyl endomorphisms. The angular
+projection \(P_{\mathcal Y}\) is applied separately on every radius.
+The isometry \(M(n)\) gives
+\(\langle Y_V,Y_{V'}\rangle_{L^2(S^3)}=2\pi^2\langle V,V'\rangle\).
+
+\begin{theorem}[Five angular projections independent of exterior data]\label{xfer:sharp}
+On \(B\) suppose the same smooth flat metric variation \(h\)
+satisfies \(D_{+,\delta}h=tf+e\) and \(q=D_{-,\delta}h\), with
+\(e\in L^2(B)\). Let \(\widetilde e\) denote its zero extension.
+On \(A\) one has
+\begin{equation}\label{xfer:angular}
+ P_{\mathcal Y}(q-T\widetilde e)=t a(\rho)Y_Z,\qquad
+ \|q\|_{L^2(A)}+\|e\|_{L^2(B)}\ge |t|\,d_A,
+ \quad d_A=\|aY_Z\|_{L^2(A)}>0 .
+\end{equation}
+The constant is attained by restricting and conformally flattening
+the round TT lift of \(tf_r\), which has \(e=0\).
+\end{theorem}
+
+\begin{proof}
+Write \(D_\pm=D_{\pm,\delta}\) in this proof and put
+\(z=q-tTf-T\widetilde e\).
+The identities \eqref{xfer:symbol} give \(D_-^*z=0\)
+distributionally on \(B\), since \(D_-^*T=D_+^*\) and
+derivatives of the zero extension agree with those of \(e\) on
+compact tests in \(B\). The multiplier identities for \(L^2\) inputs
+hold distributionally by polynomial multiplication on the Fourier
+side. Consequently \(z\) is biharmonic by
+\(D_-D_-^*=\Delta^2 I/16\) and is smooth in the ball by
+elliptic regularity. This also gives the smooth representative
+of \(q-T\widetilde e\) used for the all-radii projection.
+
+For any \(\eta\in C_c^\infty((2/3,1))\) and any \(V\), set
+\(\psi(s)=\eta(\sqrt{s})/s^2\) on the positive axis and extend
+it by zero near zero. Define
+\(\phi(s)=\tfrac16\int_s^\infty(v-s)^3\psi(v)\,dv\).
+Then \(\phi^{(4)}=\psi\), and \(\phi\) is a polynomial of
+degree at most three near zero and vanishes above the support of \(\psi\).
+The metric test \(h_{\rm test}=D_+^*(\phi(\rho^2)V)\) is smooth
+and compactly supported in \(B\). By \eqref{xfer:symbol},
+\(D_-D_+^*=H_4(\partial)/16\). Using
+\eqref{xfer:radial-derivative}, the factors of 16 cancel and
+\(D_-h_{\rm test}=\rho^4\psi(\rho^2)Y_V=\eta(\rho)Y_V\).
+Testing \(D_-^*z=0\) thus gives
+\[
+ \int_{2/3}^1 \eta(\rho)\rho^3
+        \int_{S^3}\langle z(\rho n),Y_V(n)\rangle\,dS(n)\,d\rho=0 .
+\]
+Arbitrariness of the radial probe implies that each angular pairing
+vanishes, which proves the first equality in \eqref{xfer:angular}.
+Contractivity of the angular projection and
+\(\|T\widetilde e\|_{L^2(\mathbb R^4)}=\|e\|_{L^2(B)}\) give the inequality.
+For the restricted round lift, Proposition~\ref{xfer:multiplier}
+gives \(q=tTf\) on \(B\), proving attainment.
+\end{proof}
+
+With \(a_0=6m_0/\pi^2\), \(a_2=12m_2/\pi^2\) and
+\(I_\nu=\int_{2/3}^1\rho^{\nu-1}d\rho\), the constant in
+\eqref{xfer:angular} satisfies
+\[
+ d_A^2=12\pi^2\bigl(a_0^2I_{-4}-2a_0a_2I_{-6}+a_2^2I_{-8}\bigr).
+\]
+For \(e=0\), the individual \(Y_V\) pairing equals
+\(2\pi^2t a(\rho)\langle Z,V\rangle\) at every radius.
+In particular the cross-pairings with \(V\perp Z\) vanish.
+The other angular components remain unspecified, and equality
+of the full norm at zero error requires their vanishing on \(A\).
+
+\begin{remark}\label{xfer:relaxed}
+The weaker equation \(\Delta^2 z=0\) alone allows both regular
+degree-four radial coefficients \(\rho^4,\rho^6\), since
+\(\mathcal Y\) has sphere Laplacian eigenvalue \(-24\). The usual
+radial biharmonic equation has two other powers \(\rho^{-6},\rho^{-4}\),
+excluded by regularity at zero. The relaxed norm bound would therefore
+use the distance from \(a\) to
+\(\operatorname{span}\{\rho^4,\rho^6\}\) in
+\(L^2((2/3,1),\rho^3d\rho)\), times \(\sqrt{12\pi^2}\).
+It is positive by independence of the powers and strictly smaller
+than \(d_A\) because \(a\) has positive pairing with \(\rho^4\).
+The compact tests use the full adjoint equation and rule out
+both regular powers in the measured sector.
+\end{remark}
+
+\begin{corollary}\label{xfer:local-nonlinear}
+On a supplied round patch, the conformal transfer
+\eqref{xfer:weights} preserves \(d_A\). If a smooth trace-free
+\(h\), sufficiently small in \(C^2\), in the fixed-volume chart satisfies
+\(F_{r,+}(h)=tf_r\) there, then
+\[
+ \|W_{r_h}^-\|_{L^2(A,r_h)}\ge |t|d_A-C\|h\|_{C^2(B,r)}^2 .
+\]
+\end{corollary}
+
+\begin{proof}
+The Weyl and frame maps are smooth in the two-jet of \(h\), so
+\(F_{r,\pm}(h)=D_{\pm,r}h+R_\pm\), with
+\(\|R_\pm\|_{C^0}\le C\|h\|_{C^2}^2\) on the fixed patch.
+Use \(-R_+\) for the linear source error and include \(R_-\)
+in the opposite field. The frame and volume identities give
+the claimed norm. The bound proves a nonzero response when
+the stated loss is less than \(|t|d_A\).
+\end{proof}
+
+\subsection{Compact variation and the two center data}
+
+\begin{proposition}[Compact support and the two radial moments]\label{xfer:compact}
+For signed smooth radial \(\chi\) supported in \(\{\rho\le R\}\),
+\(R\le1/2\), and a nonzero constant Weyl polarization \(V\),
+\(D_{+,\delta}h=\chi V\) admits a smooth compactly supported
+trace-free metric variation in \(B\) exactly when \(m_0=m_2=0\).
+The same holds for the round source \(\Omega^{-2}\chi V\).
+\end{proposition}
+
+\begin{proof}
+The flat adjoint kills \(V\) and \(\rho^2V\). In the algebraic
+Weyl tensor realization \(T^z_{ij,pq}\) of a positive block
+\(z\), the flat adjoint in operator normalization is
+\((D_{+,\delta}^*z)_{jq}=-\tfrac12\partial_i\partial_p T^z_{ij,pq}\),
+with repeated indices summed. This follows by contracting the
+curvature derivative with \(T^z\) and integrating by parts twice. In
+all ordered indices the operator pairing has factor \(1/4\),
+the curvature symmetries combine the four second derivatives, and
+the Ricci and scalar subtractions pair to zero.
+For the quadratic field one obtains \(-\sum_iT^V_{ij,iq}=0\).
+The two compact-support tests against the source give
+\(|V|^2m_0\) and \(|V|^2m_2\), proving necessity.
+
+For sufficiency take \(p=G*\chi\). It solves \(\Delta^2p=\chi\)
+and vanishes outside the support radius by \eqref{xfer:radial}.
+Thus \(h=16D_{+,\delta}^*(pV)\) is smooth and compactly supported
+and solves the equation by \eqref{xfer:symbol}.
+Equation~\eqref{xfer:weights} preserves support and
+trace-freeness for the round lift.
+\end{proof}
+
+For an arbitrary smooth global background \(g\) with this round
+patch, let \(L_g=dF_{g,+}(0)\). If \(\mathcal A\in\ker L_g^*\),
+let \(\alpha\) be its round components and set \(z=\Omega^2\alpha\)
+in the flat frame. Pairing against compactly supported round metric
+variations and using \eqref{xfer:weights} shows \(D_{+,\delta}^*z=0\).
+Then \(\Delta^2z=0\) by \eqref{xfer:symbol}. The sphere mean of \(z\)
+is \(z(0)+\rho^2(\Delta z)(0)/8\), since its radial Laplacian
+is the center value of the harmonic field \(\Delta z\).
+Thus for the zero-extended round source the exact adjoint pairing is
+\begin{equation}\label{xfer:center}
+ \langle \Omega^{-2}\chi V,\mathcal A\rangle_{L^2(g)}
+ =\bigl\langle V,m_0 z(0)+(m_2/8)(\Delta z)(0)\bigr\rangle .
+\end{equation}
+The weight on the adjoint incorporates both the Weyl weight and
+the round volume. Across radial polarizations the pair of center
+data lies in a space of dimension ten. Global adjoint solutions
+may supply a smaller image. For the positive seed on the round sphere there is both nonzero
+angular transmission and a vanishing global cokernel.
+
+\subsection{An exact nonlinear lift on the standard sphere}
+
+\begin{theorem}[Transmission to the opposite hemisphere]\label{xfer:nonlinear-round}
+For the unit round \(r\) and the positive seed \(f_r\) above,
+there is a smooth small fixed-volume family \(r_{h(t)}\) with
+\(F_{r,+}(h(t))=tf_r\) and \(h(0)=0\).
+For sufficiently small nonzero \(t\) the entire closed southern
+hemisphere is ASD and nowhere Weyl-flat. Its squared negative
+Weyl energy is
+\begin{equation}\label{xfer:south-energy}
+ \int_{S_-}|W_{r_{h(t)}}^-|^2\,dV_{r_{h(t)}}
+ =\frac{432}{\pi^2}
+   \left(\frac{m_0^2}{4}-\frac{2m_0m_2}{3}+\frac{m_2^2}{2}\right)t^2
+   +O(|t|^3).
+\end{equation}
+The family has positive Yamabe constant.
+\end{theorem}
+
+\begin{proof}
+On the fixed round TT slice the Banach implicit function theorem
+in \(C^{k+2,\alpha}\to C^{k,\alpha}\) with \(k\ge4\) applies to
+\(F_{r,+}\), whose derivative has inverse \(Q_r\). It gives
+\(h(t)=tQ_rf_r+O(t^2)\) in that grade. For spatial smoothness
+write \(h=D_{+,r}^*v\) using the inverse of
+\(D_{+,r}D_{+,r}^*\). The resulting equation in \(v\) is a
+fourth-order quasilinear elliptic system whose leading coefficients
+are close to the round ones, and the source is smooth.
+The elliptic regularity argument of Section~\ref{sec:lift}
+gives a smooth family. Both chiral blocks and the compatible
+chiral connection come from this one metric. Thus the two
+hemispheres have the same interface jets in a common chart,
+with opposite outward normals.
+
+The positive block is zero on a neighborhood of \(S_-\).
+Taylor expansion gives \(F_{r,-}(h(t))=tU+O(t^2)\)
+uniformly on the sphere. By \eqref{xfer:pole},
+\(|U|\ge 3\sqrt6\,m_0/(2\pi^2)>0\) on \(S_-\), and the
+remainder then gives the claimed absence of Weyl-flat points.
+For the squared energy use norm and volume preservation to
+obtain \(t^2\|U\|_{L^2(S_-,r)}^2+O(|t|^3)\).
+The squared conformal weight cancels the volume,
+and \(|Y_Z|^2=6\). Hence the coefficient is
+\[
+ 6\cdot2\pi^2(6/\pi^2)^2
+ \int_1^\infty (m_0\rho^{-4}-2m_2\rho^{-6})^2\rho^3\,d\rho ,
+\]
+which is \eqref{xfer:south-energy}. The scalar curvature
+is positive by \(C^2\) closeness to the unit round metric,
+where it is \(12\). The compact Sobolev inequality then bounds
+the Yamabe quotient below by a positive constant
+\cite[Remark~1]{ChangGurskyYang2003}.
+\end{proof}
+
+The exact prescribed positive block also gives
+\(E_+=6t^2\int_{\mathbb R^4}\chi^2\,dx\) on this sphere.
+In the operator normalization \(E_+-E_-=12\pi^2\tau\), so the two
+global energies agree on any homotopy sphere~\cite{Hirzebruch1971Signature}.
+In particular, any supplied opposite energy in a retained collar
+contributes a lower bound to the global \(E_+\). In the region
+where the positive block vanishes the corresponding twistor
+almost complex structure is integrable, with orientation chosen
+accordingly~\cite[Theorem~4.1]{AHS1978}. The nonzero opposite
+block obstructs the opposite-chiral integrability condition.
+
+On an unknown smooth homotopy sphere the local theorem applies
+inside a supplied round chart, with no hypothesis on the smooth
+geometry of its complement. It fixes the stated angular projection
+there and gives no exterior pointwise formula. The balancing
+construction of Section~\ref{sec:lift} can allow compensating
+sources supported in the actual exterior. The weighted center
+pairings in \eqref{xfer:center} test the initial linear range
+condition for radial data. Recovering the unmodified prescription
+on that slice requires cancellation of the exterior coefficients.
+Continuation in the original smooth structure and the estimates
+needed for a recognizing metric remain global requirements.
+
+\section{What fixed boundary data can obstruct}
+\label{sec:collars}
+
+The spherical calculation allows the boundary metric and its normal
+derivatives to respond to the source on either side. Fixing the metric
+on both ends of a flat collar leads to further compatibility conditions.
+To keep track of a change of reference, write
+\(I_{r,g}:\Lambda_g^+\to\Lambda_r^+\) for pullback by the positive
+symmetric tangent isometry \((r^{-1}g)^{-1/2}\), and write
+\(\mathcal F_r(g)=I_{r,g}W_g^+I_{r,g}^{-1}\). A metric variation in the
+pointwise-volume chart is \(g_h=r(e^h\cdot,\cdot)\), where \(h\) is
+self-adjoint and trace-free. Write \(D_r\) for the derivative at \(h=0\) of \(h\mapsto \mathcal F_r(g_h)\),
+the operator denoted by \(L\) in Section~\ref{sec:lift}.
+There are distinct obstructions to a uniform right inverse, to a
+particular prescribed source, and to a retained conformal structure.
+
+\subsection{Small singular values and the prescribed direction}
+
+Let \(M\) be a closed oriented smooth homotopy four-sphere. A product of two circles in an oriented \(\mathbb R^4=\mathbb C^2\)
+chart has a normal framing given by the two radial directions. A shell
+in its normal disk bundle embeds a separating \(T^3\times[-1,1]\).
+Choose smooth metrics on both complementary caps that agree with the flat
+product in the seam collars. Lengthen the cylinder to
+\(T^3\times[-L,L]\) using an increasing radial coordinate of derivative
+one near both ends. On a fixed smooth manifold this gives a family
+\(r_L\) with fixed cap metrics, fixed \(E_+\), and volume
+\(V_L=V_{\rm caps}+2L\,\operatorname{Vol}(T^3)\).
+
+For a parallel unit tangential trace-free matrix \(H\) let \(Z\) be
+its unit image in the parallel self-dual frame. At the flat product,
+a variation \(a(s)H\) has radial curvature block \(-a''H/2\).
+Its self-dual projection has an additional factor \(1/2\). All the
+nonradial flat derivatives integrate to zero on tests constant in the
+torus variables. Thus the flat formulas for their compactly supported
+profiles are
+\[
+ D_{r_L}(aH)=-\tfrac14 a''Z,\qquad
+ D_{r_L}^*(aZ)=-\tfrac14 a''H .
+\]
+The principal symbol of \(D_rD_r^*\) at any smooth reference is
+\(|\xi|_r^4 I/16\), by aligning \(\xi\) with the normal and using the
+five-dimensional trace-free tangential fiber. Its orthogonal complement
+is the infinitesimal conformal Lie symbol, which the Weyl symbol kills.
+The ASD deformation complex provides the corresponding comparison at
+an ASD background \cite[\S1.1]{GoverGursky2024}.
+For any fixed \(j\), choose \(j\) nonzero profiles
+\(\beta_i\in C_c^\infty((-1,1))\) with disjoint supports. The fields
+\(\beta_i''(s/L)Z\) have compact preimages
+\(-4L^2\beta_i(s/L)H\), so they are orthogonal to \(\ker D_{r_L}^*\).
+Their Rayleigh quotients, and that of any nonzero combination, are bounded
+by \(C_j L^{-4}\). Min--max on the orthogonal complement of the kernel
+gives this bound on the \(j\)-th strictly positive eigenvalue of
+\(D_{r_L}D_{r_L}^*\). Under \(r\mapsto c r\) this normal operator scales
+by \(c^{-2}\) in the isometric frames, so unit-volume normalization
+multiplies its eigenvalues by \(V_L\). Every fixed positive eigenvalue
+rank tends to zero at least as fast as \(L^{-3}\) in the normalized
+family, still at fixed \(E_+\). A unit target eigensection with eigenvalue
+\(\lambda>0\) requires an \(L^2\) preimage of norm at least
+\(\lambda^{-1/2}\) by adjoint pairing. These particular small-Rayleigh
+test fields themselves pair to zero with the radial Weyl source,
+which vanishes on their supports.
+
+The source can lie in the adjoint kernel in a different geometry.
+At a closed Einstein reference the first variation of the integral
+of squared scalar curvature in the pointwise-volume chart vanishes because
+the scalar variation is a divergence for trace-free \(h\). The
+squared trace-free Ricci integral has zero first variation as well.
+The Euler and signature identities then give
+\(D_r^*W_r^+=0\), since
+\(dE_+(h)=2\langle D_rh,W_r^+\rangle_{L^2(r)}\)
+\cite[(0.4) and Remark 2]{ChangGurskyYang2003}.
+The product of unit round spheres \(S^2\times S^2\) is Einstein with
+\(W^+\) having entries \((2/3,-1/3,-1/3)\).
+It therefore cannot start a differentiable path with source
+\((1-t)W_r^+\), whose initial tangent would require \(D_r h=-W_r^+\).
+This example has zero signature and \(b_2=2\).
+
+\subsection{A fixed two-ended chord and corrected sources}
+
+Let \(I=[-1,1]\), give \(T^3\) its product angular coordinates, and
+orient \(I\times T^3\) by \(ds\wedge dx_1\wedge dx_2\wedge dx_3\).
+Both open end collars are required to retain the exact flat product metric. For
+\(g_a=ds^2+\sum_i e^{2a_i(s)}dx_i^2\), with \(\sum_i a_i=0\) and
+all \(a_i\) zero near the ends, put \(p_i=a_i'\).
+The radial and tangential sectional curvatures are
+\(-p_i'-p_i^2\) and \(-p_jp_k\), respectively. Taking the half-sum
+in the normalized chiral frame and subtracting scalar curvature divided
+by twelve gives the ordered Weyl entries
+\[
+ w_i=-\tfrac12p_i'-p_i^2+\tfrac13\sum_j p_j^2.
+\]
+The symmetric transport between diagonal metrics takes these indexed
+frames to each other even at repeated eigenvalues.
+
+\begin{proposition}\label{bdry:axial-chord}
+For a nonconstant smooth interior seed \((f,f,-2f)\), the chord
+\(\lambda W_{\rm seed}^+\) in the seed frame has no two-ended
+diagonal synchronous lift at \(0<\lambda<1\).
+\end{proposition}
+\begin{proof}
+Equality of the first two Weyl entries gives
+\((p_1-p_2)'+2(p_1+p_2)(p_1-p_2)=0\).
+The left flat end fixes \(p_1=p_2\) and \(a_1=a_2=a\) throughout.
+Writing \(y=e^{-2a}\), \(y_0=e^{-2f}\) and \(V_0=y_0''/y_0\), the
+remaining Weyl block is \((y''/4y)\operatorname{diag}(1,1,-2)\).
+The prescribed equation is \(-y''+\lambda V_0y=0\) with Neumann
+ends and \(y=1\) there. For the associated forms,
+\[
+ Q_0[v]=\int_I|v'|^2,\qquad
+ Q_1[v]=\int_I y_0^2|(v/y_0)'|^2.
+\]
+The second equality follows by integration by parts using
+\(y_0'=0\) at the ends. The forms are nonnegative with distinct
+null lines \(\mathbb R\) and \(\mathbb R y_0\). Their strict convex
+combination is positive on every nonzero test. A Neumann solution
+would have \(Q_\lambda[y]=0\), contrary to \(y>0\).
+\end{proof}
+
+An even seed admits a one-profile correction at any amplitude. Fix any
+smooth nonzero even \(p\ge0\) with interior support and replace the
+potential by \(\lambda V_0-\beta p\). The Neumann ground eigenvalue is
+continuous and strictly decreasing in \(\beta\) by testing against
+its positive normalized eigenfunction. A test supported where
+\(p>0\) makes it negative for sufficiently large \(\beta\). Proposition
+\ref{bdry:axial-chord} gives positive ground eigenvalue at
+\(\beta=0\) for interior \(\lambda\), so a unique \(\beta(\lambda)>0\)
+sets it to zero. At both parameter endpoints \(\beta=0\). The
+positive eigenfunction is simple by Neumann initial-value uniqueness
+and is even by reflection. It is constant on each flat end and the
+two constants agree, so it normalizes to \(1\) on both. To check smooth
+dependence, shoot with \(y(-1)=1,y'(-1)=0\). At a positive zero of
+\(y'(1)\), differentiating the equation in \(\beta\) and using Green's
+identity gives \(\partial_\beta y'(1)=-\int_I p y^2/y(1)<0\).
+The resulting metrics solve the corrected source
+\((\lambda V_0-\beta p)\operatorname{diag}(1,1,-2)/4\).
+
+For a matrix version let \(V=\operatorname{Sym}_0(3,\mathbb R)\),
+fix \(K\Subset I^\circ\) an interval with nonempty interior, and
+take \(A\in C_K^{k+2,\alpha}(I,V)\), \(k\ge2\), \(0<\alpha<1\).
+The subscript indicates support in \(K\) as a function on \(I\).
+Use the metric \(ds^2+dx^{\mathsf T}Gdx\), \(G=e^{2A}\),
+and a seed \(A_0\) in the same space. In the seeded orbit frame
+the positive matrix is \(H=e^{-A_0}G e^{-A_0}\), and the
+transported tangent frame has columns \(Q=e^{-A_0}H^{-1/2}\).
+This order matters for noncommuting matrices. Put
+\[
+ S=\tfrac12 Q^{\mathsf T}G'Q,\qquad
+ R=-\tfrac12 Q^{\mathsf T}G''Q+
+       \tfrac14 Q^{\mathsf T}G'G^{-1}G'Q .
+\]
+The normal Riccati formula gives \(R\), while Gauss and Codazzi give
+tangential block \(-\operatorname{cof}S\) under the tangential Hodge
+identification and zero mixed block. Hence the transported source map
+is \(\mathcal F_{A_0}(A)=\tfrac12\operatorname{tf}(R-\operatorname{cof}S)\).
+It depends smoothly on \((A_0,A,A',A'')\) and at the flat origin its
+metric derivative is \(-\tfrac12\partial_s^2\).
+
+On supported profiles, the range of this derivative is exactly the
+kernel of \(\mu(y)=(\int_I y,\int_I s y)\). Indeed, integrating twice
+from the left endpoint gives
+\(-2\int_{-1}^s(s-t)y(t)\,dt\), which vanishes to the right of \(K\)
+precisely at zero moments. The kernel is zero and the integral
+operator is bounded in the indicated Hölder grades. Take two fixed
+interior scalar bumps with independent moment columns and multiply by
+a basis of \(V\), defining a source insertion \(\mathcal P\) with ten
+coefficients. Augmenting by \(\mathcal P c\) now gives an isomorphism
+of derivatives. The Banach inverse function theorem with seed as
+parameter gives a smooth local inverse \((A,c)\) to the augmented map.
+The unaugmented image in \(C_K^{k,\alpha}(I,V)\) is the split
+codimension-ten submanifold specified by \(c=0\).
+For a small smooth seed the whole segment
+\(y_\lambda=\lambda\mathcal F_{A_0}(A_0)\) lies in this chart.
+The correction coefficients are zero at both endpoints. The smooth
+inverse has bounded second target derivative on a smaller neighborhood,
+so \(\sup_\lambda|c''(\lambda)|\le C\|A_0\|_{k+2,\alpha}^2\).
+The Dirichlet Green function on \([0,1]\) gives
+\[
+ |c(\lambda)|\le C\lambda(1-\lambda)\|A_0\|_{k+2,\alpha}^2,\qquad
+ \mathcal F_{A_0}(A(\lambda))=y_\lambda-\mathcal P c(\lambda).
+\]
+The coefficient of \(A''\) is invertible near zero by its flat value
+\(-I/2\), yielding smooth profiles by the ordinary differential
+equation. This construction is within the synchronous torus-invariant
+class, with the flat end data exactly preserved.
+
+\subsection{Unrestricted flat-end obstructions}
+
+Write \(\gamma=ds^2+\sum_i dx_i^2\) for the flat collar, taking angular
+periods \(2\pi\). In the flat self-dual frame the axial seed transported
+from its own frame gives
+\[
+ T=\left(-\tfrac12 f''+(f')^2\right)Z_0,\qquad
+ Z_0=\operatorname{diag}(1,1,-2).
+\]
+For an arbitrary compactly supported trace-free variation \(h\),
+the flat double-divergence formula for the adjoint annihilates every
+parallel Weyl target. In particular
+\(\int\langle D_\gamma h,Z_0\rangle=0\), but
+\(\int\langle T,Z_0\rangle=6\operatorname{Vol}(T^3)\int_I(f')^2>0\).
+This excludes a differentiable lift through the flat metric with
+nonzero chord speed. The same pairing and the quadratic curvature
+remainder imply $\lambda\le C\|g-\gamma\|_{C^2}^2$ for any nearby
+fixed-end solution of the original chord. For general boundary values, the pairing
+equals the flux
+\(-\frac14[\int_{T^3}\partial_s(h_{11}+h_{22}-2h_{33})]_{-1}^1\),
+as all terms with tangential derivatives integrate out.
+
+There are also infinitely many tangential adjoint conditions.
+Set \(z=ds+i\,dx_1\), \(w=dx_2+i\,dx_3\) and \(\omega=z\wedge w\).
+For each positive integer \(m\),
+\(e^{m(s+ix_1)}\omega\otimes\omega\) is a complex self-dual Weyl
+tensor: \(\omega\) is simple and null, and its Ricci contraction is
+zero because \(z,w\) span a totally null plane. The first divergence
+vanishes by \(\iota_{z^\sharp}\omega=0\), so the flat Weyl adjoint
+annihilates it by its double-divergence formula
+\cite[\S1.1]{GoverGursky2024}. Its real part defines a real pairing on
+compact target sources. Multiplying these real parts by a fixed
+nonnegative interior cutoff gives compact source tests with a diagonal
+positive pairing matrix by Fourier orthogonality in \(x_1\). The
+functionals are independent and annihilate the image of compact
+metric variations. Consequently no fixed finite-dimensional space
+of interior source profiles repairs the full supported linear range.
+
+\begin{theorem}\label{bdry:unrestricted-near-flat}
+For each fixed nonconstant smooth axial seed as in Proposition
+\ref{bdry:axial-chord}, a \(C^{10}\) neighborhood of the product flat
+metric contains no smooth metric that equals the flat product on open
+collars of both ends and realizes the uncorrected seed-frame chord
+\(\lambda W_{\rm seed}^+\) for any \(0<\lambda\le1\). The candidate
+may vary in all four coordinates and have arbitrary lapse, shift and
+volume density.
+\end{theorem}
+\begin{proof}
+Identify the end tori using their product coordinates. The metrics
+and the equation extend smoothly onto the auxiliary rectangular
+flat \(T^4\), since the data agree on open end collars. Write \(r\)
+for the seed and keep \(\gamma\) for the periodically extended flat
+metric. The prescribed flat target \(T=I_{r,\gamma}^{-1}W_r^+I_{r,\gamma}\)
+has nonzero flat average. All Sobolev norms in this proof use the
+flat torus, and \(C^{10}\) closeness on the collar controls
+\(H^{10}\) closeness on the torus independently of the end widths.
+
+For a mean-zero displacement \(X\in H^8\), use the small diffeomorphism
+\(\phi(x)=x+X(x)\) and set \(P=\gamma^{-1}\phi^*g\),
+\(\rho=(\det P)^{-1/4}\), \(\widetilde g=\rho\phi^*g\).
+Its logarithm is \(h=\log P-\tfrac14(\operatorname{tr}\log P)I\).
+Solve \(\delta_\gamma h=0\), with divergence defined by
+\((\delta_\gamma h)_j=\partial^i h_{ij}\). Its mean vanishes by periodicity.
+The gauge map \(H^{10}\times H^8_0\to H^6_0\) is \(C^1\). Indeed, composition uses one spare metric derivative into \(H^8\), the two
+factors \(d\phi\) leave \(H^7\), and divergence costs one more derivative
+\cite[Theorem 1.2]{InciKappelerTopalov2012Composition}.
+Its displacement derivative is
+\(\Delta_\gamma X^\flat+\tfrac12d\operatorname{div}_\gamma X\) for
+\(\Delta_\gamma=\partial^i\partial_i\), invertible on nonzero Fourier
+modes with eigenvalues \(-|\xi|^2\) and \(-3|\xi|^2/2\). The implicit
+function theorem gives \(X\), \(\rho-1\) and \(h\) small in the stated
+grades. These grades suffice for curvature and pullback. For smooth
+inputs, translation equivariance
+and the implicit function theorem with translated smooth input imply
+smooth dependence of \(X(\cdot+a)\) in \(H^8\) on \(a\), giving all
+spatial derivatives. The gauge takes place after completing the torus.
+
+Write \(h=c+v\), with \(c\) constant and \(v\) mean-zero TT. The
+constant matrix gives a flat metric, so its Weyl target vanishes.
+On the nonzero Fourier modes the flat Weyl derivative maps TT tensors
+isometrically up to the factor \(|\xi|^2/4\), hence has bounded
+inverse from mean-zero Weyl \(H^5\) to mean-zero TT \(H^7\).
+Write \(F(h)=F_\gamma(\widetilde g)\). Smoothness of \(F:H^7\to H^5\)
+and \(F(c)=0\) give
+\[
+ \|F(c+v)-D_\gamma v\|_{H^5}
+ \le C(\|c\|_{H^7}+\|v\|_{H^7})\|v\|_{H^7}.
+\]
+Integrate the derivative along \(c+\theta v\) to obtain this estimate.
+Absorption using the flat inverse gives
+\(\|v\|_{H^7}\le C\|F(h)\|_{H^5}\). Averaging then gives
+\[
+ |\overline{F(h)}|\le C\|h\|_{H^7}\|F(h)\|_{H^5}.
+\]
+Thus the estimate accounts for the constant flat moduli without
+inverting a constant target.
+
+The target moves under this gauge. The tangent map
+\(O_x=\rho(x)^{1/2}d\phi_x(\gamma^{-1}\widetilde g)^{-1/2}_x\)
+is an oriented isometry from \(\gamma_x\) to \(g_{\phi(x)}\).
+Let \(J_O\) be its pullback on positive forms, and, at the
+indicated basepoints in the parallel flat frames, set
+\[
+ U_g=J_O(I_{r,g}\circ\phi)^{-1}(I_{r,\gamma}\circ\phi).
+\]
+Naturality, Weyl-operator conformal weight, and the seed-frame chord
+give \(\lambda^{-1}F(h)=\rho^{-1}U_g(T\circ\phi)U_g^{-1}\).
+This order retains all three identifications. As \(g\to\gamma\),
+the composition estimates and the matrix algebra in \(H^7\) give
+\(U_g\to I\), \(\rho\to1\), and \(T\circ\phi\to T\) in \(H^7\).
+The normalized target therefore tends to \(T\) there and stays
+bounded in \(H^5\). Its mean is bounded away from zero, whereas
+the averaged estimate divided by \(\lambda\) makes that mean
+tend to zero. This excludes every sufficiently near-flat metric
+uniformly over the indicated chord parameters.
+\end{proof}
+
+\subsection{Conformal holonomy of a retained flat product}
+
+\begin{proposition}\label{bdry:holonomy}
+A smooth oriented homotopy four-sphere cannot carry a global ASD metric
+whose conformal structure on an embedded flat product collar equals
+the flat product conformal structure.
+\end{proposition}
+\begin{proof}
+The signature identity forces any global ASD metric on this manifold
+to be Weyl-flat. Its locally conformally flat structure has a
+single-valued developing map because the manifold is simply connected
+\cite[\S1]{SchoenYau1988Conformal}. On the collar, developing its
+universal cover by the Euclidean inclusion gives holonomy
+\(x\mapsto x+\ell e\) for a primitive lattice vector of length \(\ell>0\)
+and unit direction \(e\). This is nontrivial up to Möbius conjugacy.
+A restriction from the global conformally flat structure would have
+trivial holonomy on that loop. The flat Levi--Civita linear holonomy
+of the product is the identity, since the parallel frame descends.
+\end{proof}
+
+A conditional quantitative version uses any smooth metric extension
+equal to the product on the collar. In its metric splitting, use
+the positive tractor norm
+\(\|(\sigma,\mu,\varrho)\|^2=\sigma^2+|\mu|^2+\varrho^2\).
+The normal tractor connection on the product has zero Schouten tensor
+and the off-diagonal terms in direction \(e\) are
+\((-\mu(e),\varrho e^\flat,0)\). Parallel transport around the loop is
+\[
+ T_\ell(\sigma,\mu,\varrho)=
+ (\sigma+\ell\mu(e)-\tfrac12\ell^2\varrho,\,
+  \mu-\ell\varrho e^\flat,\,\varrho).
+\]
+In particular its distance from the identity in operator norm is
+at least \(\delta_\ell=(\ell^2+\ell^4/4)^{1/2}\).
+Let \(F(u,t)\) be a smooth based contraction of the loop, and
+\(S_u(t_2,t_1)\) the normal tractor transport along its \(t\)-segments.
+Differentiating the parallel equation gives, with the commutator sign
+for tractor curvature \(\mathcal R^{\mathcal T}\),
+\[
+ \partial_u S_u(1,0)
+ =-\int_0^1 S_u(1,t)\mathcal R^{\mathcal T}(F_u,F_t)S_u(t,0)\,dt .
+\]
+If the segment operators are bounded by \(B_*\) in the endpoint
+positive norms and the filling area with multiplicity outside the
+product is at most \(A_*>0\), integration gives
+\[
+ \sup_{F([0,1]^2)\setminus U} (|W|_{\mathrm{op,HS}}+|C|_*)
+ \ \ge\ \frac{\delta_\ell}{B_*^2 A_*}.
+\]
+Here \(U\) is the retained product region and \(|C|_*\) is the
+Cotton comass on unit bivectors. The normal tractor curvature is
+bounded by the displayed sum in the chosen splitting and vanishes on
+\(U\) \cite[(22) and (32)]{CurryGover2015Introduction}. The area and
+transport controls are scale-dependent filling hypotheses. The
+estimate measures full tractor curvature along a two-dimensional
+filling. The four-dimensional chiral energy threshold requires
+separate control. The fixed-end and holonomy obstructions motivate
+allowing the metric and its normal derivatives to respond on both
+sides of an interface with trivial conformal holonomy.
+
+\section{A marked ball and the Weyl variational problem}\label{sec:variation}
+
+The preceding deformation problem prescribes an entire curvature field.
+For smooth recognition it can suffice to control its energy. We now
+vary the metric freely outside one coordinate ball and ask what a
+stationary extension would imply. Throughout this section \(M\) is a
+closed, connected, oriented smooth homotopy four-sphere.
+Write \(Y([g])=Y(M,[g])\) for the Yamabe constant of one conformal
+class. Fix an oriented extended chart \(\psi:B_{1+d}(0)\to M\),
+\(d>0\), and set \(K=\psi(\overline B_1)\). A marked metric has
+\(\psi^*g=\Omega^2\delta\) on \(\overline B_1\), where
+\(\Omega(x)=2/(1+|x|^2)\) and \(\delta\) is Euclidean. Let
+\(\mathcal G\) be the smooth metrics on \(M\) and \(\mathcal G_K\) its
+marked subclass. Superscripts \(+\) on these two spaces impose \(Y>0\).
+
+\begin{proposition}[Approximation with a prescribed round ball]\label{var:marking}
+For every \(g\in\mathcal G\) and \(\varepsilon>0\) there is
+\(g_K\in\mathcal G_K\) such that
+\[
+ |E_+(g_K)-E_+(g)|<\varepsilon,\qquad
+ |Y([g_K])-Y([g])|<\varepsilon .
+\]
+Thus \(\inf_{\mathcal G_K}E_+=\inf_{\mathcal G}E_+\). If
+\(\mathcal G^+\) is nonempty, so is \(\mathcal G_K^+\), and
+\(\inf_{\mathcal G_K^+}E_+=\inf_{\mathcal G^+}E_+\).
+\end{proposition}
+
+\begin{proof}
+Apply the approximation theorem of Akutagawa, Botvinnik, Kobayashi
+and Seshadri at \(o=\psi(0)\). It produces a smooth metric \(\widetilde g\)
+that is conformally flat near \(o\), with arbitrarily small changes
+in \(Y\) and in the full Weyl functional. In dimension four their
+functional is \(\mathcal W(g)=\int_M|W_g|_{(0,4)}^2\,dV_g\).
+Signature and the operator norm convention give
+\(\mathcal W=4(E_++E_-)=8E_+\) on \(M\). Thus the approximation
+controls both quantities in the assertion~\cite[\S1.2 and Proposition 4.1]{AkutagawaEtAl2002Weyl}.
+
+Choose oriented coordinates \(y\) in the flat conformal germ,
+with \(y(o)=0\) and \(y_*\widetilde g=e^{2v}\delta\). The transition
+germ \(F=\psi^{-1}\circ y^{-1}\) fixes \(0\). It can be realized by
+a diffeomorphism \(\Xi\) of \(M\) supported in the extended chart.
+To see this, join \(I\) to \(DF(0)\) in \(\mathrm{GL}^+(4)\) and
+join \(DF(0)\) to \(F\) by \(t^{-1}F(tx)\), extended smoothly to
+\(t=0\). On a common small domain these are isotopies of local
+diffeomorphisms. Cut off the time-dependent velocity field by a
+bump equal to one near \(0\) and integrate it. Trajectories starting
+sufficiently near \(0\) stay where the cutoff is one, so the time-one
+map agrees with the prescribed germ there.
+
+On a neighborhood of \(\overline B_1\), realize \(x\mapsto cx\),
+\(0<c<1\), by the flow of a cut-off radial vector field in the
+extended chart. Call the resulting diffeomorphism \(D_c\).
+For sufficiently small \(c\), \(\phi=\Xi\circ D_c\) satisfies
+\(y(\phi(\psi(x)))=cx\) on a neighborhood of \(\overline B_1\).
+There \(\psi^*\phi^*\widetilde g=c^2e^{2v(cx)}\delta\).
+Multiply by the square of the positive factor
+\(\Omega(x)/(c e^{v(cx)})\), extended to \(M\) using a cutoff
+of its logarithm. This gives the prescribed round representative
+on \(K\). The two invariants are preserved by these diffeomorphism
+and conformal operations. Taking infima proves the first equality.
+For the positive subclass choose the approximation error smaller
+than the starting \(Y\) before taking its infimum.
+\end{proof}
+
+\subsection{Exterior stationarity}
+
+Let \(B_g\) be the covariant Bach tensor normalized so that the
+gradient of the full four-index Weyl functional is \(-4B_g\).
+It is symmetric and trace free, and
+\(B_{u^2g}=u^{-2}B_g\) for smooth \(u>0\). The preceding norm
+conversion yields
+\begin{equation}\label{var:bach}
+ dE_+(g)[h]=-\tfrac12\int_M\langle B_g,h\rangle_g\,dV_g .
+\end{equation}
+The conformal factors in \(|B_{u^2g}|_{u^2g}=u^{-4}|B_g|_g\)
+and \(dV_{u^2g}=u^4dV_g\) cancel. In particular the total
+Bach norm \(\int_M |B_g|_g\,dV_g\) is invariant under conformal
+change and diffeomorphism~\cite[\S1 and (1.1)]{BahuaudGuentherIsenbergMazzeo2025Bach}.
+
+\begin{lemma}[Continuation of a vanishing Weyl block]\label{var:continuation}
+A positive \(C^4\) Bach-flat metric on \(M\) with \(W^+=0\) on a
+nonempty open set satisfies \(W^+=0\) everywhere.
+\end{lemma}
+
+\begin{proof}
+In dimension four the ambient obstruction is a fixed nonzero
+multiple of the Bach tensor. For the vanishing equation the
+normalizations can also be compared by varying
+\(\int_M Q\,dV=8\pi^2\chi(M)-\mathcal W/4\). The first variation of
+\(\int Q\) is a nonzero multiple of the obstruction pairing, and
+the identity follows from the four-dimensional formula for \(Q\)
+and Chern--Gauss--Bonnet~\cite[\S1 and Theorem 1.1]{GrahamHirachi2004Ambient}.
+This comparison extends to \(C^4\) metrics by smooth approximation
+in \(C^4\).
+
+Fix \(0<\beta<1\). In a conformal harmonic chart the coordinate
+map is \(C^{4,\beta}\) for a \(C^{3,\beta}\) metric. To transfer
+the obstruction equation at this grade, approximate the inverse
+chart locally in \(C^4\) by smooth local diffeomorphisms and the
+original metric in \(C^4\) by smooth positive metrics. Their
+pullbacks converge in \(C^3\) in the new chart. The Bach formula
+is continuous into distributions under this convergence. Its
+highest terms have two derivatives of Schouten, which leave
+only one such derivative after integration by parts against a
+test function. The other terms involve at most three derivatives
+of the metric. Naturality for the smooth approximations therefore
+transfers the zero equation to the chart. Theorem 1.3(c) of
+Lassas and Liimatainen then makes the determinant-normalized
+representative \((\det g)^{-1/4}g\) real analytic. Its hypothesis
+\(r>3\) is met by \(r=3+\beta\), and the weighted obstruction is
+identically zero~\cite[Theorems 1.3(c), 2.2 and 3.7(c), and \S3.2]{LassasLiimatainen2019ConformalHarmonic}.
+
+The Hodge star and the Weyl endomorphism of this representative
+have analytic coefficients. In particular \(P_+WP_+\), where
+\(P_+=(I+*)/2\), is analytic in each chart. Positive conformal
+rescaling preserves \(P_+\) on two-forms and preserves the zero set
+of the block. Let \(V\) be the set of points with a neighborhood
+on which \(W^+=0\). Any point in \(\overline V\) has a connected
+conformal harmonic chart meeting \(V\) in an open subset. The
+analytic identity theorem for the projected tensor implies that
+this whole chart lies in \(V\), proving the result by connectedness.
+This uses the local analytic regularity theorem. The authors'
+Theorem 1.4 has a hypothesis on the full Weyl tensor.
+\end{proof}
+
+\begin{proposition}[Stationarity with a fixed ASD cap]\label{var:stationarity}
+Suppose the metric on \(K\) is fixed to a smooth ASD metric with
+a smooth positive metric germ across \(\partial K\).
+A smooth extension is stationary for \(E_+\) against all
+compactly supported trace-free variations in \(M\setminus K\)
+if and only if it is conformally diffeomorphic to the round sphere.
+\end{proposition}
+
+\begin{proof}
+The test \(h=\chi B_g\) for nonnegative smooth bumps supported in
+\(M\setminus K\) shows by \eqref{var:bach} that \(B_g=0\) there.
+For auxiliary variations supported in \(K^\circ\), the derivative
+of the squared \(W^+\) density vanishes because \(W^+=0\) on the
+support. The same variational formula on the closed \(M\) gives
+\(B_g=0\) in \(K^\circ\). Smoothness of \(g\) gives the zero
+equation across the interface. Lemma~\ref{var:continuation}
+and signature now give both Weyl blocks zero. The conformal
+developing map of the closed simply connected \(M\) gives a
+conformal diffeomorphism to \(S^4\). Conversely a conformally
+round extension has energy zero and is stationary.
+\end{proof}
+
+If the ASD cap has \(W^-\ne0\) somewhere, every smooth extension
+has a strictly decreasing exterior direction. More generally
+at any nonstationary extension choose \(\chi\ge0\) supported
+in the exterior with \(A_g=\int_M\chi|B_g|^2\,dV_g>0\).
+The variation \(h=\chi B_g\) is realized by
+\(g_t=g(e^{t g^{-1}h}\cdot,\cdot)\), fixed on \(K\) and
+preserving volume pointwise. Its energy is at most
+\(E_+(g)-tA_g/4\) for all sufficiently small positive \(t\), since
+its derivative at zero is \(-A_g/2\).
+
+\subsection{Conditional compactness on the same manifold}
+
+\begin{theorem}[Recognition from a surviving open cap]\label{var:compactness}
+Let \(g_j\in\mathcal G_K\). Suppose that after smooth
+diffeomorphisms \(\phi_j:M\to M\) and positive conformal changes
+a subsequence of the metrics \(G_j=u_j^2\phi_j^*g_j\) has a uniform
+positive lower bound and converges strongly in \(C^4\) in a fixed smooth atlas.
+Assume some nonempty open set \(U\) lies in
+\(\phi_j^{-1}(K^\circ)\) along this subsequence.
+If either \(g_j\) minimizes \(E_+\) asymptotically over
+\(\mathcal G_K\) or \(\int_M |B_{g_j}|_{g_j}\,dV_{g_j}\to0\), then
+the limit is Weyl-flat and \(M\) is smoothly diffeomorphic to
+\(S^4\). In the minimizing case the marked and unrestricted infima are zero.
+\end{theorem}
+
+\begin{proof}
+A uniform \(C^{4,\alpha}\) bound for \(0<\alpha<1\) gives the
+stated convergence after extraction, provided the positive
+lower bound and common open set are retained. Write \(G\) for
+the positive limit. The Weyl energies are invariant under the
+given gauges. Orientation reversal merely exchanges the equal
+chiral energies on this \(M\). The round cap gives \(W^+=0\) on
+\(U\) for \(G_j\) and hence for \(G\) by \(C^2\) convergence.
+
+In the minimizing case, Proposition~\ref{var:marking} gives a
+common infimum \(I\) for \(\mathcal G_K\) and \(\mathcal G\).
+For any smooth symmetric \(h\), \(G_j+sh\) is positive for
+sufficiently small \(|s|\) independently of \(j\). Using the
+global infimum at each fixed \(s\) and passing to the limit gives
+\(I\le E_+(G+sh)\) and \(I=E_+(G)\). The density is a smooth
+function of the positive metric and its two-jet. Thus the
+first variation against fixed \(h\) is continuous under \(C^2\)
+convergence. The Bach tensor is continuous under \(C^4\)
+convergence, so \eqref{var:bach} passes to \(G\) and the two-sided
+minimum gives \(B_G=0\). In the small-Bach case the gauge invariance
+and \(C^4\) convergence directly give \(\int |B_G|_G\,dV_G=0\).
+
+Lemma~\ref{var:continuation} applies to \(G\). Signature on the
+smooth \(G_j\) gives \(E_-(G_j)=E_+(G_j)\to0\). Passing to the limit
+gives \(W^-=0\) as well. To justify smooth recognition at the
+finite metric regularity, the contracted Bianchi identity gives
+zero Cotton tensor and hence the standard real tractor
+connection is flat. This connection has \(C^{1,\beta}\)
+coefficients for any \(0<\beta<1\) at the stated grade, so its
+parallel frames are \(C^{2,\beta}\). They give a global
+parallel trivialization by simple connectivity. In this
+trivialization the canonical null ray develops into the
+projective light cone \(S^4\). If \(v\) is the null lift in
+the scale \(G\), its differential is the middle slot
+\(X\mapsto(0,G(X,\cdot),0)\) transported by the parallel frame.
+Normalizing by \(a=-\langle v,t\rangle>0\) for a fixed unit
+timelike \(t\) gives a \(C^{3,\beta}\) map whose pullback round
+metric is \(a^{-2}G\)~\cite[\S3.1, (10) and (13)]{GoverSilhan2009HigherSymmetries}.
+It is a local diffeomorphism and hence a covering by compactness.
+The target is simply connected, so it has one sheet. Approximate
+the map in \(C^1\) by smooth maps into \(\mathbb R^5\) and
+radially project onto \(S^4\). A sufficiently close approximation
+still has invertible derivative everywhere and is again a
+one-sheeted covering. This yields a smooth diffeomorphism on the
+original smooth \(M\).
+\end{proof}
+
+The common open set supplies the initial vanishing for analytic
+continuation. A compactness result for unmarked metrics alone may
+lose that set. The argument also needs the positive lower metric
+bound and the strong convergence that passes the Bach equation.
+
+\subsection{The scalar-flat threshold and two conformal gauges}
+
+Put \(E=E_+(g)\) and \(T_g=\operatorname{Ric}_g-R_g g/4\). The
+Yamabe theorem supplies a smooth unit-volume minimizing
+representative \(g_Y\), with \(R_{g_Y}=Y([g])\)~\cite[\S3, Theorem 3]{Schoen1984Yamabe}.
+Chern--Gauss--Bonnet and signature yield
+\begin{equation}\label{var:wall}
+ \begin{aligned}
+ 16\pi^2&=2E-\tfrac12\|T_{g_Y}\|_2^2+\tfrac1{24}Y([g])^2,\\
+ Y([g])^2&=48(8\pi^2-E)+12\|T_{g_Y}\|_2^2 .
+ \end{aligned}
+\end{equation}
+Here the Euler integrand uses one quarter of the full
+four-index Weyl norm squared~\cite[p.~107, (0.4) and Remark 2]{ChangGurskyYang2003}.
+At \(Y=0\) this gives \(E\ge8\pi^2\), with equality precisely
+when the class has a Ricci-flat representative. If the class
+admits the marked round cap, equality would give a Bach-flat
+marked metric by conformal covariance, hence a conformally
+round extension by Proposition~\ref{var:stationarity}. Its
+energy would be zero. Thus \(E>8\pi^2\) for the marked
+Yamabe-zero problem.
+
+The lowest eigenvalue of \(6\Delta_g+R_g\), with
+\(\Delta_g=-\operatorname{div}_g\nabla\), has the sign of \(Y\).
+For a positive unit-volume Yamabe factor \(u\), write a test
+function as \(u f\) and integrate by parts using
+\((6\Delta_g+R_g)u=Y u^3\). The numerator becomes
+\(\int(6u^2|df|_g^2+Y u^4 f^2)\,dV_g\). This gives strict
+positivity for \(Y>0\), and testing \(u\) treats \(Y\le0\).
+The eigenvalue is continuous on a \(C^2\)-continuous path of
+positive metrics. Locally in the parameter, compare the
+quadratic forms after a fixed coercive shift and compare their
+\(L^2\) denominators on the common \(H^1\) domain. The relative
+errors tend to zero by uniform convergence of the inverse
+metrics, volume densities and scalar curvatures. Infimizing the
+shifted Rayleigh quotients gives continuity. It follows from
+\eqref{var:wall} that the sign is constant on each connected
+portion with \(E<8\pi^2\), where \(|Y|\ge\sqrt{48(8\pi^2-E)}\).
+A positive sign known at one point
+of that portion can be used for recognition at any time where
+the strict \(E<4\pi^2\) criterion is met.
+
+\begin{proposition}[Estimates for a supplied subcritical positive class]\label{var:gauges}
+Suppose \(Y([g])>0\) and \(E\le8\pi^2-\delta_0\) for \(\delta_0>0\).
+In the unit-volume Yamabe representative the following bounds hold,
+with the Sobolev inequality valid for all \(v\in H^1(M,g_Y)\).
+\begin{equation}\label{var:sobolev}
+ \sqrt{48\delta_0}\le Y\le8\sqrt6\,\pi,\qquad
+ \|v\|_4^2\le \frac6{\sqrt{48\delta_0}}\|dv\|_2^2+\|v\|_2^2 .
+\end{equation}
+There is also a unit-volume representative \(g_\sigma\) with
+constant \(q=\sigma_2(A)=(8\pi^2-E)/2\), where
+\(A=(\operatorname{Ric}-R g/6)/2\) and the symmetric functions
+are those of \(g_\sigma^{-1}A\). In this representative the
+least Ricci eigenvalue is at least \(2q/\sigma_1(A)>0\).
+If in addition \(R_{g_\sigma}\le\Lambda\), then
+\begin{equation}\label{var:diameter}
+ \begin{gathered}
+ \operatorname{Ric}_{g_\sigma}\ge(6\delta_0/\Lambda)g_\sigma,
+ \qquad \operatorname{diam}(M,g_\sigma)\le
+ D:=\pi\sqrt{\Lambda/(2\delta_0)},\\
+ \operatorname{Vol}_{g_\sigma}B(x,\rho)\ge(\rho/D)^4
+ \quad(0<\rho\le D).
+ \end{gathered}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Equation~\eqref{var:wall} gives the lower bound on \(Y\).
+Aubin's upper bound is the round Yamabe value
+\(12\operatorname{Vol}(S^4,g_{\rm rd})^{1/2}=8\sqrt6\,\pi\).
+The variational inequality
+\(Y\|v\|_4^2\le6\|dv\|_2^2+Y\|v\|_2^2\)
+in \(g_Y\) proves \eqref{var:sobolev}.
+In this gauge \eqref{var:wall} also gives \(\|T\|_2^2\le4E\).
+The curvature decomposition then yields
+\(\|\operatorname{Ric}\|_2^2\le4E+96\pi^2\) and
+\(\|\operatorname{Rm}\|_{L^2,(0,4)}^2\le16E+64\pi^2\), using
+\(|\operatorname{Rm}|_{(0,4)}^2=|W|_{(0,4)}^2+2|T|^2+R^2/6\)~\cite[\S\S2--3]{LeeParker1987Yamabe}.
+
+Chang--Gursky--Yang use the Schouten normalization \(2A\).
+The integral of \(\sigma_2(2A)\) is \(16\pi^2-2E>0\) by
+Chern--Gauss--Bonnet. Their Theorem 1.2 applies with this positive
+integral and the given positive Yamabe sign. It yields a smooth
+conformal metric with \(\sigma_2(2A)\) positive constant.
+After volume normalization this gives the stated \(q\), since
+\(\sigma_2(2A)=4\sigma_2(A)\)~\cite[\S1, (1.1) and Theorem 1.2]{ChangGurskyYang2003}.
+
+In \(g_\sigma\) write \(S=\sigma_1(A)=R/6\). The identity
+\(2q=S^2-|A|^2>0\) gives a nonvanishing \(S\) of constant sign.
+The constant test function in the Yamabe quotient rules out
+the negative sign. If \(a\) is the least Schouten eigenvalue,
+then the other three eigenvalues have pair sum at most
+\((S-a)^2/3\). The least Ricci eigenvalue is \(m=S+2a\), and
+\[
+ q\le a(S-a)+(S-a)^2/3=\frac{m(3S-m)}6 .
+\]
+Since \(S-a>0\), the bound gives \(m>0\). In fact
+\(m\ge(3S-\sqrt{9S^2-24q})/2\ge2q/S\).
+Using \(q\ge\delta_0/2\) and \(S\le\Lambda/6\) gives the Ricci
+bound in \eqref{var:diameter}. Bonnet--Myers gives \(D\), and
+the Bishop--Gromov relative volume comparison with an outer
+radius larger than \(D\) gives the ball bound by letting the
+outer radius decrease to \(D\). This uses completeness and unit
+volume of \(g_\sigma\).
+\end{proof}
+
+The scalar upper bound in \eqref{var:diameter} is additional
+input in \(g_\sigma\). At fixed \(q>0\), the three equal larger
+Schouten eigenvalues can saturate the quadratic bound on \(m\)
+while \(S\) tends to infinity and \(m\) tends to zero. This is
+pointwise algebra. In particular the constant scalar value \(Y\)
+of \(g_Y\) provides no such control in \(g_\sigma\) without
+estimates on the conformal change.
+
+\section{Sharpness of the Yamabe-zero threshold}\label{sec:wall}
+
+Fix a smoothly parametrized closed coordinate ball
+\(K=\psi(\overline B_1)\), where \(\psi:B_{1+d}\to S^4\) is an
+orientation-preserving chart and \(d>0\). The round marking is the
+requirement \(\psi^*g=(2/(1+|x|^2))^2\delta\) on \(B_1\).
+Write \(\mathfrak B(g)=\int |B_g|_g\,dV_g\) for the total Bach norm.
+
+\begin{theorem}[Sharp marked Yamabe-zero infimum]\label{wall:main}
+On the standard smooth \(S^4\), the infimum of \(E_+\) among
+conformal classes with Yamabe constant zero admitting the round
+marking on \(K\) is \(8\pi^2\). The infimum is unattained. There are
+smooth marked metrics \(g_R\), \(R\to\infty\), of Yamabe constant
+zero such that
+\[
+ E_+(g_R)=E_-(g_R)=8\pi^2+O(R^{-1}),\qquad
+ \mathfrak B(g_R)=O(R^{-1}).
+\]
+Their smooth unit-volume scalar-flat representatives \(k_R\)
+satisfy \(\int|\operatorname{Ric}_{k_R}|^2\,dV_{k_R}\to0\).
+The unmarked infimum on the standard sphere is also \(8\pi^2\),
+and its attainment is equivalent to the existence of a smooth
+Ricci-flat metric there.
+\end{theorem}
+
+\subsection{Taub--NUT cores and their chiral energy}
+
+On the one-centre Taub--NUT space identify the complement of the
+nut with \((0,\infty)\times S^3\), using \(r=|z|^2/2\) in the
+underlying smooth coordinates \(z\in\mathbb C^2\). Write \(\pi\) for
+the Hopf map to the unit round sphere \((S^2,h_0)\). The connection
+\(\eta\) is normalized by circle period \(2\pi\) and
+\(d\eta=-\pi^*dA_0/2\) in the chosen base orientation. We use the
+normalization
+\begin{equation}\label{wall:tn}
+ g_{\rm TN}=V(dr^2+r^2\pi^*h_0)+V^{-1}\eta^2,
+ \qquad V=1+\frac{1}{2r}.
+\end{equation}
+For example, with \(\rho=|z|\) the Euclidean metric is
+\(d\rho^2+\rho^2(\pi^*h_0/4+\eta^2)\), and
+\(\alpha=\rho^2\eta\) is smooth at the nut. Indeed, up to sign it is
+\(\operatorname{Im}(\bar z_1\,dz_1-\bar z_2\,dz_2)\).
+Equation \eqref{wall:tn} becomes
+\((1+\rho^2)\delta-(2+\rho^2)\alpha^2/(1+\rho^2)\), showing smooth
+positive extension at \(z=0\). In the hyperkähler orientation
+the metric is Ricci-flat and the three parallel Kähler forms
+trivialize the self-dual connection, so \(W^+=0\)~\cite[\S2.1, (1)]{CherkisHurtubise2019Monads}.
+
+In outward radial arc distance \(d\ell=\sqrt V\,dr\), a slice has
+horizontal warping factor \(a=r\sqrt V\) and vertical factor
+\(c=V^{-1/2}\). The radial curvature matrix is diagonal in
+these distributions, with equal horizontal entries and vertical
+entry \(K=-c''/c\). Here the prime denotes \(d/d\ell\), and the
+normal Riccati equation gives
+\[
+ c'=(1+2r)^{-2},\qquad K=4(1+2r)^{-3}.
+\]
+Projection of the three radial unit bivectors onto \(\Lambda^-\)
+gives orthogonal vectors of norm \(1/\sqrt2\). All curvature is in
+this block, so its entries in the normalized basis are twice the
+radial ones. Trace-freeness therefore gives the three eigenvalues
+\((-K,-K,2K)\). The shell volume is \(8\pi^2 Vr^2\,dr\), by the
+circle period and the area \(4\pi\) of the Hopf base. Thus
+\begin{equation}\label{wall:core-energy}
+ A_R:=E_-(\{r\le R\},g_{\rm TN})
+ =96\pi^2\int_0^{2R}\frac{x}{(1+x)^5}\,dx
+ =8\pi^2\left(1-\frac4{(1+2R)^3}+\frac3{(1+2R)^4}\right).
+\end{equation}
+This uses the Hilbert--Schmidt norm on the curvature operator.
+It gives \(A_{1/2}=11\pi^2/2\) and agrees with the complete
+Taub--NUT integral \(8\pi^2\) in this norm after orientation
+translation~\cite[\S2 and \S5, (5.11), (5.18)]{AtiyahLeBrun2013Curvature}.
+
+Two copies of \(r\le R\) are standard coordinate four-balls.
+Join their boundaries through an \(S^3\)-cylinder by the identity
+in the markings \(z/\sqrt{2R}\). This is the standard smooth
+double, as is seen by using two latitude caps of the standard
+sphere and their product complement. The two outward radial
+directions point oppositely into the cylinder, so the global
+orientation agrees with the hyperkähler orientation on one
+ball and reverses it on the other. For all \(R\ge1\) the balls
+can be identified with fixed \(R=1\) balls without moving the
+inner balls \(r\le1/2\). For instance, send the reference \(r\) to
+\(r[1+(R-1)\zeta(r)]\), where \(\zeta\) is a nondecreasing smooth
+cutoff vanishing near the inner ball and equal to one near
+the reference boundary. This also preserves the seam coordinate
+\(u=r/R\). Before any small marking modification, the retained
+inner balls give a lower bound \(11\pi^2/2\) in each chirality.
+More generally, retaining even one such conformal ball forces
+this lower bound on both global energies on a homotopy sphere,
+by the signature identity. In the ASD orientation \(W^+\) vanishes
+on the ball, so the exterior alone carries at least \(11\pi^2/2\) of
+positive chiral energy. Any extension retaining this finite conformal
+ball therefore exceeds the \(4\pi^2\) energy threshold of
+Proposition~\ref{prop:recognition}.
+
+\subsection{A joining metric of each Yamabe sign}
+
+Work first in the metric scaled by \(R^{-2}\). Set \(V_R(u)=1+(2Ru)^{-1}\) and introduce the signed distance
+\(s=D_R(u)=\int_1^u\sqrt{V_R(v)}\,dv\). Then
+\[
+ R^{-2}g_{\rm TN}=ds^2+\gamma_s,\qquad
+ \gamma_s=a^2\pi^*h_0+c^2\eta^2,\qquad
+ a^2=u^2V_R,\quad c^2=R^{-2}V_R^{-1}.
+\]
+These formulas extend smoothly to a fixed collar on either side
+of \(u=1\). In a slice the curvature of a horizontal plane is
+\(a^{-2}-3v^2/4\), and that of either mixed plane is \(v^2/4\),
+where \(|v|=c/(2a^2)\) is the length of the vertical bracket of
+an orthonormal horizontal pair. In fact the fibres are geodesic
+and the vertical bracket is \(-d\eta(E_1,E_2)c\) times the unit
+vertical vector. The constant-fibre submersion formulas apply
+also when the base metric is distorted below~\cite[\S3, proof of Lemma 3.2]{ShankarTappTuschmann2005Circle}.
+In particular the intrinsic scalar curvature and outward mean
+curvature of the round-base slices are
+\begin{equation}\label{wall:slice}
+ S(\gamma_s)=\frac{2}{a^2}-\frac{c^2}{8a^4},\qquad
+ H_s=\partial_s\log(a^2c)
+ =V_R^{-1/2}\left(\frac2u-\frac{1}{4Ru^2V_R}\right).
+\end{equation}
+Both are uniformly positive and bounded on \(1\le u\le2\), \(R\ge1\).
+
+For the positive endpoint, choose on \([-1,1]\) a fixed smooth
+concave function \(\sigma\) that is \(t+1\) near the left end,
+\(1-t\) near the right end and constant for \(|t|\le1/4\).
+For example, integrate minus a smooth odd nondecreasing function
+that is zero on \([-1/4,1/4]\) and equals \(\pm1\) near the respective
+ends, with \(\sigma(-1)=0\). Then \(0\le\sigma\le1\),
+\(|\sigma'|\le1\) and \(u_R(\sigma)\in[1,2]\), where \(u_R=D_R^{-1}\).
+Join by \(dt^2+\gamma_{\sigma(t)}\). The seam coordinates are
+exactly \(s=t+1\) and \(s=1-t\), so the metric agrees with the
+Taub--NUT continuation on open collars. Its longitudinal
+coefficient is one, including on the plateau.
+
+For a unit radial metric \(ds^2+\gamma_s\), the Gauss formula
+for the tangential scalar trace and the Riccati trace in the
+normal direction give \(S=S(\gamma_s)-|A_s|^2-H_s^2-2\partial_s H_s\),
+where \(A_s\) is the second fundamental form. The same formula
+on the join uses \(\sigma'A_{\sigma}\) and \(\sigma'H_\sigma\).
+Since the original scalar curvature vanishes, substitution yields
+\[
+ S(dt^2+\gamma_{\sigma(t)})
+   =(1-\sigma'^2)S(\gamma_{\sigma(t)})-2\sigma''H_{\sigma(t)} .
+\]
+This is nonnegative and strictly positive on the plateau~\cite[Lemma 2.4]{EbertFrenck2021Surgery}.
+The closed joined metric has positive Yamabe constant. Indeed
+its conformal Laplacian has positive lowest \(L^2\) eigenvalue,
+as a zero Rayleigh minimizer would have to be constant and
+vanish on the positive-scalar-curvature region. This eigenvalue
+and the compact Sobolev inequality give coercivity against the
+critical \(L^4\) norm. A fixed smooth axial test supported in
+the plateau has Yamabe numerator \(O(R^{-1})\) and denominator
+comparable to \(R^{-1/2}\), since the slice volume there is
+\(8\pi^2 a^2c=8\pi^2u^2\sqrt{V_R}/R\). Thus this positive
+Yamabe constant is at most \(C R^{-1/2}\).
+
+For the negative endpoint, let \(f=2+x_3\) on the unit round
+base, \(\Delta_0=\operatorname{div}_{h_0}\nabla\), and
+\[
+ v=k\Delta_0(f^2),\qquad h=e^{2v}h_0.
+\]
+In dimension two the Dirichlet integral is conformally invariant
+and \(S_h\,dA_h=(2-2\Delta_0v)dA_0\). It follows that
+\[
+ I_h=\int_{S^2}(6|df|_h^2+S_h f^2)\,dA_h
+ =\int_{S^2}(6|df|_0^2+2f^2)\,dA_0
+       -2k\int_{S^2}(\Delta_0(f^2))^2\,dA_0 .
+\]
+The last integral is positive because \(f^2\) is nonconstant.
+Fix \(k\) so \(I_h=-m<0\). Choose a nonzero smooth nonnegative
+bump \(w(t)=w_0(t/L)\) supported in \((-L,L)\) with \(L\) a
+large fixed number. With \(J=\int_{S^2}f^2\,dA_h\), arrange
+\(6J\int|w'|^2\le(m/2)\int w^2\), since the ratio scales as \(L^{-2}\).
+On \([-L,L]\times S^3\) use
+\(dt^2+\pi^*h+R^{-2}\eta^2\). Its scalar curvature is
+\(S_h-|F|_{\Lambda^2 h}^2/(2R^2)\), where \(d\eta=\pi^*F\), by the
+horizontal and mixed formulas above. Its volume density is
+\(R^{-1}dt\,|\pi^*dA_h\wedge\eta|\). The separated test
+\(w(t)\pi^*f\), extended by zero, therefore has Yamabe numerator
+\[
+ \frac{2\pi}{R}\left[
+  6J\int |w'|^2+
+   \left(I_h-\frac1{2R^2}\int_{S^2}|F|_{\Lambda^2 h}^2 f^2\,dA_h\right)
+       \int w^2\right]
+ \le -\frac{\pi m}{R}\int w^2 .
+\]
+The denominator is a positive constant times \(R^{-1/2}\).
+Hence the negative endpoint has \(Y\le-c_0R^{-1/2}<0\).
+
+\subsection{Common collars and a uniformly controlled interpolation}
+
+Take the common neck \([-T,T]\times S^3\), \(T=L+2\), with
+seam coordinates \(u_-=1+t+T\) on the left and \(u_+=1+T-t\)
+on the right. On small fixed end collars use exactly the continuation
+\begin{equation}\label{wall:seams}
+ S_{R,\pm}=V_R(u_\pm)(dt^2+u_\pm^2\pi^*h_0)
+             +R^{-2}V_R(u_\pm)^{-1}\eta^2.
+\end{equation}
+On the negative neck extend from these collars to the fixed
+distorted product by a convex combination with disjoint smooth
+end cutoffs, each equal to one near its own seam and zero on
+\([-L,L]\). This gives agreement of the entire seam germs.
+Pull the positive endpoint back from \([-1,1]\) by an increasing
+map \(b_R:[-T,T]\to[-1,1]\) that equals
+\(-1+D_R(u_-)\) and \(1-D_R(u_+)\) on the respective collars.
+For a precise extension, let \(d_\pm=\sqrt{V_R(u_\pm)}\) there and
+use fixed disjoint end cutoffs \(\beta_\pm\) on sufficiently
+short supports. Set
+\[
+ b_R'=\beta_-d_-+\beta_+d_++\gamma_R(1-\beta_--\beta_+),
+ \qquad
+ \gamma_R=\frac{2-\int(\beta_-d_-+\beta_+d_+)}
+                 {\int(1-\beta_--\beta_+)}.
+\]
+The collars can be chosen so the subtracted integral is below one
+for all \(R\ge1\). Integrate with \(b_R(-T)=-1\). This gives the
+prescribed end germs, with upper and positive lower derivative
+bounds and bounds through order five for the map. The pulled-back
+positive metric therefore agrees with \eqref{wall:seams} on the same
+end collars as the negative one. Both are on the same smooth double
+via the identity in \(u\) on the cores and the sphere marking.
+
+Convexly interpolate the full positive metric forms on the neck,
+leaving both scaled cores fixed. In a finite family of fixed base
+charts write \(\eta=d\phi+\alpha\) and locally unwrap the fibre using
+\(z=\phi/R\). Then \(R^{-1}\eta=dz+R^{-1}\alpha\). The coefficient
+matrices of both endpoints have uniform positive lower and upper
+bounds and four bounded coordinate derivatives in these charts.
+For the positive endpoint this follows from \(du/ds=V_R^{-1/2}\),
+the fixed smooth slice profile, and the five derivative bounds
+for \(b_R\). For the negative endpoint it follows from the fixed
+base metrics and cutoff functions and the bounded shell
+coefficients in \eqref{wall:seams}. Matrix convexity keeps
+uniform ellipticity along the interpolation, and differentiation
+of the inverse gives the corresponding inverse bounds. Hence
+curvature and its first two covariant derivatives are bounded
+on the scaled neck uniformly in \(R\) and in the interpolation
+parameter. This uses only local isometric lifts. The determinant
+is bounded on the lifts, and their quotient period \(2\pi/R\)
+in \(z\) makes the scaled neck volume \(O(R^{-1})\).
+
+The Bach tensor is controlled by the second derivatives of
+Schouten and the Schouten--Weyl product, and is zero on each
+Ricci-flat core~\cite[\S1, (1.1)]{BahuaudGuentherIsenbergMazzeo2025Bach}.
+The neck thus contributes \(O(R^{-1})\) to \(\mathfrak B\) and to
+each chiral energy. A constant homothety restoring \(g_{\rm TN}\)
+on the cores leaves these integrals and the Yamabe constant
+invariant. In dimension four a positive conformal factor \(u^2\)
+gives weight \(-2\) to the covariant Bach tensor, hence weight
+\(-4\) to its norm, which cancels the volume weight. The Weyl
+operator has weight \(-2\), giving the same cancellation for
+its squared norm. We conclude that for the restored path
+\(g^0_{R,\theta}\), \(0\le\theta\le1\),
+\begin{equation}\label{wall:path}
+ E_\pm(g^0_{R,\theta})=A_R+O(R^{-1}),\qquad
+ \mathfrak B(g^0_{R,\theta})=O(R^{-1})
+\end{equation}
+uniformly in \(\theta\). The chiral energies are equal by
+signature for every smooth metric on \(S^4\).
+
+\subsection{Marking, the sign crossing and nonattainment}
+
+Place the compact closure of a slightly shrunken extended
+marked chart inside a fixed interior region of one unscaled
+core. To do this, compress the chart by the flow of a cut off
+radial contraction, then move its center to the core by a fixed
+orientation-preserving round rotation. Pull the metrics back
+by this single placement map. In oriented normal coordinates
+\(x\) at the marked center the entire path has the same
+Taub--NUT germ \(\delta+q(x)\), with \(q=O(|x|^2)\) and
+\(Dq=O(|x|)\). Replace it by
+\(\delta+\chi(x/\varepsilon)q(x)\), where \(\chi=0\) on \(B_1\)
+and \(\chi=1\) outside \(B_2\). The positive metric is Euclidean
+on \(B_\varepsilon\), and the derivative bounds through order
+four on \(B_{2\varepsilon}\) are \(O(\varepsilon^{2-j})\) at
+order \(j\). Curvature is bounded there and its second covariant
+derivative is \(O(\varepsilon^{-2})\). The changed volume is
+\(O(\varepsilon^4)\), so the energy costs are \(O(\varepsilon^4)\)
+and the total Bach cost is \(O(\varepsilon^2)\), with constants
+from the one common germ.
+
+For the positive endpoint \(h=g^0_{R,0}\) before flattening,
+write \(Q_h(\varphi)=\int(6|d\varphi|_h^2+S_h\varphi^2)\,dV_h\)
+and \(D_h(\varphi)=\|\varphi\|_{L^4(h)}^2\).
+The replacement \(h_\varepsilon\) differs by \(O(\varepsilon^2)\)
+in metric coefficients and by \(O(\varepsilon^2)\) in the
+\(L^2\) norm of the scalar density relative to \(dV_h\).
+Indeed the scalar curvature is bounded on the changed region
+and unchanged elsewhere. Uniformly over \(\varphi\), comparison
+of inverse metrics and volume forms and Hölder's inequality give
+\[
+ |Q_{h_\varepsilon}-Q_h|\le C_R\varepsilon^2(Q_h+D_h),\qquad
+ D_{h_\varepsilon}\le(1+C_R\varepsilon^2)D_h .
+\]
+Here \(S_h\ge0\) makes \(Q_h\) dominate the Dirichlet term.
+As \(Q_h\ge Y([h])D_h\), choose one sufficiently small
+\(\varepsilon(R)\le \varepsilon_*/R\) so
+\(C_R\varepsilon(R)^2(1+Y([h]))\le Y([h])/2\). This preserves
+positive Yamabe sign. The negative test is supported off the
+change, so the same radius preserves its negative sign.
+
+The shared flat germ gives the marking for the whole path by
+one diffeomorphism and one positive conformal factor at each
+\(R\). To see this, the oriented transition germ from the
+marked coordinates to the flat coordinates can be extended by a
+localized flow. Join its derivative to the identity in
+\(\mathrm{GL}^+(4,\mathbb R)\), then join the derivative to the
+germ \(G\) by the maps \(x\mapsto \lambda^{-1}G(\lambda x)\)
+for \(0\le\lambda\le1\), extended smoothly at zero. Cut off the
+velocity of this local isotopy on a neighbourhood in the extended
+chart. By first compressing the marked ball to this neighbourhood,
+one obtains a pullback equal to \(a^2\delta\) in the marked
+coordinates for some \(a>0\). Multiplication there by
+\((2/(a(1+|x|^2)))^2\), extended as a smooth positive factor
+using a cutoff of its logarithm, supplies the exact round metric.
+All marking operations are supported in the extended chart
+away from the neck. They preserve the conformal invariants.
+The flattening and the marking produce a smooth marked path
+\(g_{R,\theta}\), with the bounds \eqref{wall:path} and opposite
+Yamabe signs at its endpoints.
+
+For fixed \(R\), the lowest eigenvalue of
+\(6(-\operatorname{div}_g\nabla)+S_g\) varies continuously along
+the path. On the common \(H^1\) domain, shift the Rayleigh
+numerator at a reference parameter by a large fixed multiple
+of the \(L^2\) denominator to obtain a coercive form.
+Smooth metric variation makes the shifted forms and \(L^2\)
+norms relatively close, uniformly over test functions.
+Taking infima of the shifted quotients gives continuity.
+The first eigenvalue has the same sign as \(Y([g])\).
+With a positive smooth unit-volume Yamabe factor \(a\), the
+equation \((6(-\operatorname{div}\nabla)+S_g)a=Y([g])a^3\)
+and integration by parts give
+\[
+ Q_g(\varphi)=6\int a^2|d(\varphi/a)|_g^2\,dV_g
+                  +Y([g])\int a^2\varphi^2\,dV_g.
+\]
+This is positive in \(L^2\) for positive \(Y\). At zero the
+test \(a\) gives the null eigenvalue, and for negative \(Y\)
+it gives a negative test. Thus a parameter between the
+endpoints has \(Y=0\). Choose one for each \(R\) to obtain
+the sequence of marked metrics~\cite[\S3, Theorem 3]{Schoen1984Yamabe}
+\cite[\S1]{LeeParker1987Yamabe}.
+
+Finally, on any smooth homotopy four-sphere, choose the unit-volume
+scalar-flat representative \(k\) in a Yamabe-zero class.
+Chern--Gauss--Bonnet and zero signature give
+\begin{equation}\label{wall:cgb}
+ 16\pi^2=2E_+([k])-\tfrac12\int|\operatorname{Ric}_k|_k^2\,dV_k,
+ \qquad
+ \int|\operatorname{Ric}_k|_k^2\,dV_k=4(E_+([k])-8\pi^2).
+\end{equation}
+Here the Euler integrand uses one quarter of the full four-index
+Weyl norm, and that full squared integral equals
+\(4(E_++E_-)=8E_+\). This proves the lower bound, and
+\eqref{wall:path} at the sign crossings proves sharpness and
+the Ricci-integral limit. Equality is equivalent to a Ricci-flat
+representative, whose Yamabe numerator is the Dirichlet form.
+If the class is marked, this representative is Bach-flat and
+conformally flat on the open cap. The four-dimensional Bach
+equation is the ambient obstruction equation. Analytic
+continuation of Weyl-flatness for smooth obstruction-flat metrics
+then gives full Weyl vanishing on the connected manifold,
+contradicting the energy at equality~\cite[(0.4), Remark 2]{ChangGurskyYang2003}
+\cite{GrahamHirachi2004Ambient}
+\cite[Theorem 1.4]{LassasLiimatainen2019ConformalHarmonic}.
+The scalar-flat representative used in \eqref{wall:cgb} is
+conformally flat on the cap. The exact unit round marking, with
+scalar curvature \(12\) there, belongs to a different representative.
+
+The lower bound holds also without the cap and the constructed
+sequence belongs to both classes on the standard smooth sphere.
+Unmarked attainment therefore reduces to the Ricci-flat existence
+question. The strict inequality for each marked Yamabe-zero class
+holds on an arbitrary smooth homotopy sphere, while the construction
+of a sharp sequence here uses the standard smooth sphere.
+
+\section{Outstanding challenges}\label{sec:outlook}
+
+There are two ways the constructions could recognize the smooth structure
+of a given homotopy sphere. One is to prescribe less and less self-dual
+curvature on a single manifold. The other is to retain a round ball and
+obtain compactness for the Weyl variational problem. The hypotheses still
+needed in each approach can be stated in geometric terms.
+
+\paragraph{Removing the exterior correction.}
+Fix a smooth reference metric \(r\) round on a coordinate ball. Let
+\(W=W_r^+\), \(L=dF_r(0)\) and \(\mathcal C=\ker L^*\) as in
+Section~\ref{sec:lift}. The finite-dimensional equation
+\eqref{lift:balance} has increment \(y=-tW\) for the uncorrected
+chord, including the original exterior curvature. An exact differentiable lift of the
+chord \(F_r(h(t))=(1-t)W\) with \(h(0)=0\) requires
+\(\pi_{\mathcal C}W=0\). There is a specific question even when this
+first-order condition fails. Suppose a solution admits an expansion
+\(h(t)=\sqrt{t}\,k+t v+o(t)\) in the domain norm of the smooth curvature
+map as \(t\downarrow0\). Taylor expansion in the target space gives
+\begin{align}
+  Lk&=0, \nonumber\\
+  Lv+\tfrac12 d^2F_r(0)[k,k]&=-W,\qquad
+  \tfrac12\pi_{\mathcal C} d^2F_r(0)[k,k]=-\pi_{\mathcal C}W .
+  \label{outlook:quadratic}
+\end{align}
+For a normalized pullback by a diffeomorphism supported inside the round
+patch the curvature field stays fixed. Differentiating that identity
+twice shows that its kernel direction pairs to zero on the left of the
+projected equation. A useful kernel direction would have to give the
+required value on the global adjoint kernel \(\mathcal C\) and admit control of the
+higher-order error. A deformation of the exterior reference would
+require comparing the obstruction spaces as the metric changes,
+including points where their dimensions change. The two radial moments
+of Section~\ref{sec:transmission} identify sources removable inside a
+round patch. The balance in \eqref{lift:balance} tests the source
+against fields on all of \(M\).
+
+\paragraph{Reaching a recognizing energy.}
+An exact chord in the symmetric fixed-volume comparison has
+\[
+ E_+(g_{h(t)})=(1-t)^2E_+(r).
+\]
+This follows by squaring the target identity in the common bundle and
+integrating in the fixed volume form. If the path is \(C^2\)-continuous as a path of metrics and has a positive
+Yamabe checkpoint in a connected interval where \(E_+<8\pi^2\), its
+sign stays positive there by \eqref{var:wall}. Any point of that
+interval with \(E_+<4\pi^2\) then recognizes the smooth sphere by
+Proposition~\ref{prop:recognition}. To apply this argument one must
+continue the metric to such a point and obtain the sign independently.
+The estimates for a small change of source allow the constants to
+depend on the reference. A uniform estimate along the required
+deformation, or an estimate on its actual forcing direction sufficient
+to replace it, is still missing.
+
+\paragraph{Completing a sequence of metrics on the given manifold.}
+If \(E_+(g_j)\to0\), a different sufficient estimate is a uniform
+\(C^{3,\alpha}\) coefficient bound in a fixed finite smooth atlas,
+\(0<\alpha<1\), together with \(dV_{g_j}\ge c\,dV_r\), \(c>0\).
+Both bounds may be imposed after the same orientation-preserving
+pullbacks. Indeed the upper eigenvalue bound and the determinant
+lower bound give uniform ellipticity. Compact embedding gives a
+positive \(C^{3,\beta}\) subsequential limit \(G\) for
+\(0<\beta<\alpha\). Curvature convergence and \eqref{eq:sign}
+give \(W_G^+=W_G^-=0\). The development argument in Theorem~\ref{var:compactness} applies at
+this lower regularity. The differential Bianchi identity gives zero
+Cotton tensor, so the normal tractor connection is flat and still has
+\(C^{1,\beta}\) coefficients. Its parallel frame develops the canonical
+null ray into a conformal local diffeomorphism, and the same covering
+and smoothing argument gives smooth recognition. Moreover, write
+\(u^2G=\operatorname{dev}^*g_{\rm rd}\). The scalar transformation
+law gives \((6\Delta_G+s_G)u=12u^3\), hence
+\[
+ Q_G(f)=6\int_M u^2|d(f/u)|_G^2\,dV_G+
+             12\int_M u^2 f^2\,dV_G.
+\]
+The positive factor \(u\) and compactness make this coercive on
+\(H^1\). Coercivity persists under \(C^2\) convergence, and Sobolev
+embedding yields positive Yamabe sign for nearby smooth metrics.
+Applying the argument to any purported nonpositive subsequence gives
+eventual positivity for the full sequence. This criterion uses a
+pointwise lower volume-density bound in the coordinates that control
+the derivatives.
+
+In the marked variational problem, energy need not be known to tend
+to zero. Instead, Theorem~\ref{var:compactness} uses stationarity of
+the limit and a surviving open part of the round cap. Theorem~\ref{wall:main}
+shows how weak the available integral controls can be. Even exact
+Yamabe zero, vanishing total Bach norm in the limit and
+\(\|\Ric\|_{L^2}\to0\) in the scalar-flat representatives are
+compatible with chiral energy tending to \(8\pi^2\). In a positive
+subcritical class Proposition~\ref{var:gauges} gives estimates in two
+different representatives. To obtain a limit one would need control
+over the conformal changes of scale, curvature concentration and the
+size of the cap in the limiting coordinates. The sharp sequence itself
+is constructed on the standard smooth sphere. For a general smooth
+homotopy four-sphere the outstanding problem is to obtain, from the
+geometry of its own exterior, either a metric in the strict positive
+recognition region or a nondegenerate limit to which smooth recognition
+applies.
+
+\clearpage
+\setlength{\bibitemsep}{.36\baselineskip}
+\printbibliography[heading=bibintoc]
+\end{document}

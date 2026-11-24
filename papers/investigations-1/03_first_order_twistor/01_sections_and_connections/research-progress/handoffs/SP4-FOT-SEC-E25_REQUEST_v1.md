@@ -1,0 +1,9 @@
+# SP4-FOT-SEC-E25 · issued request v1
+
+24 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. The author-selected lead was retained. The lead's actual model identifier and effort are unavailable. Execution helpers are requested/configured as gpt-6.2-sol/ultra. A configuration is not independent backend attestation.
+
+Exact common inputs pinned in brainstorm/notes/SEC_B17_STATIONARITY_WITH_A_RETAINED_CAP_20261124.md and its linked B16 manifest.
+
+Fix a smoothly parameterized orientation-preserving chart extending a closed unit coordinate ball K, with specified unit round stereographic metric there, on a closed smooth oriented homotopy 4-sphere. Test equality of infima of E₊ over all metrics vs metrics equal to this model on K, also over the subclasses Y>0 when nonempty. Inspect Akutagawa–Botvinnik–Kobayashi–Seshadri arXiv:math/0201153v3 Proposition 4.1 and its proof (simultaneous conformally flat germ, closeness of Y and full Weyl functional). Justify on the original manifold how to pass from one small unmarked conformally flat ball to exact marked round metric (germ isotopy extension, orientation, coordinate compression, smooth positive conformal extension); verify invariance, signature, thresholds. No round atlas or Yamabe positivity assumed. One ball, no optimization attained or compactness assumed. Escalate if a framing or extension needs unproved smooth Schoenflies. Consult SH-E01 and the B17 decision.
+
+Write only notes/SEC_E25_20261124.md and research-progress/handoffs/SP4-FOT-SEC-E25_RETURN_v1.md under this owner. Include date, intended author, assistance, verified versions, requested/configured vs actually visible metadata, source passages, hypotheses, evidence and missing premises. The lead assesses and integrates shared files. Read the owning register and AGENTS.md. No numerical runs, additional helpers, shared-file edits or chat registration.

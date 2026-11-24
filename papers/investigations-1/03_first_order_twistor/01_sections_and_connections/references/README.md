@@ -27,3 +27,15 @@ Retain version and actual inspection date; link existing records rather
 than duplicate annotations or PDFs. Manuscript reuse supplies no new
 verification. Future child-specific records may be canonical here only
 when the root catalog links them with the required metadata.
+
+## Activated research
+
+The [R80–R86 source record](../../../../../references/SOURCE_NOTES_SEC_20261124.md) identifies the versions and hypotheses used in the fixed-core test, two-jet construction, off-ASD index and the rechecked inherited inputs.
+
+The [spherical interface sources R87–R88](../../../../../references/SOURCE_NOTES_SEC_20261124.md#spherical-cap-and-exterior-variation--24-november-2026) supply the Bach-flat analyticity and flat-germ approximation used to study the actual exterior.
+
+The same [source record](../../../../../references/SOURCE_NOTES_SEC_20261124.md#spherical-cap-and-exterior-variation--24-november-2026) gives R89–R90 for the obstruction tensor and the Hopf neck, and the rechecked CGY constant-σ₂ equation.
+
+The [exterior prescription passages](../../../../../references/SOURCE_NOTES_SEC_20261124.md#exterior-curvature-prescription--24-november-2026) include the exact hosted version of the compact embedding theorem used when projecting oscillatory variations to the metric kernel.
+
+The [fixed-margin primary passages, R91–R98](../../../../../references/SOURCE_NOTES_SEC_20261124.md#fixed-margin-bach-concentration--24-november-2026) give the geometric and analytic inputs for E49–E58.

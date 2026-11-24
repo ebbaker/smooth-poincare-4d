@@ -195,3 +195,7 @@ verified identities and one canonical registration. New branch research
 belongs in this branch's chat-histories. My invocation activates this broad
 session; merely saving or reading the prompt does not.
 ```
+
+## Latest assessed handoff
+
+The active branch handoff is [subcritical Bach concentration and the annular residual](04_AFTER_SUBCRITICAL_BACH_CONCENTRATION_20261124.md).

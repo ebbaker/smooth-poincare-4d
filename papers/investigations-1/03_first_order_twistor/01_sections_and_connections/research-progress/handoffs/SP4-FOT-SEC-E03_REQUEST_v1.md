@@ -1,0 +1,15 @@
+# SP4-FOT-SEC-E03 · issued request v1
+
+24 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI assistance. The author-selected lead was retained. The lead's actual model identifier and effort are unavailable. Execution helpers are requested/configured as gpt-6.2-sol/ultra. A configuration is not independent backend attestation.
+
+Baseline HEAD e76752648b69969b1234d0295530c87fce9fcdcb. Use the seven SHA-256 pins of the parent brainstorm/notes/SETUP_AND_TASK_CROSSWALK_20261124.md. Parent SH-B01 SHA-256 4619a16de34b8138d1c499a60c447697752dc12862c808a506ef4b7d2dac70c3, SH-E01 10b7b2b71d8d693d6aab079b04a3fbd8954cbc1db2f44dd47f619e1e9ef1f62f. Use the issued 24 November SEC-B01/B06 decisions in brainstorm/notes/SEC_B01_B06_ACTIVATION_20261124.md. Shared SH-B01 and SH-E01 are assessed. Smooth real Riemannian data, curvature-operator Hilbert–Schmidt conventions, W⁺=0 for ASD. Accepted inputs (SHA-256, repository paths):
+
+```
+f29747a74a46a3f0eaea4dd67c4d22418147e9a9f2eda72cda29cd93d9f0a752  papers/investigations-1/03_first_order_twistor/01_sections_and_connections/notes/SEC_E01_20261124.md
+2547888e365032037b86dd8352f1be28c49f0679f6235a99f8438162d632416c  papers/investigations-1/03_first_order_twistor/01_sections_and_connections/notes/SEC_E02_20261124.md
+2a88d4f1d26bad2ecdc6187fc54e054a2544419c64d6de9f5c2ae47779a92f5f  papers/investigations-1/03_first_order_twistor/01_sections_and_connections/brainstorm/notes/SEC_B02_FULL_DOMAIN_RADIAL_LIFT_20261124.md
+```
+
+At smooth r on a closed oriented homotopy four-sphere define F_r(h) by the B02 full pointwise-volume chart, codomain S²₀Λ⁺_r, and L_r=dF_r(0). C^{k+2,α}→C^{k,α}, k≥2, 0<α<1, or equivalent high Sobolev grades. Prove on this *full* metric domain that P=L_rL_r* is order-four elliptic with the principal symbol in E02, ker P=ker L_r*, and Q=L_r*P^{-1} is a split right inverse if this kernel vanishes. Prove a local solution of F_r(h)=(1−t)W_r under that hypothesis via h=Qz and Banach IFT. If it fails, give the necessary first-order orthogonality for this target. In addition verify the finite-dimensional TT-plus-longitudinal criterion: given the elliptic TT image and its finite smooth annihilator, L_r on conformal Lie directions K_r X must span projected cokernel iff full L onto, and if so finitely many smooth X suffice. Treat pure conformal gauge, reference-volume normalization and off-ASD diffeo action; no conjecture that the projection spans. No quantitative size/closedness, no boundary PDE. Escalate B02 if a gauge, source space or derivative-loss premise fails.
+
+Write only notes/SEC_E03_20261124.md and research-progress/handoffs/SP4-FOT-SEC-E03_RETURN_v1.md under this owner. Include date, intended author, assistance, verified versions, requested/configured vs actually visible metadata, source passages, hypotheses, evidence and missing premises. The lead assesses and integrates shared files. Read the owning register and AGENTS.md. No numerical runs, additional helpers, shared-file edits or chat registration.
