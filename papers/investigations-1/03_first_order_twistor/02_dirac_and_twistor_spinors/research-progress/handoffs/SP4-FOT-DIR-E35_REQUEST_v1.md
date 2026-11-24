@@ -1,0 +1,18 @@
+# SP4-FOT-DIR-E35 · Oscillatory metrics with actual canonical Green spinors · request v1
+24 November 2026, America/New_York. For Edward B. Baker III. Lead selected in session, actual lead identifier/effort unavailable. Fixed E packet configured for gpt-6.2-sol / ultra. Report exposed metadata separately from routing. [Owning register](../REGISTER.md).
+ 
+Use E11's single trace-free compactly supported tensor family of amplitude n^{-3/2} in an exactly flat U away from p. Choose conformally round background g_b flat at p and on U, h0=ω²g_b equal to global Euclidean metric in a stereographic coordinate and ω=r^{-2} on fixed pole ball. Fix E27 spinor source and unit boundary, use positive chirality. Set α=1/4 (or fixed <1/2), show metric C^{1,α} convergence and D_{g_n}→D_{g_b} as bounded C^{1,α}→C^{0,α} after actual bundle identification. Invert via Neumann; subtract common compact pole parametrix. Verify zero-free Ψ_n incl. fixed end and decay of regular difference, quantify Dirichlet and J^4 and estimate ||s_k||₂ in unit harmonic scale from E31; check source/compact jet and bounded compact geometry, smoothness per n. Compare E_+(g_n)≥c n verified in E11, unchanged by conformal transport, ensuring E11 local curvature calculation applies with this background. Single family asymptotic proof; no claim of exotic example, no numerical tests. Escalate actual obstruction rather than infer convergence of metric second derivatives.
+
+## Frozen repository inputs
+HEAD f178fbb604f7f972b639fa8c1fc05f649c9bc8fc, working-tree bytes. The setup crosswalk also specifies the CME manuscript and additional texts by full digest. External originals are identified by title/version/locator in the task or the linked primary-source records. Record exactly which passages you see; retain unmet premises.
+- papers/investigations-1/03_first_order_twistor/brainstorm/notes/SETUP_AND_TASK_CROSSWALK_20261124.md  `0445e1698fe6f12fed177f1d1124294c2f1405b3cb4ebeb4f7498165b3bbd322`
+- papers/investigations-1/03_first_order_twistor/manuscript/first_order_twistor_and_smooth_poincare.tex  `2e11413d0e3a25a059ae6e8375c0bdd361fb25fcb8dfad6c5c7e4d34d7f6bfa0`
+- papers/investigations-1/03_first_order_twistor/brainstorm/notes/DIRAC_AND_PROOF_ARCHITECTURE_20261124.md  `40d24b0267b753c18b4d1d27afaa139783d62ebbbe43e1d286dd45c851f252c2`
+- papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/brainstorm/notes/DIR_B18_GREEN_DERIVATIVE_TEST_20261124.md  `865b2238ed4c7d5739e02d5d104add8d2789e1a5a7a39fc5dc15e2546c4ae7ab`
+- papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/notes/DIR_E11_20261124.md  `4c503086a5ab29ea3a1f583ea5e030e52eccc4263dc718e15933ee09d6306bda`
+- papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/notes/DIR_E12_20261124.md  `6bcd9804ee4fd71b247ac32870d1263764a8ea7fe7927c67229e9007f557b2b8`
+- papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/notes/DIR_E27_20261124.md  `92051246e092a34641e0c0e35274d0ac910b23deeb1d32bca5e5c849be6473e8`
+- papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/notes/DIR_E31_20261124.md  `6ae2744aeb4896f8ad001a1d161bff2479bbb3f6c2705d4dd0aa8ba0a5db7690`
+
+## Ownership and return
+Write only `notes/DIR_E35_20261124.md` and `research-progress/handoffs/SP4-FOT-DIR-E35_RETURN_v1.md` in this owning investigation. Use links, date, author/assistance, actual available configuration, inputs and scope. No shared register, plan, bibliography or source-record edits, no manuscripts, numerics or additional helpers. Send the result to the lead at the finite boundary.

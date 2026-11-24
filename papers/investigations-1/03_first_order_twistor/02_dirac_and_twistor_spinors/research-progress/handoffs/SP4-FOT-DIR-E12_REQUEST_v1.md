@@ -1,0 +1,16 @@
+# SP4-FOT-DIR-E12 · Projected derivative of twistor error versus Weyl energy · request v1
+24 November 2026, America/New_York. For Edward B. Baker III. Lead selected in session, actual lead identifier/effort unavailable. Fixed E packet configured for gpt-6.2-sol / ultra. Report exposed metadata separately from routing. [Owning register](../REGISTER.md).
+ 
+Smooth oriented Riemannian spin four-manifold; S+ has self-dual 2-form action, c(e_i)c(e_j) on e^i∧e^j for i<j; HS orthonormal wedge basis. Set T_X=P_Xψ, d^∇T(X,Y)=∇_XT_Y−∇_YT_X in normal frames. On Λ+⊗S+ take orthogonal projection Π onto ker m, m(ω⊗σ)=c(ω)σ; first take the self-dual base-form projection (orthonormal normalized basis). Derive or disprove |Π(d^∇T)^+|²=(1/2)|W+|²_{op,HS}|ψ|²: commute ∇, use curvature of spin connection, check sign up to convention and exact factor, show ∇Dψ term lies in im(m*) by Spin(4) decomposition or direct Clifford algebra, trace/scalar removed, justify norm. If coefficient changes supply derivation. For isolated transverse zeros show how energy integral extends and convert SH-E01 threshold using actual constant. Distinguish a pointwise identity from an estimate on a produced family; if relevant separate the representation tested by P*T. No PDE, deformation estimates, or new primary theorem; use Bär §2 eq (3) for spin curvature and derive remaining algebra. Complete one identity and implication or scoped discrepancy. Return to B09 for change of projections.
+
+## Frozen repository inputs
+HEAD f178fbb604f7f972b639fa8c1fc05f649c9bc8fc, working-tree bytes. The setup crosswalk also specifies the CME manuscript and additional texts by full digest. External originals are identified by title/version/locator in the task or the linked primary-source records. Record exactly which passages you see; retain unmet premises.
+- papers/investigations-1/03_first_order_twistor/brainstorm/notes/SETUP_AND_TASK_CROSSWALK_20261124.md  `0445e1698fe6f12fed177f1d1124294c2f1405b3cb4ebeb4f7498165b3bbd322`
+- papers/investigations-1/03_first_order_twistor/manuscript/first_order_twistor_and_smooth_poincare.tex  `2e11413d0e3a25a059ae6e8375c0bdd361fb25fcb8dfad6c5c7e4d34d7f6bfa0`
+- papers/investigations-1/03_first_order_twistor/brainstorm/notes/DIRAC_AND_PROOF_ARCHITECTURE_20261124.md  `40d24b0267b753c18b4d1d27afaa139783d62ebbbe43e1d286dd45c851f252c2`
+- papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/brainstorm/notes/DIR_B09_CURVATURE_PROJECTION_20261124.md  `f66f51a76e33ebae8abccda9c13e067589778528c3b632b449e248d600943180`
+- papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/notes/DIR_E01_20261124.md  `c84eabf602f3b104ccde6738e671aaed97f905554288d65d8ac5d765e5dd3e33`
+- papers/investigations-1/03_first_order_twistor/notes/SH_E01_20261124.md  `10b7b2b71d8d693d6aab079b04a3fbd8954cbc1db2f44dd47f619e1e9ef1f62f`
+
+## Ownership and return
+Write only `notes/DIR_E12_20261124.md` and `research-progress/handoffs/SP4-FOT-DIR-E12_RETURN_v1.md` in this owning investigation. Use links, date, author/assistance, actual available configuration, inputs and scope. No shared register, plan, bibliography or source-record edits, no manuscripts, numerics or additional helpers. Send the result to the lead at the finite boundary.

@@ -35,3 +35,15 @@ changing any task status. The prior continuation SHA-256 was
 the lead alone prepared this documentation revision. No research, helper
 or numerical packet was launched. Manuscripts and scientific source
 records are unchanged.
+
+## 24 November 2026 — Spinorial concentration, balance and degree
+
+The author activated broad DIR research. The selected lead retained the session settings and configured every fixed analytical, source and example packet for gpt-6.2-sol/ultra. Runtime realization was unavailable independently. The [integrated assessment](reviews/DIR_B05_CONSTRUCTION_ASSESSMENT_20261124.md) records the exact unrestricted map supremum and its attainment, the balanced first-eigenmap characterization and degree-loss example, the universal conformal twistor zero infimum, the nonconcentrating limit criterion, and the projected Weyl identity with its first-order counterexample. [Continuation](continuation-notes/01_AFTER_CONCENTRATION_AND_BALANCE_20261124.md)
+
+The [unregistered public record](chat-histories/PARTIAL_UNREGISTERED_DIR_20261124.md) preserves the invocation and delivered updates. Local exact-thread history and the supported app reader were unavailable. Current source hashes, per-packet evidence, and second proof readings are recorded in the branch handoffs. There was no numerical campaign or manuscript revision.
+
+## 24 November 2026 — Five-eigenfunction rigidity and the Green boundary problem
+
+Continued the first handoff through B12–B22. A sharp fourth-moment bound at scalar equality gives round recognition at first multiplicity five. Near equality produces the round joint law without a Ricci premise. Hopf, signed degree concentration, and normalized map tests delimit degree loss. The compact Dirac Green construction initializes on every smooth homotopy four-sphere; scaling and actual zero-free oscillatory fields delimit the estimates it supplies. Fixed packets E18–E47 include independent reviews. The original E35 request is retained alongside v2 after an input digest changed. [Spectral assessment](reviews/DIR_B22_FIVE_EIGENFUNCTIONS_20261124.md) · [Boundary assessment](reviews/DIR_B19_GREEN_BOUNDARY_ASSESSMENT_20261124.md) · [Continuation](continuation-notes/02_AFTER_FIVE_EIGENFUNCTION_RIGIDITY_20261124.md)
+
+Verification at integration matched all seven shared setup digests and checked 300 frozen input entries from DIR requests E01–E47 (including both E35 versions). The sole mismatch was the retained E35 v1 pin, superseded by v2. All 30 continued E tasks have a request, return, note and assessment. Repository hygiene passed with 5,878 relative links, and the repository test suite ran 138 cases with three skips. Native capture remained unavailable; the [unregistered public record](chat-histories/PARTIAL_UNREGISTERED_DIR_20261124.md) includes the continuation request and delivered updates.

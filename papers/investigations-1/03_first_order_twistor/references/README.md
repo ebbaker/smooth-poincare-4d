@@ -54,3 +54,5 @@ The [sections source guide](../01_sections_and_connections/references/README.md)
 and [spinorial source guide](../02_dirac_and_twistor_spinors/references/README.md)
 link these canonical records. No duplicate bibliography, reading-copy
 collection, or new primary-source inspection claim is created by setup.
+
+The active DIR investigation rechecked the [shared conventions](../notes/SH_E00_20261124.md) and [recognition hypotheses](../notes/SH_E01_20261124.md). The [additional spinorial and scalar sources](../../../../references/SOURCE_NOTES_DIRAC_20261124.md) are cataloged at root.

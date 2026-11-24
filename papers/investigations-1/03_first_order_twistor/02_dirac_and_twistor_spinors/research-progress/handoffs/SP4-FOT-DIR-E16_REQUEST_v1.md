@@ -1,0 +1,15 @@
+# SP4-FOT-DIR-E16 · Unconditional balanced degree-one initialization · request v1
+24 November 2026, America/New_York. For Edward B. Baker III. Lead selected in session, actual lead identifier/effort unavailable. Fixed E packet configured for gpt-6.2-sol / ultra. Report exposed metadata separately from routing. [Owning register](../REGISTER.md).
+ 
+On any closed connected oriented smooth four-manifold with supplied smooth positive unit-volume density, construct at least one smooth degree +1 map to unit S4 with ∫f=0. Start with the smooth ball collapse and perturb in its homotopy class to ensure no target atoms (e.g. jet transversality to the rank-zero stratum of codimension 16, df nonzero as a linear map everywhere implies each level locally contained in a hypersurface; prove scope or a different elementary explicit smooth perturbation). Show a conformal automorphism of S4 centers this nonatomic pushforward by a degree/retraction argument using explicit sphere automorphisms or inspect a primary n-dimensional Hersch centering lemma. Keep homotopy degree; distinguish target balance from invariance of Y_f. For the finished map give smooth finite absolute-Jacobian density, but no sequence bound. Two tests only: its initialization and impossibility to center a pushforward with atom >1/2. Record actual primary citations if used; no global optimization, numerics or assumption of positive scalar curvature. Escalate failed atom or smoothness premise to B11.
+
+## Frozen repository inputs
+HEAD f178fbb604f7f972b639fa8c1fc05f649c9bc8fc, working-tree bytes. The setup crosswalk also specifies the CME manuscript and additional texts by full digest. External originals are identified by title/version/locator in the task or the linked primary-source records. Record exactly which passages you see; retain unmet premises.
+- papers/investigations-1/03_first_order_twistor/brainstorm/notes/SETUP_AND_TASK_CROSSWALK_20261124.md  `0445e1698fe6f12fed177f1d1124294c2f1405b3cb4ebeb4f7498165b3bbd322`
+- papers/investigations-1/03_first_order_twistor/manuscript/first_order_twistor_and_smooth_poincare.tex  `2e11413d0e3a25a059ae6e8375c0bdd361fb25fcb8dfad6c5c7e4d34d7f6bfa0`
+- papers/investigations-1/03_first_order_twistor/brainstorm/notes/DIRAC_AND_PROOF_ARCHITECTURE_20261124.md  `40d24b0267b753c18b4d1d27afaa139783d62ebbbe43e1d286dd45c851f252c2`
+- papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/brainstorm/notes/DIR_B11_BALANCED_CONVERSE_20261124.md  `af0cad9d274e69f062853be84649812c94f14ee52fac20d36912e94f88073b64`
+- papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/notes/DIR_E05_20261124.md  `00a0cc529ef6e7bd02c80fd042ad4e7316289e5e997cee4137eedecb9a6da739`
+
+## Ownership and return
+Write only `notes/DIR_E16_20261124.md` and `research-progress/handoffs/SP4-FOT-DIR-E16_RETURN_v1.md` in this owning investigation. Use links, date, author/assistance, actual available configuration, inputs and scope. No shared register, plan, bibliography or source-record edits, no manuscripts, numerics or additional helpers. Send the result to the lead at the finite boundary.

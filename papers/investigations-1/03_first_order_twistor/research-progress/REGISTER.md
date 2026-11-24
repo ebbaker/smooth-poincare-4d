@@ -23,10 +23,9 @@ shared work; the lead preserves task ownership, packet bounds and scientific
 hypotheses. Preparing the grants has not activated any research task.
 
 The two-branch setup was authorized and completed on 24 November.
-Scientific research remains **unactivated**. Ready means executable
+At setup scientific research was unactivated. On 24 November the author activated DIR and the necessary shared prerequisites. Ready means executable
 after activation; dependent means named inputs must be assessed first.
-Reserved E work also needs a fixed issued request. No helpers, numerics,
-new manuscripts, scheduling or external messages were activated.
+Reserved E work also needs a fixed issued request. The earlier setup activated no helpers. The DIR invocation subsequently authorized the shared and branch packets recorded in their owning registers.
 
 ## Earlier bounded preparation
 
@@ -54,12 +53,13 @@ completion tests and escalation rules are in the [shared plan](../research-plan/
 
 | ID | Type / recommendation | Dependencies | Live status |
 | --- | --- | --- | --- |
-| SP4-FOT-SH-B01 | B / Astra/ultra; common import choices | Setup inputs and named source reading | Ready; unactivated |
-| SP4-FOT-SH-E01 | E / gpt-6.2-sol/ultra; fixed endpoint audit | Assessed SH-B01 | Dependent; unactivated |
+| SP4-FOT-SH-E00 | E / gpt-6.2-sol/ultra; bounded primary passage inventory | Setup pins; supports SH-B01 | Assessed; [primary inspection and scope](../research-progress/handoffs/SP4-FOT-SH-E00_RETURN_v1.md) |
+| SP4-FOT-SH-B01 | B / Astra/ultra; common import choices | Setup inputs and named source reading | Assessed; [common convention and import decision](../brainstorm/notes/SH_B01_CONVENTIONS_20261124.md) |
+| SP4-FOT-SH-E01 | E / gpt-6.2-sol/ultra; fixed endpoint audit | Assessed SH-B01 | Assessed both conditional endpoints; [audit](../notes/SH_E01_20261124.md) |
 | SP4-FOT-SH-B02 | B / Astra/ultra; operator comparison | SH-B01, assessed SEC-E02 and DIR-E01 | Dependent; unactivated |
 | SP4-FOT-SH-E02 | E / gpt-6.2-sol/ultra; one frozen bridge | SH-B02 and issued request | Reserved; unactivated |
-| SP4-FOT-SH-B03 | B / Astra/ultra; global premise audit | SH-E01 and assessed SEC-B05 or DIR-B05 | Dependent; unactivated |
+| SP4-FOT-SH-B03 | B / Astra/ultra; global premise audit | SH-E01 and assessed SEC-B05 or DIR-B05 | DIR-B05 chain assessed; [global existence gap](../reviews/SH_B03_SPINORIAL_GLOBAL_PREMISE_20261124.md). Future constructions separate |
 
-No research request has been issued under these new IDs. Re-read before
+Initial setup issued no requests. The activated DIR session issues versioned shared requests below the handoffs directory. Re-read before
 integration; preserve completed identities and use the [handoffs](handoffs/README.md)
 for frozen requests and returns.

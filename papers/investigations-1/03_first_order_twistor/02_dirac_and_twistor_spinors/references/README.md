@@ -27,3 +27,11 @@ Retain version and actual inspection date; link existing records rather
 than duplicate annotations or PDFs. Manuscript reuse supplies no new
 verification. Future child-specific records may be canonical here only
 when the root catalog links them with the required metadata.
+
+## Activated research
+
+[Canonical R54–R59 records](../../../../../references/SOURCE_NOTES_DIRAC_20261124.md) give the source versions for twisted sphere rigidity, spinor metric identification, and the modified Yamabe functional. The [literature comparison](../notes/DIR_E13_20261124.md) distinguishes the known fixed-potential results from the optimizations checked in this branch.
+
+The [canonical continuation records R60–R79](../../../../../references/SOURCE_NOTES_DIRAC_CONTINUATION_20261124.md) give the inspected passages behind the Hopf obstructions, degree concentration and flat-ended Dirac problem, together with their geometric hypotheses.
+
+The same record includes the comparison with cubic Yamabe degeneracy and Obata rigidity, Moser normalization, and Aubry’s Ricci-pinched smooth sphere theorem. [R73–R79](../../../../../references/SOURCE_NOTES_DIRAC_CONTINUATION_20261124.md)

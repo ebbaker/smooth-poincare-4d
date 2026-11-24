@@ -1,5 +1,7 @@
 # Shared first-order twistor continuation
 
+**Current spinorial handoff.** [Continue from five-eigenfunction rigidity](../02_dirac_and_twistor_spinors/continuation-notes/02_AFTER_FIVE_EIGENFUNCTION_RIGIDITY_20261124.md). The material below preserves the original grant and setup routing.
+
 24 November 2026 (America/New_York). Prepared for Edward B. Baker III with
 OpenAI Codex assistance; actual selected model/effort unavailable. This
 is a dated handoff, not a live register. Setup is complete; research is

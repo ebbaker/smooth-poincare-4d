@@ -1,5 +1,9 @@
 # Research overview — Dirac operators and twistor spinors
 
+**Current result, 24 November.** A [five-eigenfunction rigidity theorem](../reviews/DIR_B22_FIVE_EIGENFUNCTIONS_20261124.md) identifies equality on a supplied minimizing metric and the round joint distribution under relative near equality. Actual metric production and smooth recognition in a degenerating sequence remain open. The [Dirac boundary problem](../reviews/DIR_B19_GREEN_BOUNDARY_ASSESSMENT_20261124.md) can be initialized on every input.
+
+**Earlier research update, 24 November.** [The construction assessment](../reviews/DIR_B05_CONSTRUCTION_ASSESSMENT_20261124.md) supersedes the open questions below about the spectral infimum and the degree-one comparison. The remaining problem is production of a nonconcentrating recognizing family on every smooth homotopy sphere.
+
 24 November 2026 (America/New_York). Prepared for Edward B. Baker III with
 OpenAI Codex assistance. Actual selected model identifier and reasoning
 effort are unavailable. Inputs: the [shared setup baseline](../../brainstorm/notes/SETUP_AND_TASK_CROSSWALK_20261124.md)

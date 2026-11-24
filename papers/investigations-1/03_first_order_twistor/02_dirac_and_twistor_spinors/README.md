@@ -2,7 +2,7 @@
 
 24 November 2026 (America/New_York). Prepared for Edward B. Baker III with
 OpenAI Codex assistance; actual selected model/effort unavailable.
-Author-approved setup is complete; research is unactivated.
+The author activated broad research on 24 November. The [five-eigenfunction theorem](reviews/DIR_B22_FIVE_EIGENFUNCTIONS_20261124.md) and [punctured Dirac assessment](reviews/DIR_B19_GREEN_BOUNDARY_ASSESSMENT_20261124.md) give the current results. The [next decision](continuation-notes/02_AFTER_FIVE_EIGENFUNCTION_RIGIDITY_20261124.md) concerns constructing the required Yamabe metrics.
 
 Can a variable Riemannian metric and a twistor-spinor or precisely coupled Dirac equation produce nontrivial recognizing data on every smooth homotopy four-sphere?
 

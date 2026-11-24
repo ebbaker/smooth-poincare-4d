@@ -2,8 +2,7 @@
 
 Prepared for Edward B. Baker III with OpenAI Codex assistance; updated
 24 November 2026 (America/New_York). Actual selected model identifier and
-reasoning effort are unavailable. The author-approved setup is complete;
-scientific research is unactivated.
+reasoning effort are unavailable. The DIR session completed the shared import and recognition audits on 24 November. Its first [assessment](02_dirac_and_twistor_spinors/reviews/DIR_B05_CONSTRUCTION_ASSESSMENT_20261124.md) distinguishes attained geometry, concentration, and the open global construction. The [continued DIR assessment](02_dirac_and_twistor_spinors/reviews/DIR_B22_FIVE_EIGENFUNCTIONS_20261124.md) gives five-eigenfunction round rigidity and the near-equality joint law.
 
 This parent investigation asks whether first-order geometric or spinorial
 equations can construct a smooth Riemannian conformal class with W⁺ = 0

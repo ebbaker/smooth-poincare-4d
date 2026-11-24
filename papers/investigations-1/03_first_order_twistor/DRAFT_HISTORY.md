@@ -116,3 +116,11 @@ issued packet boundaries. Authority pointers were synchronized across
 child and shared planning documents. The selected lead was the sole writer;
 actual selected model and effort were unavailable. No scientific task or
 helper was activated, and no research statuses or manuscript bytes changed.
+
+## 24 November 2026 — Shared prerequisites for activated DIR research
+
+The selected lead integrated SH-B01 under the author's DIR invocation. SH-E00 verified the named sources and SH-E01 checked exact ASD recognition and the strict Yamabe/Weyl endpoint. The [common conventions](brainstorm/notes/SH_B01_CONVENTIONS_20261124.md) and [recognition proof](notes/SH_E01_20261124.md) identify the genuine inputs for both branches. The [spinorial assessment](02_dirac_and_twistor_spinors/reviews/DIR_B05_CONSTRUCTION_ASSESSMENT_20261124.md) gives the resulting constructions and global dependency. No separate CME research was resumed.
+
+SH-B03 [assessed the global quantifier](reviews/SH_B03_SPINORIAL_GLOBAL_PREMISE_20261124.md) after DIR-B05. The two recognizing criteria have explicit additional premises for which arbitrary-sphere existence is open.
+
+The DIR continuation established [five-eigenfunction round rigidity and its weak near-equality law](02_dirac_and_twistor_spinors/reviews/DIR_B22_FIVE_EIGENFUNCTIONS_20261124.md) and [an unconditional punctured Dirac boundary construction with scoped obstructions](02_dirac_and_twistor_spinors/reviews/DIR_B19_GREEN_BOUNDARY_ASSESSMENT_20261124.md). The [next metric-construction question](02_dirac_and_twistor_spinors/continuation-notes/02_AFTER_FIVE_EIGENFUNCTION_RIGIDITY_20261124.md) is owned by DIR.

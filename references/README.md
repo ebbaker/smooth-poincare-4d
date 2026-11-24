@@ -140,3 +140,9 @@ owns the inspected versions, passages, and limitations for this comparison.
 | --- | --- | --- |
 | R52 | Christian Bär, *The Dirac operator on space forms of positive curvature* (1996), author-hosted text | Round Killing spinors, §2 Lemma 1; sphere spectrum, Theorem 1. |
 | R53 | Thomas Friedrich and Eui Chul Kim, *Some Remarks on the Hijazi Inequality and Generalizations of the Killing Equation for Spinors*, arXiv:math/9906168v1 (1999) | Selected Dirac/curvature and equality statements; no variable-metric existence theorem imported. |
+
+## Activated spinorial research, 24 November 2026
+
+[R54–R59 and rechecked earlier passages](SOURCE_NOTES_DIRAC_20261124.md) cover Listing’s twisted comparison, the fixed-spin-bundle metric identification, and the ordinary and modified Yamabe functionals. The individual derivations distinguish sphere rigidity from production of the required geometry.
+
+The [continued spinorial source checks, R60–R79](SOURCE_NOTES_DIRAC_CONTINUATION_20261124.md) cover Hopf bundles, eigenmap examples, signed degree concentration, compact Dirac invertibility, the Green pole and the boundary integral.

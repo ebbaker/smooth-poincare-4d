@@ -1,5 +1,7 @@
 # Research overview — First-order twistor constructions
 
+**Research update, 24 November.** [The spinorial assessment](../02_dirac_and_twistor_spinors/reviews/DIR_B05_CONSTRUCTION_ASSESSMENT_20261124.md) applies the common conventions and recognition audit to the activated DIR construction program. The setup account below describes its original starting point.
+
 24 November 2026 (America/New_York). Prepared for Edward B. Baker III with
 OpenAI Codex assistance. Actual selected model identifier and reasoning
 effort are unavailable. This is authorized research setup, not research

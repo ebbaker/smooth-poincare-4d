@@ -1,5 +1,7 @@
 # Shared research plan — First-order twistor constructions
 
+The initial task specifications below are preserved with their setup dates. The [activated assessment](../02_dirac_and_twistor_spinors/reviews/DIR_B05_CONSTRUCTION_ASSESSMENT_20261124.md) and the owning register describe the subsequent research.
+
 24 November 2026 (America/New_York). Prepared for Edward B. Baker III with
 OpenAI Codex assistance; actual selected model/effort unavailable. Inputs:
 the [dated baseline](../brainstorm/notes/SETUP_AND_TASK_CROSSWALK_20261124.md)
@@ -111,3 +113,5 @@ failed evidence, identify the new information motivating a revision, and
 freeze a new request. A local failure or stronger spinor condition does
 not exclude an entire proposal. The [continuation note](../continuation-notes/CONTINUATION.md)
 supplies routing and activation instructions; saving it starts no work.
+
+**SH-E00 (24 November).** Before closing SH-B01, check the actual named AHS, GHN, Fine and companion conventions and versions. Return passage-specific evidence or mark a source unavailable. The [request](../research-progress/handoffs/SP4-FOT-SH-E00_REQUEST_v1.md) fixes the six checks. The result limits shared imports.

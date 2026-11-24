@@ -1,5 +1,7 @@
 # Broad research continuation — Dirac operators and twistor spinors
 
+**Current spinorial handoff.** [Continue after the five-eigenfunction rigidity theorem](02_AFTER_FIVE_EIGENFUNCTION_RIGIDITY_20261124.md). The material below preserves the original grant and setup routing.
+
 24 November 2026 (America/New_York), broad-authority revision. Prepared
 for Edward B. Baker III with OpenAI Codex assistance. Actual selected model
 identifier and reasoning effort are unavailable. The selected lead is the

@@ -13,3 +13,5 @@ Follow [tools/CHAT_HISTORY.md](../../../../../tools/CHAT_HISTORY.md) for
 refresh, locks, supported content and bounded after-turn capture. Existing
 registrations are refreshed in place. Include completed public text only;
 never fabricate records or save an unsent final answer as authentic history.
+
+24 November DIR activation: the [unregistered partial public text](PARTIAL_UNREGISTERED_DIR_20261124.md) records the source limitation and the public research invocation and updates. If an authentic export later becomes available, verify its native identity, title and original timestamps before the canonical registration.

@@ -1,0 +1,15 @@
+# SP4-FOT-DIR-E02 · Ball concentration in any fixed conformal class · request v1
+24 November 2026, America/New_York. For Edward B. Baker III. Lead selected in session, actual lead identifier/effort unavailable. Fixed E packet configured for gpt-6.2-sol / ultra. Report exposed metadata separately from routing. [Owning register](../REGISTER.md).
+ 
+Fix any smooth closed oriented spin Riemannian 4-manifold (in particular any smooth homotopy sphere), p and a fixed normal ball. For r→0 take a smooth scalar f_r between 1 and r^−1, equal r^−1 on B_r and 1 off B_2r; put h_r=a_r² f_r²g with a_r making vol one. Choose a radial-parallel positive half-spinor cutoff equal to the uncut field through B_2r, supported in B_4r with |dχ|≤C/r outside B_2r. Estimate its residual after multiplying by (a_r f_r)^(1/2), normalizing L²; derive numerator/denominator orders and μ(h_r)→0, or locate failure. Bound a_r, show trial mass location in reference coordinates and track metric-dependent bundles. Give the distinction between a trial field and an actual first eigenvector, and what conformal covariance says about exact attainment in this class. No moving maps, Yamabe premise, numerics or compactness conclusion. One family; conclude for arbitrary base if justified. B escalation to B02 on failed normalization or boundary estimate.
+
+## Frozen repository inputs
+HEAD f178fbb604f7f972b639fa8c1fc05f649c9bc8fc, working-tree bytes. The setup crosswalk also specifies the CME manuscript and additional texts by full digest. External originals are identified by title/version/locator in the task or the linked primary-source records. Record exactly which passages you see; retain unmet premises.
+- papers/investigations-1/03_first_order_twistor/brainstorm/notes/SETUP_AND_TASK_CROSSWALK_20261124.md  `0445e1698fe6f12fed177f1d1124294c2f1405b3cb4ebeb4f7498165b3bbd322`
+- papers/investigations-1/03_first_order_twistor/manuscript/first_order_twistor_and_smooth_poincare.tex  `2e11413d0e3a25a059ae6e8375c0bdd361fb25fcb8dfad6c5c7e4d34d7f6bfa0`
+- papers/investigations-1/03_first_order_twistor/brainstorm/notes/DIRAC_AND_PROOF_ARCHITECTURE_20261124.md  `40d24b0267b753c18b4d1d27afaa139783d62ebbbe43e1d286dd45c851f252c2`
+- papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/brainstorm/notes/DIR_B01_TARGETS_20261124.md  `d6774c827da75cbe0a165170a04f26f72b23b910ad8d0af8e8d5045b0c0a5f7f`
+- papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/brainstorm/notes/DIR_B02_SPECTRAL_CONCENTRATION_20261124.md  `0b20267f005c71399d9e6a9b2e13f910e55f9b6f8f9f65b85db9cb4da3d012b5`
+
+## Ownership and return
+Write only `notes/DIR_E02_20261124.md` and `research-progress/handoffs/SP4-FOT-DIR-E02_RETURN_v1.md` in this owning investigation. Use links, date, author/assistance, actual available configuration, inputs and scope. No shared register, plan, bibliography or source-record edits, no manuscripts, numerics or additional helpers. Send the result to the lead at the finite boundary.

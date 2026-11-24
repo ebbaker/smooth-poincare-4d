@@ -1,0 +1,13 @@
+# SP4-FOT-SH-E00 · Named primary passages and comparison scope · request v1
+24 November 2026, America/New_York. For Edward B. Baker III. Lead selected in session, actual lead identifier/effort unavailable. Fixed E packet configured for gpt-6.2-sol / ultra. Report exposed metadata separately from routing. [Owning register](../REGISTER.md).
+ 
+Verify only six groups: AHS Thm 4.1 pp.435–436 and p.460 using local references/Atiyah.pdf; GHN arXiv:0911.3364v3 Remark 5.2, Prop 5.3, (14)–(20) for the root count; Fine arXiv:1111.5005v2 §2 on the definite connection and inner product (local references/1111.5005v2.pdf); Gover–Gursky arXiv:2307.12432v1 §1.1 and Prop 1.2 for round deformation benchmark; Friedrich 1990 eq (1.1), pp.61–62, Prop 6 pp.66–67; check the CME labels from the crosswalk and SHA of both local PDFs. Starting records in parent references/README and PRELIMINARY_ASSESSMENT §7. Existing temp reading copies in /private/tmp/sp4-background-readings and /private/tmp/sp4-twistor-20261123. Use primary text, distinguish exact version from other versions. Compare only scope/sign/gauge, no new theorem. Complete by explicit passage and what may be imported, or reported access limit for each. Escalate inconsistent chirality or unverified loaded premise to SH-B01. The endpoint and Bär spectral proof have separate audits.
+
+## Frozen repository inputs
+HEAD dbf88c6f128dbc055cbb6570921bd936f377427c, working-tree bytes. The setup crosswalk also specifies the CME manuscript and additional texts by full digest. External originals are identified by title/version/locator in the task or the linked primary-source records. Record exactly which passages you see; retain unmet premises.
+- papers/investigations-1/03_first_order_twistor/brainstorm/notes/SETUP_AND_TASK_CROSSWALK_20261124.md  `0445e1698fe6f12fed177f1d1124294c2f1405b3cb4ebeb4f7498165b3bbd322`
+- papers/investigations-1/03_first_order_twistor/manuscript/first_order_twistor_and_smooth_poincare.tex  `2e11413d0e3a25a059ae6e8375c0bdd361fb25fcb8dfad6c5c7e4d34d7f6bfa0`
+- papers/investigations-1/03_first_order_twistor/brainstorm/notes/DIRAC_AND_PROOF_ARCHITECTURE_20261124.md  `40d24b0267b753c18b4d1d27afaa139783d62ebbbe43e1d286dd45c851f252c2`
+
+## Ownership and return
+Write only `notes/SH_E00_20261124.md` and `research-progress/handoffs/SP4-FOT-SH-E00_RETURN_v1.md` in this owning investigation. Use links, date, author/assistance, actual available configuration, inputs and scope. No shared register, plan, bibliography or source-record edits, no manuscripts, numerics or additional helpers. Send the result to the lead at the finite boundary.

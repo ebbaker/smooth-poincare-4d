@@ -1,0 +1,15 @@
+# SP4-FOT-DIR-E03 · Actual mass leakage and geometric noncompactness · request v1
+24 November 2026, America/New_York. For Edward B. Baker III. Lead selected in session, actual lead identifier/effort unavailable. Fixed E packet configured for gpt-6.2-sol / ultra. Report exposed metadata separately from routing. [Owning register](../REGISTER.md).
+ 
+For the exact conformal family from DIR-E02 with multiplier a_r f_r, vol=1 and base g kernel-free, take any smooth spinors of h_r-L² norm 1, ||P_h ψ_r||₂→0 (in particular actual lowest eigensections). Undo the half-weight and pointwise bundle identification. Prove/refute mass on M\B_2r tends to zero, using the uniform multiplier lower bound, fixed-g elliptic gap and f_r=1 off B_2r. Distinguish unweighted core without lower bound at B_r. Separately prove/refute absence of a C² positive metric subsequential limit modulo oriented spin diffeomorphisms if E+(g)>0: use E+ invariance/continuity and show a hypothetical C² limit with a weak twistor spinor yields contradiction (justify Weyl compatibility at C² or restrict explicitly to smooth limit if unaudited; a smooth limit with C² convergence suffices). Avoid assuming compactness to infer mass. Finite scope this family and these two conclusions; for an example describe a non-Weyl-flat compactly supported metric perturbation of S4 if needed. No global no-compactness for all sequences. Escalate lower regularity, conformal gauge or kernel issues to B03.
+
+## Frozen repository inputs
+HEAD f178fbb604f7f972b639fa8c1fc05f649c9bc8fc, working-tree bytes. The setup crosswalk also specifies the CME manuscript and additional texts by full digest. External originals are identified by title/version/locator in the task or the linked primary-source records. Record exactly which passages you see; retain unmet premises.
+- papers/investigations-1/03_first_order_twistor/brainstorm/notes/SETUP_AND_TASK_CROSSWALK_20261124.md  `0445e1698fe6f12fed177f1d1124294c2f1405b3cb4ebeb4f7498165b3bbd322`
+- papers/investigations-1/03_first_order_twistor/manuscript/first_order_twistor_and_smooth_poincare.tex  `2e11413d0e3a25a059ae6e8375c0bdd361fb25fcb8dfad6c5c7e4d34d7f6bfa0`
+- papers/investigations-1/03_first_order_twistor/brainstorm/notes/DIRAC_AND_PROOF_ARCHITECTURE_20261124.md  `40d24b0267b753c18b4d1d27afaa139783d62ebbbe43e1d286dd45c851f252c2`
+- papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/brainstorm/notes/DIR_B03_MASS_AND_WEYL_20261124.md  `6d8a8f4155286c3390e22691a48617b775b9ee34c9362cf3f195f5b5b8d8ae2e`
+- papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/brainstorm/notes/DIR_B02_SPECTRAL_CONCENTRATION_20261124.md  `0b20267f005c71399d9e6a9b2e13f910e55f9b6f8f9f65b85db9cb4da3d012b5`
+
+## Ownership and return
+Write only `notes/DIR_E03_20261124.md` and `research-progress/handoffs/SP4-FOT-DIR-E03_RETURN_v1.md` in this owning investigation. Use links, date, author/assistance, actual available configuration, inputs and scope. No shared register, plan, bibliography or source-record edits, no manuscripts, numerics or additional helpers. Send the result to the lead at the finite boundary.

@@ -1,0 +1,7 @@
+# B14 · Measure the cost of loss of degree
+
+24 November 2026, America/New_York. For Edward B. Baker III by the selected OpenAI lead. Actual identifier and effort unavailable. Inputs: [E14](../../notes/DIR_E14_20261124.md), [E15](../../notes/DIR_E15_20261124.md) and [E17](../../notes/DIR_E17_20261124.md). The exact balanced construction supplies one concentrated sphere per unit of lost degree. This motivates an energy test independent of target span.
+
+Use the Hilbert–Schmidt critical energy ∫|df|⁴ without a prefactor. Compare a balanced, nearly optimal degree-one sequence to its smooth first-eigenmap limit. Strong convergence of first derivatives in L² and bounded fourth energy suppress all mixed terms of order strictly below four. The signed Jacobian and the fourth energy should therefore detect a quantized *lower cost* per unit of degree lost. Distinguish that lower bound from an assertion that every defect measure has quantized energy. Test sharpness against the two v1 insertion models. Independently, look for the local version through gluing on good three-sphere slices and identifying their integer relative degrees. The global comparison does not require the local conclusion.
+
+If these estimates hold, the coupled convergence requirement can be expressed by a strict energy budget or local concentration cap. The metric and an actual nearly optimal family satisfying such a bound still have to be constructed.
