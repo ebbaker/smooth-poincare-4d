@@ -130,3 +130,13 @@ The [Bach-flow source notes](SOURCE_NOTES_BACH_FLOW_20261123.md) record the insp
 | R46 | Eric Bahuaud and Dylan Helliwell, *Short-Time Existence for Some Higher-Order Geometric Flows* (2011) | [Theorem C and the modified equation](SOURCE_NOTES_BACH_FLOW_20261123.md#r46--short-time-existence). |
 | R47 | Eric Bahuaud, Christine Guenther, James Isenberg, and Rafe Mazzeo, *Linear and nonlinear stability for the Bach flow, I*, arXiv:2508.06633v1 (2025) | [Bach convention, dissipation, and linear stability scope](SOURCE_NOTES_BACH_FLOW_20261123.md#r47--energy-dissipation-and-stability-scope). |
 | R48 | Christopher Lopez, *Ambient obstruction flow* (2018) | [Full-curvature continuation criterion and conditional compactness](SOURCE_NOTES_BACH_FLOW_20261123.md#r48--continuation-and-compactness). |
+
+## First-order spinorial comparison, 24 November 2026
+
+The [branch brainstorm source record](../papers/investigations-1/03_first_order_twistor/brainstorm/notes/DIRAC_AND_PROOF_ARCHITECTURE_20261124.md#5-source-inspection-24-november-2026)
+owns the inspected versions, passages, and limitations for this comparison.
+
+| ID | Source | Use |
+| --- | --- | --- |
+| R52 | Christian Bär, *The Dirac operator on space forms of positive curvature* (1996), author-hosted text | Round Killing spinors, §2 Lemma 1; sphere spectrum, Theorem 1. |
+| R53 | Thomas Friedrich and Eui Chul Kim, *Some Remarks on the Hijazi Inequality and Generalizations of the Killing Equation for Spinors*, arXiv:math/9906168v1 (1999) | Selected Dirac/curvature and equality statements; no variable-metric existence theorem imported. |

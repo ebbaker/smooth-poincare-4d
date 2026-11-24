@@ -1,0 +1,674 @@
+[
+  {
+    "title": "Outline Bach flow research overview",
+    "create_time": 1795467536.774,
+    "update_time": 1795476702.851,
+    "mapping": {
+      "root": {
+        "id": "root",
+        "message": null,
+        "parent": null,
+        "children": [
+          "01a20a34-7032-78c2-be0f-9e63f58c7c02"
+        ]
+      },
+      "01a20a34-7032-78c2-be0f-9e63f58c7c02": {
+        "id": "01a20a34-7032-78c2-be0f-9e63f58c7c02",
+        "message": {
+          "id": "01a20a34-7032-78c2-be0f-9e63f58c7c02",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795467538.482,
+          "update_time": 1795467538.482,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Please read /smooth-poincare-4d/papers/investigations-1/02_bach_flow/continuation-notes/CONTINUATION.md. I'd like to discuss the research overview, plan and progress file for the new investigation. Can you propose an outline for the research overview. Make sure to reference the previous investigation (01_chiral_metric_evolution) extensively in the review. This will help with grounding the discussion in previously studied methods, obstacles to overcome, and research strategies to carry forward into the new discussion. Do not write the overview yet, I want to read the outline first to make sure it is aligned with my thinking.\n"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a20a34-6a84-70d1-b097-ce1eacf8d32a",
+            "phase": null,
+            "created_at_utc": "2026-11-23T20:58:58.482Z",
+            "completed_at_utc": "2026-11-23T20:58:58.482Z",
+            "created_at_local": "2026-11-23T15:58:58.482-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "root",
+        "children": [
+          "msg_0fcb3ba04d11abd7016b04a914440887d1bce715b5f9e694bf"
+        ]
+      },
+      "msg_0fcb3ba04d11abd7016b04a914440887d1bce715b5f9e694bf": {
+        "id": "msg_0fcb3ba04d11abd7016b04a914440887d1bce715b5f9e694bf",
+        "message": {
+          "id": "msg_0fcb3ba04d11abd7016b04a914440887d1bce715b5f9e694bf",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795467540.355,
+          "update_time": 1795467541.188,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "I’ll read the Bach-flow handoff and trace its proposed directions back to the chiral metric evolution work. I’ll bring that comparison into an outline here for your review."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a20a34-6a84-70d1-b097-ce1eacf8d32a",
+            "phase": "commentary",
+            "created_at_utc": "2026-11-23T20:59:00.355Z",
+            "completed_at_utc": "2026-11-23T20:59:01.188Z",
+            "created_at_local": "2026-11-23T15:59:00.355-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "01a20a34-7032-78c2-be0f-9e63f58c7c02",
+        "children": [
+          "msg_0fcb3ba04d11abd7016b04a962c52487d1ae4ad25701e9065b"
+        ]
+      },
+      "msg_0fcb3ba04d11abd7016b04a962c52487d1ae4ad25701e9065b": {
+        "id": "msg_0fcb3ba04d11abd7016b04a962c52487d1ae4ad25701e9065b",
+        "message": {
+          "id": "msg_0fcb3ba04d11abd7016b04a962c52487d1ae4ad25701e9065b",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795467619.023,
+          "update_time": 1795467619.97,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The earlier investigation already used the same sphere theorem to recognize a single time slice. Its cap-crossing and concentration examples also show why the Bach outline should distinguish energy decay from the geometric control needed to reach that slice."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a20a34-6a84-70d1-b097-ce1eacf8d32a",
+            "phase": "commentary",
+            "created_at_utc": "2026-11-23T21:00:19.023Z",
+            "completed_at_utc": "2026-11-23T21:00:19.970Z",
+            "created_at_local": "2026-11-23T16:00:19.023-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "msg_0fcb3ba04d11abd7016b04a914440887d1bce715b5f9e694bf",
+        "children": [
+          "msg_0fcb3ba04d11abd7016b04aa2ae33087d18a6930afc7413d66"
+        ]
+      },
+      "msg_0fcb3ba04d11abd7016b04aa2ae33087d18a6930afc7413d66": {
+        "id": "msg_0fcb3ba04d11abd7016b04aa2ae33087d18a6930afc7413d66",
+        "message": {
+          "id": "msg_0fcb3ba04d11abd7016b04aa2ae33087d18a6930afc7413d66",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795467818.917,
+          "update_time": 1795467820.235,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Gauss–Bonnet gives a positive lower bound for the Yamabe constant in the proposed starting range. The outline will give that result its own place, with a separate question about whether it can help control the geometry of the evolving metrics."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a20a34-6a84-70d1-b097-ce1eacf8d32a",
+            "phase": "commentary",
+            "created_at_utc": "2026-11-23T21:03:38.917Z",
+            "completed_at_utc": "2026-11-23T21:03:40.235Z",
+            "created_at_local": "2026-11-23T16:03:38.917-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "msg_0fcb3ba04d11abd7016b04a962c52487d1ae4ad25701e9065b",
+        "children": [
+          "msg_0fcb3ba04d11abd7016b04aa9d05bc87d18abcce1e976ec78b"
+        ]
+      },
+      "msg_0fcb3ba04d11abd7016b04aa9d05bc87d18abcce1e976ec78b": {
+        "id": "msg_0fcb3ba04d11abd7016b04aa9d05bc87d18abcce1e976ec78b",
+        "message": {
+          "id": "msg_0fcb3ba04d11abd7016b04aa9d05bc87d18abcce1e976ec78b",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795467933.052,
+          "update_time": 1795467977.97,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "I’d open the overview with the question that motivated the Bach-flow branch: **can we start from an arbitrary smooth metric and use its chiral geometry to reach a metric that recognizes the smooth sphere?** I’d make finite-time recognition the first conditional objective. The chiral metric evolution investigation already showed how to select a single recognizing time slice, and its later results identify the geometric control that such an argument must supply. [Bach-flow handoff](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/02_bach_flow/continuation-notes/CONTINUATION.md) · [Chiral metric evolution checkpoint](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/01_chiral_metric_evolution/continuation-notes/CONTINUATION.md:11)\n\n## Proposed overview outline\n\n1. **Shared objective and starting data.** Fix a closed, smooth, oriented Riemannian homotopy four-sphere \\(M\\), with \\(\\chi(M)=2\\), \\(\\tau(M)=0\\), and positive chirality. Review how Fine’s connection flow starts from a supplied positive, round-compatible definite \\(SO(3)\\) connection, reconstructs a metric, and seeks perfection \\(Q=I\\). The Bach investigation can start from any smooth \\(g_0\\). The existence of a conformal class with the bounds needed for recognition remains a separate question. [Chiral metric evolution overview](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/01_chiral_metric_evolution/research-overview/OVERVIEW.md:13)\n\n2. **Generalized isothermal coordinates and the real twistor geometry.** Give this its own section. Review what the prior work implemented on the entire real direction sphere: the curvature-ray map \\(\\phi(u)=Q^{1/2}u/|Q^{1/2}u|\\), the horizontal comparison, and the strain \\(T\\). The comparison bounds the connection mismatch and, with one more derivative, the positive chiral curvature block. A finite temporal strain budget gives a conditional continuation criterion. On the metric side, \\(S(\\Lambda_g^+)\\) and its Levi–Civita horizontal distribution are available from the start, and \\(W^+=0\\) is the integrability condition in the chosen chirality. Ask whether a metric-side twistor quantity can play an analogous quantitative role. The earlier strain estimates depend on the definite connection and its reconstructed metric. [Real horizontal comparison](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/01_chiral_metric_evolution/research-overview/OVERVIEW.md:54) · [Strain continuation criterion](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/01_chiral_metric_evolution/reviews/E138_E143_GENERAL_CONTINUATION_ASSESSMENT_20261122.md:15) · [Atiyah–Hitchin–Singer, Theorem 4.1](/Users/ebbaker/Documents/smooth-poincare-4d/references/SOURCE_NOTES_CME_REAL_TWISTOR_20261122.md:19)\n\n3. **Modified Bach flow, dissipation, and the round benchmark.** Define \\(E_\\pm=\\int_M |W^\\pm|_{\\mathrm{op,HS}}^2\\,dV_g\\) using the Hilbert–Schmidt norm on the Weyl curvature operators. State the sourced short-time theorem and the identities for smooth solutions:\n   \\[\n   \\partial_tg=B_g+\\tfrac1{12}(\\Delta_gs_g)g,\n   \\qquad\n   \\frac{dE_+}{dt}=-c_B\\int_M|B_g|^2\\,dV_g,\\quad c_B>0.\n   \\]\n   Use the companion manuscript’s factorization of the round transverse-traceless Weyl Hessian as a local check on the metric equation. Fine’s second-order connection flow and its round stability result have their own configuration space and hypotheses. [Bahuaud–Helliwell, Theorem C](https://arxiv.org/html/1010.4287v1#S1) · [Bach normalization and dissipation, §2.3](https://arxiv.org/html/2508.06633v1#S2.SS3) · [Companion Hessian calculation](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/01_chiral_metric_evolution/manuscript/chiral_curvature_and_metric_evolution.tex:9833)\n\n4. **Two recognition targets.** The twistor target \\(W^+=0\\) gives \\(W^-=0\\) by the signature identity. The conformal developing map then identifies the compact simply connected manifold with \\(S^4\\). The finite-time target is a smooth slice with \\(Y(M,[g])>0\\) and \\(E_+<4\\pi^2\\). Here the full four-index Weyl energy is \\(8E_+\\), so Chang–Gursky–Yang’s Theorem A applies. Theorem B also gives an equality case whose other topological alternatives are excluded on a homotopy sphere. Connect this directly to the prior energy-selected time slice and the later explicit static criterion from supplied connection strain. [Bach recognition sources](/Users/ebbaker/Documents/smooth-poincare-4d/references/SOURCE_NOTES_BACH_FLOW_20261123.md:23) · [Chang–Gursky–Yang, Theorems A and B](https://www.numdam.org/item/10.1007/s10240-003-0017-z.pdf#page=3) · [Prior finite-time recognition](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/01_chiral_metric_evolution/reviews/E30_E32_RECOGNITION_ASSESSMENT_20261122.md:7) · [Prior static recognition](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/01_chiral_metric_evolution/reviews/E254_E255_EFFECTIVE_STATIC_ASSESSMENT_20261123.md:7)\n\n5. **What the conditional starting range gives.** For \\(Y(M,[g_0])>0\\) and \\(4\\pi^2<E_+(g_0)<8\\pi^2\\), present the Gauss–Bonnet argument that preserves the Yamabe sign while the solution is smooth. In a Yamabe representative, the same identity gives \\(Y(M,[g(t)])^2\\ge 48(8\\pi^2-E_+(g_0))\\). Ask what this buys for Sobolev control of the evolving metrics and what additional estimate would force sufficient Bach dissipation before a singular time. The prior connection flow’s strict spectral-margin estimates suggest looking at **accumulated dissipation during times with usable geometric control**, even when a pointwise bound cannot be maintained throughout the interval. [Bach brainstorm](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/02_bach_flow/brainstorm/notes/BACH_FLOW_IDEA_20261123.md) · [Prior accumulated-margin estimate](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/01_chiral_metric_evolution/reviews/E220_E222_SHARP_APPLICATIONS_ASSESSMENT_20261123.md:5)\n\n6. **Degeneration, compactness, and critical limits.** State López’s requirements where they matter. Finite-time continuation uses full curvature control, pointed compactness also uses injectivity-radius control, and the high-curvature rescaling theorem assumes a uniform Sobolev bound. Review which parts of the companion metric compactness result apply if Ricci, \\(W^+\\), volume, and diameter bounds can be supplied, and what extra regularity a Bach-flow limit would require. Carry forward two warnings from actual connection examples: small integral quantities can coexist with concentrated distortion, and every prescribed finite ratio cap can be crossed, including near-round examples that subsequently converge. The Bach-specific question is what excludes a positive-energy Bach-flat limit in the relevant class. Such a limit can still evolve by the conformal term. [López, Theorems 1.2–1.5](https://arxiv.org/html/1506.01979v1#S1) · [Companion metric compactness](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/01_chiral_metric_evolution/reviews/E168_E169_METRIC_COMPACTNESS_ASSESSMENT_20261122.md:16) · [Concentration tests](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/01_chiral_metric_evolution/reviews/E08_E13_CONTROL_ASSESSMENT_20261122.md:23) · [Cap-crossing checkpoint](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/01_chiral_metric_evolution/continuation-notes/CONTINUATION.md:13)\n\n7. **Initial data on an arbitrary homotopy sphere.** Give independent weight to finding a positive-Yamabe class and to finding one with \\(E_+<8\\pi^2\\). Both quantities are fixed within a conformal class, so choosing a different representative alone leaves those entrance conditions unchanged. This is where the new investigation can build on the prior initialization discussion: a readily available starting object matters, and a construction needs its own estimates to reach the class where the flow argument works. [Prior initialization discussion](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/01_chiral_metric_evolution/brainstorm/notes/PAUSE_AND_BRAINSTORM_AGENDA_20261123.md:9)\n\n## First question for the plan\n\nMy provisional choice is **finite-time recognition under stated geometric hypotheses**, with initialization kept visible as an independent research direction. The first conceptual task would be to specify a volume-normalized class of actual smooth Bach-flow segments and ask whether one can bound the accumulated Bach dissipation from below on a fixed time window while the energy stays in the proposed band. If that estimate fails, the first fallback would be to determine whether a sequence with vanishing dissipation approaches a smooth Bach-flat metric or loses geometric compactness. That gives the eventual plan a bounded first question and the progress register a concrete dependency to track.\n\nThe outline is here for discussion. The only repository writes were the public chat-history records, and the final-reply capture was queued."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a20a34-6a84-70d1-b097-ce1eacf8d32a",
+            "phase": "final_answer",
+            "created_at_utc": "2026-11-23T21:05:33.052Z",
+            "completed_at_utc": "2026-11-23T21:06:17.970Z",
+            "created_at_local": "2026-11-23T16:05:33.052-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "msg_0fcb3ba04d11abd7016b04aa2ae33087d18a6930afc7413d66",
+        "children": [
+          "01a20a7a-9f52-7162-adb1-055903f08efb"
+        ]
+      },
+      "01a20a7a-9f52-7162-adb1-055903f08efb": {
+        "id": "01a20a7a-9f52-7162-adb1-055903f08efb",
+        "message": {
+          "id": "01a20a7a-9f52-7162-adb1-055903f08efb",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795472138.067,
+          "update_time": 1795472138.067,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "This looks like a very good plan, please write this up. I also had another idea that I thought of reading your response, so I'll want to brainstorm that after the writeup.\n"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a20a7a-9f2f-7321-9caf-5de25cd92751",
+            "phase": null,
+            "created_at_utc": "2026-11-23T22:15:38.067Z",
+            "completed_at_utc": "2026-11-23T22:15:38.067Z",
+            "created_at_local": "2026-11-23T17:15:38.067-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "msg_0fcb3ba04d11abd7016b04aa9d05bc87d18abcce1e976ec78b",
+        "children": [
+          "msg_0fcb3ba04d11abd7016b04bb43d49487d186b7ef6a83182e8b"
+        ]
+      },
+      "msg_0fcb3ba04d11abd7016b04bb43d49487d186b7ef6a83182e8b": {
+        "id": "msg_0fcb3ba04d11abd7016b04bb43d49487d186b7ef6a83182e8b",
+        "message": {
+          "id": "msg_0fcb3ba04d11abd7016b04bb43d49487d186b7ef6a83182e8b",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795472195.866,
+          "update_time": 1795472197.025,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "I’ll write the Bach-flow overview from the approved outline, then align the plan and progress register around the finite-time recognition question. That will give us a concrete starting point for discussing your new idea."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a20a7a-9f2f-7321-9caf-5de25cd92751",
+            "phase": "commentary",
+            "created_at_utc": "2026-11-23T22:16:35.866Z",
+            "completed_at_utc": "2026-11-23T22:16:37.025Z",
+            "created_at_local": "2026-11-23T17:16:35.866-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "01a20a7a-9f52-7162-adb1-055903f08efb",
+        "children": [
+          "msg_0fcb3ba04d11abd7016b04bc344bf087d1b9a45f39894c90de"
+        ]
+      },
+      "msg_0fcb3ba04d11abd7016b04bc344bf087d1b9a45f39894c90de": {
+        "id": "msg_0fcb3ba04d11abd7016b04bc344bf087d1b9a45f39894c90de",
+        "message": {
+          "id": "msg_0fcb3ba04d11abd7016b04bc344bf087d1b9a45f39894c90de",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795472436.339,
+          "update_time": 1795472437.966,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The overview draft now connects the Bach question to the prior finite-time recognition, twistor comparison, and compactness results. I’m putting the dissipation question into the plan with an explicit choice of geometric hypotheses and a fallback if the estimate fails."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a20a7a-9f2f-7321-9caf-5de25cd92751",
+            "phase": "commentary",
+            "created_at_utc": "2026-11-23T22:20:36.339Z",
+            "completed_at_utc": "2026-11-23T22:20:37.966Z",
+            "created_at_local": "2026-11-23T17:20:36.339-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "msg_0fcb3ba04d11abd7016b04bb43d49487d186b7ef6a83182e8b",
+        "children": [
+          "msg_0fcb3ba04d11abd7016b04bd53dd7487d1a6697310b4d73e37"
+        ]
+      },
+      "msg_0fcb3ba04d11abd7016b04bd53dd7487d1a6697310b4d73e37": {
+        "id": "msg_0fcb3ba04d11abd7016b04bd53dd7487d1a6697310b4d73e37",
+        "message": {
+          "id": "msg_0fcb3ba04d11abd7016b04bd53dd7487d1a6697310b4d73e37",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795472723.896,
+          "update_time": 1795472728.882,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "I wrote the approved Bach-flow overview and aligned the plan and progress register with it.\n\n- The overview connects the Bach-flow proposal to the prior investigation’s real twistor methods, finite-time recognition, and concentration and compactness results. [Research overview](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/02_bach_flow/research-overview/OVERVIEW.md)\n- The plan starts by choosing geometric hypotheses for a uniform lower bound on Bach dissipation over a fixed time window. It includes a compactness or rigidity fallback and an independent initial-data question. [Research plan](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/02_bach_flow/research-plan/PLAN.md)\n- The register records all six proposed tasks as ready but unactivated or reserved, with their dependencies. [Progress register](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/02_bach_flow/research-progress/REGISTER.md)\n\nTask IDs, links, and repository hygiene checks passed. The writeup is ready for us to discuss your new idea."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a20a7a-9f2f-7321-9caf-5de25cd92751",
+            "phase": "final_answer",
+            "created_at_utc": "2026-11-23T22:25:23.896Z",
+            "completed_at_utc": "2026-11-23T22:25:28.882Z",
+            "created_at_local": "2026-11-23T17:25:23.896-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "msg_0fcb3ba04d11abd7016b04bc344bf087d1b9a45f39894c90de",
+        "children": [
+          "01a20a87-4fe7-70b2-8540-d30b4aa53902"
+        ]
+      },
+      "01a20a87-4fe7-70b2-8540-d30b4aa53902": {
+        "id": "01a20a87-4fe7-70b2-8540-d30b4aa53902",
+        "message": {
+          "id": "01a20a87-4fe7-70b2-8540-d30b4aa53902",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795472969.704,
+          "update_time": 1795472969.704,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Reading the research overview outlined, specifically bullet 2, I thought of a different possible approach to the problem, motivated from the two dimensional case. In the two dimensional case, the existence of isothermal coordinates is proved by choosing a complex coordinate, and then proving existence of a solution to the Beltrami equation, or alternatively by choosing a harmonic function u and defining v using the Poincare lemma and showing that those define a coordinate system. Given how our work generalizes isothermal coordinates, and the fact that W^+=0 is the integrability condition for S(\\Lambda_g^+) as described, perhaps there is a way of more directly showing that W^+ can be made to be zero by finding local integrable sections. This could be related to searching for a first order differential equation to solve instead of a second order equation like the Bach equation. Perhaps it could be related to a Dirac operator equation of some sort. \n"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a20a87-4fc7-7833-9ef4-e611d20c1ed5",
+            "phase": null,
+            "created_at_utc": "2026-11-23T22:29:29.704Z",
+            "completed_at_utc": "2026-11-23T22:29:29.704Z",
+            "created_at_local": "2026-11-23T17:29:29.704-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "msg_0fcb3ba04d11abd7016b04bd53dd7487d1a6697310b4d73e37",
+        "children": [
+          "msg_0fcb3ba04d11abd7016b04bedf980487d18c77121db7c7f56d"
+        ]
+      },
+      "msg_0fcb3ba04d11abd7016b04bedf980487d18c77121db7c7f56d": {
+        "id": "msg_0fcb3ba04d11abd7016b04bedf980487d18c77121db7c7f56d",
+        "message": {
+          "id": "msg_0fcb3ba04d11abd7016b04bedf980487d18c77121db7c7f56d",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795473119.624,
+          "update_time": 1795473120.858,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "I’ll check what one integrable twistor section gives for a fixed metric, and what a family of sections would give. Then I’ll compare the resulting first-order equations with the chiral connection and spinor equations already close to this work."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a20a87-4fc7-7833-9ef4-e611d20c1ed5",
+            "phase": "commentary",
+            "created_at_utc": "2026-11-23T22:31:59.624Z",
+            "completed_at_utc": "2026-11-23T22:32:00.858Z",
+            "created_at_local": "2026-11-23T17:31:59.624-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "01a20a87-4fe7-70b2-8540-d30b4aa53902",
+        "children": [
+          "msg_0fcb3ba04d11abd7016b04bf7c412887d1a4a25ddb6e1abb84"
+        ]
+      },
+      "msg_0fcb3ba04d11abd7016b04bf7c412887d1a4a25ddb6e1abb84": {
+        "id": "msg_0fcb3ba04d11abd7016b04bf7c412887d1a4a25ddb6e1abb84",
+        "message": {
+          "id": "msg_0fcb3ba04d11abd7016b04bf7c412887d1a4a25ddb6e1abb84",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795473276.293,
+          "update_time": 1795473277.657,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The local test is stronger than a single section. Three integrable directions, distinct even up to sign and compatible with the same metric, force \\(W^+\\) to vanish. I’m checking how that criterion relates to the first-order spinor equations and what it leaves to prove globally."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a20a87-4fc7-7833-9ef4-e611d20c1ed5",
+            "phase": "commentary",
+            "created_at_utc": "2026-11-23T22:34:36.293Z",
+            "completed_at_utc": "2026-11-23T22:34:37.657Z",
+            "created_at_local": "2026-11-23T17:34:36.293-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "msg_0fcb3ba04d11abd7016b04bedf980487d18c77121db7c7f56d",
+        "children": [
+          "msg_0fcb3ba04d11abd7016b04c0bcc8fc87d1a033f59397e81174"
+        ]
+      },
+      "msg_0fcb3ba04d11abd7016b04c0bcc8fc87d1a033f59397e81174": {
+        "id": "msg_0fcb3ba04d11abd7016b04c0bcc8fc87d1a033f59397e81174",
+        "message": {
+          "id": "msg_0fcb3ba04d11abd7016b04c0bcc8fc87d1a033f59397e81174",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795473596.813,
+          "update_time": 1795473639.995,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "There is a precise version of your idea. **Three local integrable sections of \\(S(\\Lambda_g^+)\\), distinct even up to sign and compatible with the same metric, force \\(W^+=0\\) on their common domain.** That gives us a first-order system to consider. The construction problem is to find a conformal metric that admits those sections locally across \\(M\\).\n\n## Where the surface analogy leads\n\nOn a surface, the harmonic-function proof makes \\(*du\\) a closed **one-form**, so locally \\(*du=dv\\). In four dimensions \\(*du\\) is a three-form. The closer analogue is the Beltrami argument. On the real twistor space \\(Z_g=S(\\Lambda_g^+)\\), choose a local frame \\(L_1,L_2,L_3\\) of its almost-complex \\((0,1)\\) distribution and seek three independent complex coordinates \\(f^a\\) satisfying \\(L_jf^a=0\\). The brackets \\([L_i,L_j]\\) must also annihilate the coordinates. In complex dimension one this compatibility is automatic. On \\(Z_g\\), Atiyah–Hitchin–Singer identify it with \\(W^+=0\\) in our chirality. [Atiyah–Hitchin–Singer, Theorem 4.1 and convention translation](/Users/ebbaker/Documents/smooth-poincare-4d/references/SOURCE_NOTES_CME_REAL_TWISTOR_20261122.md:19)\n\nThis puts the proposed construction one step upstream of our earlier \\(\\mathcal O(1)\\) first-jet charts. Those charts start with a holomorphic direction fibration and a family of curves with the specified normal bundle. The first-order question here is how to obtain the integrable real twistor geometry in which such a reconstruction could be attempted. [Earlier first-jet construction and its hypotheses](/Users/ebbaker/Documents/smooth-poincare-4d/references/SOURCE_NOTES_CME_REAL_TWISTOR_20261122.md:20)\n\n## Why three local directions suffice\n\nA section over \\(U\\subset M\\) assigns an orientation-compatible orthogonal almost complex structure \\(J\\). Integrability means its complex two-plane distribution \\(T^{0,1}_J\\) is closed under brackets. A single such section permits nonzero \\(W^+\\). For example, the Fubini–Study complex structure on complex-oriented \\(\\mathbb{CP}^2\\) is integrable, and the signature identity with \\(\\tau=1\\) gives nonzero positive Weyl energy. [Signature and norm conventions](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/02_bach_flow/research-overview/OVERVIEW.md:66)\n\nThe reason additional directions matter is that each integrable section gives a root of the **Weyl quartic**. If \\(X,Y\\) span \\(T^{0,1}_J\\), the plane is totally null for the complex-bilinear extension of \\(g\\). Involutivity and the Koszul formula imply that the Levi–Civita connection preserves the plane along itself. Thus \\(R(X,Y,X,Y)=0\\), and the Ricci and scalar terms vanish on these null arguments, giving \\(W(X,Y,X,Y)=0\\). As the direction varies over \\(\\mathbb{CP}^1\\), this component is a homogeneous quartic whose coefficients encode \\(W^+\\). Each integrable \\(J\\) also gives the antipodal integrable structure \\(-J\\). Three sections distinct up to sign therefore give six distinct roots, forcing the quartic to vanish identically. [Gover–Hill–Nurowski, Section 5, equations (14)–(20)](https://arxiv.org/html/0911.3364v3#S5)\n\nConversely, when \\(W^+=0\\), the twistor space is complex. Through any point of a twistor fiber one can take a local complex surface transverse to the fiber. Projection makes that surface a local section and induces an integrable \\(J\\) on the base. So on a fixed conformal metric, the availability of three such directions near each point is an exact local characterization of the desired curvature condition. [Atiyah–Hitchin–Singer, Theorem 4.1](/Users/ebbaker/Documents/smooth-poincare-4d/references/SOURCE_NOTES_CME_REAL_TWISTOR_20261122.md:19)\n\n## First-order formulations\n\n- **A projective spinor equation for each direction.** Locally write \\(T_{\\mathbb C}M\\simeq S^-\\otimes S^+\\). A nonzero positive spinor \\(\\pi\\) specifies the null planes \\(\\mathcal D_\\pi=S^-\\otimes\\mathbb C\\pi\\). Their Frobenius condition is\n  \\[\n  (\\nabla_X^+\\pi)\\wedge\\pi=0\\qquad(X\\in\\mathcal D_\\pi).\n  \\]\n  This says the spin connection preserves the line along its own null planes. It is first order and invariant under rescaling \\(\\pi\\) by a nonvanishing function. The direct construction would solve it for several projective spinors **and a shared unknown conformal metric**.\n\n- **A twistor spinor equation involving the Dirac operator.** The strongest match to your Dirac suggestion is the first-order equation\n  \\[\n  P_X\\psi_+=\\nabla_X\\psi_++\\tfrac14 X\\cdot D_g\\psi_+=0\n  \\qquad\\text{for all }X.\n  \\]\n  Its curvature compatibility gives \\(W(X,Y)\\cdot\\psi_+=0\\). In Riemannian four dimensions a nonzero real self-dual two-form acts invertibly on \\(S^+\\), so a positive-chiral twistor spinor forces \\(W^+=0\\) wherever it is nonzero. This is a sufficient spinorial condition with its own existence problem. The ordinary equation \\(D_g\\psi=0\\) has zero global kernel even on the round \\(S^4\\), by positive scalar curvature and Lichnerowicz. [Friedrich, equation (1.1) and prolongation](/Users/ebbaker/Documents/smooth-poincare-4d/references/SOURCE_NOTES_BACH_FLOW_20261123.md:56) · [Atiyah–Hitchin–Singer, discussion of Lichnerowicz vanishing](/Users/ebbaker/Documents/smooth-poincare-4d/references/Atiyah.pdf)\n\n- **A first-order system using our chiral variables.** Take a normalized self-dual frame \\(\\Sigma\\) and an independent chiral connection \\(A\\). Impose \\(d_A\\Sigma=0\\) and require that the coefficient matrix of \\(F_A^+\\) in the frame \\(\\Sigma\\) have zero trace-free part. The first equation makes \\(A\\) the chiral Levi–Civita connection. Its self-dual curvature block is, up to the companion manuscript’s sign convention, \\(W^++\\tfrac{s}{12}I\\). This is first order in \\((\\Sigma,A)\\), with the second-order metric equation \\(W^+=0\\) recovered upon eliminating \\(A\\). The modified Bach equation, by comparison, is fourth order in the metric and involves two derivatives of curvature. [Companion compatibility equation](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/01_chiral_metric_evolution/manuscript/chiral_curvature_and_metric_evolution.tex:1342) · [Chiral curvature decomposition](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/01_chiral_metric_evolution/manuscript/chiral_curvature_and_metric_evolution.tex:1591)\n\n## The construction question I’d pursue\n\n**Can solutions of the coupled metric-and-section equations on overlapping balls be corrected so they determine one conformal class?** The sections themselves can vary from patch to patch. They have to: a homotopy four-sphere has no global almost complex structure, since \\(H^2(M;\\mathbb Z)=0\\) gives \\(c_1=0\\), while \\(c_1^2[M]=2\\chi(M)+3\\tau(M)=4\\). A common conformal class with the local three-section property everywhere would give \\(W^+=0\\), and the signature and developing-map argument would then recognize the smooth sphere. The missing existence step is the compatible choice of the class across overlaps. [Sphere recognition argument](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/02_bach_flow/research-overview/OVERVIEW.md#two-recognition-targets)\n\nI’d start with **two overlapping patches in the round model**, linearize the coupled metric-and-section problem, and check what freedom remains to correct the conformal data on the overlap. There is also a quantitative connection to the Bach plan. Three uniformly separated directions give stable algebraic control of the Weyl quartic from its sampled values. An estimate of those values by the Frobenius defects and their derivatives could turn *approximately* integrable sections into a bound on \\(E_+\\). That would parallel the companion investigation’s strain-to-curvature estimate, now using directions available in the metric twistor bundle. [Companion curvature estimate](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/01_chiral_metric_evolution/manuscript/chiral_curvature_and_metric_evolution.tex:1526)\n\nI recorded the primary-source passages for the quartic and twistor-spinor equations in the branch’s reference notes. [First-order twistor sources](/Users/ebbaker/Documents/smooth-poincare-4d/references/SOURCE_NOTES_BACH_FLOW_20261123.md:37)"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a20a87-4fc7-7833-9ef4-e611d20c1ed5",
+            "phase": "final_answer",
+            "created_at_utc": "2026-11-23T22:39:56.813Z",
+            "completed_at_utc": "2026-11-23T22:40:39.995Z",
+            "created_at_local": "2026-11-23T17:39:56.813-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "msg_0fcb3ba04d11abd7016b04bf7c412887d1a4a25ddb6e1abb84",
+        "children": [
+          "01a20ab4-7cba-7051-a7be-600e686b0a13"
+        ]
+      },
+      "01a20ab4-7cba-7051-a7be-600e686b0a13": {
+        "id": "01a20ab4-7cba-7051-a7be-600e686b0a13",
+        "message": {
+          "id": "01a20ab4-7cba-7051-a7be-600e686b0a13",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795475930.299,
+          "update_time": 1795475930.299,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "This sounds extremely promising. Can you make an additional sub-investigation within investigations-1 for this research? Follow the guidance in INVESTIGATION_SETUP_WORKFLOW, but do not yet write the research overview, plan or progress file. Instead, please write up these ideas into a note in the brainstorm folder within the new investigation, write the README file, and also write a draft manuscript that opens up the same way as the current manuscript until the ideas diverge. After the introduction, discuss the different first order formulations described above. \\\n"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a20ab4-7c98-7903-943a-8736095d897d",
+            "phase": null,
+            "created_at_utc": "2026-11-23T23:18:50.299Z",
+            "completed_at_utc": "2026-11-23T23:18:50.299Z",
+            "created_at_local": "2026-11-23T18:18:50.299-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "msg_0fcb3ba04d11abd7016b04c0bcc8fc87d1a033f59397e81174",
+        "children": [
+          "msg_0fcb3ba04d11abd7016b04ca47024487d1a0441c831e0dbf5d"
+        ]
+      },
+      "msg_0fcb3ba04d11abd7016b04ca47024487d1a0441c831e0dbf5d": {
+        "id": "msg_0fcb3ba04d11abd7016b04ca47024487d1a0441c831e0dbf5d",
+        "message": {
+          "id": "msg_0fcb3ba04d11abd7016b04ca47024487d1a0441c831e0dbf5d",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795476039.034,
+          "update_time": 1795476040.37,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "I’ll set up a third investigation and use the Bach-flow draft as the source for the shared opening. The new manuscript will develop the projective spinor, twistor spinor, and chiral connection formulations. I’ll use the PDF skill to check the reading copy."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a20ab4-7c98-7903-943a-8736095d897d",
+            "phase": "commentary",
+            "created_at_utc": "2026-11-23T23:20:39.034Z",
+            "completed_at_utc": "2026-11-23T23:20:40.370Z",
+            "created_at_local": "2026-11-23T18:20:39.034-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "01a20ab4-7cba-7051-a7be-600e686b0a13",
+        "children": [
+          "msg_0fcb3ba04d11abd7016b04cb53e04487d18671812c147acd73"
+        ]
+      },
+      "msg_0fcb3ba04d11abd7016b04cb53e04487d18671812c147acd73": {
+        "id": "msg_0fcb3ba04d11abd7016b04cb53e04487d18671812c147acd73",
+        "message": {
+          "id": "msg_0fcb3ba04d11abd7016b04cb53e04487d18671812c147acd73",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795476307.897,
+          "update_time": 1795476309.04,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The new investigation is in the series index, and the brainstorm note records the exact three-section criterion and the open overlap problem. I’ll carry that distinction into the manuscript, with the shared introduction copied through the generalized-coordinate motivation."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a20ab4-7c98-7903-943a-8736095d897d",
+            "phase": "commentary",
+            "created_at_utc": "2026-11-23T23:25:07.897Z",
+            "completed_at_utc": "2026-11-23T23:25:09.040Z",
+            "created_at_local": "2026-11-23T18:25:07.897-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "msg_0fcb3ba04d11abd7016b04ca47024487d1a0441c831e0dbf5d",
+        "children": [
+          "msg_0fcb3ba04d11abd7016b04cc663b7087d18fe6637b3aa28882"
+        ]
+      },
+      "msg_0fcb3ba04d11abd7016b04cc663b7087d18fe6637b3aa28882": {
+        "id": "msg_0fcb3ba04d11abd7016b04cc663b7087d18fe6637b3aa28882",
+        "message": {
+          "id": "msg_0fcb3ba04d11abd7016b04cc663b7087d18fe6637b3aa28882",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795476582.256,
+          "update_time": 1795476583.356,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The manuscript builds as an eight-page PDF, and the shared opening matches the Bach draft byte-for-byte. The citation and repository checks passed. I’ll now inspect the rendered pages for layout problems."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a20ab4-7c98-7903-943a-8736095d897d",
+            "phase": "commentary",
+            "created_at_utc": "2026-11-23T23:29:42.256Z",
+            "completed_at_utc": "2026-11-23T23:29:43.356Z",
+            "created_at_local": "2026-11-23T18:29:42.256-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "msg_0fcb3ba04d11abd7016b04cb53e04487d18671812c147acd73",
+        "children": [
+          "msg_0fcb3ba04d11abd7016b04ccd89dc087d18c9e247ee60ee35d"
+        ]
+      },
+      "msg_0fcb3ba04d11abd7016b04ccd89dc087d18c9e247ee60ee35d": {
+        "id": "msg_0fcb3ba04d11abd7016b04ccd89dc087d18c9e247ee60ee35d",
+        "message": {
+          "id": "msg_0fcb3ba04d11abd7016b04ccd89dc087d18c9e247ee60ee35d",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1795476696.638,
+          "update_time": 1795476702.851,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Created [investigation 03 — First-order twistor integrability](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/README.md).\n\n- The brainstorm note records the surface analogy, the three-section criterion for \\(W^+=0\\), and the proposed round two-patch test. [Brainstorm note](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/brainstorm/notes/FIRST_ORDER_TWISTOR_IDEA_20261123.md)\n- The manuscript preserves the Bach draft’s shared opening byte-for-byte, then develops the projective spinor, twistor spinor, and chiral connection formulations. It identifies conformal overlap compatibility as the open construction problem. [LaTeX manuscript](/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/manuscript/first_order_twistor_and_smooth_poincare.tex)\n\nI built and inspected all eight pages of the reading copy.\n\n:codex-file-citation{path=\"/Users/ebbaker/Documents/smooth-poincare-4d/output/pdf/03_first_order_twistor/first_order_twistor_and_smooth_poincare.pdf\" purpose=\"output\"}\n\nThe overview, plan, and progress register are blank placeholders. Repository hygiene and all 117 tool tests passed."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "metadata": {
+            "source": "Codex completed public message",
+            "source_turn_id": "01a20ab4-7c98-7903-943a-8736095d897d",
+            "phase": "final_answer",
+            "created_at_utc": "2026-11-23T23:31:36.638Z",
+            "completed_at_utc": "2026-11-23T23:31:42.851Z",
+            "created_at_local": "2026-11-23T18:31:36.638-05:00"
+          },
+          "recipient": "all"
+        },
+        "parent": "msg_0fcb3ba04d11abd7016b04cc663b7087d18fe6637b3aa28882",
+        "children": []
+      }
+    },
+    "current_node": "msg_0fcb3ba04d11abd7016b04ccd89dc087d18c9e247ee60ee35d",
+    "conversation_id": "01a20a34-6984-7723-951f-8a66eea8bacb",
+    "id": "01a20a34-6984-7723-951f-8a66eea8bacb",
+    "archive_metadata": {
+      "format": "ChatGPT-style conversation mapping; local conversion, not an official provider export",
+      "source_kind": "Local Codex paginated SQLite history; canonical public-text adapter",
+      "message_timestamps": "Recorded source start/completion times, in seconds since Unix epoch and ISO 8601",
+      "coverage": "All completed user and assistant text messages recorded through capture, including commentary; current response may still be in progress",
+      "omitted_record_types": [
+        "system and developer instructions",
+        "internal reasoning",
+        "tool calls and outputs",
+        "subagent messages",
+        "binary and runtime state"
+      ],
+      "source_public_message_records": 18,
+      "model_configurations": [],
+      "turns": {
+        "01a20a34-6a84-70d1-b097-ce1eacf8d32a": {
+          "status": "completed",
+          "started_at": 1795467537,
+          "completed_at": 1795467977
+        },
+        "01a20a7a-9f2f-7321-9caf-5de25cd92751": {
+          "status": "completed",
+          "started_at": 1795472138,
+          "completed_at": 1795472728
+        },
+        "01a20a87-4fc7-7833-9ef4-e611d20c1ed5": {
+          "status": "completed",
+          "started_at": 1795472969,
+          "completed_at": 1795473640
+        },
+        "01a20ab4-7c98-7903-943a-8736095d897d": {
+          "status": "completed",
+          "started_at": 1795475930,
+          "completed_at": 1795476702
+        }
+      },
+      "source_create_time": 1795467536.774,
+      "latest_source_kind": "Local Codex paginated SQLite history; canonical public-text adapter",
+      "first_captured_at_utc": "2026-11-23T21:03:25.852Z",
+      "first_captured_at_local": "2026-11-23T16:03:25.852-05:00",
+      "history_number": 1,
+      "captured_at_utc": "2026-11-23T23:31:42.940Z",
+      "captured_at_local": "2026-11-23T18:31:42.940-05:00"
+    }
+  }
+]

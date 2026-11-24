@@ -4,6 +4,9 @@
 | --- | --- |
 | papers/investigations-1/01_chiral_metric_evolution | Sphere manuscript and two existing Riemannian exploration notes; new overview, plan, register, and continuation |
 | papers/investigations-1/02_bach_flow | Bach-flow introduction, brainstorm note, shared reference links, and research scaffold |
+| [papers/investigations-1/03_first_order_twistor](papers/investigations-1/03_first_order_twistor/README.md) | Shared first-order manuscript, CME foundation cross-references, overview/plan/shared register, preparation notes and input/task crosswalk |
+| [03_first_order_twistor/01_sections_and_connections](papers/investigations-1/03_first_order_twistor/01_sections_and_connections/README.md) | Local sections and mixed connection proposal; complete planning scaffold and sole SEC register |
+| [03_first_order_twistor/02_dirac_and_twistor_spinors](papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/README.md) | Global spinorial construction proposal; complete planning scaffold and sole DIR register |
 | papers/initial-investigations/01_generalized_isothermal_coordinates | Wave-metric manuscript, three audits, symbolic verification script, and existing research-obstruction note |
 | papers/initial-investigations/02_chiral_descent_and_double_copy | Double-copy manuscript and four derivation notes |
 | papers/research-overview | Earlier project overview, retained as historical context |

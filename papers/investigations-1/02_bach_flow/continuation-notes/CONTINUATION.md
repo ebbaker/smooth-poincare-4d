@@ -2,9 +2,29 @@
 
 23 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The selected model identifier and reasoning effort were unavailable.
 
+## Current continuation — 23 November 2026
+
+The author approved the outline and requested the planning writeup. Read
+the [overview](../research-overview/OVERVIEW.md), [plan](../research-plan/PLAN.md),
+and [sole register](../research-progress/REGISTER.md). The first proposed
+research decision is SP4-BACH-B01, choosing the geometric class for a
+finite-window dissipation estimate before recognition. Research is
+unactivated. The next discussion will consider the author's new idea and
+how it bears on this plan.
+
+```text
+Read AGENTS.md and the Bach-flow overview, plan, and progress register
+under papers/investigations-1/02_bach_flow. Discuss the new idea I describe
+and compare it with the proposed finite-time recognition question, the
+initial-data problem, and the relevant chiral metric evolution results.
+Brainstorm the implications for the plan before activating research.
+```
+
+## Original planning handoff
+
 The [23 November brainstorm note](../brainstorm/notes/BACH_FLOW_IDEA_20261123.md), the [initial introduction](../manuscript/bach_flow_and_smooth_poincare.tex), and the [primary-source notes](../../../../references/SOURCE_NOTES_BACH_FLOW_20261123.md) are the inputs. The [draft history](../DRAFT_HISTORY.md) identifies the inherited manuscript version. The [overview](../research-overview/OVERVIEW.md), [plan](../research-plan/PLAN.md), and [sole register](../research-progress/REGISTER.md) are blank at this handoff.
 
-## Scope and routing
+### Scope and routing
 
 The next session compares research directions and writes the three planning files. The session ends when their scope, task IDs, dependencies, and statuses agree. Proof execution, numerics, and manuscript development belong to a later session authorized by the author.
 
@@ -13,7 +33,7 @@ The next session compares research directions and writes the three planning file
 | Compare objectives and settle the scope of a first question | Conceptual B work for the selected lead. The repository recommends Astra/ultra. |
 | Specify follow-up proof, source, or computation checks | Plan bounded E work only where the method, inputs, and completion test can be fixed. The repository recommends Sol 6.2/ultra helpers for authorized execution. |
 
-## Pasteable continuation prompt
+### Pasteable continuation prompt
 
 ```text
 Start a brainstorming and planning session for papers/investigations-1/02_bach_flow

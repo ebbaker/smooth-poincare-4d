@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 MANUSCRIPTS = {
     '01_chiral_metric_evolution': ('investigations-1', 'chiral_curvature_and_metric_evolution.tex'),
     '02_bach_flow': ('investigations-1', 'bach_flow_and_smooth_poincare.tex'),
+    '03_first_order_twistor': ('investigations-1', 'first_order_twistor_and_smooth_poincare.tex'),
     '01_generalized_isothermal_coordinates': ('initial-investigations', 'generalized_isothermal_wave_metrics.tex'),
     '02_chiral_descent_and_double_copy': ('initial-investigations', 'chiral_connection_descent_and_double_copy.tex'),
 }

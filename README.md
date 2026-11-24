@@ -12,10 +12,11 @@ The main working manuscript develops a local and perturbative framework near the
 | --- | --- | --- |
 | `investigations-1` | [01 — Chiral metric evolution](papers/investigations-1/01_chiral_metric_evolution/README.md) | Direct smooth Poincaré study |
 | `investigations-1` | [02 — Bach flow](papers/investigations-1/02_bach_flow/README.md) | Direct study through the evolution of chiral Weyl curvature |
+| `investigations-1` | [03 — First-order twistor constructions](papers/investigations-1/03_first_order_twistor/README.md) | Shared foundations for separate sections/connections and Dirac/twistor-spinor sub-investigations |
 | `initial-investigations` | [01 — Generalized isothermal coordinates](papers/initial-investigations/01_generalized_isothermal_coordinates/README.md) | Earlier coordinate and reconstruction study |
 | `initial-investigations` | [02 — Chiral descent and double copy](papers/initial-investigations/02_chiral_descent_and_double_copy/README.md) | Earlier descent and double-copy study |
 
-Each investigation has an overview, plan, one progress register, and dedicated locations for notes, reviews, computations, references, chat histories, and continuation prompts. The investigation README links its current material and scope.
+Each investigation has an overview, plan, one progress register per task family, and dedicated locations for notes, reviews, computations, references, chat histories, and continuation prompts. Nested sub-investigations own separate task families; their parent links their registers without duplicating live status. The investigation README links its current material and scope.
 
 ## Start here
 
