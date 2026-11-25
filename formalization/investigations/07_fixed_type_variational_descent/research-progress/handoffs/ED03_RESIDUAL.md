@@ -1,0 +1,23 @@
+# VAR-E06 and DESC-E01 · Checked return
+
+25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. These were bounded E tasks. The serving model and reasoning effort are unavailable. The [Route 07 plan](../../research-plan/PLAN.md) fixes the statements and evidence limits.
+
+## Fixed-tolerance limit
+
+`SmoothPoincare.energyBoundOfRepairFamily` has the exact fenced proposition in the plan. At one fixed tolerance, work with the natural-number reindexing of its selected subsequence. Eventually the nonnegative cardinality term is bounded above by \((K:\mathbb R)(e_i-I)\), which tends to zero. For any positive error \(\delta\), use the eventual surcharge and residual upper bounds with error \(\delta/2\) each and pass to the limit. This gives \(I\le b+\omega+\delta\) for all \(\delta>0\). The argument takes the source limit on each selected subsequence separately, so each fixed tolerance can have its own subsequence and its own \(K\). [Lean module](../../../../SmoothPoincare/Variational/RepairResidual.lean)
+
+The zero-repair test uses \(N_i=K=0\), \(e_i=I\), zero cost and a constant remainder \(I>0\). The bound is equality. The full complement cannot be discarded. An unbounded-cardinality test uses \(N_i=i+1\), \(I=1\), \(e_i=1+1/(i+1)\), cost \(1/(i+1)\) and zero remainder. The repair inequality is equality at every index, both eventual cost and remainder bounds hold with zero limits, and \(N_i(e_i-I)=1\). A bound at each index is insufficient without one eventual bound at the fixed tolerance or a separate vanishing product estimate.
+
+The geometric application needs actual independent repairs and an estimate for the full complement on the same source sequence. Joint selection bounds the complement by escape, nonregular mass, excluded atoms and selection error. To use physical-volume coverage in place of a separate chiral bound requires uniform absolute continuity of chiral mass. [One-sided repair and volume reduction](../../../../../papers/master/manuscript/chiral_weyl_energy_and_smooth_poincare.tex) · [Joint selection](../../../../../papers/master/manuscript/physical_volume.tex)
+
+## One joint competitor
+
+`SmoothPoincare.jointCompetitorGain_le_excess` derives \(m-\gamma\le e-I\) from an actual smooth Riemannian metric on a compact oriented boundaryless smooth four-manifold, oriented orthonormal frames, positive Yamabe class, integrable chiral density and a supplied orientation-preserving diffeomorphism from the source. `geometricEnergy_mem_of_pullback` establishes membership in the original type's actual energy set, so that metric also supplies its nonempty witness. The input upper bound on the actual total energy charges the replacement, matching and any net exterior change together. `SmoothPoincare.excludesStrictJointCompetitor` gives a contradiction for the strict reverse inequality. This is conditional on the endpoint, marking and global comparison. [Lean module](../../../../SmoothPoincare/Variational/JointDescent.lean)
+
+With an identity marking and equality \(m-\gamma=e-I\), the same premises force the actual candidate energy to equal \(I\). At an attained infimum, taking the minimizing metric itself and zero net gain realizes equality. Producing a marked metric and a strict gain for the diffuse multi-region problem belongs to DESC-B01 and its geometric follow-up. [Master descent plan](../../../../../papers/master/01_fixed_type_variational_descent/research-plan/PLAN.md)
+
+## Verification and inputs
+
+Both modules passed `lake env lean` at Lean `4.35.0-rc3` (`470d5ce1400764999581fd26d5d72b00d990b0f4`) and Lake `5.0.0-src+470d5ce`. Temporary checks instantiated the exact fenced type and verified zero cardinality, fixed positive remainder, unbounded cardinality and the same-type equality boundary. `#print axioms` reported `propext`, `Classical.choice` and `Quot.sound` for each of the three declarations. The lead owns public import and build verification.
+
+The intake checkout was `a1a8b8866fafd24cc11236b426fcd67d7cdfee2b` and advanced during the shared session to `9c579f0126ceb8e9a3b2d9b2fcc935b5743b2ad7`. The Route 07 plan, variational comparison and Lake manifest matched issued SHA-256 prefixes `147fe387b7fa9d77`, `0c9b1dce4aa655be` and `839111aae86b6935`. The master TeX changed during concurrent manuscript integration. Its issued prefix was `f5ece6cb00e65ecc`, the intake copy was `8bfc6287c7b128598` and the later copy was `d2d3a4151a4414f6`. The source passages used here were checked against the frozen theorem and matched its one-sided replacement and fixed-tolerance comparison. [Edition baseline](../../../research-progress/03_BASELINE.md)

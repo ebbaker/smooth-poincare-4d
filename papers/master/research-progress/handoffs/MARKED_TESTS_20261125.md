@@ -71,3 +71,52 @@ The [decision assessment](../../brainstorm/notes/MARKED_EXTERIORS_AND_ANNULI_202
 ## Concrete height check after manuscript review
 
 E49 and E50 were issued as a final bounded construction and independent audit after E36, E37 and E43. Fix the round embedded sphere, the vertical direction, and two disjoint projected neighborhoods at a common scale near its north pole. In each replace a regular part of the height by a local pair of indices two and three. Require smooth matching to the round exterior, exactly the claimed critical points, a common actual incoming level with its two framed tubes, and the total induced energy estimate. Verify the cubic level disks or provide another proof of the framing. E49 alone owns [the constructed height](../../notes/E49_TWO_BIRTH_HEIGHT.md), and E50 alone owns [its independent proof check](../../reviews/E50_TWO_BIRTH_AUDIT.md). This standard-type example tests the marking procedure on a single global height. It cannot provide selection or entry on a hypothetical nonstandard type.
+
+## Branch deliveries
+
+The scoped results were delivered as incoming files for the four branch leads. The original child task assignments remain with their owning registers.
+
+- [Physical shell extraction · incoming master result](../../../investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/research-progress/handoffs/MASTER_MARKED_TEST_RETURN_20261125.md)
+- [Immersed handle construction · incoming master result](../../../investigations-1/04_hypersurface_immersions/01_immersed_handle_constructions/research-progress/handoffs/MASTER_MARKED_TEST_RETURN_20261125.md)
+- [Recognition from an immersed height · incoming master result](../../../investigations-1/04_hypersurface_immersions/02_two_handle_recognition/research-progress/handoffs/MASTER_MARKED_TEST_RETURN_20261125.md)
+- [Fixed-type variational descent · incoming master result](../../01_fixed_type_variational_descent/research-progress/handoffs/MASTER_MARKED_TEST_RETURN_20261125.md)
+
+## Edition and verification
+
+During the session the checkout advanced to `9c579f0126ceb8e9a3b2d9b2fcc935b5743b2ad7`. Its master manuscript and shared bibliography agree with the final working sources. The independent final-text review used the earlier hashes in E48. Integration specified origin-centered nesting, the cap sign and trace pairing, the same-type path margin, and the width and gauge conditions. The near-Einstein proof also states the stronger arbitrary-target energy conclusion checked in E47.
+
+| Edition input | SHA-256 |
+| --- | --- |
+| `chiral_weyl_energy_and_smooth_poincare.tex` | `d2d3a4151a4414f6d5f5503072a8baac7458e32fbcfcc1bf4178e4b22d7e0e12` |
+| `complete_limits.tex` | `8b5692f2bcab874791998bcc3d9e42c765b95bda047c14dd6463f430e68db6f6` |
+| `critical_annulus.tex` | `1f7c7ea5b08832d95202b56c4cdce935f888c06334a5bd2af294a4493f4cfc13` |
+| `first_order_splice.tex` | `f93717b0b73cf7bc249eb710ef27378ab5434283fbd9dfa29751ec3624ff05ca` |
+| `immersion_entry.tex` | `cf7a5e72e147772f23a657d070ea78ac7c7fceeda0f51871f40026cc17d2dd62` |
+| `marked_cut.tex` | `c33376f493973d43294722b7714cefbec0803e27afaaedff582c8f662cba898b` |
+| `physical_volume.tex` | `b972bc5466245c5d26ad8c1ecead2fdf0fa7dec9a7e3e526b71d5eadc5790072` |
+| `ricci_scales.tex` | `a1dec14caba7f145ff2008ced87a09fbe9cd9c40cd51496a09ee5d947dd08819` |
+| `variational_comparison.tex` | `0c9b1dce4aa655be19b124b28c5e1c98d97645184561a9a00c05260b15c029db` |
+| `references.bib` | `4cd4468b92586b210938e7af7371431344c1241219041de0c812261606274acb` |
+| `chiral_weyl_energy_and_smooth_poincare.pdf` | `22bd606532e38abbeac78b845be2b6883103c5a7c03b3161439848c1f9d74724` |
+
+The repository manuscript builder produced the reading PDF. The retained paper includes the exterior height inequality, marked surgery criteria, spectral form on a round boundary, aggregate collar comparison, near-Einstein theorem and anchored annulus. The checks address mathematical arguments and rendering separately.
+
+The final clean LaTeX pass reports 39 pages. All six added statements have resolved labels (3.2, 3.3, 4.4, 8.2, 10.3 and 10.5). The final log and bibliography contain no unresolved references or citations. Text extracted from the distributed PDF includes all six results. The repository hygiene check passed on 15 branches with zero link errors.
+
+Final SHA-256 prefixes for the bounded returns (the full E49 hash is also recorded by its independent E50 reader).
+
+- `33bcac0c687b2191` E36_MARKED_HEIGHT
+- `008bea06b958d5cb` E37_GRAPH_HANDLE
+- `019dcb050467dc2c` E38_PHYSICAL_SEPARATION
+- `12ccdc604b69034a` E39_MARKED_COMPETITOR
+- `e6296b7530133ac2` E40_CLOSED_PINCHING
+- `41a2d84abca9cf0c` E41_SMALL_SIDE_AUDIT
+- `7653e2de8eac5fde` E42_HEIGHT_AND_COST_AUDIT
+- `bbe74e202f5b2ece` E43_SURGERY_AUDIT
+- `41002510adfd95cf` E44_EXTERIOR_CAP_AUDIT
+- `a85b3f51180f2027` E45_ROUND_END_FORM
+- `28cf9907b8094c0c` E46_EINSTEIN_SIGNED_MASS
+- `e9edbf40df9814d1` E47_NEAR_EINSTEIN_AUDIT
+- `7e1cf9a2ea0eec45` E48_INTEGRATED_MARKED_TESTS
+- `14c4187216c8602f` E49_TWO_BIRTH_HEIGHT
+- `a0a72b607aee29c7` E50_TWO_BIRTH_AUDIT

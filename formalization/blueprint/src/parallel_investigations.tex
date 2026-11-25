@@ -1,7 +1,7 @@
 \section{Descent, immersed curvature and Morse heights}
 \label{sec:parallel-investigations}
 
-These are proposed formal statements for the third program edition. For
+This section records the third program edition. Checked implications below specify their witnesses and their remaining geometric inputs. For
 physical shell selection and the residual of a repair family, the targets
 are Lemma~\ref{lem:master-quantiles} and
 Corollary~\ref{cor:master-repair-residual}. A supplied shell is tested by
@@ -11,6 +11,8 @@ Section~\ref{sec:master-variational}.
 
 \begin{proposition}[A joint competitor on the original smooth type]
 \label{prop:routes-joint-descent}
+\lean{SmoothPoincare.jointCompetitorGain_le_excess, SmoothPoincare.excludesStrictJointCompetitor}
+\leanok
 \uses{lem:master-competitor}
 Fix a nonempty set of admissible positive-class energies on \(M\) with
 finite infimum \(I\). A source has energy \(e\). Suppose a marked
@@ -21,6 +23,12 @@ includes the whole replacement cost and any net change outside the
 region. Then \(m-\gamma\le e-I\). A strict reverse inequality for one
 actual competitor gives a contradiction.
 \end{proposition}
+
+\begin{proof}
+\leanok
+The marked pullback supplies membership on the original type. Subtract the
+infimum bound from the complete energy comparison.
+\end{proof}
 
 \begin{lemma}[Weyl energy on the middle-signature locus]
 \label{lem:routes-middle-weyl}
@@ -68,10 +76,19 @@ final disk gluing when the reduced count is at most one.
 
 \begin{lemma}[Selecting a two-middle height]
 \label{lem:routes-height-selection}
+\lean{SmoothPoincare.prob_twoMiddle_gt_threeQuarters, SmoothPoincare.twoMiddle_probability_boundary}
+\leanok
 On a probability space let \(m\) be an integrable, measurable
 natural-valued count. If \(m\ge2\) almost everywhere and
 \(\mathbb E[m]<9/4\), then \(\Pr(m=2)>3/4\).
 \end{lemma}
+
+\begin{proof}
+\leanok
+Outside the two-count event the integer count is at least three almost
+everywhere. Integrate this extra unit. A probability of one quarter
+at three and three quarters at two gives equality at the excluded mean.
+\end{proof}
 
 \begin{corollary}[Heights of a subcritical immersion]
 \label{cor:routes-subcritical-heights}
@@ -104,3 +121,52 @@ sequence on which a strict contradiction is realized. Quantitative
 construction and coverage must refer to the same metric, immersion,
 or chosen physical sequence in the implication that uses it.
 \end{openproblem}
+
+\subsection{Conditional comparisons on supplied witnesses}
+
+\begin{proposition}[Measured replacements and two full cut sides]
+\label{prop:ed03-measured-comparisons}
+\uses{lem:master-competitor,prop:cut-marked-reassembly}
+\lean{SmoothPoincare.geometricRepairedMass_le_excess_sum_of_pullback, SmoothPoincare.geometricRepairedMass_le_excess_sum, SmoothPoincare.geometricDiscardedMass_le_excess, SmoothPoincare.MarkedSideReplacement.reassemble}
+\leanok
+Fix the geometric positive-energy set of the original oriented smooth
+four-manifold and use its physical chiral density in a specified frame.
+For individually marked admissible repairs of known global cost,
+\(\sum_j m_j\le N(e-I)+\sum_j\gamma_j\).
+For two full measured cut sides, suppose their union is the source,
+their intersection is volume-null, both caps are positive, and recognition
+and smooth collar reassembly data are supplied for either choice of the
+discarded cap. If \(e+\gamma_1+\gamma_2<8\pi^2\), a surviving side
+\(s\) gives an oriented competitor with
+\(m_{3-s}\le e-I+\gamma_s\). The resulting map carries the entire
+opposite raw side onto the marked cap.
+\end{proposition}
+\begin{proof}
+\leanok
+Integrate the source curvature on the specified sets. For independent repairs,
+pull each metric back and sum its comparison with the same infimum.
+For the cut, the strict total bound selects a cap below the recognition
+threshold. Use its corrected marking on a neighborhood to identify the
+other cap with the source. Apply the infimum bound to that pullback.
+\end{proof}
+
+\begin{lemma}[A common Yamabe floor along an actual metric family]
+\label{lem:ed03-path}
+\uses{def:master-admissible}
+\lean{SmoothPoincare.positiveAlongSubcriticalPath, SmoothPoincare.admissibleAlongSubcriticalMetricPath}
+\leanok
+Suppose a connected parameter family has a continuous sign detector,
+positive initially, with the stated positive and zero sign identifications
+for the class Yamabe constants of its metrics on the original type.
+Supply integrable chiral densities and the normalized inequality
+\(Y_t^2\ge48(8\pi^2-E_t)\).
+If \(E_t\le8\pi^2-\delta\) throughout for one \(\delta>0\), every energy
+is admissible and every \(Y_t\ge\sqrt{48\delta}\).
+\end{lemma}
+\begin{proof}
+\leanok
+At a zero of the sign detector the Euler inequality forces
+\(E_t\ge8\pi^2\). The intermediate value theorem propagates the positive
+sign. Take the square root of the Euler inequality and use each actual
+framed metric to witness membership.
+\end{proof}

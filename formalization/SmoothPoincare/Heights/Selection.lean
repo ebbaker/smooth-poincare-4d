@@ -1,6 +1,5 @@
 import Mathlib.Probability.Distributions.Bernoulli
 import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Omega
 
 /-! # Selection by the mean middle-index count
 
@@ -29,10 +28,11 @@ theorem prob_twoMiddle_lower_bound (μ : Measure Ω) [IsProbabilityMeasure μ] (
     filter_upwards [hfloor] with u hu
     by_cases heq : m u = 2
     · simp [bad, s, heq]
-    · have hthree : 3 ≤ m u := by omega
-      have hthreeReal : (3 : ℝ) ≤ (m u : ℝ) := by exact_mod_cast hthree
+    · have hthree : 2 + 1 ≤ m u := by omega
+      have hthreeReal : (2 : ℝ) + 1 ≤ (m u : ℝ) := by exact_mod_cast hthree
       simpa [bad, s, heq] using hthreeReal
   have hmean := integral_mono_ae ((integrable_const (2 : ℝ)).add hbadInt) hmInt hpoint
+  simp only [Pi.add_apply] at hmean
   rw [integral_add (integrable_const (2 : ℝ)) hbadInt] at hmean
   have hbadIntegral : (∫ u, bad u ∂μ) = μ.real sᶜ := by
     simp [bad, integral_indicator_const, hs.compl]
@@ -100,10 +100,10 @@ theorem prob_twoMiddle_lower_of_defect_budget (μ : Measure Ω) [IsProbabilityMe
 theorem twoMiddle_probability_boundary :
     ∃ μ : Measure ℕ, IsProbabilityMeasure μ ∧ Integrable (fun u : ℕ => (u : ℝ)) μ ∧
       (∀ᵐ u ∂μ, 2 ≤ u) ∧ (∫ u : ℕ, (u : ℝ) ∂μ) = (9/4 : ℝ) ∧
-      μ.real {u : ℕ | u = 2} = (3/4 : ℝ) := by
+      μ.real {u : ℕ | u = 2} = (3/4 : ℝ) ∧ μ.real {u : ℕ | u = 3} = (1/4 : ℝ) := by
   let p : Set.Icc (0 : ℝ) 1 := ⟨3/4, by constructor <;> norm_num⟩
   refine ⟨ProbabilityTheory.bernoulliMeasure 2 3 p, inferInstance,
-    ProbabilityTheory.integrable_bernoulliMeasure 2 3 p _, ?_, ?_, ?_⟩
+    ProbabilityTheory.integrable_bernoulliMeasure 2 3 p _, ?_, ?_, ?_, ?_⟩
   · rw [ae_iff]
     exact ProbabilityTheory.bernoulliMeasure_apply_of_notMem_of_notMem p
       (Set.to_countable _).measurableSet (by simp) (by simp)
@@ -111,5 +111,9 @@ theorem twoMiddle_probability_boundary :
     norm_num [p]
   · exact ProbabilityTheory.bernoulliMeasure_real_apply_of_mem_of_notMem p
       (measurableSet_singleton 2) (by simp) (by simp)
+  · calc
+      _ = 1 - (p : ℝ) := ProbabilityTheory.bernoulliMeasure_real_apply_of_notMem_of_mem p
+        (measurableSet_singleton 3) (by simp) (by simp)
+      _ = _ := by norm_num [p]
 
 end SmoothPoincare

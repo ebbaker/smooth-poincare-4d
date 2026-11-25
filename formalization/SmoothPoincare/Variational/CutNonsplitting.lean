@@ -14,6 +14,11 @@ open scoped ContDiff Manifold
 
 namespace SmoothPoincare
 
+private theorem discardedMass_le_excess_of_mem {A : Set ℝ} {e keep discard E γ : ℝ}
+    (hBelow : BddBelow A) (hSplit : keep + discard = e) (hCost : E ≤ keep + γ)
+    (hMember : E ∈ A) : discard ≤ e - sInf A + γ := by
+  linarith only [csInf_le hBelow hMember, hSplit, hCost]
+
 /-- Whichever cap supplies an admissible energy, the mass discarded from the
 other side is bounded using the surcharge of that admissible cap. -/
 theorem discardedMass_le_excess (A : Set ℝ) (e m₁ m₂ E₁ E₂ γ₁ γ₂ : ℝ) :
@@ -23,8 +28,8 @@ theorem discardedMass_le_excess (A : Set ℝ) (e m₁ m₂ E₁ E₂ γ₁ γ₂
       (E₂ ∈ A ∧ m₁ ≤ e - sInf A + γ₂)) := by
   intro hBelow hSplit hCost₁ hCost₂ hCompetitor
   rcases hCompetitor with h₁ | h₂
-  · exact Or.inl ⟨h₁, by linarith only [csInf_le hBelow h₁, hSplit, hCost₁]⟩
-  · exact Or.inr ⟨h₂, by linarith only [csInf_le hBelow h₂, hSplit, hCost₂]⟩
+  · exact Or.inl ⟨h₁, discardedMass_le_excess_of_mem hBelow hSplit hCost₁ h₁⟩
+  · exact Or.inr ⟨h₂, discardedMass_le_excess_of_mem hBelow ((add_comm _ _).trans hSplit) hCost₂ h₂⟩
 
 local instance : Fact (Module.finrank ℝ (EuclideanSpace ℝ (Fin 5)) = 4 + 1) := ⟨by simp⟩
 
@@ -100,6 +105,7 @@ structure MarkedSideReplacement {A : Type*} [TopologicalSpace A]
       EqOn q.retained discard.core discard.raw ∧
       q.normalBall '' (interior standardFourSphereCap)ᶜ = keep.marking '' standardFourSphereCap
 
+omit [I.Boundaryless] [T2Space M] [CompactSpace M] [Nonempty M] in
 /-- A recognized opposite cap yields a diffeomorphism whose restrictions follow
 the retained core and send the full discarded piece onto the retained cap. -/
 theorem MarkedSideReplacement.reassemble {A : Type*} [TopologicalSpace A]
@@ -123,23 +129,24 @@ theorem MarkedSideReplacement.reassemble {A : Type*} [TopologicalSpace A]
     Φ '' discard.raw = (fun x => q.normalBall (r (discard.core x))) '' discard.raw :=
       (show EqOn Φ (fun x => q.normalBall (r (discard.core x))) discard.raw from fun x hx =>
         (hExterior (hRaw hx)).trans (congrArg (fun z => q.normalBall (r z)) (hRawMap hx))).image_eq
-    _ = q.normalBall '' (r '' (discard.core '' discard.raw)) := by simp only [image_image, Function.comp_def]
+    _ = q.normalBall '' (r '' (discard.core '' discard.raw)) := by simp only [image_image]
     _ = keep.marking '' standardFourSphereCap := by rw [discard.coreImage, hClosed, hBallImage]
 
 /-- The returned competitor includes the oriented map, its core restriction,
 the full raw side and cap images, and the energy of its actual pullback metric. -/
 def GeometricMarkedCutSide.ProvidesCompetitor
     (keep : GeometricMarkedCutSide (I := I) (M := M) oX) (discardedRaw : Set M) : Prop :=
-  ∃ (Φ : M ≃ₘ⟮I, J⟯ X) (hΦ : Φ.preservesOrientation oM oX),
-    let pull := Diffeomorph.pullbackMetricCross keep.metric Φ
-    let frames := pullbackOrientedOrthonormalFrames keep.metric Φ hΦ keep.frame
-    let W := fun x => geometricChiralBlock pull oM x (frames x)
-    EqOn Φ keep.core keep.core.source ∧
-      Φ '' keep.raw = (interior (keep.marking '' standardFourSphereCap))ᶜ ∧
-      Φ '' discardedRaw = keep.marking '' standardFourSphereCap ∧
-      0 < classYamabeFour oM.dimension_eq pull ∧
-      Integrable (fun x => hilbertSchmidtSq (W x)) (riemannianVolumeMeasure I M pull) ∧
-      chiralFrameEnergy pull W = keep.cappedEnergy ∧ keep.cappedEnergy ∈ geometricPositiveEnergies oM
+  keep.cappedEnergy ∈ geometricPositiveEnergies oM ∧
+    ∃ (Φ : M ≃ₘ⟮I, J⟯ X) (hΦ : Φ.preservesOrientation oM oX),
+      let pull := Diffeomorph.pullbackMetricCross keep.metric Φ
+      let frames := pullbackOrientedOrthonormalFrames keep.metric Φ hΦ keep.frame
+      let W := fun x => geometricChiralBlock pull oM x (frames x)
+      EqOn Φ keep.core keep.core.source ∧
+        Φ '' keep.raw = (interior (keep.marking '' standardFourSphereCap))ᶜ ∧
+        Φ '' discardedRaw = keep.marking '' standardFourSphereCap ∧
+        0 < classYamabeFour oM.dimension_eq pull ∧
+        Integrable (fun x => hilbertSchmidtSq (W x)) (riemannianVolumeMeasure I M pull) ∧
+        chiralFrameEnergy pull W = keep.cappedEnergy
 
 private theorem MarkedSideReplacement.competitor {A : Type*} [TopologicalSpace A]
     {keep : GeometricMarkedCutSide (I := I) (M := M) oX}
@@ -151,7 +158,9 @@ private theorem MarkedSideReplacement.competitor {A : Type*} [TopologicalSpace A
   have hRaw := ((hCore.mono keep.rawInCore).image_eq).trans keep.coreImage
   obtain ⟨hPositive, hIntegral, hEnergy⟩ :=
     geometricPullbackCompetitor Φ hΦ keep.metric keep.frame keep.positive keep.integrable
-  exact ⟨Φ, hΦ, hCore, hRaw, hCap, hPositive, hIntegral, hEnergy, _, _, hPositive, hIntegral, hEnergy⟩
+  refine ⟨?_, Φ, hΦ, hCore, hRaw, hCap, hPositive, hIntegral, hEnergy⟩
+  exact ⟨Diffeomorph.pullbackMetricCross keep.metric Φ,
+    pullbackOrientedOrthonormalFrames keep.metric Φ hΦ keep.frame, hPositive, hIntegral, hEnergy⟩
 
 /-- For two full measured sides of one marked cut, the total cap budget selects
 a recognized opposite cap. The resulting marked competitor gives the bound
@@ -185,10 +194,9 @@ theorem geometricDiscardedMass_le_excess {A : Type*} [TopologicalSpace A]
   have hBelow := geometricPositiveEnergies_bddBelow oM
   rcases eitherSummandEnergyLtThreshold hCaps with hSmall | hSmall
   · have hCompetitor := keepRight.competitor hSmall
-    obtain ⟨_, _, _, _, _, _, _, _, hMem⟩ := hCompetitor
-    exact Or.inr ⟨hCompetitor, by linarith only [hSplit, hCost₂, csInf_le hBelow hMem]⟩
+    exact Or.inr ⟨hCompetitor,
+      discardedMass_le_excess_of_mem hBelow ((add_comm _ _).trans hSplit) hCost₂ hCompetitor.1⟩
   · have hCompetitor := keepLeft.competitor hSmall
-    obtain ⟨_, _, _, _, _, _, _, _, hMem⟩ := hCompetitor
-    exact Or.inl ⟨hCompetitor, by linarith only [hSplit, hCost₁, csInf_le hBelow hMem]⟩
+    exact Or.inl ⟨hCompetitor, discardedMass_le_excess_of_mem hBelow hSplit hCost₁ hCompetitor.1⟩
 
 end SmoothPoincare

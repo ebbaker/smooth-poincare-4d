@@ -5,3 +5,5 @@
 E36 and E43 transport the framed tubes through both ends and recognize specific surgery diagrams. For a normalized mixed diagram, try to identify the actual homology-sphere cut as simply connected or the other cut as a connected sum of two copies of the sphere product. One-sided unknot or tunnel-number-one certificates apply to the actual trace. A count or an abstract linking matrix gives no direction selection in these subclasses.
 
 [Master assessment and checked receipts](../../../../../master/brainstorm/notes/MARKED_EXTERIORS_AND_ANNULI_20261125.md) · [Versions and disjoint assignments](../../../../../master/research-progress/handoffs/MARKED_TESTS_20261125.md) · [Next research launch](../../../../../master/continuation-notes/AFTER_MARKED_EXTERIORS_20261125.md)
+
+A separate [global embedded example](../../../../../master/notes/E49_TWO_BIRTH_HEIGHT.md) realizes both marks on the standard sphere. Its actual vertical height has two index-two points before two index-three points, with a zero-framed split unlink on the common lower level. The example calibrates the construction and its diagram.

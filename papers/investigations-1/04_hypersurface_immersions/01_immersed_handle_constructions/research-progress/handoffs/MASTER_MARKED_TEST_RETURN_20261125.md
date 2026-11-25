@@ -5,3 +5,5 @@
 E37 supplies both framed solid-torus faces, an actual quadratic height, its matching bands and a fixed-germ charge bound. E42 gives a relative Morse proof and a directional test on the true exterior. The next construction needs compatible germs on one retained exterior with a whole-domain bound.
 
 [Master assessment and checked receipts](../../../../../master/brainstorm/notes/MARKED_EXTERIORS_AND_ANNULI_20261125.md) · [Versions and disjoint assignments](../../../../../master/research-progress/handoffs/MARKED_TESTS_20261125.md) · [Next research launch](../../../../../master/continuation-notes/AFTER_MARKED_EXTERIORS_20261125.md)
+
+A separate [global embedded example](../../../../../master/notes/E49_TWO_BIRTH_HEIGHT.md) realizes both marks on the standard sphere. Its actual vertical height has two index-two points before two index-three points, with a zero-framed split unlink on the common lower level. The example calibrates the construction and its diagram.

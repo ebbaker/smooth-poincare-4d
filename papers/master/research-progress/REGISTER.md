@@ -58,8 +58,8 @@
 | SP4-MASTER-E46 | Fixed-band Einstein signed-mass audit accepted | [Non-effective uniform signed mass in each chirality](../reviews/E46_EINSTEIN_SIGNED_MASS.md). The two witness balls can differ. |
 | SP4-MASTER-E47 | Near-Einstein recognition checked | [Physical compactness and one chiral spectral defect](../reviews/E47_NEAR_EINSTEIN_AUDIT.md). No effectiveness or arbitrary-type entry asserted. |
 | SP4-MASTER-E48 | Integrated mathematical text audited | [Final proof check and amendment](../reviews/E48_INTEGRATED_MARKED_TESTS.md). |
-| SP4-MASTER-E49 | Global marked-height model under assessment | [Two local births on one actual sphere immersion](../notes/E49_TWO_BIRTH_HEIGHT.md). Standard smooth type only. |
-| SP4-MASTER-E50 | Independent model check issued | [Energy, level disks and framings](../reviews/E50_TWO_BIRTH_AUDIT.md). |
+| SP4-MASTER-E49 | Actual global marked-height model checked | [Two local births on one actual sphere immersion](../notes/E49_TWO_BIRTH_HEIGHT.md). Standard smooth type only. |
+| SP4-MASTER-E50 | Independent two-birth check accepted | [Energy, level disks and framings](../reviews/E50_TWO_BIRTH_AUDIT.md). |
 
 [Integrated returns, requests and assessment](handoffs/VARIATIONAL_RETURNS_20261125.md) · [Manuscript](../manuscript/README.md). No theorem here constructs entry on arbitrary smooth homotopy spheres or establishes smooth Poincaré. The new results have manuscript proofs and scoped model checks. The earlier formalization receipts retain their original scopes.
 
