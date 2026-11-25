@@ -18,6 +18,22 @@ never fabricate records or save an unsent final answer as authentic history.
 
 24 November research discussion and manuscript. The local source and app history reader were unavailable. The [unregistered partial public record](PARTIAL_UNREGISTERED_DIR_DISCUSSION_20261124.md) preserves the completed discussion reply, requests and visible progress updates.
 
+25 November 2026 screenshot supplements:
+
+- [S05 — Research Variational Result](screenshots/S05_research_variational_result.md)
+  supplies both completed research replies. Four additional screenshots now
+  show the full opening invocation, which is included directly and matches
+  the earlier partial record linked above.
+- [S06 — Summarize Research Results](screenshots/S06_summarize_research_results.md)
+  includes the discussion, manuscript reply and expanded mathematical summary.
+
+The sixteen supplied screenshots have individual hashes and coverage maps in
+the [shared source manifest](../../../../../chat-histories/screenshots/SOURCE_MANIFEST.json).
+These records supplement the earlier excerpts without changing their
+provenance or creating native registrations. The
+[chronology](../../../../../chat-histories/CHRONOLOGY.md) records the inferred
+dates and their limits.
+
 24 November Claude Cowork session. Claude conversations about this
 investigation are registered separately in
 [claude-cowork](claude-cowork/README.md), from the session's claude.ai event

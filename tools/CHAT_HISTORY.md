@@ -8,8 +8,11 @@ completion hook or live source is available for the current conversation.
 
 Keep a conversation in one canonical `chat-histories/` directory. Use the
 relevant investigation's folder for branch work and repository-root
-`chat-histories/` for shared setup or program work. Preserve each registered
-conversation's number, filename, original creation time and first-capture
+`chat-histories/` for shared setup or program work. The historical
+conversations before **Review thread history** belong in
+[chat-histories/early-chats](../chat-histories/early-chats/README.md).
+Preserve each registered conversation's number, filename, original creation
+time and first-capture
 provenance. A later move needs an explicit audited relocation; do not register
 the same conversation in multiple destinations.
 
@@ -86,9 +89,9 @@ python3 tools/refresh_chat_history.py --thread-id ACTUAL_THREAD_ID
 ```
 
 An unregistered chat is skipped; `skipped_unregistered` is not a capture.
-Automatic registration lookup covers both repository-root history folders
-and the investigation history folders under `papers/`; an explicit
-destination must not create a second registration for an existing chat.
+Automatic registration lookup covers the repository-root history folders,
+`chat-histories/early-chats`, and the investigation history folders under
+`papers/`. Check for an existing registration before importing.
 Verify the returned success status and the registry's recorded counts,
 source/configuration metadata, sizes and hashes. Hashes establish byte
 identity, not scientific validity. Never hand-edit a registered JSON archive.
@@ -139,11 +142,25 @@ reviewed before adding an adapter.
 
 `extract_project_chats.py` selects exact titles or an observed project ID from
 an author-provided export. Inspect its diagnostic report before importing.
-`record_chat.py --import-json ... --folder ...` imports a selected conversation;
-account-wide imports require deliberate selection. Claude adapters describe
-their coverage in `--help` and module documentation. Retained browser extractor
-text is a manual, source-dependent utility; this setup does not execute it or
-verify any current remote service endpoint.
+For a reduced ChatGPT account export, select one authenticated conversation by
+ID using `import_public_chat_export.py`. It records the public text, exported
+alternate branches and file descriptors with the source chunk hash. It uses
+the same index lock and installation transaction as a Codex capture.
+
+```sh
+python3 tools/import_public_chat_export.py \
+  --export /path/to/conversations-000.json \
+  --conversation-id ACTUAL_CONVERSATION_ID \
+  --history-dir chat-histories/early-chats
+```
+
+For a copied paginated Codex store, use `refresh_chat_history.py` with
+`--source-home /path/to/database-copy` plus the usual exact ID and routing
+arguments. It applies the same read-only source and public-prefix checks.
+Choose the native title from the source metadata or session index. For an
+already filtered JSON archive, `record_chat.py --import-json ... --folder ...`
+is still available. Claude adapters describe their coverage in `--help` and
+module documentation.
 
 Run the synthetic integrity/source suite:
 

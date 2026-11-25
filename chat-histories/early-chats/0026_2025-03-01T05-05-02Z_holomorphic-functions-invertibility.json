@@ -1,0 +1,79 @@
+[
+  {
+    "id": "67c2957e-0bf8-800a-bb44-a53bfb1d0e32",
+    "conversation_id": "67c2957e-0bf8-800a-bb44-a53bfb1d0e32",
+    "title": "Holomorphic Functions Invertibility",
+    "create_time": 1740805502.59741,
+    "update_time": 1740805521.116721,
+    "current_node": "f53bbb54-95a3-42c9-b809-207e94db3908",
+    "mapping": {
+      "aaa18281-186a-4357-9252-a944364bc611": {
+        "id": "aaa18281-186a-4357-9252-a944364bc611",
+        "parent": null,
+        "children": [
+          "8abac0b5-50ed-4c96-856f-9e5ba30438c7"
+        ],
+        "message": null
+      },
+      "8abac0b5-50ed-4c96-856f-9e5ba30438c7": {
+        "id": "8abac0b5-50ed-4c96-856f-9e5ba30438c7",
+        "parent": "aaa18281-186a-4357-9252-a944364bc611",
+        "children": [
+          "f53bbb54-95a3-42c9-b809-207e94db3908"
+        ],
+        "message": {
+          "id": "8abac0b5-50ed-4c96-856f-9e5ba30438c7",
+          "author": {
+            "role": "user",
+            "name": null
+          },
+          "create_time": 1740805501.896,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Are holomorphic functions in multiple complex dimensions generally invertible and bijective in some neighborhood of any regular point?"
+            ]
+          },
+          "metadata": {}
+        }
+      },
+      "f53bbb54-95a3-42c9-b809-207e94db3908": {
+        "id": "f53bbb54-95a3-42c9-b809-207e94db3908",
+        "parent": "8abac0b5-50ed-4c96-856f-9e5ba30438c7",
+        "children": [],
+        "message": {
+          "id": "f53bbb54-95a3-42c9-b809-207e94db3908",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1740805504.955914,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "In multiple complex dimensions, holomorphic functions are generally **not** invertible in a neighborhood of every regular point unless additional conditions are imposed.\n\n### Key Points:\n1. **Jacobian Criterion**: The function \\( f: \\mathbb{C}^n \\to \\mathbb{C}^n \\) is locally invertible at a regular point if and only if the **Jacobian determinant is nonzero** at that point (by the holomorphic inverse function theorem). However, this does not guarantee global invertibility or bijectivity.\n\n2. **Liouville-Type Obstructions**: Unlike in one complex dimension (where every non-constant holomorphic function is open and univalent in a neighborhood by the inverse function theorem), in higher dimensions, holomorphic maps can fail to be injective due to **overdetermined constraints** on their derivatives.\n\n3. **Hartogs' Phenomenon**: In dimensions \\( n > 1 \\), holomorphic functions exhibit strong extension properties, meaning that local invertibility does not necessarily lead to global invertibility, and multi-valued behavior can emerge.\n\n4. **Properness and Global Injectivity**: A holomorphic function is globally injective on \\( \\mathbb{C}^n \\) if it is **proper** (inverse images of compact sets are compact) and **one-to-one**. However, many holomorphic functions fail these conditions (e.g., non-trivial entire functions).\n\n5. **Counterexamples**:\n   - **Polynomial Maps**: Many holomorphic maps in higher dimensions are not globally bijective. For example, the **polynomial map** \\( f(z_1, z_2) = (z_1^2 - z_2, z_1 z_2) \\) is not invertible despite being locally a submersion.\n   - **Blow-ups**: Certain blow-up maps are locally biholomorphic but fail to be globally invertible.\n\n### Conclusion:\nWhile **locally invertible** holomorphic functions exist at regular points where the Jacobian is nonzero, **bijectivity is not guaranteed** in multiple complex dimensions due to non-trivial global constraints."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-4o"
+          }
+        }
+      }
+    },
+    "archive_metadata": {
+      "format": "ChatGPT-style mapping of public export text",
+      "source_kind": "ChatGPT account export; public text",
+      "source_file": "conversations-000.json",
+      "source_sha256": "24dab667360a0c39cba534e46c5139906ee55cf8daf6f09d73d607981c11ad57",
+      "source_project_id": "g-p-675d0cc42194819189f2dc5651b8dade",
+      "coverage": "User and assistant text in the supplied snapshot, including exported alternate branches. The export does not mark commentary, turn completion or per-message update times.",
+      "attachment_coverage": "File descriptors and reference labels only. No binary attachments, embedded media or expanded reference and search data.",
+      "omitted_source_records": {},
+      "first_captured_at_utc": "2026-11-25T04:40:31.241Z",
+      "first_captured_at_local": "2026-11-24T23:40:31.241-05:00",
+      "history_number": 26,
+      "captured_at_utc": "2026-11-25T04:40:31.241Z",
+      "captured_at_local": "2026-11-24T23:40:31.241-05:00"
+    }
+  }
+]

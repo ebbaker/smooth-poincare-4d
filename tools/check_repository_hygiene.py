@@ -22,6 +22,8 @@ BRANCHES = ('investigations-1/01_chiral_metric_evolution',
 def files(root):
     for path in root.rglob('*'):
         relative = path.relative_to(root)
+        if relative.parts[0] == 'smooth-poincare-4d-storage':
+            continue
         if any(part in {'.git', '__pycache__', '.venv', '.chat-history-transaction'} for part in relative.parts):
             continue
         if path.is_file():

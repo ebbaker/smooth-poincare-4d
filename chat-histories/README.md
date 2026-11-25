@@ -1,6 +1,20 @@
 # Shared-program public chat histories
 
-Use this folder for repository-wide setup or cross-investigation conversations. Branch-only chats belong in that branch's chat-histories folder. There were no substantive histories in the supplied geometry folder.
+Use this folder for repository-wide setup or cross-investigation conversations.
+Branch-only chats belong in that branch's chat-histories folder. The
+[numbered chronology](CHRONOLOGY.md) links the recovered and previously
+registered conversations by original creation time. The
+[early chats](early-chats/README.md) cover the period before **Review thread
+history**.
+
+25 November 2026 screenshot recovery: [Repository audit verification](screenshots/S01_repository_audit_verification.md)
+now includes both earlier completed replies. The chronology also links five
+branch conversation supplements, recovered from the 30 images in `omitted/`.
+These are explicitly unregistered screenshot transcriptions with coverage
+limits and a [source manifest](screenshots/SOURCE_MANIFEST.json). Earlier
+partial records and native registrations are preserved.
+The [later recovery request and completed public updates](UNREGISTERED_PARTIAL_SCREENSHOT_RECOVERY_20261125.md)
+belong to that same audit conversation and remain explicitly unregistered.
 
 Follow [the capture workflow](../tools/CHAT_HISTORY.md). Do not invent registrations, titles, source transcripts, model settings, or completed final messages. A working CLI and passing tests do not verify capture of the current conversation. No native completion hook is installed by this setup.
 

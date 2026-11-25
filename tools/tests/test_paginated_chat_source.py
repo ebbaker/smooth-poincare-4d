@@ -233,6 +233,15 @@ class PaginatedSourceTests(unittest.TestCase):
                 self.assertEqual(after, before)
                 self.assertEqual(metadata_after, metadata_before)
 
+    def test_explicit_show_directive_preserves_exact_public_rows(self):
+        before = self.source()
+        for trusted_contacts in ("check", "skip"):
+            self.change_json("answer-1", moderation={
+                "moderated": True,
+                "display": {"mode": "show", "trustedContacts": trusted_contacts, "version": 1},
+            })
+            self.assertEqual(self.source(), before)
+
     def test_status_only_final_keeps_completion_and_private_content_gates(self):
         self.change_json("answer-1", moderation={"moderated": True, "display": None})
         self.add_item("private-agent", "agentMessage", 4, text="PRIVATE_SENTINEL", phase="analysis")
@@ -250,6 +259,10 @@ class PaginatedSourceTests(unittest.TestCase):
         for value in (
             {"moderated": True, "display": "Visible replacement"},
             {"moderated": True, "display": {"type": "blocked"}},
+            {"moderated": True, "display": {"mode": "show", "trustedContacts": "check", "version": 2}},
+            {"moderated": True, "display": {"mode": "show", "trustedContacts": "check", "version": True}},
+            {"moderated": True, "display": {"mode": "show", "trustedContacts": "skip", "version": 1,
+                                             "replacement": "Visible replacement"}},
             {"moderated": True, "display": None, "unknown": None},
             {"moderated": True},
             {"moderated": False, "display": "Visible replacement"},

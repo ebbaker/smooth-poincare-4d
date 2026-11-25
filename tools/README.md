@@ -10,6 +10,7 @@ Use Python 3.10 or later on macOS or Linux for the chat refresh suite.
 | `paginated_chat_source.py` | Read-only adapter for supported local paginated history schemas |
 | `record_chat.py` | Shared archive serializer and explicit single-conversation import |
 | `extract_project_chats.py` | Select exact conversations from an author-provided account export |
+| `import_public_chat_export.py` | Register one verified conversation from a reduced ChatGPT export |
 | `record_Claude_cowork_chat.py` | Convert or capture supported Cowork transcripts with declared coverage, where a transcript file exists |
 | `record_Claude_export_chat.py` | Convert supported Claude export/event records with declared coverage |
 | `record_Claude_browser_chat.py` | Record a Cowork session from its claude.ai event log, turn by turn, through a signed-in browser |

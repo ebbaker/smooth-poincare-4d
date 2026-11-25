@@ -23,6 +23,7 @@ import time
 import types
 
 MAX_BYTES = 1024 * 1024
+EARLY_HISTORY = Path("chat-histories/early-chats")
 LOCK_NAME = ".chat-history-refresh.lock"
 TRANSACTION_NAME = ".chat-history-transaction"
 TRANSACTION_FILES = {"journal.json", "old_chat", "old_index", "new_chat", "new_index", "restore_chat", "restore_index"}
@@ -80,8 +81,8 @@ def safe_directory(repo, relative):
     if path.is_absolute() or not path.parts or any(p in {".", ".."} for p in path.parts):
         raise HistoryError("--history-dir must be a repository-relative history directory")
     target = repo / path
-    if target.name not in {"chat-histories", "chat_histories"}:
-        raise HistoryError("--history-dir must name a chat-histories or chat_histories directory")
+    if target.name not in {"chat-histories", "chat_histories"} and path != EARLY_HISTORY:
+        raise HistoryError("--history-dir must name a history registry")
     current = repo
     for part in path.parts:
         current = current / part
@@ -156,11 +157,12 @@ def find_registered(repo, thread_id, preferred=None):
     # them makes a registered chat look unregistered to refresh and Stop hooks,
     # and can allow a second registration in a branch.
     indices = [repo / name / "index.json" for name in ("chat-histories", "chat_histories")]
+    indices.append(repo / EARLY_HISTORY / "index.json")
     indices.extend(papers.rglob("index.json"))
     for path in indices:
         if not path.exists() and not path.is_symlink():
             continue
-        if path.parent.name not in {"chat-histories", "chat_histories"}:
+        if path.parent.name not in {"chat-histories", "chat_histories"} and path.parent != repo / EARLY_HISTORY:
             continue
         folder = safe_directory(repo, str(path.parent.relative_to(repo)))
         index = read_index(folder)
@@ -215,9 +217,10 @@ def paginated_adapter():
     return adapter
 
 
-def call_paginated_adapter(method, thread_id):
+def call_paginated_adapter(method, thread_id, source_home=None):
     adapter = paginated_adapter()
-    codex_home = Path(os.environ.get("CODEX_HOME", str(Path.home() / ".codex"))).expanduser()
+    codex_home = (Path(source_home) if source_home is not None else
+                  Path(os.environ.get("CODEX_HOME", str(Path.home() / ".codex")))).expanduser()
     try:
         return getattr(adapter, method)(codex_home, thread_id)
     except adapter.SourceUnavailable as exc:
@@ -237,21 +240,26 @@ def load_paginated_source(thread_id):
     return call_paginated_adapter("load_paginated_rows", thread_id)
 
 
-def read_available_source(rollout, thread_id, title, recorder):
+def read_available_source(rollout, thread_id, title, recorder, *, source_home=None):
     # The recorded history mode is authoritative. A retained JSONL can be stale
     # after migration; never use it to hide an unavailable marked-paginated store.
-    if rollout is None and paginated_source_mode(thread_id) == "paginated":
+    if source_home is not None:
+        if rollout is not None or call_paginated_adapter("probe_paginated_mode", thread_id, source_home) != "paginated":
+            raise HistoryError("An explicit database snapshot requires an exact paginated history and no rollout override")
+        rows, info = call_paginated_adapter("load_paginated_rows", thread_id, source_home)
+    elif rollout is None and paginated_source_mode(thread_id) == "paginated":
         rows, info = load_paginated_source(thread_id)
-        if not isinstance(info, dict) or info.get("thread_id") != thread_id or not isinstance(info.get("source_kind"), str):
-            raise HistoryError("The paginated adapter returned inconsistent source identity", code="source_identity_mismatch")
-        # Canonical adapter rows still pass the same strict public-source reader.
-        # The temporary normalized source remains outside the repository.
-        with tempfile.TemporaryDirectory(prefix="paginated-public-chat-") as temp:
-            normalized = Path(temp) / "public.jsonl"
-            normalized.write_text("".join(json.dumps(row, ensure_ascii=False) + "\n" for row in rows), encoding="utf-8")
-            return read_public_source(normalized, thread_id, title, recorder), info["source_kind"]
-    source = resolve_rollout(thread_id, rollout)
-    return read_public_source(source, thread_id, title, recorder), "Codex local session completed public messages"
+    else:
+        source = resolve_rollout(thread_id, rollout)
+        return read_public_source(source, thread_id, title, recorder), "Codex local session completed public messages"
+    if not isinstance(info, dict) or info.get("thread_id") != thread_id or not isinstance(info.get("source_kind"), str):
+        raise HistoryError("The paginated adapter returned inconsistent source identity", code="source_identity_mismatch")
+    # Canonical adapter rows still pass the same strict public-source reader.
+    # The temporary normalized source remains outside the repository.
+    with tempfile.TemporaryDirectory(prefix="paginated-public-chat-") as temp:
+        normalized = Path(temp) / "public.jsonl"
+        normalized.write_text("".join(json.dumps(row, ensure_ascii=False) + "\n" for row in rows), encoding="utf-8")
+        return read_public_source(normalized, thread_id, title, recorder), info["source_kind"]
 
 
 def read_public_source(path, thread_id, title, recorder):
@@ -728,7 +736,40 @@ def _install_transaction(folder, filename, chat_bytes, index_bytes):
         raise HistoryError("Installation failed; the original registered capture and index were preserved") from exc
 
 
-def refresh_once(repo, thread_id, rollout=None, history_dir=None, title=None, after_turn=None, lock_wait_seconds=10, user_turn=None, reconcile_creation_time=None):
+def install_capture(folder, index, entry, conversation, recorder, captured):
+    """Render and install one validated capture while holding the registry lock."""
+    thread_id = conversation["conversation_id"]
+    archive_meta = conversation["archive_metadata"]
+    with tempfile.TemporaryDirectory(prefix="render-public-chat-") as temp:
+        stage = Path(temp)
+        if entry:
+            (stage / entry["file"]).write_bytes((folder / entry["file"]).read_bytes())
+        # Preserve reservations from unregistered numbered files without copying their bodies.
+        index["next_number"] = recorder.next_number(folder, index)
+        (stage / "index.json").write_bytes(json_bytes(index))
+        try:
+            with contextlib.redirect_stdout(io.StringIO()):
+                recorder.save_chat(stage, conversation, captured)
+        except (ValueError, OSError, KeyError, TypeError) as exc:
+            raise HistoryError("The existing renderer refused the public capture; no registered data were changed") from exc
+        rendered_index = json.loads((stage / "index.json").read_text(encoding="utf-8"))
+        rendered_entry = next(e for e in rendered_index["chats"] if e["conversation_id"] == thread_id)
+        rendered_entry["first_captured_at_utc"] = archive_meta["first_captured_at_utc"]
+        rendered_entry["first_captured_at_local"] = archive_meta["first_captured_at_local"]
+        validate_index(stage, rendered_index)
+        filename = rendered_entry["file"]
+        chat_bytes, index_bytes = (stage / filename).read_bytes(), json_bytes(rendered_index)
+        if len(chat_bytes) >= MAX_BYTES or len(index_bytes) >= MAX_BYTES:
+            raise HistoryError("The public capture or registry reaches the repository's 1 MiB limit")
+        if not entry and (folder / filename).exists():
+            raise HistoryError("Refusing to overwrite an unregistered chat filename")
+        if entry and current_hash(folder / filename) != entry["sha256"]:
+            raise HistoryError("The registered capture changed during refresh", code="integrity_check_failed")
+        _install_transaction(folder, filename, chat_bytes, index_bytes)
+    return rendered_entry
+
+
+def refresh_once(repo, thread_id, rollout=None, history_dir=None, title=None, after_turn=None, lock_wait_seconds=10, user_turn=None, reconcile_creation_time=None, *, source_home=None):
     repo = Path(repo).expanduser().resolve()
     if not isinstance(thread_id, str) or not re.fullmatch(r"[A-Za-z0-9_-]{1,128}", thread_id):
         raise HistoryError("A valid exact conversation id is required")
@@ -758,7 +799,7 @@ def refresh_once(repo, thread_id, rollout=None, history_dir=None, title=None, af
             if history_dir is None or not isinstance(title, str) or not title.strip():
                 raise HistoryError("A new capture requires explicit --history-dir and --title")
             capture_title = title
-        snapshot, source_kind = read_available_source(rollout, thread_id, capture_title, recorder)
+        snapshot, source_kind = read_available_source(rollout, thread_id, capture_title, recorder, source_home=source_home)
         if after_turn:
             if after_turn in snapshot.interrupted_turns:
                 return {"status": "skipped_interrupted_turn", "thread_id": thread_id, "turn_id": after_turn}
@@ -809,40 +850,10 @@ def refresh_once(repo, thread_id, rollout=None, history_dir=None, title=None, af
         archive_meta["turns"] = merged_turns
         archive_meta["first_captured_at_utc"] = prior_meta.get("first_captured_at_utc", prior_meta.get("captured_at_utc", recorder.iso(captured)))
         archive_meta["first_captured_at_local"] = prior_meta.get("first_captured_at_local", prior_meta.get("captured_at_local", datetime.fromtimestamp(captured, recorder.LOCAL).isoformat(timespec="milliseconds")))
-        with tempfile.TemporaryDirectory(prefix="render-public-chat-") as temp:
-            stage = Path(temp)
-            (stage / "index.json").write_bytes(json_bytes(index))
-            for old_entry in index["chats"]:
-                if old_entry["conversation_id"] == thread_id:
-                    (stage / old_entry["file"]).write_bytes((folder / old_entry["file"]).read_bytes())
-            # Preserve reservations from unregistered numbered files, without copying their bodies.
-            used = [e["number"] for e in index["chats"]]
-            for path in folder.iterdir():
-                match = re.fullmatch(r"(\d+)_.*\.json", path.name)
-                if match:
-                    used.append(int(match[1]))
-            index["next_number"] = max(index.get("next_number", 1), max(used, default=0) + 1)
-            (stage / "index.json").write_bytes(json_bytes(index))
-            try:
-                with contextlib.redirect_stdout(io.StringIO()):
-                    recorder.save_chat(stage, conversation, captured)
-            except (ValueError, OSError, KeyError, TypeError) as exc:
-                raise HistoryError("The existing renderer refused the public capture; no registered data were changed") from exc
-            rendered_index = json.loads((stage / "index.json").read_text(encoding="utf-8"))
-            rendered_entry = next(e for e in rendered_index["chats"] if e["conversation_id"] == thread_id)
-            rendered_entry["first_captured_at_utc"] = archive_meta["first_captured_at_utc"]
-            rendered_entry["first_captured_at_local"] = archive_meta["first_captured_at_local"]
-            validate_index(stage, rendered_index)
-            filename = rendered_entry["file"]
-            chat_bytes, index_bytes = (stage / filename).read_bytes(), json_bytes(rendered_index)
-            if len(chat_bytes) >= MAX_BYTES or len(index_bytes) >= MAX_BYTES:
-                raise HistoryError("The public capture or registry reaches the repository's 1 MiB limit")
-            if not entry and (folder / filename).exists():
-                raise HistoryError("Refusing to overwrite an unregistered chat filename")
-            if entry and current_hash(folder / filename) != entry["sha256"]:
-                raise HistoryError("The registered capture changed during refresh", code="integrity_check_failed")
-            _install_transaction(folder, filename, chat_bytes, index_bytes)
-        return {"status": "refreshed" if previous else "registered", "thread_id": thread_id, "number": rendered_entry["number"], "file": filename, "messages": rendered_entry["message_count"], "recovery": recovery}
+        rendered_entry = install_capture(folder, index, entry, conversation, recorder, captured)
+        return {"status": "refreshed" if previous else "registered", "thread_id": thread_id,
+                "number": rendered_entry["number"], "file": rendered_entry["file"],
+                "messages": rendered_entry["message_count"], "recovery": recovery}
 
 
 def diagnose_source(repo, thread_id, rollout=None, history_dir=None):
@@ -892,6 +903,7 @@ def parser():
     p.add_argument("--repo", type=Path, default=Path(__file__).resolve().parents[1])
     p.add_argument("--thread-id")
     p.add_argument("--rollout", type=Path)
+    p.add_argument("--source-home", type=Path, help="Read an explicit copied paginated Codex database pair")
     p.add_argument("--history-dir", help="Explicit repository-relative destination; needed with --title to opt in a new chat")
     p.add_argument("--title")
     p.add_argument("--reconcile-creation-time", nargs=2, metavar=("OLD_ISO", "NEW_ISO"),
@@ -909,7 +921,7 @@ def run_bounded(args):
     deadline = time.monotonic() + args.wait_seconds
     while True:
         try:
-            return refresh_once(args.repo, args.thread_id, args.rollout, args.history_dir, args.title, args.after_turn, lock_wait_seconds=min(5, max(0, deadline - time.monotonic())), user_turn=getattr(args, "user_turn", None), reconcile_creation_time=getattr(args, "reconcile_creation_time", None))
+            return refresh_once(args.repo, args.thread_id, args.rollout, args.history_dir, args.title, args.after_turn, lock_wait_seconds=min(5, max(0, deadline - time.monotonic())), user_turn=getattr(args, "user_turn", None), reconcile_creation_time=getattr(args, "reconcile_creation_time", None), source_home=getattr(args, "source_home", None))
         except SourcePending as exc:
             if time.monotonic() >= deadline:
                 raise SourcePending("The bounded refresh ended before the requested real source records were fully available: " + str(exc), code=exc.code, details={**exc.details, "wait_seconds": args.wait_seconds}) from exc
@@ -922,6 +934,8 @@ def main(argv=None):
     try:
         if args.reconcile_creation_time is not None and (hook or args.defer or args.diagnose or args.rollout or args.after_turn):
             raise HistoryError("Creation reconciliation is an explicit immediate repair, not a hook, deferred, diagnostic, override or turn-gated action")
+        if args.source_home is not None and any((hook, args.defer, args.diagnose, args.rollout, args.reconcile_creation_time)):
+            raise HistoryError("--source-home is for immediate capture from a copied paginated database pair")
         if not math.isfinite(args.wait_seconds) or not 0 <= args.wait_seconds <= 120:
             raise HistoryError("--wait-seconds must lie between 0 and 120")
         if hook:

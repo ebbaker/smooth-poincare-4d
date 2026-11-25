@@ -23,6 +23,7 @@ Each investigation has an overview, plan, one progress register per task family,
 - Read [AGENTS.md](AGENTS.md), the relevant investigation README, and its sole progress register.
 - Use [the setup workflow](INVESTIGATION_SETUP_WORKFLOW.md) and [B/E research workflow](GPT_RESEARCH_MODEL_WORKFLOW.md) for sustained research and bounded handoffs.
 - Follow [the reference workflow](REFERENCE_WORKFLOW.md) and [public chat-history workflow](tools/CHAT_HISTORY.md).
+- Browse the [numbered conversation chronology](chat-histories/CHRONOLOGY.md) for the recovered project history.
 - See [CONTINUATION.md](CONTINUATION.md) for the next-session choices and [MANIFEST.md](MANIFEST.md) for the file map.
 - See [the repository audit](reviews/REPOSITORY_AUDIT_20261121.md) for verified local write access, complete source coverage, workflow comparison and transfer repairs. [SETUP_STATUS.md](SETUP_STATUS.md) and [the organization correction](ORGANIZATION_UPDATE.md) retain the earlier preparation receipts.
 
