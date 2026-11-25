@@ -1,0 +1,194 @@
+\section{Finite accounting of chiral Weyl energy}
+
+We work on one common source sequence. The base and all bubbles contribute
+in one chirality. All measures in the accounting theorems have finite
+mass. For the geometric application the source measure is
+$\mu_i=|W^+_{g_i}|_{\mathrm{HS}}^2\,dV_{g_i}$. A smooth compactified
+base can carry positive energy after all bubble energies vanish.
+
+\begin{lemma}[Finite accounting with a strict residual]
+\label{lem:finite-bubble-accounting}
+\lean{SectionsAndConnections.noPositiveBubbleOfFiniteAccounting}
+\leanok
+Put $p=4\pi^2$. Let $J$ be finite, $\delta>0$ and $p\le e\le2p-\delta$.
+Suppose $e=b+\sum_{j\in J}x_j$, where $b,x_j\ge0$. Each of $b$ and
+the $x_j$ is zero or strictly larger than $p$. If $e-x_j>0$ whenever
+$x_j>0$, then every $x_j=0$ and $e=b$.
+\end{lemma}
+\begin{proof}
+\leanok
+For a positive $x_j$, the residual $e-x_j$ is less than $p$. It is
+the sum of $b$ and all the other bubble energies. Each is nonnegative
+and strictly below $p$, so each is zero. This contradicts $e-x_j>0$.
+\end{proof}
+
+\begin{lemma}[Source and component budgets in scalar form]
+\label{lem:scalar-component-budgets}
+\lean{FirstOrderTwistor.sourceBandScalarBudget, FirstOrderTwistor.sourceCurvatureBudget, FirstOrderTwistor.strictComponentResidual, FirstOrderTwistor.uniformComponentResidual}
+\leanok
+Write $Y_{\rm rd}=8\sqrt6\,\pi$. Given the source Euler identity
+$Y^2=48(8\pi^2-E)+12D$, $0\le Y\le Y_{\rm rd}$, $D\ge0$,
+and $E\le8\pi^2-\delta$ with $\delta>0$, one has $Y\ge\sqrt{48\delta}$
+and $D\le4E$. If the full curvature integral is $8E+2D+Y^2/6$, it is
+at most $192\pi^2-16\delta$. For a component with energy $x$, suppose
+the limiting Euler identity holds at $(e,y,D)$ and $4x=d\le D$. Then
+\[
+ e-x\ge (Y_{\rm rd}^2-y^2)/48.
+\]
+If $0\le y\le\widehat Y<Y_{\rm rd}$ the right hand side is positive.
+If $\widehat Y\le Y_{\rm rd}-d_\delta$ for a supplied
+$0<d_\delta<Y_{\rm rd}$, the lower bound is at least
+$[Y_{\rm rd}^2-(Y_{\rm rd}-d_\delta)^2]/48$.
+\end{lemma}
+\begin{proof}
+\leanok
+Substitute the Euler identity and $Y_{\rm rd}^2=384\pi^2$. On the
+nonnegative real axis, squaring preserves the Yamabe comparisons.
+\end{proof}
+
+\begin{lemma}[Counting ends from the numerical end budget]
+\label{lem:scalar-ale-end-count}
+\lean{FirstOrderTwistor.oneALEEndOfSubcriticalBounds, FirstOrderTwistor.q8EtaContradictionOfSubcriticalBand}
+\leanok
+In the notation of \S11.3 let $k\ge1$ count the end orders $q_j\ge1$,
+all bounded by $Q$. Suppose $e\le8\pi^2-\delta$, $\delta>0$,
+$e_+,e_-\ge0$, and
+\[
+ (8\pi^2-e)+(e_++e_-)/2+4\pi^2(k-2+\textstyle\sum_j1/q_j)
+ \le 8\pi^2/Q.
+\]
+Then $k=1$. If both chiral energies belong to $[0,8\pi^2-\delta]$,
+the $Q_8$ signature defect $|e_+-e_-|=9\pi^2$ is impossible.
+\end{lemma}
+\begin{proof}
+\leanok
+If $k\ge2$, insert $\sum_j1/q_j\ge k/Q$ and subtract $8\pi^2/Q$.
+The difference is at least $\delta+4\pi^2(k-2)(1+1/Q)>0$.
+The two nonnegative chiral energies differ by less than $9\pi^2$.
+\end{proof}
+
+\begin{lemma}[Energy on a fixed comparison domain]
+\label{lem:fixed-domain-density}
+\lean{FirstOrderTwistor.energyMeasure_real_range_of_embedding, FirstOrderTwistor.tendstoImageEnergyOfUniformPullback, FirstOrderTwistor.chiralHSDensity_integrableOn_and_tendsto}
+\leanok
+For a measurable embedding $\phi_i$ of a fixed finite-volume domain,
+suppose the pullback volume has nonnegative density $J_i$ relative to
+$d\nu$. For an integrable nonnegative source density $f_i$ on its image,
+the image mass is $\int J_i(f_i\circ\phi_i)\,d\nu$.
+Uniform convergence of these densities to an integrable nonnegative
+density gives convergence of image masses. For given chiral matrices
+$W_i$ in oriented orthonormal frames, almost-everywhere convergence of
+the nine entries and $J_i$ also gives convergence of
+$\int J_i\sum_{a,b}(W_i)_{ab}^2\,d\nu$ under measurability and a common
+integrable majorant.
+\end{lemma}
+\begin{proof}
+\leanok
+Transport measure by the embedding and use the formula for integration
+against a measure with density. Apply the finite-volume uniform bound
+or dominated convergence to the finite sum of squares.
+\end{proof}
+
+\begin{lemma}[The mass of the complement]
+\label{lem:source-remainder-split}
+\lean{FirstOrderTwistor.measureReal_univ_eq_sum_add_compl, FirstOrderTwistor.measureReal_le_sum_add_uncovered}
+\leanok
+For finitely many measurable $C_j$ with pairwise null intersections,
+put $R=(\bigcup C_j)^c$. Then $\mu(X)=\sum_j\mu(C_j)+\mu(R)$.
+If $\mu(S_k)\le d_k$ for finitely many strips, then
+\[
+ \mu(R)\le\sum_k d_k+\mu(R\setminus\textstyle\bigcup_k S_k).
+\]
+\end{lemma}
+\begin{proof}
+\leanok
+Use finite additivity up to null sets for the first equation and
+subadditivity on the covered portion for the second.
+\end{proof}
+
+\begin{theorem}[The energy defect and equality under a strip estimate]
+\label{thm:covered-measure-accounting}
+\uses{lem:source-remainder-split}
+\lean{FirstOrderTwistor.TruncationFamily.sum_componentEnergy_le, FirstOrderTwistor.TruncationFamily.tendsto_limsup_remainder, FirstOrderTwistor.energyIdentityOfCoveredRemainder}
+\leanok
+Suppose $\mu_i(X)\to e$. Each of finitely many component measures
+$\nu_j$ has increasing truncations $K_L^j$ exhausting its space up to
+a null set. For fixed $L$, the source images $C_{Li}^j$ are eventually
+measurable and pairwise disjoint up to null sets, with
+$\mu_i(C_{Li}^j)\to\nu_j(K_L^j)$. With $R_{Li}=(\bigcup_j C_{Li}^j)^c$
+and $s=\sum_j\nu_j(X_j)$, one has
+\[
+ s\le e,\qquad \lim_{L\to\infty}\limsup_{i\to\infty}\mu_i(R_{Li})=e-s .
+\]
+Suppose also that each strip mass is at most its estimated cost, and
+that both the sum of costs and the uncovered mass tend to zero in the
+following sense. For every $\varepsilon>0$ and all sufficiently large
+$L$, each quantity is eventually at most $\varepsilon$ as $i\to\infty$.
+Then $e=s$. The finite strip family may depend on $L$ and $i$.
+\end{theorem}
+\begin{proof}
+\uses{lem:source-remainder-split}
+\leanok
+At fixed $L$, take the limit of the exact mass split. The finite sum of
+truncated masses then converges to $s$ by continuity of measure from
+below. Bounding each of the two errors by $\varepsilon/2$ gives $e=s$.
+\end{proof}
+
+\begin{corollary}[Bubble energies with supplied geometric budgets]
+\label{cor:covered-bubble-energies}
+\uses{thm:covered-measure-accounting,lem:scalar-component-budgets,lem:finite-bubble-accounting}
+\lean{FirstOrderTwistor.noPositiveBubbleOfCoveredRemainder, FirstOrderTwistor.bubbleEnergyZeroOfRicciYamabeBounds}
+\leanok
+With one distinguished base and the band and gap hypotheses of
+Lemma~\ref{lem:finite-bubble-accounting}, the covered-remainder hypotheses
+give zero mass for every bubble and $e=e_0$ if each positive bubble has
+strict residual. For the same conclusion it suffices to supply the
+limiting Euler identity, $4e_j\le D$, and
+$0\le y\le\widehat Y_j<Y_{\rm rd}$ for each positive bubble.
+\end{corollary}
+\begin{proof}
+\uses{thm:covered-measure-accounting,lem:scalar-component-budgets,lem:finite-bubble-accounting}
+\leanok
+Derive equality by exhaustion. The component budget supplies the strict
+residual in the second formulation, so the finite accounting lemma applies.
+\end{proof}
+
+\begin{lemma}[Sequence limits of the supplied annular bounds]
+\label{lem:annular-bound-limits}
+\lean{FirstOrderTwistor.noNeckOfSuppliedCharts, FirstOrderTwistor.noNeckOfSuppliedField, FirstOrderTwistor.annularSmallness_iff_tendsto_limsup, FirstOrderTwistor.smallSumOfFiniteStripErrors}
+\leanok
+Given the numerical estimate of Theorem~\ref{thm:one-chart-energy}, a
+uniform bound on $K,\mathfrak B$ and iterated smallness of $\varepsilon$
+give iterated smallness of the annular energy. The same holds for
+the intrinsic bound $8\Lambda\mathfrak B+4\|W\|_2\mathfrak d$
+when $\Lambda,\|W\|_2$ are uniformly bounded and both error inputs tend
+to zero in the iterated sense. For nonnegative energies eventually
+bounded above at each fixed large $L$, this is equivalent to the
+iterated limsup being zero. Individual estimates sum over a fixed
+finite strip family.
+\end{lemma}
+\begin{proof}
+\leanok
+Bound the coefficients independently of large $L$ and sufficiently
+large $i$ at that $L$. Apply the defining eventual bounds for the
+inner limsup and sum over finitely many strips.
+\end{proof}
+
+\begin{lemma}[Covered portion of a single end]
+\label{lem:diagonal-covered-end}
+\lean{FirstOrderTwistor.exists_slow_diagonal, FirstOrderTwistor.exists_slow_diagonal_with_vanishing_annularMeasure}
+\leanok
+Suppose each fixed truncation eventually passes its comparison test.
+Suppose its annular mass between $A$ and $m$ is at most the mass of
+a model annulus in the tail beyond $A$ plus an error tending to zero
+with $m$. If the model tail mass tends to zero with $A$, there is
+a choice $m(i)\to\infty$ passing every test through $m(i)$ eventually
+and giving iterated smallness of this covered annular mass.
+\end{lemma}
+\begin{proof}
+\leanok
+Choose the largest $m\le i$ for which the tests through $m$ pass.
+For each fixed $m$ this prefix eventually passes. Compare at the
+selected endpoint and then exhaust the inner tail. Energy up to a
+different prescribed outer scale requires a separate estimate.
+\end{proof}

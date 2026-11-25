@@ -140,6 +140,21 @@ theorem smallSumOfFiniteStripErrors (K : Finset κ) (error : κ → ℕ → ℕ 
     rw [Finset.sum_insert hk]
     exact (add_le_add hi hi').trans_eq (add_halves ε)
 
+/-- Build the remainder estimate from separately controlled physical strips
+when the index family is fixed. Different strips may use different analytic bounds. -/
+def RemainderEstimates.ofFixedStrips {μ : ℕ → Measure X} {J : Finset ι}
+    {Y : ι → Type*} [∀ j, MeasurableSpace (Y j)]
+    (F : TruncationFamily μ J Y) (K : Finset κ) (strip : κ → ℕ → ℕ → Set X)
+    (cost : κ → ℕ → ℕ → ℝ)
+    (hbound : ∀ᶠ L in atTop, ∀ᶠ i in atTop, ∀ k ∈ K, (μ i).real (strip k L i) ≤ cost k L i)
+    (hsmall : ∀ k ∈ K, ∀ ε : ℝ, 0 < ε → ∀ᶠ L in atTop, ∀ᶠ i in atTop, cost k L i ≤ ε)
+    (huncovered : ∀ ε : ℝ, 0 < ε → ∀ᶠ L in atTop, ∀ᶠ i in atTop,
+      (μ i).real (F.remainder L i \ ⋃ k ∈ K, strip k L i) ≤ ε) : RemainderEstimates F κ where
+  strips L i := ⟨K, fun k => strip k L i, fun k => cost k L i⟩
+  bounds := hbound
+  sumSmall := smallSumOfFiniteStripErrors K cost hsmall
+  uncoveredSmall := huncovered
+
 variable {μ : ℕ → Measure X} [∀ i, IsFiniteMeasure (μ i)]
 
 /-- The sum of all component energies equals the total limit when the strip

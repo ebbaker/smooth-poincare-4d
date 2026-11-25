@@ -1,8 +1,15 @@
 import FirstOrderTwistor.Accounting
 import FirstOrderTwistor.ALEEndCount
 import FirstOrderTwistor.AnnularBounds
+import FirstOrderTwistor.BufferedInterpolation
+import FirstOrderTwistor.ChiralDensity
+import FirstOrderTwistor.ComparisonFamily
 import FirstOrderTwistor.ComponentBudgets
 import FirstOrderTwistor.DiagonalEnd
 import FirstOrderTwistor.EnergyDensity
+import FirstOrderTwistor.FrameEnergy
+import FirstOrderTwistor.IntrinsicIntegral
+import FirstOrderTwistor.RiemannianComparison
+import FirstOrderTwistor.WeylAccounting
 
 /-! # Energy accounting for the first-order twistor investigations -/

@@ -62,7 +62,7 @@ theorem weightedEnergy_le_of_intrinsicFlux {α : Type*} [MeasurableSpace α] (μ
     simpa only [mul_add, mul_left_comm (weylNorm x) (2 : ℝ)] using hx
   have hWeylMajorant := hWeylHessian.add (hWeylDerivative.const_mul 2)
   have hWeylIntegrable : Integrable weylContraction μ :=
-    hWeylMajorant.mono' hWeylMeas (by simpa only [Real.norm_eq_abs] using hWeylSplit)
+    hWeylMajorant.mono' hWeylMeas (by simpa only [Real.norm_eq_abs, Pi.add_apply] using hWeylSplit)
   have hWeylIntegral : (∫ x, weylContraction x ∂μ) ≤
       ∫ x, weylNorm x * hessianDefect x + 2 * (weylNorm x * derivativeDefect x) ∂μ :=
     integral_mono_ae hWeylIntegrable hWeylMajorant <|

@@ -37,7 +37,7 @@ def ProcessOptions(options, document):
             )
 
         missing = sorted(
-            name for name in requested - links.keys() if name.startswith("SectionsAndConnections.")
+            name for name in requested - links.keys() if name.startswith(("SectionsAndConnections.", "FirstOrderTwistor."))
         )
         if missing:
             raise ValueError("Missing local Lean declarations: " + ", ".join(missing))
