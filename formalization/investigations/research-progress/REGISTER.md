@@ -2,9 +2,19 @@
 
 This is the sole program register across editions. The shared task prefix is `SP4-FORM-FOT`. Each delegated task has one live proof owner. Natural-language results and the search for qualifying metrics and charts are recorded in the [master register](../../../papers/master/research-progress/REGISTER.md) and the [twistor register](../../../papers/investigations-1/03_first_order_twistor/research-progress/REGISTER.md).
 
+## Edition 03 global Gauss geometry and selected disk collars · 25 November 2026
+
+**FOT-E37.** The oriented immersion now supplies its own smooth Gauss normal, ordered pointwise frames, open middle locus, measured sheets, ordinary round area and conull Morse heights. The exact normalized mean counts middle points of the same immersion in both antipodal fibers. The smooth zero/one-middle-handle recognition still needs a marked reduction with its actual boundary maps.
+
+**Intrinsic descent.** Routes 03 and 05 recover each cap sign from joined tests, charge the entire cap outside its trim and construct compatible frames on a common coordinate chart. Route 06 tests the wide physical chart and the shifted-volume criterion. Route 07 proves the exterior charge and endpoint allowance on the selected disk widths and gives the E58 bound for both signs in one physical metric. Geometric extraction, the derivative cost on those widths, positive repair and the E57 smoothing argument retain separate proof obligations.
+
+[Assessment and kernel checks](../reviews/GLOBAL_GEOMETRY_AND_SELECTED_COLLARS_20261125.md) · [Frozen packet ledger](handoffs/ED03_GLOBAL_GEOMETRY_PACKETS_20261125.md) · [Public replay](handoffs/ED03_GLOBAL_GEOMETRY_CHECKS.lean) · [Continuation](../continuation-notes/AFTER_GLOBAL_GAUSS_AND_SELECTED_COLLARS_20261125.md)
+
 ## Edition 03 geometric realization · 25 November 2026
 
 **FOT-E35a.** Under the inclusive recognition input and round positivity, the recognized type has zero in its actual energy set. A strict infimum gap selects a positive metric, while a positive infimum equal to the threshold is unattained. The round chiral-block calculation uses the pinned constant-curvature tensor. The smooth classification and its normalization remain external geometric premises. [Threshold proof](handoffs/ED03_ATTAINED_RECOGNITION.md)
+
+**Endpoint revision.** Route 07 now derives the strict physical spectral deficit and the eventual collar-allowance lower bound for the same measured sequence. Route 06 proves escape of attaining quantiles from protected windows. The E55 selection of physical charge in smooth disks and the weak-Ricci compactness inputs remain paper-level. [Descent](../07_fixed_type_variational_descent/research-progress/REGISTER.md) · [Scales](../06_physical_scales_and_marked_annuli/research-progress/REGISTER.md)
 
 **FOT-E37.** On one Euclidean hypersurface the balanced nonzero middle spectrum cannot persist on a nonempty open set. With measured indexed Gauss data and a topological floor of two, the actual induced energy is strictly above the immersed threshold. The physical-shell theorem places both whole charged sets on a supplied chart. The chart interpolation controls its genuine first-jet residual. Intrinsic recognition at an attained threshold and both cap signs remain geometric inputs to the marked composition. The unconstrained infimum, the exterior cost of a repair and the diagram of one selected direction retain their separate obligations.
 

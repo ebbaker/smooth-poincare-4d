@@ -11,3 +11,7 @@ Derives both marked faces, the cost of changing their slope, and the positive en
 ## 25 November 2026 · Endpoint research milestone
 
 Gave an actual three-patch retained exterior on the standard sphere and computed the relative Gauss degree and necessary charge on a nonstandard completion. [Derivation and scope](notes/E53_RETAINED_EXTERIOR.md).
+
+## 25 November 2026 · recognition gap and source comparisons
+
+The reflected double has a one-half free-trace test. A long conformally product strip on the Mazur seam has a Dirichlet obstruction independent of both fillings, with exact chiral cost. [Working versions and assessment](../../../master/research-progress/handoffs/E56_E58_RECOGNITION_GAP_20261125.md)

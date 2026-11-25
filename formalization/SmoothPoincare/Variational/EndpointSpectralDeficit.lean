@@ -89,6 +89,14 @@ noncomputable def endpointRicciDefectDensity (g : SmoothRiemannianMetric I M)
   ∑ a : Fin 4, ∑ b : Fin 4, (frameRicciTensor (metricCurvatureFrameTensor g o x frame) a b -
     (metricScalarAt g x / 4) * (if a = b then 1 else 0)) ^ 2
 
+omit [CompactSpace M] [Nonempty M] in
+theorem endpointRicciDefectDensity_eq_ricci (g : SmoothRiemannianMetric I M)
+    (o : ManifoldOrientation I M 4) (x : M) (frame : OrientedOrthonormalFrameAt g o x) :
+    endpointRicciDefectDensity g o x frame =
+      ∑ a : Fin 4, ∑ b : Fin 4, (ricciTensor g x (frame.basis b) (frame.basis a) -
+        (metricScalarAt g x / 4) * (if a = b then 1 else 0)) ^ 2 := by
+  simp only [endpointRicciDefectDensity, frameRicciTensor_metric]
+
 /-- The physical normalized data and the imported geometric identities. The
 Euler identity uses the actual scalar square integral and both chiral charges. -/
 structure EndpointPhysicalSpectralData (o : ManifoldOrientation I M 4)
@@ -140,13 +148,20 @@ theorem endpointPhysicalSpectralDeficit
     endpointSpectralDefectDensity_eq _ _ _ _ (h.plus_spectrum x) (h.minus_spectrum x)
       (trace_geometricChiralBlock g o x (frame x)) (trace_traceFreeChiralBlock _)
   have hB : B = (4 / 3 : ℝ) * e - Lsq := by
+    have hScaled : Integrable (fun x => (2 / 3 : ℝ) *
+        (hilbertSchmidtSq (geometricChiralBlock g o x (frame x)) +
+          hilbertSchmidtSq (endpointNegativeWeylBlock g o x (frame x)))) dV :=
+      (h.plus_integrable.add h.minus_integrable).const_mul (2 / 3 : ℝ)
+    have hSum : (∫ x, hilbertSchmidtSq (geometricChiralBlock g o x (frame x)) +
+        hilbertSchmidtSq (endpointNegativeWeylBlock g o x (frame x)) ∂dV) =
+        e + chiralFrameEnergy g (fun x => endpointNegativeWeylBlock g o x (frame x)) :=
+      integral_add h.plus_integrable h.minus_integrable
     calc
       B = ∫ x, (2 / 3 : ℝ) * (hilbertSchmidtSq (geometricChiralBlock g o x (frame x)) +
           hilbertSchmidtSq (endpointNegativeWeylBlock g o x (frame x))) -
           endpointTopWeyl (plus x) (minus x) ^ 2 ∂dV := integral_congr_ae (Eventually.of_forall hPoint)
       _ = _ := by
-        rw [integral_sub ((h.plus_integrable.add h.minus_integrable).const_mul _) h.top_integrable,
-          integral_const_mul, integral_add h.plus_integrable h.minus_integrable]
+        rw [integral_sub hScaled h.top_integrable, integral_const_mul, hSum]
         change (2 / 3 : ℝ) * (e + chiralFrameEnergy g
           (fun x => endpointNegativeWeylBlock g o x (frame x))) - Lsq = _
         rw [h.signature_zero]
@@ -158,6 +173,7 @@ theorem endpointPhysicalSpectralDeficit
       (classYamabeFour o.dimension_eq g) ^ 2 := by
     simp [h.yamabe_scalar, h.volume_one, Measure.real_def]
   have hEuler := h.euler_two
+  dsimp only at hEuler
   rw [hScalar, h.signature_zero] at hEuler
   change 16 * Real.pi ^ 2 = e + e - D / 2 + (classYamabeFour o.dimension_eq g) ^ 2 / 24 at hEuler
   have hStrict : (classYamabeFour o.dimension_eq g) ^ 2 < 36 * Lsq := h.strict_chen_zhu
@@ -180,8 +196,9 @@ theorem endpointPhysicalSpectralLimits
   let D i := ∫ x, endpointRicciDefectDensity (g i) o x (frame i x) ∂riemannianVolumeMeasure I M (g i)
   let B i := ∫ x, endpointSpectralDefectDensity (plus i x) (minus i x) ∂riemannianVolumeMeasure I M (g i)
   let T := 4 * Real.pi ^ 2
+  have he' : Tendsto e atTop (𝓝 T) := he
   have hGap : Tendsto (fun i => e i - T) atTop (𝓝 0) := by
-    simpa only [sub_self] using he.sub (tendsto_const_nhds (x := T))
+    simpa only [sub_self] using he'.sub (tendsto_const_nhds (x := T))
   have hUpper : Tendsto (fun i => 8 * (e i - T)) atTop (𝓝 0) := by
     simpa only [mul_zero] using hGap.const_mul (8 : ℝ)
   have hBounds (i : ℕ) : 0 ≤ D i ∧ 0 ≤ B i ∧ D i + 3 * B i < 8 * (e i - T) :=

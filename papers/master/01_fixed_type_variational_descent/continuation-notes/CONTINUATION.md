@@ -1,5 +1,7 @@
 # Fixed-type descent continuation
 
+For the current research launch, use the [uniform gap and lower-band disk comparison](../../continuation-notes/AFTER_UNIFORM_RECOGNITION_GAP_20261125.md). The setup request below is historical.
+
 25 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance. E35c requested GPT-6.2 Sol/ultra for setup. Independent serving telemetry is unavailable. The [overview](../research-overview/OVERVIEW.md#ownership-and-versioned-inputs) records the exact source commit and hashes of the approved proposal and frozen setup request. This dated handoff leaves all scientific work unactivated. Re-read the [live register](../research-progress/REGISTER.md) to determine current readiness.
 
 Begin with the unresolved diffuse problem. Choose one finite marked comparison joining several disks or replacing a whole marked region on the original type. Its full energy accounting must cover the connecting geometry and all interfaces, and its positivity must be proved on the actual source. [Joint selection](../../notes/E03_JOINT_SELECTION.md) gives measured witnesses and residuals. [The controlled normal-ball calculation](../../notes/E17_DIFFUSE_REPAIR.md) gives the cost obstruction for its class. [The closed calculation](../../notes/E20_CLOSED_VARIATION.md) and [the restart calculation](../../notes/E21_ROUND_RESTART.md) fix the separate later tests.

@@ -493,6 +493,23 @@ on the inner side. The low full-curvature distance annulus must still
 be related to the supplied buffered chart.
 \end{proof}
 
+\begin{corollary}[A charged region on each full raw side]
+\label{cor:ed03-charged-cut}
+\uses{prop:ed03-inclusive-caps,prop:ed03-anchored-shell}
+\lean{SmoothPoincare.geometricChargedCut_le_excess}
+\leanok
+If the actual inner ball and the whole median exterior are contained
+in opposite raw sides of the supplied marked cut, one of their charges
+is at most the source excess plus the opposite surviving cap's cost.
+Strict reverse margins for both charges are impossible. The resulting
+alternative retains the oriented survivor and its full discarded-side bound.
+\end{corollary}
+\begin{proof}
+\leanok
+Use monotonicity of the same physical chiral measure on the two
+inclusions, then apply inclusive marked reassembly.
+\end{proof}
+
 \begin{lemma}[Curvature of the interpolated metric in the splice chart]
 \label{lem:ed03-splice-curvature}
 \uses{lem:ed03-path}
@@ -631,8 +648,7 @@ index two. Integrate this cardinality on the measured sheets. At or
 below the threshold the energy split forces a nonempty open balanced
 locus, contrary to Theorem~\ref{thm:ed03-no-open-balance}.
 \end{proof}
-Deriving the measured-sheet density identities from the ordinary round
-metric and constructing the topological count floor are separate steps.
+Theorem~\ref{thm:ed03-ordinary-indexed-area} derives the measured-sheet identity for ordinary round area. The topological count floor requires the marked handle reduction.
 For two selected handles, a proof of smooth cancellation must also track
 the attaching curves, their framings and the outgoing boundary marking.
 
@@ -655,4 +671,38 @@ Constant round curvature gives zero trace-free chiral block in the actual
 oriented frames. Pull the positive round metric back along the supplied
 oriented identification. A strict infimum gap selects an admissible
 metric below the threshold by the defining property of the infimum.
+\end{proof}
+
+\begin{proposition}[Deficit, repair cost and protected scales at the intrinsic endpoint]
+\label{prop:ed03-endpoint-windows}
+\uses{cor:ed03-attained-class,lem:ed03-yamabe-quantiles,lem:ed03-splice-curvature}
+\lean{SmoothPoincare.endpointPhysicalSpectralDeficit, SmoothPoincare.endpointPhysicalSpectralLimits, SmoothPoincare.geometricEventually_lt_endpointCollarAllowance, SmoothPoincare.metricChiralQuantile_div_tendsto_atTop_of_fullCurvature_vanishes}
+\leanok
+Put \(T=4\pi^2\). On a volume-one positive Yamabe metric use the actual
+ordered spectra of both Weyl blocks, the Euler and signature identities,
+and the strict spectral inequality \(Y^2<36\int L^2\,dV\), where
+\(L\) is the larger of their two top eigenvalues. For the physical
+trace-free Ricci energy \(D\) and the spectral deficit
+\(B=4e/3-\int L^2\,dV\), one has \(0\le D, B\) and
+\(D+3B<8(e-T)\). Thus both vanish along a sequence with \(e_i\to T\).
+For a disk and collar family on this same type with \(I=T\), let
+\(r_i\to0\) be the entire exterior chiral mass and \(s_i\to0\) the
+raw collar mass. Suppose a strict joined ceiling
+\(e_i+2\sqrt{s_i}\eta_i+\eta_i^2<2T\) produces an actual positive
+repair costing at most \((\sqrt{r_i}+\eta_i)^2\), with
+\(\eta_i\ge0\). For every \(\delta>0\), eventually
+\(\eta_i>\sqrt T-\delta\). Independently, if the full curvature
+mass on every fixed multiple of a positive physical scale \(a_i\) tends to
+zero uniformly in its center, each attaining positive-fraction quantile
+obeys \(r_i(\theta)/a_i\to\infty\) when the total energy has positive limit.
+\end{proposition}
+\begin{proof}
+\leanok
+Trace freeness computes the eigengap deficit of each block. Integrate
+both, then substitute the Euler and signature identities and spectral
+inequality. For the collar estimate a fixed saving in the allowance
+makes both ceilings strict at late indices, violating the infimum.
+For the scale comparison an attaining ball of bounded relative radius
+would put a fixed positive chiral charge into a vanishing full-curvature
+window of the same physical metric.
 \end{proof}

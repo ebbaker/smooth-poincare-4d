@@ -2,6 +2,10 @@
 
 25 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance. E35c requested GPT-6.2 Sol/ultra for setup. Independent serving telemetry is unavailable. The [overview](../research-overview/OVERVIEW.md) fixes the inputs, notation and scope. The [register](../research-progress/REGISTER.md) governs live readiness. Each E packet uses one frozen request and a disjoint output under this branch.
 
+## Current comparison
+
+The uniform recognition theorem eliminates $I^+=T$ even over varying smooth types. Work on one source in the surviving band. Below $4T/3$ apply the [two-sign charge bound](../manuscript/subcritical_charge.tex) at fixed tolerance and test the [marked flux and distortion](../manuscript/disk_collar_comparison.tex) on a charged disk or the measured aggregate. A single marked disk suffices if its gain exceeds the minimizing excess. At higher energies continue through the general residual, a closed minimizer or an equal-energy restart.
+
 ## Diffuse energy
 
 **SP4-MASTER-DESC-B01 (B, Astra/ultra).** Choose a geometry and mechanism for one simultaneous replacement. Use one finite marked family of at least two disks with actual intervening geometry, or one whole marked comparison containing the family. Compare one exterior-preserving construction and one whole-comparison alternative on paper. Hold the same physical minimizing subsequence, a fixed admissible charge tolerance and fixed faces through every estimate. Return a decision in [brainstorm/notes](../brainstorm/notes/README.md) specifying the marked domains, actual gauges, metric candidate, signed costs and route to positive Yamabe sign. Complete by freezing one calculable E01 test or identifying the specific source marking, analytic input or topological identification still needed. If only the independent boundary-fixed normal-disk mechanism is available, record the E17 obstruction and consider B02 rather than repeating that test.

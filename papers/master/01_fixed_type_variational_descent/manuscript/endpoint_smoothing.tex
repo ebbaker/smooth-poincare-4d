@@ -1,0 +1,187 @@
+\section{Ricci flow at the recognition endpoint}\label{sec:endpoint-smoothing}
+
+\begin{lemma}[Smoothing from a small curvature excess]\label{lem:endpoint-smoothing}
+Let \(h_i\) be smooth Riemannian metrics on closed connected
+four-manifolds, with volume one, scalar curvature at least \(-1\),
+and a uniform Sobolev inequality
+\begin{equation}\label{eq:smoothing-initial-sob}
+ \|f\|_4^2\le S_0(\|df\|_2^2+\|f\|_2^2).
+\end{equation}
+Suppose for some fixed \(K_0>0\) that
+\(\|(|\Rm_{h_i}|_{\rm tens}-K_0)_+\|_{2,h_i}\to0\).
+The Ricci flows \(h_i(t)\) then exist for a common positive time
+\(t_*\) at all sufficiently large indices. They have uniform
+curvature bounds on each closed positive-time subinterval. If
+\(\|\Ric_{h_i}-\lambda_0 h_i\|_{2,h_i}\to0\) for some \(\lambda_0>0\),
+the time can be chosen so that, for
+\(\lambda(t)=\lambda_0/(1-2\lambda_0t)\),
+\begin{equation}\label{eq:smoothing-einstein-transport}
+ \sup_{0\le t\le t_*}\|\Ric_{h_i(t)}-\lambda(t)h_i(t)\|_{2,h_i(t)}\to0,
+ \qquad
+ \operatorname{Vol}_{h_i(t)}\to (1-2\lambda_0t)^2
+\end{equation}
+uniformly in time. At any fixed \(0<t<t_*\), a subsequence converges
+smoothly modulo diffeomorphisms to a closed Einstein metric with
+Einstein constant \(\lambda(t)\).
+\end{lemma}
+
+\begin{proof}
+Start each maximal smooth compact Ricci flow individually and restrict
+estimates to a fixed time horizon at most one. The minimum scalar
+curvature cannot decrease. Put \(Q_t(f)=\int(|df|^2+Rf^2/4)dV_t\).
+For \(\|f\|_{2,h_i}=1\), Jensen's inequality and
+\eqref{eq:smoothing-initial-sob} give
+\[
+ \int f^2\log f^2\,dV_0\le 2\log\|f\|_4^2
+ \le 2\log\big[S_0(Q_0(f)+5/4)\big].
+\]
+For \(0<\sigma\le5\), the last bound is at most
+\(\sigma Q_0(f)-2\log\sigma+C\), by the elementary upper bound of
+the logarithm by its tangent. This is a uniform lower bound for
+Perelman's \(\mu(h_i,\sigma/4)\). The monotonicity
+\(\mu(h_i(t),\tau)\ge\mu(h_i,\tau+t)\) gives the log Sobolev inequality
+\(\int f^2\log f^2\,dV_t\le\sigma Q_t(f)-2\log\sigma+C\) for
+\(0<\sigma<1\) and \(\|f\|_{2,h_i(t)}=1\), uniformly on the
+existing flows \cite[\S3]{Perelman2002}.
+Apply Ye's conversion from logarithmic to ordinary Sobolev inequalities
+with exponent~\(4\) and potential \(R/4\), whose negative part is bounded
+\cite[Theorem~5.5, (5.17)--(5.18)]{YeSobolevFlow}. The result is
+\begin{equation}\label{eq:smoothing-weighted-sob}
+ \|f\|_{4,t}^2\le A Q_t(f)+B\|f\|_{2,t}^2
+\end{equation}
+with constants independent of the index and the initial pointwise
+curvature maximum.
+
+Write \(U=|\Rm|_{\rm tens}\). The curvature evolution gives
+\((\partial_t-\Delta)U\le aU^2\) for a dimensional \(a>0\), in the
+weak sense at zeros \cite[Theorem~7.1]{HamiltonSingularities}. Let
+\(\phi'=a\phi^2\), \(\phi(0)=K_0\), and choose a common horizon
+\(t_*\le 1\) on which \(\phi\le 2K_0\), also before the pole of
+\(\lambda\) if the Einstein defect is to be propagated.
+For \(v=(U-\phi)_+\),
+\[
+ (\partial_t-\Delta)v\le a(v^2+2\phi v),\qquad
+ R_+\le c_4(\phi+v).
+\]
+By H\"older, the \(v\) contribution in \eqref{eq:smoothing-weighted-sob}
+is bounded by \((Ac_4/4)\|v\|_2\|f\|_4^2\). As long as
+\(\|v\|_2\le\delta\) for a sufficiently small uniform \(\delta>0\),
+absorption gives \(\|f\|_4^2\le S(\|df\|_2^2+\|f\|_2^2)\) for
+all \(f\), with uniform \(S\). Since \(\partial_t dV_t=-R\,dV_t\)
+and \(R\ge-1\), testing the subsolution against \(2v\) gives
+\[
+ \frac{d}{dt}\|v\|_2^2+2\|dv\|_2^2
+ \le 2a\int v^3\,dV_t+C\|v\|_2^2.
+\]
+Here \(\int v^3\le\|v\|_2\|v\|_4^2\). Shrinking \(\delta\)
+absorbs the cubic term in the derivative estimate, and Gronwall
+keeps \(\|v(t)\|_2\le e^{Ct_*}\|v(0)\|_2<\delta/2\) for all existing
+times up to the horizon at every sufficiently large index.
+
+The unweighted Sobolev inequality gives \(\operatorname{Vol}_t
+B_t(x,r)\ge b r^4\) for \(0<r\le1\), uniformly. To see this, test
+on a cutoff equal to one on the half-ball with Lipschitz constant
+\(2/r\). For \(m(r)=r^{-4}\operatorname{Vol}_t B_t(x,r)\), the
+inequality yields \(m(r)\ge c\sqrt{m(r/2)}\), and iteration uses
+\(\lim_{s\downarrow0}m(s)=\omega_4\) for an individual smooth metric.
+Take a maximum of \(sU(x,s)\) over space and a closed existing time
+interval \([0,b_0]\) with \(b_0\le t_*\), and write \(K=U(x,t)\)
+at a maximizing point. If \(tK\ge2\), then \(U\le2K\) on the
+whole slab \([t-K^{-1},t]\). Rescale it to length one and curvature
+at most two. In this normalization the maximum principle applied to
+\(s|\nabla\Rm|^2+A_1|\Rm|^2\), where \(s\) is time from the start
+of the rescaled slab and \(A_1\) is a sufficiently large dimensional
+constant, bounds \(|\nabla\Rm|\) at the final time. Indeed the
+curvature derivative inequalities give an upper bound
+\((1+C s-2A_1)|\nabla\Rm|^2+C A_1\) for its heat operator
+\cite[\S\S7 and 13]{Hamilton1982}. Scaling back yields
+\(\|\nabla\Rm(t)\|_\infty\le C K^{3/2}\).
+If also \(K\ge\max(1,8K_0)\), then \(U(t)\ge K/2\) and
+\(v(t)\ge K/4\) on the \(h_i(t)\)-ball of radius \(cK^{-1/2}\)
+about \(x\), for a uniform \(0<c\le1\). Its volume lower bound
+gives \(\int v(t)^2dV_t\ge bc^4/16\), contradicting the uniform
+smallness. Hence \(t\|U(t)\|_\infty\) is bounded for all existing
+times up to the horizon. The compact curvature continuation criterion
+extends any flow whose maximal time would be at or below \(t_*\)
+\cite[Theorem~8.1]{HamiltonSingularities}.
+
+To propagate the Einstein defect, use an evolving orthonormal frame
+to keep the norm fixed under time differentiation. For
+\(P=\Ric-\lambda(t)h_i(t)\), curvature contraction and
+\(\lambda'=2\lambda^2\) give
+\((\partial_t-\Delta)P=2\Rm(P)+2\lambda P\) in this frame, where
+\(\Rm(h_i(t))=\Ric\) as a contraction on symmetric forms. Thus
+\[
+ \frac{d}{dt}\|P\|_2^2+2\|\nabla P\|_2^2
+ \le C\|P\|_2^2+C\int v|P|^2\,dV_t.
+\]
+Use \(|\nabla|P||\le|\nabla P|\), H\"older, and the unweighted
+Sobolev bound to absorb the last gradient contribution by taking the
+initial excess smaller. The asserted \(L^2\) estimate follows. With
+\(V_i(t)=\operatorname{Vol}_{h_i(t)}\), one has
+\(V_i\le e^{t_*}\) and
+\[
+ V_i'+4\lambda V_i=-\int\operatorname{tr}P\,dV_t=o(1)
+\]
+uniformly in time. The volume conclusion follows by solving this
+linear equation with \(V_i(0)=1\).
+
+At any fixed interior positive time, bounded curvature and the
+volume lower bound on balls give a uniform injectivity radius
+\cite[Theorem~4.7]{CheegerGromovTaylor1982}. A uniform diameter
+bound follows by packing disjoint fixed-radius balls along a
+minimizing geodesic, since the total volume is bounded. Shi's
+positive-time estimates bound all curvature derivatives
+\cite{Shi1989Flow}. Smooth compactness in the bounded-diameter case
+gives convergence under diffeomorphisms from the closed limit manifold
+to the sources \cite{HamiltonCompactness}.
+The zero limit of the \(L^2\) defect makes this limit Einstein.
+\end{proof}
+
+\begin{theorem}[Exclusion of the unattained endpoint]\label{thm:endpoint-smoothing}
+There is \(\eta>0\) such that a closed oriented smooth homotopy
+four-sphere admitting a positive Yamabe class with chiral energy
+less than \(T+\eta\) is diffeomorphic to the standard sphere. In
+particular, \(I^+(M)>T\) on a nonstandard smooth homotopy four-sphere
+with a positive Yamabe class. For every fixed \(0<\varepsilon_*<\eta\),
+the inclusive bound \(I^+(M)\le T+\varepsilon_*\) recognizes the
+standard smooth type, whether or not the infimum is attained.
+\end{theorem}
+
+\begin{proof}
+If the assertion fails, take nonstandard smooth homotopy spheres
+\(M_i\), possibly varying, with positive physical Yamabe metrics
+\(g_i\) and \(e_i=E_+(g_i)\downarrow T\) along a subsequence. The
+strict deficit \eqref{eq:endpoint-deficit} and the modified Yamabe
+calculation in Section~\ref{sec:endpoint-charge}, up to and
+including the full-curvature density estimate, apply separately to
+each class. They give volume-one auxiliary metrics \(q_i\) with
+\(Y_i\to y_*=8\sqrt3\,\pi\), \(R_{q_i}\ge c_i\to0\),
+\(\|R_{q_i}-y_*\|_2\to0\), \(\|Z_{q_i}\|_2\to0\), and
+\(\||\Rm_{q_i}|_{\rm tens}^2-64\pi^2\|_1\to0\).
+Choose smooth positive conformal factors converging in \(C^2\)
+separately at each index and rescale back to volume one. Choose their
+errors so that all the stated estimates persist, with a uniform
+scalar lower bound \(-1\). Call the resulting metrics \(h_i\).
+The Yamabe inequality and H\"older give
+\[
+ (Y_i-\|R_{h_i}-y_*\|_2)\|f\|_4^2
+ \le 6\|df\|_2^2+y_*\|f\|_2^2.
+\]
+Also \((U-8\pi)_+^2\le|U^2-64\pi^2|\), and
+\(P_i(0)=\Ric_{h_i}-(y_*/4)h_i\) tends to zero in \(L^2\).
+Apply Lemma~\ref{lem:endpoint-smoothing} with \(K_0=8\pi\) and
+\(\lambda_0=y_*/4\).
+
+At a fixed positive time the smooth limit is on a manifold
+diffeomorphic to \(M_i\) for all sufficiently large indices. Its
+scalar curvature is \(4\lambda(t)>0\), and its scalar square integral
+is \(16\lambda(t)^2(1-2\lambda_0t)^2=y_*^2\). Its trace-free Ricci
+tensor vanishes. The signature and Chern--Gauss--Bonnet identities
+in Section~1 therefore give its chiral energy equal to \(T\).
+This actual smooth positive class meets the inclusive energy
+criterion in Section~1 and identifies the standard smooth sphere,
+contradicting the choice of the \(M_i\). If
+\(I^+(M)\le T+\varepsilon_*<T+\eta\), some positive class has
+energy strictly below \(T+\eta\) by definition of the infimum.
+\end{proof}

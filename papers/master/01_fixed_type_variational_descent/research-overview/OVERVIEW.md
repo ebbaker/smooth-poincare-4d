@@ -2,9 +2,9 @@
 
 25 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance. E35c requested GPT-6.2 Sol/ultra for setup. Independent serving telemetry is unavailable. This overview identifies inherited results and planned comparisons.
 
-## The unattained endpoint
+## Uniform recognition and charged disks
 
-Every physical minimizing sequence at the recognition endpoint admits a subsequence for which finite parametrized disks at regular comparison points carry both chiral measures up to arbitrary error. The proof uses a modified Yamabe volume and the original physical curvature measure on the same balls. The first missing comparison concerns their bicollars. The strict cost test, the endpoint Ricci growth rates and the open higher band are assessed in the [master return](../../research-progress/handoffs/E53_E55_ENDPOINT_CHARGE_20261125.md).
+There is a universal $\varepsilon_*>0$ such that $I^+(M)\le4\pi^2+\varepsilon_*$ recognizes every smooth homotopy four-sphere satisfying this bound. This includes an infimum equal to $4\pi^2$ without attainment. The proof yields no numerical value for $\varepsilon_*$. The [proof](../manuscript/endpoint_smoothing.tex) and [current disk residual](../manuscript/subcritical_charge.tex) set the lower boundary and the next actual collar test for this branch.
 
 ## Fixed variational problem
 

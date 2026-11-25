@@ -12,3 +12,5 @@
 Incoming model, theorem and version provenance remains with its respective owner. The [branch overview](../research-overview/OVERVIEW.md#ownership-and-versioned-inputs) records the exact revision inputs. New research dependencies require their own passage check.
 
 [Endpoint source record](../../../../references/SOURCE_NOTES_MASTER_ENDPOINT_20261125.md) for the two spectral classifications and the modified Yamabe measure.
+
+The [canonical recognition-gap record](../../../../references/SOURCE_NOTES_MASTER_RECOGNITION_GAP_20261125.md) gives the sources for the smoothing and marked coordinate estimates.

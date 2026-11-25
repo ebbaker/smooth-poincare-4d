@@ -1,0 +1,103 @@
+\section{Chiral charge on disks above the recognition threshold}
+\label{sec:band-charge}
+
+Here the physical metrics \(g_i\) are volume-one positive Yamabe
+minimizers on one nonstandard smooth homotopy sphere. Write
+\(e_i=E_+(g_i)=E_-(g_i)\to I<2T\). Let \(q_i\) denote the
+volume-one modified Yamabe representative used in
+Section~\ref{sec:endpoint-charge}, and let
+\(\mu_i=dV_{q_i}\), \(\ell_i^2=\int L^2dV\). The measures
+\(\sigma_i=L^2dV\) and \(d\lambda_i^\pm\) are conformally invariant.
+In particular \(0<Y_i/6\le\ell_i\le\sqrt{4e_i/3}\).
+
+\begin{theorem}[A partial chiral residual bound]\label{thm:band-charge}
+Suppose \(\liminf_i(Y_i-6\ell_i/\sqrt{2})>0\). After passing to
+a subsequence, for every \(\epsilon,\zeta,r_*>0\) there are finitely
+many fixed radii \(r_j<r_*\) and, at all sufficiently large indices,
+disjoint smoothly parametrized closed standard disks with union
+\(U_i=\bigcup_j D_{ij}\). Each disk lies in a ball
+\(B_{k_i}(x_{ij},r_j)\) of a positive-Ricci metric \(k_i\in[g_i]\)
+on which the integral of \(|\Rm_{g_i}|_{\rm tens}^2dV_{g_i}\)
+is less than \(\zeta\). On these same disks, for both chiralities,
+\begin{equation}\label{eq:band-charge-residual}
+ \lambda_i^\pm(U_i)\ge Y_i^2/24-e_i-\epsilon,\qquad
+ \lambda_i^\pm(M\setminus U_i)\le 2e_i-Y_i^2/24+\epsilon
+                                  \le 4(e_i-T)+\epsilon .
+\end{equation}
+In particular the hypothesis holds whenever \(I<4T/3\), and each
+sign carries at least \(4T-3e_i-\epsilon\) on the disks. If
+\(I<5T/4\), their raw complement has energy strictly below \(T\)
+for both signs when the tolerance is sufficiently small.
+\end{theorem}
+
+\begin{proof}
+The inequalities \(Y_i^2\ge48(2T-e_i)\) and
+\(18\ell_i^2\le24e_i\) imply the asserted uniform margin for
+\(I<4T/3\). Choose the smooth positive-Ricci metric in the class
+given in Section~\ref{sec:physical-volume} and normalize its scale
+so the least radius enclosing half of \(\sigma_i(M)\) is one.
+Denote an attaining center by \(p_i\). The measure is absolutely
+continuous on the smooth source, so the ball-mass continuity argument
+there applies. Every unit ball and the exterior of \(B_1(p_i)\)
+have \(\sigma_i\)-mass at most \(\ell_i^2/2\). For a cutoff
+supported in either kind of set the ordinary Yamabe inequality in
+\(q_i\), its scalar bound \(R_{q_i}=6L_{q_i}+c_i\le6L_{q_i}\),
+and H\"older give
+\[
+ (Y_i-6\ell_i/\sqrt 2)\|f\|_{4,q_i}^2\le6\|df\|_{2,q_i}^2.
+\]
+The conformal fourth-power gradient bound of
+\eqref{eq:physical-small-support} therefore applies with this floor
+and with \(\mu_i\) on its right. Inward logarithmic cutoffs on
+unit balls and outward cutoffs based at \(p_i\) give
+\eqref{eq:physical-power} for \(\mu_i\). Choose a fixed \(D\) large
+enough that \(\mu_i(B_D(p_i))>1/2\). Packing this ball by a bounded
+number of quarter-balls finds one of uniformly positive
+\(\mu_i\)-mass. Applying the displayed inequality on the
+corresponding half-ball with a linear cutoff bounds the
+\(k_i\)-volume of \(B_{D+1}(p_i)\) below. Relative volume comparison
+now gives \eqref{eq:physical-noncollapse} on bounded windows.
+
+Take a common pointed limit and local weak limits
+\(\mu,\sigma,\nu\) for \(\mu_i,\sigma_i\) and
+\(\nu_i=|\Rm_{g_i}|^2_{\rm tens}dV_{g_i}\), respectively.
+The power estimates give tightness of \(\mu_i\) and
+\(\mu(\{x\})=0\) everywhere. For \(q_i=w_i^2k_i\), positivity
+of \(R_{k_i}\) gives
+\(-\Delta_{k_i}w_i\le V_iw_i\) with \(V_i=L_{q_i}w_i^2\).
+On every source ball \(H\), \(\|V_i\|_{2,k_i;H}^2=\sigma_i(H)\).
+At each point with \(\sigma(\{x\})=0\) choose a fixed small
+continuity radius in a bounded window. On the corresponding balls
+the potential term in \eqref{eq:physical-moser} at \(p=4\) is
+absorbed. The local \(L^8(k_i)\) bound on \(w_i\) follows from
+\(\int w_i^4dV_{k_i}=1\). Thus \(\mu\) is absolutely continuous
+relative to \(\mathcal H^4\) on a neighborhood of each such point
+by the local \(L^2\) bound on the densities and noncollapsed volume
+convergence. A countable subcover and the zero \(\mu\)-mass of the
+countably many atoms of \(\sigma\) give \(\mu\ll\mathcal H^4\).
+The regular points outside the atoms of \(\nu\) have full
+\(\mu\)-measure. The finite disjoint ball selection and smooth
+embeddings in Theorem~\ref{thm:volume-balls} apply there by
+differentiation of this density. For every fixed \(d>0\) they
+give disks with the specified radii and physical curvature ceilings,
+and \(\mu_i(M\setminus U_i)<d\) for all large indices.
+
+Finally the constant test in the ordinary Yamabe quotient gives
+\(\int L_{q_i}d\mu_i\ge Y_i/6\). On the omitted set this integral
+is at most \(\ell_i\sqrt d\). Since the total volume is one,
+Cauchy--Schwarz on \(U_i\) and the pointwise spectral bound yield
+\[
+ (\lambda_i^++\lambda_i^-)(U_i)
+ \ge \tfrac32\sigma_i(U_i)
+ \ge \tfrac32(Y_i/6-\ell_i\sqrt d)_+^2 .
+\]
+Either opposite chirality has total mass \(e_i\). Subtract it and
+choose \(d\) small using the uniform upper bounds for \(Y_i,\ell_i\).
+This proves \eqref{eq:band-charge-residual}.
+\end{proof}
+
+These estimates bound the unmodified physical charge of the
+complement. A fixed tolerance selects a fixed finite family size.
+The strict path budget, the measured allowances of the actual
+collars, and the positive sign of a replacement are still needed
+when applying the comparison on this family.

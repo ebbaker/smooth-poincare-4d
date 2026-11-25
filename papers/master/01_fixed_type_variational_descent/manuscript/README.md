@@ -2,7 +2,7 @@
 
 Working paper by Edward B. Baker III, 25 November 2026. [LaTeX manuscript](fixed_type_chiral_energy_descent.tex) · [Branch overview](../research-overview/OVERVIEW.md) · [Master manuscript](../../manuscript/README.md)
 
-The [endpoint proof](endpoint_charge.tex) selects disks carrying both chiralities and the [Ricci-window estimates](endpoint_windows.tex) quantify the curvature growth required for nonattainment. The paper treats simultaneous marked disk replacement on one physical minimizing sequence, the exact positive-sign test for a round-ended exterior, and the normal-ball obstruction for controlled fillings. The final two alternatives are smooth closed attainment and a round same-energy restart. The paper identifies the additional geometric and analytic hypotheses each argument requires.
+The [endpoint estimates](endpoint_charge.tex) and [Ricci-flow proof](endpoint_smoothing.tex) yield a uniform intrinsic recognition gap. The [higher-energy disk selection](subcritical_charge.tex) bounds both chiral residuals on the physical source. Its [collar comparison](disk_collar_comparison.tex) estimates the splice in an actual marked parametrization. The remaining alternatives include smooth closed attainment in the surviving band and a round same-energy restart.
 
 [Reading copy (PDF)](../../../../output/pdf/master/01_fixed_type_variational_descent/fixed_type_chiral_energy_descent.pdf) · Build from the repository root with `python3 tools/build_manuscripts.py master/01_fixed_type_variational_descent`.
 

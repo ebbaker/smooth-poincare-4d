@@ -457,3 +457,116 @@ give \(E_i+\gamma_{i,+}+\gamma_{i,-}<8\pi^2\) and
 The raw side masses are at least \(\theta E_i\) and \(E_i/2\),
 so Theorem~\ref{thm:nonsplitting} yields the contradiction.
 \end{proof}
+
+\subsection{Two volume measurements on a proper flat band}
+
+\begin{proposition}[Shifted radial volume test]\label{prop:radial-volume-test}
+Use the physical scales, flat metric and proper comparison
+embeddings of Proposition~\ref{prop:radial-distance-test}.
+Write \(J=(\alpha,\beta)=(1/16,2L)\), and choose
+\(t_0<t_1<t_2\) in \(J\) with \(t_0<\alpha+1/8\) and
+\(t_2>\alpha+L\). Use one \(F_i\) on a neighborhood of
+a compact radial strip strictly containing \(r^{-1}([t_0,t_2])\)
+in its interior, with \(V\) the open strip. Define
+\[
+ Q_i(u,v)=
+ \frac{4\vol_{h_i}\bigl(F_i(V)\cap\{u<\widehat d_i<v\}\bigr)}
+      {(v-\alpha)^4-(u-\alpha)^4}.
+\]
+Suppose \(Q_i(t_0,t_1)-Q_i(t_1,t_2)\to0\) and
+\(\liminf_i Q_i(t_0,t_1)>0\). Then the whole marked
+spherical comparison and the minimizing contradiction of
+Proposition~\ref{prop:radial-distance-test} hold.
+\end{proposition}
+
+\begin{proof}
+The comparison gives \(r\) locally \(1\)-Lipschitz and a short
+unit-speed backwards calibrated geodesic from every point,
+by the same first-exit and minimizing-segment limit argument.
+Here calibration means that \(r\) decreases at unit speed.
+In a convex flat chart a concatenation of two such segments
+has no corner, since its length is already the full radius
+difference. Properness lets the backwards geodesic continue
+through every length \(\ell<r(p)-\alpha\) from a given point
+\(p\). At differentiability points this gives \(|dr|_h=1\).
+Let \(q\) be the point at backwards length \(\ell\).
+A local inverse of \(\exp_q\) near \(p\) is a flat chart by
+the Jacobi equation, using the branch about that segment.
+In this chart \(r(q)+|z|\) is an upper support for \(r\)
+at \(p\), by the path-length Lipschitz bound. Hence
+\(f_\alpha=(r-\alpha)^2/2\) has an upper support there with
+Laplacian \(1+3(r(p)-\alpha)/\ell\).
+Every smooth lower test for \(f_\alpha\) lies below this
+support at contact. Taking \(\ell\uparrow r(p)-\alpha\)
+bounds the Laplacian of each lower test by four.
+This gives \(\Delta_h f_\alpha\le4\) distributionally.
+Indeed, after subtracting \(|z|^2/2\) in any flat chart,
+harmonic replacement in a ball lies below the function.
+An interior failure would give a lower test with
+strictly positive Laplacian by adding a small positive
+multiple of \(|z-z_0|^2-R^2\) to the harmonic replacement
+on the ball of radius \(R\) about \(z_0\) and shifting
+it to contact. The resulting super-mean inequality gives
+the distributional inequality by testing spherical averages.
+Thus \(\mu_\alpha=4\,dV_h-\Delta_h f_\alpha\) is a
+nonnegative Radon measure.
+
+Coarea gives \(A(t)=\mathcal H_h^3(r^{-1}(t))\) as the
+locally integrable density of \(r_*dV_h\).
+For a radial test \(\eta(r)\) with \(\eta\) smooth and
+compactly supported in \(J\), the weak gradient pairing,
+justified by uniform and \(W^{1,2}\) smoothing, gives
+\[
+ (r_*\mu_\alpha)(\eta)
+ =\int_J \bigl(4\eta(t)+(t-\alpha)\eta'(t)\bigr)A(t)\,dt
+ =\left\langle -(t-\alpha)^4
+        \left(\frac{A(t)}{(t-\alpha)^3}\right)',\eta\right\rangle .
+\]
+The area density divided by \((t-\alpha)^3\) is therefore
+nonincreasing. The normalized source volumes converge to its
+weighted averages on the two tested intervals, with weight
+\((t-\alpha)^3dt\). This follows by pulling both volumes
+back into \(V\). The metrics and distances converge uniformly,
+and each fixed \(r\)-level has zero four-volume by coarea.
+Equal weighted averages on the two adjacent intervals make
+the density constant a.e.\ across their union.
+Nonnegativity then implies \(\mu_\alpha=0\) on
+\(r^{-1}((t_0,t_2))\), which is nonempty by the positive
+average.
+
+On a connected component the interior regularity, Bochner
+identity and proper flow of
+Proposition~\ref{prop:radial-distance-test} give a flat cone
+with radius \(s=r-\alpha\). One compact comparison covers
+the whole \(1/8\le s\le L\) quotient band with buffers.
+Its image lies in the low-curvature block by
+\(\widehat d_i\circ F_i\to\alpha+s\). The middle sphere is
+at physical distance \((1+\alpha+o(1))\rho_i<2\rho_i\)
+from \(x_i\). Straightening and the quotient obstruction
+give the spherical chart, and the unchanged anchored-width
+and short-cut proofs give both complete marks off the trim,
+positive caps and the contradiction. The source volume
+test uses the selected comparison image. Replacing it by
+the full source annulus requires control of the omitted
+normalized volume.
+\end{proof}
+
+If the proper flat comparison extends over \((0,\beta)\),
+the same argument with \(\alpha=0\) gives the unshifted
+one-sided comparison. Two unshifted normalized shell
+volumes then suffice for the original radial equation on
+their common band. On a finite band the shift is relevant.
+For instance, take a smooth metric on \(\R^4\) of the form
+\(dt^2+(t-c\chi(t))^2\gamma_{\rm rd}\), where
+\(0<3c<\alpha\) and \(\chi\) increases from zero to one
+on \([2c,3c]\). The distance from the origin is \(t\),
+and the region \(t>3c\) is flat. Ball volumes at all
+scales are comparable to Euclidean by uniform metric
+comparison. The unshifted radial Laplacian on \(J\) is
+\(\Delta(t^2/2)=4+3c/(t-c)\). Its shifted area ratio is
+\(\vol(S^3)((t-c)/(t-\alpha))^3\), strictly decreasing.
+This model tests the finite-band geometric premises.
+It carries no separated chiral charge or minimizing
+condition. The physical curvature budget by itself
+supplies neither the comparison embeddings nor the
+normalized volume equalities.

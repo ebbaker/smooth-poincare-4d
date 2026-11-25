@@ -35,3 +35,7 @@ Derives positive caps and locates both entire charged sets from an anchored phys
 ## 25 November 2026 · Endpoint research milestone
 
 Added the conditional radial Laplacian criterion, its quotient-link check, and a fixed-window cylinder exhibiting the surviving radial defect. [Derivation and scope](notes/E53_PHYSICAL_SHELL.md).
+
+## 25 November 2026 · recognition gap and source comparisons
+
+Equality of two adjacent normalized source shell volumes on a proper flat radial comparison supplies the shifted cone and both marks. The finite-band shifted example distinguishes the remaining assumptions. [Working versions and assessment](../../../../master/research-progress/handoffs/E56_E58_RECOGNITION_GAP_20261125.md)

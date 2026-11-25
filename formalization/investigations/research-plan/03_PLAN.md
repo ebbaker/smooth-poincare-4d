@@ -1,10 +1,12 @@
 # Edition 03 · Formalizing the parallel master investigations
 
-**Current milestone, 25 November 2026.** [Open equality, the measured height count and the marked-shell continuation](../continuation-notes/AFTER_OPEN_EQUALITY_AND_MARKED_SHELL_20261125.md).
+**Current milestone, 25 November 2026.** [Global Gauss geometry and the selected disk widths](../reviews/GLOBAL_GEOMETRY_AND_SELECTED_COLLARS_20261125.md) · [Next proof packets](../continuation-notes/AFTER_GLOBAL_GAUSS_AND_SELECTED_COLLARS_20261125.md).
 
 25 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving configuration unavailable. [Program overview](../research-overview/03_OVERVIEW.md) · [Input revisions and verification](../research-progress/03_BASELINE.md) · [Sole program register](../research-progress/REGISTER.md)
 
 The opening proofs and their follow-through are assessed in the [activation milestone](../research-progress/handoffs/ED03_INTEGRATION_20261125.md). The [activation continuation](../continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md) gives the next geometric tasks.
+
+The current endpoint work on $I=T$ uses selected physical disks and tracks the full exterior chiral measure and the raw collar cost. For $T<I<2T$, the general diffuse repair and closed alternatives still need independently qualifying witnesses. [Endpoint revision](../../../papers/master/research-progress/handoffs/E53_E55_ENDPOINT_CHARGE_20261125.md)
 
 ## Opening proofs
 

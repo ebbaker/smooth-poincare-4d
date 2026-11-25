@@ -35,3 +35,7 @@ The master now proves the equivalence between smooth recognition, one positive c
 ## 25 November 2026 · Endpoint research milestone
 
 Located both physical chiral energies on finite regular disks at the unattained endpoint. The master identifies the remaining aggregate collar cost, gives the modified exterior test and adds the checked height subclasses. [Derivation and scope](research-progress/handoffs/E53_E55_ENDPOINT_CHARGE_20261125.md).
+
+## 25 November 2026 · recognition gap and source comparisons
+
+The uniform recognition gap replaces the unattained endpoint. The two-sign selection bounds both raw disk residuals in an explicit higher band. [Working versions and assessment](research-progress/handoffs/E56_E58_RECOGNITION_GAP_20261125.md)

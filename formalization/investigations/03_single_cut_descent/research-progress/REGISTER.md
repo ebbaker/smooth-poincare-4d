@@ -8,10 +8,12 @@ This is the sole live status register for Route 03, including inherited FOT-E25,
 
 | Task | Current state | Next proof or premise |
 | --- | --- | --- |
+| SP4-FORM-CUT-E02k | Positive cap signs and marked-side construction verified | Each cap inherits the joined Yamabe floor from its own convergent tests. An individual cost charges the changed half-collar and the full cap complement. Construct the transplants and compare the actual retained cores. [Proof and hypotheses](handoffs/ED03_CAP_TEST_TRANSFER.md) |
 | SP4-FORM-CUT-B02 | Adopted and used | The source sides cover the manifold, are volume-a.e. disjoint and both have signed collar data. Either can be retained. |
-| SP4-FORM-CUT-E02 | Verified through the inclusive cap threshold | For actual positive capped metrics, either the measured cap sum or the sum of full raw masses and both costs may be at most twice the threshold. The tie preserves both marked side images in the oriented sphere identification. Positive signs and recognition at an attained threshold remain inputs. [Endpoint](handoffs/ED03_INCLUSIVE_CUT.md) |
+| SP4-FORM-CUT-E02 | Verified through the inclusive cap threshold | For actual positive capped metrics, either the measured cap sum or the sum of full raw masses and both costs may be at most twice the threshold. The tie preserves both marked side images in the oriented sphere identification. Recognition at an attained threshold is an input. Cap signs now follow from the joined-test construction when its transplants exist. [Endpoint](handoffs/ED03_INCLUSIVE_CUT.md) |
 | SP4-FORM-CUT-E03 | Ready to specify the tensor estimate | Derive the uniform cutoff and chiral projection error on the actual splice. The inherited norm inequality already consumes a supplied projection bound. |
-| SP4-FORM-CUT-E04 | Positive-path and cut interfaces available | Use the common gap on the original joined type. The short interpolation, stretch and transfer of signs to the completed caps remain open. |
+| SP4-FORM-CUT-E02j | Verified finite contradiction for the actual two physical charges | Given their inclusions into both full raw sides, inclusive reassembly bounds one charge by the current excess plus the opposite cap cost. [Joined proof](handoffs/ED03_CHARGED_CUT.md) |
+| SP4-FORM-CUT-E04 | Positive-path and cut interfaces available | Use the common gap on the original joined type. Construct the short interpolation, stretch and actual transplants on the same marked path. |
 | SP4-FORM-CUT-E05 | Reserved | Prove the critical fixed-distortion estimate on the supplied enlarged harmonic shell and reduce to the short marked cut. Physical production of such a shell is open. |
 
 The proofs in the next table concern the previously specified core. The [dated baseline](../../research-progress/02_BASELINE.md) identifies precisely which parts can be reused.

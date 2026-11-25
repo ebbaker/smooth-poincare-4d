@@ -1,5 +1,7 @@
 # Single spherical cut and descent · Milestones
 
+- **25 November 2026.** Joined tests recover the sign on each marked cap. The individual cost includes its full complement. [Integrated assessment](../reviews/GLOBAL_GEOMETRY_AND_SELECTED_COLLARS_20261125.md)
+
 - **25 November 2026 · Chart and immersion proofs.** Accepted both full sides at an inclusive cap-energy sum and checked marked reassembly at the double equality. [Assessment](../research-progress/handoffs/ED03_CHART_GEOMETRY_20261125.md)
 
 - **25 November 2026 · Edition 03 activation.** Checked conditional two-sided nonsplitting with marked reassembly. [Assessment](../research-progress/handoffs/ED03_INTEGRATION_20261125.md)

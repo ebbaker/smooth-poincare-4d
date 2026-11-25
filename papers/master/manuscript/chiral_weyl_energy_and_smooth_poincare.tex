@@ -23,15 +23,16 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-On a smooth homotopy four-sphere, one positive Yamabe class with chiral
-Weyl energy at most \(4\pi^2\) recognizes the standard smooth type.
-An infimum equal to \(4\pi^2\) over all positive classes would be
-unattained. At that endpoint every physical minimizing sequence has
-vanishing trace-free Ricci energy. On a subsequence, finitely many
-parametrized standard disks capture all but any prescribed amount of
-both chiral energies, with arbitrarily small physical curvature integrals
-on their individual containing balls. Given a positive class below \(8\pi^2\), we minimize on
-the original smooth type.
+There is a universal \(\varepsilon_*>0\) such that a closed smooth
+homotopy four-sphere is standard whenever its infimum of chiral Weyl
+energy over positive Yamabe classes is at most \(4\pi^2+\varepsilon_*\).
+A modified Yamabe representative and a common positive time of Ricci
+flow convert a hypothetical sequence at \(4\pi^2\), even on varying
+smooth types, into a closed positive Einstein limit at the inclusive
+recognition threshold. The proof gives no numerical width for the gap.
+For a minimizing sequence with infimum below \(16\pi^2/3\), we also
+bound the original energy of each chirality outside finitely many
+parametrized standard disks on the same source.
 Removing marked standard balls gives a positive competitor if the source
 energy plus the aggregate collar cost stays subcritical. An anchored
 physical annulus between separated chiral quantiles gives a cut incompatible
@@ -234,18 +235,17 @@ Indeed, a positive class at or below \(T\) recognizes \(M\) by
 Proposition~\ref{prop:recognition}. Pulling back the round metric then
 gives \(I^+(M)=0\). Conversely, an infimum strictly below \(T\)
 supplies a positive class below \(T\) by the definition of infimum.
-If \(I^+(M)=T\) were attained, its minimizing class would recognize
-\(M\) and force \(I^+(M)=0\), a contradiction. Thus the endpoint
-left open by an estimate \(I^+(M)\le T\) is precisely an unattained
-infimum at \(T\).
+Equality of the infimum at \(T\) supplies no minimizing metric by
+definition. Theorem~\ref{thm:recognition-gap} below excludes this
+case by constructing a smooth positive-time limit.
 
 Our weaker entry hypothesis is \(I^+(M)<2T\), equivalently the
 existence of one positive class with energy strictly below \(2T\).
 On a nonstandard candidate in this range,
 \begin{equation}\label{eq:band}
- T\le I^+(M)<2T,\qquad E_+(g)>T\quad\text{for every positive class}.
+ T+\varepsilon_*<I^+(M)<2T,\qquad E_+(g)\ge I^+(M)\quad\text{for every positive class},
 \end{equation}
-Choose positive classes approaching the infimum and in each choose a smooth
+where \(\varepsilon_*\) is furnished by Theorem~\ref{thm:recognition-gap}. Choose positive classes approaching the infimum and in each choose a smooth
 volume-one Yamabe minimizer \(g_i\). Their chiral energies \(e_i=E_+(g_i)\)
 are unchanged by this choice. For a fixed \(\delta>0\) and all
 sufficiently large \(i\), we have \(e_i\le2T-\delta\). Thus \(g_i\)
@@ -282,6 +282,7 @@ Finally \(\sigma_2(A)=s^2/96-|\Ric_0|^2/8\), giving
 \eqref{eq:schouten} \cite[eq.~(0.4)]{ChangGurskyYang2003}.
 \end{proof}
 
+\input{recognition_gap}
 \input{immersion_entry}
 \input{marked_cut}
 \input{first_order_splice}
@@ -386,8 +387,7 @@ The boundary parametrizations identify its caps with the removed
 standard balls. The resulting positive class on \(M\) has energy at
 most \(e-m+c\), so the inclusive test in \eqref{eq:recognition-endpoint}
 applies at this index. Along a sequence of such repairs one has
-\(I^+(M)\le e_i-m_i+c_i\) at every tested index. A lower limit of
-these upper bounds strictly below \(T\) therefore suffices.
+\(I^+(M)\le e_i-m_i+c_i\) at every tested index. A lower limit at most \(T+\varepsilon_*\) suffices by Theorem~\ref{thm:recognition-gap}.
 \end{proof}
 
 \begin{corollary}[How much energy may remain uncovered]\label{cor:vol-reduction}
@@ -396,7 +396,7 @@ In Proposition~\ref{prop:replacement} take \(N_i\ge1\). Write
 balls, \(\Gamma_i=\sum_j\gamma_{ij}\), and \(\Delta_i=e_i-I^+(M)\).
 If on one subsequence
 \[
- \liminf_i\big[r_i+\Gamma_i+(N_i-1)\Delta_i\big]<4\pi^2,
+ \liminf_i\big[r_i+\Gamma_i+(N_i-1)\Delta_i\big]\le T+\varepsilon_*,
 \]
 then \(M\) is standard. A finite sufficient test using only measured
 data is \(r_i+\Gamma_i+(N_i-1)(e_i-T)\le T\) at one index.
@@ -410,97 +410,54 @@ The \(N_i\) certified upper bounds sum to
 \[
  I^+(M)\le r_i+\Gamma_i+(N_i-1)\Delta_i .
 \]
-Taking the lower limit now bounds the infimum. Equation~\eqref{eq:recognition-endpoint}
-applies if this bound is strict. Equality in the limiting estimate leaves
-the unattained endpoint open. A compactness argument would suffice if it
-produced a smooth positive limit on \(M\) with energy at most \(T\).
+Taking the lower limit now bounds the infimum. Theorem~\ref{thm:recognition-gap}
+applies also at equality.
 \end{proof}
 
-For a general subcritical sequence, the descent paper selects smooth
-disks at regular points of a positive-Ricci comparison. Its estimate
-for the chiral energy of the complement includes mass escaping the
-pointed limit and mass off its eligible regular set
-\cite{Baker2026FixedDescent,Baker2026MarkedLimits}. At the recognition
-endpoint both losses can be eliminated.
-
-\begin{theorem}[Charge on standard disks at the endpoint]
-\label{thm:endpoint-charge}
-Suppose \(I^+(M)=T\). On every sequence of volume-one positive Yamabe
-metrics \(g_i\) with \(e_i\to T\), one has
-\(\int|\Ric_{0,g_i}|^2dV_{g_i}<8(e_i-T)\).
-There are smooth positive-Ricci metrics \(k_i\in[g_i]\) and a
-subsequence such that for every \(\epsilon,\zeta,r_*>0\) there are
-finitely many fixed radii \(r_j<r_*\) and, for all sufficiently large
-\(i\), disjoint parametrized smooth closed standard disks
-\(B_{ij}\subset U_{ij}=B_{k_i}(x_{ij},r_j)\) with
+\begin{theorem}[Physical charge on standard disks]\label{thm:band-disk-residual}
+Suppose \(M\) is nonstandard and \(I^+(M)<4T/3\). On every sequence
+of volume-one positive Yamabe metrics \(g_i\) minimizing chiral energy
+there is a subsequence with the following property. For every
+\(\epsilon,\zeta,r_*>0\), there are finitely many fixed radii
+\(r_j<r_*\) and, at every sufficiently large index, disjoint smoothly
+parametrized standard disks with union \(U_i\). Each lies inside a
+ball of radius \(r_j\) in a positive-Ricci comparison metric in the
+class, with original full curvature integral less than \(\zeta\).
+For each chirality on the same source,
 \[
- \int_{U_{ij}} |\Rm_{g_i}|_{\rm tens}^2dV_{g_i}<\zeta,\qquad
- (E_++E_-)(g_i;M\setminus\textstyle\bigcup_j B_{ij})<\epsilon .
+ E_\pm(g_i;M\setminus U_i)\le 2e_i-Y_i^2/24+\epsilon
+                                  \le4(e_i-T)+\epsilon .
 \]
+In particular \(I^+(M)<5T/4\) places both raw residuals strictly
+below \(T\) at sufficiently small fixed tolerance.
 \end{theorem}
 \begin{proof}
-Put \(L=\max\{\lambda_{\max}(W^+),\lambda_{\max}(W^-)\}\).
-The strict and equality classifications of Chen and Zhu give
-\(Y_i^2<36\int L_i^2dV_{g_i}\) on a nonstandard homotopy sphere:
-simple connectivity excludes the nontrivial connected-sum factors,
-and the two exceptional geometries at equality have nonzero second
-homology on their compact simply connected covers
-\cite[Theorems 1.4 and 1.6]{ChenZhu2014Conformal}. Trace freeness
-gives the nonnegative density
-\(b=\tfrac23(|W^+|^2+|W^-|^2)-L^2\).
-Substitution in \eqref{eq:budgets} yields
-\[
- \int|\Ric_{0,g_i}|^2dV_{g_i}+3\int b_i\,dV_{g_i}<8(e_i-T).
-\]
-In the limit \(Y_i\to8\sqrt3\,\pi\) and
-\(6\|L_i\|_{2,g_i}-Y_i\to0\).
+Use the volume-one modified representative \(q_i\) in the proof
+of Theorem~\ref{thm:recognition-gap}. Set \(\ell_i^2=\int L^2dV\)
+and normalize a positive-Ricci comparison by the least radius
+carrying half of this conformally invariant measure. The ordinary
+Yamabe inequality on every unit comparison ball or on the exterior
+of a witnessing ball has gradient coefficient controlled by
+\(Y_i-6\ell_i/\sqrt2\), since \(R_{q_i}\le6L_{q_i}\).
+This difference stays positive by a uniform margin since
+\(Y_i^2\ge48(2T-e_i)\) and \(18\ell_i^2\le24e_i\).
+Logarithmic cutoffs give tightness and absence of atoms for the
+auxiliary volume. A local Sobolev estimate off atoms of the spectral
+measure gives absolute continuity of its volume limit with respect
+to comparison volume. Finite smooth disk selection at regular
+points outside atoms of the original full curvature measure can
+therefore cover all but any prescribed \(d>0\) of the auxiliary
+volume. The descent paper proves these steps with the radius and
+the physical curvature measure fixed through the source limit
+\cite[section on chiral charge on disks]{Baker2026FixedDescent}.
 
-Choose a unit-volume modified Yamabe representative \(q_i\) conformal to \(g_i\)
-with \(R_{q_i}-6L_{q_i}=c_i\le0\)
-\cite[Lemma 2.1 and Theorem 1.7]{ChenZhu2014Conformal}. Since
-\(Y_i\le\int R_{q_i}\,dV_{q_i}\le6\int L_{q_i}\,dV_{q_i}
-\le6\|L_i\|_{2,g_i}\), the variance of \(L_{q_i}\) tends to zero
-and \(\|R_{q_i}-Y_i\|_{2,q_i}\to0\).
-The measure \(b_i\,dV\) is conformally invariant and its mass tends
-to zero. Consequently \((|W^+|^2+|W^-|^2)dV_{g_i}/(2T)\), with
-both norms taken in \(g_i\), differs from \(dV_{q_i}\) by
-\(o(1)\) in total variation.
-
-Normalize \(k_i\) by the median radius for \(dV_{q_i}\).
-The scalar error above is absorbed in the small-support Yamabe
-inequality. Logarithmic cutoffs give tightness and the local Sobolev
-estimate bounds the volume density \(dV_{q_i}/dV_{k_i}\) in
-\(L^2_{\rm loc}(k_i)\). The resulting limiting probability measure
-gives full mass to Euclidean regular points outside the atoms of the
-physical curvature measure. The finite smooth-disk selection there
-and total-variation comparison prove the assertion. The descent paper
-gives the cutoff, integrability, and source-embedding proof
-\cite[section on the recognition endpoint]{Baker2026FixedDescent}.
-\end{proof}
-
-\begin{corollary}[Collar cost on the selected disks]\label{cor:endpoint-collar-cost}
-On a slow diagonal of Theorem~\ref{thm:endpoint-charge}, let
-\(r_i=E_+(g_i;M\setminus\bigcup_j B_{ij})\to0\).
-Give the disk boundaries disjoint marked collars with total raw
-positive chiral energy \(s_i\to0\). If the chart hypotheses of
-Proposition~\ref{prop:exterior-replacement} hold there, their
-aggregate error allowance \(\eta_i\) satisfies
-\(\liminf_i\eta_i\ge\sqrt T=2\pi\).
-\end{corollary}
-\begin{proof}
-Keep the unchanged region out of the triangle inequality in the
-splice proof. The energy ceiling on the joined path becomes
-\(e_i+2\sqrt{s_i}\eta_i+\eta_i^2\). On the retained exterior the
-corresponding bound is at most \((\sqrt{r_i}+\eta_i)^2\).
-If \(\eta_i\le\sqrt T-\delta'\) on a subsequence for some
-\(\delta'>0\), the joined bound is eventually strictly below \(2T\).
-Stretching and capping therefore give a positive class on the
-original type with energy strictly below \(T\), a contradiction.
-At each fixed index smooth disjoint bicollars can be thinned to
-have arbitrarily small raw mass, since the marked boundary spheres
-have zero four-volume. Rescaling the parameters to the fixed chart
-changes its metric estimates. Obtaining even one family with the
-stated saving on these same thin collars remains the geometric step.
+The constant test gives \(\int L_{q_i}dV_{q_i}\ge Y_i/6\).
+The integral over the omitted volume is at most \(\ell_i\sqrt d\).
+On the disks, spectral domination and Cauchy--Schwarz give combined
+chiral energy at least \(\tfrac32(Y_i/6-\ell_i\sqrt d)_+^2\).
+Subtracting the global opposite energy \(e_i\) leaves a lower
+bound for either sign on this same union. Take \(d\) sufficiently
+small and use \eqref{eq:budgets}.
 \end{proof}
 
 \input{complete_limits}
@@ -525,10 +482,10 @@ The two complete raw sides must each carry a fixed positive chiral
 mass, and both splices must be controlled in the marked chart.
 Corollary~\ref{cor:vol-reduction} permits a diffuse alternative
 if a family on the same sequence carries enough repairable chiral
-mass. At the endpoint Theorem~\ref{thm:endpoint-charge} supplies the
-complement estimate on a particular family. Above the endpoint the
-general residual and the positive sign of the actual repairs still
-require separate estimates. For Proposition~\ref{prop:exterior-replacement} the source energy plus collar surcharge must stay below \(8\pi^2\), and the removed chiral mass must exceed the surcharge plus the minimizing excess. The remaining chiral energy can stay in the retained exterior.
+mass. Below \(4T/3\), Theorem~\ref{thm:band-disk-residual} bounds
+the complement on one such family. The first missing estimate is the
+actual cost of its marked collars. At higher energies the full
+residual may also survive. For Proposition~\ref{prop:exterior-replacement} the source energy plus collar surcharge must stay below \(8\pi^2\), and the removed chiral mass must exceed the surcharge plus the minimizing excess. The remaining chiral energy can stay in the retained exterior.
 
 Corollary~\ref{cor:energy-radius} locates a second scale in the
 concentrating case. At a shrinking half-energy radius the rescaled

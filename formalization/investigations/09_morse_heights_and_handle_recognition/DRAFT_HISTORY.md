@@ -1,5 +1,7 @@
 # Morse heights and handle recognition · Milestones
 
+- **25 November 2026.** The ordinary round mean counts actual middle points, and Sard yields Morse directions for the constructed normal. [Integrated assessment](../reviews/GLOBAL_GEOMETRY_AND_SELECTED_COLLARS_20261125.md)
+
 - **25 November 2026 · Chart and immersion proofs.** Identified the actual nondegenerate index-two heights and proved the indexed mean under measured Gauss-sheet inputs. [Assessment](../research-progress/handoffs/ED03_CHART_GEOMETRY_20261125.md)
 
 - **25 November 2026 · Edition 03 activation.** Checked the sharp probability estimate, same-direction selection and the conditional indexed energy split. [Assessment](../research-progress/handoffs/ED03_INTEGRATION_20261125.md)

@@ -1,5 +1,7 @@
 # Fixed-type variational comparison · Milestones
 
+- **25 November 2026.** Oriented frames and the density-weighted chiral map now vary continuously on the common metric chart. [Integrated assessment](../reviews/GLOBAL_GEOMETRY_AND_SELECTED_COLLARS_20261125.md)
+
 - **25 November 2026 · Chart and immersion proofs.** Derived common-chart second-jet cancellation, quadratic first-jet bounds and the moving density estimate. [Assessment](../research-progress/handoffs/ED03_CHART_GEOMETRY_20261125.md)
 
 - **25 November 2026 · Edition 03 activation.** Checked same-type independent repair comparisons, path positivity under its analytic inputs, and the measured weak-defect argument. [Assessment](../research-progress/handoffs/ED03_INTEGRATION_20261125.md)

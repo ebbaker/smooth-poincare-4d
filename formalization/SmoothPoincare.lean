@@ -1,5 +1,7 @@
 import SmoothPoincare.Variational.Basic
 import SmoothPoincare.Variational.AttainedRecognition
+import SmoothPoincare.Variational.EndpointCollarCost
+import SmoothPoincare.Variational.EndpointSpectralDeficit
 import SmoothPoincare.Variational.Replacement
 import SmoothPoincare.Variational.CutNonsplitting
 import SmoothPoincare.Variational.YamabeWall
@@ -14,11 +16,12 @@ import SmoothPoincare.PhysicalScales.YamabeQuantiles
 import SmoothPoincare.Immersions.PrincipalCurvatures
 import SmoothPoincare.Immersions.InducedEndpoint
 import SmoothPoincare.Immersions.CodazziJets
-
 import SmoothPoincare.Variational.ChartSpliceJets
 import SmoothPoincare.Variational.SpliceDensity
 import SmoothPoincare.Variational.SpliceRemainderL2
 import SmoothPoincare.PhysicalScales.AnchoredShell
+import SmoothPoincare.PhysicalScales.ChargedCut
+import SmoothPoincare.PhysicalScales.EndpointRicciWindows
 import SmoothPoincare.Immersions.SpectralProjectors
 import SmoothPoincare.Immersions.GeometricOpenEquality
 import SmoothPoincare.Immersions.StrictInducedEnergy
@@ -26,6 +29,15 @@ import SmoothPoincare.Heights.ImmersionHeightIndex
 import SmoothPoincare.Heights.GaussDifferential
 import SmoothPoincare.Heights.GaussRegularCover
 import SmoothPoincare.Heights.IndexedHeightFibers
+
+import SmoothPoincare.PhysicalScales.PhysicalShellFlux
+import SmoothPoincare.PhysicalScales.SelectedDiskCollars
+import SmoothPoincare.Variational.MovingChiralFrame
+import SmoothPoincare.Variational.CapTestTransfer
+import SmoothPoincare.Variational.BandChargeTransfer
+import SmoothPoincare.Heights.RegularMorseHeights
+import SmoothPoincare.Heights.OpenMiddleLocus
+import SmoothPoincare.Heights.OrientedIndexedMean
 
 /-! # Fixed-type descent and immersed recognition
 

@@ -1,0 +1,97 @@
+\begin{theorem}[Uniform recognition above the threshold]\label{thm:recognition-gap}
+There is a number \(\varepsilon_*>0\), independent of smooth type,
+such that for every closed smooth homotopy four-sphere \(M\),
+\[
+               I^+(M)\le T+\varepsilon_*
+               \quad\Longrightarrow\quad M\cong_{\rm diff} S^4 .
+\]
+In particular the same inclusive test applies to the energy of any
+one actual positive Yamabe class.
+\end{theorem}
+
+\begin{proof}
+If nonstandard spheres admit positive classes arbitrarily close to
+\(T\), choose such classes on \(M_i\), allowing the type to vary,
+with \(e_i\to T\) and physical volume-one Yamabe metrics \(g_i\).
+Put \(L=\max\{\lambda_{\max}(W^+),\lambda_{\max}(W^-)\}\) and
+\(B=4e/3-\int L^2dV\). Trace freeness gives the pointwise bound
+\(L^2\le\tfrac23(|W^+|^2+|W^-|^2)\), so \(B\ge0\).
+The strict and equality classifications of Chen and Zhu give
+\(Y^2<36\int L^2dV\) on any nonstandard smooth homotopy sphere.
+Simple connectivity excludes the nontrivial connected-sum factors,
+and the exceptional projective plane and compact simply connected
+product of surfaces have nonzero second homology
+\cite[Theorems 1.4 and 1.6]{ChenZhu2014Conformal}.
+Consequently \eqref{eq:budgets} gives
+\[
+ D_i+3B_i<8(e_i-T),\qquad Y_i\to y_*=8\sqrt3\,\pi,\qquad
+ 6\|L_i\|_2\to y_* .
+\]
+
+In each class take the volume-one modified Yamabe metric \(q_i\)
+with \(R_{q_i}-6L_{q_i}=c_i\le0\)
+\cite[Lemma 2.1 and Theorem 1.7]{ChenZhu2014Conformal}.
+The constant test gives
+\(Y_i\le c_i+6\int L_{q_i}dV_{q_i}\le c_i+6\|L_i\|_2\).
+Thus \(c_i\to0\), the variance of \(L_{q_i}\) tends to zero, and
+\(R_{q_i}\to y_*\) in \(L^2(q_i)\). The conformally invariant
+nonnegative spectral deficit has mass \(B_i\to0\), so the sum of
+the two squared Weyl densities tends to \(2T\) in \(L^1(q_i)\).
+Gauss--Bonnet and the curvature decomposition now give
+\[
+ \|\Ric_{q_i}-(y_*/4)q_i\|_2\to0,\qquad
+ \big\||\Rm_{q_i}|_{\rm tens}^2-64\pi^2\big\|_1\to0 .
+\]
+The positive conformal factors admit smooth \(C^2\) approximations
+at each index. Take volume-one approximations preserving these limits
+with \(R\ge-1\), using \(R_{q_i}\ge c_i\). The ordinary Yamabe
+inequality absorbs the \(L^2\) scalar error and supplies a uniform
+inhomogeneous Sobolev inequality.
+
+For clarity, the compactness step uses Ricci flow of these smooth
+auxiliary metrics. Write \(U=|\Rm|_{\rm tens}\), let
+\(\phi'=a\phi^2\), \(\phi(0)=8\pi\), with the dimensional
+curvature evolution constant \(a\), and set \(v=(U-\phi)_+\).
+Initially \(\|v\|_2\to0\). Entropy monotonicity and the
+logarithmic Sobolev inequality give on existing short flows a
+uniform Sobolev estimate with potential \(R/4\)
+\cite[\S3]{Perelman2002}\cite[Theorem 5.5, arXiv version 4]{YeSobolevFlow}.
+Since \(R_+\le C(\phi+v)\), small \(\|v\|_2\) absorbs the potential
+into an ordinary Sobolev estimate. Testing
+\((\partial_t-\Delta)v\le a(v^2+2\phi v)\) against \(2v\)
+then absorbs the cubic term and keeps \(\sup_t\|v\|_2=o(1)\)
+on a common short horizon. At a space-time maximum of \(tU\) with
+\(U=K\) and \(tK\ge2\), the preceding interval of length \(1/K\)
+has curvature at most \(2K\). The curvature gradient estimate
+gives \(U\ge K/2\) on a ball of radius \(c/\sqrt K\) at that time.
+A cutoff iteration in the ordinary Sobolev inequality bounds its
+volume below by \(c'K^{-2}\) for large \(K\). This contradicts
+the small tail. The resulting \(U\le C/t\) ensures existence on
+a common interval \cite[Theorems 7.1 and 8.1]{HamiltonSingularities}.
+
+Let \(\lambda_0=y_*/4\), \(\lambda'=2\lambda^2\),
+\(\lambda(0)=\lambda_0\). In an evolving orthonormal frame
+\(P=\Ric-\lambda g\) satisfies
+\((\partial_t-\Delta)P=2\Rm(P)+2\lambda P\).
+The same Sobolev absorption controls \(\int v|P|^2\), hence
+\(\sup_t\|P\|_2=o(1)\). The volume equation
+\(V'+4\lambda V=-\int\operatorname{tr}P\,dV\) gives
+\(V(t)\to(1-2\lambda_0t)^2\). At fixed small positive time,
+bounded curvature and derivatives, ball noncollapse and a diameter
+bound from volume packing give a smooth closed limit diffeomorphic
+to every sufficiently late source on a subsequence
+\cite[Theorem 4.7]{CheegerGromovTaylor1982}\cite{HamiltonCompactness}.
+It is positive Einstein with scalar square integral
+\(16\lambda(t)^2(1-2\lambda_0t)^2=y_*^2\). By Gauss--Bonnet
+and signature its chiral energy is exactly \(T\).
+Proposition~\ref{prop:recognition} identifies the standard sphere,
+so the round metric pulls back to a zero-energy positive class on each
+late source. This contradicts their smooth types. The descent paper
+gives the complete smoothing estimates
+\cite[section on Ricci flow at the recognition endpoint]{Baker2026FixedDescent}.
+
+This excludes nonstandard positive classes with energy below
+\(T+\eta\) for some universal \(\eta>0\). Taking
+\(0<\varepsilon_*<\eta\) also covers an infimum equal to
+\(T+\varepsilon_*\), by its defining approximation.
+\end{proof}

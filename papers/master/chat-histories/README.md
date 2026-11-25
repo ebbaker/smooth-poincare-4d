@@ -9,3 +9,5 @@ At the marked-exterior milestone on 25 November, exact-ID local diagnostics foun
 At the working-paper integration milestone on 25 November, exact-ID diagnostics still found no local source, and the supported app reader returned an error for this conversation. An authenticated transcript of this turn could not be registered.
 
 At the endpoint charge milestone on 25 November, exact-ID diagnostics for the active thread found no locally persisted source. The supported app reader also failed. The mathematical records and proof reviews are available in the owning branches. The public conversation could not be registered.
+
+The 25 November uniform-gap milestone is in the same conversation. Exact-ID lookup and the app history reader yielded no authenticated public source for this turn.

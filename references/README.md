@@ -182,3 +182,5 @@ The [source records R119–R121](../papers/investigations-1/03_first_order_twist
 [Master Ricci, annular chart and immersion sources](SOURCE_NOTES_MASTER_RICCI_IMMERSION_20261125.md) record the local elliptic and rigidity inputs, the indexed hypersurface comparison, and the marked handle and Sobolev theorems.
 
 [Endpoint charge and marked diagram sources](SOURCE_NOTES_MASTER_ENDPOINT_20261125.md) record the modified Yamabe classification and the specific stabilized and mixed handle presentations used in the endpoint edition.
+
+[Uniform recognition gap](SOURCE_NOTES_MASTER_RECOGNITION_GAP_20261125.md) records the entropy, Sobolev, compactness and finite equality inputs to the positive-time argument.

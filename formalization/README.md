@@ -4,7 +4,7 @@
 with OpenAI Codex assistance. The exact serving model and reasoning effort
 are unavailable.
 
-The [current program](investigations/research-overview/OVERVIEW.md) follows the master manuscript on a fixed smooth homotopy four-sphere, with separate proof routes for physical scales, fixed-type descent, immersed curvature and Morse heights. [Edition 03 plan](investigations/research-plan/03_PLAN.md) · [Route index](investigations/README.md#proof-investigations) [Chart and immersion milestone](investigations/research-progress/handoffs/ED03_CHART_GEOMETRY_20261125.md)
+The [current program](investigations/research-overview/OVERVIEW.md) follows the master manuscript on a fixed smooth homotopy four-sphere, with separate proof routes for physical scales, fixed-type descent, immersed curvature and Morse heights. [Edition 03 plan](investigations/research-plan/03_PLAN.md) · [Route index](investigations/README.md#proof-investigations) · [Global Gauss geometry and marked collars](investigations/reviews/GLOBAL_GEOMETRY_AND_SELECTED_COLLARS_20261125.md)
 
 The Lake package has three public imports.
 

@@ -13,3 +13,7 @@ Derives joint mass selection, admissible repairs and exact sign tests. Tracks th
 ## 25 November 2026 · Endpoint research milestone
 
 Proved full endpoint disk capture by modified Yamabe normalization, a necessary lower bound on the aggregate collar allowance, and divergence of the weighted supercritical Ricci norms. [Derivation and scope](manuscript/endpoint_charge.tex).
+
+## 25 November 2026 · recognition gap and source comparisons
+
+The modified Yamabe representatives admit common-time Ricci smoothing. The closed Einstein limit recognizes the smooth type. The spectral median and marked coordinate estimate address higher-band disk removal. [Working versions and assessment](../research-progress/handoffs/E56_E58_RECOGNITION_GAP_20261125.md)

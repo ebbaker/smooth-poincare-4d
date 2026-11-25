@@ -62,3 +62,7 @@ The 25 November [working manuscript](../manuscript/README.md) collects the branc
 ## Radial test on a physical through-region
 
 B04/B05 now have a conditional replacement for a prescribed global cone chart. On a proper nonempty connected boundaryless flat comparison with compact source embeddings at the intermediate physical scale, the weak radial Laplacian identity forces a spherical cut. The fixed-window flat cylinder shows what can go wrong with that identity. The proper comparison and radial identity on a general selected sequence remain open. [E53a derivation](../notes/E53_PHYSICAL_SHELL.md) · [Independent check](../reviews/E53_RADIAL_CHECK.md)
+
+## Two physical shell volumes
+
+B04/B05 and master E56c replace the vanishing radial defect by equality of two positive normalized physical image-shell volumes on a supplied proper flat band. Backward calibration fixes the inner radial shift. The entire smaller ball and median exterior are retained when the width, chart and anchoring conditions hold. Extracting the proper source comparison and proving saturation remain open. [Derivation](../notes/E56_PHYSICAL_RADIAL_FLUX.md) · [Independent flux and marking check](../reviews/E56_FLUX_CHECK.md)

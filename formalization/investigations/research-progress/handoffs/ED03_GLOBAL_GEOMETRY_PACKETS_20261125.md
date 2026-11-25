@@ -1,0 +1,25 @@
+# Edition 03 global geometry and endpoint packets
+
+25 November 2026 (America/New_York). For Edward B. Baker III, with OpenAI Codex assistance. Author-selected lead GPT-6.2 Astra/ultra. Helper dispatch selected GPT-6.2 Sol/ultra. Independent serving telemetry for the lead is unavailable. [Predecessor and proof scope](ED03_CHART_GEOMETRY_20261125.md) · [Program register](../REGISTER.md)
+
+Revision 1 uses checkout `2fba0882dbf8766c95094ef4d1207190b0c24bc2` with additional working edits. Master main `1b3d2f3b7aee0c1a`, critical annulus `843de1028f50d9aa`, splice `e31283f6c8429f7f`, marked cut `ddbca6b7de617368`, immersion entry `f7a9522959429fdb`. The descent companion main is `e9168c7a5fdd4c40`, endpoint charge `d31fd9c9e65a4205`, windows `f8b673c33fd023d4`, selected disk comparison `c1de1c225230b140`. Manifest `839111aae86b6935`, Lean 4.35.0-rc3, mathlib `c55e6e786f49`, DifferentialGeometry `788efe978944`. Each E packet owns only its named new module and route receipt. Review and public integration belong to the parent. Frozen proofs may stop at an explicitly identified missing geometric implication.
+
+| Packet | Fixed question and acceptance |
+| --- | --- |
+| IMM-E01o · OrientedGaussNormal | Starting with ChartUnitNormal `6441d13c6e7db7fb` and NormalChartTransition `3f5b19d6cfddcfa3`, construct the positive unit normal of an oriented isometric immersion, across overlapping charts including flat points. No nonvanishing second form hypothesis. |
+| HT-E02g · GaussParametricDensity | Compare the source and target parametric densities in the very same chart, using GaussSheets `444e675a325620c5` and GaussRegularCover `afb35b11aa4ece86`. Prove the Gram determinant multiplier before using measured sheets. |
+| HT-E02h · RoundGaussArea | Compute mass and antipodal symmetry for the actual unit sphere in Euclidean five-space. Identify exactly which measure is constructed and what relates it to the metric volume. |
+| HT-E02i · ManifoldGaussSard | Derive the volume nullity of critical values from local Sard and Riemannian measure in charts on a second-countable source. For heights retain both signs of the full normal map. |
+| SCALE-E02b · PhysicalShellFlux | Test the anchored wide chart via the actual physical radial pushforward and buffered containment. Anchor and curvature comparisons must refer to the supplied chart. The E56 paper source is `ffdb821e81ecb21f`. |
+| CUT-E02k · CapTestTransfer | On two individually marked caps use the finite joined Yamabe floor and smooth positive tests transplanted from each cap on the same stretched family. Pass numerator and volume separately to the limit in each Yamabe quotient. Track each half-collar error separately. A hypothesized positive cap sign is insufficient. |
+| DESC-E02e · EndpointChargeTransfer | For the same physical sequence use the modified volume-one representative, conformal densities, deficit and Yamabe constant test to derive quantitative control of the actual omitted chiral charge. Preserve the complement of the full selected family and the separate auxiliary ball metric. |
+| VAR-E04d · MovingChiralFrame | In a single oriented coordinate basis, construct compatible orthonormalization for a positive metric matrix and control the resulting curvature-slot map. Uniformity needs an ellipticity window. A new existence assumption for the actual shell has to be identified. |
+
+The incoming scientific draft also contains an auxiliary smoothing and uniform recognition argument. Its regularity, Ricci flow existence and smooth compactness are additional dependencies. Finite threshold acceptance and a limit of energies remain distinct in all the packets. A joint repair, diffuse family or surgery reduction requires a concrete witness with its marking and all costs.
+
+### Dependent packets
+
+- DESC-E02f · SelectedDiskCollars. Given actual smooth coordinate collars of the selected disks, take shrinking radial trims of the same markings. Prove that the finite sum of physical raw charges can be made arbitrarily small at each index, including growing cardinality. Invoke the endpoint allowance only for a repair tested on the identical chosen widths. Changes in the derivative cost of trimming stay in that allowance.
+- HT/IMM-E02j · OrientedIndexedMean. Compose the constructed oriented normal, the same-chart pushforward, ordinary round area and actual count on a source modeled on Euclidean four-space. Discharge regularity on middle frames or state that residual. Integrate the strict induced-energy bound only with its actual count floor.
+- HT-E04a · RegularMorseHeights and topology review. Obtain a Morse height from the two regular fibers of the full normal, checking all critical points on the same source. Recheck the marked zero/one-handle reductions and any remaining handle imports.
+- CUT/DESC-R03 and HT/IMM-R03. Separate reviewers compare the endpoint and cap proofs with the scalar and geometric premises, and the integrated Gauss proof with its local and global measure conventions, respectively. Each writes only its own route review.

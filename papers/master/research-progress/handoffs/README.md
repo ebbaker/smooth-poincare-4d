@@ -11,3 +11,5 @@ Issue future frozen requests and record their returns here with a task ID, input
 [Parallel investigation ownership and registers](PARALLEL_OWNERSHIP_20261125.md) · [E35 setup assignments](E35_PARALLEL_SETUP_20261125.md)
 
 [Marked exteriors, height diagrams, physical anchoring and near-Einstein tests, E36–E48](MARKED_TESTS_20261125.md)
+
+[Uniform recognition and physical charge above the endpoint](E56_E58_RECOGNITION_GAP_20261125.md) records the next assessed working generation.

@@ -1,0 +1,169 @@
+\section{Global Gauss area and the cost of marked collars}
+\label{sec:ed03-global-gauss-caps}
+
+\begin{theorem}[Oriented normal and the ordinary area of the direction sphere]
+\label{thm:ed03-global-normal}
+\uses{lem:ed03-normal-heights}
+\lean{SmoothPoincare.orientedGaussVector_volume_pos, SmoothPoincare.orientedGaussNormal_smooth, SmoothPoincare.orientedPrincipalFrameAt_middle_order, SmoothPoincare.gaussRoundArea_eq_gaussConeArea, SmoothPoincare.gaussRoundArea_univ, SmoothPoincare.gaussRoundArea_antipodal}
+\leanok
+Let $F:(M^4,g)\to\mathbb R^5$ be a smooth oriented isometric hypersurface
+immersion. Fix the ambient orientation by an orthonormal basis. The unique
+positive unit normal defines a smooth map $N:M\to S^4$. At each point
+there is an oriented orthonormal principal frame for this normal with
+nondecreasing signed principal curvatures. Ordinary Riemannian area on
+the Euclidean unit sphere agrees with radial cone area, has total mass
+$\omega=8\pi^2/3$, and is invariant under the antipodal map.
+\end{theorem}
+\begin{proof}
+\leanok
+Normalize the oriented cross product of the four tangent vectors of an
+oriented chart. A positive change of basis leaves its normalization fixed,
+also where the second fundamental form vanishes. Diagonalize the symmetric
+shape operator, order its eigenvectors, and adjust the source orientation.
+For the area calculation use $(u,t)\mapsto e^tu$. The pulled-back ambient
+volume has density $e^{5t}$ relative to round area times $dt$, with integral
+$1/5$ over $t<0$. Comparing the volumes of cones gives equality of the
+two measures on every Borel set.
+\end{proof}
+
+\begin{theorem}[Open middle locus and the indexed area identity]
+\label{thm:ed03-ordinary-indexed-area}
+\uses{thm:ed03-global-normal,prop:ed03-gauss-sheets}
+\lean{SmoothPoincare.isOpen_middlePrincipalLocus, SmoothPoincare.gaussParamDensity_eq_mul_frameJacobian, SmoothPoincare.ImmersionGaussNormal.measuredSheets_of_principal, SmoothPoincare.orientedImmersion_indexedGaussMean}
+\leanok
+On a nonempty compact Polish source modeled on Euclidean four-space, let $U$
+be the locus of signature $(2,2)$ and $J=|\prod_{j=1}^4 k_j|$. Write
+$\mu$ for ordinary round area divided by $\omega$. For a unit direction $u$
+let $m_2(u)$ count the nondegenerate index-two critical points of
+$\langle F,u\rangle$ on the source. The locus $U$ is open, $J$ is
+continuous, the point set is finite almost surely, and $m_2$ is measurable
+and integrable, with
+\[
+    \int_{S^4}m_2(u)\,d\mu(u)=\frac{2}{\omega}\int_U J\,dV_g .
+\]
+\end{theorem}
+\begin{proof}
+\leanok
+In a single smooth normal chart use the determinant of the signed second
+form, and two fixed tangent coordinate vectors where the quadratic values
+have opposite strict signs. Positive determinant excludes degeneracy and
+forces an even number of negative eigenvalues. The two evaluations exclude
+both definite signatures. All three strict tests persist near the center.
+Changing the unit normal preserves middle signature. In the same source
+parametrization the target density of the composed Gauss map equals the
+source density times its orthonormal absolute Jacobian. Ratios on charts
+give continuity of $J$ even at singular points. Integrate on countably many
+regular sheets and use the disjoint fibers over $u$ and $-u$. Multiplicity
+counts points in $M$, including distinct points with the same immersed image.
+\end{proof}
+
+\begin{theorem}[Morse directions at the immersed threshold]
+\label{thm:ed03-morse-threshold}
+\uses{thm:ed03-ordinary-indexed-area,cor:ed03-strict-actual-height}
+\lean{SmoothPoincare.riemannianVolumeMeasure_criticalValues_eq_zero, SmoothPoincare.orientedHeight_ae_nondegenerate, SmoothPoincare.inducedEnergy_strict_of_orientedHeightFloor, SmoothPoincare.exists_morseHeight_le_one_of_inducedEnergy_le}
+\leanok
+Almost every round direction gives a smooth height with nondegenerate
+Hessian at each critical point. On the compact source above, use the
+ordered frames of the constructed normal. With integrable squared
+chiral norm and continuous middle deficit, energy at most $64\pi^2/9$
+gives a Morse height with a finite set of at most one index-two point.
+\end{theorem}
+\begin{proof}
+\leanok
+Apply the equal-dimensional Sard theorem in charts and transfer the null
+critical values to Riemannian volume. Remove both this set and its antipode.
+The signed Weingarten formula then gives a nondegenerate Hessian at
+every critical point of the height. If almost every direction had at
+least two middle points, the indexed identity and exclusion of open
+balanced principal frames would force strict energy above the threshold.
+Intersect the conull Morse and finiteness conclusions before selecting
+a direction. Coincident critical values are allowed.
+\end{proof}
+Smooth recognition from one such direction still requires a marked handle
+presentation and its boundary gluings on the original smooth source.
+
+\begin{proposition}[Physical chart tests and moving frames]
+\label{prop:ed03-chart-frame-tests}
+\uses{prop:ed03-anchored-shell,lem:ed03-splice-curvature}
+\lean{SmoothPoincare.physicalRadialVolume_eq_map_scaleMetric, SmoothPoincare.physicalAnchor_and_anchoredBuffer_fullCurvature_tendsto_zero, SmoothPoincare.shiftedPhysicalEuclideanShellVolume_strict_decrease, SmoothPoincare.exists_orientedMovingFrame, SmoothPoincare.movingCurvatureSlots_tensor, SmoothPoincare.tendstoUniformlyOn_movingChiralProjector}
+\leanok
+On a supplied wide chart, radial approximation on the closed buffered
+band gives a physical anchor and transfers the curvature ceiling to
+that band. Already in Euclidean space a positive shift of the radial
+coordinate gives a strictly decreasing normalized adjacent-shell volume
+quotient. On one oriented coordinate basis, positive metric matrices
+admit a continuous choice of compatible orthonormal frames. On a fixed
+uniform ellipticity window uniform convergence of the metric coefficients
+gives uniform convergence of the density-weighted chiral projections.
+\end{proposition}
+\begin{proof}
+\leanok
+Push forward the restricted physical volume by the normalized physical
+distance; retain the omitted region when comparing whole shells.
+For the shifted quotient apply the mean value theorem to differences of
+fourth powers. On the compact matrix window apply uniform continuity
+to orthonormalization and the four tensor slots in this same basis.
+\end{proof}
+
+\begin{proposition}[Positive marked caps and their individual costs]
+\label{prop:ed03-cap-tests}
+\uses{prop:ed03-inclusive-caps,lem:ed03-splice-curvature}
+\lean{SmoothPoincare.HasJoinedCapTests.yamabeFloor, SmoothPoincare.twoCapSigns_of_joinedTests, SmoothPoincare.HasJoinedCapTests.markedSide, SmoothPoincare.cappedEnergy_le_raw_add_halfCollarError}
+\leanok
+Set $T=4\pi^2$. On one connected joined path, assume the continuous sign
+test, positive start, Euler bound and energy ceiling $2T-\gamma$ for
+$\gamma>0$. If every smooth log-conformal test on each completed cap
+has joined transplants with both numerator and volume converging,
+each cap has Yamabe constant at least $\sqrt{48\gamma}$. The actual
+cap metric, raw side and complementary marked core then define a positive
+marked side. On that cap, strip mass $s$, norm error $\beta$, and a comparison
+of the entire output complement give a cap cost at most
+$E_{\mathrm{raw}}+2\sqrt{s}\,\beta+\beta^2$.
+\end{proposition}
+\begin{proof}
+\leanok
+Pass the joined lower bound to each test quotient before taking the
+infimum. The limiting test volume is positive. For the cost, apply the
+$L^2$ triangle inequality on the trim and add the complementary integral.
+The two caps use their own half-collar errors. Once both signs and markings
+are available, the sum test in Proposition~\ref{prop:ed03-inclusive-caps}
+includes equality.
+\end{proof}
+
+\begin{proposition}[The selected disk widths and finite band charge]
+\label{prop:ed03-same-width}
+\uses{prop:ed03-endpoint-windows,prop:ed03-cap-tests}
+\lean{SmoothPoincare.endpointPhysical_omitted_charges, SmoothPoincare.exists_selectedDiskWidths_small_chiral_sum, SmoothPoincare.endpointAllowance_on_selectedChartDisks, SmoothPoincare.bandPhysical_omitted_charges, SmoothPoincare.bandPhysical_yamabeEuler_sandwich}
+\leanok
+Use the volume-one physical Yamabe sequence with the ordered spectral,
+Euler and signature data and the modified probability gauge with its
+constant test and same-region spectral transport. At $I=T$ and
+$e_i\to T$, suppose marked disjoint chart disks capture all but vanishing
+modified volume. Their full physical exterior has chiral charge $r_i\to0$.
+There is one $k_i\ge i$ per finite family for which the sum of physical
+trim charges tends to zero. Write $s_i$ for their union charge at width
+$1/(k_i+1)$. For any nonnegative allowance $\eta_i$ on these widths,
+suppose that eventually the strict joined ceiling
+$e_i+2\sqrt{s_i}\eta_i+\eta_i^2<2T$ yields a positive competitor on
+the original type costing at most $(\sqrt{r_i}+\eta_i)^2$. Then for each
+$\delta>0$, eventually $\eta_i>2\pi-\delta$.
+
+At a single index, if $U$ is a supplied retained set with omitted modified
+probability at most $d$, and $\ell^2$ is the total modified spectral second
+moment with $\ell\ge0$, then each physical chiral charge satisfies
+\[
+ E_\pm(g;U^c)\le 2e-\tfrac32\max\{Y/6-\ell\sqrt d,0\}^2 .
+\]
+\end{proposition}
+\begin{proof}
+\leanok
+The endpoint scalar test and spectral deficit transfer vanishing omitted
+volume to vanishing physical charge. The marked coordinate spheres have
+zero physical volume. Thin their collars together at each finite index
+and apply the repair test at those widths. A fixed saving below $2\pi$
+would violate the fixed-type infimum. At a single index Cauchy--Schwarz
+bounds the omitted first moment by $\ell\sqrt d$. Transport the captured
+second moment on $U$ and use the common total chiral energy of either
+sign. The auxiliary positive-Ricci metric supplies the disk selection in
+the manuscript; the charges here are measured in $g$.
+\end{proof}

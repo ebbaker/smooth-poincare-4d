@@ -76,4 +76,17 @@ example (U : Set M) (hOpen : IsOpen U) (hExists : U.Nonempty)
 #check inducedEnergy_strict_of_actualIndexTwo
 #print axioms inducedEnergy_strict_of_actualIndexTwo
 
+#check geometricRecognitionEndpoint
+#print axioms geometricRecognitionEndpoint
+#check geometricChargedCut_le_excess
+#print axioms geometricChargedCut_le_excess
+#check endpointPhysicalSpectralDeficit
+#print axioms endpointPhysicalSpectralDeficit
+#check endpointPhysicalSpectralLimits
+#print axioms endpointPhysicalSpectralLimits
+#check geometricEventually_lt_endpointCollarAllowance
+#print axioms geometricEventually_lt_endpointCollarAllowance
+#check metricChiralQuantile_div_tendsto_atTop_of_fullCurvature_vanishes
+#print axioms metricChiralQuantile_div_tendsto_atTop_of_fullCurvature_vanishes
+
 end Geometry

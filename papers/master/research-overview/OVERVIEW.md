@@ -12,13 +12,13 @@ Develop intermediate results in the working draft of the sub-investigation that 
 
 In the master, state the implication with its quantifiers, give the decisive argument, and cite the precise result in the branch draft for the supporting proof. A conditional theorem can move the proof forward by replacing an open hypothesis with a weaker geometric condition. State where that condition still has to be established. For example, the cost of one immersed handle with a prescribed boundary germ belongs in the construction paper. A bound on the assembled immersion that reaches the recognition threshold advances the master because it identifies the smooth type of its domain.
 
-For variational results, say whether the estimate produces a metric or bounds an infimum. A smooth positive repair on the original type with energy at most $4\pi^2$ closes the recognition step, including equality. An estimate on a minimizing sequence that gives only $I^+(M)\le4\pi^2$ leaves the unattained endpoint open. The [master register](../research-progress/REGISTER.md) records the assessed implication and its scope.
+For variational results, say whether the estimate produces a metric or bounds an infimum. A smooth positive repair on the original type with energy at most $4\pi^2$ closes the recognition step, including equality. A finite-class proof alone uses strict inequality when the input is only an infimum. The positive-time compactness proof in this edition now covers equality and a uniform interval above it. Every promotion should identify the metric that supplies an attained class or the theorem that controls the infimum.
 
-## Endpoint charge and the next proof obligation
+## Uniform recognition and the surviving band
 
-Let \(T=4\pi^2\). At the only unresolved endpoint of \(I^+(M)\le T\), every physical minimizing sequence has vanishing trace-free Ricci energy. A modified Yamabe metric in each of those classes makes its volume approximate the sum of the two original chiral measures in total variation. Normalizing a positive-Ricci comparison by that volume places nearly all charge of both signs on a finite family of parametrized standard disks, with arbitrarily little original full curvature on each containing ball. This removes the independent complement estimate for these disks. Above the endpoint that estimate remains a premise. [Proof and assessed alternatives](../research-progress/handoffs/E53_E55_ENDPOINT_CHARGE_20261125.md)
+There is a universal $\varepsilon_*>0$ such that $I^+(M)\le4\pi^2+\varepsilon_*$ recognizes every smooth homotopy four-sphere satisfying this bound. This includes an infimum equal to $4\pi^2$ without attainment. The proof yields no numerical value for $\varepsilon_*$. The modified Yamabe representative supplies the small high-curvature tail. Ricci flow from that representative supplies smooth closed diffeomorphisms at a fixed positive time. Gauss–Bonnet and the transported Einstein defect give an actual class with chiral energy exactly $T=4\pi^2$ on the limit. Positive entry below $2T$ on arbitrary smooth types remains open.
 
-The next intrinsic question is whether the same charged disks admit disjoint marked collars on which the aggregate splice allowance is below \(2\pi\) by a fixed margin as the residual and raw collar charge tend to zero. The disk selection controls location and charge. It has yet to give distortion and derivative control in a common parametrization. A proper flat radial comparison in the neck branch and the modified sign form on an actual retained exterior provide two independent approaches.
+For $I^+(M)<4T/3$, both chiral charges outside the same finite family of selected standard disks are at most $4(e_i-T)$ up to arbitrary fixed tolerance. At $I^+(M)<5T/4$ this places both raw residuals below $T$. A strict same-type improvement still requires first-order control of the actual marked collar costs. On a separated physical sequence the proper flat comparison and saturation of two adjacent embedded shell volumes give an alternative target. The Mazur double supplies a scoped obstruction to long conformally product exteriors. All upper-band closed and restart alternatives retain their own hypotheses. [Assessment and inputs](../research-progress/handoffs/E56_E58_RECOGNITION_GAP_20261125.md)
 
 ## Current analytical results on the four routes
 
@@ -55,7 +55,7 @@ $$
 $$
 
 A single positive class with $E_+\le T$ identifies the smooth type by
-Chang–Gursky–Yang's sphere theorem and equality classification. The round metric on that type then gives $I^+(M)=0$. Conversely, $I^+(M)<T$ supplies a positive class below $T$ by the definition of infimum. It follows that any hypothetical $I^+(M)=T$ must be unattained. For a
+Chang–Gursky–Yang's sphere theorem and equality classification. The round metric on that type then gives $I^+(M)=0$. Conversely, $I^+(M)<T$ supplies a positive class below $T$ by the definition of infimum. The [uniform gap](../manuscript/recognition_gap.tex) now excludes $I^+(M)=T$ even without attainment. For a
 *closed Bach-flat positive Yamabe* class the inclusive rigidity result gives conformal
 roundness at or below $T$.
 [Normalization and closed gap, `thm:closed-gap`](../../investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/manuscript/marked_necks_and_chiral_energy.tex#L64)

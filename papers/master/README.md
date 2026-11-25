@@ -2,7 +2,7 @@
 
 The master manuscript asks whether the chiral Weyl energy on a fixed smooth homotopy four-sphere can be lowered far enough to identify its smooth type. The working edition gives a short marked-cut test and a variational comparison on the actual source. Every smooth complete physical blow-up with the stated first-order convergence is flat at minimizing energy. The paper now gives physical trace-free Ricci scale estimates, a critical harmonic-annulus cut, and direct recognition at chiral energy at most \(64\pi^2/9\) for a conformal class induced by a Euclidean hypersurface immersion. Universal entry, a general marked extraction and closed rigidity remain open.
 
-At the recognition endpoint the working edition places both chiral energies on finitely many parametrized standard disks up to any prescribed error, and gives the first remaining collar inequality. It also tests a marked exterior by its modified Yamabe form and recognizes further one-sided and mixed height diagrams. [Proof and remaining smooth types](research-progress/handoffs/E53_E55_ENDPOINT_CHARGE_20261125.md)
+There is a universal $\varepsilon_*>0$ such that $I^+(M)\le4\pi^2+\varepsilon_*$ recognizes every smooth homotopy four-sphere satisfying this bound. This includes an infimum equal to $4\pi^2$ without attainment. The proof yields no numerical value for $\varepsilon_*$. The surviving intrinsic band has a quantitative bound on raw disk-complement charge below $16\pi^2/3$. The first remaining comparison is a low-cost collar on the actual charged disks. [assessed proof and remaining cases](research-progress/handoffs/E56_E58_RECOGNITION_GAP_20261125.md)
 
 ## Working papers for the parallel investigations
 

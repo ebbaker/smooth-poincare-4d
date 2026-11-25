@@ -1,0 +1,148 @@
+\section{A spectral obstruction on a marked punctured double}
+\label{sec:marked-double-exterior}
+
+Let \(W\) be a smooth compact oriented contractible four-manifold
+with connected boundary \(Y\). An orientation-preserving diffeomorphism
+\(f:Y\to Y\) gives the oriented double \(W\cup_f(-W)\).
+Van Kampen and Mayer--Vietoris give a smooth homotopy four-sphere.
+Insert \([0,L]\times Y\) using the identity and \(f\) on its two
+faces. Collared reparametrization preserves the given smooth type
+and is fixed off the seam collars. Mark an interior coordinate ball
+on each side, disjoint from these collars. Smooth metrics on the
+punctured halves can have arbitrary prescribed product seam
+germs and exact unit round product germs at their marked
+punctures. Use the pulled-back seam metrics in the corresponding
+face markings and interpolate to interior metrics in the complements
+of the prescribed germs. The round ends admit conformally flat
+caps in their original ball parametrizations.
+
+On a closed four-manifold write \(\Lambda\) for the maximum of
+the largest signed eigenvalues of the chiral Weyl blocks. The
+ordinary and modified quadratic forms have integrand
+\(6|dv|^2+Vv^2\), with \(V=R\) and \(V=R-6\Lambda\),
+respectively. On the retained exterior the contribution from a
+unit round end is
+\(6\langle\tau,\sqrt{1-\Delta_{S^3}}\tau\rangle\) for its trace
+\(\tau\), by minimizing on the added conformally flat half
+cylinder. This follows by decomposing into eigenfunctions of
+\(-\Delta_{S^3}\); each mode minimizes the one-dimensional
+quadratic action with prescribed value and decay at infinity.
+For the identity double with reflected metrics and corresponding
+marked punctures, use all \(H^1\) tests on one punctured half
+and leave the trace on the doubled seam free. Positivity of
+the corresponding one-half form, including its round-end term,
+is equivalent to positivity of the full exterior form.
+Restriction gives the sufficient implication by addition,
+and even extension gives necessity since it doubles the value.
+Orientation reversal exchanges chiralities and preserves
+\(\Lambda\). It also makes the full positive chiral energy
+the sum of both half energies, with no Weyl energy in the caps.
+
+\begin{proposition}[Conformally product seam obstruction]
+\label{prop:marked-double-neck}
+Suppose the retained metric on the whole strip \([0,L]\times Y\)
+is conformal to \(dt^2+\gamma\), where \(\gamma\) is a smooth
+metric on the closed three-manifold \(Y\). Let \(r_{\min}\) be
+the least Ricci eigenvalue of \(\gamma\) and use the transverse
+first eigenvalues
+\[
+ \ell_{\rm mod}=\lambda_1(-6\Delta_\gamma+3r_{\min}),\qquad
+ \ell_{\rm ord}=\lambda_1(-6\Delta_\gamma+R_\gamma).
+\]
+If either \(\ell<0\) and \(L\sqrt{-\ell}\ge\pi\sqrt6\), the
+corresponding exterior form fails strict positivity, regardless
+of the half metrics, puncture caps or twist. In particular, the
+ordinary test excludes positive Yamabe sign on every closed
+completion that retains this strip. The strip contributes the
+exact energy \(\frac L4\int_Y|\operatorname{Ric}_{0,\gamma}|^2
+\,dV_\gamma\) to either chirality.
+\end{proposition}
+
+\begin{proof}
+In an orthonormal product frame whose last three vectors
+diagonalize \(\operatorname{Ric}_\gamma\), the only sectional
+curvature in the opposite pair \(0i,jk\) is
+\(K_{jk}=R_\gamma/2-r_i\). Project onto either chiral basis and
+subtract the scalar contribution \(R_\gamma/12\).
+The Weyl eigenvalues are \(R_\gamma/6-r_i/2\), giving the
+modified potential and energy identity. The lowest Dirichlet
+value of the product strip is \(\ell+6\pi^2/L^2\), by the
+Poincaré inequality in \(t\) and the transverse Rayleigh
+inequality. It is attained by \(\sin(\pi t/L)\phi(y)\) for a
+first transverse eigenfunction \(\phi\). Its zero extension
+is a nonzero \(H^1\) test on the retained exterior, with zero
+trace on every marked round end. The scalar quadratic form
+transfers under multiplication of the test by the inverse
+conformal factor, since the test has zero trace on both strip
+faces. The added potential transfers because \(\Lambda\) has
+conformal weight \(-2\). The Weyl energy of the strip is
+conformally invariant in four dimensions. A warped collar
+\(ds^2+a(s)^2\gamma\) is included with \(L=\int ds/a(s)\).
+\end{proof}
+
+The same product calculation gives a shorter bound for fixed
+half metrics. Normalize \(\phi\) in \(L^2(\gamma)\), take one
+test on each half with that trace in the common cylinder
+markings and zero trace at the marked punctures, and let \(H\)
+be the sum of their form values off the inserted strip. Put
+\(k=\sqrt{-\ell/6}\). When \(0<L<\pi/k\), the intervening test
+\[
+ \frac{\cos(k(t-L/2))}{\cos(kL/2)}\phi(y)
+\]
+has both required traces. Integration by parts gives strip
+value \(-12k\tan(kL/2)\), so \(H\le12k\tan(kL/2)\) suffices
+for failure. The bound includes the cost of realizing the
+two traces in the fixed halves. In the second copy the
+actual trace in its own marking is \(\phi\circ f^{-1}\).
+
+\begin{example}[The Mazur seam]\label{ex:mazur-spectral-seam}
+For \(n=1\), the lower half of
+\href{https://arxiv.org/pdf/2403.17356v2#page=35}{Isoshima's
+Figure 37} is the Mazur manifold \(W^-(0,3)\), with the cut
+after its first two-handle. The identity double is standard
+by Isoshima's Theorem 3.3. The punctures can be marked in
+the two corresponding zero-handles. The actual middle
+cut is \(Y=\Sigma(2,5,7)\), using
+\href{https://math.berkeley.edu/~kirby/papers/Akbulut%20and%20Kirby%20-%20Mazur%20manifolds%20-%20MR0544597.pdf}{Akbulut--Kirby,
+Proposition 1 and Theorem 2(1)}.
+
+For every \(\gamma\) on this \(Y\), both transverse
+eigenvalues in Proposition~\ref{prop:marked-double-neck}
+are negative. Indeed, \(1/2+1/5+1/7<1\), so
+\href{https://webhomes.maths.ed.ac.uk/~v1ranick/papers/milnbries.pdf}{Milnor,
+Theorem 2.7 and Corollary 6.6}, gives a finite oriented
+circle-bundle cover \(Z\) of \(Y\) over a closed orientable
+surface of genus at least two. The preimage of an essential
+simple closed curve is a torus with injective fundamental
+group, by the homotopy sequence of the fibration. The
+projection onto the surface group also gives \(b_1(Z)\ge4\).
+Any nonnegative scalar curvature metric on \(Y\) would lift
+to \(Z\) and force that metric to be flat by
+\href{https://archive.ymsc.tsinghua.edu.cn/pacm_download/59/11113-Shing-Tung_Yau_216.pdf}{Schoen--Yau,
+Theorem 3, p.~2567}. Parallel harmonic one-forms would give
+\(b_1(Z)\le3\), a contradiction. Thus the lowest eigenvalue
+of \(-8\Delta_\gamma+R_\gamma\) is negative, since a
+nonnegative value would give a nonnegative scalar curvature
+metric by conformal change with the positive first
+eigenfunction \cite[eq.~(1.1)]{LeeParker1987Yamabe}. Both
+transverse forms are bounded above on that test by this
+three-dimensional conformal form.
+
+For an explicit collar take the metric descending from the
+left-invariant metric on
+\(\widetilde{\mathrm{SL}}(2,\mathbb R)\) with cyclic
+orthonormal bracket constants \((a,a,-a)\), \(a>0\).
+Use Milnor's Brieskorn quotient model (Corollary 6.5)
+and his
+\href{https://core.ac.uk/download/pdf/82428733.pdf}{Ricci
+formula (Theorem 4.3)}. The eigenvalues of Ricci are
+\((-3a^2/2,-3a^2/2,a^2/2)\). The modified and ordinary
+transverse potentials are constant, with the corresponding
+obstructions at \(aL\ge 2\pi/\sqrt3\) and
+\(aL\ge\pi\sqrt{12/5}\). Either chiral charge is
+\((2/3)a^4L\operatorname{Vol}_{\gamma}(Y)\).
+This supplies a restriction on the conformally product
+construction at the specified marked cut. Shorter collars
+require an estimate on the half metrics or further geometric
+data.
+\end{example}
