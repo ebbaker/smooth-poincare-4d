@@ -1,6 +1,19 @@
 # Overall formalization progress
 
-This is the live register for the shared first-order twistor work and the index of all **SP4-FORM-FOT** tasks. For each delegated ID the linked route register is its sole status owner. The [Sections and Connections pilot](../01_sections_and_connections/research-progress/REGISTER.md) owns its separate `SP4-FORM-SEC` tasks. Mathematical research is tracked by the [paper investigations](../../../papers/investigations-1/03_first_order_twistor/research-progress/REGISTER.md).
+This is the sole program register across editions. The shared task prefix is `SP4-FORM-FOT`. Each delegated task has one live proof owner. Natural-language results and the search for qualifying metrics and charts are recorded in the [master register](../../../papers/master/research-progress/REGISTER.md) and the [twistor register](../../../papers/investigations-1/03_first_order_twistor/research-progress/REGISTER.md).
+
+## Version 02 · Fixed-type comparison · 25 November 2026
+
+Prepared for Edward B. Baker III with OpenAI Codex assistance. The actual serving configuration was unavailable. Issued the [overview](../research-overview/02_OVERVIEW.md), [plan](../research-plan/02_PLAN.md) and [dated evidence baseline](02_BASELINE.md). The proofs below are prospective. The baseline records the already checked imports.
+
+| Parent ID | Status | Deliverable |
+| --- | --- | --- |
+| SP4-FORM-FOT-B06 | Adopted | Give the fixed-type comparison priority. Route 03 owns the signed cut, Route 05 the variational and physical-scale arguments. Keep existing import paths and use `SmoothPoincare` for new master modules. [Module index](../../FirstOrderTwistor/README.md) |
+| SP4-FORM-FOT-E35 | Reserved · geometric recognition | Extend the strict CGY interface in E04 to equality at an actual positive class. Rule out the other equality topologies for a homotopy sphere and transfer the normalization. An infimum equal to the threshold requires separate attainment. |
+| SP4-FORM-FOT-E36 | Proposed · independent finite algebra | Prove the principal-curvature deficit bound and its sharp negative-determinant example. A second bound on signature `(2,2)` feeds the current immersion theorem. Height topology, strictness after integration and existence of an immersion meeting a threshold are separate obligations. |
+| SP4-FORM-FOT-E37 | Reserved · proof-chain audit | Audit entry and the chosen contradiction on one smooth type, tracing membership, signs, costs, markings and remaining mass. E34 retains the original three-route audit. |
+
+**Proof owners.** [Route 05](../05_variational_comparison/research-progress/REGISTER.md) owns VAR-B01–B03 and VAR-E01–E08. [Route 03](../03_single_cut_descent/research-progress/REGISTER.md) owns CUT-B02 and CUT-E02–E05 in addition to its earlier tasks. [Route 02](../02_neck_energy_accounting/research-progress/REGISTER.md) owns complete accounting and [Route 04](../04_dirac_collar_transmission/research-progress/REGISTER.md) owns transmission. The [Sections and Connections pilot](../01_sections_and_connections/research-progress/REGISTER.md) retains its SEC tasks. Shared B01/B05 and E02–E04 supply geometric conventions, measured remainders and recognition for both editions.
 
 ## Version 01 · 25 November 2026
 

@@ -1,5 +1,5 @@
 name = "sections-and-connections"
-defaultTargets = ["SectionsAndConnections", "FirstOrderTwistor"]
+defaultTargets = ["SectionsAndConnections", "FirstOrderTwistor", "SmoothPoincare"]
 
 [[require]]
 name = "DifferentialGeometry"
@@ -11,3 +11,6 @@ name = "SectionsAndConnections"
 
 [[lean_lib]]
 name = "FirstOrderTwistor"
+
+[[lean_lib]]
+name = "SmoothPoincare"

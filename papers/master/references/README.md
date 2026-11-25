@@ -12,3 +12,5 @@ The [canonical source index](../../../references/README.md) and [shared bibliogr
 25 November 2026. Prepared for Edward B. Baker III with OpenAI assistance. Checks refer to the named passages. The inherited records preserve the dates and scope of the earlier readings.
 
 The [master variational source record](../../../references/SOURCE_NOTES_MASTER_VARIATIONAL_20261125.md) records exact theorem statements checked for local replacement, the closed Yamabe sign, complete end geometry, first-order compactness, sheet monodromy and the alternative flow selection test. The shared bibliography contains the primary articles cited in the manuscript.
+
+[Physical Ricci scales and immersed recognition](../../../references/SOURCE_NOTES_MASTER_RICCI_IMMERSION_20261125.md) records the exact primary inputs to the critical annular estimate, supercritical physical compactness, indexed height count, handle classification and extrinsic sign test.

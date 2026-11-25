@@ -2,11 +2,11 @@
 
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The serving model variant and reasoning effort are unavailable.
 
-Follow a marked spherical cut through capping, recognition of the exterior and reassembly on the original smooth four-manifold. The route uses one complete embedded core and a quantitative energy margin.
+Follow a marked spherical cut through capping, recognition and reassembly on the original smooth four-manifold. Version 02 asks what follows when either of two full sides may carry the original smooth type. The previously checked fixed-core case supplies the marked gluing and metric-transport ingredients. [Master cut](../../../papers/master/manuscript/marked_cut.tex) · [Short-cut theorem](../../../papers/master/manuscript/variational_comparison.tex)
 
 [Research overview](research-overview/OVERVIEW.md) · [Research plan](research-plan/PLAN.md) · [Live progress](research-progress/REGISTER.md) · [Continuation](continuation-notes/CONTINUATION.md) · [Milestones](DRAFT_HISTORY.md)
 
-**Task ownership.** This route owns FOT-E25, FOT-E26 and FOT-E28, with CUT-B01 and CUT-E01 as local prerequisites. Inherited FOT IDs retain their original program meanings. The [route register](research-progress/REGISTER.md) records their current states. The parent coordinates shared prerequisites and the final premise audit. [Overall overview 01](../research-overview/01_OVERVIEW.md) · [Overall plan 01](../research-plan/01_PLAN.md) · [Program register](../research-progress/REGISTER.md) · [Verified baseline 01](../research-progress/01_BASELINE.md)
+**Task ownership.** CUT-B02 and CUT-E02–E05 cover the symmetric cut, geometric splice estimate, two cap signs and the harmonic-annulus criterion. FOT-E25, E26, E28, CUT-B01 and CUT-E01 retain their earlier meanings. [Current program plan](../research-plan/02_PLAN.md) · [Program register](../research-progress/REGISTER.md) · [Evidence at issue](../research-progress/02_BASELINE.md)
 
 **Current result.** The strict exterior margin, marked smooth gluing and conditional curvature-energy descent on the original smooth type are Lean-checked. The route uses a single supplied core and explicit cap and recognition hypotheses. [Verified declarations and open geometry](research-progress/REGISTER.md) · [Dated continuation](continuation-notes/AFTER_MARKED_DESCENT_20261125.md)
 

@@ -1,9 +1,11 @@
 # Current overall research plan
 
-[Version 01 · Building blocks for the collar and neck problems](01_PLAN.md) gives the shared mathematical targets and their original IDs. Since the route setup on 25 November, the [program register](../research-progress/REGISTER.md) records shared status and directs each delegated proof to its live owner. The parent retains B01, B02, B05, E02–E08 and the final audit E34.
+[Version 02 · A proof plan for the fixed-type comparison](02_PLAN.md) sets the current priorities. Start with the witnessed infimum and an individual repaired competitor, and with the two-full-side inequality on a supplied cut. [Evidence at issue](../research-progress/02_BASELINE.md) · [Program register](../research-progress/REGISTER.md)
 
-| Route plan | First bounded proof | Other ready work |
-| --- | --- | --- |
-| [02 · Full neck energy accounting](../02_neck_energy_accounting/research-plan/PLAN.md) | FOT-E01 · Verified finite accounting with strict residual | See the [covered-remainder milestone](../02_neck_energy_accounting/research-progress/REGISTER.md) and the current geometric handoff. |
-| [03 · Single spherical cut and descent](../03_single_cut_descent/research-plan/PLAN.md) | CUT-E01 · Strict exterior energy margin | CUT-B01 specifies the marked boundary and cap maps. |
-| [04 · Dirac transmission and chiral curvature](../04_dirac_collar_transmission/research-plan/PLAN.md) | SPIN-E01 · Weighted finite-cover estimate | The local algebra can start while B04 awaits the shared geometric types. |
+| Work in the next round | First deliverable |
+| --- | --- |
+| [05 · Variational comparison](../05_variational_comparison/research-plan/PLAN.md) | VAR-E01 proves the cost bound from actual admissible competitors. VAR-E05 can proceed independently on the physical chiral quantiles. |
+| [03 · The short marked cut](../03_single_cut_descent/research-plan/PLAN.md#the-short-marked-cut) | CUT-E02 proves nonsplitting with either capped side surviving. CUT-E03 isolates the curvature calculation in the actual splice chart. |
+| [Shared recognition and alternatives](02_PLAN.md#decisions-and-dependencies) | The parent owns the equality endpoint. Route 02 supplies whole-remainder bounds and Route 04 supplies estimates from controlled spinor fields as their premises become available. |
+
+[Plan 01](01_PLAN.md) preserves the original statements and task IDs. The [live registers](../README.md#proof-investigations) record their subsequent proofs.

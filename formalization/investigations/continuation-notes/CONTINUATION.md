@@ -1,4 +1,10 @@
-# Starting Version 01
+# Continuing the formalization program
+
+## Current edition
+
+Version 02 follows the master manuscript on a positive-class minimizing sequence of a fixed smooth type. Read the [overview](../research-overview/02_OVERVIEW.md), [plan](../research-plan/02_PLAN.md), [baseline](../research-progress/02_BASELINE.md) and [current register](../research-progress/REGISTER.md). On activation, start VAR-E01 from the witnessed infimum and compare each repaired metric on the original smooth type. A separate Route 03 session can develop CUT-E02 on two full sides with either cap surviving. VAR-E05 can select the physical annulus independently. [Route 05 continuation](../05_variational_comparison/continuation-notes/CONTINUATION.md) · [Route 03 continuation](../03_single_cut_descent/continuation-notes/CONTINUATION.md) · [Master manuscript and inputs](../../../papers/master/manuscript/README.md)
+
+## Version 01 launch record
 
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The exact serving model and effort are unavailable. [Plan](../research-plan/01_PLAN.md) · [Baseline](../research-progress/01_BASELINE.md) · [Live register](../research-progress/REGISTER.md)
 

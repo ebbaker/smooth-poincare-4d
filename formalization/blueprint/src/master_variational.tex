@@ -1,0 +1,242 @@
+\section{Fixed-type minimization in the master manuscript}
+\label{sec:master-variational}
+
+Fix a closed connected oriented smooth homotopy four-sphere \(M\), smooth
+Riemannian metrics, and \(T=4\pi^2\). Write \(E_\pm(g;U)\) for the
+Hilbert--Schmidt energy of the corresponding Weyl operator on \(U\).
+Signature gives equality of the two totals on \(M\). Regional energies
+retain their chirality. A positive class with \(E_+\le T\) recognizes
+the smooth type by the sphere and equality theorems of Chang, Gursky
+and Yang. This implication and its topological hypotheses are external
+dependencies in Lean. The first two entries below describe existing
+declarations. The subsequent entries record targets for the new edition.
+
+\begin{definition}[Admissible geometric energies]
+\label{def:master-admissible}
+\lean{FirstOrderTwistor.geometricPositiveEnergies}
+\leanok
+For an oriented closed smooth Riemannian four-manifold in the geometric
+library, let \(A_M\subset\mathbb R\) consist of the energies witnessed by
+a smooth metric with positive class Yamabe constant and a pointwise
+oriented orthonormal frame in which the squared chiral block of its
+Levi--Civita curvature is integrable. The energy uses the volume of
+that metric. The witness is a choice of basis at each point.
+\end{definition}
+
+\begin{lemma}[Lower bound and a marked competitor]
+\label{lem:master-competitor}
+\uses{def:master-admissible}
+\lean{FirstOrderTwistor.geometricPositiveEnergies_bddBelow, FirstOrderTwistor.geometricEnergy_mem_of_pullback}
+\leanok
+\(A_M\) is bounded below. Given an orientation-preserving
+diffeomorphism from \(M\) to a closed smooth oriented four-manifold \(X\)
+and an admissible framed metric on \(X\), its energy belongs to \(A_M\).
+\end{lemma}
+\begin{proof}
+\leanok
+The integrated squared norm is nonnegative. Pull back the metric and
+transport its frame along the given diffeomorphism. The Yamabe constant,
+integrability and the curvature integral transfer along that same map.
+\end{proof}
+
+\begin{proposition}[Independent replacements on the original type]
+\label{prop:master-replacement}
+\uses{lem:master-competitor}
+After a positive-class witness is supplied, write \(I=\inf A_M\) in
+\(\mathbb R\). Let \(m_j\) be the raw chiral masses of finitely many
+disjoint marked standard balls in a source of energy \(e\). If each
+individual repair gives an admissible metric on \(M\) of energy at
+most \(e-m_j+\gamma_j\), then
+\[
+  \sum_j m_j\le N(e-I)+\sum_j\gamma_j .
+\]
+Apply the infimum lower bound to each competitor before summing.
+For the manuscript's universal entry question the convention is
+\(\inf\varnothing=+\infty\). The geometric identification of \(A_M\)
+with the manuscript functional also needs independence from unrelated
+oriented frames.
+\end{proposition}
+
+\begin{corollary}[Independent repairs and the uncovered mass]
+\label{cor:master-repair-residual}
+\uses{prop:master-replacement}
+On a nonstandard type in the band, fix \(\varepsilon>0\).
+Suppose a subsequence admits the marked repairs above, with bounded
+cardinality at this tolerance, total surcharge of limsup at most
+\(b(\varepsilon)\) and full uncovered chiral mass of limsup at most
+\(\omega(\varepsilon)\). Then \(I\le b(\varepsilon)+\omega(\varepsilon)\).
+If such families exist for arbitrarily small tolerances and the sum
+tends to zero, this contradicts \(I\ge T\). A physical volume estimate
+supplies the complement bound under a separate uniform absolute
+continuity hypothesis for chiral mass.
+\end{corollary}
+
+\begin{proposition}[Recognition at an attained threshold]
+\label{prop:master-recognition}
+On a closed oriented smooth homotopy four-sphere, a positive conformal
+class with \(E_+(g)\le T\) gives the standard smooth type. At equality
+apply the equality classification to the actual class and exclude
+the other topologies by simple connectivity and homology.
+An unattained value \(I=T\) remains a possibility in the band.
+\end{proposition}
+
+\begin{proposition}[Nonsplitting for two marked caps]
+\label{prop:master-nonsplitting}
+\uses{lem:master-competitor,prop:cut-marked-reassembly,lem:source-remainder-split}
+Let the two full raw masses be \(m_1+m_2=e\). Assume two positive
+marked caps with costs \(E_j\le m_j+\gamma_j\), \(\gamma_j\ge0\), and
+\(e+\gamma_1+\gamma_2<2T\). On a nonstandard candidate at least one
+cap is recognized as standard and the marked reassembly makes the other
+cap \(s\) a competitor on \(M\). Hence \(m_{3-s}\le e-I+\gamma_s\).
+Along a minimizing sequence two uniformly positive full sides are
+impossible if both costs tend to zero. Either label may survive.
+The geometric theorem needs recognition of the capped homotopy spheres
+and the actual attaching maps.
+\end{proposition}
+
+\begin{lemma}[Positive paths below the scalar-flat wall]
+\label{lem:master-wall}
+\uses{lem:scalar-component-budgets}
+On the original closed smooth type, a zero Yamabe class has a
+scalar-flat representative \(q\), for which
+\(E_+(q)=2T+\frac14\int_M|\mathrm{Ric}_q|^2\,dV_q\).
+Along a smooth path starting in a positive class with \(E_+<2T\)
+throughout, the class stays positive. Its Yamabe constant is at least
+\(\sqrt{48(2T-E_+)}\). The geometric inputs include the signature and
+Euler formulas, conformal invariance, the Yamabe representative and
+continuity of the first conformal-Laplacian eigenvalue along this path.
+\end{lemma}
+
+\begin{lemma}[First-order interpolation in the splice coordinates]
+\label{lem:master-splice}
+\uses{lem:cut-cap-form}
+Fix the marked annulus and its smooth cutoff \(\psi\) in advance. In the
+oriented comparison metric \(m=\delta+v\) put \(a=\|v\|_\infty\),
+\(d=\|Dv\|_4\) and \(K=\|\mathrm{Rm}_m\|_{2}\) on the splices for the last
+norm. Under the first-order comparison assumptions, the interpolants
+\(\delta+(1-s\psi)v\), \(0\le s\le1\), incur an \(L^2\) chiral density
+error at most \(C(aK+d^2+d+a)\), uniformly in \(s\). For incoming
+splice energy \(q\) and error bound \(\Delta\), the net surcharge is at
+most \(2\sqrt q\,\Delta+\Delta^2\). The checked norm estimate consumes
+the density error. The curvature commutator and the comparison of chiral
+projections in this chart are the proposed geometric proof.
+\end{lemma}
+
+\begin{proposition}[The short marked cut]
+\label{prop:master-short-cut}
+\uses{prop:master-nonsplitting,lem:master-splice,lem:master-wall}
+On a nonstandard type take positive volume-one Yamabe representatives
+with \(e_i\to I<2T\). Supply one fixed short oriented spherical chart
+on each source, including its separating middle slice. In the conformal
+comparison gauge assume uniform and strong \(W^{1,4}\) convergence to
+the Euclidean metric and bounded full \(L^2\) curvature on the splices.
+Straighten in this chart on the joined smooth type, stretch the exact
+product for each fixed source, and transfer compactly supported tests
+to each completed cap. Zero point capacity and the path bound give both
+positive cap signs. The smaller full raw chiral mass tends to zero.
+\end{proposition}
+
+\begin{theorem}[Local replacement on a marked comparison]
+\label{thm:master-local-replacement}
+\uses{lem:master-competitor,lem:master-wall,lem:master-splice}
+On an oriented open domain supply embeddings of neighborhoods of a
+compact exhaustion with \(\Phi_i^*g_i=u_i^2m_i\), \(u_i>0\).
+Assume \(m_i\to h\) locally uniformly and strongly in \(W^{1,4}\),
+\(h\) smooth, and local full \(L^2\) curvature bounds in \(m_i\).
+For the above minimizing sequence the two chiral matrix densities
+converge strongly in \(L^2_{\rm loc}\). The limit minimizes against
+sufficiently small smooth compactly supported variations and is
+Bach-flat. The proposed proof tests an actual positive competitor on
+the original type. For \(r_i=F_\pm(m_i)-F_\pm(h)\) it gives
+\(\int(2\chi-\chi^2)|r_i|^2\le e_i-I+o(1)\) for each fixed cutoff.
+The existing two-jet theorem has stronger source regularity.
+\end{theorem}
+
+\begin{lemma}[Physical chiral quantiles]
+\label{lem:master-quantiles}
+\uses{lem:source-remainder-split,lem:scalar-component-budgets}
+In physical distance set \(r_i(\theta)\) equal to the least ball radius
+capturing \(\theta e_i\) over all centers, and \(r_i=r_i(1/2)\).
+Assume positive total chiral mass bounded away from zero, uniformly
+bounded total full curvature energy, and continuous ball masses with
+attainment as in the smooth compact case. If
+\(r_i(\theta)/r_i\to0\) on a subsequence for some \(0<\theta<1/2\),
+use its attaining inner center. The entire exterior at the median
+radius about that same center carries at least \(e_i/2\). Among the
+disjoint intervening annuli of any fixed log width one has full
+curvature integral tending to zero. The other case gives
+\(\lim_{b\downarrow0}\limsup_i\sup_x E_+(B(x,b r_i))/e_i=0\).
+\end{lemma}
+
+\begin{proposition}[A fixed-distortion harmonic shell]
+\label{prop:master-harmonic-annulus}
+\uses{lem:master-quantiles,prop:master-short-cut}
+On a separated subsequence at the positive-class infimum, supply a
+whole oriented chart \(1/8<|x|<8\) in the intervening physical shell.
+The attaining inner ball and entire median exterior must lie on
+opposite sides and outside the closed trim \(1/4\le |x|\le4\).
+Assume a constant physical rescaling has vanishing full curvature
+energy on the chart and is uniformly within a fixed sufficiently small
+distortion of Euclidean. If the coordinates are harmonic, or if
+\(\|D(\Delta_{m_i}x)\|_2\to0\), this configuration is impossible on
+the nonstandard type. The chart and the distortion are fixed before
+the source limit.
+\end{proposition}
+
+\begin{theorem}[Complete physical limits and curvature scales]
+\label{thm:master-complete-limit}
+\uses{thm:master-local-replacement,prop:master-short-cut}
+For a positive-class minimizing sequence on a fixed nonstandard type
+in the band, let \(a_i\downarrow0\). Suppose the constant rescalings
+\(a_i^{-2}g_i\) converge locally uniformly and strongly in \(W^{1,4}\)
+on oriented embeddings of neighborhoods of a compact exhaustion to
+a smooth connected complete boundaryless limit. The limit is flat.
+The argument needs ends, link topology and a marked cut whenever a
+nonflat limit is tested. As a further target, for
+\(K_i=\max_M|\mathrm{Rm}_{g_i}|\to\infty\), prove that full energy on
+physical balls of radius \(A/\sqrt{K_i}\) tends to zero uniformly in
+their centers for every fixed \(A\). Bounded \(K_i\) on a subsequence
+gives smooth closed attainment on \(M\).
+\end{theorem}
+
+\begin{proposition}[Physical Ricci scales]
+\label{prop:master-ricci-scale}
+\uses{thm:master-complete-limit}
+In the same band take a physical scale \(a_i\to0\), points \(x_i\)
+and one fixed \(2<p<\infty\). Suppose that for each fixed \(D\) one has
+\(a_i^{2-4/p}\|\mathrm{Ric}_{0,g_i}\|_{L^p(B_{g_i}(x_i,Da_i))}\le C_D\)
+eventually on the same subsequence. Full curvature energy on
+\(B_{g_i}(x_i,Aa_i)\) then tends to zero for every fixed \(A\).
+Bounded global \(L^p\) norm of the trace-free Ricci tensor on a
+subsequence gives a smooth closed positive Yamabe minimizer on \(M\).
+\end{proposition}
+
+\begin{proposition}[Recognition for one Euclidean hypersurface immersion]
+\label{prop:master-immersion}
+For a smooth immersion of \(M\) in \(\mathbb R^5\), let \(g\) be the
+induced metric, \(A\) its shape operator, \(J=\int_M(-\det A)_+\,dV_g\)
+and \(B=\|A^\circ\|_{L^4(g)}^2\). Each of \(J<8\pi^2/3\),
+\(E_+(g)\le64\pi^2/9\), or \(B\le16\sqrt{2}\,\pi/3\) implies that
+\(M\) is standard. The energy criterion also holds in the induced
+conformal class, independently of its Yamabe sign. Separate the
+pointwise principal-curvature inequalities from the Morse height
+count, smooth handle reduction and exclusion of equality by the
+Gauss and Codazzi equations. Constructing a sufficiently controlled
+immersion on every type is open.
+\end{proposition}
+
+\begin{openproblem}[Realization and the remaining alternatives]
+\label{problem:master-realization}
+\uses{prop:master-harmonic-annulus,cor:master-repair-residual,prop:master-ricci-scale,prop:master-immersion,prop:master-recognition}
+Construct entry on an arbitrary smooth type and find a qualifying
+marked cut or same-type repair on a minimizing sequence. In the diffuse
+case charge the full complement of the repaired balls. For a supplied
+whole marked base or complete constant rescaling, audit regularity,
+end topology, compactification and all mass outside fixed truncations.
+The master derives flatness of smooth complete shrinking limits and
+loss of full energy on fixed maximum-curvature-scale balls. A closed
+nonround minimizer and a round restart at the same energy still require
+rigidity, a strict improvement, or termination. The working immersion,
+physical \(L^p\) Ricci (\(p>2\)), and fixed-distortion harmonic-annulus
+criteria identify additional hypotheses for these routes.
+\end{openproblem}

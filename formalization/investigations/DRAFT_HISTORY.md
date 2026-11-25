@@ -1,5 +1,7 @@
 # Overall formalization milestones
 
+- **25 November 2026 · Version 02.** Adopted the master minimizing-sequence route, opened Route 05 and extended Route 03 to both full sides of a marked cut. Added a neutral Lean import and a master blueprint section. The dated baseline records which dependencies already have checked proofs. [Overview](research-overview/02_OVERVIEW.md) · [Plan](research-plan/02_PLAN.md) · [Baseline](research-progress/02_BASELINE.md)
+
 - **25 November 2026 · Version 01.** Prepared for Edward B. Baker III with OpenAI Codex assistance. Reviewed the pinned Lean pilot and established the first program-wide plan for the first-order twistor manuscripts and the three collar investigations. The opening builds and axiom checks concern the existing three-axis result. [Baseline](research-progress/01_BASELINE.md) · [Plan](research-plan/01_PLAN.md)
 - **25 November 2026 · Route setup.** Opened formalization investigations 02–04, assigned each delegated Version 01 task to one register, and checked the three opening proposition types in the pinned package. The parent retains common prerequisites and E34. [Route index](README.md#proof-investigations) · [Ownership table](research-progress/REGISTER.md#route-ownership)
 - **25 November 2026 · Sustained continuation prompts.** Added one standalone Astra/ultra prompt for each route, with authority for Sol 6.2/ultra helpers and alternative proof strategies. The [program handoff](continuation-notes/CONTINUATION.md) coordinates shared integration when the three sessions run together.

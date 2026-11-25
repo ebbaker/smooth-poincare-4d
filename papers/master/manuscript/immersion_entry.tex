@@ -1,0 +1,195 @@
+\section{An immersion test for entry and recognition}\label{sec:immersion}
+
+There is another way to specify a metric on the given smooth domain.
+Every smooth homotopy four-sphere is stably parallelizable
+\cite[Theorem 3.1]{KervaireMilnor1963Groups}. In rank five the
+stabilization is already in the stable range over a four-dimensional
+complex. Hence \(TM\oplus\mathbb R\) is trivial, and the immersion
+theorem gives a smooth \(F:M\to\mathbb R^5\)
+\cite[\S6]{Hirsch1959Immersions}. Give \(M\) the induced metric
+\(g\), write \(A\) for its shape operator, \(H=\operatorname{tr} A\),
+\(A^\circ=A-(H/4)I\), and set
+\[
+ J=\int_M(-\det A)_+\,dV_g,\qquad B=\|A^\circ\|_{L^4(g)}^2 .
+\]
+Self-intersections are counted on the smooth domain.
+
+\begin{theorem}[Immersed recognition and entry]\label{thm:immersed-entry}
+Each of the following conditions on one immersion implies
+\(M\cong S^4\) in the smooth category:
+\[
+       J<8\pi^2/3,\qquad E_+(g)\le64\pi^2/9,\qquad
+                     B\le(16\sqrt2/3)\pi .
+\]
+The conditions are alternatives. The energy condition holds equivalently for any representative
+conformal to the induced metric. It requires no Yamabe sign assumption.
+On a hypothetical nonstandard type, an immersion with
+\(E_+(g)<8\pi^2\) has exactly two index-two critical points in
+more than three quarters of all height directions (normalized
+spherical measure).
+\end{theorem}
+
+\begin{proof}
+Choose the unit normal so that its Gauss map \(n:M\to S^4\)
+has oriented pullback tangent bundle \(TM\). Euler classes give
+\(\deg n=1\), and its signed Jacobian is \(\det A\).
+Put \(\omega=|S^4|=8\pi^2/3\).
+For almost every \(u\in S^4\), the height \(\langle F,u\rangle\)
+is Morse, with critical points \(n^{-1}(\{u,-u\})\). The area
+formula gives the Chern--Lashof average
+\cite{ChernLashof1957Curvature}
+\[
+ \frac1{\omega}\int_{S^4}\#\operatorname{Crit}\langle F,u\rangle\,du
+  =\frac2{\omega}\int_M |\det A|\,dV_g=2+4J/\omega .
+\]
+If \(J<\omega\), some Morse height has at most four critical
+points, since each count is even. A two-critical-point height
+gives a double of two smooth disks, which is standard because any
+boundary diffeomorphism is isotopic to an orthogonal map
+\cite{Hatcher1983Smale}. With four critical points the ranks in
+the Morse complex give one extra pair in adjacent indices.
+An extra \(0,1\) pair joins two distinct disks and cancels; duality
+handles \(3,4\). For a middle pair reverse the function if
+necessary to have one 2- and one 3-handle. The disk with those
+two handles has \(H_2=0\), since only the final 4-handle is missing.
+It is a standard disk by the handle consequence of Property R
+\cite[Corollary 8.6]{Gabai1987FoliationsIII}. Equivalently the
+2-handle has zero framing on a knot whose surgery is \(S^1\times S^2\);
+Property R makes the knot trivial. Its trace is \(S^2\times D^2\); gluing it to the dual \(S^1\times D^3\) with any boundary marking gives \(S^4\) \cite[Theorem A]{LaudenbachPoenaru1972Handlebodies}. The final
+disk gluing gives the same standard sphere. Hence every immersion
+of a nonstandard candidate must have \(J\ge\omega\).
+
+In fact every Morse function on a nonstandard candidate has at least
+two index-two critical points. Reorder handles by index. The union
+of its 0- and 1-handles is connected: no higher attaching region
+can connect different components. Amalgamate the disks and 1-handles
+of a spanning tree of this connected graph into one disk. The
+remaining 1-handles reattach to its actual boundary. Do the same
+for the disjoint dual 0- and 1-handlebody. Transport the intervening
+framed 2-handle attachments with these boundary identifications.
+Their number \(m_2\) is unchanged, and Euler characteristic now says
+\(m_1+m_3=m_2\). If \(m_2\le1\), the preceding disk and single
+middle-pair arguments give the standard sphere.
+
+Let \(U\) be the open set where the shape operator has two eigenvalues
+of each sign, counted with multiplicity. At a Morse critical point
+the height Hessian is the second fundamental form up to sign. Reversing
+the normal preserves index two. Thus, writing \(m_2(u)\) for the
+original height count, the indexed area formula gives
+\begin{equation}\label{eq:middle-mass}
+ \frac1\omega\int_{S^4}m_2(u)\,du=\frac2\omega\int_U\det A\,dV_g .
+\end{equation}
+In particular the integral on the right before the factor \(2/\omega\)
+is at least \(\omega\) on a nonstandard candidate. The comparison
+of the Weyl tensor on middle signatures with the indexed height integral
+is due in general dimension to Onti and Vlachos
+\cite[\S\S2--3]{OntiVlachos2017Hypersurfaces}. Here the smooth
+four-dimensional handle conclusion gives the lower count even though
+the middle Betti number vanishes.
+
+In a principal orthonormal frame let \(k_1,\ldots,k_4\) be the
+principal curvatures. The Gauss equation gives the scalar curvature
+\(R=3H^2/4-|A^\circ|^2\). On both chiral Weyl blocks its eigenvalues
+are \((s_j-\bar s)/2\), where \(s_j=k_1 k_l+k_m k_n\) for the
+three pairings and \(\bar s\) is their mean. Their squared Hilbert--Schmidt norm is
+\(\frac1{12}\sum_{j<k}(s_j-s_k)^2\). On \(U\), write the curvatures
+as \((-a,-b,c,d)\) with \(a,b,c,d>0\). The positive pair sum
+\(ab+cd\) is at least \(2\sqrt{\det A}\) and each negative pair
+sum is at most \(-2\sqrt{\det A}\). Therefore
+\begin{equation}\label{eq:middle-weyl}
+             |W^\pm|^2_{\rm HS}\ge\tfrac83\det A\quad\text{on }U .
+\end{equation}
+Equality requires \(ab=cd,\ ac=bd,\ ad=bc\), so \(a=b=c=d\).
+Equality throughout a nonempty open subset of \(U\) is impossible.
+Indeed the two smooth principal distributions there have rank two
+and eigenvalues \(k,-k\) with \(k>0\). Codazzi, tested on orthogonal
+vectors in either distribution, gives the directional derivative
+of its eigenvalue zero along that distribution. Together they give
+\(dk=0\). For \(X\) in the first distribution and \(Y\) in the
+second, \((\nabla_X A)Y=(\nabla_Y A)X\) now lies in both
+distributions and vanishes. Metric compatibility then shows each
+distribution is parallel in all directions. A mixed sectional
+curvature would be zero, contrary to the Gauss value \(-k^2\).
+Thus when \(\int_U\det A>0\) the integrated comparison is strict.
+Equations~\eqref{eq:middle-mass}--\eqref{eq:middle-weyl} force
+\(E_+(g)>(8/3)\omega=64\pi^2/9\) on a nonstandard candidate.
+More precisely the excess is the sum of three nonnegative terms,
+\[
+ E_+(g)-\tfrac83\omega =
+ E_+(g;M\setminus U)
+ +\int_U\bigl(|W^+|^2_{\rm HS}-\tfrac83\det A\bigr)\,dV_g
+ +\tfrac43\omega\left(\frac1\omega\int_{S^4}m_2(u)\,du-2\right).
+\]
+If \(E_+(g)<8\pi^2\), the mean index-two count is less than \(9/4\).
+All regular counts are at least two, so the proportion at least
+three is less than \(1/4\). This proves the height assertion.
+In particular four mutually orthogonal directions can be chosen
+with this count simultaneously: the first four vectors of a random
+orthonormal frame each have uniform marginal direction, and the
+union of the four failure events has probability less than one.
+After the two spanning-tree reductions such a two-middle-handle
+description has \((m_1,m_3)=(0,2),(1,1)\) or \((2,0)\).
+
+If the four trace-free principal curvatures are
+\[
+ (x+y+z,\ x-y-z,\ -x+y-z,\ -x-y+z)/2,
+\]
+then \(N=x^2+y^2+z^2=|A^\circ|^2\) and the three Weyl eigenvalues
+are \((x^2-N/3)/2,(y^2-N/3)/2,(z^2-N/3)/2\).
+Consequently the pointwise deficit satisfies the sharp inequality
+\begin{equation}\label{eq:shape-deficit}
+ D:=\tfrac16|A^\circ|^4-|W^\pm|^2_{\rm HS}
+   =\tfrac12(x^2y^2+x^2z^2+y^2z^2)
+   \ \ge\ \tfrac89(-\det A)_+ .
+\end{equation}
+For negative determinant, reverse normal if necessary, permute,
+and rescale the principal curvatures by a positive constant to
+write them as \((-s,1-s,1-s+v,1-s+v+u)\), with \(0<s<1\),
+\(v,u\ge0\). Put \(z_0=1+2v+u\), \(b=1-2s\).
+Then \(32D=2z_0^2(1+u^2)+(1-u^2)^2\ge2z_0^2+1\), whereas
+\(16(-\det A)=(1-b^2)((z_0+b)^2-u^2)\). Cauchy--Schwarz gives
+\[
+ (1-b^2)(z_0+b)^2\le(2z_0^2+1)(1-b^2)(1/2+b^2)
+                         \le\tfrac9{16}(2z_0^2+1).
+\]
+This proves \eqref{eq:shape-deficit}; \((-1,3,3,3)\) realizes
+equality. For nonnegative determinant the formula for \(D\)
+suffices. Integrating on a nonstandard candidate yields
+\[
+                E_+(g)\le B^2/6-64\pi^2/27 .
+\]
+
+For \(B\le(16\sqrt2/3)\pi\) the upper bound is \(64\pi^2/9\),
+which contradicts the strict middle-index estimate. This proves
+the third recognition criterion.
+
+The same calculation gives a separate sign test for an actual
+metric constructed using this representation. Use the sharp submanifold Sobolev inequality in
+codimension two \cite[Corollary 2 and \S2]{Brendle2021Isoperimetric}
+on \(F\) composed with \(\mathbb R^5\subset\mathbb R^6\).
+The proof applies on the immersed domain: its contact function
+takes a minimum there, and the area formula for the normal-bundle
+map counts the preimages of each ambient point. The extra normal
+has zero second fundamental form. Writing \(\kappa=|B^4|=\pi^2/2\),
+the inequality for \(w=|f|^3\) and Cauchy--Schwarz give
+\[
+ 4\kappa^{1/4}\|w\|_{4/3}\le\int_M\sqrt{|dw|^2+H^2w^2}\,dV_g,
+ \qquad 16\sqrt\kappa\,\|f\|_4^2\le9\|df\|_2^2+\|Hf\|_2^2 .
+\]
+Thus the closed conformal-Laplacian form is at least
+\((32\sqrt\kappa/3-B)\|f\|_4^2+\|Hf\|_2^2/12\).
+At \(B=32\sqrt\kappa/3\), apply this to the positive first
+eigenfunction. The mean curvature is nonzero somewhere since the
+coordinate functions of a closed minimal immersion into Euclidean
+space would be harmonic constants. This proves strict positivity
+also at that endpoint. For a larger \(B\), one can test the smaller penalty
+\(\|(|A^\circ|^2-H^2/12)_+\|_2\) against \(32\sqrt\kappa/3\)
+with strict inequality. On a nonstandard candidate this would give
+positive-class entry whenever also \(B<(4\sqrt{35}/3)\pi\), by
+the integrated deficit estimate. All bounds refer to the same immersion.
+\end{proof}
+
+The immersion theorem supplies the first derivatives needed for
+an immersion. The quantitative tests use its second derivatives
+over the whole domain. Constructing an immersion satisfying either
+test on an arbitrary smooth type remains an existence question.

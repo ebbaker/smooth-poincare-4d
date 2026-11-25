@@ -4,7 +4,9 @@
 OpenAI Codex assistance. The exact serving model and reasoning effort are
 unavailable.
 
-This blueprint starts with the three formalization targets and the supplied
+The [master section](src/master_variational.tex) follows the fixed-type variational argument. It links the checked positive-energy set and pullback competitor to targets for independent repairs, the short marked cut, local replacement and physical quantile selection. The [current edition](../investigations/research-overview/02_OVERVIEW.md) explains the geometric hypotheses and the [progress baseline](../investigations/research-progress/02_BASELINE.md) records the declaration checks.
+
+The original sections start with the three formalization targets and the supplied
 chart argument from [Sections and Connections](../../papers/investigations-1/03_first_order_twistor/01_sections_and_connections/manuscript/twistor_sections_and_chiral_weyl_curvature.tex).
 The manuscript was inspected at checkout
 `fb37f1bbb1a6aea44838f2d7746ed4d6cc164a67` with source SHA-256

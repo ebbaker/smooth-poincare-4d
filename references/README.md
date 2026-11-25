@@ -178,3 +178,5 @@ The [source records R119–R121](../papers/investigations-1/03_first_order_twist
 [Third collar source records R143–R151](SOURCE_NOTES_THIRD_COLLAR_20261125.md) cover Ricci-limit volume and smooth ball embeddings, local Sobolev control, critical smoothing, singular integrals and the closed chiral Cotton equation.
 
 [Master variational comparison sources](SOURCE_NOTES_MASTER_VARIATIONAL_20261125.md) cover the limit Ricci equation, end regularity, harmonic compactness, smooth removal, joint measure selection and the topology of the entry test.
+
+[Master Ricci, annular chart and immersion sources](SOURCE_NOTES_MASTER_RICCI_IMMERSION_20261125.md) record the local elliptic and rigidity inputs, the indexed hypersurface comparison, and the marked handle and Sobolev theorems.

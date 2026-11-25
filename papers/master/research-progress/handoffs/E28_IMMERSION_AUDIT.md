@@ -1,0 +1,3 @@
+# SP4-MASTER-E28 · Independent extrinsic entry check
+
+25 November 2026, for Edward B. Baker III with OpenAI. Sol 6.2/ultra requested. Revision 1, b3cd11a2b839b6d2cb6262f8210f33d19d6f5a0a with E23 return SHA256 e1e3245bd95e40a4c4a63ace2f7cf41a02be44fc50773fdc4294a1a14e028b06. B02. Recompute independently the principal-Weyl inequality, sharp constant, immersed version of Brendle and supported negative scalar test in E23. Assess whether endpoint 4π² or direct recognition follows at a stated weak inequality, and whether universal immersion existence includes the quantitative bound. Record repaired subclaims with primary receipts. Finite task, only papers/master/reviews/E28_IMMERSION_AUDIT.md; no registration.

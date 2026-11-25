@@ -1,0 +1,13 @@
+# Where to find the Lean modules
+
+`FirstOrderTwistor` is the shared library introduced for Routes 02–04 in the first overall plan. The route directories own the research records. Source files live here so a proof about a cap or a spinor field can reuse the same curvature, volume and remainder definitions. At the edition 02 review, its entry point reached all 103 modules in this directory, 58 directly and 45 through their imports. [Public import](../FirstOrderTwistor.lean) · [Original module convention](../investigations/research-plan/01_PLAN.md) · [Shared integration decision](../investigations/research-progress/REGISTER.md)
+
+| When looking for | Start here | Research owner |
+| --- | --- | --- |
+| Chiral frames, curvature of the metric and Riemannian volume | [Geometric block](GeometricChiralBlock.lean), [frame changes](SelfDualFrameChange.lean), [physical integral](FixedMetricEnergy.lean) | [Shared foundations and Route 02](../investigations/02_neck_energy_accounting/research-progress/REGISTER.md) |
+| Component budgets, embedded truncations, strips and uncovered mass | [Budgets](ComponentBudgets.lean), [accounting](Accounting.lean), [comparison family](ComparisonFamily.lean), [buffered interpolation](BufferedInterpolation.lean) | [Route 02](../investigations/02_neck_energy_accounting/README.md) |
+| Cap costs, marked boundaries and descent on the original smooth type | [Single-cut imports](SingleCut.lean), [splice](CapSplice.lean), [oriented reassembly](OrientedCutGluing.lean), [composed theorem](OneCutDescent.lean) | [Route 03](../investigations/03_single_cut_descent/README.md) |
+| Spin curvature, the annular square and estimates on the physical remainder | [Twisted square](SpinTwistedSquare.lean), [metric regularization](SpinMetricRegularization.lean), [cover accounting](SpinCoverAccounting.lean), [Bochner accounting](SpinBochnerAccounting.lean) | [Route 04](../investigations/04_dirac_collar_transmission/README.md), using Route 02 |
+| Signed cylinder inverse, endpoint traces and perturbations | [Weak modes](CylinderWeakMode.lean), [Hilbert synthesis](CylinderWeakSynthesis.lean), [endpoint traces](CylinderHilbertTrace.lean), [core traces](CoreTraces.lean) | [Route 04](../investigations/04_dirac_collar_transmission/research-progress/REGISTER.md) |
+
+The original three-axis pilot has its own [public import](../SectionsAndConnections.lean). New work from the [master plan](../investigations/research-plan/02_PLAN.md) goes under [SmoothPoincare/Variational](../SmoothPoincare/Variational/Basic.lean) and [SmoothPoincare/PhysicalScales](../SmoothPoincare/PhysicalScales/Basic.lean). Both directories import the established declarations by their existing names.

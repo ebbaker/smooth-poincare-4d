@@ -1,6 +1,6 @@
 # Master research continuation
 
-Use the [continuation after the physical energy-scale results](AFTER_PHYSICAL_ENERGY_SCALES_20261125.md) for the current launch prompt, scope and next geometric targets. The original activation below preserves the first edition’s instructions.
+Use the [continuation after immersed heights and physical Ricci scales](AFTER_IMMERSED_HEIGHTS_AND_RICCI_SCALES_20261125.md) for the current launch. The [earlier physical energy-scale handoff](AFTER_PHYSICAL_ENERGY_SCALES_20261125.md) preserves the previous inputs. The original activation below preserves the first edition’s instructions.
 
 ## Original launch of sustained research
 

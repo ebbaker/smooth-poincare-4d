@@ -2,7 +2,19 @@
 
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The serving model variant and reasoning effort are unavailable.
 
-This is the sole live status register for FOT-E25, FOT-E26 and FOT-E28, with CUT-B01 and CUT-E01 as local prerequisites. The parent register directs each inherited task here. [Task definitions and acceptance tests](../research-plan/PLAN.md) · [Overall overview 01](../../research-overview/01_OVERVIEW.md) · [Overall plan 01](../../research-plan/01_PLAN.md) · [Program register](../../research-progress/REGISTER.md) · [Verified baseline 01](../../research-progress/01_BASELINE.md)
+This is the sole live status register for Route 03, including inherited FOT-E25, E26 and E28. [Task definitions and acceptance tests](../research-plan/PLAN.md) · [Current program plan](../../research-plan/02_PLAN.md) · [Program register](../../research-progress/REGISTER.md) · [Evidence at issue](../../research-progress/02_BASELINE.md)
+
+## Version 02 tasks
+
+| Task | State at issue | Next proof or premise |
+| --- | --- | --- |
+| SP4-FORM-CUT-B02 | Scope adopted | Use two full raw sides with both markings and either surviving cap. Specialize the existing geometric transport to each cap. |
+| SP4-FORM-CUT-E02 | Ready for the conditional inequality | Carry the positive signed cap, recognized opposite cap and actual same-type competitor. Check both choices of surviving side and the strict total margin. |
+| SP4-FORM-CUT-E03 | Ready to specify the tensor estimate | Derive the uniform cutoff and chiral projection error on the actual splice. The inherited norm inequality already consumes a supplied projection bound. |
+| SP4-FORM-CUT-E04 | Depends on CUT-E02, CUT-E03 and VAR-E02 | Prove the path margin, fixed-index stretching and both cap signs, then apply the two-side inequality. |
+| SP4-FORM-CUT-E05 | Reserved | Prove the critical fixed-distortion estimate on the supplied enlarged harmonic shell and reduce to the short marked cut. Physical production of such a shell is open. |
+
+The proofs in the next table concern the previously specified core. The [dated baseline](../../research-progress/02_BASELINE.md) identifies precisely which parts can be reused.
 
 ## Version 01 tasks
 

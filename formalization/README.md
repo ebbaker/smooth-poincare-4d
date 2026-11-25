@@ -4,7 +4,14 @@
 with OpenAI Codex assistance. The exact serving model and reasoning effort
 are unavailable.
 
-This directory contains the Lean package and its toolchain configuration.
+The [current program](investigations/research-overview/OVERVIEW.md) follows the master manuscript on a fixed smooth homotopy four-sphere. The Lake package has three public imports.
+
+| Import | Purpose |
+| --- | --- |
+| [SectionsAndConnections](SectionsAndConnections.lean) | Coordinate Weyl pilot and finite residual arithmetic. |
+| [FirstOrderTwistor](FirstOrderTwistor.lean) | Existing neck-accounting, marked-cut and spinor proofs. The [route-to-module index](FirstOrderTwistor/README.md) locates the main results and their owners. |
+| [SmoothPoincare](SmoothPoincare.lean) | The master manuscript's [variational](SmoothPoincare/Variational/Basic.lean) and [physical-scale](SmoothPoincare/PhysicalScales/Basic.lean) imports. At opening these expose existing foundations. [Edition 02 evidence](investigations/research-progress/02_BASELINE.md) |
+
 The first pilot follows the Sections and Connections manuscript.
 The [three-axis Weyl module](SectionsAndConnections/ThreeAxisWeyl.lean)
 proves the exact identity and Hilbert–Schmidt lower bound for a symmetric

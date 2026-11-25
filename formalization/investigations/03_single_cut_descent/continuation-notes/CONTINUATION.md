@@ -6,7 +6,9 @@
 
 ## Current continuation
 
-The opening assignments have been executed. Resume from the [marked descent handoff](AFTER_MARKED_DESCENT_20261125.md) and [live register](../research-progress/REGISTER.md).
+For Version 02 start with CUT-E02. Use both full raw masses, instantiate the retained cap on the original type and test the exchanged labels. Then isolate the curvature projection estimate in the fixed chart for CUT-E03. Coordinate with Route 05 on the scalar-flat wall for CUT-E04. [Short marked cut packets](../research-plan/PLAN.md#the-short-marked-cut) · [Route register](../research-progress/REGISTER.md) · [Current program baseline](../../research-progress/02_BASELINE.md)
+
+For the previously specified ALE core, the opening assignments have been executed. Resume from the [marked descent handoff](AFTER_MARKED_DESCENT_20261125.md).
 
 ## Original launch prompt
 

@@ -23,7 +23,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-A positive Yamabe class with chiral Weyl energy below \(4\pi^2\)
+A positive Yamabe class with chiral Weyl energy at most \(4\pi^2\)
 recognizes the standard smooth four-sphere. We study how a spherical
 cut could yield recognition in the larger range below \(8\pi^2\).
 On a hypothetical nonstandard smooth homotopy sphere, a nearly
@@ -34,7 +34,7 @@ chiral energy and give a first-order metric criterion for the required
 caps. A subcritical metric path permits the use of two short splices. In the same range we locate disjoint smooth balls on the original
 manifold that carry almost all the volume and individually little full
 curvature. A one-sided replacement inequality identifies what would
-allow those balls to detect the smooth type. Fixed-type minimization forces strong local chiral convergence in a supplied first-order comparison. Every complete smooth limit at a vanishing physical scale is flat. Consequently every ball of fixed radius in the maximum-curvature rescaling loses its full curvature energy, uniformly in the center. The existence of a
+allow those balls to detect the smooth type. Fixed-type minimization forces strong local chiral convergence in a supplied first-order comparison. Every complete smooth limit at a vanishing physical scale is flat. This forces vanishing full energy at scales with locally bounded rescaled \(L^p\) trace-free Ricci curvature, \(p>2\). A low-curvature annulus with a single harmonic marking at sufficiently small fixed distortion gives the separating cut. An independent recognition criterion applies when one conformal class is realized by an immersion into \(\mathbb R^5\): chiral energy at most \(64\pi^2/9\) suffices in that class, with no Yamabe sign condition. The existence of a
 subcritical starting class and of sufficiently inexpensive cuts or
 replacements on general smooth homotopy four-spheres remains open.
 \end{abstract}
@@ -265,6 +265,7 @@ Finally \(\sigma_2(A)=s^2/96-|\Ric_0|^2/8\), giving
 \eqref{eq:schouten} \cite[eq.~(0.4)]{ChangGurskyYang2003}.
 \end{proof}
 
+\input{immersion_entry}
 \input{marked_cut}
 \input{first_order_splice}
 \input{variational_comparison}
@@ -352,6 +353,8 @@ of that limit also suffice to make the uncovered mass arbitrarily
 small: the excluded large atoms of \(\nu\) form a finite set.
 
 \input{complete_limits}
+\input{ricci_scales}
+\input{critical_annulus}
 
 \section{Outstanding geometric questions}\label{sec:open}
 
@@ -359,7 +362,7 @@ The first question is whether every smooth homotopy four-sphere
 admits a positive Yamabe class of energy below \(8\pi^2\).
 This would put every hypothetical counterexample in the band of
 \eqref{eq:band}. A positive class with \(E_+\le4\pi^2\) would
-already settle its smooth type.
+already settle its smooth type. Theorem~\ref{thm:immersed-entry} gives direct recognition if some immersion into \(\mathbb R^5\) induces chiral energy at most \(64\pi^2/9\). Every smooth type admits immersions, and obtaining this integral bound is open.
 
 Once in the band it suffices, on each hypothetical nonstandard
 \(M\), to find \emph{one} positive-class minimizing sequence and a
@@ -380,9 +383,7 @@ concentrating case. At a shrinking half-energy radius the rescaled
 curvature must grow without bound within some fixed multiple along a
 subsequence. The smaller curvature radius gives no lower bound for
 the chiral mass near that curvature peak. To turn the scale separation
-into a cut one still needs a marked annulus with positive mass on
-both full sides, or an independent comparison on the region between
-the scales. Repeated concentration at successively smaller physical
+into a cut, Proposition~\ref{prop:critical-annulus} asks for one whole harmonic marking with fixed small distortion on the selected physical block. Theorem~\ref{thm:ricci-scale} forces supercritical Ricci growth on shrinking charged windows. Neither estimate constructs the marking in general. Repeated concentration at successively smaller physical
 diameters need not decrease the limiting energy.
 
 A minimizing sequence could instead approach a smooth nonround
