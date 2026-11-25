@@ -7,3 +7,5 @@ Read [the parent SEC source guide](../../references/README.md), [annular and Ein
 [Overview with direct manuscript passages](../research-overview/OVERVIEW.md) · [Shared TeX versions](../../../brainstorm/notes/COLLAR_PROGRAM_AND_SPC4_20261125.md#inputs-and-versions) · [Canonical catalog](../../../../../../references/README.md) · [Bibliography](../../../../../../references/references.bib)
 
 The linked records own the source metadata and earlier inspection history. The setup review used the cited local passages and scoping notes. It confers no independent verification on an imported theorem. Before a new dependency enters a research result, inspect the primary passage and retain its version, exact hypotheses, stage of use and evidence level in the canonical record. [Reference workflow](../../../../../../REFERENCE_WORKFLOW.md)
+
+[Sources inspected for the joint collar research](../../../../../../references/SOURCE_NOTES_JOINT_COLLAR_20261125.md) identify the gluing, spectral and boundary results used in the dated derivations.

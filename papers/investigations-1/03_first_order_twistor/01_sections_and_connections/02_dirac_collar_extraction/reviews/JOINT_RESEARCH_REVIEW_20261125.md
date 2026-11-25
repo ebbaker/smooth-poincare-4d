@@ -1,0 +1,8 @@
+# Lead assessment of the joint collar derivations
+
+25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex. Lead requested as GPT-6.2 Astra, ultra. The lead runtime does not independently expose its serving variant or reasoning setting. Delegated checks explicitly select gpt-6.2-sol, ultra. Working checkout `cec037fa20d8b9e74636e4c313e802df9f71bd3d`. [Task register and proofs](../research-progress/REGISTER.md) · [Joint assessment](../../../reviews/JOINT_COLLAR_ASSESSMENT_20261125.md)
+
+
+I checked the conversion of the Cartesian critical norm to the round product measure and the derivative of the moving polar frame. The scale factor cancels in the derivative term because the dimension is four. The spin lift exists globally on the supplied spherical strip and its overall sign is immaterial once fixed on both sides. For the smooth full core the curvature and spin estimates apply to an actual image in the original source at each sufficiently large index. The normal-coordinate construction is on a protected smaller domain of fixed length. Its constants can depend on that length and the two end slices can move.
+
+The slow diagonal uses a single embedding for each source index, chosen from thresholds on larger and larger **fixed** compact truncations. The transferred error can be made smaller than the decay at the outermost chosen radius, so the integrated bound $C A^{-2\alpha}$ is independent of the resulting length. This is one growing bubble-side region with physical outer scale tending to zero. An arbitrary second truncation cannot be placed at that chosen scale. The first-order strip or a family of overlapping spin gauges has no independent estimate of the uncovered middle.

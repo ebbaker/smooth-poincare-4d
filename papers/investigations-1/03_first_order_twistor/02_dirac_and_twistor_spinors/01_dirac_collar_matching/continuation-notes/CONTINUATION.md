@@ -2,6 +2,8 @@
 
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. Exact serving model and reasoning effort unavailable. [Inputs and versions](../../../brainstorm/notes/COLLAR_PROGRAM_AND_SPC4_20261125.md#inputs-and-versions)
 
+**Later on 25 November.** [Research results and current continuation](AFTER_JOINT_COLLAR_RESEARCH_20261125.md). The setup prompt below is retained as issued.
+
 ## Setup handoff
 
 The approved scope is inverse, actual boundary traces and curvature from matched spinors. The branch is set up and research awaits activation. The initial independent entries are SP4-FOT-MATCH-E01 and SP4-FOT-MATCH-B01. Start with E01 on the round product and B01 on alternatives compatible with the geometric data. Continue through E02 when ready. For actual gluing freeze the adjoining trace spaces, conformal weights and kernel treatment before assessing curvature or global attainment. A bad trace angle can lead to different end placement in EXTRACT. If only normalization or derivative control fails, retain the inverse and return B03 to the field choice or fixed-manifold compactness question. [Register](../research-progress/REGISTER.md) · [Detailed task specifications](../research-plan/PLAN.md) · [Reference passages](../references/README.md) · [Global proof obligations](../../../brainstorm/notes/COLLAR_PROGRAM_AND_SPC4_20261125.md)

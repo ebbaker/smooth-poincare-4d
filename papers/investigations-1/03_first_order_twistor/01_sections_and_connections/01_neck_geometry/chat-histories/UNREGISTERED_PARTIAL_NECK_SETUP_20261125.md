@@ -43,3 +43,17 @@ The session reports thread ID 6b070e70-4878-83ea-9233-6daeab8970ea. The local re
 > The shared proof map now distinguishes two ways a collar could help. One controlled cut could identify the capped exterior as standard and lower the energy on the original smooth type. Complete control across every neck could instead rule out a smooth bubble. The plans also address what happens if a positive closed Bach-flat limit survives either argument.
 
 > All three overviews, plans, and progress registers are in place. I’m checking the manuscript links against the cited passages and verifying that each task appears in exactly one live register, including the existing parent tasks on annular estimates and spectral rigidity.
+
+**Assistant · excerpt from the delivered setup reply**
+
+> The main connection is that the smooth-bubble contradiction needs an energy identity in **one chirality**. If matched spinors give \(E_+\) bounds whose sum vanishes over the regions left between components, they could close that identity.
+
+**User**
+
+> Excellent, can you write a continuation prompt for a new Astra session on ultra to begin work on all three projects? Please give the model broad authority to continue trying different routes, and to create helpers using Sol 6.2.
+
+**Assistant · public commentary**
+
+> I’ll write one pasteable prompt for an Astra/ultra lead to run all three branches together, with authority to revise the research routes and delegate bounded work to Sol 6.2/ultra helpers.
+
+> All three registers still list independent opening checks. The prompt will let Astra assign one to each helper while it decides which collars the geometry can supply and which estimates the Dirac argument actually needs.

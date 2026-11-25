@@ -2,6 +2,8 @@
 
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. Exact serving model and reasoning effort unavailable. [Inputs and versions](../../../brainstorm/notes/COLLAR_PROGRAM_AND_SPC4_20261125.md#inputs-and-versions)
 
+**Later on 25 November.** [Research results and current continuation](AFTER_JOINT_COLLAR_RESEARCH_20261125.md). The setup prompt below is retained as issued.
+
 ## Setup handoff
 
 The approved scope is spin strip on a degenerating geometric sequence. The branch is set up and research awaits activation. The initial independent entries are SP4-FOT-EXTRACT-E01 and SP4-FOT-EXTRACT-B01. Start with E01 on one supplied buffered chart and B01 on an actual full ALE end or selected annular block. Share an estimate in the matching gauge as soon as one is available. Try a varying-slice or fixed-width formulation if one product comparison across the whole neck fails. A spin identification, scale-dependent constant or varying-slice bound can be revised without replanning the metric cap. A request from matching to move a cut is a reason to revisit the original embedding. [Register](../research-progress/REGISTER.md) · [Detailed task specifications](../research-plan/PLAN.md) · [Reference passages](../references/README.md) · [Global proof obligations](../../../brainstorm/notes/COLLAR_PROGRAM_AND_SPC4_20261125.md)

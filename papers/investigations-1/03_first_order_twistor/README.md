@@ -39,3 +39,5 @@ The activated SEC session obtained a [fixed-metric section-energy comparison](01
 ## Collars and smooth recognition
 
 The [three-branch proof map and manuscript passages](brainstorm/notes/COLLAR_PROGRAM_AND_SPC4_20261125.md) connect [neck geometry](01_sections_and_connections/01_neck_geometry/research-overview/OVERVIEW.md), [geometric extraction of Dirac collars](01_sections_and_connections/02_dirac_collar_extraction/research-overview/OVERVIEW.md) and [Dirac matching](02_dirac_and_twistor_spinors/01_dirac_collar_matching/research-overview/OVERVIEW.md). It identifies the possible one-cut descent and energy-identity arguments, and the remaining global inputs for each.
+
+The [joint collar assessment](reviews/JOINT_COLLAR_ASSESSMENT_20261125.md) proves conditional descent on the original smooth type, identifies the finite link of a sufficiently controlled cut, and describes the actual spinor transmission estimates. The [joint continuation](continuation-notes/AFTER_JOINT_COLLAR_RESEARCH_20261125.md) starts from the remaining separating-chart problem.

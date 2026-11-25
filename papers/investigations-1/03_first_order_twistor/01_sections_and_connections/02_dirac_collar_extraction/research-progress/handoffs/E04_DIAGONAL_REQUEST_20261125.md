@@ -1,0 +1,13 @@
+# SP4-FOT-EXTRACT-E04 · Diagonal end request, revision 1
+
+25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The actual serving model and reasoning effort are unavailable. The plan recommends Astra/ultra for EXTRACT-B03 and gpt-6.2-sol/ultra for this bounded E04 check. [EXTRACT register](../REGISTER.md)
+
+**Frozen inputs.** Checkout `cec037fa20d8b9e74636e4c313e802df9f71bd3d`, [EXTRACT plan](../../research-plan/PLAN.md) SHA-256 `caf24a8987751f9fcfdc57e9584bc8ad79cc86630e4ca2d7903af6ef2e9ca0b0`, [SEC §11](../../../manuscript/twistor_sections_and_chiral_weyl_curvature.tex) SHA-256 `329513a3cfd8e939373533fad90f36b9108ce0ea41a22f9cc348587a4110fe66`, [NECK-E03](../../../01_neck_geometry/notes/E03_EMBEDDED_CUT_20261125.md) SHA-256 `414ba49d31e4c706a07d506b05c3b930a7765f3b1ee62fb37cef353d651cfaea`, and [EXTRACT-E02](../../notes/E02_ALE_SPIN_TRANSFER_20261125.md) SHA-256 `75a52db87e3330321f8511b9e2ab20606635ed30de588fc2d49ebaf2e59850b0`.
+
+**EXTRACT-B03 decision.** Use one comparison embedding per source index across a single expanding portion of the supplied smooth ALE end. The comparison uses differentiated full-core convergence and positive ALE decay. The outer endpoint need only diverge in bubble units and converge to zero in physical units. Require one chart and one lifted spin gauge, with no propagation across independently extracted charts.
+
+**Bounded check.** For integer \(m\) choose \(R_m=e^m\). Use fixed-domain convergence and physical rescaling to choose index thresholds \(i_m\) with scale-weighted \(C^4\) comparison error at most \(R_m^{-\alpha}\) and \(\lambda_iR_m\le R_m^{-1}\) for \(i\ge i_m\) on the \(m\)-th comparison. Follow a slow diagonal \(m=m(i)\), retaining the same full-core embedding across its entire end interval and buffers. Show that the reference \(H^1\to L^2\) coefficient bound on \(A\le r\le R_{m(i)}\) is \(O(A^{-\alpha})\), independent of length, with explicit physical endpoint and conformal spin data.
+
+**Completion and escalation.** Give the diagonal and prove a uniform estimate in one product gauge, or record where the given convergence is insufficient and return to EXTRACT-B03. The endpoint cannot be required to meet a separate comparison domain within this packet. [Companion NECK-E04 request](../../../01_neck_geometry/research-progress/handoffs/E04_DIAGONAL_REQUEST_20261125.md)
+
+**Assigned output.** [Common diagonal end note](../../notes/E04_DIAGONAL_END_20261125.md) and [EXTRACT-E04 return](E04_DIAGONAL_RETURN_20261125.md). The designated lead owns the register, milestones and chat records.

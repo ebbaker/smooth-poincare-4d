@@ -1,5 +1,9 @@
 # Shared first-order twistor continuation
 
+**Joint collar research completed on 25 November.** [Results on the original smooth type](../reviews/JOINT_COLLAR_ASSESSMENT_20261125.md) · [Current joint handoff](AFTER_JOINT_COLLAR_RESEARCH_20261125.md).
+
+The [original joint prompt](JOINT_COLLAR_RESEARCH_20261125.md) records the scope of the activation.
+
 **Current spinorial handoff.** [Continue from five-eigenfunction rigidity](../02_dirac_and_twistor_spinors/continuation-notes/02_AFTER_FIVE_EIGENFUNCTION_RIGIDITY_20261124.md). The material below preserves the original grant and setup routing.
 
 24 November 2026 (America/New_York). Prepared for Edward B. Baker III with

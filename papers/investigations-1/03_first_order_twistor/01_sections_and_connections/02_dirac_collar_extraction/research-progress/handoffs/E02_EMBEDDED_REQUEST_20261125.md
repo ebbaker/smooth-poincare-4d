@@ -1,0 +1,13 @@
+# SP4-FOT-EXTRACT-E02 · Embedded-end request, revision 1
+
+25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The actual serving model and reasoning effort for this record are unavailable. The prescribed routing is EXTRACT-B01 conceptual choice followed by a bounded E02 derivation. The plan recommends Astra/ultra for B01 and gpt-6.2-sol/ultra for E02.
+
+**Frozen inputs.** Checkout `cec037fa20d8b9e74636e4c313e802df9f71bd3d`, [EXTRACT plan](../../research-plan/PLAN.md) SHA-256 `caf24a8987751f9fcfdc57e9584bc8ad79cc86630e4ca2d7903af6ef2e9ca0b0`, [SEC §11](../../../manuscript/twistor_sections_and_chiral_weyl_curvature.tex) SHA-256 `329513a3cfd8e939373533fad90f36b9108ce0ea41a22f9cc348587a4110fe66`, and [DIR §3.3 and conformal law](../../../../02_dirac_and_twistor_spinors/manuscript/dirac_twistor_and_yamabe_rigidity.tex) SHA-256 `71dfada5256b2e33425c12d835bed57e66dc85cb87db6f89e4edabf18c0b198d`. [EXTRACT register](../REGISTER.md)
+
+**EXTRACT-B01 decision.** Use the same supplied full embedded smooth nonflat ALE limit and trivial spherical link as [NECK-E03](../../../01_neck_geometry/research-progress/handoffs/E03_EMBEDDED_REQUEST_20261125.md). Use the compactification-normal strip so the middle cross-section has its explicit \\(D^4\\) marking. Record the direct ALE-coordinate version as well. Smooth transfer on each fixed compact set supplies the first derivatives, so the E01 interpolation estimate is unnecessary for this case.
+
+**Bounded check.** Take one strip \\(I\times S^3\\) of fixed normalized length at least two with a buffer on each end, increasing \\(t\\) from core toward the puncture. Give the orientation and spin lift, the two end labels and physical scales, and the exact conformal factor and spinor weight. Compare the positive chiral Dirac operator in the symmetric frame identification to the reference product operator in \\(H^1\to L^2\\). Check that the \\(C^1\\) bound implies the candidate \\(L^\infty\\) plus slabwise \\(W^{1,4}\\) matching criterion, with all norms taken in the reference metric. Order the radius and source limits and identify any missing hypothesis.
+
+**Completion and escalation.** Give an arbitrarily small fixed-strip perturbation or the first unproved step. Reopen EXTRACT-B01 if the common chart or spin comparison fails, and refer a different matching threshold to MATCH-B01. The adjoining Cauchy data, long-neck overlap control and curvature consequences require separate arguments.
+
+**Assigned output.** [E02 spin transfer](../../notes/E02_ALE_SPIN_TRANSFER_20261125.md) and [E02 return](E02_EMBEDDED_RETURN_20261125.md). The designated research lead owns the shared register, milestones and chat records.

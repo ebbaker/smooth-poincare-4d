@@ -1,0 +1,10 @@
+# Choosing a spin strip and following one end
+
+25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex. Lead requested as GPT-6.2 Astra, ultra. The lead runtime does not independently expose its serving variant or reasoning setting. Delegated checks explicitly select gpt-6.2-sol, ultra. Working checkout `cec037fa20d8b9e74636e4c313e802df9f71bd3d`. [Input versions](../../../../brainstorm/notes/COLLAR_PROGRAM_AND_SPC4_20261125.md#inputs-and-versions)
+
+
+**B01.** Select the full smooth embedded ALE limit with differentiated end decay from SEC §§11.1–11.4. E02 transfers one large fixed annulus, including both buffers, from one comparison embedding to the source. The accepted alternative when only a cheap block exists is E01's first-order estimate, conditional on a supplied oriented spherical coordinate chart, its zeroth-order error and its second-derivative budget. The vanishing curvature integral of the selected block alone gives none of those coordinate estimates. The exact Bach-flat comparison of Chang–Qing–Yang has stronger assumptions. [Theorem 3.1](https://arxiv.org/pdf/math/0508621)
+
+**B02.** Test unit-normal geodesic slices with spin parallel transport and the square root of the slice density. Fix the length before choosing the end radius. Use slightly smaller, newly chosen boundary slices if the normal flow shifts the old ones. E03 measures the slice gap, normal variation in the common Hilbert space and remainder on the transferred smooth strip. The first-order critical-norm strip by itself gives no bound on the normal derivative of the slice connection.
+
+**B03.** Choose one chain that actually has coherent embeddings, on the smooth end side. Send its diagonal weighted estimate and physical outer scale to NECK-E04. An unbounded cylinder length controlled this way may end far inside the annulus left by the exterior truncation. For curvature accounting the next input is an independently identified exterior end, together with estimates covering the region in between.

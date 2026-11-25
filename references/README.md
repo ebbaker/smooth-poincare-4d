@@ -170,3 +170,5 @@ The [source records R109–R118](SOURCE_NOTES_SEC_ANNULAR_20261124.md) cover the
 ## Lean formalization scoping, 25 November 2026
 
 The [source records R119–R121](../papers/investigations-1/03_first_order_twistor/01_sections_and_connections/brainstorm/notes/LEAN_FORMALIZATION_PILOT_20261125.md#sources-inspected-on-25-november-2026) identify the Hamilton–Perelman and Hamilton formalization papers, the `DifferentialGeometry` releases, and the Mathlib exterior-power Hodge star documentation inspected for a possible four-dimensional Lean pilot.
+
+[Joint collar sources R122–R127](SOURCE_NOTES_JOINT_COLLAR_20261125.md) give the smooth disk and boundary identifications, the varying-slice boundary problem and the closed Dirac eigenvalue estimate used in the neck, extraction and matching checks.
