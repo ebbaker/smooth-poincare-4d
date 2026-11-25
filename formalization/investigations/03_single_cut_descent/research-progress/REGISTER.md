@@ -9,7 +9,7 @@ This is the sole live status register for Route 03, including inherited FOT-E25,
 | Task | State at issue | Next proof or premise |
 | --- | --- | --- |
 | SP4-FORM-CUT-B02 | Scope adopted | Use two full raw sides with both markings and either surviving cap. Specialize the existing geometric transport to each cap. |
-| SP4-FORM-CUT-E02 | Ready for the conditional inequality | Carry the positive signed cap, recognized opposite cap and actual same-type competitor. Check both choices of surviving side and the strict total margin. |
+| SP4-FORM-CUT-E02 | Opening proposition type-checked | Prove the conditional inequality. Carry the positive signed cap, recognized opposite cap and actual same-type competitor. Check both choices of surviving side and the strict total margin. |
 | SP4-FORM-CUT-E03 | Ready to specify the tensor estimate | Derive the uniform cutoff and chiral projection error on the actual splice. The inherited norm inequality already consumes a supplied projection bound. |
 | SP4-FORM-CUT-E04 | Depends on CUT-E02, CUT-E03 and VAR-E02 | Prove the path margin, fixed-index stretching and both cap signs, then apply the two-side inequality. |
 | SP4-FORM-CUT-E05 | Reserved | Prove the critical fixed-distortion estimate on the supplied enlarged harmonic shell and reduce to the short marked cut. Physical production of such a shell is open. |

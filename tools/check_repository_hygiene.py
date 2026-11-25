@@ -12,6 +12,7 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 BRANCHES = ('master',
+            'master/01_fixed_type_variational_descent',
             'investigations-1/01_chiral_metric_evolution',
             'investigations-1/02_bach_flow',
             'investigations-1/03_first_order_twistor',
@@ -20,6 +21,9 @@ BRANCHES = ('master',
             'investigations-1/03_first_order_twistor/01_sections_and_connections/02_dirac_collar_extraction',
             'investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors',
             'investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/01_dirac_collar_matching',
+            'investigations-1/04_hypersurface_immersions',
+            'investigations-1/04_hypersurface_immersions/01_immersed_handle_constructions',
+            'investigations-1/04_hypersurface_immersions/02_two_handle_recognition',
             'initial-investigations/01_generalized_isothermal_coordinates',
             'initial-investigations/02_chiral_descent_and_double_copy')
 

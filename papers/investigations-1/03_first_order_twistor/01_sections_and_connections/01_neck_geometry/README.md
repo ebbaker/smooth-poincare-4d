@@ -14,4 +14,6 @@ The [second joint assessment](../../reviews/SECOND_COLLAR_ASSESSMENT_20261125.md
 
 The [third joint assessment](../../reviews/THIRD_COLLAR_ASSESSMENT_20261125.md) integrates E21–E23. [Current continuation](continuation-notes/AFTER_THIRD_COLLAR_RESEARCH_20261125.md).
 
+For the master’s separated-quantile problem, use the [physical-shell launch](continuation-notes/PHYSICAL_SHELL_LAUNCH_20261125.md) and the [B04/B05 register receipt](research-progress/REGISTER.md#physical-shell-setup). The requested result is one embedded shell placing the full charged inner ball and the entire median exterior on opposite sides, with critical estimates for the physical metric on both splices.
+
 The [working manuscript](manuscript/README.md) presents the analytical results through 25 November and concludes with the outstanding geometric questions.

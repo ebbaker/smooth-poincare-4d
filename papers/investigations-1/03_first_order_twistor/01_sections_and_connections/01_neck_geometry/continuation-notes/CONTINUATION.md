@@ -4,6 +4,8 @@
 
 **Later on 25 November.** [Research results and current continuation](AFTER_JOINT_COLLAR_RESEARCH_20261125.md). The setup prompt below is retained as issued.
 
+[Focused launch for the master’s separating physical shell](PHYSICAL_SHELL_LAUNCH_20261125.md) · [Third joint continuation](AFTER_THIRD_COLLAR_RESEARCH_20261125.md)
+
 ## Setup handoff
 
 The approved scope is supplied metric cap and candidate spherical cut. The branch is set up and research awaits activation. The initial independent entries are SP4-FOT-NECK-E01 and SP4-FOT-NECK-B01. Audit the two caps of one supplied collar in E01 and compare ways to obtain a usable cut in B01. If a full smooth bubble is supplied, test exterior recognition before requiring a result on the long neck. Use the parent annular test only where its hypotheses apply. A failed Weyl transition estimate can change the cut or cap regularity in B01. A positive closed critical class moves B03 back to variational selection. Preserve either local conclusion independently. [Register](../research-progress/REGISTER.md) · [Detailed task specifications](../research-plan/PLAN.md) · [Reference passages](../references/README.md) · [Global proof obligations](../../../brainstorm/notes/COLLAR_PROGRAM_AND_SPC4_20261125.md)

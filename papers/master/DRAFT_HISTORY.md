@@ -15,3 +15,7 @@ Added the zero-Yamabe wall, positive short marked caps, local minimizing replace
 ## 25 November 2026 · middle-index heights and physical Ricci scales
 
 Resumed from b3cd11a for Edward B. Baker III with OpenAI Codex assistance. Added direct smooth recognition at \(E_+\le64\pi^2/9\) on hypersurface-induced conformal classes, the associated shape criterion and two-middle-handle restriction in the surviving immersed band. Added the supercritical trace-free Ricci scale theorem and the small-fixed-distortion critical harmonic shell test. The regular-disk repair, finite shell, warped transition, round restart and closed variation tests remain in the research record at their individual scopes. [Manuscript](manuscript/README.md) · [Checks and inputs](research-progress/handoffs/RICCI_AND_IMMERSION_RETURNS_20261125.md) · [Continuation](continuation-notes/AFTER_IMMERSED_HEIGHTS_AND_RICCI_SCALES_20261125.md).
+
+## 25 November 2026 · parallel investigations
+
+For Edward B. Baker III with OpenAI Codex assistance. Organized the [parallel proof plan](research-plan/PLAN.md) around direct recognition, subcritical immersed height recognition and intrinsic fixed-type descent. Created the immersion parent, its construction and topology children, and the fixed-type descent child. Extended the existing neck-geometry investigation for the separating physical shell. [Versioned ownership crosswalk](research-progress/handoffs/PARALLEL_OWNERSHIP_20261125.md) · [Launch prompts](continuation-notes/PARALLEL_PROGRAM_20261125.md). This is a research-organization milestone.

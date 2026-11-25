@@ -2,10 +2,20 @@
 
 25 November 2026. Prepared for Edward B. Baker III with OpenAI Codex
 assistance. Actual serving model and reasoning effort are unavailable.
-This synthesis uses the committed research record at
-`5ff7014caff55ad9cc49bb910b8e5fbcb546bd11` and the 25 November
-manuscript and formalization changes that were then in the working tree and subsequently recorded in commit `fc60509`. It reports
-the inherited results at their stated hypotheses.
+The current organization uses the 33-page master edition committed at 2689540e6dae1656b7f5ad4be52504db044995f2 and the [accepted parallel proposal](../brainstorm/notes/PARALLEL_INVESTIGATION_PROPOSAL_20261125.md). Earlier editions and their source hashes remain in the provenance sections below.
+
+## How the four investigations fit the proof
+
+The program seeks three possible ways to recognize a given homotopy four-sphere. One metric may meet a recognition theorem directly. For an immersion in the wider band \(E_+<8\pi^2\), the existing height count on a putative nonstandard sphere lets one select a Morse height with two middle handles and ask whether its attaching data determine the smooth type. Finally, any positive Yamabe class below \(8\pi^2\) gives entry to fixed-type minimization, where a geometric contradiction on one suitable sequence suffices. The [master plan](../research-plan/PLAN.md) states the quantifiers and the remaining alternatives.
+
+| Research owner | What it receives | What the master can use |
+| --- | --- | --- |
+| [Immersed handle constructions](../../investigations-1/04_hypersurface_immersions/01_immersed_handle_constructions/research-overview/OVERVIEW.md) | A framed smooth handle presentation and prescribed immersion data on its interfaces. | A global induced class satisfying a recognition or entry threshold, or a model with clearly specified exterior requirements. |
+| [Two-handle recognition](../../investigations-1/04_hypersurface_immersions/02_two_handle_recognition/research-overview/OVERVIEW.md) | A candidate immersed height in the subcritical band, including its actual framed attaching maps. | Recognition for a selected diagram class, together with whatever direction-selection or coverage result is still needed. |
+| [Neck geometry](../../investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/research-overview/OVERVIEW.md) | A positive-class minimizing sequence with separated physical chiral radii. | A whole marked physical shell to which the existing cap and same-type contradiction apply. |
+| [Fixed-type variational descent](../01_fixed_type_variational_descent/research-overview/OVERVIEW.md) | A diffuse minimizing sequence, a charged remainder, or a specified closed or round alternative. | A strict admissible competitor on the original smooth type, independent recognition, or a proved termination step with its residual hypotheses. |
+
+The [immersion parent](../../investigations-1/04_hypersurface_immersions/README.md) checks that the constructions and diagram lemmas apply to the same immersion and smooth presentation. Positive entry can also come from an independent intrinsic construction. The master retains responsibility for covering all smooth types and all alternatives on the sequence used in a proof. Each branch develops exploratory work locally and returns an independently checked implication or a scoped failure. [Register crosswalk](../research-progress/handoffs/PARALLEL_OWNERSHIP_20261125.md)
 
 ## The variational problem on a fixed smooth type
 

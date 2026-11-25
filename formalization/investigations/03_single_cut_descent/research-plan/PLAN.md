@@ -15,10 +15,24 @@ Version 02 extends this route from a supplied ALE core to a marked sphere whose 
 | CUT-B02 | `prop:cut-energy`. Specify the two raw domains and both cap markings. | Partition the whole source up to a null separating sphere. Track both positive capped classes, the smooth map in each direction of reassembly, and which side bears each surcharge. |
 | CUT-E02 | `Variational/CutNonsplitting.lean`, `SmoothPoincare.discardedMass_le_excess`. Blueprint `prop:master-nonsplitting`. | For each possible survivor $s$ prove $m_{3-s}\le e-I^+(M)+\gamma_s$ from the actual admissible competitor. Test the exchanged labels and the case where the strict total cap margin is exhausted. This packet can start with the specified cap recognition and reassembly as hypotheses. |
 | CUT-E03 | `Variational/SpliceDensity.lean`, `SmoothPoincare.spliceDensityError`. Source `weak:splice`, blueprint `lem:master-splice`. | In the actual fixed oriented chart derive the chiral matrix error uniformly in the straightening parameter from the cutoff commutator, uniform metric error, strong first-derivative bound and full-curvature budget. Feed that estimate into `firstOrderCapSpliceWeylBound`, which currently takes a projection-error hypothesis. |
-| CUT-E04 | `Variational/ShortMarkedCut.lean`, `SmoothPoincare.nonsplittingOfShortMarkedCut`. Source `prop:short-cut`, blueprint `prop:master-short-cut`. | Use VAR-E02 on the original joined type. Fix the chart and cutoff domains, straighten there, stretch at fixed source index, then pass compact tests to each closure using zero point capacity and exclude zero there by the wall. Apply CUT-E02 with the two resulting signs and costs. |
+| CUT-E04 | `Variational/ShortMarkedCut.lean`, `SmoothPoincare.nonsplittingOfShortMarkedCut`. Source `prop:short-cut`, blueprint `prop:master-short-cut`. | Use VAR-E02 on the original joined type. Fix the chart and cutoff domains, straighten there, then stretch at fixed source index. Pass the positive lower bound, uniform in stretch length, to compact tests on each completed side. Zero point capacity extends the bound to both closures. Apply CUT-E02 with the resulting signs and costs. |
 | CUT-E05 | `PhysicalScales/HarmonicAnnulus.lean`, `SmoothPoincare.excludesMarkedHarmonicAnnulus`. Source `prop:critical-annulus`, blueprint `prop:master-harmonic-annulus`. | Start from one whole oriented enlarged physical shell. Keep the attaining inner ball and the entire median exterior disjoint from the closed trim on opposite sides. Use fixed small distortion, vanishing full curvature and exact harmonic coordinates or vanishing $L^2$ norm of the derivative of the coordinate tensions. Reduce to CUT-E04. |
 
 If the source only provides a low-curvature block, return the missing whole marking and derivative comparison to the natural-language investigation. If the original fixed core is available, the [existing descent handoff](../research-progress/handoffs/INTEGRATION_20261125.md) gives the shorter route to that particular conclusion. [Signed marked cut](../../../../papers/master/manuscript/marked_cut.tex) · [Splice](../../../../papers/master/manuscript/first_order_splice.tex) · [Short cut](../../../../papers/master/manuscript/variational_comparison.tex) · [Fixed-distortion criterion](../../../../papers/master/manuscript/critical_annulus.tex)
+
+### First symmetric implication
+
+This is the arithmetic conclusion of CUT-E02. The geometric statement must produce the disjunctive membership from the strict total cap bound, the two positive classes, recognition and marked reassembly. Record the corresponding oriented pullback for each surviving side. The ordered conclusion keeps the surcharge with that side.
+
+~~~lean
+import SmoothPoincare
+
+#check (∀ (A : Set ℝ) (e m₁ m₂ E₁ E₂ γ₁ γ₂ : ℝ),
+  BddBelow A → m₁ + m₂ = e →
+  E₁ ≤ m₁ + γ₁ → E₂ ≤ m₂ + γ₂ → (E₁ ∈ A ∨ E₂ ∈ A) →
+  ((E₁ ∈ A ∧ m₂ ≤ e - sInf A + γ₁) ∨
+   (E₂ ∈ A ∧ m₁ ≤ e - sInf A + γ₂)))
+~~~
 
 ## Opening proof
 

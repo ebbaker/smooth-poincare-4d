@@ -1,0 +1,35 @@
+# Overview of immersed index-two handle constructions
+
+25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance under the frozen SP4-MASTER-E35a assignment. GPT-6.2 Sol/ultra was requested for setup. Actual serving model and effort are unavailable. [Inputs and versions](#inputs-and-versions) · [Plan](../research-plan/PLAN.md) · [Live register](../research-progress/REGISTER.md)
+
+## The marked domain and the induced metric
+
+Fix one smooth oriented four-dimensional handlebody $P$ and one smooth framed attaching map $a:S^1\times D^2\hookrightarrow\partial P$. The index-two handle is $H=D^2\times D^2$. Its attaching face is $S^1\times D^2$, its outgoing face is $D^2\times S^1$, and their common torus is $S^1\times S^1$. A rounded handle trace uses fixed markings along both faces, including the identified torus and the collar in the unchanged part of the boundary. Prescribe both marked collar maps into oriented Euclidean $\mathbb R^5$ with compatible overlap data. A model must give a smooth rank-four immersion through the trace and its two collars, respecting the attaching framing and the chosen smoothing of the corner. Agreement of immersion maps on collar neighborhoods in the original marked coordinates suffices for smooth gluing. Any weaker matching condition needs a proof of the resulting regularity and its curvature cost.
+
+For one actual smooth immersion $F$, use its Riemannian metric $g=F^*g_{\mathrm{Euc}}$, oriented unit normal $\nu$, and shape operator $d\nu=-dF\circ A$. Set $A^\circ=A-\tfrac14(\operatorname{tr}A)I$ and use $E_+(g;U)=\int_U\lvert W^+_g\rvert_{\mathrm{HS}}^2\,dV_g$, with $W^+$ an operator on the real self-dual two-forms. Integrate on the smooth domain with distinct preimages counted separately. Where useful, also record the signed Gauss integral, $J=\int(-\det A)_+\,dV_g$, and $B=\lVert A^\circ\rVert_4^2$. Use $B^2$ for additive shape budgets. An orientation reversal interchanges the two chiral blocks, and the Euclidean hypersurface Gauss formula gives them equal squared norms. The energy and determinant masses in this normalization are invariant under ambient dilation in four dimensions. Any small-parameter estimate must identify the controlled dimensionless data and specify its uniform constants.
+
+## Inherited results and the open construction
+
+- Every smooth homotopy four-sphere admits a smooth Euclidean hypersurface immersion by tangent-bundle triviality after adding a line and the immersion theorem. The existence argument controls rank. The branch needs second-derivative control on one immersion. [Immersion criterion, section `sec:immersion`](../../../../master/manuscript/immersion_entry.tex#L1) · [Primary source record](../references/README.md)
+- For a smooth closed homotopy four-sphere, $E_+(g)\le64\pi^2/9$ on the conformal class of one such immersion implies $M\cong S^4$ smoothly, for any Yamabe sign. At $E_+(g)<8\pi^2$ on a hypothetical nonstandard type, more than three quarters of height directions in normalized spherical measure have exactly two index-two critical points. Entry into the subcritical variational program also requires $Y([g])>0$ with $E_+(g)<8\pi^2$ on the same closed class. [Master theorem](../../../../master/manuscript/immersion_entry.tex#L17) · [Middle-index review](../../../../master/reviews/E34_MIDDLE_WEYL_EQUALITY.md) · [Variational setup](../../../../master/research-overview/OVERVIEW.md)
+- E32 gives an exact $S^3$-rotational bridge with planar end germs, vanishing chiral energy and $J=8\pi^2/3$ on the bridge. Its conditional closed sign estimate uses the supplied full positive-Yamabe sides. Its two spherical annuli and common-axis marking provide a comparison for matching costs. The proposed index-two surgery faces are solid tori with an attaching framing. [E32 rotational transition](../../../../master/notes/E32_ROTATIONAL_TRANSITION.md)
+
+The first question is whether a concrete marked handlebody with compatible immersed collar data admits an index-two model with a controlled handle energy and separate estimates for the two matching regions. If the model is meant to give an immersed height, specify an actual direction and regular levels, prove the claimed critical points for the height of that same immersion and track the attaching map through the matching. A handle trace presented with an auxiliary Morse function gives only a marked local construction until the height has been checked.
+
+For a closed application, the exterior is the actual remaining part of the same marked smooth manifold. Across the two collars and the unchanged part of the boundary, assemble a single $F:M\looparrowright\mathbb R^5$ with compatible markings and a common induced metric. Partition the domain into the handle, the two matching regions and the retained exterior with overlap counted once. Any change to the exterior enters its budget. A local bound becomes a recognition or entry estimate only after the corresponding threshold holds for the full domain and any needed Yamabe sign is established for the assembled metric. Extension to arbitrary handle and collar data, compatibility across several attachments and exhaustion of smooth homotopy types all remain open.
+
+Return a checked local model and precise extension premises to the [immersion parent](../../README.md). Refer actual height and framing data to [two-handle recognition](../../02_two_handle_recognition/README.md) once they have been verified. Send the [master](../../../../master/README.md) only an assessed same-domain comparison or a clearly scoped construction and its outstanding premises. [Continuation and routing](../continuation-notes/CONTINUATION.md)
+
+## Inputs and versions
+
+Repository base `2689540e6dae1656b7f5ad4be52504db044995f2`. The links identify the files inspected on 25 November 2026. SHA-256 fixes the setup inputs independently of later edits.
+
+| Input | SHA-256 |
+| --- | --- |
+| [Author-approved working placement proposal](../../../../master/brainstorm/notes/PARALLEL_INVESTIGATION_PROPOSAL_20261125.md) | `c9ee3eb7ee8755ea76fac852f24899e6858383acc08d59de24e9e183b480721c` |
+| [E35 setup handoff, revision 1](../../../../master/research-progress/handoffs/E35_PARALLEL_SETUP_20261125.md) | `5792fe933cc3e86067db05bc1fae468aac41449bdcf68c7b991955e0be71654a` |
+| [Master immersion section](../../../../master/manuscript/immersion_entry.tex) | `512ef85cfa696497da0b43e6efee36c4c60dd1f7d1eb78f4442b6d078a0b2c8e` |
+| [E32 marked rotational transition](../../../../master/notes/E32_ROTATIONAL_TRANSITION.md) | `117212d92c59696ecfe03cbe1c512165c8e88c391a7b67e781ff338ff06fe64b` |
+| [E33 index-two handle reduction](../../../../master/reviews/E33_INDEX_TWO_HANDLES.md) | `8e8d0078213eb5367c2ff35ae26d7bda246d101e522ac1283e3520765c6b62e8` |
+| [E34 middle-signature Weyl estimate](../../../../master/reviews/E34_MIDDLE_WEYL_EQUALITY.md) | `af154cb515a24a51c9d4fb2aa58a61325fc023cdde5897ec08ea6826f77ec3bc` |
+| [Canonical primary source notes](../../../../../references/SOURCE_NOTES_MASTER_RICCI_IMMERSION_20261125.md) | `5cb7d822ace1115a3272b3aba25c0b0070fd0056945ab3fdcdc6faf1d41828af` |

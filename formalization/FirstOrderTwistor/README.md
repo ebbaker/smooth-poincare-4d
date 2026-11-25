@@ -1,6 +1,6 @@
 # Where to find the Lean modules
 
-`FirstOrderTwistor` is the shared library introduced for Routes 02–04 in the first overall plan. The route directories own the research records. Source files live here so a proof about a cap or a spinor field can reuse the same curvature, volume and remainder definitions. At the edition 02 review, its entry point reached all 103 modules in this directory, 58 directly and 45 through their imports. [Public import](../FirstOrderTwistor.lean) · [Original module convention](../investigations/research-plan/01_PLAN.md) · [Shared integration decision](../investigations/research-progress/REGISTER.md)
+`FirstOrderTwistor` is the shared library introduced for Routes 02–04 in the first overall plan. The route directories own the research records. Source files live here so a proof about a cap or a spinor field can reuse the same curvature, volume and remainder definitions. At the edition 02 review, its entry point reached all 103 modules in this directory, 58 directly and 45 through their imports. The largest group is Route 04, with 45 files beginning with `Spin` and seven beginning with `Cylinder`. These cover distinct local identities, estimates, inverse constructions and traces. [Public import](../FirstOrderTwistor.lean) · [Original module convention](../investigations/research-plan/01_PLAN.md) · [Shared integration decision](../investigations/research-progress/REGISTER.md)
 
 | When looking for | Start here | Research owner |
 | --- | --- | --- |

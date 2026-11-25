@@ -44,6 +44,7 @@
 | SP4-MASTER-E32 | Rotational transition assessed | [E32_ROTATIONAL_TRANSITION](../notes/E32_ROTATIONAL_TRANSITION.md). Sharp two-ended model; planar marking preserves the full negative Gauss charge. |
 | SP4-MASTER-E33 | Index-two height topology accepted | [E33_INDEX_TWO_HANDLES](../reviews/E33_INDEX_TWO_HANDLES.md). Every Morse height on a nonstandard candidate needs at least two middle points. |
 | SP4-MASTER-E34 | Strict middle-signature Weyl bound accepted | [E34_MIDDLE_WEYL_EQUALITY](../reviews/E34_MIDDLE_WEYL_EQUALITY.md). Inclusive \(64\pi^2/9\) chiral recognition on hypersurface-induced classes. |
+| SP4-MASTER-E35 | Parallel setup integrated | [Frozen editorial assignments](handoffs/E35_PARALLEL_SETUP_20261125.md) and [ownership crosswalk](handoffs/PARALLEL_OWNERSHIP_20261125.md). Child research tasks have separate live registers. |
 
 [Integrated returns, requests and assessment](handoffs/VARIATIONAL_RETURNS_20261125.md) · [Manuscript](../manuscript/README.md). No theorem here constructs entry on arbitrary smooth homotopy spheres or establishes smooth Poincaré. The new results have manuscript proofs and scoped model checks. The earlier formalization receipts retain their original scopes.
 

@@ -1,0 +1,16 @@
+# Continue the parallel master program
+
+25 November 2026, for Edward B. Baker III with OpenAI Codex assistance. Master baseline 2689540e6dae1656b7f5ad4be52504db044995f2. The author has approved the organization. New research packets await activation. [Master plan](../research-plan/PLAN.md) · [Owner crosswalk](../research-progress/handoffs/PARALLEL_OWNERSHIP_20261125.md) · [Master register](../research-progress/REGISTER.md).
+
+| Session | Launch and first intended result |
+| --- | --- |
+| Immersed construction | [Construction prompt](../../investigations-1/04_hypersurface_immersions/01_immersed_handle_constructions/continuation-notes/CONTINUATION.md). Frame both faces of an index-two attachment and calculate its cost with the exterior input explicit. |
+| Recognition from heights | [Topology prompt](../../investigations-1/04_hypersurface_immersions/02_two_handle_recognition/continuation-notes/CONTINUATION.md). Under immersed subcritical entry, look for geometric cancellation in an actual mixed diagram and retain the two-component alternative. |
+| Physical shell | [Neck prompt](../../investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/continuation-notes/PHYSICAL_SHELL_LAUNCH_20261125.md). Construct the marked annulus between two charged physical sets on the same minimizing sequence. |
+| Fixed-type descent | [Descent prompt](../01_fixed_type_variational_descent/continuation-notes/CONTINUATION.md). Test multi-region replacement and an independent complement estimate, then follow any closed or round survivor. |
+
+The [immersion parent handoff](../../investigations-1/04_hypersurface_immersions/continuation-notes/CONTINUATION.md) coordinates shared constructions and recognized height classes. The master lead owns program-wide coverage and manuscript promotion.
+
+### Pasteable master launch
+
+> Activate sustained master research in papers/master. Use GPT-6.2 Astra/ultra as lead and GPT-6.2 Sol/ultra for bounded, versioned execution and independent checks. Read AGENTS.md, INVESTIGATION_SETUP_WORKFLOW.md, GPT_RESEARCH_MODEL_WORKFLOW.md, REFERENCE_WORKFLOW.md, the master overview, plan, sole register, ownership crosswalk and the four branch handoffs in PARALLEL_PROGRAM_20261125.md. Recompute the working manuscript and evidence revisions. Compare each new branch result with its original hypotheses and the remaining smooth types. Test direct recognition for a positive class at or below 4π² or for a hypersurface-induced class at or below 64π²/9. At immersed energy below 8π² follow a selected Morse height to its actual attaching maps. Positive subcritical entry on arbitrary smooth types remains a separate target. On the intrinsic route use one admissible physical Yamabe minimizing sequence and its actual marks, gauges and measures; seek a full separating shell, a strict same-type competitor or a proved closed rigidity or restart termination result. Coordinate with existing branch writers and freeze disjoint helper outputs. Continue through useful alternatives without routine approval, preserve scoped failures and report a verified implication with its quantifiers and remaining obstruction. Promote a result when it shortens the master proof and rebuild the PDF after manuscript changes.

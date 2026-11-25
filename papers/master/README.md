@@ -2,6 +2,8 @@
 
 The master manuscript asks whether the chiral Weyl energy on a fixed smooth homotopy four-sphere can be lowered far enough to identify its smooth type. The working edition gives a short marked-cut test and a variational comparison on the actual source. Every smooth complete physical blow-up with the stated first-order convergence is flat at minimizing energy. The paper now gives physical trace-free Ricci scale estimates, a critical harmonic-annulus cut, and direct recognition at chiral energy at most \(64\pi^2/9\) for a conformal class induced by a Euclidean hypersurface immersion. Universal entry, a general marked extraction and closed rigidity remain open.
 
+The [current proof plan](research-plan/PLAN.md) coordinates four branches. The [immersion parent](../investigations-1/04_hypersurface_immersions/README.md) brings together [handle construction](../investigations-1/04_hypersurface_immersions/01_immersed_handle_constructions/README.md) and [recognition from heights](../investigations-1/04_hypersurface_immersions/02_two_handle_recognition/README.md). [Neck geometry](../investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/README.md) studies the separated physical sets, and [fixed-type descent](01_fixed_type_variational_descent/README.md) studies the alternatives in which energy persists. [Individual launch prompts](continuation-notes/PARALLEL_PROGRAM_20261125.md)
+
 - [Read the manuscript (PDF)](../../output/pdf/master/chiral_weyl_energy_and_smooth_poincare.pdf) · [Editable manuscript and build](manuscript/README.md)
 - [Research overview and map of the contributing investigations](research-overview/OVERVIEW.md)
 - [Research plan](research-plan/PLAN.md) · [Live progress register](research-progress/REGISTER.md)

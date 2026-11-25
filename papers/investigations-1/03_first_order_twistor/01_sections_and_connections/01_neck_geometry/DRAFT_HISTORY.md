@@ -23,3 +23,7 @@ E21–E23. Perturbed cuts, the Cotton obstruction and the quantitative smoothing
 ## 25 November 2026 · collar manuscript integration
 
 First manuscript for NECK-E01–E23. It develops buffered caps and smooth-type descent, exact and approximate cut extraction, one-puncture restart, and the closed critical alternatives. Research input through `5ff7014`. [Manuscript](manuscript/marked_necks_and_chiral_energy.tex) · [Coverage and evidence](../../reviews/MANUSCRIPT_COVERAGE_20261125.md)
+
+## 25 November 2026 · master physical-shell setup
+
+Linked the separated-quantile and critical-annulus inputs to B04/B05. The setup specifies both marked sides, the required physical coordinate bounds and the strict one-cut margins. [Register receipt](research-progress/REGISTER.md#physical-shell-setup) · [Dated launch and inputs](continuation-notes/PHYSICAL_SHELL_LAUNCH_20261125.md)

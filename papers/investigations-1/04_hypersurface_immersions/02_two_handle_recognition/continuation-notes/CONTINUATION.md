@@ -1,0 +1,27 @@
+# Continue two-middle-handle recognition
+
+25 November 2026 (UTC). Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving model and reasoning effort unavailable. [Input versions](../research-overview/OVERVIEW.md#input-versions) · [Sole live register](../research-progress/REGISTER.md)
+
+Setup is complete and research awaits activation. The first question is what geometry of a selected immersed height could give a transverse single intersection between a framed 2-handle attaching circle and the belt 2-sphere of the 1-handle in the mixed case. The inherited energy band and direction count are conditional. Selection of a mixed presentation, comparison with the original levels and coverage of the two-component case need their own proofs.
+
+## Routing at setup
+
+| Task | Model recommendation and reason | Prerequisite and finite return |
+| --- | --- | --- |
+| [SP4-IMM-HT-B01](../research-plan/PLAN.md#sp4-imm-ht-b01) | Astra/ultra. The source of the geometric cancelling position is open. | Conditional mixed presentation. Choose a certificate for one class and record its precise marked data or the missing premise. |
+| [SP4-IMM-HT-E01](../research-plan/PLAN.md#sp4-imm-ht-e01) | GPT-6.2 Sol/ultra. A selected framed move has fixed geometric and marking tests. | B01 supplies one case and a fixed direct test or slide. Check one cancellation and reconnection to the actual end bodies. |
+| [SP4-IMM-HT-B02](../research-plan/PLAN.md#sp4-imm-ht-b02) | Astra/ultra. An extra geometric restriction and its origin must be chosen. | After a mixed assessment or a B03 one-sided input, select one two-component diagram class and propose one way to identify its trace. |
+| [SP4-IMM-HT-E02](../research-plan/PLAN.md#sp4-imm-ht-e02) | GPT-6.2 Sol/ultra. The selected move sequence or trace comparison has specified input and output. | B02 fixes the diagram class, justified hypothesis and finite proof. Check the marked trace and smooth gluing in that class. |
+| [SP4-IMM-HT-B03](../research-plan/PLAN.md#sp4-imm-ht-b03) | Astra/ultra. Direction selection and coverage require more than the averaged count. | When recognition needs a new selection or coverage premise, assess one quantified implication on the admitted immersion class and record what is missing. |
+
+## Pasteable activation prompt
+
+> Activate sustained analytical research in papers/investigations-1/04_hypersurface_immersions/02_two_handle_recognition. Retain my selected research lead model and effort. Use Astra/ultra as the recommended lead if I have selected no alternative. I authorize bounded gpt-6.2-sol/ultra helpers for fixed E work in this branch.
+>
+> Read the root AGENTS.md, README.md, INVESTIGATION_SETUP_WORKFLOW.md, GPT_RESEARCH_MODEL_WORKFLOW.md, REFERENCE_WORKFLOW.md, LARGE_FILES.md and tools/CHAT_HISTORY.md. Read this branch's README, research-overview/OVERVIEW.md, research-plan/PLAN.md, sole live research-progress/REGISTER.md and references/README.md. Read the parent immersion README, the construction sibling overview, and the master overview, plan, register and cited source passages. Check the source versions in the branch overview, in particular papers/master/manuscript/immersion_entry.tex and the E26, E33 and E34 reviews. Record any new source version used.
+>
+> Work with a closed oriented smooth homotopy four-sphere and a supplied smooth Euclidean hypersurface immersion F with induced Riemannian metric and chiral Hilbert–Schmidt energy E_+ below 8π². Use the master recognition theorem for E_+ at or below 64π²/9. On a hypothetical nonstandard domain the master selects Morse directions with two index-two points. Begin SP4-IMM-HT-B01 with one conditional reduced mixed (1,1) presentation. Seek a geometric certificate of a single transverse meeting of a framed 2-handle attaching circle with the actual belt sphere of the 1-handle, directly or by one specified framed slide. Keep the two actual end bodies, all attaching and outgoing maps, the other 2-handle and any needed comparison of actual height levels with the auxiliary ordered levels. Signed incidence or a crossing in the image of F is insufficient.
+>
+> If B01 supplies the marking and geometric test, freeze E01 to check one marked cancellation and transport of the remaining handle and gluing, then apply the one-middle-handle result where it fits. If a selection or level comparison is missing, assess that precise implication in B03. Develop B02 for a supplied one-sided (0,2) presentation or its dual (2,0) with an actual framed two-component link and its surgery marking. Require an extra geometric restriction justified on the chosen class before freezing E02. Use one-knot Property R only in its stated case, and keep any selection of the mixed case or coverage of one-sided cases explicit.
+>
+> Freeze exact input versions, finite scope, evidence, outputs and failure returns for each packet. The lead integrates returns, preserves adverse evidence, records actual available execution settings, updates the sole branch register and continues through useful ready work and in-scope revisions. Follow the public-history procedure with the verified branch destination for this research conversation. Finish at an assessed milestone with a dated handoff. State precisely which conditional recognition or missing geometric hypothesis can be returned to the parent and master. Quantitative immersion existence on all smooth types remains with its owning route. This activation covers analytical work in this branch.
