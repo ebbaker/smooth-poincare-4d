@@ -66,6 +66,56 @@ The final restriction to the positive locus takes place after the
 compactly supported integration on the original patch.
 \end{proof}
 
+\begin{proposition}[Moving Clifford frame and gradient at a common zero]
+\label{prop:spin-frame-joint-zero}
+\uses{prop:annular-spin-square,prop:annular-spin-regularization}
+\lean{FirstOrderTwistor.chiralSpinCovectorConnection_inner_skew, FirstOrderTwistor.spinNormalGaugeConnection_skew_of_orthonormal, FirstOrderTwistor.raisedFrameCliffordConnection_of_movingFrame, FirstOrderTwistor.lowerFrameCliffordConnection_of_movingFrame, FirstOrderTwistor.gradedCovectorClifford_skew, FirstOrderTwistor.gradedCovectorClifford_anticommute, FirstOrderTwistor.annularTwistedCurvaturePotential_gradedCovectorPositive_bound_iff, FirstOrderTwistor.annularInverseMetricConnection_of_movingFrame, FirstOrderTwistor.inverseMetricFromFrame_eq_gramInverse, FirstOrderTwistor.euclidean_spinJointZero_gradientSq_ae_on_open, FirstOrderTwistor.spinMetric_jointZero_gradientSq_ae}
+\leanok
+A supplied orthonormal frame with coordinate metricity has a skew
+connection on both tensor-spin chiralities. Its raised and lowered
+Clifford symbols satisfy the covariant first-order equations.
+The frame also yields the inverse metric $UU^\top=G^{-1}$ and its
+coordinate derivative. The positive curvature pairing agrees with its value in the full
+graded Hilbert fibre. On an open spin chart the derivative density
+$Q$ vanishes almost everywhere on the common zero set of a finite
+$C^1$ family for every measure absolutely continuous with respect to
+the chart volume. On a compact physical subset of a single chart this
+conclusion holds for the actual metric volume.
+\end{proposition}
+\begin{proof}
+\leanok
+Differentiate $U^\top G U=I$ and contract the two chiral spin lifts
+with the moving frame. The full Clifford action has two off-diagonal
+blocks. Their product preserves the positive summand and its norm.
+For the level-set assertion, take derivatives along coordinate lines,
+apply Fubini, and intersect the finitely many full-measure sets.
+The connection annihilates a field where its value is zero.
+\end{proof}
+
+\begin{proposition}[A harmonic zero at the critical exponent]
+\label{prop:flat-spin-relative-zero}
+\uses{prop:annular-spin-regularization}
+\lean{FirstOrderTwistor.flatRelativeZeroSpinor_dirac, FirstOrderTwistor.flatRelativeZeroSpinor_mass_pos_ae, FirstOrderTwistor.flatRelativeZeroCost_not_integrable_ball_containing_zero, FirstOrderTwistor.flatRelativeZeroCost_annulus_integral, FirstOrderTwistor.flatComplementaryCost_integrable_ball, FirstOrderTwistor.flatComplementaryCost_annulus_logLower, FirstOrderTwistor.flatComplementaryCost_ball_tendsto_atTop}
+\leanok
+In the parallel positive spin frame of oriented flat $\mathbb R^4$,
+$\psi(x)=x_0+x_1 i-x_2 j-x_3 k$ is harmonic and has a single zero.
+Its relative fourth-power density integrates to
+$32\pi^2\log(b/a)$ on $a<|x|\le b$ for $0<a\le b$.
+It is nonintegrable on every ball containing the origin. Adding a
+constant nonzero harmonic spinor $h$ gives a finite cost on each
+bounded ball. At each fixed radius $R>0$ its integral over $B_R(0)$
+tends to infinity as $h\to0$ through nonzero values.
+\end{proposition}
+\begin{proof}
+\leanok
+The Dirac contraction of the four constant coefficients vanishes.
+The squared mass is $|x|^2$ and the squared gradient is four.
+The radial density is $16/|x|^4$ and the unit three-sphere has
+area $2\pi^2$. With the second field present, the density becomes
+$16/(|x|^2+|h|^2)^2$. On $|h|<|x|\le b$, it is at least $4/|x|^4$.
+Radial integration gives the claims.
+\end{proof}
+
 \begin{proposition}[Square-integrable incoming inverse in the spectral model]
 \label{prop:weak-spectral-incoming}
 \uses{prop:spin-mode-transmission}

@@ -31,10 +31,10 @@ minimizing positive class can discard at most its excess above the
 infimum plus the cost of closing the retained piece. We prove the
 resulting obstruction to a cut separating two positive amounts of
 chiral energy and give a first-order metric criterion for the required
-caps. In the same range we locate disjoint smooth balls on the original
+caps. A subcritical metric path permits the use of two short splices. In the same range we locate disjoint smooth balls on the original
 manifold that carry almost all the volume and individually little full
 curvature. A one-sided replacement inequality identifies what would
-allow those balls to detect the smooth type. The existence of a
+allow those balls to detect the smooth type. Fixed-type minimization forces strong local chiral convergence in a supplied first-order comparison. Every complete smooth limit at a vanishing physical scale is flat. Consequently every ball of fixed radius in the maximum-curvature rescaling loses its full curvature energy, uniformly in the center. The existence of a
 subcritical starting class and of sufficiently inexpensive cuts or
 replacements on general smooth homotopy four-spheres remains open.
 \end{abstract}
@@ -267,6 +267,7 @@ Finally \(\sigma_2(A)=s^2/96-|\Ric_0|^2/8\), giving
 
 \input{marked_cut}
 \input{first_order_splice}
+\input{variational_comparison}
 \input{physical_volume}
 
 \section{What a volume-bearing family would have to control}
@@ -340,6 +341,18 @@ The subsequences may depend on \(\epsilon\) because their energy
 limits all equal the same infimum.
 \end{proof}
 
+Proposition~\ref{prop:joint-vol} gives a second complement test.
+For a jointly selected family of fixed cardinality the replacement
+inequality gives
+\(\lambda(G_\zeta)-\varepsilon\le\limsup_i\sum_j\gamma_{ij}\).
+Thus inexpensive repairs as \(\varepsilon\downarrow0\) already
+exclude positive mass on \(G_\zeta\). Tightness of the chiral measures,
+concentration of their limit on regular points, and absence of atoms
+of that limit also suffice to make the uncovered mass arbitrarily
+small: the excluded large atoms of \(\nu\) form a finite set.
+
+\input{complete_limits}
+
 \section{Outstanding geometric questions}\label{sec:open}
 
 The first question is whether every smooth homotopy four-sphere
@@ -350,10 +363,9 @@ already settle its smooth type.
 
 Once in the band it suffices, on each hypothetical nonstandard
 \(M\), to find \emph{one} positive-class minimizing sequence and a
-subsequence with a buffered cut satisfying Corollary~\ref{weak:balanced}.
-Its two raw sides must carry uniformly positive chiral energy, with
-positive capped Yamabe classes and vanishing cap excess. Theorem~\ref{thm:cut}
-and its first-order version then rule out that \(M\).
+subsequence with the short marked cut of Proposition~\ref{prop:short-cut}.
+The two complete raw sides must each carry a fixed positive chiral
+mass, and both splices must be controlled in the marked chart.
 Theorem~\ref{thm:volume-balls} locates smooth balls in the original
 source. Their construction uses the positive-Ricci distance, whereas
 the splice depends on first derivatives in an actual buffer. Their
@@ -362,6 +374,16 @@ Corollary~\ref{cor:vol-reduction} gives a different sufficient condition
 when curvature on sets of small physical volume can also be controlled.
 If this control fails, an extraction argument must account for the
 curvature carried by those sets.
+
+Corollary~\ref{cor:energy-radius} locates a second scale in the
+concentrating case. At a shrinking half-energy radius the rescaled
+curvature must grow without bound within some fixed multiple along a
+subsequence. The smaller curvature radius gives no lower bound for
+the chiral mass near that curvature peak. To turn the scale separation
+into a cut one still needs a marked annulus with positive mass on
+both full sides, or an independent comparison on the region between
+the scales. Repeated concentration at successively smaller physical
+diameters need not decrease the limiting energy.
 
 A minimizing sequence could instead approach a smooth nonround
 closed minimizer. At an attained minimum, positive Yamabe sign is open

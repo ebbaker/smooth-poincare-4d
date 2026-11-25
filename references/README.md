@@ -176,3 +176,5 @@ The [source records R119–R121](../papers/investigations-1/03_first_order_twist
 [Second collar source records R128–R142](SOURCE_NOTES_SECOND_COLLAR_20261125.md) cover exact compactness and its limits, the Bach gauge, relative characteristic forms, positive Schouten gauges, harmonic Weyl curvature, spinor normalization and the contrast between physical and conformal base limits.
 
 [Third collar source records R143–R151](SOURCE_NOTES_THIRD_COLLAR_20261125.md) cover Ricci-limit volume and smooth ball embeddings, local Sobolev control, critical smoothing, singular integrals and the closed chiral Cotton equation.
+
+[Master variational comparison sources](SOURCE_NOTES_MASTER_VARIATIONAL_20261125.md) cover the limit Ricci equation, end regularity, harmonic compactness, smooth removal, joint measure selection and the topology of the entry test.

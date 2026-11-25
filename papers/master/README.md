@@ -1,6 +1,6 @@
 # Smooth four-dimensional Poincaré conjecture · master investigation
 
-The master manuscript asks whether the chiral Weyl energy on a fixed smooth homotopy four-sphere can be lowered far enough to identify its smooth type. Its first edition develops the marked-cut argument, proves what volume can be located in the original manifold, and identifies where the curvature needed for recognition can still concentrate.
+The master manuscript asks whether the chiral Weyl energy on a fixed smooth homotopy four-sphere can be lowered far enough to identify its smooth type. The working edition gives a short marked-cut test and a variational comparison on the actual source. Every smooth complete physical blow-up with the stated first-order convergence is flat at minimizing energy. The paper derives the resulting separation between the physical chiral energy radius and the maximum-curvature scale. Universal entry, a general marked extraction and closed rigidity remain open.
 
 - [Read the manuscript (PDF)](../../output/pdf/master/chiral_weyl_energy_and_smooth_poincare.pdf) · [Editable manuscript and build](manuscript/README.md)
 - [Research overview and map of the contributing investigations](research-overview/OVERVIEW.md)

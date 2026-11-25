@@ -1,4 +1,5 @@
 import FirstOrderTwistor.SpinNormalGauge
+import FirstOrderTwistor.SpinTwistedSquare
 import Mathlib.Tactic.NoncommRing
 
 /-!
@@ -14,7 +15,7 @@ the coordinate metricity equation, so it applies away from normal centers.
 -/
 
 open Filter Topology
-open scoped Matrix Matrix.Norms.Elementwise Quaternion RealInnerProductSpace
+open scoped Matrix Matrix.Norms.Elementwise Quaternion InnerProductSpace
 
 namespace FirstOrderTwistor
 
@@ -23,6 +24,7 @@ private abbrev FrameMatrix := Matrix (Fin 4) (Fin 4) ℝ
 private noncomputable def frameTranspose : FrameMatrix →L[ℝ] FrameMatrix :=
   (Matrix.transposeLinearEquiv (Fin 4) (Fin 4) ℝ ℝ).toLinearMap.toContinuousLinearMap
 
+set_option backward.isDefEq.respectTransparency false in
 private theorem frameProduct_differentiableAt {F G : EuclideanFour → FrameMatrix}
     {x : EuclideanFour} (hF : DifferentiableAt ℝ F x) (hG : DifferentiableAt ℝ G x) :
     DifferentiableAt ℝ (fun y => F y * G y) x := by
@@ -52,7 +54,7 @@ theorem spinNormalGaugeConnection_transpose_eq_neg_of_orthonormal
   let D := A i x * U x + dU
   have hOrthoAt : (U x)ᵀ * G x * U x = 1 := hOrtho.eq_of_nhds
   have hVU : V x * U x = 1 := hInverse.eq_of_nhds
-  have hUV : U x * V x = 1 := Matrix.mul_eq_one_comm.mp hVU
+  have hUV : U x * V x = 1 := mul_eq_one_comm.mp hVU
   have hUG : (U x)ᵀ * G x = V x := calc
     _ = ((U x)ᵀ * G x) * (U x * V x) := by rw [hUV, mul_one]
     _ = V x := by rw [← mul_assoc, hOrthoAt, one_mul]
@@ -73,7 +75,7 @@ theorem spinNormalGaugeConnection_transpose_eq_neg_of_orthonormal
   rw [spinFrameMatrix_fderiv_mul_apply hTranspose (frameProduct_differentiableAt hG hU),
     spinFrameMatrix_fderiv_mul_apply hG hU, hTransposeDeriv] at hDOrtho
   have hDOrtho' : (U x)ᵀ * (G x * dU + dG * U x) + (dU)ᵀ * (G x * U x) = 0 := by
-    simpa only [fderiv_const_apply, ContinuousLinearMap.zero_apply] using hDOrtho
+    simpa only [fderiv_const_apply, zero_apply] using hDOrtho
   have hCompat : dG = (A i x)ᵀ * G x + G x * A i x := hMetric
   have hSkew : (D)ᵀ * (G x * U x) + ((U x)ᵀ * G x) * D = 0 := calc
     _ = (U x)ᵀ * (G x * dU + dG * U x) + (dU)ᵀ * (G x * U x) := by
@@ -100,5 +102,54 @@ theorem spinNormalGaugeConnection_skew_of_orthonormal
     spinNormalGaugeConnection A U V i x b a = -spinNormalGaugeConnection A U V i x a b := by
   exact congrArg (fun C : FrameMatrix => C a b)
     (spinNormalGaugeConnection_transpose_eq_neg_of_orthonormal hU hG hOrtho hInverse i (hMetric i))
+
+/-- Left multiplication by an imaginary quaternion is skew for the real
+spinor inner product. -/
+theorem imaginaryQuaternion_mul_inner_skew (c u v : ℍ[ℝ]) (hc : c.re = 0) :
+    ⟪c * u, v⟫_ℝ = -⟪u, c * v⟫_ℝ := by
+  simp only [Quaternion.inner_def, Quaternion.re_mul, Quaternion.imI_mul, Quaternion.imJ_mul,
+    Quaternion.imK_mul, Quaternion.re_star, Quaternion.imI_star, Quaternion.imJ_star,
+    Quaternion.imK_star, hc, zero_mul, zero_sub, zero_add]
+  ring
+
+/-- The cotangent correction is the negative transpose of the tangent
+connection. Combined with a metric spin connection it is skew in the
+orthonormal tensor-product frame. -/
+theorem spinCovectorConnection_inner_skew
+    (Ω : FrameMatrix) (hΩ : ∀ a b, Ω b a = -Ω a b)
+    (c : ℍ[ℝ]) (hc : c.re = 0) (u v : Fin 4 → ℍ[ℝ]) :
+    (∑ k, ⟪c * u k - ∑ a, Ω a k • u a, v k⟫_ℝ) =
+      -(∑ k, ⟪u k, c * v k - ∑ a, Ω a k • v a⟫_ℝ) := by
+  have hCotangent : (∑ k, ∑ a, Ω a k * ⟪u a, v k⟫_ℝ) =
+      -(∑ k, ∑ a, Ω a k * ⟪u k, v a⟫_ℝ) := calc
+    _ = ∑ k, ∑ a, Ω k a * ⟪u k, v a⟫_ℝ := Finset.sum_comm
+    _ = _ := by
+      rw [← Finset.sum_neg_distrib]
+      apply Finset.sum_congr rfl
+      intro k _
+      rw [← Finset.sum_neg_distrib]
+      apply Finset.sum_congr rfl
+      intro a _
+      rw [hΩ a k, neg_mul]
+  simp only [inner_sub_left, inner_sub_right, sum_inner, inner_sum,
+    real_inner_smul_left, real_inner_smul_right, imaginaryQuaternion_mul_inner_skew c _ _ hc,
+    Finset.sum_sub_distrib, Finset.sum_neg_distrib, hCotangent]
+  abel
+
+/-- Both chiral spin lifts act skew in the real Hilbert inner product of the
+covector-spin tensor, with the same skew tangent matrix. -/
+theorem chiralSpinCovectorConnection_inner_skew
+    (Ω : FrameMatrix) (hΩ : ∀ a b, Ω b a = -Ω a b) (u v : Fin 4 → ℍ[ℝ]) :
+    let positive := spinConnectionLift Ω
+    let negative := negativeSpinConnectionLift Ω
+    ((∑ k, ⟪positive * u k - ∑ a, Ω a k • u a, v k⟫_ℝ) =
+      -(∑ k, ⟪u k, positive * v k - ∑ a, Ω a k • v a⟫_ℝ)) ∧
+    ((∑ k, ⟪negative * u k - ∑ a, Ω a k • u a, v k⟫_ℝ) =
+      -(∑ k, ⟪u k, negative * v k - ∑ a, Ω a k • v a⟫_ℝ)) := by
+  constructor
+  · exact spinCovectorConnection_inner_skew Ω hΩ (spinConnectionLift Ω)
+      (by simp [spinConnectionLift, smul_eq_mul]) u v
+  · exact spinCovectorConnection_inner_skew Ω hΩ (negativeSpinConnectionLift Ω)
+      (by simp [negativeSpinConnectionLift, smul_eq_mul]) u v
 
 end FirstOrderTwistor

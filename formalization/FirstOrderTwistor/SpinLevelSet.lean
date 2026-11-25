@@ -1,3 +1,4 @@
+import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
 import Mathlib.Analysis.Calculus.ContDiff.Comp
 import Mathlib.Analysis.Calculus.Deriv.Inverse
 import Mathlib.Analysis.Calculus.Deriv.Prod
@@ -141,6 +142,60 @@ theorem euclidean_fderiv_eq_zero_ae_on_levelSet {n : ℕ}
   rw [← hE.map_eq]
   exact (ae_map_iff hE.measurable.aemeasurable hp).2 hAE
 
+
+/-- Localize the Euclidean level-set statement to a supplied open coordinate
+domain. The test fields only need to be C¹ on that domain. -/
+theorem euclidean_fderiv_eq_zero_ae_on_openLevelSet {n : ℕ}
+    {Ω : Set (EuclideanSpace ℝ (Fin (n + 1)))} (hΩ : IsOpen Ω)
+    (f : EuclideanSpace ℝ (Fin (n + 1)) → V) (hf : ContDiffOn ℝ 1 f Ω) (c : V) :
+    ∀ᵐ x ∂(volume.restrict Ω), f x = c → fderiv ℝ f x = 0 := by
+  classical
+  let E := EuclideanSpace ℝ (Fin (n + 1))
+  have hbump (x : Ω) : ∃ χ : E → ℝ, tsupport χ ⊆ Ω ∧ ContDiff ℝ 1 χ ∧ χ x = 1 := by
+    obtain ⟨χ, hsup, _, hc, _, hx⟩ := exists_contDiff_tsupport_subset (n := 1) (hΩ.mem_nhds x.2)
+    exact ⟨χ, hsup, hc, hx⟩
+  choose χ hχsupport hχ hχone using hbump
+  let U (x : Ω) := Function.support (χ x)
+  have hU (x : Ω) : IsOpen (U x) := isOpen_ne_fun (hχ x).continuous continuous_const
+  have hCover : Ω ⊆ ⋃ x : Ω, U x := by
+    intro x hx
+    apply mem_iUnion.mpr
+    refine ⟨⟨x, hx⟩, ?_⟩
+    change χ ⟨x, hx⟩ x ≠ 0
+    rw [hχone]
+    exact one_ne_zero
+  obtain ⟨J, hJ, hJcover⟩ := (HereditarilyLindelofSpace.isLindelof Ω).elim_countable_subcover U hU hCover
+  let : Countable J := hJ.to_subtype
+  have hlocal (a : J) : ∀ᵐ y ∂(volume : Measure E), y ∈ U a → f y = c → fderiv ℝ f y = 0 := by
+    let g (y : E) := χ a y • (f y - c)
+    have hg : ContDiff ℝ 1 g := by
+      apply contDiff_iff_contDiffAt.mpr
+      intro y
+      by_cases hy : y ∈ tsupport (χ a)
+      · have hyΩ := hχsupport a hy
+        exact (hχ a).contDiffAt.smul ((hf.contDiffAt (hΩ.mem_nhds hyΩ)).sub contDiffAt_const)
+      · have hnear : ∀ᶠ z in 𝓝 y, χ a z = 0 :=
+          (notMem_tsupport_iff_eventuallyEq.mp hy)
+        apply (contDiffAt_const (c := (0 : V))).congr_of_eventuallyEq
+        exact hnear.mono fun z hz => by simp [g, hz]
+    filter_upwards [euclidean_fderiv_eq_zero_ae_on_levelSet g hg 0] with y hy
+    intro hyU hfy
+    have hyΩ := hχsupport a (subset_tsupport _ hyU)
+    have hfy' := ((hf.contDiffAt (hΩ.mem_nhds hyΩ)).differentiableAt one_ne_zero).hasFDerivAt
+    have hχy' := ((hχ a).differentiable one_ne_zero y).hasFDerivAt
+    have hg' := (hχy'.smul (hfy'.sub_const c)).fderiv
+    have hgZero : g y = 0 := by simp [g, hfy]
+    have hScale : χ a y • fderiv ℝ f y = 0 := by
+      simpa [g, hfy] using hg'.symm.trans (hy hgZero)
+    exact (smul_eq_zero.mp hScale).resolve_left hyU
+  have hAll : ∀ᵐ y ∂(volume : Measure E), ∀ a : J,
+      y ∈ U a → f y = c → fderiv ℝ f y = 0 := ae_all_iff.mpr hlocal
+  have hIn : ∀ᵐ y ∂(volume.restrict Ω), y ∈ Ω := ae_restrict_mem hΩ.measurableSet
+  filter_upwards [ae_mono Measure.restrict_le_self hAll, hIn] with y hy hyΩ
+  obtain ⟨a, ha⟩ := mem_iUnion.mp (hJcover hyΩ)
+  obtain ⟨haJ, haU⟩ := mem_iUnion.mp ha
+  exact hy ⟨a, haJ⟩ haU
+
 /-- On the joint zero locus of a finite family, all values and all first
 derivatives vanish almost everywhere for a gauge absolutely continuous
 with respect to Euclidean volume. -/
@@ -178,5 +233,31 @@ theorem euclidean_spinJointZero_gradientSq_ae {n : ℕ} {A B : Type*}
   intro a ha
   have ha0 := hx hMass a ha
   simp [ha0.1, ha0.2]
+
+
+/-- The covariant derivative density vanishes on the joint zero locus with
+only C¹ fields on the open chart. Absolute continuity is required on that
+chart, so the measure elsewhere is immaterial. -/
+theorem euclidean_spinJointZero_gradientSq_ae_on_open {n : ℕ} {A B : Type*}
+    {Ω : Set (EuclideanSpace ℝ (Fin (n + 1)))} (hΩ : IsOpen Ω)
+    (μ : Measure (EuclideanSpace ℝ (Fin (n + 1)))) (hμ : μ.restrict Ω ≪ volume.restrict Ω)
+    (fields : Finset A) (directions : Finset B) (ψ : A → EuclideanSpace ℝ (Fin (n + 1)) → V)
+    (frame : B → EuclideanSpace ℝ (Fin (n + 1)) → EuclideanSpace ℝ (Fin (n + 1)))
+    (connection : B → EuclideanSpace ℝ (Fin (n + 1)) → V →L[ℝ] V)
+    (hψ : ∀ a ∈ fields, ContDiffOn ℝ 1 (ψ a) Ω) :
+    ∀ᵐ x ∂μ.restrict Ω, (∑ a ∈ fields, ‖ψ a x‖ ^ 2) = 0 →
+      (∑ a ∈ fields, ∑ i ∈ directions,
+        ‖fderiv ℝ (ψ a) x (frame i x) + connection i x (ψ a x)‖ ^ 2) = 0 := by
+  have hAll : ∀ᵐ x ∂μ.restrict Ω, ∀ a : fields,
+      ψ a x = 0 → fderiv ℝ (ψ a) x = 0 :=
+    ae_all_iff.mpr fun a => hμ.ae_le
+      (euclidean_fderiv_eq_zero_ae_on_openLevelSet hΩ (ψ a) (hψ a a.property) 0)
+  filter_upwards [hAll] with x hx
+  intro hMass
+  apply Finset.sum_eq_zero
+  intro a ha
+  have haSq := (Finset.sum_eq_zero_iff_of_nonneg (fun _ _ => sq_nonneg _)).mp hMass a ha
+  have haZero : ψ a x = 0 := by simpa using haSq
+  simp [haZero, hx ⟨a, ha⟩ haZero]
 
 end FirstOrderTwistor

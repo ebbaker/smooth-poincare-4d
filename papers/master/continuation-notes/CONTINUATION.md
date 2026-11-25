@@ -1,4 +1,8 @@
-# Launch sustained research on the master proof route
+# Master research continuation
+
+Use the [continuation after the physical energy-scale results](AFTER_PHYSICAL_ENERGY_SCALES_20261125.md) for the current launch prompt, scope and next geometric targets. The original activation below preserves the first edition’s instructions.
+
+## Original launch of sustained research
 
 25 November 2026 · Prepared for Edward B. Baker III with OpenAI Codex assistance. The first master edition draws on the research at `5ff7014` and the contributing manuscripts recorded at `fc60509`. The [master manuscript](../manuscript/README.md), [research overview and source map](../research-overview/OVERVIEW.md), [research plan](../research-plan/PLAN.md), [sole live register](../research-progress/REGISTER.md) and [initial independent checks](../reviews/INITIAL_EDITION_20261125.md) are the starting documents. At preparation, B01 and E00 had established the initial edition. The register gives the current status when this note is used.
 
