@@ -21,3 +21,9 @@ Use the [references](references/README.md), [continuation prompt](continuation-n
 The lead owns this task family. Shared tasks stay in the parent; the
 sibling's tasks stay in its register. Local projective spinors belong to
 SEC; global twistor-spinor and coupled Dirac existence belong to DIR.
+
+## Sub-investigation
+
+- [Dirac matching on a supplied collar](01_dirac_collar_matching/README.md) asks
+  how far the geometry of an incoming surgery collar can be relaxed while
+  retaining quantitative spinor transmission.
