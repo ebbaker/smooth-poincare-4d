@@ -15,6 +15,10 @@ limits and a [source manifest](screenshots/SOURCE_MANIFEST.json). Earlier
 partial records and native registrations are preserved.
 The [later recovery request and completed public updates](UNREGISTERED_PARTIAL_SCREENSHOT_RECOVERY_20261125.md)
 belong to that same audit conversation and remain explicitly unregistered.
+As clarified by the author on 25 November, the screenshot-recovery portion
+was accidentally continued here from **Reconstruct Chat History**. The
+record notes that task connection while retaining the messages in the chat
+where they were actually sent.
 
 Follow [the capture workflow](../tools/CHAT_HISTORY.md). Do not invent registrations, titles, source transcripts, model settings, or completed final messages. A working CLI and passing tests do not verify capture of the current conversation. No native completion hook is installed by this setup.
 

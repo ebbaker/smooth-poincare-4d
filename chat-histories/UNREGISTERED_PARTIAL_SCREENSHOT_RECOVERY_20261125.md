@@ -19,6 +19,18 @@ It is the same conversation, not an additional entry in the chronology.
 Both earlier records retain their original contents. Private instructions,
 internal reasoning, tool traffic and the unsent final reply are excluded.
 
+## Context of the continuation
+
+Added 25 November 2026 at the author's request: the screenshot-recovery work
+beginning with “I have added a new subfolder called omitted” was an
+**accidental continuation here of the separate conversation titled
+“Reconstruct Chat History.”** The original repository-access and setup
+comparison requests belong to this **Repository audit verification** chat.
+The later screenshot requests and recovery replies were also sent in this
+chat, but continue the task from **Reconstruct Chat History**. This note
+records that relationship without moving messages between conversations,
+changing their provenance, or inventing a native ID for the originating chat.
+
 ## User — screenshot recovery request
 
 I have added a new subfolder called omitted with screenshots of most of the conversations. Please include those conversations as well. The ones I didn't include are newer, and the data export didn't include newer chats, so I can do another export at a later time, but for now this should suffice. It's annoying that chat session capture didn't work, but at least we fixed it, and would've had to do this for older chat captures anyways, so overall it's not so bad.
@@ -100,3 +112,23 @@ I’ll check the updated screenshots for “Research Variational Result” and f
 ## Assistant — completed public commentary 2
 
 I found four new screenshots that show the full opening prompt. They match the text preserved earlier. I’m adding that complete prompt to S05 and updating the coverage notes.
+
+## Later append — continuation context, 25 November 2026
+
+The following completed reply and subsequent public messages were available
+when this append was prepared. Native capture remains unavailable. The final
+reply to the history-update request is not yet sent and is not included.
+
+## Assistant — completed expanded-prompt recovery reply
+
+Found the four new screenshots and updated [S05 — Research Variational Result](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/chat-histories/screenshots/S05_research_variational_result.md).
+
+The full opening prompt is now included directly and matches the earlier record. I also updated the chronology and source manifest; all checks pass.
+
+## User — history update and continuation clarification
+
+Can you update the chat history for this chat, and make a note that the screenshot part was a continuation from "Reconstruct Chat History" (this was accidental)
+
+## Assistant — completed public commentary
+
+I’ll update this conversation’s public record and note that the screenshot-recovery work accidentally continued here from “Reconstruct Chat History.”

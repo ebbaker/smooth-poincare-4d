@@ -76,6 +76,10 @@ the earlier partial record. The S01 screenshots predate the
 later screenshot-recovery request in that same conversation.
 That [request and its completed public updates](UNREGISTERED_PARTIAL_SCREENSHOT_RECOVERY_20261125.md)
 are preserved separately as an unregistered continuation of S01.
+The author clarified on 25 November that this screenshot-recovery portion
+was an **accidental continuation from “Reconstruct Chat History”** in the
+**Repository audit verification** conversation. The record preserves that
+task relationship and the actual conversation in which the messages were sent.
 
 ## Sidebar titles still awaiting recovery
 
