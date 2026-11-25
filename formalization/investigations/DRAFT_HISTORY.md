@@ -1,3 +1,4 @@
 # Overall formalization milestones
 
 - **25 November 2026 · Version 01.** Prepared for Edward B. Baker III with OpenAI Codex assistance. Reviewed the pinned Lean pilot and established the first program-wide plan for the first-order twistor manuscripts and the three collar investigations. The opening builds and axiom checks concern the existing three-axis result. [Baseline](research-progress/01_BASELINE.md) · [Plan](research-plan/01_PLAN.md)
+- **25 November 2026 · Route setup.** Opened formalization investigations 02–04, assigned each delegated Version 01 task to one register, and checked the three opening proposition types in the pinned package. The parent retains common prerequisites and E34. [Route index](README.md#proof-investigations) · [Ownership table](research-progress/REGISTER.md#route-ownership)
