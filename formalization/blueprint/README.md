@@ -27,6 +27,8 @@ tracks the underlying mathematical investigation.
 
 The [finite accounting section](src/neck_accounting.tex) records the checked conditional energy identity, strip bounds and comparison hypotheses. The [Route 02 register](../investigations/02_neck_energy_accounting/research-progress/REGISTER.md) distinguishes those results from the open physical extraction and first-variation problems.
 
+The [spinor transmission section](src/spin_transmission.tex) records the weighted and normalized residual criteria and the local spinor and boundary estimates. [Route 04 register](../investigations/04_dirac_collar_transmission/research-progress/REGISTER.md)
+
 Edit [content.tex](src/content.tex) for mathematical statements, proofs and
 dependencies. Place `\uses` in the statement or proof that needs the
 dependency. Add `\lean` when the corresponding Lean declaration exists

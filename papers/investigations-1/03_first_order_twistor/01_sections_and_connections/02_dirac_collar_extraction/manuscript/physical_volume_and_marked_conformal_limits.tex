@@ -1,0 +1,454 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1.06in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{Physical Volume and Marked Conformal Limits of Almost Bach-Flat Yamabe Four-Spheres}
+\author{Edward B. Baker III}
+\date{25 November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A conformal comparison on a punctured region can retain curvature while losing all volume in the original Yamabe metric. We study smooth closed oriented homotopy four-spheres with unit-volume positive Yamabe metrics, total Bach norm tending to zero, and chiral Weyl energy in a fixed band below \(8\pi^2\). A supplied smooth closed base with coherent embeddings of whole punctured truncations and a \(C^0\cap W^{1,4}\) comparison with local scalar-square control has strong local chiral Weyl convergence and is Bach-flat. A nonround base transfers its smooth type to the source. At the infimum of positive-Yamabe chiral energy, a nonround marked base recovers the full physical volume and yields measured Gromov--Hausdorff convergence with no residual curvature energy. A fixed compact with positive physical volume also gives recovery below the round Yamabe value. We give volume tests in a normalized positive-Ricci gauge, a Green limit for smooth evacuated comparisons, and signed curvature accounting at supplied faces. The whole marked comparison is a geometric hypothesis.
+\end{abstract}
+
+\section{Source and comparison hypotheses}
+
+All metrics are smooth and Riemannian unless a convergence norm is specified. Fix a smooth closed connected oriented homotopy four-sphere \(M\), and write \(g_i\) for the actual volume-one positive Yamabe minimizers. Use \(\Delta=\operatorname{div}\nabla\), \(L_g=-6\Delta_g+R_g\) and
+\[
+ Q_g(f,z)=\int(6\langle df,dz\rangle_g+R_g fz)\,dV_g,
+ \qquad
+ Y([g])=\inf_{0\ne f\in H^1}\frac{Q_g(f,f)}{\|f\|_{4,g}^2}.
+\]
+Let \(S=Y_{\rm rd}=8\sqrt 6\,\pi\) denote the round value. With \(W^\pm\) acting on the real \(\Lambda^\pm\), set \(E_\pm(g;U)=\int_U|W_g^\pm|_{\rm HS}^2\,dV_g\) and omit \(U\) for the whole manifold. Orient every comparison so that it preserves chirality. Assume
+\begin{equation}\label{eq:source}
+ \begin{gathered}
+  R_{g_i}=Y_i=Y([g_i])\to y,\qquad
+  E_i=E_+(g_i)=E_-(g_i)\to e,\\
+  4\pi^2\le E_i\le8\pi^2-\delta,\quad \delta>0,\qquad
+  \int_M|B_{g_i}|\,dV_{g_i}\to0 .
+ \end{gathered}
+\end{equation}
+The signature identity is \(E_+-E_-=12\pi^2\tau\). With \(D_i=\int_M|\operatorname{Ric}_{0,g_i}|^2\,dV_{g_i}\), Gauss--Bonnet gives
+\begin{equation}\label{eq:budget}
+ D_i=4E_i+Y_i^2/12-32\pi^2,
+ \qquad 0<Y_0:=\sqrt{48\delta}\le Y_i\le S,
+ \qquad D_i\le4E_i .
+\end{equation}
+Indeed the closed Euler integrand is \(|W^+|_{\rm HS}^2+|W^-|_{\rm HS}^2-\tfrac12|\operatorname{Ric}_0|^2+R^2/24\) with integral \(8\pi^2\chi\). The full four-index Weyl norm squared is four times the sum of the squared block norms. The Yamabe upper bound is strict except on the conformal round sphere \cite[Theorem 2]{Schoen1984Yamabe}. The Weyl densities and the total Bach density \(|B_g|\,dV_g\) are invariant under positive conformal changes in four dimensions. We use the first variation \(DE_\pm(g)[H]=-\tfrac12\int\langle B_g,H\rangle_g\,dV_g\) on closed four-manifolds with the corresponding Bach convention \cite[Introduction and \S3]{ChangGurskyYang2003}\cite[\S3]{GrahamHirachi2004Ambient}. Define
+\[
+ I^+(M)=\inf\{E_+(g): g\text{ a smooth metric on }M,\ Y([g])>0\}.
+\]
+
+For \(0\le \chi\le1\) let \(a=\int\chi^4dV_{g_i}\) and \(D(\chi)=\int|d\chi|^2dV_{g_i}\). If the support of the transition has volume at most \(t\), if \(\chi=1\) on a region of volume \(m\), and if its nonzero set has volume at most \(s\), the source Yamabe test gives
+\begin{equation}\label{eq:yamabe-test}
+ \sqrt a-a\le 6D(\chi)/Y_i+t/4,qquad
+ Y_0(1-\sqrt{s})\sqrt m\le 6D(\chi),qquad
+ D(\chi)\le \|d\chi\|_{4,g_i}^{2}\sqrt{t}.
+\end{equation}
+Here the first estimate uses \(\chi^2(1-\chi^2)\le1/4\). The second uses \(\int\chi^2\le\sqrt{s}\sqrt a\). The gradient fourth power is conformally invariant. For use below one also has the source small-ball lower bound \(\operatorname{Vol}_{g_i}B_{g_i}(x,r)\ge c r^4\) for \(r\le1\), with \(c>0\) independent of \(x,i\). A cutoff on \(B(x,r)\) equal to one on \(B(x,r/2)\) yields \(Y_0 V(r/2)^{1/2}\le(24+S) r^{-2}V(r)\). Iterate the resulting inequality for \(V(r)/r^4\) and use the Euclidean small-radius limit at the smooth center.
+
+\begin{definition}[Whole marked comparison]\label{def:marking}
+Let \(N\) be a smooth closed connected oriented homotopy four-sphere with smooth metric \(h\) and a finite set \(P\) of ordinary smooth points. On neighborhoods of an exhaustion by simultaneous compact truncations of \(N-P\), one oriented embedding \(\Phi_i\) per source index is used with its restrictions. A slow diagonal of such embeddings is permitted. On each fixed compact write
+\begin{equation}\label{eq:weak-marking}
+ k_i=\Phi_i^*g_i=u_i^2 m_i,qquad u_i>0,qquad
+ m_i\longrightarrow h\text{ in }C^0_{\rm loc}\cap W^{1,4}_{\rm loc},qquad
+ \sup_i\|R_{m_i}\|_{L^2(K,m_i)}<\infty .
+\end{equation}
+In the last condition one can instead use the full comparison curvature. Coefficient convergence uses fixed smooth coordinates. A smooth conformal comparison has \(C^\infty_{\rm loc}\) convergence of \(m_i\), and a smooth physical comparison has \(m_i=k_i\to h\) in \(C^\infty_{\rm loc}\). A positive physical-volume witness is a fixed compact \(K\subset N-P\) with \(\limsup_i\operatorname{Vol}_{g_i}(\Phi_i K)>0\). Conclusions from this witness use a witnessing subsequence.
+\end{definition}
+
+\begin{theorem}[Recovery from a marked base]\label{thm:marked-recovery}
+Assume \eqref{eq:source} and Definition~\ref{def:marking}. Then \(B_h=0\), \(Y([h])\ge y\) and both chiral Weyl densities converge strongly locally in \(L^1\) on the marking. Let \(e_N=E_+(h)=E_-(h)\le e\).
+\begin{enumerate}
+ \item If \(e_N>0\), then \(e_N>4\pi^2\), \(y<S\), and \(N\) and \(M\) are orientation-preservingly diffeomorphic. This applies when a fixed compared compact detects positive limiting chiral energy.
+ \item If \(e_N>0\) and \(e-I^+(M)<(S^2-y^2)/48\), or if \(y<S\) and there is a positive physical-volume witness, then along a subsequence \(u_i\to u>0\) strongly locally in \(H^1\cap L^4\). The metric \(k=u^2h\) is a smooth unit-volume Yamabe minimizer on \(N\) with scalar curvature \(y\), and \(N\) and \(M\) have the same oriented smooth type. Along the same subsequence the original physical spaces converge in measured Gromov--Hausdorff distance to \((N,k,dV_k)\).
+ \item With this physical convergence and \(e=e_N\), the physical full-curvature densities converge strongly in \(L^1\) on fixed marked compacts and the whole complementary curvature integral vanishes after exhaustion. In particular this holds for a nonround marked base at \(e=I^+(M)\).
+\end{enumerate}
+\end{theorem}
+
+\input{volume_witnesses}
+
+\section{Curvature and the Yamabe equation in a weak comparison}
+
+\begin{lemma}[Local curvature bound and chirality]\label{lem:weyl}
+Under \eqref{eq:source} and \eqref{eq:weak-marking}, full comparison curvature is locally bounded in \(L^2\). In oriented coordinate frames, the matrix representatives of \(W_{m_i}^\pm\) multiplied by the square root of the coordinate volume density converge strongly in \(L^2_{\rm loc}\) to the corresponding representatives for \(h\), and \(B_h=0\).
+\end{lemma}
+\begin{proof}
+On a relatively compact coordinate ball use the orthonormal frame given by the positive matrix square root of the metric inverse. The connection forms \(\omega_i\) are bounded in \(L^4\) by first-derivative control. The local Euler transgression relative to the flat frame connection is obtained from the curvature of \(t\omega_i\), which is \(t\Omega_i+(t^2-t)\omega_i\wedge\omega_i\), where \(\Omega_i\) is its curvature at \(t=1\). The transgression form has norm bounded by \(C(|\omega_i||\mathrm{Rm}_{m_i}|+|\omega_i|^3)\) \cite[\S3]{ChernSimons1974Characteristic}. In full tensor norms the normalized Euler bulk expression is
+\[
+ \begin{aligned}
+ \mathcal E_i&=|W_{m_i}|_{\rm tens}^2-2|\operatorname{Ric}_{0,m_i}|^2+R_{m_i}^2/6,\\
+ |\mathrm{Rm}_{m_i}|_{\rm tens}^2+\mathcal E_i&=2|W_{m_i}|_{\rm tens}^2+R_{m_i}^2/3 .
+ \end{aligned}
+\]
+Against a fixed squared cutoff \(\zeta^2\), integration of the transgression costs at most
+\[
+ C\int\zeta |d\zeta|(|\omega_i||\mathrm{Rm}_{m_i}|+|\omega_i|^3).
+\] Young's inequality absorbs the term containing full curvature on the left. The remaining connection terms are bounded by the local \(L^4\) bound. Weyl energy is bounded by conformal invariance and scalar-square by hypothesis. Smaller balls give the full bound on each compact.
+
+In coordinates write \(\mathcal R(m)\) for the all-lowered curvature, so \(\mathcal R(m)=L(D^2m)+Q_m(Dm,Dm)\), with \(L\) constant coefficient and \(Q_m\) smooth algebraic in \(m\). Thus \(\mathcal R(m_i)\rightharpoonup\mathcal R(h)\) in \(L^2\). In the same frames let \(F_\pm(m)=P^\pm_m\mathcal R(m)\), with \(P^\pm_m\) including the Weyl projection and the factor \((\det m)^{1/4}\). Then \(|F_\pm(m)|^2dx=|W_m^\pm|^2_{\rm HS}dV_m\). Uniform metric convergence implies weak \(L^2\) convergence of \(F_\pm\).
+
+Set \(v_i=m_i-h\) and take a fixed nonnegative cutoff \(\chi\). Differentiation yields
+\begin{equation}\label{eq:relative-variation}
+ DF_\pm(m_i)[\chi v_i]
+     =\chi\big(F_\pm(m_i)-F_\pm(h)\big)+o_{L^2}(1).
+\end{equation}
+In detail, commuting \(\chi\) through \(L(D^2)\) costs \(o_{L^2}(1)\) by first-derivative convergence. The variation of \(Q_m(Dm,Dm)\) costs \(o_{L^2}(1)\) by H\"older with two \(L^4\) factors and uniform smallness of \(v_i\). The quadratic difference between \(m_i\) and \(h\) has the same bound. The projection variation costs \(C\|v_i\|_\infty\|\mathcal R(m_i)\|_2\). Also \(P^\pm_{m_i}\mathcal R(h)\to P^\pm_h\mathcal R(h)\). Extend the conformal gauge of \(m_i\) to a smooth source representative by cutting off its log factor outside the support. The Bach first variation in \(\chi v_i\) is bounded by \(C\|v_i\|_\infty\int|B_{g_i}|dV_{g_i}\). Pair \eqref{eq:relative-variation} with \(F_\pm(m_i)\) and subtract the weakly vanishing pairing with \(\chi F_\pm(h)\) to prove strong convergence. This step uses only bounded total Bach norm.
+
+For a fixed smooth compactly supported variation \(H\), \(DF_\pm(m_i)[H]\rightharpoonup DF_\pm(h)[H]\) in \(L^2\). The projection variation involves the weak curvature limit, and all remaining terms converge strongly by the coordinate formula. Pairing with the now strongly convergent \(F_\pm(m_i)\) passes the first variation to \(h\), where it vanishes by \eqref{eq:source}. Smooth extension across \(P\) gives \(B_h=0\) on \(N\).
+\end{proof}
+
+\begin{remark}
+The scalar-square bound belongs to the comparison gauge. Constant physical rescalings preserve the full curvature integral. For a variable change one can take \(m_i=e^{2\varphi_i}h\) on a fixed ball, with \(\varphi_i=i^{-3/2}\zeta\sin(ix^1)\) and \(\zeta=1\) on a smaller ball. The \(C^0\cap W^{1,4}\) difference tends to zero and the Weyl integral is unchanged, while the leading scalar term has size \(i^{1/2}\) on the smaller ball and unbounded \(L^2\) norm.
+\end{remark}
+
+\begin{proposition}[Yamabe factor and physical volume]\label{prop:factor}
+With the marked comparison, \(Y([h])\ge y\). A subsequence has a nonnegative factor limit \(u\) weakly in \(H^1_{\rm loc}\) and almost everywhere, with \(L_hu=yu^3\) weakly across the marks. If \(u\ne0\), it is smooth and strictly positive, \(\int_Nu^4dV_h=1\), and \(Y([h])=y\). In this case local convergence is strong in \(H^1\cap L^4\). If \(y<S\), convergence is strong in these norms also when \(u=0\), and then every fixed compared compact has vanishing physical volume. With smooth conformal comparisons the local convergence in each of these strong cases is smooth.
+\end{proposition}
+\begin{proof}
+The scalar density in coordinates is a divergence linear in \(Dm\) with smooth algebraic coefficients in \(m\), plus terms quadratic in \(Dm\). This follows from the coordinate scalar formula by applying the product rule to the Christoffel derivatives. The divergence coefficients converge in \(L^4\) and the quadratic ones in \(L^2\). Integrating against \(fz\), with the gradient terms estimated by \(H^1\subset L^4\), gives on each fixed relatively compact domain
+\begin{equation}\label{eq:form}
+ |(Q_{m_i}-Q_h)(f,z)|\le o_i(1)\|f\|_{H^1}\|z\|_{H^1}
+\end{equation}
+for compactly supported tests, and for one locally \(H^1\) factor by inserting a cutoff equal to one near the other's support. Transport a test by \(f/u_i\) to the source and use conformal covariance to get \(Q_{m_i}(f,f)\ge Y_i\|f\|_{4,m_i}^2\) \cite[\S2]{LeeParker1987Yamabe}. Pass to the limit and approximate closed tests by cutoffs about the smooth points whose squared gradient integrals are \(O(r^2)\).
+
+The equation \(L_{m_i}u_i=Y_i u_i^3\), tested with \(\eta^2u_i\), gives
+\[
+ Q_{m_i}(\eta u_i,\eta u_i)=Y_i\int\eta^2 u_i^4dV_{m_i}+6\int u_i^2|d\eta|_{m_i}^2dV_{m_i}.
+\]
+The right side is bounded by unit physical volume and the fixed cutoff. Form comparison and local coercivity of \(Q_h\) up to an \(L^2\) term yield local \(H^1\) bounds. Rellich compactness, convergence almost everywhere and \eqref{eq:form} pass the weak equation to \(u\) because \(u_i^3\rightharpoonup u^3\) locally in \(L^{4/3}\). Fatou gives mass at most one. Test the limiting equation with \(\eta_r^2u\), using smooth puncture cutoffs with \(\|d\eta_r\|_4\le C\). The cutoff error is bounded by \(C\|u\|_{L^4(\operatorname{supp}d\eta_r)}^2\to0\). This first gives finite energy across the marks and then the closed weak equation by vanishing point capacity. Thus
+\[
+ Y([h])\left(\int u^4dV_h\right)^{1/2}
+       \le Q_h(u,u)=y\int u^4dV_h .
+\]
+A nonzero solution has unit mass and attains the quotient. Critical regularity for the Yamabe equation follows by truncated power tests, splitting \(yu^2-R_h\in L^2\) into a bounded term and a small tail for each fixed power, followed by elliptic bootstrapping. The strong maximum principle gives positivity \cite[\S2 and after Theorem 4.1]{LeeParker1987Yamabe}.
+
+When the mass of \(u\) is one, any local vague volume limit dominates \(u^4dV_h\) and has mass at most one, so it equals this measure. Uniform convexity then gives strong local \(L^4\) convergence. Testing the difference equation with \(\eta^2(u_i-u)\), and using \eqref{eq:form}, gives strong local \(H^1\) convergence. For the strict subround assertion, put \(w_i=u_i-u\); fourth-power splitting gives \(\limsup_i\int_D|w_i|^4dV_h\le1\) on any fixed interior ball \(D\) \cite{BrezisLieb1983Functional}. Test the difference with \(\eta^2w_i\), \(\eta\in C_c^\infty(D)\). Mixed cubic terms containing a fixed \(u\) tend to zero by truncating \(u\) in \(L^4\) and using strong subcritical convergence. Up to an \(o(1)\) error from the forms and lower-order terms, the leading nonlinear term is at most \((y+o(1))\|\eta w_i\|_4^2\) by H\"older. The sharp Euclidean Sobolev inequality and smooth metric comparison on a sufficiently small \(D\) give
+\[
+ (S-\varepsilon)\|\eta w_i\|_4^2
+    \le 6\|d(\eta w_i)\|_2^2
+    \le (y+o(1))\|\eta w_i\|_4^2+o(1)
+\]
+with \(S-\varepsilon>y\) \cite[Theorem 3.3]{LeeParker1987Yamabe}\cite{Talenti1976BestConstant}. Absorb and cover each compact. Strong \(H^1\cap L^4\) also implies \(u_i^2m_i\to u^2h\) in \(W^{1,4/3}_{\rm loc}\cap L^2_{\rm loc}\), by the product rule and H\"older.
+
+For smooth comparison metrics, \(V_i=Y_i u_i^2-R_{m_i}\) converges strongly locally in \(L^2\) in each of the strong cases. In \(-6\Delta_{m_i}u_i=V_i u_i\), test with \(\eta^2u_i^{q-1}\) for fixed \(q\ge4\). The local Sobolev estimate absorbs the tail of \(V_i\) in \(L^2\) after truncating at a common level depending on \(q\). Each step bounds \(L^{2q}\) on a smaller compact in terms of \(L^q\) on the larger one. Interior elliptic estimates and bootstrapping give smooth convergence on every fixed interior compact.
+\end{proof}
+
+\section{Marked caps and the cost of evacuation}\label{sec:cap}
+
+\begin{lemma}[Closed chiral gap]\label{lem:closed-gap}
+On a smooth closed oriented homotopy four-sphere, a smooth Bach-flat metric of positive Yamabe class is conformally round or has \(E_+=E_->4\pi^2\).
+\end{lemma}
+\begin{proof}
+Below \(4\pi^2\), the full tensor Weyl integral is strictly below \(16\pi^2\chi=32\pi^2\), so the sphere theorem of Chang--Gursky--Yang gives the standard smooth sphere by simple connectivity. At equality, their equality theorem on smooth types other than \(S^4\) and \(\mathbb{RP}^4\) gives a metric conformal to Fubini--Study on \(\mathbb{CP}^2\) or conformal to a metric isometrically covered by the product \(S^3\times S^1\). The second Betti number and simple connectivity exclude those cases, respectively \cite[Theorems A and B]{ChangGurskyYang2003}. On the resulting standard \(S^4\), Chang--Chen's theorem applies to smooth positive-Yamabe Bach-flat metrics at the inclusive full tensor threshold \(32\pi^2\) and gives a round conformal class \cite[Remark 2 and Theorem 2.1]{ChangChen2021RicciSphere}.
+\end{proof}
+
+\begin{proposition}[Marked caps and smooth-type transfer]\label{prop:cap}
+For a whole marked comparison \eqref{eq:weak-marking}, let \(K_b\) be the truncation outside the disjoint open \(h\)-normal balls of radius \(b\) at \(P\). For fixed sufficiently small \(b\), every exterior is incident to exactly one marked face. These exteriors admit marked ball caps of positive Yamabe class for large \(i\) and small fixed \(b\). Their total chiral energy has iterated upper limit at most \(e-e_N\), where \(i\to\infty\) precedes \(b\downarrow0\). The raw exterior chiral energy has iterated limit exactly \(e-e_N\). If \(e-e_N<4\pi^2\), then \(M\) and \(N\) are orientation-preservingly diffeomorphic.
+\end{proposition}
+\begin{proof}
+The truncation is connected, and every exterior meets it. The Mayer--Vietoris sequence for the core and the exterior, thickened by collars, gives an exact sequence
+\[
+ 0\longrightarrow\mathbb Z^{|P|}\longrightarrow
+ \mathbb Z\oplus\mathbb Z^{\#\text{exteriors}}\longrightarrow \mathbb Z\longrightarrow0
+\]
+since \(H_1(M)=0\). Thus every exterior has one boundary sphere. Van Kampen for this star of spaces makes the component fundamental groups free factors of \(\pi_1(M)\), so each is trivial. Mayer--Vietoris in degree two gives \(H_2=0\) for each exterior. With a standard disk attached by its given spherical chart, each capped exterior is a simply connected homology four-sphere, hence a homotopy four-sphere.
+
+Here are the metric bounds for the caps. Fix a log-buffer length \(\ell\), then fix \(b\), and compare on the larger truncation with all buffers in the same source. In one smooth global representative of the source class, arranged to equal \(m_i\) on the buffers by extending the logarithm of its conformal factor, first interpolate to the exact metric \(h\) near each face. For a fixed transition profile \(\theta\), the all-lowered curvature formula used in Lemma~\ref{lem:weyl} gives
+\[
+ F_\pm(h+\theta(m_i-h))
+   =\theta F_\pm(m_i)+(1-\theta)F_\pm(h)+o_{L^2}(1).
+\]
+The commutator with the constant principal term involves \(m_i-h\) and \(D(m_i-h)\). Projection errors use the full comparison bound on this fixed buffer. Lemma~\ref{lem:weyl} gives an \(o_i(1;b,\ell)\) change in either energy. The global Yamabe lower bound changes by at most \(o_i(1;b,\ell)\). Indeed \eqref{eq:form} bounds the global form difference by a small coefficient times the gradient square on the changed patches plus \(\|f\|_4^2\). A cutoff equal to one on those patches and its complement in a squared partition of unity give a bound of this local gradient energy by \(C(Q(f,f)+\|f\|_4^2)\) in the original representative. For this, use the local form estimate and the nonnegative Yamabe form on the complementary term. The localization error is bounded by \(6\sum\|d\chi\|_4^2\|f\|_4^2\), and the fourth-power denominator changes by a factor \(1+o_i(1)\) by uniform metric convergence on the modified region.
+
+For the next splice use the exact \(h\) buffers, with \(t=\log(b/\rho)\) for normal radius \(\rho\). Then \(\rho^{-2}h\) is \(O_\ell(b^2)\)-close in \(C^2\) to \(dt^2+\gamma_{S^3(1)}\) on the buffered strip. Extend the strip gauge conformally on the retained side and splice to the exact cylinder over unit width. Attach a smooth conformally flat ball there using a cylindrical end of a rotationally symmetric ball metric. Both the original and changed unit splice have Weyl integral \(O_\ell(b^4)\). To estimate the capped Yamabe constant, choose a squared partition across length \(\ell\) in the retained buffer with gradients bounded by \(C/\ell\). Extend the exterior-supported term to the interpolated source. Compare the cap-supported term with the model conformally round cap and cylinder. The model Yamabe form dominates \(S\) times the fourth-norm squared, by conformal transport to the round sphere, and its gradient term is controlled by that model form since the model can be chosen with nonnegative scalar curvature. The \(C^2\) metric comparison and finite buffer volume give an \(o_{b\downarrow0}(1)\) loss at fixed \(\ell\) in the cap-side Yamabe bound. The localization loss is bounded by \(C\ell^{-3/2}\|f\|_4^2\) using the volume \(O(\ell)\) and H\"older. The sum of the squared-partition fourth-norm squares dominates \(\|f\|_4^2\) by the triangle inequality applied to \(f^2\). The capped Yamabe lower bound is therefore \(\min(Y_i,S)-C\ell^{-3/2}-o_{b\downarrow0}(1)-o_i(1;b,\ell)\), with the \(b\)-error at fixed \(\ell\). This proves positivity by choosing \(\ell\) first. When smooth convergence to \(h\) is available, the first interpolation may be omitted and the cylinder comparison applied directly. See also the marked-neck treatment of the same surgery \cite{Baker2026MarkedNecks}.
+
+Conformal invariance and Lemma~\ref{lem:weyl} give
+\[
+ \lim_i E_\pm(g_i;M\setminus\Phi_iK_b)
+    =e-E_\pm(h;K_b).
+\]
+The cap estimate costs \(O_\ell(b^4)+o_i(1;b,\ell)\) per face, so take \(i\to\infty\), then \(b\downarrow0\). If the residual is below \(4\pi^2\), each capped exterior is standard by the strict sphere theorem. Its cap is a given parametrized disk. Palais's extension theorem for orientation-preserving disk embeddings in a connected oriented smooth manifold extends the prescribed identification near this disk to an ambient diffeomorphism between the recognized standard sphere and the standard double of the deleted ball \cite[Theorem C]{Palais1960Extending}. Restrict to the other side and glue by the marked collar to \(K_b\). If \(P=\varnothing\), the whole closed embedding has open and closed image and is a diffeomorphism.
+\end{proof}
+
+\begin{proposition}[Evacuation penalty]\label{prop:evacuation}
+Suppose every fixed compared compact has vanishing physical volume. Along a subsequence, one marked exterior has limiting volume one at every fixed truncation of a countable exhaustion and all other exterior volumes tend to zero. Moreover
+\begin{equation}\label{eq:penalty}
+ e-e_N\ \ge\ (S^2-y^2)/48 .
+\end{equation}
+\end{proposition}
+\begin{proof}
+Use the actual one-face exteriors of Proposition~\ref{prop:cap} with a slow nested exhaustion. For each exterior choose a physical test equal to one throughout the deep exterior and zero on the core and near the splice. Place its fixed transition beyond the interpolation and splice so its support sees an unchanged physical conformal class on the capped manifold. This transition lies in a fixed compared annulus, so its gradient fourth power is bounded. By \eqref{eq:yamabe-test} its physical Dirichlet integral vanishes. If \(\lambda_j\) is the limiting physical volume of the exterior, both the square and fourth-power integrals of the cutoff tend to \(\lambda_j\). Yamabe minimality then gives \(\sqrt{\lambda_j}\le\lambda_j\). The masses sum to one. Intervening marked annuli evacuate, so the label is preserved in the nested exhaustion. This also follows from the exit tests of Section~\ref{sec:volume-witnesses}.
+
+Transport the test on the unit-volume exit to its capped exterior by conformal covariance. Its quotient tends to \(y\), so the positive cap Yamabe constant has limsup at most \(y\). Gauss--Bonnet in its own unit-volume Yamabe minimizer and \eqref{eq:budget} give cap energy at least \((S^2-Y_{\rm cap}^2)/48\). The difference between raw and capped energy is small in the iterated limit by the cap estimate. This proves \eqref{eq:penalty}.
+\end{proof}
+
+If \(e_N>0\), Lemma~\ref{lem:closed-gap} and sharp Yamabe rigidity give \(e_N>4\pi^2\) and \(y\le Y([h])<S\). Proposition~\ref{prop:cap} transfers the smooth type, since \(e-e_N<4\pi^2-\delta\). Then \(I^+(M)\le e_N\) by the positive class on \(N\). If the minimizing excess \(e-I^+(M)\) is below \((S^2-y^2)/48\), the zero alternative of Proposition~\ref{prop:factor} contradicts Proposition~\ref{prop:evacuation}. At exact minimization \(e=e_N\). Alternatively, when \(y<S\), the stated volume witness gives a nonzero factor directly. Its saturating class on \(N\) is nonround since \(Y([h])=y<S\), so the same cap argument applies. These arguments give the first two claims of Theorem~\ref{thm:marked-recovery} except for its distance assertion.
+
+
+For a uniform near-minimizing version, the exactly Bach-flat gap in
+the fixed band gives \(Y([h])\le S-d_\delta\) for some \(d_\delta>0\)
+whenever the marked base is nonround. This bound for \emph{closed
+exactly critical classes} follows from the exact compactness
+alternative and the smooth full-core ALE end and compactification
+results in \cite[\S12.2]{Baker2026TwistorSections}. It makes
+\(\big(S^2-(S-d_\delta)^2\big)/48\) a sufficient uniform excess
+threshold in Theorem~\ref{thm:marked-recovery} on such bases.
+
+\section{Physical distances and curvature}\label{sec:distance}
+
+\begin{proposition}[Ambient measured limit]\label{prop:distance}
+Under the whole marked comparison, suppose the limit factor in Proposition~\ref{prop:factor} is positive. With \(k=u^2h\), the original physical spaces \((M,d_{g_i},dV_{g_i})\) converge along the saturating subsequence in measured Gromov--Hausdorff distance to \((N,d_k,dV_k)\).
+\end{proposition}
+\begin{proof}
+First improve the factor estimates on fixed coordinate balls. In \(-6\Delta_{m_i}u_i=V_i u_i\), \(V_i=Y_i u_i^2-R_{m_i}\); the scalar-density part of \eqref{eq:form} and strong \(u_i^2\to u^2\) in \(L^2\) imply for compactly supported \(z\)
+\begin{equation}\label{eq:potential}
+ \left|\int V_i z^2dV_{m_i}\right|
+     \le o_i(1)\|dz\|_2^2+C\|z\|_2^2 .
+\end{equation}
+Indeed subtract the smooth limiting potential density and use the fixed-chart Sobolev inequality. Test with \(\eta^2u_i^{q-1}\) for each fixed successive power \(q=4,8,\ldots\). For \(v=u_i^{q/2}\), ellipticity and Young's inequality bound \(c_q\|d(\eta v)\|_2^2\) by the potential form on \(\eta v\) plus \(C_q\int |d\eta|^2v^2\). At each fixed power absorb \eqref{eq:potential} for large \(i\) and use Sobolev on a smaller ball to double the available exponent. Finitely many nested steps give boundedness in any finite \(L^Q_{\rm loc}\) and interpolation gives strong convergence in every finite \(L^q_{\rm loc}\).
+
+In coordinates \(A_i=\sqrt{\det m_i}\,m_i^{-1}\). On sufficiently small fixed balls choose coordinates so that the smooth limit coefficient is the identity at the center. Then \(\|A_i-I\|_\infty\) is arbitrarily small for large \(i\). For any finite \(Q\ge16\), the undifferentiated right-hand side is bounded in \(L^s\), where \(1/s=1/2+1/Q\), by the scalar \(L^2\) bound and \(u_i\in L^Q\). Localizing \(w=\eta u_i\) adds an \(L^2\) term involving \(du_i\cdot A_i d\eta\) and the divergence of an \(L^Q\) field involving \(u_i A_i d\eta\). For \(1/p_*=1/4+1/Q\) the constant-coefficient bound for \(-\Delta w=f+\operatorname{div}G\) is
+\[
+ \|dw\|_{p_*}\le C(\|f\|_s+\|G\|_{p_*}) .
+\]
+Here \(1/s=1/p_*+1/4\), so Sobolev duality represents \(f\) as a divergence of an \(L^{p_*}\) field. The second derivatives of the Newtonian inverse are bounded on \(L^{p_*}\) by the homogeneous singular-integral theorem \cite[Chapter I, Theorem 1]{CalderonZygmund1952Singular}. Put \((A_i-I)dw\) into \(G\) and absorb by coefficient smallness. Each compactly supported \(w\) is smooth, so this is an a priori estimate. Interpolate the resulting gradient bound with strong \(H^1\) convergence to get
+\begin{equation}\label{eq:p-gradient}
+ u_i\longrightarrow u\quad\text{in }W^{1,p}_{\rm loc},
+ \qquad 1\le p<4.
+\end{equation}
+The estimate uses finite \(Q\) and stops below the critical endpoint \(p=4\).
+
+For the distance lower bound set \(K_b=N\setminus\bigcup_{a\in P}B_k(a,b)\) with small disjoint smooth balls. The topology argument of Proposition~\ref{prop:cap} applies to these cuts. At fixed \(b,\varepsilon>0\), the bad set where \(|u_i-u|>\varepsilon\) in \(K_b\) can be covered by balls with sum of radii tending to zero. In a chart multiply the difference by a cutoff equal to one on the smaller chart and extend by zero. Fixed-radius averages tend uniformly to zero. If the localized difference \(f_i\) is bad at a point, some dyadic ball about it has \(\int_{B_r}|df_i|^p\ge c\varepsilon^p r\). Otherwise consecutive dyadic averages differ by at most \(C c^{1/p}\varepsilon r^{1-3/p}\) by Poincar\'e. This geometric series for \(p>3\) contradicts the point value for small \(c\) and large \(i\). A disjoint ball selection with fivefold dilates covering the bad set gives sum of radii at most \(C\varepsilon^{-p}\|df_i\|_p^p=o_i(1)\). Take finitely many charts and compare to \(d_k\).
+
+Fix \(x\in K_b\) and let \(F(z)=d_k(x,z)\). Its images of the bad balls and of the boundary spheres lie in open intervals with total length at most \(o_i(1;b,\varepsilon)+C|P|b\), uniformly in \(x\). For their union \(J\), set \(G(t)=\int_0^t 1_{\mathbb R\setminus J}(s)\,ds\). The function \(G\circ F\) is constant near each bad point and on each marked face. Extend its transported value by that constant across the corresponding exterior, using the one-face property. The resulting function is locally Lipschitz and has physical gradient bounded by \(1+C\varepsilon+o_i(1;b)\), by uniform \(m_i\to h\) and \(u_i\ge u-\varepsilon\) where it can have gradient. The constant extensions satisfy the same bound, hence the global physical Lipschitz bound follows from the length characterization. Between \(\Phi_i(x)\) and \(\Phi_i(z)\), the function difference is at least \(d_k(x,z)-|J|\). This estimates ambient distances even for paths entering the exterior.
+
+For the upper bound approximate a nearly minimizing \(k\)-path between fixed endpoints by finitely many coordinate line segments in \(N-P\). Smooth detours around the finite marks give paths of arbitrarily small length excess. Replace each segment by two segments through a point in a small fixed ball near its midpoint. Their limiting \(k\)-lengths are uniformly close to the original segment length as the midpoint ball shrinks. Averaging the physical length error uses the kernel \(|w-x|^{-3}\) obtained by polar integration about an endpoint \(x\). This kernel is in \(L^{q'}\) on bounded charts for \(q>4\), so strong \(L^q\) convergence of \(u_i\) and uniform convergence of \(m_i\) give a broken path with vanishing length error. For endpoints a small coordinate distance \(r\) apart one can use a midpoint ball of radius comparable to \(r\); the same integration and H\"older bound the ambient physical distance by \(C\|u_i\|_q r^{1-4/q}\) on a larger chart. This gives equicontinuity and the finite-net argument makes the upper bound uniform on each fixed \(K_b\).
+
+By volume saturation the physical complement has volume \(O(b^4)+o_i(1;b)\). The source small-ball lower bound implies that every physical point is within \(O(b)+o_i(1;b)\) of the core, and an exterior point is within that distance of its own face. Indeed a ball centered at an exterior point of radius below its distance to the core lies in the exterior. Send core points back by \(\Phi_i^{-1}\) and each open exterior to its mark. Choose \(b_i\downarrow0\) slowly enough for all preceding estimates, then the resulting maps have vanishing distance distortion and dense images in the limit. The local density convergence on fixed compacts and the vanishing exterior volume give weak convergence of their pushed-forward physical measures to \(dV_k\).
+\end{proof}
+
+\begin{proposition}[Physical curvature at equal chiral energy]\label{prop:physical-curvature}
+Assume the saturation in Proposition~\ref{prop:distance} and \(e=e_N\). On each fixed compact in the marking,
+\[
+ \operatorname{Ric}_{0,k_i}\to\operatorname{Ric}_{0,k},\qquad
+ u_i^{-2}\mathcal R(k_i)\to u^{-2}\mathcal R(k)
+       \quad\text{strongly in }L^2(h).
+\]
+The physical full-curvature densities converge strongly locally in \(L^1\), and
+\[
+ \lim_{b\downarrow0}\limsup_i \int_{M\setminus\Phi_i K_b}
+             |\mathrm{Rm}_{g_i}|_{\rm tens}^2dV_{g_i}=0 .
+\]
+\end{proposition}
+\begin{proof}
+For \(T_i=\operatorname{Ric}_{k_i}\) with both indices down, \(|T_i|_{m_i}^2dV_{m_i}=|T_i|_{k_i}^2dV_{k_i}\), so the source bounds give weak \(L^2\) compactness on the comparison. The conformal formula is
+\[
+ u_i^2T_i=u_i^2\operatorname{Ric}_{m_i}-2u_i\nabla^2_{m_i}u_i
+ +4du_i\otimes du_i-(u_i\Delta_{m_i}u_i+|du_i|_{m_i}^2)m_i.
+\]
+The comparison Ricci tensors converge weakly in \(L^2\) by the all-lowered formula and uniform convergence of inverse metrics. Strong \(L^2\) convergence of \(u_i^2\) passes the curvature products to distributions. Products of first derivatives of \(u_i\) converge in \(L^1\). In the Hessian write \(u_i\partial_a\partial_bu_i=\partial_a(u_i\partial_bu_i)-\partial_a u_i\partial_bu_i\). Here \(u_i du_i\to u\,du\) in \(L^{4/3}\), and the differentiated algebraic coefficients converge in \(L^4\). This also treats the Christoffel and trace terms. Hence positivity of \(u\) identifies every weak limit of \(T_i\) as \(\operatorname{Ric}_k\). Subtract \(Y_i u_i^2m_i/4\), strongly converging in \(L^2\), to get weak local convergence of the trace-free tensors.
+
+By \eqref{eq:budget} and \(e=e_N\), the global physical squared trace-free Ricci integrals converge to that of \(k\). Weak lower semicontinuity on compact domains and exhaustion of their complements in \(N-P\) give convergence of the local norms. The quadratic norm coefficients converge uniformly for the comparison metrics. This proves local strong convergence and vanishing total exterior trace-free Ricci energy in the exhaustion. Both chiral energies exhaust by Lemma~\ref{lem:weyl} and equality of totals. Scalar-square energy exhausts by volume saturation and constant scalars. In full tensor norms
+\[
+ |\mathrm{Rm}|_{\rm tens}^2
+ =4(|W^+|_{\rm HS}^2+|W^-|_{\rm HS}^2)+2|\operatorname{Ric}_0|^2+R^2/6 .
+\]
+For the tensor statement, \(u_i^{-2}W(k_i)=W(m_i)\) with all indices down. The corresponding Ricci and scalar terms are fixed multiples of \(m_i\mathbin{\wedge}\operatorname{Ric}_{0,k_i}\) and \(Y_i u_i^2m_i\mathbin{\wedge} m_i\), with \(\mathbin{\wedge}\) the Kulkarni--Nomizu product. Each converges strongly by the preceding results. Its squared norm in the comparison gauge is precisely the physical full-curvature density. This proves Theorem~\ref{thm:marked-recovery}.
+\end{proof}
+
+\section{Smooth comparisons, Green limits, and the round case}\label{sec:smooth}
+
+\subsection{Smooth physical bases and disjoint components}
+
+A smooth physical comparison has \(u_i=1\). In particular the limiting metric already has scalar curvature \(y\) and volume one by Proposition~\ref{prop:factor}. A smooth conformal comparison with nonzero limit factor becomes a smooth physical comparison to \(u^2h\). At the round value \(y=S\) and with a physical limit, the sharp Yamabe theorem identifies its conformal class with the round sphere. The metric itself has constant positive sectional curvature: \(W=0\), \(R=S\), and \eqref{eq:budget} on the base gives \(\operatorname{Ric}_0=0\). The source Yamabe supremum is then \(S\) since \(Y_i\to S\). No source conformal class in the stated band achieves this value.
+
+\begin{proposition}[Obstruction to a disjoint smooth component]\label{prop:ale-exclusion}
+Suppose on the same sequence there is an oriented smoothly embedded comparison on whole fixed compact truncations of a complete, nonflat scalar-flat ALE limit \((X,g_X)\) at a length scale \(\lambda_i\downarrow0\). Assume the limit has one differentiably Euclidean end of positive order and the conformal compactification is a smooth closed homotopy four-sphere. Under \eqref{eq:source}, a full smooth pointed rescaling with whole embedded compact truncations and finitely many positive-order differentiable ALE ends has the required one-ended topology and smooth compactification by \cite[\S\S11.3--11.4]{Baker2026TwistorSections}. If the comparison interiors for \(X\) and the marked base are disjoint at each fixed pair of truncations, then \(X\) cannot coexist with a nonround marked base or with any physically saturated marked base. When \(y=S\), the same exclusion of \(X\) holds without a base.
+\end{proposition}
+\begin{proof}
+Smooth convergence after constant rescaling and the invariant Bach norm give exact Bach-flatness on \(X\), hence on the smooth compactification by conformal covariance and continuity. Compactly supported transported tests give \(Y_c(X,g_X)\ge y\), and this equals the Yamabe constant of the compactification, by conformal covariance and a smooth point cutoff of vanishing \(H^1\) capacity. The scalar-flat Euler identity with \(\chi(X)=1\) and one Euclidean end yields \(\int|\operatorname{Ric}_{g_X}|^2=4e_X\), where \(e_X=E_\pm(g_X)\) by compactification and closed signature. Nonflatness implies \(e_X>0\), so Lemma~\ref{lem:closed-gap} gives \(e_X>4\pi^2\). Disjoint compact comparisons followed by exhaustion give \(e_N+e_X\le e\). If \(e_N>0\) the two strict gaps violate the band. If a saturated base is round, \(y=S\). Already \(Y_c(X,g_X)\ge S\) contradicts strict sharp Yamabe rigidity on the nonround compactification. No disjointness is needed for this last argument.
+\end{proof}
+
+\begin{remark}
+A smooth conformal comparison can be evacuated on any supplied source sequence. In an oriented normal chart choose \(\Phi_i(x)=\exp^{g_i}_{q_i}(\lambda_i x)\) on growing Euclidean balls, with \(\lambda_i\) sufficiently small that \(\lambda_i^{-2}\Phi_i^*g_i\to\delta\) smoothly on compacts and the physical volume of each whole image tends to zero. In the stereographic model \(\omega=2/(1+|x|^2)\), set \(m_i=\omega^2\lambda_i^{-2}\Phi_i^*g_i\) and \(u_i=\lambda_i/\omega\). This gives a round comparison limit with no physical-volume witness and no fixed compact Weyl witness. It preserves every source-only bound of the input sequence. At \(y=S\), Proposition~\ref{prop:factor} still gives saturation if \(u\ne0\); the subround absorption does not apply in general at the round value. In a smooth comparison a volume atom of mass \(a>0\) on an interior chart satisfies \(S\sqrt a\le ya\). This follows by testing the factor equation with a squared cutoff around the point and taking the source limit and then the cutoff radius to zero, using strong local \(L^2\) convergence for the bounded scalar term and the gradient error. Thus an interior atom at the round value would carry the whole mass.
+\end{remark}
+
+\subsection{The Green limit of an evacuated smooth comparison}
+
+\begin{proposition}[Green pole at the physical exit]\label{prop:green}
+Let the marked comparison be smooth, \(y<S\), and \(u=0\). Fix \(x_0\in N-P\) and set \(c_i=u_i(x_0)\). On a subsequence the rescaled physical metrics \(c_i^{-2}k_i\) converge smoothly on fixed compacts to \(w^2h\), where
+\[
+ w=G_h(p_*,\cdot)/G_h(p_*,x_0),\qquad L_hG_h(p,\cdot)=24\pi^2\delta_p .
+\]
+Here \(p_*\) is the mark whose exterior carries unit physical volume. The limit is scalar-flat and Bach-flat and extends smoothly at the other marks as an intrinsic metric. With those points filled it has a complete unquotiented Euclidean end of positive differentiable order. Its trace-free Ricci integral is \(4e_N\), giving \eqref{eq:penalty} independently of the cap proof.
+\end{proposition}
+\begin{proof}
+By Proposition~\ref{prop:factor}, \(u_i\to0\) smoothly on interior compacts. The ratio \(w_i=u_i/c_i\) solves
+\[
+ -6\Delta_{m_i}w_i+(R_{m_i}-Y_i u_i^2)w_i=0,qquad w_i(x_0)=1.
+\]
+On a connected precompact set joining a comparison compact to \(x_0\) the coefficients are uniformly elliptic and smoothly bounded. The interior Harnack inequality for positive solutions with bounded zeroth-order coefficients and elliptic estimates give smooth subsequential convergence on compact subsets to \(w>0\), \(L_hw=0\) \cite[Theorem 8.20]{GilbargTrudinger2001Elliptic}.
+
+Here is the isolated-singularity calculation. Coercivity of \(L_h\) follows from \(Y([h])>0\), bounded scalar, and compactness. At a mark solve \(L_h q=0\) on a small normal ball with boundary value one. Coercivity and the strong maximum principle give \(q>0\). Put \(f=w/q\). Then \(\operatorname{div}_h(q^2\nabla f)=0\) on the punctured ball. Its outward flux \(\mathcal F\) through each normal sphere is constant. The weighted mean \(M(r)=r^{-3}\int_{S_r}q^2f\,dS_h\) satisfies \(M'(r)=r^{-3}\mathcal F+b(r)M(r)\) with \(b\) bounded, since the logarithmic radial derivative of the positive angular density \(q^2r^{-3}dS_h\) is bounded. Integrating gives \(M(r)=-\mathcal F/(2r^2)+O(r^{-1}+1)\), with \(M(r)=O(1)\) if \(\mathcal F=0\). Positivity gives \(\mathcal F\le0\), while rescaled annular Harnack and interior estimates give \(f=O(r^{-2})\) and \(df=O(r^{-3})\). Integration by parts gives \(L_hw=-6\mathcal F\delta_p/q(p)\) at the mark. In the boundary term, replacing a smooth test by its point value has error \(O(r)\), so the distribution contains only a nonnegative point mass.
+
+The Green kernel with the given normalization has leading term \(r^{-2}\), since the outward flux of \(-6\,d(r^{-2})\) is \(24\pi^2\). For example subtract a cutoff of that term. Its remaining forcing is \(O(r^{-2})\) with differentiated bounds, hence in \(L^{4/3}\), and the correction from coercivity lies in \(H^1\subset L^4\). On rescaled annuli the correction has \(L^4\) norm \(O(r^{-1})\), so elliptic estimates give \(D^j(G_h-r^{-2})=O(r^{-1-j})\) for each fixed order. The maximum principle gives positivity after using the leading term on small inner spheres. Uniqueness of the inverse of \(L_h\) gives a sum of these kernels with nonnegative coefficients. There is at least one positive coefficient. Inversion at a pole gives a complete Euclidean end with differentiated metric error \(O(R^{-1})\); the other marks of zero coefficient are intrinsically smooth. The scalar vanishes by the conformal Laplacian equation and the Bach tensor by conformal covariance. These estimates also follow from the conformal normal-coordinate Green expansion \cite[Lemma 6.4 and Theorem 6.5]{LeeParker1987Yamabe}.
+
+At each fixed truncation the unique volume exit exists by Proposition~\ref{prop:evacuation}. Let \(\chi\) equal one outside a buffered collar of that exit and vanish farther within that exit. Its physical support volume tends to zero. The gradient square integral is \(O(c_i^2)\) by smooth convergence of \(c_i^{-2}k_i\) on its fixed transition. By the same Yamabe test as in \eqref{eq:yamabe-test},
+\[
+ Y_i\big(1-\operatorname{Vol}_{g_i}(\operatorname{supp}\chi)^{1/2}\big)
+       \|\chi\|_{4,g_i}^2\le6D(\chi)=O(c_i^2).
+\]
+Thus \(c_i^{-2}g_i\)-volume of the region where \(\chi=1\) is bounded. At any other mark a positive Green pole would give infinite volume there after fixed-annulus convergence and exhaustion. Hence the unique pole is precisely the volume exit. This identification concerns the given punctured comparisons; smoothness at a filled point does not supply a source embedding across it.
+
+The squared Ricci integral of the model is finite by differentiated decay, and is controlled by the source trace-free Ricci integral using fixed compared compacts, constant rescaling and scalar-flatness. For clarity, if a scalar-flat Green model had \(\ell\) positive poles, its intrinsic truncation would have \(\chi=2-\ell\) and each Euclidean end would contribute \(8\pi^2\) to the Euler boundary term in the convention of \eqref{eq:budget}. Its two chiral integrals are those of \(h\). Thus
+\[
+ D_X=4e_N+32\pi^2(\ell-1)\le 4e+y^2/12-32\pi^2 .
+\]
+Here the Euclidean boundary contribution is fixed by applying Gauss--Bonnet to a flat ball and by differentiated end convergence \cite[\S7]{TianViaclovsky2005ALE}. The inequality alone already forces \(\ell=1\) under the stated source band. It gives \eqref{eq:penalty}. The Green model uses the same comparison images as the marked conformal base, so this is a transfer of the Ricci budget on those images.
+\end{proof}
+
+\subsection{Curvature atoms and a round restart}
+
+\begin{proposition}[Defect measures for smooth physical convergence]\label{prop:atoms}
+Assume a whole smooth physical comparison, with limit \(k\). Under the approximate maps of Proposition~\ref{prop:distance}, along a subsequence the physical curvature measures on \(N\) have limits
+\[
+\begin{aligned}
+ |W^\pm|_{\rm HS}^2dV &\rightharpoonup |W_k^\pm|_{\rm HS}^2dV_k+\sum_{p\in P}e_p\delta_p,\\
+ |\operatorname{Ric}_0|^2dV &\rightharpoonup |\operatorname{Ric}_{0,k}|^2dV_k+4\sum_{p\in P}e_p\delta_p,\\
+ |\mathrm{Rm}|_{\rm tens}^2dV &\rightharpoonup |\mathrm{Rm}_k|_{\rm tens}^2dV_k+16\sum_{p\in P}e_p\delta_p ,
+\end{aligned}
+\]
+where \(e_p\ge0\) and \(\sum_p e_p=e-E_+(k)\).
+\end{proposition}
+\begin{proof}
+Away from the marks this is local smooth convergence and on each exterior the scalar-square mass tends to zero in exhaustion. Use the Cartesian spin frames and signed-charge estimate of Proposition~\ref{prop:charge} on each one-face physical exterior. On a fixed small face its error is \(O(b^4)+o_i(1;b)\); its physical volume is also \(O(b^4)+o_i(1;b)\). Thus its limiting chiral masses agree and each is one quarter of its trace-free Ricci mass. The full tensor decomposition then gives the coefficient \(16\). The sum follows from total mass.
+\end{proof}
+
+In particular a unit-volume round physical base may have a positive curvature defect. Proposition~\ref{prop:ale-exclusion} excludes the specified smooth nonflat ALE models there. For a nonstandard \(M\) with \(e=I^+(M)\) the given round physical comparison permits a same-type restart at one mark. Indeed, build all caps on a slow sequence with \(\ell\to\infty\) and sufficiently slow shrinking radii. Their Yamabe constants tend to \(S\), their chiral energy changes are \(o(1)\), and their total Bach norms tend to zero: in the smooth physical comparison the normalized unit splices converge in \(C^4\) to the conformally flat product, with the retained region only conformally changed. The central filling is standard. Each capped exterior of energy below \(4\pi^2\) is standard. At most one exterior cap can reach \(4\pi^2\) because of the strict total band. At least one cap is nonstandard because the connected sum with the marked standard pieces recovers \(M\), using the disk extension in Proposition~\ref{prop:cap}. The surviving cap therefore has the original oriented type. Its chiral energy is at least \(I^+(M)\) by its positive class, so all remaining exterior energies vanish. Pass to a subsequence for the label of this one mark. The survivor can be put in its unit-volume Yamabe minimizing gauge, which preserves the chiral energy and total Bach norm. This gives a restart with the same limiting energy, and supplies no strict decrease. See the companion marked-neck paper for the cap construction at the physical scale \cite{Baker2026MarkedNecks}.
+
+In that single-atom case one can choose a source scale using fixed chiral mass. For \(0<\eta<e\), let \(\rho_i\) be the least radius for which a physical ball has \(E_+=\eta\), choosing a maximizing center at that radius. The continuous maximum over centers and the continuous ball integrals justify the choice. Saturation and smooth physical comparison give exterior diameter \(O(b)+o_i(1;b)\), since the depth bound in Proposition~\ref{prop:distance} connects exterior points to their face, whose intrinsic diameter is \(O(b)+o_i(1;b)\). Thus \(\rho_i\to0\) and the centers approach the atom under the approximate maps. At rescaling \(\rho_i^{-2}g_i\) the chosen unit ball has that mass and no unit ball has more. The rescaled scalar tends to zero and physical noncollapse persists at fixed scales. A positive mass ball in the source becomes a positive-curvature region in a comparison limit only with justified convergence or tightness of that curvature measure.
+
+\section{Collars, signed curvature, and conformal currents}\label{sec:collars}
+
+\subsection{First-order geometric data on supplied strips}
+
+\begin{proposition}[Buffered strip and spin transfer]\label{prop:spin-strip}
+On a supplied oriented Euclidean comparison annulus write \(G=\delta+v\), \(a=\|v\|_\infty\) and \(K=\|D^2v\|_2\) in the buffered annulus. Assume \(a\) is sufficiently small and \(\|\eta Dv\|_4^2\le Ca(K+a)\) for a cutoff equal to one on a chosen logarithmic strip of length at least two. With \(\rho=\rho_0e^t\), let \(H=\rho^{-2}G\) in cylinder coordinates, \(H_0=dt^2+\gamma\), and define
+\[
+ \varepsilon_D=\|H-H_0\|_\infty+
+    \sup_{1\le |J|\le 2}\|\nabla^0(H-H_0)\|_{L^4(J\times S^3)} .
+\]
+In the fixed symmetric spin gauge the Dirac perturbation has \(H^1\to L^2\) norm at most \(C\varepsilon_D\le C(a+\sqrt{a(K+a)})\), independently of physical radius or length.
+
+On a supplied embedded smooth ALE end with an unquotiented spherical link, constant comparison length scales \(\lambda_i\to0\), and differentiated decay \(D^j(G_X-\delta)=O(r^{-\alpha-j})\) through order four, there is a slow diagonal of embedded strips \(A\le r\le A_i\), \(A_i\to\infty\), \(\lambda_i A_i\to0\). The cylinder metric is \((\lambda_i r)^{-2}\) times the physical metric and its product coefficient errors through order four are \(O(r^{-\alpha})\). The entire embedded strip has full Weyl integral at most \(C A^{-2\alpha}\).
+\end{proposition}
+\begin{proof}
+In the polar unit frame of the normalized metric, \(|H-H_0|\le C|v|\) and \(|\nabla^0(H-H_0)|\le C(\rho|Dv|+|v|)\). The derivative term has invariant fourth power under \(dV_{H_0}=\rho^{-4}dx\). The remaining polar-frame term is bounded by \(Ca\) on every unit to two-unit slab. The metric frame is obtained by the positive inverse square root, whose derivative has size \(C|\nabla^0(H-H_0)|\). In the corresponding spin gauge the resulting first-order coefficient error has size \(C|H-H_0|\) and its zeroth-order error is bounded by \(C|\nabla^0(H-H_0)|\). This follows from the Koszul formula and the spin action of the skew orthonormal connection difference \cite[Proposition 1.6 and \S2]{BourguignonGauduchon1992}. Apply \(H^1\subset L^4\) on slabs of bounded length and sum the squared bounds. The source has a unique spin structure and the simply connected buffered strip has the ordinary product spin structure, with a common choice of lift on the two ends.
+
+On the ALE end, for each large fixed \(A_j\) impose on the complete buffered truncation a weighted comparison \(C^4\) error at most \(A_j^{-\alpha}\) as well as \(\lambda_i A_j\le A_j^{-1}\). These finitely many estimates per truncation hold at sufficiently large indices. Retain the largest available level through a strictly increasing sequence of thresholds. Multiplication by the inverse squared physical radius and substitution of \(\log r\) gives the stated product decay. Since the cylinder is conformally flat, its Weyl tensor is \(O(r^{-\alpha})\); integration in \(d\log r\) gives the bound. A fixed strip in a compactification-normal chart also has the desired smallness. If the smooth compactifying metric is \(a_X^2G_X\) and the compactification radius is \(s e^{-t}\), the exact cylinder factor is \(a_X/(\lambda_i s e^{-t})\) on the physical pullback and the jet error at fixed width is \(O(s^2)+o_i(1;s)\).
+\end{proof}
+
+For a normalized gauge \(H=\Omega^2G\), the spinor and Dirac image weights are \(\Omega^{-3/2}\) and \(\Omega^{-5/2}\) in the conformal spin lift. In the radial gauge the reference trace on an end is \(\rho^{3/2}\) times the transported physical field in fixed \(H^{1/2}(S^3)\); the area factor \(\rho^{-3}\) exactly cancels the field weight in squared slice \(L^2\). The reference outward normals are \(-\partial_t\) and \(+\partial_t\). On the round physical base a smooth field across a puncture gives a normalized trace of size \(O(b^{3/2})\). A Dirac Green pole with nonzero leading term of physical size \(b^{-3}\) gives \(O(b^{-3/2})\) in that normalized trace, with smooth angular profiles measured in the round frame \cite[\S4.1]{Baker2026DiracYamabe}. These are transported traces of the specified fields. Coupling to an adjoining solution requires its actual trace in the same marking.
+
+A second usable comparison is available on any fixed buffered cylinder where \(\|H-H_0\|_{C^4}\le\eta\). Normal flow from one seed slice moves the two cuts by \(O_L(\eta)\) and gives \(ds^2+g_s\) with \(C^2\) metric error \(O_L(\eta)\), by the geodesic equation and its differentiated flow estimates on length \(L\). In the parallel spin frame the volume-half-density conjugation cancels the scalar mean-curvature term. The normal operator on fixed slice \(H^1\to L^2\) spaces is \(\partial_s+A_s\), where \(\|A_s-A_{\rm rd}\|+\|\dot A_s\|=O_L(\eta)\) in these norms by the \(C^2\) comparison and the frame transport equation \(\partial_s E=-\tfrac12g_s^{-1}\partial_s g_s E\) \cite[(3.6), (4.1) and \S5]{BaerGauduchonMoroianu2005Cylinders}. The signed round tangential spectrum has gap \(3/2\) \cite[Theorem 1]{Bar1996SphereDirac}. Its graph estimate and the coefficient bounds give a gap of at least \(3/4\) and \(\|v\|_{H^1}\le2\|A_sv\|_2\) for small \(\eta\), hence \(|\langle v,\dot A_s v\rangle|\le O_L(\eta)\|A_sv\|_2^2\). The fixed-product and varying-slice boundary estimates for these data are developed in \cite{Baker2026DiracTransmission}.
+
+\subsection{Coverage and one separating cut}
+
+Suppose two buffered oriented collar images lie in a connected actual two-face interface, with one reaching the inner boundary and the other the outer boundary, on the prescribed inward sides. If each full free face is in the relative interior of the other collar image, their union is both relatively open and closed and covers the interface. A sufficient ordering criterion in a supplied common height with connected levels is that the infimum of the height of the inner collar's free face exceed the supremum on the outer collar's free face. Each level below the first infimum, or above the second supremum, intersects the appropriate collar and meets no free face there, so the entire connected level is covered. In comparison scales \(r_i\ll R_i\), this can be checked if the free-face heights are within errors \(\eta_{i,\pm}\) of \(\log(r_i A_i)\) and \(\log(R_i/B_i)\), respectively, and \(\log(r_i A_i B_i/R_i)>\eta_{i,-}+\eta_{i,+}\). On overlaps the actual transition \(\Psi=(F^+)^{-1}F^-\) obeys \(\Psi^*H^+=(\rho^-/\rho^+\circ\Psi)^2 H^-\); compatible spin lifts and first derivatives of this change are further data for a common operator estimate.
+
+Independent fixed-compact comparisons can leave an uncovered middle. Under supplied separated placement, slow diagonal collars with end bounds \(CL^{-2\alpha}\) on the Euclidean side and \(CL^{-4}\) towards a smooth normal puncture bound the interface energy by their sum plus the actual uncovered energy, with \(L\) fixed before the source limit. To see why smooth fixed-compact convergence alone cannot remove the last term, translate one compactly supported smooth perturbation of the round cylinder with nonzero Weyl tensor into the middle of cylinders of diverging length, and return to the physical gauge by multiplying by the square of the radius. The metrics can equal a reference flat metric on both end neighborhoods. The perturbed shell carries its fixed nonzero Weyl integral by conformal invariance and translation. This model tests end comparison without the Yamabe minimizing or Bach hypotheses in \eqref{eq:source}.
+
+Conditionally, one buffered cut separating two fixed positive chiral masses can suffice on a minimizing sequence. If both capped sides have positive Yamabe sign and their energies exceed the raw energies by at most \(\gamma_i\to0\), at least one cap is standard by the strict band and sphere theorem. The remaining cap has the source smooth type by marked gluing, so its energy is at least \(I^+(M)\). The smaller raw side thus has mass at most \(E_i-I^+(M)+\gamma_i\). In particular a positive middle mass cannot have two positive restricted quantile sets separated by such a cut at exact minimization. A large logarithmic gap between quantile radii permits averaging the full-curvature budget on disjoint blocks, while extracting an actual cut on a selected block needs a metric chart and a spherical marking \cite{Baker2026MarkedNecks}. In the exact Bach-flat setting the available annular theorem additionally uses its annular component and inner area assumptions \cite[Theorem 3.1]{ChangQingYang2006Gap}.
+
+\subsection{The physical signed charge}
+
+\begin{proposition}[Physical boundary frames and charge]\label{prop:charge}
+On a smooth source domain \(U_i\) with marked physical spherical faces, suppose each buffered face after constant scale normalization is \(C^2\)-close to a Euclidean unit shell, with errors \(\varepsilon_j\). Use the Cartesian half-spin frames at the faces and put
+\[
+ Q_\pm(U_i)=E_\pm(g_i;U_i)+\tfrac{Y_i^2}{48}\operatorname{Vol}_{g_i}(U_i)
+             -\tfrac14\int_{U_i}|\operatorname{Ric}_{0,g_i}|^2dV_{g_i}.
+\]
+Then the distance of \(Q_\pm(U_i)\) to \(8\pi^2\mathbb Z\) is bounded by \(C\sum_j(\varepsilon_j^2+\varepsilon_j^3)\). If \(\operatorname{Vol}_{g_i}(U_i)\le\delta/(16\pi^2)\) and the boundary error is below \(\delta/2\), the relative integer is zero and the same error bounds \(|Q_\pm(U_i)|\).
+\end{proposition}
+\begin{proof}
+Lift the Cartesian frame formed by the positive inverse square root of the unit-shell coordinate metric. The induced \(\mathrm{SU}(2)_\pm\) connection matrices \(A_\pm\) have \(L^3\) norm \(O(\varepsilon_j)\) and \(d_\Sigma A_\pm\) have \(L^{3/2}\) norm \(O(\varepsilon_j)\). These norms are unchanged by constant physical rescaling on the face. With anti-Hermitian rank-two trace, \(\operatorname{CS}(A)=\operatorname{tr}(A\wedge dA+\tfrac23A^3)\) has integral of size \(O(\varepsilon_j^2+\varepsilon_j^3)\) by H\"older. The curvature of the chiral spin connection has signed Chern--Weil density \(\mp\operatorname{tr}(F_\pm\wedge F_\pm)\) equal to the integrand of \(Q_\pm\); this follows by taking the difference of the squared norms of its self-dual and anti-self-dual two-form blocks, using the scalar and trace-free Ricci blocks of the curvature operator. Relative Chern--Weil in the given boundary frames gives \(Q_\pm=8\pi^2j_\pm\mp\int_{\partial U_i}\operatorname{CS}(A_\pm)\) for a signed relative integer \(j_\pm\) \cite[\S3]{ChernSimons1974Characteristic}\cite{Baker2026DiracTransmission}. The integer does not require boundary frame extension across \(U_i\). In the physical Yamabe gauge, \eqref{eq:budget} bounds the charge from below by \(-(8\pi^2-\delta)\) and from above by \(8\pi^2-\delta+8\pi^2\operatorname{Vol}_{g_i}(U_i)\). This interval and the boundary error exclude every nonzero relative integer.
+\end{proof}
+
+For a residual between supplied disjoint smooth AE and ordinary normal physical faces at radii \(\lambda_i A\) and \(b\), the normalized errors are \(O(A^{-\alpha})+o_i(1;A)\) and \(O(b^2)+o_i(1;b)\). The physical removable base has volume one, so the residual volume tends to zero as its fixed truncations exhaust. The two signed charges then tend to zero, taking the source limit first. In this comparison class the chiral deficit in either block equals one quarter of the same-gauge trace-free Ricci deficit and the scalar-square residual vanishes. This identity permits positive residual Weyl and Ricci masses in that proportion. Proposition~\ref{prop:atoms} uses the same estimate on individual one-face exteriors.
+
+\subsection{The conformal change of the signed charge}
+
+Let \(g\) be a physical metric on a smooth oriented spin domain \(U\), \(\widetilde g=e^{2f}g\), and \(g_t=e^{2tf}g\). For \(A_g=(\operatorname{Ric}_g-R_g g/6)/2\) and \(N_g=(\operatorname{tr}_gA_g)g-A_g\), the contracted Bianchi identity gives \(\operatorname{div}_{g_t}N_{g_t}=0\). Differentiating the Schouten endomorphism and the volume gives
+\[
+ \partial_t\big(\sigma_2(A_{g_t})dV_{g_t}\big)
+ =-\operatorname{div}_{g_t}(N_{g_t}^{\sharp}\nabla^{g_t}f)dV_{g_t}
+\]
+\cite[\S2.1]{GurskyStreets2018TwoYamabe}. Write \(q_g(U)=\int_U\sigma_2(A_g)dV_g\) and \(J=q_g(U)-q_{\widetilde g}(U)\). The conforming charge \(Q_\pm=E_\pm+2q\) changes by \(-2J\). In frames transported by the conformal spin isometry, the relative integer is unchanged, and the real change of the Chern--Simons sum is \(-2s_\pm J\) with \(s_+=-1\), \(s_-=+1\). The modular difference is bounded in terms of \(2\operatorname{dist}(J,4\pi^2\mathbb Z)\).
+
+To compute \(J\) use the boundary normal \(\nu\), \(a=f_\nu\), \(v=\nabla_\Sigma f\), and second fundamental form \(II(X,Y)=g(\nabla_X\nu,Y)\), \(H=\operatorname{tr}II\). Along the conformal path the normal, gradient and area factors cancel in the Newton flux. With \(A_{g_t}=A_g-t\nabla^2f+t^2df\otimes df-\tfrac12t^2|df|^2g\), time integration and boundary integration by parts give the outward face current
+\[
+ J_\Sigma=\int_\Sigma\left[
+  N_g(\nu,a\nu+v)-a\Delta_\Sigma f-\tfrac12 II(v,v)
+  -\tfrac12 H a^2-\tfrac12a(a^2+|v|^2)\right]dS_g .
+\]
+The normal-normal Hessian cancels, so offset constants in \(f\) do not enter. Each term is invariant as an integral under constant face rescaling.
+
+For two faces take the forward normal on both, so \(J=F_+-F_-\). Normalize each physical radius by a constant length rescaling and use the resulting induced metric and measure. On a normalized unit sphere put \(x=1+f_\nu\), \(m=V^{-1}\int_\Sigma x\,dS\), \(\xi=x-m\), \(V=\operatorname{Vol}\Sigma\), and \(P_3(x)=x^3-3x+2\). Then
+\[
+ F_\Sigma=-\tfrac12\big(VP_3(m)+\mathcal A_\Sigma\big)+\mathcal R_\Sigma,qquad
+ \mathcal A_\Sigma=\int_\Sigma(3m\xi^2+\xi^3+(m+\xi)|v|^2+2\xi\Delta_\Sigma f).
+\]
+The remainder has bound \(C(\|N_g(\nu,\cdot)\|_{3/2}A+\|II-\gamma_\Sigma\|_3 A^2)\) with \(A=\|\,|f_\nu|+|v|\,\|_3\) and \(\gamma_\Sigma\) the induced normalized metric. This follows by subtracting \(II=\gamma_\Sigma\), \(H=3\), \(N_g=0\) from the face formula. In particular, with \(J_-=[-J]_+\),
+\[
+ J_-\le \tfrac12[ V_+P_3(m_+)-V_-P_3(m_-) ]_+
+      +\tfrac12[\mathcal A_+-\mathcal A_-]_+ +|\mathcal R_+|+|\mathcal R_-|.
+\]
+For instance, H\"older gives the explicit bound
+\[
+ |\mathcal A_\Sigma|\le
+ 3|m|\|\xi\|_2^2+\|\xi\|_3^3+|m|\|v\|_2^2+
+ \|\xi\|_3\|v\|_3^2+2\|\xi\|_3\|\Delta_\Sigma f\|_{3/2}.
+\] In a \(\Gamma_2^+\) gauge the Schouten integral is nonnegative, so \(E_\pm(U)\le |Q_\pm(U,g)|+2J_-\). On exact round cylindrical shells with positive target Ricci, writing \(w=t+f\) for the target log factor over the cylinder gives \(-3m'(t)>2 V^{-1}\int_{S^3}|D_\Sigma w|^2\,dS\) from the normal Ricci component and integration over the slice. This controls the sliced angular square by the mean slope drop. Cubic and mixed terms need additional bounds.
+
+Two round-face tests identify the role of the angular data. For a Euclidean annulus, \(w=\epsilon\eta(t)\phi(\theta)\) with \(\Delta\phi=-3\phi\), \(\eta=0\) near the inner face and \((\eta,\eta')=(1,-1)\) on the outer face gives two zero mean slopes and \(J=-3\epsilon^2\int\phi^2\). The cubic terms integrate to zero by reflection. This local example has no target positivity assumption. For the unit-volume round sphere in stereographic coordinates, take \(\widetilde g_b=(z\mapsto b^2z-be_1)^*g\) and the actual source shells \((b-a)/b^2\le|z|\le(b+a)/b^2\) with fixed \(a>0\). In terms of \(R=b^2|z|\) and \(s=\theta\cdot e_1\) the normalized slope is
+\[
+ x=\frac{1+b^2-R^2}{1+b^2+R^2-2Rb s}+\frac{2|z|^2}{1+|z|^2}.
+\]
+The denominator of the first term on a face is \(1+a^2+2Rb(1-s)\). The polar weight \(\sin^2\theta\) gives means \(O_a(b^{-1})\) and squared \(L^2\) fluctuations \(O_a(b^{-1})\). On caps of angular radius \(b^{-1}\) the cubic integral stays bounded below. The shell images in \(y=b^2z-be_1\) tend to \(\{|y_1|\le a\}\). Their physical source volume tends to zero and their target Schouten integral tends to the round integral over this slab. Thus \(J\) tends to a strictly negative number between \(-4\pi^2\) and zero, although both gauges are round and have positive Schouten curvature. The shell widths in log radius tend to zero. This example concerns zero Weyl energy and these particular shrinking shells.
+
+
+For the same shifted round family there is a separate bound at nonvanishing logarithmic width. Let \(r_-,r_+\) be concentric source radii with the source shell volume tending to zero. Averaging the displayed slope over \(S^3\) gives
+\[
+ m_b(r)=\frac{2(1+b^2-R^2)}
+ {1+b^2+R^2+\sqrt{(1+(R-b)^2)(1+(R+b)^2)}}+\frac{2r^2}{1+r^2},
+ \qquad R=b^2r.
+\]
+For this computation the average of \((A-B\cos\theta)^{-1}\) with polar density \(2\sin^2\theta/\pi\) is \(2/(A+\sqrt{A^2-B^2})\), by the half-angle substitution. If target mass stays positive on a subsequence, the image shell intersects a fixed ball in the \(y\) coordinates. This gives \(R_-\le b+C\), \(R_+\ge b-C\), and the vanishing source volume gives \(r_+\to0\). For \(R/b\to\lambda\) and \(r\to0\) the mean tends to \(1-\lambda^2\) on \(0\le\lambda\le1\) and \(\lambda^{-2}-1\) on \(1\le\lambda\le\infty\). This profile is strictly decreasing. Matching means force \(R_\pm/b\to1\), so the logarithmic width vanishes. Thus at widths bounded below with matching means this explicit family instead has vanishing paired current.
+
+\section{Further geometric input}
+
+The normalized positive-Ricci tests locate regular metric-limit points carrying physical measure and can transfer a finite family of smooth balls of small physical curvature back to the source. The marked recovery theorem requires original-source tensor control, a comparison gauge with the stated integrability, and coherent embeddings of whole punctured truncations. Obtaining these at a volume-bearing or curvature-bearing point, and extending them across the relevant compared region, remains open. In the weak comparison the physical convergence is measured Gromov--Hausdorff, with the stated local Sobolev and curvature convergence. Smooth convergence in those markings requires further estimates.
+
+A round physical limit can leave curvature at a shrinking mark and can leave the original smooth type in its capped exterior. Resolving the one-mark residual, proving that a same-type restart eventually improves the minimizing problem, and classifying a surviving nonround closed critical class are separate unresolved steps. The arguments apply to smooth ordinary marks and supplied spherical cuts. Additional quotient-link geometry would require its own estimates and topology.
+
+\section*{Author and source note}
+Prepared for Edward B. Baker III on 25 November 2026 with OpenAI Codex assistance. The research records identify a requested GPT-6.2 Astra/ultra lead and bounded GPT-6.2 Sol/ultra checks where specified. Exact serving configurations and effort are unavailable. The manuscript integrates the extraction branch's dated chart, current, volume, weak-base and distance derivations, the independent weak-base and distance checks, and the first, second and third joint collar assessments at repository input \texttt{5ff7014}. The weak-base review records input checkout \texttt{7db310a2} and derivation hash prefix \texttt{71fa1d97}. The second-round cap review records \texttt{6879850c}. Primary dependences are cited at use, including the strict and equality sphere theorems, the inclusive Bach-flat gap on standard \(S^4\), the marked disk extension, the sharp Yamabe threshold, and the constant-coefficient singular-integral estimate. The manuscript gives conditional proofs and explicit model tests. Its comparison hypotheses come from supplied marked inputs, rather than from extraction of a whole marked base on a general sequence.
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+\end{document}

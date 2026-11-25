@@ -9,3 +9,7 @@ Resume the three collar investigations in this checkout with GPT-6.2 Astra on ul
 ## User
 
 The note can be found in /papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/01_dirac_collar_matching/continuation-notes/AFTER_SECOND_COLLAR_RESEARCH_20261125
+
+## User
+
+This sounds like very exciting progress. I would like to include the most recent results into the relevant manuscripts. Can you look through the recent commits to determine which recent research has been incorporated into the various manuscripts, and include any parts that are not already included? If a manuscript has not been drafted within a given sub-investigation, and there are relevant results, then please create one. When writing, focus on analytical or theoretical results, leaving any numerics or test cases for supporting evidence. Please develop the ideas systematically, and methodically derive all of the relevant results, maximizing the coherence of the development of ideas, and the elegance of the results. At the end, describe the outstanding challenges. Save the pdf in the output folder, which is ignored by git.

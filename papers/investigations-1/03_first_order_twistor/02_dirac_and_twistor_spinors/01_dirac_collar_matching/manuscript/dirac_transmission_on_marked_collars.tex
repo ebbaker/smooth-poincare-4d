@@ -1,0 +1,492 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[final]{microtype}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Rm}{\mathrm{Rm}}
+\newcommand{\Ric}{\mathrm{Ric}}
+\newcommand{\Vol}{\operatorname{Vol}}
+\newcommand{\CS}{\operatorname{CS}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\Tr}{\operatorname{tr}}
+\title{Dirac Transmission and Chiral Curvature on Marked Four-Dimensional Collars}
+\author{Edward B. Baker III}
+\date{25 November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study the ordinary spin Dirac equation on supplied oriented Riemannian four-dimensional collars with marked boundary. We derive length-uniform inverses for fixed reference projections and for varying gapped slice operators, and match them to actual Cauchy data of smooth adjoining pieces. A closed positive Yamabe bound controls regular seam corrections in critical conformal norms. We distinguish these propagation bounds from estimates for chiral Weyl energy. The latter follow under independent relative Bochner bounds, from a signed boundary charge in a positive Schouten representative, or by a first variation on weak physical charts with logarithmic cutoff transitions. Examples quantify the role of pole strengths, curvature, and the choice of chart. The estimates give conditional tests on a residual in the original smooth manifold.
+\end{abstract}
+
+\section{Conventions and geometric setting}
+
+All metrics and spin structures used below are smooth and Riemannian, and all identifications preserve orientation and the stipulated spin structures. In dimension four, \(S^+\) denotes the complex rank-two half-spin bundle on which real self-dual two-forms act. We use
+\[
+ c(X)^2=-|X|^2,\qquad D=\sum_i c(e_i)\nabla_{e_i},\qquad
+ P_X\psi=\nabla_X\psi+\tfrac14 c(X)D\psi .
+\]
+Set \(R(X,Y)=[\nabla_X,\nabla_Y]-\nabla_{[X,Y]}\) and
+\(\ip{\mathcal R(X\wedge Y)}{Z\wedge V}=\ip{R(X,Y)V}{Z}\).
+Write \(E_\pm(g;U)=\int_U |W^\pm|_{\mathrm{HS}}^2\,dV_g\) for the Hilbert--Schmidt norms of the real curvature-operator blocks on \(\Lambda^\pm\). Unadorned norms of the full Riemann and Weyl tensors use the four-index convention, so \(|W|^2=4(|W^+|_{\mathrm{HS}}^2+|W^-|_{\mathrm{HS}}^2)\). We use the nonnegative scalar Laplacian \(\Delta\).
+
+For \(h=b^2g\), let \(\beta\) be the fiberwise isometric spin identification. The harmonic and twistor transports have weights \(b^{-3/2}\) and \(b^{1/2}\), respectively. In particular the source weight in
+\begin{equation}
+ D_h(b^{-3/2}\beta\psi)=b^{-5/2}\beta D_g\psi
+ \label{eq:conformal}
+\end{equation}
+is fixed by the four-dimensional Dirac covariance~\cite[\S1.4]{Hitchin1974Harmonic}. On a chart with \(g=\rho^2h\), the physical-to-cylinder weights for a spinor and forcing are \(\rho^{3/2}\) and \(\rho^{5/2}\). The two boundary traces carry their own radii and the prescribed angular spin identifications.
+
+Our closed-source application is to a fixed smooth oriented homotopy four-sphere \(M\), which is spin. For a physical metric \(g\) taken as a volume-one positive Yamabe minimizer, \(s=Y([g])>0\) and
+\begin{equation}
+ E_+(M)=E_-(M)=E,\qquad
+ 16\pi^2=2E+s^2/24-\tfrac12\int_M|\Ric_0|^2\,dV_g .
+ \label{eq:band}
+\end{equation}
+These are the signature and Chern--Gauss--Bonnet identities in the above norms. The round Yamabe upper bound is \(s\le 8\sqrt6\,\pi\)~\cite{Schoen1984Yamabe}. In the band \(4\pi^2\le E\le8\pi^2-\delta\), this gives \(s\ge\sqrt{48\delta}\), \(\int_M|\Ric_0|^2\le4E\), and \(\int_M|\Rm|^2\le\Lambda\) for an absolute finite \(\Lambda\). The results below indicate when they use this band. The general boundary estimates require only the stated local geometry and, where indicated, a positive closed Yamabe bound. A marked chart means a specified smooth embedding on the source, including its stated buffers, together with the coordinate and spin identifications used for comparison. Companion papers develop the chiral recognition criterion, the marked cuts, and the comparison of conformal representatives~\cite{Baker2026TwistorSections,Baker2026MarkedNecks,Baker2026MarkedLimits}. The spinor conventions agree with the treatment of Dirac fields and Yamabe rigidity in~\cite{Baker2026DiracYamabe}.
+
+\section{Inverting the collar equation}
+
+\subsection{The round product and its perturbation}
+On \(Z_L=[0,L]\times S^3(1)\), \(L\ge2\), use the product orientation and the same normal \(n=+\partial_t\) at both ends. Identify the target of \(D^+\) with its source by \(c(n)^{-1}\). In the normal-parallel gauge the operator is \(L_0=\partial_t+A\), with
+\(A=\sum_a -c(n)c(e_a)\nabla^Y_{e_a}\).
+Its spectrum is \(\lambda=\pm(3/2+k)\), \(k\ge0\)~\cite[Theorem~1]{Bar1996SphereDirac}. Denote its sign projections by \(P_\pm\) and set \(\|z\|_{\mathcal T}=\||A|^{1/2}z\|_2\), an equivalent \(H^{1/2}\) norm. The incoming trace is \((P_+u(0),P_-u(L))\). The outgoing trace is \((P_-u(0),P_+u(L))\).
+
+\begin{proposition}\label{prop:round}
+The map \(u\mapsto(L_0u,P_+u(0),P_-u(L))\) from \(H^1\) onto \(L^2\oplus P_+\mathcal T\oplus P_-\mathcal T\) is bijective. If its output is \((f,x,y)\), then
+\begin{equation}
+ \|u\|_{H^1}^2+\|P_-u(0)\|_{\mathcal T}^2+\|P_+u(L)\|_{\mathcal T}^2
+ \le \|f\|_2^2+\|x\|_{\mathcal T}^2+\|y\|_{\mathcal T}^2 .
+ \label{eq:roundinverse}
+\end{equation}
+For \(f=0\) the outgoing norm is at most \(e^{-3L/2}\|(x,y)\|\). The \(L^2\) Hilbert adjoint of the homogeneous realization is \(-\partial_t+A\) on \(H^1\) with the complementary homogeneous projections.
+\end{proposition}
+
+\begin{proof}
+Set \(Q(u)=\|\partial_tu\|_2^2+\|Au\|_2^2\). On the unit round link, \(A^2=(\nabla^Y)^*\nabla^Y+3/2\) by the Schr\"odinger--Lichnerowicz formula~\cite[proof of Theorem~2.6]{FriedrichKim1999Hijazi}. Thus \(\|u\|_{H^1}^2=Q(u)-\|u\|_2^2/2\in[7Q(u)/9,Q(u)]\). For a scalar eigenmode of absolute eigenvalue \(\mu\ge3/2\), differentiating \((1-t)_+|u_\lambda|^2\) gives
+\(\mu|u_\lambda(0)|^2\le\int_0^1(|u_\lambda'|^2+(\mu^2+\mu)|u_\lambda|^2)\,dt\).
+Time reversal gives the analogous inequality at \(L\). The unit end strips have disjoint interiors. Summing gives a length-uniform trace bound. The real cross term in the squared equation is
+\(\ip{u(L)}{Au(L)}-\ip{u(0)}{Au(0)}\), interpreted by trace duality. It equals the squared outgoing norm minus the squared incoming norm. This proves \eqref{eq:roundinverse} first for finite mode sums and then by \(H^1\) convergence.
+
+For \(\lambda>0\), solve using \(e^{-\lambda t}x_\lambda+\int_0^t e^{-\lambda(t-s)}f_\lambda(s)\,ds\). For \(\lambda<0\), solve using \(e^{-\mu(L-t)}y_\lambda-\int_t^L e^{-\mu(s-t)}f_\lambda(s)\,ds\). Finite sums converge in \(H^1\) by the estimate, and give the claimed transfer when \(f=0\). The Green pairing is the value of \(\ip{u}{v}\) at \(L\) minus its value at \(0\). Testing a weak adjoint element mode by mode gives \(H^1\) scalar coefficients and forces the opposite projections at the two ends. Time reflection conjugates these finite-mode adjoint problems to the original one. Applying the estimate to differences of their finite sums gives the full \(H^1\) adjoint domain.
+\end{proof}
+
+A trace lift supported in the unit end strips is
+\[
+ \ell(t)=(1-t)_+e^{-t|A|}x+(1-(L-t))_+ e^{-(L-t)|A|}y.
+\]
+Integration mode by mode gives \(Q(\ell)\le(17/9)\|(x,y)\|^2\) and \(\|L_0\ell\|_2^2\le(2/9)\|(x,y)\|^2\). Here the latter uses the derivative of the cutoff alone.
+
+Let \(h_0=dt^2+\gamma_{S^3(1)}\) and \(k=h-h_0\). For a supplied smooth \(h\) set
+\[
+ \epsilon=\|k\|_\infty+\sup_{J\subset[0,L],\,1\le |J|\le2}
+                          \|\nabla^0k\|_{L^4(J\times S^3)} .
+\]
+Use the isometric spin lift of \((h_0^{-1}h)^{-1/2}\) and the reference measure, and keep the above projections fixed. The transported operator \(L_h\) uses the reference inverse normal Clifford multiplication. The finite spin comparison~\cite[Theorem~3.1 and Remark~3.2]{BourguignonGauduchon1992} has a principal difference \(O(|k|)\) with derivative \(O(|\nabla^0 k|)\), and an order-zero difference \(O(|k|+|\nabla^0 k|)\). These estimates follow by differentiating the symmetric frame change and using the Levi-Civita connection difference in its spin lift. On disjoint slabs with lengths in \([1,2]\), Hölder and the fixed \(H^1\hookrightarrow L^4\) bound give
+\[
+ \|L_h-L_0\|_{H^1\to L^2}\le C\epsilon=:\alpha .
+\]
+Indeed, the squared \(L^2\) norm of \(|\nabla^0k||u|\) is bounded by the squared supremum of the slab \(L^4\) norms times a constant times \(\|u\|_{H^1}^2\). For \(\alpha<1\), Neumann inversion of the map in Proposition~\ref{prop:round} proves bijectivity with the same trace prescription. The square root of the left side of \eqref{eq:roundinverse} is bounded by \((1-\alpha)^{-1}\) times the square root of its right side. In an embedded buffered Euclidean chart with amplitude \(a=\|v\|_\infty\) and coordinate Hessian budget \(K=\|D^2v\|_2\) on a fixed larger buffer, critical interpolation bounds the first-order error by \(C(a+\sqrt{a(K+a)})\) upon conversion to log radius~\cite{Baker2026MarkedLimits}. Here the Hessian budget is one sufficient input to the Dirac comparison. Section~\ref{sec:charts} uses a different curvature estimate that takes intrinsic full curvature as input.
+
+The adjoint projections act on the conormal trace. If \(B_0\) is the normal coefficient of \(L_h\), then the weak Green pairing has \(B_0^*v\) in the second trace slot. For sufficiently small \(\epsilon\), the full adjoint domain is
+\[
+ v\in H^1,\qquad P_-(B_0^*v)(0)=0,\qquad P_+(B_0^*v)(L)=0 .
+\]
+Indeed the formal adjoint composed with multiplication by \(N=(B_0^*)^{-1}\) has normal part \(-\partial_t\) and differs from \(-\partial_t+A\) by \(O(\epsilon)\) in \(H^1\to L^2\). The order-zero coefficients include the first derivatives of the tangential principal part and of \(N\), estimated by the same slab argument. On the complementary domain this composed operator is invertible. The Green formula gives inclusion of the stated \(H^1\) domain in the Hilbert adjoint domain. Subtracting an \(H^1\) solution with the same adjoint image from any weak adjoint element gives an annihilator of the full range of \(L_h\), proving equality.
+
+\subsection{Varying slices}
+Take the normalized form \(\mathcal L=\partial_t+A_t+B\) on a fixed unitary bundle and slice measure. Let \(H=L^2(S^3)\), \(X=H^1(S^3)\) denote section spaces in that gauge, and set \(X_I=H^1(I;H)\cap L^2(I;X)\) with squared norm \(\|\partial_tu\|_2^2+\|u\|_{L^2(I;X)}^2\). Suppose \(A_t\) is smooth, self-adjoint and of Dirac type, with common domain \(X\). Assume a uniform gap \(\|w\|_H\le\kappa^{-1}\|A_tw\|_H\), a uniform graph bound \(\|w\|_X\le C_g\|A_tw\|_H\), and
+\begin{equation}
+ |\ip{w}{\dot A_t w}_H|\le\theta\|A_tw\|_H^2,\qquad \theta<1 .
+ \label{eq:relativeA}
+\end{equation}
+The projections at the endpoints are those of \(A_0,A_L\) in the common \(+\partial_t\) convention.
+
+\begin{proposition}
+For \(L_1=\partial_t+A_t\) the homogeneous incoming problem has a length-uniform \(L^2\to X_I\) inverse of norm at most \(C_*=\max\{1,C_g(1-\theta)^{-1/2}\}\). The same conclusion holds for \(\mathcal L\) with inverse bound \(C_* /(1-C_*\|B\|_{X_I\to L^2})\) if \(C_*\|B\|_{X_I\to L^2}<1\). A uniform upper bound on \(A_t:X\to H\) also gives a uniform inhomogeneous \(H^{1/2}\) trace estimate.
+\end{proposition}
+
+\begin{proof}
+Write \([Q_t(u)]_0^L=[\ip{u(t)}{A_tu(t)}_H]_0^L\). Integration by parts gives
+\begin{align*}
+ \|L_1u\|_2^2
+   &=\|\partial_tu\|_2^2+\|A_tu\|_2^2+[Q_t(u)]_0^L
+                                    -\int_I\ip{u}{\dot A_tu}_H\,dt,\\
+ \|(-\partial_t+A_t)v\|_2^2
+   &=\|\partial_tv\|_2^2+\|A_tv\|_2^2-[Q_t(v)]_0^L
+                                    +\int_I\ip{v}{\dot A_tv}_H\,dt .
+\end{align*}
+The bracket term with its displayed sign is nonnegative on the incoming domain for \(u\) and the complementary domain for \(v\). The powers of \(A_t\) at the ends are defined via \(H^{1/2},H^{-1/2}\) duality. These identities extend by density to \(X_I\). The relative bound absorbs both interior terms. The full weak adjoint has the stated complementary \(H^1\) domain by elliptic spectral boundary regularity~\cite[Theorems~1.7 and 1.12, Addendum~1.13, Example~1.16(a), and \S7.2]{BaerBallmann2011Boundary}. In the real symbol convention the boundary normal symbol is \(I\oplus(-I)\) for the inward normals, the tangential symbol is skew-Hermitian, and the adapted operators are \(A_0,-A_L\). These signs make the allowed subspaces the negative spectral subspaces of the adapted operators. The inverse bound gives closed range and the adjoint bound kills its orthogonal complement. Neumann inversion handles \(B\). For inhomogeneous data, use a fixed reference positive elliptic operator \(\Lambda_1=(1+\nabla_*^*\nabla_*)^{1/2}\) and end lifts \(\chi(s)e^{-s\Lambda_1}\), where \(s\) is distance from the corresponding endpoint. The \(X_I\) lift bound follows from \(\int_0^\infty \nu^2e^{-2s\nu}\,ds=\nu/2\). Its \(\mathcal L\)-image is bounded using the upper operator bound. Correction on the homogeneous domain gives the inhomogeneous estimate. Endpoint projections are uniformly bounded on \(H^{1/2}\) by interpolation between \(H\) and the graph domain.
+\end{proof}
+
+For geodesic slicing \(h=dt^2+g_t\), normal spin parallel transport gives the scalar addition \(\tfrac14\Tr_{g_t}\dot g_t\). Multiplication by \(\rho_t=(dV_{g_t}/dV_*)^{1/2}\) cancels it since \(\partial_t\log\rho_t=\tfrac14\Tr_{g_t}\dot g_t\)~\cite[(3.6), (4.1), and Theorem~5.1]{BaerGauduchonMoroianu2005Cylinders}. The resulting \(A_t\) is self-adjoint in the fixed measure. A sufficient test for \eqref{eq:relativeA} is
+\(\sup_t\|\dot A_t\|_{X\to H} C_g/\kappa<1\).
+For the geodesic slicing, bounded slice norms of \(\dot g_t\) and \(\nabla^{g_t}\dot g_t\) in \(L^\infty\), with uniform equivalence of the slice and reference \(H^1\) norms, bound \(\dot A_t\). This uses the first variation of the slice Dirac operator and the commutator of the density with its tangential principal part. The gap and graph bound are independent measurements.
+
+\begin{example}
+For \(g_t=r(t)^2\gamma_{S^3(1)}\), \(r(t)=2+\tfrac12\sin t\), the transported \(A_t=r(t)^{-1}A\) has gap at least \(3/5\), and \(C_g=5/2\) works. Since \(\dot A_t=-r'A_t/r\), the relative constant is at most \(2\sup|r'|/3=1/3\). This gives uniform inversion for order-one departures from the unit product. In the Dirac-type class the scalar block \(\lambda(t)=(t-L/2)/L\) has no prescribed endpoint value and admits the kernel \(e^{-(t-L/2)^2/(2L)}\). Reversing the crossing prescribes both values and makes this same Gaussian span the scalar adjoint kernel. The block is realized on the lowest positive eigenspace of \(A-3/2+\lambda(t)\), with the other spectral blocks at least \(1/2\) from zero. Thus arbitrarily small absolute variation can coexist with failure of the homogeneous inverse when a mode crosses zero.
+\end{example}
+
+\subsection{Weights and reflection}
+For either supplied inverse, suppose \(\|u\|_{H^1}\le C(\|\mathcal L u\|_2+\|\Gamma_{\rm in}u\|)\) and \(\|[\mathcal L,t]\|_{2\to2}\le b_0\). The fixed-domain perturbation and the normal form with an order-zero \(B\) have such a normal symbol bound. For a Lipschitz \(\phi(t)\) with \(|\phi'|\le\tau\), \(\tau Cb_0<1\), apply the inverse estimate to \(v=e^\phi u\). Since
+\(\mathcal L v=e^\phi\mathcal L u+\phi'[\mathcal L,t]v\) and the endpoint weights commute with the projections,
+\begin{equation}
+ \|e^\phi u\|_{H^1}\le
+ \frac{C}{1-Cb_0\tau}
+      \bigl(\|e^\phi\mathcal L u\|_2+\|\Gamma_{\rm in}(e^\phi u)\|\bigr).
+ \label{eq:weights}
+\end{equation}
+Choosing \(\phi=\tau\min(t,L-t)\) bounds the \(H^1\) norm on \([d,L-d]\) by \(C_\tau(1+\tau)e^{-\tau d}\|\Gamma_{\rm in}u\|\) for harmonic \(u\). On a fixed-width midpoint strip a bounded sum of squared incoming norms therefore precludes a length-uniform positive joint pointwise floor in this gauge. Choosing \(\phi=\tau t\) when the right incoming datum vanishes and \(\phi=\tau(L-t)\) in the reversed problem gives \(O(e^{-\tau L})\) one-sided transmission by the fixed-width endpoint trace estimate.
+
+Let \(S_h\) be the homogeneous incoming-to-outgoing map for the fixed near-product comparison and \(S_0\) its round counterpart. Apply the round outgoing bound to the difference of the two solutions with the same incoming datum. The difference has zero incoming trace and round forcing \(-(L_h-L_0)u_h\). Consequently
+\begin{equation}
+ \|S_h-S_0\|\le\frac{\alpha}{1-\alpha},\qquad
+ \|S_h\|\le e^{-3L/2}+\frac{\alpha}{1-\alpha} .
+ \label{eq:reflection}
+\end{equation}
+The diagonal entries of \(S_0\) vanish. Equation~\eqref{eq:reflection} bounds same-end reflection. The weighted off-diagonal transmission estimate \eqref{eq:weights} also applies to the varying-slice family.
+
+\section{Actual traces and regular jump corrections}
+
+\subsection{The flat ball and a prescribed pole}
+In an oriented stereographic \(x\)-coordinate on the standard \(S^4\) cut at \(r=1,e^L\), with \(r=|x|\). For the right cap use \(y=aJx/r^2\), \(a>0\), with \(J\) a reflection, so inversion composed with \(J\) preserves orientation. Let \(\rho_L=ae^{-L}\). Choose a smooth compact conformal representative flat in the two ball coordinates near the caps by interpolating between factors \(1\) and \(a/r^2\) in the \(x\)-coordinate. In the cylinder gauge \(h_0=r^{-2}|dx|^2=|y|^{-2}|dy|^2\), all signs use \(t=\log r\) and the same \(+\partial_t\).
+
+A regular left-ball field decays in the cylinder toward \(t=-\infty\), so its seam trace lies in \(P_-\mathcal T\). For a regular right ball the corresponding direction is \(t=+\infty\) and the trace lies in \(P_+\mathcal T\). For either ball, every trace in the indicated space extends by decaying modes. With \(s\) the logarithmic inward distance and \(r_b=r_0e^{-s}\) the flat radius, the flat \(H^1\) estimate on \(e^{-\mu s}z_\mu\), \(\mu=|\lambda|\), follows from
+\[
+ \int_0^\infty e^s(1+\mu^2)e^{-2\mu s}\,ds
+       =\frac{1+\mu^2}{2\mu-1}\le C\mu .
+\]
+The Dirac transport to the ball has weight \(r_b^{-3/2}\) and the differentiated field has a bound with weight \(r_b^{-5/2}\). The center is removable in the weak equation by a radius-\(\epsilon\) cutoff with \(L^2\) gradient \(O(\epsilon)\), followed by elliptic regularity. Modal uniqueness on the half-cylinder gives uniqueness on each ball.
+
+For a prescribed negative-chiral source \(\eta\) in the cap frame, set \(\omega_3=2\pi^2\). The flat positive Green field is \(-c(y)\eta/(\omega_3|y|^4)\), from applying \(D\) to \((2\omega_3|y|^2)^{-1}\eta\)~\cite[\S2.1 and Proposition~2.3]{AmmannHumbertMorel2006Mass}. Its collar trace \(p_\eta\) is a lowest negative mode since its cylindrical transport grows as \(e^{3(t-L)/2}\) toward the right center. It satisfies
+\[
+ Ap_\eta=-\tfrac32p_\eta,\qquad
+ |p_\eta|=\frac{\rho_L^{-3/2}|\eta|}{\omega_3},\qquad
+ \|p_\eta\|_{\mathcal T}=\sqrt{\frac{3}{2\omega_3}}\rho_L^{-3/2}|\eta| .
+\]
+The right affine space is \(p_\eta+P_+\mathcal T\). Equality of the full traces imposes incoming data \((0,p_\eta)\), and the matched field is
+\(u(t)=e^{-3(L-t)/2}p_\eta\). The pole is the only singularity, since in the common gauge equal full traces cancel the distributional seam terms. To express the spinor in the flat \(x\)-gauge, take \(J\) to be the reflection in \(\xi^\perp\), \(|\xi|=1\). The spin lift of the orthogonal part of inversion is \(c(\xi)c(x/r)\), and inverse transport gives the constant spinor \(-a^{-3/2}c(\xi)\eta/\omega_3\). Its twistor transport in the cylinder is \(r^{-2}u\) and in the cap is \(-c(y)\eta/(a^2\omega_3)\), with a transverse zero at the center if \(\eta\ne0\).
+
+Arbitrary discrepancies between the collar and the core traces at the seams can also be corrected in the round class. If the prescribed discrepancies are \(d_\ell,d_r\) in the order collar trace minus end trace, the incoming data are \(x=P_+d_\ell,\ y=p_\eta+P_-d_r\). The regular end traces are \(e^{-L|A|}y-P_-d_\ell,\ e^{-L|A|}x-P_+d_r\). The four corrections from the zero-discrepancy solution have joint norm at most \((1+e^{-3L/2})\|(d_\ell,d_r)\|\), by the orthogonality of the projected data.
+
+The midpoint norm is \(e^{-3L/4}\rho_L^{-3/2}|\eta|/\omega_3\). A bounded incoming trace entails decay. A fixed physical \(\eta\) and fixed \(a\) give the growing amplitude \(a^{-3/2}e^{3L/4}|\eta|/\omega_3\). For any finite number of harmonic fields with incoming pairs \((x_j,y_j)\), the slice projections give
+\begin{equation}
+ \int_{S^3}\sum_j|u_j(L/2)|^2
+ \le e^{-3L/2}\sum_j(\|x_j\|_2^2+\|y_j\|_2^2).
+ \label{eq:floor}
+\end{equation}
+A single lowest mode attains the rate. A uniform positive pointwise joint floor on the whole cylinder requires a total squared incoming budget growing at least as \(e^{3L/2}\). For the pole mode \(D_{h_0}u=0\) and \(|P_{h_0}u|^2=3|u|^2\). Its normal derivative contributes \(9|u|^2/4\), and its constant link norm and the link Dirac square give another \(3|u|^2/4\). Its relative quartic first-order cost is \(9\omega_3 L\). The flat \(x\)-gauge gives zero cost for its parallel harmonic transport, while the projected differentiated defect vanishes in both gauges by conformal flatness.
+
+\subsection{Graphs of compact cores}
+Consider a left core with an exact unit-round product germ \([-2,0]\times S^3\), and attach an auxiliary conformally round filling that retains the product on \([0,2]\times S^3\) and closes at a smooth point. Suppose the resulting closed Yamabe constant is at least \(y_0>0\). For the right core impose the reversed germ and the same positivity assumption for its own auxiliary closed filling. The common increasing-\(t\) normal convention is used on the two cores. Put \(H_\pm=P_\pm\mathcal T\).
+
+We use a closed spectral estimate throughout this section. On any smooth closed spin representative \(\widetilde g\) of volume \(V\) and Yamabe constant at least \(y_0\),
+\begin{equation}
+ \|D_{\widetilde g}^{-1}\|_{2\to2}\le \sqrt{3/y_0}\,V^{1/4}.
+ \label{eq:hijazi}
+\end{equation}
+For the normalization, Hölder and the Yamabe quotient give \(\mu_1(6\Delta+s)\ge y_0V^{-1/2}\). With positive first eigenfunction \(f\), the metric \(f^2\widetilde g\) has scalar curvature \(\mu_1 f^{-2}\). A Dirac eigenspinor transported by \eqref{eq:conformal} has equation \(D\psi=\lambda f^{-1}\psi\) there. The integrated identity \(\|P\psi\|_2^2=\tfrac34\|D\psi\|_2^2-\tfrac14\int s|\psi|^2\) gives \(3\lambda^2\ge\mu_1\), the dimensional form of Hijazi's inequality~\cite[Theorem~A]{Hijazi1986Conformal}. Full self-adjointness and anticommutation with chirality give the inverse in each chirality. A disconnected source can be treated componentwise.
+
+In the capped core, rescale conformally away from the seam so that \(V\le 1+3\omega_3\), retaining the product on \([-1,1]\). For example, use a conformal factor that is a fixed cutoff there and a positive constant \(c\le1\) away from \((-3/2,3/2)\), with \(c^4\Vol(g)\le1\). The collar trace is unchanged. The \(H^1\) norm of \(w=D^{-1}F\) near the seam is bounded by \(C(\|F\|_{2}+\|w\|_{2})\): multiply \(w\) by a cutoff in the fixed product window and use the integrated Dirac square for the resulting compactly supported field. Its \(H^{1/2}\) trace obeys the same estimate.
+
+For \(z\in H_-\), on the left core use \(\ell(t)=\chi(t)e^{t|A|}z\), with \(\chi=1\) near the seam and support in the unit window. Its piecewise Dirac image \(F=c(\partial_t)\chi'e^{t|A|}z\) vanishes near the seam and extends by zero as a closed \(L^2\) source. On the auxiliary filling \(w=D^{-1}F\) is regular, so its seam trace lies in \(H_+\) by the ball extension argument. Thus the left-core harmonic extension \(\ell-w\) has trace \(z+G_Lz\), where \(G_Lz=-P_+\operatorname{tr}w\). The uniform closed inverse and window estimate show \(\|G_L\|\le C(y_0)\). Any core field with trace in \(H_+\) extends regularly across the auxiliary filling and then is zero by \eqref{eq:hijazi}. This proves the graph assertion and uniqueness of extension. On the right the roles of \(H_+\) and \(H_-\) reverse, yielding a bounded \(G_R:H_+\to H_-\).
+
+If a piece carries a prescribed pole, add a particular field with that source and a regular remainder. For a left particular field \(p\) its affine shift is \(b_L=P_+\operatorname{tr}p-G_LP_-\operatorname{tr}p\), and on the right interchange the signs. A closed capped-core Green field with a specified interior source supplies such a particular field by \eqref{eq:hijazi}. The pole's flat expansion uses a flat germ at its position. The affine shifts must be measured in the seam gauge.
+
+On the exact cylinder set \(T_\pm=e^{-L|A|}|_{H_\pm}\). The actual matching equations are
+\(x=G_LT_-y+b_L,\ y=G_RT_+x+b_R\).
+Eliminating \(y\) gives a return operator of norm at most
+\(\|G_L\|\|G_R\|e^{-3L}=m_0\). For \(m_0<1\), the left incoming norm is bounded by \((\|b_L\|+\|G_L\|e^{-3L/2}\|b_R\|)/(1-m_0)\), and the right bound follows from the second equation. In the near-product case require compatible exact seam germs and use \(\mathcal G=\operatorname{diag}(G_L,G_R)\). Matching becomes
+\[
+ (I-\mathcal G S_h)(x,y)=(b_L,b_R).
+\]
+By \eqref{eq:reflection} it is uniquely solvable when
+\(m=\max(\|G_L\|,\|G_R\|)(e^{-3L/2}+\alpha/(1-\alpha))<1\), and
+\(\|(x,y)\|\le (1-m)^{-1}\|(b_L,b_R)\|\).
+The collar \(H^1\) estimate adds the factor \((1-\alpha)^{-1}\). A uniform margin and bounded affine shifts allow the interior decay estimate \eqref{eq:weights}. Equality of full traces and opposite outward normals give the global weak equation with the stipulated poles. Elliptic regularity gives smoothness away from them.
+
+\subsection{A two-seam right inverse on the original closed source}
+Suppose the original closed spin source has \(Y([g])\ge y_0>0\) and a marked collar with cuts at \(0,L\), \(L\ge6\). On two fixed windows \([t_\nu-2,t_\nu+2]\times S^3\), \(t_\nu=0,L\), supply a smooth conformal normalization \(h=F^2g\) with the preceding fixed near-product bounds. The same spin gauge is used on the two faces of each cut. A jump \(j_\nu\) is the normalized trace on the increasing-\(t\) side minus that on the decreasing-\(t\) side. For arbitrary \((j_0,j_1)\in\mathcal T^2\), there is a unique piecewise \(H^1\), piecewise harmonic field \(z\) with these jumps. Its two-sided half-window \(H^1\) norms and its four trace norms are bounded jointly by \(C(y_0)\|(j_0,j_1)\|\), independently of \(L\), the original seam scales, and the outside geometry.
+
+To prove this, extend the two normalized gauges to a closed representative \(\widetilde g=\vartheta^2g\) using
+\(\vartheta=c(1-\sum_\nu\chi_\nu)+\sum_\nu\chi_\nu F\), where the disjoint cutoffs equal one on the unit-radius windows and are supported in radius \(3/2\) windows. Choose \(c^4\Vol(g)\le1\). Convexity of the fourth power bounds the new volume by \(1\) plus the total normalized volume of the two cutoff supports. Lift each jump on its increasing-\(t\) side by \(\zeta(s)e^{-s|A|}j_\nu\), \(s\ge0\), within a radius \(1/2\) window, and extend by zero elsewhere on the cut-open manifold. The lift \(v\) is piecewise \(H^1\) with the stated bound and \(F_0=D_{\widetilde g,\mathrm{pw}}v\) is a global \(L^2\) source with comparable bound. The distributional Dirac image of \(v\) would also contain \(c(\nu)j_\nu\,\delta_{\Sigma_\nu}\) in the geometric gauge, with \(\nu\) pointing toward the increasing side. Use the regular piecewise image alone and take \(z=v-D_{\widetilde g}^{-1}F_0\).
+
+The closed correction has a single trace on each seam, so \(z\) retains the jumps and is harmonic in every interior. In the fixed windows, product cutoffs and the reference first-order comparison bound the local \(H^1\) norm of the closed correction by \(C(\|F_0\|_2+\|D_{\widetilde g}^{-1}F_0\|_2)\), absorbing the small operator difference by the reference Dirac square. A difference with zero jumps extends weakly as a closed harmonic field, hence is zero. Undoing conformal transport proves the assertion for \(g\). Adding this regular correction can remove mismatches of specified pole fields while preserving their prescribed singular coefficients.
+
+\subsection{Critical mass of a regular correction}
+On any smooth closed spin four-manifold with \(Y([g])\ge y_0>0\), set \(p=8/5\) and \(q=8/3\). There is a conformally invariant estimate
+\begin{equation}
+ \|D_g^{-1}f\|_q\le 2^{1/4}\sqrt{3/y_0}\,\|f\|_p.
+ \label{eq:critical}
+\end{equation}
+For smooth test sections \(f,k\) temporarily normalize both \(L^p(g)\) norms to one. For \(h=b^2g\), the transported sources \(b^{-5/2}\beta f,b^{-5/2}\beta k\) have squared \(L^2(h)\) norms \(\int b^{-1}|f|^2\,dV_g\) and the analogous integral for \(k\). The pairing of the inverse against the other source is invariant by \eqref{eq:conformal}. Choose \(b\) by
+\[
+ b^4=(|f|^2+\epsilon)^{4/5}+(|k|^2+\epsilon)^{4/5}.
+\]
+Then \(b\ge |f|^{2/5},|k|^{2/5}\), both weighted \(L^2\) norms are at most one, and \(\Vol(h)\to2\). Apply \eqref{eq:hijazi} in this representative and take the limit, then take the supremum over smooth tests \(k\). By density and elliptic regularity this extends to \(L^p\), with a unique distributional solution in \(L^q\). The estimate is in the spin-conformal exponents of \cite[\S2.2]{Ammann2005SpinConformalClass}. It also holds chirally.
+
+The lift for the jump problem has \(L^q\) norm and piecewise forcing \(L^p\) norm bounded by \(C\|(j_0,j_1)\|\) by the fixed-window Sobolev inequality and bounded support volume. Formula \eqref{eq:critical} therefore bounds the entire regular correction, including the uncharted middle. If such a family \(z_a\) has total squared jump norm \(J_0^2=\sum_a\|(j_{a,0},j_{a,1})\|^2\), a joint bound \(\sum_a|z_a|^2\ge c_0^2\) on a region of volume \(V_0\) forces
+\[
+ c_0^2 V_0^{3/4}\le C(y_0)J_0^2
+\]
+by Minkowski in \(L^{4/3}\). The volume is measured in the same conformal gauge as the floor. For \(V_0\asymp L\), this upper bound on \(c_0\) scales as \(J_0 L^{-3/8}\). Both critical norms in \eqref{eq:critical} are invariant locally under their respective weights. A fixed nonzero Green pole behaves as \(r^{-3}\) in a flat germ, with \(L^{8/3}\) power integral of order \(\epsilon^{-4}\) outside radius \(\epsilon\). The critical estimate controls regular corrections. The actual normalized pole strength enters through the measured affine trace.
+
+\section{The differentiated spinor defect}
+
+\subsection{The chiral curl and its normalization}
+For \(T=P\psi\) define \(m:\Lambda^+\otimes S^+\to S^+\) by \(m(\omega\otimes\psi)=c(\omega)\psi\), and \(\Pi=I-m^*m/6\). In an orthonormal positive basis \(\omega_a\), the corresponding \(C_a=c(\omega_a)|_{S^+}\) satisfy \(C_a C_b+C_b C_a=-4\delta_{ab}I\). Thus \(mm^*=6I\).
+The spin curvature formula~\cite[\S2]{Bar1996SphereDirac} and the integrated identity used in \eqref{eq:hijazi} give the pointwise identity
+\begin{equation}
+ (d^\nabla T)^+=-\tfrac12\sum_a\omega_a\otimes c(W^+\omega_a)\psi
+                             -\tfrac16 m^*P^*T .
+ \label{eq:curl}
+\end{equation}
+Indeed the curvature contribution is the spin action \(-c(\mathcal R)/2\), with positive block \(W^++(s/12)I\). Antisymmetrizing the derivative of the Clifford term in \(P\) contributes \(\tfrac18 C_aD^2\psi\) in component \(a\), since \(c(\omega_a)\) annihilates \(D\psi\) of opposite chirality. The remaining scalar part combines with this term through \(P^*P=\tfrac34 D^2-\tfrac14s\). The symmetry and trace-free property of \(W^+\) give zero Clifford contraction of the Weyl term. Since \(|c(\omega)\psi|^2=2|\omega|^2|\psi|^2\) for real self-dual \(\omega\),
+\begin{equation}
+  2|\Pi(d^\nabla P\psi)^+|^2=|W^+|_{\rm HS}^2|\psi|^2 .
+  \label{eq:curlnorm}
+\end{equation}
+These identities have no field-equation hypothesis and include all zeros.
+
+For a finite smooth family write \(S=\sum_a|\psi_a|^2\), \(\mathcal H=\sum_a|\Pi(d^\nabla P\psi_a)^+|^2\). The chiral energy on \(\{S>0\}\) is the integral of \(2\mathcal H/S\). In particular a floor \(S\ge c_j^2>0\) on each protected region \(U_j\) gives, by conformal invariance of the chiral energy density times volume,
+\begin{equation}
+ E_+(U)\le 2\sum_j c_j^{-2}\int_{U_j}\mathcal H_j\,dV_j
+           +E_+(U\setminus\textstyle\bigcup_j U_j).
+ \label{eq:floorcov}
+\end{equation}
+Different smooth fields and conformal metrics can be used on different regions, with derivatives taken in their own metrics. On a connected domain one nontrivial actual harmonic member suffices for the common zero set to have volume zero by B\"ar's nodal-set theorem for smooth Dirac solutions~\cite[Main Theorem]{Baer1997Nodal}. On the nonzero locus, \(\widehat\psi=\psi/|\psi|\) may be used in \eqref{eq:curlnorm}, so the normalized projected derivative square is \(|W^+|_{\rm HS}^2/2\). The normalization here is pointwise and \eqref{eq:curlnorm} applies to it directly. For one actual field on a closed positive-scalar source punctured at \(p\), invert the closed Dirac operator on \(\delta_p\eta\) for \(\eta\in S^-_p\setminus\{0\}\). Elliptic regularity makes the image a smooth positive harmonic field away from \(p\). If it were supported at \(p\), its highest-order delta derivative term would yield a Dirac image of order at least one by invertibility of the principal symbol off the zero covector. This would contradict the order-zero source. On a connected punctured source this field is nontrivial and its normalized defect integral is half the full chiral energy, with the pole and nodal set omitted.
+
+\subsection{Ricci forcing on a protected strip}
+On the fixed strip \([0,4]\times S^3(1)\), suppose \(h\) is near the round product with first-order error \(\epsilon_1=\|h-h_0\|_\infty+\|\nabla^0(h-h_0)\|_4\), and take an actual harmonic field \(u\) in that gauge. Compare it to \(u_0=r^{3/2}\kappa\) in the transported reference spin frame, where \(r=e^t\) and \(\kappa\) is a flat constant unit spinor in \(x=r\omega\). Its incoming data are zero at the left and the specified lowest negative mode at the right. Let \(d\) be the incoming trace discrepancy in \(\mathcal T^2\). The fixed inverse gives \(\|u-u_0\|_{H^1}\le C(\epsilon_1+d)\) by applying it to the difference. After transport to \(g=r^2h\), express the actual spinor \(\psi\) in the symmetric frame relative to the Euclidean metric. Its difference from \(\kappa\) is \(O(\epsilon_1+d)\) in \(H^1\), and the same bound holds for \(\|\nabla^g\psi\|_2\). The connection difference is \(O(\epsilon_1)\) in \(L^4\), so the latter bound follows by the fixed \(H^1\to L^4\) embedding.
+
+Put \(q=\nabla\psi=P\psi\) for a harmonic field, with the Levi-Civita covector connection included in \(T^*\otimes S\). At a normal frame,
+\begin{equation}
+ (D^{T^*}q)(X)-\nabla_X D\psi
+   =\sum_i c(e_i)R^S(e_i,X)\psi
+   =\tfrac12 c(\Ric^\sharp X)\psi .
+ \label{eq:ricciforcing}
+\end{equation}
+The spin Ricci contraction in the opposite order is
+\[\sum_i c(e_i)R^S(X,e_i)=-\tfrac12 c(\Ric^\sharp X).\] The local \(H^1\to L^2\) comparison also applies to \(D^{T^*}\). The metric error bounds its principal difference, and first metric derivatives bound the spin and covector connection differences. Let \(K,K'\) be the strips over \([1,3]\) and \((1/2,7/2)\). Apply the flat identity \(\|\partial(\zeta q)\|_2=\|D_{\rm flat}^{T^*}(\zeta q)\|_2\) to a cutoff supported in \(K'\) and absorb the comparison error. It follows that
+\begin{equation}
+ \|\nabla^gq\|_{2,K}\le C\bigl(\|q\|_{2,K'}+\||\Ric_g|\,|\psi|\|_{2,K'}\bigr).
+ \label{eq:localRicci}
+\end{equation}
+Antisymmetrization and projection give the same type of upper bound for the projected derivative. If \(|\psi|\ge c_*>0\) on \(K\), its normalized \(L^2\) norm is bounded by \(C c_*^{-1}(\epsilon_1+d+\||\Ric_g|\,|\psi|\|_{2,K'})\).
+
+For example, if \(\epsilon_2=\|h-h_0\|_{W^{2,p}}\) is small for fixed \(p>4\), the identified equation for \(w=\psi-\kappa\) is
+\((D_{\rm flat}+a^i\partial_i+b)w=-b\kappa\), with \(\|a\|_\infty+\|Da\|_\infty+\|b\|_\infty+\|Db\|_p\le C_p\epsilon_2\). For \(q_0=4,p\) the usual constant-coefficient Dirac estimate from the Euclidean \(L^{q_0}\) singular-integral bound~\cite[Chapter~I]{CalderonZygmund1952Singular} applies with interior cutoffs, absorbing the small \(a^i\partial_i\) term and bounding cutoff terms in \(L^{q_0}\). Use \(H^1\hookrightarrow L^4\), then the resulting \(W^{1,4}\hookrightarrow L^p\) and \(W^{1,p}\hookrightarrow L^\infty\) on nested strips. The differentiated equation for \(\partial_j w\) has forcing \(-(\partial_j a^i)\partial_i w-(\partial_j b)(w+\kappa)\) in \(L^p\). This gives \(\|w\|_{W^{2,p}(K)}\le C_p(\epsilon_2+d)\), a floor \(1/2\) for small enough \(\epsilon_2+d\), and the same \(O(\epsilon_2+d)\) bound for the normalized projected derivative on \(K\). Each protected strip has its own incoming data. For a growing family, the sufficient curvature condition from these estimates is smallness of the sum of the squared estimates and of the uncovered energy in \eqref{eq:floorcov}.
+
+\subsection{A relative Bochner estimate}
+\begin{proposition}\label{prop:bochner}
+Let \(\psi_a\) be a finite smooth family of positive Dirac-harmonic spinors, let \(S=\sum_a|\psi_a|^2\), \(Q=\sum_a|\nabla\psi_a|^2\), and let \(v^2=Q/S\) on \(\{S>0\}\). For a real compactly supported cutoff \(\chi\) on the smooth domain, suppose \(S>0\) almost everywhere in its support. Then
+\begin{equation}
+ \int\chi^2|W^+|_{\mathrm{HS}}^2
+   \le C\int\bigl(\chi^2|\Ric|^2+\chi^2|\Rm|v^2
+                            +\chi^2v^4+|d\chi|^2v^2\bigr),
+ \label{eq:bochner}
+\end{equation}
+with all volume and differential measurements in the metric of the equation. The constant \(C\) depends only on dimension and the tensor norms.
+\end{proposition}
+\begin{proof}
+In a normal frame the square of the covector-twisted Dirac operator is \(\nabla^*\nabla+s/4+\tfrac12\sum_{ij}c(e_i)c(e_j)\otimes R^{T^*}_{ij}\). Thus for a compactly supported \(w\), \(\|\nabla w\|_2^2\le \|D^{T^*}w\|_2^2+C\int|\Rm||w|^2\). Apply this to \(w=f\nabla\psi_a\), summing and using \eqref{eq:ricciforcing}:
+\[
+ \int f^2\sum_a|\nabla^2\psi_a|^2
+ \le C\int(f^2|\Ric|^2 S+f^2|\Rm|Q+|df|^2Q).
+\]
+For \(f=\chi(S+\epsilon)^{-1/2}\) one has \(|dS|^2\le4SQ\), whence
+\(|df|^2Q\le2|d\chi|^2Q/(S+\epsilon)+2\chi^2(Q/(S+\epsilon))^2\).
+By \eqref{eq:curlnorm} and the exterior norm convention,
+\(|W^+|_{\rm HS}^2 S/2\le2\sum_a|\nabla^2\psi_a|^2\).
+These inequalities bound the regularized left side with its factor \(S/(S+\epsilon)\). Monotone convergence as \(\epsilon\downarrow0\) gives \eqref{eq:bochner}, also in the extended sense if a relative integral diverges.
+\end{proof}
+The proof is a local counterpart of curvature estimates through Witten spinors~\cite[\S3]{BrayFinster1999Curvature,Finster2008LevelSet}. In a chart cover with \(\sum_j\chi_j^2\ge1\) on the covered subset, let \(\mathcal R,\mathcal K,\mathcal V,\mathcal C\) be the sums of the integrals of \(\chi_j^2|\Ric_j|^2,\chi_j^2|\Rm_j|^2,\chi_j^2v_j^4,|d\chi_j|^2v_j^2\) in the respective metrics. By Cauchy--Schwarz the total cost is at most \(C(\mathcal R+\sqrt{\mathcal K\mathcal V}+\mathcal V+\mathcal C)\). Each term is invariant under constant rescaling. For a variable conformal metric, its own Ricci and gradient data are required. The flat parallel field gives zero Bochner cost, while the round cylindrical mode from Section~3 has \(v^2=3\) and \(|\Ric|^2=12\), producing a cost proportional to length even though \(W=0\).
+
+\subsection{A bounded-energy oscillation with actual Green fields}
+On the standard \(S^4\) choose a conformally round metric \(g_b=f^2\delta\) on its punctured chart, where \(\delta\) is Euclidean, \(f=1\) near a compact protected annulus, and \(f=r^{-2}\) toward the puncture at infinity. The latter is a flat germ in an oriented inverted frame. For a nonzero smooth real cutoff \(\zeta\) in the annulus, \(H=\operatorname{diag}(0,1,-1,0)\) and fixed \(a>0\), set
+\[
+ F_n=\zeta(x)\cos(nx^1),\qquad
+ g_n=g_b+a n^{-2}F_n H,\qquad
+ q_n=f^{-2}g_n=\delta+a n^{-2}F_n H.
+\]
+The first-order error of \(r^{-2}q_n\) on the fixed cylinder is \(O(n^{-1})\). In the flat gauge the linear scalar variation is \(\partial_i\partial_j k_{ij}-\partial_i\partial_i\Tr k\) for \(k=g_n-g_b\). Since \(\Tr H=0\) and \(H_{1i}=0\), it is \(O(n^{-2})\). The nonlinear terms \(O(|k||D^2k|+|Dk|^2)\) have the same order. The scalar functions of the compact metrics therefore differ by \(O(n^{-2})\). The positive Yamabe quadratic form of \(g_b\) dominates its \(H^1\) norm, by its positive Yamabe inequality and bounded negative part of \(s_{g_b}\). Comparing the forms and \(L^4\) denominators gives \(Y([g_n])\to Y(S^4)\).
+
+Fix a pole source so the background Green field \(G_b\) transports to a unit parallel spinor \(\kappa\) in the punctured Euclidean metric. In the common compact spin gauge the actual Green solution is \(G_b+z_n\), with
+\[
+ D_nz_n=-(D_n-D_b)G_b,\qquad \|z_n\|_{W^{1,p_*}}=O(n^{-1})\quad(p_*>4).
+\]
+The right side is supported away from the pole and the transported operator difference is \(O(n^{-1})\) from \(W^{1,p_*}\) to \(L^{p_*}\), so the estimate follows by perturbing the fixed compact inverse. The common flat germ makes \(z_n\) regular harmonic there. Interior estimates at the pole transport to \(O(n^{-1}r^{-3})\) at infinity with differentiated decay \(O(n^{-1}r^{-4})\). Thus in \(q_n\) the actual fields \(\Psi_n\) converge uniformly to \(\kappa\), have a positive floor for large \(n\), and satisfy \(\|\nabla^{q_n}\Psi_n\|_4=O(n^{-1})\). Their relative quartic first-order defects tend to zero.
+
+In the leading Riemann components both derivatives fall on the cosine, giving \(R_{1i1j}=\tfrac a2 F_n H_{ij}+O(n^{-1})\), \(\Ric=\tfrac a2 F_n H+O(n^{-1})\). The Weyl operator has leading term \(a F_n C/4\), where the ordered \(12,13,14,23,24,34\) diagonal entries of \(C\) are \(1,-1,0,0,-1,1\). Its positive block has squared norm \(|C^+|_{\rm HS}^2=2\). Differentiating the error \(j\) times costs \(O(n^{j-1})\) for \(0\le j\le2\). In particular
+\[
+ E_+(g_n)=E_+(q_n)\longrightarrow\frac{a^2}{16}\int\zeta^2\,dx>0 .
+\]
+The normalized projected defect integral has half this limit by \eqref{eq:curlnorm}. The Bach convention
+\(B_{ij}=\nabla^k\nabla^\ell W_{ikj\ell}+\tfrac12\Ric^{k\ell}W_{ikj\ell}\)
+gives \(B(q_n)_{ij}=-\tfrac a4 n^2 F_n H_{ij}+O(n)\). The leading term uses \(C_{i1j1}=H_{ij}\). Derivatives of the connection and contractions contribute to the lower-order error. Since \(\int|F_n|\) stays bounded below, \(\|B(q_n)\|_1\asymp n^2\). Both \(E_+\) and the integrated Bach norm are conformally invariant in four dimensions~\cite[\S2]{Derdzinski1983SelfDual,CatinoMastroliaMonticelliRigoliIntegrability}. The example tests positive Yamabe sign, fixed protected first-order comparison, a normalized actual field and bounded Weyl energy. By choosing \(a\), the energy limit can lie in the interior of the stated band. The Bach norm diverges and the first-order chart is measured in the displayed gauge.
+
+\section{Signed chiral boundary charges}
+
+Let \(U\) be a smooth compact domain in an oriented spin four-manifold, with outward-normal-first boundary orientation. Use the Levi-Civita connection on each \(S^\pm|_U\), anti-Hermitian curvature \(F_\pm\), and trace in the fundamental two-dimensional representation. Set \(\sigma_+=-1,\ \sigma_-=1\) and write
+\[
+ I_\pm(g;U)=\int_U\left(|W^\pm|_{\rm HS}^2+s_g^2/48-|\Ric_0|^2/4\right)dV_g .
+\]
+Pointwise, \(\Tr(F_\pm\wedge F_\pm)\) is \(\sigma_\pm\) times the integrand of \(I_\pm\). In fact the spin curvature map is \(-c(\mathcal R)/2\) and \(-\Tr(c(\omega)c(\eta))=4\ip{\omega}{\eta}\) in the corresponding chirality. The positive and negative input pieces of \(F_+\) therefore have squared norms \(|W^++(s_g/12)I|_{\rm HS}^2\) and \(|\mathcal R_{+-}|_{\rm HS}^2\). The first gives \(|W^+|_{\rm HS}^2+s_g^2/48\). In an orthonormal eigenframe for \(\Ric_0\) with eigenvalues \(\lambda_i\), the second is \(\sum_{j=2}^4(\lambda_1+\lambda_j)^2/4=|\Ric_0|^2/4\). Tracing the wedge of anti-Hermitian matrices subtracts the positive-input norm and adds the negative-input norm. On \(S^-\) the two inputs exchange their roles. The Chern class convention is \(c_2=[\Tr(F\wedge F)/(8\pi^2)]\), from \(\det(I+iF/(2\pi))\). In particular the round \(S^4\) has \(I_\pm=8\pi^2\) and \(c_2(S^+)=-1\).
+
+Supply smooth determinant-one unitary frames on the actual boundary. Write \(a_\pm\) for the restrictions of the ambient connection matrices in these frames, \(F_\pm^\top\) for the tangential curvatures, \(P_0=8\pi^2\), and
+\[
+ C_\pm=\sum_{\Sigma\subset\partial U}\int_\Sigma
+ \CS(a_\pm),\qquad
+ \CS(a)=\Tr(a\wedge da+\tfrac23a^{\wedge3})
+        =\Tr(a\wedge F^\top-\tfrac13a^{\wedge3}) .
+\]
+Chern--Simons transgression~\cite[\S3, Proposition~3.2]{ChernSimons1974Characteristic} gives
+\begin{equation}
+ I_\pm(g;U)=\sigma_\pm(P_0k_\pm+C_\pm),\qquad k_\pm\in\mathbb Z .
+ \label{eq:charges}
+\end{equation}
+For the relative integer, extend the frames to a short collar, cut the connection to its flat frame connection near the boundary, and double with a trivial flat bundle on the oppositely oriented copy. The modified curvature integral on the double equals \(\int_U\Tr(F_\pm\wedge F_\pm)-C_\pm\). The construction uses the frames on the boundary collar only. Under a frame change by \(q:\Sigma\to\mathrm{SU}(2)\), the change in the integral on a face is \(-\tfrac13\int_\Sigma\Tr((q^{-1}dq)^{\wedge3})=8\pi^2\deg q\) in the group orientation given by \((i,j,k)\). The degree factor uses \(\Tr(ijk)=-2\) and total volume \(2\pi^2\) of the unit three-sphere. The relative integer changes by the opposite degree. The connection includes the ambient extrinsic data on the face.
+
+On a fixed face in its specified metric,
+\begin{equation}
+ \left|\int_\Sigma\CS(a)\right|
+ \le C\bigl(\|a\|_3\|F^\top\|_{3/2}+\|a\|_3^3\bigr).
+ \label{eq:traceCS}
+\end{equation}
+A nowhere-zero half-spinor on the face defines a frame by unit normalization and the parallel quaternionic structure. The frame connection satisfies \(|a|\le C|\nabla^\top\psi|/|\psi|\). Thus \eqref{eq:traceCS} tests actual first tangential derivatives in the \(L^3\) scale. The \(L^3\) tangential derivative requires separate measurement beyond \(H^{1/2}\) transmission. The flat Dirac pole gives a nowhere-zero harmonic field with an integral of absolute value \(8\pi^2\) in the frame it defines, by the degree of absolute value one of the isometry \(\omega\mapsto c(\omega)\eta/|\eta|\) relative to the constant frame. The small numerical flux condition depends on the representative, and the modular condition allows winding.
+
+\subsection{Physical residuals and finite partitions}
+For the physical Yamabe band in \eqref{eq:band}, any compact residual of volume \(v\) has
+\[
+ -P_0+\delta\le -\tfrac14\int_M|\Ric_0|^2
+  \le I_\pm(g;U)\le P_0-\delta+P_0v .
+\]
+If \(P_0v+|C_\pm|<\delta\) in the specified frame, then \(k_\pm=0\) by \eqref{eq:charges} and
+\begin{equation}
+ E_\pm(U)=\tfrac14\int_U|\Ric_0|^2\,dV-\tfrac{s^2}{48}v+\sigma_\pm C_\pm .
+ \label{eq:riccisub}
+\end{equation}
+The same conclusion for the nearest representative uses \(\operatorname{dist}(C_\pm,P_0\mathbb Z)\). Vanishing physical volume and both signed fluxes make the two residual Weyl energies agree asymptotically and identify each with a quarter of the residual trace-free Ricci integral. That integral still needs an independent estimate.
+
+For a finite smooth partition into \(k\) pieces, write \(I_\pm=P_0n_{j,\pm}+\varepsilon_{j,\pm}\) on each piece with nearest representatives and \(|\varepsilon_{j,\pm}|\le\epsilon\). If \(2\epsilon<\delta\) and \(k\epsilon<P_0\), each integer is nonnegative by the lower bound and their sum is one in each chirality since the closed total is \(P_0\). On each piece \(I_+-I_-=E_+-E_-\) has absolute value at most \(P_0-\delta\), so \(n_{j,+}=n_{j,-}\). Hence a unique piece carries both unit charges. Its volume is at least \((\delta-\epsilon)/P_0\), by the upper estimate for \(I_\pm\). On every other piece the absolute value of the left side of \eqref{eq:riccisub} after moving its scalar and Ricci terms to the left is at most \(\epsilon\). These are charge and volume conclusions on the actual partition. The sum of absolute representative errors must be measured if the number of pieces grows.
+
+\subsection{Positive Schouten representatives and conformal current}
+For \(A_g=(\Ric_g-s_gg/6)/2\), one has
+\(2\sigma_2(A_g)=s_g^2/48-|\Ric_0|^2/4\), where symmetric functions refer to the metric endomorphism. In the closed positive band, \(\int_M\sigma_2(A_g)=(P_0-E)/2>0\). Chang--Gursky--Yang's positive Yamabe, positive total second Schouten symmetric function theorem yields a smooth conformal metric \(h\) with \(\sigma_2(A_h)>0\)~\cite[Theorem~A]{ChangGurskyYang2002PositiveRicci}. Their Schouten convention doubles \(A_g\), which preserves the sign condition. Thus \(I_\pm(h;\cdot)\) are positive measures with total \(P_0\). On the actual domain \(U\),
+\begin{equation}
+ d_\pm:=\operatorname{dist}(C_\pm(h),P_0\mathbb Z)
+   =\min\{I_\pm(h;U),I_\pm(h;M\setminus U)\}
+   \ge\min\{E_\pm(U),E_\pm(M\setminus U)\}.
+ \label{eq:positiveCS}
+\end{equation}
+This is a test on the single signed total in the chosen metric, valid for any smooth compact residual with any number of boundary components. If \(d_\pm\to0\) while the exterior has a positive energy lower bound in the same chirality, then \(E_\pm(U)\to0\). Moreover, if \(d_++d_-<\delta\), the nearest branches agree. Opposite branches would make \(|E_+(U)-E_-(U)|\ge P_0-d_+-d_->E\). Therefore an exterior lower bound in either chirality exceeding \(d_++d_-\) selects \(U\) for both, giving \(E_+(U)+E_-(U)\le d_++d_-\). In \eqref{eq:traceCS} the boundary spinor and curvature must be measured in \(h\) to test \eqref{eq:positiveCS} directly.
+
+Let \(h=e^{2u}g\), \(g_t=e^{2tu}g\) and \(N_t=(\Tr_{g_t}A_{g_t})g_t-A_{g_t}\). Contracted Bianchi gives \(\operatorname{div}_{g_t}N_t=0\). Differentiating \(\sigma_2(A)\) against \(-\nabla^2_{g_t}u\) gives a divergence, with the \(-4u\sigma_2\) endomorphism term canceled by the volume variation~\cite[\S2.1]{GurskyStreets2018TwoYamabe}. Thus with the outward normals \(\nu_t\),
+\begin{equation}
+ J=\int_0^1\!\!\int_{\partial U}N_t(\nu_t,\nabla^{g_t}u)\,dS_{g_t}\,dt,
+ \qquad
+ I_\pm(h;U)=I_\pm(g;U)-2J .
+ \label{eq:current}
+\end{equation}
+Transporting the frames by the conformal spin isometry keeps their relative integers. The raw trace integrals then change by \(C_+(h)-C_+(g)=2J\) and \(C_-(h)-C_-(g)=-2J\). The paired sum is invariant, also modulo the period for independent frames. In a positive Schouten metric, \(E_\pm(U)\le I_\pm(g;U)+2J_-\) with \(J_-=\max(-J,0)\). For physical charges tending to zero, the missing signed estimate is \(J_-\to0\). In the physical unit-volume Yamabe gauge, positivity of \(2\sigma_2(A_h)\) already gives \(J_+\le s_g^2\Vol_g(U)/96\), since \(I_\pm(h;U)\ge E_\pm(U)\).
+
+The current uses only boundary derivatives. On an outward physical face \(\Sigma\) write \(a=u_\nu\), \(v=\nabla_\Sigma(u|_\Sigma)\), \(II(X,Y)=g(\nabla_X\nu,Y)\), \(H_\Sigma=\Tr II\), and use \(\Delta_\Sigma^{\rm div}=\operatorname{div}_\Sigma\nabla_\Sigma\) for the boundary formula. The rescaling factors for the normal, gradient and area in \eqref{eq:current} cancel. Insert \(A_{g_t}=A_g-t\nabla^2u+t^2du\otimes du-\tfrac12t^2|du|^2g\) and integrate in \(t\). The normal-normal Hessian cancels and integration by parts on the face yields
+\begin{equation}
+ J_\Sigma=\int_\Sigma\left[
+ aN_0(\nu,\nu)+N_0(\nu,v)-a\Delta_\Sigma^{\rm div}(u|_\Sigma)
+ -\tfrac12 II(v,v)-\tfrac12 H_\Sigma a^2-\tfrac12 a(a^2+|v|^2)
+ \right]dS_g .
+ \label{eq:boundarycurrent}
+\end{equation}
+Here \(N_0=s_gg/4-\Ric_g/2\). Hölder bounds its absolute value by \(C(\alpha\beta+\gamma\alpha^2+\alpha^3)\) for \(\alpha=\||a|+|v|\|_3,\ \beta=\|N_0(\nu,\cdot)\|_{3/2}+\|\Delta_\Sigma^{\rm div}(u|_\Sigma)\|_{3/2},\ \gamma=\|II\|_3\), all scale invariant. The orientation in \eqref{eq:boundarycurrent} allows cancellation among faces. Small absolute end costs suffice, and the signed comparison can use more than absolute estimates.
+
+For a radial metric \(e^{2w(t)}(dt^2+\gamma_{S^3})\) and \(p=w'\), the Schouten radial and tangential eigenvalues are \(e^{-2w}[-(1-p^2)/2-p']\) and \(e^{-2w}(1-p^2)/2\). A primitive of the radial measure \(2\sigma_2(A)dV\) integrated on each link is \(2\pi^2(p^3-3p+2)\). For the round conformal factors \(w(t)=-\log\cosh t\) and \(w_i(t)=-\log\cosh(t+i)\), the same annular domains \(t\in[-i-1,-i+1]\) have physical round volume and charge tending to zero in the first metric but fixed positive charge in the second. Both metrics are round and the negative \(J\) tends to a nonzero constant. The equator of either round metric has modular distance \(4\pi^2\). These zero-Weyl tests quantify why current transfer and facewise smallness require geometric hypotheses beyond bounds on the total curvature or positivity of the target representative.
+
+\section{Weak physical charts and logarithmic cutoffs}\label{sec:charts}
+
+The following estimate uses the Weyl first variation on embedded charts. Denote the Bach tensor by the convention of Section~4. With the full four-index norm its closed first variation is
+\[
+ D\!\left(\int_M |W|^2\,dV\right)[h]=-4\int_M\ip{B}{h}\,dV .
+\]
+The factor follows by contracting the variation of the all-lowered Riemann tensor with \(2W\). Trace terms from varying the Schouten tensor vanish in that contraction. The terms with two derivatives of \(h\) combine by the curvature symmetries and integrate twice to \(-4\nabla^k\nabla^\ell W_{ikj\ell}\). The metric contractions, the volume term and the remaining Schouten terms give \(-2\Ric^{k\ell}W_{ikj\ell}\), using \(W_{iabc}W_j{}^{abc}=\tfrac14 |W|^2g_{ij}\) in dimension four. This is the Bach variational formula~\cite[\S3]{LeBrun2013EinsteinExtremal}, converted to the full tensor norm above. Since \(E_+-E_-\) is topological, the compactly supported variation of \(E_+\) is \(-\frac12\int\ip{B}{h}\,dV\).
+
+\begin{theorem}\label{thm:cover}
+Let \(g\) be a smooth closed oriented Riemannian four-metric. Supply finitely many oriented embedded buffered annular charts \(\Phi_j:A_j^*\to M\) with \(\Phi_j^*g=c_j^2m_j\) for constants \(c_j>0\), where \(m_j=\delta_{\rm eucl}+v_j\) and \(a_j=\|v_j\|_\infty\le1/4\). Each radial cutoff \(0\le\eta_j\le1\) equals one on its protected annulus and has two smooth transitions in log radius of widths at least \(L_j\ge1\), given by stretching fixed profiles. Let \(T_j\) be the union of its two transition shells and set \(d_j=\|\eta_j Dv_j\|_4,\ d_{T,j}=\|\eta_j Dv_j\|_{4,T_j}\) in the Cartesian coordinate measure. Push \(\eta_j^4\) to the source, extended by zero, to obtain \(\chi_j\). Set \(\omega=\sum_j\chi_j\) and \(V=U\cap\{\omega\ge 1\}\) for a measurable residual \(U\). Then
+\begin{align}
+ E_+(U)\le E_+(U\setminus V)+C\biggl[
+  &\int_M |B_g|\sum_j a_j\chi_j\,dV_g
+     +\int_M|\Rm_g|^2\sum_j a_j^2\chi_j\,dV_g \notag\\
+  &+\sum_j\left(d_j^4+ L_j^{-3/2}d_{T,j}^2+L_j^{-1}a_j^2\right)\biggr].
+ \label{eq:bachcover}
+\end{align}
+The constant is independent of the physical radii and their ratios. The local statement also holds on a supplied oriented annular quotient by a finite free spherical group, using invariant cutoffs and coordinate integrals divided by the group order before taking norms.
+\end{theorem}
+
+\begin{proof}
+Use the Euclidean representation \(F(m)\) of the positive Weyl block in the oriented symmetric \(m^{-1/2}\) frame, multiplied by \((\det m)^{1/4}\), so that \(|F|^2dx=|W^+|_{\rm HS}^2dV_m\). In Cartesian coordinates the all-lowered Riemann tensor has a linear principal part \(\mathcal L(D^2v)\) with constant coefficients and an additional quadratic expression \(Q_m(Dv,Dv)\). Indeed the second derivatives in the coordinate Riemann formula have the coefficient \(1/2\) and fixed permutations of indices, while the remaining terms involve the metric inverse and products of first derivatives. The smooth projection, density and frame together give \(F(m)=\mathcal P_m[\mathcal L(D^2 v)+Q_m(Dv,Dv)]\).
+
+With one cutoff \(\eta\), vary \(m\) by \(\eta^4v\). In \(F'_m[\eta^4v]-\eta^4F(m)\), the full principal term \(\eta^4\mathcal L(D^2v)\) cancels. The variation of \(\mathcal P_m\) is bounded by \(C\eta^4 a|\Rm|\), and the differentiated quadratic expression, after subtracting its weighted copy, is bounded by \(C(\eta^4|Dv|^2+|D(\eta^4)||Dv||v|)\). The remaining principal terms are bounded by \(C(|D(\eta^4)||Dv|+|D^2(\eta^4)||v|)\). Consequently
+\begin{equation}
+ F'_m[\eta^4v]-\eta^4F=\eta^2\mathcal E,\qquad
+ \|\mathcal E\|_2\le C\bigl(aK+d^2+\|D\eta\|_4d_T
+             +a(\|D^2\eta\|_2+\|D\eta\|_4^2)\bigr),
+ \label{eq:chartdef}
+\end{equation}
+where \(K=\|\eta^2\Rm_m\|_{2,m}\), \(d=\|\eta Dv\|_4\), \(d_T=\|\eta Dv\|_{4,T}\). The factors \(D(\eta^4)=4\eta^3D\eta\) and \(D^2(\eta^4)=4\eta^3D^2\eta+12\eta^2D\eta\otimes D\eta\) give the displayed Hölder bounds even where \(\eta\) tends to zero. This calculation replaces a bound on the coordinate Hessian by the intrinsic curvature term.
+
+For a transition of width \(L\) and log radius \(t=\log r\), write \(\eta=f((t-t_0)/L)\) up to reversal. Then \(|D\eta|\le CL^{-1}r^{-1}\) and \(|D^2\eta|\le C(L^{-1}+L^{-2})r^{-2}\). The formula \(dx=r^4\,dt\,d\omega_{S^3}\) yields \(\|D\eta_j\|_4\le CL_j^{-3/4}\) and \(\|D^2\eta_j\|_2\le CL_j^{-1/2}\). For unequal widths, one can retain the two transition terms separately with their own widths.
+
+Take the single smooth metric variation \(\sum_j(\Phi_j)_*(c_j^2\eta_j^4v_j)\) on the actual source, with each term extended by zero. Add the first variations by linearity, evaluating each term in its producing frame. With \(S_\omega=\int_M\omega |W_g^+|_{\rm HS}^2\,dV_g\), the result is
+\[
+ 2S_\omega+2\sum_j\ip{\eta_j^2F(m_j)}{\mathcal E_j}_{L^2}
+ =-\tfrac12\int_M\left\langle B_g,
+       \sum_j(\Phi_j)_*(c_j^2\eta_j^4v_j)\right\rangle dV_g .
+\]
+The pairing is bounded in absolute value by \(C\int_M |B_g|\sum_ja_j\chi_j\,dV_g\). The mixed term has bound \(2\sqrt{S_\omega}(\sum_j\|\mathcal E_j\|_2^2)^{1/2}\), so Young's inequality absorbs a part of \(S_\omega\). Insert the cutoff estimates in \eqref{eq:chartdef} and use \(K_j^2=\int_M\chi_j|\Rm_g|^2\,dV_g\) by constant scale invariance. This proves \eqref{eq:bachcover} since \(E_+(V)\le S_\omega\). The equivariant calculation on the cover of a quotient divides the integrals by the group order. The Euclidean cutoff norms on the quotient are at most the corresponding upstairs norms.
+\end{proof}
+
+On one coherent chart with fixed-width profiles the bound on the protected annulus is \(C[a\int |B|+(aK+d^2+d_T+a)^2]\), using the local \eqref{eq:chartdef} before squaring and with \(K,d\) allowed to be unweighted. The oscillatory example has \(a=O(n^{-2})\), \(d=O(n^{-1})\), bounded \(K\), and a positive protected Weyl limit. The fixed-chart estimate forces its Bach integral to grow at least on the order of \(n^2\). For a finite collection of charts, the two geometric integrals in \eqref{eq:bachcover} are bounded by \(P a_*\|B_g\|_1\) and \(P a_*^2\Lambda\) if the supports have multiplicity at most \(P\), \(a_*=\sup a_j\), and the source full curvature integral is bounded by \(\Lambda\). The physical constant-scale hypothesis ensures that this last bound is measured in the metric used to represent each chart. Variable conformal chart factors require separate full-curvature control.
+
+If every unit log slab in chart \(j\) has \(\|Dv_j\|_4\le\epsilon_j\), let \(n_j\) count the slabs meeting the support. For both transitions of width \(L_j\), integration gives
+\[
+ d_j^4\le n_j\epsilon_j^4,\qquad
+ L_j^{-3/2}d_{T,j}^2\le C L_j^{-1}\epsilon_j^2.
+\]
+The transition cost thus decreases with transition length. The bulk term is the sum of fourth powers on the whole support, including the protected regions. Frame changes between charts enter only through the measured coordinate errors of the individual charts. Normalizing the cutoffs by a sum would introduce additional derivatives of that sum.
+
+\begin{example}
+The bulk critical cost is sensitive to the supplied chart, even on a small physical normal ball. Fix an orthogonal complex structure \(J_0\) on \(\R^4\) and use the oriented diffeomorphism of the punctured ball
+\(\varphi_\epsilon(x)=\exp(\epsilon\log|x|\,J_0)x\), whose inverse has parameter \(-\epsilon\).
+For \(n=x/r\) the pullback of the flat metric has difference
+\[
+ \varphi_\epsilon^*\delta_{\rm eucl}-\delta_{\rm eucl}
+  =\epsilon(n\otimes J_0n+J_0n\otimes n)+\epsilon^2 n\otimes n .
+\]
+The derivative in the unit angular direction \(J_0n\) has leading tensor \(2\epsilon r^{-1}(J_0n\otimes J_0n-n\otimes n)\), orthogonal to the differentiated quadratic term. Thus its full derivative norm is comparable to \(\epsilon/r\). For an actual smooth metric \(\delta_{\rm eucl}+w\) in a normal ball, the extra derivative from \(\varphi_\epsilon^*w\) is bounded by \(C(|Dw|+\epsilon r^{-1}|w|)\) at the corresponding points. Shrinking the ball to make \(\sup(|w|+r|Dw|)\ll\epsilon\) preserves the comparable derivative size and gives amplitude \(O(\epsilon)\). This coordinate change preserves the physical source energies.
+
+Take \(k\) consecutive protected log intervals of length \(L\) with length-\(L\) buffers at both ends of each. The cover has bounded multiplicity, bulk cost at least \(c kL\epsilon^4\) and transition cost at most \(C k\epsilon^2/L\). With \(k=L=i\) and \(\epsilon=i^{-1/2}\), the per-slab errors and transition costs tend to zero while the bulk cost stays positive. The ball can have arbitrarily small physical chiral energy. The example tests the chart norms and leaves open the existence of a better chart for that source.
+\end{example}
+
+By \eqref{eq:curlnorm}, Theorem~\ref{thm:cover} also bounds twice the integral of the normalized projected curl of any actual smooth half-spinor over its regular nonzero locus, in the physical metric or in a harmonic conformal representative. For the actual Green field constructed above this is the full chiral energy, with its volume-zero singular and nodal set excluded. This consequence is independent of how much that field attenuates along the residual.
+
+\section{Outstanding challenges}
+
+Each criterion applies to the actual region it measures. For a sequence of marked comparisons, fix each finite collection of base and bubble truncations, take the source limsup first, then exhaust the comparison components. A chiral energy identity follows from these estimates when the cost of the selected test and the chiral energy outside its coverage tend to zero in this order. For the relative Bochner test the quantities to measure include the full Ricci term in the harmonic gauge and the summed relative quartic gradient and cutoff costs. For the chart variation they include a coherent choice of weak physical coordinates, the bulk first-derivative sum, and the uncovered chiral integral. For the boundary test they include the signed current on the actual end faces in the positive representative or a direct small modular flux there, together with the exterior lower bound that selects the small branch. Angular current contributions require estimates on the actual faces. These alternatives have different geometric inputs.
+
+A positive Yamabe lower bound supplies the closed regular inverse. A nondegenerate family of actual affine pole traces requires additional source normalization and end estimates. The inverse for varying slices also leaves the actual Cauchy spaces to be identified unless one can use the global jump construction with measured seams. The scalar crossing model identifies an additional finite-dimensional issue when the gap is lost. A spinorial curvature test through \eqref{eq:floorcov} needs its own derivative control wherever there is a floor, or one of the intrinsic bounds for the normalized ratio.
+
+The wider geometric program must establish the existence of marked separating charts, or control the mass that stays at a single scale, and handle a possible nonround closed critical class on the original smooth type. In a closed positive Yamabe homotopy-sphere class, \(E_+<4\pi^2\) gives the strict smooth recognition threshold of Chang--Gursky--Yang~\cite[Theorem~A and Remark~2]{ChangGurskyYang2003}. The theorem uses the full tensor energy \(\int_M |W|^2=8E_+\) and \(\chi(M)=2\) here, and simple connectedness selects \(S^4\). The existence of a positive subcritical class on every smooth homotopy sphere and the global mechanism reaching recognition remain open.
+
+\section*{Preparation and evidence}
+Prepared for Edward B. Baker III with OpenAI Codex assistance, 25 November 2026. This manuscript integrates the three November collar assessments and the underlying analytical derivations, from starting revisions \texttt{cec037f}, \texttt{6879850}, and \texttt{7db310a}, consolidated at \texttt{5ff7014}. The adjacent Dirac manuscript at \texttt{0a0abde} supplies the spinorial conventions and the chiral curl framework. The precursor assessments record a requested GPT-6.2 Astra/ultra lead and bounded GPT-6.2 Sol/ultra checks. The exact serving model and reasoning effort of this drafting session are unavailable. The evidence here consists of analytical results under the displayed hypotheses and explicit analytical model tests.
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+\end{document}

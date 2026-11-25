@@ -18,3 +18,7 @@ The first objective is a finite-time recognizing slice under explicit
 geometric hypotheses. The plan gives a bounded dissipation question, a
 compactness or rigidity fallback, and a parallel initial-data question.
 Research is unactivated.
+
+## 25 November 2026 · collar manuscript integration
+
+Added the positive Yamabe barrier along smooth flow, the almost critical physical slices of an immortal trajectory, and the volume-bearing marked balls on those slices. The introduction was previously the whole manuscript at `b721c00`. Research input through `5ff7014`. [Manuscript](manuscript/bach_flow_and_smooth_poincare.tex) · [Coverage and evidence](../03_first_order_twistor/reviews/MANUSCRIPT_COVERAGE_20261125.md)

@@ -19,16 +19,31 @@
 
 \title{Bach flow and the smooth four-dimensional\\Poincar\'e conjecture}
 \author{Edward B. Baker III}
-\date{Working draft --- 23 November 2026}
+\date{Working draft --- 25 November 2026}
 % Prepared for Edward B. Baker III with OpenAI Codex assistance,
 % 23 November 2026 (America/New_York). The selected model and effort were unavailable.
 % The common opening is copied from the companion chiral metric evolution draft.
 % The exact source identity and evidence scope are recorded in ../DRAFT_HISTORY.md.
-% This draft contains the introduction and its cited background.
+% Revised 25 November against b721c00 and the collar research at 5ff7014.
+% Coordinating serving settings are unavailable.
 
 \begin{document}
 \maketitle
 \thispagestyle{plain}
+
+\begin{abstract}
+On a smooth homotopy four-sphere, the modified Bach flow decreases
+the chiral Weyl energy \(E_+\). We show that a smooth trajectory
+starting in a positive Yamabe class with \(E_+<8\pi^2\) retains a
+uniform positive Yamabe bound. If the flow exists for all time and
+has energy at least \(4\pi^2\), its dissipation produces late slices
+whose unit-volume Yamabe representatives have vanishing integrated
+Bach norm in the limit. A marked-volume theorem then locates disjoint
+smooth balls in the original manifold carrying almost all physical
+volume and individually little curvature. The relation between their
+boundaries and the chiral energy needed for sphere recognition remains
+open.
+\end{abstract}
 
 \section{Introduction}\label{sec:introduction}
 
@@ -189,13 +204,114 @@ constant of the conformal class is positive and
 type, since simple connectivity excludes
 \(\mathbb{RP}^4\)~\cite[Theorem A]{ChangGurskyYang2003}.
 
-It remains to determine whether the flow can reach this threshold or a
-smooth conformally flat limit from broader initial data. The
-dissipation identity controls the time integral of the squared Bach
-tensor. The continuation criterion of Lopez involves the full Riemann
-tensor, and a smooth critical metric satisfies \(B_g=0\).
-A global argument must control curvature concentration and show that
-the evolution attains a recognition condition~\cite[Theorem 1.2]{Lopez2018AmbientObstruction}.
+\section{A uniform Yamabe bound along a smooth trajectory}
+
+Assume \(M\) is a closed oriented smooth homotopy four-sphere, that
+\(Y(M,[g_0])>0\), and that \(E_+(g_0)\le 8\pi^2-\delta\) for a fixed
+\(\delta>0\). All subsequent assertions about a time \(t\) refer to
+the smooth existence interval of \eqref{eq:modified-bach}. Write
+\(Y_t=Y(M,[g(t)])\). Take a unit-volume minimizing Yamabe metric \(h_t\)
+in this conformal class, so \(s_{h_t}=Y_t\)
+\cite{LeeParker1987Yamabe}. Gauss--Bonnet, \(\chi(M)=2\), and
+\eqref{eq:chiral-weyl-energy} give
+\begin{equation}\label{eq:yamabe-budget}
+ 16\pi^2=2E_+(g(t))-\tfrac12\int_M|\Ric_0(h_t)|^2\,dV_{h_t}
+                     +\tfrac1{24}Y_t^2 .
+\end{equation}
+Indeed the Weyl terms in this formula are conformal integrals,
+while the scalar term is evaluated in the volume-one metric
+\cite[eq.~(0.4)]{ChangGurskyYang2003}. Dropping the Ricci integral
+after solving for \(Y_t^2\) and using \eqref{eq:weyl-dissipation}
+yields \(Y_t^2\ge 48(8\pi^2-E_+(g_0))\ge48\delta\).
+To recover the sign, the first eigenvalue of
+\(-6\Delta_{g(t)}+s_{g(t)}\) varies continuously on a smooth
+trajectory. Pairing its positive first eigenfunction with the
+positive conformal factor in the Yamabe equation identifies its
+sign with that of \(Y_t\). Thus
+\[
+ Y_t\ge\sqrt{48(8\pi^2-E_+(g_0))}.
+\]
+This argument permits an arbitrary choice of Yamabe minimizer at
+each time. Any smooth time with \(E_+<4\pi^2\) is sufficient for smooth
+recognition. The strict inequality must hold at an actual slice.
+
+\section{Almost critical slices and their physical volume}
+
+Suppose now the solution exists smoothly for all \(t\ge0\) and stays
+at or above the recognition threshold. Write
+\(e=\lim_{t\to\infty}E_+(g(t))\). Monotonicity gives this limit and
+\eqref{eq:weyl-dissipation} yields times \(t_i\in[i,i+1]\) with
+\[
+ \int_M |B_{g(t_i)}|^2\,dV_{g(t_i)}
+ \le c_B^{-1}\bigl(E_+(g(i))-E_+(g(i+1))\bigr)\longrightarrow0 .
+\]
+Since \(\partial_t dV_g=(\Delta_gs_g/6)dV_g\), integration on the
+closed manifold preserves its total volume \(V\). Hence the spatial
+\(L^1\) Bach norms tend to zero by Cauchy--Schwarz with constant
+\(V^{1/2}\). In dimension four the covariant Bach tensor transforms as
+\(B_{u^2g}=u^{-2}B_g\). Its norm with the rescaled metric acquires
+another \(u^{-2}\), so \(|B|\,dV\) is conformally invariant.
+The selected unit-volume physical Yamabe metrics \(g_i=h_{t_i}\)
+therefore satisfy
+\begin{equation}\label{eq:sequence}
+ \int_M |B_{g_i}|\,dV_{g_i}\longrightarrow0,\qquad
+ s_{g_i}=Y_{t_i}\ge\sqrt{48\delta},\qquad
+ 4\pi^2\le E_+(g_i)\longrightarrow e\le8\pi^2-\delta .
+\end{equation}
+Here the squared Bach norm was estimated in the evolving metric.
+It is the first-power norm that transfers to the physical metrics.
+
+On this actual sequence, for every \(\epsilon,\zeta>0\) a subsequence
+has a uniformly finite collection of disjoint smoothly embedded
+standard four-balls carrying together at least \(1-\epsilon\) of
+\(dV_{g_i}\), each carrying less than \(\zeta\) of
+\(\int|\mathrm{Rm}_{g_i}|^2\,dV_{g_i}\)
+\cite{Baker2026MarkedLimits}. The construction makes a distinction
+between the metrics used to find the balls and to integrate on them.
+Positive Yamabe sign and positive integrated second Schouten curvature
+give a positive-Ricci conformal representative
+\cite[Theorem~A and Corollary~B]{ChangGurskyYang2002PositiveRicci}.
+Its distance is rescaled so the least radius containing half the
+physical probability is one. Bishop comparison controls the fourth
+power Dirichlet cost of a logarithmic cutoff in this gauge. The
+physical Yamabe inequality then excludes concentration of the physical
+probability on arbitrarily small gauge balls. Locally bounding the
+physical conformal factor gives absolute continuity of the limiting
+physical probability on the noncollapsed Ricci limit. Almost every
+such point is regular and is a nonatom of the bounded physical
+curvature measure. At fixed continuity radii take the source limit
+first, then shrink the radii. Local smooth ball embeddings and a
+finite disjoint selection realize the assertion
+\cite[Theorems~2.1, 5.9 and Appendix~A]{CheegerColding1997StructureI}
+\cite{Baker2026MarkedLimits}.
+
+\section{Outstanding flow and recognition questions}
+
+The volume-bearing balls leave open the location of the chiral energy
+in their complement. A balanced cut requires two prescribed positive chiral masses on opposite
+sides and enough geometric control to splice and cap the cut. For
+one-cut smooth-type transfer it suffices to recognize a subthreshold
+capped exterior, which may carry zero energy. A second
+route would give a smooth closed oriented homotopy sphere \(N\) with
+finitely many ordinary marked points and coherent oriented embeddings
+of its whole punctured truncations. Pass to a subsequence with
+\(Y_{t_i}\to y\). In \(\Phi_i^*g_i=u_i^2m_i\) suppose \(m_i\to h\)
+locally uniformly and strongly in \(W^{1,4}\), with a local
+\(L^2(m_i)\) scalar-curvature bound and a smooth extension of \(h\) to
+\(N\). If the base carries positive chiral energy, the marked
+comparison theorem makes it Bach-flat and identifies its oriented
+smooth type with \(M\)
+\cite{Baker2026MarkedNecks,Baker2026MarkedLimits}. Full recovery at
+\(e=I^+(M)\) uses equality with the infimum over positive classes on
+that smooth type. The evolution gives \(e\ge I^+(M)\), which leaves open a positive residual energy.
+
+Finite-time singularities require their own analysis. The continuation
+criterion uses the full Riemann tensor \cite[Theorem~1.2]{Lopez2018AmbientObstruction};
+the dissipation integral controls a different tensor.
+The global questions are whether the flow admits such singularities
+in this band, whether a surviving closed critical class can be
+classified, and how to obtain positive subcritical initial data on
+each candidate smooth sphere.
 
 \bibliographystyle{unsrturl}
 \bibliography{references}

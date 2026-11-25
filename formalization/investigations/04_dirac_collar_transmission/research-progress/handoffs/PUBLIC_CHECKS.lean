@@ -1,0 +1,471 @@
+import FirstOrderTwistor
+
+/-!
+# Route 04 public declaration checks
+
+These commands check the source-declared public constants and named
+structure fields from the Route 04 modules through the library import.
+They can be run with `lake env lean` from the formalization directory.
+-/
+
+/-! ## CoreTraces -/
+
+#check FirstOrderTwistor.matchSuppliedCoreTraceGraphs
+#print axioms FirstOrderTwistor.matchSuppliedCoreTraceGraphs
+#check FirstOrderTwistor.closedJumpCorrectionOfRightInverse
+#print axioms FirstOrderTwistor.closedJumpCorrectionOfRightInverse
+#check FirstOrderTwistor.criticalJointMassFloor
+#print axioms FirstOrderTwistor.criticalJointMassFloor
+#check FirstOrderTwistor.criticalJointFloorOfJumpBounds
+#print axioms FirstOrderTwistor.criticalJointFloorOfJumpBounds
+
+/-! ## CylinderDirac -/
+
+#check FirstOrderTwistor.cylinderIncomingEnd
+#print axioms FirstOrderTwistor.cylinderIncomingEnd
+#check FirstOrderTwistor.cylinderOutgoingEnd
+#print axioms FirstOrderTwistor.cylinderOutgoingEnd
+#check FirstOrderTwistor.roundCylinderMode
+#print axioms FirstOrderTwistor.roundCylinderMode
+#check FirstOrderTwistor.roundCylinderMode_at_incoming
+#print axioms FirstOrderTwistor.roundCylinderMode_at_incoming
+#check FirstOrderTwistor.roundCylinderMode_hasDerivAt
+#print axioms FirstOrderTwistor.roundCylinderMode_hasDerivAt
+#check FirstOrderTwistor.roundCylinderMode_equation
+#print axioms FirstOrderTwistor.roundCylinderMode_equation
+#check FirstOrderTwistor.roundCylinderGap_of_signedSpectrum
+#print axioms FirstOrderTwistor.roundCylinderGap_of_signedSpectrum
+#check FirstOrderTwistor.norm_roundCylinderMode_le
+#print axioms FirstOrderTwistor.norm_roundCylinderMode_le
+#check FirstOrderTwistor.roundCylinderMode_at_outgoing
+#print axioms FirstOrderTwistor.roundCylinderMode_at_outgoing
+#check FirstOrderTwistor.roundCylinder_outgoingTrace_sq_le
+#print axioms FirstOrderTwistor.roundCylinder_outgoingTrace_sq_le
+#check FirstOrderTwistor.forcedCylinderMode
+#print axioms FirstOrderTwistor.forcedCylinderMode
+#check FirstOrderTwistor.forcedCylinderMode_at_incoming
+#print axioms FirstOrderTwistor.forcedCylinderMode_at_incoming
+#check FirstOrderTwistor.forcedCylinderMode_hasDerivAt
+#print axioms FirstOrderTwistor.forcedCylinderMode_hasDerivAt
+#check FirstOrderTwistor.forcedCylinderMode_equation
+#print axioms FirstOrderTwistor.forcedCylinderMode_equation
+#check FirstOrderTwistor.cylinderMode_energy_balance
+#print axioms FirstOrderTwistor.cylinderMode_energy_balance
+#check FirstOrderTwistor.cylinder_weighted_equation
+#print axioms FirstOrderTwistor.cylinder_weighted_equation
+#check FirstOrderTwistor.diracWeighted_norm_le
+#print axioms FirstOrderTwistor.diracWeighted_norm_le
+#check FirstOrderTwistor.diracWeighted_remoteTrace_norm_le
+#print axioms FirstOrderTwistor.diracWeighted_remoteTrace_norm_le
+#check FirstOrderTwistor.fixedDomainDiracPerturbation
+#print axioms FirstOrderTwistor.fixedDomainDiracPerturbation
+#check FirstOrderTwistor.fixedDomainDiracPerturbation_apply
+#print axioms FirstOrderTwistor.fixedDomainDiracPerturbation_apply
+#check FirstOrderTwistor.fixedDomainDiracPerturbation_inverse_norm_le
+#print axioms FirstOrderTwistor.fixedDomainDiracPerturbation_inverse_norm_le
+
+/-! ## CylinderSpectral -/
+
+#check FirstOrderTwistor.roundCylinderIncoming_sqNorm_add
+#print axioms FirstOrderTwistor.roundCylinderIncoming_sqNorm_add
+#check FirstOrderTwistor.roundCylinderCoefficients
+#print axioms FirstOrderTwistor.roundCylinderCoefficients
+#check FirstOrderTwistor.roundCylinderCoefficients_apply
+#print axioms FirstOrderTwistor.roundCylinderCoefficients_apply
+#check FirstOrderTwistor.roundCylinderCoefficients_sqNorm_le
+#print axioms FirstOrderTwistor.roundCylinderCoefficients_sqNorm_le
+#check FirstOrderTwistor.roundCylinder_outgoingCoefficients_sqNorm_le
+#print axioms FirstOrderTwistor.roundCylinder_outgoingCoefficients_sqNorm_le
+#check FirstOrderTwistor.roundCylinderMidpoint
+#print axioms FirstOrderTwistor.roundCylinderMidpoint
+#check FirstOrderTwistor.roundCylinderMidpoint_hasSum
+#print axioms FirstOrderTwistor.roundCylinderMidpoint_hasSum
+#check FirstOrderTwistor.roundCylinderMidpoint_sqNorm_le
+#print axioms FirstOrderTwistor.roundCylinderMidpoint_sqNorm_le
+#check FirstOrderTwistor.roundCylinderMidpoint_jointFloor
+#print axioms FirstOrderTwistor.roundCylinderMidpoint_jointFloor
+#check FirstOrderTwistor.roundCylinderMidpoint_jointFloor_Lp
+#print axioms FirstOrderTwistor.roundCylinderMidpoint_jointFloor_Lp
+#check FirstOrderTwistor.forcedCylinderMode_graphEnergy_le
+#print axioms FirstOrderTwistor.forcedCylinderMode_graphEnergy_le
+#check FirstOrderTwistor.forcedCylinderModes_graphEnergy_hasSum
+#print axioms FirstOrderTwistor.forcedCylinderModes_graphEnergy_hasSum
+
+/-! ## SpinBochnerAccounting -/
+
+#check FirstOrderTwistor.spinBochnerBudget_eventuallySmall
+#print axioms FirstOrderTwistor.spinBochnerBudget_eventuallySmall
+#check FirstOrderTwistor.energyIdentityOfSpinBochnerBudgets
+#print axioms FirstOrderTwistor.energyIdentityOfSpinBochnerBudgets
+
+/-! ## SpinBochnerCutoff -/
+
+#check FirstOrderTwistor.normalizedSpinCutoff_fderiv
+#print axioms FirstOrderTwistor.normalizedSpinCutoff_fderiv
+#check FirstOrderTwistor.normalizedSpinCutoff_fderiv_bound
+#print axioms FirstOrderTwistor.normalizedSpinCutoff_fderiv_bound
+#check FirstOrderTwistor.spinOpNormSq_le_frameSum
+#print axioms FirstOrderTwistor.spinOpNormSq_le_frameSum
+#check FirstOrderTwistor.normalizedSpinCutoff_fderiv_bound_frame
+#print axioms FirstOrderTwistor.normalizedSpinCutoff_fderiv_bound_frame
+
+/-! ## SpinCompactness -/
+
+#check FirstOrderTwistor.existsUnitKernelOfCompactEmbedding
+#print axioms FirstOrderTwistor.existsUnitKernelOfCompactEmbedding
+#check FirstOrderTwistor.tendstoWeakOfTendstoEmbedding
+#print axioms FirstOrderTwistor.tendstoWeakOfTendstoEmbedding
+#check FirstOrderTwistor.weylBlock_eq_zero_of_dense_spinor
+#print axioms FirstOrderTwistor.weylBlock_eq_zero_of_dense_spinor
+
+/-! ## SpinConnectionLift -/
+
+#check FirstOrderTwistor.spinConnectionLift
+#print axioms FirstOrderTwistor.spinConnectionLift
+#check FirstOrderTwistor.spinConnectionLift_commutator
+#print axioms FirstOrderTwistor.spinConnectionLift_commutator
+#check FirstOrderTwistor.spinConnectionLift_frameCurvature
+#print axioms FirstOrderTwistor.spinConnectionLift_frameCurvature
+
+/-! ## SpinCovariantJet -/
+
+#check FirstOrderTwistor.spinCoordinatePartial
+#print axioms FirstOrderTwistor.spinCoordinatePartial
+#check FirstOrderTwistor.spinCovariantDerivative
+#print axioms FirstOrderTwistor.spinCovariantDerivative
+#check FirstOrderTwistor.spinCoordinateCurvature
+#print axioms FirstOrderTwistor.spinCoordinateCurvature
+#check FirstOrderTwistor.spinCovariantDerivative_commutator
+#print axioms FirstOrderTwistor.spinCovariantDerivative_commutator
+#check FirstOrderTwistor.spinFrameCoordinateCurvature
+#print axioms FirstOrderTwistor.spinFrameCoordinateCurvature
+#check FirstOrderTwistor.spinCoordinateCurvature_connectionLift
+#print axioms FirstOrderTwistor.spinCoordinateCurvature_connectionLift
+#check FirstOrderTwistor.spinFrameCommutator_of_coordinateConnection
+#print axioms FirstOrderTwistor.spinFrameCommutator_of_coordinateConnection
+
+/-! ## SpinCoverAccounting -/
+
+#check FirstOrderTwistor.SpinDefectStrip
+#print axioms FirstOrderTwistor.SpinDefectStrip
+#check FirstOrderTwistor.SpinDefectStrip.volume
+#print axioms FirstOrderTwistor.SpinDefectStrip.volume
+#check FirstOrderTwistor.SpinDefectStrip.weylNormSq
+#print axioms FirstOrderTwistor.SpinDefectStrip.weylNormSq
+#check FirstOrderTwistor.SpinDefectStrip.fields
+#print axioms FirstOrderTwistor.SpinDefectStrip.fields
+#check FirstOrderTwistor.SpinDefectStrip.spinorNormSq
+#print axioms FirstOrderTwistor.SpinDefectStrip.spinorNormSq
+#check FirstOrderTwistor.SpinDefectStrip.projectedNormSq
+#print axioms FirstOrderTwistor.SpinDefectStrip.projectedNormSq
+#check FirstOrderTwistor.SpinDefectStrip.floor
+#print axioms FirstOrderTwistor.SpinDefectStrip.floor
+#check FirstOrderTwistor.SpinDefectStrip.weightedCost
+#print axioms FirstOrderTwistor.SpinDefectStrip.weightedCost
+#check FirstOrderTwistor.SpinDefectStrip.ValidOn
+#print axioms FirstOrderTwistor.SpinDefectStrip.ValidOn
+#check FirstOrderTwistor.SpinDefectStrip.ValidOn.measurableSet
+#print axioms FirstOrderTwistor.SpinDefectStrip.ValidOn.measurableSet
+#check FirstOrderTwistor.SpinDefectStrip.ValidOn.energyMatch
+#print axioms FirstOrderTwistor.SpinDefectStrip.ValidOn.energyMatch
+#check FirstOrderTwistor.SpinDefectStrip.ValidOn.weylIntegrable
+#print axioms FirstOrderTwistor.SpinDefectStrip.ValidOn.weylIntegrable
+#check FirstOrderTwistor.SpinDefectStrip.ValidOn.weylNonneg
+#print axioms FirstOrderTwistor.SpinDefectStrip.ValidOn.weylNonneg
+#check FirstOrderTwistor.SpinDefectStrip.ValidOn.projectedIntegrable
+#print axioms FirstOrderTwistor.SpinDefectStrip.ValidOn.projectedIntegrable
+#check FirstOrderTwistor.SpinDefectStrip.ValidOn.projectedIdentity
+#print axioms FirstOrderTwistor.SpinDefectStrip.ValidOn.projectedIdentity
+#check FirstOrderTwistor.SpinDefectStrip.ValidOn.floorPos
+#print axioms FirstOrderTwistor.SpinDefectStrip.ValidOn.floorPos
+#check FirstOrderTwistor.SpinDefectStrip.ValidOn.floorBound
+#print axioms FirstOrderTwistor.SpinDefectStrip.ValidOn.floorBound
+#check FirstOrderTwistor.SpinDefectStrip.mass_le_weightedCost
+#print axioms FirstOrderTwistor.SpinDefectStrip.mass_le_weightedCost
+#check FirstOrderTwistor.RemainderEstimates.ofSpinDefectStrips
+#print axioms FirstOrderTwistor.RemainderEstimates.ofSpinDefectStrips
+
+/-! ## SpinCoverBounds -/
+
+#check FirstOrderTwistor.finiteCoverDefectBound
+#print axioms FirstOrderTwistor.finiteCoverDefectBound
+#check FirstOrderTwistor.setIntegral_le_uncovered_add_sum
+#print axioms FirstOrderTwistor.setIntegral_le_uncovered_add_sum
+#check FirstOrderTwistor.finiteCoverDefectBoundOfIntegrals
+#print axioms FirstOrderTwistor.finiteCoverDefectBoundOfIntegrals
+
+/-! ## SpinCurvature -/
+
+#check FirstOrderTwistor.spinUnit
+#print axioms FirstOrderTwistor.spinUnit
+#check FirstOrderTwistor.selfDualCliffordQuaternion
+#print axioms FirstOrderTwistor.selfDualCliffordQuaternion
+#check FirstOrderTwistor.selfDualClifford
+#print axioms FirstOrderTwistor.selfDualClifford
+#check FirstOrderTwistor.selfDualCliffordGenerator
+#print axioms FirstOrderTwistor.selfDualCliffordGenerator
+#check FirstOrderTwistor.selfDualClifford_normSq
+#print axioms FirstOrderTwistor.selfDualClifford_normSq
+#check FirstOrderTwistor.weylSpinRows
+#print axioms FirstOrderTwistor.weylSpinRows
+#check FirstOrderTwistor.weylSpinDefect
+#print axioms FirstOrderTwistor.weylSpinDefect
+#check FirstOrderTwistor.weylSpinDefect_normSq
+#print axioms FirstOrderTwistor.weylSpinDefect_normSq
+#check FirstOrderTwistor.selfDualCliffordTrace
+#print axioms FirstOrderTwistor.selfDualCliffordTrace
+#check FirstOrderTwistor.selfDualCliffordTraceAdjoint
+#print axioms FirstOrderTwistor.selfDualCliffordTraceAdjoint
+#check FirstOrderTwistor.selfDualCliffordTrace_inner
+#print axioms FirstOrderTwistor.selfDualCliffordTrace_inner
+#check FirstOrderTwistor.selfDualCliffordTrace_traceAdjoint
+#print axioms FirstOrderTwistor.selfDualCliffordTrace_traceAdjoint
+#check FirstOrderTwistor.selfDualCliffordProjection
+#print axioms FirstOrderTwistor.selfDualCliffordProjection
+#check FirstOrderTwistor.selfDualCliffordTrace_projection
+#print axioms FirstOrderTwistor.selfDualCliffordTrace_projection
+#check FirstOrderTwistor.selfDualCliffordProjection_eq_self
+#print axioms FirstOrderTwistor.selfDualCliffordProjection_eq_self
+#check FirstOrderTwistor.selfDualCliffordProjection_orthogonal
+#print axioms FirstOrderTwistor.selfDualCliffordProjection_orthogonal
+#check FirstOrderTwistor.selfDualCliffordProjection_traceAdjoint
+#print axioms FirstOrderTwistor.selfDualCliffordProjection_traceAdjoint
+#check FirstOrderTwistor.selfDualCliffordProjection_add
+#print axioms FirstOrderTwistor.selfDualCliffordProjection_add
+#check FirstOrderTwistor.selfDualCliffordTrace_weylSpinRows
+#print axioms FirstOrderTwistor.selfDualCliffordTrace_weylSpinRows
+#check FirstOrderTwistor.selfDualCliffordProjection_weylSpinDefect_add_adjoint
+#print axioms FirstOrderTwistor.selfDualCliffordProjection_weylSpinDefect_add_adjoint
+
+/-! ## SpinCutoffCover -/
+
+#check FirstOrderTwistor.spinCutoffIntegral_in_gauge
+#print axioms FirstOrderTwistor.spinCutoffIntegral_in_gauge
+#check FirstOrderTwistor.spinCutoffCoveredMass_le_sum
+#print axioms FirstOrderTwistor.spinCutoffCoveredMass_le_sum
+#check FirstOrderTwistor.spinCutoffRemainderMass_le_uncovered_add_cost
+#print axioms FirstOrderTwistor.spinCutoffRemainderMass_le_uncovered_add_cost
+#check FirstOrderTwistor.RemainderEstimates.ofSpinCutoffCover
+#print axioms FirstOrderTwistor.RemainderEstimates.ofSpinCutoffCover
+
+/-! ## SpinDefectDensity -/
+
+#check FirstOrderTwistor.spinorJointNonzero
+#print axioms FirstOrderTwistor.spinorJointNonzero
+#check FirstOrderTwistor.normalizedSpinDefectSq
+#print axioms FirstOrderTwistor.normalizedSpinDefectSq
+#check FirstOrderTwistor.normalizedSpinDefectIntegral
+#print axioms FirstOrderTwistor.normalizedSpinDefectIntegral
+#check FirstOrderTwistor.spinDefectEnergyDecomposition
+#print axioms FirstOrderTwistor.spinDefectEnergyDecomposition
+#check FirstOrderTwistor.spinDefectFloorBound
+#print axioms FirstOrderTwistor.spinDefectFloorBound
+#check FirstOrderTwistor.normalizedSpinDefectIntegral_eq_of_energyMeasure
+#print axioms FirstOrderTwistor.normalizedSpinDefectIntegral_eq_of_energyMeasure
+
+/-! ## SpinJetResidual -/
+
+#check FirstOrderTwistor.normSq_projectedFrameTwistorCurl_eq_sum
+#print axioms FirstOrderTwistor.normSq_projectedFrameTwistorCurl_eq_sum
+#check FirstOrderTwistor.SpinDefectStrip.ofMetricJets
+#print axioms FirstOrderTwistor.SpinDefectStrip.ofMetricJets
+#check FirstOrderTwistor.SpinDefectStrip.validOn_ofMetricJets
+#print axioms FirstOrderTwistor.SpinDefectStrip.validOn_ofMetricJets
+#check FirstOrderTwistor.SpinDefectStrip.ratioValidOn_ofMetricJets
+#print axioms FirstOrderTwistor.SpinDefectStrip.ratioValidOn_ofMetricJets
+
+/-! ## SpinLeviCivita -/
+
+#check FirstOrderTwistor.leviCivitaCoordinateMatrices
+#print axioms FirstOrderTwistor.leviCivitaCoordinateMatrices
+#check FirstOrderTwistor.differentiableAt_leviCivitaCoordinateMatrices
+#print axioms FirstOrderTwistor.differentiableAt_leviCivitaCoordinateMatrices
+#check FirstOrderTwistor.leviCivitaCoordinateMatrices_eq_zero_at_normalCenter
+#print axioms FirstOrderTwistor.leviCivitaCoordinateMatrices_eq_zero_at_normalCenter
+#check FirstOrderTwistor.spinFrameCoordinateCurvature_leviCivita_normalCenter
+#print axioms FirstOrderTwistor.spinFrameCoordinateCurvature_leviCivita_normalCenter
+
+/-! ## SpinMetricBlock -/
+
+#check FirstOrderTwistor.selfDualCurvatureBlock_isSymm_of_pair_symm
+#print axioms FirstOrderTwistor.selfDualCurvatureBlock_isSymm_of_pair_symm
+#check FirstOrderTwistor.metricCurvatureFrameTensor_swap_first
+#print axioms FirstOrderTwistor.metricCurvatureFrameTensor_swap_first
+#check FirstOrderTwistor.metricCurvatureFrameTensor_swap_last
+#print axioms FirstOrderTwistor.metricCurvatureFrameTensor_swap_last
+#check FirstOrderTwistor.metricCurvatureFrameTensor_pair_symm
+#print axioms FirstOrderTwistor.metricCurvatureFrameTensor_pair_symm
+#check FirstOrderTwistor.selfDualCurvatureBlock_metric_isSymm
+#print axioms FirstOrderTwistor.selfDualCurvatureBlock_metric_isSymm
+#check FirstOrderTwistor.geometricChiralBlock_isSymm
+#print axioms FirstOrderTwistor.geometricChiralBlock_isSymm
+
+/-! ## SpinNormalChart -/
+
+#check FirstOrderTwistor.normalChartDiracSymbol
+#print axioms FirstOrderTwistor.normalChartDiracSymbol
+#check FirstOrderTwistor.normalChartTwistorSymbol
+#print axioms FirstOrderTwistor.normalChartTwistorSymbol
+#check FirstOrderTwistor.normalChartDiracSymbol_at_center
+#print axioms FirstOrderTwistor.normalChartDiracSymbol_at_center
+#check FirstOrderTwistor.normalChartTwistorSymbol_at_center
+#print axioms FirstOrderTwistor.normalChartTwistorSymbol_at_center
+#check FirstOrderTwistor.metricNormalChartTwistorDefect
+#print axioms FirstOrderTwistor.metricNormalChartTwistorDefect
+
+/-! ## SpinNormalFrame -/
+
+#check FirstOrderTwistor.negativeCliffordVector
+#print axioms FirstOrderTwistor.negativeCliffordVector
+#check FirstOrderTwistor.positiveCliffordVector
+#print axioms FirstOrderTwistor.positiveCliffordVector
+#check FirstOrderTwistor.selfDualAlternation
+#print axioms FirstOrderTwistor.selfDualAlternation
+#check FirstOrderTwistor.selfDualAlternation_cliffordCorrection
+#print axioms FirstOrderTwistor.selfDualAlternation_cliffordCorrection
+#check FirstOrderTwistor.frameCurvatureQuaternion
+#print axioms FirstOrderTwistor.frameCurvatureQuaternion
+#check FirstOrderTwistor.SpinFrameCommutator
+#print axioms FirstOrderTwistor.SpinFrameCommutator
+#check FirstOrderTwistor.selfDualAlternation_of_spinCommutator
+#print axioms FirstOrderTwistor.selfDualAlternation_of_spinCommutator
+#check FirstOrderTwistor.frameTwistorCurl
+#print axioms FirstOrderTwistor.frameTwistorCurl
+#check FirstOrderTwistor.weylSpinDefect_split_trace
+#print axioms FirstOrderTwistor.weylSpinDefect_split_trace
+#check FirstOrderTwistor.projectedFrameTwistorCurl
+#print axioms FirstOrderTwistor.projectedFrameTwistorCurl
+#check FirstOrderTwistor.projectedFrameTwistorCurl_normSq
+#print axioms FirstOrderTwistor.projectedFrameTwistorCurl_normSq
+#check FirstOrderTwistor.metricProjectedFrameTwistorCurl_normSq
+#print axioms FirstOrderTwistor.metricProjectedFrameTwistorCurl_normSq
+
+/-! ## SpinNormalGauge -/
+
+#check FirstOrderTwistor.spinFrameMatrix_fderiv_mul_apply
+#print axioms FirstOrderTwistor.spinFrameMatrix_fderiv_mul_apply
+#check FirstOrderTwistor.spinNormalGaugeConnection
+#print axioms FirstOrderTwistor.spinNormalGaugeConnection
+#check FirstOrderTwistor.spinNormalGauge_firstJet
+#print axioms FirstOrderTwistor.spinNormalGauge_firstJet
+#check FirstOrderTwistor.spinNormalGauge_at_center
+#print axioms FirstOrderTwistor.spinNormalGauge_at_center
+#check FirstOrderTwistor.spinNormalGauge_inverse_firstJet
+#print axioms FirstOrderTwistor.spinNormalGauge_inverse_firstJet
+#check FirstOrderTwistor.spinNormalGauge_leviCivita_at_center
+#print axioms FirstOrderTwistor.spinNormalGauge_leviCivita_at_center
+
+/-! ## SpinRatioAccounting -/
+
+#check FirstOrderTwistor.SpinDefectStrip.nonzeroRegion
+#print axioms FirstOrderTwistor.SpinDefectStrip.nonzeroRegion
+#check FirstOrderTwistor.SpinDefectStrip.normalizedCost
+#print axioms FirstOrderTwistor.SpinDefectStrip.normalizedCost
+#check FirstOrderTwistor.SpinDefectStrip.RatioValidOn
+#print axioms FirstOrderTwistor.SpinDefectStrip.RatioValidOn
+#check FirstOrderTwistor.SpinDefectStrip.RatioValidOn.measurableRegion
+#print axioms FirstOrderTwistor.SpinDefectStrip.RatioValidOn.measurableRegion
+#check FirstOrderTwistor.SpinDefectStrip.RatioValidOn.energyMatch
+#print axioms FirstOrderTwistor.SpinDefectStrip.RatioValidOn.energyMatch
+#check FirstOrderTwistor.SpinDefectStrip.RatioValidOn.weylIntegrable
+#print axioms FirstOrderTwistor.SpinDefectStrip.RatioValidOn.weylIntegrable
+#check FirstOrderTwistor.SpinDefectStrip.RatioValidOn.weylNonneg
+#print axioms FirstOrderTwistor.SpinDefectStrip.RatioValidOn.weylNonneg
+#check FirstOrderTwistor.SpinDefectStrip.RatioValidOn.projectedIdentity
+#print axioms FirstOrderTwistor.SpinDefectStrip.RatioValidOn.projectedIdentity
+#check FirstOrderTwistor.SpinDefectStrip.mass_nonzeroRegion_eq_normalizedCost
+#print axioms FirstOrderTwistor.SpinDefectStrip.mass_nonzeroRegion_eq_normalizedCost
+#check FirstOrderTwistor.RemainderEstimates.ofNormalizedSpinDefectStrips
+#print axioms FirstOrderTwistor.RemainderEstimates.ofNormalizedSpinDefectStrips
+#check FirstOrderTwistor.normalizedSpinDefectIntegral_singleton_eq_lpNorm_sq
+#print axioms FirstOrderTwistor.normalizedSpinDefectIntegral_singleton_eq_lpNorm_sq
+#check FirstOrderTwistor.SpinDefectStrip.normalizedCost_le_of_singleton_lpNorm
+#print axioms FirstOrderTwistor.SpinDefectStrip.normalizedCost_le_of_singleton_lpNorm
+
+/-! ## SpinReflection -/
+
+#check FirstOrderTwistor.fixedDomainDirac_resolvent_identity
+#print axioms FirstOrderTwistor.fixedDomainDirac_resolvent_identity
+#check FirstOrderTwistor.fixedDomainDirac_perturbedSolution_incoming
+#print axioms FirstOrderTwistor.fixedDomainDirac_perturbedSolution_incoming
+#check FirstOrderTwistor.fixedDomainDiracScattering
+#print axioms FirstOrderTwistor.fixedDomainDiracScattering
+#check FirstOrderTwistor.fixedDomainDiracScattering_sub
+#print axioms FirstOrderTwistor.fixedDomainDiracScattering_sub
+#check FirstOrderTwistor.fixedDomainDiracScattering_sub_norm_le
+#print axioms FirstOrderTwistor.fixedDomainDiracScattering_sub_norm_le
+#check FirstOrderTwistor.fixedDomainDiracScattering_sameEnd_norm_le
+#print axioms FirstOrderTwistor.fixedDomainDiracScattering_sameEnd_norm_le
+#check FirstOrderTwistor.fixedDomainDiracScattering_norm_le_round_add
+#print axioms FirstOrderTwistor.fixedDomainDiracScattering_norm_le_round_add
+
+/-! ## SpinRelativeBochner -/
+
+#check FirstOrderTwistor.spinCutoff_fraction_integrals_tendsto
+#print axioms FirstOrderTwistor.spinCutoff_fraction_integrals_tendsto
+#check FirstOrderTwistor.spinRelativeBochner_bound
+#print axioms FirstOrderTwistor.spinRelativeBochner_bound
+#check FirstOrderTwistor.spinMixedRelative_integrable_and_le
+#print axioms FirstOrderTwistor.spinMixedRelative_integrable_and_le
+#check FirstOrderTwistor.spinMixedRelative_sum_le
+#print axioms FirstOrderTwistor.spinMixedRelative_sum_le
+
+/-! ## SpinResidualEstimate -/
+
+#check FirstOrderTwistor.energyIdentityOfSpinorRatioBounds
+#print axioms FirstOrderTwistor.energyIdentityOfSpinorRatioBounds
+
+/-! ## SpinRicciForcing -/
+
+#check FirstOrderTwistor.frameRicciTensor
+#print axioms FirstOrderTwistor.frameRicciTensor
+#check FirstOrderTwistor.frameRicciForcing
+#print axioms FirstOrderTwistor.frameRicciForcing
+#check FirstOrderTwistor.frameSpinRicciContraction
+#print axioms FirstOrderTwistor.frameSpinRicciContraction
+#check FirstOrderTwistor.frameRicciForcing_normSq
+#print axioms FirstOrderTwistor.frameRicciForcing_normSq
+#check FirstOrderTwistor.frameTwistedDiracDerivative
+#print axioms FirstOrderTwistor.frameTwistedDiracDerivative
+#check FirstOrderTwistor.frameDiracDerivative
+#print axioms FirstOrderTwistor.frameDiracDerivative
+#check FirstOrderTwistor.frameTwistedDiracDerivative_sub_diracDerivative
+#print axioms FirstOrderTwistor.frameTwistedDiracDerivative_sub_diracDerivative
+#check FirstOrderTwistor.harmonicFrameTwistedDiracDerivative_normSq
+#print axioms FirstOrderTwistor.harmonicFrameTwistedDiracDerivative_normSq
+#check FirstOrderTwistor.frameSpinRicciContraction_constantSectional
+#print axioms FirstOrderTwistor.frameSpinRicciContraction_constantSectional
+#check FirstOrderTwistor.metricCurvatureFrameTensor_bianchi
+#print axioms FirstOrderTwistor.metricCurvatureFrameTensor_bianchi
+#check FirstOrderTwistor.frameRicciTensor_metric
+#print axioms FirstOrderTwistor.frameRicciTensor_metric
+#check FirstOrderTwistor.harmonicMetricFrameTwistedDiracDerivative_normSq
+#print axioms FirstOrderTwistor.harmonicMetricFrameTwistedDiracDerivative_normSq
+#check FirstOrderTwistor.harmonicMetricCoordinateTwistedDiracDerivative_normSq
+#print axioms FirstOrderTwistor.harmonicMetricCoordinateTwistedDiracDerivative_normSq
+
+/-! ## SpinStrip -/
+
+#check FirstOrderTwistor.spinStrip_coefficientPerturbation
+#print axioms FirstOrderTwistor.spinStrip_coefficientPerturbation
+#check FirstOrderTwistor.spinStrip_operatorPerturbation
+#print axioms FirstOrderTwistor.spinStrip_operatorPerturbation
+#check FirstOrderTwistor.spinStrip_sumSlabBounds
+#print axioms FirstOrderTwistor.spinStrip_sumSlabBounds
+#check FirstOrderTwistor.spinStrip_bufferedCoefficientBound
+#print axioms FirstOrderTwistor.spinStrip_bufferedCoefficientBound
+#check FirstOrderTwistor.spinStrip_absorbTwistedDirac
+#print axioms FirstOrderTwistor.spinStrip_absorbTwistedDirac
+#check FirstOrderTwistor.spinStrip_projectedDerivative
+#print axioms FirstOrderTwistor.spinStrip_projectedDerivative
+
+/-! ## SpinTwistorDerivative -/
+
+#check FirstOrderTwistor.coordinateTwistorComponent
+#print axioms FirstOrderTwistor.coordinateTwistorComponent
+#check FirstOrderTwistor.coordinateTwistorComponent_partial
+#print axioms FirstOrderTwistor.coordinateTwistorComponent_partial
+#check FirstOrderTwistor.projectedCoordinateTwistorCurl
+#print axioms FirstOrderTwistor.projectedCoordinateTwistorCurl
+#check FirstOrderTwistor.metricCoordinateTwistorDefect
+#print axioms FirstOrderTwistor.metricCoordinateTwistorDefect

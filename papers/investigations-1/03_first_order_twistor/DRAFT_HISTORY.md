@@ -144,3 +144,7 @@ Two independent derivations give a positive lower bound on the energy lost if ph
 ## 25 November 2026 · third collar session
 
 Located the physical probability at regular points of a positive Ricci limit and transferred finite smooth volume-bearing ball markings to the original sources. On a whole weakly marked nonround minimizing base obtained measured physical convergence and full curvature recovery. [Joint assessment](reviews/THIRD_COLLAR_ASSESSMENT_20261125.md).
+
+## 25 November 2026 · collar manuscript integration
+
+Integrated the three-axis and spinor defect identities, finite marked energy accounting, smooth-type transfer and the volume-versus-energy extraction problem. The earlier draft at `f178fbb` ended with the fixed-metric differential estimate as a question. Research input through `5ff7014`. [Manuscript](manuscript/first_order_twistor_and_smooth_poincare.tex) · [Coverage and evidence](reviews/MANUSCRIPT_COVERAGE_20261125.md)

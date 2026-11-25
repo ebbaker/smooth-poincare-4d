@@ -22,7 +22,7 @@
 \title{First-order twistor integrability and the\\
 smooth four-dimensional Poincar\'e conjecture}
 \author{Edward B. Baker III}
-\date{Working draft --- 23 November 2026}
+\date{Working draft --- 25 November 2026}
 % Prepared for Edward B. Baker III with OpenAI Codex assistance,
 % 23 November 2026 (America/New_York). Selected model and effort unavailable.
 % The inherited opening and companion input are pinned in ../DRAFT_HISTORY.md.
@@ -30,6 +30,19 @@ smooth four-dimensional Poincar\'e conjecture}
 \begin{document}
 \maketitle
 \thispagestyle{plain}
+
+% Revision from f178fbb against research through 5ff7014. Serving settings
+% of the coordinating session unavailable. Companion checks selected Sol/ultra.
+\begin{abstract}
+Three local sections of the positive twistor sphere give pointwise probes
+of chiral Weyl curvature. We derive an integrated estimate from their
+Frobenius tensors and identify the corresponding curvature component for a
+positive spinor. On a degenerating homotopy four-sphere we track where
+such estimates must hold to imply a strict energy improvement on the
+original smooth manifold. Marked regions carrying physical volume can now
+be found in the subcritical band. Extending their markings to a separating
+collar or a nonround closed base remains the geometric question.
+\end{abstract}
 
 \section{Introduction}\label{sec:introduction}
 
@@ -178,7 +191,11 @@ condition \(W^+=0\) in the metric alone is second order. The modified
 Bach flow differentiates curvature twice and is fourth order in the
 metric~\cite[eqs.~(1.1)--(1.2)]{BahuaudGuentherIsenbergMazzeo2025Bach}.
 The proposed direct route must produce a single conformal class
-compatible with the local solutions.
+compatible with the local solutions. Section~\ref{sec:three-defects}
+quantifies the fixed-metric obstruction using three sections or one
+spinor. Section~\ref{sec:marked-accounting} follows that obstruction
+through marked truncations of a sequence and identifies the remaining
+geometric input.
 
 \section{Local twistor sections and the Weyl quartic}
 \label{sec:local-sections}
@@ -427,7 +444,7 @@ vanishes. The frame-valued unknown \(\Sigma\) allows the local
 three-planes to be described on a bundle with nontrivial
 transitions.
 
-\section{Conformal overlaps and a quantitative question}
+\section{Conformal overlaps and the conditioning of three directions}
 \label{sec:overlap}
 
 An integrable section need only be local. In fact, a single global
@@ -485,20 +502,228 @@ the norm of the evaluation map on unit blocks is positive
 uniformly over the compact set of separated triples. The magnitudes
 of the evaluations are independent of the choices of unit phase.
 
-Can the right side of \eqref{eq:quartic-estimate} be controlled by
-the Frobenius defects \([X,Y]\bmod\mathcal D_i\) of the three plane
-fields and their derivatives, with sufficient control of the
-metric and section geometry? This would be a metric-side counterpart
-to the companion's bound on chiral curvature from the strain and
-its derivative~\cite[curvature controlled by the strain derivative]{Baker2026ChiralMetricEvolution}.
-An integrated estimate could also inform the Bach approach. On a
-homotopy sphere the full four-index Weyl energy is \(8E_+\), so the
-strict threshold \(E_+<4\pi^2\) together with a positive Yamabe
-constant of the conformal class suffices for smooth sphere
-recognition~\cite[Theorem~A and Remarks~1--2]{ChangGurskyYang2003}.
-The algebraic bound is local. Establishing a differential estimate
-or constructing compatible exact solutions on arbitrary homotopy
-four-spheres is the next mathematical problem.
+\section{Measuring the defect of three sections}\label{sec:three-defects}
+
+The estimate takes a particularly simple form when the three sections
+are orthogonal in the twistor sphere. Write their axes as an orthonormal
+basis \(n_1,n_2,n_3\) of \(\Lambda^+\), and set
+\(\xi_i=(n_j+\mathrm i n_k)/\sqrt2\) for cyclic \(i,j,k\).
+For a symmetric trace-free matrix \(W=(w_{ij})\) in this basis, write
+\(d_j=w_{jj}\) and \(q_i=|\langle W\xi_i,\xi_i\rangle_{\mathbb C}|\).
+The complex bilinear evaluation is \((d_j-d_k)/2+\mathrm i w_{jk}\).
+Since \(\sum d_i=0\), summing its squared modulus gives
+\begin{equation}\label{eq:orthogonal-samples}
+ \sum_i q_i^2=\tfrac34\sum_i d_i^2+\sum_{j<k}w_{jk}^2
+ \ \ge\ \tfrac12|W|_{\rm HS}^2 .
+\end{equation}
+Equality holds for any block with zero diagonal. Thus the reconstruction
+constant is uniform even where the eigenlines of \(W\) cannot be chosen
+smoothly.
+
+For a positive orthogonal almost complex structure \(J\), put
+\(P=(1+\mathrm iJ)/2,\ Q=1-P,\ F(X,Y)=Q[PX,PY]\). Torsion freeness
+makes this bracket tensorial. Give the complexified tangent its
+Hermitian norm, counting each exterior pair once, and use the complex
+bilinear metric for null pairings. If \(X,Y\) form a unitary basis of
+\(\mathcal D=\mathrm{im}\,P\), the Schouten part vanishes on the null
+plane. In the connection preserving the splitting into \(\mathcal D\)
+and its conjugate, the off-diagonal part of the Levi--Civita connection is
+\(K=(\nabla P)(P-Q)\). It has norm \(|\nabla J|/2\). The null Koszul
+formula expresses the off-diagonal connection on \(\mathcal D\) through
+\(F\). Differentiating it gives the curvature on the unit null bivector
+\(X\wedge Y\) as
+\[
+ g_{\mathbb C}((\nabla_X F)(X,Y),Y)
+ -g_{\mathbb C}((\nabla_Y F)(X,Y),X)
+ -g_{\mathbb C}(K_{F(X,Y)}Y,X).
+\]
+The last term accounts for the torsion of the splitting connection.
+The first two terms together have magnitude at most
+\(\sqrt2\,|\nabla F|\). Cauchy--Schwarz in the two quantities
+\(|\nabla F|\) and \(|\nabla J||F|\) now bounds the squared evaluation
+by \(\tfrac94(|\nabla F|^2+|\nabla J|^2|F|^2)\)
+\cite{Baker2026TwistorSections}.
+
+With \(W=W_g^+\), multiply \eqref{eq:orthogonal-samples} and the
+last bound by a subordinate partition of unity \(\{\rho_a\}\) and
+integrate. Orthogonal triples \(J_{ai}\) can be chosen independently
+on the open sets \(U_a\) of a finite cover, giving
+\[
+ E_+(g)\le\tfrac92\sum_{a,i}\int_{U_a}\rho_a
+  (|\nabla F_{ai}|^2+|\nabla J_{ai}|^2|F_{ai}|^2)\,dV_g .
+\]
+There is no differentiation of the partition in this argument. On a
+smooth closed oriented homotopy four-sphere in a positive Yamabe class,
+a right hand side strictly below \(4\pi^2\) gives smooth recognition.
+Indeed the signature identity yields equality of the two chiral
+integrals, each in Hilbert--Schmidt norm, and summing ordered
+four-index components gives four times their sum. The full tensor
+integral then satisfies the strict sphere theorem
+\cite[Theorem~A and Remark~2]{ChangGurskyYang2003}.
+
+The scale of the lower bound can also be tested from above. Let
+\(I(g)\) be the infimum of this weighted integral of the defect
+density (without the prefactor \(9/2\)) over finite local covers,
+partitions and orthogonal triples. At a point \(p\) choose a
+conformal representative agreeing to first order with \(g\), whose
+Schouten tensor vanishes at \(p\), by prescribing the Hessian of the
+logarithmic conformal factor there. Radial transport of the axes in
+this representative makes their first derivatives vanish at \(p\).
+The derivative of its connection matrix in a radial frame is one half
+of curvature at the center. Only the positive curvature block acts on
+the axes; it is \(W^+\) there. With the exterior-pair norm this gives
+\(\sum_i |\nabla F_i|^2(p)\le4|W^+|_{\rm HS}^2(p)\).
+By continuity the local inequality holds to arbitrary additive error
+in small patches about each center. Choosing a finite subcover and
+a partition, then sending the error to zero, gives
+\[
+ \tfrac29 E_+(g)\le I(g)\le4E_+(g).
+\]
+The same shrinking-patch argument gives zero for the infimum with
+density \(\sum_i|F_i|^4\), since all the brackets vanish at their
+chosen centers \cite{Baker2026TwistorSections}. This explains the
+derivative in the functional even on one smooth metric.
+
+\subsection{A spinor supplies the axes}
+
+Let \(j\) be the parallel antiunitary quaternionic structure of
+\(S^+\). Where a smooth positive-chirality spinor \(\psi\) is nonzero,
+take \(\pi_1=\psi,\ \pi_2=(\psi+j\psi)/\sqrt2,
+\pi_3=(\psi+\mathrm i j\psi)/\sqrt2\). For unit representatives the
+axis inner product is \(2|\langle u,v\rangle|^2-1\). The three
+pairwise squared inner products are \(1/2\), giving the axes required
+above. For a single line write \(u=\pi/|\pi|\), and let \(q\) project
+onto its orthogonal complement. On
+\(\mathcal D=S^-\otimes\mathbb C u\), the Clifford trace correction in
+\((P_{\rm tw}\pi)_X=\nabla_X\pi+c(X)D\pi/4\) takes values in
+\(\mathbb C u\). For \(X=a\otimes u,Y=b\otimes u\), torsion freeness
+therefore gives
+\[
+ F(X,Y)= b\otimes v_X-a\otimes v_Y,\qquad
+ v_X=q(P_{\rm tw}\pi)_X/|\pi|.
+\]
+Choosing \(a,b\) unitary makes the output terms orthogonal. The three
+spinors have equal norms, and \(P_{\rm tw}\) commutes with \(j\) on
+real tangent vectors. Consequently
+\(\sum_i |F_i|^2\le 3|P_{\rm tw}\psi|^2/|\psi|^2\)
+\cite{Baker2026TwistorSections}. This controls the undifferentiated
+brackets. Curvature occurs one derivative later.
+
+In fact let \(m:\Lambda^+\otimes S^+\to S^+\) be Clifford contraction
+and \(\Pi=1-m^*m/6\) its kernel projection. With an orthonormal
+self-dual frame \(\omega_a\), commuting spin derivatives and subtracting
+the Clifford trace gives
+\[
+ \Pi(d^\nabla P_{\rm tw}\psi)^+
+ =-\tfrac12\sum_a\omega_a\otimes c(W^+\omega_a)\psi,\qquad
+ |\Pi(d^\nabla P_{\rm tw}\psi)^+|^2
+ =\tfrac12 |W^+|_{\rm HS}^2|\psi|^2.
+\]
+The scalar-curvature and \(D^2\psi\) terms belong to \(\mathrm{im}\,m^*\);
+symmetry and trace freeness put the displayed Weyl term in \(\ker m\).
+The second equality uses \(|c(\omega)\psi|^2=2|\omega|^2|\psi|^2\)
+for real self-dual \(\omega\) \cite{Baker2026DiracYamabe}.
+Wherever \(\psi\ne0\), dividing the squared defect by \(|\psi|^2\)
+recovers exactly half the chiral density. An independent bound on that
+quotient would give curvature control, whereas a small first-order
+spinor Rayleigh quotient alone permits concentration.
+
+\section{Transporting the estimates to a degenerating source}
+\label{sec:marked-accounting}
+
+Let \(g_i\) be smooth unit-volume positive Yamabe minimizers on one
+fixed, oriented smooth homotopy four-sphere \(M\). Write
+\(\mu_i=|W^+_{g_i}|_{\rm HS}^2dV_{g_i}\) and pass to a subsequence
+with \(\mu_i(M)\to e\in[T,2T-\delta]\), \(T=4\pi^2,\ \delta>0\).
+For finitely many models indexed by \(j\), suppose disjointly marked
+compact truncations \(K^j_L\) on the source have masses tending, at
+each fixed \(L\), to \(\mu^j(K^j_L)\). Suppose these compact sets
+exhaust their models and put \(e_j=\mu^j(\bigcup_L K^j_L)\).
+Writing \(R_{i,L}\) for the actual uncovered region, subtraction gives
+\begin{equation}\label{eq:finite-remainder}
+ \lim_{L\to\infty}\lim_{i\to\infty}\mu_i(R_{i,L})=e-\sum_j e_j .
+\end{equation}
+The inner limit uses finitely many mass limits at a fixed truncation.
+For example, in oriented orthonormal frames on a fixed compact
+let \(w_{ab,i}\) be the nine components of the self-dual Weyl block
+of the pulled-back metric and \(J_i\) its volume density relative to
+a fixed positive background. The actual integral has integrand
+\(\sum_{a,b}|w_{ab,i}|^2 J_i\). Convergence of the metric two-jets
+with uniform ellipticity on the compact gives convergence of these
+components in convergent frames and of the densities. Boundedness
+then gives the required mass limit by integration. A weaker comparison
+must supply its own convergence argument. On a subdivided collar, a
+sufficient criterion bounds the total residual by the sum of the
+nonnegative errors on its pieces and the mass missed by them, and
+takes that upper bound to zero in the same order. Smallness on each
+of a growing number of pieces need not imply that estimate
+\cite{Baker2026MarkedNecks,Baker2026DiracTransmission}.
+
+One smooth cut can already suffice without a decomposition of all the
+energy. Suppose a whole marked core has limiting uncapped energy \(x>T\) and its
+boundary compares through buffers on both sides to an ordinary
+coordinate sphere of a smooth compactification. Assume the caps
+preserve positive Yamabe sign and the exterior cap and splice cost
+is at most \(\eta\), with the capped exterior energy in the limit superior at most \(e-x+\eta\).
+For \(\eta\le\delta\) this bound is strictly below \(T\).
+The capped exterior is a homotopy sphere when the embedded \(S^3\)
+separates a homotopy sphere: van Kampen, Mayer--Vietoris and capping
+give simple connectivity and sphere homology. The strict sphere theorem
+recognizes it as standard for all sufficiently late cuts. Transport
+the exterior's parametrized cap into the standard sphere. The smooth
+disk theorem identifies it with the prescribed standard hemisphere
+with its parametrization; collar adjustment gives the corresponding
+identification of complements. Gluing the latter along the original
+mark therefore recovers the smooth type of the capped core
+\cite[Theorem~C]{Palais1960Extending}\cite{Baker2026MarkedNecks}. If \(e=I^+(M)\), the infimum over positive
+Yamabe classes on this smooth \(M\), any capped core with energy
+strictly below \(e\) is now impossible. For an almost critical sequence
+\(\int_M|B_{g_i}|\,dV_{g_i}\to0\), a complete smooth nonflat ALE
+blow-up at scales tending to zero, with whole oriented smooth
+truncation comparisons and the differentiated end decay required for
+smooth compactification, has such a strict energy loss
+\cite{Baker2026MarkedNecks}. A closed nonround conformal base can instead
+carry all \(e\).
+
+For the latter conclusion, take a smooth closed oriented homotopy
+sphere with finitely many ordinary punctures, and supply compatible
+orientation-preserving smooth embeddings of whole truncations. Write \(\Phi_i^*g_i=u_i^2m_i\);
+require \(m_i\to h\) locally in \(C^0\cap W^{1,4}\) strongly, a
+locally bounded \(L^2\) scalar curvature of \(m_i\), a smooth filled
+metric \(h\), and \(\int_M|B_{g_i}|\,dV_{g_i}\to0\).
+When a fixed compact sees positive limiting chiral energy, the
+variational comparison gives a nonround Bach-flat base with energy
+above \(T\). The cap argument identifies its smooth type. At
+\(e=I^+(M)\), lower semicontinuity and the infimum force equality of
+energies. The physical volume then fills the base, and the physical
+metrics converge after subsequence in measured Gromov--Hausdorff distance to a smooth
+volume-one Yamabe representative. The curvature energy has no residual
+on exhaustion. Each conclusion concerns the specified markings and
+metrics \cite{Baker2026MarkedLimits}.
+
+\section{Outstanding geometric questions}
+
+There is a source of markings before a whole base has been found.
+For every pair \(\epsilon,\zeta>0\), after a subsequence one can mark
+finitely many disjoint smooth standard four-balls in the original
+\(M\) with total physical volume at least \(1-\epsilon\) and individual
+physical full-curvature integrals below \(\zeta\). The construction
+normalizes a positive-Ricci representative by the half-mass radius of
+the physical measure. It transfers regular balls in that distance to
+the smooth sources \cite{Baker2026MarkedLimits}. The open step is to
+control the first derivatives in compatible markings and to locate
+the chiral measure relative to their boundaries. It may concentrate
+in a set of small physical volume. A usable separating cut needs
+quantitative control on both sides, in the gauges used for sewing.
+
+For the spinor approach the remaining estimate concerns the
+normalized differentiated defect on enough of the actual source,
+including control of uncovered chiral mass. For a closed nonround
+critical minimizer even full recovery leaves its classification open.
+Finally the entire subcritical argument requires a positive Yamabe
+class with \(E_+<8\pi^2\) on the smooth manifold under investigation.
+Producing such an entry class on an arbitrary smooth homotopy
+four-sphere is a separate existence problem.
 
 \bibliographystyle{unsrturl}
 \bibliography{references}

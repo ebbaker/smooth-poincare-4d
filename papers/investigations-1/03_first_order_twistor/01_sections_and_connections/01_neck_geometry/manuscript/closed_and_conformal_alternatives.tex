@@ -1,0 +1,1062 @@
+% Edward B. Baker III, with OpenAI Codex assistance, 25 November 2026.
+% Inputs: repository HEAD 5ff7014 and the dated neck-geometry derivations.
+% Exact serving model and reasoning effort were unavailable.
+
+\section{Positive Schouten representatives and boundary charge}
+\label{alt:gauge}
+
+Let \(M\) be a smooth closed oriented homotopy four-sphere. Write
+\(E=E_+=E_-\) for its common closed chiral Weyl energy, and suppose
+\(Y=Y([g])>0\) and \(E\le 8\pi^2-\delta\), \(\delta>0\). For a
+representative \(h\) use the Schouten tensor \(P_h=(\operatorname{Ric}_h-R_hh/6)/2\),
+and put \(p_h=\sigma_2(h^{-1}P_h)\) and \(T_h=\operatorname{Ric}_{0,h}\).
+The elementary symmetric function and Chern--Gauss--Bonnet give
+\begin{equation}\label{alt:schouten}
+ p_h=\frac{R_h^2}{96}-\frac{|T_h|^2}{8},\qquad
+ q:=\int_M p_h\,dV_h=\frac{8\pi^2-E}{2}\ge \frac{\delta}{2}.
+\end{equation}
+In the unit-volume Yamabe representative \(g_Y\),
+\(R_{g_Y}=Y\) and \(Y^2=96q+12\int_M|T_{g_Y}|^2\,dV_{g_Y}\).
+In particular \(\sqrt{48\delta}\le Y\le Y_{\mathrm{rd}}=8\sqrt6\pi\).
+
+Theorem A and Corollary B of Chang--Gursky--Yang give a smooth
+representative \(h\) with \(R_h>0\) and \(p_h>0\)
+\cite[Theorem A, Corollary B and Lemma 1.1]{ChangGurskyYang2002PositiveRicci}.
+Their Schouten tensor is \(2P_h\). In the same class one may choose
+the unit-volume representative satisfying \(p_h=q\), by their
+constant-\(\sigma_2\) existence theorem
+\cite[Theorem 1.2 and equation (1.6)]{ChangGurskyYang2003}.
+Positivity of \(p_h\) prevents \(R_h\) from vanishing by
+\eqref{alt:schouten}. Connectedness and the positive Yamabe
+constant, tested against the constant function, give \(R_h>0\).
+Uniqueness after volume normalization applies in a fixed nonround
+class, and the solutions in the round class are round
+\cite[Theorem 1.5]{GurskyStreets2018TwoYamabe}.
+
+For \(S=R_h/6>0\) and least eigenvalue \(a\) of \(h^{-1}P_h\),
+Cauchy--Schwarz on the other three eigenvalues gives
+\[
+ p_h\le a(S-a)+(S-a)^2/3=(S-a)(S+2a)/3.
+\]
+Thus \(m=S+2a=\lambda_{\min}(\operatorname{Ric}_h)>0\), and
+\(p_h\le m(3S-m)/6\le mS/2\). Also \(|P_h|^2<S^2\), because
+\(S^2-|P_h|^2=2p_h\). These inequalities give
+\begin{equation}\label{alt:riccone}
+ R_h\ge\sqrt{96p_h},\qquad
+ \lambda_{\min}(\operatorname{Ric}_h)\ge\frac{12p_h}{R_h},
+ \qquad \operatorname{Ric}_h<\frac{R_h}{2}h.
+\end{equation}
+At fixed \(p_h=q>0\) the algebraic bound can degenerate.
+The Ricci eigenvalues \(m,(R-m)/3,(R-m)/3,(R-m)/3\), with
+\(m=(R-\sqrt{R^2-96q})/4\), have \(m\sim12q/R\). The modified
+prescription
+\(p_h-\alpha |W_h|_{\mathrm{tens}}^2/16=\lambda\) has
+\(\lambda=q-\alpha E/2\ge\delta/4\) at volume one for
+\(\alpha=\delta/(16\pi^2)\)
+\cite[Theorem 1.1 and equation (1.4)]{ChangGurskyYang2003}.
+The same algebraic degeneration is possible with a zero Weyl block.
+
+\subsection{Physical metric estimates}
+
+The chiral Weyl measures and \(|B|\,dV\) are conformally invariant
+on each fixed domain. Physical balls and their energy quantile radii
+depend on the representative. In any representative one has
+\begin{equation}\label{alt:full-curvature}
+ \begin{split}
+ \int_M |T_h|^2\,dV_h&=\tfrac1{12}\int_M R_h^2\,dV_h-8q,\\
+ \int_M |\operatorname{Ric}_h|^2\,dV_h
+   &=\tfrac13\int_M R_h^2\,dV_h-8q,\\
+ \int_M |\operatorname{Rm}_h|_{\mathrm{tens}}^2\,dV_h
+   &=8E-16q+\tfrac13\int_M R_h^2\,dV_h .
+ \end{split}
+\end{equation}
+The first identity follows from \eqref{alt:schouten}. The second uses
+the trace decomposition, and the third uses
+\(|\operatorname{Rm}|_{\mathrm{tens}}^2
+=|W|_{\mathrm{tens}}^2+2|T|^2+R^2/6\).
+In the Yamabe gauge \(\int R^2=Y^2\le384\pi^2\). In a positive-Ricci
+representative with volume \(V\) and diameter \(D\), Bishop--Gromov gives
+\[
+ \frac{V}{D^4}r^4\le V_x(r):=\operatorname{Vol}_h B_h(x,r)
+ \le \omega_4r^4\quad(0<r\le D),\qquad \omega_4=\pi^2/2.
+\]
+A scalar upper bound \(R_h\le R_*\) in the constant-\(p_h\) gauge
+would give \(D\le\pi\sqrt{R_*/(4q)}\) by \eqref{alt:riccone} and
+Bonnet--Myers.
+
+\begin{proposition}[Scalar energy and physical ball bounds]
+\label{alt:physical-balls}
+Suppose \(h\) has unit volume, \(\operatorname{Ric}_h\ge0\),
+\(Y([h])\ge y_0>0\) and \(\int_M R_h^2\,dV_h\le L_*^2\).
+Then its diameter is bounded above in terms of \(y_0,L_*\), and
+\(c(y_0,L_*)r^4\le V_x(r)\le\omega_4r^4\) for \(0<r\le D\).
+For a complete connected noncompact four-manifold with
+nonnegative Ricci curvature, finite scalar \(L^2\) energy
+and the same Yamabe inequality on compactly supported tests,
+the asymptotic volume ratio is at least \((y_0/Y_{\mathrm{rd}})^2\).
+\end{proposition}
+
+\begin{proof}
+Use a cutoff supported on \(B(x,r)\), equal to one on \(B(x,r/2)\),
+with gradient bound \(2/r\). Bishop doubling gives
+\(V_x(r/2)\ge V_x(r)/16\). The Yamabe inequality and Hölder yield
+\[
+ \frac{y_0}{4}\le \frac{24}{r^2}V_x(r)^{1/2}
+ +\left(\int_{B(x,r)}R_h^2\,dV_h\right)^{1/2}.
+\]
+Thus each ball has volume at least \(\kappa r^4\),
+\(\kappa=(y_0/192)^2\), or scalar \(L^2\) norm greater than
+\(y_0/8\). Pack disjoint unit balls centered two units apart along a
+minimizing diameter segment. The two kinds of balls number at most
+\(\kappa^{-1}+64L_*^2/y_0^2\) altogether, which bounds \(D\) and gives
+the first assertion by Bishop--Gromov.
+
+In the noncompact case let \(\alpha_\infty\) be the asymptotic
+volume ratio. Balls of radius \(r\) centered at distance \(2r\) along
+a ray have scalar energy tending to zero, which first gives
+\(\alpha_\infty\ge\kappa/(81\omega_4)>0\).
+Apply the compact-support Yamabe inequality to \(f(d(o,\cdot)/r)\)
+for \(f\in C_c^\infty((0,\infty))\). The pushforward of
+\(r^{-4}dV\) by \(d(o,\cdot)/r\) tends on compact subintervals to
+\(\alpha_\infty\,d(\omega_4s^4)\), by convergence of the radial volume
+distribution. The distance gradient has norm one almost everywhere.
+The scalar term divided by \(r^2\) tends to zero by Hölder and
+finiteness of the scalar energy on the escaping supports. The limit
+inequality bounds \(y_0\) by \(\sqrt{\alpha_\infty}\) times the
+Euclidean Yamabe quotient of the radial test. Cutoffs of the
+stereographic round conformal factor have quotients tending to
+\(Y_{\mathrm{rd}}\) \cite[\S3, Theorems 3.2--3.3]{LeeParker1987Yamabe}.
+\end{proof}
+
+For a supplied complete noncompact smooth pointed limit at
+vanishing scales in these constant-\(p_h\) gauges, assume the
+uniform scalar-energy bound of Proposition~\ref{alt:physical-balls}.
+Nonnegative Ricci curvature and the compact-support Yamabe
+inequality pass to the limit. The
+scalar \(L^2\) budget passes on exhaustion and the constant \(p_h\)
+rescales to zero. Its volume ratio is at least
+\(\delta/(8\pi^2)\). A single smooth ALE end with link \(S^3\)
+has volume ratio one, in which case Bishop--Gromov rigidity gives
+Euclidean space.
+
+Positivity alone leaves the scalar-energy and diameter estimates
+open. For example, the rotational ellipsoids
+\(z^2/L^2+|y|^2=1\) in \(\mathbb R^5\) are strictly convex and
+conformally round. In the warped-product expression
+\(ds^2+a(s)^2\gamma_{S^3}\), this follows by using
+\(d\log\rho=ds/a(s)\), with smooth pole expansions
+\(a(s)=s+O(s^3)\) in pole distance. If \(k_r,k_t\) are radial
+and tangential sectional curvatures, then
+\(p_h=3k_rk_t/2>0\). On \(|z|\le L/2\),
+\(a=\sqrt{1-z^2/L^2}\) and \(k_t=(1-a_s^2)/a^2\) have uniform
+positive lower bounds. The volume is comparable to \(L\) and
+\(\int R^2\ge cL\). Unit-volume rescaling leaves that divergence
+and gives diameter at least \(2L/V^{1/4}\). A unit ball in that
+rescaling lies in an original \(z\)-slab of width \(2V^{1/4}\),
+so has unit-volume measure at most \(CV^{-3/4}\). This family has
+nonconstant \(p_h\). The constant-\(p_h\) choice in its round class
+is round. For varying constant-\(p_h\) classes,
+\eqref{alt:full-curvature} and Proposition~\ref{alt:physical-balls}
+use a further uniform scalar-energy assumption. Transferring a
+physical radius selection between gauges also requires distance
+comparison or a new selection in the chosen metric.
+
+\subsection{Conformal boundary current and its modular consequence}
+
+Fix an actual compact smooth domain \(U\subset M\).
+Let \(h=e^{2u}g\), \(g_t=e^{2tu}g\), and
+\(N_t=(\operatorname{tr}_{g_t}P_{g_t})g_t-P_{g_t}\).
+The contracted Bianchi identity gives \(\operatorname{div}N_t=0\).
+The infinitesimal Schouten law
+\(\partial_tP_{g_t}=-\nabla^2_{g_t}u\) and
+\(\operatorname{tr}(T_1(K)K)=2\sigma_2(K)\) for
+\(K=g_t^{-1}P_{g_t}\) give
+\begin{equation}\label{alt:newton}
+ \partial_t(p_{g_t}\,dV_{g_t})
+ =-\operatorname{div}_{g_t}(N_t^{\sharp_{g_t}}\nabla^{g_t}u)\,dV_{g_t}.
+\end{equation}
+Here the term \(-4up_{g_t}\) from differentiating the inverse
+metric cancels the volume derivative. These are the Newton tensor
+identities of \cite[\S2.1, equations (2-1)--(2-5) and Lemma 2.1]{GurskyStreets2018TwoYamabe}
+with the sign appropriate to \(g_t=e^{2tu}g\). Write
+\[
+ q_g(U)=\int_U p_g\,dV_g,\qquad
+ J=\sum_{\Sigma\subset\partial U}
+   \int_0^1\!\int_\Sigma N_t(\nu_t,\nabla^{g_t}u)\,dS_{g_t}\,dt,
+ \qquad q_h(U)-q_g(U)=-J ,
+\]
+using the outward \(g_t\)-unit normals. In this integral the changes
+of the normal, gradient and area contribute factors
+\(e^{-tu},e^{-2tu},e^{3tu}\), whose product is one. Integrating
+\(P_{g_t}=P_g-t\nabla_g^2 u+t^2du\otimes du
+-t^2|du|_g^2g/2\) gives the exact face current
+\begin{equation}\label{alt:face-current}
+ J_\Sigma=\int_\Sigma\!
+  \left[N_0(\nu,\nabla u)
+   +\tfrac12\bigl(\nabla^2u(\nu,\nabla u)-(\Delta_g u)u_\nu\bigr)
+   -\tfrac12|\nabla u|^2u_\nu\right]dS_g .
+\end{equation}
+Here \(\Delta_g=\nabla^i\nabla_i\). If \(f=u|_\Sigma\),
+\(v=\nabla_\Sigma f\), \(a=u_\nu\), and
+\(II(X,Y)=g(\nabla_X\nu,Y)\), the same integral has integrand
+\[
+ aN_0(\nu,\nu)+N_0(\nu,v)-a\Delta_\Sigma f
+ -\tfrac12 II(v,v)-\tfrac12(\operatorname{tr}II)a^2
+ -\tfrac12a(a^2+|v|^2).
+\]
+Indeed the normal-normal Hessian cancels and the mixed Hessian
+contributes \(\langle\nabla_\Sigma a,v\rangle-II(v,v)\).
+The two integrals of the tangential Laplacian combine by integration
+by parts. Hölder bounds \(|J_\Sigma|\) by
+\[
+ C\bigl(A_\Sigma D_\Sigma+\|II\|_3 A_\Sigma^2+A_\Sigma^3\bigr),
+ \quad A_\Sigma=\|\,|a|+|v|\,\|_3,\quad
+ D_\Sigma=\|N_0(\nu,\cdot)\|_{3/2}+\|\Delta_\Sigma f\|_{3/2}.
+\]
+All the norms in this bound are invariant under constant rescaling.
+For paired faces with a common forward transverse direction,
+\eqref{alt:face-current} gives the difference of the two integrals
+in that direction. Cancellation of the signed sum is possible even
+when individual integrals are large.
+
+For either chirality put
+\(I_\pm(U,h)=E_\pm(h;U)+2q_h(U)\), and denote by
+\(C_\pm(\partial U,h)\) the oriented sum of the Chern--Simons
+integrals of the physical Levi-Civita half-spin connections in
+boundary frames. Use the unnormalized anti-Hermitian fundamental
+trace and set \(P_0=8\pi^2\), \(s_+=-1\), \(s_-=1\).
+The homotopy sphere is spin because \(H^2(M;\mathbb Z/2)=0\).
+Its half-spin bundles restrict trivially to the boundary
+since \(\pi_j(\mathrm{SU}(2))=0\) for \(j=0,1,2\).
+The diagonal Riemann curvature block is
+\(W^\pm+R_h\operatorname{Id}/12\) and the off-diagonal block
+has squared norm \(|T_h|^2/4\). The factor \(1/2\) in the
+Clifford curvature map is paired with
+\(-\operatorname{tr}(c(\omega)c(\eta))=4\langle\omega,\eta\rangle\)
+for two-forms of the acting chirality
+\cite[\S2.3]{Baker2026DiracYamabe}. Evaluating
+\(s_\pm\operatorname{tr}(F_\pm\wedge F_\pm)\) gives the difference
+of their squared norms times \(dV_h\), namely
+\((|W^\pm|^2+R_h^2/48-|T_h|^2/4)dV_h\).
+Subtracting the boundary transgression gives the relative second
+Chern integer, so
+\[
+ I_\pm(U,h)=s_\pm\bigl(P_0k_\pm+C_\pm(\partial U,h)\bigr),
+ \qquad k_\pm\in\mathbb Z .
+\]
+The transgression identity used here is
+\cite[\S3, Proposition 3.2]{ChernSimons1974Characteristic}.
+Using the canonical conformal spin isometry to transport the frames
+preserves \(k_\pm\). Hence
+\begin{equation}\label{alt:gauge-charge}
+ I_\pm(U,h)-I_\pm(U,g)=-2J,qquad
+ C_\pm(\partial U,h)-C_\pm(\partial U,g)=-2s_\pm J .
+\end{equation}
+Independent frames give the second equation modulo \(P_0\).
+For a single face the real equality follows by applying the
+formula to a collar with the conformal change cut off at its
+other end. In particular, using \(d_P(x)\) for the distance
+to \(P\mathbb Z\), one gets
+\[
+ d_{P_0}\bigl(C_\pm(\partial U,h)\bigr)
+ \le d_{P_0}\bigl(C_\pm(\partial U,g)\bigr)+2d_{P_0/2}(J).
+\]
+For example, if \(p_h\ge0\) on \(U\), then
+\(0\le E_\pm(h;U)\le |I_\pm(U,g)|+2\max\{-J,0\}\).
+In a volume-one Yamabe source the positive part of \(J\) is
+bounded by \(Y^2\operatorname{Vol}_g(U)/96\) by \eqref{alt:schouten}.
+Controlling the other sign is an additional boundary estimate.
+
+Global curvature and volume bounds alone leave that sign open
+on an actual residual. On the unit round sphere let
+\(h_\lambda=\Phi_\lambda^*g\), where in stereographic coordinates
+\(\Phi_\lambda(x)=\lambda x\), and take
+\(U_\lambda=\{a/\lambda\le |x|\le b/\lambda\}\) for fixed
+\(0<a<b\). The two gauges have the same global curvature bounds
+and positive constant \(p=3/2\). The physical \(g\)-volume of
+\(U_\lambda\) tends to zero and its \(h_\lambda\)-volume is the
+fixed round volume of \(\{a\le |x|\le b\}\). Thus
+\(J=q_g(U_\lambda)-q_{h_\lambda}(U_\lambda)\) has a negative
+nonzero limit. This example concerns the zero Weyl class.
+
+\begin{proposition}[Positive chiral charge on a residual domain]
+\label{alt:positive-charge}
+If \(p_h>0\) globally, put \(U^c=\overline{M\setminus U}\).
+Then
+\[
+ d_{P_0}\bigl(C_\pm(\partial U,h)\bigr)
+ =\min\{I_\pm(U,h),I_\pm(U^c,h)\}
+ \ge\min\{E_\pm(h;U),E_\pm(h;U^c)\}.
+\]
+In particular, along a sequence with complementary chiral mass
+bounded below and modular distance tending to zero, the chiral
+Weyl energy and the Schouten integral on \(U\) both tend to zero.
+\end{proposition}
+
+\begin{proof}
+The two charges are nonnegative and sum to \(P_0\) by
+\eqref{alt:schouten}. The transgression congruence gives the
+minimum exactly. If \(I_\pm(U^c,h)\) is bounded below by a positive
+constant, the smaller charge is eventually \(I_\pm(U,h)\).
+In the constant-\(p_h\) gauge,
+\[
+ I_\pm(U,h)=E_\pm(h;U)+(P_0-E)
+                \frac{\operatorname{Vol}_h(U)}{\operatorname{Vol}_h(M)}.
+\]
+Thus the volume fraction is bounded by the modular distance divided
+by \(\delta\) once the smaller charge is selected.
+The same argument works in an iterated exhaustion
+\(\lim_{L\to\infty}\limsup_i\), provided the complementary lower
+bound holds in \(\liminf_i\) with one constant for all sufficiently
+large fixed \(L\).
+\end{proof}
+
+A single balanced cut has modular distance at least the smaller of
+its two Weyl masses. For a middle residual one needs the oriented
+sum on its actual boundary. On a radial spherical collar
+\(h=e^{2w}(dt^2+\gamma_{S^3(1)})\), let \(v=w'\).
+The radial and tangential sectional curvatures are
+\(-e^{-2w}v'\) and \(e^{-2w}(1-v^2)\). Since \(W=0\) and
+\(p_h=3k_rk_t/2\), integration gives
+\[
+ I_\pm([t_-,t_+]\times S^3,h)=F(v(t_+))-F(v(t_-)),\qquad
+ F(v)=4\pi^2-6\pi^2v+2\pi^2v^3.
+\]
+For the slice with increasing-\(t\) coorientation the modular
+Chern--Simons value is \(s_\pm F(v)\). To fix the additive
+constant, fill the slice from below by a radial ball whose metric
+agrees near the slice and has \(w=t+\mathrm{const}\) at the
+early pole. That pole has slope one and \(F(1)=0\).
+For \(|v|\le1\) the modular distance on the slice is
+\(2\pi^2(1-|v|)^2(2+|v|)\). Each boundary of an exact round
+product cylinder has distance \(4\pi^2\), while the oriented
+sum is zero. Strictly admissible round-class examples with
+the same limiting cancellation are supplied by
+\[
+ w_L(t)=L-\log 2-\tfrac12\bigl(\log\cosh(t+L)+\log\cosh(t-L)\bigr).
+\]
+Here \(-1<v_L<1\), \(v_L'<0\), both pole expansions are smooth,
+and \(w_L,v_L\to0\) uniformly on \([-L/2,L/2]\). The round
+strip \([-L,0]\) with \(w=-\log\cosh t\) instead has limiting
+charge \(4\pi^2\). The symmetric strip \([-L,L]\) in that
+metric has charge tending to \(P_0\), so its modular distance
+vanishes on the complementary branch. These examples explain
+the paired orientation and the uniform complementary mass
+hypothesis of Proposition~\ref{alt:positive-charge}.
+For example, in a fixed admissible perturbation of the round
+metric with nonzero Weyl tensor, take \(U\) to be the exterior
+of a ball shrinking to a point with nonzero curvature in the
+tested block. The complementary mass is positive and tends to
+zero, while the exterior Weyl mass tends to the positive mass
+of the whole sphere.
+
+Even the local equation \(p_h=q>0\) permits two large individual
+fluxes with a small oriented sum. On \([-L,L]\) set
+\(w(0)=-\log L\), \(v(0)=0\) in
+\[
+ w'=v,\qquad v'=-\tfrac{2q}{3}e^{4w}/(1-v^2).
+\]
+As long as \(|w+\log L|\le1\) and \(|v|\le1/2\),
+\(|v'|\le C_q L^{-4}\). Integration closes these bounds for
+large \(L\) and gives \(|v|\le C_qL^{-3}\) and
+\(|w+\log L|\le C_qL^{-2}\) on the full interval.
+The individual modular distances tend to \(4\pi^2\), and their
+paired charge is \(O_q(L^{-3})\). In this solution the first
+integral \((1-v^2)^2-\tfrac{2q}{3}e^{4w}\) tends to one as
+\(L\to\infty\). A smooth pole in a global radial completion
+with constant \(q\) would force that first integral to be zero.
+
+\section{Round-base restart and the Green-rescaling budget}
+\label{alt:base}
+
+Let \(I^+(M)\) be the infimum of \(E_+\) over smooth
+positive-Yamabe classes on a fixed oriented smooth homotopy
+four-sphere \(M\). Consider volume-one Yamabe minimizers \(g_i\)
+with common chiral energy \(E_i\in[4\pi^2,8\pi^2-\delta]\),
+\(E_i\to e\), \(Y_i\to y>0\), and
+\(\mathfrak B(g_i):=\int_M|B_{g_i}|\,dV_{g_i}\to0\).
+We first use a physical comparison with a round base, then a
+comparison in a potentially different conformal gauge.
+
+\subsection{A restart at one physical puncture}
+
+\begin{theorem}[Restart on the original smooth type]\label{alt:restart}
+Suppose \(M\) is nonstandard, \(e=I^+(M)\) and
+\(y=Y_{\mathrm{rd}}\). Supply a volume-one round sphere
+\((N,q_N)\) with a finite marked set \(P\), and oriented embeddings
+on neighborhoods of whole fixed compact truncations of
+\(N\setminus P\) on which the physical metrics converge smoothly
+to \(q_N\). Then there is a slow coherent exhaustion, and after
+a subsequence one fixed puncture label, whose actual exterior
+contains \(e-o(1)\) of both chiral Weyl masses. Its intrinsic
+physical diameter tends to zero. Capping that exterior and
+selecting a volume-one Yamabe minimizer gives metrics \(g_i'\)
+on the original oriented smooth type with
+\[
+ E_+(g_i')\to I^+(M),\qquad
+ \mathfrak B(g_i')\to0,\qquad Y([g_i'])\to Y_{\mathrm{rd}} .
+\]
+Each restarted class has a marked conformally round germ.
+\end{theorem}
+
+\begin{proof}
+A comparison on the whole unpunctured sphere would imply
+\(E_i\to0\), so \(P\ne\varnothing\). Use disjoint round normal
+coordinate balls with radius variable \(\rho\) around its points.
+At cut radius \(r\), set \(t=\log(r/\rho)\) and choose the angular
+orientation consistently. In the \(\rho^{-2}\) gauge the round
+comparison is
+\[
+ dt^2+\left(\frac{\sin(k\rho)}{k\rho}\right)^2\gamma_{S^3(1)},
+\]
+where \(k^2>0\) is the round sectional curvature. The product
+\(C^2\) error through \(|t|\le\ell+2\) is
+\(O((r e^{\ell+2})^2)\). The \(C^4\) error on the central unit
+splices is \(O(r^2)\). At fixed \(r,\ell\) the smooth physical
+comparison gives an additional \(o_i(1)\) in both estimates.
+
+Choose lengths \(\ell_m\to\infty\), tolerances
+\(\eta_m\downarrow0\) with \(\ell_m\eta_m^2\to0\), then radii
+\(r_m\downarrow0\) small enough for the buffered closures to be
+disjoint and the round errors below \(\eta_m/2\). Also require
+\(r_m^4(1+\ell_m)\to0\). Choose increasing source thresholds at which
+the errors of the source on the entire larger truncation
+\(N\setminus\bigcup_{p\in P} B_{q_N}(p,r_m e^{-\ell_m-2})\)
+are below \(\eta_m\) and the volume integral over the truncation
+at \(r_m\) agrees with its round value to within \(\eta_m\).
+Impose unscaled smooth comparison through order \(m+4\) at each
+threshold with error tending to zero. At each index use only the
+map for the latest threshold and its restrictions. Write
+\(r_i',\ell_i'\) for the resulting cut radius and buffer length.
+This choice supplies the nested truncations and their comparisons
+on all fixed compact subsets.
+
+By the whole-truncation topology in the proof of
+Theorem~\ref{thm:finite-punctures}, there is one exterior \(V_{ij}\)
+per face and its marked spherical cap is a homotopy sphere.
+Capping the central truncation gives \(N\), and the marked
+connected sum of all capped pieces gives \(M\).
+Let \(m^\pm_{ij}=E_\pm(g_i;V_{ij})\) and let \(e^\pm_{ij}\)
+be the capped chiral energies. The buffered cap estimates in
+Theorem~\ref{thm:caps} give
+\begin{equation}\label{alt:restart-cap}
+ \begin{split}
+ |e^\pm_{ij}-m^\pm_{ij}|&\le C\eta_{2,i}^2,\\
+ \mathfrak B(\widehat g_{ij})&\le
+         \mathfrak B(g_i;V_{ij})+C\eta_{4,i},\\
+ Y([\widehat g_{ij}])&\ge
+   \min\{Y_i,(1-C\eta_{2,i})Y_{\mathrm{rd}}\}
+        -C(\ell_i')^{-3/2}.
+ \end{split}
+\end{equation}
+Here \(\eta_{2,i},\eta_{4,i}\le\eta_m\) along the chosen
+exhaustion. The first bound compares both old and new unit splices
+to the conformally flat product. The second uses the fourth jets
+on the central splice and the conformal invariance of the Bach
+\(L^1\) density in dimension four. Both bounds are independent of
+\(r_i'\). One may put the splice and cap at physical length
+scale \(r_i'\), using the factor \(r_i'/\rho\) on the retained
+collar, extended with a cutoff on the spare buffer. The cap in this
+pre-minimization representative has volume \(O((r_i')^4)\)
+and the replaced representative on the long collar has volume
+\(O((r_i')^4(1+\ell_i'))\).
+
+All capped exteriors have positive Yamabe constant with limits
+\(Y_{\mathrm{rd}}\), by \eqref{alt:restart-cap} and the universal
+upper bound. The central capped piece carries the round metric.
+By Theorem~\ref{thm:nonsplitting}, the strict upper band and the
+\(o(1)\) cap costs imply at most one capped piece of energy
+\(\ge4\pi^2\). The nonstandard type forces one nonstandard
+capped exterior, of the original oriented type. For its label
+\(j_i\),
+\[
+ I^+(M)\le e^+_{i,j_i},\qquad
+ E_i-m^+_{i,j_i}\le E_i-I^+(M)+C\eta_{2,i}^2\to0 .
+\]
+The minus estimate follows because both closed energies are equal
+on each capped piece and on each source. Fix the surviving label
+along a subsequence. Larger cuts in the same normal coordinate
+range, defined by restriction of the same map, add a marked
+cylindrical layer. The capped type is preserved and the larger
+exterior still contains the limiting mass. Smaller cuts within
+the controlled buffer lose at most
+\(C(1+\ell_i')\eta_{2,i}^2=o(1)\) of either Weyl mass.
+
+The exteriors have physical volume tending to zero by the
+volume-one normalization and the imposed convergence of the
+central volume. The source Yamabe inequality gives uniform
+physical lower bounds \(\operatorname{Vol} B(x,u)\ge c_0u^4\)
+for \(0<u\le r_0\). In fact the cutoff in a ball and the
+bounded source scalar curvature give \(V_x(u)/u^4\ge
+c(V_x(u/2)/(u/2)^4)^{1/2}\). Iteration to small radii gives
+the uniform bound. For each exterior point, a ball of radius
+\(\min\{d(x,\partial V_{ij})/2,r_0\}\) lies in its exterior.
+Its small volume thus implies
+\(d(x,\partial V_{ij})\le 2c_0^{-1/4}
+\operatorname{Vol}(V_{ij})^{1/4}\) for large \(i\).
+Shortest segments to the boundary stay in the exterior up to the
+first boundary point. Its sole boundary sphere has intrinsic
+diameter \(O(r_i')\), giving the intrinsic diameter bound
+\[
+ \operatorname{diam}_{\rm intr} V_{ij}
+ \le 4c_0^{-1/4}\operatorname{Vol}(V_{ij})^{1/4}+Cr_i'\to0 .
+\]
+
+Transport the surviving capped class to \(M\) by the oriented
+diffeomorphism and take a unit-volume Yamabe minimizer
+\cite[\S3]{Schoen1984Yamabe}. The class invariants are unchanged.
+Equation \eqref{alt:restart-cap} and the minimizing bound imply the
+three asserted limits, and the exact cap supplies the marked germ.
+\end{proof}
+
+For a given \(i\) the signed change equals the splice excess
+\(e^+_{i,j_i}-m^+_{i,j_i}\) minus the discarded mass
+\(E_i-m^+_{i,j_i}\). A strict improvement requires the second
+term to exceed the first. A further restart requires new usable
+comparison data. An estimate for the size of the marked germ
+in the restarted Yamabe gauge requires further control.
+
+\subsection{A conformal Green model}
+
+For the same source hypotheses preceding
+Theorem~\ref{alt:restart}, allow general \(y>0\) and \(e\).
+Supply a smooth closed oriented homotopy-sphere conformal base
+\((N,h)\) with finite marked set \(P\). Suppose on full compact
+truncations off \(P\) there are oriented comparison embeddings
+\(F_i\) and representatives \(F_i^*g_i=u_i^2h_i\), where
+\(h_i\to h\) smoothly on fixed compacts. Compact-support Yamabe
+tests then give \(Y([h])\ge y\) by cutoff at the finitely many
+smooth points. The invariance of the Bach \(L^1\) density gives
+\(B_h=0\) away from \(P\), and hence everywhere by smoothness.
+Write \(e_N=E_\pm(h)\le e\), by conformal measure invariance
+and exhaustion.
+
+\begin{theorem}[One-pole Green budget]\label{alt:green}
+Suppose a further constant length normalization at scales
+\(\lambda_i\downarrow0\) gives
+\[
+ \lambda_i^{-2}F_i^*g_i\longrightarrow g_X=w^2h,qquad
+ w=\sum_{j=1}^{\ell}a_jG_{p_j},\quad a_j>0,
+\]
+smoothly on fixed compact subsets of \(N\setminus P\).
+Here \(p_j\in P\) are distinct poles and \(G_p\) is the Green
+function satisfying
+\((6\nabla^*\nabla+R_h)G_p=24\pi^2\delta_p\).
+On \(X=N\setminus\{p_1,\ldots,p_\ell\}\), including any ordinary
+marked points, one has
+\[
+ \int_X |\operatorname{Ric}_{g_X}|^2\,dV_{g_X}
+       =4e_N+32\pi^2(\ell-1),\qquad
+ e-e_N\ge 8\pi^2\ell-y^2/48 .
+\]
+There is exactly one pole in the strict upper band, and hence
+\(e-e_N\ge(Y_{\mathrm{rd}}^2-y^2)/48\).
+\end{theorem}
+
+\begin{proof}
+A positive homogeneous solution with no pole is impossible on the
+closed base with \(Y([h])>0\). The conformal scalar-curvature law
+gives \(R_{g_X}=0\) away from the poles. Near each pole,
+the corresponding Green function has positive \(r^{-2}\) leading
+term in conformal normal coordinates
+\cite[Lemma 6.4 and Theorem 6.5]{LeeParker1987Yamabe}. The other
+terms are smooth. Inversion and a constant coordinate rescaling
+give one Euclidean, unquotiented end per pole with differentiable
+decay \(O_2(R^{-\alpha})\) for any fixed \(0<\alpha<2\).
+The metric is complete and its curvature square is integrable
+by the decay. A large end truncation removes \(\ell\) balls from
+\(N\), so has Euler characteristic \(2-\ell\).
+The Gauss--Bonnet boundary integral tends to \(8\pi^2\) on each
+end: the rescaled end collar tends in \(C^2\) to the Euclidean
+unit sphere collar with outward normal. The sign and coefficient
+are those of a Euclidean ball
+\cite[\S7, equation (7.2)]{TianViaclovsky2005ALE}. Since the
+total chiral Weyl energies on \(X\) equal \(e_N\), the open
+Gauss--Bonnet identity is
+\[
+ 8\pi^2(2-\ell)=2e_N-\tfrac12
+       \int_X|\operatorname{Ric}_{g_X}|^2\,dV_{g_X}
+       +8\pi^2\ell .
+\]
+
+On an embedded fixed compact away from all of \(P\), the limit
+Ricci integral equals the limit of physical trace-free Ricci
+integrals, using only constant-scale invariance and smooth
+convergence to a scalar-flat metric. Exhaustion proves the bound
+by the limiting source budget
+\[
+ \lim_i\int_M|\operatorname{Ric}_{0,g_i}|^2,dV_{g_i}
+     =4e+y^2/12-32\pi^2
+\]
+from \eqref{alt:schouten}. The ordinary omitted marks carry
+no smooth curvature mass. The two Ricci identities give the
+asserted inequality. Two poles would force \(e\ge e_N+8\pi^2\)
+since \(y\le Y_{\mathrm{rd}}\), contradicting the strict band.
+\end{proof}
+
+Here the Green model and the compact conformal base have the same
+Weyl measures on the comparison domains. A separate disjoint bubble
+would need additional comparisons. If \([h]\) is nonround,
+Theorem~\ref{thm:closed-gap} gives \(e_N>4\pi^2\) and
+\(y\le Y([h])<Y_{\mathrm{rd}}\) by strict Yamabe rigidity
+\cite[Theorem 2]{Schoen1984Yamabe}. Since
+\(e-e_N<4\pi^2-\delta\), Theorem~\ref{thm:finite-punctures}
+gives the same smooth type as \(M\) from the conformal comparison.
+Thus \(I^+(M)\le e_N\), and the Green model is excluded at the
+infimum. More generally the uniform exact-class Yamabe deficit
+\(Y([h])\le Y_{\mathrm{rd}}-d_\delta\) in this closed band
+gives
+\[
+ e-I^+(M)\ge e-e_N\ge
+ \frac{Y_{\mathrm{rd}}^2-(Y_{\mathrm{rd}}-d_\delta)^2}{48}>0 .
+\]
+This uses the deficit on the closed base in
+Lemma~\ref{thm:exact-compactness} and
+\cite[\S12.2]{Baker2026TwistorSections}.
+
+For a nonround base, the supplied zero-factor comparisons can be
+normalized by the factor at an ordinary point. Harnack bounds and
+interior regularity give a positive limiting factor solving the
+homogeneous conformal Laplace equation away from \(P\). The
+nonnegative isolated point sources give the Green representation
+in Theorem~\ref{alt:green} under the smooth coherent comparison
+hypotheses \cite{Baker2026MarkedLimits}. A positive unrescaled
+limit factor instead extends through the marked points. Its
+volume \(v\le1\) satisfies \(Y([h])v^{1/2}\le yv\) by the
+Yamabe inequality and the limiting equation, so \(v=1\) and
+\(Y([h])=y\). The physical metrics converge in the measured
+Gromov--Hausdorff sense along that subsequence by whole-truncation
+comparison, collapse of the one-face complements and source
+ball noncollapse \cite{Baker2026MarkedLimits}.
+In this physical branch at the infimum all chiral,
+scalar-square, trace-free Ricci and full curvature defects vanish
+by volume and energy saturation and \eqref{alt:full-curvature}.
+For a round base, if the Green comparison is supplied then
+\(e_N=0\) and the single-pole Ricci identity makes the complete
+scalar-flat conformally flat model Euclidean. Other ordinary
+marks can still be omitted by the comparison. The resulting
+flat model carries zero chiral mass and the source may retain
+energy outside the comparison.
+
+\section{Closed critical metrics}
+\label{alt:closed}
+
+\subsection{Isolation of the first exact critical value}
+
+For a fixed smooth closed oriented homotopy four-sphere \(M\), let
+\[
+ \mathcal A_M=\{E_+([g]): B_g=0,\ Y([g])>0,\ 0<E_+([g])<8\pi^2\}
+\]
+range over smooth metrics on \(M\), and set
+\(a_M=\inf\mathcal A_M\) when the set is nonempty. Let
+\(\kappa_\delta>0\) be the exact same-type energy drop in the
+upper band \(E_+\le 8\pi^2-\delta\) from
+Theorem~\ref{thm:ale-descent}.
+
+\begin{theorem}[First fixed-type critical value]\label{alt:critical}
+If \(\mathcal A_M\ne\varnothing\), then its first value is attained
+and \(4\pi^2<a_M<8\pi^2\). For
+\[
+ a_M\le b\le8\pi^2-\delta,\qquad b<a_M+\kappa_\delta ,
+\]
+the volume-one Yamabe representatives realizing values in
+\(\mathcal A_M\cap[a_M,b]\) are sequentially compact up to oriented
+diffeomorphisms. The set of distinct values in that sublevel is
+finite. In particular \(a_M\) is isolated among exact positive
+subcritical values on \(M\).
+\end{theorem}
+
+\begin{proof}
+Take a sequence of exact values converging to \(e\le b\).
+Theorem~\ref{thm:closed-gap} places the representatives in the
+exact compactness band. In the blow-up alternative of
+Lemma~\ref{thm:exact-compactness}, the smooth ALE compactification
+and the marked same-type descent produce a member of
+\(\mathcal A_M\) of value at most
+\(e-\kappa_\delta<a_M\), which is impossible. The compact
+alternative gives smooth convergence with limiting energy \(e\)
+and positive Yamabe sign. Apply this first to a minimizing
+sequence, taking \(\delta>0\) with \(a_M<8\pi^2-\delta\) and
+discarding a finite prefix, to attain \(a_M\). The closed gap
+gives the strict lower bound at the attaining class.
+
+For finiteness, fix any smooth Bach-flat metric \(g\) on \(M\)
+and take the trace-free Bach gauge of Gursky--Viaclovsky
+\cite[\S2.3, equation (2.59) and Theorem 2.11]{GurskyViaclovsky2015}.
+For \(0<\alpha<1\) its map is
+\[
+ P_g^B(\theta)=\pi_0^g\!
+     \left(B_{g+\theta}
+         +K_{g+\theta}(\square_{K_g}\beta_g\theta)\right)
+ : C^{4,\alpha}(S^2_0)\longrightarrow C^{0,\alpha}(S^2_0)
+\]
+with the normalization of that source. Here \(K_g\) is its conformal
+Killing operator, \(\square_{K_g}=\delta_g K_g\),
+\(\beta_g\theta=\delta_g\theta\) on trace-free tensors, and \(\pi_0^g\)
+is the fixed-background trace-free projection. This map is real
+analytic in \(\theta\): inverse metric, differentiation with fixed
+background, and multiplication through the required jet orders
+are analytic on the open cone of positive metrics. Theorem 2.11
+gives an elliptic derivative and puts every sufficiently
+\(C^{4,\alpha}\)-close Bach-flat metric into the small zero set by
+a diffeomorphism near the identity and a conformal change.
+The elliptic derivative has a finite-dimensional kernel \(K\)
+and closed image of finite codimension. Project onto that image
+and apply the analytic implicit function theorem on a closed
+complement of \(K\). Its graph \(\theta=k+v(k)\) contains all
+small zeros.
+
+The full four-index Weyl integral \(F(k)\) on the graph is
+real analytic by the same metric operations and the analytic
+volume density. At a parameter from an actual Bach-flat metric
+its unrestricted first variation vanishes, so \(dF(k)=0\) on
+the entire kernel tangent space. The finite-dimensional
+\L{}ojasiewicz gradient inequality
+\cite[Theorem 1]{Feehan2020Gradient} gives
+\(|F(k)-F(0)|^\vartheta\le C|dF(k)|\), with
+\(0<\vartheta<1\) near zero. Consequently all nearby smooth
+Bach-flat metrics have the same full Weyl integral, and hence
+the same \(E_+\) on \(M\). If the displayed sublevel contained
+infinitely many distinct values, choose a representative
+of each and use smooth subsequential compactness. Local constancy
+at its limit contradicts distinctness.
+\end{proof}
+
+The isolation concerns values. A least exact critical value
+may be a saddle for variations through arbitrary positive-Yamabe
+metrics. More generally, distinct exact values accumulating
+inside a fixed band force the blow-up alternative along the
+corresponding sequence, and an exact value lower by at least
+\(\kappa_\delta\) than the accumulation value on the same type.
+
+\subsection{The chiral Cotton obstruction and Einstein reduction}
+
+Let \(C_{ijkl}=(W^+)_{ijkl}\) be the all-lowered Weyl block,
+\(D_{jkl}=\nabla^i C_{ijkl}\), and
+\(L(\alpha)_{jkl}=\alpha^iC_{ijkl}\) for a real one-form.
+Put \(w=|W^+|_{\mathrm{HS}}\) and \(U=\{w>0\}\).
+Use the full ordered-index norm for three-tensors.
+In an orthonormal self-dual eigenbasis \(\Sigma_a\), with
+eigenvalues \(\lambda_a\),
+\(C_{ijkl}=\sum_a\lambda_a(\Sigma_a)_{ij}(\Sigma_a)_{kl}\).
+Contraction of each normalized eigenform with a vector has
+squared norm half the vector's squared norm, and summing
+over the ordered last pair contributes a factor of two.
+Thus \(L^*L=w^2\operatorname{Id}\). Define on \(U\)
+\[
+ \beta=-w^{-2}L^*D,\qquad
+ \mathcal R=D+L(\beta),\qquad r=|\mathcal R|,
+\]
+and set \(\mathcal R=D\) on \(M\setminus U\).
+The conformal change \(\widehat g=e^{2f}g\) gives
+\(\widehat C=e^{2f}C\) and \(\widehat D=D+L(df)\) as covariant
+tensors \cite[equations (3.3)--(3.4)]{GurskyMcKeownTyrrell2026}.
+Because \(\widehat L=L\), \(\widehat L^*=e^{-4f}L^*\), and
+\(\widehat w^2=e^{-4f}w^2\), the residual \(\mathcal R\) is
+unchanged and \(\widehat\beta=\beta-df\). The pointwise orthogonal
+decomposition is
+\begin{equation}\label{alt:cotton-split}
+ |D+L(df)|_g^2=r^2+w^2|df-\beta|_g^2 \quad\text{on } U.
+\end{equation}
+The left-hand side is \(r^2\) on the complement.
+In particular
+\[
+ \int_M |\widehat D|_{\widehat g}^{4/3}\,dV_{\widehat g}
+ \ge\int_M r^{4/3}\,dV_g ,
+\]
+using the three-index norm's conformal weight. On any piecewise
+smooth regular closed curve \(\gamma\subset U\), the integral
+of the left side of \eqref{alt:cotton-split} with respect to
+arclength is bounded below by
+\[
+ \int_\gamma r^2\,ds_g+
+         \frac{|\oint_\gamma\beta|^2}{\int_\gamma w^{-2}\,ds_g}.
+\]
+This follows from the tangential component of \(df-\beta\),
+Cauchy--Schwarz and \(\oint_\gamma df=0\).
+
+For a smooth half-harmonic representative, \(\mathcal R=0\)
+on \(U\) and \(\beta\) must extend to a smooth closed one-form.
+Conversely such an extension is exact on a homotopy sphere.
+The resulting divergence equation extends by continuity to
+\(\overline U\), and holds on the interior of the complement
+because \(C\) vanishes there.
+
+\begin{theorem}[Closed harmonic scale for a Bach-flat class]
+\label{alt:harmonic-scale}
+Let \(g\) be smooth and Bach-flat on a closed oriented homotopy
+four-sphere and suppose \(W^+\not\equiv0\). Then a smooth
+half-harmonic representative for \(W^+\) exists if and only if
+\(\mathcal R=0\) on \(U\) and \(\beta\) has a smooth extension
+to the whole sphere. Every such half-harmonic representative
+is Einstein.
+\end{theorem}
+
+\begin{proof}
+With the Schouten tensor \(P_g\), the Bach formula in the
+\(W^+\) block is
+\(B_{ij}=2(\nabla^k\nabla^l+P_g^{kl})C_{ikjl}\)
+\cite[\S3, p.~78]{LeBrun2013EinsteinExtremal}.
+Use \(\nabla^l C_{ikjl}=-D_{jik}\) and substitute
+\(D=\mathcal R-L(\beta)\) twice to obtain
+\begin{equation}\label{alt:cotton-bach}
+ \tfrac12 B_{ij}
+ =C_{ikjl}\bigl(P_g^{kl}-\nabla^k\beta^l+\beta^k\beta^l\bigr)
+       -\nabla^k\mathcal R_{jik}-\beta^k\mathcal R_{ikj}.
+\end{equation}
+Here the derivative of the Weyl tensor in the substitution
+uses \(\nabla^k C_{ajik}=-D_{iaj}\).
+When \(\mathcal R=0\), the skew part yields
+\(W^+((d\beta)^+)=0\) by the Bianchi identity.
+
+The invertible locus of \(W^+\) is dense in \(U\) when
+\(D=-L(\beta)\) there. Indeed, if rank two held on an open
+subset, a local quaternionic frame \(I,J,K=IJ\) could be
+chosen with \(J\) the zero eigenline, and with opposite
+eigenvalues on \(I,K\). Differentiate \(W^+(\omega_J)=0\)
+and contract on the first index of \(C\). The contracted
+derivative of \(C\) vanishes against \(\omega_J\) by
+\(D=-L(\beta)\). Writing \(\nabla J=a\otimes I+b\otimes K\)
+in the other term gives \(a(IX)=b(KX)\), hence \(b=a\circ J\).
+The identity \((\nabla_{JX}J)JY=(\nabla_XJ)Y\) follows and
+gives integrability of \(J\). For a Hermitian metric,
+the \(W^+\) block consists of a scalar multiple of
+\(\tfrac12\omega_J\otimes\omega_J-\tfrac13\operatorname{Id}\)
+and off-diagonal terms between \(\omega_J\) and its
+orthogonal complement. Thus \(W^+(\omega_J)=0\) makes the
+entire block zero, contrary to rank two
+\cite[\S4, Theorem 4.1 and proof of Proposition 4.1]{GoverNagy2007FourDimensional}.
+
+Consequently \((d\beta)^+=0\) on \(U\).
+For a nonzero smooth Bach-flat block, \(U\) is dense in \(M\):
+the conformally normalized metric is real analytic in local
+conformal harmonic coordinates by obstruction-flatness
+\cite[Theorems 2.2 and 3.7(c)]{LassasLiimatainen2019ConformalHarmonic}.
+The analytic identity theorem for a Weyl block and the conformal
+invariance of its zero set exclude an open zero set on the
+connected manifold. If \(\bar\beta\) is a smooth extension,
+\(d\bar\beta\) is therefore anti-self-dual everywhere. Stokes
+gives \(0=\int_M d\bar\beta\wedge d\bar\beta
+=-\|d\bar\beta\|_2^2\). The closed extension is exact, giving
+the asserted half-harmonic representative by \eqref{alt:cotton-split}.
+The necessity follows by taking \(\bar\beta=df\).
+
+In the half-harmonic scale the Bach equation is
+\(C_{ikjl}P_g^{kl}=0\). On trace-free symmetric tensors this
+contraction is \(W^+\) acting on the first factor in
+\(S^2_0\simeq\Lambda^+\otimes\Lambda^-\).
+Indeed let \(I_a,J_b\) be opposite-chirality unit quaternionic
+frames with \(W^+\) diagonal in the former. The contraction on
+a basis element \(I_aJ_b\) is
+\(\frac12\sum_c\lambda_c I_c(I_aJ_b)I_c^{-1}\).
+The conjugation fixes the term with \(c=a\) and negates the
+others, yielding \(\lambda_a I_aJ_b\). Thus the trace-free
+Schouten tensor is zero on the invertible locus, and then
+everywhere by density. The contracted Bianchi identity gives
+constant scalar curvature.
+\end{proof}
+
+The Einstein implication in the proof requires a nonzero
+half-harmonic block and Bach-flatness, and applies on any connected
+closed oriented four-manifold. It shows a limitation of using
+stability to obtain a harmonic scale on general smooth types.
+On \(N=\#_4\mathbb{CP}^2\) in the positive-signature orientation,
+LeBrun supplies a positive-Yamabe self-dual conformal class
+\cite[Theorem 1 and \S5, p.~235]{LeBrun1991Explicit}.
+Its \(W^-=0\) makes \(E_+=12\pi^2\tau(N)=48\pi^2\)
+an absolute minimum by the signature formula. It is Bach-flat
+with nonnegative unrestricted Hessian. If its nonzero \(W^+\)
+had a half-harmonic representative, the preceding implication
+would make it positive Einstein. But then
+\(4\pi^2(2\chi-3\tau)=2E_-+\int R^2/24\,dV>0\),
+whereas \(\chi=6\), \(\tau=4\). On the homotopy sphere in the
+subcritical band, both the vanishing residual and smooth extension
+in Theorem~\ref{alt:harmonic-scale} remain hypotheses.
+
+\subsection{The half-harmonic energy threshold}
+
+\begin{theorem}[Strict half-harmonic bound]\label{alt:harmonic-gap}
+Let \([g]\) be a smooth positive-Yamabe class on a closed
+oriented homotopy four-sphere, with a smooth representative
+satisfying \(\nabla^i(W^+)_{ijkl}=0\). Let \(e=E_+([g])\),
+and let \(T_Y\) be the squared \(L^2\) norm of trace-free
+Ricci curvature in a Yamabe minimizer of the class.
+Then either the class is conformally round or
+\[
+ e>\frac{16\pi^2}{3}+\frac{T_Y}{6}.
+\]
+For the largest eigenvalue \(z\) of \(W^+\) in the nonround
+case, the operator \(-6\Delta_g+R_g-6z\) has negative first
+eigenvalue, and \(36\int_M z^2\,dV_g>Y([g])^2\).
+\end{theorem}
+
+\begin{proof}
+In the half-harmonic representative put \(w=|W^+|_{\mathrm{HS}}\).
+Use \(\Delta_g=\nabla^i\nabla_i\). The half-harmonic
+Weitzenb\"ock formula and improved Kato inequality give
+\[
+ \tfrac12\Delta_g w^2=|\nabla W^+|^2+\tfrac12R_g w^2-18\det W^+,
+ \qquad |\nabla W^+|^2\ge\tfrac53|\nabla w|^2\quad(w>0)
+\]
+\cite[equations (3.3), (3.7) and Corollary 3.4]{GurskyMcKeownTyrrell2026}.
+Fu gives the gap with the four-index norm, whose square is
+\(4w^2\) for one block
+\cite[Proposition E, equations (2-1)--(2-9)]{Fu2018FourManifolds}.
+For eigenvalues \(x\le y\le z\) with \(x+y+z=0\),
+\[
+ 6zw^2-36\det W^+=12z(x-y)^2\ge0,qquad
+ 6z\le 2\sqrt6\,w.
+\]
+The first equality uses \(w^2=2z^2-2xy\). The bound uses
+\(x^2+y^2\ge z^2/2\).
+Set \(u_\epsilon=w^2+\epsilon^2\),
+\(f_\epsilon=u_\epsilon^{1/6}\), and \(P_z=-6\Delta_g+R_g-6z\).
+Then
+\[
+ 6\Delta_g f_\epsilon=u_\epsilon^{-5/6}
+   \bigl(\Delta_g u_\epsilon-\tfrac56u_\epsilon^{-1}
+                            |\nabla u_\epsilon|^2\bigr).
+\]
+Kato bounds the subtracted term by \(2|\nabla W^+|^2\), also
+at zeroes since \(\nabla u_\epsilon=0\) there. The two preceding
+displays give
+\(P_z f_\epsilon\le(R_g-6z)\epsilon^2 u_\epsilon^{-5/6}
+\le\|R_g\|_\infty\epsilon^{1/3}\).
+Multiplication by \(f_\epsilon\) and integration bound
+\(f_\epsilon\) in \(H^1\). Its uniform limit \(f=w^{1/3}\)
+therefore has \(P_z\) quadratic form at most zero by lower
+semicontinuity. If \(w\not\equiv0\), the Yamabe inequality
+and Hölder yield
+\[
+ Y\|f\|_4^2
+ \le \int_M(6|\nabla f|^2+R_g f^2)\,dV_g
+ \le 6\int_M zf^2\,dV_g
+ \le 2\sqrt6\,\|w\|_2\|f\|_4^2.
+\]
+In equality, Hölder forces \(w\) proportional to \(w^{2/3}\)
+and hence a positive constant by continuity and connectedness.
+The constant test is Yamabe minimizing, giving constant scalar
+curvature \(R_g=2\sqrt6\,w\). The Weitzenb\"ock formula and
+\(18\det W^+\le\sqrt6\,w^3\) force \(W^+\) to be parallel,
+with eigenvalues \((-R_g/12,-R_g/12,R_g/6)\). The simple
+eigenline is orientable since \(H^1(M;\mathbb Z/2)=0\).
+A global unit section is a nonzero parallel self-dual form,
+contrary to \(b_2(M)=0\). Thus \(e>Y^2/24\).
+In the Yamabe gauge the topological identity is
+\(16\pi^2=2e-T_Y/2+Y^2/24\). Combining gives the asserted
+strict bound. If \(W^+=0\), the zero signature gives \(W^-=0\)
+and the simply connected closed conformally flat manifold is
+conformally round by the developing map.
+
+For the spectral statement, the form tested on \(f\) gives
+\(\lambda_1(P_z)\le0\). If equality holds then \(f\) is a
+weak first eigenfunction. Elliptic regularity and the strong
+maximum principle for the bounded Lipschitz potential give
+\(f>0\). The calculation at \(\epsilon=0\) now gives
+\[
+ P_z f=-w^{-5/3}
+     \bigl(2|\nabla W^+|^2-\tfrac{10}{3}|\nabla w|^2
+                    +12z(x-y)^2\bigr).
+\]
+The nonnegative summands force \(x=y=-z/2\) everywhere.
+A global section of norm \(\sqrt2\) of the simple eigenline
+defines a compatible almost complex structure. Its first
+Chern class must satisfy
+\(\langle c_1^2,[M]\rangle=2\chi+3\tau=4\), impossible
+when \(H^2(M;\mathbb Z)=0\). Thus the first eigenvalue is
+negative. A negative-form test and Hölder give
+\(Y^2<36\int z^2\,dV_g\). The sign of the operator is conformally
+invariant because its quadratic form is that of the conformal
+Laplacian with the weight-two potential \(6z\).
+\end{proof}
+
+Every positive Einstein metric satisfies the half-harmonic
+hypothesis by the contracted Bianchi identity. Thus in the band
+\(4\pi^2<E_+\le16\pi^2/3\) every Bach-flat candidate lacks
+the smooth harmonic scale of Theorem~\ref{alt:harmonic-scale}.
+
+\subsection{The positive Einstein Hessian}
+
+\begin{proposition}[A spectral criterion for Weyl descent]
+\label{alt:einstein-hessian}
+On a closed oriented homotopy four-sphere let \(g\) be positive
+Einstein with constant scalar \(R\). Use the positive-leading
+Lichnerowicz operator on transverse-traceless tensors
+\[
+ \mathcal L=\nabla^*\nabla-2\mathring{\operatorname{Rm}}
+                       +\tfrac R2\operatorname{Id},
+ \qquad (\mathring{\operatorname{Rm}}h)_{ij}=R_{ipjq}h^{pq},
+\]
+where \(\mathring{\operatorname{Rm}}h=-h\) on trace-free tensors
+at sectional curvature one. The Hessian of \(E_+\) on this
+subspace is
+\begin{equation}\label{alt:hessian}
+ D^2E_+(g)[h,h]=\tfrac18
+         \langle h,(\mathcal L-R/2)(\mathcal L-R/3)h\rangle_{L^2}.
+\end{equation}
+A negative variation modulo conformal and diffeomorphism
+directions exists if and only if the transverse-traceless spectrum
+of \(\mathcal L\) meets \((R/3,R/2)\). Such a direction
+decreases the energy inside the positive-Yamabe classes on \(M\).
+\end{proposition}
+
+\begin{proof}
+Chern--Gauss--Bonnet and signature give the functional identity
+\[
+ \int_M(|\operatorname{Ric}|^2-R^2/3)\,dV
+ =\tfrac12\int_M |W|_{\mathrm{tens}}^2,dV-16\pi^2\chi(M)
+ =4E_+-16\pi^2\chi(M).
+\]
+Gursky--Viaclovsky's transverse-traceless factorization for this
+quadratic functional at an Einstein metric gives half the product
+of the operators \(-\mathcal L+R/2\) and \(-\mathcal L+R/3\)
+\cite[Theorem 3.10 and equation (3.41)]{GurskyViaclovsky2015}.
+Dividing by four gives \eqref{alt:hessian}. On an eigentensor
+the multiplier has negative sign exactly in the stated open
+interval, and the bilinear kernel consists of the two endpoint
+eigenspaces. The \(R/2\) endpoint is the infinitesimal Einstein
+equation in transverse-traceless gauge.
+
+Conformal and Lie-derivative directions are in the radical
+of the Hessian by differentiating the invariances at the
+critical metric. The remaining part of a smooth variation is
+transverse-traceless: remove its trace and solve the orthogonal
+projection onto the image of the conformal Killing operator.
+Its normal operator is elliptic, and the right-hand side is
+orthogonal to the conformal Killing fields. A negative
+transverse-traceless tensor is realized by the path
+\(g_s=g(e^{s h^\sharp}\cdot,\cdot)\), whose volume form is fixed.
+For small \(|s|\), scalar curvature stays positive by compactness
+and smooth dependence, giving positive Yamabe sign.
+\end{proof}
+
+Exclusion of both endpoint eigenvalues gives local Bach
+rigidity, and exclusion of the full closed interval gives a
+strict local minimum modulo the two gauges by the nonlinear
+rigidity and local minimality results of
+\cite[Theorem 1.6 and Proposition 6.4]{GurskyViaclovsky2015}.
+If the open interval is empty but an endpoint occurs, the
+Hessian is nonnegative and leaves those kernel directions
+for higher-order analysis. The criterion concerns unrestricted
+metric variations with positive Yamabe sign. It gives no path
+of exact Bach-flat classes descending from an isolated value.
+
+For any positive Einstein representative of volume \(V\),
+\(R\sqrt V=Y([g])\). To see this, write
+\(g=u^{-2}\widehat g\) with \(\widehat g\) a Yamabe minimizer.
+The trace-free Ricci equation is
+\(0=\operatorname{Ric}_{0,\widehat g}
+      +2u^{-1}(\widehat\nabla^2u)_0\).
+Pair with \(u\operatorname{Ric}_{0,\widehat g}\) and integrate
+in \(\widehat g\). The Hessian term integrates to zero by the
+contracted Bianchi identity and the constant scalar curvature.
+Thus \(\widehat g\) is Einstein too. The identity
+\(16\pi^2=2E_++R^2 V/24\) for the two Einstein metrics
+gives the claim. In particular in the unit-volume gauge,
+\(R=Y\), \(E_+=8\pi^2-Y^2/48\), and the interval test is
+\(\mu/Y\in(1/3,1/2)\). For sectional curvature one,
+\(R=12\) and \(\mathcal L=\nabla^*\nabla+8\), so the Hessian
+is \((\nabla^*\nabla+2)(\nabla^*\nabla+4)/8\) and is
+positive on this subspace. For a nonround positive Einstein
+survivor the integral Weyl band gives no conclusion about an
+eigenvalue in the descent interval.

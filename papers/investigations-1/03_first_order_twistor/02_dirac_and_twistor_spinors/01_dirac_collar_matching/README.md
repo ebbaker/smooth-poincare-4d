@@ -13,3 +13,5 @@ The [parent investigation](../README.md) owns its existing tasks. [Neck geometry
 The [second joint assessment](../../reviews/SECOND_COLLAR_ASSESSMENT_20261125.md) integrates E10–E14. [Second-session continuation](continuation-notes/AFTER_SECOND_COLLAR_RESEARCH_20261125.md).
 
 The [third joint assessment](../../reviews/THIRD_COLLAR_ASSESSMENT_20261125.md) integrates E15. [Current continuation](continuation-notes/AFTER_THIRD_COLLAR_RESEARCH_20261125.md).
+
+The [working manuscript](manuscript/README.md) presents the analytical results through 25 November and concludes with the outstanding geometric questions.

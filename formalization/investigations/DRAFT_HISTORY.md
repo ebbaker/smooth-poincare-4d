@@ -5,3 +5,4 @@
 - **25 November 2026 · Sustained continuation prompts.** Added one standalone Astra/ultra prompt for each route, with authority for Sol 6.2/ultra helpers and alternative proof strategies. The [program handoff](continuation-notes/CONTINUATION.md) coordinates shared integration when the three sessions run together.
 
 - **25 November 2026 · Route 02 activated.** Integrated the shared `FirstOrderTwistor` Lake target, the E02a frame normalization and measured comparison/cover interfaces for B01/B05. [Route 02 integration](02_neck_energy_accounting/research-progress/handoffs/INTEGRATION_20261125.md)
+- **25 November 2026 · Route 04 activated.** Proved the varying-floor cover and the conditional energy identity from local differentiated spinor bounds. [Route 04 proofs and limits](04_dirac_collar_transmission/reviews/TRANSMISSION_AND_RESIDUAL_20261125.md) · [Route 02 interface](02_neck_energy_accounting/research-progress/handoffs/INCOMING_ROUTE04_20261125.md)

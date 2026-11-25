@@ -59,6 +59,9 @@
 % (claude-fable-5-2) and manuscript integration by Claude Opus 5.5 (claude-opus-5-5), Claude Cowork,
 % reasoning effort max as the session's configuration records it. Revision based on
 % 15940b9fae9557b26f9abcf84021b159f8c5f2fa; analytical results through SEC-E61.
+% 25 November 2026 collar integration from checkout 5ff7014, for Edward B. Baker III
+% with OpenAI Codex assistance. Actual serving model/effort are unavailable.
+% The comparison statements use assessed NECK, EXTRACT, and MATCH results.
 \begin{document}
 \maketitle
 \thispagestyle{plain}
@@ -104,9 +107,15 @@ compactly supported perturbation the transverse traceless part is
 bounded by the \(L^1\) norm of its linearized Bach tensor divided by
 \(4\pi^2\). A
 non-round positive Einstein metric on \(S^4\) would lie in the band
-with \(E_+>\tfrac{16}3\pi^2\). The remaining global problem is to
-construct and control a deformation or a convergent sequence on the
-given smooth manifold.
+with \(E_+>\tfrac{16}3\pi^2\). A supplied first-order cover gives a
+weighted estimate for residual energy, and a supplied smooth ALE core
+transfers its lower-energy compactification to the original smooth
+type by a marked cut. On a minimizing sequence, a whole marked
+nonround conformal limit recovers the physical metric and exhausts
+the curvature budget under first-order comparison and a local
+comparison scalar-curvature bound. Constructing the required
+comparisons or a global deformation on an arbitrary smooth homotopy
+sphere remains open.
 \end{abstract}
 
 \clearpage
@@ -267,6 +276,14 @@ length-independent bounds in terms of the total Bach norm and errors
 controlled by the chart or the conformal Killing defect.
 The linearization at the flat cone explains the scales involved and
 isolates the nonlinear amplitude estimate that is still missing.
+
+Section~\ref{sec:marked-limits} specifies the additional geometry needed
+to apply this analysis on the original manifold. A weighted
+first-variation estimate works on supplied first-order annular
+charts. Marked cuts recognize a subthreshold exterior and transfer a
+closed component to the original smooth type. Under a weak comparison
+of a whole punctured nonround base, minimization excludes loss of the
+physical volume and the full curvature budget.
 
 \section{The Weyl energy measured by twistor sections}
 \label{sec:sections}
@@ -5378,6 +5395,7 @@ tensor is \emph{transverse traceless} if it is divergence free and trace
 free.
 
 \begin{lemma}[The flat linearization]\label{msneck:flat-lemma}
+The flat Weyl and Bach operators have the following gauge and symbol properties.
 \begin{enumerate}[label=\textup{(\roman*)}]
 \item The operators \(W'\) and \(B'\) vanish on \(L_Z\delta+f\delta\)
 for every vector field \(Z\) and function \(f\). The tensor \(B'(h)\) is
@@ -6372,6 +6390,339 @@ question~\cite{GurskyMalchiodi2025Mass}. Such a metric would also belong
 to the set \(\mathcal A\) of Theorem~\ref{msgap:minimum}, with energy
 above \(\tfrac{16}3\pi^2\).
 
+\section{Marked necks and limits on the original manifold}\label{sec:marked-limits}
+
+The following results concern the positive-Yamabe band of
+Section~\ref{msgap:section}. They use comparisons of actual regions of
+a sequence on a fixed smooth manifold. The cap estimates and the
+construction of spinor traces are developed in the companion
+papers~\cite{Baker2026MarkedNecks,Baker2026MarkedLimits,Baker2026DiracTransmission}.
+
+\subsection{Testing a first-order cover of a residual region}
+
+Let \(U\) be a measurable region of a smooth closed oriented Riemannian
+four-manifold \((M,g)\). Supply finitely many oriented embedded annular
+charts \(\Phi_j\) buffered on both sides, with
+\(\Phi_j^*g=c_j^2m_j\), \(c_j>0\) constant, and
+\(m_j=I+v_j\), \(a_j=\|v_j\|_\infty\le1/4\).
+Let \(0\le\eta_j\le1\) be a compactly supported radial cutoff equal to
+one on the protected annulus, with a fixed smooth profile stretched
+over log-radius width at least \(L_j\ge1\) on each transition.
+Write \(T_j\) for the union of the two transitions and set
+\(d_j=\|\eta_j Dv_j\|_4\), \(d_{T,j}=\|\eta_j Dv_j\|_{4,T_j}\)
+in Euclidean coordinates. Push \(\eta_j^4\) to \(M\) and extend it
+by zero to obtain \(\chi_j\). Put \(V=U\cap\{\sum_j\chi_j\ge1\}\).
+
+\begin{proposition}[First-order residual estimate]\label{prop:marked-cover}
+In these charts,
+\begin{align}
+ E_+(g;U)\le E_+(g;U\setminus V)+C\bigg[
+ &\int_M |B_g|\sum_j a_j\chi_j\,dV_g+
+ \int_M|\Rm_g|_{\mathrm{tens}}^2\sum_j a_j^2\chi_j\,dV_g
+ \notag\\
+ &+\sum_j\bigl(d_j^4+L_j^{-3/2}d_{T,j}^2+L_j^{-1}a_j^2\bigr)
+ \bigg].\label{eq:marked-cover}
+\end{align}
+Here \(C\) is determined by the fixed cutoff profiles and metric
+neighborhood. Bounds on chart multiplicity can be used in the two
+integrals, and no common frame on overlaps is required.
+\end{proposition}
+
+\begin{proof}
+In one chart write \(F(m)=P_m R(m)\) for the Euclidean matrix of \(W^+\)
+in the oriented symmetric frame, including the square root of the
+coordinate volume density. The all-lowered curvature has the form
+\(R(m)=\mathcal L(D^2v)+Q_m[Dv,Dv]\) with constant principal part
+\(\mathcal L\). The localized variation obeys
+\[
+ DF_m[\eta^4 v]=\eta^4 F(m)+\eta^2 H,\qquad
+ \|H\|_2\le C\bigl(a\|\eta^2\Rm_m\|_2+d^2+
+     \|D\eta\|_4d_T+
+     a(\|D^2\eta\|_2+\|D\eta\|_4^2)\bigr).
+\]
+Indeed the principal parts cancel where the two derivatives fall
+on \(v\). Terms with derivatives on \(\eta^4\) and the quadratic
+curvature terms give the displayed first-derivative bounds.
+Differentiating \(P_m\) contributes \(Ca\|\eta^2\Rm_m\|_2\).
+On a log interval of length \(L\) the bounds
+\(|D\eta|\le C L^{-1}|x|^{-1}\) and
+\(|D^2\eta|\le C L^{-1}|x|^{-2}\) give
+\(\|D\eta\|_4\le C L^{-3/4}\) and
+\(\|D^2\eta\|_2\le C L^{-1/2}\).
+
+Use the single tensor variation
+\(\sum_j(\Phi_j)_*(c_j^2\eta_j^4 v_j)\) on \(M\).
+The signature identity and the variational convention of
+Section~\ref{msneck:section} give
+\(DE_+[h]=-\tfrac12\int_M\langle B_g,h\rangle\,dV_g\).
+With \(S=\int_M(\sum_j\chi_j)|W^+|_{\mathrm{HS}}^2\,dV_g\),
+the chart calculation gives \(2S\) and an error of size at most
+\(2\sqrt{S}(\sum_j\|H_j\|_2^2)^{1/2}\).
+Absorbing this error by Young's inequality and using
+\(E_+(g;V)\le S\) proves \eqref{eq:marked-cover}.
+\end{proof}
+
+The source bound on \(\int|\Rm|_{\mathrm{tens}}^2\) in
+Section~\ref{msale:section} controls the second term of
+\eqref{eq:marked-cover} for uniformly bounded multiplicity and
+small \(\sup_j a_j\). Long cutoff transitions reduce the transition
+costs. If the \(L^4\) norm of \(Dv_j\) on each unit log slab is at most
+\(\varepsilon_j\), then \(d_j^4\le n_j\varepsilon_j^4\), where \(n_j\)
+counts all slabs meeting the support. The factor \(n_j\) can grow with
+the length, even in nearly Euclidean coordinates on a region of
+arbitrarily small curvature energy. The logarithmically rotating
+coordinates in~\cite{Baker2026DiracTransmission} exhibit this behavior.
+The estimate requires small total bulk cost and small uncovered energy
+to give a no-neck conclusion. Its use in a nonconstant conformal
+comparison would require a bound on full curvature in that comparison.
+
+\subsection{A marked cut transfers the smooth type}
+
+On a fixed smooth oriented homotopy sphere \(M\), write
+\(I^+(M)=\inf_{Y([g])>0}E_+(g)\) over smooth Riemannian metrics.
+Let \(g_i\) be smooth unit-volume positive Yamabe minimizers on \(M\)
+in the fixed band, with \(E_+(g_i)\to e\), \(Y([g_i])\to y>0\) and
+\(\mathfrak B(g_i)\to0\).
+
+\begin{proposition}[Same-type descent from a supplied ALE core]\label{prop:marked-descent}
+Suppose the sequence admits a nonflat smooth complete ALE comparison
+satisfying Section~\ref{msale:section}, including smooth comparison
+of its whole truncated core. Its smooth conformal compactification
+is orientation-preservingly diffeomorphic to \(M\) and gives a
+positive-Yamabe Bach-flat class on \(M\) with
+\(4\pi^2<e_X\le e-\kappa_\delta\), where \(\kappa_\delta\) is
+the uniform residual in \eqref{msgap:uniform-residual}. In particular,
+this ALE alternative is impossible if \(e-I^+(M)<\kappa_\delta\).
+\end{proposition}
+
+\begin{proof}
+The smooth compactification has one ordinary added point, and
+\(e-e_X<4\pi^2-\delta\) by \eqref{msgap:strict}.
+Choose a fixed long buffer first and then a sufficiently small
+normal sphere about the added point. Its pullback in the normalized
+log-radius gauge is arbitrarily close to the round product through
+two derivatives after taking \(i\to\infty\) on this fixed buffer.
+Splicing the separated exterior to a standard cap costs a vanishing
+chiral energy as the cut shrinks after the source limit. The Yamabe
+form on the capped exterior is positive by localizing the source
+and model forms with cutoffs whose squares sum to one. On a log
+buffer of length \(\ell\) the squared-gradient error is bounded by
+\(C\ell^{-3/2}\|f\|_4^2\), so the length is chosen using the fixed
+positive source Yamabe lower bound before taking the normal radius
+small. These are the marked two-cap estimates of
+\cite{Baker2026MarkedNecks}.
+
+The exterior cap is a smooth homotopy sphere by Mayer--Vietoris and
+van Kampen across its one spherical face. Its chiral energy is
+less than \(4\pi^2\) by the full source budget outside the compared
+core. Proposition~\ref{prop:recognition} makes it standard. The
+parametrized cap disk in that recognized sphere may be straightened
+to the standard disk with its attaching collar by disk
+extension~\cite[Theorem C]{Palais1960Extending}. Thus the actual
+exterior can be replaced by the compactification ball using the
+marking. Transferring the compactified class gives the stated
+inequality for \(I^+(M)\).
+\end{proof}
+
+This also localizes the conclusion about exact critical values to a
+fixed smooth type. Let \(\mathcal A_M\) be the exact,
+positive-Yamabe Bach-flat chiral values in \((0,8\pi^2)\) on \(M\).
+If \(\mathcal A_M\) is nonempty, its infimum \(a_M\) is attained and
+\(a_M>4\pi^2\). Indeed a sequence approaching \(a_M\) satisfies
+Lemma~\ref{msgap:compactness} in a fixed band, and
+Proposition~\ref{prop:marked-descent} excludes the ALE alternative
+because it would supply a smaller value on \(M\). The smooth
+alternative gives attainment. For the same reason the smooth
+alternative holds for any sequence of exact classes in
+\([a_M,b]\) if \(b\le8\pi^2-\delta\) and \(b<a_M+\kappa_\delta\),
+so that the volume-one Yamabe representatives are compact up to
+oriented diffeomorphisms.
+
+The exact critical value is locally constant among sufficiently
+\(C^{4,\alpha}\)-close Bach-flat metrics, with \(0<\alpha<1\).
+In the trace-free \(C^{4,\alpha}\to C^{0,\alpha}\) Bach
+gauge~\cite[(2.59) and Theorem 2.11]{GurskyViaclovsky2015}, the
+analytic implicit function theorem solves the equation projected
+onto the linearized image as a graph over its finite-dimensional
+kernel. The gauge theorem represents nearby actual critical metrics
+on the graph after a diffeomorphism and conformal change. The
+restriction of \(E_+\) to the graph is real
+analytic and has zero differential at each of those representatives.
+The finite-dimensional analytic gradient
+inequality~\cite[Theorem 1]{Feehan2020Gradient} then forces the value
+there to equal that at the center. Compactness and this local
+constancy show that \(\mathcal A_M\cap[a_M,b]\) is finite, and hence
+that \(a_M\) is isolated. This argument concerns exact critical
+values and gives no stability or classification of their metrics.
+
+\subsection{Recovery of a nonround marked base}
+
+\begin{theorem}[First-order comparison and physical recovery]\label{thm:marked-base}
+Use the same sequence \(g_i\) in the fixed band. Let \(h\) be smooth
+on a closed oriented homotopy four-sphere \(N\), with a finite set
+\(P\) of ordinary smooth marks. Suppose one compatible family of
+orientation-preserving embeddings of whole compact truncations of
+\(N\setminus P\) into \(M\) supplies
+\(\Phi_i^*g_i=u_i^2m_i\), with smooth positive \(u_i\) and smooth
+metrics \(m_i\to h\) strongly in \(C^0_{\mathrm{loc}}\cap
+W^{1,4}_{\mathrm{loc}}\). Assume also a uniform local \(L^2\) bound on
+full curvature in \(m_i\) on each fixed compact truncation. A uniform
+local \(L^2\) scalar bound in \(m_i\) suffices in its place.
+
+Then both chiral Weyl densities converge strongly in \(L^1_{\mathrm{loc}}\),
+\(B_h=0\), and \(Y([h])\ge y\). If \([h]\) is nonround,
+then \(e_N=E_+(h)>4\pi^2\) and \(N\) is orientation-preservingly
+diffeomorphic to \(M\). In the nonround case, if \(e=I^+(M)\),
+then \(e=e_N\) and, along a subsequence, \(u_i\) converges strongly
+in \(H^1_{\mathrm{loc}}\cap L^4_{\mathrm{loc}}\) to a smooth positive
+factor \(u\) on \(N\). The metric \(u^2h\) is a unit-volume Yamabe
+minimizer with scalar curvature \(y\). The physical sequence converges
+to it in measured Gromov--Hausdorff distance. The full physical
+curvature densities converge locally in \(L^1\) on the compared
+region, and the complementary full-curvature energy tends to zero
+in the iterated exhaustion limit.
+
+A positive limiting physical volume on one compared compact,
+together with \(y<Y_{\rd}\), suffices for physical volume saturation
+and the same-type conclusion without first detecting nonzero Weyl
+curvature.
+\end{theorem}
+
+\begin{proof}
+The curvature formula in Proposition~\ref{prop:marked-cover} gives weak
+\(L^2_{\mathrm{loc}}\) convergence of the curvature matrices.
+For a fixed nonnegative compactly supported \(\chi\), the variation
+at \(m_i\) with direction \(\chi(m_i-h)\) has
+\[
+ DF_\pm(m_i)[\chi(m_i-h)]
+ =\chi\bigl(F_\pm(m_i)-F_\pm(h)\bigr)+o_{L^2}(1).
+\]
+All terms with derivatives on \(\chi\) or only first
+derivatives on \(m_i-h\) vanish by the assumed strong convergence.
+The \(L^2\) bound controls terms with a small variation of the
+algebraic coefficients. The Bach pairing tends to zero by conformal
+invariance of the total Bach density. Weak convergence then identifies
+the mixed term and gives strong \(L^2_{\mathrm{loc}}\) convergence of
+\(F_\pm\). A fixed smooth compactly supported variation now passes
+to the limit and gives \(B_h=0\), including at \(P\) by smoothness.
+If only comparison scalar curvature is bounded in \(L^2\), the
+local Euler transgression gives the full curvature bound on
+smaller patches. In an orthonormal coordinate frame the connection
+form is bounded in \(L^4\). The boundary terms obtained by testing
+the Euler density with a squared cutoff are bounded by the
+connection times curvature and the cubic connection term. Young's
+inequality absorbs the weighted curvature term, using the
+conformally invariant Weyl bound and the assumed scalar bound.
+See~\cite{Baker2026MarkedLimits} for the estimates.
+
+The scalar density is a divergence linear in the metric first
+derivatives plus terms quadratic in those derivatives. Thus the
+Yamabe quadratic forms on compactly supported \(H^1\) tests converge
+there in operator norm. Transferring the source inequality and
+cutting off at \(P\) gives \(Y([h])\ge y\). By
+Theorem~\ref{msgap:closed} a nonround \(h\) has \(e_N>4\pi^2\),
+and sharp Yamabe rigidity gives \(y\le Y([h])<Y_{\rd}\)
+~\cite[Theorem 2]{Schoen1984Yamabe}. The residual
+\(e-e_N<4\pi^2\) suffices to identify the smooth type using simultaneous
+one-face caps. For this first-order comparison, fix the long buffer,
+then the normal radius, and first interpolate \(m_i\) to \(h\) on
+fixed subbuffers. The chiral density formula and the convergence of
+the Yamabe forms make this first interpolation cost \(o_i(1)\).
+An IMS localization with fixed cutoffs bounds its local form error
+by \(o_i(1)\) times the global source form and \(L^4\) norm.
+On the exact \(h\) buffers the smooth cap argument of
+Proposition~\ref{prop:marked-descent} applies to all faces, after
+which each recognized exterior can be glued by its marked disk.
+If \(P=\varnothing\), the embedding already identifies the
+closed manifolds. These operations retain the prescribed orientation.
+
+The Yamabe equation \(L_{m_i}u_i=Y([g_i])u_i^3\) and unit physical
+volume give a weak \(H^1_{\mathrm{loc}}\) limit solving \(L_hu=yu^3\).
+Finite \(L^4\) mass permits cutoff removal of the ordinary marks.
+When \(y<Y_{\rd}\), test the difference of equations by a cutoff
+times \(u_i-u\). The fixed-patch Yamabe form errors tend to zero.
+Since \(\limsup_i\int|u_i-u|^4\le1\) on the patch, the
+coefficient of the critical term is at most \(y+o(1)\), which
+is absorbed by the local sharp Sobolev coefficient, chosen
+strictly above \(y\). Hence convergence is strong locally in
+\(H^1\cap L^4\)~\cite{Baker2026MarkedLimits}. If \(u\ne0\),
+Yamabe regularity and the maximum principle make it smooth and
+positive~\cite[\S2--3]{LeeParker1987Yamabe}. Testing by \(u\)
+gives \(Y([h])\sqrt{\int_N u^4\,dV_h}\le
+y\int_N u^4\,dV_h\), hence unit mass and \(Y([h])=y\).
+This also gives the conclusion from a positive volume witness,
+which by strong local convergence implies \(u\ne0\) and a
+nonround base.
+
+In the nonround minimizing case \(I^+(M)\le e_N\le e\) gives
+equality. If \(u=0\), every fixed compared compact evacuates.
+Take a cutoff equal to one deep on each actual exterior and zero
+across its buffer. Its squared Dirichlet cost in the physical
+metric tends to zero by H\"older, conformal invariance of the
+fourth-power cutoff gradient integral, and vanishing physical
+volume of the fixed compared transition. The source Yamabe
+inequality then gives \(\sqrt{\lambda_j}\le\lambda_j\) for
+every limiting exterior volume \(\lambda_j\). Exactly one is
+one, since the finitely many volumes sum to one. The same test,
+transported to the capped exterior and supported away from its
+splice, gives an upper limit \(y\) for its own Yamabe constant.
+Its Gauss--Bonnet formula in unit-volume Yamabe gauge gives
+\[
+ e-e_N\ \ge\ (Y_{\rd}^2-y^2)/48 .
+\]
+The bound follows by taking \(i\to\infty\) at each fixed cut and
+then exhausting, as the splice cost vanishes. It contradicts
+\(e=e_N\) and strict subroundness.
+
+For the physical distance conclusion the critical form estimate for
+the factor equation yields local \(L^{16}\) bounds by two power
+tests. The constant-coefficient divergence estimate, with coefficients
+frozen on sufficiently small fixed patches and then absorbed, gives
+local \(W^{1,16/5}\) bounds
+~\cite[Chapter I, Theorem 1]{CalderonZygmund1952Singular}.
+Interpolation with strong \(H^1\) convergence gives strong local
+\(W^{1,p}\) for \(3<p<16/5\). The associated ball cover of
+\(\{|u_i-u|>\varepsilon\}\) has vanishing sum of radii on fixed compacts.
+This controls shortcuts across low-factor sets; averaging broken
+paths using strong \(L^q_{\mathrm{loc}}\), \(q>4\), controls
+upper distances. Each one-face exterior meets a shrinking boundary
+sphere of the base, and physical Yamabe noncollapse bounds its
+distance to the core by a constant times the fourth root of the
+missing physical volume. This yields the measured
+Gromov--Hausdorff assertion under saturation. Finally the conformal
+Ricci equation identifies weak physical Ricci limits on compact
+truncations by testing after multiplication by \(u_i^2\).
+In the minimizing case \eqref{eq:GB} gives convergence of total
+trace-free Ricci energy because both \(E_+\) and \(Y([g_i])\)
+converge to those of the limiting physical metric. Weak lower
+semicontinuity and exhaustion give local strong convergence and
+zero residual trace-free Ricci energy. Saturation exhausts the
+scalar term, while local strong chiral convergence and the signature
+identity exhaust the two Weyl terms. The algebraic full-curvature
+decomposition gives the asserted density convergence and zero
+residual. The details of the distance and tensor comparisons are
+in~\cite{Baker2026MarkedLimits}.
+\end{proof}
+
+A nonzero limiting chiral integral on one fixed compact comparison
+certifies the nonround hypothesis. When the physical base is instead
+round, with smooth comparison on every fixed whole truncation, there
+is another conditional conclusion. On a nonstandard minimizing source
+one exterior must have nonstandard capped smooth type. All others
+are standard because two nonstandard caps would each cost at least
+\(4\pi^2\) while the total is strictly subcritical. A slow diagonal
+of the marked cuts keeps the whole smooth type and all limiting
+chiral energy on that one shrinking exterior. Indeed the nonstandard
+cap, which has the original smooth type after the other standard
+pieces and the round base are removed, has energy at least
+\(I^+(M)=e\). The splice errors tend to zero, and the full source
+budget bounds the limiting energy from above by \(e\).
+The construction can restart the minimizing sequence on that cap
+with vanishing extra total Bach norm under smooth collar
+comparison through four derivatives~\cite{Baker2026MarkedNecks}.
+This conclusion localizes the concentration at an actual marked
+puncture of a supplied round physical base.
+
 \section{Outstanding challenges}\label{sec:outlook}
 
 \paragraph{Continuing a radial contraction.}
@@ -6520,42 +6871,37 @@ components and control of the entire complement of their truncations,
 including any orbifold intermediate regions.
 
 \paragraph{What an energy identity would give.}
-Suppose a sequence on a smooth homotopy four-sphere lies in the
-positive-Yamabe band \(4\pi^2\le E_+\le8\pi^2-\delta\), with
-\(\mathfrak B\to0\), and admits the smooth base and ALE comparison
-data of Section~\ref{msgap:section}. If the no-neck estimate accounts
-for the full complement of the comparison regions, the inequality
-\eqref{msgap:accounting} becomes the identity \(e=e_0+\sum_j e_j\).
-Here \(e\) is the limiting source energy, \(e_0\) is the base energy
-and \(e_j\) are the bubble energies, all in a single chirality. A
-nonflat smooth ALE component \(X\) contributes \(e_X>4\pi^2\).
-The residual estimate \eqref{msgap:strict} then gives
-\[
- 0<e-e_X<4\pi^2-\delta .
-\]
-Every other bubble is flat, and the smooth positive-Yamabe Bach-flat
-base is conformally round by Theorem~\ref{msgap:closed}. The identity
-would then give \(e=e_X\), contradicting the strict residual bound.
-Thus, in this compactification class an energy identity rules out
-nonflat bubbles. All limiting energy must lie on the smooth closed
-base, so a sequence in the positive band can persist only at a
-closed critical value. In particular, complete accounting rules out
-such a sequence if \(e\) is strictly below the first positive closed
-critical value of Theorem~\ref{msgap:minimum}, or if the set of
-positive subcritical critical values is empty. If complete accounting
-were available for every vanishing-Bach sequence in a closed subband
-strictly below that value, it would give a positive lower bound for
-\(\mathfrak B/E_+\) on the subband whenever the family is nonempty.
-This would exclude the small-gradient cause of diverging radial
-strain in \eqref{mscost:strain}. Controlling the actual radial lift
-would still require an estimate for the inverse in that direction.
+Under the smooth base and ALE comparison hypotheses of
+Section~\ref{msgap:section}, complete energy accounting rules out a
+nonflat ALE component by \eqref{msgap:strict}: it would be the only
+nonflat component, the base would be round, and a strictly positive
+remainder would still be present. For a sequence in the positive
+band the identity would therefore place all the energy at a closed
+critical value. Proposition~\ref{prop:marked-descent} gives a
+different consequence of an actual smooth ALE comparison: one
+marked cut transfers a lower-energy critical class to the original
+smooth type and is already incompatible with minimization. It
+remains to obtain either suitable comparisons or residual control
+from the original approximate Bach equation. Even with the cover
+estimate \eqref{eq:marked-cover}, the bulk derivative sum and the
+uncovered Weyl energy need separate bounds. Positive physical
+volume can be located in finitely many measured balls in a
+normalized positive Ricci representative
+~\cite{Baker2026MarkedLimits}. Turning those balls into a whole
+first-order marked comparison, or a separating cut that tracks
+the two chiral masses, requires further control of the comparison
+geometry.
 
 \paragraph{Recognizing the original manifold.}
 The metric constructed at the end of a continuation, or recovered in
 a compactness argument, must determine the smooth type of the starting
-manifold. A smoothly capped blow-up core can itself be a homotopy sphere
-of unknown smooth type, and accounting for its energy alone gives
-no smooth identification with the source. The compact-gauge theorem in
+manifold. A smoothly capped core can itself be a homotopy sphere of unknown
+smooth type. The marked cap argument transfers it to the source
+under its exterior margin. The nonround marked base theorem
+recovers a closed minimizing class on that type, whose
+classification or instability remains open. A round physical base
+leaves the problem of extracting a nonflat smooth limit or a
+separating cut at its energy-carrying puncture. The compact-gauge theorem in
 Section~\ref{msgauge:section} retains the original manifold, provided
 its uniform ellipticity and \(W^{2,q}\) bounds are available. A surviving
 marked volume then forces conformal roundness. For a sequence confined

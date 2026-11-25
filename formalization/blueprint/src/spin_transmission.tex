@@ -1,0 +1,234 @@
+\section{Spinor transmission and the residual chiral energy}
+
+In an oriented Riemannian spin four-manifold let $P$ be the twistor
+operator on positive half-spinors. We use the curvature operator with
+positive sectional curvature on the round sphere, the Hilbert--Schmidt
+norm on $W^+$, and the Hilbert norm on spinor-valued two-forms.
+
+\begin{lemma}[Weighted finite cover]
+\label{lem:finite-cover-defect-bound}
+\lean{FirstOrderTwistor.finiteCoverDefectBound, FirstOrderTwistor.finiteCoverDefectBoundOfIntegrals}
+\leanok
+Let $r\le u+\sum_{j\in J} w_j$ for a finite $J$. If $c_j>0$ and
+$c_j^2 w_j\le 2H_j$ for $j\in J$, then
+$r\le u+\sum_{j\in J}2H_j/c_j^2$.
+For a nonnegative, integrable density on a measurable residual $S$,
+take $w_j$ to be its integral on $S\cap U_j$ and $u$ its integral on
+$S\setminus\bigcup_{j\in J}U_j$, for measurable strips $U_j$.
+\end{lemma}
+\begin{proof}
+\leanok
+The energy measure restricted to $S$ is finite. Subadditivity on the
+union gives the cover inequality even with overlaps. Divide each strip
+estimate by its positive squared floor and sum. An empty family leaves
+the whole residual in the uncovered term.
+\end{proof}
+
+\begin{proposition}[Projected twistor curl in a supplied normal frame]
+\label{prop:supplied-normal-spin-defect}
+\lean{FirstOrderTwistor.selfDualCliffordProjection_orthogonal, FirstOrderTwistor.spinCovariantDerivative_commutator, FirstOrderTwistor.spinConnectionLift_commutator, FirstOrderTwistor.selfDualCurvatureBlock_metric_isSymm, FirstOrderTwistor.metricProjectedFrameTwistorCurl_normSq, FirstOrderTwistor.metricCoordinateTwistorDefect, FirstOrderTwistor.spinNormalGauge_leviCivita_at_center, FirstOrderTwistor.metricNormalChartTwistorDefect}
+\leanok
+In the positive quaternionic half-spin fiber the unit self-dual forms
+act by $C_a=\sqrt{2}\,I_a$ for $I_a=i,j,k$. Write $m$ for contraction
+and $\Pi=1-m^*m/6$. In a coordinate model supply a $C^2$ field, a
+differentiable frame connection vanishing at the point, upper and lower
+Clifford symbols with their normal-frame values and zero first derivatives,
+and an identification of the frame curvature with the metric curvature
+in the chosen oriented orthonormal frame. For the coordinate twistor
+operator and its exterior covariant derivative,
+\[
+ \Pi(d^\nabla P\psi)^+_a=-\tfrac12 c(W^+\omega_a)\psi,
+ \qquad
+ \sum_a|\Pi(d^\nabla P\psi)^+_a|^2
+   =\tfrac12|W^+|_{\rm HS}^2|\psi|^2 .
+\]
+In an aligned boundaryless normal chart the hypotheses on the symbols and
+curvature follow from the metric Christoffel matrices and a supplied
+twice differentiable moving frame with identity value and zero first
+derivative at the center and a differentiable local inverse. For spinor
+interpretation choose an oriented orthonormal frame field and its positive
+spin lift. The covector connection term vanishes at the normal center.
+The squared formula also holds for every ordered two-jet realizing
+the metric spin curvature commutator in that frame.
+\end{proposition}
+\begin{proof}
+\leanok
+The commutator of two coordinate covariant derivatives equals the
+curvature of the supplied connection by symmetry of the ordinary
+Hessian. The positive spin lift preserves brackets of skew matrices.
+Self-dual alternation of the Clifford correction in $P$ lies in the
+image of $m^*$, as does the scalar part of the curvature block.
+The trace-free symmetric block lies in $\ker m$, and $mm^*=6$.
+The norm of left Clifford multiplication by a real self-dual form
+squares to twice the squared form norm times the squared spinor norm.
+\end{proof}
+
+\begin{proposition}[Measured strip costs on the physical remainder]
+\label{prop:spin-remainder-costs}
+\uses{lem:finite-cover-defect-bound,prop:supplied-normal-spin-defect,thm:covered-measure-accounting}
+\lean{FirstOrderTwistor.spinDefectFloorBound, FirstOrderTwistor.spinDefectEnergyDecomposition, FirstOrderTwistor.SpinDefectStrip.validOn_ofMetricJets, FirstOrderTwistor.RemainderEstimates.ofSpinDefectStrips, FirstOrderTwistor.RemainderEstimates.ofNormalizedSpinDefectStrips, FirstOrderTwistor.SpinDefectStrip.normalizedCost_le_of_singleton_lpNorm, FirstOrderTwistor.energyIdentityOfSpinorRatioBounds}
+\leanok
+On each strip intersected with the physical remainder, assume equality
+of the restricted physical and strip chiral energy measures. In the
+strip metric write $S_j=\sum_a|\psi_{ja}|^2$ and
+$H_j=\sum_a|\Pi(d^\nabla P\psi_{ja})^+|^2$. Given the a.e. per-field
+identities and the required integrability, a joint floor $S_j\ge c_j^2>0$
+gives cost $2\int H_j/c_j^2$. Alternatively use the joint nonzero set
+and cost $2\int H_j/S_j$ there. In the latter case the uncovered set
+consists of points outside every contributing joint nonzero set. Each
+strip uses its own fields and volume. If the summed costs and the uncovered
+energy both vanish, first in the eventual sequence bounds at fixed
+truncation and then on exhaustion, these estimates give the remainder
+hypothesis of Theorem~\ref{thm:covered-measure-accounting}.
+\end{proposition}
+\begin{proof}
+\leanok
+Sum the identities over fields and integrate. On the positive locus the
+ratio is exactly half the curvature density. On a floor set use its
+lower bound in the unnormalized identity. Transfer only the restricted
+energy measure. At each pair of indices take the finite union and retain
+its complement once. The number of strips may vary with both indices.
+\end{proof}
+
+\begin{lemma}[First-order perturbations and a differentiated interior bound]
+\label{lem:spin-strip-derivative}
+\uses{lem:buffered-euclidean-interpolation}
+\lean{FirstOrderTwistor.spinStrip_operatorPerturbation, FirstOrderTwistor.spinStrip_bufferedCoefficientBound, FirstOrderTwistor.spinStrip_sumSlabBounds, FirstOrderTwistor.spinStrip_absorbTwistedDirac, FirstOrderTwistor.spinStrip_projectedDerivative, FirstOrderTwistor.harmonicMetricCoordinateTwistedDiracDerivative_normSq}
+\leanok
+For a supplied operator difference $a\nabla+b$ on a reference strip,
+gradient norm bound one and Sobolev constant $S$, the operator norm
+from the first-order space to $L^2$ is at most
+$\|a\|_\infty+S\|b\|_4$. For the interior estimate on $K\Subset K'$,
+supply the flat cutoff estimate, small twisted-operator perturbation,
+the differentiated harmonic equation with its cutoff and Ricci forcing
+bounds, the return to the actual norms, an incoming error $d$, a
+first-order comparison error $\epsilon_1$, and a floor $|\psi|\ge c>0$
+on $K$. With constants from those estimates,
+\[
+ \left\|\frac{|\Pi(d^\nabla P\psi)^+|}{|\psi|}\right\|_{2,K}
+ \le \frac{C}{c}\left(\epsilon_1+d+
+       \|\,|\mathrm{Ric}|\,|\psi|\,\|_{2,K'}\right).
+\]
+\end{lemma}
+\begin{proof}
+\leanok
+Apply H\"older with exponents $(\infty,2)$ and $(4,4)$ in the supplied
+measure. Buffered interpolation bounds the coefficient budget under its
+chart comparison hypotheses. For the derivative estimate, absorb the
+relative error in the flat estimate when $C_0\epsilon\le1/2$. Bound the
+cutoff term on the outer buffer, then divide the projected norm by the
+floor on the inner set.
+\end{proof}
+
+\begin{proposition}[Relative Bochner criterion without a positive minimum]
+\label{prop:spin-relative-bochner}
+\lean{FirstOrderTwistor.normalizedSpinCutoff_fderiv_bound_frame, FirstOrderTwistor.spinRelativeBochner_bound, FirstOrderTwistor.spinMixedRelative_sum_le, FirstOrderTwistor.spinCutoffIntegral_in_gauge, FirstOrderTwistor.RemainderEstimates.ofSpinCutoffCover, FirstOrderTwistor.energyIdentityOfSpinBochnerBudgets}
+\leanok
+For measured joint spinor mass $S$, derivative density $Q$, and cutoff
+$\chi$, set $v^2=Q/S$ on the joint nonzero locus. Assume $S>0$ almost
+everywhere on the cutoff support. Given the integrated regularized
+twisted Bochner inequality and finite relative costs in the strip metric,
+\[
+ \int\chi^2|W^+|^2 \le C\int
+ \big(\chi^2|\mathrm{Ric}|^2+\chi^2|\mathrm{Rm}|v^2+
+          \chi^2v^4+|d\chi|^2v^2\big).
+\]
+For a finite family of measured patches the sum of the mixed terms
+is at most $\sqrt{\mathcal K\mathcal V}$, where $\mathcal K$ and
+$\mathcal V$ are the sums of $\int\chi^2|\mathrm{Rm}|^2$ and
+$\int\chi^2 v^4$ in the respective gauges. Where the cutoff squares
+sum to at least one in the physical energy measure, the weighted costs
+bound the covered energy. The mass of the remaining set enters once.
+For a uniform constant, bounded $\mathcal K$, vanishing Ricci-square,
+relative fourth-power and cutoff costs, and vanishing uncovered energy
+in the iterated order, Route~02 gives the component energy identity
+under its truncation and total convergence hypotheses.
+\end{proposition}
+\begin{proof}
+\leanok
+Writing $D=S+\epsilon$, differentiating $\chi/\sqrt D$ gives
+$|d(\chi/\sqrt D)|^2Q\le 2|d\chi|^2 Q/D+2\chi^2(Q/D)^2$
+in the Hilbert frame model. Use the factor $S/(S+\epsilon)$ on the left and dominate the regularized
+right side by the finite unregularized costs. Dominated convergence
+takes $\epsilon$ to zero. Apply Cauchy--Schwarz first to each integral,
+then to the finite sum over patches.
+\end{proof}
+
+\begin{proposition}[Incoming modes and attenuation]
+\label{prop:spin-mode-transmission}
+\lean{FirstOrderTwistor.forcedCylinderMode_equation, FirstOrderTwistor.cylinderMode_energy_balance, FirstOrderTwistor.fixedDomainDiracPerturbation_inverse_norm_le, FirstOrderTwistor.fixedDomainDiracScattering_sameEnd_norm_le, FirstOrderTwistor.diracWeighted_remoteTrace_norm_le, FirstOrderTwistor.roundCylinderMidpoint_jointFloor_Lp}
+\leanok
+For $\partial_t+A$ on $[0,L]$, a positive signed mode uses its left
+datum, a negative mode its right datum. On a supplied complete
+orthonormal modal model with $|\lambda|\ge3/2$, a finite family with
+joint floor $c^2$ on the middle slice satisfies
+\[
+ c^2\operatorname{vol}(Y)
+ \le e^{-3L/2}\sum_a(\|x_a\|_2^2+\|y_a\|_2^2)
+\]
+for the homogeneous solutions and their signed incoming components.
+For a boundedly invertible reference operator with inverse norm at most
+$C$, a fixed-domain perturbation of norm at most $\delta$ has inverse
+norm at most $C/(1-C\delta)$ if $C\delta<1$.
+With fixed incoming and outgoing trace maps and a vanishing same-end
+reference block, the resolvent identity bounds the same-end reflection
+by the perturbation norm times the two inverse and trace factors.
+\end{proposition}
+\begin{proof}
+\leanok
+Integrate each signed scalar equation from its incoming end. At distance
+$L/2$ the squared amplitude decreases by at least the indicated exponential
+factor. Sum using the Hilbert norm and integrate the floor on the slice.
+The perturbation bound follows by a Neumann inverse on the fixed spaces.
+\end{proof}
+
+\begin{proposition}[Matching and regular jump corrections]
+\label{prop:spin-core-and-jump}
+\lean{FirstOrderTwistor.matchSuppliedCoreTraceGraphs, FirstOrderTwistor.closedJumpCorrectionOfRightInverse, FirstOrderTwistor.criticalJointFloorOfJumpBounds}
+\leanok
+For two supplied bounded core graphs $G_L,G_R$ and propagation norm
+bounds $e^{-3L/2}$ in both directions, the affine graph equations have
+a unique solution when $\|G_L\|\|G_R\|e^{-3L}<1$. For an original-source
+jump problem supply four measured face maps, a right lift of both jumps,
+a compatible closed inverse, and zero-jump gluing. There is a unique
+piecewise homogeneous correction with the specified jumps. If its regular
+fields satisfy $\|\psi_a\|_{8/3}\le C J_a$ and their joint floor on $U$ is
+$c^2$, then $c^2\operatorname{vol}(U)^{3/4}\le C^2\sum_a J_a^2$ for
+nonnegative jumps and bound constants as in the critical norm estimate.
+\end{proposition}
+\begin{proof}
+\leanok
+Substitute one affine trace equation into the other and apply contraction.
+For the jump correction subtract from the piecewise lift the restriction
+of the global inverse applied to its Dirac error. Use the $L^{4/3}$
+triangle inequality on the sum of squared field norms.
+\end{proof}
+
+\begin{proposition}[Attainment in a supplied compact gauge]
+\label{prop:spin-compact-kernel}
+\lean{FirstOrderTwistor.existsUnitKernelOfCompactEmbedding, FirstOrderTwistor.weylBlock_eq_zero_of_dense_spinor}
+\leanok
+Fix a real Hilbert domain with compact inclusion into the reference
+$L^2$ space. A bounded sequence whose image norms tend to one, whose
+operator defects tend to zero, and whose operators converge in norm to
+$P$ yields a kernel element with unit image norm. Separately, a continuous
+Weyl block vanishes throughout a chart if its projected defect vanishes
+and the spinor is nonzero on a dense set satisfying the pointwise identity.
+\end{proposition}
+\begin{proof}
+\leanok
+Take a strongly converging image subsequence and a weak cluster point in
+the bounded Hilbert domain. Continuous linear maps identify the kernel
+and the image norm of this point. For the Weyl block, apply the pointwise
+identity on the dense set and continuity to all coefficients.
+\end{proof}
+
+\begin{openproblem}[Differentiated control over an entire physical residual]
+\label{problem:physical-spin-residual}
+\notready
+Construct measured fields or local gauges on the actual residual of the
+geometric sequence with summably small independent differentiated bounds
+and negligible uncovered energy. A Green pole, compatible endpoint germs,
+a fixed-domain Sobolev inverse, and a normalized limit on the same
+smooth manifold each require their own geometric realization.
+\end{openproblem}

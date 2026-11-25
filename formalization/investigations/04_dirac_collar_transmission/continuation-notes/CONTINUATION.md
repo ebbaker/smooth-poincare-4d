@@ -4,6 +4,10 @@
 
 [Route overview](../research-overview/OVERVIEW.md) · [Proof plan and opening Lean type](../research-plan/PLAN.md#opening-proof) · [Live route register](../research-progress/REGISTER.md) · [Program ownership](../../research-progress/REGISTER.md#route-ownership) · [Input and toolchain baseline](../../research-progress/01_BASELINE.md)
 
+## Current continuation
+
+The weighted cover and the local spin-curvature analysis have been integrated. Use the [dated handoff and next proofs](AFTER_WEIGHTED_COVER_20261125.md). The original launch prompt follows.
+
 ## Launch prompt
 
 Paste this block into a fresh Astra session with the repository selected.

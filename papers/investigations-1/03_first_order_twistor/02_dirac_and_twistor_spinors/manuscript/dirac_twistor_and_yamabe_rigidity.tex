@@ -52,7 +52,7 @@
 \title{Twistor spinors, Dirac concentration, and\\
 Yamabe spectral rigidity in dimension four}
 \author{Edward B. Baker III}
-\date{Working draft --- 24 November 2026}
+\date{Working draft --- 25 November 2026}
 % Prepared for Edward B. Baker III with OpenAI Codex assistance.
 % Actual selected model identifier and reasoning effort were unavailable.
 % Revised 24 November 2026 for Edward B. Baker III with LLM assistance:
@@ -62,6 +62,10 @@ Yamabe spectral rigidity in dimension four}
 % minimizers and the integral Ricci criterion, and the matching changes to
 % the abstract, the introduction, Section 9 and the last section.
 % Source versions and proof scope are recorded in ../DRAFT_HISTORY.md.
+
+% 25 November 2026 collar integration from checkout 5ff7014, for Edward B. Baker III
+% with OpenAI Codex assistance. Actual serving model/effort are unavailable.
+% The transmission and comparison statements use assessed MATCH and EXTRACT results.
 
 \begin{document}
 \maketitle
@@ -94,8 +98,12 @@ a conformally flat neck leaves the conformal class unchanged. On a
 homotopy four-sphere, a volume-one Yamabe metric whose trace-free Ricci
 tensor satisfies \(\int\abs{\Ric_0}^2<s^2/12-16\pi^2\) recognizes the
 standard sphere by the theorem of Chang, Gursky, and Yang.
-Constructing suitable conformal classes on an arbitrary homotopy
-four-sphere and controlling the geometry of vanishing-volume regions
+On a supplied two-seam collar, uniform positive Yamabe constant gives
+a length-independent Dirac correction for prescribed jumps.
+The normalized projected derivative of an actual Green field
+measures half the chiral Weyl energy on each measurable source
+region. Constructing suitable conformal classes and extracting
+controlled comparison geometry on an arbitrary homotopy four-sphere
 remain open.
 \end{abstract}
 
@@ -136,7 +144,7 @@ assumption. Its stability has a probabilistic conclusion on the
 eigenfunction values and a separate geometric requirement for smooth
 recognition.
 
-The last analytical section tests the construction problem on explicit
+Section~\ref{sec:necklace-tests} tests the construction problem on explicit
 cases. Attaching a round sphere to a punctured core across a
 conformally flat neck returns the original conformal class, so the
 minimizing metrics and their spectra are unchanged. On
@@ -149,6 +157,14 @@ Finally the Chern--Gauss--Bonnet formula turns the hypothesis of
 Chang, Gursky, and Yang into a bound on the trace-free Ricci tensor of
 a Yamabe metric, and the Delaunay metrics sit exactly at equality in
 that bound.
+
+Section~\ref{sec:collar-transmission} connects the spinor boundary
+problem to geometric comparisons of an approximately critical sequence.
+When two seams are supplied, the closed Dirac inverse solves the
+jump problem in their normalized frames and controls the global
+critical spinor norm. A related curvature estimate identifies the
+derivative quantity that still needs control on the residual
+region, including where the spinor amplitude becomes small.
 
 \section{Chiral recognition and the twistor equation}\label{sec:twistor}
 
@@ -327,7 +343,7 @@ In particular the adjoint equation \(P^*T=0\) tests the component
 orthogonal to the one containing \(W^+\). When the zero set of \(\psi\)
 has measure zero, integrating the squared projected derivative divided
 by \(\abs{\psi}^2\) gives \(E_+(g)/2\). The integrand has a smooth
-extension through isolated zeros by \eqref{eq:weyl-defect}. On a
+extension across the zero set by \eqref{eq:weyl-defect}. On a
 homotopy sphere, an integral strictly below \(2\pi^2\) in a
 positive Yamabe class is sufficient for smooth recognition.
 
@@ -1952,7 +1968,7 @@ Proposition~\ref{prop:budget} gives a second criterion on a homotopy
 four-sphere, in which an integral bound on the trace-free Ricci
 tensor replaces both the pointwise bound and the spectral pinching.
 
-\section{A flat neck, Delaunay minimizers, and an integral curvature criterion}
+\section{A flat neck, Delaunay minimizers, and an integral curvature criterion}\label{sec:necklace-tests}
 \label{sec:tests}
 
 The construction problem asks for conformal classes on a homotopy
@@ -2518,6 +2534,235 @@ at every length. A pinched mode can therefore have a trace-free
 Hessian of fixed size in \(L^2\), carried by the region where
 \(\Ric_0\) is large.
 
+\section{Dirac transmission and curvature on marked collars}\label{sec:collar-transmission}
+
+A comparison collar gives a way to use the canonical fields of
+Section~\ref{sec:green} on the actual closed source. There are two
+analytic requirements: solving the transmission problem for the
+prescribed traces and controlling the projected derivative in
+\eqref{eq:weyl-defect}. We give the estimates used at this interface.
+The strip analysis, Cauchy data from actual capped regions and
+quantitative comparison of end fields are developed in
+\cite{Baker2026DiracTransmission}. The geometry that supplies or tests
+the end identifications is treated in
+\cite{Baker2026MarkedNecks,Baker2026MarkedLimits}.
+
+\subsection{A global correction for seam jumps}
+
+Let \((M,g)\) be a smooth closed oriented Riemannian spin four-manifold
+with \(Y([g])\ge y_0>0\). All Dirac operators in this section are
+untwisted. Supply an embedded oriented collar with coordinates
+\([-2,L+2]\times S^3\), \(L\ge6\), and a smooth conformal representative
+\(h=F^2g\) in those coordinates, where \(F>0\). Near \(t_0=0\) and
+\(t_1=L\), on the two windows \(|t-t_\nu|\le3/2\), suppose
+\(h\) is close to \(h_0=dt^2+g_{S^3(1)}\) in the norm
+\(\|h-h_0\|_{L^\infty}+\|\nabla^0(h-h_0)\|_{L^4}\).
+Use the same symmetric spin-frame identification on both sides of
+each cut. Let \(A\) be the reference tangential Dirac operator with
+normal \(+\partial_t\), and equip the trace space
+\(\mathcal T=H^{1/2}(S^3,S^\pm_0)\) with the equivalent norm
+\(\||A|^{1/2}\cdot\|_2\). The reference spectrum has
+\(\abs{A}\ge3/2\)~\cite{Bar1996SphereDirac}. Write
+\(J_\nu q\) for the positive-side trace minus the negative-side trace
+in the reference frame after harmonic conformal transport
+\eqref{eq:conformal-spin}.
+
+\begin{proposition}[Closed-source jump correction]\label{prop:dirac-jumps}
+For fixed chirality and prescribed jumps \(j_\nu\in\mathcal T\),
+there is a unique piecewise \(H^1\) Dirac-harmonic spinor \(q\) with
+\(J_\nu q=j_\nu\) on the cut-open source. If the two normalized
+windows meet the stated uniform smallness bound, then
+\begin{equation}\label{eq:dirac-jumps}
+ \sum_{\nu=0}^1\sum_{\sigma=\pm}
+ \left(\norm{q_h}_{H^1(B_\nu^\sigma)}^2+
+             \norm{\tau_{\nu,\sigma}q}_{\mathcal T}^2\right)
+ \le C(y_0)^2\sum_{\nu=0}^1\norm{j_\nu}_{\mathcal T}^2 ,
+\end{equation}
+where \(B_\nu^\sigma\) are the half-windows of width \(1/2\) at each
+cut, and \(\tau_{\nu,\sigma}\) denotes the corresponding trace.
+The global critical norm also satisfies
+\(\|q\|_{L^{8/3}(g)}\le C(y_0)
+(\sum_\nu\|j_\nu\|_{\mathcal T}^2)^{1/2}\).
+The constants do not depend on \(L\), the original conformal scales
+at the seams or the geometry outside the windows.
+\end{proposition}
+
+\begin{proof}
+Extend the normalized representative to \(\widetilde g=b^2g\)
+equal to \(h\) on both unit windows. A smooth positive \(b\) can be
+chosen by interpolating \(F\) to a sufficiently small positive
+constant outside the disjoint buffered windows. Convexity of
+\(x\mapsto x^4\) bounds the total \(\widetilde g\)-volume by the sum
+of the two buffered metric volumes and one. On any conformal
+representative \(k\) in the closed class, the Hijazi estimate yields
+\[
+ \|D_k^{-1}\|_{L^2(k)\to L^2(k)}
+ \le (3/y_0)^{1/2}\Vol(k)^{1/4}
+\]
+~\cite[Theorem A and (2.1)--(2.2)]{Hijazi1986Conformal}.
+In these conventions the first eigenvalue \(\mu_1\) of
+\(6\Delta_k+s_k\) is at least \(Y([g])\Vol(k)^{-1/2}\).
+Its positive first eigenfunction provides a conformal gauge in
+which the integrated twistor identity \eqref{eq:energy} gives
+\(3\lambda^2\ge\mu_1\) for every closed Dirac eigenvalue \(\lambda\).
+
+For \(s=t-t_\nu\ge0\) lift each jump to the positive half-window
+as \(v_\nu(s)=\zeta(s)e^{-s|A|}j_\nu\), transported into the normalized
+frame. The cutoff \(\zeta\) equals one near zero and vanishes for
+\(s\ge1/2\). Integration of \((1+\mu^2)e^{-2\mu s}\) on each
+absolute angular mode \(\mu\ge3/2\) gives
+\(\|v_\nu\|_{H^1}\le C\|j_\nu\|_{\mathcal T}\). Extend by zero on
+the other sides, set \(v=v_0+v_1\), and let \(G=D_{\widetilde
+g,\mathrm{pw}}v\) be the regular Dirac image on the open pieces.
+The first-order operator comparison bounds \(\|G\|_2\) by the
+sum of the lift norms. Solving on the closed source gives
+\(w=D_{\widetilde g}^{-1}G\). This corrects the regular forcing,
+while the seam delta terms of the distributional derivative of
+\(v\) encode the jumps. The field \(v-w\) is harmonic on the
+pieces and has the prescribed jumps.
+
+In the windows the operator difference from the round product is
+bounded by \(C(\|h-h_0\|_\infty+\|\nabla^0(h-h_0)\|_4)\) as a map
+from \(H^1\) to \(L^2\). The zero-order term with one metric
+derivative uses \(H^1\subset L^4\). The product interior estimate
+with a cutoff absorbs this error and gives the uniform \(H^1\)
+bound for \(w\) on the half-windows from its global \(L^2\) bound
+and \(\|G\|_2\). The trace estimate gives \eqref{eq:dirac-jumps}.
+A field with zero jumps glues to a weak harmonic spinor on the
+closed manifold and therefore vanishes by the closed spectral bound.
+
+For the global estimate put \(p=8/5\), \(p'=8/3\).
+Given smooth \(f,k\) with \(L^p(g)\) norms one, choose
+\(a_\epsilon^4=(|f|_g^2+\epsilon)^{4/5}
++(|k|_g^2+\epsilon)^{4/5}\) and transport the two sources to
+\(g_\epsilon=a_\epsilon^2g\) with weight \(-5/2\).
+The pairing of \(D^{-1}f\) and \(k\) is conformally invariant
+by \eqref{eq:conformal-spin}, and each transported \(L^2\) norm
+is at most one because \(a_\epsilon^{-1}|f|^2\le |f|^{8/5}\),
+and similarly for \(k\). The volume of \(g_\epsilon\) tends to
+two. Applying the closed \(L^2\) bound in that gauge and taking
+the dual supremum proves
+\[
+ \|D_g^{-1}f\|_{8/3,g}\le 2^{1/4}(3/y_0)^{1/2}\|f\|_{8/5,g}.
+\]
+Density extends this to \(L^{8/5}\) forcing. Apply the estimate
+to \(G\), supported in fixed-volume normalized windows, and the
+local Sobolev estimate to \(v\) there. The \(L^{8/3}\) solution
+norm is invariant under Dirac transport. This proves the global
+bound on \(q\).
+\end{proof}
+
+The estimate acts on actual source traces. To compare two specific
+end fields one still needs both trace mismatches in a common
+identification at their respective seams and control of the
+regular forcing of the chosen interpolation. A small solution in
+the critical mass norm does not bound its projected differentiated
+twistor defect. The defect requires a different estimate.
+
+\subsection{Curvature of actual normalized Green fields}
+
+\begin{proposition}[Projected defect on a measured source region]\label{prop:actual-dirac-defect}
+Let \((M,g)\) be a connected smooth closed oriented Riemannian spin
+four-manifold with \(Y([g])>0\). For any point \(p\) and any nonzero
+negative half-spinor \(\xi\) there, the positive half-spinor
+\(\psi=D_g^{-1}(\delta_p\xi)\) is nontrivial and smooth harmonic on
+\(M\setminus\{p\}\). Let \(Z\) be its interior zero set and put
+\(\widehat\psi=\psi/|\psi|\) off \(Z\cup\{p\}\).
+For every measurable \(U\subset M\),
+\begin{equation}\label{eq:actual-dirac-defect}
+ \int_{U\setminus(Z\cup\{p\})}
+       \big|\Pi(d^\nabla P\widehat\psi)^+\big|^2\,dV_g
+ =\tfrac12 E_+(g;U).
+\end{equation}
+The same density is obtained in every smooth positive conformal
+representative on the compared open set when the harmonic field is
+transported with its Dirac weight and then normalized.
+\end{proposition}
+
+\begin{proof}
+Invertibility follows from positive Yamabe constant and the closed
+Dirac bound above. Elliptic regularity gives a smooth solution away
+from the pole, and chirality gives its positive sign. A nonzero
+distribution supported at one point is a finite sum of derivatives
+of a delta. The invertible principal Dirac symbol away from the
+zero covector multiplies its highest-order coefficient polynomial
+to a nonzero polynomial of one higher order. Thus a solution
+supported at \(p\) cannot have order-zero Dirac image
+\(\delta_p\xi\). The punctured manifold is connected, and B\"ar's
+nodal-set theorem for harmonic Dirac spinors gives volume zero for
+\(Z\)~\cite[Main Theorem]{Baer1997Nodal}. At every nonzero point,
+apply Proposition~\ref{prop:weyl-defect} to \(\widehat\psi\)
+and use \(|\widehat\psi|=1\). The norm density is half the chiral
+Weyl density, which is conformally invariant in four dimensions.
+\end{proof}
+
+Consequently a Weyl-energy estimate on an actual residual region
+controls the left-hand side of \eqref{eq:actual-dirac-defect} at any
+spinor amplitude. In particular, suppose finitely many buffered
+annular charts of the physical source, up to constant scale, have
+metric perturbations \(v_j\) uniformly small in \(L^\infty\).
+For cutoffs \(\eta_j\) that equal one on the protected regions and
+use long log-radius transitions, varying the metric by the sum of
+the pushed-forward \(\eta_j^4v_j\) tests their weighted chiral
+energy against the total Bach norm. The first-derivative curvature
+errors include \(\sum_j\|\eta_j Dv_j\|_4^4\). The conformally
+invariant defect therefore tends to zero on the covered residual
+along a sequence with uniformly bounded cover multiplicity and
+physical \(L^2\) curvature, vanishing metric amplitudes and total
+Bach norm, and vanishing summed bulk and transition errors.
+To pass to the entire residual also requires vanishing uncovered
+chiral energy~\cite{Baker2026TwistorSections,Baker2026DiracTransmission}.
+Derivative bounds on individual unit slabs alone permit a bulk
+sum that grows with the length. Even when the estimate applies,
+zero sets need other control for arguments that use a global
+spinor direction.
+
+\subsection{Physical volume at the comparison faces}
+
+A normalized collar frame can see very little of the measure of
+the original Yamabe minimizer. Let \(g_i\) be volume-one positive
+Yamabe minimizers with \(Y([g_i])\ge y_0\). If \(0\le\chi\le1\)
+is one on a region of physical volume \(m\), its support has
+physical volume at most \(s\), and its derivative is supported
+on a transition of physical volume \(v\), then
+\begin{equation}\label{eq:dirac-volume-witness}
+ y_0(1-\sqrt{s})\sqrt m\ \le\
+ 6\int_M|d\chi|_{g_i}^2\,dV_{g_i}\ \le\
+ 6\left(\int_M|d\chi|_{g_i}^4\,dV_{g_i}\right)^{1/2}\sqrt v .
+\end{equation}
+For the first inequality use the Yamabe quotient and
+\(\int\chi^2\le\sqrt{s}(\int\chi^4)^{1/2}\).
+The second is H\"older on the transition. The fourth-power
+gradient integral can be evaluated in the conformal comparison
+gauge. Thus on an actual fixed marking with bounded cutoff
+four-energy, two exteriors each carrying a positive fraction
+of the physical volume give a positive compact volume witness.
+If every fixed comparison compact evacuates, testing each exterior
+separately gives \(\sqrt{\lambda_j}\le\lambda_j\) for every limiting
+exterior volume \(\lambda_j\), so only one exit carries volume.
+
+For the connection to smooth type, suppose the source is a fixed
+oriented smooth homotopy four-sphere with vanishing total Bach
+norm and \(4\pi^2\le E_+(g_i)\le8\pi^2-\delta\) for
+\(\delta>0\). Supply a coherent comparison of whole compact
+truncations of a smooth closed conformal base with finitely many
+ordinary marks. The first-order comparison theorem uses
+\(C^0\cap W^{1,4}\) convergence of the comparison metrics and a
+local \(L^2\) scalar-curvature bound in that gauge. If the limiting
+source Yamabe value is strictly subround, positive physical volume
+on one fixed compared compact suffices for saturation.
+At minimizing chiral energy over all smooth positive-Yamabe
+classes on the source, a supplied nonround base gives the volume
+saturation by itself and transfers the smooth type. The physical
+sequence then converges in measured Gromov--Hausdorff distance
+with no residual full-curvature energy
+~\cite{Baker2026TwistorSections,Baker2026MarkedLimits}.
+These implications help distinguish a physically relevant comparison
+from one obtained by normalizing a tiny coordinate neighborhood.
+Spectral convergence to a smooth limit for the weak comparison
+used here is a separate condition for applying
+Theorem~\ref{thm:spectral} to a pinched sequence.
+
 \section{Outstanding challenges}\label{sec:open}
 
 \paragraph{Construction on an arbitrary smooth homotopy sphere.}
@@ -2588,7 +2833,16 @@ nondegenerate limit of the kind in
 Section~\ref{sec:twistor-variation}. The explicit oscillatory
 family in Proposition~\ref{prop:oscillation} and the fixed-end
 scaling of the Dirichlet energy give two independent obstructions
-to deriving such control from the residual size alone.
+to deriving such control from the residual size alone. The
+jump correction of Proposition~\ref{prop:dirac-jumps} can be used
+once the actual seams and traces are supplied. To exploit it in the
+geometric problem one must obtain compatible end identifications
+and bound the projected derivative on the whole residual. The cover
+estimate controls it only with a bound on the summed bulk first
+derivatives and the energy of the uncovered part. The cutoff
+criterion \eqref{eq:dirac-volume-witness} applies on actual marked
+faces. Producing those comparisons on an approximately critical
+sequence remains open.
 
 \paragraph{Degree and the remaining eigenspaces.}
 For a supplied minimizing metric, recognition from a near-zero

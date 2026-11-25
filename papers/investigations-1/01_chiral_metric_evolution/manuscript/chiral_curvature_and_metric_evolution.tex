@@ -35,7 +35,7 @@
 
 \title{Chiral curvature and metric evolution\\on oriented four-manifolds}
 \author{Edward B. Baker III}
-\date{Working draft --- 23 November 2026}
+\date{Working draft --- 25 November 2026}
 % Background revision: 21 November 2026 (America/New_York), for Edward B. Baker III,
 % with OpenAI assistance. Actual model/effort not independently exposed.
 % Inputs, passage checks and editorial scope: ../reviews/BACKGROUND_REVISION_20261121.md.
@@ -14128,9 +14128,79 @@ that inequality for the reconstructed metric's Levi--Civita
 curvature. The homotopy-sphere compactness proof above uses
 its full-core topological obstruction independently.
 
+% Revision for Edward B. Baker III, 25 November 2026, with OpenAI
+% assistance. Source 5417865; collar comparison audited at 5ff7014.
+\subsection{Definiteness on a marked spherical collar}\label{sec:marked-product}
+
+Suppose a smooth embedding has already identified a region with a
+product of an interval and the unit round \(S^3\). The distinction
+between a supplied metric and a metric reconstructed from connection
+curvature can be seen pointwise there. Write \(h_0=dt^2+\gamma_{S^3}\),
+\(e^0=dt\), and choose an oriented orthonormal spatial coframe \(e^i\).
+For cyclic \(i,j,k\), set \(\omega_i=e^j\wedge e^k\) and
+\(\Sigma_i^\pm=e^0\wedge e^i\pm\omega_i\). Then
+\(\Sigma_i^\pm\wedge\Sigma_j^\pm=\pm2\delta_{ij}\,dV\). The product
+curvature operator is the identity on the tangential forms \(\omega_i\)
+and vanishes on the mixed forms. Thus its diagonal chiral blocks are
+\(I/2\), its off-diagonal block is \(-I/2\), and both Weyl blocks
+vanish. In our connection convention the chiral curvature is
+\[
+ F_i=-\tfrac12(\Sigma_i^+-\Sigma_i^-)=-\omega_i,\qquad
+ F_i\wedge F_j=0 .
+\]
+All wedges vanish because the three tangential directions support no
+four-form. The curvature span is totally isotropic for the wedge
+pairing. In particular \(\mu_A=0\), and the construction of \(Q\) and
+\(\widehat g_A\) from this Levi--Civita connection has reached the
+boundary of its domain.
+
+The calculation extends to a warped collar \(ds^2+a(s)^2\gamma_{S^3}\).
+Its mixed and tangential sectional curvatures are
+\(k_r=-a''/a\) and \(k_t=(1-(a')^2)/a^2\). In the paired bases the
+diagonal and mixed blocks are \((k_r+k_t)I/2\) and
+\((k_r-k_t)I/2\), respectively. Taking their difference of squares
+gives the wedge matrix
+\[
+ F_i\wedge F_j=2k_rk_t\,\delta_{ij}\,dV .
+\]
+Positive scalar curvature \(6(k_r+k_t)\) therefore permits a vanishing
+wedge matrix at a product boundary. In the same conformal class
+\(e^{2t}h_0\) is flat, while \(\operatorname{sech}^2(t)h_0\) is the
+unit round metric with two poles removed. Their chiral
+Levi--Civita connections have zero and strictly positive wedge
+matrices, respectively.
+
+There is also a quantitative length restriction. For
+\(g_f=e^{2f(t)}h_0\), one has \(ds=e^fdt,\ a=e^f\), so
+\[
+ k_r=-e^{-2f}f'',\qquad k_t=e^{-2f}(1-(f')^2).
+\]
+Assume \(k_r,k_t>0,\ e^{2f}\ge m>0\), and \(k_rk_t\ge\kappa>0\)
+on an interval. Then \(|f'|<1\), \(k_t\le m^{-1}\), and
+\(f''=-e^{2f}k_r\le-\kappa m^2\). Integration bounds the length of
+the original \(t\)-interval by \(2/(\kappa m^2)\). A fixed round
+gauge works on a fixed strip, but a sequence of longer strips cannot
+satisfy these radial bounds uniformly.
+
+On a supplied metric one can still compare an independently chosen
+connection \(A=\Gamma^++b\) to the chiral Levi--Civita connection.
+The compatibility equation \(d_A\Sigma=[b,\Sigma]\) uses the metric
+frame \(\Sigma\) even at the product locus. After identifying the
+bundles on a buffer, a smooth cutoff \(\theta\) gives
+\[
+ F_{\Gamma^++\theta b}=F_{\Gamma^+}+\theta\,d_{\Gamma^+}b+
+ d\theta\wedge b+\tfrac12\theta^2[b\wedge b].
+\]
+Thus control of \(b\), its covariant derivative and the cutoff cost
+preserves a strictly positive reference wedge margin under a sufficiently
+small perturbation. The product connection has zero margin, so the reference
+for that argument must be chosen separately. To use the resulting connection for a global flow
+one must also extend it across the caps in the required bundle and
+control the margin on the exterior.
+
 \section{Outstanding analytical and global challenges}\label{sec:challenges}
 
-The calculations identify a nonlinear stable basin at the round connection and the variables that must be controlled beyond that basin. They leave the following problems unresolved.
+The radial length estimate in Section~\ref{sec:marked-product} leaves open the construction of a compatible, uniformly definite connection across a general marked cut. The calculations identify a nonlinear stable basin at the round connection and the variables that must be controlled beyond that basin. They leave the following problems unresolved.
 
 \subsection{A nonlinear equation for the reconstructed geometry}
 The exact velocity formula determines \(\widehat g_t\) from \(d_AA_t\), but it is not a closed equation in \(\widehat g\). The compatibility defect

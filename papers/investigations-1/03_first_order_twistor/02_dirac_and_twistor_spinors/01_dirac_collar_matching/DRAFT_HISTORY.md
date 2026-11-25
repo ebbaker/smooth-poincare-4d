@@ -15,3 +15,7 @@ Ricci, weak-coordinate and boundary-current mechanisms assessed. Production of a
 ## 25 November 2026 · third joint collar session
 
 E15. Slow cutoff transitions give a quantified chart-sum estimate. The bulk derivative sum, uncovered chiral energy and signed angular current are open on an actual full residual. [Decision](brainstorm/notes/THIRD_COLLAR_DECISIONS_20261125.md) · [Joint assessment](../../reviews/THIRD_COLLAR_ASSESSMENT_20261125.md).
+
+## 25 November 2026 · collar manuscript integration
+
+First manuscript for MATCH-E01–E15. It develops transmission for actual core data, two-seam correction, the differentiated defect of actual spinors, signed end charges and estimates on coherent weak charts. Research input through `5ff7014`. [Manuscript](manuscript/dirac_transmission_on_marked_collars.tex) · [Coverage and evidence](../../reviews/MANUSCRIPT_COVERAGE_20261125.md)

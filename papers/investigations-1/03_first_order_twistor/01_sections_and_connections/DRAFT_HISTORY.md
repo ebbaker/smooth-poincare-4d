@@ -77,3 +77,7 @@ Revised the [manuscript](manuscript/twistor_sections_and_chiral_weyl_curvature.t
 ## 25 November 2026 · no-neck application and sub-investigation
 
 Expanded Section 15 for Edward B. Baker III with OpenAI Codex assistance. The new argument gives the consequence of a full energy identity under the supplied smooth base and ALE hypotheses. The [neck geometry setup](01_neck_geometry/README.md) records the analytic question and compares chiral evolution, Dirac methods and surgery for SEC-B36. The [source record](manuscript/README.md#no-neck-application--25-november-2026) pins the revised source and verified PDF.
+
+## 25 November 2026 · collar manuscript integration
+
+Added §15 on the weak residual estimate, cutting and transferring the smooth type, fixed-type isolation, and nonround marked conformal limits. The through-E61 manuscript was last revised in `f6e10f0`. Research input through `5ff7014`. [Manuscript](manuscript/twistor_sections_and_chiral_weyl_curvature.tex) · [Coverage and evidence](../reviews/MANUSCRIPT_COVERAGE_20261125.md)

@@ -21,6 +21,15 @@ MANUSCRIPTS = {
     '03_first_order_twistor/02_dirac_and_twistor_spinors': (
         'investigations-1', 'dirac_twistor_and_yamabe_rigidity.tex'
     ),
+    '03_first_order_twistor/01_sections_and_connections/01_neck_geometry': (
+        'investigations-1', 'marked_necks_and_chiral_energy.tex'
+    ),
+    '03_first_order_twistor/01_sections_and_connections/02_dirac_collar_extraction': (
+        'investigations-1', 'physical_volume_and_marked_conformal_limits.tex'
+    ),
+    '03_first_order_twistor/02_dirac_and_twistor_spinors/01_dirac_collar_matching': (
+        'investigations-1', 'dirac_transmission_on_marked_collars.tex'
+    ),
     '01_generalized_isothermal_coordinates': ('initial-investigations', 'generalized_isothermal_wave_metrics.tex'),
     '02_chiral_descent_and_double_copy': ('initial-investigations', 'chiral_connection_descent_and_double_copy.tex'),
 }

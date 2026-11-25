@@ -19,3 +19,7 @@ Scalar-flat Green metric on the punctured base, with the physical volume exit id
 ## 25 November 2026 · third joint collar session
 
 E12–E17. Actual marked balls carrying most physical volume and recovery under a whole first-order conformal comparison are assessed; construction of that comparison and detection of nonroundness on it remain open. [Decision](brainstorm/notes/THIRD_COLLAR_DECISIONS_20261125.md) · [Joint assessment](../../reviews/THIRD_COLLAR_ASSESSMENT_20261125.md).
+
+## 25 November 2026 · collar manuscript integration
+
+First manuscript for EXTRACT-E01–E17. It derives the physical-volume marking and conditional marked-base recovery, the metric and curvature limits, and the information carried by physical and conformal end currents. Research input through `5ff7014`. [Manuscript](manuscript/physical_volume_and_marked_conformal_limits.tex) · [Coverage and evidence](../../reviews/MANUSCRIPT_COVERAGE_20261125.md)

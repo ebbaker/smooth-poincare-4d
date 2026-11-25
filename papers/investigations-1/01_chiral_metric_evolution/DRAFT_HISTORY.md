@@ -62,3 +62,7 @@ Record subsequent manuscript milestones concisely with the source files, substan
 | 2026-11-23 | Added actual near-round global ratio cap crossing and verified159-page PDF. | Assessed E240–E245; E246 mathematical precision and E247/final changed-page visual checks complete. [Evidence and hashes](reviews/E246_E247_GLOBAL_CAP_MANUSCRIPT_DISPOSITION_20261123.md). Global round-attracting family; arbitrary fixed-r extension separate. |
 
 | 2026-11-23 | Integrated actual short-time crossing of every prescribed finite closed or strict ratio cap above one, exact static recognition from N4 of the Claude Fable5.2 review, convention/context repairs, and the R45 comparison. Broadened the title and verified the164-page PDF. | E248–E258 assessed within scope; clean build, canonical references and all-page visual coverage recorded in the [final disposition](reviews/FINAL_REVIEW_CHECKPOINT_DISPOSITION_20261123.md). Initial-data existence and general global control remain open. Research paused at the author's request for brainstorming. |
+
+## 25 November 2026 · collar manuscript integration
+
+Added the curvature wedge matrix of a spherical product and its warped conformal representatives, the radial length bound and the connection matching requirement. The reference manuscript was `5417865`. Research input through `5ff7014`. [Manuscript](manuscript/chiral_curvature_and_metric_evolution.tex) · [Coverage and evidence](../03_first_order_twistor/reviews/MANUSCRIPT_COVERAGE_20261125.md)

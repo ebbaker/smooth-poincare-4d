@@ -19,3 +19,7 @@ One Euclidean end and an exact lower bound for the residual. A nonround minimizi
 ## 25 November 2026 · third joint collar session
 
 E21–E23. Perturbed cuts, the Cotton obstruction and the quantitative smoothing comparison have been assessed. A regular-point source marking is available; turning it into a weak cut separating the complete chiral quantiles is open. [Decision](brainstorm/notes/THIRD_COLLAR_DECISIONS_20261125.md) · [Joint assessment](../../reviews/THIRD_COLLAR_ASSESSMENT_20261125.md).
+
+## 25 November 2026 · collar manuscript integration
+
+First manuscript for NECK-E01–E23. It develops buffered caps and smooth-type descent, exact and approximate cut extraction, one-puncture restart, and the closed critical alternatives. Research input through `5ff7014`. [Manuscript](manuscript/marked_necks_and_chiral_energy.tex) · [Coverage and evidence](../../reviews/MANUSCRIPT_COVERAGE_20261125.md)

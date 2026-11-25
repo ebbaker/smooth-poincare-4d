@@ -8,7 +8,7 @@
 
 **SP4-FORM-SPIN-E01 · Summing differentiated errors on a finite cover.** For a finite set $J$, let $r$ denote the residual energy, $u$ the uncovered energy, $w_j$ a strip energy, $H_j$ its integrated squared differentiated defect and $c_j$ its positive spinor floor. The local geometric estimates will give $c_j^2w_j\le2H_j$. The opening proof composes these real inequalities with the cover bound $r\le u+\sum_{j\in J}w_j$. The proposed public declaration `FirstOrderTwistor.finiteCoverDefectBound` in `formalization/FirstOrderTwistor/SpinCoverBounds.lean` corresponds to proposed blueprint `lem:finite-cover-defect-bound`. For $J=\varnothing$ it must retain $r\le u$. FOT-E18 and the geometric cover argument must still provide the inputs. [MATCH-E05, weighted sum](../../../../papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/01_dirac_collar_matching/notes/E05_NORMALIZATION_AND_RESIDUAL_20261125.md) · [DIR source identity](../../../../papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/manuscript/dirac_twistor_and_yamabe_rigidity.tex#L292)
 
-The following type elaborates with the pinned imports. Proof and public declaration are pending.
+This was the frozen proposition type at setup. Its public proof and the subsequent geometric results are in the [live register](../research-progress/REGISTER.md).
 
 ~~~lean
 import Mathlib.Basic.Real.Basic

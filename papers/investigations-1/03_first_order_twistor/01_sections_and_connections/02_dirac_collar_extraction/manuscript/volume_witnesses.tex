@@ -1,0 +1,575 @@
+\section{Physical volume and marked balls}
+\label{sec:volume-witnesses}
+
+Write \(\mu_i=dV_{g_i}\), a probability measure, and fix
+\(0<Y_0\leq Y_i\leq S\). The estimates in
+Section~\ref{vol:physical-tests} require only the unit-volume Yamabe
+minimizers and the scalar lower bound. The positive Ricci representative
+in Section~\ref{vol:positive-ricci} uses the chiral upper bound as well.
+
+\subsection{Cutoff tests on the physical source}
+\label{vol:physical-tests}
+
+For a Lipschitz cutoff \(0\leq\chi\leq1\), define
+\[
+ a=\int_M\chi^4\,d\mu_i,\qquad
+ D=\int_M|d\chi|_{g_i}^2\,d\mu_i,\qquad
+ A(\chi)=\left(\int_M|d\chi|_{g_i}^4\,d\mu_i\right)^{1/2}.
+\]
+If \(T\) contains \(\{0<\chi<1\}\) and the gradient support up to a
+null set, the physical Yamabe inequality gives
+\begin{align}
+ \sqrt a-a&\leq 6D/Y_i+\mu_i(T)/4,\label{vol:yamabe-partition}\\
+ Y_0(1-\sqrt{s})\sqrt m&\leq 6D
+ \quad\text{if }\mu_i(\{\chi=1\})\geq m,\quad
+                   \mu_i(\{\chi\ne0\})\leq s,\label{vol:small-support}\\
+ D&\leq A(\chi)\sqrt{\mu_i(T)}.\label{vol:holder}
+\end{align}
+For the first inequality use
+\(\int\chi^2\,d\mu_i\leq a+\mu_i(T)/4\).
+For the second use \(\int\chi^2\,d\mu_i\leq\sqrt{s}\sqrt a\).
+The last inequality is H\"older's inequality. The integral defining
+\(A(\chi)\) is invariant under conformal changes of metric in dimension
+four. A fixed cutoff in a uniformly bilipschitz comparison collar thus
+has uniformly bounded \(A(\chi)\). If the comparison collar is a
+length-\(L\) cylinder uniformly bilipschitz to the unit spherical product, a
+cutoff with slope \(O(L^{-1})\) has \(A(\chi)=O(L^{-3/2})\).
+
+The same Yamabe inequality yields a spectral test in the physical
+metric. For smooth \(f\) with \(\int f\,d\mu_i=0\), expanding the
+Yamabe quotient at \(1+t f\) to second order gives
+\[
+ 6\int|df|_{g_i}^2\,d\mu_i\geq 2Y_i\int f^2\,d\mu_i .
+\]
+In particular \(\lambda_1(-\Delta_{g_i})\geq Y_i/3\), with
+\(\Delta=\operatorname{div}\nabla\) and \(\lambda_1\) the first
+positive eigenvalue. If \(\chi\) equals one and zero on disjoint sets
+of masses \(m_1,m_0\), its variance is at least
+\(m_1m_0/(m_1+m_0)\) for \(m_1+m_0>0\). Indeed, minimize
+\(m_1(1-c)^2+m_0c^2\) over constants \(c\). Thus the spectral test and
+\eqref{vol:holder} also bound any two such masses in terms of the
+capacity and physical volume of their transition.
+
+\begin{proposition}[A finite-exit volume witness]
+\label{vol:exit-witness}
+Let \(K_i\subset M\) be a marked compact domain with finitely many
+complementary components \(U_{ij}\), \(1\leq j\leq J\), and null
+boundaries. Suppose each \(U_{ij}\) has a cutoff equal to one there,
+zero on the other components, with its transition in a compared
+buffer \(T_{ij}\subset K_i\). Suppose \(A(\chi_{ij})\leq A\) and the
+buffers have overlap multiplicity at most \(\ell\).
+Write \(\kappa_i=\mu_i(K_i)\) and \(m_{ij}=\mu_i(U_{ij})\).
+If \(m_{ij}\leq1-\eta\) for every \(j\), with \(0<\eta<1\), then
+\begin{equation}
+ \kappa_i\geq
+ \min\left\{\frac{\eta}{2},\frac{c_\eta}{36A^2\ell+c_\eta}\right\},
+ \qquad
+ c_\eta=Y_0^2(1-\sqrt{1-\eta/2})^2 .
+ \label{vol:exit-lower}
+\end{equation}
+If two exits each have mass at least \(\eta\), each of their buffers
+has mass at least
+\(Y_0^2(1-\sqrt{1-\eta})^2\eta/(36A^2)\) when \(A>0\).
+If instead \(\kappa_i\to0\) at this fixed comparison stage, every limit
+of the finite mass vector has exactly one entry equal to one.
+\end{proposition}
+
+\begin{proof}
+For the first assertion, if \(\kappa_i<\eta/2\), the nonzero set of
+each cutoff has mass at most \(m_{ij}+\kappa_i\leq1-\eta/2\).
+Squaring \eqref{vol:small-support}, using \eqref{vol:holder}, and
+summing gives
+\(c_\eta(1-\kappa_i)\leq36A^2\ell\kappa_i\).
+The case \(J=0\) has \(\kappa_i=1\).
+For the second assertion, either cutoff has a nonzero set of mass
+at most \(1-\eta\) and equals one on mass at least \(\eta\).
+For the last assertion, at a limit of the mass vector the transition
+terms in \eqref{vol:yamabe-partition} vanish by \eqref{vol:holder},
+and \(a\to m_j\) for each cutoff. Hence \(\sqrt{m_j}\leq m_j\).
+The masses sum to one. For successive coherent cuts with the same
+exit labels, differences in exit masses are measured by the
+intervening compared compact regions. If their masses tend to zero,
+the surviving label agrees on all stages of a nested exhaustion
+after diagonal subsequence extraction.
+\end{proof}
+
+For example, a bound \(\sup_x\mu_i(B_{g_i}(x,r))\leq1-\eta\) at a
+fixed radius supplies \eqref{vol:exit-lower} with margin \(\eta/2\)
+if each exit is contained in such a ball up to \(o(1)\) physical
+volume. This application requires containment for the actual
+complementary pieces.
+
+\begin{proposition}[Saturation on a capacity-controlled exhaustion]
+\label{vol:exhaustion}
+Let \(X\) be an open comparison manifold with coherent embeddings
+\(F_i\) on neighborhoods of exhausting compact domains. Let
+\(\chi_b\in C_c^\infty(X;[0,1])\) equal one on those domains, with
+compact transition supports \(T_b\) leaving every compact as
+\(b\downarrow0\). Suppose the transported cutoffs, extended by zero to
+\(M\), satisfy \(\sup_b\limsup_i A(\chi_b\circ F_i^{-1})<\infty\).
+Then every locally vague limit \(\lambda\) of the physical measures
+pulled back to \(X\) has total mass zero or one. A positive lower
+mass bound on a fixed compared compact forces mass one. A positive
+limsup does so along a subsequence realizing that limsup.
+\end{proposition}
+
+\begin{proof}
+Vague convergence gives \(0\leq\lambda(X)\leq1\). For each fixed
+\(b\), compactness of the transition support gives
+\[
+ \limsup_{i\to\infty}\mu_i(F_i(T_b))\leq\lambda(T_b).
+\]
+By \eqref{vol:holder}, the Dirichlet term vanishes as first
+\(i\to\infty\), then \(b\downarrow0\). Taking those limits in the
+Yamabe test for the transported cutoff gives
+\(\sqrt{\lambda(X)}\leq\lambda(X)\): the compactly supported second
+and fourth powers converge against the local measures for each \(b\),
+and both integrals tend to \(\lambda(X)\) by dominated convergence.
+The mass witness follows by testing with a compactly supported
+continuous function equal to one on the witnessing compact.
+For ordinary punctures of a smooth closed comparison, radial cutoffs
+on annuli of radii \(b,2b\) give such a uniform fourth-gradient
+bound after the source limit, by uniform local metric comparison
+and conformal invariance.
+\end{proof}
+
+\begin{remark}[Evacuation in shrinking normal charts]
+\label{vol:normal-chart-evacuation}
+For any supplied smooth source sequence, comparison embeddings can
+be chosen whose entire images have physical volume tending to zero.
+Choose oriented source normal coordinates based at \(q'_i\in M\)
+and radii \(R_i\to\infty\) in the parameter space. For each \(i\),
+choose \(\lambda_i>0\) small enough that
+\(F_i(x)=\exp_{q'_i}^{g_i}(\lambda_i x)\) is an embedding on
+\(B_{R_i}(0)\), its image has \(\mu_i\)-mass at most \(i^{-1}\), and
+\(\lambda_i^{-2}F_i^*g_i\) tends to the Euclidean metric smoothly on
+compacts. Each such choice is possible by smoothness of the individual
+metric in its normal coordinates. Under stereographic identification
+with a growing subset of \(S^4\setminus\{p\}\), the comparison
+\(m_i=\omega^2\lambda_i^{-2}F_i^*g_i\), where
+\(\omega=2/(1+|x|^2)\), converges smoothly locally to the round metric.
+Its physical factor is \(\lambda_i/\omega\), and every fixed compared
+compact evacuates. This construction preserves all estimates on the
+supplied source sequence. A source-only ball bound can certify
+volume detection only with an additional relation to the marking.
+\end{remark}
+
+\subsection{Positive Ricci geometry at the half-volume scale}
+\label{vol:positive-ricci}
+
+The Schouten tensor here is
+\(A_h=\tfrac12(\operatorname{Ric}_h-\tfrac16R_h h)\).
+Signature and Gauss--Bonnet on the homotopy sphere give, in the
+Hilbert--Schmidt curvature-operator normalization of \(E_+\),
+\begin{equation}
+ \int_M\sigma_2(A_h)\,dV_h=\frac{8\pi^2-E_+(g_i)}{2}
+ \quad\text{for }h\in[g_i].
+ \label{vol:sigma2}
+\end{equation}
+Indeed, \(E_-=E_+\), the full tensor Weyl integral is \(8E_+\),
+and the Gauss--Bonnet integrand in these conventions is
+\(\tfrac14|W|_{\rm tens}^2+4\sigma_2(A_h)\).
+Also \(\sigma_2(A_h)=R_h^2/96-|\operatorname{Ric}_0(h)|^2/8\).
+The unit-volume Yamabe representative therefore obeys
+\(Y_i^2\geq48\delta\) when \(E_+(g_i)\leq8\pi^2-\delta\), so one
+may take \(Y_0=\sqrt{48\delta}\).
+The positive Yamabe sign and \eqref{vol:sigma2} give a smooth
+positive-Ricci conformal representative
+\(H_i^0\) by Chang--Gursky--Yang
+\cite[Theorem A and Corollary B]{ChangGurskyYang2002PositiveRicci}.
+Their Schouten tensor is \(2A_h\), which leaves the sign of its
+second symmetric function unchanged. Any smooth positive-Ricci
+representative may be used in the following normalization.
+
+\begin{theorem}[Half-volume scale]
+\label{vol:median}
+Choose the least \(H_i^0\)-radius \(a_i\) of a ball carrying half of
+\(\mu_i\), a witnessing center \(q_i\), and put
+\(H_i=a_i^{-2}H_i^0\). In this subsection and the next, all unqualified
+balls are taken in the \(H_i\) distance on the source or the
+corresponding pointed distance on a limit. There are constants
+\(C,\alpha>0\) depending only on \(Y_0\) such that
+\begin{equation}
+ \sup_x\mu_i(B_r(x))\leq C r^\alpha\quad(0<r\leq1),\qquad
+ \mu_i(M\setminus B_R(q_i))\leq C R^{-\alpha}\quad(R\geq1).
+ \label{vol:power}
+\end{equation}
+For every fixed \(D>0\) there is \(v_D>0\) such that
+\begin{equation}
+ v_D r^4\leq \operatorname{Vol}_{H_i}(B_r(x))
+ \leq\omega_4 r^4\quad(x\in B_D(q_i),\ 0<r\leq1),\qquad
+ \omega_4=\pi^2/2 .
+ \label{vol:noncollapse}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+For each \(i\), distance spheres have zero Riemannian
+four-volume by the polar-coordinate representation of measure.
+The conformally related \(\mu_i\) also vanishes on every sphere.
+Continuity of ball mass in center and radius follows from
+inclusions between balls whose radii differ by the change in
+center and radius. The maximum over the compact center set is
+continuous in radius, starts at zero and reaches one. Thus
+\(a_i>0\) is attained and, after scaling,
+\(\mu_i(B_1(q_i))=\tfrac12=\max_x\mu_i(B_1(x))\).
+
+For \(0<r<R\) use the logarithmic cutoff which equals one on
+\(B_r(x)\), is affine in \(\log d_{H_i}(x,\cdot)\) on the annulus,
+and vanishes outside \(B_R(x)\). Bishop's radial area bound in
+nonnegative Ricci curvature supplies
+\[
+ \int_M |d\chi|_{H_i}^4\,dV_{H_i}
+ \leq \frac{2\pi^2}{\log^4(R/r)}\int_r^R\frac{dt}{t}
+ =\frac{2\pi^2}{\log^3(R/r)} .
+\]
+The reversed cutoff has the same cost. Put
+\(C_0=72\pi^2/[Y_0^2(1-2^{-1/2})^2]\). When \(R\leq1\), apply
+\eqref{vol:small-support} and \eqref{vol:holder} to the first
+cutoff with \(s=1/2\) and transition mass
+\(\mu_i(B_R(x))-\mu_i(B_r(x))\). When \(x=q_i\) and \(r\geq1\)
+apply them to the reversed cutoff. This gives
+\begin{align*}
+ \mu_i(B_r(x))&\leq\frac{C_0}{C_0+\log^3(R/r)}\mu_i(B_R(x)),
+       &&0<r<R\leq1,\\
+ \mu_i(M\setminus B_R(q_i))&\leq
+     \frac{C_0}{C_0+\log^3(R/r)}\mu_i(M\setminus B_r(q_i)),
+       &&1\leq r<R .
+\end{align*}
+Fix \(L>0\), set \(\rho=C_0/(C_0+L^3)\),
+\(\alpha=-\log\rho/L\), and iterate at ratios \(e^L\).
+Monotonicity gives \eqref{vol:power} with \(C=(2\rho)^{-1}\).
+
+By relative Bishop--Gromov comparison, a maximal \(r\)-separated
+family with centers in \(B_D(q_i)\) has cardinality at most
+\((1+4D/r)^4\). Its disjoint \(r/2\)-balls lie in
+\(B_{D+r/2}(q_i)\). For any such center, the ball of radius
+\(2D+r/2\) about that center contains this common enclosing ball.
+Relative volume comparison at that center gives the claimed
+packing bound. In particular a dimensionally bounded number of
+\(1/4\)-balls covers \(B_1(q_i)\), so one of them has physical
+mass at least \(c>0\), with \(c\) universal. Its concentric
+\(1/2\)-ball has physical mass at most one half. The cutoff between
+these balls has gradient bounded by \(4\) in \(H_i\).
+Its fourth-gradient integral is bounded by a universal constant
+times \(\operatorname{Vol}_{H_i}B_2(q_i)\).
+Equations \eqref{vol:small-support} and \eqref{vol:holder} now give
+\(\operatorname{Vol}_{H_i}B_2(q_i)\geq v>0\) independently of \(i\).
+For \(x\in B_D(q_i)\), compare \(B_r(x)\) to \(B_{D+2}(x)\),
+which contains the base ball. This yields the lower bound in
+\eqref{vol:noncollapse}. The upper bound is Bishop comparison.
+\end{proof}
+
+\begin{corollary}[A protected ball on each source]
+\label{vol:protected}
+Fix \(A_0>1\), \(\zeta>0\), a nonnegative Borel measure \(\nu_i\) on
+each source with \(\nu_i(M)\leq\Lambda<\infty\), and at most \(J\)
+prescribed source points for each \(i\).
+There exist \(D,r,m>0\), independent of \(i\), and centers
+\(x_i\in B_D(q_i)\) such that
+\[
+ \mu_i(B_r(x_i))\geq m,\qquad
+ \nu_i(B_{A_0r}(x_i))\leq\zeta .
+\]
+The centers may be chosen at distance at least \(2A_0r\) from every
+prescribed point.
+\end{corollary}
+
+\begin{proof}
+Take \(D\geq1\) so the tail bound leaves at most a quarter of the
+mass outside \(B_D(q_i)\). For \(2A_0r\leq1\), Fubini gives
+\[
+ \int_M \nu_i(B_{A_0r}(x))\,d\mu_i(x)
+ =\int_M\mu_i(B_{A_0r}(z))\,d\nu_i(z)
+ \leq\Lambda C(A_0r)^\alpha .
+\]
+Choose \(r\) so \(C(2A_0r)^\alpha(J+\Lambda/\zeta)\leq1/4\).
+By Markov's inequality and \eqref{vol:power}, centers in the desired
+window with the desired buffer and mark clearance have physical
+mass at least one half. A maximal \(r\)-separated family of these
+centers has at most \((1+4D/r)^4\) members by the preceding
+packing proof. Their \(r\)-balls cover the allowed centers.
+Take \(m=\tfrac12(1+4D/r)^{-4}\).
+\end{proof}
+
+One can take \(\nu_i=|\operatorname{Rm}(g_i)|_{\rm tens}^2\,d\mu_i\).
+In fact, the decomposition of the full curvature tensor and
+\eqref{vol:sigma2} give
+\[
+ \int_M|\operatorname{Rm}(g_i)|_{\rm tens}^2\,d\mu_i
+ =16E_+(g_i)-64\pi^2+Y_i^2/3\leq16E_+(g_i)+64\pi^2 .
+\]
+One can also take a chiral Weyl measure, using its conformal
+invariance. These estimates control the indicated measures on
+subsets of the source defined by \(H_i\)-distance.
+
+\begin{proposition}[Bounded factor on bounded windows]
+\label{vol:bounded-factor}
+Write \(g_i=w_i^2H_i\). For each fixed \(D>0\),
+\begin{equation}
+ \sup_{B_D(q_i)} w_i\leq C_D,qquad
+ d\mu_i\leq C_D^4\,dV_{H_i}\quad\text{on }B_D(q_i).
+ \label{vol:factor-bound}
+\end{equation}
+In particular \(d_{g_i}(x,y)\leq C_{3D+1}d_{H_i}(x,y)\) for
+\(x,y\in B_D(q_i)\).
+\end{proposition}
+
+\begin{proof}
+All norms and gradients in this proof use \(H_i\).
+Positive scalar curvature in this metric and the conformal
+Yamabe equation give
+\(-6\Delta_{H_i}w_i\leq Y_i w_i^3\).
+For centers in \(B_{D+2}(q_i)\) and radii \(r\leq1\), the local
+Sobolev inequality on a complete four-manifold with nonnegative
+Ricci curvature \cite[Theorem 3.1]{SaloffCoste1992Uniformly}
+and \eqref{vol:noncollapse} give
+\[
+ \|z\|_4^2\leq C_D\bigl(\|dz\|_2^2+r^{-2}\|z\|_2^2\bigr),
+ \qquad z\in H_0^1(B_r(x)).
+\]
+The relative prefactor in that theorem is bounded by
+\(C r^2\operatorname{Vol}_{H_i}(B_r(x))^{-1/2}\).
+For \(p\geq2\) test the subsolution with \(\eta^2w_i^{p-1}\)
+for a cutoff supported in the ball. The principal term is
+\(24(p-1)p^{-2}\int\eta^2|d(w_i^{p/2})|^2\). Absorbing half of
+it against the cutoff cross term and using the Sobolev inequality
+for \(z=\eta w_i^{p/2}\) yields
+\begin{equation}
+ \|z\|_4^2\leq C_Dp^2\int (|d\eta|^2+r^{-2}\eta^2)w_i^p\,dV_{H_i}
+       +C_Dp^2\int Y_i w_i^2z^2\,dV_{H_i}.
+ \label{vol:power-test}
+\end{equation}
+At \(p=4\), the last integral is at most
+\(S\mu_i(B_r(x))^{1/2}\|z\|_4^2\). By \eqref{vol:power}, take a
+fixed \(r=r(D)>0\) for which the term absorbs. A cutoff equal to
+one on \(B_{r/2}(x)\) and \(\int w_i^4\,dV_{H_i}=1\) give a
+uniform \(L^8\) bound there.
+
+Thus \(V_i=Y_iw_i^2\) is uniformly bounded in \(L^4\) on the
+smaller ball. For subsequent cutoffs,
+\[
+ \int V_i z^2\,dV_{H_i}\leq C_{D,r}\|z\|_{8/3}^2
+       \leq C_{D,r}\|z\|_2\|z\|_4 .
+\]
+Young's inequality in \eqref{vol:power-test} absorbs the \(L^4\)
+factor, with coefficient at most \(C_{D,r}p^4\) on the squared
+\(L^2\) norm of \(z\). Iterate on balls decreasing from radius
+\(r/2\) to \(r/4\), with derivative bounds \(C2^j/r\) and
+\(p_j=4\cdot 2^j\). The successive norm multipliers are bounded by
+\([C_{D,r}p_j^4 4^j]^{1/p_j}\), whose product is finite. The
+centers range over the bounded window. This proves the first
+estimate in \eqref{vol:factor-bound}, and the second is the
+four-dimensional change of volume. An \(H_i\)-minimizing geodesic
+between the indicated points remains in \(B_{3D+1}(q_i)\), so
+integrating \(w_i\) along it gives the distance estimate.
+\end{proof}
+
+\subsection{Regular points and smooth marked balls}
+
+\begin{theorem}[Physical mass at metric regular points]
+\label{vol:regular}
+After passing to a subsequence, \((M,d_{H_i},q_i)\) converges
+in pointed Gromov--Hausdorff distance to a proper metric space
+\((X,d,q)\). In a joint pointed realization, \(dV_{H_i}\) tends
+locally weakly to Euclidean-normalized \(\mathcal H^4\) on \(X\),
+and \(\mu_i\) converges to a probability
+\(\mu=f\,\mathcal H^4\) with \(f\in L^\infty_{\rm loc}(X)\).
+The probability \(\mu\) gives full mass to points whose tangent
+cones are all Euclidean four-space. If \(\nu_i\) are as in
+Corollary~\ref{vol:protected}, take a local weak limit \(\nu\)
+on the same subsequence. For any fixed \(A_0>1\), one can choose a
+regular point \(x\in\operatorname{supp}\mu\), off any prescribed
+finite set and the atoms of \(\nu\), with approximating source
+centers \(x_i\to x\) and
+\begin{equation}
+ \lim_{b\downarrow0}\lim_i\frac{\mu_i(B_b(x_i))}{\omega_4 b^4}
+      = f(x)\in(0,\infty),\qquad
+ \lim_{b\downarrow0}\lim_i\nu_i(B_{A_0b}(x_i))=0 .
+ \label{vol:regular-iterated}
+\end{equation}
+The outer limit is through joint continuity radii for the
+respective measures.
+\end{theorem}
+
+\begin{proof}
+The packing bound gives pointed metric precompactness.
+Noncollapse at \(q_i\) and \(\operatorname{Ric}_{H_i}\geq0\)
+allow application of Cheeger--Colding's noncollapsed volume
+convergence theorem
+\cite[Theorem 5.9]{CheegerColding1997StructureI}.
+Local mass bounds give joint local weak limits for the physical
+probabilities and for \(\nu_i\) after further subsequence
+extraction. One can use a common pointed metric realization
+with convergent centers on each bounded window. The physical
+tail bound in \eqref{vol:power} preserves all the probability.
+Testing \eqref{vol:factor-bound} against nonnegative continuous
+functions of compact support yields the density assertion.
+The same volume convergence and the regularity theorem
+\cite[Theorems 2.1 and 5.11]{CheegerColding1997StructureI}
+give Euclidean four-dimensional tangent cones at
+\(\mathcal H^4\)-almost every point, hence at \(\mu\)-almost
+every point. At such a regular point,
+\(\mathcal H^4(B_b(x))/(\omega_4 b^4)\to1\).
+This follows from noncollapsed volume convergence applied to
+the Euclidean blow-ups, using a diagonal sequence of the
+smooth sources at those scales.
+
+The measure \(\mathcal H^4\) is locally doubling by the limiting
+Bishop--Gromov comparison. Differentiation of \(\mu\) relative
+to \(\mathcal H^4\) gives the ball density ratio \(f(x)\) at
+\(\mu\)-almost every point, where \(0<f(x)<\infty\).
+The at most countably many atoms of \(\nu\) and any prescribed
+finite set are \(\mu\)-null. Choose a point with all these
+properties. First transfer the two balls at fixed radii using
+local weak convergence and their continuity boundaries.
+Then take \(b\downarrow0\), using differentiation and
+\(\nu(\{x\})=0\).
+\end{proof}
+
+\begin{corollary}[Finitely many disjoint smooth source balls]
+\label{vol:smooth-balls}
+Fix \(0<\epsilon<1\), \(\zeta>0\), and a maximum radius
+\(r_*>0\). On the subsequence above, for all sufficiently large
+\(i\) there are uniformly finitely many disjoint smoothly
+embedded closed standard four-balls \(\Omega_{i\ell}\subset M\).
+Each lies inside an \(H_i\)-ball of radius at most \(r_*\),
+has \(\nu_i(\Omega_{i\ell})<\zeta\), and the union has physical
+mass at least \(1-\epsilon\). The embeddings can be oriented
+consistently with \(M\).
+\end{corollary}
+
+\begin{proof}
+Choose a bounded window with physical limiting mass greater than
+\(1-\epsilon/4\). Fix \(\tau\in(0,1/6)\) sufficiently small that
+\((1-3\tau)^4(1-\epsilon/2)>1-\epsilon\), with strict room to
+decrease the left side slightly. At almost every point for \(\mu\)
+in the window, the preceding proof provides both Euclidean
+\(\mathcal H^4\)-density and positive physical four-density, with
+zero atomic \(\nu\)-mass. Fix a volume error small enough that
+the almost-maximal-volume ball theorem
+\cite[Appendix A, Theorems A.1.8--A.1.9]{CheegerColding1997StructureI}
+provides a smooth open-ball embedding into any qualifying source
+ball, with image containing the concentric ball of relative
+radius \(1-\tau\). That theorem applies to the smooth sources
+with \(\operatorname{Ric}\geq0\) at sufficiently small radii.
+
+Use a fine family of limit balls about the indicated points,
+with radii \(r<r_*\) below this theorem's bound, and
+\(\nu(\overline B_r)<\zeta/2\). The radii
+\(r,(1-\tau)r,(1-3\tau)r\) may all be taken as continuity radii.
+Choose them sufficiently small that the \(\mathcal H^4\)-volume
+ratio at \((1-\tau)r\) meets the theorem's volume requirement
+with a strict margin. At the same time the physical mass ratio
+between \((1-3\tau)r\) and \(r\) can be made as close to
+\((1-3\tau)^4\) as desired. The Vitali covering theorem for the
+locally doubling \(\mathcal H^4\) measure selects disjoint balls
+covering almost all the indicated centers. Since
+\(\mu\ll\mathcal H^4\), a finite subfamily covers physical
+mass greater than \(1-\epsilon/2\). By the ratio choice its
+\((1-3\tau)r\)-balls still carry strictly more than
+\(1-\epsilon\). Shrinking the selected outer balls to
+\((1-\tau)r\) gives a positive separation margin for this
+finite family.
+
+With all radii held fixed, transfer the centers to the sources
+using the pointed realization. Volume convergence and the
+strict margin allow application of the smooth ball theorem
+inside each \((1-\tau)r\)-ball for large \(i\). Its image
+contains the closed concentric \((1-3\tau)r\)-ball compactly,
+since \((1-\tau)^2>1-3\tau\). The preimage of this smaller
+metric ball is compact in the open parameter ball, so it is
+contained in the interior of a smaller closed concentric
+parameter ball. Take its image for \(\Omega_{i\ell}\).
+Disjointness follows from the separation margin. Convergence
+of the measures on the fixed smaller and outer balls gives
+the total physical mass and the per-ball bound on \(\nu_i\).
+A reflection of a parameter ball, if necessary, fixes its
+orientation. Each boundary is an actual smooth three-sphere.
+\end{proof}
+
+The ball theorem here supplies smooth embeddings at each index.
+The estimates concern their volumes and the specified measures.
+First derivatives of the marked metrics in the critical norm and
+a comparison on a whole punctured truncation require further
+geometric input.
+
+\subsection{Saturation for a whole marking at the same scale}
+
+\begin{proposition}[Exits in the half-volume gauge]
+\label{vol:normalized-marking}
+Suppose there are coherent whole-truncation markings
+\(\Phi_i\) of a connected smooth closed \((N,h)\) minus a
+finite set \(P\) of ordinary points, such that
+\(\Phi_i^*H_i\to h\) locally uniformly. Write
+\(K_b=N\setminus\bigcup_{a\in P}B_h(a,b)\) for the compact
+truncations by disjoint small normal balls. Then
+\begin{equation}
+ \lim_{b\downarrow0}\limsup_i
+ \mu_i\bigl(M\setminus\Phi_i(K_b)\bigr)=0 .
+ \label{vol:exit-saturation}
+\end{equation}
+If the marking also has the local first-order and comparison
+curvature properties of Definition~\ref{def:marking} with
+\(m_i=\Phi_i^*H_i\), its conformal factors have strong local
+\(H^1\) and \(L^4\) convergence and a positive smooth unit-mass
+limit, including when \(y=S\).
+\end{proposition}
+
+\begin{proof}
+Each spherical face of the connected marked core is a separating
+hypersurface in \(M\), since \(H^1(M;\mathbb Z)=0\). The connected
+core lies on its inward side. All other faces lie on that same
+side, so each component of the complement meets exactly one face:
+it cannot connect the outward side of one face to the outward
+side of another while avoiding the core. If \(P=\varnothing\),
+the embedding of closed \(N\) is onto by invariance of domain
+and compactness, and there is no exterior.
+
+For a mark \(a\), fix a small \(s>0\) less than half the separation
+of the normal neighborhoods of distinct marks, and choose
+\(b\ll s\). Take any point \(z_i\) of the face
+\(\Sigma_i=\Phi_i(S_h(a,b))\). Its intrinsic \(H_i\)-diameter
+is at most \(C_1 b\) for large \(i\). Following a face path and
+then a normal radial segment in the core shows that the marked
+annulus \(b<d_h(a,\cdot)<s-C_2 b\), with \(C_2>C_1+1\), lies
+in \(B_s(z_i)\) for large \(i\) at fixed \(b,s\).
+Its \(H_i\)-volume is at least
+\[
+ \omega_4s^4\bigl(1-O(s^2)-O(b/s)-o_i(1;b,s)\bigr).
+\]
+If a point of the exterior reaches depth \(s/2\) from \(\Sigma_i\),
+choose a point \(x_i\) of exact depth \(s/2\) by continuity
+along an exterior path to the face. Then
+\(d_{H_i}(x_i,z_i)\leq s/2+C_1 b\). The ball \(B_{s/8}(x_i)\)
+lies entirely in the exterior and in \(B_s(z_i)\).
+The larger ball \(B_{2s}(x_i)\) contains the marked annulus.
+Relative Bishop comparison at \(x_i\) implies that the exterior
+ball has \(H_i\)-volume at least \(16^{-4}\) times that of
+the annulus. The exterior ball and annulus are disjoint.
+Choose \(s\) small, then \(b/s\) small, then \(i\) large.
+Their combined volume would exceed \(\omega_4 s^4\), contradicting
+Bishop comparison at \(z_i\). Therefore every exterior point
+has depth less than \(s/2\), and the entire exterior is contained
+in \(B_s(z_i)\).
+
+By \eqref{vol:power}, for each sufficiently small \(s\), all
+sufficiently small fixed \(b\) have limiting upper exterior mass at
+most \(|P|Cs^\alpha\). This proves \eqref{vol:exit-saturation}
+in the stated order of limits.
+
+For the factor assertion, a sufficiently small fixed coordinate
+ball on the marked core maps into a comparably small \(H_i\)-ball
+by the uniform local metric comparison and lengths of coordinate
+segments. Its \(L^4\) physical factor mass is therefore uniformly
+small by \eqref{vol:power}. In the local critical-absorption estimate
+of Proposition~\ref{prop:factor}, the difference of the factors
+from their weak limit has small \(L^4\) norm there by fourth-power
+splitting. The coefficient of its pure cubic term,
+\(Y_i\|u_i-u\|_4^2\), is then below the local Sobolev coefficient
+even for \(y=S\). The same absorption proof supplies strong local
+\(H^1\) and \(L^4\) convergence. Equation~\eqref{vol:exit-saturation}
+now gives unit mass for the limiting factor. The removable-point
+and positivity argument of Proposition~\ref{prop:factor} then
+gives the smooth positive factor on \(N\).
+\end{proof}

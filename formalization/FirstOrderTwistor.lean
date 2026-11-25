@@ -8,8 +8,10 @@ import FirstOrderTwistor.ComparisonFamily
 import FirstOrderTwistor.ComponentBudgets
 import FirstOrderTwistor.ConformalEnergy
 import FirstOrderTwistor.ConvergingFrames
+import FirstOrderTwistor.CoreTraces
 import FirstOrderTwistor.CurvatureCompressionBound
 import FirstOrderTwistor.CurvatureDensityLimit
+import FirstOrderTwistor.CylinderSpectral
 import FirstOrderTwistor.DiagonalEnd
 import FirstOrderTwistor.EnergyDensity
 import FirstOrderTwistor.FixedMetricEnergy
@@ -21,6 +23,19 @@ import FirstOrderTwistor.IntrinsicIntegral
 import FirstOrderTwistor.MetricJetEnergy
 import FirstOrderTwistor.RiemannianComparison
 import FirstOrderTwistor.SingleCut
+import FirstOrderTwistor.SpinBochnerAccounting
+import FirstOrderTwistor.SpinBochnerCutoff
+import FirstOrderTwistor.SpinCompactness
+import FirstOrderTwistor.SpinCoverBounds
+import FirstOrderTwistor.SpinCutoffCover
+import FirstOrderTwistor.SpinJetResidual
+import FirstOrderTwistor.SpinNormalChart
+import FirstOrderTwistor.SpinReflection
+import FirstOrderTwistor.SpinRelativeBochner
+import FirstOrderTwistor.SpinResidualEstimate
+import FirstOrderTwistor.SpinRicciForcing
+import FirstOrderTwistor.SpinStrip
+import FirstOrderTwistor.SpinTwistorDerivative
 import FirstOrderTwistor.WeylAccounting
 
-/-! # Energy accounting and marked single-cut descent for the first-order twistor investigations -/
+/-! # Energy accounting, marked single-cut descent and spinor transmission -/
