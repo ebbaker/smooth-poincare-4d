@@ -1,6 +1,6 @@
 # Research papers and investigations
 
-The repository separates the direct smooth Poincaré program from the earlier geometric studies that motivated it.
+The [master manuscript](master/README.md) develops a variational approach to the smooth four-dimensional Poincaré conjecture. Its [research overview](master/research-overview/OVERVIEW.md) connects the proposed proof to the specialized investigations and the earlier geometric studies.
 
 | Collection | Investigation | Purpose |
 | --- | --- | --- |

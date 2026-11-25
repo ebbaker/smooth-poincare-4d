@@ -1,0 +1,271 @@
+\section{Marked spherical cuts}\label{sec:cut}
+
+An embedded round-product comparison collar supplies two pieces of data
+for a cut. Its middle sphere marks the boundary identification, and its
+retained buffers permit a Yamabe estimate for the two capped classes.
+We measure the energy of each entire side in the original metric,
+including the part on which the metric is subsequently changed.
+
+\subsection{Marked topology and the energy inequality}
+
+\begin{proposition}[Finite cut criterion]\label{prop:cut-energy}
+Let \(g\) be a smooth metric on a closed oriented homotopy four-sphere \(M\). Cut \(M\) along a finite collection of pairwise disjoint smoothly
+embedded three-spheres and attach marked standard balls. Give the
+capped pieces smooth metrics and the inherited orientations. Write
+\[
+ m_j=E_+(g;P_j),\qquad E_j=E_+(\widehat g_j),\qquad
+ E=E_+(g)=\sum_j m_j .
+\]
+Suppose the capped metrics have positive Yamabe constants and
+\(E_j\leq m_j+\gamma_j\) with \(\gamma_j\geq0\). If
+\(E+\sum_j\gamma_j<2T\), at most one capped piece has
+\(E_j\geq T\). The original manifold is oriented-diffeomorphic to
+that piece if it exists. If all \(E_j<T\), the original manifold is
+standard. In particular, if \(M\) is nonstandard, the unique piece
+\(s\) with \(E_s\geq T\) satisfies
+\begin{equation}\label{eq:cut-discarded}
+ \sum_{j\ne s}m_j\leq E-I^+(M)+\gamma_s .
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Each middle sphere separates, since otherwise a loop could cross it
+once, contrary to \(H_1(M;\mathbb Z)=0\). A cut in a current piece
+splits it in two: separation holds in the full manifold, and the
+connected two-sided collar provides exactly two adjacent components.
+The incidence graph of the pieces and cuts is therefore a tree.
+Van Kampen and Mayer--Vietoris along its edges, and along the cap
+boundaries, give
+\[
+ \pi_1(M)\cong *_{j}\pi_1(\widehat M_j),\qquad
+ H_2(M;\mathbb Z)\cong\bigoplus_j H_2(\widehat M_j;\mathbb Z).
+\]
+All the factors vanish. By Poincar\'e duality the capped pieces are
+simply connected integral homology four-spheres. Hurewicz gives a
+map from \(S^4\) representing a fundamental class of each, and the
+homological Whitehead theorem makes each a homotopy sphere.
+
+On each capped piece the signature vanishes, so \(E_+=E_-\) and its
+full four-index Weyl integral is \(8 E_j\). For \(E_j<T=4\pi^2\)
+this is strictly less than \(16\pi^2\chi(\widehat M_j)=32\pi^2\).
+The positive Yamabe constant and simple connectivity now imply
+\(\widehat M_j\cong S^4\) by the conformally invariant sphere theorem
+\cite[Theorem A and Remark 2]{ChangGurskyYang2003}. Summing the
+energy bounds shows that at most one piece can have \(E_j\geq T\).
+
+Removing the actual cap balls and reusing the original boundary
+identifications recovers \(M\). In a standard capped leaf, Palais's
+theorem moves the embedded cap ball to a coordinate hemisphere in
+the standard sphere. The closed complement of the cap interior is
+therefore a standard ball
+\cite[Theorem B]{Palais1960Extending}. The resulting boundary
+identification extends over a standard ball, since a diffeomorphism
+of \(S^3\) is isotopic to an orthogonal map of the same orientation
+sign. Use the isotopy in a collar and the orthogonal map towards
+the center \cite[p.~553]{Hatcher1983Smale}. Filling the neighboring
+piece by the raw leaf or by the cap thus gives the same oriented
+diffeomorphism type, by a diffeomorphism that is the identity on
+the neighboring piece outside the gluing collar. Root the tree at
+the exceptional piece, or at any piece if all are standard.
+Successively removing standard leaves identifies \(M\) with the
+capped root. In the nonstandard case its metric is an admissible
+competitor for \(I^+(M)\), so
+\(I^+(M)\leq E_s\leq m_s+\gamma_s\). This gives
+\eqref{eq:cut-discarded}.
+\end{proof}
+
+For one cut there is a useful direct case. If both capped classes
+are positive and both raw energies differ from \(E/2\) by at most
+\(a\), then \(E/2+a+\max_j\gamma_j<T\) recognizes both caps and
+hence \(M\). For more uneven divisions, the minimizing inequality
+\eqref{eq:cut-discarded} brings even a small discarded mass into play.
+
+\subsection{Smooth caps and localization}
+
+Let \(g\) be a smooth metric on an oriented homotopy four-sphere \(M\).
+For each cut take an oriented smooth embedding
+\[
+ \Phi\colon(-\ell-2,\ell+2)\times S^3\longrightarrow M,
+ \qquad \ell\geq1,
+\]
+and a positive smooth factor \(f\) on the chart. Write \(h=f^2\Phi^*g\),
+\(h_0=dt^2+\gamma\), where \(\gamma\) is the round metric of sectional
+curvature one, and let \(\eta=\|h-h_0\|_{C^2(h_0)}\) on the displayed
+strip. This norm uses the suprema of the covariant derivatives through
+order two with respect to \(h_0\). Use \(x=|t|\) on either side of
+the middle sphere and denote the unit splice by \(0<x<1\) and the
+retained buffer by \(1<x<1+\ell\). A finite family of charts is taken
+with pairwise disjoint images. Denote the raw pieces by \(P_j\), and
+index their boundary components by \(b\). The length and comparison
+error for the chart of boundary \(b\) are \(\ell_b,\eta_b\).
+
+\begin{lemma}[Buffered spherical caps]\label{lem:buffered-caps}
+There are constants \(\eta_*,C_W,C_Y,C_I>0\), independent of \(g\) and
+of the buffer lengths, with the following property. If
+\(\eta_b\leq\eta_*\) at every boundary, then each \(P_j\) has a smooth
+metric \(\widehat g_j\) after filling each boundary with a standard
+ball using its chart identification. The metrics have the inherited
+orientations and satisfy
+\begin{align}
+ E_+(\widehat g_j)&\leq E_+(g;P_j)+\gamma_j,
+ & \gamma_j&=C_W\sum_{b\subset\partial P_j}\eta_b^2,\label{eq:cut-cost}\\
+ Y([\widehat g_j])&\geq
+ \min\left\{Y([g]),\min_{b\subset\partial P_j}
+                 (1-C_Y\eta_b)Y_{\rm rd}\right\}
+   -C_I\left(\sum_{b\subset\partial P_j}\ell_b^{-3}\right)^{1/2},
+ \label{eq:cut-yamabe}
+\end{align}
+provided \(Y([g])>0\), where \(Y_{\rm rd}=8\sqrt6\,\pi\).
+\end{lemma}
+
+\begin{proof}
+Extend the chart factors to a global positive factor by cutting off
+their logarithms in the spare collar width. The resulting source
+representative equals \(h\) through each buffer. On a unit splice
+use \(h_0+\theta(x)(h-h_0)\), with a fixed smooth \(0\leq\theta\leq1\)
+equal to zero near \(0\) and one near \(1\). Outside the splices keep
+the source representative. The splice is positive by convexity and
+is a round product near its attaching boundary.
+
+For a ball model, take a smooth nonincreasing \(\zeta\) equal to one
+near \(0\) and zero near \(\pi/2\), with \(0\leq\zeta\leq1\). Set
+\(\widetilde a(0)=0\) and \(\widetilde a'(s)=\cos(s)\zeta(s)\) for
+\(0\leq s\leq\pi/2\), extending this derivative by zero. Let \(A>0\)
+be the eventual value of \(\widetilde a\) and set
+\(a(s)=A^{-1}\widetilde a(As)\). The metric
+\begin{equation}\label{eq:cut-model}
+ b_\infty=ds^2+a(s)^2\gamma
+\end{equation}
+has a smooth round center and a unit product end. Truncate within
+the product part to obtain the ball, which glues to the splice by
+the given identification. The warped-product formula
+\(R_{b_\infty}=6[(1-(a')^2)/a^2-a''/a]\) gives a positive scalar
+curvature lower bound. Here \(a''\leq0\) and \(a'<1\) away from the
+center. At the center the round germ has scalar curvature \(12A^2\).
+The radius determined by \(d\log r=ds/a(s)\) ranges from zero to
+infinity and gives \(b_\infty=(a/r)^2(dr^2+r^2\gamma)\). Near zero,
+\(r\) is a positive constant times \(\tan(As/2)\), so the conformal
+factor is smooth and positive there. Thus the entire ball model and
+the product have zero Weyl tensor. By conformal covariance and the
+sharp Euclidean Sobolev inequality in dimension four, compactly
+supported tests on \(b_\infty\) satisfy the Yamabe inequality with
+constant \(Y_{\rm rd}\) \cite{Talenti1976BestConstant}.
+
+In product coordinates, the splice metric is \(O(\eta_b)\)-close
+to the product through order two. The Weyl tensor is a smooth
+function of this metric jet, and the splice has uniformly bounded
+volume. Its chiral integral is at most \(C_W\eta_b^2\). The energy
+on the unchanged part of \(P_j\) equals its original energy by
+conformal invariance. More precisely, if \(T_b\) denotes the unit
+splice in the raw piece and in the capped piece, then
+\begin{equation}\label{eq:cut-splice-excess}
+ E_+(\widehat g_j)-E_+(g;P_j)=
+ \sum_{b\subset\partial P_j}
+     \bigl(E_+(\widehat g_j;T_b)-E_+(g;T_b)\bigr).
+\end{equation}
+Taking the upper bound on the new integrals proves \eqref{eq:cut-cost}.
+
+For the Yamabe estimate write \(Q_k(u)=\int(6|du|_k^2+R_k u^2)\,dV_k\)
+in a metric \(k\). The conformal Laplacian satisfies
+\(L_{f^2k}w=f^{-3}L_k(fw)\), so both \(Q_{f^2k}(w)\) and
+\(\|w\|_{4,f^2k}^2\) transfer to the corresponding expressions for
+\(fw\) in \(k\). On each cap, splice and buffer, compare the
+gradient, scalar-curvature and volume densities with those of
+\(b_\infty\), using product coordinates measured outwards from the
+cap. The metrics agree on the ball. On the splice and buffer their
+two-jets differ by \(O(\eta_b)\), uniformly in the buffer length.
+The positive scalar lower bound of the model therefore gives
+\(Q_{\widehat g_j}(w)\geq (1-C_Y\eta_b)Y_{\rm rd}
+\|w\|_{4,\widehat g_j}^2\) for tests supported in this region. Such
+tests extend by zero as compactly supported tests on \(b_\infty\).
+
+We record the localization for any local cap inequality with
+positive constant \(y_b\) on the cap, splice and buffer. Choose a
+squared partition \(\chi_0^2+\sum_b\chi_b^2=1\). The function
+\(\chi_b\) is one on its cap through the splice and zero before the
+outer end of its buffer. In the \(b\)-buffer use
+\((\chi_0,\chi_b)=(\sin\alpha_b,\cos\alpha_b)\), with a smooth
+angle increasing from \(0\) to \(\pi/2\) on the length \(\ell_b\),
+constant near the endpoints, and with derivative bounded by
+\(C/\ell_b\). The other \(\chi_b\)'s vanish there. If \(k=\widehat g_j\),
+the gradient identity is
+\[
+ Q_k(u)=Q_k(\chi_0u)+\sum_b Q_k(\chi_bu)
+       -6\int\left(|d\chi_0|_k^2+\sum_b|d\chi_b|_k^2\right)u^2\,dV_k .
+\]
+The interior term transfers by zero extension to the source
+representative and has quotient at least \(Y([g])\). Each cap term
+has quotient at least \(y_b\). On a buffer uniformly comparable
+to the unit product, the squared gradient sum is bounded by
+\(C\ell_b^{-2}\) on volume at most \(C\ell_b\). Its global \(L^2\)
+norm is at most \(C(\sum_b\ell_b^{-3})^{1/2}\) by disjointness.
+Hölder's inequality bounds the last integral, and the \(L^2\)
+triangle inequality applied to \(u^2=\sum_a(\chi_a u)^2\) gives
+\begin{equation}\label{eq:cut-ims}
+ Y([k])\geq \min\{Y([g]),\min_b y_b\}
+             -C_I\left(\sum_b\ell_b^{-3}\right)^{1/2}.
+\end{equation}
+Taking the smooth comparison constants for \(y_b\) proves
+\eqref{eq:cut-yamabe}.
+\end{proof}
+
+For \(n\) cuts and \(Y([g])\geq y_0>0\), write
+\(y_* =\min\{y_0,Y_{\rm rd}\}\). Choose the disjoint buffers with
+\(C_I\sqrt{2n}\,\ell_b^{-3/2}\leq y_*/4\) for every \(b\), then
+impose \(\eta_b\leq\eta_*\) and \(C_Y\eta_b\leq1/2\). All the
+capped classes then have Yamabe constant at least \(y_*/4\).
+With \(\eta_{\max}=\max_b\eta_b\), the sum of the excess bounds in
+\eqref{eq:cut-cost} is at most \(2n C_W\eta_{\max}^2\).
+
+\subsection{One cut on a minimizing sequence}
+
+\begin{theorem}[One-cut nonsplitting]\label{thm:cut}
+Let \(g_i\) be smooth metrics on a fixed oriented nonstandard
+homotopy four-sphere \(M\), with \(Y([g_i])\geq y_0>0\) and
+\(e_i=E_+(g_i)\to I^+(M)<2T\). Fix \(\ell\geq1\) sufficiently
+large that \(C_I\ell^{-3/2}<\min\{y_0,Y_{\rm rd}\}/4\). Suppose
+there is one buffered chart of this length for each \(i\) with
+comparison error \(\eta_i\to0\). Write \(P_{i,-},P_{i,+}\) for
+the two raw pieces cut at its middle sphere, with chiral energies
+measured in the physical metrics \(g_i\). Then
+\begin{equation}\label{eq:cut-min-bound}
+ \min_{\sigma\in\{-,+\}}E_+(g_i;P_{i,\sigma})
+ \leq e_i-I^+(M)+C_W\eta_i^2
+\end{equation}
+for all sufficiently large \(i\). In particular, both raw sides
+cannot have positive lower limits of their chiral energies.
+\end{theorem}
+
+\begin{proof}
+Lemma~\ref{lem:buffered-caps} makes both capped classes positive
+for all large \(i\), with total energy excess at most
+\(2C_W\eta_i^2\). Since \(I^+(M)<2T\), the strict energy margin in
+Proposition~\ref{prop:cut-energy} holds for these caps for all
+large \(i\). Apply \eqref{eq:cut-discarded} to the discarded
+side. Its energy bounds the minimum from above.
+\end{proof}
+
+The quantitative one-cut condition also applies to any positive
+Yamabe caps in Proposition~\ref{prop:cut-energy}. With
+\(\Delta_i=e_i-I^+(M)\) and per-side excess bounds \(\gamma_{i,\pm}\),
+assume \(e_i+\gamma_{i,+}+\gamma_{i,-}<2T\). If the positive side survives, then
+\(E_+(g_i;P_{i,-})\leq\Delta_i+\gamma_{i,+}\). If the negative
+side survives, then \(E_+(g_i;P_{i,+})\leq\Delta_i+\gamma_{i,-}\).
+A cut with \(E_+(g_i;P_{i,-})>\Delta_i+\gamma_{i,+}\) and
+\(E_+(g_i;P_{i,+})>\Delta_i+\gamma_{i,-}\) gives a contradiction
+at that index.
+
+For a finite family with positive caps, if
+\(\Gamma_i=\sum_j\gamma_{i,j}\to0\), then
+\eqref{eq:cut-discarded} bounds the total discarded raw energy by \(\Delta_i+\Gamma_i\to0\).
+With a free length \(\ell\) and a fixed finite number of cuts, first
+choose \(\ell\) for Yamabe localization with disjoint retained
+buffers. At that length take \(i\) sufficiently large for the
+chart comparisons and the strict energy margin. More generally, if
+the capped signs hold for each sufficiently large fixed \(\ell\)
+and sufficiently large \(i\), and
+\(\lim_{\ell\to\infty}\limsup_{i\to\infty}\Gamma_{i,\ell}=0\),
+then the discarded sum has zero upper limit in the same order.
+Indeed the strict energy margin holds eventually in \(i\) for all
+sufficiently large fixed \(\ell\), and the inner upper limit is at
+most \(\limsup_i\Gamma_{i,\ell}\).

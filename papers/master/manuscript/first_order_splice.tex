@@ -1,0 +1,172 @@
+\section{Cap estimates in a first-order cone chart}\label{weak:section}
+
+Fix \(\ell\ge 1\). The comparison uses a single chart through the
+splices and both retained buffers. Write
+\[
+ A_\ell=\{y\in\mathbb R^4:e^{-\ell-2}<|y|<e^{\ell+2}\},
+ \qquad t=\log|y| .
+\]
+An oriented smooth embedding \(\Phi:A_\ell\to M\) puts the two
+splices \(T_j\) at \(0<|t|<1\) and the retained buffers at
+\(1<|t|<1+\ell\). For a constant \(\rho>0\), use the metric
+\(m=\rho^{-2}\Phi^*g=\delta_{\rm Euc}+v\) in these Cartesian
+coordinates. Set
+\[
+ a=\|v\|_{L^\infty(A_\ell)},\qquad
+ d=\|Dv\|_{L^4(A_\ell,dy)},\qquad
+ K=\|\operatorname{Rm}_m\|_{L^2(T_1\cup T_2,m)} .
+\]
+The first two norms use Euclidean components, and the third uses
+the four-index curvature norm and volume of \(m\). The last norm
+equals the corresponding norm of \(g\) on the embedded splices,
+by four-dimensional scaling. On the product collar use
+\(h=|y|^{-2}m\), extending the positive conformal multiplier to the
+source outside the region used below. On each splice put
+\(n=\delta_{\rm Euc}+\theta(|t|)v\), with the cutoff of
+Lemma~\ref{lem:buffered-caps}, and attach the same model cap to
+\(|y|^{-2}n\). This is the exact product near the middle face and the source representative near the outer splice face.
+
+\begin{lemma}[First-order cap comparison]\label{weak:splice}
+Suppose \(a\le 1/4\), \(Y([g])>0\), and \(C_\ell(a+d)\le 1/2\)
+for a sufficiently large constant \(C_\ell\). Write \(P_j\)
+for the raw sides and \(\widehat g_j\) for the capped metrics.
+For either chirality let \(q_j=E_\pm(g;T_j)\) and
+\(q=q_1+q_2\). There is an error
+\[
+ \Delta=C\bigl(aK+d^2+d+a\bigr)
+\]
+such that
+\begin{align}
+ \left(\sum_j E_\pm(\widehat g_j;T_j)\right)^{1/2}
+     &\le \sqrt q+\Delta,\\
+ \sum_j E_\pm(\widehat g_j)
+     &\le E_\pm(g)+2\sqrt q\,\Delta+\Delta^2,\\
+ E_\pm(\widehat g_j)
+     &\le E_\pm(g;P_j)+2\sqrt{q_j}\,\Delta+\Delta^2 .
+ \label{weak:side-cost}
+\end{align}
+The Yamabe constants satisfy
+\begin{equation}\label{weak:yamabe}
+ Y([\widehat g_j])\ge
+ \min\{Y([g]),(1-C_\ell(a+d))Y_{\rm rd}\}
+ - C_I\ell^{-3/2}.
+\end{equation}
+The constants \(C,C_I\) depend only on the fixed profiles and
+model, and \(C_\ell\) may also depend on \(\ell\).
+\end{lemma}
+
+\begin{proof}
+For an all-lowered curvature tensor in Cartesian coordinates,
+\[
+ \operatorname{Rm}_{\rm low}(p)=L(D^2p)+Q(p)[Dp,Dp]
+\]
+with \(L\) constant-coefficient and \(Q\) smooth on positive
+metric matrices. The second derivatives arise by differentiating
+Christoffel symbols of the first kind, which are linear in
+\(Dp\) with constant coefficients. Differentiation of the inverse
+metric and the products of Christoffel symbols contribute to \(Q\).
+The principal terms in
+\(\operatorname{Rm}_{\rm low}(n)-\theta\operatorname{Rm}_{\rm low}(m)\)
+cancel except for the product-rule terms containing
+\(D\theta\,Dv\) and \(D^2\theta\,v\). The Cartesian derivatives
+of \(\theta\) are bounded on the unit splices. Thus the difference
+is bounded by \(C(|Dv|^2+|Dv|+a)\).
+
+Let \(\mathcal P_p\) take an all-lowered curvature tensor to its
+chiral Weyl matrix in the oriented \(p^{-1/2}\)-orthonormal frame,
+multiplied by \((\det p)^{1/4}\). This linear map depends smoothly
+on \(p\), so \(\|\mathcal P_n-\mathcal P_m\|\le Ca\).
+The square of the Euclidean \(L^2\) norm of
+\(F(p)=\mathcal P_p\operatorname{Rm}_{\rm low}(p)\) is the chiral
+energy. Uniform metric comparison and H\"older yield
+\[
+ \|F(n)-\theta F(m)\|_{L^2(T_1\cup T_2,dy)}
+ \le C\bigl(d^2+d+a+aK\bigr).
+\]
+Indeed the curvature difference is acted on by \(\mathcal P_n\),
+and the error from changing the projection is
+\(\theta(\mathcal P_n-\mathcal P_m)\operatorname{Rm}_{\rm low}(m)\).
+This proves the square-root estimate on the union of the splices,
+and on each one with its own incoming energy. Chiral energy is
+conformally invariant. The net cost is the difference of the new
+and incoming splice energies, as in \eqref{eq:cut-splice-excess}.
+
+For a localized test on the cap side, extend the perturbation to the
+model \(b=b_\infty\) of \eqref{eq:cut-model}, obtaining \(k=b+e\).
+Use the actual capped metric through the buffer, then cut
+\(e\) off on \(1+\ell<|t|<2+\ell\).
+The perturbation is zero on the exact cap. In product coordinates
+\(b=|y|^{-2}\delta_{\rm Euc}\), so the metric, connection and
+cutoff comparisons give
+\[
+ \|e\|_{L^\infty(b)}\le a,\qquad
+ D_e:=\|\nabla_b e\|_{L^4(b)}\le C\bigl(d+(1+\ell)^{1/4}a\bigr).
+\]
+In particular the product volume density is \(|y|^{-4}dy\)
+and \(|\nabla_b e|_b\le C(|y||Dv|+|v|)\) on the support of \(e\).
+Put \(P^{ij}=(dV_k/dV_b)k^{ij}\) and
+\(A^p{}_{ij}=(\nabla_k-\nabla_b)^p{}_{ij}\).
+Then \(|P-b^{-1}|\le C|e|\) and
+\(|\nabla_bP|+|A|\le C|\nabla_b e|\) in model norms.
+Contracting the Ricci difference with \(P\) gives a divergence
+with vector \(V^p=P^{ij}A^p{}_{ij}-P^{ip}A^q{}_{iq}\).
+The derivatives of \(P\) and the connection products are
+quadratic in \(\nabla_b e\), and the change in contraction of
+the background Ricci tensor is \(O(|e|)\). Hence
+\[
+ (dV_k/dV_b)R_k-R_b=\operatorname{div}_b V+H,\qquad
+ |V|\le C|\nabla_b e|,\qquad |H|\le C(|e|+|\nabla_b e|^2).
+\]
+Use \(Q_p(w)=\int(6|dw|_p^2+R_p w^2)dV_p\).
+Integrating the divergence against \(w^2\) for a compactly
+supported smooth test gives
+\[
+ |Q_k(w)-Q_b(w)|\le C\bigl(a\|w\|_{H^1(b)}^2+
+ D_e\|w\|_{4,b}\|dw\|_{2,b}+D_e^2\|w\|_{4,b}^2\bigr).
+\]
+The positive scalar lower bound and the round Yamabe inequality
+on the model bound this error by \(C_\ell(a+d)Q_b(w)\).
+The denominator changes by a factor at most \(1+Ca\), giving
+\(Q_k(w)\ge (1-C_\ell(a+d))Y_{\rm rd}\|w\|_{4,k}^2\)
+after increasing \(C_\ell\).
+
+Apply \eqref{eq:cut-ims} with the source cutoff supported away from
+the splice and the cap cutoff vanishing near the far edge of the
+buffer. Their tests extend by zero to the conformal source and to
+\(k\), respectively. Uniform comparison to the product on the
+buffer bounds the sum of squared cutoff gradients by
+\(C\ell^{-2}\) on volume \(C\ell\). Its \(L^2\) norm is at most
+\(C\ell^{-3/2}\). The triangle inequality for the squares of the
+localized functions then gives \eqref{weak:yamabe}.
+\end{proof}
+
+\begin{corollary}[Measured balanced sides]\label{weak:balanced}
+Let \(g_i\) be metrics on a fixed oriented smooth homotopy
+four-sphere \(M\), with \(Y([g_i])\ge y_0>0\) and
+\(E_+(g_i)\le 8\pi^2-\delta\) for some \(\delta>0\).
+Choose \(\ell\) large enough that
+\(C_I\ell^{-3/2}<\tfrac12\min\{y_0,Y_{\rm rd}/2\}\).
+Suppose the charts above are supplied at this fixed length, with
+\(a_i+d_i\to0\), \(K_i\) bounded, and measurable sets
+\(D_{i,j}\subset P_{i,j}\) satisfying
+\(E_+(g_i;D_{i,j})\ge\beta>0\) for both sides.
+Then both caps have positive Yamabe constant for large \(i\), and
+each has positive-chiral energy at most \(E_+(g_i)-\beta+o(1)\).
+If moreover \(E_+(g_i)\to I^+(M)\), the infimum over positive
+Yamabe conformal classes on \(M\), then \(M\) is diffeomorphic
+to \(S^4\).
+\end{corollary}
+
+\begin{proof}
+Equation~\eqref{weak:yamabe} gives positivity. Each raw side omits
+at least \(\beta\) in the other side, and each surcharge in
+\eqref{weak:side-cost} tends to zero. Thus \(E_+(g_i)\) plus the
+sum of the two surcharges is strictly below \(8\pi^2\) for large
+\(i\). If \(M\) is nonstandard, \eqref{eq:cut-discarded} in
+Proposition~\ref{prop:cut-energy} now gives
+\[
+ \min_j E_+(g_i;P_{i,j})\le E_+(g_i)-I^+(M)+o(1).
+\]
+This contradicts the fixed \(\beta\) margin along a minimizing
+sequence.
+\end{proof}

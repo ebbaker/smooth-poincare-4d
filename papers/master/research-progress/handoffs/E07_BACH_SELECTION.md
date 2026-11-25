@@ -1,0 +1,7 @@
+# SP4-MASTER-E07 · Bach Selection
+
+25 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance. Lead decision at HEAD fc60509a27f6b97f48e2619f9e6f0f6cd4eb36e2. All upstream committed inputs below are at this commit unless a working revision is given. Frozen master working inputs (SHA-256 prefixes): main TeX a499b313e6d5, marked_cut 3f3722b56d34, first_order_splice f93717b0b73c, physical_volume 8ff80d4d42e5. Read AGENTS.md, master overview, plan, register, initial review and cited owning theorem before use. Bounded E execution, requested GPT-6.2 Sol/ultra. Sole writer of the named output. Lead owns all other files. Cite primary passages and give stable links and actual metadata where available. No chat registration by helpers.
+
+B04 concurrent bounded selection test, conditional on entry. Try dissipative selection by starting smooth volume-preserving negative Weyl/Bach flow independently at each positive near-minimizing seed with energy excess d_i. Deducing L1-small Bach at the same limiting infimum: derive exact sufficient lifespan versus excess even for finite-time flow and test conformal/global scale invariance, failure case and any short-time estimate. Check committed Bach manuscript. Also check whether abstract Ekeland bypasses the obstruction in the norm needed. No compactness theorem without its hypotheses. Finite scope: selection and its sharp limits.
+
+Distinct output: `papers/master/notes/E07_BACH_SELECTION.md`. Return after one derivation and verification, including negative results and remaining cases.

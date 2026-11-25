@@ -17,7 +17,7 @@ The author activated this route on 25 November. Checked portions below have thei
 | SP4-FORM-FOT-E19 | Partial | Dense nonzero locus and continuity extend zero Weyl across zeros. Spin prolongation, regularity at zeros and smooth recognition on the same manifold remain. |
 | SP4-FORM-FOT-E20 | Partial | Unit-mass reference kernel element and strong image subsequence in a supplied compact Hilbert gauge. Realize the transported Sobolev estimates, norm convergence and geometric limit on the given manifold. |
 | SP4-FORM-FOT-E21 | Reserved | A prescribed Green pole, closed/relative invertibility, elliptic regularity and scale-normalized asymptotics are needed. |
-| SP4-FORM-FOT-E22 | Partial | Signed homogeneous and continuously forced modes, energy balance, square-summable midpoint synthesis and bounds. Realize the complete weak incoming spin-Sobolev inverse on the unit-round product. |
+| SP4-FORM-FOT-E22 | Verified fixed signed spectral model | The weak incoming inverse on the completed graph, modal and Hilbert-valued Sobolev solutions and both endpoint traces are checked. Its geometric realization on the unit-round spin bundle remains open. |
 | SP4-FORM-FOT-E23 | Partial | Checked buffered derivative interpolation, Hölder operator bound and finite slab aggregation from measured coefficient/Sobolev inputs. Identify these coefficients from an actual marked strip and its spin comparison. |
 | SP4-FORM-FOT-E24 | Partial | Neumann equivalence and quantitative norm bound on fixed spaces; endpoint scattering stability. Realize the trace domain and physical operator. |
 | SP4-FORM-FOT-E27 | Reserved | Five-mode scalar Yamabe equality and recognition retain their separate geometric hypotheses. |
@@ -27,6 +27,17 @@ The author activated this route on 25 November. Checked portions below have thei
 | SP4-FORM-FOT-E33 | Partial | Weighted remote attenuation under an inverse estimate, same-end reflection for fixed-projector perturbations, and the exponential midpoint obstruction. Physical pole normalization and geometric transmission over an actual residual remain. |
 
 [Issued packets](handoffs/ACTIVATION_20261125.md) · [Independent premise check](../reviews/RESIDUAL_PREMISE_CHECK_20261125.md) · [Dated continuation](../continuation-notes/AFTER_WEIGHTED_COVER_20261125.md)
+
+## Second integration on 25 November
+
+| Task | Current conclusion | Remaining geometric input |
+| --- | --- | --- |
+| B04 / E18 | The covector-twisted Dirac square and scalar quarter, the intrinsic four-index curvature bound, chart Green identities, metric-volume unweighted estimate and regularized inequality are checked. The physical-current version gives coefficient 816. | Identify the local graded spin trivializations, tests and scalar norm pullbacks in the chosen annulus or supply the compact current with the stated normal first jets. |
+| E18 / SPIN-E02 | Removing regularization bounds the positive-mass locus with finite relative costs. Joint-zero energy can be transferred and charged in the original physical measure. | Establish a small sum of Ricci, relative-gradient and cutoff costs, and small uncovered energy on the same sequence. |
+| E22 / E24 | The weak modal equation is solved for arbitrary square-integrable forcing. The completed incoming graph is isometric to the data space. A single Hilbert-valued absolutely continuous representative gives both endpoint traces. Small fixed-domain perturbations preserve inversion. | Identify the model on the actual spin cylinder with its angular eigenbasis, geometric Sobolev norm and fixed trace maps. |
+| E30–E33 | Existing graph, jump, regular-mass and attenuation estimates retain their previous hypotheses. | Supply actual core fields, normalized pole shifts, four face traces where needed, and the same physical smooth source. |
+
+[Second verification return](handoffs/BOCHNER_AND_INVERSE_20261125.md) · [Derivation](../notes/ANNULAR_BOCHNER_AND_WEAK_INVERSE_20261125.md) · [Current continuation](../continuation-notes/AFTER_ANNULAR_BOCHNER_AND_WEAK_INVERSE_20261125.md)
 
 ## Setup evidence
 

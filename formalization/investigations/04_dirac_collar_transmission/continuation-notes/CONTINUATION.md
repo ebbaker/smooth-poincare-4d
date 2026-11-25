@@ -6,7 +6,7 @@
 
 ## Current continuation
 
-The weighted cover and the local spin-curvature analysis have been integrated. Use the [dated handoff and next proofs](AFTER_WEIGHTED_COVER_20261125.md). The original launch prompt follows.
+The current handoff follows the [annular Bochner estimate and weak incoming inverse](AFTER_ANNULAR_BOCHNER_AND_WEAK_INVERSE_20261125.md). The [first integration](AFTER_WEIGHTED_COVER_20261125.md) records the weighted cover and local curvature identity. The original launch prompt follows.
 
 ## Launch prompt
 

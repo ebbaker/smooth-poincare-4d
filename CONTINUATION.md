@@ -4,6 +4,7 @@ Setup date: 2026-11-21; navigation updated 2026-11-25, America/New_York. Prepare
 
 | Program | Destination | Next-session entry |
 | --- | --- | --- |
+| Master program | [Master investigation](papers/master/README.md) | [Program continuation](papers/master/continuation-notes/CONTINUATION.md) |
 | Direct investigation | [Chiral metric evolution](papers/investigations-1/01_chiral_metric_evolution/README.md) | [Continuation and author pause boundary](papers/investigations-1/01_chiral_metric_evolution/continuation-notes/CONTINUATION.md) |
 | Direct investigation | [Bach flow](papers/investigations-1/02_bach_flow/README.md) | [Continuation prompt](papers/investigations-1/02_bach_flow/continuation-notes/CONTINUATION.md) |
 | Shared twistor foundations | [First-order twistor constructions](papers/investigations-1/03_first_order_twistor/README.md) | [Shared-work prompt](papers/investigations-1/03_first_order_twistor/continuation-notes/CONTINUATION.md) |

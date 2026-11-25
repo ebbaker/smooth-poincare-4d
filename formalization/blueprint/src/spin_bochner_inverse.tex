@@ -1,0 +1,99 @@
+\subsection{The annular square and its integrated estimate}
+
+\begin{proposition}[Square of the covector-twisted Dirac operator]
+\label{prop:annular-spin-square}
+\uses{prop:supplied-normal-spin-defect}
+\lean{FirstOrderTwistor.metricNormalChartTwistedDiracSquare, FirstOrderTwistor.metricFrameTwistedCurvaturePotential_eq_scalar_add, FirstOrderTwistor.metricFrameTwistedCurvaturePotential_pairing_le_intrinsic, FirstOrderTwistor.annularCovariantHessian_commutator, FirstOrderTwistor.annularDiracSquare_eq_traceHessian_add_curvature}
+\leanok
+For a $C^2$ positive tensor-spinor $v$ in the supplied aligned normal spin
+chart of a smooth Riemannian four-metric, the square is
+\[
+ D^-D^+v=-\sum_i(\nabla^2 v)_{ii}+\mathcal Ev,\qquad
+ \mathcal E=\tfrac14\mathrm{Scal}_g+
+    \sum_{i<j}c^-(e_i)c^+(e_j)R^{T^*}_{ij}.
+\]
+The absolute curvature pairing is at most
+$96|\mathrm{Rm}_g|\,|v|^2$ for the four-index tensor norm.
+In arbitrary annular coordinates the same Hessian contraction uses $g^{ij}$.
+The coordinate formula takes the Clifford anticommutator, the raised-symbol
+connection equation, and the torsion-free tangent coefficients as inputs.
+\end{proposition}
+\begin{proof}
+\leanok
+Differentiate the tensor product connection in both covector slots.
+The second covariant derivatives split into their symmetric Clifford
+contraction and a commutator. The dual connection acts by negative
+transpose. Contract the spin curvature using Bianchi and the Ricci
+trace to obtain the scalar quarter. Estimate each of the six oriented
+Clifford pairs in the curvature pairing and identify the full frame
+norm with the intrinsic tensor norm.
+\end{proof}
+
+\begin{proposition}[Compact tests and relative regularization in the metric volume]
+\label{prop:annular-spin-regularization}
+\uses{prop:annular-spin-square,prop:spin-relative-bochner}
+\lean{FirstOrderTwistor.annularDirac_green, FirstOrderTwistor.annularWeightedGradient_divergence_eq_traceHessian, FirstOrderTwistor.annularMetric_rough_le, FirstOrderTwistor.annularMetric_weitzenbock_le, FirstOrderTwistor.annularCliffordFluxCompatible_of_leviCivita, FirstOrderTwistor.spinMetricAnnulus_unweighted, FirstOrderTwistor.metricHarmonicFamily_weylMass_le_hessian, FirstOrderTwistor.spinCoordinateRegularizedFamilyProduct_at_normalCenter, FirstOrderTwistor.metricNormalChartHarmonicBochnerValues, FirstOrderTwistor.spinMetricAnnulus_regularized, FirstOrderTwistor.spinRelativeBochner_bound_of_jointZero, FirstOrderTwistor.spinJointZero_physicalCutoffCost}
+\leanok
+On a measured annulus, suppose the harmonic family, local spin germs,
+curvature norms and compact test currents are realized in the physical
+metric as in the linked declarations. For $S=\sum_a|\psi_a|^2$,
+$Q=\sum_a|\nabla\psi_a|^2$ and every $\epsilon>0$, put
+$r_\epsilon=Q/(S+\epsilon)$. Then
+\[
+ \int\chi^2|W^+|^2\frac S{S+\epsilon}\,dV_g
+ \le 816\int\left(\chi^2|\mathrm{Ric}|^2\frac S{S+\epsilon}
+ +\chi^2|\mathrm{Rm}|r_\epsilon+\chi^2r_\epsilon^2+
+ |d\chi|^2r_\epsilon\right)dV_g .
+\]
+The right side uses the actual four-dimensional volume throughout.
+For finite relative costs and $Q=0$ almost everywhere on
+$\{S=0\}$ in the cutoff support, the limit bounds the weighted energy
+on $\{S>0\}$. A comparison with the original energy measure charges
+the remaining weighted energy on $\{S=0\}$ separately.
+\end{proposition}
+\begin{proof}
+\leanok
+Apply the metric divergence theorem to the compact current formed by
+pairing $\nabla_i v+c^-(e_i)D^+v$ with $v$. Equivalently, in a measured
+chart integrate the density-weighted Dirac and raised-gradient fluxes.
+This yields $\int|\nabla v|^2\le\int|D^+v|^2+
+96\int|\mathrm{Rm}|\,|v|^2$. Set $v=\chi\nabla\psi_a/\sqrt{S+\epsilon}$.
+Sum the exact Ricci forcing and the differentiated cutoff estimates.
+The two product terms have the same squared norm, and the
+projected alternation costs at most twice the squared Hessian.
+The coefficient from the regularized calculation is $48+8\cdot96$.
+The final restriction to the positive locus takes place after the
+compactly supported integration on the original patch.
+\end{proof}
+
+\begin{proposition}[Square-integrable incoming inverse in the spectral model]
+\label{prop:weak-spectral-incoming}
+\uses{prop:spin-mode-transmission}
+\lean{FirstOrderTwistor.forcedCylinderMode_memH1, FirstOrderTwistor.forcedCylinderMode_weak_energy_balance, FirstOrderTwistor.cylinderGraphIncomingEquiv, FirstOrderTwistor.cylinderSmoothSingleModes_dense, FirstOrderTwistor.cylinderSmoothGraph_norm_sq_comparison, FirstOrderTwistor.cylinderMode_twoTrace_le, FirstOrderTwistor.cylinderWeakSynthesis, FirstOrderTwistor.CylinderWeakModalSolution.continuousTrace_realization, FirstOrderTwistor.CylinderWeakModalSolution.realize, FirstOrderTwistor.CylinderWeakModalSolution.weak_derivative_of_realization, FirstOrderTwistor.cylinderGraphIncomingPerturbation}
+\leanok
+In a fixed signed spectral model on $[0,L]$, $L>0$, assume a
+countable Hilbert eigenbasis and the unit-round gap $|\lambda|\ge3/2$.
+Any square-summable family of $L^2$ forcing coefficients and incoming
+half-order traces has a unique modewise absolutely continuous solution.
+Its squared bulk first-order graph norm is at most $13/9$ times the
+sum of the forcing and incoming squared norms. The signed incoming
+map is an isometric isomorphism in the graph norm consisting of bulk
+derivative energy and the weighted outgoing trace. For $L\ge1$
+this norm and the bulk norm are uniformly equivalent.
+With fixed incoming projectors and a trace-preserving perturbation
+of norm $\delta<1$, the inverse norm is at most $1/(1-\delta)$
+in the isometric graph norm.
+\end{proposition}
+\begin{proof}
+\leanok
+Integrate the forcing from the left for positive modes and the right
+for negative modes. The integrating factor gives an absolutely
+continuous representative and its weak derivative. Integrating the reconstructed Hilbert-valued velocity from the left trace produces a single continuous representative. Every modal coefficient agrees on the closed interval, so both endpoint values agree there. The signed energy
+identity has the outgoing trace on the bulk side. Sum it and use
+the gap. Finite differentiable mode sums are dense in the completed
+graph, and continuous forcing is dense in the modal $L^2$ spaces.
+Use Parseval to synthesize the time and tangential derivatives in the
+supplied basis. A linear cutoff gives a two-ended trace inequality
+with explicit inverse-length term. Apply the Neumann bound to the
+completed incoming map.
+\end{proof}

@@ -1,0 +1,27 @@
+# Annular Bochner formula and spectral inverse · second Route 04 return
+
+25 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance. The author's lead selection is GPT-6.2 Astra at ultra. The serving lead variant and effort are unavailable. The six bounded helper sessions retain their explicitly selected GPT-6.2 Sol at ultra. [Previous integration](INTEGRATION_20261125.md) · [Live register](../REGISTER.md)
+
+## Sources and frozen requests
+
+The intake checkout was at `5ff7014caff55ad9cc49bb910b8e5fbcb546bd11` with the previous Route 04 integration in the working tree. The four working manuscript hashes and the two blueprint inputs at intake matched the previous integration receipt. MATCH-E11 SHA-256 is `e249e29f8b640ba63e7b31aed80a4ec0e539b3c3bf3ef657e792620930c5a9aa`; MATCH-E01 is `35a75f5e023e100db4e3f8cb4f94143311af8317a07ee2c0ca575850b1c66286`. No proof in this return imports the concurrently drafted master manuscript. Lean, Lake, the manifest and all ten installed dependency revisions matched the prior pins. The historical 192-declaration check is preserved separately.
+
+| Packet and owner | Frozen scope | Acceptance boundary |
+| --- | --- | --- |
+| E18o · Clifford helper | Compute the tensor-product commutator, expand the composed chiral Dirac operators and specialize to actual Levi–Civita curvature at the aligned normal center. | Preserve the dual covector sign, order of the two Clifford maps and all chart hypotheses. |
+| E18p · cover helper | Compactly supported Green formula on an open measured chart, volume transport, rough and Dirac pairings. | Derive integration by parts with compact flux; identify the remaining metric and spin coefficient conditions. |
+| E18q · normalization helper | Derive the regularized inequality from the unweighted inequality for a cutoff gradient, norm estimates and finite-family identities. | Fully quantify positive regularization, metric volume and finite integrals. |
+| E18r/s · strip helper | Bound the actual tensor-spin curvature potential in the full intrinsic Riemann norm; derive the weighted symbol and inverse-metric flux equations. | Exhibit a universal coefficient and distinguish the coordinate and library model bases. |
+| E22c · transmission helper | Construct an absolutely continuous signed solution for arbitrary square-integrable interval forcing. | Check the weak derivative, the prescribed incoming trace and uniqueness. |
+| E22d · graph helper | Extend the signed inverse to the Hilbert graph closure and square-summable modal data with the physical bulk graph weight. | Prove density/completion and specify which identification of the spin Sobolev space remains. |
+| E18t/E22e · lead | Bound the projected Hessian sharply, derive the compact current criterion on the physical Riemannian measure, and bound both endpoint traces from bulk energy. | Verify the first jets behind the current pairing and exhibit the explicit length dependence. |
+
+The geometric square uses the Clifford connection on the tensor product with the cotangent bundle. The curvature sign and Clifford order are determined using the repository's positive half-spin representation. For comparison, Melrose states the twisted formula for a Hermitian connection in Proposition 8.27, with his convention for Clifford contraction. [Melrose, §8.8](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/melrose.pdf)
+
+## Follow-on packets and scientific decisions
+
+- B04 retains both coordinate descriptions. A marked normal frame computes the signed curvature and intrinsic norm using genuine Levi–Civita coefficients. In an arbitrary annular coordinate chart the volume density and inverse metric enter the formal adjoints; the identities have to hold in that same chart. The fixed tangent basis used by the differential-geometry library can differ from the standard Euclidean coordinate basis.
+- B04 uses the exact modal graph consisting of the time derivative, the tangential derivative, and the outgoing half-order trace. The energy identity makes its norm equal to forcing plus incoming trace. A separate bulk estimate compares it with the usual first-order norm on long cylinders. For small positive lengths the trace estimate retains an inverse length.
+- E18u (normalization) computes both cutoff Leibniz errors and the cutoff-family jet in the normal spin trivialization. E18v (Clifford) removes the lower bound on mass while keeping the full patch for integration by parts. E18w/y (cover) transfers the chart estimates to the physical volume and inserts the arbitrary-coordinate square from E18x (Clifford). E18z (graph helper) studies derivative locality on simultaneous zeros. E18aa (strip helper) identifies the Clifford connection equation from chiral spin lifts. Each packet has its own module.
+- E22f (transmission) constructs the countable weak solutions, synthesizes the field, time derivative and tangential derivative in a supplied Hilbert basis, and studies the continuous endpoint representative. E24 (graph helper) applies the fixed-domain perturbation theorem to the actual inverse on the model graph. The [weak-forcing check](WEAK_FORCING_EXAMPLE.lean) uses an interior step and both signs, and tests the inverse-length term on a constant field.
+- During this work the checkout advanced to `fc60509a27f6b97f48e2619f9e6f0f6cd4eb36e2`. This commit records the first Route 04 integration. The manuscript and formalization source revisions were rechecked after the change.

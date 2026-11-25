@@ -11,7 +11,8 @@ import re
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-BRANCHES = ('investigations-1/01_chiral_metric_evolution',
+BRANCHES = ('master',
+            'investigations-1/01_chiral_metric_evolution',
             'investigations-1/02_bach_flow',
             'investigations-1/03_first_order_twistor',
             'investigations-1/03_first_order_twistor/01_sections_and_connections',

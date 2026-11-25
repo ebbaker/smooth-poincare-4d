@@ -1,0 +1,7 @@
+# SP4-MASTER-E02 · Quantile Chart
+
+25 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance. Lead decision at HEAD fc60509a27f6b97f48e2619f9e6f0f6cd4eb36e2. All upstream committed inputs below are at this commit unless a working revision is given. Frozen master working inputs (SHA-256 prefixes): main TeX a499b313e6d5, marked_cut 3f3722b56d34, first_order_splice f93717b0b73c, physical_volume 8ff80d4d42e5. Read AGENTS.md, master overview, plan, register, initial review and cited owning theorem before use. Bounded E execution, requested GPT-6.2 Sol/ultra. Sole writer of the named output. Lead owns all other files. Cite primary passages and give stable links and actual metadata where available. No chat registration by helpers.
+
+B03. Test the first-order cap on a measured quantile block of NECK-E11 and the exact physical mark of vol:smooth-balls. Fix a length before i; test whether normal or near-isometric ball coordinates suffice by quantitative estimates or an explicit smooth distorted gauge on the Euclidean model. Identify surviving gauge-independent alternatives and what full sides are controlled. Compare source weak:balanced and cap surcharges. Finite scope: chart implication or counterexample in a specified marking.
+
+Distinct output: `papers/master/notes/E02_QUANTILE_CHART.md`. Return after one derivation and verification, including negative results and remaining cases.

@@ -1,0 +1,388 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\Ric}{Ric}
+\DeclareMathOperator{\Rm}{Rm}
+\newcommand{\CP}{\mathbb{CP}}
+\title{Chiral Weyl energy and the smooth\\four-dimensional Poincar\'e conjecture}
+\author{Edward B. Baker III}
+\date{Working draft, 25 November 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+A positive Yamabe class with chiral Weyl energy below \(4\pi^2\)
+recognizes the standard smooth four-sphere. We study how a spherical
+cut could yield recognition in the larger range below \(8\pi^2\).
+On a hypothetical nonstandard smooth homotopy sphere, a nearly
+minimizing positive class can discard at most its excess above the
+infimum plus the cost of closing the retained piece. We prove the
+resulting obstruction to a cut separating two positive amounts of
+chiral energy and give a first-order metric criterion for the required
+caps. In the same range we locate disjoint smooth balls on the original
+manifold that carry almost all the volume and individually little full
+curvature. A one-sided replacement inequality identifies what would
+allow those balls to detect the smooth type. The existence of a
+subcritical starting class and of sufficiently inexpensive cuts or
+replacements on general smooth homotopy four-spheres remains open.
+\end{abstract}
+\section{Introduction}
+Isothermal coordinates provide a simple model for using geometry to
+recognize the smooth structure of a sphere. Every smooth Riemannian metric
+on an oriented real surface can be written locally as
+\[
+ g=e^{2u}(dx^2+dy^2)=e^{2u}|dz|^2,\qquad z=x+iy.
+\]
+Orientation-preserving transitions between these charts are holomorphic,
+so the metric determines a Riemann surface. If the underlying smooth
+surface is closed and homotopy equivalent to \(S^2\), it is orientable
+and simply connected. Uniformization then identifies this compact Riemann
+surface biholomorphically with \(\CP^1\); the resulting map is a
+diffeomorphism to the standard smooth two-sphere~\cite{Donaldson2011}.
+This gives a geometric proof of the two-dimensional smooth Poincar\'e
+statement. Isothermal coordinates supply the local conformal description,
+and uniformization supplies the global identification.
+
+In three dimensions, the analogous statement is that every closed smooth
+three-manifold homotopy equivalent to \(S^3\) is diffeomorphic to the
+standard three-sphere. Hamilton's approach replaces conformal coordinates
+by a geometric heat equation, the Ricci flow,
+\[
+ \partial_t g=-2\Ric(g).
+\]
+After fixing the diffeomorphism freedom, this is a nonlinear parabolic
+evolution of the metric. Hamilton proved that in dimension three the
+volume-normalized flow starting from strictly positive Ricci curvature
+converges to a metric of constant positive sectional
+curvature~\cite{Hamilton1982}. General initial metrics can develop
+singularities, so the broader program required both their analysis and
+a way to continue the evolution. Perelman's entropy and noncollapsing
+estimates supplied decisive control of singularity models~\cite{Perelman2002}.
+His construction of Ricci flow with surgery removes appropriate neck
+regions and replaces them by controlled caps~\cite{Perelman2003Surgery}.
+For a homotopy three-sphere, finite-time extinction together with the
+topology of these surgeries yields the smooth identification with
+\(S^3\)~\cite{Perelman2003Extinction}. The lesson for higher dimensions is
+that a local smoothing equation must be accompanied by global control of
+degeneration and its topological consequences.
+
+In higher dimensions, Smale's handle-cancellation methods, underlying
+$h$-cobordism theory, show that every closed smooth homotopy $n$-sphere
+with $n\geq5$ is homeomorphic to $S^n$~\cite{Smale1961}.
+Milnor's exotic seven-spheres show that the same topological sphere can
+admit distinct smooth structures~\cite{Milnor1956}.
+Dimension four lies outside the range of these smooth handle-cancellation
+arguments. Freedman proved that every closed topological homotopy
+four-sphere is homeomorphic to \(S^4\)~\cite{Freedman1982}. The smooth
+four-dimensional Poincar\'e conjecture asks whether every closed smooth
+homotopy four-sphere is diffeomorphic to the standard \(S^4\). This remains
+open. Major approaches include handle calculus and surgery descriptions
+that seek to simplify homotopy
+spheres, and knot-theoretic obstructions that could distinguish a candidate
+exotic sphere~\cite{FreedmanGompfMorrisonWalker2010}.
+Geometric approaches seek a distinguished metric or connection
+whose existence would force the standard smooth structure. The present
+work pursues this direction, with anti-self-dual (ASD) conformal geometry
+as a possible target. Fine~\cite{Fine2011} introduced a gradient flow for
+definite \(SO(3)\) connections aimed at producing ASD Einstein metrics of
+nonzero scalar curvature. This offers a concrete
+four-dimensional evolution framework; its application to the smooth
+Poincar\'e problem would still require suitable initial connections on
+arbitrary homotopy spheres and global control of the flow.
+
+The special geometry of four dimensions explains the appeal of these
+variables. Unlike a surface metric, a general four-dimensional metric has
+Weyl curvature that cannot be removed by conformal rescaling or a change
+of coordinates. At the same time, on an oriented Riemannian four-manifold
+the Hodge star satisfies \(*^2=1\) on real two-forms, producing two real
+rank-three bundles,
+\[
+ \Lambda^2T^*M=\Lambda_g^+\oplus\Lambda_g^-.
+\]
+Atiyah, Hitchin, and Singer~\cite{AHS1978} used this chiral splitting to
+connect conformal geometry and gauge fields. In our orientation convention,
+their twistor integrability criterion says that \(W^+=0\) precisely when
+the natural almost complex
+structure on the sphere bundle \(S(\Lambda_g^+)\) is integrable.
+The resulting complex threefold encodes a real four-dimensional conformal
+geometry through a family of projective lines. Penrose's nonlinear-graviton
+construction supplies the corresponding
+holomorphic picture and, with additional data, its Ricci-flat
+specialization~\cite{Penrose1976}. These are four-dimensional analogues of
+the relation between conformal geometry and complex analysis on surfaces,
+with a curvature integrability condition in place of an automatic local
+complex structure.
+
+Gauge theory provides a complementary reason to work with connections.
+Donaldson invariants extract information about smooth four-manifolds from
+moduli spaces of anti-self-dual gauge connections~\cite{DonaldsonKronheimer1990}.
+Their success motivates the use of gauge fields in smooth topology,
+although it does not settle the
+homotopy-sphere case, where the second cohomology vanishes. Twistor methods
+also reach beyond the self-dual sector. Witten~\cite{Witten1978} describes
+the full classical Yang--Mills equations using holomorphic bundles on the
+space of complex null lines, with specified triviality and third-order
+formal extension conditions. This is a local
+complex flat-spacetime correspondence, not an existence theorem for curved
+Riemannian four-manifolds. Together these ideas motivate generalized
+coordinate descriptions in which maps depend on both a point and a chiral
+direction, and curvature is carried by connection data. For a flat-space
+precursor based on generalized conformal maps acting on Yang--Mills fields,
+see~\cite{Baker2023} and references therein.
+
+The variational argument below uses curvature on the original smooth
+manifold. Its starting observation is that the strict sphere theorem
+tests a single positive conformal class. A sphere separating two pieces
+with combined capped energy below twice the recognition threshold must
+leave at least one piece below that threshold. If that piece is
+standard, the other retains the original smooth type. Minimizing the
+energy on this \emph{fixed} smooth type then bounds the energy one can
+discard by cutting.
+
+Two measures enter this argument. The Yamabe equation allows one to
+locate smooth balls supporting physical volume. The energy minimized
+by the cutting argument measures chiral Weyl curvature. We derive
+estimates for both and formulate the remaining comparison on the same
+marked regions of the manifold.
+
+\section{The two energy thresholds}\label{sec:thresholds}
+
+Let \(M\) be a smooth closed connected oriented manifold homotopy
+equivalent to \(S^4\). Then \(\pi_1(M)=0\), \(\chi(M)=2\) and
+\(\tau(M)=0\). All metrics are Riemannian. We take the curvature
+operator of the unit round sphere to be the identity on real two-forms.
+For measurable \(U\subset M\) put
+\[
+ E_\pm(g;U)=\int_U |W^\pm_g|_{\mathrm{HS}}^2\,dV_g,\qquad
+ E_\pm(g)=E_\pm(g;M),\qquad T=4\pi^2 .
+\]
+Here \(W^\pm\) are the Weyl blocks on \(\Lambda^\pm\). Summing over
+ordered tensor indices counts each antisymmetric pair twice. Thus
+\(|W|_{\mathrm{tens}}^2=4(|W^+|_{\mathrm{HS}}^2+|W^-|_{\mathrm{HS}}^2)\).
+The signature formula gives
+\[
+ E_+(g)-E_-(g)=12\pi^2\tau(M)=0
+\]
+on the closed manifold \cite{Hirzebruch1971Signature}.
+Hence the total four-index Weyl integral is \(8E_+(g)\).
+On a region with boundary one retains the sum of the two blocks.
+
+For a conformal class \([g]\), write
+\begin{equation}\label{eq:yamabe}
+ Q_g(f)=\int_M(6|df|^2+s_g f^2)\,dV_g,\qquad
+ Y([g])=\inf_{0\ne f\in H^1(M)}\frac{Q_g(f)}{\|f\|_{L^4(g)}^2}.
+\end{equation}
+The change \(g\mapsto u^2g\) takes \(Q_{u^2g}(f)\) to \(Q_g(uf)\).
+It preserves the chiral Weyl measures as well: the Weyl operator
+scales by \(u^{-2}\) and the four-dimensional volume by \(u^4\).
+A positive class has a smooth volume-one minimizing representative
+with constant scalar curvature \(Y([g])\). Its value is bounded above
+by the round value \(S=8\sqrt6\,\pi\)
+\cite{Schoen1984Yamabe,LeeParker1987Yamabe}.
+
+\begin{proposition}[Recognition]\label{prop:recognition}
+If \(Y([g])>0\) and \(E_+(g)\le T\), then \(M\) is diffeomorphic to
+the standard \(S^4\). Independently of the sign of \(Y([g])\), the
+condition \(W^+=0\) identifies the conformal class with the round class.
+\end{proposition}
+\begin{proof}
+In the strict case the full Weyl integral is less than
+\(8T=16\pi^2\chi(M)\). The sphere theorem of Chang, Gursky and Yang
+gives \(S^4\) or \(\mathbb{RP}^4\), and simple connectivity selects
+\(S^4\). At equality their classification on the remaining smooth types
+gives the Fubini--Study case or a manifold covered by the round product
+\(S^3\times S^1\). The former has nonzero second homology. The latter
+cannot be simply connected, since a connected covering of a simply
+connected manifold is trivial
+\cite[Theorems A and B, Remark 2]{ChangGurskyYang2003}.
+If \(W^+=0\), the signature identity and smoothness imply \(W^-=0\).
+The conformal structure is then locally flat. The conformal developing
+map of the simply connected \(M\) is a local diffeomorphism to \(S^4\).
+Compactness makes it a covering and hence a diffeomorphism
+\cite{Kuiper1949}.
+\end{proof}
+
+Define
+\[
+ I^+(M)=\inf\{E_+(g):g\text{ smooth},\quad Y([g])>0\},
+ \qquad \inf\varnothing=+\infty .
+\]
+The round class has zero energy. Conversely \(I^+(M)<T\) supplies a
+competitor below \(T\), so \(M\) is standard and \(I^+(M)=0\).
+Our weaker entry hypothesis is \(I^+(M)<2T\), equivalently the
+existence of one positive class with energy strictly below \(2T\).
+On a nonstandard candidate in this range,
+\begin{equation}\label{eq:band}
+ T\le I^+(M)<2T,\qquad E_+(g)>T\quad\text{for every positive class}.
+\end{equation}
+Recognition leaves open \(I^+(M)=T\), in which case the infimum is unattained. Choose positive
+classes approaching the infimum and in each choose a smooth
+volume-one Yamabe minimizer \(g_i\). Their chiral energies \(e_i=E_+(g_i)\)
+are unchanged by this choice. For a fixed \(\delta>0\) and all
+sufficiently large \(i\), we have \(e_i\le2T-\delta\). Thus \(g_i\)
+solves a Yamabe minimization exactly within its class, while its chiral
+energy approaches \(I^+(M)\) as the class varies.
+
+\begin{lemma}[Physical curvature budget]\label{lem:budget}
+For these representatives write \(Y_i=Y([g_i])\) and
+\(D_i=\int_M|\Ric_{0,g_i}|^2\,dV_{g_i}\). Then
+\begin{equation}\label{eq:budgets}
+\begin{gathered}
+ D_i=4e_i+\frac{Y_i^2}{12}-32\pi^2,\qquad
+ \sqrt{48\delta}\le Y_i\le S,\\
+ \int_M|\Rm_{g_i}|_{\mathrm{tens}}^2\,dV_{g_i}
+   =16e_i+\frac{Y_i^2}{3}-64\pi^2 .
+\end{gathered}
+\end{equation}
+With \(A=(\Ric-sg/6)/2\) the Schouten tensor,
+\begin{equation}\label{eq:schouten}
+ 4\int_M\sigma_2(g_i^{-1}A_{g_i})\,dV_{g_i}=16\pi^2-2e_i>0 .
+\end{equation}
+\end{lemma}
+\begin{proof}
+Chern--Gauss--Bonnet, with the Weyl norm already converted, reads
+\[
+ 16\pi^2=2e_i-\tfrac12D_i+\tfrac1{24}Y_i^2 .
+\]
+The scalar curvature is constant and the physical volume equals one.
+Solving for \(D_i\), using \(D_i\ge0\), and taking the positive square
+root proves the first two estimates. The orthogonal decomposition
+\(|\Rm|_{\mathrm{tens}}^2=|W|_{\mathrm{tens}}^2+2|\Ric_0|^2+s^2/6\)
+then gives the last identity in \eqref{eq:budgets}.
+Finally \(\sigma_2(A)=s^2/96-|\Ric_0|^2/8\), giving
+\eqref{eq:schouten} \cite[eq.~(0.4)]{ChangGurskyYang2003}.
+\end{proof}
+
+\input{marked_cut}
+\input{first_order_splice}
+\input{physical_volume}
+
+\section{What a volume-bearing family would have to control}
+\label{sec:replacement}
+
+For a smoothly parametrized standard ball there is a shorter comparison.
+An orientation-compatible replacement with its boundary parametrization
+fixed produces a metric on the same smooth \(M\): remove the interior
+of the parametrized disk and glue a copy of that disk by the inverse
+marking, using collars to smooth the identification. This observation
+requires no recognition theorem for the complementary manifold.
+
+\begin{proposition}[One-sided replacement]\label{prop:replacement}
+Let \(g_i\) be positive classes on a fixed oriented \(M\), with
+\(e_i\to I^+(M)<\infty\). On the \(i\)-th source let
+\(B_{ij}\), \(1\le j\le N_i\), be disjoint smoothly marked closed
+standard four-balls, and put \(m_{ij}=E_+(g_i;B_{ij})\).
+For each \(j\), suppose that replacing this one ball with its
+parametrization fixed gives a smooth positive Yamabe class on \(M\)
+whose total energy is at most \(e_i-m_{ij}+\gamma_{ij}\),
+where \(\gamma_{ij}\ge0\) includes the full net exterior splice and
+cap cost relative to the raw exterior. Then
+\begin{equation}\label{eq:replacement}
+ \sum_{j=1}^{N_i}m_{ij}
+ \le N_i\bigl(e_i-I^+(M)\bigr)+\sum_{j=1}^{N_i}\gamma_{ij}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Each singly repaired metric is an admissible competitor on \(M\).
+Thus \(I^+(M)\le e_i-m_{ij}+\gamma_{ij}\) for every \(j\).
+Sum these inequalities. Each comparison tests one competitor, so the
+repairs can be made independently.
+\end{proof}
+
+For a sequence in the band \eqref{eq:band}, write
+\(\mu_i=dV_{g_i}\) and \(\lambda_i=|W^+_{g_i}|_{\rm HS}^2dV_{g_i}\).
+Consider the following uniform absolute continuity condition:
+\begin{equation}\label{eq:ac}
+ \omega(a):=\limsup_{i\to\infty}
+    \sup_{\mu_i(U)\le a}\lambda_i(U)\longrightarrow0
+   \quad (a\downarrow0),
+\end{equation}
+where \(U\) ranges over measurable sets. For example a uniform
+physical \(L^{2+\alpha}\) bound on \(W^+\), with \(\alpha>0\), gives
+\(\omega(a)\le C a^{\alpha/(2+\alpha)}\) by H\"older. The critical
+integral bound in \eqref{eq:budgets} alone gives no such modulus.
+
+\begin{corollary}\label{cor:vol-reduction}
+Let \(M\) admit a positive class with \(E_+<2T\) and choose a
+positive-class minimizing sequence of volume-one Yamabe representatives.
+Suppose that for each sufficiently small fixed \(\epsilon>0\) a
+subsequence has a family as in Theorem~\ref{thm:volume-balls}
+covering at least \(1-\epsilon\) of the physical volume and admitting
+the one-sided repairs of Proposition~\ref{prop:replacement}. Assume
+\(\limsup_i\sum_j\gamma_{ij}\le b(\epsilon)\) on this subsequence,
+where \(b(\epsilon)\to0\). If \eqref{eq:ac} holds for the chosen
+sequence, \(M\) is standard.
+\end{corollary}
+\begin{proof}
+Argue on a nonstandard candidate. Fix \(\epsilon\) and any positive
+individual curvature tolerance for the ball theorem. The numbers
+\(N_i\) stay bounded on the selected subsequence. Use
+\eqref{eq:replacement} on the union and \eqref{eq:ac} on its
+complement. The smooth boundaries have zero curvature measure.
+Taking \(i\to\infty\) gives
+\[
+ I^+(M)=\lim_i e_i\le b(\epsilon)+\omega(\epsilon).
+\]
+Let \(\epsilon\downarrow0\). This contradicts \eqref{eq:band}.
+The subsequences may depend on \(\epsilon\) because their energy
+limits all equal the same infimum.
+\end{proof}
+
+\section{Outstanding geometric questions}\label{sec:open}
+
+The first question is whether every smooth homotopy four-sphere
+admits a positive Yamabe class of energy below \(8\pi^2\).
+This would put every hypothetical counterexample in the band of
+\eqref{eq:band}. A positive class with \(E_+\le4\pi^2\) would
+already settle its smooth type.
+
+Once in the band it suffices, on each hypothetical nonstandard
+\(M\), to find \emph{one} positive-class minimizing sequence and a
+subsequence with a buffered cut satisfying Corollary~\ref{weak:balanced}.
+Its two raw sides must carry uniformly positive chiral energy, with
+positive capped Yamabe classes and vanishing cap excess. Theorem~\ref{thm:cut}
+and its first-order version then rule out that \(M\).
+Theorem~\ref{thm:volume-balls} locates smooth balls in the original
+source. Their construction uses the positive-Ricci distance, whereas
+the splice depends on first derivatives in an actual buffer. Their
+physical volume can be appreciable while their chiral energy is tiny.
+Corollary~\ref{cor:vol-reduction} gives a different sufficient condition
+when curvature on sets of small physical volume can also be controlled.
+If this control fails, an extraction argument must account for the
+curvature carried by those sets.
+
+A minimizing sequence could instead approach a smooth nonround
+closed minimizer. At an attained minimum, positive Yamabe sign is open
+under smooth variations. The first variation of chiral energy is a
+nonzero constant times the pairing with the Bach tensor, so the metric
+is Bach-flat \cite[\S3]{ChangGurskyYang2003}. A smooth limit can
+carry all the limiting energy. Classifying such a minimizer or
+constructing a variation that strictly lowers its energy on the same
+smooth manifold remains an independent problem. A sequence selected
+solely by its energy has no Bach error estimate in the argument above.
+An appeal to fourth-order compactness would require a selection theorem
+in the norm used by that compactness argument.
+
+\section*{Disclosure of language-model assistance}
+The research underlying this manuscript used large language models from
+OpenAI (Astra and Sol) and Anthropic (Claude Fable and Claude Opus).
+Their contributions across the research program included exploring
+proof strategies, drafting derivations, checking arguments and editing
+text. OpenAI models assisted in preparing this manuscript. Responsibility
+for its mathematical claims rests with the author.
+
+\bibliographystyle{unsrturl}
+\bibliography{references}
+\end{document}

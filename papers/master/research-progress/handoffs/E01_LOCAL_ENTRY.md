@@ -1,0 +1,7 @@
+# SP4-MASTER-E01 · Local Entry
+
+25 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance. Lead decision at HEAD fc60509a27f6b97f48e2619f9e6f0f6cd4eb36e2. All upstream committed inputs below are at this commit unless a working revision is given. Frozen master working inputs (SHA-256 prefixes): main TeX a499b313e6d5, marked_cut 3f3722b56d34, first_order_splice f93717b0b73c, physical_volume 8ff80d4d42e5. Read AGENTS.md, master overview, plan, register, initial review and cited owning theorem before use. Bounded E execution, requested GPT-6.2 Sol/ultra. Sole writer of the named output. Lead owns all other files. Cite primary passages and give stable links and actual metadata where available. No chat registration by helpers.
+
+B02. On an arbitrary smooth M choose a smooth seed h, introduce an exactly flat ball by a normal-coordinate cutoff at scale r, then insert a conformally round bulb or long round neck on that marked ball. Compute the two transition energies and Yamabe signs/continuity as r shrinks, including seeds of either sign and the scalar-flat endpoint. Test whether this geometry can create entry or strict gain independent of the seed. If only preservation follows, prove the sharp scope and identify an independent seed condition. Finite scope: this family, with explicit cutoff and blow-up estimates, no global chart.
+
+Distinct output: `papers/master/notes/E01_LOCAL_ENTRY.md`. Return after one derivation and verification, including negative results and remaining cases.

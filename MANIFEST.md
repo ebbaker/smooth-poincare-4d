@@ -2,6 +2,7 @@
 
 | Location | Contents |
 | --- | --- |
+| [papers/master](papers/master/README.md) | Program manuscript, overview, proof plan and master progress register |
 | papers/investigations-1/01_chiral_metric_evolution | Sphere manuscript and two existing Riemannian exploration notes; new overview, plan, register, and continuation |
 | papers/investigations-1/02_bach_flow | Bach-flow introduction, brainstorm note, shared reference links, and research scaffold |
 | [papers/investigations-1/03_first_order_twistor](papers/investigations-1/03_first_order_twistor/README.md) | Shared first-order manuscript, CME foundation cross-references, overview/plan/shared register, preparation notes and input/task crosswalk |

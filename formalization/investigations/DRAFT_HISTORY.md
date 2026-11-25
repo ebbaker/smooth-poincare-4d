@@ -6,3 +6,5 @@
 
 - **25 November 2026 · Route 02 activated.** Integrated the shared `FirstOrderTwistor` Lake target, the E02a frame normalization and measured comparison/cover interfaces for B01/B05. [Route 02 integration](02_neck_energy_accounting/research-progress/handoffs/INTEGRATION_20261125.md)
 - **25 November 2026 · Route 04 activated.** Proved the varying-floor cover and the conditional energy identity from local differentiated spinor bounds. [Route 04 proofs and limits](04_dirac_collar_transmission/reviews/TRANSMISSION_AND_RESIDUAL_20261125.md) · [Route 02 interface](02_neck_energy_accounting/research-progress/handoffs/INCOMING_ROUTE04_20261125.md)
+
+- **25 November 2026 · Route 04 annular and weak-inverse results.** Obtained the integrated curvature estimate from compact metric tests and constructed the weak signed inverse in the fixed spectral model. [Second integration](04_dirac_collar_transmission/research-progress/handoffs/BOCHNER_AND_INVERSE_20261125.md)
