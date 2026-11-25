@@ -15,3 +15,7 @@ Exact extraction, weak-sequence counterexample and a closed critical alternative
 Single puncture carries the original nonstandard smooth type and the full limiting energy in the minimizing regime. [Derivation](notes/E19_ROUND_BASE_SINGLE_PUNCTURE_20261125.md).
 
 One Euclidean end and an exact lower bound for the residual. A nonround minimizing base recovers physical scale. [Derivation](notes/E20_GREEN_LIMIT_RICCI_BUDGET_20261125.md).
+
+## 25 November 2026 · third joint collar session
+
+E21–E23. Perturbed cuts, the Cotton obstruction and the quantitative smoothing comparison have been assessed. A regular-point source marking is available; turning it into a weak cut separating the complete chiral quantiles is open. [Decision](brainstorm/notes/THIRD_COLLAR_DECISIONS_20261125.md) · [Joint assessment](../../reviews/THIRD_COLLAR_ASSESSMENT_20261125.md).

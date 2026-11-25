@@ -8,7 +8,7 @@
 
 **SP4-FORM-FOT-E01 · Finite accounting with a strict residual.** Use a finite index set $J$, base energy $b$, bubble energies $x_j$, and limiting energy $e$. The gaps and equality are inputs to this algebraic task. The proof should also work for an empty family and for additional zero-energy indices. Check why strict residual is needed by allowing one positive bubble to carry all the energy. The proposed public name is `SectionsAndConnections.noPositiveBubbleOfFiniteAccounting` in `formalization/SectionsAndConnections/FiniteAccounting.lean`. Blueprint proposal `lem:finite-bubble-accounting` corresponds to SEC `msgap:strict`, `msgap:accounting` and §15. [Original E01 statement](../../research-plan/01_PLAN.md#first-bounded-proof) · [Manuscript implication](../../../../papers/investigations-1/03_first_order_twistor/01_sections_and_connections/manuscript/twistor_sections_and_chiral_weyl_curvature.tex#L6520)
 
-The following type elaborates with the pinned imports. Proof and public declaration are pending.
+The following type was frozen at setup. The public proof and the [checked edge cases](../research-progress/handoffs/E01_RETURN.md) were integrated on 25 November. The [live register](../research-progress/REGISTER.md) tracks the subsequent geometric sublemmas.
 
 ~~~lean
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic

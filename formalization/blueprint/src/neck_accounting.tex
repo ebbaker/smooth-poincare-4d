@@ -55,7 +55,7 @@ all bounded by $Q$. Suppose $e\le8\pi^2-\delta$, $\delta>0$,
 $e_+,e_-\ge0$, and
 \[
  (8\pi^2-e)+(e_++e_-)/2+4\pi^2(k-2+\textstyle\sum_j1/q_j)
- \le 8\pi^2/Q.
+ \le y^2/48\le 8\pi^2/Q.
 \]
 Then $k=1$. If both chiral energies belong to $[0,8\pi^2-\delta]$,
 the $Q_8$ signature defect $|e_+-e_-|=9\pi^2$ is impossible.
@@ -87,6 +87,59 @@ integrable majorant.
 Transport measure by the embedding and use the formula for integration
 against a measure with density. Apply the finite-volume uniform bound
 or dominated convergence to the finite sum of squares.
+\end{proof}
+
+\begin{lemma}[Compatibility of the physical self-dual frame coefficients]
+\label{lem:compression-reconstruction}
+\lean{FirstOrderTwistor.selfDualCurvatureBlock_chiralFrameTensor, FirstOrderTwistor.traceFreeChiralBlock_chiralFrameTensor, FirstOrderTwistor.hilbertSchmidtSq_traceFreeSelfDualBlock_le_frameTensorNormSq}
+\leanok
+Compress the four-slot tensor reconstructed from the two chiral matrices
+in the ordered pairs $(01,02,03)$ and $(23,31,12)$ onto the normalized
+self-dual sums. The result equals the supplied positive block entry by
+entry. Removing its scalar trace preserves a trace-free positive block. For any
+four-slot array $R$ the squared Hilbert--Schmidt norm of its trace-free
+self-dual compression is at most $\sum_{abcd}R_{abcd}^2$.
+\end{lemma}
+\begin{proof}
+\leanok
+The four entries in the compression are two copies of the half-sum
+and two copies of the half-difference in the same row and column.
+Their sum divided by two is the positive entry. For the general bound
+apply Cauchy--Schwarz to each four-term compression. The nine groups of
+ordered coefficients are disjoint, and removing the scalar trace decreases
+the squared norm.
+\end{proof}
+
+\begin{theorem}[Physical chiral energy on a fixed compact domain]
+\label{thm:physical-compact-energy}
+\uses{lem:fixed-domain-density}
+\lean{FirstOrderTwistor.tendsto_metricCurvatureFrameTensor_of_metricCPConvergence, FirstOrderTwistor.tendsto_geometricChiralBlock, FirstOrderTwistor.orthonormalFrameFromReferenceAt, FirstOrderTwistor.tendsto_orthonormalFrameFromReferenceAt, FirstOrderTwistor.tendsto_riemannianVolumeDensity_of_metricCPConvergenceOn, FirstOrderTwistor.tendsto_geometricChiralIntegral_of_framedCurvature, FirstOrderTwistor.tendsto_geometricChiralIntegral_of_metricCPConvergence}
+\leanok
+On a Hausdorff, $\sigma$-compact smooth oriented Riemannian four-manifold
+without boundary, let $K$ be compact. Suppose $g_i\to g$ on $K$ in the intrinsic metric two-jet norm.
+At each point choose a positive $g$-orthonormal frame. Orthonormalize it
+for $g_i$ in that order and use the resulting frames for the self-dual
+curvature blocks. Fix a smooth reference volume $dV_q$. Assume that
+the densities $(dV_{g_i}/dV_q)|W^+_{g_i}|_{\mathrm{HS}}^2$ are
+measurable up to $dV_q$-null sets on $K$, and that the full four-slot
+curvature squares weighted by $dV_{g_i}/dV_q$ have a common integrable
+majorant there. Then
+\[
+ \lim_i\int_K |W^+_{g_i}|_{\mathrm{HS}}^2\,dV_{g_i}
+       =\int_K |W^+_g|_{\mathrm{HS}}^2\,dV_g.
+\]
+\end{theorem}
+\begin{proof}
+\leanok
+The metric Gram entries converge in the limiting frame. Positive
+Gram--Schmidt normalizations preserve its orientation and converge to it.
+Expand each moving curvature slot in the limiting basis and use the
+two-jet estimate for the full lowered Riemann tensor. The self-dual
+compression and trace removal preserve entrywise convergence. The
+Riemannian volume ratio converges by the Gram determinant formula.
+The squared norm of the trace-free compression is bounded by the full
+four-slot square. Apply dominated convergence in $dV_q$ and change back to the respective
+metric volumes.
 \end{proof}
 
 \begin{lemma}[The mass of the complement]
@@ -143,7 +196,7 @@ With one distinguished base and the band and gap hypotheses of
 Lemma~\ref{lem:finite-bubble-accounting}, the covered-remainder hypotheses
 give zero mass for every bubble and $e=e_0$ if each positive bubble has
 strict residual. For the same conclusion it suffices to supply the
-limiting Euler identity, $4e_j\le D$, and
+limiting Euler identity, $4e_j\le D$ for every bubble, and
 $0\le y\le\widehat Y_j<Y_{\rm rd}$ for each positive bubble.
 \end{corollary}
 \begin{proof}
@@ -191,4 +244,145 @@ Choose the largest $m\le i$ for which the tests through $m$ pass.
 For each fixed $m$ this prefix eventually passes. Compare at the
 selected endpoint and then exhaust the inner tail. Energy up to a
 different prescribed outer scale requires a separate estimate.
+\end{proof}
+
+\subsection{From framed curvature and Riemannian volume to the strip costs}
+
+\begin{lemma}[Full and chiral energy on one region]
+\label{lem:frame-energy-accounting}
+\lean{FirstOrderTwistor.frameTensorNormSq_eq_four_chiral, FirstOrderTwistor.frameTensorIntegral_eq_four_chiral, FirstOrderTwistor.positiveChiralMass_le_quarterFrame}
+\leanok
+In an oriented orthonormal coframe put $u=(01,02,03)$ and
+$v=(23,31,12)$ for the six basis two-forms. For blocks $P,N$ in the
+normalized bases $(u\pm v)/\sqrt2$, the reconstructed tensor satisfies
+\[
+ \sum_{a,b,c,d}W_{abcd}^2=4(\|P\|_{\rm HS}^2+\|N\|_{\rm HS}^2).
+\]
+On a measurable strip, assume its physical positive density agrees
+almost everywhere with $\|P\|_{\rm HS}^2$ and both block densities
+are integrable there. Its positive mass is bounded by one quarter
+of the reconstructed full tensor integral.
+\end{lemma}
+\begin{proof}
+\leanok
+In the skew-pair basis the diagonal submatrices are $(P+N)/2$
+and the off-diagonal submatrices are $(P-N)/2$. Counting the
+two orders of each exterior pair gives the factor four. Integrate
+the identity using nonnegativity of the other block.
+\end{proof}
+
+\begin{lemma}[Volume transport on a Riemannian truncation]
+\label{lem:volume-on-truncation}
+\lean{FirstOrderTwistor.riemannianVolume_comap_of_partialDiffeomorph, FirstOrderTwistor.riemannianVolume_transport_of_compact_partialDiffeomorph, FirstOrderTwistor.riemannianVolume_transport_of_compact_referenceMetric}
+\leanok
+On the smooth, Hausdorff, sigma-compact, boundaryless Riemannian
+manifolds of the pinned volume theorem, let a smooth partial
+diffeomorphism pull the target metric back to the given domain
+metric on an open neighborhood of a measurable truncation $A$.
+The restriction to $A$ is a measurable embedding; its pullback
+target volume is the domain volume transported to the subtype $A$.
+For compact $A$ and a smooth reference metric $q$, its induced volume
+on $A$ is finite. The Riemannian volume density of the pullback metric
+relative to $q$ supplies the Jacobian in the fixed-truncation comparison.
+\end{lemma}
+\begin{proof}
+\leanok
+Apply change of variables for the partial diffeomorphism to measurable
+subsets of the truncation. Determine the two measures by their values
+on these sets. Restrict the volume-density formula for the pair of
+metrics to $A$ and use finiteness of Riemannian volume on compact sets.
+\end{proof}
+
+\begin{proposition}[Accounting from measured comparison embeddings]
+\label{prop:accounting-on-embeddings}
+\uses{lem:fixed-domain-density,lem:source-remainder-split,lem:frame-energy-accounting,thm:covered-measure-accounting}
+\lean{FirstOrderTwistor.FixedTruncationComparison.tendsto_imageMass, FirstOrderTwistor.TruncationFamily.ofEnergyComparisons, FirstOrderTwistor.energyIdentityOfFullWeylStrips}
+\leanok
+For each fixed domain, give embeddings in its component and the
+source sequence, their volume Jacobians relative to a common finite
+reference volume, and uniform convergence of the two Jacobian-weighted
+densities. Assume the model ranges increase and exhaust up to null
+sets and the source ranges are eventually pairwise disjoint up to
+null sets at fixed truncation. These data construct the comparison
+family in Theorem~\ref{thm:covered-measure-accounting}.
+On a fixed finite cover of the remainder by strips up to a leftover
+set, the energy identity follows if the full tensor cost on each
+strip tends to zero in the iterated sense and the positive chiral mass
+of the leftover does likewise. The frames of
+Lemma~\ref{lem:frame-energy-accounting} may vary from strip to strip.
+\end{proposition}
+\begin{proof}
+\uses{lem:fixed-domain-density,lem:frame-energy-accounting,thm:covered-measure-accounting}
+\leanok
+Transport both densities to the same fixed domain to compare the image
+masses. Apply the quarter bound on each strip and sum its costs over
+the finite index set before taking the two limits.
+\end{proof}
+
+\begin{lemma}[Integral consequence of the intrinsic flux identity]
+\label{lem:integral-intrinsic-flux}
+\lean{FirstOrderTwistor.weightedEnergy_le_of_intrinsicFlux}
+\leanok
+On the protected region, let $E=-8\int b+4\int w$ be the weighted
+energy from the integrated flux identity of \S14. Suppose
+$|b|\le\Lambda |B|$, $|w|\le |W|(H+2D)$ there, where $H,D,|W|$
+are nonnegative and square integrable, $|B|$ is integrable, and
+the contraction integrands are measurable and the weighted energy density is integrable. Then
+\[
+ E\le8\Lambda\int |B|+4\|W\|_2(\|H\|_2+2\|D\|_2).
+\]
+In the geometric application $H$ and $D$ are the weighted norms of the
+conformal Killing defect and its differentiated term in \S14.4.
+\end{lemma}
+\begin{proof}
+\leanok
+Take the upper bound of each signed integral. Apply
+Cauchy--Schwarz separately to $\int |W|H$ and $\int |W|D$.
+\end{proof}
+
+\begin{lemma}[Buffered interpolation in Euclidean dimension four]
+\label{lem:buffered-euclidean-interpolation}
+\lean{FirstOrderTwistor.bufferedInterpolation}
+\leanok
+Let $\eta\ge0$ be a compactly supported $C^1$ function on $\mathbb R^4$.
+Let $u$ have finitely many real components, each $C^2$ on the support
+of $\eta$ in the sense of local jets, and $|u|\le U$ there, $U\ge0$.
+Write $c=\|D\eta\|_4$, $Y=\|\eta Du\|_4$ and
+$X=\|\eta^2D^2u\|_2$, using the Euclidean Hilbert--Schmidt norms.
+Then
+\[
+ Y\le4cU+2\sqrt{UX}, \qquad Y^2\le32c^2U^2+8UX .
+\]
+\end{lemma}
+\begin{proof}
+\leanok
+Integrate by parts against $\eta^4|Du|^2\partial_a u$ and differentiate
+the flux. The trace of a four-dimensional Hessian is bounded by twice
+its Hilbert--Schmidt norm. The two resulting products have H\"older
+exponents $(4,4/3)$ and $(2,2)$, giving
+$Y^4\le U(4cY^3+4Y^2X)$. The scalar inequalities follow, including
+when $Y=0$. Compact support and the stated regularity give the needed
+integrability. This proves the interpolation step used in \S14.3;
+uniform construction of the annular cutoffs and the Weyl
+first-variation estimate remain geometric prerequisites.
+\end{proof}
+
+\begin{lemma}[Conformal rescaling of the measured chiral block]
+\label{lem:conformal-framed-measure}
+\lean{FirstOrderTwistor.riemannianChiralEnergyMeasure_restrict_conformalMetric, FirstOrderTwistor.riemannianChiralEnergyMeasure_conformalMetric}
+\leanok
+Let $\widetilde g=e^{2u}g$ for smooth $u$ on a smooth Riemannian
+four-manifold. In matched oriented orthonormal frames on a measurable
+region $A$, suppose the supplied block coefficients satisfy
+$\widetilde W^+=e^{-2u}W^+$ almost everywhere. The energy measures
+$\|\widetilde W^+\|_{\rm HS}^2dV_{\widetilde g}$ and
+$\|W^+\|_{\rm HS}^2dV_g$ agree on restriction to $A$. With a global
+coefficient comparison the measures agree on the manifold.
+\end{lemma}
+\begin{proof}
+\leanok
+The conformal volume theorem gives the density $e^{4u}$.
+Squaring all nine entries gives a factor $e^{-4u}$ and the factors
+cancel as densities. Identifying these coefficient matrices with
+the intrinsic Weyl operators of the two metrics remains a geometric input.
 \end{proof}

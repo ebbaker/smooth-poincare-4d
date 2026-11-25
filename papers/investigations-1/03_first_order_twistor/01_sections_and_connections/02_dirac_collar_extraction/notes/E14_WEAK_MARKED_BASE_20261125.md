@@ -1,0 +1,73 @@
+# A whole marked base with first-derivative control
+
+25 November 2026. Prepared for Edward B. Baker III with OpenAI Codex. The requested lead configuration is GPT-6.2 Astra/ultra. Independent serving telemetry is unavailable. This is a conditional analytic and smooth-type implication on smooth oriented Riemannian four-manifolds. [Frozen EXTRACT-E14 request](../research-progress/handoffs/E14_THIRD_REQUEST_20261125.md) · [Source versions](../../../brainstorm/notes/COLLAR_PROGRAM_AND_SPC4_20261125.md#inputs-and-versions).
+
+## Hypotheses and result
+
+Let \(g_i\) be volume-one positive Yamabe minimizers on the fixed smooth oriented homotopy four-sphere \(M\). Write \(s_{g_i}=Y_i\to y\), \(E_+(g_i)\to e\) in the fixed band \(4\pi^2\le E_+\le8\pi^2-\delta\), and assume \(\int|B_{g_i}|\,dV_{g_i}\to0\). Here \(E_+\) uses the Hilbert–Schmidt norm on real \(\Lambda^+\). Let \(h\) be smooth on a closed oriented homotopy four-sphere \(N\), and \(P\) a finite set of ordinary marked points. On an exhaustion of \(N-P\) assume single compatible orientation-preserving smooth embeddings of **whole** compact truncations, with
+\[
+ \Phi_i^*g_i=u_i^2m_i,\qquad
+ m_i\to h\quad\text{strongly in }C^0_{\mathrm{loc}}\cap W^{1,4}_{\mathrm{loc}},
+ \qquad \sup_i\|\mathrm{Rm}_{m_i}\|_{L^2(K,m_i)}<\infty
+ \tag{1}
+\]
+on every fixed compact \(K\subset N-P\), for positive smooth \(u_i\). Norms of differences are taken in fixed smooth background coordinates. Local bounds can depend arbitrarily on the compact. The last norm is the full tensor norm in the **comparison** metric. It is automatic for constant rescalings of the physical gauge by the source budget. Local \(L^2\) scalar curvature bounds in the comparison gauge also suffice, as shown below.
+
+Then both chiral Weyl densities converge strongly in \(L^1_{\rm loc}\), their matrix representatives converge strongly in \(L^2_{\rm loc}\), \(B_h=0\) and \(Y([h])\ge y\). If one fixed compared compact has positive limiting chiral energy, then \(e_N=E_+(h)>4\pi^2\) (use the positive chirality for this detection, or the negative one and the closed signature). In this case \(N\cong M\) by an oriented diffeomorphism. At \(e=I^+(M)\) one has \(e=e_N\), \(Y([h])=y<Y_{\rm rd}\), and the physical volumes saturate on the exhaustion. Along a subsequence \(u_i\to u>0\) strongly in \(H^1_{\rm loc}\cap L^4_{\rm loc}\), where \(u^2h\) is a smooth unit-volume Yamabe minimizer on \(N\). The physical metric tensors then converge locally in \(L^2(h)\). Alternatively, if \(y<Y_{\rm rd}\) and a fixed compared compact has positive limiting physical volume, the same-type conclusion follows without first detecting Weyl curvature. The test requires an actual marking. The higher-integrability and distance arguments in [EXTRACT-E15](../reviews/LEAD_ASSESSMENT_20261125.md) prove measured Gromov–Hausdorff convergence in the saturated case. At minimizing energy they also give strong local physical curvature densities and vanishing full-curvature residual. Smooth convergence of the given physical pullbacks remains open.
+
+## First variation relative to a nonflat metric
+
+In an oriented relatively compact coordinate patch use the all-indices-down curvature and the Euclidean matrix realizations \(F_\pm(k)=P^\pm_k R(k)\) of the Weyl components, including the square root of the coordinate volume density in \(P\). Then \(|F_\pm|^2dx=|W^\pm|^2_{\rm HS}dV_k\). Write \(R(k)=L(D^2 k)+Q_k[Dk,Dk]\), with constant linear \(L\) and smooth algebraic coefficients. This is the identity used in [MATCH-E14](../../../02_dirac_and_twistor_spinors/01_dirac_collar_matching/notes/E14_WEAK_CHART_BACH_DEFECT_20261125.md). Strong first derivatives imply distributional convergence of \(R(m_i)\) to \(R(h)\). The local bound in (1) upgrades this to weak \(L^2\) convergence. Smooth coefficient dependence gives \(F_\pm(m_i)\rightharpoonup F_\pm(h)\) in \(L^2\).
+
+Set \(v_i=m_i-h\). For fixed \(0\le\chi\in C_c^\infty\), differentiation in direction \(\chi v_i\) gives
+\[
+ DF_\pm(m_i)[\chi v_i]=\chi(F_\pm(m_i)-F_\pm(h))+o_{L^2}(1).
+ \tag{2}
+\]
+Indeed \(L(D^2(\chi v_i))-\chi L(D^2v_i)\to0\) in \(L^2\). The quadratic low-order difference \(Q_{m_i}[Dm_i,Dm_i]-Q_h[Dh,Dh]\) tends strongly to zero. In its variation the terms with \(D(\chi v_i)\) go to zero in \(L^2\) by Hölder, and the coefficient variation is \(O(\|v_i\|_\infty)\) times a bounded \(L^2\) quantity. The projection variation \(DP_{m_i}[\chi v_i]R(m_i)\) is small by (1). Finally \(P_{m_i}R(h)\to P_hR(h)\).
+
+The absolute first variation in this compactly supported direction is bounded by \(C\|v_i\|_\infty\int_{\mathrm{supp}\chi}|B_{m_i}|dV_{m_i}\). For each \(i\) this follows either by extending the comparison conformal factor off the support, or by using the local first variation with a fixed exterior. The four-dimensional density \(|B|dV\) is conformally invariant. With (2) and weak convergence this gives \(\int\chi|F_\pm(m_i)-F_\pm(h)|^2\to0\). Local strong convergence of the two Weyl components here requires only bounded local total Bach norm. For exact criticality of the limit, take any fixed smooth symmetric compactly supported tensor \(H\). Now \(DF_\pm(m_i)[H]\rightharpoonup DF_\pm(h)[H]\) in \(L^2\): the \(DP[H]R\) term converges weakly, and every other term converges strongly by the curvature formula. Pair with the strongly convergent \(F_\pm(m_i)\). The source first variation tends to zero by vanishing total Bach and the bounded test norm. Hence \(B_h=0\) off \(P\), and smooth extension gives \(B_h=0\) everywhere. This reasoning does not pass a quadratic expression in two weak curvature limits.
+
+For the alternative local scalar condition, choose a smooth orthonormal frame for \(m_i\) by the positive matrix square root in a fixed coordinate ball. Its connection one-form \(\omega_i\) is bounded in \(L^4\) by (1)'s coefficient and first-derivative bounds. For curvature two-form \(\Omega_i\) the local Euler transgression of the flat frame connection has the form \(d\,\mathrm{CS}_{\rm Eu}(\omega_i)=\mathrm{Pf}(\Omega_i)\), with \(|\mathrm{CS}_{\rm Eu}|\le C(|\omega_i||\mathrm{Rm}_{m_i}|+|\omega_i|^3)\). This identity follows by integrating the polarized Pfaffian on \(t\omega_i\), whose curvature is \(t\Omega_i+(t^2-t)\omega_i\wedge\omega_i\). In four dimensions the Euler density is a fixed positive multiple of \((|W|_{\rm tens}^2-2|\mathrm{Ric}_0|^2+R^2/6)dV\). Test with \(\eta^2\) on the ball. Absorb \(C\int\eta|d\eta||\omega_i||\mathrm{Rm}|\) using Young and the algebraic curvature decomposition. The cubic connection term is bounded for fixed smooth \(\eta\). Thus local \(L^2\) bounds on \(R_{m_i}\) and on Weyl give a full curvature bound on the smaller ball where \(\eta=1\). The Weyl bound already holds by conformal invariance. Arbitrary nonconstant conformal changes need not retain the physical scalar-square budget.
+
+## Source Yamabe tests on a first-order comparison
+
+On any fixed relatively compact smooth patch the Yamabe bilinear forms satisfy
+\[
+ |(Q_{m_i}-Q_h)(f,k)|\le o_i(1)\|f\|_{H^1}\|k\|_{H^1}
+ \tag{3}
+\]
+for compactly supported tests. To see this, write the scalar density as a coordinate divergence linear in \(Dm\) with coefficients depending smoothly on \(m\), plus contractions quadratic in \(Dm\). The divergence coefficients converge in \(L^4\) and the quadratic coefficients in \(L^2\). Integrate the divergence against \(fk\), and use \(H^1\subset L^4\) and uniform convergence of the principal coefficients. The estimate also holds for one locally \(H^1\) factor with a cutoff equal to one on the other's support. This is the [NECK-E07 scalar form comparison](../../01_neck_geometry/notes/E07_FIRST_ORDER_CAP_20261125.md) on a fixed background. Testing the source inequality with the conformally transported compact tests and then taking cutoffs about the finitely many smooth points gives \(Y([h])\ge y>0\).
+
+Testing \(L_{m_i}u_i=Y_i u_i^3\) with \(\eta^2u_i\) gives
+\[
+ Q_{m_i}(\eta u_i)=Y_i\int\eta^2u_i^4dV_{m_i}
+                  +6\int u_i^2|d\eta|_{m_i}^2dV_{m_i}.
+\]
+The right side is bounded on every fixed patch by unit physical volume. Equation (3) and coercivity up to a fixed \(L^2\) term for \(Q_h\) give a uniform local \(H^1\) bound. Weak \(H^1\), almost-everywhere and strong local subcritical \(L^q\) convergence give a nonnegative \(u\); \(u_i^3\rightharpoonup u^3\) in local \(L^{4/3}\). Equation (3) yields \(L_hu=yu^3\). Its finite \(L^4\) solution extends across \(P\): test with squared smooth puncture cutoffs having bounded \(L^4\) gradient, use \(\|u\|_{L^4(\rm transition)}\to0\), then extend in \(H^1\) and use zero point capacity in the weak equation. Nonzero \(u\) is smooth and strictly positive by the usual Yamabe regularity and maximum principle. Testing by \(u\) gives \(Y([h])\sqrt{\int u^4}\le y\int u^4\), so a nonzero \(u\) has unit mass. [EXTRACT-E09](E09_CONFORMAL_BASE_VOLUME_DICHOTOMY_20261125.md) · [Lee–Parker, §2, Theorem 2.2 and §3](https://users.math.msu.edu/users/parker/YamabeProblem.pdf).
+
+When \(y<S=Y_{\rm rd}\), interior concentration is excluded even for the metrics in (1). Here are details at the critical exponent. Put \(w_i=u_i-u\). On a fixed small coordinate ball \(D\), \(\limsup\int_D|w_i|^4dV_h\le1\), by the local \(L^4\) splitting of an almost-everywhere convergent bounded sequence. The splitting follows by expanding the fourth power and truncating the fixed \(u\) in \(L^4\). Test the difference of equations by \(\eta^2w_i\) for \(\eta\in C^\infty_c(D)\). Mixed cubic terms with a factor of \(u\) vanish after the same truncation and local subcritical convergence. The form errors are \(o(1)\) by (3), as are the lower-order \(w_i^2\) terms. Therefore
+\[
+ 6\|\nabla(\eta w_i)\|_2^2
+ \le (y+o(1))\|\eta w_i\|_4^2+o(1).
+\]
+On a small fixed ball the sharp Euclidean Sobolev inequality gives
+\((S-\epsilon)\|\eta w_i\|_4^2\le6\|\nabla(\eta w_i)\|_2^2\) in the smooth \(h\) metric, by comparison in normal coordinates. Choose \(\epsilon<S-y\), absorb, and cover each compact. This proves strong local \(H^1\) and \(L^4\). A subround positive physical-volume witness now forces \(u\ne0\); then \(Y([h])=y<S\), so the closed base cannot be conformally round.
+
+## Marked caps and the cost of physical evacuation
+
+Let \(e_N>0\). Smoothness, exact Bach-flatness, \(Y([h])>0\), the closed homotopy-sphere gap and sharp Yamabe rigidity give \(e_N>4\pi^2\) and \(y\le Y([h])<S\). See [SEC §12.1](../../manuscript/twistor_sections_and_chiral_weyl_curvature.tex#L4357). There is less than \(4\pi^2\) limiting chiral energy left outside the base.
+
+Here a two-step interpolation is essential if the bounds in (1) grow near \(P\). Fix the Yamabe buffer length \(\ell\), then a smooth normal radius \(b\) and disjoint slightly larger buffers. On an outer transition for each desired cut, splice \(m_i\) **first to \(h\)** with a fixed cutoff \(\theta\), retaining the source away from the tested region and making the metric exactly \(h\) on the central buffer. In an annulus with two retained sides use two such transitions. For \(k_i=h+\theta(m_i-h)\) the same all-lowered formula gives
+\[
+ F_\pm(k_i)=\theta F_\pm(m_i)+(1-\theta)F_\pm(h)+o_{L^2}(1).
+\]
+This uses the local curvature bound at the already fixed \(b\); the projection error is \(o_i(1;b,\ell)\). Thus the transition changes each chiral energy by \(o_i(1;b,\ell)\). This surgery may be made in a smooth global conformal representative equal to \(m_i\) on the needed buffers. The starting Yamabe constant is unchanged by that choice. The interpolated metric still has \(Y\ge Y_i-o_i(1;b,\ell)\). Indeed (3) applied to differences on the fixed transition and central buffers bounds the global quadratic-form difference by \(o_i(1)(\|df\|^2_{2,\mathrm{loc}}+\|f\|_{4,\mathrm{loc}}^2)\). To bound the local gradient by the *global* source energy, use a fixed cutoff equal to one on the modified sets and a second cutoff whose squares sum to one. Their IMS localization error is at most \(C_{b,\ell}\|f\|_4^2\), since gradients have bounded conformally invariant \(L^4\) norm. The complementary localized energy is nonnegative by \(Y_i>0\); on the comparison patch (3) gives a local gradient bound up to \(C_{b,\ell}\|f\|_4^2\). Volume-density errors in the \(L^4\) denominator are \(o_i(1)\). These estimates apply to tests on the whole source, including across the comparison boundary.
+
+Next apply the smooth [NECK-E09 cap and topology proof](../../01_neck_geometry/notes/E09_FINITE_PUNCTURE_TRANSFER_20261125.md) on the exact \(h\) buffers. Its fixed-width model error there is \(O_\ell(b^2)\). First take \(i\to\infty\) at fixed \(b,\ell\), then \(b\downarrow0\). Pick \(\ell\) large enough for a strictly positive Yamabe bound on every exterior cap. The sum of their energies has limsup at most \(e-e_N\) in this order. Each capped exterior is a smooth positive-Yamabe homotopy sphere with energy below \(4\pi^2\) for sufficiently small \(b\) and large \(i\). The inherited sphere and smooth marking/gluing results give \(N\cong M\), with the stated orientation. If \(P\) is empty the full embedding already gives a diffeomorphism. [Chang–Gursky–Yang, Theorem A](https://www.numdam.org/item/10.1007/s10240-003-0017-z.pdf).
+
+With this smooth type and the positive \(h\) class, \(I^+(M)\le e_N\). In particular minimizing gives \(e=e_N\) by lower semicontinuity (or by local strong convergence and exhaustion). If \(u=0\), the subround strong local convergence above implies evacuation on every compared compact. For each marked exterior choose its trial cutoff supported in the unchanged exterior, including a fixed comparison transition **beyond the interpolation and cut splices**. Transport it conformally from the physical metric for the exterior cap test. On the transition its Dirichlet cost in the physical gauge is bounded by its uniform \(L^4\) gradient squared times the square root of its vanishing physical volume. The source Yamabe inequality gives \(\sqrt{\lambda_j}\le\lambda_j\) for each limiting exit volume and \(\sum\lambda_j=1\). One exit has volume one, and its capped Yamabe constant has limsup at most \(y\). Gauss–Bonnet in the cap's own positive Yamabe minimizer gives a raw residual cost
+\[
+ e-e_N\ \ge\ (S^2-y^2)/48>0 .
+\]
+The same cutoff and limit details are in the [second joint cap proof](../../../reviews/SECOND_COLLAR_LEAD_CHECK_20261125.md). This contradicts minimization, and also excludes evacuation if \(e-I^+(M)<(S^2-y^2)/48\). Thus there is a positive physical-volume witness on a fixed compared compact and the positive \(u\) has unit total volume. The argument supplies neither the embeddings in (1) on a raw sequence nor a smooth upgrade of the physical pullbacks.

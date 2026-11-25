@@ -54,7 +54,11 @@ theorem bufferedInterpolation_holder {α : Type*} [MeasurableSpace α] {μ : Mea
     rw [ENNReal.ofReal_div_of_pos (by norm_num : (0 : ℝ) < 3)]
     simpa using memLp_pow_div hf hfNonneg 3
   have hSquared : MemLp (fun x => f x ^ 2) (ENNReal.ofReal (2 : ℝ)) μ := by
-    simpa [ENNReal.div_eq_inv_mul] using memLp_pow_div hf hfNonneg 2
+    have hHalf : (4 : ℝ≥0∞) / 2 = 2 := by
+      symm
+      rw [ENNReal.eq_div_iff (by simp) (by simp)]
+      norm_num
+    simpa only [ENNReal.ofReal_ofNat, Nat.cast_ofNat, hHalf] using memLp_pow_div hf hfNonneg 2
   have hTwo : MemLp h (ENNReal.ofReal (2 : ℝ)) μ := by simpa using hh
   let _ := hFourThird.ennrealOfReal
   let _ := hTwoTwo.ennrealOfReal
@@ -66,7 +70,7 @@ theorem bufferedInterpolation_holder {α : Type*} [MeasurableSpace α] {μ : Mea
     have hCubicPower : (∫ x, (f x ^ (3 : ℕ)) ^ (4 / 3 : ℝ) ∂μ) = ∫ x, f x ^ 4 ∂μ := by
       refine integral_congr_ae (hfNonneg.mono fun x hx => ?_)
       change (f x ^ (3 : ℕ)) ^ (4 / 3 : ℝ) = f x ^ (4 : ℕ)
-      rw [← Real.rpow_natCast_mul hx 3, show (3 : ℝ) * (4 / 3) = 4 by norm_num,
+      rw [← Real.rpow_natCast_mul hx 3, Nat.cast_ofNat, show (3 : ℝ) * (4 / 3) = 4 by norm_num,
         Real.rpow_ofNat]
     have hHolder := integral_mul_le_Lp_mul_Lq_of_nonneg hFourThird hgNonneg hCubedNonneg hFour hCubed
     rw [hCubicPower] at hHolder

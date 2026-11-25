@@ -1,0 +1,14 @@
+# SP4-FORM-FOT-E25e · Exterior patch from corrected recognition
+
+25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The actual serving model and reasoning effort are unavailable. This bounded E packet uses checkout `0c3399d831d71a1a17c29ffcba14ee0593315cbe`, the working `SmoothCutGluing.lean` with SHA-256 prefix `8f5c5cd3d4e6987c`, and the marked descent audit with SHA-256 prefix `f917eac7b8d01b7b`. [Smooth gluing](../../../../FirstOrderTwistor/SmoothCutGluing.lean) · [Marked descent audit](../../reviews/MARKED_DESCENT_AUDIT_20261125.md) · [Lake manifest](../../../../lake-manifest.json)
+
+`exteriorPatchOfRecognition retained recognition normalBall` constructs the smooth partial diffeomorphism $b\circ r\circ v$ from $M$ to $\widehat X$. Here $v$ identifies the retained exterior with its thickening in $\widehat V$, $r\colon\widehat V\to S^4$ is the corrected recognition, and $b$ identifies the opposite hemisphere and its collar with the actual normal-ball patch. The source and target lemmas compute the full composition domains as
+
+$$\operatorname{dom}v\cap(r\circ v)^{-1}(\operatorname{dom}b),\qquad
+\operatorname{ran}b\cap(r^{-1}\circ b^{-1})^{-1}(\operatorname{ran}v).$$
+
+The map and its inverse are smooth on these open sets by `PartialDiffeomorph.trans`. The two evaluation lemmas give the forward and inverse compositions. [Lean module](../../../../FirstOrderTwistor/ExteriorPatch.lean) · [Corrected recognition](../../../../FirstOrderTwistor/MarkedCapRecognition.lean)
+
+`exteriorPatch_eqOn_collarParameters` composes the two recorded identities $r(v(F(t,\omega)))=Q(t,\omega)$ and $b(Q(t,\omega))=P_s(t,\omega)$ on the full signed collar. `SmoothCutGluing.ofRecognizedExterior` takes the core comparison inverse, source and target collar charts on the same parameter domain, the open covers and their overlap equalities, and the core and exterior chart formulas. It derives agreement with the core inverse on the source overlap and supplies both maps to `SmoothCutGluing.toDiffeomorph`. Its geometric inputs include the actual partial identifications, the corrected recognition, and the open-cover data for the chosen cut. The orientation theorem consumes the patch orientation proofs separately. [Normal-coordinate cut](../../../../../papers/investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/notes/E03_EMBEDDED_CUT_20261125.md) · [Orientation theorem](../../../../FirstOrderTwistor/OrientedCutGluing.lean)
+
+`lake build FirstOrderTwistor.ExteriorPatch` passed under Lean `4.35.0-rc3` (2,446 jobs). `#check` and `#print axioms` passed through the module import for all seven public declarations. Each uses `propext`, `Classical.choice` and `Quot.sound`. A separate real-line identity example instantiated the constructor, obtained `core_eq_exterior`, and produced the global diffeomorphism with `toDiffeomorph`.

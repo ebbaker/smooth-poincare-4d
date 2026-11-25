@@ -1,0 +1,316 @@
+import FirstOrderTwistor
+
+/-!
+# Public declaration checks for Route 03
+
+25 November 2026. Replay from the formalization package with `lake env lean` on this file.
+The middle-slice endpoint examples are compiled in `CutMargin`.
+-/
+
+-- CutMargin
+#check FirstOrderTwistor.exteriorEnergyLtThreshold
+#print axioms FirstOrderTwistor.exteriorEnergyLtThreshold
+#check FirstOrderTwistor.exteriorEnergyLtThresholdOfStrictError
+#print axioms FirstOrderTwistor.exteriorEnergyLtThresholdOfStrictError
+
+-- CutCoreComparison
+#check FirstOrderTwistor.FixedTruncationComparison.eventually_complMass_eq_total_sub_imageMass
+#print axioms FirstOrderTwistor.FixedTruncationComparison.eventually_complMass_eq_total_sub_imageMass
+#check FirstOrderTwistor.FixedTruncationComparison.tendsto_complMass
+#print axioms FirstOrderTwistor.FixedTruncationComparison.tendsto_complMass
+#check FirstOrderTwistor.eventually_cappedExteriorEnergy_le_of_coreComparisons
+#print axioms FirstOrderTwistor.eventually_cappedExteriorEnergy_le_of_coreComparisons
+
+-- CutSelection
+#check FirstOrderTwistor.selectFixedSphericalCut
+#print axioms FirstOrderTwistor.selectFixedSphericalCut
+
+-- CapEstimates
+#check FirstOrderTwistor.capFormLowerBoundOfIMS
+#print axioms FirstOrderTwistor.capFormLowerBoundOfIMS
+#check FirstOrderTwistor.halfCapYamabeMargin
+#print axioms FirstOrderTwistor.halfCapYamabeMargin
+#check FirstOrderTwistor.capYamabePositiveOfMargin
+#print axioms FirstOrderTwistor.capYamabePositiveOfMargin
+#check FirstOrderTwistor.halfQuotientCapYamabeMargin
+#print axioms FirstOrderTwistor.halfQuotientCapYamabeMargin
+#check FirstOrderTwistor.capPartitionMass
+#print axioms FirstOrderTwistor.capPartitionMass
+#check FirstOrderTwistor.capCutoffLoss
+#print axioms FirstOrderTwistor.capCutoffLoss
+#check FirstOrderTwistor.capYamabeInfimumLowerBound
+#print axioms FirstOrderTwistor.capYamabeInfimumLowerBound
+
+-- CapSplice
+#check FirstOrderTwistor.smoothCapSpliceWeylBound
+#print axioms FirstOrderTwistor.smoothCapSpliceWeylBound
+#check FirstOrderTwistor.smoothCapSpliceBachBound
+#print axioms FirstOrderTwistor.smoothCapSpliceBachBound
+#check FirstOrderTwistor.capSpliceProjectionErrorBound
+#print axioms FirstOrderTwistor.capSpliceProjectionErrorBound
+#check FirstOrderTwistor.capSpliceNormTriangle
+#print axioms FirstOrderTwistor.capSpliceNormTriangle
+#check FirstOrderTwistor.firstOrderCapSpliceWeylBound
+#print axioms FirstOrderTwistor.firstOrderCapSpliceWeylBound
+
+-- NormalCutMark
+#check FirstOrderTwistor.normalCapMark
+#print axioms FirstOrderTwistor.normalCapMark
+#check FirstOrderTwistor.normalCutPolar
+#print axioms FirstOrderTwistor.normalCutPolar
+#check FirstOrderTwistor.normalCapMark_image_closedBall
+#print axioms FirstOrderTwistor.normalCapMark_image_closedBall
+#check FirstOrderTwistor.normalCapMark_image_sphere
+#print axioms FirstOrderTwistor.normalCapMark_image_sphere
+#check FirstOrderTwistor.norm_normalCutPolar
+#print axioms FirstOrderTwistor.norm_normalCutPolar
+#check FirstOrderTwistor.normalCutPolar_log_radius
+#print axioms FirstOrderTwistor.normalCutPolar_log_radius
+#check FirstOrderTwistor.normalCutPolar_zero
+#print axioms FirstOrderTwistor.normalCutPolar_zero
+#check FirstOrderTwistor.normalCutPolar_range_at_time
+#print axioms FirstOrderTwistor.normalCutPolar_range_at_time
+#check FirstOrderTwistor.normalCutPolar_mem_ball_iff
+#print axioms FirstOrderTwistor.normalCutPolar_mem_ball_iff
+#check FirstOrderTwistor.normalCutPolar_mem_sphere_iff
+#print axioms FirstOrderTwistor.normalCutPolar_mem_sphere_iff
+#check FirstOrderTwistor.normalCutPolar_notMem_closedBall_iff
+#print axioms FirstOrderTwistor.normalCutPolar_notMem_closedBall_iff
+#check FirstOrderTwistor.normalCutPolarHomeomorph
+#print axioms FirstOrderTwistor.normalCutPolarHomeomorph
+#check FirstOrderTwistor.normalCutPolarHomeomorph_apply
+#print axioms FirstOrderTwistor.normalCutPolarHomeomorph_apply
+#check FirstOrderTwistor.exists_normalCutRadius_for_buffer
+#print axioms FirstOrderTwistor.exists_normalCutRadius_for_buffer
+#check FirstOrderTwistor.chartedNormalCap
+#print axioms FirstOrderTwistor.chartedNormalCap
+#check FirstOrderTwistor.chartedNormalCap_apply
+#print axioms FirstOrderTwistor.chartedNormalCap_apply
+#check FirstOrderTwistor.chartedNormalCap_boundary
+#print axioms FirstOrderTwistor.chartedNormalCap_boundary
+#check FirstOrderTwistor.chartedNormalCut_middle_range
+#print axioms FirstOrderTwistor.chartedNormalCut_middle_range
+#check FirstOrderTwistor.chartedNormalCut_sides
+#print axioms FirstOrderTwistor.chartedNormalCut_sides
+
+-- SmoothNormalMark
+#check FirstOrderTwistor.puncturedNormalFour
+#print axioms FirstOrderTwistor.puncturedNormalFour
+#check FirstOrderTwistor.normalCutPolarHomeomorph_symm_fst
+#print axioms FirstOrderTwistor.normalCutPolarHomeomorph_symm_fst
+#check FirstOrderTwistor.normalCutPolarHomeomorph_symm_snd
+#print axioms FirstOrderTwistor.normalCutPolarHomeomorph_symm_snd
+#check FirstOrderTwistor.contMDiff_normalCutPolarHomeomorph
+#print axioms FirstOrderTwistor.contMDiff_normalCutPolarHomeomorph
+#check FirstOrderTwistor.contMDiff_normalCutPolarHomeomorph_symm
+#print axioms FirstOrderTwistor.contMDiff_normalCutPolarHomeomorph_symm
+#check FirstOrderTwistor.normalCutPolarDiffeomorph
+#print axioms FirstOrderTwistor.normalCutPolarDiffeomorph
+#check FirstOrderTwistor.normalCutPolarDiffeomorph_toHomeomorph
+#print axioms FirstOrderTwistor.normalCutPolarDiffeomorph_toHomeomorph
+#check FirstOrderTwistor.normalCutPolarDiffeomorph_apply
+#print axioms FirstOrderTwistor.normalCutPolarDiffeomorph_apply
+
+-- MarkedReassembly
+#check FirstOrderTwistor.markedReassemblyIso
+#print axioms FirstOrderTwistor.markedReassemblyIso
+#check FirstOrderTwistor.inl_markedReassemblyIso_hom
+#print axioms FirstOrderTwistor.inl_markedReassemblyIso_hom
+#check FirstOrderTwistor.inr_markedReassemblyIso_hom
+#print axioms FirstOrderTwistor.inr_markedReassemblyIso_hom
+
+-- SmoothCutGluing
+#check FirstOrderTwistor.SmoothCutGluing
+#print axioms FirstOrderTwistor.SmoothCutGluing
+#check FirstOrderTwistor.SmoothCutGluing.core_eq_exterior
+#print axioms FirstOrderTwistor.SmoothCutGluing.core_eq_exterior
+#check FirstOrderTwistor.SmoothCutGluing.core_symm_eq_collar
+#print axioms FirstOrderTwistor.SmoothCutGluing.core_symm_eq_collar
+#check FirstOrderTwistor.SmoothCutGluing.exterior_symm_eq_collar
+#print axioms FirstOrderTwistor.SmoothCutGluing.exterior_symm_eq_collar
+#check FirstOrderTwistor.SmoothCutGluing.core_symm_eq_exterior_symm
+#print axioms FirstOrderTwistor.SmoothCutGluing.core_symm_eq_exterior_symm
+#check FirstOrderTwistor.SmoothCutGluing.collar_smooth
+#print axioms FirstOrderTwistor.SmoothCutGluing.collar_smooth
+#check FirstOrderTwistor.SmoothCutGluing.collar_symm_smooth
+#print axioms FirstOrderTwistor.SmoothCutGluing.collar_symm_smooth
+#check FirstOrderTwistor.SmoothCutGluing.toDiffeomorph
+#print axioms FirstOrderTwistor.SmoothCutGluing.toDiffeomorph
+#check FirstOrderTwistor.SmoothCutGluing.toDiffeomorph_eq_core
+#print axioms FirstOrderTwistor.SmoothCutGluing.toDiffeomorph_eq_core
+#check FirstOrderTwistor.SmoothCutGluing.toDiffeomorph_eq_exterior
+#print axioms FirstOrderTwistor.SmoothCutGluing.toDiffeomorph_eq_exterior
+#check FirstOrderTwistor.SmoothCutGluing.toDiffeomorph_eq_collar
+#print axioms FirstOrderTwistor.SmoothCutGluing.toDiffeomorph_eq_collar
+#check FirstOrderTwistor.SmoothCutGluing.toDiffeomorph_symm_eq_core
+#print axioms FirstOrderTwistor.SmoothCutGluing.toDiffeomorph_symm_eq_core
+#check FirstOrderTwistor.SmoothCutGluing.toDiffeomorph_symm_eq_exterior
+#print axioms FirstOrderTwistor.SmoothCutGluing.toDiffeomorph_symm_eq_exterior
+#check FirstOrderTwistor.SmoothCutGluing.toDiffeomorph_symm_eq_collar
+#print axioms FirstOrderTwistor.SmoothCutGluing.toDiffeomorph_symm_eq_collar
+
+-- OrientedCutGluing
+#check FirstOrderTwistor.PreservesPatchOrientation
+#print axioms FirstOrderTwistor.PreservesPatchOrientation
+#check FirstOrderTwistor.SmoothCutGluing.toDiffeomorph_preservesOrientation
+#print axioms FirstOrderTwistor.SmoothCutGluing.toDiffeomorph_preservesOrientation
+
+-- MarkedCapRecognition
+#check FirstOrderTwistor.exists_recognition_eqOn_capNeighborhood
+#print axioms FirstOrderTwistor.exists_recognition_eqOn_capNeighborhood
+
+-- ExteriorPatch
+#check FirstOrderTwistor.exteriorPatchOfRecognition
+#print axioms FirstOrderTwistor.exteriorPatchOfRecognition
+#check FirstOrderTwistor.exteriorPatch_source
+#print axioms FirstOrderTwistor.exteriorPatch_source
+#check FirstOrderTwistor.exteriorPatch_target
+#print axioms FirstOrderTwistor.exteriorPatch_target
+#check FirstOrderTwistor.exteriorPatch_apply
+#print axioms FirstOrderTwistor.exteriorPatch_apply
+#check FirstOrderTwistor.exteriorPatch_symm_apply
+#print axioms FirstOrderTwistor.exteriorPatch_symm_apply
+#check FirstOrderTwistor.exteriorPatch_eqOn_collarParameters
+#print axioms FirstOrderTwistor.exteriorPatch_eqOn_collarParameters
+#check FirstOrderTwistor.SmoothCutGluing.ofRecognizedExterior
+#print axioms FirstOrderTwistor.SmoothCutGluing.ofRecognizedExterior
+
+-- ExteriorRecognition
+#check FirstOrderTwistor.StandardFourSphere
+#print axioms FirstOrderTwistor.StandardFourSphere
+#check FirstOrderTwistor.standardFourSphereCap
+#print axioms FirstOrderTwistor.standardFourSphereCap
+#check FirstOrderTwistor.standardFourSphereCap_isClosed
+#print axioms FirstOrderTwistor.standardFourSphereCap_isClosed
+#check FirstOrderTwistor.eitherSummandEnergyLtThreshold
+#print axioms FirstOrderTwistor.eitherSummandEnergyLtThreshold
+#check FirstOrderTwistor.twoSummandEnergyCounterexample
+#print axioms FirstOrderTwistor.twoSummandEnergyCounterexample
+#check FirstOrderTwistor.exists_markedExteriorRecognition
+#print axioms FirstOrderTwistor.exists_markedExteriorRecognition
+
+-- MarkedCut
+#check FirstOrderTwistor.signedCollar_inside_capNeighborhood
+#print axioms FirstOrderTwistor.signedCollar_inside_capNeighborhood
+#check FirstOrderTwistor.originalTypeOfRecognizedExterior
+#print axioms FirstOrderTwistor.originalTypeOfRecognizedExterior
+
+-- ChiralTransport
+#check FirstOrderTwistor.hilbertSchmidtSq_orthogonal_conjugate
+#print axioms FirstOrderTwistor.hilbertSchmidtSq_orthogonal_conjugate
+#check FirstOrderTwistor.chiralFrameEnergy
+#print axioms FirstOrderTwistor.chiralFrameEnergy
+#check FirstOrderTwistor.chiralFrameEnergy_nonneg
+#print axioms FirstOrderTwistor.chiralFrameEnergy_nonneg
+#check FirstOrderTwistor.chiralFrameEnergy_pullback
+#print axioms FirstOrderTwistor.chiralFrameEnergy_pullback
+
+-- YamabeTransport
+#check FirstOrderTwistor.classYamabeFour
+#print axioms FirstOrderTwistor.classYamabeFour
+#check FirstOrderTwistor.classYamabeFour_pullback
+#print axioms FirstOrderTwistor.classYamabeFour_pullback
+
+-- SphericalCut
+#check FirstOrderTwistor.positiveYamabeEnergyInfimum
+#print axioms FirstOrderTwistor.positiveYamabeEnergyInfimum
+#check FirstOrderTwistor.positiveYamabeEnergyInfimum_le
+#print axioms FirstOrderTwistor.positiveYamabeEnergyInfimum_le
+#check FirstOrderTwistor.MarkedMetricTransfer
+#print axioms FirstOrderTwistor.MarkedMetricTransfer
+#check FirstOrderTwistor.CutResidualInputs
+#print axioms FirstOrderTwistor.CutResidualInputs
+#check FirstOrderTwistor.MarkedMetricTransfer.competitor
+#print axioms FirstOrderTwistor.MarkedMetricTransfer.competitor
+#check FirstOrderTwistor.lowerEnergyOnOriginalType
+#print axioms FirstOrderTwistor.lowerEnergyOnOriginalType
+#check FirstOrderTwistor.excludesExactMinimum
+#print axioms FirstOrderTwistor.excludesExactMinimum
+#check FirstOrderTwistor.uniformDescentOnOriginalType
+#print axioms FirstOrderTwistor.uniformDescentOnOriginalType
+
+-- GeometricChiralBlock
+#check FirstOrderTwistor.CurvatureFrameTensor
+#print axioms FirstOrderTwistor.CurvatureFrameTensor
+#check FirstOrderTwistor.selfDualFirstWedge
+#print axioms FirstOrderTwistor.selfDualFirstWedge
+#check FirstOrderTwistor.selfDualSecondWedge
+#print axioms FirstOrderTwistor.selfDualSecondWedge
+#check FirstOrderTwistor.selfDualCurvatureBlock
+#print axioms FirstOrderTwistor.selfDualCurvatureBlock
+#check FirstOrderTwistor.traceFreeChiralBlock
+#print axioms FirstOrderTwistor.traceFreeChiralBlock
+#check FirstOrderTwistor.trace_traceFreeChiralBlock
+#print axioms FirstOrderTwistor.trace_traceFreeChiralBlock
+#check FirstOrderTwistor.traceFreeChiralBlock_smul_one
+#print axioms FirstOrderTwistor.traceFreeChiralBlock_smul_one
+#check FirstOrderTwistor.constantSectionalFrameTensor
+#print axioms FirstOrderTwistor.constantSectionalFrameTensor
+#check FirstOrderTwistor.selfDualCurvatureBlock_constantSectional
+#print axioms FirstOrderTwistor.selfDualCurvatureBlock_constantSectional
+#check FirstOrderTwistor.traceFreeSelfDualBlock_constantSectional
+#print axioms FirstOrderTwistor.traceFreeSelfDualBlock_constantSectional
+#check FirstOrderTwistor.metricKulkarniNomizuFrameTensor
+#print axioms FirstOrderTwistor.metricKulkarniNomizuFrameTensor
+#check FirstOrderTwistor.selfDualCurvatureBlock_metricKulkarniNomizu
+#print axioms FirstOrderTwistor.selfDualCurvatureBlock_metricKulkarniNomizu
+#check FirstOrderTwistor.OrientedOrthonormalFrameAt
+#print axioms FirstOrderTwistor.OrientedOrthonormalFrameAt
+#check FirstOrderTwistor.orientedOrthonormalFrameAt
+#print axioms FirstOrderTwistor.orientedOrthonormalFrameAt
+#check FirstOrderTwistor.metricCurvatureFrameTensor
+#print axioms FirstOrderTwistor.metricCurvatureFrameTensor
+#check FirstOrderTwistor.geometricChiralBlock
+#print axioms FirstOrderTwistor.geometricChiralBlock
+#check FirstOrderTwistor.trace_geometricChiralBlock
+#print axioms FirstOrderTwistor.trace_geometricChiralBlock
+
+-- ChiralFramePullback
+#check FirstOrderTwistor.pullbackOrientedOrthonormalFrameAt
+#print axioms FirstOrderTwistor.pullbackOrientedOrthonormalFrameAt
+#check FirstOrderTwistor.mfderiv_pullbackOrientedOrthonormalFrameAt_basis
+#print axioms FirstOrderTwistor.mfderiv_pullbackOrientedOrthonormalFrameAt_basis
+#check FirstOrderTwistor.pullbackOrientedOrthonormalFrames
+#print axioms FirstOrderTwistor.pullbackOrientedOrthonormalFrames
+#check FirstOrderTwistor.metricCurvatureFrameTensor_pullback
+#print axioms FirstOrderTwistor.metricCurvatureFrameTensor_pullback
+#check FirstOrderTwistor.geometricChiralBlock_pullback
+#print axioms FirstOrderTwistor.geometricChiralBlock_pullback
+#check FirstOrderTwistor.geometricChiralBlockField_pullback
+#print axioms FirstOrderTwistor.geometricChiralBlockField_pullback
+
+-- SelfDualFrameChange
+#check FirstOrderTwistor.hodgeStar_map_of_volumePreserving
+#print axioms FirstOrderTwistor.hodgeStar_map_of_volumePreserving
+#check FirstOrderTwistor.traceFreeCompression_conjugate
+#print axioms FirstOrderTwistor.traceFreeCompression_conjugate
+#check FirstOrderTwistor.selfDualWedgeInclusion
+#print axioms FirstOrderTwistor.selfDualWedgeInclusion
+#check FirstOrderTwistor.selfDualWedgeInclusion_orthogonal
+#print axioms FirstOrderTwistor.selfDualWedgeInclusion_orthogonal
+#check FirstOrderTwistor.curvatureWedgeMatrix
+#print axioms FirstOrderTwistor.curvatureWedgeMatrix
+#check FirstOrderTwistor.selfDualCurvatureBlock_eq_compression
+#print axioms FirstOrderTwistor.selfDualCurvatureBlock_eq_compression
+#check FirstOrderTwistor.traceFreeSelfDualBlock_conjugate
+#print axioms FirstOrderTwistor.traceFreeSelfDualBlock_conjugate
+
+-- GeometricCutDescent
+#check FirstOrderTwistor.geometricPositiveEnergies
+#print axioms FirstOrderTwistor.geometricPositiveEnergies
+#check FirstOrderTwistor.geometricPositiveEnergies_bddBelow
+#print axioms FirstOrderTwistor.geometricPositiveEnergies_bddBelow
+#check FirstOrderTwistor.geometricPullbackCompetitor
+#print axioms FirstOrderTwistor.geometricPullbackCompetitor
+#check FirstOrderTwistor.geometricEnergy_mem_of_pullback
+#print axioms FirstOrderTwistor.geometricEnergy_mem_of_pullback
+#check FirstOrderTwistor.geometricPositiveEnergies_eq_of_diffeomorph
+#print axioms FirstOrderTwistor.geometricPositiveEnergies_eq_of_diffeomorph
+#check FirstOrderTwistor.geometricDescentOnOriginalType
+#print axioms FirstOrderTwistor.geometricDescentOnOriginalType
+
+-- OneCutDescent
+#check FirstOrderTwistor.MarkedCutRealization
+#print axioms FirstOrderTwistor.MarkedCutRealization
+#check FirstOrderTwistor.oneCutDescent
+#print axioms FirstOrderTwistor.oneCutDescent

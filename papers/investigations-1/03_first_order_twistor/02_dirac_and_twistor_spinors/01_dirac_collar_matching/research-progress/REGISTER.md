@@ -24,7 +24,8 @@ This is the sole live register for **SP4-FOT-MATCH**. Research activated jointly
 | SP4-FOT-MATCH-E12 | Compute the signed chiral charge of an arbitrary measured residual. | **Integer forced to zero on a small-volume physical residual with small absolute end flux.** [Proof](../notes/E12_RELATIVE_CHIRAL_CHARGE_20261125.md) | [Request](handoffs/E12_REQUEST_20261125.md) · [Return](handoffs/E12_RETURN_20261125.md) |
 | SP4-FOT-MATCH-E13 | Compare both charges across finite partitions and test first tangential spin derivatives. | **Unique common charge-carrying piece in the physical gauge. Positive gauge gives an end-only test.** [Proof](../notes/E13_CHARGE_DISTRIBUTION_AND_SPIN_TRACES_20261125.md) | [Request](handoffs/E13_REQUEST_20261125.md) · [Return](handoffs/E13_RETURN_20261125.md) |
 | SP4-FOT-MATCH-E14 | Use Weyl first variation on an actual coherent weak physical chart. | **Hessian-free estimate on the protected region and normalized curl consequence.** [Proof](../notes/E14_WEAK_CHART_BACH_DEFECT_20261125.md) | [Request](handoffs/E14_REQUEST_20261125.md) · [Return](handoffs/E14_RETURN_20261125.md) |
-| SP4-FOT-MATCH-B05 | Test the actual residual by the weak-chart Bach estimate, a summed relative spinor estimate, or the paired current. Account for the entire remaining region. | **Open.** [Decision](../brainstorm/notes/SECOND_COLLAR_DECISIONS_20261125.md) | [Continuation](../continuation-notes/AFTER_SECOND_COLLAR_RESEARCH_20261125.md) |
+| SP4-FOT-MATCH-B05 | Test the actual residual by the weak-chart Bach estimate, a summed relative spinor estimate, or the paired current. Account for the entire remaining region. | **Slow cutoff transitions give a quantified chart-sum estimate. The bulk derivative sum, uncovered chiral energy and signed angular current are open on an actual full residual.** [Revision](../brainstorm/notes/THIRD_COLLAR_DECISIONS_20261125.md) | [Continuation](../continuation-notes/AFTER_THIRD_COLLAR_RESEARCH_20261125.md) |
+| SP4-FOT-MATCH-E15 | Sum first-order Bach variations with logarithmic transitions. | **Improved cutoff powers and an exact gauge test; no control of the bulk sum from slabwise error alone.** [Evidence](../notes/E15_THIRD_COLLAR_20261125.md) | [Request](handoffs/E15_THIRD_REQUEST_20261125.md) |
 
 ## Recording a change
 
@@ -37,3 +38,7 @@ The designated lead records a dated decision, return, assessment or status chang
 ## Second joint assessment
 
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex. The requested lead is GPT-6.2 Astra on ultra. Its serving configuration is not independently exposed. Bounded helper calls selected gpt-6.2-sol on ultra. Working checkout `6879850c01a741618210815be0cc8041abe45a94`. [Branch assessment](../reviews/SECOND_COLLAR_REVIEW_20261125.md) · [Joint result](../../../reviews/SECOND_COLLAR_ASSESSMENT_20261125.md) · [Active continuation](../continuation-notes/AFTER_SECOND_COLLAR_RESEARCH_20261125.md).
+
+## Third joint assessment
+
+25 November 2026. [Third joint assessment](../../../reviews/THIRD_COLLAR_ASSESSMENT_20261125.md) · [B05 revision](../brainstorm/notes/THIRD_COLLAR_DECISIONS_20261125.md) · [Current branch continuation](../continuation-notes/AFTER_THIRD_COLLAR_RESEARCH_20261125.md). The lead review was configured GPT-6.2 Astra/ultra with bounded GPT-6.2 Sol/ultra checks. Starting revision 7db310a.

@@ -15,3 +15,7 @@ Actual overlap and independent boundary frames assessed. Construction of either 
 Measured Gromov–Hausdorff convergence and paired point masses. The full Riemann atom has weight 16 times the chiral atom. [Derivation](notes/E10_METRIC_LIMIT_AND_CURVATURE_ATOMS_20261125.md).
 
 Scalar-flat Green metric on the punctured base, with the physical volume exit identified. [Derivation](notes/E11_VANISHING_FACTOR_GREEN_LIMIT_20261125.md).
+
+## 25 November 2026 · third joint collar session
+
+E12–E17. Actual marked balls carrying most physical volume and recovery under a whole first-order conformal comparison are assessed; construction of that comparison and detection of nonroundness on it remain open. [Decision](brainstorm/notes/THIRD_COLLAR_DECISIONS_20261125.md) · [Joint assessment](../../reviews/THIRD_COLLAR_ASSESSMENT_20261125.md).

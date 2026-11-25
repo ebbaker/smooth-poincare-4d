@@ -13,6 +13,8 @@ The proposed targets and conventions are in the [pilot note](../papers/investiga
 The [Lean Blueprint](blueprint/README.md) records their statements, proof
 dependencies, and the open neck hypotheses.
 
+The [FirstOrderTwistor library](FirstOrderTwistor.lean) contains the Route 02 proofs of energy accounting from convergence on fixed truncations and bounds on all remaining regions. It includes the four-slot/chiral conversion and fixed-domain comparisons for the metric’s Levi–Civita curvature and Riemannian volume. It also exposes the [marked single-cut descent theorems](investigations/03_single_cut_descent/README.md). [Verified statements and remaining geometric inputs](investigations/02_neck_energy_accounting/research-progress/REGISTER.md)
+
 Use the [formalization setup workflow](FORMALIZATION_SETUP_WORKFLOW.md)
 and [investigation index](investigations/README.md) to plan and track
 Lean proofs.

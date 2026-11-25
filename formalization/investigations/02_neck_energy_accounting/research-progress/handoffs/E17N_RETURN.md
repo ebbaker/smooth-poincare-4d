@@ -1,0 +1,29 @@
+# FOT-E17n · Curvature coefficients in convergent tangent frames
+
+25 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance. GPT-6.2 Sol/ultra was requested. Actual serving model and reasoning effort were unavailable. [Lean module](../../../../FirstOrderTwistor/MetricJetCurvature.lean) · [SEC `msale:budgets` and `msgap:accounting`][account]
+
+## Checked statements
+
+| Declaration in `FirstOrderTwistor` | Hypotheses and output |
+| --- | --- |
+| `tendsto_metricCurvatureFrameTensor_of_fixedCurvature` | At a point $x$ of one smooth real finite-dimensional manifold, assume convergence of `metricRm04StandardAt` on any four fixed tangent vectors. Supply metric-oriented orthonormal frames for the sequence and limit and convergence of each moving frame vector's coordinates in the limiting basis. The actual coefficients of `metricCurvatureFrameTensor` converge for every ordered quadruple in `Fin 4`. |
+| `tendsto_metricRm04StandardAt_of_metricCPConvergence` | Take a compact (K\ni x), a sequence $G_n$ and limit $g$ of smooth metrics, and `MetricCPConvergenceOn K 2 G g R` for a smooth reference metric $R$. The manifold is Hausdorff and sigma compact, with boundaryless model. The standard full lowered curvature converges on any four fixed tangent vectors at $x$. |
+| `tendsto_metricCurvatureFrameTensor_of_metricCPConvergence` | Combine the two-jet hypothesis and the supplied oriented frame convergence to obtain precisely the coefficient convergence consumed by E17l. |
+
+The fixed-vector to moving-frame proof expands the four tangent arguments in the limiting basis. Each term is a product of four scalar coordinate functions and one fixed-basis curvature coefficient. Convergence of the finite sum gives the result in the actual operator ordering $a,b,d,c$ used by `metricCurvatureFrameTensor` for the frame indices $a,b,c,d$. [Geometric frame and coefficient definitions](../../../../FirstOrderTwistor/GeometricChiralBlock.lean#L100)
+
+The metric two-jet proof uses the chart centered at $x$. Compact two-jet convergence controls the jet errors at $x$ through `derivNorm_le_sup`. The reference-metric lower comparison on \(\{x\}\), the small zeroth-order error, and `covNorm_le_add` supply the lower metric bound and upper derivative bounds for the pinned `exists_abs_chartRiemannTensor_sub_le`. Its estimate is (C\sum_{q=0}^{2}\operatorname{metricDerivNorm}(q,G_n,g,R,x)). The chart basis component formula and `metricRm04StandardAt_eq_chartRiemannCLM` lower the last slot using the converging metric pairings from `MetricCPConvergenceOn.tendsto_inner`. A finite basis expansion then gives fixed-vector convergence. The coordinate estimate is the source of the sigma-compactness hypothesis in the two direct declarations. [Pinned chart curvature estimate][chart] · [Pinned lowered curvature bridge][bridge] · [Pinned metric evaluation][metric]
+
+## Application and verification
+
+The pointwise frame inputs share the given orientation and are orthonormal for their respective metrics. The declaration consumes the convergence of all sixteen frame coordinates at the point. A fixed-truncation application uses a frame choice and convergence at each point where the coefficient comparison is required, together with the other E17l density hypotheses. Comparison embeddings or frame choices for geometric sequences are inputs for that application. [SEC §11.1, `msale:budgets`](../../../../../papers/investigations-1/03_first_order_twistor/01_sections_and_connections/manuscript/twistor_sections_and_chiral_weyl_curvature.tex#L3899) · [SEC `msgap:accounting`][account]
+
+The focused Lake build of the pinned chart curvature estimate and lowered curvature bridge passed with 4,044 jobs. `lake env lean FirstOrderTwistor/MetricJetCurvature.lean` passed. A separate stdin audit printed the types and axioms of all three public declarations and the key imported results. Each reported exactly `propext`, `Classical.choice` and `Quot.sound`. The public-import check belongs to lead integration. The pinned full `TensorConvergence` module gives another source-level path to the fixed-vector premise. Its larger dependency build was interrupted during the bounded packet, and the checked direct theorem uses the focused chart imports. [Pinned full curvature convergence][full]
+
+The checkout during proof work was `0c3399d831d71a1a17c29ffcba14ee0593315cbe`. The manifest SHA-256 was `839111aae86b693524cd57db5ce7f2e8edc972dad49296468eb18d6735e52239`. The imported sibling `GeometricChiralBlock.lean` had SHA-256 `7743079e81d003ad56ee0f4f305c38f3f87bfcd3e22f2912d85d5426a164dd69`. The SEC manuscript SHA-256 was `329513a3cfd8e939373533fad90f36b9108ce0ea41a22f9cc348587a4110fe66`. The toolchain and dependencies were Lean `4.35.0-rc3`, Mathlib `c55e6e786f49`, and DifferentialGeometry `788efe97894474c032de6dfb1289d515f613d15a`. [Baseline](../../../research-progress/01_BASELINE.md)
+
+[account]: ../../../../../papers/investigations-1/03_first_order_twistor/01_sections_and_connections/manuscript/twistor_sections_and_chiral_weyl_curvature.tex#L4692
+[chart]: https://github.com/qinz1yang/differential-geometry/blob/788efe97894474c032de6dfb1289d515f613d15a/DifferentialGeometry/Geometry/Metric/Convergence/Curvature/RiemannTensor.lean#L102
+[bridge]: https://github.com/qinz1yang/differential-geometry/blob/788efe97894474c032de6dfb1289d515f613d15a/DifferentialGeometry/Geometry/Curvature/Coordinates/RiemannTensorBridge.lean#L22
+[metric]: https://github.com/qinz1yang/differential-geometry/blob/788efe97894474c032de6dfb1289d515f613d15a/DifferentialGeometry/Geometry/Metric/Convergence/Metric/Evaluation.lean#L96
+[full]: https://github.com/qinz1yang/differential-geometry/blob/788efe97894474c032de6dfb1289d515f613d15a/DifferentialGeometry/Geometry/Metric/Convergence/Curvature/TensorConvergence.lean#L22

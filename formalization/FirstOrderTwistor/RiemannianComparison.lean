@@ -1,4 +1,6 @@
 import DifferentialGeometry.Analysis.Integration.Measure.PullbackPartial
+import DifferentialGeometry.Analysis.Integration.Measure.VolumeDensity
+import DifferentialGeometry.Analysis.Integration.Measure.Riemannian.Properties
 import FirstOrderTwistor.EnergyDensity
 
 /-!
@@ -85,5 +87,55 @@ theorem riemannianVolume_transport_of_compact_partialDiffeomorph
   obtain ⟨hEmbedding, hVolume⟩ :=
     riemannianVolume_comap_of_partialDiffeomorph Φ g h U hU hMetric hA.measurableSet hAU
   exact ⟨hEmbedding, hJacobian, hJacobianNonneg, hVolume.trans hDensity⟩
+
+omit [I.Boundaryless] in
+/-- The ambient Riemannian volume density restricts to the induced volume
+measures on a measurable subtype. -/
+theorem riemannianVolume_comap_subtype_eq_energyMeasure
+    (q g : SmoothRiemannianMetric I M) {A : Set M} (hA : MeasurableSet A) :
+    (riemannianVolumeMeasure (I := I) (M := M) g).comap (Subtype.val : A → M) =
+      energyMeasure ((riemannianVolumeMeasure (I := I) (M := M) q).comap (Subtype.val : A → M))
+        (fun x : A ↦ riemannianVolumeDensity q g (x : M)) := by
+  apply Measure.ext
+  intro s hs
+  have hImage := (MeasurableEmbedding.subtype_coe hA).measurableSet_image.mpr hs
+  rw [comap_subtype_coe_apply hA, riemannianVolumeMeasure_eq_withDensity q g,
+    withDensity_apply _ hImage, energyMeasure, withDensity_apply _ hs]
+  exact (setLIntegral_subtype hA s (fun x ↦ ENNReal.ofReal (riemannianVolumeDensity q g x))).symm
+
+omit [I.Boundaryless] in
+/-- The volume induced by a smooth metric on a compact truncation is finite. -/
+theorem isFiniteMeasure_riemannianVolume_comap_subtype
+    (q : SmoothRiemannianMetric I M) {A : Set M} (hA : IsCompact A) :
+    IsFiniteMeasure ((riemannianVolumeMeasure (I := I) (M := M) q).comap (Subtype.val : A → M)) := by
+  let _ : IsFiniteMeasureOnCompacts (riemannianVolumeMeasure (I := I) (M := M) q) :=
+    riemannianVolumeMeasure_isFiniteMeasureOnCompacts q
+  refine ⟨?_⟩
+  rw [comap_subtype_coe_apply hA.measurableSet, Set.image_univ, Subtype.range_coe]
+  exact hA.measure_lt_top
+
+/-- A smooth reference metric supplies the finite reference volume and the
+positive volume density in the compact-truncation transport field. -/
+theorem riemannianVolume_transport_of_compact_referenceMetric
+    (Φ : PartialDiffeomorph I J M N ∞)
+    (q g : SmoothRiemannianMetric I M) (h : SmoothRiemannianMetric J N)
+    (U : Opens M) (hU : (U : Set M) ⊆ Φ.source)
+    (hMetric : ∀ x ∈ U, ∀ v w : TangentSpace I x,
+      g.inner x v w = h.inner (Φ x) (mfderiv I J Φ x v) (mfderiv I J Φ x w))
+    {A : Set M} (hA : IsCompact A) (hAU : A ⊆ U) :
+    let referenceVolume := (riemannianVolumeMeasure (I := I) (M := M) q).comap (Subtype.val : A → M)
+    let jacobian (x : A) := riemannianVolumeDensity q g (x : M)
+    IsFiniteMeasure referenceVolume ∧
+      MeasurableEmbedding (fun x : A ↦ Φ (x : M)) ∧
+      AEMeasurable jacobian referenceVolume ∧ 0 ≤ᵐ[referenceVolume] jacobian ∧
+      (riemannianVolumeMeasure (I := J) (M := N) h).comap (fun x : A ↦ Φ (x : M)) =
+        energyMeasure referenceVolume jacobian := by
+  dsimp only
+  have hMeasurable : Measurable (fun x : A ↦ riemannianVolumeDensity q g (x : M)) :=
+    (riemannianVolumeDensity_contMDiff q g).continuous.measurable.comp measurable_subtype_coe
+  exact ⟨isFiniteMeasure_riemannianVolume_comap_subtype q hA,
+    riemannianVolume_transport_of_compact_partialDiffeomorph Φ g h U hU hMetric hA hAU
+      _ _ hMeasurable.aemeasurable (ae_of_all _ fun x ↦ (riemannianVolumeDensity_pos q g (x : M)).le)
+      (riemannianVolume_comap_subtype_eq_energyMeasure q g hA.measurableSet)⟩
 
 end FirstOrderTwistor

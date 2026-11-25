@@ -2,7 +2,9 @@
 
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The exact serving model and effort are unavailable. [Plan](../research-plan/01_PLAN.md) · [Baseline](../research-progress/01_BASELINE.md) · [Live register](../research-progress/REGISTER.md)
 
-| Ready on activation | Scope | Deliverable |
+The table and prompt below are the launch record. For current work use the [Route 02 handoff](../02_neck_energy_accounting/continuation-notes/AFTER_FINITE_ACCOUNTING_20261125.md) and [shared decisions](../research-progress/REGISTER.md#25-november-2026--shared-decisions-for-the-route-02-activation).
+
+| Ready at setup | Scope | Deliverable |
 | --- | --- | --- |
 | SP4-FORM-FOT-B01 · planning lead | Select the shared formal types and inventory the actual dependencies of E02–E04 and E09. | A decision and import/prerequisite table linking source labels to pinned Lean declarations. |
 | SP4-FORM-FOT-E01 · bounded proof | Finite accounting with a strict residual, including the empty family. It can proceed independently of B01. | A checked theorem in the current Lake library, with the equality explicitly supplied at this algebraic stage. |

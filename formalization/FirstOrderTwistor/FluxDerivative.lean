@@ -185,7 +185,7 @@ theorem abs_bufferedFlux_contraction_le {ι : Type*} [Fintype ι]
   calc
     |c₁ * (∑ a, dη a * A a) + c₂ * (∑ a, B a * A a)| + |c₃ * (∑ j, v j * T j)| ≤
         |c₁ * (∑ a, dη a * A a)| + |c₂ * (∑ a, B a * A a)| + |c₃ * (∑ j, v j * T j)| :=
-      add_le_add_right (abs_add_le _ _) _
+      add_le_add_left (abs_add_le _ _) _
     _ = c₁ * |∑ a, dη a * A a| + c₂ * |∑ a, B a * A a| + c₃ * |∑ j, v j * T j| := by
       simp only [abs_mul, abs_of_nonneg hc₁, abs_of_nonneg hc₂, abs_of_nonneg hc₃]
     _ ≤ c₁ * (coordinateNorm dη * (coordinateNorm v * coordinateNorm d)) +

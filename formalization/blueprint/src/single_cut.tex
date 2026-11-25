@@ -1,0 +1,212 @@
+\section{Descent from one marked spherical cut}
+
+Let $T=4\pi^2$. The source is an oriented smooth closed homotopy
+four-sphere. We use the Hilbert--Schmidt norm of the Weyl endomorphism
+on the self-dual two-forms. A chosen smooth ALE compactification
+$\widehat X$ has a marked normal ball at its added point. The comparison
+must embed the whole protected core and the two collar buffers into a
+single source. Several of the lemmas below apply to general measure
+spaces or manifolds; their geometric applications use these choices.
+
+\begin{lemma}[Strict exterior margin]
+\label{lem:strict-exterior-margin}
+\lean{FirstOrderTwistor.exteriorEnergyLtThreshold, FirstOrderTwistor.exteriorEnergyLtThresholdOfStrictError}
+\leanok
+Let $T,\delta>0$, $e\le2T-\delta$, $v\le e-x+\eta$ and
+$0\le\eta\le\delta$. If $x>T$, then $v<T$. If $x\ge T$, the
+same conclusion holds when $\eta<\delta$.
+\end{lemma}
+\begin{proof}
+\leanok
+At $x=T$, $e=2T-\delta$ and $\eta=\delta$ the exterior bound is $T$.
+Either strict inequality in the statement lowers this upper bound.
+\end{proof}
+
+\begin{lemma}[Protected core and physical exterior]
+\label{lem:cut-core-complement}
+\lean{FirstOrderTwistor.FixedTruncationComparison.tendsto_complMass, FirstOrderTwistor.eventually_cappedExteriorEnergy_le_of_coreComparisons}
+\leanok
+Assume fixed-core image-mass comparison, a finite model of energy $x$
+exhausted almost everywhere by increasing protected cores, and total
+source energy tending to $e$. Suppose the exterior costs at most the
+physical complement of the protected core plus a splice error tending
+to zero in the iterated order. For every $\varepsilon>0$ and all
+sufficiently large fixed truncations $L$, the exterior energy is at most
+$e-x+\varepsilon$ for all sufficiently late source indices at $L$.
+\end{lemma}
+\begin{proof}
+\leanok
+Subtract the mass of the measurable embedded image from the total
+source mass. At fixed $L$ this difference tends to $e$ minus the model
+core mass. Use exhaustion and split the allowance between the remaining
+model tail and the splice.
+\end{proof}
+
+\begin{lemma}[Cap form and splice estimates]
+\label{lem:cut-cap-form}
+\lean{FirstOrderTwistor.capPartitionMass, FirstOrderTwistor.capCutoffLoss, FirstOrderTwistor.capYamabeInfimumLowerBound, FirstOrderTwistor.smoothCapSpliceWeylBound, FirstOrderTwistor.smoothCapSpliceBachBound, FirstOrderTwistor.firstOrderCapSpliceWeylBound}
+\leanok
+For nonzero $L^4$ tests, let $\chi^2+\xi^2=1$ and suppose the two
+localized quadratic forms have nonnegative lower coefficients $a,b$.
+Supply the IMS identity with error $6\int Fu^2$ where $F\ge0$ and
+$6\|F\|_2\le L$. Under the stated measurability and integrability
+conditions the infimum of the tested Rayleigh quotients is at least
+$\min(a,b)-L$. On a splice of volume at most $V$, a pointwise Weyl
+bound $C\eta_2$ costs at most $V C^2\eta_2^2$ in squared norm.
+An independent pointwise Bach bound $C'\eta_4$ costs at most
+$VC'\eta_4$ in integrated norm. In the first-order model, put
+$q,A$ for the old and new squared norms, with the quotient normalization.
+If the normalized weighted $L^2$ splice error is at most $\Delta$ and
+the cutoff has modulus at most one, the net added energy is at most
+$2\sqrt q\,\Delta+\Delta^2$.
+\end{lemma}
+\begin{proof}
+\leanok
+Apply the triangle inequality to $u^2=(\chi u)^2+(\xi u)^2$ in
+$L^2$ and use Cauchy--Schwarz on the cutoff loss. Divide the resulting
+form bound by $\|u\|_4^2$. Integrate the two pointwise bounds on the
+fixed splice. For the first-order estimate apply the $L^2$ triangle
+inequality on the pair of splices and square.
+\end{proof}
+
+\begin{lemma}[One buffer, radius and index for both tests]
+\label{lem:cut-ordered-selection}
+\uses{lem:strict-exterior-margin,lem:cut-cap-form}
+\lean{FirstOrderTwistor.selectFixedSphericalCut}
+\leanok
+Suppose $e\le2T-\delta$, $x\ge T$, and $0<4\varepsilon<\delta$.
+Supply a cutoff loss tending to zero with width, compact core exhaustion
+and collar closeness as the radius tends to zero for each width, and
+source comparisons at each chosen fixed radius. Assume the same exterior
+metric satisfies the cap energy and Yamabe estimates in the normal chart.
+One can choose a width $\ell\ge1$, then an arbitrarily small fixed
+$s>0$, so that eventually in the source index
+\[
+ E_{\rm ext}<e-x+4\varepsilon,\qquad E_{\rm ext}<T,\qquad
+ Y_{\rm ext}>\tfrac12\min(y_0,Y_{\rm rd}/2)>0.
+\]
+\end{lemma}
+\begin{proof}
+\leanok
+Choose $\ell$ to control the cutoff loss. In that width make the model
+tail and collar error small at a fixed radius. Intersect the eventual
+conditions for total energy, protected core comparison and splice error
+at that radius. Their four allowances give the displayed energy bound.
+\end{proof}
+
+\begin{lemma}[The normal ball and the signed slice]
+\label{lem:cut-normal-mark}
+\lean{FirstOrderTwistor.normalCutPolarDiffeomorph, FirstOrderTwistor.chartedNormalCap_boundary, FirstOrderTwistor.chartedNormalCut_sides, FirstOrderTwistor.exists_normalCutRadius_for_buffer, FirstOrderTwistor.signedCollar_inside_capNeighborhood}
+\leanok
+In normal coordinates put $P_s(t,u)=se^{-t}Ju$ for $s>0$, $u\in S^3$
+and an orthogonal $J$. The signed cylinder maps diffeomorphically onto punctured four-space,
+with inverse given by the logarithmic radius and the normalized direction. The boundary of the marked ball $v\mapsto sJv$
+is precisely the middle slice. The positive side lies inside the ball
+and the negative side lies outside the closed ball. A radius as small
+as desired places the ball and any fixed finite buffer in a chart
+about zero. An open neighborhood of an entire middle sphere contains
+a two-sided strip of positive uniform width.
+\end{lemma}
+\begin{proof}
+\leanok
+The norm is $se^{-t}$, giving signed time $-\log(\|y\|/s)$ and the
+three radius tests. The largest radius on a buffer of half-length
+$L$ is $se^L$. For the final assertion apply the tube lemma to
+$\{0\}\times S^3$ in the inverse image of the open neighborhood.
+\end{proof}
+
+\begin{proposition}[Smooth reassembly on a marked collar]
+\label{prop:cut-marked-reassembly}
+\lean{FirstOrderTwistor.exists_markedExteriorRecognition, FirstOrderTwistor.exists_recognition_eqOn_capNeighborhood, FirstOrderTwistor.originalTypeOfRecognizedExterior, FirstOrderTwistor.SmoothCutGluing.toDiffeomorph_preservesOrientation}
+\leanok
+Given an oriented recognition $f:\widehat V\to S^4$ and an oriented
+ambient extension of its recorded cap germ, a corrected recognition
+agrees with the prescribed chart near the closed cap and maps its closed
+exterior onto the opposite hemisphere. Supply the retained-side and
+normal-ball maps, the core inverse, and the two open covers with their
+common signed collar charts. When these charts satisfy the recorded
+patch formulas and preserve tangent orientations on their domains, they
+induce an oriented smooth diffeomorphism $\Phi:M\to\widehat X$
+with those core and exterior restrictions.
+\end{proposition}
+\begin{proof}
+\leanok
+Compose $f$ with the inverse ambient extension. Compose the corrected
+map with the retained-side and normal-ball charts. The resulting
+exterior map and the core inverse coincide on the source overlap, and
+the common collar maps onto the target overlap. Glue both maps and
+their inverses on these opens. Their differentials on the patch domains
+carry the given orientations.
+\end{proof}
+
+\begin{proposition}[Marked competitor and the variational residual]
+\label{thm:one-cut-same-type-descent}
+\uses{prop:cut-marked-reassembly,lem:scalar-component-budgets}
+\lean{FirstOrderTwistor.classYamabeFour_pullback, FirstOrderTwistor.chiralFrameEnergy_pullback, FirstOrderTwistor.MarkedMetricTransfer.competitor, FirstOrderTwistor.lowerEnergyOnOriginalType, FirstOrderTwistor.excludesExactMinimum, FirstOrderTwistor.uniformDescentOnOriginalType}
+\leanok
+Use the specified positive-block coefficients for the energy functional
+on all source metrics. On the compactified metric $g$ of energy $x$,
+suppose $Y([g])>0$ and the oriented patch maps identify the two blocks
+up to almost-everywhere orthogonal conjugacy. The actual pullback
+$\Phi^*g$ has the same positive Yamabe constant and energy. The infimum
+on $M$ for this coefficient family, denoted by $I_W(M)$, therefore
+satisfies $I_W(M)\le x$. The strict scalar residual gives $I_W(M)\le x<e$ under its Ricci and
+subround Yamabe hypotheses. With a supplied band-uniform deficit the
+stronger inequality is $I_W(M)\le x\le e-\kappa_\delta$.
+\end{proposition}
+\begin{proof}
+\leanok
+Pullback identifies the two sets of normalized total scalar-curvature
+values as the smooth logarithmic conformal factor varies. Conjugacy
+preserves the squared Hilbert--Schmidt norm, and Riemannian volume
+changes variables by the same diffeomorphism. Insert the resulting
+metric into the source infimum and apply the strict or uniform residual.
+\end{proof}
+
+\begin{theorem}[Curvature and descent on the original smooth type]
+\label{thm:cut-curvature-descent}
+\uses{prop:cut-marked-reassembly,thm:one-cut-same-type-descent}
+\lean{FirstOrderTwistor.geometricChiralBlock, FirstOrderTwistor.geometricChiralBlock_pullback, FirstOrderTwistor.geometricPullbackCompetitor, FirstOrderTwistor.geometricPositiveEnergies_eq_of_diffeomorph, FirstOrderTwistor.geometricDescentOnOriginalType, FirstOrderTwistor.oneCutDescent}
+\leanok
+Compute the positive block of the actual lowered Levi--Civita curvature
+in an oriented orthonormal basis by restricting to the normalized
+self-dual wedge basis and removing the scalar trace. Let $\mathcal E(M)$
+be the energies so obtained from positive-Yamabe metrics and pointwise
+oriented orthonormal frames with integrable squared block norm.
+An oriented diffeomorphism identifies the two variational sets.
+For the single-cut implication, assume $e\le 2T-\delta$, $x>T$ and
+$0\le\eta\le\delta$ with $\delta>0$. On the specified exterior supply a
+positive Yamabe metric of integrable chiral energy at most $e-x+\eta$.
+Assume its strict recognition principle, the hemisphere germ-extension
+theorem and the marked local patches for this cut. The map returned by reassembly agrees with the fixed core inverse
+and pulls the compactified metric back to the given source. On the
+marked cut, a positive-Yamabe compactification with integrable curvature
+energy $x$ yields $x\in\mathcal E(M)$. The Route 02 strict residual
+implies $\inf\mathcal E(M)\le x<e$. The uniform residual gives
+$\inf\mathcal E(M)\le x\le e-\kappa_\delta$ with its extra Yamabe deficit.
+\end{theorem}
+\begin{proof}
+\leanok
+Transport the chosen tangent basis by the inverse differential. It
+remains oriented and orthonormal for the pulled-back metric. Riemann
+naturality identifies all four curvature slots, so the two positive
+blocks have identical entries in these paired frames. Pullback preserves
+integrability, the energy integral and the Yamabe value. Apply the
+construction to the inverse map for the reverse inclusion of the
+variational sets. Use the source infimum and the two scalar residuals.
+\end{proof}
+
+\begin{openproblem}[Realizing the marked cut from the source hypotheses]
+\label{problem:cut-geometric-realization}
+\notready
+Produce the required smooth compactification, marked full-core embedding,
+cap metric estimates and recognized exterior under the hypotheses of the
+single-cut theorem. Identifying the formal infimum $\inf\mathcal E(M)$
+with the intrinsic $I^+(M)$ in the manuscript requires invariance under
+arbitrary changes of oriented orthonormal frame and integrability of the
+intrinsic density for each smooth metric. Formal recognition still needs the topology of the
+actual capped exterior and the strict sphere theorem. The expected strict
+residual depends on the geometric Euler, Ricci and Yamabe inputs. General
+existence of a suitable cut and further descent from a positive closed
+critical class are separate questions.
+\end{openproblem}

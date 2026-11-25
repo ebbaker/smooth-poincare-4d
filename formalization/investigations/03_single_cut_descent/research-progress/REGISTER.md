@@ -6,18 +6,27 @@ This is the sole live status register for FOT-E25, FOT-E26 and FOT-E28, with CUT
 
 ## Version 01 tasks
 
-*Ready* means executable on activation. *Dependent* means a named design decision is needed. *Reserved* targets need the listed prerequisites and an exact proof packet.
-
-| Task | Status | Dependency or next deliverable |
+| Task | Current evidence | Remaining premise or next proof |
 | --- | --- | --- |
-| SP4-FORM-CUT-B01 | Ready | Specify the actual marked cuts and the maps needed to glue the two balls. Submit shared type choices to parent B05. |
-| SP4-FORM-CUT-E01 | Ready | Real-valued strict exterior margin from the source budget, bubble cost and total cap error. |
-| SP4-FORM-FOT-E25 | Reserved | CUT-B01, parent B05/E04 and gluing topology. Recognize and reassemble the identified capped summand. |
-| SP4-FORM-FOT-E26 | Reserved | Parent B05, Route 02 E09 and the NECK-E01 estimates. Verify the cap bounds on the chosen metric. |
-| SP4-FORM-FOT-E28 | Reserved | CUT-E01, E25–E26, Route 02 E11–E13 and the marked full-core comparison. Transfer the lower-energy class to the original manifold. |
+| SP4-FORM-CUT-B01 | Adopted the normal ball, physical embedding, oriented signed collar and specified exterior. The Euclidean radial marking and two-open-patch reassembly are checked. | Realize the supplied smooth charts and cover geometry from the marked geometric cut. [Decision](../brainstorm/notes/MARKED_BOUNDARY_DECISION_20261125.md) |
+| SP4-FORM-CUT-E01 | Verified with the exact launch type, the full-error endpoint and a checked equality example. Also verified the strictly smaller error variant at threshold bubble cost. | Closed. [Proof receipt](handoffs/CUT_E01_RETURN.md) |
+| SP4-FORM-FOT-E25 | Conditional smooth reassembly. The marked correction acts on an open cap neighborhood. The maps glue to an actual oriented diffeomorphism with both restrictions. Recognition of the specified exterior targets the standard smooth unit sphere. | Construct the capped homotopy-sphere data, instantiate the parent strict sphere theorem and Palais neighborhood-extension input, and verify the actual signed charts and their domains. [Audit](../reviews/MARKED_DESCENT_AUDIT_20261125.md) · [Patch constructor](handoffs/PATCH_RETURN.md) |
+| SP4-FORM-FOT-E26 | The two local form bounds, an IMS identity and measured cutoff cost give the Rayleigh lower bound. Integrated smooth Weyl/Bach costs and first-order splice estimates are checked under separate hypotheses. | Prove the closed capped metric's form comparisons and curvature bounds on the actual splice, including identification of the tested quotient with its class Yamabe constant. [Forms](handoffs/CAP_RETURN.md) · [Splice](handoffs/CAP_SPLICE_RETURN.md) |
+| SP4-FORM-FOT-E28 | Fixed-core comparison charges the entire complement; joint cut selection fixes length, radius and source index. Strict and quantitative variational bounds follow on the original smooth type from a marked metric transfer and the corresponding Route 02 residual inputs. | Realize the metric and topological premises on the same chosen cut, the component identities and the strict or uniform deficit. Audit general conformity with the manuscript energy, including arbitrary frame independence. [Core](handoffs/CORE_RETURN.md) · [Selection](handoffs/SELECTION_RETURN.md) · [Yamabe transport](handoffs/YAMABE_RETURN.md) |
 
 ## Setup evidence
 
-On 25 November 2026 the opening proposition in the route plan elaborated as `Prop` using `lake env lean --stdin` under Lean `4.35.0-rc3`. The existing package built successfully (1,619 jobs). `FirstOrderTwistor.exteriorEnergyLtThreshold` is a planned declaration. Route proof execution awaits activation. [Checked proposition type](../research-plan/PLAN.md) · [Package pins and existing proofs](../../research-progress/01_BASELINE.md#lean-evidence)
+On 25 November 2026 the opening proposition in the route plan elaborated as `Prop` using `lake env lean --stdin` under Lean `4.35.0-rc3`. The existing package built successfully (1,619 jobs). `FirstOrderTwistor.exteriorEnergyLtThreshold` was a planned declaration at setup. The table above records its subsequent proof. [Checked proposition type](../research-plan/PLAN.md) · [Package pins and existing proofs](../../research-progress/01_BASELINE.md#lean-evidence)
 
 The route lead records dated returns here, including the actual prover and effort when available. The program integrator owns shared build files, blueprint edits and FOT-E34. [Sustained continuation prompt](../continuation-notes/CONTINUATION.md) · [Platform roles](../../../FORMALIZATION_SETUP_WORKFLOW.md#platform-guidance)
+
+
+## Activation and review · 25 November 2026
+
+The route opened at `7db310a` and integrated the new Route 02 component and measure declarations at `0c3399d`. Read the [requests and version checks](handoffs/ACTIVATION_20261125.md), [integration evidence](handoffs/INTEGRATION_20261125.md) and [next session](../continuation-notes/AFTER_MARKED_DESCENT_20261125.md). The working manuscript and joint-note hashes agree with the Version 01 baseline. The later [second collar assessment](../../../../papers/investigations-1/03_first_order_twistor/reviews/SECOND_COLLAR_ASSESSMENT_20261125.md) concerns additional base alternatives and does not weaken the full-core hypothesis in this route.
+
+On the compactified metric, `geometricChiralBlock` evaluates all four slots of Levi-Civita curvature in a real oriented orthonormal tangent basis, compresses to the normalized self-dual basis and removes the scalar trace. Curvature in the frame transported through the marked diffeomorphism agrees pointwise. This discharges the earlier audit's coefficient-identification concern for the new geometric-energy theorem. Its variational set contains energies of actual metrics with a positive class Yamabe constant and integrable squared block norm in a pointwise frame. A separate Hodge/coordinate comparison concerns arbitrary unrelated frames. [Curvature block](handoffs/GEOMETRIC_BLOCK_RETURN.md) · [Transported frame](handoffs/FRAME_PULLBACK_RETURN.md) · [Geometric variational theorem](../../../FirstOrderTwistor/GeometricCutDescent.lean)
+
+A positive closed Bach-flat class above the recognition threshold can survive the decrease. Passing to another cut or continuing the descent requires additional geometry. The formal results use distinct metrics on the capped exterior and on the compactification, with the latter pulled back to the source. The paper's Bach-flatness of the transferred representative, general collar extraction and termination remain outside the checked conclusion.
+
+The assembled `oneCutDescent` theorem now uses the same oriented map for the fixed-core equality, the positive Yamabe constant, the integrable curvature energy and the strict and conditional uniform bounds. Its recognition premise tests the metric on the specified exterior. The [third collar assessment](../../../../papers/investigations-1/03_first_order_twistor/reviews/THIRD_COLLAR_ASSESSMENT_20261125.md) gives more information about physical volume balls. Producing the requisite marked full core and separating cut on the approximately critical source sequence remains open. [One-cut theorem and audit](handoffs/ONE_CUT_RETURN.md)

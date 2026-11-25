@@ -11,3 +11,5 @@ The linked records own the source metadata and earlier inspection history. The s
 [Sources inspected for the joint collar research](../../../../../../references/SOURCE_NOTES_JOINT_COLLAR_20261125.md) identify the gluing, spectral and boundary results used in the dated derivations.
 
 The [second collar source record](../../../../../../references/SOURCE_NOTES_SECOND_COLLAR_20261125.md) identifies the primary passages used in the [new branch assessment](../reviews/SECOND_COLLAR_REVIEW_20261125.md).
+
+The [third collar source record](../../../../../../references/SOURCE_NOTES_THIRD_COLLAR_20261125.md) gives the exact primary passages behind the new derivations and checks.

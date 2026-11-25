@@ -1,0 +1,290 @@
+import SectionsAndConnections
+import FirstOrderTwistor
+
+/-! Public type and axiom audit for the Route 02 milestone of 25 November 2026. -/
+
+-- SectionsAndConnections.FiniteAccounting
+#check SectionsAndConnections.noPositiveBubbleOfFiniteAccounting
+#print axioms SectionsAndConnections.noPositiveBubbleOfFiniteAccounting
+
+-- FirstOrderTwistor.Accounting
+#check FirstOrderTwistor.TruncationFamily
+#print axioms FirstOrderTwistor.TruncationFamily
+#check FirstOrderTwistor.StripFamily
+#print axioms FirstOrderTwistor.StripFamily
+#check FirstOrderTwistor.TruncationFamily.remainder
+#print axioms FirstOrderTwistor.TruncationFamily.remainder
+#check FirstOrderTwistor.TruncationFamily.componentEnergy
+#print axioms FirstOrderTwistor.TruncationFamily.componentEnergy
+#check FirstOrderTwistor.TruncationFamily.sum_componentEnergy_le
+#print axioms FirstOrderTwistor.TruncationFamily.sum_componentEnergy_le
+#check FirstOrderTwistor.TruncationFamily.tendsto_remainder
+#print axioms FirstOrderTwistor.TruncationFamily.tendsto_remainder
+#check FirstOrderTwistor.TruncationFamily.tendsto_limsup_remainder
+#print axioms FirstOrderTwistor.TruncationFamily.tendsto_limsup_remainder
+#check FirstOrderTwistor.RemainderEstimates
+#print axioms FirstOrderTwistor.RemainderEstimates
+#check FirstOrderTwistor.smallSumOfFiniteStripErrors
+#print axioms FirstOrderTwistor.smallSumOfFiniteStripErrors
+#check FirstOrderTwistor.RemainderEstimates.ofFixedStrips
+#print axioms FirstOrderTwistor.RemainderEstimates.ofFixedStrips
+#check FirstOrderTwistor.energyIdentityOfCoveredRemainder
+#print axioms FirstOrderTwistor.energyIdentityOfCoveredRemainder
+#check FirstOrderTwistor.noPositiveBubbleOfCoveredRemainder
+#print axioms FirstOrderTwistor.noPositiveBubbleOfCoveredRemainder
+#check FirstOrderTwistor.bubbleEnergyZeroOfRicciYamabeBounds
+#print axioms FirstOrderTwistor.bubbleEnergyZeroOfRicciYamabeBounds
+
+-- FirstOrderTwistor.AccountingLimits
+#check FirstOrderTwistor.tendstoAccountingRemainder
+#print axioms FirstOrderTwistor.tendstoAccountingRemainder
+#check FirstOrderTwistor.accountedEnergy_le_totalEnergy
+#print axioms FirstOrderTwistor.accountedEnergy_le_totalEnergy
+#check FirstOrderTwistor.totalEnergy_eq_accountedEnergy
+#print axioms FirstOrderTwistor.totalEnergy_eq_accountedEnergy
+
+-- FirstOrderTwistor.ALEEndCount
+#check FirstOrderTwistor.card_div_le_sum_reciprocal_end_orders
+#print axioms FirstOrderTwistor.card_div_le_sum_reciprocal_end_orders
+#check FirstOrderTwistor.oneALEEndOfSubcriticalBounds
+#print axioms FirstOrderTwistor.oneALEEndOfSubcriticalBounds
+#check FirstOrderTwistor.q8EtaContradictionOfSubcriticalBand
+#print axioms FirstOrderTwistor.q8EtaContradictionOfSubcriticalBand
+
+-- FirstOrderTwistor.AnnularBounds
+#check FirstOrderTwistor.annularLimsup_le_iff
+#print axioms FirstOrderTwistor.annularLimsup_le_iff
+#check FirstOrderTwistor.annularSmallness_iff_tendsto_limsup
+#print axioms FirstOrderTwistor.annularSmallness_iff_tendsto_limsup
+#check FirstOrderTwistor.noNeckOfSuppliedCharts
+#print axioms FirstOrderTwistor.noNeckOfSuppliedCharts
+#check FirstOrderTwistor.noNeckOfSuppliedField
+#print axioms FirstOrderTwistor.noNeckOfSuppliedField
+
+-- FirstOrderTwistor.AnnularInterpolation
+#check FirstOrderTwistor.bufferedInterpolation
+#print axioms FirstOrderTwistor.bufferedInterpolation
+
+-- FirstOrderTwistor.BufferedInterpolation
+#check FirstOrderTwistor.EuclideanFour
+#print axioms FirstOrderTwistor.EuclideanFour
+#check FirstOrderTwistor.euclideanPartial
+#print axioms FirstOrderTwistor.euclideanPartial
+#check FirstOrderTwistor.euclideanGradientSq
+#print axioms FirstOrderTwistor.euclideanGradientSq
+#check FirstOrderTwistor.bufferedFlux
+#print axioms FirstOrderTwistor.bufferedFlux
+#check FirstOrderTwistor.bufferedInterpolation_integrationByParts
+#print axioms FirstOrderTwistor.bufferedInterpolation_integrationByParts
+#check FirstOrderTwistor.bufferedInterpolation_of_quartic
+#print axioms FirstOrderTwistor.bufferedInterpolation_of_quartic
+
+-- FirstOrderTwistor.ChiralDensity
+#check FirstOrderTwistor.chiralHSDensity
+#print axioms FirstOrderTwistor.chiralHSDensity
+#check FirstOrderTwistor.chiralHSDensity_nonneg
+#print axioms FirstOrderTwistor.chiralHSDensity_nonneg
+#check FirstOrderTwistor.tendsto_chiralHSDensity
+#print axioms FirstOrderTwistor.tendsto_chiralHSDensity
+#check FirstOrderTwistor.chiralHSDensity_integrableOn_and_tendsto
+#print axioms FirstOrderTwistor.chiralHSDensity_integrableOn_and_tendsto
+
+-- FirstOrderTwistor.ComparisonFamily
+#check FirstOrderTwistor.FiniteEnergyDensity
+#print axioms FirstOrderTwistor.FiniteEnergyDensity
+#check FirstOrderTwistor.FiniteEnergyDensity.toMeasure
+#print axioms FirstOrderTwistor.FiniteEnergyDensity.toMeasure
+#check FirstOrderTwistor.FiniteEnergyDensity.instIsFiniteMeasureToMeasure
+#print axioms FirstOrderTwistor.FiniteEnergyDensity.instIsFiniteMeasureToMeasure
+#check FirstOrderTwistor.FiniteEnergyDensity.toFiniteMeasure
+#print axioms FirstOrderTwistor.FiniteEnergyDensity.toFiniteMeasure
+#check FirstOrderTwistor.FixedTruncationComparison
+#print axioms FirstOrderTwistor.FixedTruncationComparison
+#check FirstOrderTwistor.FixedTruncationComparison.tendsto_imageMass
+#print axioms FirstOrderTwistor.FixedTruncationComparison.tendsto_imageMass
+#check FirstOrderTwistor.TruncationFamily.ofEnergyComparisons
+#print axioms FirstOrderTwistor.TruncationFamily.ofEnergyComparisons
+
+-- FirstOrderTwistor.ComponentBudgets
+#check FirstOrderTwistor.roundYamabeConstant
+#print axioms FirstOrderTwistor.roundYamabeConstant
+#check FirstOrderTwistor.roundYamabeConstant_pos
+#print axioms FirstOrderTwistor.roundYamabeConstant_pos
+#check FirstOrderTwistor.roundYamabeConstant_sq
+#print axioms FirstOrderTwistor.roundYamabeConstant_sq
+#check FirstOrderTwistor.sourceBandScalarBudget
+#print axioms FirstOrderTwistor.sourceBandScalarBudget
+#check FirstOrderTwistor.sourceCurvatureBudget
+#print axioms FirstOrderTwistor.sourceCurvatureBudget
+#check FirstOrderTwistor.componentResidual
+#print axioms FirstOrderTwistor.componentResidual
+#check FirstOrderTwistor.strictComponentResidual
+#print axioms FirstOrderTwistor.strictComponentResidual
+#check FirstOrderTwistor.componentResidual_lt
+#print axioms FirstOrderTwistor.componentResidual_lt
+#check FirstOrderTwistor.uniformResidualMargin
+#print axioms FirstOrderTwistor.uniformResidualMargin
+#check FirstOrderTwistor.uniformResidualMargin_pos
+#print axioms FirstOrderTwistor.uniformResidualMargin_pos
+#check FirstOrderTwistor.uniformComponentResidual
+#print axioms FirstOrderTwistor.uniformComponentResidual
+
+-- FirstOrderTwistor.ConformalEnergy
+#check FirstOrderTwistor.hilbertSchmidtSq_conformal_cancel
+#print axioms FirstOrderTwistor.hilbertSchmidtSq_conformal_cancel
+#check FirstOrderTwistor.energyMeasure_conformalFour
+#print axioms FirstOrderTwistor.energyMeasure_conformalFour
+#check FirstOrderTwistor.riemannianChiralEnergyMeasure_restrict_conformalMetric
+#print axioms FirstOrderTwistor.riemannianChiralEnergyMeasure_restrict_conformalMetric
+#check FirstOrderTwistor.riemannianChiralEnergyMeasure_conformalMetric
+#print axioms FirstOrderTwistor.riemannianChiralEnergyMeasure_conformalMetric
+
+-- FirstOrderTwistor.ConvergingFrames
+#check FirstOrderTwistor.tendsto_metricInner_of_basis
+#print axioms FirstOrderTwistor.tendsto_metricInner_of_basis
+#check FirstOrderTwistor.metricGramSchmidtBasis
+#print axioms FirstOrderTwistor.metricGramSchmidtBasis
+#check FirstOrderTwistor.metricGramSchmidtBasis_inner
+#print axioms FirstOrderTwistor.metricGramSchmidtBasis_inner
+#check FirstOrderTwistor.tendsto_metricGramSchmidtBasis
+#print axioms FirstOrderTwistor.tendsto_metricGramSchmidtBasis
+#check FirstOrderTwistor.metricGramSchmidtBasis_eq_of_orthonormal
+#print axioms FirstOrderTwistor.metricGramSchmidtBasis_eq_of_orthonormal
+#check FirstOrderTwistor.metricGramSchmidtBasis_orientation
+#print axioms FirstOrderTwistor.metricGramSchmidtBasis_orientation
+#check FirstOrderTwistor.orthonormalFrameFromReferenceAt
+#print axioms FirstOrderTwistor.orthonormalFrameFromReferenceAt
+#check FirstOrderTwistor.tendsto_orthonormalFrameFromReferenceAt
+#print axioms FirstOrderTwistor.tendsto_orthonormalFrameFromReferenceAt
+
+-- FirstOrderTwistor.CurvatureCompressionBound
+#check FirstOrderTwistor.hilbertSchmidtSq_traceFreeSelfDualBlock_le_frameTensorNormSq
+#print axioms FirstOrderTwistor.hilbertSchmidtSq_traceFreeSelfDualBlock_le_frameTensorNormSq
+
+-- FirstOrderTwistor.CurvatureDensityLimit
+#check FirstOrderTwistor.traceFreeSelfDualBlock
+#print axioms FirstOrderTwistor.traceFreeSelfDualBlock
+#check FirstOrderTwistor.tendsto_traceFreeSelfDualBlock_apply
+#print axioms FirstOrderTwistor.tendsto_traceFreeSelfDualBlock_apply
+#check FirstOrderTwistor.curvatureFrameDensity_integrableOn_and_tendsto
+#print axioms FirstOrderTwistor.curvatureFrameDensity_integrableOn_and_tendsto
+#check FirstOrderTwistor.tendsto_geometricChiralBlock
+#print axioms FirstOrderTwistor.tendsto_geometricChiralBlock
+#check FirstOrderTwistor.geometricChiralDensity_integrableOn_and_tendsto
+#print axioms FirstOrderTwistor.geometricChiralDensity_integrableOn_and_tendsto
+
+-- FirstOrderTwistor.DiagonalEnd
+#check FirstOrderTwistor.exists_slow_diagonal
+#print axioms FirstOrderTwistor.exists_slow_diagonal
+#check FirstOrderTwistor.exists_slow_diagonal_with_vanishing_annularMass
+#print axioms FirstOrderTwistor.exists_slow_diagonal_with_vanishing_annularMass
+#check FirstOrderTwistor.exists_slow_diagonal_with_vanishing_annularMeasure
+#print axioms FirstOrderTwistor.exists_slow_diagonal_with_vanishing_annularMeasure
+
+-- FirstOrderTwistor.EnergyDensity
+#check FirstOrderTwistor.energyMeasure
+#print axioms FirstOrderTwistor.energyMeasure
+#check FirstOrderTwistor.isFiniteEnergyMeasure
+#print axioms FirstOrderTwistor.isFiniteEnergyMeasure
+#check FirstOrderTwistor.energyMeasure_real_apply
+#print axioms FirstOrderTwistor.energyMeasure_real_apply
+#check FirstOrderTwistor.energyMeasure_real_range_of_embedding
+#print axioms FirstOrderTwistor.energyMeasure_real_range_of_embedding
+#check FirstOrderTwistor.integrableDensityOfComparisonEmbedding
+#print axioms FirstOrderTwistor.integrableDensityOfComparisonEmbedding
+#check FirstOrderTwistor.tendstoIntegralOfUniformDensity
+#print axioms FirstOrderTwistor.tendstoIntegralOfUniformDensity
+#check FirstOrderTwistor.tendstoImageEnergyOfUniformPullback
+#print axioms FirstOrderTwistor.tendstoImageEnergyOfUniformPullback
+
+-- FirstOrderTwistor.FixedMetricEnergy
+#check FirstOrderTwistor.chiralIntegral_eq_referenceDensity
+#print axioms FirstOrderTwistor.chiralIntegral_eq_referenceDensity
+#check FirstOrderTwistor.tendsto_geometricChiralIntegral_of_framedCurvature
+#print axioms FirstOrderTwistor.tendsto_geometricChiralIntegral_of_framedCurvature
+
+-- FirstOrderTwistor.FrameCompression
+#check FirstOrderTwistor.selfDualCurvatureBlock_chiralFrameTensor
+#print axioms FirstOrderTwistor.selfDualCurvatureBlock_chiralFrameTensor
+#check FirstOrderTwistor.traceFreeChiralBlock_chiralFrameTensor
+#print axioms FirstOrderTwistor.traceFreeChiralBlock_chiralFrameTensor
+
+-- FirstOrderTwistor.MetricJetCurvature
+#check FirstOrderTwistor.tendsto_metricCurvatureFrameTensor_of_fixedCurvature
+#print axioms FirstOrderTwistor.tendsto_metricCurvatureFrameTensor_of_fixedCurvature
+#check FirstOrderTwistor.tendsto_metricRm04StandardAt_of_metricCPConvergence
+#print axioms FirstOrderTwistor.tendsto_metricRm04StandardAt_of_metricCPConvergence
+#check FirstOrderTwistor.tendsto_metricCurvatureFrameTensor_of_metricCPConvergence
+#print axioms FirstOrderTwistor.tendsto_metricCurvatureFrameTensor_of_metricCPConvergence
+
+-- FirstOrderTwistor.MetricJetEnergy
+#check FirstOrderTwistor.tendsto_geometricChiralIntegral_of_metricCPConvergence
+#print axioms FirstOrderTwistor.tendsto_geometricChiralIntegral_of_metricCPConvergence
+
+-- FirstOrderTwistor.MetricVolumeLimit
+#check FirstOrderTwistor.tendsto_riemannianVolumeDensity_of_metricCPConvergenceOn
+#print axioms FirstOrderTwistor.tendsto_riemannianVolumeDensity_of_metricCPConvergenceOn
+
+-- FirstOrderTwistor.FluxDerivative
+#check FirstOrderTwistor.coordinateNorm
+#print axioms FirstOrderTwistor.coordinateNorm
+#check FirstOrderTwistor.hessianTraceNorm_le
+#print axioms FirstOrderTwistor.hessianTraceNorm_le
+#check FirstOrderTwistor.euclideanHessian
+#print axioms FirstOrderTwistor.euclideanHessian
+#check FirstOrderTwistor.bufferedFlux_partial
+#print axioms FirstOrderTwistor.bufferedFlux_partial
+#check FirstOrderTwistor.abs_bufferedFlux_contraction_le
+#print axioms FirstOrderTwistor.abs_bufferedFlux_contraction_le
+
+-- FirstOrderTwistor.FrameEnergy
+#check FirstOrderTwistor.skewPairArray
+#print axioms FirstOrderTwistor.skewPairArray
+#check FirstOrderTwistor.chiralFrameTensor
+#print axioms FirstOrderTwistor.chiralFrameTensor
+#check FirstOrderTwistor.frameTensorNormSq
+#print axioms FirstOrderTwistor.frameTensorNormSq
+#check FirstOrderTwistor.frameTensorNormSq_eq_four_chiral
+#print axioms FirstOrderTwistor.frameTensorNormSq_eq_four_chiral
+#check FirstOrderTwistor.frameTensorIntegral_eq_four_chiral
+#print axioms FirstOrderTwistor.frameTensorIntegral_eq_four_chiral
+#check FirstOrderTwistor.positiveChiralIntegral_le_quarterFrame
+#print axioms FirstOrderTwistor.positiveChiralIntegral_le_quarterFrame
+
+-- FirstOrderTwistor.InterpolationHolder
+#check FirstOrderTwistor.interpolationL4
+#print axioms FirstOrderTwistor.interpolationL4
+#check FirstOrderTwistor.interpolationL2
+#print axioms FirstOrderTwistor.interpolationL2
+#check FirstOrderTwistor.bufferedInterpolation_holder
+#print axioms FirstOrderTwistor.bufferedInterpolation_holder
+#check FirstOrderTwistor.bufferedInterpolation_of_fluxBound
+#print axioms FirstOrderTwistor.bufferedInterpolation_of_fluxBound
+
+-- FirstOrderTwistor.IntrinsicIntegral
+#check FirstOrderTwistor.weightedEnergy_le_of_intrinsicFlux
+#print axioms FirstOrderTwistor.weightedEnergy_le_of_intrinsicFlux
+
+-- FirstOrderTwistor.MeasureAccounting
+#check FirstOrderTwistor.measureReal_univ_eq_sum_add_compl
+#print axioms FirstOrderTwistor.measureReal_univ_eq_sum_add_compl
+#check FirstOrderTwistor.measureReal_le_sum_add_uncovered
+#print axioms FirstOrderTwistor.measureReal_le_sum_add_uncovered
+
+-- FirstOrderTwistor.RiemannianComparison
+#check FirstOrderTwistor.riemannianVolume_comap_of_partialDiffeomorph
+#print axioms FirstOrderTwistor.riemannianVolume_comap_of_partialDiffeomorph
+#check FirstOrderTwistor.riemannianVolume_transport_of_compact_partialDiffeomorph
+#print axioms FirstOrderTwistor.riemannianVolume_transport_of_compact_partialDiffeomorph
+#check FirstOrderTwistor.riemannianVolume_comap_subtype_eq_energyMeasure
+#print axioms FirstOrderTwistor.riemannianVolume_comap_subtype_eq_energyMeasure
+#check FirstOrderTwistor.isFiniteMeasure_riemannianVolume_comap_subtype
+#print axioms FirstOrderTwistor.isFiniteMeasure_riemannianVolume_comap_subtype
+#check FirstOrderTwistor.riemannianVolume_transport_of_compact_referenceMetric
+#print axioms FirstOrderTwistor.riemannianVolume_transport_of_compact_referenceMetric
+
+-- FirstOrderTwistor.WeylAccounting
+#check FirstOrderTwistor.positiveChiralMass_le_quarterFrame
+#print axioms FirstOrderTwistor.positiveChiralMass_le_quarterFrame
+#check FirstOrderTwistor.energyIdentityOfFullWeylStrips
+#print axioms FirstOrderTwistor.energyIdentityOfFullWeylStrips

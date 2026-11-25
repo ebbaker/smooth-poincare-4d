@@ -4,7 +4,11 @@
 
 [Route overview](../research-overview/OVERVIEW.md) · [Proof plan and opening Lean type](../research-plan/PLAN.md#opening-proof) · [Live route register](../research-progress/REGISTER.md) · [Program ownership](../../research-progress/REGISTER.md#route-ownership) · [Input and toolchain baseline](../../research-progress/01_BASELINE.md)
 
-## Launch prompt
+## Current continuation
+
+The opening assignments have been executed. Resume from the [marked descent handoff](AFTER_MARKED_DESCENT_20261125.md) and [live register](../research-progress/REGISTER.md).
+
+## Original launch prompt
 
 Paste this block into a fresh Astra session with the repository selected.
 

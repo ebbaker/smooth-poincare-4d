@@ -11,3 +11,7 @@ Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving mo
 ## 25 November 2026 · second joint collar session
 
 Ricci, weak-coordinate and boundary-current mechanisms assessed. Production of a vanishing right hand side on the full residual is open. [Assessment](reviews/SECOND_COLLAR_REVIEW_20261125.md) · [Live register](research-progress/REGISTER.md).
+
+## 25 November 2026 · third joint collar session
+
+E15. Slow cutoff transitions give a quantified chart-sum estimate. The bulk derivative sum, uncovered chiral energy and signed angular current are open on an actual full residual. [Decision](brainstorm/notes/THIRD_COLLAR_DECISIONS_20261125.md) · [Joint assessment](../../reviews/THIRD_COLLAR_ASSESSMENT_20261125.md).

@@ -25,6 +25,8 @@ tracks the underlying mathematical investigation.
 | Weyl energy in one annular chart | `msneck:annulus` |
 | Supplied chart limit and open neck control | `msneck:no-neck-target` |
 
+The [finite accounting section](src/neck_accounting.tex) records the checked conditional energy identity, strip bounds and comparison hypotheses. The [Route 02 register](../investigations/02_neck_energy_accounting/research-progress/REGISTER.md) distinguishes those results from the open physical extraction and first-variation problems.
+
 Edit [content.tex](src/content.tex) for mathematical statements, proofs and
 dependencies. Place `\uses` in the statement or proof that needs the
 dependency. Add `\lean` when the corresponding Lean declaration exists

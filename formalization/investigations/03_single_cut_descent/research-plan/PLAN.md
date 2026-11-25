@@ -4,6 +4,8 @@
 
 [Route overview and input versions](../research-overview/OVERVIEW.md) · [Route register](../research-progress/REGISTER.md) · [Overall overview 01](../../research-overview/01_OVERVIEW.md) · [Overall plan 01](../../research-plan/01_PLAN.md) · [Program register](../../research-progress/REGISTER.md) · [Verified baseline 01](../../research-progress/01_BASELINE.md)
 
+The [dated proof return](../research-progress/handoffs/INTEGRATION_20261125.md) and [next proof packet](../continuation-notes/AFTER_MARKED_DESCENT_20261125.md) update this launch plan.
+
 ## Opening proof
 
 **SP4-FORM-CUT-E01 · Strict exterior energy margin.** Isolate the arithmetic in NECK-E02/E05, “One choice of the cut and all margins.” Write $T=4\pi^2$, $x=e_X$, $v$ for the capped exterior energy, and $\eta$ for the combined tail, transfer and splice error. The proposed public declaration `FirstOrderTwistor.exteriorEnergyLtThreshold` in `formalization/FirstOrderTwistor/CutMargin.lean` corresponds to proposed blueprint `lem:strict-exterior-margin`. E26 and E28 must construct the error bound on the physical metric before using this lemma. Check the case $\eta=\delta$ and the loss of strictness if $x=T$ there. [Source inequality](../../../../papers/investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/notes/E02_E05_SAME_TYPE_DESCENT_20261125.md) · [Program E28](../../research-plan/01_PLAN.md#conditional-results-from-the-joint-collar-work)

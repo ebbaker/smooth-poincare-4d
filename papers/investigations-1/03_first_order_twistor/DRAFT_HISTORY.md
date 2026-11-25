@@ -140,3 +140,7 @@ On standard smooth S⁴ the infimum in the marked Yamabe-zero class is exactly 8
 The [joint assessment](reviews/SECOND_COLLAR_ASSESSMENT_20261125.md) records the new geometric, spin and closed-class results. [Continuation](continuation-notes/AFTER_SECOND_COLLAR_RESEARCH_20261125.md).
 
 Two independent derivations give a positive lower bound on the energy lost if physical volume evacuates a nonround conformal base. At minimization this yields physical convergence and zero curvature deficit on the original smooth type. [Lead proof check](reviews/SECOND_COLLAR_LEAD_CHECK_20261125.md).
+
+## 25 November 2026 · third collar session
+
+Located the physical probability at regular points of a positive Ricci limit and transferred finite smooth volume-bearing ball markings to the original sources. On a whole weakly marked nonround minimizing base obtained measured physical convergence and full curvature recovery. [Joint assessment](reviews/THIRD_COLLAR_ASSESSMENT_20261125.md).

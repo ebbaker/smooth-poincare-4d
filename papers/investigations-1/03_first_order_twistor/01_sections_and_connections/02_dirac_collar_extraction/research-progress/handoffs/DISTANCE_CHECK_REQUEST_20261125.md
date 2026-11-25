@@ -1,0 +1,5 @@
+# EXTRACT-E15 · DISTANCE_CHECK
+
+Revision 1, 25 November 2026, for Edward B. Baker III, OpenAI Codex. B05 follow-on selected upon recovery in [E14](../../notes/E14_WEAK_MARKED_BASE_20261125.md), at the current working revision of that note, original manuscript hashes in the proof map. [Register](../REGISTER.md). Fixed E proof check, configured gpt-6.2-sol/ultra. Use the smooth oriented source, physical Yamabe minimizers and weak marked comparison metrics and iterated limits of E14.
+
+Under a whole marked comparison with u_i→u>0 strongly W^{1,p}_loc for p>3, and strongly in L^q_loc for q>4, independently prove or disprove uniform convergence of marked physical distances and global measured GH convergence. Handle lower distances through low-factor sets, puncture exteriors, possible repeated excursions, upper bounds by averaging broken lines, uniform coverage from physical noncollapse. Do not assume a physical C⁰ metric bound. Output this review only. Write ../../reviews/DISTANCE_CHECK_20261125.md and return the outcome; any unverified geometric premise returns to B05.
