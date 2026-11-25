@@ -4,6 +4,8 @@
 
 Prepared with OpenAI Codex assistance (America/New_York). The exact serving model and reasoning effort are unavailable. This discussion draft proposes two research targets and their order. The task identifiers are proposed for the author's review. Research activation and the branch's official overview, plan and progress register are pending.
 
+**Adoption on 25 November 2026.** The author approved the three branches. The scoping text below records the proposal as discussed. The approved [NECK](../../research-overview/OVERVIEW.md), [EXTRACT](../../../02_dirac_collar_extraction/research-overview/OVERVIEW.md) and [MATCH](../../../../02_dirac_and_twistor_spinors/01_dirac_collar_matching/research-overview/OVERVIEW.md) overviews, plans and registers govern future work. [Common proof map](../../../../brainstorm/notes/COLLAR_PROGRAM_AND_SPC4_20261125.md)
+
 ## Proposed research overview
 
 The central question is whether Weyl energy can persist between concentration scales in an almost Bach-flat sequence on a smooth homotopy four-sphere. There is also a question with a shorter geometric reach. If one can locate a single spherical collar, can a cut there identify which side carries the smooth structure of the original manifold? I propose pursuing both questions. The first could give a complete energy identity. The second could yield information about the original manifold while the geometry of the rest of the neck is still unknown.

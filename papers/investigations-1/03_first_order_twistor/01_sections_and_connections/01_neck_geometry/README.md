@@ -1,36 +1,11 @@
 # Neck geometry and Weyl energy
 
-Prepared for Edward B. Baker III with OpenAI Codex assistance,
-25 November 2026 (America/New_York). The exact serving model and
-reasoning effort are unavailable.
+25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. Exact serving model and reasoning effort unavailable. [Inputs and versions](../../brainstorm/notes/COLLAR_PROGRAM_AND_SPC4_20261125.md#inputs-and-versions)
 
-Can the necks of an almost Bach-flat sequence in the fixed
-positive-Yamabe energy band carry Weyl energy between concentration
-scales? This sub-investigation asks what metric or intrinsic control
-would rule out that energy, what such a result would imply for smooth
-four-dimensional Poincaré, and what a controlled cut and cap would
-require.
+Can a separating cut reduce Weyl energy on the same smooth homotopy four-sphere, or can complete accounting rule out a nonflat bubble? This branch studies scale and link selection, metric cap costs and the whole neck.
 
-The [proposed research overview and plan](brainstorm/notes/PROPOSED_OVERVIEW_AND_PLAN_20261125.md)
-is open for author review. It includes a [proposed division of the collar work](brainstorm/notes/PROPOSED_OVERVIEW_AND_PLAN_20261125.md#proposed-division-of-the-collar-work)
-covering neck energy, the extraction of a collar for the Dirac equation, and spinor matching on a supplied collar.
+[Overview](research-overview/OVERVIEW.md) · [Research plan](research-plan/PLAN.md) · [Live register](research-progress/REGISTER.md) · [Continuation prompt](continuation-notes/CONTINUATION.md)
 
-- [The neck problem and its role in smooth recognition](brainstorm/notes/NECK_GEOMETRY_AND_ENERGY_ACCOUNTING_20261125.md) states the limiting problem, existing estimates, and the hypotheses of the argument using an energy identity.
-- [Chiral evolution, Dirac methods, and surgery](brainstorm/notes/CHIRAL_DIRAC_AND_SURGERY_APPROACHES_20261125.md) compares the two companion manuscripts and identifies tests for several approaches.
-- [What the companion manuscripts provide on a supplied collar](brainstorm/notes/USING_A_SUPPLIED_COLLAR_20261125.md) works through the cap and Yamabe estimates, the exact cylinder calculation, the chiral and spinorial comparison, and the hypotheses needed to find a collar.
-- [Sections and connections manuscript](../manuscript/twistor_sections_and_chiral_weyl_curvature.tex) gives the inherited results in Sections 11–14 and the conditional application in Section 15.
+The working notes on [energy between scales](brainstorm/notes/NECK_GEOMETRY_AND_ENERGY_ACCOUNTING_20261125.md), [companion approaches](brainstorm/notes/CHIRAL_DIRAC_AND_SURGERY_APPROACHES_20261125.md), [a supplied collar](brainstorm/notes/USING_A_SUPPLIED_COLLAR_20261125.md) and the [review proposal](brainstorm/notes/PROPOSED_OVERVIEW_AND_PLAN_20261125.md) document the initial choices. The older SEC working source used before the §15 addition had SHA-256 8e034b514153b2502879f973e2d19cf93c45b95008d46de833c01668d10bee44. Subsequent work uses the version in the shared input record.
 
-This is a scoping sub-investigation of [Sections and connections](../README.md),
-with its scope and comparisons recorded in the brainstorm notes. The
-[parent SEC register](../research-progress/REGISTER.md) owns the existing
-SEC-B36 decision and the reserved SEC-E62 test. The
-[handoff after E61](../continuation-notes/05_AFTER_ANNULAR_ENERGY_AND_CONSERVATION_20261124.md)
-records their dependencies. The setup activates no new research packet.
-[Investigation setup workflow](../../../../../INVESTIGATION_SETUP_WORKFLOW.md)
-
-The manuscript reviewed at setup was the working source after the
-25 November review corrections, SHA-256
-`8e034b514153b2502879f973e2d19cf93c45b95008d46de833c01668d10bee44`.
-The [manuscript provenance](../manuscript/README.md) records the Section 15
-addition made with this setup. The comparison note pins the two other
-manuscript versions.
+The [parent investigation](../README.md) owns its existing tasks. [Dirac collar extraction](../02_dirac_collar_extraction/research-overview/OVERVIEW.md) · [Dirac collar matching](../../02_dirac_and_twistor_spinors/01_dirac_collar_matching/research-overview/OVERVIEW.md) share the [route to smooth four-sphere recognition](../../brainstorm/notes/COLLAR_PROGRAM_AND_SPC4_20261125.md). Setup is complete and scientific tasks await activation. [References](references/README.md) · [Milestones](DRAFT_HISTORY.md) · [Public history](chat-histories/README.md)

@@ -29,7 +29,8 @@ Edit [content.tex](src/content.tex) for mathematical statements, proofs and
 dependencies. Place `\uses` in the statement or proof that needs the
 dependency. Add `\lean` when the corresponding Lean declaration exists
 and use `\leanok` in each environment whose statement or proof has been
-checked. The initial entries await Lean formalization.
+checked. The null evaluations, the three-axis statement and its proof
+have been checked in the [Lean module](../SectionsAndConnections/ThreeAxisWeyl.lean).
 [Lean Blueprint documentation](https://github.com/PatrickMassot/leanblueprint#writing-your-blueprint)
 
 ## Local builds
@@ -60,7 +61,8 @@ following and open [localhost:8000](http://127.0.0.1:8000/).
 python3 -m http.server --bind 127.0.0.1 --directory blueprint/web 8000
 ```
 
-The web build writes linked declaration names to `blueprint/lean_decls`.
-Once the first `\lean` links exist, Lean Blueprint's optional CheckDecls
-dependency supports `lake exe checkdecls blueprint/lean_decls` after
-building with `lake build`. [Lean Blueprint build commands](https://github.com/PatrickMassot/leanblueprint#local-compilation)
+The web build runs `lake build` and writes the linked declaration names
+to `blueprint/lean_decls`. For project declarations the [source links](src/localleansource.py)
+use the compiled Lean declaration positions. Selecting a Lean name in the
+statement or dependency graph opens the corresponding line of the local
+source, included with the generated HTML.

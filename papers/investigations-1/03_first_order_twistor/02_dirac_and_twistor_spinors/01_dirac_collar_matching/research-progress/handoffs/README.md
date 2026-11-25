@@ -1,0 +1,3 @@
+# Handoffs — Dirac collar matching
+
+Use this directory for dated, frozen requests, bounded returns and model-change records. Name the task, input version, hypotheses, allowed method and scope, expected evidence, writer and disjoint output path. A matching handoff names the collar hypothesis version, trace and normal conventions, conformal weights, admissible data on both pieces, kernel corrections and the length dependence of every inverse, normalization and defect bound. No request was issued at setup. The [register](../REGISTER.md) owns status. [Routing](../../../../../../../GPT_RESEARCH_MODEL_WORKFLOW.md)

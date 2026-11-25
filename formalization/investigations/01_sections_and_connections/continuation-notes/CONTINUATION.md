@@ -12,7 +12,10 @@ check the [live register](../research-progress/REGISTER.md) before
 taking it up. The [platform guidance](../../../FORMALIZATION_SETUP_WORKFLOW.md#platform-guidance)
 applies to either a direct execution or a handoff.
 
-## Launch prompt for Astra on ultra
+The following is the original E01 launch prompt. Its completed proof and
+verification commands are in the [register](../research-progress/REGISTER.md#e01-verification).
+
+## Original launch prompt for Astra on ultra
 
 ```text
 Work in /Users/ebbaker/Documents/smooth-poincare-4d with Astra on ultra as the

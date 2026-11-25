@@ -29,3 +29,17 @@ The session reports thread ID 6b070e70-4878-83ea-9233-6daeab8970ea. The local re
 > I’ll compare what the neck proposal is trying to extract with what the Dirac branch actually needs for transmission, then revise the draft to show where that work should live.
 
 > The round cylinder clarifies the distinction. Its tangential Dirac operator has a spectral gap, while its chiral curvature forms have zero wedge products. I found a concrete first task for a separate extraction branch in §14.3: check what its annular metric estimate supplies for the Dirac comparison on one fixed strip.
+
+**User**
+
+> Excellent, please proceed with creating the files for all three branches. Please make sure that the overview clearly states the goals of the sub-investigation and how it fits in with the overall project, with links to the relevant sections of the manuscripts in the parent or parallel / sibling investigations. Make sure that the research plan is flexible enough that it allows for trying a number of different paths if one approach does not work, creating mechanisms to revisit initial constructions if it is found that they don't work out as planned. Make sure that, together, the plans form a coherent picture that could potentially lead to a proof of spc4.
+
+**Assistant · public commentary**
+
+> I’ll set up all three branches around their agreed questions and connect their plans. Each overview will show how its results could contribute to smooth four-sphere recognition, and each plan will say what to revisit if an estimate fails or a later stage needs different input.
+
+> The manuscripts give the three branches different starting points. A metric cut needs control of the cap’s curvature and Yamabe sign. Dirac transmission can start with first-order control on a fixed strip, but using it to bound Weyl energy takes an additional estimate. I’m building those distinctions into the tasks so a failed cap construction won’t block the spinor work.
+
+> The shared proof map now distinguishes two ways a collar could help. One controlled cut could identify the capped exterior as standard and lower the energy on the original smooth type. Complete control across every neck could instead rule out a smooth bubble. The plans also address what happens if a positive closed Bach-flat limit survives either argument.
+
+> All three overviews, plans, and progress registers are in place. I’m checking the manuscript links against the cited passages and verifying that each task appears in exactly one live register, including the existing parent tasks on annular estimates and spectral rigidity.

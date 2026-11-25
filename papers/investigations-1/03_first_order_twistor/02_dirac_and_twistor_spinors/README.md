@@ -24,6 +24,4 @@ SEC; global twistor-spinor and coupled Dirac existence belong to DIR.
 
 ## Sub-investigation
 
-- [Dirac matching on a supplied collar](01_dirac_collar_matching/README.md) asks
-  how far the geometry of an incoming surgery collar can be relaxed while
-  retaining quantitative spinor transmission.
+[Dirac matching on a supplied collar](01_dirac_collar_matching/research-overview/OVERVIEW.md) studies uniform inverses, actual core and cap trace matching, and the normalization and derivative estimates needed for curvature. [Geometric extraction](../01_sections_and_connections/02_dirac_collar_extraction/research-overview/OVERVIEW.md) seeks a collar realizing these hypotheses. [Neck geometry](../01_sections_and_connections/01_neck_geometry/research-overview/OVERVIEW.md) studies the cut, the capped metrics and full energy accounting. The [shared proof map](../brainstorm/notes/COLLAR_PROGRAM_AND_SPC4_20261125.md) places these results in the recognition argument.

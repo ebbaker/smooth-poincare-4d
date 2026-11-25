@@ -8,17 +8,22 @@ geometric hypotheses. Section references point to the working
 
 \begin{definition}[Null evaluations]
 \label{def:null-evaluations}
+\lean{SectionsAndConnections.axisNullVector, SectionsAndConnections.axisNullEvaluation, SectionsAndConnections.axisMagnitude}
+\leanok
 Let $V$ be a real Euclidean three-space with orthonormal basis
 $n_1,n_2,n_3$. For cyclic $(i,j,k)$ set
 $\zeta_i=(n_j+\mathrm{i}n_k)/\sqrt{2}$. For a real symmetric
 trace-free endomorphism $W$ of $V$, let
 $q_i=|\langle W\zeta_i,\zeta_i\rangle_{\mathbb C}|$.
 The pairing is the complex bilinear extension of the real inner product.
+The Lean declarations use coordinates in the specified orthonormal basis.
 \end{definition}
 
 \begin{lemma}[Three-axis Weyl estimate]
 \label{lem:three-axis-weyl}
 \uses{def:null-evaluations}
+\lean{SectionsAndConnections.threeAxisWeylEstimate}
+\leanok
 Write $d_i$ for the diagonal entries of $W$ and $w_{ij}$ for its
 off-diagonal entries in this basis. Then
 \[
@@ -29,6 +34,7 @@ off-diagonal entries in this basis. Then
 \end{lemma}
 
 \begin{proof}
+\leanok
 For cyclic $(i,j,k)$ the complex pairing equals
 $(d_j-d_k)/2+\mathrm{i}w_{jk}$. Summing the squared magnitudes gives
 the equality because $\sum_i d_i=0$ implies

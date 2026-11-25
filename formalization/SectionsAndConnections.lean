@@ -1,4 +1,4 @@
-import Mathlib.Basic.Complex.Basic
+import SectionsAndConnections.ThreeAxisWeyl
 
 /-!
 # Sections and connections

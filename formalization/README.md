@@ -5,8 +5,10 @@ with OpenAI Codex assistance. The exact serving model and reasoning effort
 are unavailable.
 
 This directory contains the Lean package and its toolchain configuration.
-The first pilot follows the Sections and Connections manuscript. The starter
-module imports Mathlib's complex numbers for the three-axis Weyl calculation.
+The first pilot follows the Sections and Connections manuscript.
+The [three-axis Weyl module](SectionsAndConnections/ThreeAxisWeyl.lean)
+proves the exact identity and Hilbert–Schmidt lower bound for a symmetric
+trace-free real matrix in orthonormal coordinates.
 The proposed targets and conventions are in the [pilot note](../papers/investigations-1/03_first_order_twistor/01_sections_and_connections/brainstorm/notes/LEAN_FORMALIZATION_PILOT_20261125.md).
 The [Lean Blueprint](blueprint/README.md) records their statements, proof
 dependencies, and the open neck hypotheses.

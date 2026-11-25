@@ -35,3 +35,7 @@ Use the [reference guide](references/README.md), [draft history](DRAFT_HISTORY.m
 Each child has its own full planning scaffold and activation prompt.
 
 The activated SEC session obtained a [fixed-metric section-energy comparison](01_sections_and_connections/reviews/SEC_B05_GLOBAL_CONSTRUCTION_20261124.md), then a [sharp spherical transmission calculation](01_sections_and_connections/reviews/SEC_SPHERICAL_TRANSMISSION_20261124.md) and [marked variational assessment](01_sections_and_connections/reviews/SEC_CAP_COMPACTNESS_AND_YAMABE_WALL_20261124.md). Its [continuation](01_sections_and_connections/continuation-notes/02_AFTER_SPHERICAL_TRANSMISSION_AND_YAMABE_WALL_20261124.md) studies the exterior correction on the given manifold.
+
+## Collars and smooth recognition
+
+The [three-branch proof map and manuscript passages](brainstorm/notes/COLLAR_PROGRAM_AND_SPC4_20261125.md) connect [neck geometry](01_sections_and_connections/01_neck_geometry/research-overview/OVERVIEW.md), [geometric extraction of Dirac collars](01_sections_and_connections/02_dirac_collar_extraction/research-overview/OVERVIEW.md) and [Dirac matching](02_dirac_and_twistor_spinors/01_dirac_collar_matching/research-overview/OVERVIEW.md). It identifies the possible one-cut descent and energy-identity arguments, and the remaining global inputs for each.

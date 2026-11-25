@@ -32,4 +32,9 @@ The [subcritical concentration assessment](reviews/SEC_SUBCRITICAL_BACH_CONCENTR
 
 The [annular energy assessment](reviews/SEC_ANNULAR_ENERGY_AND_CONSERVATION_20261124.md), from a Claude Cowork session on 24 November 2026, proves a length-independent energy bound on long annuli in one chart, the linear theory at the flat cone and a conservation law for nearly conical necks, and states the remaining step. The [latest continuation](continuation-notes/05_AFTER_ANNULAR_ENERGY_AND_CONSERVATION_20261124.md) defines SEC-B36. These results are in the notes E59–E61 and, since 25 November, in Section 14 of the manuscript.
 
-The [neck geometry sub-investigation](01_neck_geometry/README.md) scopes the energy identity and compares chiral evolution, Dirac methods and controlled surgery. Section 15 of the manuscript gives the conditional implication for excluding nonflat smooth ALE bubbles.
+## Collar investigations
+
+- [Neck geometry and Weyl energy](01_neck_geometry/research-overview/OVERVIEW.md) studies separating spherical cuts, cap costs and no-neck accounting. [Section 15 of the manuscript](manuscript/twistor_sections_and_chiral_weyl_curvature.tex#L6522) explains the conditional exclusion of nonflat smooth ALE bubbles.
+- [Geometric extraction of Dirac collars](02_dirac_collar_extraction/research-overview/OVERVIEW.md) seeks embedded spin strips and gauges on actual degenerating sequences. The [Dirac matching investigation](../02_dirac_and_twistor_spinors/01_dirac_collar_matching/research-overview/OVERVIEW.md) determines sufficient analytic hypotheses and tests actual trace gluing.
+
+The [shared proof map](../brainstorm/notes/COLLAR_PROGRAM_AND_SPC4_20261125.md) gives their relation to smooth recognition and the inputs passed between the branches.

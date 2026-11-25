@@ -63,3 +63,7 @@ completion tests and escalation rules are in the [shared plan](../research-plan/
 Initial setup issued no requests. The activated DIR session issues versioned shared requests below the handoffs directory. Re-read before
 integration; preserve completed identities and use the [handoffs](handoffs/README.md)
 for frozen requests and returns.
+
+## Collar investigations — 25 November 2026
+
+The [NECK](../01_sections_and_connections/01_neck_geometry/research-progress/REGISTER.md), [EXTRACT](../01_sections_and_connections/02_dirac_collar_extraction/research-progress/REGISTER.md) and [MATCH](../02_dirac_and_twistor_spinors/01_dirac_collar_matching/research-progress/REGISTER.md) registers own the three collar task families. See the [shared proof map](../brainstorm/notes/COLLAR_PROGRAM_AND_SPC4_20261125.md) for their hypotheses, handoffs and relation to recognition on the original smooth type.
