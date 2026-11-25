@@ -6,15 +6,15 @@
 | --- | --- | --- |
 | SP4-MASTER-B01 | Initial edition assessed; route revised | [Initial editorial choice](../brainstorm/notes/INITIAL_PROOF_ROUTE_20261125.md) and [entry, short cuts and physical scales](../brainstorm/notes/ENTRY_AND_CONCENTRATION_20261125.md). |
 | SP4-MASTER-E00 | Initial synthesis completed | [Initial review](../reviews/INITIAL_EDITION_20261125.md). |
-| SP4-MASTER-B02 | Active, exterior entry tests added in E37/E42/E45 | Global immersed metric exists. Its chiral and shape criteria recognize conditionally. Warped branch examples settle local signs and costs only. Universal quantitative construction open. |
+| SP4-MASTER-B02 | Modified round-end and immersed exterior tests assessed | The modified exterior form recognizes the filled type. Both new concrete exterior families live on the standard sphere. Existence on further types remains open. [E53–E55 assessment](handoffs/E53_E55_ENDPOINT_CHARGE_20261125.md) |
 | SP4-MASTER-E01 | Assessed for fixed seeds | [Normal-ball flattening and round insertion](../notes/E01_LOCAL_ENTRY.md). Fixed nonzero signs persist; annular cost is \(O(r^4)\). |
-| SP4-MASTER-B03 | Active, new anchored-shell and charged-disk alternatives E38/E41/E44 | Joint disk selection, short marked cut and whole-side comparison. A low-curvature harmonic marking at fixed small distortion suffices. Whole-shell extraction, diffuse replacement and residual control are open. |
+| SP4-MASTER-B03 | Endpoint complement discharged in E55 | Both physical chiral energies lie on selected small-curvature disks to any tolerance. Collar control there, or an unconditional whole marked shell, remains open. [E53–E55 assessment](handoffs/E53_E55_ENDPOINT_CHARGE_20261125.md) |
 | SP4-MASTER-E02 | Marking implication fails in the tested gauge | [Near-isometric flat shear and actual splice surcharge](../notes/E02_QUANTILE_CHART.md). |
 | SP4-MASTER-E03 | Joint selection assessed; repair conditional | [Joint volume/chiral balls and residual](../notes/E03_JOINT_SELECTION.md). Escaping mass, excluded atoms and nonregular points remain possible. |
-| SP4-MASTER-B04 | Partial closed rigidity E40/E46/E47, with extraction and remaining survivors open | [Decision](../brainstorm/notes/ENTRY_AND_CONCENTRATION_20261125.md). Whole nonround base transfers attainment; a round same-energy restart has no general termination proof. |
+| SP4-MASTER-B04 | Endpoint defects and wide-band survivors assessed | At the endpoint the critical Ricci defect vanishes and supercritical norms diverge faster than any inverse power of the minimizing excess. The wider-band closed alternative and equal-energy restart remain open. [E53–E55 assessment](handoffs/E53_E55_ENDPOINT_CHARGE_20261125.md) |
 | SP4-MASTER-E04 | Lead comparison completed under whole markings | [Marked base and positive paths](../manuscript/variational_comparison.tex) and [complete physical limit](../manuscript/complete_limits.tex). Revised mechanism executed through E08/E11–E14. |
 | SP4-MASTER-E05 | Einstein subclass assessed | [Chiral eigenvalue estimate and uniform non-effective gap](../notes/E05_CLOSED_STABILITY.md). General closed minimizer remains reachable. |
-| SP4-MASTER-B05 | Direct and marked-height subclasses assessed, universal coverage open | Direct recognition proved for one Euclidean hypersurface-induced conformal class at \(E_+\le64\pi^2/9\). Universal existence or exhaustion open. |
+| SP4-MASTER-B05 | Additional marked diagrams recognized | Tunnel-number-two links, generalized square knots and the mixed belt-circle hypothesis enlarge the recognized presentation classes. Selection from an actual qualifying immersion remains open. [E53–E55 assessment](handoffs/E53_E55_ENDPOINT_CHARGE_20261125.md) |
 | SP4-MASTER-E06 | Reserved for a complete proof | Local proof checks retain their own IDs below. |
 | SP4-MASTER-E07 | Conditional selection; norm obstruction assessed | [Flow lifespan versus excess and Ekeland test](../notes/E07_BACH_SELECTION.md). No general small source Bach norm established. |
 | SP4-MASTER-E08 | Independent derivation accepted | [Local defect elimination and stationarity](../reviews/E08_LOCAL_REPLACEMENT_CHECK.md). |
@@ -61,6 +61,10 @@
 | SP4-MASTER-E49 | Actual global marked-height model checked | [Two local births on one actual sphere immersion](../notes/E49_TWO_BIRTH_HEIGHT.md). Standard smooth type only. |
 | SP4-MASTER-E50 | Independent two-birth check accepted | [Energy, level disks and framings](../reviews/E50_TWO_BIRTH_AUDIT.md). |
 | SP4-MASTER-E51 | Companion manuscripts integrated | [Five disjoint draft returns and independent master checks](handoffs/E51_COMPANION_DRAFTS_20261125.md). The master keeps the direct thresholds and marked comparison criteria. |
+| SP4-MASTER-E52 | Finite and limiting endpoints distinguished | [Endpoint proof and independent check](handoffs/E52_RECOGNITION_ENDPOINT_20261125.md). Finite positive caps allow equality in the total budget. The limiting endpoint requires an admissible metric realizing the energy bound. |
+| SP4-MASTER-E53 | Four branch returns assessed | Proper flat radial comparison, relative immersed exterior, physical Ricci growth, and marked height subclasses. [E53–E55 assessment](handoffs/E53_E55_ENDPOINT_CHARGE_20261125.md) |
+| SP4-MASTER-E54 | Inclusive spectral recognition and endpoint defects | [Independent check](../reviews/E54_SPECTRAL_ENDPOINT.md). The modified boundary form also gives a direct test on an actual retained exterior. |
+| SP4-MASTER-E55 | Full endpoint disk capture and collar cost | [Proof](../01_fixed_type_variational_descent/manuscript/endpoint_charge.tex) and [independent check](../reviews/E55_ENDPOINT_DISK_AUDIT.md). Escaping and ineligible chiral charge are removed from the selected-disk criterion at this endpoint. |
 
 [Integrated returns, requests and assessment](handoffs/VARIATIONAL_RETURNS_20261125.md) · [Manuscript](../manuscript/README.md). No theorem here constructs entry on arbitrary smooth homotopy spheres or establishes smooth Poincaré. The new results have manuscript proofs and scoped model checks. The earlier formalization receipts retain their original scopes.
 
@@ -68,4 +72,4 @@
 
 The concurrent [Route 05 register](../../../formalization/investigations/05_variational_comparison/research-progress/REGISTER.md) specifies a variational formalization route. Its pending geometric and physical-scale packets do not change the analytical statuses above.
 
-The [current decision and remaining-type comparison](../brainstorm/notes/MARKED_EXTERIORS_AND_ANNULI_20261125.md) and [frozen research handoffs](handoffs/MARKED_TESTS_20261125.md) govern this edition. Formal routes 06–09 were being organized concurrently. No Lean declaration verifies these master returns.
+The [earlier decision and remaining-type comparison](../brainstorm/notes/MARKED_EXTERIORS_AND_ANNULI_20261125.md) and [frozen research handoffs](handoffs/MARKED_TESTS_20261125.md) describe the marked-tests edition. Formal routes 06–09 were being organized concurrently. No Lean declaration verifies these master returns.

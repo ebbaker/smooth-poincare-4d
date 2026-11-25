@@ -27,3 +27,11 @@ For Edward B. Baker III with OpenAI Codex assistance. Added a one-point physical
 ## 25 November 2026 · companion manuscripts and shorter master proof
 
 Prepared for Edward B. Baker III with OpenAI Codex assistance. Added working papers for the immersed handle, two-middle-handle recognition and fixed-type descent investigations, revised the existing neck manuscript in place, and added a coordinating immersion paper. The master now gives the inclusive direct thresholds, the marked comparisons and the single-sequence alternatives in 27 pages (previously 39). The independent disk criterion distinguishes a finite repair that reaches the recognition threshold from an unattained limiting value. [Five working papers](README.md#working-papers-for-the-parallel-investigations) · [Inputs, proof locations and verification](research-progress/handoffs/E51_COMPANION_DRAFTS_20261125.md)
+
+## 25 November 2026 · recognition at equality
+
+The master now proves the equivalence between smooth recognition, one positive class at or below the threshold, and a fixed-type infimum strictly below it. The finite marked-cut criterion includes equality in the total energy budget when the capped classes are positive. The overview specifies how to place intermediate derivations and when their conclusions advance the master proof. [Manuscript and checks](research-progress/handoffs/E52_RECOGNITION_ENDPOINT_20261125.md) · [Promotion guidance](research-overview/OVERVIEW.md#what-belongs-in-the-master-proof)
+
+## 25 November 2026 · Endpoint research milestone
+
+Located both physical chiral energies on finite regular disks at the unattained endpoint. The master identifies the remaining aggregate collar cost, gives the modified exterior test and adds the checked height subclasses. [Derivation and scope](research-progress/handoffs/E53_E55_ENDPOINT_CHARGE_20261125.md).

@@ -7,3 +7,7 @@ Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving mo
 ## 25 November 2026 · First working manuscript
 
 Carries the actual framed tubes through handle reductions and identifies which one-sided and mixed surgeries give the standard sphere. [Manuscript and build](manuscript/README.md) · [Assessed editorial return](../../../master/research-progress/handoffs/E51_COMPANION_DRAFTS_20261125.md).
+
+## 25 November 2026 · Endpoint research milestone
+
+Added recognition through a belt-circle isotopy or two further one-sided link classes; checked the marked Mazur-double example. [Derivation and scope](notes/E53_HEIGHT_DIAGRAMS.md).

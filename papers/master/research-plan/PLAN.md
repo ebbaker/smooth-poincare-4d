@@ -4,6 +4,10 @@
 
 The [working papers](../README.md#working-papers-for-the-parallel-investigations) develop intermediate estimates and marked constructions. The master imports a result when it recognizes a specified smooth class, yields an admissible improvement, or eliminates an alternative under identified geometric hypotheses. The [editorial crosswalk](../research-progress/handoffs/E51_COMPANION_DRAFTS_20261125.md) locates the longer arguments.
 
+## First comparison at the endpoint
+
+On one endpoint sequence use the actual disks from the [full charge selection](../01_fixed_type_variational_descent/manuscript/endpoint_charge.tex). Work at a fixed tolerance before moving the radius or family. Seek normalized metric and first-derivative bounds on bicollars of those same disk boundaries. Test the error on the actual splice supports first. For raw collar energy \(s\), residual \(r\), and certified allowance \(\eta\), the joined ceiling is \(e+2\sqrt{s}\,\eta+\eta^2\), and the retained bound is at most \((\sqrt r+\eta)^2\). The joined inequality is strict. If thin collars lose control, test a different marked family or a physical through-region using the radial comparison. For \(T<I^+<2T\) retain the original residual, closed and restart alternatives. [Assessed proof and next packets](../continuation-notes/AFTER_ENDPOINT_CHARGE_20261125.md)
+
 ## What would prove smooth Poincaré in dimension four?
 
 Fix an arbitrary closed oriented smooth homotopy four-sphere \(M\) and suppose its smooth type is nonstandard. For each such \(M\), it suffices to complete **one** of the following implications. Different constructions may cover different classes of smooth types. A universal conclusion requires a proof that their combined coverage is exhaustive.
@@ -21,7 +25,7 @@ Here \(E_+\) uses the Hilbert–Schmidt norm on \(\Lambda^+\). Existence of a sm
 3. On diffuse physical sequences, estimate the square sum of collar errors for charged, parametrized standard balls. Compare their total raw charge against that surcharge and the single minimizing excess. This comparison permits an arbitrary retained exterior and requires no disappearance of all complement energy.
 4. For bounded physical supercritical Ricci, test the two small defects in the new near-Einstein theorem on the same Yamabe representative. If one survives, the deficit estimate narrows the possible limit but supplies no negative variation. Seek a signed comparison on that survivor or a genuinely different round restart with strict gain.
 
-[Current theorem-by-theorem decisions](../brainstorm/notes/MARKED_EXTERIORS_AND_ANNULI_20261125.md) · [Next launch and scope of each owner](../continuation-notes/AFTER_MARKED_EXTERIORS_20261125.md)
+[Current theorem-by-theorem decisions](../brainstorm/notes/MARKED_EXTERIORS_AND_ANNULI_20261125.md) · [Current launch and branch assignments](../continuation-notes/AFTER_ENDPOINT_CHARGE_20261125.md)
 
 ## Four investigations that can run in parallel
 

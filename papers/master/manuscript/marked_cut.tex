@@ -18,11 +18,11 @@ capped pieces smooth metrics and the inherited orientations. Write
 \]
 Suppose the capped metrics have positive Yamabe constants and
 \(E_j\leq m_j+\gamma_j\) with \(\gamma_j\geq0\). If
-\(E+\sum_j\gamma_j<2T\), at most one capped piece has
-\(E_j\geq T\). The original manifold is oriented-diffeomorphic to
-that piece if it exists. If all \(E_j<T\), the original manifold is
+\(\sum_j E_j\leq2T\), in particular if \(E+\sum_j\gamma_j\leq2T\),
+at most one capped piece has \(E_j>T\). The original manifold is
+oriented-diffeomorphic to that piece if it exists. If all \(E_j\leq T\), the original manifold is
 standard. In particular, if \(M\) is nonstandard, the unique piece
-\(s\) with \(E_s\geq T\) satisfies
+\(s\) with \(E_s>T\) satisfies
 \begin{equation}\label{eq:cut-discarded}
  \sum_{j\ne s}m_j\leq E-I^+(M)+\gamma_s .
 \end{equation}
@@ -45,13 +45,12 @@ simply connected integral homology four-spheres. Hurewicz gives a
 map from \(S^4\) representing a fundamental class of each, and the
 homological Whitehead theorem makes each a homotopy sphere.
 
-On each capped piece the signature vanishes, so \(E_+=E_-\) and its
-full four-index Weyl integral is \(8 E_j\). For \(E_j<T=4\pi^2\)
-this is strictly less than \(16\pi^2\chi(\widehat M_j)=32\pi^2\).
-The positive Yamabe constant and simple connectivity now imply
-\(\widehat M_j\cong S^4\) by the conformally invariant sphere theorem
-\cite[Theorem A and Remark 2]{ChangGurskyYang2003}. Summing the
-energy bounds shows that at most one piece can have \(E_j\geq T\).
+Each cap is an actual positive class on its capped homotopy sphere.
+Proposition~\ref{prop:recognition} therefore identifies every piece of
+energy \(E_j\leq T\) with \(S^4\). Two energies strictly above \(T\)
+would have sum greater than \(2T\), contradicting the total bound.
+If two energies equal \(T\), both pieces are standard and every
+remaining energy is zero.
 
 Removing the actual cap balls and reusing the original boundary
 identifications recovers \(M\). In a standard capped leaf, Palais's
@@ -76,7 +75,7 @@ competitor for \(I^+(M)\), so
 
 For one cut there is a useful direct case. If both capped classes
 are positive and both raw energies differ from \(E/2\) by at most
-\(a\), then \(E/2+a+\max_j\gamma_j<T\) recognizes both caps and
+\(a\), then \(E/2+a+\max_j\gamma_j\le T\) recognizes both caps and
 hence \(M\). For more uneven divisions, the minimizing inequality
 \eqref{eq:cut-discarded} brings even a small discarded mass into play.
 
@@ -85,7 +84,7 @@ On a fixed nonstandard type let positive classes have energies
 \(e_i\to I^+(M)<2T\). Suppose a marked sphere has full raw sides
 \(P_{i,\pm}\) with positive smooth caps of energies at most
 \(E_+(g_i;P_{i,\pm})+\gamma_{i,\pm}\). If
-\(e_i+\gamma_{i,+}+\gamma_{i,-}<2T\), then
+\(e_i+\gamma_{i,+}+\gamma_{i,-}\le2T\) at index \(i\), then
 \begin{equation}\label{eq:cut-min-bound}
  \min_{\sigma=\pm} E_+(g_i;P_{i,\sigma})
  \le e_i-I^+(M)+\max_{\sigma=\pm}\gamma_{i,\sigma}.
@@ -98,7 +97,9 @@ side. This proves the inequality, even when the survivor varies with \(i\).
 \end{proof}
 
 A short first-order comparison in Proposition~\ref{prop:short-cut}
-will construct such positive caps. For a long buffered product
+constructs positive caps by keeping the joined metric strictly below
+\(2T\) along a path on \(M\). The inclusive bound above applies once
+the capped classes are known to be positive. For a long buffered product
 collar the neck paper gives the individual cap estimates directly,
 including the localization loss for unequal buffer lengths
 \cite{Baker2026MarkedNecks}.
@@ -170,3 +171,20 @@ strict positivity on all nonzero tests is equivalent to positive
 Yamabe sign. Finally the eigenvalues \(l+1\) of the boundary operator
 are at least one, giving the Robin test by its Rayleigh quotient.
 \end{proof}
+
+For a direct recognition test let \(L_h\) be the largest eigenvalue
+of either Weyl block on this exterior. If for every nonzero \(v\in H^1(P)\)
+\begin{equation}\label{eq:modified-boundary}
+ Q_h(v)-6\int_P L_h v^2\,dV_h
+      +6\sum_j\langle f_j,\sqrt{1-\Delta_\gamma}\,f_j\rangle>0,
+\end{equation}
+then \(M\) is standard. Indeed \(L\) has conformal weight minus two
+and vanishes on each cap. The preceding extension argument therefore
+tests the closed form with potential \(R-6L\) exactly. Its positive
+first eigenvalue and bounded potential give coercivity in \(H^1\),
+so its modified Yamabe quotient has a positive infimum by Sobolev
+embedding. Chen and Zhu's classification and simple connectivity give
+the conclusion \cite[Theorem 1.7]{ChenZhu2014Conformal}.
+This test uses only the marked exterior. The descent paper gives explicit
+round-ended cylinders satisfying it with unbounded exterior Weyl energy
+\cite{Baker2026FixedDescent}.

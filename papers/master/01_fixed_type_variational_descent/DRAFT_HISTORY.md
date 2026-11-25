@@ -9,3 +9,7 @@ Prepared for Edward B. Baker III with OpenAI Codex assistance. GPT-6.2 Sol/ultra
 ## 25 November 2026 · First working manuscript
 
 Derives joint mass selection, admissible repairs and exact sign tests. Tracks the remaining energy through punctures, closed limits and restarts. [Manuscript and build](manuscript/README.md) · [Assessed editorial return](../research-progress/handoffs/E51_COMPANION_DRAFTS_20261125.md).
+
+## 25 November 2026 · Endpoint research milestone
+
+Proved full endpoint disk capture by modified Yamabe normalization, a necessary lower bound on the aggregate collar allowance, and divergence of the weighted supercritical Ricci norms. [Derivation and scope](manuscript/endpoint_charge.tex).

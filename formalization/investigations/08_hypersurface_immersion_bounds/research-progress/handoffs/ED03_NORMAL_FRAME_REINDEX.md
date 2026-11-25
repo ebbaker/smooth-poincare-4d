@@ -1,0 +1,11 @@
+# IMM-E01w · Reindexing after a normal sign change
+
+25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. This was a bounded E task. The serving model and reasoning effort are unavailable. [Immersion plan](../../research-plan/PLAN.md)
+
+`exists_reindexedBalancedNormalFrame` starts with one orthonormal basis for the given bilinear metric $K$ and a bilinear form whose diagonal in that basis is $\varepsilon(-a,-a,a,a)$, with $\varepsilon=1$ or $-1$. In the positive case use the given basis. In the negative case reindex it by $(0\ 2)(1\ 3)$. The permutation preserves the orthonormal Gram matrix and restores the ordered diagonal $(-a,-a,a,a)$ for the same scalar form. `balancedSignSwap_sign` certifies positive permutation sign, so the reindexing preserves a supplied orientation. [Lean proof](../../../../SmoothPoincare/Immersions/NormalFrameReindex.lean)
+
+`unitNormal_eq_or_eq_neg_of_collinear` takes two unit vectors and a supplied scalar collinearity witness. Squaring the norm in the scalar relation gives $\varepsilon^2=1$. This provides the two normal sign cases for the actual chart once normal-line membership is supplied. The packet is algebra at a point and applies to the same forms used by the chart shape dual and balanced parallelism proofs. [Raised shape](../../../../SmoothPoincare/Immersions/ChartShapeDual.lean) · [Chart parallelism](../../../../SmoothPoincare/Immersions/BalancedShapeParallel.lean)
+
+`lake build +SmoothPoincare.Immersions.NormalFrameReindex` completed 9728 jobs with Lean `4.35.0-rc3` (`470d5ce1400764999581fd26d5d72b00d990b0f4`). A separate importing file checked the theorem types and reported only `propext`, `Classical.choice` and `Quot.sound` for the reindexing, permutation sign, and collinear unit normal results.
+
+The issued `BalancedShapeParallel.lean`, `ChartShapeDual.lean` and `CodazziJets.lean` had SHA-256 prefixes `c65e456d47e396a1`, `7dd380f5a790a763` and `8d4279c5d32919ca`. The manuscript prefix was `d294f6e4600927f5` and the Lake manifest prefix was `839111aae86b6935`. DifferentialGeometry was `788efe97894474c032de6dfb1289d515f613d15a` and Mathlib was `c55e6e786f49471c72fbddbec5415808896aec1e`. [Baseline](../../../research-progress/03_BASELINE.md)

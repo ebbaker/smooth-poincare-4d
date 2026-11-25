@@ -10,3 +10,5 @@
 | Yamabe cutoff and round equality | Lee–Parker §2, equation (2.7), supplies conformal covariance for compact tests. Inherited inspection of Schoen Theorem 2 and Lee–Parker §3 supplies the strict spherical Yamabe comparison and the round value. The exact graft and limit arguments are internal to E21. [Yamabe source record](../../../../references/SOURCE_NOTES_BACH_FLOW_20261123.md) · [Round restart calculation](../../notes/E21_ROUND_RESTART.md) |
 
 Incoming model, theorem and version provenance remains with its respective owner. The [branch overview](../research-overview/OVERVIEW.md#ownership-and-versioned-inputs) records the exact revision inputs. New research dependencies require their own passage check.
+
+[Endpoint source record](../../../../references/SOURCE_NOTES_MASTER_ENDPOINT_20261125.md) for the two spectral classifications and the modified Yamabe measure.

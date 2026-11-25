@@ -2,6 +2,10 @@
 
 25 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance. E35c requested GPT-6.2 Sol/ultra for setup. Independent serving telemetry is unavailable. This overview identifies inherited results and planned comparisons.
 
+## The unattained endpoint
+
+Every physical minimizing sequence at the recognition endpoint admits a subsequence for which finite parametrized disks at regular comparison points carry both chiral measures up to arbitrary error. The proof uses a modified Yamabe volume and the original physical curvature measure on the same balls. The first missing comparison concerns their bicollars. The strict cost test, the endpoint Ricci growth rates and the open higher band are assessed in the [master return](../../research-progress/handoffs/E53_E55_ENDPOINT_CHARGE_20261125.md).
+
 ## Fixed variational problem
 
 Let \(M\) be a closed connected oriented smooth homotopy four-sphere with smooth positive-definite Riemannian metrics. Assume one positive-Yamabe class on \(M\) with \(E_+<8\pi^2\). Define

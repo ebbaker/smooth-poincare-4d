@@ -9,7 +9,7 @@ This is the sole live status register for Route 03, including inherited FOT-E25,
 | Task | Current state | Next proof or premise |
 | --- | --- | --- |
 | SP4-FORM-CUT-B02 | Adopted and used | The source sides cover the manifold, are volume-a.e. disjoint and both have signed collar data. Either can be retained. |
-| SP4-FORM-CUT-E02 | Verified conditional two-side theorem | The actual orientation-preserving reassembly tracks the core and the image of the whole discarded side. The cap signs, threshold recognition, marking extensions and surcharge estimates are inputs. [Two-side proof](handoffs/ED03_TWO_SIDES.md) |
+| SP4-FORM-CUT-E02 | Verified through the inclusive cap threshold | For actual positive capped metrics, either the measured cap sum or the sum of full raw masses and both costs may be at most twice the threshold. The tie preserves both marked side images in the oriented sphere identification. Positive signs and recognition at an attained threshold remain inputs. [Endpoint](handoffs/ED03_INCLUSIVE_CUT.md) |
 | SP4-FORM-CUT-E03 | Ready to specify the tensor estimate | Derive the uniform cutoff and chiral projection error on the actual splice. The inherited norm inequality already consumes a supplied projection bound. |
 | SP4-FORM-CUT-E04 | Positive-path and cut interfaces available | Use the common gap on the original joined type. The short interpolation, stretch and transfer of signs to the completed caps remain open. |
 | SP4-FORM-CUT-E05 | Reserved | Prove the critical fixed-distortion estimate on the supplied enlarged harmonic shell and reduce to the short marked cut. Physical production of such a shell is open. |
@@ -44,3 +44,5 @@ A positive closed Bach-flat class above the recognition threshold can survive th
 The assembled `oneCutDescent` theorem now uses the same oriented map for the fixed-core equality, the positive Yamabe constant, the integrable curvature energy and the strict and conditional uniform bounds. Its recognition premise tests the metric on the specified exterior. The [third collar assessment](../../../../papers/investigations-1/03_first_order_twistor/reviews/THIRD_COLLAR_ASSESSMENT_20261125.md) gives more information about physical volume balls. Producing the requisite marked full core and separating cut on the approximately critical source sequence remains open. [One-cut theorem and audit](handoffs/ONE_CUT_RETURN.md)
 
 **Edition 03 activation, 25 November 2026.** [Public integration and hypothesis audit](../../research-progress/handoffs/ED03_INTEGRATION_20261125.md) · [Next geometric tasks](../../continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md)
+
+**25 November 2026 · Geometric realization.** [Assessed chart and immersion milestone](../../research-progress/handoffs/ED03_CHART_GEOMETRY_20261125.md) · [Dated continuation](../../continuation-notes/AFTER_OPEN_EQUALITY_AND_MARKED_SHELL_20261125.md)

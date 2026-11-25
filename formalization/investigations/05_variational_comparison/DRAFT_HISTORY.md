@@ -1,5 +1,7 @@
 # Fixed-type variational comparison · Milestones
 
+- **25 November 2026 · Chart and immersion proofs.** Derived common-chart second-jet cancellation, quadratic first-jet bounds and the moving density estimate. [Assessment](../research-progress/handoffs/ED03_CHART_GEOMETRY_20261125.md)
+
 - **25 November 2026 · Edition 03 activation.** Checked same-type independent repair comparisons, path positivity under its analytic inputs, and the measured weak-defect argument. [Assessment](../research-progress/handoffs/ED03_INTEGRATION_20261125.md)
 
 - **25 November 2026 · Edition 03 transfers.** Retained the local variational tasks and handed the physical-scale and complete-limit work to Route 06 and the repair residual to Route 07. [Current ownership](research-progress/REGISTER.md)

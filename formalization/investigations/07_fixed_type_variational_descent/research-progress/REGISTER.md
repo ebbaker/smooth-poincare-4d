@@ -16,3 +16,5 @@ This is the sole live status register for `SP4-FORM-DESC` and `VAR-E06`. The [pr
 **Setup evidence.** The opening statement in the plan elaborated as `Prop` through `import SmoothPoincare` with Lean `4.35.0-rc3`. Subsequent proof receipts appear above. The dated [edition baseline](../../research-progress/03_BASELINE.md) records the checks and the historical ownership transfers.
 
 **Edition 03 activation, 25 November 2026.** [Public integration and hypothesis audit](../../research-progress/handoffs/ED03_INTEGRATION_20261125.md) · [Next geometric tasks](../../continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md)
+
+**25 November 2026 · Attained threshold.** A finite family satisfying the inclusive surplus test produces an actual positive class. That class can enter the [parent recognition and infimum theorem](../../research-progress/handoffs/ED03_ATTAINED_RECOGNITION.md). A lower-limit estimate at the threshold still leaves attainment open. The complete measured family or a joint repair remains the input from this route. [Next geometric tests](../../continuation-notes/AFTER_OPEN_EQUALITY_AND_MARKED_SHELL_20261125.md)

@@ -1,5 +1,7 @@
 # Launching fixed-type variational comparison
 
+**Latest handoff, 25 November 2026.** [Geometric realization and next proofs](../../continuation-notes/AFTER_OPEN_EQUALITY_AND_MARKED_SHELL_20261125.md).
+
 **Current handoff, 25 November 2026.** [Continue from the assessed Edition 03 milestone](../../continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md). The launch instructions below record the original packet.
 
 25 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. The serving configuration was unavailable. [Route overview](../research-overview/OVERVIEW.md) · [Route plan and first exact Lean target](../research-plan/PLAN.md) · [Live register](../research-progress/REGISTER.md) · [Source revisions and toolchain](../../research-progress/02_BASELINE.md)

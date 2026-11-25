@@ -122,6 +122,7 @@ the quantitative claim.
 \end{proof}
 
 \input{../../manuscript/physical_volume}
+\input{endpoint_charge}
 
 \section{Simultaneous replacements on the source}
 
@@ -244,6 +245,32 @@ covariance therefore gives the lower bound on the compact
 metric. Its Weyl energy is precisely the energy of the retained
 piece. This proves \eqref{eq:disc-bound} and then \eqref{eq:removed}.
 \end{proof}
+
+\paragraph{Cost measured on the actual collars.}
+Let \(s\) and \(s_{\rm out}\) denote the original positive chiral
+energy on all the collars and on their exterior halves, respectively.
+Let \(r=e-m\) be the raw retained charge. Take the direct-sum
+\(L^2\) splice estimate only on the collars, adding back the squares
+on the unchanged regions. The joined path has energy at most
+\[
+ e-s+(\sqrt s+\eta)^2=e+2\sqrt{s}\,\eta+\eta^2 .
+\]
+If this bound is strictly below \(2T\), the same stretching and
+compactification give a positive same-type metric of energy at most
+\[
+ r-s_{\rm out}+(\sqrt{s_{\rm out}}+\eta_{\rm out})^2
+   =r+2\sqrt{s_{\rm out}}\,\eta_{\rm out}+\eta_{\rm out}^2 ,
+\]
+where \(\eta_{\rm out}\le\eta\) is any certified direct-sum allowance
+on the exterior halves obtained by restriction of the collar estimates.
+In particular choose the disks of Theorem~\ref{thm:endpoint-disks} on
+a slow diagonal giving \(r_i\to0\). Smooth disjoint tubular collars
+can be narrowed so that \(s_i\to0\). Whenever their normalized charts
+meet the comparison hypotheses, \(\liminf\eta_i\ge\sqrt T\):
+a subsequence bounded strictly below \(\sqrt T\) gives a joined
+energy strictly below \(2T\) and a retained energy strictly below
+\(T\). This is a bound on the certified allowances for these charts.
+Narrowing a collar changes its derivative and ellipticity tests.
 
 \subsection{Energy bookkeeping and measured complements}
 
@@ -434,6 +461,38 @@ exact flat balls the inverse-radius conformal factor gives
 the round product collars. Filling in the ends recovers the
 flattened class because the radial compactifying factors
 differ by smooth positive factors constant near each center.
+
+\paragraph{A recognition test with no exterior energy ceiling.}
+In the form of Theorem~\ref{thm:round-form}, replace \(R_h\) by
+\(R_h-6L_h\), using the largest Weyl eigenvalue of either chirality
+from Section~\ref{sec:endpoint-charge}. Positivity of this modified
+boundary form on every nonzero test recognizes the capped domain.
+The Weyl eigenvalue \(L_h\) has conformal weight minus two, so its
+term preserves covariance of the Yamabe form. It vanishes on the
+conformally flat caps. Minimizing the cylindrical
+extensions gives the same boundary operator. The closed modified
+operator has a positive lowest eigenvalue; combining the spectral gap
+with boundedness of its potential gives an \(H^1\) lower bound.
+Sobolev embedding yields a positive modified Yamabe constant, so
+Chen and Zhu's Theorem 1.7 applies \cite{ChenZhu2014Conformal}.
+
+For explicit exteriors take \([0,\ell+2]\times S^3\) with its product
+markings. In the middle length \(\ell\) use \(dt^2+h_s\), where
+\(h_s=e^{2s\phi}\gamma\) and the smooth function \(\phi\) has a
+critical point with nonzero trace-free Hessian. On each unit end use
+a fixed smooth cutoff of \(s\) equal to zero near the boundary and
+equal to \(s\) near the middle. At the critical point the conformal
+Ricci formula in dimension three gives nonzero trace-free Ricci for
+\(s\ne0\). The product thus has nonzero Weyl curvature since
+\(W_{0a0b}=-\tfrac12(\Ric_{h_s})_{0,ab}\) in an orthonormal frame,
+up to curvature sign. Time reflection interchanges chirality, so
+the positive chiral energy per unit middle length is strictly positive.
+For fixed sufficiently small \(s\ne0\), uniform \(C^2\) comparison
+with the round product gives \(R-6L\ge3\) on the whole exterior,
+independently of \(\ell\). The modified form is positive while the
+exterior energy grows linearly with \(\ell\). Capping the two
+marked ends gives the standard smooth sphere in this construction.
+A qualifying exterior on a further smooth type remains to be found.
 
 \subsection{Endpoint comparison and assembly across general interfaces}
 
@@ -1052,6 +1111,8 @@ This attainment conclusion uses the bounded Ricci subsequence.
 A sequence selected only by its chiral energies need not meet
 that hypothesis or a prescribed Bach-error bound.
 
+\input{endpoint_windows}
+
 \section*{Provenance and assistance}
 
 Prepared for Edward B. Baker III on 25 November 2026.
@@ -1066,10 +1127,13 @@ E44--E48. GPT-6.2 Sol with ultra effort was requested for
 the drafting packet. Actual serving model and effort were
 unavailable for independent verification. OpenAI Codex
 assisted with the derivations, their checks and the preparation
-of this draft.
+of this draft. The endpoint analysis uses the working E52 master edition and the E53--E55 derivations and independent checks of 25 November 2026.
 
 \section{Outstanding challenges}
 
+At \(I=T\), Theorem~\ref{thm:endpoint-disks} locates nearly all
+chiral charge in disks with a physical curvature ceiling on each
+containing ball. The cost of their actual collars remains open.
 The strict comparison \eqref{eq:removed} leaves a geometric
 problem on the measured source. One needs actual marked collars
 whose aggregate error is smaller than the discarded raw energy

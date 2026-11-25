@@ -73,6 +73,7 @@ continuity hypothesis for chiral mass.
 
 \begin{proposition}[Recognition at an attained threshold]
 \label{prop:master-recognition}
+\uses{cor:ed03-attained-class}
 On a closed oriented smooth homotopy four-sphere, a positive conformal
 class with \(E_+(g)\le T\) gives the standard smooth type. At equality
 apply the equality classification to the actual class and exclude
@@ -82,16 +83,18 @@ An unattained value \(I=T\) remains a possibility in the band.
 
 \begin{proposition}[Nonsplitting for two marked caps]
 \label{prop:master-nonsplitting}
-\uses{lem:master-competitor,prop:cut-marked-reassembly,lem:source-remainder-split,prop:ed03-measured-comparisons}
+\uses{lem:master-competitor,prop:cut-marked-reassembly,lem:source-remainder-split,prop:ed03-measured-comparisons,prop:ed03-inclusive-caps}
 Let the two full raw masses be \(m_1+m_2=e\). Assume two positive
 marked caps with costs \(E_j\le m_j+\gamma_j\), \(\gamma_j\ge0\), and
-\(e+\gamma_1+\gamma_2<2T\). On a nonstandard candidate at least one
+\(e+\gamma_1+\gamma_2\le 2T\). On a nonstandard candidate at least one
 cap is recognized as standard and the marked reassembly makes the other
 cap \(s\) a competitor on \(M\). Hence \(m_{3-s}\le e-I+\gamma_s\).
 Along a minimizing sequence two uniformly positive full sides are
 impossible if both costs tend to zero. Either label may survive.
-The geometric theorem needs recognition of the capped homotopy spheres
-and the actual attaching maps.
+Recognition is needed at an attained cap energy equal to \(T\). When both
+caps meet that threshold, the maps identify the source with the sphere
+and retain both marked images. The actual attaching maps and positive
+cap signs are required.
 \end{proposition}
 
 \begin{lemma}[Positive paths below the scalar-flat wall]
@@ -213,7 +216,7 @@ subsequence gives a smooth closed positive Yamabe minimizer on \(M\).
 
 \begin{proposition}[Recognition for one Euclidean hypersurface immersion]
 \label{prop:master-immersion}
-\uses{lem:routes-middle-weyl,lem:routes-shape-deficit,lem:routes-indexed-mass,prop:routes-middle-count,lem:ed03-equality,cor:ed03-balanced-endpoint,lem:ed03-codazzi-jets}
+\uses{lem:routes-middle-weyl,lem:routes-shape-deficit,lem:routes-indexed-mass,prop:routes-middle-count,lem:ed03-equality,cor:ed03-balanced-endpoint,lem:ed03-codazzi-jets,cor:ed03-strict-actual-height}
 For a smooth immersion of \(M\) in \(\mathbb R^5\), let \(g\) be the
 induced metric, \(A\) its shape operator, \(J=\int_M(-\det A)_+\,dV_g\)
 and \(B=\|A^\circ\|_{L^4(g)}^2\). Each of \(J<8\pi^2/3\),

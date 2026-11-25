@@ -16,3 +16,5 @@ The [master variational source record](../../../references/SOURCE_NOTES_MASTER_V
 [Physical Ricci scales and immersed recognition](../../../references/SOURCE_NOTES_MASTER_RICCI_IMMERSION_20261125.md) records the exact primary inputs to the critical annular estimate, supercritical physical compactness, indexed height count, handle classification and extrinsic sign test.
 
 The [marked-exterior source update](../../../references/SOURCE_NOTES_MASTER_RICCI_IMMERSION_20261125.md#marked-exteriors-surgery-boundaries-and-closed-limits) records the precise unknot, tunnel, gluing and conformal Kähler theorems imported into the current edition, and the role of the round end's spectral form.
+
+[Endpoint and marked-diagram sources](../../../references/SOURCE_NOTES_MASTER_ENDPOINT_20261125.md) give the primary finite pinching and equality classifications, modified Yamabe representative and additional two-middle-handle tests used in E53–E55.

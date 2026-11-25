@@ -2,6 +2,14 @@
 
 This is the sole program register across editions. The shared task prefix is `SP4-FORM-FOT`. Each delegated task has one live proof owner. Natural-language results and the search for qualifying metrics and charts are recorded in the [master register](../../../papers/master/research-progress/REGISTER.md) and the [twistor register](../../../papers/investigations-1/03_first_order_twistor/research-progress/REGISTER.md).
 
+## Edition 03 geometric realization · 25 November 2026
+
+**FOT-E35a.** Under the inclusive recognition input and round positivity, the recognized type has zero in its actual energy set. A strict infimum gap selects a positive metric, while a positive infimum equal to the threshold is unattained. The round chiral-block calculation uses the pinned constant-curvature tensor. The smooth classification and its normalization remain external geometric premises. [Threshold proof](handoffs/ED03_ATTAINED_RECOGNITION.md)
+
+**FOT-E37.** On one Euclidean hypersurface the balanced nonzero middle spectrum cannot persist on a nonempty open set. With measured indexed Gauss data and a topological floor of two, the actual induced energy is strictly above the immersed threshold. The physical-shell theorem places both whole charged sets on a supplied chart. The chart interpolation controls its genuine first-jet residual. Intrinsic recognition at an attained threshold and both cap signs remain geometric inputs to the marked composition. The unconstrained infimum, the exterior cost of a repair and the diagram of one selected direction retain their separate obligations.
+
+[Integrated proof and remaining hypotheses](handoffs/ED03_CHART_GEOMETRY_20261125.md) · [Execution and review ledger](handoffs/ED03_GEOMETRIC_PACKETS_20261125.md) · [Next dated proofs](../continuation-notes/AFTER_OPEN_EQUALITY_AND_MARKED_SHELL_20261125.md)
+
 ## Edition 03 activation · 25 November 2026
 
 **FOT-B07, implemented.** The six opening propositions now have proofs. Their owning registers and the [integrated kernel and source audit](handoffs/ED03_INTEGRATION_20261125.md) record the stronger measured, geometric and equality results. [Issued proof and review packets](handoffs/ED03_ASSIGNMENTS_20261125.md) · [Next session](../continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md)

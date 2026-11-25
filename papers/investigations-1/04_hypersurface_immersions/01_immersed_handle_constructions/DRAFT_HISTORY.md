@@ -7,3 +7,7 @@ Prepared for Edward B. Baker III with OpenAI Codex assistance. Created the setup
 ## 25 November 2026 · First working manuscript
 
 Derives both marked faces, the cost of changing their slope, and the positive energy forced by a fixed collar germ. [Manuscript and build](manuscript/README.md) · [Assessed editorial return](../../../master/research-progress/handoffs/E51_COMPANION_DRAFTS_20261125.md).
+
+## 25 November 2026 · Endpoint research milestone
+
+Gave an actual three-patch retained exterior on the standard sphere and computed the relative Gauss degree and necessary charge on a nonstandard completion. [Derivation and scope](notes/E53_RETAINED_EXTERIOR.md).

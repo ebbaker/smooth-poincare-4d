@@ -32,9 +32,10 @@ direction of the reference normal image, and the indexed Gauss area
 formula converts this count to a strict chiral bound. For finitely many
 such collars on a closed smooth homotopy four-sphere, the overlap
 of their directional images yields a recognition criterion entirely
-in terms of the common exterior and the marked references. A construction
-on the standard sphere illustrates the actual height diagrams and the
-role of the complete exterior.
+in terms of the common exterior and the marked references. A signed
+count gives an additional necessary budget for negative Gauss mass
+on this exterior. Three exact marked collars on a standard sphere
+realize the quartic order of the seam cost in a positive Yamabe class.
 \end{abstract}
 
 \section{Closed and relative height counts}
@@ -484,6 +485,126 @@ for the assembled class as well as the full \(E_+<8\pi^2\)
 bound. The exact quadratic patch itself has negative scalar
 curvature.
 
+\begin{proposition}[Negative Gauss mass of the exterior]\label{prop:relative-gauss}
+Use the hypotheses of Theorem~\ref{thm:exterior}. Choose each
+\(N_j\) using the orientation-compatible normal on the graph
+and write \(\ell(u)=\sum_j{\bf1}_{N_j}(u)\) and \(S=\sum_j s_j\).
+For almost every \(u\), the signed Gauss count on \(C^\circ\)
+over \(u\) is \(1-\ell(u)\). With \(m_i(u)\) the height counts after
+insertion of the references, the exterior satisfies
+\begin{equation}\label{eq:exterior-gauss}
+ J(C)=S+I_2(C)+\tfrac12\int_{S^4}
+                 (m_0(u)+m_4(u)-2)\,d\sigma_4(u).
+\end{equation}
+If \(M\) is nonstandard, then
+\begin{equation}\label{eq:exterior-shape}
+ \begin{aligned}
+ J(C)&\ge S+D_C=\omega_4+\tfrac12\int_{S^4}(k(u)-2)_+\,d\sigma_4(u),\\
+ B^2(C)&>\tfrac{64}{3}D_C+\tfrac{16}{3}S .
+ \end{aligned}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The orientation-compatible normal identifies \(TM\) with
+\(\nu^*TS^4\) as oriented bundles, so \(2\deg\nu=\chi(M)=2\).
+Each reference contributes one positive preimage over \(N_j\)
+and zero elsewhere away from the seam image. Subtracting these
+contributions gives the signed count on \(C^\circ\).
+
+For almost every height direction, the seams contain no critical
+points and the patches contribute only their \(k(u)=\ell(u)+\ell(-u)\)
+middle points. The Morse Euler sum therefore gives
+\[
+ m_1(u)+m_3(u)=m_{2,C}(u)+k(u)+m_0(u)+m_4(u)-2 .
+\]
+Odd index is equivalent to negative shape determinant at either
+normal sign. The area formula identifies the half-integral of
+the odd count with \(J(C)\), and the half-integral of \(m_{2,C}\)
+with \(I_2(C)\) \cite[\S3, equation (5)]{OntiVlachos2017Hypersurfaces}.
+The half-integral of \(k\) is \(S\), giving \eqref{eq:exterior-gauss}.
+Every height has a minimum and a maximum, so \(J(C)\ge S+I_2(C)\).
+If \(M\) is nonstandard, Theorem~\ref{thm:exterior} and its proof
+give \(I_2(C)\ge D_C\) and \(E_+(C)>\frac83D_C\).
+The pointwise shape deficit in the immersion paper
+\cite[Proposition 2.1]{Baker2026ImmersionEnergy} gives
+\(B^2(C)\ge 6E_+(C)+\frac{16}{3}J(C)\), proving
+\eqref{eq:exterior-shape}.
+\end{proof}
+
+In particular, \(J(C)\ge S\) holds on every smooth type under
+the seam hypotheses. If three patches have the same one-sign
+image of area \(s\), then \(D_C=\omega_4-2s\). A nonstandard
+type requires \(J(C)\ge\omega_4+s\), and almost every direction
+in the common one-sign image has at least two negative Gauss
+preimages in \(C^\circ\) on any type.
+
+\begin{example}[An exact quadratic exterior on the standard sphere]
+\label{ex:exact-exterior}
+Translate the unit sphere so its north pole is the origin, and
+write its upper chart as the graph of \(h_0(X)=\sqrt{1-|X|^2}-1\).
+Fix \(a_j=5je_1\), \(j=1,2,3\), and a smooth cutoff \(\chi\)
+supported in \(B_2(0)\) and equal to one on \(B_{3/2}(0)\).
+For all sufficiently small \(r>0\), the new chart height
+\[
+ h_r(X)=h_0(X)+\sum_{j=1}^3\chi(X/r-a_j)
+        \bigl(r^2q(X/r-a_j)-h_0(X)\bigr)
+\]
+has disjoint modification supports compactly contained in the
+upper chart. The horizontal differential has rank four, the
+change is \(O(r^2)\), and the modified upper sheet stays separate
+from the lower one. Thus this is a smooth embedding of \(S^4\).
+
+Let \(P_{j,r}\) be the chart image of \(X=r(a_j+z)\), \(z\in\Omega\).
+Since \(\Omega\subset B_{3/2}(0)\), the graph is the translated
+\(F_{r,r}\) on each patch and on a neighborhood of its whole seam.
+The exterior \(C_r\) is the complement of the interiors of these
+three marked chart disks. On all three patches the actual height
+levels \(\pm r^2\lambda\) carry the product solid tori and the
+side coordinates of Proposition~\ref{prop:trace}, including the
+incoming and belt framings. For each \(r\), Sard's theorem permits
+choosing \(\delta_0<\lambda<1/2\) so both are regular levels on
+the whole sphere.
+
+On the chart supports, \(|Dh_r|=O(r)\) and \(|D^2h_r|=O(1)\).
+In fact the bracket and its first two derivatives are \(O(r^2)\),
+\(O(r)\), and \(O(1)\), respectively, by the zero constant and
+linear jets of \(h_0\) at the origin. The cutoff derivatives of
+orders one and two cost \(O(r^{-1})\) and \(O(r^{-2})\). The
+resulting shape is uniformly bounded on a set of volume \(O(r^4)\).
+The remainder is round and contributes zero to \(E_\pm,B^2,J\).
+Consequently \(E_\pm(S^4),B^2(S^4),J(C_r)=O(r^4)\).
+The three reference Gauss images are identical by translation,
+with area \(s_r=|\Omega|r^4+O(r^6)\) by \eqref{eq:normal-area}.
+Thus \(J(C_r)\ge3s_r\) by \eqref{eq:exterior-gauss}, and the
+quartic order of the required seam contribution is attained.
+The actual exterior satisfies \(E_+(C_r)\le\frac83D_{C_r}\),
+where \(D_{C_r}=\omega_4-2s_r\), for small \(r\).
+
+The full induced metric has \(E_+<8\pi^2\) and positive Yamabe
+constant for small \(r\). Indeed \(g_r\) is uniformly equivalent
+to the round metric, and
+\(\|\Scal_{g_r}-12\|_{L^2(g_r)}=O(r^2)\) by the shape and volume
+estimates. Compact Sobolev and Hölder give
+\[
+ \int (6|df|^2+\Scal_{g_r} f^2)\,dV_{g_r}
+ \ge (6-Cr^2)\bigl(\|df\|_{L^2(g_r)}^2+\|f\|_{L^2(g_r)}^2\bigr)
+ \ge c\|f\|_{L^4(g_r)}^2
+\]
+with \(c>0\) uniform for small \(r\)
+\cite[(1.3)--(1.4) and Theorem 2.3]{LeeParker1987Yamabe}.
+\end{example}
+
+The same formula can insert a shrinking cluster in a tangent
+graph chart of any fixed smooth immersion. The exterior energy
+then converges to that immersion's original full energy, since
+both replaced regions have bounded curvature and volume \(O(r^4)\).
+Meanwhile \(D_C\to\omega_4\). On a hypothetical nonstandard
+type the original full energy lies strictly above
+\(\frac83\omega_4\) by the closed theorem, so this procedure
+keeps the exterior above the recognition threshold for all
+sufficiently small \(r\).
+
 \section{Two comparisons}
 
 \subsection{A spherical two-face transition}
@@ -654,6 +775,10 @@ editorial assignment, with GPT-6.2 Sol/ultra requested.
 Actual serving model and reasoning effort are unavailable.
 The draft assembles repository results E32, E37, E42, E49 and E50
 at commit \texttt{483ad3cef5a0af4328c5d35cabbc1f5224d26b1e}.
+The exterior Gauss budget and exact quadratic exterior were added
+for SP4-MASTER-E53b, prepared for Edward B. Baker III on
+25 November 2026 from checkout \texttt{b5de9758f16e}, with the
+actual serving model and reasoning effort unavailable.
 The accompanying manuscript README records the evidence and input versions.
 
 \bibliographystyle{unsrturl}

@@ -1,0 +1,102 @@
+\section{Ricci growth at the recognition endpoint}\label{sec:endpoint-windows}
+
+Let \(I=T=4\pi^2\) and retain the fixed physical minimizing
+sequence of this paper. Smooth recognition implies that every
+\(d_i=e_i-T\) is positive, since a smooth positive class of energy
+at most \(T\) would give \(I=0\). The strict defect inequality
+\eqref{eq:endpoint-deficit}, or independently the full-tensor
+pinching classification of Fu \cite[Theorem 1.3]{Fu2018FourManifolds},
+together with \eqref{eq:budgets} gives, with \(A_i=\|Z_{g_i}\|_{L^2(g_i)}\),
+\begin{equation}\label{eq:endpoint-ricci-defect}
+ A_i^2\le 8d_i,\qquad
+ 192\pi^2-48d_i\le Y_i^2\le192\pi^2+48d_i .
+\end{equation}
+In particular the physical trace-free Ricci energy tends to zero.
+
+For a physical region \(U\), let
+\[
+ N_{i,q}(U)=\sup_{t>0}t\,\operatorname{Vol}_{g_i}
+      (U\cap\{|Z_{g_i}|_{g_i}>t\})^{1/q},\qquad
+ \gamma_q=2-4/q .
+\]
+This is the weak \(L^q\) quasinorm in the physical gauge.
+
+\begin{proposition}[Ricci growth and curvature at the endpoint]
+\label{prop:endpoint-ricci-windows}
+For every fixed finite \(q>2\) and \(\kappa>0\), a physical
+minimizing sequence at \(I=T\) satisfies
+\[
+ A_i^{2\kappa}N_{i,q}(M)\longrightarrow\infty,\qquad
+ d_i^\kappa N_{i,q}(M)\longrightarrow\infty.
+\]
+In particular \(d_i^\kappa\sup_M|\Rm_{g_i}|_{\rm tens}\to\infty\).
+Let \(a_i\to0\), \(x_i\in M\), and
+\(U_i(D)=B_{g_i}(x_i,Da_i)\). If for every fixed finite \(D>0\)
+there is a bound, eventually on one subsequence, on
+\begin{equation}\label{eq:endpoint-protected-weak}
+ \|Z_{g_i}\|_{L^2(U_i(D),g_i)}^{2\kappa}
+       a_i^{\gamma_q}N_{i,q}(U_i(D)),
+\end{equation}
+then for each fixed \(A>0\), the full curvature integral on
+\(B_{g_i}(x_i,Aa_i)\) tends to zero on that subsequence. One
+sufficient condition for \eqref{eq:endpoint-protected-weak} is a
+bound with \(d_i^\kappa\) in place of the factor involving the
+local \(L^2\) norm.
+
+For \(a_i=(d_i^\kappa N_{i,q}(M))^{-1/\gamma_q}\) the curvature
+conclusion holds uniformly in the center. If \(r_i(\vartheta)\)
+is the least physical radius at which some ball carries positive
+chiral mass \(\vartheta e_i\), then
+\[
+ r_i(\vartheta)(d_i^\kappa N_{i,q}(M))^{1/\gamma_q}
+     \longrightarrow\infty\qquad (0<\vartheta\le1/2).
+\]
+\end{proposition}
+
+\begin{proof}
+On any measure space put \(A=\|f\|_2\), \(B=\|f\|_{q,\infty}\).
+The distribution function of \(|f|\) is bounded by
+\(\min(A^2t^{-2},B^qt^{-q})\). For \(2<p<q\), split its
+layer-cake integral at \(t=(B^q/A^2)^{1/(q-2)}\), obtaining
+\[
+ \|f\|_p\le C(p,q)A^\alpha B^{1-\alpha},\qquad
+ \frac1p=\frac{\alpha}{2}+\frac{1-\alpha}{q} .
+\]
+If either norm vanishes both sides are zero. Choose
+\(p=2+(q-2)/(1+q\kappa)\), so that
+\(\alpha/(1-\alpha)=2\kappa\) and
+\(\gamma_p=(1-\alpha)\gamma_q\). Therefore
+\[
+ a_i^{\gamma_p}\|Z_{g_i}\|_{L^p(U,g_i)}
+ \le C(p,q)\left(\|Z_{g_i}\|_{L^2(U,g_i)}^{2\kappa}
+          a_i^{\gamma_q}N_{i,q}(U)\right)^{1-\alpha} .
+\]
+On \(M\), a bounded subsequence of \(A_i^{2\kappa}N_{i,q}(M)\)
+would imply a bounded subsequence of the global \(L^p\) norm.
+The physical Ricci-scale theorem
+gives smooth positive attainment on the original type, which
+contradicts recognition at \(T\). The bound
+\eqref{eq:endpoint-ricci-defect} gives the stated divergence in
+terms of \(d_i\). Unit volume and the pointwise
+Ricci contraction bound give \(N_{i,q}(M)\le C\sup_M|\Rm|_{\rm tens}\).
+
+On the shrinking balls, the displayed interpolation gives the
+strong \(L^p\) bounds on all protected windows required by the
+physical Ricci-scale theorem in the companion master manuscript.
+Its conclusion is vanishing full curvature mass on every smaller
+fixed multiple of the scale. For the specified \(a_i\), the
+sufficient bound involving \(d_i^\kappa\) holds uniformly over
+the centers for every \(D\). Failure of uniform vanishing would
+select a subsequence and centers with a positive integral. If a
+bounded multiple of \(a_i\) reached a chiral quantile, its full
+curvature integral would be at least \(4\vartheta e_i\), contrary
+to this vanishing.
+\end{proof}
+
+This condition allows growth of the weak \(L^q\) norm controlled
+by any fixed inverse power of the minimizing excess. The
+critical estimate \eqref{eq:endpoint-ricci-defect} itself gives
+neither an exponent above two nor the coordinate regularity
+needed by the harmonic compactness argument. A candidate endpoint
+must meet that critical estimate while its supercritical norms
+grow faster than every such fixed power.

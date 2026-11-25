@@ -1,0 +1,176 @@
+\section{Where the Weyl energy can go at the recognition endpoint}
+\label{sec:endpoint-charge}
+
+Write \(\lambda_1^\pm\le\lambda_2^\pm\le z_\pm\) for the eigenvalues
+of the real Weyl blocks, set \(L=\max(z_+,z_-)\), and write
+\(d\lambda^\pm=|W^\pm|^2_{\rm HS}\,dV\). Use the physical
+volume-one Yamabe metric for \(D=\int|Z|^2dV\). Define the
+conformal invariant
+\[
+ B=\int_M\left\{\tfrac13\sum_{\pm}(\lambda_1^\pm-\lambda_2^\pm)^2
+                   +\min(z_+^2,z_-^2)\right\}dV .
+\]
+For any positive class on a nonstandard smooth homotopy sphere,
+\begin{equation}\label{eq:endpoint-deficit}
+                 D+3B < 8(e-T),\qquad e=E_+(g).
+\end{equation}
+Indeed \(|W^\pm|^2=3z_\pm^2/2+(\lambda_1^\pm-\lambda_2^\pm)^2/2\)
+by trace freeness. Hence \(B=4e/3-\int L^2dV\).
+Chen and Zhu's strict and equality classifications give
+\(Y^2<36\int L^2dV\) on the indicated smooth type
+\cite[Theorems 1.4 and 1.6]{ChenZhu2014Conformal}.
+For the strict classification simple connectivity excludes every
+nontrivial connected-sum factor by van Kampen. At equality the other
+possibilities are the projective plane over \(\mathbb C\) and a
+universal cover conformal to a product of constant-curvature surfaces.
+The cover here is the compact simply connected manifold itself.
+Both surface factors would be compact simply connected surfaces, so
+the product has nonzero second homology. The projective plane also
+has nonzero second homology. Substitution of \eqref{eq:budgets} gives
+\eqref{eq:endpoint-deficit}.
+
+Suppose henceforth that \(I=T\) and \(e_i\to T\), and put
+\(y_*=8\sqrt3\,\pi\). Then \(D_i+B_i\to0\),
+\(Y_i\to y_*\), and \(6\|L_i\|_{2,g_i}\to y_*\).
+On the set where \(z_+\ge z_-\) the negative energy density is
+the sum of \(3z_-^2/2\) and half its lower eigengap squared.
+On the complementary set interchange the signs. The combined
+energy of these two smaller blocks is at most \(3B_i/2\).
+The sets in this estimate may vary with \(i\).
+
+\begin{theorem}[Finite disks carrying both chiral energies]
+\label{thm:endpoint-disks}
+For every such sequence there are smooth positive-Ricci metrics
+\(k_i\in[g_i]\), with a constant scale specified below, and a
+subsequence having the following property. Given \(\epsilon,\zeta,r_*>0\),
+there are finitely many fixed radii \(r_j<r_*\) and, at every
+sufficiently large index, pairwise disjoint parametrized smooth
+closed standard disks \(B_{ij}\subset B_{k_i}(x_{ij},r_j)\) satisfying
+\begin{align}
+ \int_{B_{k_i}(x_{ij},r_j)} |\Rm_{g_i}|_{\rm tens}^2\,dV_{g_i}
+ &<\zeta\quad\text{for each }j,\label{eq:endpoint-curv}\\
+ (\lambda_i^++\lambda_i^-)
+ \big(M\setminus\textstyle\bigcup_j B_{ij}\big)&<\epsilon .
+ \label{eq:endpoint-capture}
+\end{align}
+The centers tend to Euclidean regular points in one pointed limit of
+the comparison metrics.
+\end{theorem}
+
+\begin{proof}
+Let \(q_i\) be a volume-one modified Yamabe representative with
+\(R_{q_i}-6L_{q_i}=c_i\) constant, where \(c_i\) is the infimum of
+the modified Yamabe quotient. Its positive conformal factor is
+\(C^{2,\alpha}\) for \(0<\alpha<1\), sufficient for the scalar
+equation and test functions below
+\cite[Lemma 2.1 and proof of Theorem 1.4]{ChenZhu2014Conformal}.
+By their Theorem 1.7, \(c_i\le0\) on this smooth type. Put
+\(l_i=\|L_{q_i}\|_{2,q_i}=\|L_{g_i}\|_{2,g_i}\). The
+ordinary Yamabe inequality and Cauchy--Schwarz give
+\[
+ Y_i\le\int R_{q_i}\,dV_{q_i}
+      =c_i+6\int L_{q_i}\,dV_{q_i}\le c_i+6l_i.
+\]
+Thus \(c_i\to0\) and \(0\le6(l_i-\int L_{q_i}\,dV_{q_i})
+\le6l_i-Y_i\to0\). Since the volume is one,
+\(\|L_{q_i}-l_i\|_2^2=2l_i(l_i-\int L_{q_i}\,dV_{q_i})\).
+In particular \(\|R_{q_i}-Y_i\|_{2,q_i}\to0\).
+The difference
+\[
+ \tfrac23(d\lambda_i^++d\lambda_i^-)-L_{q_i}^2\,dV_{q_i}
+\]
+is a positive measure of mass \(B_i\). The square of \(L_{q_i}\)
+converges in \(L^1(q_i)\) to \((y_*/6)^2=4T/3\).
+Consequently, for \(\mu_i=dV_{q_i}\),
+\begin{equation}\label{eq:charge-volume-tv}
+ \left\|\frac{\lambda_i^++\lambda_i^-}{2T}-\mu_i\right\|_{\rm TV}
+ \longrightarrow0.
+\end{equation}
+Here the norm is the mass of the variation measure. Both Weyl
+measures are those of the original physical class on its actual sets.
+The identity uses the auxiliary volume \(dV_{q_i}\).
+
+The same representative has a further curvature bound. The equation
+gives \(R_{q_i}/6\) within \(o(1)\) of \(L_{q_i}\) uniformly and
+hence \(R_{q_i}\to y_*\) in \(L^2(q_i)\). Gauss--Bonnet gives
+\(\int|Z_{q_i}|^2=4e_i+\int R_{q_i}^2/12-32\pi^2\to0\).
+It follows from the curvature decomposition and
+\eqref{eq:charge-volume-tv} that
+\[
+ \big\|\,|\Rm_{q_i}|_{\rm tens}^2-64\pi^2\,\big\|_{L^1(q_i)}
+ \longrightarrow0.
+\]
+Indeed the four-index Weyl contribution tends to \(8T\) in this
+norm and the scalar contribution to \(y_*^2/6\). The identities
+for \(q_i\) follow by \(C^2\) approximation of its positive
+conformal factor on each compact source. If smooth representatives
+are needed, choose the approximations separately at each index so
+that the errors in these integrals and in volume tend to zero.
+These curvature conclusions concern the auxiliary representative;
+\eqref{eq:endpoint-curv} below concerns the physical Yamabe metric.
+
+Choose a smooth positive-Ricci comparison in the class as in
+Section~\ref{sec:physical-volume}. Normalize its scale by the least
+radius carrying half of \(\mu_i\), set this radius to one, and use an
+attaining center \(p_i\). This is legitimate since the smooth
+comparison distance spheres have zero \(\mu_i\)-measure.
+We give the changes to the proof of Theorem~\ref{thm:volume-balls}.
+On a cutoff \(\chi\) of support of \(\mu_i\)-measure at most one half,
+the Yamabe inequality implies
+\[
+ \big[(1-2^{-1/2})Y_i-\|R_{q_i}-Y_i\|_{2,q_i}\big]
+ \|\chi\|_{4,q_i}^2 \le 6\|d\chi\|_{2,q_i}^2.
+\]
+The bracket has a uniform positive floor. The conformally invariant
+fourth-power gradient estimate in \eqref{eq:physical-small-support}
+therefore applies with this floor. The logarithmic cutoffs and
+packing argument give \eqref{eq:physical-power} for \(\mu_i\)
+and \eqref{eq:physical-noncollapse} for \(k_i\). In particular
+the auxiliary volumes are tight and uniformly small on small
+comparison balls, with uniform noncollapse of comparison volume
+on each bounded window.
+
+Write \(q_i=w_i^2 k_i\). The scalar equation gives
+\(-\Delta_{k_i}w_i\le V_iw_i\), where
+\(V_i=\tfrac16(R_{q_i})_+ w_i^2\), since \(R_{k_i}>0\).
+On any comparison ball \(U\) one has
+\[
+ 6\|V_i\|_{2,k_i;U}\le Y_i\sqrt{\mu_i(U)}
+                         +\|R_{q_i}-Y_i\|_{2,q_i}.
+\]
+On each fixed bounded window choose the radius sufficiently small,
+then the index sufficiently large, to absorb the potential term at
+\(p=4\) in \eqref{eq:physical-moser}. The resulting local
+\(L^8(k_i)\) bound on \(w_i\) uses only
+\(\int w_i^4dV_{k_i}=1\). Packing covers the window by uniformly
+many such half-balls. Thus the auxiliary volume densities \(w_i^4\)
+are bounded in \(L^2(k_i)\) there. Against compactly supported
+continuous tests in a common pointed realization, Cauchy--Schwarz
+and noncollapsed comparison-volume convergence give
+\(\mu=f\mathcal H^4\) with \(f\in L^2_{\rm loc}\) in the limit.
+Tightness gives \(\mu(X)=1\).
+
+The original measures \(\nu_i=|\Rm_{g_i}|_{\rm tens}^2dV_{g_i}\)
+have bounded total mass by \eqref{eq:budgets}. Pass to a further
+subsequence with a local weak limit for these measures. Euclidean
+regular points outside the atoms of this limit have full
+\(\mu\)-measure. At \(\mu\)-almost every such center the density ratio
+\(\mu(B_r(x))/\mathcal H^4(B_r(x))\) tends to \(f(x)\in(0,\infty)\)
+as in
+\eqref{eq:physical-ordered-limits}. Apply the finite disjoint selection,
+shrink and smooth embedding in the proof of
+Theorem~\ref{thm:volume-balls} at these centers. For any
+\(\delta'>0\) the disks capture more than \(1-\delta'\) of \(\mu_i\),
+with the prescribed bound on the original \(\nu_i\) in the containing
+balls. Take \(2T\delta'<\epsilon\) and transfer
+\eqref{eq:charge-volume-tv} on those same source sets.
+\end{proof}
+
+At this endpoint the selection removes the missing complement estimate
+for these disks. To use them in Theorem~\ref{thm:simultaneous} one
+needs the actual bicollar charts and their aggregate cost. For
+example, if the uncovered positive charge is less than \(\epsilon<T\),
+a cost \(c_i<T-\epsilon\) yields \(e_i+c_i<2T\) for all large
+\(i\), and a positive retained class of energy less than \(T\).
+A bound on the curvature integral of a containing ball alone gives
+no first-order comparison on the parametrized boundary.

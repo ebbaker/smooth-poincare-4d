@@ -445,6 +445,214 @@ same-sign pair, so symmetry gives the vanishing of the whole tensor.
 If curvature commuted with the shape, the mixed sectional entry would
 vanish. Gauss gives that very entry as \(-a^2\).
 \end{proof}
-The projected first-order equations require smooth adapted data on the
-open locus. Passing from there to curvature commutation requires the
-differential identity for a parallel endomorphism on that neighborhood.
+The chart-level geometric realization is developed in
+Lemma~\ref{lem:ed03-normal-codazzi}.
+
+\subsection{A marked sphere, an interpolated metric and the Gauss map}
+
+\begin{proposition}[Inclusive threshold for full positive caps]
+\label{prop:ed03-inclusive-caps}
+\uses{prop:ed03-measured-comparisons,prop:cut-marked-reassembly}
+\lean{SmoothPoincare.geometricDiscardedMass_le_excess_inclusive, SmoothPoincare.MarkedSideReplacement.recognizeOriginalOfBothCaps_le_threshold}
+\leanok
+Suppose the two capped metrics are positive, the full raw masses split
+the source energy, both marking extensions and costs are supplied, and
+recognition applies to each attained cap of energy at most \(T\).
+A cap-energy sum at most \(2T\), or the corresponding upper bound on
+the two raw masses plus both costs, gives the marked survivor and its
+discarded-mass estimate. If both caps are at most \(T\), the source
+admits the resulting oriented sphere identification with both marked images.
+\end{proposition}
+\begin{proof}
+\leanok
+At least one cap meets the inclusive threshold. Use its actual recognition
+map and the specified boundary correction. Pull the other positive cap
+back to the source. When both caps meet the bound, compose both maps.
+\end{proof}
+
+\begin{proposition}[Anchored placement in the physical metric]
+\label{prop:ed03-anchored-shell}
+\uses{lem:ed03-yamabe-quantiles}
+\lean{SmoothPoincare.exists_anchoredSphere_radialSides, SmoothPoincare.physicalBall_subset_anchoredBand_of_face_margin, SmoothPoincare.anchoredPoint_mem_inner_of_short_anchor, SmoothPoincare.geometricChiralMeasure_real_le_metricFullCurvatureMeasure, SmoothPoincare.anchoredShell_places_charged_sets}
+\leanok
+On a simply connected physical source, an annular chart supplies the
+two radial sides of its middle sphere. Suppose the buffered band has
+the lower length comparison, the charge on the inner ball exceeds the
+band's full curvature mass, and one anchor satisfies the strict travel
+and volume tests. With the radius and width margins of the finite
+placement theorem, the entire inner ball and median exterior lie in the
+inner and outer sides respectively. Both avoid the closed trim.
+\end{proposition}
+\begin{proof}
+\leanok
+Apply separation to the radial bicollar. A path leaving a closed chart
+band reaches an actual face. Apply the length comparison up to its
+first exit, or after its last entry for the path to the anchor.
+Volume and the ball lower bound control the physical diameter needed
+on the inner side. The low full-curvature distance annulus must still
+be related to the supplied buffered chart.
+\end{proof}
+
+\begin{lemma}[Curvature of the interpolated metric in the splice chart]
+\label{lem:ed03-splice-curvature}
+\uses{lem:ed03-path}
+\lean{SmoothPoincare.chartSpliceMetric_secondPartial_sub, SmoothPoincare.chartSpliceRiemannLower_sub, SmoothPoincare.chartCurvatureFirstJetTerm_sub_memLp_and_le, SmoothPoincare.tendstoUniformly_quadraticRemainder_l2, SmoothPoincare.norm_framedChiralCompression_le_one, SmoothPoincare.tendstoUniformly_geometricSpliceEnergy}
+\leanok
+Write the two actual metrics as \(g,b\) and take
+\(h_t=(1-t\chi)g+t\chi b\) in one fixed chart.
+The second-derivative part of the lowered curvature is affine in the
+second derivatives. Its cutoff commutator consists of first derivatives
+of \(\chi\) multiplying first derivatives of \(b-g\), and second
+derivatives of \(\chi\) multiplying its values. The remaining term is
+the difference of explicit first-jet curvature expressions. With common
+uniform metric and inverse bounds, value and inverse discrepancies
+\(O(\eta)\), and \(L^4\) first-jet majorants \(G,d\) for size and discrepancy,
+its comparison is bounded in \(L^2\) by a fixed multiple of
+\(\eta\lVert G\rVert_4^2+\lVert d\rVert_4\lVert G\rVert_4\). A uniform
+\(L^2\) residual and the given bounds on the moving oriented projection
+and volume density give the uniform integrated squared-energy comparison.
+\end{lemma}
+\begin{proof}
+\leanok
+Differentiate the actual Gram coefficients twice, then use the
+all-lowered curvature formula. Take the fixed oriented trace-free chiral
+compression, whose operator norm is at most one. Expand the difference
+of squares and apply the integral Cauchy--Schwarz inequality to the
+weighted residual.
+\end{proof}
+
+\begin{lemma}[Normal Codazzi and the derivative of the balanced shape]
+\label{lem:ed03-normal-codazzi}
+\uses{prop:ed03-induced-block,lem:ed03-codazzi-jets}
+\lean{SmoothPoincare.immersionChart_secondForm, SmoothPoincare.immersionChart_normalCodazzi, SmoothPoincare.exists_smoothChartUnitNormal_of_principal, SmoothPoincare.exists_immersionChartShapeDual, SmoothPoincare.chartShapeDerivative_symmetries, SmoothPoincare.balancedShapeCovDeriv_eq_zero, SmoothPoincare.saturatedPrincipalFrame_noParallelShapeInChart}
+\leanok
+A nonzero signed principal curvature produces a smooth local unit normal
+through the specified point normal. Its scalar normal form has a
+\(C^2\) metric dual on the fixed chart. Normal projection of the flat
+ambient curvature identity gives Codazzi for the actual immersion.
+On a balanced patch, differentiating \(S^2=a^2\mathrm{Id}\) and using
+the two derivative symmetries forces \(\nabla S=0\). Parallelism on an
+open neighborhood forces curvature commutation, contradicting the mixed
+Gauss entry at its balanced center.
+\end{lemma}
+\begin{proof}
+\leanok
+Normalize a nonzero component of the actual second form, with its
+principal sign corrected at the center. Invert the positive chart
+metric to raise the normal form. The normal derivative is perpendicular
+to the normal itself. Metric compatibility identifies the normal
+Codazzi tensor with the lowered derivative of the shape. Differentiate
+the parallel endomorphism equation once more on the same neighborhood.
+\end{proof}
+
+\begin{lemma}[Both normal heights and the Gauss differential]
+\label{lem:ed03-normal-heights}
+\uses{prop:ed03-induced-block}
+\lean{SmoothPoincare.principalHeight_hessian, SmoothPoincare.principalHeight_morseIndex, SmoothPoincare.principalHeight_twoMiddle_bothNormals, SmoothPoincare.principalHeight_unitCritical_iff, SmoothPoincare.principalNormal_derivative, SmoothPoincare.principalNormal_gramJacobian}
+\leanok
+The unit directions critical at a supplied principal frame are exactly
+its two normals. The Hessian at height \(s\nu\) has diagonal entries
+\(s k_i\) in the supplied orthonormal basis. At a middle-signature
+point both heights are nondegenerate of index two. For a differentiable
+unit normal field through this normal, \(D\nu(e_i)=-k_i\,dF(e_i)\)
+and its orthonormal-frame Gram Jacobian is \(\lvert\prod_i k_i\rvert\).
+\end{lemma}
+\begin{proof}
+\leanok
+The unit normal and the four tangent images form an ambient orthonormal
+basis. Differentiate perpendicularity and unit length and evaluate in
+this basis. Apply the inertia formula to the actual height Hessian.
+\end{proof}
+
+\begin{proposition}[Indexed mass from measured sheets of one normal map]
+\label{prop:ed03-gauss-sheets}
+\uses{lem:ed03-normal-heights}
+\lean{SmoothPoincare.ImmersionGaussNormal.exists_regularSheets, SmoothPoincare.GaussRegularSheets.parametrization, SmoothPoincare.gaussSheet_pushforward_of_paramDensity, SmoothPoincare.gaussMultiplicity_eq_encard, SmoothPoincare.meanIndexTwo_eq_gaussMass}
+\leanok
+A smooth normal map with invertible derivative on the given open
+locus admits countably many disjoint measurable injective sheets.
+With the local density identities, an actual middle count agreeing with
+both fibers almost everywhere, and antipodally invariant sphere area
+of mass \(\omega=8\pi^2/3\), the normalized mean is
+\((2/\omega)\int_U\det A\,dV_g\). Domain multiplicities include all
+overlapping sheet images. The sheet statement retains its regular-locus,
+volume and integrability hypotheses.
+\end{proposition}
+\begin{proof}
+\leanok
+Use local inverses, a countable subcover and measurable disjointification
+in the source. Apply change of variables on each chart, sum the image
+indicators, and then integrate both normal signs.
+\end{proof}
+
+\begin{theorem}[Exclusion of open equality for an actual immersion]
+\label{thm:ed03-no-open-balance}
+\uses{lem:ed03-normal-codazzi,lem:ed03-normal-heights}
+\lean{SmoothPoincare.chartNormalForm_eq_secondFundamentalFormAt, SmoothPoincare.exists_fixedChartPrincipalBasis, SmoothPoincare.exists_reindexedBalancedNormalFrame, SmoothPoincare.noOpenBalancedPrincipalFrames}
+\leanok
+Let \(F:(M^4,g)\to\mathbb R^5\) be a smooth isometric hypersurface
+immersion with an orientation on the source. No nonempty open set admits
+pointwise oriented principal frames of its second fundamental form with
+spectrum \((-a,-a,a,a)\), \(a>0\) at every point. Both the magnitude
+and the frames may be chosen independently at each point.
+\end{theorem}
+\begin{proof}
+\leanok
+Use one nonzero principal curvature at a center to fix a smooth unit
+normal and raise the second form on that chart. Transport each principal
+basis by the inverse derivative of the chart transition. The normal
+component of the Hessian obeys the bilinear transformation law because
+the differential of the corresponding height vanishes. Reversal of the
+normal interchanges the two rank-two blocks by an even permutation.
+In this fixed chart \(S^2=a^2\mathrm{Id}\). Evaluating this identity
+against one fixed basis vector and its dual coordinate makes the positive
+square root differentiable locally. Codazzi gives parallelism there.
+Curvature commutation now contradicts mixed sectional curvature \(-a^2\).
+\end{proof}
+
+\begin{corollary}[Strict immersed energy bound for the actual indexed count]
+\label{cor:ed03-strict-actual-height}
+\uses{cor:ed03-balanced-endpoint,thm:ed03-no-open-balance,prop:ed03-gauss-sheets}
+\lean{SmoothPoincare.indexedHeightTwoPoints_eq_gaussFibers, SmoothPoincare.meanActualIndexTwo_eq_gaussMass, SmoothPoincare.inducedEnergy_strict_of_actualIndexTwo}
+\leanok
+Use the true open middle locus, globally supplied pointwise principal
+frames of the immersion, ordered there and matching the energy frame.
+Supply a unit normal and a measured Gauss-sheet atlas on this locus,
+the normalized spherical area inputs, integrable densities and continuity
+of the middle deficit. The count of nondegenerate index-two points is
+measurable and finite almost surely. If it is at least two almost surely,
+then \(E_+(g)>64\pi^2/9\).
+\end{corollary}
+\begin{proof}
+\leanok
+At every source point the two Gauss fibers of the middle locus are
+precisely the two possible unit height directions with nondegenerate
+index two. Integrate this cardinality on the measured sheets. At or
+below the threshold the energy split forces a nonempty open balanced
+locus, contrary to Theorem~\ref{thm:ed03-no-open-balance}.
+\end{proof}
+Deriving the measured-sheet density identities from the ordinary round
+metric and constructing the topological count floor are separate steps.
+For two selected handles, a proof of smooth cancellation must also track
+the attaching curves, their framings and the outgoing boundary marking.
+
+\begin{corollary}[Attained positive classes and the fixed-type infimum]
+\label{cor:ed03-attained-class}
+\uses{lem:master-competitor}
+\lean{SmoothPoincare.standardRoundFour_chiralBlock_eq_zero, SmoothPoincare.existsGeometricPositiveMetric_belowThreshold, SmoothPoincare.geometricRecognitionEndpoint}
+\leanok
+Suppose the actual framed positive-energy set is nonempty, the round
+four-sphere has positive class Yamabe constant, and every admissible
+metric at or below \(T=4\pi^2\) has the stated oriented sphere recognition.
+Then a single class of energy at most \(T\), an infimum strictly below
+\(T\), and that oriented identification are equivalent. In the recognized
+case zero belongs to the admissible set and its infimum vanishes.
+If the infimum is \(T\), it is unattained.
+\end{corollary}
+\begin{proof}
+\leanok
+Constant round curvature gives zero trace-free chiral block in the actual
+oriented frames. Pull the positive round metric back along the supplied
+oriented identification. A strict infimum gap selects an admissible
+metric below the threshold by the defining property of the infimum.
+\end{proof}

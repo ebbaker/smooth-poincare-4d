@@ -1,6 +1,6 @@
 # Master research continuation
 
-Use [After marked exteriors and annuli](AFTER_MARKED_EXTERIORS_20261125.md) for the active research launch. The [parallel program handoff and four branch prompts](PARALLEL_PROGRAM_20261125.md) records the division of ownership. The [immersion and Ricci-scale handoff](AFTER_IMMERSED_HEIGHTS_AND_RICCI_SCALES_20261125.md) records the preceding mathematical milestone. The [earlier physical energy-scale handoff](AFTER_PHYSICAL_ENERGY_SCALES_20261125.md) preserves the previous inputs. The original activation below preserves the first edition’s instructions.
+Use [Continue from endpoint charge capture](AFTER_ENDPOINT_CHARGE_20261125.md) for the current Astra/ultra launch. The [earlier endpoint handoff](AFTER_RECOGNITION_ENDPOINT_20261125.md) records the starting hypotheses. The [parallel program handoff](PARALLEL_PROGRAM_20261125.md) identifies the four branch owners. The [marked-exterior and annulus handoff](AFTER_MARKED_EXTERIORS_20261125.md), [immersion and Ricci-scale handoff](AFTER_IMMERSED_HEIGHTS_AND_RICCI_SCALES_20261125.md), and [physical energy-scale handoff](AFTER_PHYSICAL_ENERGY_SCALES_20261125.md) preserve earlier milestones. The first-edition launch below is retained for provenance.
 
 ## Original launch of sustained research
 
@@ -31,7 +31,7 @@ All IDs below have prefix `SP4-MASTER-`. Astra Ultra chooses the mathematical me
 | B04 (Astra), then E04 or E05 (Sol) | A cut or repair estimate leaves a concentration region, a whole limiting base, or a smooth closed survivor. | For E04, check a marked base or an ALE comparison on whole truncations. For E05, test rigidity or an admissible strictly decreasing variation at a closed minimizer, including the case where the divergence of $W^+$ cannot be made zero by a conformal change. State any surviving cases. |
 | B05 (Astra), then E06 (independent Sol check) | A candidate argument covers entry and every reachable case, or proves smooth recognition directly. | Trace the implication from an arbitrary smooth homotopy sphere and independently audit the topology, analytic estimates, quantifiers and strict inequalities. |
 
-## Paste into a new Astra Ultra session
+## Historical first-edition prompt
 
 > Activate sustained research in `papers/master` in the smooth-poincare-4d checkout. Use GPT-6.2 Astra at ultra reasoning effort as lead. You have broad authority to try different proof routes, revisit earlier choices, consult primary literature, revise or create B decisions and E packets, and create bounded GPT-6.2 Sol helpers at ultra effort for derivations, counterexamples and independent proof checks. Continue through useful follow-on work without asking for routine approval.
 >

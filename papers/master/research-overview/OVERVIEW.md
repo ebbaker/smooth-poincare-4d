@@ -6,6 +6,20 @@ The parallel organization began with the 33-page master edition committed at 268
 
 The four specialist investigations now have [working papers](../README.md#working-papers-for-the-parallel-investigations), together with a coordinating paper on hypersurface immersion geometry. The master gives the threshold, height and fixed-type implications. The [proof crosswalk](../research-progress/handoffs/E51_COMPANION_DRAFTS_20261125.md) identifies where the underlying arguments are developed.
 
+## What belongs in the master proof
+
+Develop intermediate results in the working draft of the sub-investigation that owns them. Give the analytical derivation there and link supporting computations or scoped failures in the branch records. Before promoting a result, identify the step in the [master proof plan](../research-plan/PLAN.md) that changes. Specify which hypothesis it discharges, which previously open case it settles, or which part of the proof it shortens under the same or weaker assumptions.
+
+In the master, state the implication with its quantifiers, give the decisive argument, and cite the precise result in the branch draft for the supporting proof. A conditional theorem can move the proof forward by replacing an open hypothesis with a weaker geometric condition. State where that condition still has to be established. For example, the cost of one immersed handle with a prescribed boundary germ belongs in the construction paper. A bound on the assembled immersion that reaches the recognition threshold advances the master because it identifies the smooth type of its domain.
+
+For variational results, say whether the estimate produces a metric or bounds an infimum. A smooth positive repair on the original type with energy at most $4\pi^2$ closes the recognition step, including equality. An estimate on a minimizing sequence that gives only $I^+(M)\le4\pi^2$ leaves the unattained endpoint open. The [master register](../research-progress/REGISTER.md) records the assessed implication and its scope.
+
+## Endpoint charge and the next proof obligation
+
+Let \(T=4\pi^2\). At the only unresolved endpoint of \(I^+(M)\le T\), every physical minimizing sequence has vanishing trace-free Ricci energy. A modified Yamabe metric in each of those classes makes its volume approximate the sum of the two original chiral measures in total variation. Normalizing a positive-Ricci comparison by that volume places nearly all charge of both signs on a finite family of parametrized standard disks, with arbitrarily little original full curvature on each containing ball. This removes the independent complement estimate for these disks. Above the endpoint that estimate remains a premise. [Proof and assessed alternatives](../research-progress/handoffs/E53_E55_ENDPOINT_CHARGE_20261125.md)
+
+The next intrinsic question is whether the same charged disks admit disjoint marked collars on which the aggregate splice allowance is below \(2\pi\) by a fixed margin as the residual and raw collar charge tend to zero. The disk selection controls location and charge. It has yet to give distortion and derivative control in a common parametrization. A proper flat radial comparison in the neck branch and the modified sign form on an actual retained exterior provide two independent approaches.
+
 ## Current analytical results on the four routes
 
 The master now has two ways to test a retained exterior before constructing a global competitor. On an intrinsic exterior with marked round ends there is an exact spectral test for the positive Yamabe sign, and the capped energy is the exterior energy. On an immersed exterior the number of index-two critical points needed on its complement gives an explicit directional lower bound for the exterior's Weyl integral on any hypothetical nonstandard type. At two middle handles the transported one-sided surgery link and the two mixed surgery orders give recognizable smooth subclasses. The quantitative construction and the selection of these subclasses remain open.
@@ -18,7 +32,7 @@ The program seeks three possible ways to recognize a given homotopy four-sphere.
 
 | Research owner | What it receives | What the master can use |
 | --- | --- | --- |
-| [Immersed handle constructions](../../investigations-1/04_hypersurface_immersions/01_immersed_handle_constructions/research-overview/OVERVIEW.md) | A framed smooth handle presentation and prescribed immersion data on its interfaces. | A global induced class satisfying a recognition or entry threshold, or a model with clearly specified exterior requirements. |
+| [Immersed handle constructions](../../investigations-1/04_hypersurface_immersions/01_immersed_handle_constructions/research-overview/OVERVIEW.md) | A framed smooth handle presentation and prescribed immersion data on its interfaces. | A global induced class satisfying a recognition threshold, or a positive induced class satisfying subcritical entry. |
 | [Two-handle recognition](../../investigations-1/04_hypersurface_immersions/02_two_handle_recognition/research-overview/OVERVIEW.md) | A candidate immersed height in the subcritical band, including its actual framed attaching maps. | Recognition for a selected diagram class, together with whatever direction-selection or coverage result is still needed. |
 | [Neck geometry](../../investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/research-overview/OVERVIEW.md) | A positive-class minimizing sequence with separated physical chiral radii. | A whole marked physical shell to which the existing cap and same-type contradiction apply. |
 | [Fixed-type variational descent](../01_fixed_type_variational_descent/research-overview/OVERVIEW.md) | A diffuse minimizing sequence, a charged remainder, or a specified closed or round alternative. | A strict admissible competitor on the original smooth type, independent recognition, or a proved termination step with its residual hypotheses. |
@@ -40,8 +54,8 @@ $$
  \qquad T=4\pi^2 .
 $$
 
-Strict recognition applies at $E_+<T$ with $Y([g])>0$, by
-Chang–Gursky–Yang's sphere theorem and simple connectivity. The equality classification also identifies the smooth type at $E_+=T$ on a homotopy sphere. For a
+A single positive class with $E_+\le T$ identifies the smooth type by
+Chang–Gursky–Yang's sphere theorem and equality classification. The round metric on that type then gives $I^+(M)=0$. Conversely, $I^+(M)<T$ supplies a positive class below $T$ by the definition of infimum. It follows that any hypothetical $I^+(M)=T$ must be unattained. For a
 *closed Bach-flat positive Yamabe* class the inclusive rigidity result gives conformal
 roundness at or below $T$.
 [Normalization and closed gap, `thm:closed-gap`](../../investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/manuscript/marked_necks_and_chiral_energy.tex#L64)
@@ -50,7 +64,7 @@ roundness at or below $T$.
 Suppose a candidate nonstandard $M$ admits a positive-Yamabe class
 with $E_+<8\pi^2$. It then has a minimizing sequence of smooth
 volume-one Yamabe metrics $g_i$, with
-$T\le E_+(g_i)\le 8\pi^2-\delta$, $\delta>0$, and
+$T<E_+(g_i)\le 8\pi^2-\delta$, $\delta>0$, for all sufficiently large $i$, and
 $E_+(g_i)\to I^+(M)$. A conformal change to these physical metrics
 keeps the chiral energy. Their scalar curvatures are the Yamabe
 constants $Y_i$, and Gauss–Bonnet gives
@@ -76,9 +90,10 @@ A supplied finite family of disjoint smooth spherical cuts admits a
 quantitative test. Let $m_j$ be the raw chiral energy on each piece
 and suppose that closing the pieces with their marked caps gives
 positive-Yamabe metrics with energies $e_j\le m_j+\gamma_j$, where
-$\gamma_j\ge0$. If $E_+(g)+\sum_j\gamma_j<8\pi^2$,
-at most one capped piece can reach $T$. All pieces strictly below
-$T$ are standard. Parametrized reassembly along the original
+$\gamma_j\ge0$. If the sum of the capped energies is at most $8\pi^2$,
+as is guaranteed by $E_+(g)+\sum_j\gamma_j\le8\pi^2$, at most one
+capped piece exceeds $T$. Every piece at or below $T$ is standard.
+If all are standard, the source is standard. Otherwise parametrized reassembly along the original
 boundary markings gives $M$ the oriented smooth type of the
 possible exceptional piece $s$. On a nonstandard $M$, its
 capped metric is an admissible competitor on $M$, hence
@@ -93,7 +108,7 @@ argument starts directly with the minimizing sequence. A variant
 transfers the smooth type from one strictly subthreshold exterior
 and gives a contradiction when the retained capped core has a
 strict energy decrement on $M$.
-[Finite cuts, `thm:nonsplitting`](../../investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/manuscript/marked_necks_and_chiral_energy.tex#L412)
+[Master finite cut criterion, `prop:cut-energy`](../manuscript/marked_cut.tex)
 · [One-cut and residual accounting, `sec:marked-accounting`](../../investigations-1/03_first_order_twistor/manuscript/first_order_twistor_and_smooth_poincare.tex#L631)
 
 - **Separating collar.** Two fixed positive chiral quantile masses at
@@ -203,7 +218,7 @@ $$
  \sum_{j=1}^{N_i}m_{ij}\le N_i(e_i-I^+(M))+\sum_j\gamma_{ij}.
 $$
 
-Fix the physical-volume tolerance before choosing the finite family and taking the source limit. If the aggregate excess tends to zero in this order, the marked union carries vanishing chiral energy. The complement may still carry the whole infimum in arbitrarily small physical volume. Uniform absolute continuity of the physical chiral measures is one sufficient independent estimate; an admissible concentrated model with strict same-type descent is another direction. The published sphere and Ricci-limit theorems provide neither the repairs nor this absolute continuity. [Manuscript, one-sided replacement and its corollary](../manuscript/chiral_weyl_energy_and_smooth_poincare.tex)
+Fix the physical-volume tolerance before selecting the balls. For a fixed number of independent repairs, vanishing aggregate excess forces the marked union to carry vanishing chiral energy in the minimizing limit. If the number grows, the term $N_i(e_i-I^+(M))$ also needs control. The complement can carry the whole infimum in arbitrarily small physical volume. The descent paper gives the joint selection and the uniform absolute continuity test. The master uses the resulting residual bound at the threshold stated above. [Fixed-type descent draft](../01_fixed_type_variational_descent/manuscript/README.md) · [Master repair corollary](../manuscript/chiral_weyl_energy_and_smooth_poincare.tex)
 
 ## Other routes to recognition
 

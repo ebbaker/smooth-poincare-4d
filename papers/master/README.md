@@ -2,7 +2,7 @@
 
 The master manuscript asks whether the chiral Weyl energy on a fixed smooth homotopy four-sphere can be lowered far enough to identify its smooth type. The working edition gives a short marked-cut test and a variational comparison on the actual source. Every smooth complete physical blow-up with the stated first-order convergence is flat at minimizing energy. The paper now gives physical trace-free Ricci scale estimates, a critical harmonic-annulus cut, and direct recognition at chiral energy at most \(64\pi^2/9\) for a conformal class induced by a Euclidean hypersurface immersion. Universal entry, a general marked extraction and closed rigidity remain open.
 
-The latest edition adds an intrinsic round-boundary sign test, recognition from a retained immersed exterior and selected height diagrams, a single-point test for the full physical shell, simultaneous removal of charged marked disks and a near-Einstein recognition theorem. [Results and remaining cases](brainstorm/notes/MARKED_EXTERIORS_AND_ANNULI_20261125.md)
+At the recognition endpoint the working edition places both chiral energies on finitely many parametrized standard disks up to any prescribed error, and gives the first remaining collar inequality. It also tests a marked exterior by its modified Yamabe form and recognizes further one-sided and mixed height diagrams. [Proof and remaining smooth types](research-progress/handoffs/E53_E55_ENDPOINT_CHARGE_20261125.md)
 
 ## Working papers for the parallel investigations
 
@@ -19,7 +19,7 @@ The [proof plan](research-plan/PLAN.md) has four specialist investigations. The 
 ## Master manuscript and research records
 
 - [Read the manuscript (PDF)](../../output/pdf/master/chiral_weyl_energy_and_smooth_poincare.pdf) · [Editable manuscript and build](manuscript/README.md)
-- [Research overview and map of the contributing investigations](research-overview/OVERVIEW.md)
+- [Research overview and map of the contributing investigations](research-overview/OVERVIEW.md) · [What belongs in the master proof](research-overview/OVERVIEW.md#what-belongs-in-the-master-proof)
 - [Research plan](research-plan/PLAN.md) · [Live progress register](research-progress/REGISTER.md)
 - [Initial proof-route decision](brainstorm/notes/INITIAL_PROOF_ROUTE_20261125.md) · [Draft history](DRAFT_HISTORY.md) · [Continuation](continuation-notes/CONTINUATION.md)
 

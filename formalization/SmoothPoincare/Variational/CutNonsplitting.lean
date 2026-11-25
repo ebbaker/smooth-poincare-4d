@@ -106,16 +106,15 @@ structure MarkedSideReplacement {A : Type*} [TopologicalSpace A]
       q.normalBall '' (interior standardFourSphereCap)ᶜ = keep.marking '' standardFourSphereCap
 
 omit [I.Boundaryless] [T2Space M] [CompactSpace M] [Nonempty M] in
-/-- A recognized opposite cap yields a diffeomorphism whose restrictions follow
-the retained core and send the full discarded piece onto the retained cap. -/
-theorem MarkedSideReplacement.reassemble {A : Type*} [TopologicalSpace A]
+/-- An oriented recognition of the opposite cap gives a marked diffeomorphism
+that follows the retained core and sends the discarded piece onto the retained cap. -/
+theorem MarkedSideReplacement.reassembleOfRecognition {A : Type*} [TopologicalSpace A]
     {keep : GeometricMarkedCutSide (I := I) (M := M) oX}
     {discard : GeometricMarkedCutSide (I := I) (M := M) oV}
     (cut : MarkedSideReplacement (A := A) oM oS keep discard)
-    (hSmall : discard.cappedEnergy < 4 * Real.pi ^ 2) :
+    (initial : V ≃ₘ⟮IV, 𝓡 4⟯ StandardFourSphere) (hInitial : initial.preservesOrientation oV oS) :
     ∃ Φ : M ≃ₘ⟮I, J⟯ X, Φ.preservesOrientation oM oX ∧
       EqOn Φ keep.core keep.core.source ∧ Φ '' discard.raw = keep.marking '' standardFourSphereCap := by
-  obtain ⟨⟨initial, hInitial⟩⟩ := cut.recognize hSmall
   obtain ⟨r, U, hr, hOpen, hCap, hSource, _, hInverse, _, _, _, hClosed, _⟩ :=
     exists_recognition_eqOn_capNeighborhood oV oS initial hInitial discard.marking standardFourSphereCap
       (cut.extendMarking initial hInitial)
@@ -131,6 +130,18 @@ theorem MarkedSideReplacement.reassemble {A : Type*} [TopologicalSpace A]
         (hExterior (hRaw hx)).trans (congrArg (fun z => q.normalBall (r z)) (hRawMap hx))).image_eq
     _ = q.normalBall '' (r '' (discard.core '' discard.raw)) := by simp only [image_image]
     _ = keep.marking '' standardFourSphereCap := by rw [discard.coreImage, hClosed, hBallImage]
+
+omit [I.Boundaryless] [T2Space M] [CompactSpace M] [Nonempty M] in
+/-- The original strict-threshold marked reassembly. -/
+theorem MarkedSideReplacement.reassemble {A : Type*} [TopologicalSpace A]
+    {keep : GeometricMarkedCutSide (I := I) (M := M) oX}
+    {discard : GeometricMarkedCutSide (I := I) (M := M) oV}
+    (cut : MarkedSideReplacement (A := A) oM oS keep discard)
+    (hSmall : discard.cappedEnergy < 4 * Real.pi ^ 2) :
+    ∃ Φ : M ≃ₘ⟮I, J⟯ X, Φ.preservesOrientation oM oX ∧
+      EqOn Φ keep.core keep.core.source ∧ Φ '' discard.raw = keep.marking '' standardFourSphereCap := by
+  obtain ⟨⟨initial, hInitial⟩⟩ := cut.recognize hSmall
+  exact cut.reassembleOfRecognition initial hInitial
 
 /-- The returned competitor includes the oriented map, its core restriction,
 the full raw side and cap images, and the energy of its actual pullback metric. -/
@@ -148,19 +159,44 @@ def GeometricMarkedCutSide.ProvidesCompetitor
         Integrable (fun x => hilbertSchmidtSq (W x)) (riemannianVolumeMeasure I M pull) ∧
         chiralFrameEnergy pull W = keep.cappedEnergy
 
-private theorem MarkedSideReplacement.competitor {A : Type*} [TopologicalSpace A]
+private theorem MarkedSideReplacement.competitorOfRecognition {A : Type*} [TopologicalSpace A]
     {keep : GeometricMarkedCutSide (I := I) (M := M) oX}
     {discard : GeometricMarkedCutSide (I := I) (M := M) oV}
     (cut : MarkedSideReplacement (A := A) oM oS keep discard)
-    (hSmall : discard.cappedEnergy < 4 * Real.pi ^ 2) :
+    (initial : V ≃ₘ⟮IV, 𝓡 4⟯ StandardFourSphere) (hInitial : initial.preservesOrientation oV oS) :
     keep.ProvidesCompetitor (oM := oM) discard.raw := by
-  obtain ⟨Φ, hΦ, hCore, hCap⟩ := cut.reassemble hSmall
+  obtain ⟨Φ, hΦ, hCore, hCap⟩ := cut.reassembleOfRecognition initial hInitial
   have hRaw := ((hCore.mono keep.rawInCore).image_eq).trans keep.coreImage
   obtain ⟨hPositive, hIntegral, hEnergy⟩ :=
     geometricPullbackCompetitor Φ hΦ keep.metric keep.frame keep.positive keep.integrable
   refine ⟨?_, Φ, hΦ, hCore, hRaw, hCap, hPositive, hIntegral, hEnergy⟩
   exact ⟨Diffeomorph.pullbackMetricCross keep.metric Φ,
     pullbackOrientedOrthonormalFrames keep.metric Φ hΦ keep.frame, hPositive, hIntegral, hEnergy⟩
+
+private theorem MarkedSideReplacement.competitor {A : Type*} [TopologicalSpace A]
+    {keep : GeometricMarkedCutSide (I := I) (M := M) oX}
+    {discard : GeometricMarkedCutSide (I := I) (M := M) oV}
+    (cut : MarkedSideReplacement (A := A) oM oS keep discard)
+    (hSmall : discard.cappedEnergy < 4 * Real.pi ^ 2) :
+    keep.ProvidesCompetitor (oM := oM) discard.raw := by
+  obtain ⟨⟨initial, hInitial⟩⟩ := cut.recognize hSmall
+  exact cut.competitorOfRecognition initial hInitial
+
+omit [I.Boundaryless] [Nonempty M] in
+private theorem rawEnergies_add (g : SmoothRiemannianMetric I M)
+    (frame : ∀ x, OrientedOrthonormalFrameAt g oM x)
+    (left : GeometricMarkedCutSide (I := I) (M := M) oX)
+    (right : GeometricMarkedCutSide (I := I) (M := M) oV)
+    (hInt : Integrable (fun x => hilbertSchmidtSq (geometricChiralBlock g oM x (frame x)))
+      (riemannianVolumeMeasure I M g))
+    (hCover : left.raw ∪ right.raw = univ)
+    (hOverlap : AEDisjoint (riemannianVolumeMeasure I M g) left.raw right.raw) :
+    left.rawEnergy g frame + right.rawEnergy g frame =
+      chiralFrameEnergy g (fun x => geometricChiralBlock g oM x (frame x)) := by
+  have hSum := setIntegral_union₀ hOverlap right.rawMeasurable.nullMeasurableSet
+    hInt.integrableOn hInt.integrableOn
+  rw [hCover, setIntegral_univ] at hSum
+  exact hSum.symm
 
 /-- For two full measured sides of one marked cut, the total cap budget selects
 a recognized opposite cap. The resulting marked competitor gives the bound
@@ -184,11 +220,8 @@ theorem geometricDiscardedMass_le_excess {A : Type*} [TopologicalSpace A]
     ((left.ProvidesCompetitor (oM := oM) right.raw ∧ right.rawEnergy g frame ≤ excess + γ₁) ∨
       (right.ProvidesCompetitor (oM := oM) left.raw ∧ left.rawEnergy g frame ≤ excess + γ₂)) := by
   intro e excess hCost₁ hCost₂ hMargin
-  have hSplit : left.rawEnergy g frame + right.rawEnergy g frame = e := by
-    have hSum := setIntegral_union₀ hOverlap right.rawMeasurable.nullMeasurableSet
-      hInt.integrableOn hInt.integrableOn
-    rw [hCover, setIntegral_univ] at hSum
-    exact hSum.symm
+  have hSplit : left.rawEnergy g frame + right.rawEnergy g frame = e :=
+    rawEnergies_add g frame left right hInt hCover hOverlap
   have hCaps : left.cappedEnergy + right.cappedEnergy < 2 * (4 * Real.pi ^ 2) := by
     linarith only [hSplit, hCost₁, hCost₂, hMargin]
   have hBelow := geometricPositiveEnergies_bddBelow oM
@@ -198,5 +231,81 @@ theorem geometricDiscardedMass_le_excess {A : Type*} [TopologicalSpace A]
       discardedMass_le_excess_of_mem hBelow ((add_comm _ _).trans hSplit) hCost₂ hCompetitor.1⟩
   · have hCompetitor := keepLeft.competitor hSmall
     exact Or.inl ⟨hCompetitor, discardedMass_le_excess_of_mem hBelow hSplit hCost₁ hCompetitor.1⟩
+
+/-- A nonstrict total cap budget supplies at least one inclusive recognition test. -/
+theorem eitherCappedEnergy_le_threshold {T E₁ E₂ : ℝ} (hSum : E₁ + E₂ ≤ 2 * T) :
+    E₁ ≤ T ∨ E₂ ≤ T := by
+  by_cases h₁ : E₁ ≤ T
+  · exact Or.inl h₁
+  · exact Or.inr (by linarith only [lt_of_not_ge h₁, hSum])
+
+/-- With inclusive recognition, either a bound on the two actual capped energies
+or the sufficient bound on the source energy plus both surcharges gives a marked
+competitor and the retained-side discarded-mass inequality. -/
+theorem geometricDiscardedMass_le_excess_inclusive {A : Type*} [TopologicalSpace A]
+    (g : SmoothRiemannianMetric I M) (frame : ∀ x, OrientedOrthonormalFrameAt g oM x)
+    (left : GeometricMarkedCutSide (I := I) (M := M) oX)
+    (right : GeometricMarkedCutSide (I := I) (M := M) oV)
+    (hInt : Integrable (fun x => hilbertSchmidtSq (geometricChiralBlock g oM x (frame x)))
+      (riemannianVolumeMeasure I M g))
+    (hCover : left.raw ∪ right.raw = univ)
+    (hOverlap : AEDisjoint (riemannianVolumeMeasure I M g) left.raw right.raw)
+    (keepLeft : MarkedSideReplacement (A := A) oM oS left right)
+    (keepRight : MarkedSideReplacement (A := A) oM oS right left)
+    (recognizeLeft : left.cappedEnergy ≤ 4 * Real.pi ^ 2 →
+      Nonempty {r : X ≃ₘ⟮J, 𝓡 4⟯ StandardFourSphere // r.preservesOrientation oX oS})
+    (recognizeRight : right.cappedEnergy ≤ 4 * Real.pi ^ 2 →
+      Nonempty {r : V ≃ₘ⟮IV, 𝓡 4⟯ StandardFourSphere // r.preservesOrientation oV oS})
+    {γ₁ γ₂ : ℝ} :
+    let e := chiralFrameEnergy g (fun x => geometricChiralBlock g oM x (frame x))
+    let excess := e - sInf (geometricPositiveEnergies oM)
+    left.cappedEnergy ≤ left.rawEnergy g frame + γ₁ →
+    right.cappedEnergy ≤ right.rawEnergy g frame + γ₂ →
+    (left.cappedEnergy + right.cappedEnergy ≤ 2 * (4 * Real.pi ^ 2) ∨
+      e + γ₁ + γ₂ ≤ 2 * (4 * Real.pi ^ 2)) →
+    ((left.ProvidesCompetitor (oM := oM) right.raw ∧ right.rawEnergy g frame ≤ excess + γ₁) ∨
+      (right.ProvidesCompetitor (oM := oM) left.raw ∧ left.rawEnergy g frame ≤ excess + γ₂)) := by
+  intro e excess hCost₁ hCost₂ hMargin
+  have hSplit : left.rawEnergy g frame + right.rawEnergy g frame = e :=
+    rawEnergies_add g frame left right hInt hCover hOverlap
+  have hCaps : left.cappedEnergy + right.cappedEnergy ≤ 2 * (4 * Real.pi ^ 2) := by
+    rcases hMargin with hCaps | hTotal
+    · exact hCaps
+    · linarith only [hSplit, hCost₁, hCost₂, hTotal]
+  have hBelow := geometricPositiveEnergies_bddBelow oM
+  rcases eitherCappedEnergy_le_threshold hCaps with hSmall | hSmall
+  · obtain ⟨⟨r, hr⟩⟩ := recognizeLeft hSmall
+    have hCompetitor := keepRight.competitorOfRecognition r hr
+    exact Or.inr ⟨hCompetitor,
+      discardedMass_le_excess_of_mem hBelow ((add_comm _ _).trans hSplit) hCost₂ hCompetitor.1⟩
+  · obtain ⟨⟨r, hr⟩⟩ := recognizeRight hSmall
+    have hCompetitor := keepLeft.competitorOfRecognition r hr
+    exact Or.inl ⟨hCompetitor, discardedMass_le_excess_of_mem hBelow hSplit hCost₁ hCompetitor.1⟩
+
+omit [I.Boundaryless] [T2Space M] [CompactSpace M] [Nonempty M] in
+/-- When both actual caps meet the inclusive threshold, their recognitions give
+an oriented identification of the original manifold with the standard sphere.
+The intermediate diffeomorphism retains the two marked image identities. -/
+theorem MarkedSideReplacement.recognizeOriginalOfBothCaps_le_threshold {A : Type*} [TopologicalSpace A]
+    {keep : GeometricMarkedCutSide (I := I) (M := M) oX}
+    {discard : GeometricMarkedCutSide (I := I) (M := M) oV}
+    (cut : MarkedSideReplacement (A := A) oM oS keep discard)
+    (recognizeKeep : keep.cappedEnergy ≤ 4 * Real.pi ^ 2 →
+      Nonempty {r : X ≃ₘ⟮J, 𝓡 4⟯ StandardFourSphere // r.preservesOrientation oX oS})
+    (recognizeDiscard : discard.cappedEnergy ≤ 4 * Real.pi ^ 2 →
+      Nonempty {r : V ≃ₘ⟮IV, 𝓡 4⟯ StandardFourSphere // r.preservesOrientation oV oS})
+    (hKeep : keep.cappedEnergy ≤ 4 * Real.pi ^ 2)
+    (hDiscard : discard.cappedEnergy ≤ 4 * Real.pi ^ 2) :
+    ∃ (Φ : M ≃ₘ⟮I, J⟯ X) (r : X ≃ₘ⟮J, 𝓡 4⟯ StandardFourSphere),
+      Φ.preservesOrientation oM oX ∧ r.preservesOrientation oX oS ∧
+      EqOn Φ keep.core keep.core.source ∧
+      Φ '' keep.raw = (interior (keep.marking '' standardFourSphereCap))ᶜ ∧
+      Φ '' discard.raw = keep.marking '' standardFourSphereCap ∧
+      (Φ.trans r).preservesOrientation oM oS := by
+  obtain ⟨⟨initial, hInitial⟩⟩ := recognizeDiscard hDiscard
+  obtain ⟨⟨r, hr⟩⟩ := recognizeKeep hKeep
+  obtain ⟨Φ, hΦ, hCore, hCap⟩ := cut.reassembleOfRecognition initial hInitial
+  exact ⟨Φ, r, hΦ, hr, hCore, ((hCore.mono keep.rawInCore).image_eq).trans keep.coreImage,
+    hCap, Diffeomorph.preservesOrientation_trans hΦ hr⟩
 
 end SmoothPoincare

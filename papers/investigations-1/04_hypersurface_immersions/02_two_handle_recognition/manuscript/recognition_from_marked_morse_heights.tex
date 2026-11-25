@@ -27,11 +27,13 @@ Below \(8\pi^2\), a putative nonstandard source has exactly two
 index-two points in more than three quarters of height directions.
 We carry the framed attaching tubes of such a height through the
 two end-handlebody reductions. In the one-sided case an unknotted
-component or tunnel number one in the actual two-component surgery
-link suffices. In the mixed case either of two intermediate surgery
-manifolds, \(S^3\) or \(\#_2(S^1\times S^2)\), suffices. The proofs
-retain the boundary identifications. Selection of a diagram satisfying
-one of these conditions remains a separate geometric problem.
+component, tunnel number at most two, or a generalized square knot
+component in the actual two-component surgery link suffices. In the
+mixed case the tests include two intermediate surgery manifolds,
+\(S^3\) and \(\#_2(S^1\times S^2)\), and an isotopy between the
+next attaching circle and the preceding belt circle on the marked
+cut. Selection of a diagram satisfying a recognition condition
+remains a separate geometric problem.
 \end{abstract}
 
 \section{Morse functions with few middle handles}\label{sec:marked}
@@ -377,6 +379,43 @@ Slide equivalence to the unlink for an arbitrary two-component
 link with this outgoing boundary is the general Property \(2R\)
 question, which is not a premise of Proposition~\ref{prop:onesided}.
 
+\begin{proposition}[One-sided recognition after stabilization]\label{prop:onesided-stable}
+With the one-sided marking of Proposition~\ref{prop:onesided},
+suppose the actual link, possibly after framed slides, has tunnel number two
+or contains a component isotopic in \(S^3\) to the generalized
+square knot \(T_{p,q}\#T_{-p,q}\), where \(p,q\ge 2\) are coprime.
+Then \(M\cong S^4\).
+\end{proposition}
+
+\begin{proof}
+For tunnel number two, the geometric input is two embedded arcs
+with interiors disjoint from the link and from each other, whose
+union with the link has handlebody exterior. For the actual
+integrally framed surgery from \(S^3\) to \(Y_2\), Meier, Schirmer
+and Zupan give a slide sequence from the split union of this link
+with one zero-framed unknot to the three-component zero-framed
+unlink \cite[Corollary 1.3(2), \(c=2\), \(k=0\)]{MeierSchirmerZupan2016Trisections}.
+Add that unknot in a ball disjoint from the marked link and add
+a cancelling 3-handle on its \(S^1\times S^2\) summand. Its
+attaching sphere meets the new 2-handle belt circle once. This is
+a local 2--3 stabilization of the original decomposition. The
+upper cap becomes \(\HB{3}\), with the gluing on the original
+part carried over the stabilization. The framed slides identify
+the stabilized lower trace with \(\TB{3}\) and transport the
+outgoing gluing. Theorem A applies to this actual gluing.
+
+For the generalized square knot, the actual ordered presentation
+has no 1-handles and two 2-handles, and one attaching circle is
+\(T_{p,q}\#T_{-p,q}\). Meier and Zupan's theorem applies to the
+closed homotopy sphere with this presentation
+\cite[Theorems 1.1--1.2]{MeierZupan2022SquareKnots}. Their
+diagrammatic statement permits a split zero-framed unlink with
+its cancelling 3-handles and up to two cancelling Hopf pairs
+before simplification. Framed slides and insertion of these pairs
+preserve the smooth closed manifold with the boundary
+identifications transported as above.
+\end{proof}
+
 \subsection{The two intermediate boundaries in a mixed presentation}
 
 Assume \((\ell,r)=(1,1)\). Denote the marked lower belt sphere
@@ -541,6 +580,93 @@ one has determinant \(-n^2=\pm1\). Each side then has trivial
 fundamental group and no reduced homology, and so is contractible.
 Likewise first homology \(\mathbb Z^2\) is only a necessary
 condition for the \(Y_2\) cut.
+
+At every mixed cut, including before the Euclidean algorithm,
+\(H_1(Y)\) is either \(\mathbb Z^2\) or \((\mathbb Z/n)^2\)
+for some \(n\ge1\). Write \(a_\pm\) for the winding numbers of
+the attaching circles of the respective pieces read from their
+ends. Then \(H_1(X_\pm)=\mathbb Z/a_\pm\), with
+\(\mathbb Z/0=\mathbb Z\). In the ordinary boundary surgery
+picture of either piece the two-component matrix has determinant
+\(-a_\pm^2\), by its dotted-to-zero form. Thus the two integers
+vanish together, or have the same nonzero absolute value.
+Mayer--Vietoris for the actual decomposition of the homotopy
+sphere identifies \(H_1(Y)\) with \(H_1(X_-)\oplus H_1(X_+)\),
+giving the assertion. A cut of Heegaard genus at most one must
+consequently be \(S^3\): the other gluings of two solid tori give
+\(S^1\times S^2\) or a lens space with nontrivial cyclic first homology.
+
+\begin{theorem}[Mixed recognition by a belt-circle isotopy]\label{thm:mixed-meridian}
+In a mixed marked presentation let \(Y\) be the cut after the
+first middle handle. Suppose the attaching circle of the second
+middle handle is ambient isotopic in \(Y\) to the belt circle of
+the first. Then \(M\cong S^4\). The same test is available after
+framed slides and a new order, or in the reversed presentation.
+\end{theorem}
+
+\begin{proof}
+Let \(W=\HB{1}\cup h^2_1\) be the lower piece. Extend the supplied
+isotopy over the outgoing collar of \(W\), carrying the actual
+attaching tube of \(h^2_2\). Its core now bounds the co-core disk
+of \(h^2_1\) in \(W\). Thus attaching \(h^2_2\) leaves
+\(\pi_1(W)\) unchanged. Handles of index three and four leave it
+unchanged as well. Consequently \(\pi_1(W)=1\), so the first
+attaching circle has winding \(a=\pm1\) in \(\partial\HB{1}\).
+
+In the dotted-unknot diagram \(U\cup K\) of \(W\), a small
+geometric meridian \(\mu\) of \(K\), in a ball disjoint from
+\(U\), represents the belt circle in the surgered boundary.
+It is obtained by moving a meridian of the removed tube slightly
+into its exterior. Upon filling, the meridian has intersection
+number one with the filling slope on the torus and is parallel
+to the filling core. Identify the transported tube with a framed
+tube about \(\mu\). With preferred-longitude integer coefficients
+\(d\) on \(K\) and \(b\) on \(\mu\), the full ordinary boundary
+surgery matrix is
+\[
+ \begin{pmatrix}0&a&0\\a&d&1\\0&1&b\end{pmatrix}.
+\]
+The outgoing boundary is \(Y_1\). Its first homology has rank
+one, which forces the determinant \(-a^2b\) to vanish, so \(b=0\).
+Turning over \(h^2_1\) gives an inverse trace with attaching core
+the same belt circle. Its framing also gives outgoing boundary
+\(Y_1\), so the same calculation gives \(b=0\) in the meridian
+coordinates. The transported framing therefore agrees with the
+inverse trace framing. Isotopy of the framed tubes gives a
+diffeomorphism on the adjoining trace that carries its outgoing
+identification. The discrepancy between the induced top gluing
+and the identity double extends over the upper \(\HB{1}\) by the
+1-handlebody boundary-extension theorem
+\cite[proof of Theorem A, pp.~341--342]{LaudenbachPoenaru1972Handlebodies}.
+Hence the actual closed manifold is diffeomorphic to the identity
+double of \(W\).
+
+After rounding corners this double is \(\partial(W\times I)\).
+The five-dimensional product has one 1-handle and one 2-handle,
+with the latter attached along a primitive circle in the
+four-dimensional boundary \(S^1\times S^3\) of the 1-handlebody.
+After orienting the circle it is freely homotopic to a factor
+circle. Relative parametric transversality, with the same
+dimension counts as in Theorem~\ref{thm:mixed}, makes this
+homotopy an isotopy. Extend it over a collar to move the framed
+tube. The resulting core meets the belt 3-sphere of the
+five-dimensional 1-handle transversely once. The geometric
+cancellation theorem makes the rounded product a 5-ball
+\cite[Theorem 5.4]{Milnor1965HCobordism}. Its boundary is the
+standard 4-sphere.
+\end{proof}
+
+For a concrete marked presentation the original Mazur manifold is
+\(W^-(0,3)\) in Akbulut and Kirby's notation, with boundary
+\(\Sigma(2,5,7)\) \cite[\S1, Proposition 1 and Theorem 2]{AkbulutKirby1979Mazur}.
+In Isoshima's diagram of \(DW^-(0,n+2)\) at \(n=1\), the extra
+zero-framed circle is a small meridian of the first attaching
+circle \cite[Figure 37]{Isoshima2025MazurDoubles}. The intermediate
+boundary is an integral homology sphere with nontrivial fundamental
+group, so the unchanged cut in this diagram is neither \(S^3\) nor
+\(Y_2\). The example verifies the geometric hypothesis on a published
+smooth handle presentation of the standard sphere. Relating such a
+diagram to an immersed height requires its own comparison.
 
 \section{An exterior height test}\label{sec:exterior}
 
@@ -724,11 +850,12 @@ Prepared with OpenAI Codex assistance for Edward B. Baker III on
 25 November 2026. The manuscript consolidates the master
 immersion section and packets E26, E33, E34, E36, E42, E43, E49,
 and E50 at repository base \texttt{483ad3cef5a0af4328c5d35cabbc1f5224d26b1e}.
-The manuscript directory records the input revisions and source formats.
-The requested execution routing was GPT-6.2 Sol/ultra. Actual
-serving model and reasoning effort were unavailable. The manuscript
-assembles conditional implications and a checked standard-type
-example.
+The E53d additions use height TeX bundle \texttt{6acf5b21c6791706}
+at base \texttt{b5de9758f16e}. The manuscript directory and E53d note
+record the input revisions and source formats. The requested E51
+execution routing was GPT-6.2 Sol/ultra. Actual serving model and
+reasoning effort were unavailable. The manuscript assembles
+conditional implications and standard-type examples.
 
 \section{Outstanding challenges}\label{sec:open}
 
@@ -750,15 +877,14 @@ count, so one can ask for a recognized diagram for even one of
 them. A useful selection theorem would have to relate the immersed
 geometry of the selected height to its framed tubes on the smooth
 domain, using the actual comparison if the critical levels are
-reordered. In the mixed case it would suffice to give a belt
-intersection as in Proposition~\ref{prop:belt} or to identify the
-actual intermediate three-manifold in Theorem~\ref{thm:mixed}.
-In the one-sided case it would suffice to find a geometric link
-restriction such as that of Proposition~\ref{prop:onesided}, or
-otherwise identify the marked trace. The averaged count yields
-none of those restrictions. Open coverage of these diagrams and
-quantitative subcritical entry are separate dependencies in the
-recognition program.
+reordered. A mixed recognition can use a belt intersection as in
+Proposition~\ref{prop:belt}, the actual intermediate three-manifold
+in Theorem~\ref{thm:mixed}, or the marked isotopy in
+Theorem~\ref{thm:mixed-meridian}. A one-sided recognition can use a
+geometric restriction as in Propositions~\ref{prop:onesided} and
+\ref{prop:onesided-stable}, or an identification of the marked trace.
+Obtaining one of these geometric inputs on a selected height and
+quantitative subcritical entry on arbitrary smooth types remain open.
 
 \begingroup
 \raggedright

@@ -180,3 +180,5 @@ The [source records R119–R121](../papers/investigations-1/03_first_order_twist
 [Master variational comparison sources](SOURCE_NOTES_MASTER_VARIATIONAL_20261125.md) cover the limit Ricci equation, end regularity, harmonic compactness, smooth removal, joint measure selection and the topology of the entry test.
 
 [Master Ricci, annular chart and immersion sources](SOURCE_NOTES_MASTER_RICCI_IMMERSION_20261125.md) record the local elliptic and rigidity inputs, the indexed hypersurface comparison, and the marked handle and Sobolev theorems.
+
+[Endpoint charge and marked diagram sources](SOURCE_NOTES_MASTER_ENDPOINT_20261125.md) record the modified Yamabe classification and the specific stabilized and mixed handle presentations used in the endpoint edition.

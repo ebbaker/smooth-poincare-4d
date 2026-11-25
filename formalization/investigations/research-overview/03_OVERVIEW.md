@@ -1,5 +1,7 @@
 # Edition 03 · Intrinsic descent and immersed recognition
 
+**Current milestone, 25 November 2026.** [Open equality, the measured height count and the marked-shell continuation](../continuation-notes/AFTER_OPEN_EQUALITY_AND_MARKED_SHELL_20261125.md).
+
 25 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving configuration unavailable. [Proof plan](../research-plan/03_PLAN.md) · [Progress and revisions at issue](../research-progress/03_BASELINE.md) · [Live program register](../research-progress/REGISTER.md)
 
 Fix a closed connected oriented smooth homotopy four-sphere $M$. Write $E_+(g)=\int_M|W^+_g|_{\rm HS}^2\,dV_g$ for the energy of its self-dual Weyl endomorphism. The updated master plan asks for one successful argument on **each** candidate smooth type. Different candidates can be covered by different arguments. Its three implications have distinct entry hypotheses. [Master research overview](../../../papers/master/research-overview/OVERVIEW.md) · [Master plan and coverage test](../../../papers/master/research-plan/PLAN.md)

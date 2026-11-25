@@ -1,14 +1,16 @@
 # Edition 03 · Formalizing the parallel master investigations
 
+**Current milestone, 25 November 2026.** [Open equality, the measured height count and the marked-shell continuation](../continuation-notes/AFTER_OPEN_EQUALITY_AND_MARKED_SHELL_20261125.md).
+
 25 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving configuration unavailable. [Program overview](../research-overview/03_OVERVIEW.md) · [Input revisions and verification](../research-progress/03_BASELINE.md) · [Sole program register](../research-progress/REGISTER.md)
 
-The opening proofs and their follow-through are assessed in the [activation milestone](../research-progress/handoffs/ED03_INTEGRATION_20261125.md). The [current continuation](../continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md) gives the next geometric tasks.
+The opening proofs and their follow-through are assessed in the [activation milestone](../research-progress/handoffs/ED03_INTEGRATION_20261125.md). The [activation continuation](../continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md) gives the next geometric tasks.
 
 ## Opening proofs
 
 | Owner | First target | Next geometric test |
 | --- | --- | --- |
-| [03 · CUT-E02](../03_single_cut_descent/research-plan/PLAN.md#first-symmetric-implication) | For either retained cap $s$, prove $m_{3-s}\le e-I^+(M)+\gamma_s$. | Produce admissible membership from the actual two-sided marking, positive signs, strict total margin and recognition of the other cap. |
+| [03 · CUT-E02](../03_single_cut_descent/research-plan/PLAN.md#first-symmetric-implication) | For either retained cap $s$, prove $m_{3-s}\le e-I^+(M)+\gamma_s$. | Produce admissible membership from the actual two-sided marking, positive signs, inclusive total energy bound and recognition of the other cap at the attained threshold. |
 | [05 · VAR-E01](../05_variational_comparison/research-plan/PLAN.md#first-bounded-proof) | Compare each individually repaired metric with the same infimum, then sum. | Instantiate the result with positive metrics on the original type. Continue to the scalar-flat wall and first-order local replacement. |
 | [06 · VAR-E05](../06_physical_scales_and_marked_annuli/research-plan/PLAN.md#first-bounded-proof) | From $n>0$ disjoint annuli with sum at most $C$, find one with full mass at most $C/n$. | Derive disjointness, attainment and the whole exterior from the physical measures. Give 03 the actual separating chart if it can be constructed. |
 | [07 · VAR-E06](../07_fixed_type_variational_descent/research-plan/PLAN.md#first-bounded-proof) | At fixed tolerance bound the limiting energy by the total repair cost plus the full residual. | Import VAR-E01 for the geometric sum. For a single joint repair, compare its strict gain with the excess $e_i-I^+(M)$. |

@@ -362,3 +362,98 @@ same center remain separate requirements. A finite quotient
 chart can enter Proposition~\ref{prop:link} under the stated
 cost and product hypotheses. The anchored theorem concerns
 the resulting spherical chart on the source.
+
+\subsection{A radial condition on a flat comparison region}
+
+\begin{proposition}[A scalar distance test]\label{prop:radial-distance-test}
+Use the separated physical scales in \eqref{eq:anchored-marks}.
+Set \(h_i=\rho_i^{-2}g_i\), \(\widehat d_i=d_{h_i}(x_i,\cdot)\),
+and take \(\rho_i\) from a low-full-curvature block containing every
+fixed positive normalized radial interval for all large \(i\).
+Choose \(L\) as in Proposition~\ref{prop:anchored-marking} with
+\(A_0=H=2\), and set \(J=(1/16,2L)\).
+Suppose a nonempty connected oriented smooth flat four-manifold
+\((U,h)\) without boundary has a proper continuous map \(r:U\to J\).
+Assume each compact
+subset of \(U\) has a neighborhood with oriented smooth
+embeddings \(F_i\) into the source such that \(F_i^*h_i\to h\)
+locally in \(C^0\cap W^{1,4}\) and \(\widehat d_i\circ F_i\to r\)
+locally uniformly. Assume on these comparisons that for each
+\(\varphi\in C^\infty_c(U)\), with \(\varphi_i\) transported by
+an embedding of a neighborhood of its support and extended by zero,
+\begin{equation}\label{eq:radial-distance-test}
+ \int_M\left(
+ \left\langle d(\widehat d_i^{\,2}/2),d\varphi_i\right\rangle_{h_i}
+ +4\varphi_i\right)dV_{h_i}\longrightarrow0 .
+\end{equation}
+These data give a whole spherical comparison annulus on the
+source, with both complete marks on opposite sides and off
+the closed trim. The configuration is impossible at the
+positive-class infimum of a fixed nonstandard type.
+\end{proposition}
+
+\begin{proof}
+The physical distances restricted to the comparison charts
+are uniformly locally Lipschitz by metric convergence.
+Thus the pullbacks of \(\widehat d_i^{\,2}/2\) converge
+locally weakly in \(W^{1,2}\) to \(f=r^2/2\). Equation
+\eqref{eq:radial-distance-test} gives \(\Delta_h f=4\),
+with \(\Delta=\operatorname{div}\nabla\). In flat coordinates
+interior regularity gives smoothness, and \(r>0\) makes \(r\)
+smooth. It is locally \(1\)-Lipschitz in \(h\). At a fixed
+comparison point a short final segment of any source minimizing
+geodesic from \(x_i\) stays in the comparison chart. Indeed,
+the length from the point to the boundary of a compact chart
+ball has a positive lower bound by uniform ellipticity.
+Passing to a subsequence of the pulled-back segments gives a curve
+of speed at most one along which \(r\) changes at speed one.
+Consequently \(|dr|_h=1\) at every point.
+
+The Bochner identity now gives
+\[
+ |df|_h^2=2f,\qquad
+ |\nabla_h^2 f|^2=\tfrac12\Delta_h |df|_h^2=4.
+\]
+Equality in the trace inequality yields \(\nabla_h^2 f=h\).
+Hence \(\nabla_h r\) flows between the levels at unit speed,
+and on the tangent space to each level
+\(\nabla_h^2 r=r^{-1}h\). The flow exists across any closed
+interval in \(J\), since its inverse image is compact by
+properness. It identifies \(U\) with
+\(J\times N\), where \(N=\{r=1\}\) is a compact
+connected three-manifold. Integrating the metric evolution
+along the flow gives \(h=dr^2+r^2\gamma\), with \(\gamma\)
+the induced metric on \(N\). The tangential curvature formula
+for this metric and flatness give sectional curvature one
+on \(N\). Its complete simply connected cover is the unit
+round \(S^3\), so \(N=S^3/\Gamma\) with \(\Gamma\) a finite
+free subgroup of \(\SO(4)\).
+
+Use a comparison on a compact band in \(J\) strictly
+containing \([1/8,L]\). The lifted source metrics on this
+band tend to Euclidean in \(C^0\cap W^{1,4}\). Its image
+lies in the physical low-curvature block by the radial
+convergence. Straighten across a fixed short annulus by a
+radial cutoff, equivariantly on the finite cover. The
+all-lowered curvature comparison of Theorem~\ref{thm:caps}
+gives \(o(1)\) critical curvature norm of the interpolant
+on the transition. The same estimate on the quotient follows
+by division of its squared integral by \(|\Gamma|\).
+The multiplier \((\rho_i r)^{-2}\) on the straightened
+physical metric gives the exact round quotient product
+around the middle slice at no additional chiral cost.
+The resulting closed metric has \(E_+\le E_i+o(1)<9\pi^2\).
+Proposition~\ref{prop:link} gives \(\Gamma=1\).
+
+The original comparison chart is now spherical, with
+ellipticity \(H=2\) and \(d_i(S_i(1))\le2\rho_i\) for large
+\(i\). Proposition~\ref{prop:anchored-marking} gives both
+complete marks and the closed trim. Apply the first-order
+alternative in Proposition~\ref{prop:neck-critical-shell}.
+The two nonnegative cap allowances are \(o(1)\), and the
+caps have positive Yamabe constant. The band and near-minimality
+give \(E_i+\gamma_{i,+}+\gamma_{i,-}<8\pi^2\) and
+\(E_i-I^+(M)+\max(\gamma_{i,+},\gamma_{i,-})<4\pi^2\theta\).
+The raw side masses are at least \(\theta E_i\) and \(E_i/2\),
+so Theorem~\ref{thm:nonsplitting} yields the contradiction.
+\end{proof}
