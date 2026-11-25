@@ -31,3 +31,15 @@ HEAD `2fba0882dbf8766c95094ef4d1207190b0c24bc2`. The E58 TeX prefix was `efb34dc
 
 
 `lake build SmoothPoincare.Variational.BandChargeTransfer` passed (9,779 Lake jobs). A fresh import replay checked all three public signatures and `#print axioms` reported only `propext`, `Classical.choice`, and `Quot.sound`. The checked module SHA-256 prefix is `12256ebb51ac2669`.
+
+## E58 tolerance conversion and strict residual
+
+`BandChargeTolerance.lean` now checks the tolerance conversion. `bandPhysical_omitted_charges_le_tolerance` composes the exact per-sign bound with the Yamabe and Euler inequalities. It accepts the spectral transport on $U$ and on the whole source. It gives
+$$
+E_\pm(g;U^c)\le 4(e-T)+\frac{Y\ell}{2}\sqrt d
+$$
+on the same full complement for both chiralities. [Lean module](../../../../SmoothPoincare/Variational/BandChargeTolerance.lean)
+
+For `bandPhysical_omitted_charges_eventually_lt_threshold`, assume $e_i\to I_0<5T/4$ and the physical and modified spectral premises at every index. The theorem chooses one $d>0$ before the finite families, depending only on $I_0$ and $T$. For each supplied finite measurable family, it uses its actual union $U_i$ and a late bound $\mu_i(U_i^c)\le d$. Both physical raw residuals on $U_i^c$ are eventually strictly less than $T$. In the minimizing-sequence application $I_0=I^+(M)$. The proof takes an intermediate energy ceiling $e_0=(I_0+5T/4)/2$, a positive coefficient control $K=\max\{e_0,1\}$, and the margin $m=T-4(e_0-T)>0$. The checked moment bounds give $Y_i\ell_i/2\le3\ell_i^2\le4e_i\le4K$ at late indices. The choice $d=(m/(8K))^2$ spends at most half of $m$ in the tolerance term. Measurability and modified-volume coverage of the supplied families are premises. Admissibility and repair or cap costs require separate arguments.
+
+`lake build SmoothPoincare.Variational.BandChargeTolerance` passed without diagnostics (9,780 jobs). A fresh import checked both signatures, including one fixed tolerance chosen before the supplied family. Both axiom reports contain only `propext`, `Classical.choice` and `Quot.sound`. The tolerance module SHA-256 prefix is `4286acd49669bcc2`. The imported `BandChargeTransfer.lean` is at the checked prefix `12256ebb51ac2669`.

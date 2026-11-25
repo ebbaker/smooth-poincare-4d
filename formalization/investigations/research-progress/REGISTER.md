@@ -4,7 +4,7 @@ This is the sole program register across editions. The shared task prefix is `SP
 
 ## Edition 03 global Gauss geometry and selected disk collars · 25 November 2026
 
-**FOT-E37.** The oriented immersion now supplies its own smooth Gauss normal, ordered pointwise frames, open middle locus, measured sheets, ordinary round area and conull Morse heights. The exact normalized mean counts middle points of the same immersion in both antipodal fibers. The smooth zero/one-middle-handle recognition still needs a marked reduction with its actual boundary maps.
+**FOT-E37.** The oriented immersion now supplies its own smooth Gauss normal, ordered pointwise frames, open middle locus, measured sheets, ordinary round area and conull Morse heights. The exact normalized mean counts middle points of the same immersion in both antipodal fibers. Continuity of the induced Weyl density makes the inclusive low-count theorem unconditional on this geometric witness. Under the topological floor, energy below $8\pi^2$ gives ordinary round probability above $3/4$ for exactly two middle points. The smooth zero/one-middle-handle recognition still needs a marked reduction with its actual boundary maps.
 
 **Intrinsic descent.** Routes 03 and 05 recover each cap sign from joined tests, charge the entire cap outside its trim and construct compatible frames on a common coordinate chart. Route 06 tests the wide physical chart and the shifted-volume criterion. Route 07 proves the exterior charge and endpoint allowance on the selected disk widths and gives the E58 bound for both signs in one physical metric. Geometric extraction, the derivative cost on those widths, positive repair and the E57 smoothing argument retain separate proof obligations.
 

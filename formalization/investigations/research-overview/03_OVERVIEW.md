@@ -1,6 +1,6 @@
 # Edition 03 · Intrinsic descent and immersed recognition
 
-**Current milestone, 25 November 2026.** [Open equality, the measured height count and the marked-shell continuation](../continuation-notes/AFTER_OPEN_EQUALITY_AND_MARKED_SHELL_20261125.md).
+**Current milestone, 25 November 2026.** [Global Gauss geometry, low-count Morse heights and selected disk collars](../reviews/GLOBAL_GEOMETRY_AND_SELECTED_COLLARS_20261125.md) · [Next proofs](../continuation-notes/AFTER_GLOBAL_GAUSS_AND_SELECTED_COLLARS_20261125.md).
 
 25 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving configuration unavailable. [Proof plan](../research-plan/03_PLAN.md) · [Progress and revisions at issue](../research-progress/03_BASELINE.md) · [Live program register](../research-progress/REGISTER.md)
 

@@ -1,0 +1,222 @@
+\section{A comparison scale carrying diffuse Weyl curvature}
+\label{sec:spectral-windows}
+
+The median construction in Theorem~\ref{thm:band-charge} controls
+the entire modified volume when its spectral margin is positive.
+For descent it suffices to find a single region carrying a fixed
+positive chiral mass. We now obtain one throughout the strict band.
+
+\begin{theorem}\label{thm:spectral-windows}
+Let \(g_i\) be unit-volume positive Yamabe metrics on a fixed
+nonstandard smooth oriented homotopy four-sphere with
+\(e_i\to I=I^+(M)<2T\). After passing to a subsequence let
+\(Y_i\to y>0\). There are constant rescalings \(k_i\) of smooth
+positive-Ricci metrics in these classes and basepoints for which
+the pointed limit \(X\) is noncollapsed. Write \(m=\mathcal H^4\)
+in Euclidean volume normalization. In this comparison let
+\(\sigma,\lambda^+,\lambda^-\) be the local weak limits of
+\(L^2dV,|W^+|^2_{\rm HS}dV,|W^-|^2_{\rm HS}dV\) on the sources.
+The absolutely continuous parts relative to \(m\) satisfy
+\[
+ \sigma_{\rm ac}(X)\ge y^2/36,\qquad
+ (\lambda^+_{\rm ac}+\lambda^-_{\rm ac})(X)\ge y^2/24 .
+\]
+For every \(\epsilon,\zeta,r_*>0\) a fixed finite number of
+smoothly parametrized disjoint standard disks on each late source,
+with union \(U_i\), can be chosen in comparison balls of fixed radii
+\(r_j<r_*\), each having original full curvature integral below
+\(\zeta\). One sign \(s\), fixed along the subsequence, satisfies
+\[
+ \lambda_i^s(U_i)\ge Y_i^2/48-\epsilon
+                  \ge 2T-e_i-\epsilon.
+\]
+On the same disks both signs satisfy
+\(\lambda_i^\pm(M\setminus U_i)\le 2e_i-Y_i^2/24+\epsilon\).
+The second bound is informative for each sign when \(Y_i^2/24>e_i\).
+\end{theorem}
+
+\begin{proof}
+Use the volume-one modified representatives \(q_i\), with
+\(\mu_i=dV_{q_i}\), \(R_{q_i}=6L_{q_i}+c_i\), \(c_i\le0\),
+from Section~\ref{sec:endpoint-charge}. The positive-Ricci comparisons
+exist by Section~\ref{sec:physical-volume}. Put
+\(\sigma_i=L_{q_i}^2\mu_i\), a conformal measure of bounded total
+mass. Discard finitely many indices and fix
+\(0<6\sqrt\beta<Y_0\le Y_i\) using the strict subcritical budget.
+Start with the function \(h_i=1\). At each step it is Lipschitz,
+\(0\le h_i\le1\), \(\int h_i^4d\mu_i\to1\), and
+\(\int|dh_i|^4dV=o(1)\), the latter integral being conformally
+invariant. The restricted mass \(\sigma_i(\{h_i>0\})\) must
+exceed \(\beta\) eventually: otherwise the ordinary Yamabe
+inequality tested on \(h_i\) gives
+\[
+ (Y_0-6\sqrt\beta)\|h_i\|_{4,q_i}^2
+   \le 6\|dh_i\|_{2,q_i}^2=o(1)
+\]
+on a subsequence. Here and below we use \(\mu_i(M)=1\).
+
+Scale the positive-Ricci comparison so that the least radius
+enclosing \(\beta\) of this restricted measure is one, witnessed
+at \(p_i\). The restricted measure is absolutely continuous on
+each smooth source, so continuity of ball mass and compactness of
+the center set give the normalization. If some bounded centered
+window carries a positive lower bound of \(h_i^4\mu_i\) on a
+subsequence, keep this scale. Otherwise every fixed window has
+weighted volume tending to zero. Choose \(R_i\uparrow\infty\)
+sufficiently slowly that \(\int_{B_{R_i^2}(p_i)}h_i^4d\mu_i=o(1)\).
+Multiply \(h_i\) by a distance cutoff zero through \(R_i\), rising
+linearly in log radius to one at \(R_i^2\). Its fourth-power
+gradient integral is at most \(2\pi^2/(\log R_i)^3\) by the
+Bishop area bound. The new functions preserve both limits and
+their positive sets lose at least \(\beta\) of spectral mass.
+Uniform boundedness of \(\sigma_i(M)\) forces termination after
+finitely many such deletions.
+
+On the retained scale put \(\theta_i=h_i^4\mu_i\). For a Lipschitz
+cutoff \(0\le\chi\le1\) in a unit ball the Yamabe test gives
+\[
+ (Y_0-6\sqrt\beta)\Big(\int\chi^4d\theta_i\Big)^{1/2}
+       \le6\|d(h_i\chi)\|_{2,q_i}^2 .
+\]
+The norm on the right before squaring is at most
+\(o(1)+\|d\chi\|_{4,k_i}\). Inward logarithmic cutoffs give
+a uniform upper bound tending to zero for limiting mass on balls
+of radius tending to zero. On the other hand a fixed bounded
+window carries positive weighted mass. The relative Bishop packing
+bound covers it by boundedly many quarter-balls. A linear cutoff on
+the half-ball about a quarter-ball of definite mass now gives a
+positive lower bound on the comparison volume of that half-ball.
+Relative volume comparison gives noncollapse on all bounded
+windows. Pass to a pointed limit and common local weak limits of
+the measures, including \(\theta_i\), the unrestricted \(\mu_i\)
+and the original full curvature measures \(\nu_i\). The preceding
+estimates give \(v:=\theta(X)>0\) and \(\theta(\{x\})=0\).
+
+Off the countable atoms of the unrestricted \(\sigma\), choose a
+small continuity ball at each point. For \(q_i=w_i^2 k_i\),
+\(-\Delta_{k_i}w_i\le L_{q_i}w_i^3\), and the squared local
+\(L^2(k_i)\) norm of the potential \(L_{q_i}w_i^2\) is the
+original spectral mass on the ball. The \(p=4\) estimate
+\eqref{eq:physical-moser} therefore absorbs this term on a sufficiently
+small fixed ball and bounds \(w_i^4\) in \(L^2(k_i)\) on its half.
+Noncollapsed volume convergence and Cauchy--Schwarz show that the
+limit of \(\mu_i\) is absolutely continuous there. Since
+\(\theta_i\le\mu_i\), countable covering and the absence of
+\(\theta\)-atoms give \(\theta\ll m\) on all of \(X\).
+This uses only local convergence.
+
+Set \(\alpha_i=L_{q_i} h_i^2\mu_i\) and take its local weak
+limit \(\alpha\). The matrix of measures with diagonal
+\((\theta_i,\sigma_i)\) and off-diagonal \(\alpha_i\) is
+positive semidefinite: every constant quadratic test has a square
+as its density. The property passes to local weak limits. Taking
+densities relative to \(\theta+\sigma\) (Cauchy--Schwarz also
+gives \(\alpha\ll\theta+\sigma\)) and testing rational pairs yields
+\(\alpha=f\theta\) and \(\sigma\ge f^2\theta\).
+For \(R>1\), use the centered cutoff \(\chi_R\) equal to one
+through \(R\), falling linearly in log radius to zero at \(R^2\).
+Testing the Yamabe inequality on \(h_i\chi_R\) gives
+\[
+ Y_i\Big(\int\chi_R^4d\theta_i\Big)^{1/2}
+ \le 6\|d(h_i\chi_R)\|_{2,q_i}^2 +6\int\chi_R^2d\alpha_i .
+\]
+At fixed \(R\) the radial tests converge on the common pointed
+realization. The gradient norm is at most
+\(o_i(1)+(2\pi^2)^{1/4}(\log R)^{-3/4}\).
+Taking the source limit and then \(R\to\infty\) gives
+\(y\sqrt v\le6\alpha(X)\). Cauchy--Schwarz and \(\theta\ll m\)
+now give \(\sigma_{\rm ac}(X)\ge\int f^2d\theta
+\ge\alpha(X)^2/v\ge y^2/36\). The pointwise algebraic inequality
+\(\lambda_i^++\lambda_i^-\ge(3/2)\sigma_i\) passes to measures
+and to their absolutely continuous parts.
+
+Take \(s\) maximizing \(\lambda^s_{\rm ac}(X)\).
+Both absolutely continuous parts give full measure to regular
+points outside atoms of \(\nu\). Apply the finite ball selection
+in Section~\ref{sec:physical-volume} to their sum together with
+\(\sigma_{\rm ac}\) on a bounded
+continuity window containing all but a prescribed tolerance of its
+mass. Use differentiation of this density for the loss on shrinking
+the balls. The same loss estimate bounds the omitted part of
+either absolutely continuous measure. On the sources use the
+smooth embedded disks containing the fixed inner comparison balls
+and contained in the fixed outer ones. Lower bounds transfer by
+weak convergence of the full chiral measures at common continuity
+radii; the curvature ceiling uses \(\nu_i\) of \(g_i\).
+Subtracting the opposite total mass \(e_i\) from the combined
+lower bound proves the two individual residual estimates. Adjust
+the tolerance using \(Y_i\to y\) and the budget
+\(Y_i^2\ge48(2T-e_i)\).
+\end{proof}
+
+There is a second estimate for the full residual. Take the same fixed
+disks using the absolutely continuous spectral measure as above.
+With \(\Delta_i=36\ell_i^2-Y_i^2\),
+\[
+   \sigma_i(M\setminus U_i)\le \Delta_i/36+\epsilon,\qquad
+   \lambda_i^\pm(M\setminus U_i)\le \Delta_i/6+6\epsilon .
+\]
+Indeed the transfer captures at least \(Y_i^2/36-\epsilon\) of
+\(\sigma_i\), and each Weyl block satisfies \(|W^\pm|^2\le6L^2\).
+In particular if \(\Delta_i\to0\), both chiral measures can be
+captured to arbitrary tolerance in this one frame. This controls
+escape, singular mass and the excluded atoms together. The selected
+finite disks and their radii are fixed before the source limit.
+
+For the selected sign, escape together with the entire singular part
+in this frame costs at most \(I-y^2/48\). Its raw complement on the
+finite family is at most \(2(e_i-T)+\epsilon\), hence is strictly
+below \(T\) when \(I<3T/2\) and the tolerance is small. The chiral
+density need not be positive in both signs at the same regular point.
+Taking a curvature ceiling \(\zeta<2I\) makes every individual disk
+carry less than \(I/2\) in either sign. At fixed tolerance the number
+of disks is fixed, so a further subsequence has one label carrying a
+fixed positive mass of sign \(s\), with a fixed positive mass of the
+same sign on its other side. This marked sphere is a candidate for
+one repair on the original type.
+
+\begin{corollary}[A marked bicollar with small incoming curvature]
+\label{cor:thin-raw-collar}
+For every \(\eta,\zeta,r_*>0\) the selected sign admits a fixed
+comparison radius \(r<r_*\) and a number \(b>0\) such that on all
+late sources a parametrized disk \(D_i\) and a two-sided smooth
+bicollar \(A_i\) of its boundary lie in a single comparison ball
+\(B_i(r)\). Both complete sides carry at least \(b\) of sign \(s\),
+and, writing \(\nu_i=|\Rm_{g_i}|_{\rm tens}^2dV_{g_i}\),
+\[
+ \nu_i(B_i(r))<\zeta,\qquad
+ (\nu_i+\lambda_i^s)(A_i)<\eta\,\lambda_i^s(D_i).
+\]
+\end{corollary}
+\begin{proof}
+Choose a regular point of differentiation of \(m,\lambda^s,\nu\)
+where \(d\lambda^s_{\rm ac}/dm\) is finite and positive and
+\(d\nu_{\rm ac}/dm\) is finite. There the singular parts have zero
+four-dimensional density. Choose \(0<\tau<1/6\) so the limiting
+density ratio of the mass of \(\nu+\lambda^s\) on
+\(B_r\setminus B_{(1-3\tau)r}\) to that of \(\lambda^s\) on
+\(B_{(1-3\tau)r}\) is below \(\eta/2\). Then choose a sufficiently
+small fixed joint continuity radius meeting the comparison volume
+threshold at \((1-\tau)r\) and a strict outer curvature ceiling
+below \(\min(\zeta,2I)\). The finite-radius transfers and smooth
+open model ball of Section~\ref{sec:physical-volume} apply on
+every late source. Its interior contains the closed inner ball
+compactly. In its parameter domain choose three nested compact
+concentric disks, the smallest containing that compact preimage
+in its interior. Use the middle disk for \(D_i\) and the annulus
+between the other two for its bicollar. The displayed estimate
+follows by inclusion. The fixed inner ball supplies a positive
+lower mass, while the entire outer ball carries less than \(I/2\)
+of sign \(s\). Taking \(b\) smaller than both margins proves the claim.
+\end{proof}
+
+The marking is smooth on both faces. Its normalized distortion and
+differentiated coordinate residual can depend on its actual width.
+Even a collar of arbitrarily small raw curvature can require a large
+change in these quantities. If the entire protected core lies in
+the image of one fixed compact of a smooth locally conformally flat
+comparison satisfying Proposition~\ref{prop:local-min}, strong
+local chiral convergence would give core energy tending to zero.
+This excludes a round restart covering the charged core in such
+a marking. The evacuated graft of Proposition~\ref{prop:graft}
+can still occur on another region.

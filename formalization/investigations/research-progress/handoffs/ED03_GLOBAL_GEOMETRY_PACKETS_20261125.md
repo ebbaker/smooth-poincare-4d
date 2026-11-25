@@ -23,3 +23,19 @@ The incoming scientific draft also contains an auxiliary smoothing and uniform r
 - HT/IMM-E02j · OrientedIndexedMean. Compose the constructed oriented normal, the same-chart pushforward, ordinary round area and actual count on a source modeled on Euclidean four-space. Discharge regularity on middle frames or state that residual. Integrate the strict induced-energy bound only with its actual count floor.
 - HT-E04a · RegularMorseHeights and topology review. Obtain a Morse height from the two regular fibers of the full normal, checking all critical points on the same source. Recheck the marked zero/one-handle reductions and any remaining handle imports.
 - CUT/DESC-R03 and HT/IMM-R03. Separate reviewers compare the endpoint and cap proofs with the scalar and geometric premises, and the integrated Gauss proof with its local and global measure conventions, respectively. Each writes only its own route review.
+
+### Replay and follow-through at the same working revision
+
+| Packet | Frozen output and review criterion |
+| --- | --- |
+| IMM-E01p | Construct ordered principal frames for the actual oriented normal, including repeated eigenvalues. Check the normal and ordering after the orientation adjustment. |
+| HT-E02k | Prove openness by positive determinant and opposite fixed quadratic evaluations in one smooth normal chart. Allow independent signed frames at neighboring points. |
+| IMM-E01r | Prove continuity of the actual squared chiral norm evaluated in arbitrary pointwise principal frames. Check local shape-matrix transport, invariance under changing normal and compact-source integrability. |
+| HT/IMM-E02j | Use the actual open locus, ordinary round metric volume, ordered frames and smooth global normal. Test the inclusive energy endpoint by seeking a Morse direction with a finite set of at most one middle point on this immersion. |
+| HT-E04b | In the strict upper band, integrate the genuine area identity, the Weyl lower bound and the conull Morse event. The topological floor and any marked data must apply to the same direction. |
+| DESC-E02g | Bound each physical chiral charge on the same omitted set using the modified test and finite E58 spectral moment. Convert to the explicit tolerance and test the strict raw threshold on a supplied family. |
+| Public replay | Check the instantiated source volume, native round measure, finite source cardinality, actual marked side, exact width and both physical chiralities through the public import. |
+
+[Exact public examples](ED03_GLOBAL_GEOMETRY_CHECKS.lean) · [Integrated assessment and final input generations](../../reviews/GLOBAL_GEOMETRY_AND_SELECTED_COLLARS_20261125.md)
+
+**Acceptance.** The closing integrated working tree passed the default Lake build, both prior exact-type suites, the public same-witness suite, all 367 inventoried Edition 03 declaration checks and all 293 blueprint declaration checks. Both formats rebuilt. The [dated assessment](../../reviews/GLOBAL_GEOMETRY_AND_SELECTED_COLLARS_20261125.md) records the intermediate checkout advance, final source hashes, proof scopes and remaining geometric dependencies.

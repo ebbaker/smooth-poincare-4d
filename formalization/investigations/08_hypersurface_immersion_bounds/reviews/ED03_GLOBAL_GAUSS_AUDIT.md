@@ -91,3 +91,29 @@ curvatures on the middle locus, integrability of its Weyl expression,
 continuity of the excess there, and an almost-sure count floor. This
 accounts for the hypotheses needed beyond the normalization and
 multiplicity identities.
+
+## Final generation, 25 November 2026
+
+`isOpen_middlePrincipalLocus` proves openness for the actual middle locus,
+and `orientedPrincipalFrameAt` constructs pointwise ordered principal
+frames from the globally oriented unit normal. `continuous_inducedChiralDensity`
+expresses the squared chiral norm locally using traces and determinant of
+the signed shape operator. The expression is invariant under a basis
+change and simultaneous sign reversal. On a compact source the resulting
+continuous density is integrable for the physical volume. Its difference
+from $8/3$ times the absolute principal product is continuous by the chart
+ratio result. These facts discharge the earlier openness, frame-order,
+integrability and excess-continuity inputs in the constructed-immersion
+specializations. [Principal frames](../../../SmoothPoincare/Immersions/PrincipalFrameExistence.lean) · [Open locus](../../../SmoothPoincare/Heights/OpenMiddleLocus.lean) · [Chiral density](../../../SmoothPoincare/Immersions/ChiralEnergyContinuity.lean)
+
+`orientedImmersion_indexedGaussMean` now obtains the normalized mean
+from the immersion and orientations. `exists_morseHeight_le_one_of_inducedEnergy_le`
+combines the conull Morse and finite-count results with the strict bound
+under a count floor. At energy at most $64\pi^2/9$ it selects an actual
+Morse height with at most one index-two point, without a separate
+count-floor hypothesis. In the upper band the probability of the actual
+Morse event with exactly two index-two points exceeds $3/4$ below
+$8\pi^2$, given the independent floor of two on finite Morse heights.
+The event agrees almost everywhere with the measurable count event.
+Recognizing the smooth type from a selected height still requires the
+handle argument. [Indexed mean and inclusive selection](../../../SmoothPoincare/Heights/OrientedIndexedMean.lean) · [Upper-band selection](../../../SmoothPoincare/Heights/OrientedHeightSelection.lean)

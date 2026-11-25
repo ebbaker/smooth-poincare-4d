@@ -1,0 +1,198 @@
+\subsection{Logarithmic selection with physical Ricci comparison}
+\label{subsec:physical-ricci-flux}
+
+We give two Ricci comparison hypotheses under which the full
+distance defect tends to zero on a selected physical block.
+First, the following estimate converts a scalar volume error
+and a one-sided Laplacian error into a bound on that defect.
+
+\begin{lemma}[Finite radial defect estimate]\label{lem:physical-flux}
+Let \(d\) be distance from a point in a smooth complete Riemannian
+four-manifold with metric \(h\). Write \(V(t)=\vol_h\{d<t\}\) and
+\(\mu=4dV_h-\Delta_h(d^2/2)\), with
+\(\Delta=\operatorname{div}\nabla\). Fix \(0<a<a'<b'<b\) and
+\(\eta\in C_c^\infty((a,b))\) with \(0\le\eta\le1\) and
+\(\eta=1\) on \([a',b']\). For any constants \(C,c\) one has
+\begin{equation}\label{eq:finite-physical-flux}
+ |\mu|(\{a'\le d\le b'\})
+ \le \|V-C-\omega_4c\,t^4\|_{L^\infty([a,b])}
+     \int_a^b |5\eta'(t)+t\eta''(t)|\,dt
+     +2\mu^-(\{a<d<b\}),
+\end{equation}
+where \(\omega_4\) is the Euclidean unit ball volume and
+\(\mu^-\) is the negative part of \(\mu\).
+\end{lemma}
+
+\begin{proof}
+The squared-distance Laplacian is a signed Radon measure
+away from the center. Its singular part is nonpositive,
+by the corresponding result for distance and the weak
+chain rule
+\cite[Corollaries~2.11--2.12]{MantegazzaMascellaniUraltsev2014DistanceHessian}.
+The Lipschitz test \(\eta(d)\) admits smooth approximations
+converging uniformly and strongly in \(W^{1,2}\).
+Coarea and \(|dd|_h=1\) almost everywhere therefore give
+\[
+ \begin{aligned}
+ \int\eta(d)\,d\mu
+ &=\int_a^b(4\eta(t)+t\eta'(t))V'(t)\,dt\\
+ &=-\int_a^b(5\eta'(t)+t\eta''(t))
+          [V(t)-C-\omega_4c\,t^4]\,dt .
+ \end{aligned}
+\]
+The constant drops out by integration by parts. The fourth
+power contributes the integral of a multiple of \((t^4\eta)'\).
+Use \(|\mu|=\mu+2\mu^-\) and \(0\le\eta\le1\) to obtain the estimate.
+\end{proof}
+
+\begin{proposition}[Two physical Ricci comparisons]
+\label{prop:physical-ricci-flux}
+Use the source and complete chiral marks in
+\eqref{eq:anchored-marks}. Suppose one of the following
+holds for a fixed \(K\ge0\).
+\begin{enumerate}
+\item \(\Ric_{g_i}\ge-3K g_i\) on \(B_{g_i}(x_i,b_i)\).
+\item There are \(s_i\ge a_i\) with \(s_i/b_i\to0\), and
+\(\Ric_{g_i}\ge-3K g_i\) on
+\(\{s_i<d_{g_i}(x_i,\cdot)<b_i\}\).
+For a uniform \(C_0<\infty\) suppose also
+\[
+ \vol_{g_i}\{2s_i<d_{g_i}(x_i,\cdot)<4s_i\}\le C_0s_i^4 .
+\]
+\end{enumerate}
+There are scales \(\rho_i\to0\) with
+\(a_i/\rho_i\to0\) and \(\rho_i/b_i\to0\) for which every
+fixed compact strip of positive radii in
+\(h_i=\rho_i^{-2}g_i\) has vanishing full-curvature integral
+and vanishing total variation of
+\[
+ \mu_i=4dV_{h_i}-\Delta_{h_i}(d_{h_i}(x_i,\cdot)^2/2).
+\]
+If at these scales there is also a proper flat comparison
+with the compact oriented source embeddings and radial
+alignment of Proposition~\ref{prop:radial-distance-test},
+then its whole spherical cut exists with both complete
+marks off the closed trim. In particular the combined
+hypotheses are impossible at the positive-class infimum of
+a fixed nonstandard smooth type.
+\end{proposition}
+
+\begin{proof}
+Let \(s_K(t)=\sinh(\sqrt K\,t)/\sqrt K\) for \(K>0\), with
+\(s_0(t)=t\). The model volume is
+\[
+ v_K(t)=4\omega_4\int_0^t s_K(u)^3\,du .
+\]
+In the first case take the centered ratio
+\[
+ \Phi_i(t)=\frac{\vol_{g_i}B_{g_i}(x_i,t)}{v_K(t)} .
+\]
+Polar Riccati comparison along each minimizing ray makes
+the polar Jacobian divided by \(s_K(t)^3\) nonincreasing
+before its cut time, with initial value one. Assigning it
+zero after the cut time and taking area and volume averages
+gives a nonincreasing \(\Phi_i\le1\) on
+\([a_i,\min(1,b_i)]\).
+
+In the second case apply Riccati comparison on the part of
+each uncut ray after any \(s_i+\varepsilon\). There the
+model mean curvature \(3s_K'(t-s_i-\varepsilon)/
+s_K(t-s_i-\varepsilon)\) starts with a pole. Let
+\(\varepsilon\downarrow0\) and use the nonpositive singular
+Laplacian to get the weak upper bound
+\(3s_K'(d-s_i)/s_K(d-s_i)\) for \(\Delta_{g_i}d\) on the
+protected annulus, with \(d=d_{g_i}(x_i,\cdot)\).
+Testing radially and using coarea gives
+\(DA\le 3(s_K'/s_K)(t-s_i)A\,dt\) for the coarea
+area \(A(t)\). Thus \(A(t)/s_K(t-s_i)^3\) is nonincreasing.
+Its weighted average from \(2s_i\) is
+\[
+ \Phi_i(t)=\frac{\vol_{g_i}\{2s_i<d<t\}}
+                 {v_K(t-s_i)-v_K(s_i)} .
+\]
+The average decreases, and the measured transition volume
+bounds it uniformly from above at \(4s_i\). Both cases have
+a positive floor on the intervals used below. In the first
+case this follows from the physical Yamabe small-ball
+lower bound. In the second, for \(8s_i\le t\le\min(1,b_i)\),
+a radius-\(t/8\) ball centered at distance \(t/2\) on a
+minimizing segment reaching \(b_i\) lies in the numerator
+annulus. The same small-ball bound applies.
+
+In the first case let \(A_i=a_i\), in the second
+\(A_i=8s_i\), and take \(B_i=\min(1,b_i)\) in both.
+Then \(T_i=\log(B_i/A_i)\to\infty\).
+Split the middle half of the logarithmic interval into
+\(N_i=\lfloor\sqrt{T_i}\rfloor\) equal subintervals.
+The curvature integrals add and the ratio drops telescope.
+With \(\Lambda\) the source full-curvature bound, one
+subinterval has the sum of its curvature integral and
+its ratio drop at most
+\[
+ (\Lambda+\Phi_i(A_i)-\Phi_i(B_i))/N_i.
+\]
+Choose \(\rho_i\) at its exponential midpoint. Then
+\(a_i/\rho_i,\rho_i/b_i\le e^{-T_i/4}\) and
+\(\rho_i\to0\) by bounded diameter. The selected logarithmic
+width tends to infinity, so the bound applies to every
+fixed compact normalized strip. These steps for the
+absolute errors only require the ratio upper bound.
+
+Put \(d_i=d_{h_i}(x_i,\cdot)\) and \(V_i(t)=\vol_{h_i}\{d_i<t\}\).
+In case one use \(\sigma_i=C_i=0\). In case two use
+\(\sigma_i=s_i/\rho_i\to0\) and
+\(C_i=\rho_i^{-4}\vol_{g_i}B_{g_i}(x_i,2s_i)\).
+On every fixed strip \([a,b]\), model expansion after
+rescaling gives
+\[
+ V_i(t)-C_i=\omega_4\Phi_i(\rho_i)t^4
+        +O_{a,b}(N_i^{-1}+\sigma_i+K\rho_i^2).
+\]
+Indeed, in case one the model is \(v_{K\rho_i^2}(t)\).
+In case two it is
+\(v_{K\rho_i^2}(t-\sigma_i)-v_{K\rho_i^2}(\sigma_i)\).
+The corresponding distributional upper bound for
+\(\Delta_{h_i}(d_i^2/2)\) is \(dV_{h_i}\) times
+\(1+3d_i s_{K\rho_i^2}'(d_i-\sigma_i)/
+s_{K\rho_i^2}(d_i-\sigma_i)\). Its excess over four is
+\(O_{a,b}(\sigma_i+K\rho_i^2)\). The normalized volume
+of the strip is bounded by the volume profile with its
+constant \(C_i\) removed. Lemma~\ref{lem:physical-flux}
+now gives vanishing total variation on every inner trim.
+
+Each smooth compactly supported test from the proper flat
+comparison transports into one fixed trim and has bounded
+supremum norm. The preceding bound gives
+\eqref{eq:radial-distance-test} irrespective of the volume
+omitted by the comparison image. One oriented comparison
+embedding on a neighborhood of a compact buffered radial
+strip containing the entire preimage of \([1/8,L]\)
+gives the full link chart after radial rigidity.
+Proposition~\ref{prop:radial-distance-test} then gives the
+round quotient, excludes a nontrivial link group, and
+places the full inner ball and full median exterior on
+opposite sides of the cut. The first-order splice uses
+the physical \(C^0\cap W^{1,4}\) convergence and the
+physical curvature bound. Its two cap allowances are
+\(o(1)\) in the same chirality as the source marks.
+\end{proof}
+
+Control of the scalar ratio alone gives a signed radial
+average. The last term in \eqref{eq:finite-physical-flux}
+is what permits control on all tests in the comparison
+image. For the separate volume test in
+Proposition~\ref{prop:radial-volume-test}, the two
+normalized omissions must instead have vanishing
+difference, with a positive retained image limit and
+the same radial normalization on both measurements.
+A fixed positive comparison endpoint requires the
+shifted denominators from that proposition.
+
+The Ricci bounds above concern the physical Yamabe
+metrics. The positive-Ricci conformal representative has
+different distances and volume densities. Its comparison
+alone does not give the two physical hypotheses. In the
+second case the measured transition rate \(O(s_i^4)\)
+is stronger than the available absolute \(o(1)\) volume bound.
+Both routes still require the proper compact source
+embedding at the selected scale.

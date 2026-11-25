@@ -1,5 +1,6 @@
 import SmoothPoincare.Heights.IntegratedSelection
 import SmoothPoincare.Heights.OrientedIndexedMean
+import SmoothPoincare.Immersions.ChiralEnergyContinuity
 
 /-! # Subcritical selection for the actual oriented immersion -/
 
@@ -46,6 +47,7 @@ local notation "Wₛ" => (fun x : M => geometricChiralBlock g o x ((Pₛ) x).fra
 local notation "dV" => riemannianVolumeMeasure I M g
 local notation "m₂" => (fun u : GaussDirection => (indexedHeightTwoPoints F u).ncard)
 
+omit [Nonempty M] [CompactSpace M] in
 private theorem orientedMiddle_weyl_bound :
     ∀ x ∈ Uₛ, (8 / 3 : ℝ) * Jₛ x ≤ hilbertSchmidtSq (Wₛ x) := by
   intro x hx
@@ -66,7 +68,6 @@ private theorem orientedMiddle_weyl_bound :
     chiral energy bound gives ordinary round probability above three quarters
     of Morse directions with exactly two middle critical points. -/
 theorem orientedHeight_prob_morse_twoMiddle_of_subcritical_energy
-    (hW : Integrable (fun x => hilbertSchmidtSq (Wₛ x)) dV)
     (hfloor : ∀ u, IsMorseHeightDirection F u → (indexedHeightTwoPoints F u).Finite →
       2 ≤ m₂ u)
     (hE : chiralFrameEnergy g Wₛ < 8 * Real.pi ^ 2) :
@@ -84,6 +85,7 @@ theorem orientedHeight_prob_morse_twoMiddle_of_subcritical_energy
   have hdetInt := (orientedGauss_absProduct_continuous_integrable g F o a Pₛ).2.integrableOn
     (s := Uₛ)
   have hU := (isOpen_middlePrincipalLocus Pₛ).measurableSet
+  have hW := integrable_inducedChiralDensity Pₛ
   have hcount : (3 / 4 : ℝ) < (μₛ).real {u | m₂ u = 2} :=
     (prob_and_exists_regular_twoMiddle_of_subcritical_energy g o
       (fun x => ((Pₛ) x).frame) Uₛ Jₛ μₛ m₂ hU hW hdetInt
@@ -91,6 +93,7 @@ theorem orientedHeight_prob_morse_twoMiddle_of_subcritical_energy
       (fun _ => Unit) (fun _ _ _ => ⟨()⟩)).1
   have hevent : morseTwoMiddleDirections F =ᵐ[μₛ] {u | m₂ u = 2} := by
     filter_upwards [hregular] with u hu
+    apply propext
     change (IsMorseHeightDirection F u ∧ (indexedHeightTwoPoints F u).Finite ∧ m₂ u = 2) ↔
       m₂ u = 2
     exact ⟨fun he => he.2.2, fun he => ⟨hu.1, hu.2, he⟩⟩
@@ -100,13 +103,12 @@ theorem orientedHeight_prob_morse_twoMiddle_of_subcritical_energy
 
 /-- The selected direction carries the supplied data for its own height. -/
 theorem orientedHeight_exists_morse_twoMiddle_with_data_of_subcritical_energy
-    (hW : Integrable (fun x => hilbertSchmidtSq (Wₛ x)) dV)
     (hfloor : ∀ u, IsMorseHeightDirection F u → (indexedHeightTwoPoints F u).Finite →
       2 ≤ m₂ u)
     (hE : chiralFrameEnergy g Wₛ < 8 * Real.pi ^ 2)
     (Data : GaussDirection → Type*) (hdata : ∀ u ∈ morseTwoMiddleDirections F, Nonempty (Data u)) :
     ∃ u ∈ morseTwoMiddleDirections F, Nonempty (Data u) := by
-  obtain ⟨_, _, hp⟩ := orientedHeight_prob_morse_twoMiddle_of_subcritical_energy F o a hW hfloor hE
+  obtain ⟨_, _, hp⟩ := orientedHeight_prob_morse_twoMiddle_of_subcritical_energy F o a hfloor hE
   have hne : (morseTwoMiddleDirections F).Nonempty := by
     by_contra! hempty
     rw [hempty, measureReal_empty] at hp

@@ -6,7 +6,7 @@
 
 The opening proofs and their follow-through are assessed in the [activation milestone](../research-progress/handoffs/ED03_INTEGRATION_20261125.md). The [activation continuation](../continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md) gives the next geometric tasks.
 
-The current endpoint work on $I=T$ uses selected physical disks and tracks the full exterior chiral measure and the raw collar cost. For $T<I<2T$, the general diffuse repair and closed alternatives still need independently qualifying witnesses. [Endpoint revision](../../../papers/master/research-progress/handoffs/E53_E55_ENDPOINT_CHARGE_20261125.md)
+The Lean endpoint comparison at $I=T$ tracks the full exterior chiral measure and the repair cost on the selected widths. The scientific master now excludes this endpoint by E57; formalizing its auxiliary smoothing and positive-time compactness is independent. Above the paper gap, E58 gives a lower-band test on the measured exterior. A positive repair, a closed limit or a restart must carry its own witness. [Paper assessment](../../../papers/master/research-progress/handoffs/E56_E58_RECOGNITION_GAP_20261125.md)
 
 ## Opening proofs
 

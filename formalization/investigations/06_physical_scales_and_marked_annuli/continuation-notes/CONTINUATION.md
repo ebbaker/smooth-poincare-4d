@@ -1,8 +1,8 @@
 # Physical scales and marked annuli · Continuation
 
-**Latest handoff, 25 November 2026.** [Geometric realization and next proofs](../../continuation-notes/AFTER_OPEN_EQUALITY_AND_MARKED_SHELL_20261125.md).
+**Latest handoff, 25 November 2026.** [Global Gauss geometry and selected disk collars](../../continuation-notes/AFTER_GLOBAL_GAUSS_AND_SELECTED_COLLARS_20261125.md).
 
-**Current handoff, 25 November 2026.** [Continue from the assessed Edition 03 milestone](../../continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md). The launch instructions below record the original packet.
+The [Edition 03 activation handoff](../../continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md) and launch instructions below record the original packet.
 
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The serving model and effort for preparation were unavailable. [Overall overview](../../research-overview/03_OVERVIEW.md) · [Program plan](../../research-plan/03_PLAN.md) · [Source revisions and pins](../../research-progress/03_BASELINE.md)
 

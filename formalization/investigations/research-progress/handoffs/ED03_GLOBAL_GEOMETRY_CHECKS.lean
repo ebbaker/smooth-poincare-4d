@@ -61,6 +61,10 @@ local instance : Fact (Module.finrank ℝ E₅ = 4 + 1) := ⟨by simp⟩
 #print axioms bandPhysical_yamabeEuler_sandwich
 #check @bandPhysical_omitted_charges
 #print axioms bandPhysical_omitted_charges
+#check @bandPhysical_omitted_charges_le_tolerance
+#print axioms bandPhysical_omitted_charges_le_tolerance
+#check @bandPhysical_omitted_charges_eventually_lt_threshold
+#print axioms bandPhysical_omitted_charges_eventually_lt_threshold
 
 section Endpoint
 
@@ -128,6 +132,30 @@ example
     (∫ x in Uᶜ, P x ∂dV) ≤ B ∧ (∫ x in Uᶜ, N x ∂dV) ≤ B :=
   bandPhysical_omitted_charges o g frame plus minus h hL hell hMoment hc hTest hU hd hTransport
 
+/-- The finite tolerance bounds both physical complements with the same
+modified probability, regional transport and omitted-volume error. -/
+example
+    (o : ManifoldOrientation I M 4) (g : SmoothRiemannianMetric I M)
+    (frame : ∀ x, OrientedOrthonormalFrameAt g o x) (plus minus : M → Fin 3 → ℝ)
+    (h : EndpointPhysicalSpectralData o g frame plus minus)
+    {μ : Measure M} [IsProbabilityMeasure μ] {L : M → ℝ} {ell c d : ℝ}
+    (hL : MemLp L 2 μ) (hell : 0 ≤ ell) (hMoment : ∫ x, L x ^ 2 ∂μ = ell ^ 2)
+    (hc : c ≤ 0) (hTest : classYamabeFour o.dimension_eq g ≤ c + 6 * ∫ x, L x ∂μ)
+    {U : Set M} (hU : MeasurableSet U) (hd : μ.real Uᶜ ≤ d)
+    (hTotalTransport : (∫ x, endpointTopWeyl (plus x) (minus x) ^ 2
+      ∂riemannianVolumeMeasure I M g) = ell ^ 2)
+    (hTransport : (∫ x in U, endpointTopWeyl (plus x) (minus x) ^ 2
+      ∂riemannianVolumeMeasure I M g) = ∫ x in U, L x ^ 2 ∂μ) :
+    let dV := riemannianVolumeMeasure I M g
+    let P := fun x => hilbertSchmidtSq (geometricChiralBlock g o x (frame x))
+    let N := fun x => hilbertSchmidtSq (endpointNegativeWeylBlock g o x (frame x))
+    let e := chiralFrameEnergy g (fun x => geometricChiralBlock g o x (frame x))
+    let Y := classYamabeFour o.dimension_eq g
+    let B := 4 * (e - 4 * Real.pi ^ 2) + Y * ell / 2 * Real.sqrt d
+    (∫ x in Uᶜ, P x ∂dV) ≤ B ∧ (∫ x in Uᶜ, N x ∂dV) ≤ B :=
+  bandPhysical_omitted_charges_le_tolerance o g frame plus minus h hL hell hMoment
+    hc hTest hU hd hTotalTransport hTransport
+
 end Endpoint
 
 /-! ## Positive marked caps and their costs -/
@@ -194,6 +222,10 @@ end MarkedSide
 #print axioms orientedPrincipalFrameAt_middle_order
 #check @isOpen_middlePrincipalLocus
 #print axioms isOpen_middlePrincipalLocus
+#check @continuous_inducedChiralDensity
+#print axioms continuous_inducedChiralDensity
+#check @integrable_inducedChiralDensity
+#print axioms integrable_inducedChiralDensity
 #check @gaussFrameJacobian
 #print axioms gaussFrameJacobian
 #check @gaussParamDensity_eq_mul_frameJacobian
@@ -245,8 +277,18 @@ end MarkedSide
 #print axioms orientedImmersion_indexedGaussMean
 #check @inducedEnergy_strict_of_orientedHeightFloor
 #print axioms inducedEnergy_strict_of_orientedHeightFloor
+#check @orientedImmersion_energy_strict_of_indexTwoFloor
+#print axioms orientedImmersion_energy_strict_of_indexTwoFloor
 #check @exists_morseHeight_le_one_of_inducedEnergy_le
 #print axioms exists_morseHeight_le_one_of_inducedEnergy_le
+#check @IsMorseHeightDirection
+#print axioms IsMorseHeightDirection
+#check @morseTwoMiddleDirections
+#print axioms morseTwoMiddleDirections
+#check @orientedHeight_prob_morse_twoMiddle_of_subcritical_energy
+#print axioms orientedHeight_prob_morse_twoMiddle_of_subcritical_energy
+#check @orientedHeight_exists_morse_twoMiddle_with_data_of_subcritical_energy
+#print axioms orientedHeight_exists_morse_twoMiddle_with_data_of_subcritical_energy
 
 /-- The Riemannian sheet measure is transported to native spherical area. -/
 example {M : Type*} [MeasurableSpace M] {n : M → GaussDirection} {U : Set M}
@@ -293,5 +335,31 @@ example :
           ∫ x in {x : M | HasMiddlePrincipalSignature (P x).curvature},
             |∏ i, (P x).curvature i| ∂riemannianVolumeMeasure I M g :=
   orientedImmersion_indexedGaussMean g F o a
+
+/-- Smooth Morse heights and finite index-two counts hold together on the
+same conull set of ordinary round directions. -/
+example : ∀ᵐ u ∂μ₄, IsMorseHeightDirection F u ∧ (indexedHeightTwoPoints F u).Finite := by
+  filter_upwards [orientedHeight_ae_nondegenerate F o a,
+    (orientedImmersion_indexedGaussMean g F o a).2.1] with u hu hf
+  exact ⟨hu, hf⟩
+
+/-- Inclusive energy alone gives a Morse height with at most one middle
+critical point on this immersion. -/
+example (he : chiralFrameEnergy g (fun x =>
+      geometricChiralBlock g o x (orientedPrincipalFrameAt F o a x).frame) ≤ 64 * Real.pi ^ 2 / 9) :
+    ∃ u : GaussDirection, IsMorseHeightDirection F u ∧
+      (indexedHeightTwoPoints F u).Finite ∧ (indexedHeightTwoPoints F u).ncard ≤ 1 := by
+  obtain ⟨u, hs, hn, hf, hc⟩ := exists_morseHeight_le_one_of_inducedEnergy_le g F o a he
+  exact ⟨u, ⟨hs, hn⟩, hf, hc⟩
+
+/-- The upper-band probability refers to the exact Morse event, with the
+topological count floor retained for finite Morse heights. -/
+example (hfloor : ∀ u, IsMorseHeightDirection F u → (indexedHeightTwoPoints F u).Finite →
+      2 ≤ (indexedHeightTwoPoints F u).ncard)
+    (he : chiralFrameEnergy g (fun x =>
+      geometricChiralBlock g o x (orientedPrincipalFrameAt F o a x).frame) < 8 * Real.pi ^ 2) :
+    IsProbabilityMeasure μ₄ ∧ NullMeasurableSet (morseTwoMiddleDirections F) μ₄ ∧
+      (3 / 4 : ℝ) < (μ₄).real (morseTwoMiddleDirections F) :=
+  orientedHeight_prob_morse_twoMiddle_of_subcritical_energy F o a hfloor he
 
 end IndexedHeights

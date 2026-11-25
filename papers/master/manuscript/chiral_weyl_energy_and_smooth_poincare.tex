@@ -23,16 +23,18 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-There is a universal \(\varepsilon_*>0\) such that a closed smooth
-homotopy four-sphere is standard whenever its infimum of chiral Weyl
-energy over positive Yamabe classes is at most \(4\pi^2+\varepsilon_*\).
-A modified Yamabe representative and a common positive time of Ricci
-flow convert a hypothetical sequence at \(4\pi^2\), even on varying
-smooth types, into a closed positive Einstein limit at the inclusive
-recognition threshold. The proof gives no numerical width for the gap.
-For a minimizing sequence with infimum below \(16\pi^2/3\), we also
-bound the original energy of each chirality outside finitely many
-parametrized standard disks on the same source.
+Let \(e\) be the chiral Weyl energy and \(L\) the larger of the
+top eigenvalues of the two Weyl blocks. We prove a uniform smooth
+recognition gap above \(32\pi^2\) for the infimum of
+\(4e+3\int L^2dV\) over positive Yamabe classes on a homotopy
+four-sphere. This includes a uniform gap above \(4\pi^2\) for the
+infimum of \(e\) alone. At the spectral threshold a modified Yamabe
+metric and a common positive time of Ricci flow give a smooth
+positive Einstein limit with nonnegative isotropic curvature.
+Throughout the band of infima below \(8\pi^2\), we find a comparison
+scale where the original Weyl measures have positive absolutely continuous
+mass. One parametrized disk then has a fixed positive mass of the same
+chirality on each side along a subsequence.
 Removing marked standard balls gives a positive competitor if the source
 energy plus the aggregate collar cost stays subcritical. An anchored
 physical annulus between separated chiral quantiles gives a cut incompatible
@@ -414,51 +416,77 @@ Taking the lower limit now bounds the infimum. Theorem~\ref{thm:recognition-gap}
 applies also at equality.
 \end{proof}
 
-\begin{theorem}[Physical charge on standard disks]\label{thm:band-disk-residual}
-Suppose \(M\) is nonstandard and \(I^+(M)<4T/3\). On every sequence
-of volume-one positive Yamabe metrics \(g_i\) minimizing chiral energy
-there is a subsequence with the following property. For every
-\(\epsilon,\zeta,r_*>0\), there are finitely many fixed radii
-\(r_j<r_*\) and, at every sufficiently large index, disjoint smoothly
-parametrized standard disks with union \(U_i\). Each lies inside a
-ball of radius \(r_j\) in a positive-Ricci comparison metric in the
-class, with original full curvature integral less than \(\zeta\).
-For each chirality on the same source,
+\begin{theorem}[A charged disk throughout the subcritical band]\label{thm:band-disk-residual}
+Suppose \(M\) is nonstandard and \(I=I^+(M)<2T\). On every
+minimizing sequence of unit-volume positive Yamabe metrics, a
+subsequence admits a positive-Ricci comparison scale and a fixed
+sign \(s\) with the following property. For each \(\epsilon,\zeta,r_*>0\),
+finitely many disjoint smoothly parametrized standard disks on each
+late source, with union \(U_i\), satisfy
 \[
- E_\pm(g_i;M\setminus U_i)\le 2e_i-Y_i^2/24+\epsilon
-                                  \le4(e_i-T)+\epsilon .
+ E_s(g_i;U_i)\ge Y_i^2/48-\epsilon\ge 2T-e_i-\epsilon,
+ \qquad E_\pm(g_i;U_i)\ge Y_i^2/24-e_i-\epsilon .
 \]
-In particular \(I^+(M)<5T/4\) places both raw residuals strictly
-below \(T\) at sufficiently small fixed tolerance.
+Their containing comparison balls have fixed radii below \(r_*\)
+and original full curvature integrals below \(\zeta\).
+On a further subsequence one marked disk has fixed positive
+lower bounds of the same chiral mass on both complete sides.
+The raw complement of the family falls strictly below \(T\)
+in sign \(s\) for \(I<3T/2\), and in both signs for \(I<5T/4\),
+at sufficiently small fixed tolerance.
 \end{theorem}
-\begin{proof}
-Use the volume-one modified representative \(q_i\) in the proof
-of Theorem~\ref{thm:recognition-gap}. Set \(\ell_i^2=\int L^2dV\)
-and normalize a positive-Ricci comparison by the least radius
-carrying half of this conformally invariant measure. The ordinary
-Yamabe inequality on every unit comparison ball or on the exterior
-of a witnessing ball has gradient coefficient controlled by
-\(Y_i-6\ell_i/\sqrt2\), since \(R_{q_i}\le6L_{q_i}\).
-This difference stays positive by a uniform margin since
-\(Y_i^2\ge48(2T-e_i)\) and \(18\ell_i^2\le24e_i\).
-Logarithmic cutoffs give tightness and absence of atoms for the
-auxiliary volume. A local Sobolev estimate off atoms of the spectral
-measure gives absolute continuity of its volume limit with respect
-to comparison volume. Finite smooth disk selection at regular
-points outside atoms of the original full curvature measure can
-therefore cover all but any prescribed \(d>0\) of the auxiliary
-volume. The descent paper proves these steps with the radius and
-the physical curvature measure fixed through the source limit
-\cite[section on chiral charge on disks]{Baker2026FixedDescent}.
 
-The constant test gives \(\int L_{q_i}dV_{q_i}\ge Y_i/6\).
-The integral over the omitted volume is at most \(\ell_i\sqrt d\).
-On the disks, spectral domination and Cauchy--Schwarz give combined
-chiral energy at least \(\tfrac32(Y_i/6-\ell_i\sqrt d)_+^2\).
-Subtracting the global opposite energy \(e_i\) leaves a lower
-bound for either sign on this same union. Take \(d\) sufficiently
-small and use \eqref{eq:budgets}.
+\begin{proof}
+Write \(\mu_i=dV_{q_i}\) in the volume-one modified Yamabe
+representative, \(\sigma_i=L^2dV\), and \(Y_i\to y>0\).
+Choose \(6\sqrt\beta<\inf_i Y_i\) after discarding an initial
+segment. Start with \(h_i=1\). Normalize the positive-Ricci
+comparison by the smallest ball carrying \(\beta\) of
+\(\sigma_i|_{\{h_i>0\}}\). If \(h_i^4\mu_i\) vanishes on every
+fixed bounded window about the witnessing center, cut \(h_i\) to
+zero on a slowly growing ball. A logarithmic cutoff to its squared
+radius costs \(o(1)\) in fourth-power gradient integral. Thus
+\(\int h_i^4d\mu_i\to1\), \(\|dh_i\|_4=o(1)\), and the available
+spectral mass drops by at least \(\beta\). A remaining total of at
+most \(\beta\) would contradict the ordinary Yamabe test on \(h_i\),
+since \(R_{q_i}\le6L_{q_i}\). Bounded total spectral mass therefore
+gives a scale retaining positive weighted volume in a bounded window.
+
+On each unit ball the Yamabe test on \(h_i\chi\) has coercivity
+coefficient \(Y_i-6\sqrt\beta\). Inward logarithmic cutoffs exclude
+atoms of the weighted volume limit \(\theta\), and a cutoff in a
+bounded window of positive mass gives noncollapse by packing.
+The local scalar equation for \(q_i\) gives an \(L^2\) bound on its
+volume density off atoms of the unrestricted spectral measure, by
+one Sobolev iteration. Thus \(0<\theta(X)\le1\) and
+\(\theta\ll\mathcal H^4\). The detailed estimates and smooth ball
+selection are in the descent paper
+\cite[section on a comparison scale carrying diffuse Weyl curvature]{Baker2026FixedDescent}.
+
+The local weak limits \(\alpha,\sigma\) of \(Lh_i^2\mu_i,\sigma_i\)
+satisfy \(\alpha=f\theta\) and \(\sigma\ge f^2\theta\), by positivity
+of the two-by-two matrix of their measures with \(\theta\).
+An outer logarithmic cutoff in the Yamabe test, taken to infinity
+after the source limit, gives \(6\alpha(X)\ge y\sqrt{\theta(X)}\).
+Hence the absolutely continuous part of \(\sigma\) has mass at least
+\(y^2/36\). The sum of the original chiral measures dominates
+\(3\sigma/2\) in the limit, so one sign has absolutely continuous mass
+at least \(y^2/48\). Disks at regular points outside atoms of the
+physical curvature measure capture these absolutely continuous masses
+to arbitrary tolerance. The opposite global charge is \(e_i\), giving
+the second bound. For the one-disk conclusion choose
+\(\zeta<2I\) and small tolerance. Each disk has charge at most
+\(\zeta/4\), and one of the finitely many labels carries a fixed
+positive fraction of the selected total on a subsequence.
 \end{proof}
+
+Thus after entry, a single inexpensive repair would suffice at every
+subcritical infimum. A first-order marking that covered a fixed
+positive fraction of this disk by one fixed compact subset of a
+smooth locally conformally flat comparison would contradict strong
+local chiral convergence under the hypotheses of
+Theorem~\ref{thm:local-min}. Round comparisons confined to other
+regions or other scales can still leave a charged exterior.
 
 \input{complete_limits}
 \input{ricci_scales}
@@ -482,10 +510,9 @@ The two complete raw sides must each carry a fixed positive chiral
 mass, and both splices must be controlled in the marked chart.
 Corollary~\ref{cor:vol-reduction} permits a diffuse alternative
 if a family on the same sequence carries enough repairable chiral
-mass. Below \(4T/3\), Theorem~\ref{thm:band-disk-residual} bounds
-the complement on one such family. The first missing estimate is the
-actual cost of its marked collars. At higher energies the full
-residual may also survive. For Proposition~\ref{prop:exterior-replacement} the source energy plus collar surcharge must stay below \(8\pi^2\), and the removed chiral mass must exceed the surcharge plus the minimizing excess. The remaining chiral energy can stay in the retained exterior.
+mass. Theorem~\ref{thm:band-disk-residual} supplies such a charged
+disk throughout the strict band. The missing estimate is the cost of
+repair in its actual smooth marking. For Proposition~\ref{prop:exterior-replacement} the source energy plus collar surcharge must stay below \(8\pi^2\), and the removed chiral mass must exceed the surcharge plus the minimizing excess. The remaining chiral energy can stay in the retained exterior.
 
 Corollary~\ref{cor:energy-radius} locates a second scale in the
 concentrating case. At a shrinking half-energy radius the rescaled

@@ -60,24 +60,34 @@ counts points in $M$, including distinct points with the same immersed image.
 \begin{theorem}[Morse directions at the immersed threshold]
 \label{thm:ed03-morse-threshold}
 \uses{thm:ed03-ordinary-indexed-area,cor:ed03-strict-actual-height}
-\lean{SmoothPoincare.riemannianVolumeMeasure_criticalValues_eq_zero, SmoothPoincare.orientedHeight_ae_nondegenerate, SmoothPoincare.inducedEnergy_strict_of_orientedHeightFloor, SmoothPoincare.exists_morseHeight_le_one_of_inducedEnergy_le}
+\lean{SmoothPoincare.riemannianVolumeMeasure_criticalValues_eq_zero, SmoothPoincare.orientedHeight_ae_nondegenerate, SmoothPoincare.continuous_inducedChiralDensity, SmoothPoincare.orientedImmersion_energy_strict_of_indexTwoFloor, SmoothPoincare.exists_morseHeight_le_one_of_inducedEnergy_le, SmoothPoincare.orientedHeight_prob_morse_twoMiddle_of_subcritical_energy, SmoothPoincare.orientedHeight_exists_morse_twoMiddle_with_data_of_subcritical_energy}
 \leanok
 Almost every round direction gives a smooth height with nondegenerate
 Hessian at each critical point. On the compact source above, use the
-ordered frames of the constructed normal. With integrable squared
-chiral norm and continuous middle deficit, energy at most $64\pi^2/9$
+ordered frames of the constructed normal. Their squared chiral norm is
+continuous even when the frames jump. Energy at most $64\pi^2/9$
 gives a Morse height with a finite set of at most one index-two point.
+Suppose instead that every Morse direction with finite middle count has
+at least two such points. When the induced energy is strictly below
+$8\pi^2$, the Morse directions with exactly two index-two points
+have round probability strictly greater than $3/4$.
 \end{theorem}
 \begin{proof}
 \leanok
 Apply the equal-dimensional Sard theorem in charts and transfer the null
 critical values to Riemannian volume. Remove both this set and its antipode.
 The signed Weingarten formula then gives a nondegenerate Hessian at
-every critical point of the height. If almost every direction had at
+every critical point of the height. The squared chiral norm is a continuous
+basis-invariant polynomial in the chart shape operator. Its value is
+unchanged when the normal reverses. Compactness gives integrability.
+If almost every direction had at
 least two middle points, the indexed identity and exclusion of open
 balanced principal frames would force strict energy above the threshold.
 Intersect the conull Morse and finiteness conclusions before selecting
-a direction. Coincident critical values are allowed.
+a direction. For the upper band, the Weyl bound on the middle locus
+puts the mean count below $9/4$. With the supplied floor, a count
+different from two is at least three almost surely. Coincident critical
+values are allowed in both statements.
 \end{proof}
 Smooth recognition from one such direction still requires a marked handle
 presentation and its boundary gluings on the original smooth source.
@@ -133,7 +143,7 @@ includes equality.
 \begin{proposition}[The selected disk widths and finite band charge]
 \label{prop:ed03-same-width}
 \uses{prop:ed03-endpoint-windows,prop:ed03-cap-tests}
-\lean{SmoothPoincare.endpointPhysical_omitted_charges, SmoothPoincare.exists_selectedDiskWidths_small_chiral_sum, SmoothPoincare.endpointAllowance_on_selectedChartDisks, SmoothPoincare.bandPhysical_omitted_charges, SmoothPoincare.bandPhysical_yamabeEuler_sandwich}
+\lean{SmoothPoincare.endpointPhysical_omitted_charges, SmoothPoincare.exists_selectedDiskWidths_small_chiral_sum, SmoothPoincare.endpointAllowance_on_selectedChartDisks, SmoothPoincare.bandPhysical_omitted_charges, SmoothPoincare.bandPhysical_yamabeEuler_sandwich, SmoothPoincare.bandPhysical_omitted_charges_le_tolerance, SmoothPoincare.bandPhysical_omitted_charges_eventually_lt_threshold}
 \leanok
 Use the volume-one physical Yamabe sequence with the ordered spectral,
 Euler and signature data and the modified probability gauge with its
@@ -154,6 +164,10 @@ moment with $\ell\ge0$, then each physical chiral charge satisfies
 \[
  E_\pm(g;U^c)\le 2e-\tfrac32\max\{Y/6-\ell\sqrt d,0\}^2 .
 \]
+The Euler estimate bounds this by $4(e-T)+(Y\ell/2)\sqrt d$.
+If $e_i\to I<5T/4$, one sufficiently small fixed tolerance for the
+omitted volume gives both raw complements strictly below $T$ at late
+indices on a supplied disk family.
 \end{proposition}
 \begin{proof}
 \leanok

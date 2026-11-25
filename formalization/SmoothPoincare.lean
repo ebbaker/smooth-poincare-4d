@@ -35,9 +35,11 @@ import SmoothPoincare.PhysicalScales.SelectedDiskCollars
 import SmoothPoincare.Variational.MovingChiralFrame
 import SmoothPoincare.Variational.CapTestTransfer
 import SmoothPoincare.Variational.BandChargeTransfer
+import SmoothPoincare.Variational.BandChargeTolerance
 import SmoothPoincare.Heights.RegularMorseHeights
 import SmoothPoincare.Heights.OpenMiddleLocus
 import SmoothPoincare.Heights.OrientedIndexedMean
+import SmoothPoincare.Heights.OrientedHeightSelection
 
 /-! # Fixed-type descent and immersed recognition
 

@@ -1,0 +1,178 @@
+\subsection{Capacity and measured repair of buffered disks}
+\label{sec:collar-capacity}
+
+A logarithmic buffer outside a protected core consumes auxiliary
+volume. Fix one source of Theorem~\ref{thm:band-charge}, write
+\(\mu_q=dV_q\), and suppose \(Y-6\ell/\sqrt{2}\ge\kappa>0\).
+For a compact core \(C_j\) take nested exterior marked annuli
+\(A_{j\ell}\), with disjoint interiors and smoothly extending faces.
+Assume that the whole region through the outermost face lies in a
+single comparison ball of radius at most one in the spectral-median
+gauge. Let \(b_{j\ell}>0\) be each annulus's Euclidean logarithmic
+width and \(\mathcal L_j=\sum_\ell b_{j\ell}\). In its marking the
+determinant-one metric has smallest eigenvalue at least
+\(\Lambda^{-1}\). Then
+\begin{equation}\label{eq:marked-collar-capacity}
+ \sum_j\mathcal L_j^3\mu_q(C_j)
+ \le \frac{72\pi^2\Lambda^2}{\kappa^2}
+          \sum_{j,\ell}\mu_q(A_{j\ell}).
+\end{equation}
+If all annuli are disjoint and avoid all the cores, the last sum
+is at most \(1-\mu_q(\bigcup_j C_j)\), for pairwise disjoint cores.
+
+Indeed, use one cutoff on each stack, equal to one through the inner
+face and zero beyond the outer face. Across a layer let it drop by
+\(b_{j\ell}/\mathcal L_j\) linearly in \(\log |x|\), keeping it constant
+in the gaps. Its fourth-power Dirichlet integral is conformally
+invariant. In determinant-one coordinates its radial derivative
+has Euclidean size \((\mathcal L_j |x|)^{-1}\) on the layer, and
+the metric costs at most \(\Lambda^2\) in the fourth power.
+The summed integral is therefore at most
+\(2\pi^2\Lambda^2/\mathcal L_j^3\). The cutoff's nonzero set is
+in a comparison ball of at most half the total spectral mass.
+The small-support Yamabe inequality in
+Theorem~\ref{thm:band-charge} and H\"older give
+\[
+ \kappa\,\mu_q(C_j)^{1/2}
+ \le 6\left(\int |d\chi_j|_q^4\,d\mu_q\right)^{1/2}
+          \left(\sum_\ell\mu_q(A_{j\ell})\right)^{1/2}.
+\]
+Squaring and adding proves \eqref{eq:marked-collar-capacity}.
+On a Euclidean annulus the log-radial cutoff attains the minimum
+fourth-power energy for a unit drop. H\"older on each ray gives
+the same lower bound \(2\pi^2/\mathcal L^3\) after integration over
+the unit sphere.
+
+In particular, suppose the protected cores are all the original E58
+disks and cover auxiliary volume greater than \(1-d_0\). Disjoint
+stacks each containing \(N\) annuli of width two would require
+\[
+ N^3(1-d_0)<\frac{9\pi^2\Lambda^2}{\kappa^2}\,d_0 .
+\]
+Thus even one outward annulus of fixed width on every original disk
+is excluded at sufficiently small \(d_0\) and fixed \(\Lambda\),
+when the cutoffs stay in the stated comparison balls. The estimate
+also holds when separate markings supply the distinct layers.
+A smaller protected core needs its own measured charge.
+
+\paragraph{A refined allowance in the marked chart.}
+On one fixed-width annulus of
+Proposition~\ref{prop:disk-collar-comparison}, let
+\(d=\|h\|_{2,A}\), retaining \(a=\|h\|_{\infty,A}\),
+\(w^2=4(E_++E_-)(g;A)\) and \(\tau=\|DG(m)\|_{2,A}\).
+Put \(b=w+\tau+d\). For the same fixed cutoff \(\psi\), now set
+\[
+ \beta=C(ab+\sqrt{db}+d),\qquad
+ n_s=\exp((1-s\psi)h).
+\]
+For small universal \(a\), in the chiral density representation of
+Theorem~\ref{thm:simultaneous} one has
+\begin{equation}\label{eq:weighted-collar-allowance}
+ \|F_\pm(n_s)-(1-s\psi)F_\pm(m)\|_{2,A}\le s\beta .
+\end{equation}
+The estimate also holds on either half. Let \(\chi\) be a fixed
+interior cutoff equal to one on the support of \(\psi\), and write
+\(X=\|\chi^2 D^2h\|_2\), \(Z=\|\chi Dh\|_2\) and
+\(J=\|\chi Dh\|_4^2\). The joint elliptic estimate of
+Proposition~\ref{prop:disk-collar-comparison} gives
+\(X\le C(b+Z+aX+J)\). Integration by parts gives
+\(Z^2\le C(dX+dZ)\) and
+\(J^2\le C(aXJ+\|h\|_4 J^{3/2})\). For the last term one uses
+H\"older on \(h\,D\chi\) and \(|\chi Dh|^3\).
+Since \(\|h\|_4^2\le ad\), it follows that
+\(Z\le C(\sqrt{dX}+d)\) and \(J\le Ca(X+d)\).
+Absorption gives \(X\le Cb\).
+
+Write \(F_\pm(\exp h)=P_\pm(h)D^2h+Q_\pm(h)[Dh,Dh]\) with
+smooth coefficients, and set \(\vartheta=1-s\psi\).
+The coefficient changes in the density difference are
+\(P_\pm(\vartheta h)-P_\pm(h)=O(sa)\) and
+\(\vartheta^2Q_\pm(\vartheta h)-\vartheta Q_\pm(h)=O(s)\).
+Derivatives landing on \(\vartheta\) cost \(Cs(Z+d)\) in
+\(L^2\). This gives \(Cs(aX+J+Z+d)\), proving
+\eqref{eq:weighted-collar-allowance}. Restoring the source multiplier
+preserves the chiral energies.
+
+\paragraph{Signed path and exterior costs.}
+For each selected disjoint patch, let \(B_j\) be the entire raw
+disk, \(A_j\) the annulus and \(A_j^{\rm out}\) its exterior half.
+For either chirality write
+\[
+ \begin{gathered}
+ S_j^\pm=\lambda^\pm(A_j),\qquad
+ S_{j,{\rm out}}^\pm=\lambda^\pm(A_j^{\rm out}),\\
+ H_j^\pm=\int_{A_j}(1-\psi)^2d\lambda^\pm,\qquad
+ H_{j,{\rm out}}^\pm=\int_{A_j^{\rm out}}(1-\psi)^2d\lambda^\pm .
+ \end{gathered}
+\]
+Using \eqref{eq:weighted-collar-allowance}, put
+\begin{align}
+ U_j^\pm&=\max\{0,(\sqrt{H_j^\pm}+\beta_j)^2-S_j^\pm\},
+       \label{eq:weighted-collar-path}\\
+ V_j^\pm&=(\sqrt{H_{j,{\rm out}}^\pm}+\beta_{j,{\rm out}})^2
+                                      -S_{j,{\rm out}}^\pm .
+       \label{eq:weighted-collar-exterior}
+\end{align}
+Here \(\beta_{j,{\rm out}}\) may use the restricted error, or the
+full \(\beta_j\). The \(L^2\) norm of the leading joined-path density
+is the norm of an affine function of \(s\). Adding the allowance
+\(s\beta_j\) gives a nonnegative convex function. Its square is
+bounded by the larger endpoint square, which proves
+\eqref{eq:weighted-collar-path}. The same triangle inequality
+restricted to the exterior at \(s=1\) gives
+\eqref{eq:weighted-collar-exterior}. In particular \(V_j^\pm\)
+can be negative.
+
+At each path parameter a single-patch change alone is a smooth
+metric on the same closed oriented \(M\). Its two total chiral
+increments agree by signature, and agree with the corresponding
+increments on that patch. The same reasoning applies after the
+single patch is capped with its marked conformally flat disk.
+Thus if
+\(e+\sum_j\min_\pm U_j^\pm<2T\), the simultaneous joined path,
+product stretching and compactification of
+Theorem~\ref{thm:simultaneous} yield a positive class on the
+original \(M\). Its energy is at most
+\begin{equation}\label{eq:weighted-collar-gain}
+ e-\sum_j\max_\pm\{\lambda^\pm(B_j)-V_j^\pm\}.
+\end{equation}
+In particular, the sign used to estimate the gain may vary by
+disk. An actual single-patch exterior change \(o_j^\pm\)
+satisfies \(o_j^+-o_j^-=\lambda^+(B_j)-\lambda^-(B_j)\)
+by the same signature identity.
+
+\paragraph{Finite measured selection.}
+For each protected core suppose there are \(N_j\) candidate
+annuli of width two, with the preceding nesting and disjointness.
+Normalize each to the annulus of
+Proposition~\ref{prop:disk-collar-comparison}. Define
+\(W_j^2=\sum_\ell w_{j\ell}^2\),
+\(L_j^2=\sum_\ell\tau_{j\ell}^2\),
+\(P_j^2=\sum_\ell d_{j\ell}^2\), and \(a_j=\max_\ell a_{j\ell}\).
+Then \eqref{eq:weighted-collar-allowance} and Cauchy--Schwarz give
+\[
+ \sum_\ell(w_{j\ell}^2+\beta_{j\ell}^2)
+ \le \mathcal D_j
+ =W_j^2+C\bigl[a_j^2(W_j^2+L_j^2)
+                +P_j(W_j+L_j)+P_j^2\bigr].
+\]
+The physical curvature ceiling on the containing ball controls
+\(W_j^2\). In a common parent chart the \(L_j^2\) term is the
+integral of \(|DG|^2\) on the union of candidate annuli, by
+critical scaling, and \(P_j^2\) is bounded by a fixed multiple
+of the integral of \(|h|^2|x|^{-4}\) there. Neither of these
+coordinate estimates follows from the physical curvature ceiling.
+
+Choose the candidate minimizing \(w_{j\ell}^2+\beta_{j\ell}^2\)
+on each core. For each sign and on either region the surcharge
+is at most \(2\sqrt S\,\beta+\beta^2\le S+2\beta^2\), with
+\(S\le w^2/4\). The summed joined and exterior allowances
+are therefore each at most \(\Gamma=2\sum_j\mathcal D_j/N_j\).
+All chosen disks contain the corresponding \(C_j\).
+If \(e+\Gamma<2T\) and
+\(\sum_j\max_\pm\lambda^\pm(C_j)>\Gamma+(e-I)\),
+then \eqref{eq:weighted-collar-gain} yields a strict same-type
+comparison. A known charge bound on the original disks transfers
+to their smaller cores after subtracting the actual lost charge.
+The cost and the protected charge are independent measurements on
+the same finite family.

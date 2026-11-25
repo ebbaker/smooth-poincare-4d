@@ -1,0 +1,259 @@
+\section{Short marked product seams and the cost of the halves}
+\label{sec:short-marked-seam}
+
+Keep the retained punctured halves \(X_0,X_1\) and their metrics
+fixed. Use exact unit round collars at their marked punctures and
+fix the seam face markings \(j_i:(Y,\gamma)\to\partial_{\rm seam}X_i\).
+The seam germs are exact products. The inserted product has length
+\(L>0\) and is glued by \(j_0,j_1\). In the double notation these
+maps are the identity and the given orientation-preserving \(f\),
+so the trace at the second face in its original marking is
+\(\psi_1\circ f^{-1}\). The second half's orientation is reversed
+in the joined four-manifold. Collar insertion and capping the
+round punctures in their original coordinates give the same
+closed smooth type as the length-zero gluing.
+
+For either of the scalar potentials \(V\) from
+Section~\ref{sec:marked-double-exterior}, define the form on a
+retained half by
+\[
+ q_i(u)=\int_{X_i}(6|du|^2+Vu^2)\,dV
+ +6\sum_b\langle\tau_bu,\sqrt{1-\Delta_{S^3}}\,\tau_bu\rangle,
+ \qquad
+ d_i[\psi_i]=\inf_{u|_{\partial_{\rm seam}X_i}
+                         =\psi_i\circ j_i^{-1}}q_i(u).
+\]
+For this definition of the trace minimum require that \(q_i\)
+be positive on every nonzero test of zero seam trace. Failure
+on that subspace gives a global nonpositive test by zero
+extension. The compact \(L^2\) embedding and bounded potential
+give coercivity on the subspace when it is positive.
+The minimizer for a fixed trace is the unique weak solution
+of \((-6\Delta+V)u=0\) with prescribed seam trace and
+the natural round-end condition
+\(6\partial_\nu u+6\sqrt{1-\Delta_{S^3}}\tau_bu=0\) on each
+puncture face. Thus \(d_i\) is the pairing of the prescribed
+trace with the outward conormal derivative \(6\partial_\nu u\),
+in the indicated markings.
+
+\begin{proposition}[Exact trace test]\label{prop:short-seam-trace}
+Let \(\ell_1\) be the first eigenvalue of the transverse operator
+\(A=-6\Delta_\gamma+V_\gamma\) from
+Proposition~\ref{prop:marked-double-neck}. Suppose
+\(\ell_1+6\pi^2/L^2>0\). In an \(L^2(\gamma)\)-orthonormal
+eigenbasis of \(A\), denote the coefficients of the seam traces
+\(\psi_i\) by \(x_{ij}\). For an eigenvalue \(\ell\), put
+\(k=\sqrt{|\ell|/6}\). The modal matrices of the exact cylinder
+trace form \(c_L\) are
+\[
+ \begin{aligned}
+ C_L(\ell>0)&=6k
+ \begin{pmatrix}\coth(kL)&-\operatorname{csch}(kL)\\
+                 -\operatorname{csch}(kL)&\coth(kL)\end{pmatrix},\\
+ C_L(0)&=\tfrac6L\begin{pmatrix}1&-1\\-1&1\end{pmatrix},\\
+ C_L(\ell<0)&=6k
+ \begin{pmatrix}\cot(kL)&-\csc(kL)\\-\csc(kL)&\cot(kL)\end{pmatrix}.
+ \end{aligned}
+\]
+The capped form is strictly positive if and only if both
+zero-seam-trace half forms are strictly positive and
+\[
+ d_0[\psi_0]+d_1[\psi_1]
+ +c_L[\psi_0,\psi_1]>0,\qquad
+ c_L=\sum_j (x_{0j},x_{1j}) C_L(\ell_j)(x_{0j},x_{1j})^{\mathsf T}
+\]
+for every nonzero \(H^{1/2}(Y)\) trace pair. For the ordinary
+form this is equivalent to positive Yamabe sign.
+\end{proposition}
+
+\begin{proof}
+The cylinder minimizer for each trace pair solves
+\(6b''=\ell b\) on the mode of eigenvalue \(\ell\). Its action
+is \(6[b b']_0^L\), which gives the matrices by the specified
+endpoint values. The zero-endpoint cylinder form is coercive
+by the length hypothesis and the two Rayleigh inequalities.
+Subtracting the three fixed-trace minimizers gives an exact
+decomposition into the trace form and the three zero-trace
+quadratic forms. The closed form and the round-end reduction
+have the same strict sign. On the closed compact manifold a
+strictly positive form with bounded potential has an attained
+positive first \(L^2\) eigenvalue. This and the Sobolev inequality
+give the positive normalized quotient.
+\end{proof}
+
+For the reflected identity double use the free trace at the
+midpoint. The one-half trace test becomes \(d_h+n_L\), where
+the eigenvalues of \(n_L\) are \(6k\tanh(kL/2)\), \(0\), and
+\(-6k\tan(kL/2)\) on positive, zero, and negative transverse
+eigenvalues, respectively. This follows by imposing
+\(b'(L/2)=0\) on the half-cylinder minimizer. Even extension and
+restriction give equivalence with the identity double test.
+If the same retained half is used on both sides and \(f\) is
+a \(\gamma\)-isometry, cutting the twisted double at the
+midpoint gives two copies of the same free-trace problem.
+The identity sign then implies the twisted sign.
+For example, let \(q_h\ge c\|\cdot\|_{H^1}^2\) on the unextended
+half and let \(C_{\rm tr}\) be its \(H^1\)-to-\(L^2\) seam
+trace bound. If \(\ell_1<0\), both forms pass for
+\(L<2k_0^{-1}\arctan(c/(6k_0 C_{\rm tr}^2))\) for the selected
+potential, where \(k_0=\sqrt{-\ell_1/6}\). This is because the
+negative part of \(n_L\) is bounded above by
+\(6k_0\tan(k_0L/2)\) in \(L^2\).
+
+In the original orientations of the two retained metrics
+the exact closed energy is
+\begin{equation}
+ \label{eq:short-seam-energy}
+ E_\pm(L)=E_\pm(h_0;X_0)+E_\mp(h_1;X_1)
+       +\frac L4\int_Y|\operatorname{Ric}^0_\gamma|^2\,dV_\gamma.
+\end{equation}
+The round caps have zero Weyl curvature and the half terms
+include any retained interpolation. With the same metric on
+both halves, the two chiral energies and their dependence on
+length agree for identity and compatible twisted gluing.
+
+\begin{proposition}[Signature cost of the homogeneous Mazur germ]
+\label{prop:short-seam-aps}
+On the homogeneous metrics \(\gamma_a\) of the marked
+\(\Sigma(2,5,7)\) in Example~\ref{ex:mazur-spectral-seam},
+let the two retained product face germs be pulled back from
+\(\gamma_a\) by the actual face markings. If the capped halves
+are contractible, either closed chirality has energy at least
+\[
+ 12\pi^2|\eta_{\rm sig}(Y,\gamma_a)|
+       +\frac{484\pi^2}{105}\,aL .
+\]
+Here \(\eta_{\rm sig}\) is the unreduced eta value of the
+odd signature operator on even forms. For this metric
+\(|\eta_{\rm sig}|=65/84\), so the energy exceeds
+\(8\pi^2\) for every positive \(L\).
+\end{proposition}
+
+\begin{proof}
+For the product-boundary capped half the signature is zero.
+The boundary signature theorem therefore gives
+\[
+ E_+(h_i;X_i)-E_-(h_i;X_i)
+  =12\pi^2\eta_{\rm sig}(\partial X_i,\gamma_a),
+\]
+where the boundary on the right means the seam face after
+capping the punctures. The chiral density is in the
+Hilbert--Schmidt operator convention and the eta value has
+the outward-normal-first orientation. Capping adds no Weyl
+energy. The sum of the two half energies is at least the
+absolute value of their difference on each half, and the
+closed signature vanishes. These facts and
+\eqref{eq:short-seam-energy} give the stated lower bound.
+\cite[Theorem (4.14)]{APS1975SpectralI}
+\cite[\S2]{BiquardHerzlichRumin2007Diabatic}
+
+We give the metric normalization and eta calculation. The
+Seifert direction is the third direction in the cyclic
+Milnor frame. The base has curvature \(-a^2\), since
+\(K(e_1,e_2)=-7a^2/4\) and the submersion adds \(3a^2/4\).
+The oriented triangle quotient has area \(22\pi/(70a^2)\).
+Milnor's central extension has generators \(g_i\) with
+\(g_i^{\alpha_i}=g_1g_2g_3=c\), where \(c\) is a full
+rotation and \(\alpha_i=(2,5,7)\).
+Its abelianization is cyclic of order \(11\) generated by \(c\).
+Milnor's commutator model thus has regular fiber length
+\(22\pi/a\). The volume is \(242\pi^2/(35a^3)\).
+The strip charge in the proposition now follows from the
+Ricci eigenvalues in Example~\ref{ex:mazur-spectral-seam}.
+\href{https://webhomes.maths.ed.ac.uk/~v1ranick/papers/neuwir3.pdf}{Milnor, Theorem 3.1 and Corollaries 3.2 and 6.5}.
+
+Use the unit-period-\(2\pi\) connection
+\(\theta=(a/11)e^3\) and orientation \(\theta\wedge d\theta>0\).
+The degree is \(d=-\int d\theta/(2\pi)=-1/70\) on the base.
+In the abelianization \(g_i\equiv m_i c\) with
+\(m_i=(6,9,8)\). The positive base rotation is lifted in the
+commutator by \(g_i c^{-m_i}\), whose fiber angle in the
+\(2\pi\) normalization is \(2\pi(1/\alpha_i-m_i)/11\).
+Hence the local action weights of the orbifold bundle are
+\((1-\alpha_i m_i)/11\bmod\alpha_i=(1,1,2)\).
+To fix the sign in the adiabatic limit, apply the signature
+theorem to the disk orbifold of this Seifert line with the
+cone points excised. The oriented inner boundaries are the
+negatives of the round lenses \(L(\alpha_i,\beta_i)\).
+The rational intersection form has a single negative direction
+from the zero section of self-intersection \(d\), and removing
+rational homology ball neighborhoods preserves this form.
+Use a connection metric with fiber
+\(ds^2+F_\epsilon(s)^2\theta^2\), where \(F_\epsilon=s\)
+near zero and \(F_\epsilon=\epsilon\) near the outer face.
+At fixed \(\epsilon\) the metric can be flattened in shrinking
+orbifold normal balls with bounded curvature, and a radial
+conformal change then gives round product inner boundaries at
+vanishing signature density cost. The outer Pontryagin
+integral tends to \(d/3\). Indeed the horizontal bundle and
+line reference connections have vanishing Pontryagin four-form.
+At the outer boundary their line block has entry \(-\theta\),
+the Levi--Civita line block is zero, and the horizontal and
+mixed block differences tend to zero. The outer transgression
+of \(\operatorname{tr}(\Omega^2)\) tends to
+\(2\theta\wedge d\theta\), giving \(d/3\) after multiplication
+by \(-1/(24\pi^2)\) and integration.
+The APS eta value on the positively oriented round lens is
+\(-4s(\beta_i,\alpha_i)\), so the inner boundary orientation
+gives
+\[
+ \eta_{\rm ad}=1+d/3-4\sum_i s(\beta_i,\alpha_i)
+              =-19/210.
+\]
+The three sums are \(0,1/5,1/14\). The sign also follows from
+the residue sum in the adiabatic calculation.
+\cite[Theorem (4.14)]{APS1975SpectralI}
+\cite[Proposition (2.12)]{APS1975SpectralII}
+\cite[equations (75)--(77)]{BiquardHerzlichRumin2007Diabatic}
+
+For an independent finite-metric check, vary just the
+third coframe to \(v e^3\). The Levi--Civita connection has
+\(\omega_{12}=-a(1+v^2/2)e^3\),
+\(\omega_{23}=av e^1/2\), and \(\omega_{31}=av e^2/2\).
+The Chern--Simons trace
+\(\operatorname{tr}(\omega\wedge d\omega+2\omega^3/3)\)
+is \(-a^3(2+2v^2+v^4)e^{123}\).
+Apply the boundary signature theorem to a product-ended
+interpolation cylinder. Its signature is zero and
+\(p_1=-\operatorname{tr}(\Omega\wedge\Omega)/(8\pi^2)\).
+Thus \(\eta(v)-\eta_{\rm ad}=
+ a^3\operatorname{Vol}_{\gamma_a}(Y)(2v^2+v^4)/(24\pi^2)\),
+where the limit uses \(v\to0\).
+At \(v=1\) the correction is \(121/140\), giving \(65/84\)
+in the chosen orientation. Reversing orientation changes the
+sign. The obstruction depends on the prescribed homogeneous
+boundary metric and survives arbitrary shortening of its
+exact product seam.
+\end{proof}
+
+The same computation permits an exact change of the marked
+cross-section metric. On the same quotient, scale the third
+coframe by \(v>0\) and keep the horizontal coframe fixed.
+The resulting Ricci eigenvalues are
+\((-a^2(1+v^2/2),-a^2(1+v^2/2),a^2v^2/2)\), from the
+cyclic brackets \((a/v,a/v,-av)\). Its volume is
+\(v\operatorname{Vol}_{\gamma_a}(Y)\). Thus
+\[
+ \eta_{\rm sig}(v)=\frac{121(2v^2+v^4)-38}{420},\qquad
+ E_\pm(\mathrm{strip};v)=\frac{121\pi^2}{105}\,aL\,v(1+v^2)^2 .
+\]
+At \(v^2=\sqrt{159}/11-1\) the boundary signature cost
+vanishes. The two transverse potentials are still negative
+constants. For this altered metric the ordinary trace test
+and the charged interior energy remain the tests for entry,
+with retained halves that meet the new germ.
+
+For a further marked presentation take the Mazur cork and
+its nonextendible boundary involution in the diagrams of
+Auckly--Kim--Melvin--Ruberman. Their Figure~2 gives smooth
+standard spheres for both identity and twisted gluings.
+Averaging a boundary metric over the involution gives an
+invariant product germ and permits the same chosen half
+metric to be used on each side in the identity and twisted
+constructions. The sign comparison and
+\eqref{eq:short-seam-energy} then apply without extending the
+involution. This gives a comparison on two actual smooth
+gluings. Realizing the ordinary sign and the strict energy
+ceiling on one such fixed half remains a geometric premise.
+\cite[\S1 and Figures 1--2]{AucklyKimMelvinRuberman2017Equivariant}
+

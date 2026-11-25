@@ -1,0 +1,159 @@
+\subsection{The reduced Ricci-flow test}\label{sec:cotton-variation}
+
+At a smooth constant-scalar Bach-flat metric let \(g(t)\) start at
+\(g\) under Ricci flow. Use the ordered-index tensor
+\(C_{ijk}=\nabla_i Z_{jk}-\nabla_j Z_{ik}\), which is twice the
+Cotton tensor formed from \((\Ric-Rg/6)/2\) with the same index order.
+Write \(s_m=\operatorname{tr}((Z^\sharp)^m)\). The tangent to the
+volume-normalized flow is \(-2Z\). The unnormalized tangent differs
+by a pure trace, which is in the Hessian kernel at the critical
+metric. The second derivative for either flow in its own time
+variable is therefore \(4H_g(Z,Z)\). It reduces to
+\begin{equation}\label{eq:ricci-cotton-hess}
+ \left.\frac{d^2}{dt^2}E_+(g(t))\right|_{t=0}
+ =\int_M\left[\frac7{12}s_2^2-s_4
+      -3Z^{ia}C_{ijk}C_a{}^{jk}\right]dV_g .
+\end{equation}
+The quartic term is nonnegative. In a Ricci eigenframe with
+\(Z^\sharp\) eigenvalues \(\xi_1,\ldots,\xi_4\), it is
+\begin{equation}\label{eq:ricci-quartic}
+ \frac7{12}s_2^2-s_4
+ =\frac16\sum_{ij|kl}(\xi_i-\xi_j)^2(\xi_k-\xi_l)^2 ,
+\end{equation}
+where the sum runs over the three partitions into pairs. In fact,
+if \(p=\xi_1+\xi_2\), \(q=\xi_1+\xi_3\) and \(r=\xi_1+\xi_4\),
+then \(s_2=p^2+q^2+r^2\) and
+\(s_4=3s_2^2/4-(p^4+q^4+r^4)/2\). Six times the quartic is
+\((p^2-q^2)^2+(q^2-r^2)^2+(r^2-p^2)^2\). It vanishes exactly when
+at least three eigenvalues coincide.
+
+To derive \eqref{eq:ricci-cotton-hess}, the constant-scalar Bach
+equation and \(\operatorname{div}Z=0\) give
+\begin{equation}\label{eq:cotton-div-bach}
+ \nabla^i C_{ijk}=-(W\cdot Z)_{jk} .
+\end{equation}
+Indeed, \(\nabla^i\nabla_j Z_{ik}=(\Ric\circ Z)_{jk}-(\Rm\cdot Z)_{jk}\),
+while \(\Rm\cdot Z=W\cdot Z-Z^2-RZ/12+s_2g/2\), with \(Z^2=Z\circ Z^\sharp\).
+Subtract the commuted derivative from the stationary formula for
+\(\Delta Z\). The Weyl contraction \(\langle W\cdot Z,Z^2\rangle\)
+vanishes pointwise in dimension four. To see this, set
+\(w_{ij}=W_{ijij}\) in the eigenframe. Weyl trace-freeness gives
+\(w_{ij}=w_{kl}\) for complementary pairs and
+\(w_{12}+w_{13}+w_{14}=0\). The coefficient of each \(w_{ij}\) in
+the contraction is
+\[
+ \xi_i\xi_j(\xi_i+\xi_j)+\xi_k\xi_l(\xi_k+\xi_l)
+ =-\sum_{a<b<c}\xi_a\xi_b\xi_c .
+\]
+Integration by parts in \eqref{eq:cotton-div-bach} therefore gives
+\(\int_M C_{ijk}\nabla_i(Z^2)_{jk}\,dV_g=0\).
+
+For \(T_{ijk}=\nabla_iZ_{jk}\), let \(P_1,P_2,X_1,X_2\) denote
+the sums of \(\xi_i T_{ijk}^2\), \(\xi_j T_{ijk}^2\),
+\(\xi_i T_{ijk}T_{jik}\), and \(\xi_k T_{ijk}T_{jik}\), respectively.
+Let \(J=Z^{ia}C_{ijk}C_a{}^{jk}=P_1+P_2-2X_1\).
+The two derivative terms of \eqref{eq:ricci-hess} add to
+\(5P_2-3J-2(X_1+X_2)\). The vanishing integrated pairing just
+proved is \(\int_M(2P_2-X_1-X_2)\,dV_g=0\). Pairing the stationary
+Bach equation with \(Z^2\) gives
+\[
+ 2\int_M\Rm(Z,Z^2)\,dV_g
+  =\int_M(2P_2+Rs_3/6+s_2^2/2)\,dV_g .
+\]
+The Weyl cancellation and the curvature decomposition give
+\(\Rm(Z,Z^2)=-s_4-Rs_3/12+s_2^2/2\). Thus the integrated
+derivative terms of \eqref{eq:ricci-hess} reduce to the integral
+of \(-s_4-Rs_3/6+s_2^2/4-3J\). Its scalar terms then produce
+\eqref{eq:ricci-cotton-hess}.
+
+At an attained minimum, three times the integrated Cotton
+contraction is at most the integrated quartic in
+\eqref{eq:ricci-quartic}. A strict reverse inequality at a
+stationary positive metric gives a same-type positive competitor
+along short forward flow. The first derivative vanishes, and the
+positive Yamabe sign persists by continuity of the first conformal
+Laplacian eigenvalue. The contraction can have either sign at
+the level of a first jet. For example, entries
+\(T_{123}=T_{132}=T_{312}=T_{321}=h\) with all other entries zero
+give \(J=(\xi_2-\xi_4)h^2\) and satisfy the trace and divergence
+constraints on \(T\). They supply no control of the integrated
+sign on an actual stationary metric in the surviving band.
+
+\begin{proposition}[Cotton-flat positive constant-scalar gauge]
+\label{prop:cotton-flat-bach}
+Let \(g\) be a smooth Bach-flat Riemannian metric on a connected
+four-manifold without boundary, of constant scalar curvature
+\(R>0\). If \(C=0\), then \(g\) is Einstein or locally
+conformally flat. On a closed smooth homotopy four-sphere the
+locally conformally flat case is round up to scale and
+diffeomorphism.
+\end{proposition}
+
+\begin{proof}
+Equation~\eqref{eq:cotton-div-bach} gives \(W\cdot Z=0\).
+Adding its diagonal components with indices 1 and 2 gives
+\(p w_{12}=0\), using the same \(p,q,r\) and \(w_{ij}\) as above.
+The other complementary pairs give \(q w_{13}=r w_{14}=0\).
+If \(Z\ne0\) and its spectrum is different from \((a,a,-a,-a)\)
+up to ordering, at most one of \(p,q,r\) is zero. The trace
+identity for \(w_{ij}\) then makes every sectional Weyl coefficient
+zero in every Ricci eigenframe.
+
+The condition \(C=0\) says that the tangent-valued one-form
+\(Z^\sharp\) is covariantly closed. Apply the covariant exterior
+derivative again and use a Ricci eigenframe. With the curvature
+indices ordered by \(R_{ijkl}=\langle R(e_i,e_j)e_l,e_k\rangle\),
+the resulting identity is
+\[
+ \xi_kR_{ijkl}+\xi_iR_{jkil}+\xi_jR_{kijl}=0 .
+\]
+For \(l=i\), ordinary Bianchi gives
+\((\xi_k-\xi_j)R_{ijki}=0\). Thus a Weyl coefficient with exactly
+one shared index is zero when the other two eigenvalues differ,
+since \(\Rm-W\) is diagonal in the Ricci eigenframe. When they
+coincide, polarize the zero sectional Weyl coefficient using a
+rotation in their common eigenspace. For entries with four
+distinct indices, set \(x=R_{1234}\), \(y=R_{2314}\), and
+\(z=R_{3124}\). Bianchi gives \(x+y+z=0\). The covariant closure
+identity with last indices 4 and 3 gives, respectively,
+\(\xi_3x+\xi_1y+\xi_2z=0\) and
+\(\xi_4x+\xi_2y+\xi_1z=0\). Adding gives \(px=0\).
+Permuting indices gives \(qz=ry=0\), so at most one of \(x,y,z\)
+can be nonzero and Bianchi forces all three to vanish. Thus
+\(W=0\) at every point where \(Z\ne0\) has spectrum different
+from the double pairs.
+
+The open set on which both \(W\) and \(Z\) are nonzero therefore
+has Ricci defect eigenvalues \(a,-a\) of multiplicity two, with
+\(a>0\) smooth. For either repeated eigenvalue, take two
+orthogonal unit vectors in its eigenspace. Pair the Codazzi
+equation with one of them to see that the eigenvalue derivative
+along the other is zero. Applying this in the two eigenspaces
+makes \(a\) locally constant. For inputs from opposite
+eigenspaces the two sides of the Codazzi equation lie in
+orthogonal summands and must both vanish. This gives parallel
+eigenspace distributions and hence a local product of surfaces.
+Its Gaussian curvatures are \(R/4+a\) and \(R/4-a\). If the first
+two indices span the first factor, the decomposition of curvature
+gives \(w_{12}=R/6\) and \(p=2a\), contradicting \(p w_{12}=0\).
+Consequently wherever \(Z\ne0\), one has \(W=0\).
+
+If \(Z\) is nonzero anywhere, \(W\) thus vanishes on an open set.
+The unique continuation theorem for local conformal flatness of
+smooth connected obstruction-flat metrics applies, since
+obstruction-flatness is Bach-flatness in four dimensions
+\cite[Theorem~3.8]{LassasLiimatainen2019ConformalHarmonic}.
+It gives \(W=0\) globally. On a closed simply connected four-sphere
+type, Kuiper's theorem supplies a conformal diffeomorphism to the
+round sphere \cite{Kuiper1949}. Write the pulled-back round metric
+as \(f^{-2}g\) with \(f>0\). The trace-free Ricci transformation
+then gives \(f Z=-2(\nabla^2 f)^0\). Pairing with \(Z\) and
+integrating using \(\operatorname{div}Z=0\) shows that
+\(\int f|Z|^2dV_g=0\). Hence \(Z=0\) and the positive conformally
+flat metric has constant sectional curvature.
+\end{proof}
+
+The Cotton-flat subclass on the homotopy sphere accordingly
+has zero in \eqref{eq:ricci-cotton-hess} and enters the Einstein
+comparison below. Cotton flatness remains a separate hypothesis
+from Bach stationarity and second-order stability.

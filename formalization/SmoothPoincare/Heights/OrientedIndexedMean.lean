@@ -3,6 +3,7 @@ import SmoothPoincare.Heights.OpenMiddleLocus
 import SmoothPoincare.Heights.RoundGaussArea
 import SmoothPoincare.Heights.GaussParametricDensity
 import SmoothPoincare.Immersions.StrictInducedEnergy
+import SmoothPoincare.Immersions.ChiralEnergyContinuity
 
 /-! # Indexed Gauss area of an oriented Euclidean hypersurface
 
@@ -88,14 +89,14 @@ and the almost-sure count floor is the independent handle-theoretic input. -/
 theorem inducedEnergy_strict_of_orientedHeightFloor
     (hOrder : ∀ x ∈ U₀, (P x).curvature 0 < 0 ∧ (P x).curvature 1 < 0 ∧
       0 < (P x).curvature 2 ∧ 0 < (P x).curvature 3)
-    (hW : Integrable (fun x => hilbertSchmidtSq (W₀ x)) dV)
-    (hcont : ContinuousOn (fun x => hilbertSchmidtSq (W₀ x) - (8 / 3 : ℝ) * J₀ x) U₀)
     (hfloor : ∀ᵐ u ∂μ₀, 2 ≤ (indexedHeightTwoPoints F u).ncard) :
     64 * Real.pi ^ 2 / 9 < chiralFrameEnergy g W₀ := by
+  have hcont : Continuous (fun x => hilbertSchmidtSq (W₀ x) - (8 / 3 : ℝ) * J₀ x) := (continuous_inducedChiralDensity P).sub (continuous_const.mul
+    (orientedGauss_absProduct_continuous_integrable g F o a P).1)
   apply inducedEnergy_strict_of_actualIndexTwo g F o (fun x => (P x).frame) J₀ P
     (isOpen_middlePrincipalLocus P) (fun _ _ => rfl) _ N₀ gaussRoundArea gaussRoundArea_univ gaussRoundArea_antipodal
-    (actualMiddleSheetAtlas g F o a P (isOpen_middlePrincipalLocus P)) hW
-    (orientedGauss_absProduct_continuous_integrable g F o a P).2.integrableOn hcont hfloor
+    (actualMiddleSheetAtlas g F o a P (isOpen_middlePrincipalLocus P)) (integrable_inducedChiralDensity P)
+    (orientedGauss_absProduct_continuous_integrable g F o a P).2.integrableOn hcont.continuousOn hfloor
   intro x hx
   obtain ⟨h₀, h₁, h₂, h₃⟩ := hOrder x hx
   refine ⟨-(P x).curvature 0, -(P x).curvature 1, (P x).curvature 2, (P x).curvature 3,
@@ -119,11 +120,17 @@ theorem orientedImmersion_indexedGaussMean :
       (∫ u, (m u : ℝ) ∂μ₀) = (2 / (8 * Real.pi ^ 2 / 3)) * ∫ x in Uₛ, Jₛ x ∂dV :=
   orientedMeanActualIndexTwo g F o a Pₛ
 
+/-- A floor on the actual direction counts gives strict energy on the induced
+metric without supplying regularity, normal charts or principal frames. -/
+theorem orientedImmersion_energy_strict_of_indexTwoFloor
+    (hfloor : ∀ᵐ u ∂μ₀, 2 ≤ (indexedHeightTwoPoints F u).ncard) :
+    64 * Real.pi ^ 2 / 9 < chiralFrameEnergy g Wₛ :=
+  inducedEnergy_strict_of_orientedHeightFloor g F o a Pₛ
+    (fun x hx => orientedPrincipalFrameAt_middle_order F o a x hx) hfloor
+
 /-- At or below the inclusive immersed threshold there exists a smooth Morse
 height on this immersion with a finite set of at most one index-two point. -/
 theorem exists_morseHeight_le_one_of_inducedEnergy_le
-    (hW : Integrable (fun x => hilbertSchmidtSq (Wₛ x)) dV)
-    (hcont : ContinuousOn (fun x => hilbertSchmidtSq (Wₛ x) - (8 / 3 : ℝ) * Jₛ x) Uₛ)
     (he : chiralFrameEnergy g Wₛ ≤ 64 * Real.pi ^ 2 / 9) :
     ∃ u : GaussDirection, ContMDiff I 𝓘(ℝ, ℝ) ∞ (immersionHeight F (u : V₅)) ∧
       (∀ x, IsCriticalPointAt I (immersionHeight F (u : V₅)) x →
@@ -131,8 +138,7 @@ theorem exists_morseHeight_le_one_of_inducedEnergy_le
       (indexedHeightTwoPoints F u).Finite ∧ (indexedHeightTwoPoints F u).ncard ≤ 1 := by
   by_contra absent
   apply (not_lt_of_ge he)
-  apply inducedEnergy_strict_of_orientedHeightFloor g F o a Pₛ
-    (fun x hx => orientedPrincipalFrameAt_middle_order F o a x hx) hW hcont
+  apply orientedImmersion_energy_strict_of_indexTwoFloor g F o a
   filter_upwards [orientedHeight_ae_nondegenerate F o a,
     (orientedImmersion_indexedGaussMean g F o a).2.1] with u hm hf
   by_contra! low

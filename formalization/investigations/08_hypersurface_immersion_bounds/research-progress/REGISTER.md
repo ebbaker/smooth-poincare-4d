@@ -6,6 +6,7 @@ This is the sole live status register for `SP4-FORM-IMM` and `FOT-E36`. The [pro
 
 | Task | Current state | Next evidence |
 | --- | --- | --- |
+| SP4-FORM-IMM-E01r | Positive chiral density is continuous in arbitrary pointwise principal frames | A basis-invariant polynomial in the actual chart shape crosses eigenvalue multiplicities and flips of normal. Compactness gives integrability. [Proof](handoffs/ED03_CHIRAL_ENERGY_CONTINUITY.md) |
 | SP4-FORM-IMM-E01o/p | Global normal and ordered principal frames verified | One ambient orientation determines the smooth Gauss map through flat points. Each signed orthonormal principal frame uses that same normal; sorting and source orientation fix both sign slots on the middle locus. [Normal](handoffs/ED03_ORIENTED_GLOBAL_NORMAL.md) · [Frames](handoffs/ED03_PRINCIPAL_FRAME_EXISTENCE.md) |
 | SP4-FORM-IMM-B01 | Adopted signed oriented principal frame of the actual second fundamental form | Use the induced metric, unit Euclidean normal, slot order (a,b,d,c), and normalized complementary wedge pairs. |
 | SP4-FORM-FOT-E36 | Verified scalar theorem for all four curvatures | The middle-signature constant and equality are exact. The independent all-sign deficit has coefficient 8/9, attained at (−1,3,3,3). [Proof](handoffs/ED03_PRINCIPAL.md) · [Current companion, eq:shape-deficit](../../../../papers/investigations-1/04_hypersurface_immersions/manuscript/chiral_energy_of_hypersurface_immersions.tex) |
