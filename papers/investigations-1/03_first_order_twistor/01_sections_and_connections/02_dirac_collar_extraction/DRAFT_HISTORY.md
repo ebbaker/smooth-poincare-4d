@@ -11,3 +11,5 @@ Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving mo
 ## 25 November 2026 · second joint collar session
 
 Actual overlap and independent boundary frames assessed. Construction of either a residual cover or controlled paired flux from the original data is open. [Assessment](reviews/SECOND_COLLAR_REVIEW_20261125.md) · [Live register](research-progress/REGISTER.md).
+
+Measured Gromov–Hausdorff convergence and paired point masses. The full Riemann atom has weight 16 times the chiral atom. [Derivation](notes/E10_METRIC_LIMIT_AND_CURVATURE_ATOMS_20261125.md).

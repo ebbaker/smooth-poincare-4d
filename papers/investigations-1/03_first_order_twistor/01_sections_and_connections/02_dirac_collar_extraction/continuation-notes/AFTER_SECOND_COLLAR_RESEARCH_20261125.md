@@ -7,3 +7,5 @@ Locate a compared compact with positive physical volume below the round Yamabe c
 Actual overlap and independent boundary frames assessed. Construction of either a residual cover or controlled paired flux from the original data is open. Follow the joint continuation for the relevant sequence, order of limits and alternative branches.
 
 [Decision and evidence](../research-progress/REGISTER.md) · [Joint continuation](../../../continuation-notes/AFTER_SECOND_COLLAR_RESEARCH_20261125.md) · [Assessment](../reviews/SECOND_COLLAR_REVIEW_20261125.md)
+
+A physical base gives a measured metric limit and places all unmatched curvature in explicit atoms. Use a mass-normalized ball at such an atom when refining the comparison. [E10](../notes/E10_METRIC_LIMIT_AND_CURVATURE_ATOMS_20261125.md).

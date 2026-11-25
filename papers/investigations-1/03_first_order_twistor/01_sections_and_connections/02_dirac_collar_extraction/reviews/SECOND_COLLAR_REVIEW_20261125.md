@@ -9,3 +9,5 @@ On physical ALE and ordinary smooth Euclidean ends, E06 bounds the boundary term
 E09 tests the conformal comparison by tracking physical volume on one fixed compact. A smooth nonzero weak Yamabe factor exhausts all unit volume. When the limiting Yamabe constant is subround, an interior atom would require more than the total mass. A residual without this volume witness can still have nonzero Weyl energy. E07 identifies the additional boundary derivatives needed to use the positive Schouten gauge on such a residual.
 
 [Evidence and requests](../research-progress/REGISTER.md) · [Joint conclusions](../../../reviews/SECOND_COLLAR_ASSESSMENT_20261125.md)
+
+Compare the entire physical metric and all curvature defect measures with a removable base. Measured Gromov–Hausdorff convergence and paired point masses. The full Riemann atom has weight 16 times the chiral atom. [E10](../notes/E10_METRIC_LIMIT_AND_CURVATURE_ATOMS_20261125.md)

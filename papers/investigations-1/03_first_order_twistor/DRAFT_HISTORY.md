@@ -134,3 +134,7 @@ The DIR continuation established [five-eigenfunction round rigidity and its weak
 SEC obtained a [sharp angular measurement on a round patch with arbitrary exterior](01_sections_and_connections/reviews/SEC_SPHERICAL_TRANSMISSION_20261124.md) and a [variational compactness criterion](01_sections_and_connections/reviews/SEC_CAP_COMPACTNESS_AND_YAMABE_WALL_20261124.md) with explicit degenerating examples on the standard sphere. The exact and strict recognizing alternatives remain in SH-E01. The new [exterior balancing problem](01_sections_and_connections/continuation-notes/02_AFTER_SPHERICAL_TRANSMISSION_AND_YAMABE_WALL_20261124.md) has one owner in SEC.
 
 On standard smooth S⁴ the infimum in the marked Yamabe-zero class is exactly 8π² and is unattained. The [distinct proof check](01_sections_and_connections/notes/SEC_E38_20261124.md) confirmed the scaled neck bounds and placement of the round marking.
+
+## 25 November 2026 · second collar session
+
+The [joint assessment](reviews/SECOND_COLLAR_ASSESSMENT_20261125.md) records the new geometric, spin and closed-class results. [Continuation](continuation-notes/AFTER_SECOND_COLLAR_RESEARCH_20261125.md).

@@ -10,4 +10,4 @@ The [review proposal](../01_neck_geometry/brainstorm/notes/PROPOSED_OVERVIEW_AND
 
 The [parent investigation](../README.md) owns its existing tasks. [Neck geometry](../01_neck_geometry/research-overview/OVERVIEW.md) · [Dirac collar matching](../../02_dirac_and_twistor_spinors/01_dirac_collar_matching/research-overview/OVERVIEW.md) share the [route to smooth four-sphere recognition](../../brainstorm/notes/COLLAR_PROGRAM_AND_SPC4_20261125.md). Sustained research was activated on 25 November. [Joint results](../../reviews/JOINT_COLLAR_ASSESSMENT_20261125.md) · [Current branch handoff](continuation-notes/AFTER_JOINT_COLLAR_RESEARCH_20261125.md). [References](references/README.md) · [Milestones](DRAFT_HISTORY.md) · [Public history](chat-histories/README.md)
 
-The [second joint assessment](../../reviews/SECOND_COLLAR_ASSESSMENT_20261125.md) integrates E05–E09. [Current continuation](continuation-notes/AFTER_SECOND_COLLAR_RESEARCH_20261125.md).
+The [second joint assessment](../../reviews/SECOND_COLLAR_ASSESSMENT_20261125.md) integrates E05–E10. [Current continuation](continuation-notes/AFTER_SECOND_COLLAR_RESEARCH_20261125.md).

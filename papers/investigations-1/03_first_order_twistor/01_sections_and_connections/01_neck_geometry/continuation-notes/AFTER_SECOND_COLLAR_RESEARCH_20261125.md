@@ -7,3 +7,5 @@ Seek the weak balanced cut despite isolated curvature spikes. In parallel, bound
 Exact extraction, weak-sequence counterexample and a closed critical alternative assessed. The weak separating chart is open. Follow the joint continuation for the relevant sequence, order of limits and alternative branches.
 
 [Decision and evidence](../research-progress/REGISTER.md) · [Joint continuation](../../../continuation-notes/AFTER_SECOND_COLLAR_RESEARCH_20261125.md) · [Assessment](../reviews/SECOND_COLLAR_REVIEW_20261125.md)
+
+In the round-base case, rescale at a fixed positive Weyl mass on the single surviving puncture exterior and test for loss of energy under comparison. [E19](../notes/E19_ROUND_BASE_SINGLE_PUNCTURE_20261125.md).

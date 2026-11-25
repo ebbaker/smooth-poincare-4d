@@ -7,9 +7,11 @@
 | SP4-FORM-FOT-B01 · planning lead | Select the shared formal types and inventory the actual dependencies of E02–E04 and E09. | A decision and import/prerequisite table linking source labels to pinned Lean declarations. |
 | SP4-FORM-FOT-E01 · bounded proof | Finite accounting with a strict residual, including the empty family. It can proceed independently of B01. | A checked theorem in the current Lake library, with the equality explicitly supplied at this algebraic stage. |
 
-Route 02 owns FOT-E01. Each route now has a bounded launch prompt for its own first proof. Use the corresponding route register for the return. [02 · Accounting](../02_neck_energy_accounting/continuation-notes/CONTINUATION.md) · [03 · Single cut](../03_single_cut_descent/continuation-notes/CONTINUATION.md) · [04 · Dirac transmission](../04_dirac_collar_transmission/continuation-notes/CONTINUATION.md)
+Each link opens a self-contained prompt for sustained formalization with GPT-6.2 Astra at ultra and bounded Sol 6.2/ultra helpers. All three routes can start independently. [02 · Accounting](../02_neck_energy_accounting/continuation-notes/CONTINUATION.md) · [03 · Single cut](../03_single_cut_descent/continuation-notes/CONTINUATION.md) · [04 · Dirac transmission](../04_dirac_collar_transmission/continuation-notes/CONTINUATION.md)
 
-The first packet below is an optional prompt for the parent opening milestone. The [workflow](../../FORMALIZATION_SETUP_WORKFLOW.md) gives the equivalent Claude or Lean-capable Aristotle handoff procedure.
+When all three sessions run together, Route 02 can act as parent integrator for B01/B05 as needed and for shared Lake targets, public imports and blueprint edits. An active parent lead retains that role. A route running alone may integrate unclaimed shared work. Each route owns its proof modules and live register.
+
+The prompt below is for a separate parent session working on the opening milestone. The [workflow](../../FORMALIZATION_SETUP_WORKFLOW.md) gives the equivalent Claude or Lean-capable Aristotle handoff procedure.
 
 ~~~text
 Work in /Users/ebbaker/Documents/smooth-poincare-4d. Activate the opening
@@ -21,10 +23,10 @@ Check current status and the pinned source revisions.
 
 Use Astra/ultra as lead unless I select another configuration. Carry out
 SP4-FORM-FOT-B01 for the shared geometric and recognition dependencies.
-Record the actual Lean types or the precise missing prerequisites. In
-parallel you may issue SP4-FORM-FOT-E01 as a bounded Sol 6.2/ultra
-packet. Use the exact finite-family statement in “First bounded proof”
-of 01_PLAN.md. Compare its public type with the manuscript's strict
+Record the actual Lean types or the precise missing prerequisites. Route 02
+owns SP4-FORM-FOT-E01. If that session is active, use its return. If you
+are the sole lead, you may issue its bounded Sol 6.2/ultra packet through
+Route 02 using the “First bounded proof” statement in 01_PLAN.md. Compare its public type with the manuscript's strict
 residual argument, including the empty family and the supplied energy
 equality. If integrating that proof, build from formalization/, check the
 public declaration and its axioms, update the blueprint, and record

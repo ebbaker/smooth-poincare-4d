@@ -9,3 +9,5 @@ E14 gives positive Ricci curvature in a conformal representative. A uniform scal
 For exact critical metrics the same-type competitor from E02 rules out bubbling strictly below $a_M+\kappa_\delta$ in the fixed band. Analytic reduction in a Bach gauge gives finite distinct values in each compact sublevel inside that margin. The spectrum of a particular Einstein metric determines whether the TT Hessian is negative. In the lower subband even a non-Einstein class with a half-harmonic representative faces the E16 strict inequality. None of the three tests provides a contradiction at a general nonround exact critical class.
 
 [Evidence and requests](../research-progress/REGISTER.md) · [Joint conclusions](../../../reviews/SECOND_COLLAR_ASSESSMENT_20261125.md)
+
+Restart on the capped survivor of a round physical base. Single puncture carries the original nonstandard smooth type and the full limiting energy in the minimizing regime. [E19](../notes/E19_ROUND_BASE_SINGLE_PUNCTURE_20261125.md)

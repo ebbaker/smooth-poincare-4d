@@ -20,4 +20,4 @@ This is the sole live status register for FOT-E25, FOT-E26 and FOT-E28, with CUT
 
 On 25 November 2026 the opening proposition in the route plan elaborated as `Prop` using `lake env lean --stdin` under Lean `4.35.0-rc3`. The existing package built successfully (1,619 jobs). `FirstOrderTwistor.exteriorEnergyLtThreshold` is a planned declaration. Route proof execution awaits activation. [Checked proposition type](../research-plan/PLAN.md) · [Package pins and existing proofs](../../research-progress/01_BASELINE.md#lean-evidence)
 
-The route lead records dated returns here, including the actual prover and effort when available. The program integrator owns shared build files, blueprint edits and FOT-E34. [Next bounded packet](../continuation-notes/CONTINUATION.md) · [Platform roles](../../../FORMALIZATION_SETUP_WORKFLOW.md#platform-guidance)
+The route lead records dated returns here, including the actual prover and effort when available. The program integrator owns shared build files, blueprint edits and FOT-E34. [Sustained continuation prompt](../continuation-notes/CONTINUATION.md) · [Platform roles](../../../FORMALIZATION_SETUP_WORKFLOW.md#platform-guidance)
