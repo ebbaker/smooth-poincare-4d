@@ -4,7 +4,19 @@ The master manuscript asks whether the chiral Weyl energy on a fixed smooth homo
 
 The latest edition adds an intrinsic round-boundary sign test, recognition from a retained immersed exterior and selected height diagrams, a single-point test for the full physical shell, simultaneous removal of charged marked disks and a near-Einstein recognition theorem. [Results and remaining cases](brainstorm/notes/MARKED_EXTERIORS_AND_ANNULI_20261125.md)
 
-The [current proof plan](research-plan/PLAN.md) coordinates four branches. The [immersion parent](../investigations-1/04_hypersurface_immersions/README.md) brings together [handle construction](../investigations-1/04_hypersurface_immersions/01_immersed_handle_constructions/README.md) and [recognition from heights](../investigations-1/04_hypersurface_immersions/02_two_handle_recognition/README.md). [Neck geometry](../investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/README.md) studies the separated physical sets, and [fixed-type descent](01_fixed_type_variational_descent/README.md) studies the alternatives in which energy persists. [Individual launch prompts](continuation-notes/PARALLEL_PROGRAM_20261125.md)
+## Working papers for the parallel investigations
+
+The [proof plan](research-plan/PLAN.md) has four specialist investigations. The immersion paper links the two extrinsic investigations so a constructed immersion and its height refer to the same smooth domain. Each manuscript page gives its editable source and build instructions.
+
+| Working paper | Argument developed in full |
+| --- | --- |
+| [Hypersurface immersions](../investigations-1/04_hypersurface_immersions/manuscript/README.md) | Relates the Gauss map, chiral energy and middle-index heights on one immersion. Derives the endpoint and tests the Yamabe sign. |
+| [Immersed handle constructions](../investigations-1/04_hypersurface_immersions/01_immersed_handle_constructions/manuscript/README.md) | Derives both marked faces, the cost of changing their slope, and the positive energy forced by a fixed collar germ. |
+| [Recognition from Morse heights](../investigations-1/04_hypersurface_immersions/02_two_handle_recognition/manuscript/README.md) | Carries the actual framed tubes through handle reductions and identifies which one-sided and mixed surgeries give the standard sphere. |
+| [Marked neck geometry](../investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/manuscript/README.md) | Derives positive caps and locates both entire charged sets from an anchored physical annulus. The chart is an input to this implication. |
+| [Fixed-type variational descent](01_fixed_type_variational_descent/manuscript/README.md) | Derives joint mass selection, admissible repairs and exact sign tests. Tracks the remaining energy through punctures, closed limits and restarts. |
+
+## Master manuscript and research records
 
 - [Read the manuscript (PDF)](../../output/pdf/master/chiral_weyl_energy_and_smooth_poincare.pdf) · [Editable manuscript and build](manuscript/README.md)
 - [Research overview and map of the contributing investigations](research-overview/OVERVIEW.md)

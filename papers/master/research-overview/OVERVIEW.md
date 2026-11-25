@@ -4,6 +4,8 @@
 assistance. Actual serving model and reasoning effort are unavailable.
 The parallel organization began with the 33-page master edition committed at 2689540e6dae1656b7f5ad4be52504db044995f2 and the [accepted parallel proposal](../brainstorm/notes/PARALLEL_INVESTIGATION_PROPOSAL_20261125.md). Earlier editions and their source hashes remain in the provenance sections below.
 
+The four specialist investigations now have [working papers](../README.md#working-papers-for-the-parallel-investigations), together with a coordinating paper on hypersurface immersion geometry. The master gives the threshold, height and fixed-type implications. The [proof crosswalk](../research-progress/handoffs/E51_COMPANION_DRAFTS_20261125.md) identifies where the underlying arguments are developed.
+
 ## Current analytical results on the four routes
 
 The master now has two ways to test a retained exterior before constructing a global competitor. On an intrinsic exterior with marked round ends there is an exact spectral test for the positive Yamabe sign, and the capped energy is the exterior energy. On an immersed exterior the number of index-two critical points needed on its complement gives an explicit directional lower bound for the exterior's Weyl integral on any hypothetical nonstandard type. At two middle handles the transported one-sided surgery link and the two mixed surgery orders give recognizable smooth subclasses. The quantitative construction and the selection of these subclasses remain open.

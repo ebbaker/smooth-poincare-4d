@@ -5,3 +5,5 @@ Use this destination for verified conversations specific to the master investiga
 At the resumed 25 November milestone the same exact-ID local lookup was still absent and the app history reader returned an error. The investigation records below the master directory are mathematical work products. An authenticated transcript of the resumed turn could not be registered.
 
 At the marked-exterior milestone on 25 November, exact-ID local diagnostics found no source for the current thread, and the supported app history reader returned an error. The master notes and verified PDF are available. An authenticated public transcript could not be registered.
+
+At the working-paper integration milestone on 25 November, exact-ID diagnostics still found no local source, and the supported app reader returned an error for this conversation. An authenticated transcript of this turn could not be registered.

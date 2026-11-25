@@ -2,6 +2,8 @@
 
 25 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving configuration unavailable. [Program overview](../research-overview/03_OVERVIEW.md) · [Input revisions and verification](../research-progress/03_BASELINE.md) · [Sole program register](../research-progress/REGISTER.md)
 
+The opening proofs and their follow-through are assessed in the [activation milestone](../research-progress/handoffs/ED03_INTEGRATION_20261125.md). The [current continuation](../continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md) gives the next geometric tasks.
+
 ## Opening proofs
 
 | Owner | First target | Next geometric test |

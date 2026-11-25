@@ -16,3 +16,5 @@
 | SP4-MASTER-DESC-E05 | Reserved | B05 must freeze one proof chain and the corresponding review test. |
 
 The [parent register](../../research-progress/REGISTER.md) owns SP4-MASTER and all original task IDs and receipts. The [benchmarks and evidence limits](../research-overview/OVERVIEW.md) are inherited. Scientific tasks in this branch await activation.
+
+The 25 November [working manuscript](../manuscript/README.md) collects the branch results and their outstanding hypotheses. [Master editorial receipt E51](../../research-progress/handoffs/E51_COMPANION_DRAFTS_20261125.md).

@@ -1,0 +1,768 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\DeclareMathOperator{\lk}{lk}
+\newcommand{\HB}[1]{\mathcal H_{#1}}
+\newcommand{\TB}[1]{\mathcal T_{#1}}
+\title{Recognition of smooth homotopy four-spheres\\from marked Morse heights}
+\author{Edward B. Baker III}
+\date{Working manuscript, 25 November 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Every Morse function on a nonstandard smooth homotopy four-sphere has
+at least two index-two points. For an immersion into Euclidean
+five-space, the indexed normal area and an integrated Weyl estimate
+give smooth recognition at chiral Weyl energy at most \(64\pi^2/9\).
+Below \(8\pi^2\), a putative nonstandard source has exactly two
+index-two points in more than three quarters of height directions.
+We carry the framed attaching tubes of such a height through the
+two end-handlebody reductions. In the one-sided case an unknotted
+component or tunnel number one in the actual two-component surgery
+link suffices. In the mixed case either of two intermediate surgery
+manifolds, \(S^3\) or \(\#_2(S^1\times S^2)\), suffices. The proofs
+retain the boundary identifications. Selection of a diagram satisfying
+one of these conditions remains a separate geometric problem.
+\end{abstract}
+
+\section{Morse functions with few middle handles}\label{sec:marked}
+
+All manifolds and maps are smooth. Let \(M\) be a closed connected
+oriented homotopy four-sphere. A diffeomorphism to the standard sphere
+can be made orientation preserving by reflection of the target.
+For a Morse function \(h\) on \(M\)
+write \(n_i\) for its index-\(i\) count. Here Morse means that all
+critical points are nondegenerate, with coincident critical values
+allowed. An index-\(i\) handle is
+\(D^i\times D^{4-i}\), attached by its framed tube
+\(S^{i-1}\times D^{4-i}\). Its belt sphere is
+\(\{0\}\times S^{3-i}\) in the outgoing boundary. Reversal
+interchanges the attaching and belt data and changes index \(i\) to
+\(4-i\). Write
+\[
+ \HB{k}=\natural_k(S^1\times D^3),\qquad
+ \TB{k}=\natural_k(S^2\times D^2),\qquad
+ Y_k=\#_k(S^1\times S^2),
+\]
+where \(\natural\) denotes boundary connected sum. In particular,
+\(\HB{0}=D^4\) and \(Y_0=S^3\).
+
+\begin{lemma}[Marked end reductions]\label{lem:trees}
+The handles of \(h\) yield an ordered presentation of the actual \(M\)
+with reduced index counts
+\[
+ (1,\ell,n_2,r,1),\qquad
+ \ell=n_1-n_0+1,\quad r=n_3-n_4+1,\quad n_2=\ell+r .
+\]
+The lower and upper dual \(0\)--\(1\) bodies are \(\HB{\ell}\) and
+\(\HB{r}\). Their identifications with the original end bodies
+transport the middle attaching tubes and the outgoing gluing.
+\end{lemma}
+
+\begin{proof}
+To separate tied critical values when needed, use small disjoint
+scalar bumps constant near the individual critical points. The
+supports of the derivatives avoid the critical points, so on each
+such compact support the differential of \(h\) is bounded away
+from zero. Small amplitudes keep the same critical points and
+Hessians. This makes an auxiliary scalar function on \(M\).
+
+Use the final rearrangement theorem and its self-indexing formulation
+to order the handles by index on \(M\)
+\cite[Theorems 4.7--4.8]{Milnor1965HCobordism}. These results keep the critical
+points and their indices, and one can choose disjoint attaching tubes
+at a common incoming level of the index-two block. The ordered
+decomposition uses a gradient-like field and regular collars. It is
+an auxiliary Morse presentation if the original critical values do
+not have this order. The critical count belongs to \(h\). Separating
+ties, changing the order within or between index blocks, and sliding
+framed handles can produce cuts of auxiliary presentations. To use
+the geometry of an unmodified level of \(h\), one needs a comparison
+with the particular cut being used. Within a block of disjoint
+attachments one may attach the handles in any order on the common
+level, using a product collar to identify the full outgoing boundary.
+
+Take collars on the cuts immediately before and after the index-two
+block. The lower body \(P\) is connected because subsequent
+attaching regions have connected attaching sphere and so cannot join
+distinct components. The same argument applied to the reversed
+decomposition makes the upper dual body \(Q\) connected. Form a graph
+in each body with a vertex for every \(0\)-handle and an edge for
+every \(1\)-handle. Choose a spanning tree in each graph. Attach
+the edges of the tree first. At any leaf, the leaf ball and the
+edge to the rest amount to an enlargement across a boundary disk.
+After rounding corners the enlargement is a ball. Equivalently the
+attaching zero-sphere of the edge meets the belt of the leaf
+\(0\)-handle in one point, the geometric cancellation criterion
+\cite[Theorem~5.4]{Milnor1965HCobordism}.
+Absorbing each leaf gives a single ball and carries the non-tree
+feet as disjoint disks on its boundary. Reattach those handles with
+their actual feet. This gives the lower and upper
+diffeomorphisms \(\alpha:P'\to P\) and \(\beta:Q'\to Q\), where
+\(P'\cong\HB{\ell}\) and \(Q'\cong\HB{r}\).
+
+For the explicit markings, let \(N\) be the middle cobordism and let
+\(p:\partial P\to\partial_-N\) and \(q:\partial Q\to\partial_+N\) be
+the given boundary maps. For an incoming framed tube
+\(a_j:S^1\times D^2\to\partial_-N\), use the full transported map
+\[
+ a_j'=(\partial\alpha)^{-1}p^{-1}a_j .
+\]
+On reversal, the corresponding rule for each dual tube is pullback by
+\((\partial\beta)^{-1}q^{-1}\). In this reversal the dual core in the
+outgoing tube of the forward handle gives the new attaching circle
+and the outgoing \(D^2\) factor gives its normal framing. Let \(X\)
+be \(P'\) with the transported \(2\)-handles attached, and let
+\(\eta:\partial X\to\partial_+N\) be its induced outgoing marking.
+The closed assembly uses
+\[
+ \varphi=(\partial\beta)^{-1}q^{-1}\eta:\partial X\to\partial Q'.
+\]
+On the collared pieces the comparison with \(M\) uses
+\(\alpha,\operatorname{id}_N,\beta\). A framed slide giving a trace
+diffeomorphism \(s:X_{\rm new}\to X\) replaces \(\varphi\) by
+\(\varphi\partial s\), and a change of upper coordinates pulls that
+map back on the upper side. Thus the framing and not just the core
+curve is transported. Tree contraction gives the stated counts,
+and \(\chi(M)=2=1-\ell+n_2-r+1\) finishes.
+\end{proof}
+
+We use two facts about arbitrary boundary markings.
+Hatcher's theorem gives \(\pi_0\operatorname{Diff}(S^3)\cong
+\pi_0 O(4)\), so every boundary diffeomorphism of a standard
+four-ball extends to the ball by extending its orthogonal endpoint
+and its isotopy on a collar \cite[p.~553]{Hatcher1983Smale}.
+Laudenbach--Po\'enaru's Theorem A says that
+\(\TB{k}\cup_\varphi\HB{k}\cong S^4\) for any boundary
+diffeomorphism \(\varphi\). We also use the boundary-extension
+statement that a self-diffeomorphism of \(Y_k\) extends over
+\(\HB{k}\) \cite[Theorem A and its proof, pp.~337, 341--342]{LaudenbachPoenaru1972Handlebodies}.
+An orientation-reversing discrepancy can be absorbed by a
+reflection of the rounded product of a three-dimensional handlebody
+with an interval. The explicit extension theorem also has an
+independent proof \cite[Theorem~2.5]{Moussard2026HandlebodyDiffeomorphisms}.
+
+\begin{proposition}[Zero or one index-two point]\label{prop:one}
+If any Morse function on \(M\) has \(n_2\leq1\), then
+\(M\cong S^4\).
+\end{proposition}
+
+\begin{proof}
+For \(n_2=0\), Lemma~\ref{lem:trees} gives two actual balls joined
+by their boundary diffeomorphism, which extends by Hatcher's theorem.
+For \(n_2=1\), reverse if needed so that \((\ell,r)=(0,1)\).
+Then \(X\) is the trace of integer-framed surgery on a knot \(K\) in
+\(S^3=\partial D^4\), and the actual boundary is
+\(Y_1=S^1\times S^2\), from the upper \(\HB{1}\).
+In the exterior of \(K\) its meridian generates \(H_1=\mathbb Z\)
+and its preferred longitude vanishes. Filling with integer framing
+\(n\) kills \(n\) times the meridian, so \(H_1(Y_1)=\mathbb Z\)
+forces \(n=0\). Gabai's Corollary 8.3 computes the knot genus from
+the least genus of a nonseparating surface in the zero surgery.
+The sphere factor in \(Y_1\) makes the genus zero, so \(K\) is the
+unknot \cite[Corollary 8.3 and Remark 8.5]{Gabai1987FoliationsIII}.
+Its zero trace is \(\TB{1}\), seen by capping a spanning disk by
+the handle core with product normal framing. Theorem A applies to
+the given gluing with \(\HB{1}\).
+\end{proof}
+
+For comparison, Gabai also gives Po\'enaru's consequence that a
+ball with one \(2\)-handle and one \(3\)-handle and with \(H_2=0\)
+is a standard ball \cite[Corollary 8.6]{Gabai1987FoliationsIII}.
+Scharlemann gives a PL version with one \(2\)-handle and no
+\(3\)-handles and uses an end-tree reduction in its proof
+\cite[Corollary~2.2 and pp.~422--423]{Scharlemann2008GeneralizedPropertyR}.
+The proof of Proposition~\ref{prop:one} uses smooth marked gluings.
+
+\section{Indexed normal area and the middle energy range}\label{sec:index}
+
+Let \(F:M\looparrowright\mathbb R^5\) be a smooth immersion,
+\(g=F^*g_{\rm Eucl}\), and \(\nu:M\to S^4\) the oriented unit normal
+with \(d\nu=-dF\circ A\). For \(U\subset M\) write
+\begin{gather*}
+ E_\pm(g;U)=\int_U |W^\pm_g|_{\mathrm{HS}}^2\,dV_g,\qquad
+ \Omega_2=\{A\text{ has signature }(2,2)\},\\
+ I_2=\int_{\Omega_2}\det A\,dV_g,\qquad
+ \omega=|S^4|=\frac{8\pi^2}{3}.
+\end{gather*}
+Here \(W^\pm_g\) are real symmetric trace-free curvature
+endomorphisms on \(\Lambda^\pm\), and unqualified \(E_\pm(g)\)
+integrate over \(M\). They agree by signature. All counts and
+integrals are on the immersed domain, so distinct preimages at a
+self-intersection are distinct points.
+
+\begin{proposition}[Two height averages]\label{prop:averages}
+For almost every \(u\in S^4\), \(h_u=\langle F,u\rangle\) is Morse.
+If \(n_i(u)\) are its original counts and
+\(J=\int_M(-\det A)_+\,dV_g\), then
+\begin{align*}
+ \frac1\omega\int_{S^4}\sum_{i=0}^4 n_i(u)\,d\sigma
+       &=2+\frac{4J}{\omega},\\
+ \frac1\omega\int_{S^4}n_2(u)\,d\sigma
+       &=\frac{2I_2}{\omega}.
+\end{align*}
+In particular \(J<\omega\) recognizes the standard smooth sphere.
+\end{proposition}
+
+\begin{proof}
+By Sard, for almost every direction both \(u\) and \(-u\) are
+regular values of \(\nu\). The height is critical precisely on
+\(\nu^{-1}(\{u,-u\})\), where its Hessian is
+\(\langle u,\nu\rangle g(A\cdot,\cdot)\). This gives nondegeneracy
+of all critical points, including for self-intersecting immersions.
+Distinctness of their critical values is a separate condition.
+The Hessian determinant has the
+sign of \(\det A\), and in four dimensions sign reversal leaves the
+middle index unchanged. The signed Gauss Jacobian is \(\det A\).
+The Morse Euler sum therefore gives \(2\deg\nu=\chi(M)=2\).
+The signed area identity yields \(\int_M\det A=\omega\), and
+the absolute area identity gives the total count in the display.
+Applied on \(\Omega_2\) with both signs of the normal, the same
+identity gives the middle count. This is the hypersurface
+specialization of total-curvature averaging
+\cite{ChernLashof1957Curvature}.
+
+When \(J<\omega\) the average total is less than six. The count
+is even by the Morse Euler identity, so some Morse height has at
+most four critical points. To list the possible counts, let \(r_j\)
+be the rank of the cellular boundary in degree \(j\), with
+\(r_0=r_5=0\). Then \(n_j=b_j+r_j+r_{j+1}\). Here the endpoint
+Betti numbers are one and the others zero. Two points give
+\((1,0,0,0,1)\). Four points give exactly one extra adjacent pair,
+so \(n_2\leq1\). Proposition~\ref{prop:one} applies.
+\end{proof}
+
+\begin{lemma}[Middle-signature Weyl cost]\label{lem:weyl}
+On \(\Omega_2\) one has
+\[
+ |W^\pm_g|_{\mathrm{HS}}^2\geq \tfrac83\det A.
+\]
+If a domain contains a nonempty open subset of \(\Omega_2\), the
+integrated comparison on that domain is strict.
+\end{lemma}
+
+\begin{proof}
+Write the principal curvatures as \((-a,-b,c,d)\) with
+\(a,b,c,d>0\), and put \(P=abcd\).
+The Euclidean Gauss equation diagonalizes the curvature operator
+on principal two-forms with entries \(k_i k_j\). Pairing opposite
+indices in a chiral basis gives the three sums
+\[
+ s_1=ab+cd,\qquad s_2=-ac-bd,\qquad s_3=-ad-bc.
+\]
+The Weyl eigenvalues in each chiral block are \((s_j-\bar s)/2\):
+the sectional-pair averages are \(s_j/2\) and the scalar part is
+\(\bar s/2\). Hence the squared norm is
+\(\frac1{12}\sum_{i<j}(s_i-s_j)^2\). The arithmetic--geometric mean
+inequality gives \(s_1\ge2\sqrt P\) and \(s_2,s_3\le-2\sqrt P\),
+which proves the comparison. The use of middle-signature
+determinants in hypersurface Weyl estimates has the antecedent
+\cite[\S\S2--3]{OntiVlachos2017Hypersurfaces}.
+
+Pointwise equality requires \(ab=cd\), \(ac=bd\), and \(ad=bc\),
+so \(a=b=c=d\). If this holds on an open set, \(A\) has smooth
+rank-two eigenbundles with eigenvalues \(k,-k\), \(k>0\).
+For orthogonal unit fields \(X,Y\) in one eigenbundle with
+eigenvalue \(\lambda\), Euclidean Codazzi gives
+\[
+ X(\lambda)=\langle(\nabla_X A)Y,Y\rangle
+            =\langle(\nabla_Y A)X,Y\rangle=0 .
+\]
+Thus \(dk=0\) along both bundles. With \(X\) in the positive
+bundle and \(Y\) in the negative bundle, Codazzi now yields
+\(-2k(\nabla_XY)_+=2k(\nabla_YX)_-\), so both sides vanish.
+Metric compatibility makes each bundle parallel in all directions.
+Its mixed sectional curvature is then zero, while Gauss gives
+\(-k^2\). The nonnegative continuous defect therefore has positive
+integral on any domain containing an open middle-signature subset.
+\end{proof}
+
+\begin{theorem}[Recognition and direction selection]\label{thm:band}
+The condition \(E_+(g)\le64\pi^2/9\) implies \(M\cong S^4\).
+On a nonstandard \(M\), if \(E_+(g)<8\pi^2\), more than three
+quarters of normalized spherical directions are Morse heights
+with exactly two index-two points. Four mutually orthogonal
+directions can be chosen with that count.
+\end{theorem}
+
+\begin{proof}
+On a nonstandard \(M\), Proposition~\ref{prop:one} gives
+\(n_2(u)\ge2\). Thus \(I_2\ge\omega\) by
+Proposition~\ref{prop:averages}. Lemma~\ref{lem:weyl} is strict
+after integration since \(\Omega_2\) has positive mass, so
+\(E_+(g)>\frac83 I_2\ge64\pi^2/9\).
+If \(E_+(g)<8\pi^2\), the middle count average is less than \(9/4\).
+The proportion of directions with count at least three is bounded
+by the average of \(n_2-2\), and is therefore less than \(1/4\).
+The first four entries of a random orthonormal frame each have
+uniform marginal direction. The union of their four failure events
+has probability less than one.
+\end{proof}
+
+The two Weyl estimates use the given induced Riemannian metric
+without a Yamabe sign hypothesis. Under a smooth conformal change
+the chiral Hilbert--Schmidt norm squared and the volume density
+scale reciprocally, so the energy condition also tests that
+induced conformal class. The count estimate fixes an original
+function \(h_u\). It does not specify the distribution of the
+other indices, the tree choices, or the framed attaching curves.
+
+\section{Recognized marked surgery presentations}\label{sec:surgery}
+
+Fix a Morse function with exactly two index-two points and apply
+Lemma~\ref{lem:trees}. Its possible reduced odd-handle distributions
+are \((\ell,r)=(0,2),(1,1),(2,0)\). The following tests are purely
+smooth topology and also apply to a marked presentation obtained
+without a hypersurface immersion.
+
+\subsection{A one-sided two-component link}
+
+\begin{proposition}[One-sided recognition]\label{prop:onesided}
+When \((\ell,r)=(0,2)\), let \(L\) be the actual two-component
+framed attaching link in \(\partial D^4\). The same statement
+applies after reversal when \((\ell,r)=(2,0)\). If \(L\), possibly
+after framed slides, contains an unknotted component or has tunnel
+number one, then \(M\cong S^4\).
+\end{proposition}
+
+\begin{proof}
+The outgoing boundary of its trace is \(Y_2\), by its actual
+identification with \(\partial\HB{2}\). In a link exterior the two
+meridians generate \(H_1\) freely. In this basis the preferred
+longitude of one component represents its linking number with
+the other times the other meridian. Thus the two filling slopes
+give the integral matrix with framings on the diagonal and
+linking number off diagonal. Its cokernel is \(H_1(Y_2)=\mathbb Z^2\),
+so it is the zero matrix.
+
+A framed slide replaces an attaching circle by a band sum with
+a push-off specified by the other handle's framing. The band
+is embedded in the marked three-dimensional level with interior
+disjoint from the link. For oriented components in \(S^3\), the
+new framing is the sum of the framings plus twice the signed
+linking term, as follows by taking the corresponding framed
+push-off of the band sum. The slide is an isomorphism of the
+smooth trace, with its outgoing marking carried as in
+Lemma~\ref{lem:trees}.
+
+For the unknot case, Gompf--Scharlemann--Thompson's
+Proposition 3.2 supplies slides to the zero-framed unlink.
+It assumes precisely the two-component surgery to \(Y_2\) and
+an unknotted component. The proof isotopes the other component
+in the zero surgery on the unknot and realizes passages through
+the surgery core as slides. For tunnel number one, the tunnel
+complement is a genus-two handlebody. Its free group of rank two
+surjects onto the link group, which surjects onto \(\pi_1(Y_2)\),
+also free of rank two. Hopficity gives a free rank-two link group;
+their Proposition 3.1 uses the classical unlink criterion for
+this group to identify the unlink
+\cite[\S2 and Propositions 2.2, 3.1--3.2]{GompfScharlemannThompson2010}.
+Both routes give the trace \(\TB{2}\): split framed-unknot
+attachments give the boundary connected sum of their zero traces.
+Theorem A applies to the transported gluing with \(\HB{2}\).
+\end{proof}
+
+In particular the proof uses the actual link and allows known
+framed moves on it. The zero matrix holds for every such link.
+Slide equivalence to the unlink for an arbitrary two-component
+link with this outgoing boundary is the general Property \(2R\)
+question, which is not a premise of Proposition~\ref{prop:onesided}.
+
+\subsection{The two intermediate boundaries in a mixed presentation}
+
+Assume \((\ell,r)=(1,1)\). Denote the marked lower belt sphere
+by \(S\subset\partial\HB{1}=S^1\times S^2\) and the two lower
+attaching tubes by \(K_1,K_2\), using the same notation for their
+cores. In a Kirby diagram let \(U\) be the dotted unknot of the
+lower \(1\)-handle. Replacing the dot by a zero coefficient
+describes the boundary surgery of the trace by ordinary framed
+link surgery in \(S^3\). As a four-dimensional operation this
+substitutes \(D^2\times S^2\) for an interior \(S^1\times D^3\);
+it changes the trace while retaining the outer boundary. These
+statements follow from the product neighborhoods and the
+identification of the dotted-unknot boundary with zero surgery
+on that unknot. For the dotted-circle convention, handle slides,
+and geometric cancellation see
+\cite[\S1, pp.~898--899]{Stipsicz2003SpinCobordism}.
+
+The meridian of \(U\) generates \(H_1(\partial\HB{1})\).
+Consequently the lower \(2\)-to-\(1\) handle incidence row is
+\((\lk(U,K_1),\lk(U,K_2))\). Handles of indices three and four
+do not change \(H_1\), so the cokernel of this row is zero.
+Orientations, permutation, and actual framed slides of the two
+\(2\)-handles implement the integer Euclidean algorithm. Choose
+this marked diagram with row \((1,0)\). For the full ordinary
+surgery the matrix then has the form
+\[
+ \begin{pmatrix}0&1&0\\1&d&b\\0&b&c\end{pmatrix}.
+\]
+Its outgoing boundary is \(Y_1\), so it has rank two and
+determinant zero, giving \(c=0\). The intermediate boundaries
+have two distinct algebraic possibilities:
+\begin{enumerate}
+\item Attaching \(K_1\) first gives an integral homology sphere,
+by the determinant \(-1\) of its dotted-to-zero two-component minor
+and three-dimensional Poincar\'e duality.
+\item Attaching \(K_2\) first gives first homology \(\mathbb Z^2\),
+since its two-component minor is zero.
+\end{enumerate}
+The change \(K_2\mapsto K_2-bU\) diagonalizes the remaining
+off-block entry of the ordinary surgery matrix. This is a basis
+calculation in the ordinary framed surgery trace. It supplies no
+geometric cancellation in the original dotted diagram. Keeping just
+\(U_0\cup K_2\) yields the \emph{intermediate} boundary in the
+second order, while the full ordinary surgery has three components
+and boundary \(Y_1\).
+
+\begin{proposition}[A geometric belt intersection]\label{prop:belt}
+If after framed slides or isotopy one of the two actual attaching
+circles meets \(S\) transversely once, \(M\cong S^4\). The same
+criterion holds at the upper end in the dual presentation.
+\end{proposition}
+
+\begin{proof}
+Attach the indicated handle first. Its attaching circle meets the
+belt sphere of the \(1\)-handle in exactly one point of the common
+level. Milnor's first cancellation theorem removes the two critical
+points by changing the function away from its end levels. Product
+flow for this function, fixed in the incoming collar coordinates,
+induces a map to the outgoing level. Pull back the other attaching
+tube by that map. This product identification sets the outgoing
+marking through its flow. In the dotted diagram the same procedure
+slides each passage of the other tube
+over the cancelling handle to clear the \(1\)-handle disk before
+deleting the pair. The bands use disjoint parallel copies along
+the cancelling tube with the given framing. In either description
+the cancellation changes the marking by the trace map. The
+remaining counts are \((1,0,1,1,1)\), or their reverse, and
+Proposition~\ref{prop:one} applies. Signed intersection one by
+itself allows multiple geometric passages.
+\end{proof}
+
+\begin{theorem}[Mixed recognition at a supplied intermediate cut]\label{thm:mixed}
+After a choice of framed slides and order of the two middle handles,
+let \(Y\) be the actual intermediate boundary in a mixed marked
+presentation. If \(Y\cong S^3\) or \(Y\cong Y_2\), then \(M\cong S^4\).
+\end{theorem}
+
+\begin{proof}
+The two pieces \(X_-,X_+\) at \(Y\) each consist of \(\HB{1}\)
+and a single \(2\)-handle, read from their respective ends. The
+upper attaching tube is the dual of the second forward handle,
+transported in the actual outgoing boundary coordinates.
+
+\emph{The \(S^3\) cut.}
+Cap either piece by a marked standard \(D^4\) using a chosen
+boundary diffeomorphism. The dual handle attaches to this cap ball
+along a framed knot in its \(S^3\), and surgery gives
+\(\partial\HB{1}=Y_1\). The surgery homology forces framing zero,
+and Property R forces the unknot as in Proposition~\ref{prop:one}.
+Thus the capped piece is \(\TB{1}\cup\HB{1}\) with its
+transported boundary gluing, and is standard by Theorem A.
+
+Its cap is an actual smoothly parametrized disk in the resulting
+\(S^4\). The complement of such a disk is standard: first shrink
+the disk by the isotopy of parametrized embeddings \(x\mapsto j(tx)\)
+to a small disk about \(j(0)\). In a coordinate chart the rescaling
+of \(j(tx)-j(0)\) by \(t^{-1}\) extends smoothly at \(t=0\) to
+the derivative of \(j\). This isotopes the small disk to its
+local linear ellipsoid and then a coordinate round disk; ambient
+isotopy extension transfers the complement. This is the
+parametrized disk application of Palais's extension theorem
+\cite[Theorem B]{Palais1960Extending}. Hence both \(X_-\) and
+\(X_+\) are standard disks and their given gluing is standard by
+the boundary extension for \(S^3\).
+
+\emph{The \(Y_2\) cut.}
+For either side draw \(\HB{1}\) with dotted unknot \(U\) and
+draw the marked framed attaching circle \(K\). The ordinary
+two-component surgery \(U_0\cup K\) gives \(Y_2\), so apply the
+proof of Gompf--Scharlemann--Thompson's Proposition 3.2. In zero
+surgery on \(U\), that proof isotopes \(K\) in \(S^1\times S^2\)
+into a three-ball, where Property R identifies it as the unknot.
+Here use that isotopy directly in the actual \(\partial\HB{1}\).
+It carries the framing and extends through a collar. The framing
+in the ball is zero by \(H_1(Y_2)=\mathbb Z^2\): surgery in the
+ball must add a free factor to \(H_1(S^1\times S^2)\).
+This proves
+\[
+ X_\pm\cong (S^1\times D^3)\natural(S^2\times D^2),
+\]
+with the resulting coordinates on the actual gluing.
+
+In the \(S^2\times D^2\) summand of \(X_-\), replace the interior
+product neighborhood of \(S^2\times\{0\}\) by \(D^3\times S^1\).
+The remaining annulus is a product collar on \(S^2\times S^1\);
+thus the replaced \(X_-\) is \(\HB{2}\) with the same outer
+marking. The discrepancy between the given gluing and the product
+gluing matching boundary connected summands extends over
+\(\HB{2}\). The closed surgered manifold is therefore
+\((S^1\times S^3)\#S^4\cong S^1\times S^3\). Here the first
+summand is the double of \(S^1\times D^3\), and the second is
+the union \((S^1\times D^3)\cup(S^2\times D^2)\) in the
+product boundary of \(D^2\times D^3\).
+
+The inverse surgery on the actual core circle \(\gamma\) of the
+inserted product recovers \(M\). Removing its open tubular
+neighborhood preserves fundamental group by general position for
+paths and disks relative to a circle in dimension four. Its
+boundary has one circle generator, mapping to the class of
+\(\gamma\); filling with \(D^2\times S^2\) kills this class.
+Thus \(1=\pi_1(M)=\mathbb Z/\langle[\gamma]\rangle\), and
+\([\gamma]=\pm1\). Choosing its orientation gives a free
+homotopy to the standard factor circle. Relative parametric
+transversality makes the homotopy an isotopy: the zero-tangent
+condition has codimension four in the two-dimensional parameter
+space, and the equal-time double-point condition has codimension
+four in the three-dimensional pair-and-time space. By isotopy
+extension and tubular-neighborhood uniqueness the complement of
+the framed tube is identified with \(S^1\times D^3\). The original
+framing induces a boundary diffeomorphism to \(D^2\times S^2\),
+and Theorem A at \(k=1\) handles this actual identification.
+\end{proof}
+
+In the normalized diagram an integral homology sphere cut is
+\(S^3\) if it is simply connected, by the three-dimensional
+Poincar\'e theorem. Simple connectivity of \(M\) alone supplies
+no such conclusion from van Kampen: at an integral homology sphere
+cut each side is contractible already. In fact its single
+\(2\)-handle kills the generator of its single \(1\)-handle group,
+since for a dotted-to-zero surgery minor with linking \(n\)
+one has determinant \(-n^2=\pm1\). Each side then has trivial
+fundamental group and no reduced homology, and so is contractible.
+Likewise first homology \(\mathbb Z^2\) is only a necessary
+condition for the \(Y_2\) cut.
+
+\section{An exterior height test}\label{sec:exterior}
+
+\begin{proposition}\label{prop:exterior}
+Cut \(M=P\cup Q\) along a smooth common boundary. Give \(P\) a
+smooth immersion into \(\mathbb R^5\) up to the boundary.
+Suppose for almost every \(u\in S^4\) its height agrees on \(P\)
+with a smooth Morse function on the given \(M\) having at most
+\(k(u)\) index-two points in \(\operatorname{int}Q\), where \(k\)
+is measurable. Put \(D=\int_{S^4}(2-k(u))_+\,d\sigma\) in ordinary
+spherical area. If \(D>0\) and \(E_+(g;P)\le4D/3\), then
+\(M\cong S^4\).
+\end{proposition}
+
+\begin{proof}
+The normal image of the smooth three-dimensional boundary and its
+antipode are null. Off those images the scalar extension, whose
+first derivative agrees with the known height at the seam, has
+no critical point there. Its exterior count follows from
+Propositions~\ref{prop:one} and \ref{prop:averages}: on a nonstandard
+source there are at least \((2-k(u))_+\) exterior middle points,
+so \(2I_2(P)\ge D\). Because \(D>0\), an open exterior set has
+middle signature. Lemma~\ref{lem:weyl} gives the strict inequality
+\(E_+(g;P)>4D/3\). Only the known exterior is used for the curvature
+calculation. The scalar extensions can vary with direction.
+\end{proof}
+
+For example, suppose finitely many disjoint patches agree with the
+exterior on their marked boundary collars through the quadratic
+graphs
+\[
+ (x,y)\in\Omega_j\longmapsto
+ \bigl(R_j(x,y),\,R_jt_j(|y|^2-|x|^2)/2\bigr),
+ \qquad R_j,t_j>0 .
+\]
+Ambient rigid motions can be included in the marks. The filling
+heights then have one middle point in patch \(j\) precisely on
+the interior normal image \(N_j\) or its antipode, up to null
+sets. Indeed the graph Hessian has signature \((2,2)\) and the
+upward unit Gauss map is one-to-one. Its gnomonic coordinate is
+\(p=-t_j\operatorname{diag}(-1,-1,1,1)(x,y)\). The round metric
+of the chart \(p\mapsto(p,1)/\sqrt{1+|p|^2}\) has one
+eigenvalue \((1+|p|^2)^{-2}\) in the radial direction and three
+\((1+|p|^2)^{-1}\) in transverse directions. Consequently
+\[
+ |N_j|=t_j^4\int_{\Omega_j}(1+t_j^2|z|^2)^{-5/2}\,dz,\qquad
+ k=\sum_j{\bf 1}_{N_j\cup(-N_j)}.
+\]
+In particular
+\[
+ \frac D2=\omega-\sum_j |N_j|+
+                 \frac12\int_{S^4}(k-2)_+\,d\sigma .
+\]
+If the domains are copies of a domain star-shaped about zero in
+common vertical and horizontal coordinates, their normal images
+are nested via the gnomonic coordinates. Then
+\(D/2=\omega-|N_{(1)}|-|N_{(2)}|\) uses the two largest areas,
+with absent terms zero. This proposition controls the exterior
+energy under supplied scalar fillings of the prescribed germs.
+It does not provide a bound on the topology of a generic
+two-middle-handle diagram.
+
+\section{A calibration on a single embedded sphere}\label{sec:example}
+
+The following example supplies the actual disk and tube data in
+a common height level. It is built on the standard sphere.
+In a regular height box use \(w=(x_1,x_2,y)\) and \(v\), and let
+\(\chi(w,v)\) be a smooth cutoff equal to one on the \(d\)-ball
+and zero off the \(2d\)-ball. For small fixed \(a>0\), put
+\[
+ \begin{aligned}
+ Q(w)&=-|x|^2+y^2,\\
+ P_{\tau,a}(w,v)&=Q(w)+v^3+3a^2v-6\tau a^2v\chi(w,v),\\
+ \psi_a(w,v)&=(w,P_{0,a}(w,v)),\qquad
+ U_{\tau,a}=P_{\tau,a}\circ\psi_a^{-1},\qquad 0\le\tau\le1 .
+ \end{aligned}
+\]
+The last coordinate of \(\psi_a\) has positive derivative
+\(3(v^2+a^2)\) and is onto at each \(w\). Thus \(U_{0,a}\) is the
+affine height coordinate \(T\), and \(U_{\tau,a}=T\) off a
+compact set. On the transition annulus \(D(Q+v^3)\) has a
+positive minimum in norm and the cutoff perturbation of the
+differential is \(O_d(a^2)\). Outside the cutoff the \(v\)
+derivative remains positive. In the core at \(\tau=1\) the
+polynomial is \(Q+C_a(v)\), \(C_a(v)=v^3-3a^2v\).
+Its only critical points are \((0,a)\) of index two and value
+\(-2a^3\) and \((0,-a)\) of index three and value \(2a^3\).
+Their Hessians are read directly from the quadratic part and
+\(C_a''(v)=6v\). The parameter passes through the usual cubic
+birth at \(\tau=1/2\)
+\cite[\S3.5, equation (3.5.1)]{BorodzikPowellTeichner2025LinkConcordance}.
+The disjoint insertions can be carried out at separate parameter
+times to give a path with one birth at a time.
+
+Choose two fixed disjoint angular boxes
+\(\Theta_j(w)\subset S^3\) on the upper round hemisphere, and take
+parameters \(a_2=1.1a_1\) within the above margins. Choose \(T_0\)
+so that both insertions and their modified values are supported
+in the interior of \((-T_0,T_0)\), and choose \(R_0^2>4T_0+1\).
+For sufficiently small \(r>0\), put \(h_*=\sqrt{1-R_0^2r^2}\)
+and use the boxes
+\[
+ z=r\sqrt{R_0^2-2h_*T-r^2T^2}\,\Theta_j(w).
+\]
+The round graph height at \(z\) is \(h_*+r^2T\). Replace it by
+\(h_*+r^2U_{\tau,a_j}(w,T)\), retaining the horizontal coordinates.
+The boxes are disjoint and match the round graph on neighborhoods
+of their faces. Their heights remain positive, so the horizontal
+projection gives an embedding on the upper graph with no collision
+with the lower hemisphere. In normalized coordinates \(z/r\)
+the latitude and angular inverses have bounded first and second
+derivatives on the fixed supporting boxes. Thus the changed graphs
+have slopes \(O(r)\) and uniformly bounded Hessians, with the
+two fixed birth parameters held constant. Gauss gives
+\(|W^\pm|_{\mathrm{HS}}^2\le C|A|^4\) and the changed volume
+is \(O(r^4)\). Therefore \(E_\pm=O(r^4)\), uniformly in \(\tau\).
+At \(\tau=1\) the actual vertical height has counts
+\((1,0,2,2,1)\), since its index-two values are below all its
+index-three values and the poles remain the two extrema.
+
+Normalize heights by subtracting \(h_*\) and dividing by \(r^2\).
+Set \(d_0=3a_2^3\). The levels \(-d_0,0,d_0\) are regular.
+On the relevant local pieces choose the negative coordinate
+gradient of \(Q+C_a\) as the descending field, and extend to a
+global descending gradient-like field by a partition of unity.
+Both fields strictly decrease height on the overlaps away from
+critical points. In the box with parameter \(a\), the actual
+index-two attaching circle at \(-d_0\) is
+\[
+ K=\{v=a,\ y=0,\ |x|^2=d_0-2a^3\}.
+\]
+Near \(v=a\) use \(V=(v-a)\sqrt{v+2a}\) so that
+\(C_a(v)=-2a^3+V^2\). This gives the framed tube with
+\(x=\sqrt{d_0-2a^3+y^2+V^2}\,\theta\) in the \((y,V)\)
+normal coordinates. The same lower level contains the spanning
+disk
+\[
+ \{y=0,\ v_0\le v\le a,\ |x|^2=C_a(v)+d_0\},
+\]
+where \(v_0\in(-3a,-2a)\) is the simple left root. Its existence
+uses \(2<d_0/a^3<4\), since \(C_a(-3a)=-18a^3\) and
+\(C_a(-2a)=-2a^3\). The circles collapse smoothly at \(v_0\),
+as one can solve for \(v\) in terms of \(|x|^2\) there. The
+radial derivative vanishes at the boundary \(v=a\). The vector
+\(\partial_y\) is tangent to the level along the disk and is a
+disk-normal framing vector, so the handle push-off has zero
+linking relative to the disk. Both disks and their tubes lie
+in the uncut polynomial regions for the fixed sufficiently
+small \(a_j\). The entire lower level is an \(S^3\) by flow from
+an unchanged lower latitude. The disks lie in separate angular
+boxes, and their three-dimensional regular neighborhoods are
+disjoint balls. Thus the actual link in the common incoming
+level is the split unlink with both framings zero.
+
+At the actual middle level \(0\) the belt circle of the
+index-two handle and the attaching sphere of its index-three
+partner in that box are respectively
+\[
+ \begin{split}
+ B&=\{x=0,\ 0\le v\le\sqrt3 a,\ y^2=-C_a(v)\},\\
+ T&=\{y=0,\ -\sqrt3 a\le v\le0,\ |x|^2=C_a(v)\}.
+ \end{split}
+\]
+They are smooth at each collapse by simplicity of the relevant
+roots. The descending field carries \(B\) toward \((0,a)\) and
+the ascending field carries \(T\) toward \((0,-a)\), with both
+trajectories confined to the polynomial core. At \(v=0,x=y=0\)
+the derivative \(C_a'(0)\ne0\) gives level coordinates \((x,y)\).
+The two tangent spaces there are the \(y\)-line and the
+\(x\)-plane, so they meet transversely once. The normal line
+of the \(3\)-handle tubing is \(\partial_y\) along \(T\).
+The two pairs in different boxes are disjoint. The outer levels
+of the two boxes give the original latitude product outside
+the insertions, and regular-height flow transports its markings.
+This verifies both middle handles on one actual height without
+needing to reorder index blocks. The construction provides a
+standard-type check of the one-sided test.
+
+\section*{Provenance and assistance}
+Prepared with OpenAI Codex assistance for Edward B. Baker III on
+25 November 2026. The manuscript consolidates the master
+immersion section and packets E26, E33, E34, E36, E42, E43, E49,
+and E50 at repository base \texttt{483ad3cef5a0af4328c5d35cabbc1f5224d26b1e}.
+The manuscript directory records the input revisions and source formats.
+The requested execution routing was GPT-6.2 Sol/ultra. Actual
+serving model and reasoning effort were unavailable. The manuscript
+assembles conditional implications and a checked standard-type
+example.
+
+\section{Outstanding challenges}\label{sec:open}
+
+Universal existence of a smooth immersion is a qualitative input:
+stable tangent triviality of homotopy spheres, in the rank-five
+range on a four-complex, gives a tangent monomorphism into a
+trivial rank-five bundle, and the positive-codimension immersion
+theorem realizes it \cite[Theorem 3.1]{KervaireMilnor1963Groups}
+\cite[\S6]{Hirsch1959Immersions}. Constructing an induced class
+below \(8\pi^2\) on every smooth homotopy four-sphere is a
+quantitative problem. Shrinking an ambient model by dilation leaves
+its four-dimensional curvature energy unchanged. The small energy
+in Section~\ref{sec:example} instead uses a bounded Hessian and
+a round retained exterior on the standard type.
+
+For a supplied subcritical immersion on a putative nonstandard
+type, Theorem~\ref{thm:band} supplies many directions of the right
+count, so one can ask for a recognized diagram for even one of
+them. A useful selection theorem would have to relate the immersed
+geometry of the selected height to its framed tubes on the smooth
+domain, using the actual comparison if the critical levels are
+reordered. In the mixed case it would suffice to give a belt
+intersection as in Proposition~\ref{prop:belt} or to identify the
+actual intermediate three-manifold in Theorem~\ref{thm:mixed}.
+In the one-sided case it would suffice to find a geometric link
+restriction such as that of Proposition~\ref{prop:onesided}, or
+otherwise identify the marked trace. The averaged count yields
+none of those restrictions. Open coverage of these diagrams and
+quantitative subcritical entry are separate dependencies in the
+recognition program.
+
+\begingroup
+\raggedright
+\bibliographystyle{unsrturl}
+\bibliography{references}
+\endgroup
+\end{document}

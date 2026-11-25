@@ -27,3 +27,7 @@ First manuscript for NECK-E01–E23. It develops buffered caps and smooth-type d
 ## 25 November 2026 · master physical-shell setup
 
 Linked the separated-quantile and critical-annulus inputs to B04/B05. The setup specifies both marked sides, the required physical coordinate bounds and the strict one-cut margins. [Register receipt](research-progress/REGISTER.md#physical-shell-setup) · [Dated launch and inputs](continuation-notes/PHYSICAL_SHELL_LAUNCH_20261125.md)
+
+## 25 November 2026 · Anchored shell in the neck manuscript
+
+Derives positive caps and locates both entire charged sets from an anchored physical annulus. The chart is an input to this implication. [Manuscript and build](manuscript/README.md) · [Assessed editorial return](../../../../master/research-progress/handoffs/E51_COMPANION_DRAFTS_20261125.md).

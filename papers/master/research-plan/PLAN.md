@@ -2,6 +2,8 @@
 
 25 November 2026, prepared for Edward B. Baker III with OpenAI Codex assistance. Current organization follows the [accepted parallel proposal](../brainstorm/notes/PARALLEL_INVESTIGATION_PROPOSAL_20261125.md) and master manuscript at 2689540e6dae1656b7f5ad4be52504db044995f2. [Overview and source versions](../research-overview/OVERVIEW.md) · [Sole master register](../research-progress/REGISTER.md) · [Task ownership crosswalk](../research-progress/handoffs/PARALLEL_OWNERSHIP_20261125.md). The earlier [physical-scale handoff](../continuation-notes/AFTER_PHYSICAL_ENERGY_SCALES_20261125.md) and [immersion handoff](../continuation-notes/AFTER_IMMERSED_HEIGHTS_AND_RICCI_SCALES_20261125.md) preserve the preceding decisions.
 
+The [working papers](../README.md#working-papers-for-the-parallel-investigations) develop intermediate estimates and marked constructions. The master imports a result when it recognizes a specified smooth class, yields an admissible improvement, or eliminates an alternative under identified geometric hypotheses. The [editorial crosswalk](../research-progress/handoffs/E51_COMPANION_DRAFTS_20261125.md) locates the longer arguments.
+
 ## What would prove smooth Poincaré in dimension four?
 
 Fix an arbitrary closed oriented smooth homotopy four-sphere \(M\) and suppose its smooth type is nonstandard. For each such \(M\), it suffices to complete **one** of the following implications. Different constructions may cover different classes of smooth types. A universal conclusion requires a proof that their combined coverage is exhaustive.

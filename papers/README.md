@@ -1,6 +1,6 @@
 # Research papers and investigations
 
-The [master manuscript](master/README.md) develops a variational approach to the smooth four-dimensional Poincaré conjecture. Its [research overview](master/research-overview/OVERVIEW.md) connects the proposed proof to the specialized investigations and the earlier geometric studies.
+The [master manuscript](master/README.md) develops a variational approach to the smooth four-dimensional Poincaré conjecture. Its [research overview](master/research-overview/OVERVIEW.md) connects the proposed proof to the specialized investigations and the earlier geometric studies. The [working papers for the four parallel investigations](master/README.md#working-papers-for-the-parallel-investigations) give the intermediate arguments and their outstanding hypotheses.
 
 | Collection | Investigation | Purpose |
 | --- | --- | --- |

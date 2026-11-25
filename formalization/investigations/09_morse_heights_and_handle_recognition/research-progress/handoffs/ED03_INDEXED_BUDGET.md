@@ -59,3 +59,8 @@ prefix `cf7a5e72e147772f`. The initial issue named the revision recorded
 by E48, `4f56dfe589d3525e`. The E36 note retained digest prefix
 `33bcac0c687b2191`.
 [Source revision record](../../../../../papers/master/reviews/E48_INTEGRATED_MARKED_TESTS.md#inputs-and-checks)
+
+The module passed `lake build +SmoothPoincare.Heights.IntegratedSelection`
+on Lean `4.35.0-rc3`, Lake `5.0.0-src+470d5ce` and unchanged pinned
+manifest `839111aae86b6935`. A separate import checked both statements
+and reported only `propext`, `Classical.choice` and `Quot.sound` for each.

@@ -32,17 +32,22 @@ infimum bound from the complete energy comparison.
 
 \begin{lemma}[Weyl energy on the middle-signature locus]
 \label{lem:routes-middle-weyl}
+\uses{prop:ed03-induced-block}
+\lean{SmoothPoincare.middleSignatureWeylBound, SmoothPoincare.inducedMiddleWeylBound}
+\leanok
 In the induced metric of a smooth Euclidean hypersurface, take principal
 curvatures \((-a,-b,c,d)\), all four parameters positive. The three pair
 sums are \(ab+cd,-ac-bd,-ad-bc\). For either Weyl endomorphism the squared
 Hilbert--Schmidt norm is one twelfth of the sum of the three squared
 differences between these sums. It is at least \((8/3)abcd\), with
-equality precisely when \(a=b=c=d\). The scalar algebra and the Gauss
-equation identifying the actual curvature are separate proof targets.
+equality precisely when \(a=b=c=d\). The signed algebra is checked, including the equality case.
+The principal-frame realization of these two blocks is recorded below.
 \end{lemma}
 
 \begin{lemma}[Shape-operator deficit]
 \label{lem:routes-shape-deficit}
+\lean{SmoothPoincare.shapeDeficitBound, SmoothPoincare.shapeDeficitBound_sharp}
+\leanok
 For arbitrary real principal curvatures in the same block normalization,
 \[
   \tfrac16 |A^\circ|^4-|W^\pm|_{\rm HS}^2
@@ -50,6 +55,16 @@ For arbitrary real principal curvatures in the same block normalization,
 \]
 The tuple \((-1,3,3,3)\) realizes equality with negative determinant.
 \end{lemma}
+
+\begin{proof}
+\leanok
+Write the trace-free part in the three Hadamard coordinates. Their
+pairwise squared products give the nonnegative deficit. For negative
+determinant, permutation and simultaneous sign reversal reduce to one
+negative entry and three ordered positive entries. The resulting
+polynomial inequality gives the stated coefficient. Substitution of the
+displayed tuple gives sharpness.
+\end{proof}
 
 \begin{lemma}[Indexed Gauss mass]
 \label{lem:routes-indexed-mass}
@@ -170,3 +185,266 @@ At a zero of the sign detector the Euler inequality forces
 sign. Take the square root of the Euler inequality and use each actual
 framed metric to witness membership.
 \end{proof}
+
+\begin{lemma}[Weighted defect in a fixed measured chart]
+\label{lem:ed03-weighted-defect}
+\lean{SmoothPoincare.fixedCrossTerm_tendsto_zero, SmoothPoincare.weightedDefect_tendsto_zero}
+\leanok
+In a fixed real Hilbert-valued \(L^2\) chart let \(r_i\rightharpoonup0\),
+\(F\in L^2\), and let \(0\le\chi\le1\) be measurable.
+Suppose source energies tend to the real admissible infimum and
+actual endpoint energies belong to that set. Assume the endpoint change is
+\[
+ \int\bigl(\|F+(1-\chi)r_i\|^2-\|F+r_i\|^2\bigr)+o(1).
+\]
+Then \(\int(2\chi-\chi^2)\|r_i\|^2\to0\) and
+\(\int_{\{\chi=1\}}\|r_i\|^2\to0\).
+\end{lemma}
+\begin{proof}
+\leanok
+Pair the weak limit with the single \(L^2\) test \(\chi F\).
+Expand the squares and apply the infimum bound to the endpoint.
+The nonnegative weight equals one on the stated level set.
+\end{proof}
+
+\begin{lemma}[Physical quantiles on a compact measured source]
+\label{lem:ed03-measure-quantiles}
+\lean{SmoothPoincare.continuous_physicalBallMass, SmoothPoincare.exists_isChiralQuantile, SmoothPoincare.exists_lowMass_quantileAnnulus_at, SmoothPoincare.chiralQuantileAlternatives, SmoothPoincare.isChiralDiffuse_iff_tendsto_limsup}
+\leanok
+Use finite chiral and full measures for each physical metric, with positive
+total chiral mass and a common upper bound \(C\) on full mass.
+On a compact nonempty source with null distance spheres for the chiral
+measure, every interior positive chiral quantile has an attaining center
+at its least radius. For these quantiles either the normalized small-ball
+mass is diffuse in the ordered limits of Lemma~\ref{lem:master-quantiles},
+or there is a subsequence with a fixed \(0<\theta<1/2\) whose
+\(\theta\)-radius is negligible relative to its median radius.
+About the same attaining centers one retains the entire median exterior
+of mass at least \(e_i/2\). For each fixed shell ratio \(q>1\) and
+each tolerance, sufficiently late indices admit a shell between the
+two radii with full mass at most that tolerance. An arbitrary fixed
+multiplicative guard may be reserved on either side by selecting a wider
+shell first.
+\end{lemma}
+\begin{proof}
+\leanok
+Null spheres give joint continuity of ball mass by dominated convergence.
+Compact minimization selects an attaining center and radius. Negating uniform
+diffuseness yields a strict subsequence. Among \(n\) disjoint shells of ratio
+\(q\) one has full mass at most \(C/n\). The median bound holds at every
+center, including the one already chosen for the smaller ball.
+\end{proof}
+
+\begin{lemma}[The measured remainder after actual repairs]
+\label{lem:ed03-measured-residual}
+\uses{prop:ed03-measured-comparisons}
+\lean{SmoothPoincare.geometricChiralMeasure, SmoothPoincare.geometricEnergyBoundOfRepairFamily, SmoothPoincare.energyBoundOfRepairFamily}
+\leanok
+Fix a tolerance and one reindexed minimizing sequence on the oriented source.
+Use its Levi--Civita curvature and its own Riemannian volumes. Suppose
+measurable regions are pairwise disjoint up to chiral-null sets, their
+cardinalities are eventually bounded, and individual repaired positive
+metrics on this type have the asserted complete costs. If the total
+surcharge and the chiral mass of the complement of their union have
+eventual upper bounds \(b+\epsilon\) and \(\omega+\epsilon\) for
+every \(\epsilon>0\), then \(I\le b+\omega\).
+\end{lemma}
+\begin{proof}
+\leanok
+Add the measured complement to the summed regional estimate. The bounded
+cardinality times the source excess tends to zero at this fixed tolerance.
+Pass to the limit and then let the allowance in the two bounds tend to zero.
+\end{proof}
+
+\begin{lemma}[The two cost terms in height selection]
+\label{lem:ed03-indexed-budget}
+\uses{lem:routes-indexed-mass,prop:routes-middle-count,lem:routes-height-selection}
+\lean{SmoothPoincare.indexedHeight_energy_split, SmoothPoincare.prob_and_exists_regular_twoMiddle_of_subcritical_energy}
+\leanok
+For the actual framed metric suppose the pointwise middle-locus Weyl
+bound, indexed area identity on the specified probability measure,
+integrability, and almost-everywhere count floor hold.
+Writing \(\omega=8\pi^2/3\), the energy above \(8\omega/3\) equals
+\[
+ E_+(M\setminus U)
+ +\int_U\bigl(|W^+|^2-\tfrac83\det A\bigr)
+ +\tfrac43\omega\,(\mathbb E m_2-2).
+\]
+Each term is nonnegative. If \(E_+<8\pi^2\) and the regular directions
+are conull, one can select a regular two-middle direction and retain
+any data supplied on that event for that same direction.
+\end{lemma}
+\begin{proof}
+\leanok
+Split the physical integral over \(U\) and its complement and substitute
+the indexed identity. The first two terms bound the mean count.
+Apply the strict probability estimate and intersect the event with the
+regular set.
+\end{proof}
+
+\begin{lemma}[What equality at the immersed threshold forces]
+\label{lem:ed03-equality}
+\uses{lem:ed03-indexed-budget}
+\lean{SmoothPoincare.indexedHeight_endpoint_saturation}
+\leanok
+In the hypotheses of the measured split, suppose \(U\) is open and the
+pointwise middle deficit is continuous on it. If \(E_+\le64\pi^2/9\),
+then \(E_+=64\pi^2/9\), \(E_+(M\setminus U)=0\),
+\(\int_U\det A=8\pi^2/3\), \(U\ne\varnothing\), the pointwise Weyl
+inequality saturates everywhere on \(U\), and \(m_2=2\) almost surely.
+\end{lemma}
+\begin{proof}
+\leanok
+Every nonnegative term in the excess must vanish. The indexed identity
+gives the positive middle Gauss mass. Riemannian volume charges every
+nonempty open set, so continuity turns the almost-everywhere equality
+into equality on the full open locus.
+\end{proof}
+
+\begin{lemma}[Selecting the positive minimizing metrics]
+\label{lem:ed03-positive-sequence}
+\uses{def:master-admissible}
+\lean{SmoothPoincare.existsGeometricMinimizingSequence, SmoothPoincare.existsPhysicalYamabeMinimizingSequence}
+\leanok
+An actual framed positive class of energy below \(8\pi^2\) on the fixed
+oriented type supplies a sequence of smooth positive metrics with integrable
+framed energy tending to the same real infimum. Some fixed
+\(\delta>0\) bounds every energy by \(8\pi^2-\delta\).
+If each such framed class has a volume-one scalar-constant Yamabe
+representative with the same energy, the sequence can be chosen in
+those representatives.
+\end{lemma}
+\begin{proof}
+\leanok
+Choose admissible values within a shrinking tolerance of the infimum,
+keeping every tolerance smaller than the entry margin. Extract the
+metric and frame witnessing each chosen value. In the normalized
+version use the supplied conformal representatives. Adding their smooth
+log factors translates the domain of the class infimum bijectively.
+\end{proof}
+
+\begin{proposition}[Both chiral blocks of an induced metric]
+\label{prop:ed03-induced-block}
+\lean{SmoothPoincare.metricCurvatureFrameTensor_eq_principalGauss, SmoothPoincare.inducedAntiChiralBlock_eq, SmoothPoincare.inducedChiralBlock_normSq, SmoothPoincare.inducedMiddleWeylBound, SmoothPoincare.inducedShapeDeficitBound}
+\leanok
+Supply a smooth isometric map into Euclidean five-space, the oriented
+orthonormal tangent frame at a point, a unit normal there, and signed
+principal curvatures \(k_i\) diagonalizing the actual normal-valued
+second fundamental form. In the normalized complementary sum and
+difference wedge bases, both trace-free blocks agree. Their squared norm
+is \(\sum_{j<l}(s_j-s_l)^2/12\), with \(s_j\) the three pair sums.
+The signed middle bound with its equality case and the all-sign
+shape deficit therefore hold for the curvature of that induced metric.
+\end{proposition}
+\begin{proof}
+\leanok
+Apply the Gauss equation to the metric-preserving differential, using
+the slot order \(R_{abdc}\). The ambient Euclidean term vanishes.
+In a principal frame the two cross terms between complementary
+wedges vanish. Compress either diagonal block, remove its trace, and
+apply the signed algebra to the same principal tuple.
+\end{proof}
+
+\begin{corollary}[Balanced principal spectrum on the open middle locus]
+\label{cor:ed03-balanced-endpoint}
+\uses{lem:ed03-equality,prop:ed03-induced-block}
+\lean{SmoothPoincare.inducedEndpoint_forces_balancedPrincipalFrames}
+\leanok
+Apply Lemma~\ref{lem:ed03-equality} on a single immersion with oriented
+principal frames matching the energy frame on \(U\). Identify the determinant
+there with the signed principal product. At the inclusive threshold,
+throughout the nonempty open \(U\) the spectrum has the form
+\((-k,-k,k,k)\) with \(k>0\) pointwise.
+\end{corollary}
+\begin{proof}
+\leanok
+Apply the induced middle comparison to supply the pointwise input
+of the energy split. At saturation its equality classification identifies
+all four absolute principal curvatures at that point.
+\end{proof}
+
+\begin{lemma}[Physical distance spheres and attainment on the metric sequence]
+\label{lem:ed03-distance-spheres}
+\uses{lem:ed03-measure-quantiles}
+\lean{SmoothPoincare.riemannianVolume_physicalDistanceSphere_eq_zero, SmoothPoincare.geometricChiralMeasure_physicalDistanceSphere_eq_zero, SmoothPoincare.exists_metricChiralQuantileAlternatives}
+\leanok
+On a compact connected boundaryless model of positive dimension, every
+intrinsic distance sphere of a smooth Riemannian metric has zero volume.
+The physical curvature measure with chiral density also gives it zero mass.
+In dimension four the actual positive-energy sequence, with integrable
+chiral and full densities and a uniform full-curvature budget, therefore
+selects its own attaining quantiles and satisfies the measured alternatives.
+\end{lemma}
+\begin{proof}
+\leanok
+In an orthonormal identification of the tangent space, a minimizing
+geodesic places each point of the physical sphere in the exponential
+image of a Euclidean sphere of the same radius. This set has Haar
+measure zero and its smooth image has zero Riemannian volume. Absolute
+continuity gives the chiral assertion. Apply quantile attainment to
+each metric before selecting a subsequence.
+\end{proof}
+
+\begin{lemma}[A repair reaching the finite threshold]
+\label{lem:ed03-repair-threshold}
+\uses{lem:ed03-measured-residual}
+\lean{SmoothPoincare.geometricRepairThreshold, SmoothPoincare.geometricRepairLiminf}
+\leanok
+Let a nonempty family of \(N\) actual admissible repairs have total cost
+\(\Gamma\) and full uncovered chiral mass \(r\) on a source of energy \(e\).
+Then \(I\le r+\Gamma+(N-1)(e-I)\). If
+\(r+\Gamma+(N-1)(e-T)\le T\), some repair in that family has energy at most
+\(T\). For an eventual sequence of such families, \(I\) is bounded by the
+extended-real lower limit of the surplus at \(T=I\), for variable \(N\).
+\end{lemma}
+\begin{proof}
+\leanok
+Split the source integral over the disjoint regions and their entire
+complement. Sum the supplied individual repair bounds. Under the threshold
+condition their sum is at most \(NT\), so at least one bound is at most \(T\).
+The lower-limit claim follows from the eventual pointwise bound.
+\end{proof}
+
+\begin{corollary}[Quantiles of one normalized minimizing sequence]
+\label{lem:ed03-yamabe-quantiles}
+\uses{lem:ed03-distance-spheres,lem:ed03-positive-sequence}
+\lean{SmoothPoincare.existsPhysicalYamabeMinimizingSequenceWithQuantiles}
+\leanok
+Under positive subcritical entry, same-energy Yamabe realization, and
+positive fixed-type infimum, choose volume-one minimizing metrics and
+their frames once. If their full densities are integrable with a uniform
+budget, these same metrics and frames admit the physical quantile
+alternatives of Lemma~\ref{lem:ed03-distance-spheres}.
+\end{corollary}
+\begin{proof}
+\leanok
+Each energy lies in the admissible set, hence is at least the positive
+infimum. Use these positive energies to take quantiles of the original
+sequence, retaining its uniform subcritical gap, scalar normalization
+and convergence.
+\end{proof}
+
+\begin{lemma}[Projected Codazzi equations and mixed Gauss curvature]
+\label{lem:ed03-codazzi-jets}
+\uses{prop:ed03-induced-block}
+\lean{SmoothPoincare.saturatedCodazziJets_zero, SmoothPoincare.saturatedPrincipalFrame_noCurvatureCommutation}
+\leanok
+For the signed rank-two blocks of a balanced spectrum, suppose
+\(T_{ijk}=\langle(\nabla_i A)e_j,e_k\rangle\) is symmetric in the first
+two and in the last two indices. Suppose the differentiated eigenvalue
+equations give \(T_{ijk}=\delta_{jk}\sigma_j\partial_i a\) when
+\(\sigma_j=\sigma_k\). Then \(da=0\) and \(T=0\).
+In an actual balanced principal frame of an isometric immersion with
+\(a>0\), its curvature cannot commute with its shape operator.
+\end{lemma}
+\begin{proof}
+\leanok
+For each index choose a distinct partner with the same sign and exchange
+the first two indices to get its derivative zero. Every triple has a
+same-sign pair, so symmetry gives the vanishing of the whole tensor.
+If curvature commuted with the shape, the mixed sectional entry would
+vanish. Gauss gives that very entry as \(-a^2\).
+\end{proof}
+The projected first-order equations require smooth adapted data on the
+open locus. Passing from there to curvature commutation requires the
+differential identity for a parallel endomorphism on that neighborhood.

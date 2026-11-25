@@ -48,15 +48,22 @@ one-chirality energy of \(9\pi^2\). In the positive Yamabe band
 a supplied smooth asymptotically Euclidean limit, or a suitably
 marked finite-puncture base, to the original smooth type. We extract
 a separating collar between widely separated chiral energy quantiles
-for exactly Bach-flat sources. For sources with small integrated
+for exactly Bach-flat sources. On a fixed physical minimizing
+sequence, a sufficiently wide elliptic spherical chart with
+vanishing full-curvature integral and one point at controlled
+distance from the inner center determines both complete sides.
+Fixed small distortion and harmonic coordinates on the central
+annulus then suffice for positive caps and the minimizing
+contradiction. For sources with small integrated
 Bach norm, pointwise curvature can diverge on low-energy balls even
 after Yamabe minimization. We give hypotheses for preserving a
 supplied cut under perturbation, and an initial-metric comparison
 outside a small exceptional set from local Ricci smoothing. We
 also analyze the conformal and closed critical alternatives. The
 results leave open the existence of an appropriate starting class
-on every smooth homotopy four-sphere and the extraction of a
-separating weak collar from the two critical curvature bounds.
+on every smooth homotopy four-sphere and the extraction of the
+anchored chart and its critical gauge on a general minimizing
+sequence.
 \end{abstract}
 
 \tableofcontents
@@ -1009,6 +1016,8 @@ curvature. The proof above obtains the full smaller shell
 using the pointed comparison and fixes the buffer after
 taking that limit \cite[Theorem 3.1]{ChangQingYang2006Gap}.
 
+\input{anchored_physical_shell}
+
 \section{Almost Bach-flat sources}
 
 \subsection{Curvature spikes in Yamabe gauge}
@@ -1347,12 +1356,13 @@ separate requirement
 The harmonic-coordinate route of Deane Yang requires
 supercritical local Ricci control
 \cite[Theorems 3.1 and 7.1]{Yang1992ConvergenceII}.
-For a balanced cut the remaining requirements include
-a whole separating annulus in the physical source and
-sufficient comparison on both buffers, including across
-any exceptional regions. Uniform upper physical volume
-ratios on those scales are themselves additional to the
-bounds in Section~\ref{sec:quantiles}.
+For the criterion of Section~\ref{sec:anchored-shell} the
+remaining requirements include one wide embedded chart in
+the physical source, its center-distance bound, and the
+central critical coordinate estimate across any exceptional
+regions. Uniform upper physical volume ratios on those scales
+are themselves additional to the bounds in
+Section~\ref{sec:quantiles}.
 
 \input{closed_and_conformal_alternatives}
 
@@ -1360,21 +1370,29 @@ bounds in Section~\ref{sec:quantiles}.
 
 The variational arguments begin with a smooth positive
 subcritical conformal class on a fixed smooth type.
-Existence of such a class on every homotopy four-sphere
-and selection of an almost Bach-flat minimizing sequence
-in the physical Yamabe gauge are independent questions.
-Given such a sequence, the quantitative descent excludes
-a full embedded smooth ALE limit in the specified band
-and the finite-cut inequality excludes an extracted
-balanced spherical cut. For weak sources it remains to
-derive a first-order separating comparison, or another
-energy estimate that controls the entire region between
-the quantiles. The diagonal comparison on an embedded
-AE end covers only a specified portion of that region.
-A whole smooth marked conformal base would give another
-route. Extracting such a base from the weak critical
-curvature bounds remains open. In the absence of
-descent a nonround closed critical class may remain.
+Existence of such a class on every homotopy four-sphere remains
+open. On one fixed-type minimizing sequence with separated
+quantiles, the outstanding geometric step is to extract one
+physical source annulus of the width in \eqref{eq:anchored-width},
+at an intermediate scale and with bounded rescaled distance to
+the attaining center. Its full curvature must vanish in integral,
+and its central metric must meet the first-order or critical
+coordinate test of Proposition~\ref{prop:neck-critical-shell}.
+The small-side estimate already determines the positions of
+the two entire marks once the wide chart is supplied. Physical
+transition volume and protected ball regularity give partial
+tests, with the stated additional comparison hypotheses.
+
+Selecting a minimizing sequence with vanishing integrated
+Bach norm in the physical Yamabe gauge is a separate question.
+For that class the quantitative descent excludes a supplied full
+embedded smooth ALE limit with its specified end regularity, and
+the diagonal comparison covers a specified portion of an embedded
+AE end. A whole smooth marked conformal base would give another
+route. Extracting such a base on weak critical curvature bounds
+remains open, as does termination after a round base with a charged
+puncture. In the absence of descent a nonround closed critical
+class may remain.
 The Einstein, harmonic-chirality and conformal criteria
 above give restrictions on that alternative under their
 stated hypotheses.
@@ -1385,7 +1403,13 @@ assistance on 25 November 2026 from project checkout
 \texttt{5ff7014}. The exact serving model and reasoning
 effort for manuscript preparation are unavailable.
 The inputs are the dated neck geometry derivations and
-the three joint collar assessments. The arguments concern
+the three joint collar assessments. The physical-shell revision
+was drafted on 25 November 2026 from \texttt{483ad3c} with
+OpenAI Codex assistance. It uses the incoming master E38/E41
+return, the E16 and E25 local and component tests, and the
+master critical-annulus and short-splice arguments. The
+accompanying source inventory identifies the checked versions.
+The arguments concern
 smooth Riemannian sources, with quotient models and
 removability used only as specified. Claims about supplied
 markings, exact Bach compactness and almost Bach-flat

@@ -42,3 +42,12 @@ integrated error, weak convergence of the actual densities, and admissible
 membership on the original type. This packet uses the endpoint identity at
 $s=1$. The uniform path estimate and the subsequent compact variation are
 separate obligations. [Independent local comparison](../../../../../papers/master/reviews/E08_LOCAL_REPLACEMENT_CHECK.md)
+
+## Verification
+
+`lake env lean SmoothPoincare/Variational/Defect.lean` and
+`lake build SmoothPoincare.Variational.Defect` passed under Lean
+`4.35.0-rc3` with Mathlib `c55e6e786f49` and DifferentialGeometry
+`788efe978944`. The targeted build had 2,935 jobs. A fresh module import
+checked both public statements. `#print axioms` reported only `propext`,
+`Classical.choice` and `Quot.sound` for both. [Lake manifest](../../../../lake-manifest.json)

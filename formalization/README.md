@@ -12,7 +12,7 @@ The Lake package has three public imports.
 | --- | --- |
 | [SectionsAndConnections](SectionsAndConnections.lean) | Coordinate Weyl pilot and finite residual arithmetic. |
 | [FirstOrderTwistor](FirstOrderTwistor.lean) | Existing neck-accounting, marked-cut and spinor proofs. The [route-to-module index](FirstOrderTwistor/README.md) locates the main results and their owners. |
-| [SmoothPoincare](SmoothPoincare.lean) | The master manuscript's [variational](SmoothPoincare/Variational/Basic.lean) and [physical-scale](SmoothPoincare/PhysicalScales/Basic.lean) imports. At opening these expose existing foundations. [Edition 02 evidence](investigations/research-progress/02_BASELINE.md) |
+| [SmoothPoincare](SmoothPoincare.lean) | Actual measured repairs and two-sided cuts, quantiles of the physical minimizing sequence, principal curvature of an isometric immersion, and the conditional height and Codazzi results. [Verified results and hypotheses](investigations/research-progress/handoffs/ED03_INTEGRATION_20261125.md) |
 
 The first pilot follows the Sections and Connections manuscript.
 The [three-axis Weyl module](SectionsAndConnections/ThreeAxisWeyl.lean)

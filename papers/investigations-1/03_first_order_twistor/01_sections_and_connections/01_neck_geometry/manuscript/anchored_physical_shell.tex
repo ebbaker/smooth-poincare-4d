@@ -1,0 +1,364 @@
+\section{A physical shell located by one point}\label{sec:anchored-shell}
+
+For the fixed-type minimizing problem take one smooth, closed,
+oriented homotopy four-sphere \(M\), with \(g_i\) as in
+\eqref{eq:band} and \(E_i\to I^+(M)\). Let \(r_i(\alpha)\) be
+the least physical radius \(r\) for which the maximum of
+\(\mu_i(B_{g_i}(x,r))\) over all \(x\in M\) reaches \(\alpha E_i\),
+where \(\mu_i=|W^+_{g_i}|_{\rm HS}^2dV_i\). This maximum is
+attained and continuous in \(r\). Indeed the ball masses are
+jointly continuous in the center and radius by the zero mass of
+distance spheres, and \(M\) is compact. On one subsequence with
+\(a_i=r_i(\theta)\), \(b_i=r_i(1/2)\), and \(a_i/b_i\to0\), fix
+\(0<\theta<1/2\) and take \(x_i\) attaining the smaller quantile.
+Writing \(d_i=d_{g_i}(x_i,\cdot)\), the two full sets are
+\begin{equation}\label{eq:anchored-marks}
+ D_{i,-}=\{d_i<a_i\},\qquad D_{i,+}=\{d_i\ge b_i\},\qquad
+ \mu_i(D_{i,-})=\theta E_i,\qquad \mu_i(D_{i,+})\ge E_i/2.
+\end{equation}
+The last estimate uses the maximum over centers at \(b_i\).
+The block selection of Section~\ref{sec:quantiles} works with
+these same sets, since it uses only the quotient of the radii
+and the full physical curvature budget.
+
+\subsection{Locating both complete sides}
+
+Write \(A(u,v)=\{u<|z|<v\}\subset\R^4\), and let
+\(\delta_{\rm Euc}\) be the Euclidean metric. The following
+statement places the marks using a chart whose radial
+position in the physical source need not be prescribed.
+
+\begin{proposition}[Marking an anchored wide chart]\label{prop:anchored-marking}
+Fix \(A_0<\infty\) and an ellipticity bound \(H\ge1\). There is a
+fixed \(L>8\), depending only on \(A_0,H,y_0\), with the following
+property. Suppose that \(a_i/\rho_i\to0\), \(\rho_i/b_i\to0\), and
+that there are oriented smooth embeddings
+\(\Phi_i:A(1/8,L)\to M\). Put \(S_i(r)=\Phi_i(\{|z|=r\})\) and
+\(m_i=\rho_i^{-2}\Phi_i^*g_i\), and assume
+\begin{equation}\label{eq:anchored-wide-data}
+ d_i(S_i(1))\le A_0\rho_i,\qquad
+ H^{-1}\delta_{\rm Euc}\le m_i\le H\delta_{\rm Euc},\qquad
+ \int_{A(1/8,L)}|\Rm_{m_i}|^2\,dV_{m_i}\longrightarrow0.
+\end{equation}
+Here \(d_i(S)\) is the infimum of the physical distance over \(S\).
+Then \(D_{i,-}\) and \(D_{i,+}\) are on opposite sides of \(S_i(1)\)
+for all large \(i\), and both are disjoint from the entire closed
+trim \(K_i=\Phi_i(\{1/4\le|z|\le4\})\).
+\end{proposition}
+
+\begin{proof}
+Each embedded coordinate sphere has two connected sides. A
+complementary path joining its two collar faces would produce
+a loop crossing the sphere once modulo two, contrary to
+\(H_1(M;\mathbb Z/2)=0\). Every complementary component abuts
+the sphere and meets one of its two connected half collars.
+The sides are labeled by their radial direction on the chart.
+Similarly the image of an open radial band between two chart
+spheres is a component of their complement. It is open by
+the local inverse theorem and relatively closed there by
+compactness of the closed band. A physical path crossing that
+band from one face to the other has length at least
+\(\rho_i H^{-1/2}\) times their difference in radii. This uses
+only the part of the path between its last entry on one face
+and its first exit on the other, so other parts may use ambient
+shortcuts.
+
+The diameter bound from Section~\ref{sec:quantiles} implies
+\(\rho_i\to0\), and the ball lower bound there gives
+\(\vol_{g_i}B(z,r)\ge\nu r^4\) for all \(0<r\le1\), for a uniform
+\(\nu>0\) depending on \(y_0\). Choose a side \(U_i\) of \(S_i(1)\)
+of physical volume at most one half. Define \(f_i=0\) on the
+other side and let it rise linearly to one between coordinate
+radii \(1\) and \(1/2\) or between \(1\) and \(2\), according to
+the side chosen, extending by one on the rest of \(U_i\).
+Ellipticity on this fixed strip gives
+\(\int|df_i|_{g_i}^2dV_i\le C(H)\rho_i^2\). The Yamabe form,
+applied by smooth density, gives
+\[
+ (1-2^{-1/2})y_0\|f_i\|_{4,g_i}^2
+ \le 6\int|df_i|_{g_i}^2dV_i
+\]
+because \(\|f_i\|_{2,g_i}^2\le2^{-1/2}\|f_i\|_{4,g_i}^2\).
+The plateau therefore has volume \(O(\rho_i^4)\), and the
+strip has volume at most \(H^2|A(1/2,2)|\rho_i^4\). In all,
+\(\vol_{g_i}(U_i)\le C_*(H,y_0)\rho_i^4\), with \(C_*\)
+independent of the wider chart radius \(L\). For \(p\in U_i\),
+the open ball of radius \(\min(1,d_{g_i}(p,S_i(1)))\) stays in
+\(U_i\) by minimizing segments from \(p\). The lower volume
+bound shows that every point of \(U_i\) is within
+\((C_*/\nu)^{1/4}\rho_i\) of \(S_i(1)\) for large \(i\).
+
+The coordinate-outer side contains the embedded shell
+\(2<|z|<L/2\) of physical volume at least
+\(H^{-2}\omega_4((L/2)^4-16)\rho_i^4\), where \(\omega_4\) is the
+volume of the Euclidean unit ball. Choose \(L>8\) with
+\begin{equation}\label{eq:anchored-width}
+ H^{-2}\omega_4((L/2)^4-16)>C_*(H,y_0),\qquad
+ (L/2-1)/\sqrt H>A_0 .
+\end{equation}
+The coordinate-inner side is then the smaller one. A nearest point
+of \(S_i(1)\) to \(x_i\), unit-sphere chart paths of length at most
+\(\pi\sqrt H\rho_i\), and the bound on the smaller side show that
+every point of that side has physical distance \(O(\rho_i)\) from
+\(x_i\). The whole trim has the same bound, using radial chart
+paths as well. Thus \(D_{i,+}\) is entirely on the outer side,
+outside the trim, even if it is disconnected.
+
+It remains to locate \(x_i\). A point of the protected closed
+band \(1/4\le |z|\le L/2\) has ambient distance at least
+\(c(H)\rho_i\) from the complement of the chart. To exit, a
+path must first cross one of the radial faces of the larger
+compact band \([3/16,3L/4]\). If the inner ball met the
+protected band, its entire radius-\(a_i\) ball would be in
+the chart by this first-exit bound, since the distance between
+any two of its points is at most \(2a_i=o(\rho_i)\). The
+four-dimensional scale invariance of the curvature integral,
+and \(4|W^+|_{\rm HS}^2\le |\Rm|_{\rm tens}^2\), would make
+its mass tend to zero, contradicting \eqref{eq:anchored-marks}.
+In particular \(x_i\) is outside that band. If it lay on the
+coordinate-outer side, a minimizing path to \(S_i(1)\) would
+cross the band from \(S_i(L/2)\) to \(S_i(1)\), at cost at least
+\((L/2-1)\rho_i/\sqrt H\). This contradicts the anchor and
+\eqref{eq:anchored-width}. The inner ball is connected by its
+minimizing radii, so it belongs to the coordinate-inner side
+and misses the trim. All cut locations have used the physical
+metrics \(g_i\).
+\end{proof}
+
+There is a useful fixed-width alternative when the supplied trim
+already lies between the two marks and within physical distance
+\(t_i=o(b_i)\) of \(x_i\). The cutoff proof shows that no point
+of the smaller side can belong to \(D_{i,+}\). Indeed the last
+entry into the trim on a minimizing segment from \(x_i\) to the
+unit sphere costs at least \(3\rho_i/(4\sqrt H)\) in remaining
+radial length, so \(\rho_i=O(t_i)\). One oriented source arc
+from \(x_i\) to a point of \(D_{i,+}\) with nonzero signed
+intersection with \(S_i(1)\) now marks the entire median
+exterior. The signed intersection records the side of the
+endpoint relative to the starting point. For instance, if the
+supremum of \(d_i\) on the inner trim face is strictly below
+its infimum on the outer face, a minimizing segment to a median
+exterior point that visits the open trim at an intermediate
+distance has one outward crossing and no inward crossing.
+Distance increases along that segment, so the visit must enter
+through the inner face and exit through the outer one. In a
+wide chart with the volume test in \eqref{eq:anchored-width}
+and \(x_i\) outside the trim, the two infima
+\(d_i(S_i(1/2))\le d_i(S_i(2))\) instead suffice to orient
+the center. An outer center would have to cross the band
+\([1/2,2]\) on the way to the nearer inner sphere, giving the
+reverse strict inequality by the extra radial length.
+
+\subsection{Critical coordinate control and the cap}
+
+\begin{proposition}[A short critical shell cut]\label{prop:neck-critical-shell}
+Suppose a chart on \(A(1/8,8)\) in the physical source already
+has the complete marking of \eqref{eq:anchored-marks}, with both
+marks off the closed trim \(K_i\). Assume its constant
+rescaling \(m_i\) satisfies
+\begin{equation}\label{eq:neck-critical-shell}
+ \|m_i-\delta_{\rm Euc}\|_\infty\le\epsilon_*,\qquad
+ \int_{A(1/8,8)}|\Rm_{m_i}|^2\,dV_{m_i}\to0,\qquad
+ \|D T_i\|_{2,dz}\to0,\quad T_i^a=\Delta_{m_i}z^a .
+\end{equation}
+Here \(\epsilon_*>0\) is fixed sufficiently small on this annulus
+before taking the source limit. In exact harmonic coordinates the
+last condition is automatic. Such data are impossible on a fixed
+nonstandard \(M\) at its positive-class infimum. Thus the wide
+data in Proposition~\ref{prop:anchored-marking} together with
+\eqref{eq:neck-critical-shell} on the central chart also give a
+contradiction. The same implication holds with uniform and strong
+\(W^{1,4}\) convergence to Euclidean in the supplied central chart
+in place of the fixed small distortion and tension conditions.
+\end{proposition}
+
+\begin{proof}
+Write \(v=m-\delta_{\rm Euc}\), \(\eta=\|v\|_\infty\) and
+\(T^a=\Delta_m z^a\). The reduced metric equation has the form
+\[
+ m^{ab}\partial_{ab}v_{jk}
+ =-2\Ric_{jk}-m_{ja}\partial_kT^a-m_{ka}\partial_jT^a
+   +O(|Dv|^2),
+\]
+using \(T^a=-m^{bc}\Gamma^a_{bc}\)
+\href{https://www.numdam.org/item/10.24033/asens.1405.pdf}{(DeTurck--Kazdan,
+Lemma~4.1)}. For a compactly supported cutoff \(\chi\) set
+\(X=\|\chi^2D^2v\|_2\), \(G=\|\chi Dv\|_4\). Integration by
+parts against \(v\) in \(\int \chi^4|Dv|^4\) gives
+\(G^2\le C\eta X+C_\chi\eta^2\). Apply the Euclidean
+\(\|D^2f\|_2=\|\Delta f\|_2\) identity to \(f=\chi^2v\).
+Freezing the principal coefficient costs \(C\eta X\), the
+quadratic term costs \(CG^2\), and the commutators cost at most
+\(C_\chi(G+\eta)\). Substituting the inequality for \(G^2\)
+and absorbing with \(\eta\le\epsilon_*\) yields
+\[
+ X\le C_\chi(\|\chi^2\Ric\|_2+\|\chi^2 DT\|_2+\eta),\qquad
+ G^2\le C_\chi\eta(\|\chi^2\Ric\|_2+\|\chi^2 DT\|_2+\eta).
+\]
+These Euclidean component norms are comparable to metric norms
+for the indicated tensor sources. Use nested cutoffs protecting
+the closed trim. Rellich compactness and these estimates give a
+weak \(W^{2,2}\) limit \(h\), with strong \(W^{1,s}\) convergence
+for \(s<4\) and almost-everywhere convergence. The quadratic
+first-derivative terms converge in distributions by strong
+\(W^{1,2}\). The bounded principal coefficients pass to the
+limit against a fixed \(L^2\) test by dominated convergence.
+The limit has zero right-hand curvature and differentiated
+tension in the reduced equation, and zero full curvature in
+distributions by the all-lowered curvature formula.
+
+For interior regularity write the reduced equation on a ball as
+\(h^{ab}\partial_{ab}h+C(h,Dh)Dh=0\), with drift coefficients
+bounded by \(C_0|Dh|\). This is a small perturbation of the
+Dirichlet Laplacian on \(W^{2,s}\cap W^{1,s}_0\), for \(s=2,3\).
+The drift is small in \(L^4\) by the estimate above and is bounded
+on that operator domain by the embedding into gradients in
+\(L^{4s/(4-s)}\). A cutoff times \(h\) gives a forcing in
+\(L^3\). Solving there and using uniqueness at exponent two
+gives \(h\in W^{2,3}_{\rm loc}\). Its gradient lies in \(L^{12}\)
+and the principal coefficients are continuous. Freezing them on
+smaller balls gives \(W^{2,6}_{\rm loc}\), followed by ordinary
+interior bootstrapping to a smooth flat metric. In the
+approximately harmonic case a limiting constant coordinate
+tension is compatible with this argument, which uses its derivative.
+Subtract the reduced equations for \(m_i\) and \(h\), and localize
+again. The principal perturbation and the drift of size
+\(C(|Dm_i|+|Dh|)\) are absorbed at exponent two. The other terms
+tend to zero in \(L^2\), including coefficient differences against
+the smooth jets of \(h\), the curvature and tension sources, and
+the cutoff commutators. For a drift commutator use the \(L^4\)
+bound on the drift and strong \(L^4\) convergence of \(m_i-h\).
+This gives strong \(W^{2,2}\) and hence strong \(W^{1,4}\)
+convergence on smaller interiors.
+
+The flat metric on the simply connected annulus \(A(1/4,4)\)
+has an oriented developing map \(F\), obtained by integrating a
+parallel orthonormal coframe. Since \((DF)^tDF=h\), the gradient
+is uniformly within \(C\epsilon_*\) of \(\SO(4)\). The geometric
+rigidity estimate for the fixed Lipschitz annulus gives a
+rotation \(Q\) with \(\|DF-Q\|_2\le C\epsilon_*\)
+\cite[Theorem 3.1]{FrieseckeJamesMueller2002Rigidity}.
+After translation, Poincar\'e and the uniform derivative bound
+make \(F-Qz\) uniformly small on the closed \(A(1/3,3)\) as
+\(\epsilon_*\downarrow0\). In fact a fixed nonzero supremum
+there would give a fixed lower \(L^2\) bound on an interior ball.
+The straight homotopy gives degree one on \(A(1/3,3)\) for
+each target point in \(A(1/2,2)\). The positive Jacobian makes
+its preimage unique there. The pulled-back unit sphere separates
+the original trim faces, since every path across the trim must
+traverse the two intermediate radii \(1/3\) and \(3\), at which
+the developed radii are below and above one, respectively. In
+particular this change of coordinates retains both complete marks.
+
+On the developed \(A(1/2,2)\) the metrics tend strongly to
+Euclidean in \(W^{1,4}\) and are uniformly elliptic. The same
+properties already hold on a central annulus in the alternative
+first-order hypothesis. Apply the curvature comparison of
+Theorem~\ref{thm:caps} with a fixed short splice cutoff, leaving
+an exactly flat strip about the new cut. Uniform ellipticity and
+the product rule for the all-lowered curvature tensor bound the
+\(L^2\) error in the chiral densities by a constant times
+\[
+ \|\Rm_{m_i}\|_2+\|Dm_i\|_4^2+\|Dm_i\|_2+
+ \|m_i-\delta_{\rm Euc}\|_2=o(1)
+\]
+in the developed chart. The projection change is bounded by the
+first term, so uniform convergence after development is unnecessary.
+The estimate holds along the interpolation on the closed source
+and on each splice separately. A conformal multiplier on the
+flat strip gives the exact round product at zero chiral cost.
+
+The splice path remains positive. If a continuous smooth metric
+path on the closed type beginning at a positive class first lost
+that sign, the zero first eigenvalue of the conformal Laplacian
+would give a scalar-flat representative by a positive
+eigenfunction. Equation~\eqref{eq:signature} and Gauss--Bonnet
+then require \(E_+\ge8\pi^2\), whereas the whole path here has
+energy \(E_i+o(1)<8\pi^2\). Stretch the exact product to any
+finite length on the same type by increasing its radial arclength
+coefficient with a bump supported in the product. That path retains
+the same chiral energy, so the Yamabe constants of the stretched
+metrics are bounded below by a fixed positive constant, by
+\eqref{eq:budgets} in their unit-volume Yamabe representatives.
+For each fixed source index any compactly supported test on one
+side with an attached half-cylinder extends by zero to a long enough
+stretched source and inherits that inequality. Compactify the end
+conformally using \(r=e^{-t}\), so \(r^2(dt^2+\gamma)\) is smooth
+and flat at the added point. The vanishing point capacity in
+dimension four transports the same Yamabe bound to the capped
+side by approximation with compactly supported punctured tests.
+The resulting caps are spherical and conformally flat. The
+per-side nonnegative upper allowances \(\gamma_{i,\pm}\) above the
+actual raw energies are \(o(1)\). Both raw masses are at least
+\(\theta E_i\), and for all large \(i\)
+\[
+ E_i+\gamma_{i,+}+\gamma_{i,-}<8\pi^2,\qquad
+ E_i-I^+(M)+\max\{\gamma_{i,+},\gamma_{i,-}\}<4\pi^2\theta .
+\]
+Theorem~\ref{thm:nonsplitting} contradicts these two raw masses.
+All normalized windows and splice profiles are fixed in advance.
+The auxiliary stretch for testing positivity is performed on an
+exact product after the splice at each fixed index.
+\end{proof}
+
+\subsection{What is presently available from a physical block}
+
+The physical Yamabe form also controls the number of exterior
+components with a specified depth, if a transition-volume
+bound is supplied. For \(R>2s>0\), suppose two components of
+\(\{d_i>s\}\) reach depth \(R\). Such components correspond to
+the through components in \(\{s<d_i<R\}\), by the
+\(H_0\) Mayer--Vietoris sequence for the open cover by the
+connected \(\{d_i<R\}\) and \(\{d_i>s\}\), using \(H_1(M)=0\),
+and by minimizing segments to see that every exterior
+component meets the annulus. On the smaller full exterior
+component use the cutoff \(\min(1,(d_i-s)/s)\), extended by
+zero. Its gradient energy is at most \(s^{-2}V_i(s)\) with
+\(V_i(s)=\vol_{g_i}\{s<d_i<2s\}\). A ball about a point of
+depth \(R\) of radius \(\min(1,R-2s)\) stays in the plateau.
+The same half-volume Yamabe argument forces
+\begin{equation}\label{eq:neck-physical-volume-test}
+ V_i(s)\ \ge\ \frac{(1-2^{-1/2})y_0\sqrt\nu}{6}
+                   s^2\min(1,R-2s)^2 .
+\end{equation}
+Supremal depth gives the same estimate by approximation. Thus
+an upper bound \(V_i(s)\le C s^4\) rules out two such components
+if \(R/s>2+\sqrt{C/c_Y}\) and \(R-2s\le1\), where \(c_Y\) is
+the coefficient in \eqref{eq:neck-physical-volume-test}. The scalar-curvature
+term of the full budget gives only
+\(V_i(s)\le 6y_0^{-2}\int_{\{s<d_i<2s\}}|\Rm_{g_i}|^2dV_i\).
+The block supplies an absolute \(o(1)\), without an \(O(s^4)\)
+estimate as \(s\to0\). At fixed radii in the shrinking
+normalized block, the needed physical rate is fourth order
+in the scale. The positive-Ricci conformal gauge has its own
+ball volumes and radii. Comparisons there require transfer of
+both the conformal density and the distance levels before use
+in \eqref{eq:neck-physical-volume-test}. Once an anchored full
+chart is supplied, its smaller-side cutoff works directly.
+
+On a fixed rescaled annular window \(h_i=\rho_i^{-2}g_i\), a
+supplementary bounded \(L^p(h_i)\) norm of the physical Ricci
+tensor for \(p>2\) gives local comparison. This norm in the
+original metric is \(\rho_i^{2-4/p}\|\Ric_{g_i}\|_{L^p(g_i)}\)
+on the corresponding physical window. Interpolation with
+the vanishing critical curvature norm gives \(\Ric_{h_i}\to0\)
+in \(L^q\), \(2<q<p\), on the same window. Apply integral
+relative volume comparison on each protected ball with model
+curvature zero to bound its upper volume ratio
+\href{https://www.math.ucla.edu/~petersen/Papers/28.pdf}{(Petersen--Wei,
+Lemma~2.3)}. The normalized Yamabe inequality then supplies
+a uniform local homogeneous Dirichlet Sobolev inequality,
+absorbing its \(Y_i\rho_i^2\|u\|_2^2\) term by the upper ball
+volume. On smaller fixed balls the small critical curvature
+and the scaled \(L^q\) Ricci control give harmonic coordinates
+and \(W^{2,q}\) interior bounds by Yang's local theorem
+\cite[Theorem 7.1]{Yang1992ConvergenceII}. Their interior limits
+are flat by strong \(W^{1,4}\) convergence and the reduced equation.
+These are protected local conclusions. Comparison of balls
+centered at \(x_i\) would require Ricci input inside the omitted
+core as well. Packing and gluing local charts into a wide
+source annulus, identifying its link and anchoring it at the
+same center remain separate requirements. A finite quotient
+chart can enter Proposition~\ref{prop:link} under the stated
+cost and product hypotheses. The anchored theorem concerns
+the resulting spherical chart on the source.

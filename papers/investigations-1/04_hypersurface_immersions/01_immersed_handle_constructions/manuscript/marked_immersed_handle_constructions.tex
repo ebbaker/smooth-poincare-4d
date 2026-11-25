@@ -1,0 +1,661 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+\DeclareMathOperator{\Scal}{Scal}
+\DeclareMathOperator{\vol}{Vol}
+\DeclareMathOperator{\supp}{supp}
+\title{Marked immersed index-two handles\\and exterior chiral Weyl bounds}
+\author{Edward B. Baker III}
+\date{25 November 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct a rounded index-two handle in Euclidean five-space whose
+actual linear height realizes the product attaching and belt markings.
+Flattening its graph makes both induced chiral Weyl energies decay
+quartically in the slope parameter. The estimate extends to two
+prescribed compatible, scaled graph collars and their corner overlap.
+Fixing a nonflat quadratic collar forces a positive cost for every
+smooth immersed filling, including those that cease to be graphs.
+A relative Morse calculation forces an index-two point in almost every
+direction of the reference normal image, and the indexed Gauss area
+formula converts this count to a strict chiral bound. For finitely many
+such collars on a closed smooth homotopy four-sphere, the overlap
+of their directional images yields a recognition criterion entirely
+in terms of the common exterior and the marked references. A construction
+on the standard sphere illustrates the actual height diagrams and the
+role of the complete exterior.
+\end{abstract}
+
+\section{Closed and relative height counts}
+
+Every smooth homotopy four-sphere admits a smooth immersion into
+\(\mathbb R^5\). Its tangent bundle is stably trivial and stabilization
+in rank five is already in the stable range over a four-dimensional
+complex. The existence assertion then follows from the immersion
+theorem \cite[Theorem 3.1]{KervaireMilnor1963Groups}
+\cite[\S6]{Hirsch1959Immersions}. Prescribing a graph on a marked handle
+imposes relative geometric conditions on that immersion. Our aim is to
+measure which conditions survive arbitrary replacement of its interior,
+and to specify the exterior data needed to use an energy estimate on
+the original closed smooth domain.
+
+For an oriented smooth hypersurface immersion \(F\) use the induced
+Riemannian metric \(g\), the compatible unit normal \(\nu\), and the
+shape operator \(d\nu=-dF\circ A\). Let \(U_2\) be the open set where
+\(A\) has two positive and two negative eigenvalues. On a measurable
+set \(P\) of the smooth domain put
+\[
+ \begin{split}
+ E_\pm(P)&=\int_P |W_g^\pm|_{\mathrm{HS}}^2\,dV_g,\qquad
+ I_2(P)=\int_{P\cap U_2}\det A\,dV_g,\\
+ J(P)&=\int_P(-\det A)_+\,dV_g,\qquad
+ B^2(P)=\int_P|A-\tfrac14(\operatorname{tr}A)I|^4\,dV_g .
+ \end{split}
+\]
+The Weyl blocks are endomorphisms of the real chiral two-form
+bundles. Distinct preimages of an immersed point are counted on the
+domain. These integrals are invariant under ambient dilation.
+Reversing orientation exchanges the Weyl blocks, and the Gauss
+equation gives their pointwise squared norms equal in the Euclidean
+hypersurface setting.
+
+\begin{lemma}[Middle-signature curvature and height]\label{lem:area}
+Put \(\omega_4=\sigma_4(S^4)=8\pi^2/3\). For almost every
+\(u\in S^4\), the critical points of \(\langle F,u\rangle\) in the
+interior of \(P\) are nondegenerate and lie in \(\nu^{-1}(\{u,-u\})\).
+If \(m_{2,P}(u)\) counts those of index two, then for a smooth compact
+domain, or a domain cut out by smooth seams,
+\[
+ I_2(P)=\tfrac12\int_{S^4}m_{2,P}(u)\,d\sigma_4(u),
+ \qquad E_\pm(P)\ge\tfrac83 I_2(P).
+\]
+If \(P^\circ\cap U_2\ne\varnothing\), the energy comparison is strict.
+\end{lemma}
+
+\begin{proof}
+At a critical point the height Hessian is \(\pm g(A\cdot,\cdot)\),
+according to the normal sign, so the index is two precisely on
+\(U_2\). The signed normal Jacobian is \(\det A\). Sard's theorem
+and the area formula give the count, with a factor of two from the
+two signs. Normal images of smooth seams have spherical measure
+zero. This is the indexed form of the total curvature calculation
+\cite{ChernLashof1957Curvature,OntiVlachos2017Hypersurfaces}.
+
+In a principal orthonormal frame the Gauss curvature eigenvalues
+are \(k_i k_j\). Write \(s_1,s_2,s_3\) for the three opposite-pair
+sums, and \(\bar s\) for their mean. Either chiral Weyl block has
+eigenvalues \((s_j-\bar s)/2\), so its squared norm is
+\(\frac1{12}\sum_{j<\ell}(s_j-s_\ell)^2\).
+On \(U_2\), label the curvatures \((-a,-b,c,d)\) with positive
+\(a,b,c,d\). The sums are \(ab+cd,-ac-bd,-ad-bc\).
+By the arithmetic--geometric mean inequality the first exceeds
+or equals \(2\sqrt{\det A}\) and the latter two are at most
+\(-2\sqrt{\det A}\). This gives \(\frac83\det A\) as a lower
+bound and equality requires \(a=b=c=d\).
+
+If equality held on an open set, the two principal distributions
+would have rank two and eigenvalues \(k,-k\) with \(k>0\). For
+orthonormal vectors \(X,Y\) in the same distribution, Codazzi gives
+\(X(\pm k)=\langle(\nabla_X A)Y,Y\rangle
+=\langle(\nabla_Y A)X,Y\rangle=0\).
+Thus \(dk=0\). For \(X,Y\) in opposite distributions, the two
+sides of Codazzi lie in opposite distributions and separately
+vanish. Metric compatibility then makes both distributions
+parallel. Every mixed sectional curvature would be zero, whereas
+Gauss gives \(-k^2\). The nonnegative continuous pointwise defect
+is therefore positive on some open subset of every nonempty
+open middle-signature region.
+\end{proof}
+
+\begin{lemma}[A smooth handle-count bound]\label{lem:top}
+Every Morse function on a closed smooth homotopy four-sphere
+not diffeomorphic to \(S^4\) has at least two index-two points.
+\end{lemma}
+
+\begin{proof}
+Reorder the handles by index
+\cite[Theorems 4.7--4.8]{Milnor1965HCobordism}.
+The union of the 0- and 1-handles
+is connected since all subsequent attaching regions are connected.
+Joining the 0-handles along a spanning tree of the 1-handles
+gives one smooth four-ball, carrying the remaining attachments to
+its boundary \cite[Theorem~5.4]{Milnor1965HCobordism}.
+The dual operation gives one 4-handle. These reductions
+preserve the number \(m_2\) of index-two handles. Euler
+characteristic gives \(m_1+m_3=m_2\) for the reduced counts.
+If \(m_2=0\), the two balls glue to \(S^4\), by extension of
+boundary diffeomorphisms over the ball \cite{Hatcher1983Smale}.
+If \(m_2=1\), reverse the handles if needed to obtain a 0-, a
+2-, a 3- and a 4-handle. The boundary after the 2-handle is
+\(S^1\times S^2\) by the dual 1-handle description. Hence its
+integral surgery coefficient is zero and Property~R identifies the
+attaching knot as the unknot \cite[Corollary 8.6]{Gabai1987FoliationsIII}.
+The \(S^2\times D^2\) trace and the dual \(S^1\times D^3\)
+glue to \(S^4\) with the given boundary identification by the
+extension theorem for four-dimensional 1-handlebodies
+\cite[Theorem A]{LaudenbachPoenaru1972Handlebodies}.
+\end{proof}
+
+In particular a closed immersed homotopy sphere with
+\(E_+\le\frac83\omega_4=64\pi^2/9\) is smoothly standard.
+On a putative nonstandard type, if \(E_+<8\pi^2\), the mean number
+of index-two points is strictly less than \(9/4\). Since each
+Morse height has at least two, more than three quarters of directions
+have exactly two. To turn this count into a surgery argument one
+needs the attaching maps of the same height.
+
+\section{A quadratic handle with two marked faces}
+\label{sec:graph}
+
+Write \(z=(x,y)\in\mathbb R^2\times\mathbb R^2\),
+\[
+ q(z)=(|y|^2-|x|^2)/2,\qquad s(z)=(|y|^2+|x|^2)/2,\qquad
+ D=\operatorname{diag}(-1,-1,1,1).
+\]
+The product \(D^2_x\times D^2_y\) has attaching face \(|x|=1\),
+outgoing face \(|y|=1\), and common corner \(S^1\times S^1\).
+Choose a smooth even convex function \(\rho\) by convolving absolute
+value with a nonnegative even mollifier supported in
+\((-\delta_0,\delta_0)\). Then \(|q|\le\rho(q)\le |q|+\delta_0\),
+\(|\rho'|\le1\), and \(\rho(q)=|q|\) for \(|q|\ge\delta_0\).
+The domain \(\Omega=\{s+\rho(q)\le1\}\) rounds the corner.
+Near the rounded portion both radii are positive, and \(s\) is
+a transverse coordinate. Elsewhere the boundary agrees with
+one of the original faces. The domain is star-shaped since
+\(s+\rho(q)\) is nondecreasing in \(|x|^2\) and \(|y|^2\).
+
+\begin{proposition}[Actual height and product framing]\label{prop:trace}
+For \(R,t>0\) the map
+\[
+                 F_{R,t}(z)=(Rz,Rtq(z))
+\]
+embeds \(\Omega\) in \(\mathbb R^5\). Its actual vertical height is
+\(Rtq\) and has just one interior critical point, of index two.
+For \(\delta_0<\lambda<1/2\) the trace \(|q|\le\lambda\)
+has marked incoming and outgoing solid tori with actual heights
+\(-Rt\lambda\) and \(Rt\lambda\). They have the product framing
+of the index-two handle and its belt.
+\end{proposition}
+
+\begin{proof}
+The horizontal differential is \(RI\), and the critical point at
+zero has height Hessian \(RtD\). At the given levels the parametrizations
+in the domain are
+\[
+ (\theta,v)\longmapsto(\sqrt{2\lambda+|v|^2}\,\theta,v),
+ \qquad
+ (w,\phi)\longmapsto(w,\sqrt{2\lambda+|w|^2}\,\phi),
+\]
+where \(\theta,\phi\in S^1\) and \(|v|,|w|\le\sqrt{1-2\lambda}\).
+On the lateral boundary between the levels the coordinates are
+\((q,\theta,\phi)\). The two radii there are
+\(\sqrt{1-\rho(q)-q}\) and \(\sqrt{1-\rho(q)+q}\),
+both positive. In particular \(q\) is a submersion on the lateral
+boundary, and the product side identifies both angle coordinates
+between the two faces.
+
+In the induced metric the negative height gradient is a positive
+multiple of \((x,-y)\). The descending disk is \(y=0\) and the
+ascending disk is \(x=0\). At the incoming circle \(v=0\) the
+coordinate normal vectors \(\partial_{v_j}\) are the original
+\(y\)-vectors. At the outgoing belt circle \(w=0\) the \(x\)-vectors
+give the belt marking in the same way. This specifies the
+framed solid-torus embeddings in the actual height levels.
+Their images in a surrounding boundary are determined by the
+supplied exterior attachment.
+\end{proof}
+
+\subsection{Slope, normal directions and energy}
+
+Use the upward normal and set \(\mathcal W=(1+t^2|z|^2)^{1/2}\).
+At \(R=1\) the metric is \(I+t^2Dz\otimes Dz\), its volume
+density is \(\mathcal W\), and the second fundamental form is
+\(tD/\mathcal W\). In an induced orthonormal frame the shape operator
+is \(tD+O(t^3)\), uniformly on the marked domain, and has signature
+\((2,2)\) even at the seam. At general \(R\),
+\[
+ \nu=\frac{(-tDz,1)}{\mathcal W},\qquad
+ \det A=\frac{t^4}{R^4\mathcal W^6},\qquad
+ dV_g=R^4\mathcal W\,dz,\qquad
+ \Scal_g=-\frac{2t^2(2+t^2|z|^2)}{R^2\mathcal W^4}.
+\]
+The scalar identity follows from
+\(\Scal=(\operatorname{tr}A)^2-|A|^2\) and the rank-one
+inverse formula. In the chiral eigenvalue formula the leading
+eigenvalues are \( (4/3,-2/3,-2/3)t^2/R^2\).
+For every measurable \(V\subset\Omega\), with \(|V|\) its
+horizontal coordinate volume, this gives
+\begin{equation}\label{eq:scale}
+ \begin{aligned}
+ E_\pm(V)&=\tfrac83 |V|t^4+O(|V|t^6),&
+ I_2(V)&=|V|t^4+O(|V|t^6),\\
+ B^2(V)&=16|V|t^4+O(|V|t^6),& J(V)&=0 .
+ \end{aligned}
+\end{equation}
+The constants are independent of \(R\) and \(V\). In particular
+ambient dilation alone leaves the energy fixed.
+
+For a graph of slope at most \(S\), its upward normal directions
+lie in the spherical cap about \(e_5\) of angular radius
+\(\arctan S\). Its possible critical directions are in that
+cap and its antipode. Each of these caps has area
+\(|S^3|\int_0^{\arctan S}\sin^3\alpha\,d\alpha=O(S^4)\)
+as \(S\downarrow0\). For the reference graph define the precise
+one-sign normal image \(N_t=\nu(\Omega^\circ)\). The upper
+gnomonic coordinates \(p=u_{\rm hor}/u_5\) give \(p=-tDz\).
+The spherical area density in these coordinates is
+\((1+|p|^2)^{-5/2}dp\), so
+\begin{equation}\label{eq:normal-area}
+       s_t:=\sigma_4(N_t)
+       =t^4\int_\Omega(1+t^2|z|^2)^{-5/2}\,dz
+       =I_2(\Omega)>0 .
+\end{equation}
+The graph has one index-two point for each direction in
+\(N_t\cup(-N_t)\), and zero for directions outside these two
+sets and the seam normal images.
+
+\subsection{Compatible graph collars}
+
+Fix a normalized collar width \(\epsilon>0\). Suppose marked
+graph germs \((Rz,Rt k_{x,t}(z))\) and \((Rz,Rt k_{y,t}(z))\)
+are given on \(|x|>1-\epsilon\) and \(|y|>1-\epsilon\)
+in the same horizontal coordinates. Require equality as functions
+on the overlap and uniform normalized \(C^2\) bounds. For gluing
+to an exterior, use the germs supplied across the same marked seam.
+Let \(k_t\) be their union. Choose radial cutoffs \(\chi_x,\chi_y\)
+supported in the respective collars, equal to one beyond
+radius \(1-\epsilon/2\), with \(j\)-th derivatives
+bounded by \(C\epsilon^{-j}\) for \(j\le2\).
+Define
+\[
+ \chi=1-(1-\chi_x)(1-\chi_y),\qquad
+ f_t=q+\eta_t,\qquad \eta_t=\chi(k_t-q).
+\]
+The added function extends smoothly by zero. With
+\(\sqrt{1-\delta_0}>1-\epsilon/2\), a whole neighborhood
+of the rounded seam has \(\chi=1\). Thus the graph of \(Rt f_t\)
+with horizontal map \(Rz\) matches the prescribed collars,
+including their common corner, and is an embedding of the patch.
+
+Let \(M_j=\sup |D^j(k_t-q)|\) on the collar union for
+\(0\le j\le2\) and set
+\[
+        K=C(1+M_2+\epsilon^{-1}M_1+\epsilon^{-2}M_0).
+\]
+Then \(K\) bounds the coordinate Hessian of \(f_t\) there.
+At \(R=1\), for a graph of height \(l\),
+\(|A|\le|D^2l|/(1+|Dl|^2)^{1/2}\) and
+\(dV=(1+|Dl|^2)^{1/2}dz\). The Gauss equation bounds each
+of \(|W^\pm|^2,|\det A|,|A^\circ|^4,\Scal_-^2\) by
+\(C|A|^4\). On either collar minus the other and on their
+overlap, the integral of any of these quantities over \(V\)
+is at most \(C|V|t^4K^4\), also at general \(R\) by scale
+invariance. These three sets and the core form an additive
+partition up to null boundaries. The normalized bounds also give
+slope \(O(t)\), so their normal images lie in the same type of
+spherical caps of area \(O(t^4)\). The energy estimate is quartic at
+fixed widths and records the derivative loss if those widths shrink.
+
+For the actual framing and critical point after matching,
+assume in addition \(\|\eta_t\|_{C^1}\) sufficiently small.
+Choose \(\sigma>0\) with \(\lambda+2\sigma<1/2\), and
+\(1-\epsilon>\sqrt{2(\lambda+2\sigma)}\).
+The correction then vanishes near the core disks over
+\(|q|\le\lambda+2\sigma\). On its support \(|Dq|\ge1-\epsilon\).
+The functions \(q+v\eta_t\), \(0\le v\le1\), preserve the
+interior critical point and the boundary submersion near the
+two specified levels, since the \(q\)-derivative along the
+side of the unperturbed trace is one. On the regular part
+of a slightly larger band choose smooth \(Z_v\) with
+\(d(q+v\eta_t)(Z_v)=1\), tangent to the side there.
+Local submersions give such fields and a partition of unity
+joins them. The flow of \(-\eta_t Z_v\), cut off outside
+that larger band, fixes the core disk neighborhoods and
+transports the two marked levels. The time derivative of
+\((q+v\eta_t)\) along this flow vanishes where the cutoff is one.
+The supplied side identifications must use this transport
+if the side height changes. Exact equality with \(q\) there
+keeps the original side parametrization. A bound on the
+normalized \(C^2\) jets alone gives the energy estimate,
+while the additional submersion control gives this height result.
+
+\section{A positive cost for a fixed collar}\label{sec:fixed}
+
+\begin{theorem}[Fixed quadratic germ]\label{thm:fixed}
+Let \(R>0\) and \(t>0\) be fixed. Suppose a smooth immersion
+\(G:\Omega\looparrowright\mathbb R^5\) agrees as a map with
+\(F_{R,t}\) on a neighborhood of the entire marked rounded boundary.
+For almost every \(u\in N_t\cup(-N_t)\), its actual height
+\(\langle G,u\rangle\) has an interior index-two critical point.
+In particular
+\[
+                   I_2(G;\Omega)\ge s_t,\qquad
+                   E_\pm(G;\Omega)>\tfrac83 s_t .
+\]
+The estimate allows self-intersections and arbitrary immersed
+interiors. Its lower bound is independent of \(R\).
+\end{theorem}
+
+\begin{proof}
+Fix \(u\in N_t\) such that \(u,-u\) are regular normal values
+for \(G\) on the interior. This excludes a null set by Sard's theorem.
+The reference height, extended over the whole coordinate space,
+completes the square as \(h_0=c+bq(z-z_0)\), where
+\(b=Rt u_5>0\) and \(z_0\in\Omega^\circ\) is its unique
+critical point. Let \(h\) agree with \(\langle G,u\rangle\)
+in \(\Omega\) and with \(h_0\) outside. Equality of the full
+collar germ makes this a smooth extension. Choose \(L>0\)
+larger than both \(|h-c|\) and \(|h_0-c|\) on \(\Omega\).
+
+Write \(z-z_0=(\xi,\eta)\) and \(S=|\xi|^2+|\eta|^2\).
+Choose \(S_0\) with \(\Omega\subset\{S<S_0\}\) and \(bS_0/2>L\).
+Add the same radial function \(\Psi(S)\) to both heights,
+with \(\Psi=0\) up to \(S_0\) and \(\Psi'\) smooth and strictly
+increasing from zero to infinity for \(S>S_0\).
+The resulting functions are proper and have identical end
+sublevel sets at \(c-L,c+L\). A new exterior critical point can
+only satisfy \(\eta=0\) and \(2\Psi'(S)=b\). Its critical
+value is below \(c-L\), since \(-bS/2+\Psi(S)\) decreases
+from its value below \(-L\) at \(S_0\) to that radius.
+The compact band between the chosen regular levels therefore
+contains only the filling's nondegenerate interior critical points.
+
+The common pair of end sublevels can be computed with
+\(h_0+\Psi\). Contracting \(\eta\) to zero decreases that
+height and is a deformation of pairs. The function on the negative
+plane decreases radially to a minimum below \(-L\) and
+then increases without bound. The upper retract is a disk and
+the lower one a radial annulus, so the pair has relative
+\(H_2\cong\mathbb Z\). Regular-band deformation and single-point
+Morse attachment imply that this rank is bounded by the number
+of index-two points in the compact band
+\cite[Theorems 3.1--3.2 and Remark~3.3]{Milnor1963MorseTheory}.
+One may separate coinciding critical values by small bumps
+constant near the critical points, preserving their indices.
+The auxiliary critical locus below \(c-L\) plays no role.
+This proves the count, and reversing the height preserves index two.
+
+Integrate the count over \(N_t\). Its antipode is disjoint
+from it. The area formula, counting each sign in its own
+normal image, gives \(I_2(G;\Omega)\ge s_t\).
+This middle mass is positive, so the strict local comparison
+in Lemma~\ref{lem:area} gives the energy lower bound.
+\end{proof}
+
+The underlying relative invariant is the degree-two homology of
+a pair of fixed end sublevels. A boundary gradient degree alone
+would count all Morse indices with alternating signs and would
+also allow a definite critical point. More generally a supplied
+common exterior extension of two heights with compact regular
+end levels fixes a lower bound on the number of interior index-two
+points by the rank of its relative \(H_2\) minus the number
+known to lie in the auxiliary exterior band. Applying this for a
+measurable family of actual ambient directions is what produces
+a geometric lower bound.
+
+In the flat limit \(s_t=|\Omega|t^4+O(t^6)\), so
+\eqref{eq:scale} and \eqref{eq:normal-area} give the same
+leading coefficient as the fixed-germ lower bound. This limit
+varies the normalized collar. At any fixed \(t>0\), even
+allowing arbitrary immersed interiors leaves the positive
+lower bound in Theorem~\ref{thm:fixed}.
+
+\section{An exterior recognition criterion}\label{sec:exterior}
+
+\begin{theorem}[Directional coverage by the reference patches]
+\label{thm:exterior}
+Let \(M\) be a closed oriented smooth homotopy four-sphere with a
+smooth immersion. Let \(P_1,\ldots,P_N\) be pairwise disjoint
+closed marked patches modeled on \(\Omega\). Assume that the immersion
+equals on a collar of each whole seam a rigidly placed
+\(F_{R_j,t_j}\), where \(R_j,t_j>0\).
+Let \(C=M\setminus\bigcup_j P_j^\circ\) be the retained exterior
+with its induced metric. Let \(N_j\) be the reference one-sign normal
+image in actual ambient coordinates, \(s_j=\sigma_4(N_j)\), and
+\[
+ k(u)=\sum_j{\bf1}_{N_j\cup(-N_j)}(u),\qquad
+ D_C=\tfrac12\int_{S^4}(2-k(u))_+\,d\sigma_4(u).
+\]
+If \(M\) is nonstandard then \(E_+(C)>\tfrac83D_C\).
+In particular either inequality
+\[
+ E_+(C)\le\tfrac83D_C,\qquad
+ E_+(C)+\tfrac83\sum_j s_j\le\tfrac83\omega_4
+\]
+suffices for smooth standardness. These conclusions use
+the actual seams and the given exterior metric.
+\end{theorem}
+
+\begin{proof}
+Replace the interiors by the reference graphs, leaving the
+whole exterior fixed. This gives a smooth immersion on the
+same \(M\) by equality of maps on collars. In almost every
+direction its actual index-two count is \(m_{2,C}(u)+k(u)\).
+The formula counts on the domain, regardless of intersections
+between immersed pieces. Lemma~\ref{lem:top} forces this sum
+to be at least two on a nonstandard \(M\). Integration by
+Lemma~\ref{lem:area} shows \(I_2(C)\ge D_C\). Equivalently,
+\begin{equation}\label{eq:coverage}
+ D_C=\omega_4-\sum_j s_j+
+                 \tfrac12\int_{S^4}(k(u)-2)_+\,d\sigma_4(u).
+\end{equation}
+Each nondegenerate reference seam has middle signature.
+Smoothness therefore gives an open middle-signature region on
+the exterior side whenever there is a patch. If the family is
+empty, the nonstandard count itself gives positive middle
+mass. In either case Lemma~\ref{lem:area} gives the strict
+exterior bound. The last integral in \eqref{eq:coverage} is
+nonnegative, which yields the coarser criterion.
+\end{proof}
+
+For a common vertical axis and common horizontal marking,
+the upper gnomonic images \(-t_jD\Omega^\circ\) are
+nested by star-shapedness. On the double caps
+\(\min(2,k)\) is the sum of the two largest indicators.
+If \(s_{(1)},s_{(2)}\) are the two largest areas, with zero
+for an absent patch, then \(D_C=\omega_4-s_{(1)}-s_{(2)}\).
+For separately rotated references, the integral in
+\eqref{eq:coverage} retains their actual overlap. For
+a finite collection of scaled matching graphs in
+Section~\ref{sec:graph}, without the exact fixed reference germs
+of this theorem, the simpler consequence is
+\(I_2(C)\ge\omega_4-O(\sum_j t_j^4)\) on a nonstandard
+closed completion, by the integrated height count and the
+patch curvature bounds. This makes the relative-to-global
+obstruction explicit when the graph amplitudes tend to zero.
+
+The exterior and seam assumptions are part of the construction
+problem. The proofs apply to one immersion on the closed
+domain and keep its common exterior fixed. If matching requires
+altering that exterior, its new energy enters the comparison.
+For positive Yamabe entry, one needs a positive Yamabe constant
+for the assembled class as well as the full \(E_+<8\pi^2\)
+bound. The exact quadratic patch itself has negative scalar
+curvature.
+
+\section{Two comparisons}
+
+\subsection{A spherical two-face transition}
+
+A different two-face model has rotating spherical rather than
+solid-torus sections. Set \(F(s,\theta)=(r(s)\theta,z(s))\),
+\(\theta\in S^3\), with \(s\) arclength and \(r'=\cos\phi\),
+\(z'=\sin\phi\). The principal curvatures in a compatible
+orientation are \(p=\phi'\) and \(q_0=\sin\phi/r\) with
+multiplicity three. The three opposite-pair sums agree, so
+both chiral Weyl blocks vanish. The choice \(p=-q_0/3\)
+gives \(r^{1/3}\sin\phi=r_0^{1/3}\) for a waist \(r_0>0\).
+The identity \(ds/d\phi=-3r_0\sin^{-4}\phi\) gives infinite
+arclength at both angular endpoints and \(r\ge r_0\).
+The complete bridge belongs to the rotational
+\(H_3=0\) family
+\cite[\S1.2.1, equation (7) and Theorem~2(ii)]{Palmas1999RotationHypersurfaces}.
+The determinant integral has density
+\(\phi'\sin^3\phi\,ds\,d\sigma_3\), and the angle decreases
+from \(\pi\) to zero. Thus the signed mass is \(-\omega_4\)
+and \(J=\omega_4\), despite the vanishing chiral cost.
+
+On either arm one may replace \(a(r)=(r_0/r)^{1/3}\)
+by \(a(r)\chi(r/R)\) on \(R\le r\le2R\), with a nonincreasing
+cutoff equal to one and zero near the two ends.
+Integrating the outward height derivative
+\(a\chi/\sqrt{1-(a\chi)^2}\) gives exact flat end germs
+on coaxial parallel planes. The signed determinant is unchanged
+by the smoothing, because the two angular endpoints are unchanged.
+Monotonicity makes the determinant nonpositive and preserves \(J\).
+On the two bands \(|p|+|q_0|=O((r_0/R)^{1/3}/R)\) and their
+volume is \(O(R^4)\), so their shape costs are
+\(O((r_0/R)^{4/3})\). The spherical model isolates a
+negative Gauss charge for one marked transition. It supplies
+spherical planar collars with opposite normal ends, whereas the
+quadratic construction uses solid tori and positive middle mass.
+
+\subsection{Two actual births on the standard sphere}
+
+The following construction tests the height marking on a single
+closed embedding. In local variables \(w=(x_1,x_2,y)\) and \(v\)
+put \(Q=-|x|^2+y^2\), choose a cutoff \(\chi\) equal to one
+near zero, and set
+\[
+ P_\tau=Q+v^3+3a^2v-6\tau a^2v\chi(w,v),\quad
+ \psi(w,v)=(w,P_0(w,v)),\quad U_\tau=P_\tau\circ\psi^{-1}.
+\]
+The positive \(v\)-derivative of \(P_0\) makes \(\psi\) a
+global diffeomorphism. The function \(U_0\) is the affine
+height coordinate and \(U_\tau\) agrees with it off a compact
+set. On the fixed transition the differential of \(Q+v^3\)
+is bounded away from zero, so sufficiently small fixed \(a>0\)
+excludes extra critical points there. For \(\tau=1\) the
+inner polynomial has the index-two point \(v=a\) at value
+\(-2a^3\) and the index-three point \(v=-a\) at value \(2a^3\).
+This is the compactly supported Cerf insertion
+\cite[\S3.5, equation (3.5.1)]{BorodzikPowellTeichner2025LinkConcordance}.
+
+Use small disjoint angular charts \(\Theta_j(w)\) on the unit
+horizontal \(S^3\), and write the upper unit round sphere over
+\(z\in\mathbb R^4\) as \(h_0(z)=\sqrt{1-|z|^2}\).
+For \(r\) small choose a common regular latitude
+\(h_*=\sqrt{1-R_0^2r^2}\) and normalize the height by
+\(T=(h_0-h_*)/r^2\). The two charts have horizontal maps
+\[
+ z=r\sqrt{R_0^2-2h_*T-r^2T^2}\,\Theta_j(w).
+\]
+Choose \(R_0\) fixed large enough that the radicand stays
+uniformly positive on fixed boxes containing the full supports
+and their height ranges. Insert \(h_*+r^2U_\tau(w,T)\) on
+each chart with fixed nearby unequal parameters
+\(a_1,a_2\), so both index-two levels precede both index-three
+levels and all critical values are distinct at the endpoint.
+The graphs equal the round map on collars. The horizontal
+projection has full rank and remains injective in the upper
+graph, and the modified heights stay above the lower hemisphere.
+This gives one smooth embedded sphere, with two new index-two
+points and two index-three points for the actual vertical height.
+
+In each box the normalized coordinates have bounded first and
+second derivatives in \(z/r\), since the boxes stay a
+fixed normalized distance from the pole. Thus \(|D_z h|=O(r)\)
+and \(|D_z^2h|=O(1)\), uniformly in \(\tau\), and the modified
+volume is \(O(r^4)\). The unchanged exterior is round and the
+shape stays bounded in the boxes, giving \(E_\pm=O(r^4)\)
+along the entire path. This same path gives positive Yamabe
+sign for small \(r\). It starts at the round class, and if
+an intermediate conformal Laplacian first eigenvalue vanished,
+a scalar-flat conformal metric would give
+\(E_+=8\pi^2+\frac14\int|\operatorname{Ric}|^2dV\)
+by signature and Gauss--Bonnet. This contradicts the path
+bound. The identification of the first eigenvalue sign with the
+Yamabe sign uses conformal covariance
+\cite[\S2]{LeeParker1987Yamabe}.
+
+For clarity, the actual framed link can be read in the cubic
+coordinates. Put \(C_a(v)=v^3-3a^2v\) and
+\(L_0=3\max_j a_j^3\), with \(a_2/a_1=11/10\).
+In the common normalized incoming height \(-L_0\) the \(j\)-th
+attaching circle is \(v=a,\ y=0,\ |x|^2=L_0-2a^3\).
+A spanning disk in that level is
+\[
+ y=0,\qquad v_0\le v\le a,\qquad |x|^2=C_a(v)+L_0,
+\]
+where \(v_0\in(-3a,-2a)\) is its simple left root.
+The displayed pieces lie inside the cubic region as the fixed
+\(a_j\) are chosen sufficiently small. At the circle the two
+normal framing vectors are positive rescalings of \(\partial_v\)
+and \(\partial_y\), given by the Morse variables
+\((v-a)\sqrt{v+2a},y\). The vector \(\partial_y\) extends
+over the disk, normal to it within the level. This gives the
+zero framing. Below the first middle critical value the global
+level is \(S^3\) by regular transport from an unmodified latitude.
+The disks lie in disjoint angular boxes and have disjoint
+three-ball neighborhoods in this level. Hence the two circles
+form the zero-framed split unlink.
+
+In the intermediate height zero the index-two belt circle
+is \(x=0,\ y^2=-C_a(v)\) for \(0\le v\le\sqrt3a\), and
+the index-three attaching sphere is \(y=0,\ |x|^2=C_a(v)\)
+for \(-\sqrt3a\le v\le0\). The cubic gradient follows the
+appropriate stable or unstable directions on these pieces.
+They meet transversely once in each box at the origin, because
+\((x,y)\) are coordinates in the level there by
+\(C_a'(0)\ne0\). There are no cross intersections. Farther
+out the incoming and outgoing end levels are exactly round
+latitudes. The original angular coordinate and \(T\) give
+their product identification and preserve the unchanged
+exterior. This realizes an actual subcritical two-middle-handle
+height on the known standard type. It leaves the availability
+of corresponding exterior data on other types open.
+
+\section{Outstanding challenges}
+
+The first construction problem is to realize the two prescribed
+solid-torus markings and common corner in an immersion of
+the retained exterior of a given smooth presentation, with a
+quantitative energy bound measured on that same exterior.
+The fixed-collar estimate identifies the cost of substituting
+an interior once this geometry is supplied. To use flattening
+instead, one would need a family of exteriors whose normalized
+germs vary with the small slopes and whose geometry remains
+controlled up to the seams.
+
+For several handles the directional formula uses the actual
+rotations and overlap of all reference normal images. A bound
+for one patch gives little control of a collection unless its
+embeddings and their common exterior are specified together.
+A different family of reference germs could be tested by
+computing compact sublevel pairs for a set of ambient directions
+and determining their exterior critical counts. This would
+extend the relative argument to the extent that the required
+height and collar data can be obtained.
+
+There are two further global steps. A positive-entry construction
+must control the closed conformal Laplacian as well as the total
+chiral energy. A height-recognition construction must identify the
+actual reduced surgery diagram in one selected subcritical
+direction. The standard example supplies a split diagram and
+one convenient direction. Neither the index count nor localized
+energy controls the isotopy class of a prescribed attaching knot
+or the existence of qualifying data on arbitrary smooth
+homotopy four-spheres.
+
+\paragraph{Provenance.}
+Prepared with OpenAI Codex assistance under the bounded SP4-MASTER-E51a
+editorial assignment, with GPT-6.2 Sol/ultra requested.
+Actual serving model and reasoning effort are unavailable.
+The draft assembles repository results E32, E37, E42, E49 and E50
+at commit \texttt{483ad3cef5a0af4328c5d35cabbc1f5224d26b1e}.
+The accompanying manuscript README records the evidence and input versions.
+
+\bibliographystyle{unsrturl}
+\bibliography{references}
+\end{document}

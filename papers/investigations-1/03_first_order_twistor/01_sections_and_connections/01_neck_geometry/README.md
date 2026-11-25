@@ -1,5 +1,7 @@
 # Neck geometry and Weyl energy
 
+[Working paper (PDF)](../../../../../output/pdf/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/marked_necks_and_chiral_energy.pdf) · [Editable manuscript and build](manuscript/README.md)
+
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. Exact serving model and reasoning effort unavailable. [Inputs and versions](../../brainstorm/notes/COLLAR_PROGRAM_AND_SPC4_20261125.md#inputs-and-versions)
 
 Can a separating cut reduce Weyl energy on the same smooth homotopy four-sphere, or can complete accounting rule out a nonflat bubble? This branch studies scale and link selection, metric cap costs and the whole neck.

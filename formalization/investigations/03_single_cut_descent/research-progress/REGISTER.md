@@ -6,12 +6,12 @@ This is the sole live status register for Route 03, including inherited FOT-E25,
 
 ## Version 02 tasks
 
-| Task | State at issue | Next proof or premise |
+| Task | Current state | Next proof or premise |
 | --- | --- | --- |
-| SP4-FORM-CUT-B02 | Scope adopted | Use two full raw sides with both markings and either surviving cap. Specialize the existing geometric transport to each cap. |
-| SP4-FORM-CUT-E02 | Opening proposition type-checked | Prove the conditional inequality. Carry the positive signed cap, recognized opposite cap and actual same-type competitor. Check both choices of surviving side and the strict total margin. |
+| SP4-FORM-CUT-B02 | Adopted and used | The source sides cover the manifold, are volume-a.e. disjoint and both have signed collar data. Either can be retained. |
+| SP4-FORM-CUT-E02 | Verified conditional two-side theorem | The actual orientation-preserving reassembly tracks the core and the image of the whole discarded side. The cap signs, threshold recognition, marking extensions and surcharge estimates are inputs. [Two-side proof](handoffs/ED03_TWO_SIDES.md) |
 | SP4-FORM-CUT-E03 | Ready to specify the tensor estimate | Derive the uniform cutoff and chiral projection error on the actual splice. The inherited norm inequality already consumes a supplied projection bound. |
-| SP4-FORM-CUT-E04 | Depends on CUT-E02, CUT-E03 and VAR-E02 | Prove the path margin, fixed-index stretching and both cap signs, then apply the two-side inequality. |
+| SP4-FORM-CUT-E04 | Positive-path and cut interfaces available | Use the common gap on the original joined type. The short interpolation, stretch and transfer of signs to the completed caps remain open. |
 | SP4-FORM-CUT-E05 | Reserved | Prove the critical fixed-distortion estimate on the supplied enlarged harmonic shell and reduce to the short marked cut. Physical production of such a shell is open. |
 
 The proofs in the next table concern the previously specified core. The [dated baseline](../../research-progress/02_BASELINE.md) identifies precisely which parts can be reused.
@@ -42,3 +42,5 @@ On the compactified metric, `geometricChiralBlock` evaluates all four slots of L
 A positive closed Bach-flat class above the recognition threshold can survive the decrease. Passing to another cut or continuing the descent requires additional geometry. The formal results use distinct metrics on the capped exterior and on the compactification, with the latter pulled back to the source. The paper's Bach-flatness of the transferred representative, general collar extraction and termination remain outside the checked conclusion.
 
 The assembled `oneCutDescent` theorem now uses the same oriented map for the fixed-core equality, the positive Yamabe constant, the integrable curvature energy and the strict and conditional uniform bounds. Its recognition premise tests the metric on the specified exterior. The [third collar assessment](../../../../papers/investigations-1/03_first_order_twistor/reviews/THIRD_COLLAR_ASSESSMENT_20261125.md) gives more information about physical volume balls. Producing the requisite marked full core and separating cut on the approximately critical source sequence remains open. [One-cut theorem and audit](handoffs/ONE_CUT_RETURN.md)
+
+**Edition 03 activation, 25 November 2026.** [Public integration and hypothesis audit](../../research-progress/handoffs/ED03_INTEGRATION_20261125.md) · [Next geometric tasks](../../continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md)

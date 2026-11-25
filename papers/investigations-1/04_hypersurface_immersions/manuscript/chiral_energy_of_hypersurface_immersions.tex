@@ -1,0 +1,857 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\DeclareMathOperator{\Ric}{Ric}
+\DeclareMathOperator{\Rm}{Rm}
+\DeclareMathOperator{\Vol}{Vol}
+\DeclareMathOperator{\Crit}{Crit}
+\newcommand{\R}{\mathbb R}
+\title{Chiral Weyl energy and Morse heights of\\immersed homotopy four-spheres}
+\author{Edward B. Baker III}
+\date{Working draft, 25 November 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+A smooth Euclidean hypersurface immersion of a closed homotopy
+four-sphere ties its induced Weyl energy to the index-two critical
+points of its linear heights. We give sharp pointwise bounds for
+each chiral Weyl block in terms of the shape operator and prove
+strictness after integration on a nonempty middle-signature locus.
+It follows that induced chiral energy at most \(64\pi^2/9\) recognizes
+the standard smooth sphere, with no hypothesis on Yamabe sign.
+Below \(8\pi^2\), a hypothetical nonstandard sphere has exactly two
+middle critical points in more than three quarters of the height
+directions. We prove a directional recognition criterion on a
+retained immersed exterior, and give a separate test for positivity
+of the induced conformal class. Examples distinguish these conditions
+from first-order immersion control and from curvature control of
+a local joining region. The quantitative existence and marked
+height coverage needed on an arbitrary homotopy sphere remain open.
+\end{abstract}
+
+\section{Metric and immersion data}
+
+Let \(M\) be a connected closed oriented smooth homotopy four-sphere.
+We use the real chiral bundles \(\Lambda^\pm\) and the
+Hilbert--Schmidt norm of their Weyl endomorphisms. For an oriented
+Riemannian metric \(g\) and measurable \(P\subset M\) put
+\[
+ E_\pm(g;P)=\int_P |W_g^\pm|_{\mathrm{HS}}^2\,dV_g,
+ \qquad E_\pm(g)=E_\pm(g;M).
+\]
+The chiral densities are invariant under positive conformal change,
+since the Hodge splitting on two-forms is unchanged and each Weyl
+endomorphism has weight \(-2\) for the change \(g\mapsto f^2g\).
+On a closed homotopy sphere the signature is zero,
+so \(E_+=E_-\) and the full four-index Weyl integral is \(8E_+\)
+\cite[Remark 2 and (0.4)]{ChangGurskyYang2003}.
+
+An actual smooth immersion \(F:M\to\R^5\) exists on each such smooth
+type. The stable triviality of \(TM\) follows from
+Kervaire--Milnor \cite[Theorem 3.1]{KervaireMilnor1963Groups}, and the
+rank-five bundle \(TM\oplus\R\) is in the stable range over a
+four-dimensional complex. Its trivialization supplies a bundle
+monomorphism over a constant map, which Hirsch's immersion theorem
+realizes in positive codimension \cite[\S6]{Hirsch1959Immersions}.
+Use the induced Riemannian metric \(g=F^*\delta\), the
+orientation-compatible Gauss map \(\nu:M\to S^4\), and the
+shape operator \(A=-dF^{-1}d\nu\). Write
+\[
+ H=\operatorname{tr}A,\quad A^\circ=A-\tfrac14 H I,\quad
+ B=\left(\int_M |A^\circ|^4\,dV_g\right)^{1/2},\quad
+ J=\int_M(-\det A)_+\,dV_g,\quad \omega=|S^4|=\frac{8\pi^2}{3}.
+\]
+Here \(s_+=\max(s,0)\). Every integral or height count uses \(M\);
+distinct sheets that meet in the ambient space contribute separately.
+The shape, Gauss map and heights belong to \(F\) and its induced
+representative. A positive Yamabe representative of \([g]\) has the
+same chiral energy. It need not itself be induced by an immersion.
+
+\section{Sharp curvature comparisons}
+
+In an oriented principal frame write \(k_1,\ldots,k_4\) for the
+principal curvatures. The Euclidean Gauss equation gives the
+sectional entries \(k_i k_j\) and
+\begin{equation}\label{eq:scalar}
+ R=H^2-|A|^2=\tfrac34 H^2-|A^\circ|^2.
+\end{equation}
+Set \(s_1=k_1k_2+k_3k_4\) and define \(s_2,s_3\) by the other
+opposite-pair partitions. In the normalized self-dual and
+anti-self-dual bases formed from the opposite pairs, each
+diagonal curvature block has entries \(s_j/2\). Its Weyl block
+subtracts \(R/12\) from each entry, and \(R=2\sum_j s_j\).
+Consequently the two Weyl spectra agree, and pointwise
+\begin{equation}\label{eq:weylsums}
+ |W^\pm|^2=\frac1{12}\sum_{i<j}(s_i-s_j)^2 .
+\end{equation}
+
+\begin{proposition}[Shape deficit]\label{prop:deficit}
+For either chirality,
+\begin{equation}\label{eq:shape-deficit}
+ D:=\tfrac16 |A^\circ|^4-|W^\pm|^2
+ \ \ge\ \tfrac89(-\det A)_+ .
+\end{equation}
+If \(\det A\ge0\), equality holds exactly when the principal data
+form two equal pairs. If \(\det A<0\), equality holds exactly at
+positive multiples of \((-1,3,3,3)\), up to permutation and
+simultaneous reversal of the signs. Both the upper bound
+\(|W^\pm|^2\le |A^\circ|^4/6\) and the coefficient \(8/9\)
+are pointwise sharp.
+\end{proposition}
+\begin{proof}
+Write the trace-free principal data in the form
+\[
+ \tfrac12(x+y+z,\ x-y-z,\ -x+y-z,\ -x-y+z).
+\]
+Their squared norm is \(N=x^2+y^2+z^2\). A common shift of the
+principal curvatures changes the \(s_i\) by the same amount.
+For the trace-free data the first opposite-pair sum is
+\(x^2-N/2\), with the corresponding expressions for \(y,z\).
+Thus the Weyl eigenvalues are \((x^2-N/3)/2\) and its two
+permutations, giving
+\[
+ D=\tfrac12(x^2y^2+x^2z^2+y^2z^2).
+\]
+When the determinant is nonnegative, equality is equivalent
+to at most one of \(x,y,z\) being nonzero, which is the stated
+two-pair condition.
+
+For a negative determinant, reverse the normal if necessary,
+order the three positive curvatures, and use homogeneity to write
+the list as \((-a,1-a,1-a+v,1-a+v+u)\) with \(0<a<1\) and
+\(u,v\ge0\). Let \(Z=1+2v+u\) and \(b=1-2a\).
+The trace-free coordinates are \((-Z,-1-u,u-1)/2\), and
+\[
+ \begin{split}
+ 32D&=2Z^2(1+u^2)+(1-u^2)^2\ge 2Z^2+1,\\
+ 16(-\det A)&=(1-b^2)((Z+b)^2-u^2)\\
+ &\le (2Z^2+1)(1-b^2)(1/2+b^2)
+       \le \tfrac9{16}(2Z^2+1).
+ \end{split}
+\]
+The second line uses weighted Cauchy--Schwarz for \(Z+b\),
+and \((1-b^2)(1/2+b^2)=9/16-(b^2-1/4)^2\).
+The first bound is an equality only at \(u=0\), since \(Z\ge1\).
+Equality in the other bounds gives \(2Zb=1\) and \(b^2=1/4\).
+Hence \(b=1/2\), \(Z=1\), and \(v=0\), giving the stated ratio.
+The equality lists are realized at a point of a Euclidean graph
+by prescribing its Hessian at zero slope.
+\end{proof}
+
+Let \(U\subset M\) be the open set of shape signature \((2,2)\).
+For an immersed subdomain use the same definition on its
+interior. Set \(I_2(P)=\int_{P\cap U}\det A\,dV_g\) when \(P\)
+is a subdomain, and \(I_2=I_2(M)\).
+\begin{proposition}[Middle-signature comparison]\label{prop:middle}
+On \(U\),
+\begin{equation}\label{eq:middle-weyl}
+ |W^\pm|^2\ge \tfrac83\det A .
+\end{equation}
+The constant is pointwise sharp, with equality exactly at
+\((-k,-k,k,k)\) up to permutation, \(k>0\).
+Equality cannot hold on an open subset of \(U\).
+Thus \(E_\pm(g;P)>\frac83 I_2(P)\) whenever \(P\) has a
+nonempty open middle-signature locus.
+\end{proposition}
+\begin{proof}
+For principal data \((-a,-b,c,d)\) with \(a,b,c,d>0\), write
+\(p=abcd\). The sum \(ab+cd\) is at least \(2\sqrt p\).
+The two other sums, \(-ac-bd\) and \(-ad-bc\), are at
+most \(-2\sqrt p\). Two differences in \eqref{eq:weylsums}
+are therefore at least \(4\sqrt p\); they yield the bound.
+Equality forces \(ab=cd,\ ac=bd,\ ad=bc\), hence equal
+magnitudes. A graph with this Hessian proves pointwise sharpness.
+
+For open-set equality the smooth eigenbundles of eigenvalues
+\(k,-k\) have rank two. In a rank-two eigenspace, the projection
+of Codazzi for two orthogonal vector fields gives zero
+directional derivative of its eigenvalue in both directions.
+The two eigenspaces together imply \(dk=0\). With \(k\) constant,
+for sections \(X,Y\) of opposite distributions,
+\((\nabla_X A)Y=(\nabla_Y A)X\) lies in both distributions and
+vanishes. Metric compatibility now makes both distributions
+parallel for all derivatives. Mixed sectional curvature is zero
+for such parallel distributions, in conflict with its Gauss
+value \(-k^2\). The nonnegative pointwise defect cannot vanish
+identically on a nonempty open set in \(U\), so its integral
+there is positive.
+\end{proof}
+Integrating Proposition~\ref{prop:deficit} also gives
+\begin{equation}\label{eq:integrateddeficit}
+ E_\pm(g)+\tfrac89 J\le B^2/6 .
+\end{equation}
+The Weyl density can be positive where the Gauss map has
+zero Jacobian. For the rank-two principal list
+\((k_1,k_2,0,0)\), \eqref{eq:weylsums} gives
+\(|W^\pm|^2=(k_1k_2)^2/6\).
+
+\section{Heights and smooth recognition}
+
+The identity \(TM\simeq\nu^*TS^4\) as oriented bundles
+gives \(2\deg\nu=\chi(M)=2\). In dimension four the signed
+Jacobian of \(\nu\) is \(\det A\). For almost every
+\(u\in S^4\), both \(u\) and \(-u\) are regular Gauss values.
+The height \(h_u=\langle F,u\rangle\) is then Morse. Its
+critical points are the two inverse images, and its Hessian
+there is \(\langle u,\nu\rangle g(A\cdot,\cdot)\). Reversing
+the sign of this Hessian preserves index two. This genericity
+asserts nondegenerate critical points. Their critical values
+may coincide, including at distinct source points with the
+same ambient image. The area
+formula gives the Chern--Lashof total average
+\cite{ChernLashof1957Curvature} and its middle-index version
+\cite[\S\S2--3]{OntiVlachos2017Hypersurfaces}:
+\begin{equation}\label{eq:averages}
+ \frac1\omega\int_{S^4}\#\Crit(h_u)\,d\sigma
+ =\frac2\omega\int_M|\det A|\,dV_g=2+\frac{4J}{\omega}.
+\end{equation}
+\begin{equation}\label{eq:middle-mass}
+ \frac1\omega\int_{S^4}m_2(u)\,d\sigma=\frac{2 I_2}{\omega}.
+\end{equation}
+Here \(m_2(u)\) is the index-two count and \(d\sigma\) is
+ordinary spherical area. The factor two in each formula
+comes from the two normal signs.
+
+\begin{lemma}[One middle handle]\label{lem:one}
+If a Morse function on \(M\) has at most one index-two
+critical point, then \(M\) is diffeomorphic to \(S^4\).
+The same conclusion holds for a Morse function with at most
+four critical points in total.
+\end{lemma}
+\begin{proof}
+Reorder the handles by index, keeping their counts. The
+topological argument permits small localized changes to an
+auxiliary scalar function to separate repeated critical values.
+It gives a marked handle presentation of the same smooth
+domain. Recovering an actual regular level of the original
+linear height requires its own level and marking data. The
+union of the \(0\)- and \(1\)-handles is connected because
+no higher handle has a disconnected attaching region.
+Amalgamate the \(0\)-handles and \(1\)-handles of a spanning
+tree of their incidence graph to one standard \(4\)-disk.
+Every remaining \(1\)-handle reattaches by its transported
+marking. From the opposite end do the same with the dual
+\(0\)- and \(1\)-handles. These two operations occur in
+disjoint end pieces and preserve the number of middle
+handles and the actual boundary identifications. Now the
+number of \(1\)- and \(3\)-handles sums to the number of
+\(2\)-handles by \(\chi(M)=2\).
+
+With no middle handle the manifold is a double of standard
+disks. Each boundary diffeomorphism of \(S^3\) is isotopic
+to the orthogonal map of its orientation component by
+Hatcher's theorem. Extending the isotopy over a collar
+and the orthogonal map over the rest of the disk identifies
+the double with \(S^4\) \cite{Hatcher1983Smale}.
+With one middle handle, reverse the function if needed so
+that the remaining odd handle has index three. The lower
+half is the trace of a framed knot in \(S^3\); its outgoing
+boundary is \(S^1\times S^2\) because the upper half is a
+dual genus-one \(1\)-handlebody. The first homology of
+integer \(n\)-surgery is \(\mathbb Z/n\mathbb Z\), so the
+framing is zero. Property R makes the knot the unknot
+\cite[Corollary 8.3 and Remark 8.5]{Gabai1987FoliationsIII}.
+The trace is \(S^2\times D^2\), and gluing to \(S^1\times D^3\)
+by the actual boundary map gives \(S^4\) by
+Laudenbach--Po\'enaru \cite[Theorem A]{LaudenbachPoenaru1972Handlebodies}.
+
+For the second assertion, two critical points give the
+double already considered. With four, the ranks \(m_j\)
+satisfy \(m_j=b_j+r_j+r_{j+1}\), where \(r_j\) is the rank
+of the boundary maps of the Morse chain complex. The total
+rank in excess of \(b_0+b_4=2\) is two, so exactly one
+nonzero \(r_j\) is one. The possibilities are one extra
+adjacent-index pair. Each has at most one index-two
+point and is covered by the preceding argument. For an
+extra \(0,1\) pair the unique \(1\)-handle joins the distinct
+disks; the dual statement handles the \(3,4\) pair.
+\end{proof}
+
+\begin{theorem}[Global immersion tests]\label{thm:recognition}
+Each of the following conditions on a single immersion
+recognizes the standard smooth four-sphere:
+\[
+ J<\omega,\qquad E_+(g)\le\frac{64\pi^2}{9},\qquad
+ B\le\frac{16\sqrt2\,\pi}{3}.
+\]
+On a hypothetical nonstandard \(M\), an immersion with
+\(E_+(g)<8\pi^2\) has \(m_2=2\) in more than three quarters
+of the height directions. Four mutually orthogonal such
+directions can be selected.
+\end{theorem}
+\begin{proof}
+The total critical count is even by the Morse Euler sum.
+If \(J<\omega\) its average in \eqref{eq:averages} is less
+than six, so there is a Morse height with two or four critical
+points. On a hypothetical nonstandard type, Lemma~\ref{lem:one}
+therefore gives \(J\ge\omega\) and \(m_2(u)\ge2\) for all Morse
+heights. By \eqref{eq:middle-mass}, \(I_2\ge\omega\). In particular
+\(U\ne\varnothing\), and Proposition~\ref{prop:middle} gives
+\(E_+>8\omega/3=64\pi^2/9\). The surplus decomposes as
+\[
+ E_+-\tfrac83\omega
+ =E_+(g;M\setminus U)
+  +\int_U\bigl(|W^+|^2-\tfrac83\det A\bigr)\,dV_g
+  +\tfrac43\omega\left(\frac1\omega\int_{S^4}m_2\,d\sigma-2\right).
+\]
+All terms are nonnegative and the middle one is positive.
+This proves inclusion of the endpoint. The pointwise
+constant is sharp; the argument gives no optimal global
+upper energy for recognition. If \(B\le16\sqrt2\,\pi/3\),
+\eqref{eq:integrateddeficit} and \(J\ge\omega\) give
+\(E_+\le64\pi^2/9\), which is impossible on the nonstandard type.
+
+When \(E_+<8\pi^2\), \eqref{eq:middle-mass} and the
+middle-signature comparison give
+\(\omega^{-1}\int m_2\,d\sigma<9/4\). The excess above two
+bounds the proportion of directions with \(m_2\ge3\) by
+less than \(1/4\). The four first vectors of a random
+orthonormal frame each have uniform marginal direction.
+The union of their four failure events has probability
+less than one. For each chosen direction, after the two
+end reductions of Lemma~\ref{lem:one}, the pair of remaining
+odd-handle counts belongs to \(\{(0,2),(1,1),(2,0)\}\).
+\end{proof}
+
+The strict endpoint for \(J\) cannot be improved by the
+averaging argument alone. For \(k\ge1\), put
+\(\Theta=(2k+1)\pi\), choose a nonnegative smooth \(b\) supported
+in \((0,\pi/2)\) with \(C=\int b(t)\cos t\,dt>1\), and set
+\[
+ \rho(t)=1+b(t)+b(\Theta-t),\qquad
+ r(t)=\int_0^t\rho(s)\cos s\,ds,\qquad
+ z(t)=\int_0^t\rho(s)\sin s\,ds.
+\]
+The rotational map \((t,y)\mapsto (z(t),r(t)y)\),
+\(y\in S^3\), defines an immersion on \(S^4\).
+Indeed \(r(\Theta-t)=r(t)\), \(r(0)=r(\Theta)=0\),
+and \(r=C+\sin t>0\) through the part between the end
+bumps; monotonicity and reflection give positivity on
+the remaining open arms. Each collapsing orbit is smooth
+in the coordinates \(w=r y\), because the profile near
+each end is a round meridian. The speed of the profile
+is \(\rho\). Its normal is \((\cos t,-\sin t\,y)\) up to
+a global sign. A nonaxial direction has one regular
+preimage per length-\(\pi\) interval, and an axial height
+has an interior critical latitude. Thus every Morse height
+has \(4k+2\) critical points and \(J=k\omega\). The metric
+\(\rho^2dt^2+r^2g_{S^3}\) is round-conformal: with
+\(d\tau=\rho\,dt/r\) the cylinder rescaled by
+\(\operatorname{sech}^2\tau\) gives the round compactification,
+and the quotient of its multiplier by \(r\) extends
+smoothly and positively over the round cap charts.
+These immersions have zero Weyl energy and positive Yamabe
+sign, including the six-critical-point case at \(J=\omega\).
+
+\section{The retained exterior and directional counts}\label{sec:exterior}
+
+Suppose \(M=P\cup Q\) along a smooth common boundary, and
+\(F:P\to\R^5\) is an immersion smooth up to the boundary. For
+almost every direction \(u\), suppose \(h_u\) on \(P\) extends
+to a smooth Morse function on \(M\) with at most \(k(u)\)
+index-two critical points in \(\operatorname{int}Q\), where
+\(k\) is nonnegative and measurable. A different scalar
+extension may be used for each direction. Define
+\[
+ D_P=\frac12\int_{S^4}(2-k(u))_+\,d\sigma .
+\]
+\begin{proposition}[Exterior recognition]\label{prop:exterior}
+If \(D_P>0\) and \(E_+(g;P)\le \frac83 D_P\), then
+\(M\) is diffeomorphic to \(S^4\). The conclusion also holds
+with \(D_P=0\) under the same energy inequality if the interior
+of \(P\) has a nonempty middle-signature locus.
+\end{proposition}
+\begin{proof}
+The Gauss image of the seam and its antipode have spherical
+measure zero. At almost every remaining direction the
+exterior count is at least \((2-k(u))_+\) if \(M\) is
+nonstandard, by Lemma~\ref{lem:one}. The area formula restricted
+to \(P\) yields \(I_2(P)\ge D_P\). If \(D_P>0\) the middle-signature
+locus meets the interior of \(P\). With this locus either
+inferred or supplied, Proposition~\ref{prop:middle} gives
+\(E_+(g;P)>\frac83 I_2(P)\), contradicting the assumed bound.
+\end{proof}
+
+\subsection{Quadratic seam data}
+
+Let \(Q\) consist of finitely many disjoint marked domains
+\(\Omega_j\subset\R^2_x\times\R^2_y\) with smooth boundary.
+Assume \(F\) extends across each marked collar by the germ
+of the graph
+\[
+ F_j(z)=(R_j z,R_j t_j q(z)),\qquad q(z)=\tfrac12(|y|^2-|x|^2),
+ \qquad R_j,t_j>0,
+\]
+up to a specified rigid motion of each graph. Use these
+graphs on the interiors to extend the heights. Their shape
+signature is \((2,2)\) by congruence with the graph Hessian.
+If \(N_j\) is the image of the interior by the upward
+unit normal after that rigid motion, then \(N_j\) and
+\(-N_j\) are disjoint and
+\begin{equation}\label{eq:normalarea}
+ k(u)=\sum_j \boldsymbol{1}_{N_j\cup(-N_j)}(u),\qquad
+ \sigma_j:=|N_j|=t_j^4\int_{\Omega_j}(1+t_j^2|z|^2)^{-5/2}\,dz.
+\end{equation}
+In fact the normal is \((-t_jD z,1)/\sqrt{1+t_j^2|z|^2}\)
+before the rigid motion, with \(D=\operatorname{diag}(-1,-1,1,1)\).
+Its chart \(p=u_h/u_5=-t_jD z\) is injective. The spherical
+metric in this chart has one eigenvalue \((1+|p|^2)^{-2}\)
+along \(p\) and three \((1+|p|^2)^{-1}\) normal to it, which
+gives the area factor in \eqref{eq:normalarea}.
+
+These seams give a middle-signature open set on the exterior
+side whenever there is at least one patch: the graph has
+nondegenerate shape at the seam and the exterior has the
+same smooth germ there. In particular, the strict comparison
+in Proposition~\ref{prop:exterior} is available. The angular
+threshold is
+\[
+ D_P=\omega-\sum_j \sigma_j+
+                \frac12\int_{S^4}(k(u)-2)_+\,d\sigma .
+\]
+Thus \(E_+(g;P)+\frac83\sum_j\sigma_j\le\frac83\omega\)
+is a sufficient, potentially weaker criterion. For one patch
+the exact threshold is \(\frac83(\omega-\sigma_1)\).
+For copies of one star-shaped domain centered at the origin
+with common ambient axes and horizontal marking, the \(N_j\)
+are nested by the normal chart in \eqref{eq:normalarea}.
+Pointwise \(\min(2,k)\) is the sum of the two largest antipodal
+indicators. Hence \(D_P=\omega-\sigma_{(1)}-\sigma_{(2)}\),
+where the terms are the two largest areas and an absent
+term is zero. Distinct rotations require the overlap integral
+in the full expression. Only the actual exterior energy and
+the supplied seam data enter these recognition criteria.
+
+\begin{proposition}[A forced middle point for a fixed graph germ]\label{prop:fixedgerm}
+Let \(G:\overline\Omega\to\R^5\) be a smooth immersion agreeing
+near the entire marked boundary with \(F_{R,t}\) for one
+quadratic graph above. Write \(N\) for that graph's interior
+one-sign normal image and \(\sigma_N=|N|\). For almost every
+direction in \(N\cup(-N)\), the height of \(G\) has at least
+one middle critical point in \(\Omega^\circ\). In particular
+\(I_2(G;\Omega)\ge\sigma_N\) and
+\(E_\pm(G^*\delta;\Omega)>\frac83\sigma_N\).
+\end{proposition}
+\begin{proof}
+After reversing the direction if necessary, take \(u\in N\)
+with both normal signs regular for \(G\). The tilted
+quadratic reference has its unique critical point \(z_0\)
+inside \(\Omega\), and can be written as
+\(h_0=c+\frac b2(|\eta|^2-|\xi|^2)\), where \(b=Rt u_5>0\)
+and \((\xi,\eta)=z-z_0\) in the negative and positive planes.
+Extend \(h=\langle G,u\rangle\) smoothly by \(h_0\) outside
+\(\Omega\). Choose \(L\) larger than the deviations from
+\(c\) of the two heights on the patched domain, and choose
+\(r_0\) with the domain inside \(|z-z_0|<r_0\) and
+\(br_0^2/2>L\).
+
+Add the same smooth radial term \(\psi(s)\),
+\(s=|\xi|^2+|\eta|^2\), to both functions, with \(\psi=0\)
+up to \(r_0^2\) and \(\psi'\) strictly increasing to infinity
+thereafter. The new functions are proper. Every new radial
+critical point has \(\eta=0\) and \(\psi'(s)=b/2\). Its value
+lies below \(c-L\), since \(-bs/2+\psi(s)\) decreases until
+that radius. Thus the critical points in the compact band
+\([c-L,c+L]\) of the modified height are exactly those
+inside the patch. The two end sublevel sets coincide with
+the corresponding reference sublevel sets. For the reference
+both sets retract together by contracting \(\eta\) to zero.
+In the negative plane the upper set is a disk and the lower
+one an annulus, from the minimum and subsequent increase of
+\(-bs/2+\psi(s)\). Their relative \(H_2\) is \(\mathbb Z\).
+The Morse cell attachment theorem for a compact band now
+forces an index-two critical point. Equal critical values
+can first be separated by small perturbations constant near
+the affected critical points. The band endpoints and the
+critical indices are preserved
+\cite[Theorems 3.1--3.2 and Remark~3.3]{Milnor1963MorseTheory}.
+
+Integrate over \(N\), using the two disjoint normal signs and
+the area formula. This gives \(I_2(G;\Omega)\ge\sigma_N\)
+and a nonempty open middle-signature locus. Proposition
+\ref{prop:middle} gives the strict energy assertion.
+\end{proof}
+The alternating index sum from the boundary degree of the
+gradient would allow an extremum in place of a middle point.
+The relative sublevel group determines a specific degree.
+A more general seam requires a computable fixed sublevel
+pair and the auxiliary index-two count in its exterior.
+
+\section{Yamabe sign and second-order tests}\label{sec:sign}
+
+Write \(Q_g(f)=\int_M(6|df|^2+Rf^2)\,dV_g\),
+\(\kappa=|B^4|=\pi^2/2\), and \(B_Y=32\sqrt\kappa/3=16\sqrt2\,\pi/3\).
+The sharp submanifold Sobolev bound in codimension two gives
+\begin{equation}\label{eq:brendle}
+ 4\kappa^{1/4}\|w\|_{4/3}
+ \le \int_M (|dw|^2+H^2w^2)^{1/2}\,dV_g .
+\end{equation}
+To apply Brendle's estimate to the immersed domain, compose
+\(F\) with the linear inclusion \(\R^5\subset\R^6\). The extra
+normal has zero second fundamental form and the mean curvature
+vector is the trace, of length \(|H|\)
+\cite[Corollary 2 and \S2, Lemmas 4--6]{Brendle2021Isoperimetric}.
+The multiplicity issue can be seen in the proof. For a positive
+smooth weight \(w\), scale it so that the integral in
+\eqref{eq:brendle} equals \(4\int w^{4/3}\).
+This is possible since \(H\) is nonzero somewhere on a closed
+immersion. Solve the resulting mean-zero equation
+\[
+ \operatorname{div}(w\nabla v)=4w^{4/3}-(|dw|^2+H^2w^2)^{1/2}.
+\]
+For \(|\xi|<1\), minimize \(v-\langle F,\xi\rangle\) on \(M\).
+At a minimum the map \((p,y)\mapsto dF_p(\nabla v)+y\)
+from the normal bundle covers \(\xi\), and
+\(\nabla^2v-\langle\mathrm{II},y\rangle\) is nonnegative.
+Its trace is at most \(4w^{1/3}\) by the equation and
+Cauchy--Schwarz applied to the tangent and normal components
+of \(\xi\). The local Jacobian is therefore at most \(w^{4/3}\).
+For the shell \(\sigma<|\xi|<1\), each admissible normal
+fiber in dimension two has area at most \(\pi(1-\sigma^2)\).
+The area formula bounds the ambient shell volume from above
+by \(\pi(1-\sigma^2)\int w^{4/3}\), with multiplicities on
+the domain side. Divide by \(1-\sigma^2\) and let \(\sigma\uparrow1\).
+Since \(3|B^6|=\pi\kappa\), the normalized integral
+of \(w^{4/3}\) is at least \(\kappa\). Undoing the normalization
+gives \eqref{eq:brendle}
+on the immersed domain without an injectivity assumption.
+
+Set \(w=|f|^3\) by smooth approximation. Cauchy--Schwarz in
+\eqref{eq:brendle} gives
+\[
+ 16\sqrt\kappa\,\|f\|_4^2\le9\|df\|_2^2+\|Hf\|_2^2.
+\]
+By \eqref{eq:scalar} this implies both form bounds
+\begin{equation}\label{eq:form}
+ Q_g(f)\ge B_Y\|f\|_4^2-\int_M(|A^\circ|^2-H^2/12)f^2\,dV_g
+ \ \ge\ (B_Y-B)\|f\|_4^2+\tfrac1{12}\|Hf\|_2^2 .
+\end{equation}
+Consequently \(Y([g])>0\) if \(B\le B_Y\) or if
+\(\|(|A^\circ|^2-H^2/12)_+\|_2<B_Y\). At \(B=B_Y\), test
+on the positive first conformal-Laplacian eigenfunction.
+The last term in \eqref{eq:form} is positive since a
+closed Euclidean minimal immersion would have all
+coordinate functions harmonic and hence constant. The
+first eigenvalue has the sign of the Yamabe constant
+\cite[\S\S2,11]{LeeParker1987Yamabe}.
+
+For comparison, on a homotopy sphere a supplied nonnegative
+Yamabe sign and \(E_+<8\pi^2\) already imply strict positivity.
+At zero sign, the scalar-flat conformal representative
+\(\tilde g\) satisfies
+\[
+ E_+(g)=8\pi^2+\tfrac14\|\Ric_{\tilde g}\|_2^2
+\]
+by Gauss--Bonnet and signature \cite[(0.4)]{ChangGurskyYang2003}.
+This identity cannot determine the sign without the
+nonnegativity premise.
+
+An actual immersion with \(Y([g])>0\) and \(E_+<8\pi^2\)
+enters the intrinsic minimization over positive Yamabe
+classes on its fixed smooth type. For example \(B<4\sqrt3\,\pi\)
+guarantees this for its induced class by \eqref{eq:form}
+and \(E_+\le B^2/6\). More generally, if \(J\ge\omega\)
+and positivity is available independently, the bound
+\(B<4\sqrt{35}\,\pi/3\) suffices by \eqref{eq:integrateddeficit}.
+With \(J<\omega\), smooth recognition already follows.
+The coupled nonstandard estimate at \(B=B_Y\) gives
+\(E_+\le64\pi^2/9\), and Theorem~\ref{thm:recognition}
+then excludes that smooth type. The intrinsic
+Chang--Gursky--Yang threshold \(E_+\le4\pi^2\) also gives
+smooth recognition if \(Y>0\). The strict theorem applies in
+the four-index norm, and the equality alternatives on a
+nonstandard type are ruled out by simple connectivity and
+\(b_2=0\) \cite[Theorems A--B]{ChangGurskyYang2003}.
+The extrinsic middle-signature argument explains why the
+threshold in Theorem~\ref{thm:recognition} does not require a
+Yamabe condition.
+
+\subsection{First-order control and concentration}
+
+A regular homotopy permits changes of the second derivatives
+that are invisible in a \(C^1\) limit. In a graph chart
+\(x\mapsto(x,u_0(x))\), multiply its height by a cutoff to
+flatten an interior cube while keeping the exterior.
+Graph interpolation keeps the horizontal differential
+equal to the identity throughout. In the flat cube
+\([-a,a]^4\), use the perturbation
+\[
+ u_k(x)=\frac{\varepsilon_k}{k}\,\eta(x)
+               \bigl(\cos(kx_1)+\cos(kx_2)\bigr),
+ \qquad k=m\pi/a,\quad \varepsilon_k=k^{-1/2},
+\]
+where \(\eta=1\) near the cube and is supported inside the
+flattened chart. These perturbations tend to zero in \(C^1\).
+On the cube \(w_k=\sqrt{1+|Du_k|^2}\), \(dV_g=w_k\,dx\),
+and the two active principal curvatures have product
+\(\det D^2_{12}u_k/w_k^4\). The rank-two Weyl formula gives
+\[
+ E_\pm(g_k;[-a,a]^4)
+ \ge\frac{4a^4\varepsilon_k^4k^4}{6(1+2\varepsilon_k^2)^{7/2}}
+ \longrightarrow\infty .
+\]
+The determinant integral has no \(C^1\) bound either.
+Using four active cosine terms of amplitude \(k^{-3/2}\),
+restrict to subcubes where all cosines are bounded away
+from zero and the diagonal Hessian has negative
+determinant. This set has volume bounded below and the
+negative determinant magnitude is of order \(k^2\).
+In graph coordinates \((-\det A)_+\,dV_g=
+(-\det D^2u_k)_+ (1+|Du_k|^2)^{-5/2}dx\), proving divergence.
+The modifications remain in the same regular homotopy
+class, relative to the outer graph. Fixed-shape patches
+may also be scaled into arbitrarily small charts. The
+total Weyl energy, \(J\), and the integral of
+\(|A^\circ|^4\) each retain their size under ambient
+homothety, since they have curvature degree four.
+Shrinking support by itself supplies no control of these
+integrals.
+
+\subsection{A supported negative sign test}
+
+There are actual immersions with negative Yamabe sign on any
+of the prescribed domains. Consider the graph
+\(\Sigma=(x,y,xy)\subset\R^3\), with
+\[
+ K=-(1+x^2+y^2)^{-2},\qquad dA=\sqrt{1+x^2+y^2}\,dx\,dy .
+\]
+Its parameter unit disk has curvature integral
+\(-c_0=-2\pi(1-1/\sqrt2)\), and lies in the ambient-radius-two
+set. Put \(\rho=|(x,y,xy)|\). Then \(|d\rho|_\Sigma\le1\) and
+\(\operatorname{Area}(\rho\le R)\le16R^2\) for \(R\ge2\).
+Indeed in the first quadrant integrate \(1+x+y\) over
+\(0\le x\le R\), \(0\le y\le\min(R,R/x)\). For \(x\le1\)
+the result is at most \(5R^2/4\). For \(x\ge1\) it is at
+most \(R\log R+3R^2/2\le5R^2/2\). Sum the four quadrants.
+A cutoff \(\chi\) equal to one up to \(\rho=2\), zero beyond
+\(2^{N+1}\), and linear in \(\log\rho\) between the two
+radii has \(\int|d\chi|^2\le64/[N(\log 2)^2]\) by summing
+over the \(N\) dyadic annuli. Since \(K\le0\) and
+\(\int K\chi^2\le-c_0\), choose finite \(N\) large enough
+that \(6\int|d\chi|^2+2\int K\chi^2\le-c_0\).
+
+The product graph \(\Sigma\times\R^2\subset\R^5\)
+has scalar curvature \(2K\). For a nonzero compactly
+supported planar test \(\varphi\) and \(f(x,y,z)=
+\chi(x,y)\varphi(z/L)\) its quadratic form is at most
+\[
+ -c_0L^2\int_{\R^2}\varphi^2
+       +6\left(\int_{\R^2}|d\varphi|^2\right)
+          \left(\int_\Sigma\chi^2\,dA\right).
+\]
+Choose finite \(L\) to make this negative, and smooth the
+cutoff inside a larger box. Cut off the graph height
+outside a neighborhood of this support. A common ambient
+dilation inserts the finite patch into a flattened
+graph chart and rescales the supported quadratic form
+by a positive constant. Extension by zero keeps its
+negative sign on the closed domain. The same graph
+interpolation as above preserves regular homotopy.
+These examples show why quantitative selection of the
+immersion and the sign test are separate from formal
+immersion existence. They do not give a negative
+sign conclusion for immersions in the subcritical energy band.
+
+\section{A rotational test for global gluing budgets}\label{sec:rotational}
+
+A rotational bridge displays the distinction between Weyl
+energy and negative Gauss mass even with exact planar face
+germs. Take
+\[
+ F(s,\theta)=(r(s)\theta,z(s)),\qquad
+ r'=\cos\phi,\quad z'=\sin\phi,\qquad \theta\in S^3 ,
+\]
+with \(s\) arclength and \(r>0\). For
+\(\nu=(-\sin\phi\,\theta,\cos\phi)\) the principal curvatures
+are \(p=\phi'\) and \(q=\sin\phi/r\), the latter repeated
+three times. The radial ambient acceleration is \(p\nu\),
+and the orbit sphere has angular radial acceleration
+\(-\theta/r\), giving \(q\). All three opposite-pair sums
+are \(pq+q^2\). Thus this class has \(W^\pm=0\), and
+\[
+ g=ds^2+r^2 g_{S^3},\quad
+ R=6q(p+q),\qquad |A^\circ|^2=\tfrac34(p-q)^2.
+\]
+
+The negative-determinant equality in
+Proposition~\ref{prop:deficit} occurs for \(p=-q/3\).
+At a waist with \(r=r_0>0,\ z=0,\ \phi=\pi/2\), this
+ODE gives
+\[
+ r=r_0\sin^{-3}\phi,\qquad
+ \frac{ds}{d\phi}=-3r_0\sin^{-4}\phi,\qquad 0<\phi<\pi.
+\]
+The first identity follows by differentiating
+\(r^{1/3}\sin\phi\), and the second by the equation for \(p\).
+The metric is complete since the two arclength integrals
+diverge and \(r\ge r_0\). It is embedded because \(z'>0\).
+This is the rotational \(H_3=0\) model
+\cite[\S1.2.1, equation (7) and Theorem~2(ii)]{Palmas1999RotationHypersurfaces}.
+Its determinant integral is
+\[
+ |S^3|\int_\pi^0\sin^3\phi\,d\phi=-\omega.
+\]
+The sign is negative throughout and
+\(B^2=(16/3)\omega=128\pi^2/9\) by
+\eqref{eq:shape-deficit} at equality.
+
+For exact planar faces retain each arm to radius \(R\gg r_0\).
+On the upper arm the outward slope parameter is
+\(a(r)=(r_0/r)^{1/3}\), with \(dZ/dr=a/\sqrt{1-a^2}\).
+On either arm for \(R\le r\le2R\), replace \(a\) by
+\(a_\pm(r)=a(r)\chi_\pm(r/R)\), with smooth nonincreasing
+cutoffs equal to one near \(R\) and zero near \(2R\).
+Integrate \(a_\pm/\sqrt{1-a_\pm^2}\) from the retained
+height to the new face height, and reflect the lower
+arm. Each outward graph agrees with the exact parametrized
+plane near its face. The planes are parallel, with
+marked centers on the common axis. Only compatible
+prescribed exterior germs can use these data. With \(Z\) the
+ideal upper height, each absolute face height can be chosen
+in \((Z(R),Z(2R))\) by moving the decrease of its cutoff
+toward either end and interpolating the profiles. At fixed
+\(R,r_0\) the two choices are independent. Integrating
+\(dZ/dr\) shows that the separation is of order
+\(R(r_0/R)^{1/3}\) for large \(R/r_0\).
+
+Let \(\varepsilon=(r_0/R)^{1/3}\).
+For the modified arm, with the global normal convention,
+\(p=a_\pm'\), \(q=a_\pm/r\), up to simultaneous reversal
+if the orientation is changed. The radial volume density
+is \(r^3/\sqrt{1-a_\pm^2}\). Its determinant mass over the
+cutoff band is exactly
+\[
+ |S^3|\int_0^\varepsilon \frac{v^3}{\sqrt{1-v^2}}\,dv,
+\]
+equal to the corresponding complete tail's mass. Thus
+the marked bridge still has \(J=\omega\) and signed total
+\(-\omega\). More generally, for any smooth rotational profile
+with \(r>0\) going between these two outward planar ends,
+the signed integral is \(-\omega\) by the primitive
+\(-\cos\phi+\cos^3\phi/3\) of \(\sin^3\phi\).
+It follows that its negative part costs at least \(\omega\).
+For the displayed cutoffs each band's volume is \(O(R^4)\)
+and \(|p|+|q|=O(\varepsilon/R)\), for a fixed cutoff family.
+Consequently the flattened bridge has
+\[
+ W^\pm=0,\qquad B^2=128\pi^2/9+O(\varepsilon^4),\qquad
+ \int R_-^2\,dV_g=O(\varepsilon^4).
+\]
+The shape cost is strictly larger than \(128\pi^2/9\),
+because the cutoff changes the equality ratio where
+\(a_\pm>0\) and \(\chi_\pm\) is decreasing. The scalar
+curvature of the induced radial graph satisfies
+\[
+ R=\frac3{r^3}\frac{d}{dr}(r a_\pm)^2 .
+\]
+It is negative somewhere on each flattening arm since
+the differentiated quantity goes from \(R^2\varepsilon^2\)
+to zero. This sign concerns the induced representative.
+
+The bridge is conformal to a round product, using
+\(r^{-2}g=d\tau^2+g_{S^3}\), \(d\tau=ds/r\), and the
+product has scalar curvature six. Its length between the
+marked faces is \(L=2\log(R/r_0)+O(1)\), because the length
+from the waist to \(R\) is
+\(3\log\cot(\arcsin(\varepsilon)/2)\) on each side.
+Suppose two supplied closed immersed sides have
+positive Yamabe constants \(y_-,y_+\) and exact compatible
+flat disk germs at the marked faces. Use their entire
+disk exteriors and identify the parameterizations
+through flat buffers. The punctured sides in their
+\(r^{-2}\) conformal gauges have exact infinite round-product
+ends. Sine and cosine cutoffs \(\chi_\pm\) on the joined
+cylinder with \(\chi_-^2+\chi_+^2=1\) and gradients
+\(O(L^{-1})\) allow \(\chi_\pm f\) to be used as compact
+tests on their respective punctured sides. Conformal
+covariance gives \(Q(\chi_\pm f)\ge y_\pm\|\chi_\pm f\|_4^2\)
+\cite[(2.7)]{LeeParker1987Yamabe}. The localization identity is
+\[
+ Q(f)=\sum_\pm Q(\chi_\pm f)-
+                       6\int\sum_\pm |d\chi_\pm|^2 f^2 .
+\]
+The cylinder has volume \(O(L)\), so the last term is at
+most \(C L^{-3/2}\|f\|_4^2\) by H\"older, while
+\(\sum_\pm\|\chi_\pm f\|_4^2\ge\|f\|_4^2\).
+The whole joined class therefore has Yamabe constant
+at least \(\min(y_-,y_+)-CL^{-3/2}\). This gives positivity
+for sufficiently long bridges if the supplied signs have
+a uniform positive margin. In this comparison the two
+full exterior Weyl energies add, and the bridge contributes
+its \(J=\omega\) and shape cost in addition to the exterior
+costs. The zero Weyl energy of the bridge alone gives no
+bound for the joined metric's total energy. On a joined
+homotopy sphere, the signed determinant integrals of the
+two full exteriors must add to \(2\omega\) to compensate the
+bridge's signed integral \(-\omega\).
+
+\section{Coverage and further challenges}
+
+The companion on marked immersed handle constructions \cite{Baker2026ImmersedHandles}
+treats framed solid-torus faces, matching bands and
+conditional realizations of a local index-two attachment.
+Section~\ref{sec:exterior} uses compatible germs and the energy
+of a common exterior in the resulting immersion. A round
+rotational bridge has spherical faces and does not supply
+these solid-torus attaching maps. Local estimates do not give
+the full exterior or its energy.
+
+The companion on recognition from marked Morse heights \cite{Baker2026MarkedHeights}
+treats the actual diagrams for the two-middle-handle
+case. Theorem~\ref{thm:recognition} gives the angular proportion of
+regular heights with exactly two middle points. The three permitted odd-handle
+distributions do not themselves decide geometric cancellation.
+A proof by selected heights needs a direction in the same
+immersion whose actual framed levels satisfy a recognition
+hypothesis. Even four orthogonal good directions from the
+count give no such attaching-map information by themselves.
+
+If a positive subcritical class passes to intrinsic fixed-type
+minimization, its initial immersion need not extend to any
+minimizing class. The
+master manuscript
+treats that separate question. In particular the harmonic-annulus
+comparison there takes a supplied oriented embedded comparison
+with small fixed distortion, vanishing full curvature in that
+gauge, harmonic or controlled-tension coordinates, and protected
+placements of the two charged sides. It does not extract those
+data from a Euclidean immersion, its Weyl integral or its height
+counts. The rotational model above furnishes an exact local
+product after conformal change, with different hypotheses on
+the marked sides.
+
+For an arbitrary homotopy sphere the remaining geometric
+premise is a global immersed construction with a qualifying
+energy or shape bound, or a retained immersed exterior meeting
+the angular test with actual matching data. For the subcritical
+height route a separate coverage mechanism must link the
+available directions to the certified diagrams. For intrinsic
+entry both the sign and the strict subcritical energy belong
+to the same supplied conformal class. These alternatives do
+not presently cover every possible smooth type.
+
+\paragraph{Provenance.}
+Prepared for Edward B. Baker III with OpenAI Codex assistance
+on 25 November 2026. This standalone analysis incorporates the
+parent immersion investigation and the master computations on
+immersion entry, height averaging, shape deficit, rotational
+joining and fixed-germ exterior recognition. The frozen
+repository base was \texttt{483ad3cef5a0af4328c5d35cabbc1f5224d26b1e}.
+The bounded editorial request selected GPT-6.2 Sol/ultra.
+Actual serving model and reasoning effort were unavailable.
+The proofs retain the hypotheses of their assessed inputs.
+The setup and harmonic annulus records enter the provenance
+and scope comparison, respectively.
+
+\bibliographystyle{alpha}
+\bibliography{references}
+\end{document}

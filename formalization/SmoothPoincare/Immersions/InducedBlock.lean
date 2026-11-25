@@ -19,6 +19,24 @@ noncomputable def principalGaussTensor (k : Fin 4 → ℝ) : CurvatureFrameTenso
     (if a = c then k a else 0) * (if b = d then k b else 0) -
     (if a = d then k a else 0) * (if b = c then k b else 0)
 
+/-- Compression in the normalized differences of the same complementary wedge
+pairs used for the positive basis. These differences form the negative basis. -/
+noncomputable def antiSelfDualCurvatureBlock (R : CurvatureFrameTensor) : Matrix (Fin 3) (Fin 3) ℝ :=
+  let coeff (p q : Fin 4 × Fin 4) := R p.1 p.2 q.1 q.2
+  fun i j =>
+    (coeff (selfDualFirstWedge i) (selfDualFirstWedge j) -
+      coeff (selfDualFirstWedge i) (selfDualSecondWedge j) -
+      coeff (selfDualSecondWedge i) (selfDualFirstWedge j) +
+      coeff (selfDualSecondWedge i) (selfDualSecondWedge j)) / 2
+
+theorem principalGauss_chiralBlocks_eq (k : Fin 4 → ℝ) :
+    antiSelfDualCurvatureBlock (principalGaussTensor k) =
+      selfDualCurvatureBlock (principalGaussTensor k) := by
+  ext i j
+  fin_cases i <;> fin_cases j <;>
+    norm_num [antiSelfDualCurvatureBlock, selfDualCurvatureBlock, principalGaussTensor,
+      selfDualFirstWedge, selfDualSecondWedge]
+
 /-- Compress the Gauss tensor in the normalized self-dual basis and remove its
 trace. The squared norm is one twelfth of the three squared pair differences. -/
 theorem principalGauss_weylNormSq (k : Fin 4 → ℝ) :
@@ -33,12 +51,13 @@ theorem principalGauss_weylNormSq (k : Fin 4 → ℝ) :
     ext i j
     fin_cases i <;> fin_cases j <;>
       norm_num [selfDualCurvatureBlock, principalGaussTensor, selfDualFirstWedge,
-        selfDualSecondWedge, Matrix.diagonal_apply] <;> ring
+        selfDualSecondWedge, Matrix.diagonal_apply]
+    ring
   dsimp only
   rw [hblock]
   simp [hilbertSchmidtSq, traceFreeChiralBlock, Matrix.trace, Matrix.diagonal_apply,
     Matrix.smul_apply, Matrix.one_apply, Fin.sum_univ_three]
-  <;> ring
+  ring
 
 section Immersion
 
@@ -79,8 +98,20 @@ theorem metricCurvatureFrameTensor_eq_principalGauss :
   unfold metricCurvatureFrameTensor principalGaussTensor
   rw [gauss_equation_of_inner_map F.smooth F.isometric, metricRm04StandardAt_apply,
     euclideanMetric_metricRm04At_eq_zero]
-  simp only [ContinuousMultilinearMap.zero_apply, zero_add, P.principal, euclideanMetric_inner,
-    real_inner_smul_left, real_inner_smul_right, P.unit, mul_one]
+  have normal_prod (u v : ℝ) :
+      euclideanMetric.inner (F.map p) (u • P.normal) (v • P.normal) = u * v := by
+    change inner ℝ (u • P.normal) (v • P.normal) = u * v
+    simp only [real_inner_smul_left, real_inner_smul_right, P.unit, mul_one]
+    exact mul_comm v u
+  simp only [zero_apply, zero_add, P.principal, normal_prod]
+
+/-- The two chiral matrices coincide in the paired principal wedge bases for
+the induced metric at this point. -/
+theorem inducedAntiChiralBlock_eq :
+    traceFreeChiralBlock (antiSelfDualCurvatureBlock (metricCurvatureFrameTensor g o p P.frame)) =
+      geometricChiralBlock g o p P.frame := by
+  unfold geometricChiralBlock
+  rw [metricCurvatureFrameTensor_eq_principalGauss P, principalGauss_chiralBlocks_eq]
 
 /-- Intrinsic positive Weyl density of the induced metric in this very frame. -/
 theorem inducedChiralBlock_normSq :
@@ -100,8 +131,9 @@ theorem inducedMiddleWeylBound {a b c d : ℝ}
     t ≤ W ∧ (W = t ↔ a = b ∧ b = c ∧ c = d) := by
   dsimp only
   rw [inducedChiralBlock_normSq P, hk]
-  convert middleSignatureWeylBound a b c d ha hb hc hd using 3 <;>
-    dsimp [principalWeylNormSq] <;> ring
+  change _ ≤ principalWeylNormSq (-a) (-b) c d ∧ (principalWeylNormSq (-a) (-b) c d = _ ↔ _)
+  simp only [principalWeylNormSq, neg_mul, mul_neg, neg_neg, ← neg_add]
+  exact middleSignatureWeylBound a b c d ha hb hc hd
 
 /-- The independent shape deficit uses the same principal frame, for every sign pattern. -/
 theorem inducedShapeDeficitBound :

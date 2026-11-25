@@ -2,6 +2,12 @@
 
 This is the sole program register across editions. The shared task prefix is `SP4-FORM-FOT`. Each delegated task has one live proof owner. Natural-language results and the search for qualifying metrics and charts are recorded in the [master register](../../../papers/master/research-progress/REGISTER.md) and the [twistor register](../../../papers/investigations-1/03_first_order_twistor/research-progress/REGISTER.md).
 
+## Edition 03 activation · 25 November 2026
+
+**FOT-B07, implemented.** The six opening propositions now have proofs. Their owning registers and the [integrated kernel and source audit](handoffs/ED03_INTEGRATION_20261125.md) record the stronger measured, geometric and equality results. [Issued proof and review packets](handoffs/ED03_ASSIGNMENTS_20261125.md) · [Next session](../continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md)
+
+**FOT-E37, assessed conditional coverage.** A positive subcritical entry on the specified type supplies actual positive minimizing metrics. Normalizing them uses same-energy Yamabe representatives. The chosen physical metrics now supply their own quantiles. The diffuse repair estimate retains the full uncovered mass and can select an actual repair at the inclusive threshold. The cut needs geometric markings and positive caps. The immersed route reaches a precise open saturation obstruction at equality under the indexed identity and smooth count floor. Below the strict upper threshold the selected regular direction carries whatever marked data have been constructed for that very direction. No new candidate smooth type is recognized by these formalizations. The remaining work for FOT-E35 includes intrinsic equality recognition on an attained class. [Original thresholds and hypotheses](../../../papers/master/manuscript/chiral_weyl_energy_and_smooth_poincare.tex)
+
 ## Edition 03 · Parallel master investigations · 25 November 2026
 
 SP4-FORM-FOT-B07 **adopted** the new proof ownership. The four opening proposition types have been checked. The [dated baseline](03_BASELINE.md) records the package, source versions and scope. [Overview](../research-overview/03_OVERVIEW.md) · [Proof plan](../research-plan/03_PLAN.md) · [Continuation](../continuation-notes/AFTER_PARALLEL_ROUTE_SETUP_20261125.md)
@@ -14,7 +20,7 @@ SP4-FORM-FOT-B07 **adopted** the new proof ownership. The four opening propositi
 | [09 · Morse heights](../09_morse_heights_and_handle_recognition/research-progress/REGISTER.md) | New HT family. Indexed Gauss mass, middle count, direction selection and marked cancellation. |
 | [05 · Local comparison](../05_variational_comparison/research-progress/REGISTER.md) and [03 · Single cut](../03_single_cut_descent/research-progress/REGISTER.md) | 05 retains VAR-B01/B02 and E01–E04. 03 retains CUT-E02–E05, including the conditional harmonic-shell theorem. |
 
-The parent retains FOT-E35, recognition at an attained intrinsic threshold, and FOT-E37, coverage on each candidate smooth type. Both are reserved for their indicated geometric inputs. FOT-E34 retains its earlier three-route audit. Earlier assignments below are dated records.
+The parent retains FOT-E35, recognition at an attained intrinsic threshold, and FOT-E37, coverage on each candidate smooth type. At setup both were reserved for their indicated geometric inputs. The activation entry above records the subsequent conditional coverage audit. FOT-E34 retains its earlier three-route audit. Earlier assignments below are dated records.
 
 ## Version 02 · Fixed-type comparison · 25 November 2026
 

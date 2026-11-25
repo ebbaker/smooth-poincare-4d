@@ -60,6 +60,7 @@
 | SP4-MASTER-E48 | Integrated mathematical text audited | [Final proof check and amendment](../reviews/E48_INTEGRATED_MARKED_TESTS.md). |
 | SP4-MASTER-E49 | Actual global marked-height model checked | [Two local births on one actual sphere immersion](../notes/E49_TWO_BIRTH_HEIGHT.md). Standard smooth type only. |
 | SP4-MASTER-E50 | Independent two-birth check accepted | [Energy, level disks and framings](../reviews/E50_TWO_BIRTH_AUDIT.md). |
+| SP4-MASTER-E51 | Companion manuscripts integrated | [Five disjoint draft returns and independent master checks](handoffs/E51_COMPANION_DRAFTS_20261125.md). The master keeps the direct thresholds and marked comparison criteria. |
 
 [Integrated returns, requests and assessment](handoffs/VARIATIONAL_RETURNS_20261125.md) · [Manuscript](../manuscript/README.md). No theorem here constructs entry on arbitrary smooth homotopy spheres or establishes smooth Poincaré. The new results have manuscript proofs and scoped model checks. The earlier formalization receipts retain their original scopes.
 

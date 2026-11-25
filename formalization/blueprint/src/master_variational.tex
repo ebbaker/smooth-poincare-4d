@@ -8,8 +8,8 @@ Signature gives equality of the two totals on \(M\). Regional energies
 retain their chirality. A positive class with \(E_+\le T\) recognizes
 the smooth type by the sphere and equality theorems of Chang, Gursky
 and Yang. This implication and its topological hypotheses are external
-dependencies in Lean. The first two entries below describe existing
-declarations. The subsequent entries record targets for the new edition.
+dependencies in Lean. The dependencies below distinguish checked conditional comparisons from
+geometric realization on a candidate smooth type.
 
 \begin{definition}[Admissible geometric energies]
 \label{def:master-admissible}
@@ -41,7 +41,7 @@ integrability and the curvature integral transfer along that same map.
 
 \begin{proposition}[Independent replacements on the original type]
 \label{prop:master-replacement}
-\uses{lem:master-competitor}
+\uses{lem:master-competitor,prop:ed03-measured-comparisons}
 After a positive-class witness is supplied, write \(I=\inf A_M\) in
 \(\mathbb R\). Let \(m_j\) be the raw chiral masses of finitely many
 disjoint marked standard balls in a source of energy \(e\). If each
@@ -59,7 +59,7 @@ oriented frames.
 
 \begin{corollary}[Independent repairs and the uncovered mass]
 \label{cor:master-repair-residual}
-\uses{prop:master-replacement}
+\uses{prop:master-replacement,lem:ed03-measured-residual,lem:ed03-repair-threshold}
 On a nonstandard type in the band, fix \(\varepsilon>0\).
 Suppose a subsequence admits the marked repairs above, with bounded
 cardinality at this tolerance, total surcharge of limsup at most
@@ -82,7 +82,7 @@ An unattained value \(I=T\) remains a possibility in the band.
 
 \begin{proposition}[Nonsplitting for two marked caps]
 \label{prop:master-nonsplitting}
-\uses{lem:master-competitor,prop:cut-marked-reassembly,lem:source-remainder-split}
+\uses{lem:master-competitor,prop:cut-marked-reassembly,lem:source-remainder-split,prop:ed03-measured-comparisons}
 Let the two full raw masses be \(m_1+m_2=e\). Assume two positive
 marked caps with costs \(E_j\le m_j+\gamma_j\), \(\gamma_j\ge0\), and
 \(e+\gamma_1+\gamma_2<2T\). On a nonstandard candidate at least one
@@ -96,7 +96,7 @@ and the actual attaching maps.
 
 \begin{lemma}[Positive paths below the scalar-flat wall]
 \label{lem:master-wall}
-\uses{lem:scalar-component-budgets}
+\uses{lem:scalar-component-budgets,lem:ed03-path}
 On the original closed smooth type, a zero Yamabe class has a
 scalar-flat representative \(q\), for which
 \(E_+(q)=2T+\frac14\int_M|\mathrm{Ric}_q|^2\,dV_q\).
@@ -138,7 +138,7 @@ positive cap signs. The smaller full raw chiral mass tends to zero.
 
 \begin{theorem}[Local replacement on a marked comparison]
 \label{thm:master-local-replacement}
-\uses{lem:master-competitor,lem:master-wall,lem:master-splice}
+\uses{lem:master-competitor,lem:master-wall,lem:master-splice,lem:ed03-weighted-defect}
 On an oriented open domain supply embeddings of neighborhoods of a
 compact exhaustion with \(\Phi_i^*g_i=u_i^2m_i\), \(u_i>0\).
 Assume \(m_i\to h\) locally uniformly and strongly in \(W^{1,4}\),
@@ -154,7 +154,7 @@ The existing two-jet theorem has stronger source regularity.
 
 \begin{lemma}[Physical chiral quantiles]
 \label{lem:master-quantiles}
-\uses{lem:source-remainder-split,lem:scalar-component-budgets}
+\uses{lem:source-remainder-split,lem:scalar-component-budgets,lem:ed03-yamabe-quantiles}
 In physical distance set \(r_i(\theta)\) equal to the least ball radius
 capturing \(\theta e_i\) over all centers, and \(r_i=r_i(1/2)\).
 Assume positive total chiral mass bounded away from zero, uniformly
@@ -213,7 +213,7 @@ subsequence gives a smooth closed positive Yamabe minimizer on \(M\).
 
 \begin{proposition}[Recognition for one Euclidean hypersurface immersion]
 \label{prop:master-immersion}
-\uses{lem:routes-middle-weyl,lem:routes-shape-deficit,lem:routes-indexed-mass,prop:routes-middle-count}
+\uses{lem:routes-middle-weyl,lem:routes-shape-deficit,lem:routes-indexed-mass,prop:routes-middle-count,lem:ed03-equality,cor:ed03-balanced-endpoint,lem:ed03-codazzi-jets}
 For a smooth immersion of \(M\) in \(\mathbb R^5\), let \(g\) be the
 induced metric, \(A\) its shape operator, \(J=\int_M(-\det A)_+\,dV_g\)
 and \(B=\|A^\circ\|_{L^4(g)}^2\). Each of \(J<8\pi^2/3\),

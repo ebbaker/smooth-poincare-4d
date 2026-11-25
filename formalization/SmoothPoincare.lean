@@ -5,10 +5,14 @@ import SmoothPoincare.Variational.YamabeWall
 import SmoothPoincare.Variational.Defect
 import SmoothPoincare.Variational.RepairResidual
 import SmoothPoincare.Variational.JointDescent
+import SmoothPoincare.Variational.RepairThreshold
+import SmoothPoincare.Variational.MeasuredRepairFamily
+import SmoothPoincare.Variational.MinimizingSequence
 import SmoothPoincare.PhysicalScales.Basic
-import SmoothPoincare.PhysicalScales.Quantiles
+import SmoothPoincare.PhysicalScales.YamabeQuantiles
 import SmoothPoincare.Immersions.PrincipalCurvatures
-import SmoothPoincare.Heights.Selection
+import SmoothPoincare.Immersions.InducedEndpoint
+import SmoothPoincare.Immersions.CodazziJets
 
 /-! # Fixed-type descent and immersed recognition
 

@@ -10,6 +10,11 @@ from pathlib import Path
 import re
 from urllib.parse import unquote, urlsplit
 
+if __package__:
+    from .build_manuscripts import MANUSCRIPTS
+else:
+    from build_manuscripts import MANUSCRIPTS
+
 ROOT = Path(__file__).resolve().parents[1]
 BRANCHES = ('master',
             'master/01_fixed_type_variational_descent',
@@ -50,6 +55,10 @@ def main():
     manifest = json.loads((root / 'IMPORT_MANIFEST.json').read_text())
     local_only = {entry['destination'] for entry in manifest['files']
                   if entry['git_policy'] in {'local_reading_copy', 'generated_local_copy'}}
+    # Reading copies may be absent on a checkout that has not built the TeX.
+    for branch, (series, filename) in MANUSCRIPTS.items():
+        if (root / 'papers' / series / branch / 'manuscript' / filename).is_file():
+            local_only.add((Path('output/pdf') / branch / Path(filename).with_suffix('.pdf')).as_posix())
     required = ['README.md', 'AGENTS.md', 'LICENSE.txt', 'CITATION.cff', 'CONTINUATION.md',
                 '.gitignore', '.github/pull_request_template.md',
                 '.github/workflows/check-repository.yml', '.github/workflows/build-latex.yml',

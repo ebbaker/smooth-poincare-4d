@@ -25,128 +25,33 @@ taking the source limit. The same conclusion holds for approximately harmonic co
 \end{proposition}
 
 \begin{proof}
-We give the critical estimate in the coordinates where the metric is
-known. For a smooth \(m=\delta_{\rm Euc}+v\) write
-\(\eta=\|v\|_\infty\) and \(T^a=\Delta_m x^a\).
-For a fixed compactly supported cutoff \(0\le\chi\le1\) put
-\[
- X=\|\chi^2D^2v\|_2,\quad G=\|\chi Dv\|_4,\quad
- L_\chi=\|D\chi\|_4^2+\|D^2(\chi^2)\|_2 .
-\]
-Norms of components use \(dx\). Integrating
-\(\chi^4|Dv|^4\) by parts against \(v\) gives
-\(G^4\le C\eta(G^2 X+\|D\chi\|_4G^3)\), hence
-\(G^2\le C\eta X+C\eta^2 L_\chi\).
-The coordinate Ricci equation has principal part
-\[
- m^{ab}\partial_{ab}v_{jk}
- =-2\Ric_{jk}-m_{ja}\partial_kT^a-m_{ka}\partial_jT^a
-     +O(|Dv|^2).
-\]
-Apply \(\|D^2f\|_2=\|\Delta_{\rm Euc}f\|_2\) to
-\(f=\chi^2v\) extended by zero. The commutators cost
-\(C\|D\chi\|_4G+C\eta L_\chi\), and freezing the principal
-coefficient costs \(C\eta X\). Absorbing these terms using
-the bound for \(G^2\) gives
+Apply the short critical shell estimate of the neck paper
+\cite{Baker2026MarkedNecks} in the supplied coordinates. Its gauge
+hypothesis concerns the physical rescaling on the entire central
+annulus. In detail, set \(v=m-\delta_{\rm Euc}\),
+\(\eta=\|v\|_\infty\) and \(T^a=\Delta_m x^a\). For a fixed interior
+cutoff \(\chi\) the localized Ricci equation gives
 \begin{equation}\label{eq:critical-chart}
- X\le C B,\qquad G^2\le C\eta B,\qquad
- B=\|\chi^2\Ric\|_2+\|\chi^2 DT\|_2+\eta L_\chi .
+ \|\chi^2D^2v\|_2\le C B,\qquad
+ \|\chi Dv\|_4^2\le C\eta B,\qquad
+ B=\|\chi^2\Ric\|_2+\|\chi^2 DT\|_2+C_\chi\eta .
 \end{equation}
-In particular if \(\eta_i\to0\) and \(B_i\) stays bounded, this
-gives the strong first-order estimate and bounded full curvature on
-each interior splice. The differentiated tension belongs to the
-coordinate system used in the interpolation.
-
-For the fixed-distortion assertion choose cutoffs on nested annuli
-in \(A(1/8,8)\) which equal one on a neighborhood of
-\(\overline{A(1/4,4)}\). In harmonic coordinates \(T=0\); in the approximate case the differentiated tension contributes an additional \(o(1)\).
-Equation~\eqref{eq:critical-chart} gives bounded \(W^{2,2}\) and
-\(\|Dm_i\|_4\le C\varepsilon_*+o_i(1)\) there. Pass to a
-weak \(W^{2,2}\) limit \(h\), strongly in each \(W^{1,s}\),
-\(s<4\), and almost everywhere. The matrices and inverses stay
-uniformly within \(C\varepsilon_*\) of the Euclidean ones.
-In the Ricci and harmonic equations the bounded coefficients
-converge almost everywhere. They may be transferred to a fixed
-test in \(L^2\) in the Hessian term. Quadratic gradient terms
-converge in distributions by strong \(W^{1,2}\) and the uniform
-ellipticity. Thus the limit satisfies the reduced metric equation with vanishing right-hand source Ricci and differentiated tension. In the approximate case a limiting constant coordinate tension is allowed; its derivative vanishes throughout the argument. Its full curvature also vanishes in distributions,
-by the all-lowered formula and smallness of the incoming integral.
-
-Here is the interior regularity at the critical exponent. Write
-the equation for \(h\) as
-\(h^{ab}\partial_{ab}h+C(h,Dh)Dh=0\), where \(C\) denotes a
-matrix of first-order coefficients bounded by \(C_0|Dh|\).
-On a fixed ball compactly inside the annulus, this system with
-zero Dirichlet data is a small operator perturbation of the flat
-Laplacian from \(W^{2,s}\cap W^{1,s}_0\) to \(L^s\), for
-\(s=2,3\). Indeed the principal error is \(O(\varepsilon_*)\);
-the first-order error is bounded by
-\(C\|Dh\|_4\|Du\|_{4s/(4-s)}\).
-Choose \(\varepsilon_*\) for these two estimates and the fixed
-cutoffs. Applying the operator to a compactly supported cutoff
-times \(h\) gives a forcing in \(L^3\), since \(Dh\in L^4\).
-Solve at exponent three and use uniqueness at two to identify
-the solution. Thus \(h\in W^{2,3}_{\rm loc}\); its reduced metric equation first gives \(W^{2,6}\) by \(Dh\in L^{12}\) and freezing continuous principal coefficients on smaller balls. Interior estimates then give smoothness as in
-Lemma~\ref{lem:ricci-radius}. The smooth metric is flat.
-
-In fact \(m_i\to h\) strongly in \(W^{2,2}\) on smaller interiors.
-Subtract the harmonic Ricci equations and localize with another
-cutoff. The operator on \(m_i-h\) has small principal perturbation
-and first-order coefficients bounded by \(C(|Dm_i|+|Dh|)\),
-small in \(L^4\). The forcing tends to zero in \(L^2\):
-the Ricci norm vanishes, coefficient differences multiplying the
-smooth \(D^2h,(Dh)^2\) converge by dominated convergence, and
-cutoff commutators with \(D(m_i-h)\) converge strongly in \(L^2\).
-For the drift commutator use boundedness in \(L^4\) of the drift
-and strong \(L^4\) convergence of \(m_i-h\). Absorption at \(s=2\)
-gives the claim, hence strong \(W^{1,4}\).
-
-It remains to place a whole spherical cut in these coordinates.
-On \(A(1/4,4)\), integrate an oriented parallel orthonormal coframe
-of \(h\) to a developing map \(F\) into \(\mathbb R^4\). The annulus
-is simply connected. Its derivative is within \(C\varepsilon_*\)
-of \(SO(4)\), since \((DF)^tDF=h\). The rigidity estimate on this
-fixed Lipschitz domain gives a rotation \(Q\) with
-\(\|DF-Q\|_2\le C\varepsilon_*\)
+Here \(C_\chi\) depends on the cutoff derivatives and the norms on
+the right use Euclidean coordinates. Small fixed \(\eta\) permits
+absorption in the interior elliptic estimates. Vanishing full curvature
+and differentiated tension yield, after passage to a subsequence, a smooth flat limit and strong local
+\(W^{2,2}\) convergence in these coordinates. The developing map of
+the limit has degree one over a smaller annulus. The neck paper proves
+this last assertion using geometric rigidity
 \cite[Theorem 3.1]{FrieseckeJamesMueller2002Rigidity}.
-After translation, Poincar\'e and the uniform Lipschitz bound show
-\(F-Qx\) is uniformly small on a slightly smaller closed annulus
-as \(\varepsilon_*\downarrow0\). For example a fixed lower bound
-on its supremum there forces a fixed positive \(L^2\) norm on an
-interior ball. Choose \(\varepsilon_*\) so the degree on
-\(A(1/3,3)\) is one at every point of \(A(1/2,2)\), by the
-straight homotopy to \(Qx\) on the boundary. Positive Jacobian
-gives exactly one preimage there. The pulled-back unit sphere
-separates the original inner and outer faces: every crossing of
-the trimmed annulus goes from smaller to larger than unit
-developed radius. Thus both original charged sets retain their
-full masses. This argument uses only a bounded trim; if a wider
-fixed log interval is desired, the dilation of the radial splice
-profiles below is fixed in advance.
-
-In the developed chart on \(A(1/2,2)\) the metrics converge strongly
-in \(W^{1,4}\) to the Euclidean metric and are uniformly elliptic.
-Uniform convergence is unnecessary for the cost here. Interpolate
-with the Euclidean metric on the two fixed splice strips, leaving
-an exactly flat middle strip. For the chiral density matrix the
-difference from the cutoff times the incoming matrix has \(L^2\)
-norm at most a constant times
-\[
- \|\Rm_{m_i}\|_2+\|Dm_i\|_4^2+\|Dm_i\|_2+
-                       \|m_i-\delta_{\rm Euc}\|_2=o(1).
-\]
-Indeed the projection-change term is bounded by the first term
-using ellipticity, and the product rule in the all-lowered
-curvature formula gives the rest. On each splice separately the same bound gives an individual excess \(o(1)\) above the incoming raw side. The bound holds uniformly along
-the cutoff interpolation on the closed original type. Multiplying
-conformally to obtain the exact round product costs zero chiral
-energy. The path stays below \eqref{eq:zero-wall}. Stretch the
-exact product and cut as in Proposition~\ref{prop:short-cut}, choosing
-a fixed buffer length for the band margin before the source limit.
-Both caps have positive Yamabe sign and their combined excess above
-the incoming energy is \(o(1)\). The middle sphere is smoothly
-marked and both complete raw sides have positive limiting mass.
-This contradicts the fixed-type cut inequality.
+Thus one whole cut lies in the protected trim. In the developed
+coordinates strong \(W^{1,4}\), uniform ellipticity and vanishing full
+curvature make each splice error \(o(1)\): the projection-change term
+is bounded by the incoming curvature, and the cutoff terms by the
+strong first-order convergence. Stretching the exact product gives
+positive caps as in Proposition~\ref{prop:short-cut}. Each full raw
+side retains its charged set. Corollary~\ref{thm:cut} contradicts this
+at the infimum.
 \end{proof}
 
 \begin{corollary}[A physical annulus located by one point]\label{cor:anchored-annulus}

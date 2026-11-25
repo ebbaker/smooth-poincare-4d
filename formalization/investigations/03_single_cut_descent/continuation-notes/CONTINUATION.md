@@ -1,5 +1,7 @@
 # Single spherical cut and descent · Sustained continuation
 
+**Current handoff, 25 November 2026.** [Continue from the assessed Edition 03 milestone](../../continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md). The launch instructions below record the original packet.
+
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The model settings below apply to the requested future session. The drafting model variant and effort are unavailable.
 
 [Route overview](../research-overview/OVERVIEW.md) · [Proof plan and opening Lean type](../research-plan/PLAN.md#opening-proof) · [Live route register](../research-progress/REGISTER.md) · [Program ownership](../../research-progress/REGISTER.md#route-ownership) · [Input and toolchain baseline](../../research-progress/01_BASELINE.md)

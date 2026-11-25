@@ -149,19 +149,23 @@ precursor based on generalized conformal maps acting on Yang--Mills fields,
 see~\cite{Baker2023} and references therein.
 
 The variational argument below uses curvature on the original smooth
-manifold. Its starting observation is that the strict sphere theorem
-tests a single positive conformal class. A sphere separating two pieces
-with combined capped energy below twice the recognition threshold must
-leave at least one piece below that threshold. If that piece is
-standard, the other retains the original smooth type. Minimizing the
+manifold. The sphere theorem recognizes a single positive conformal
+class at the threshold, including equality. If a cut gives two positive
+capped classes with combined energy at most twice that threshold, one
+has energy at most the threshold. Its smooth type is standard, so the
+other piece retains the original smooth type after capping. Minimizing the
 energy on this \emph{fixed} smooth type then bounds the energy one can
 discard by cutting.
 
-Two measures enter this argument. The Yamabe equation allows one to
-locate smooth balls supporting physical volume. The energy minimized
-by the cutting argument measures chiral Weyl curvature. We derive
-estimates for both and formulate the remaining comparison on the same
-marked regions of the manifold.
+For a given smooth type, direct recognition requires just one metric
+in the class tested in Proposition~\ref{prop:recognition} or
+Theorem~\ref{thm:immersed-entry}. In the wider immersed band the
+question passes to the attaching maps of one selected height. On the
+intrinsic route, positive subcritical entry instead allows a minimizing
+sequence on that type. It suffices to find on one such sequence a
+marked cut with charge on both sides, or an admissible disk repair
+whose gain exceeds the minimizing excess. Physical Yamabe volume and
+chiral energy then play different roles on the same marked regions.
 
 \section{The two energy thresholds}\label{sec:thresholds}
 
@@ -225,16 +229,29 @@ Define
  I^+(M)=\inf\{E_+(g):g\text{ smooth},\quad Y([g])>0\},
  \qquad \inf\varnothing=+\infty .
 \]
-The round class has zero energy. Conversely \(I^+(M)<T\) supplies a
-competitor below \(T\), so \(M\) is standard and \(I^+(M)=0\).
+For a fixed smooth homotopy four-sphere the recognition criterion gives
+\begin{equation}\label{eq:recognition-endpoint}
+ M\cong_{\mathrm{diff}} S^4
+ \quad\Longleftrightarrow\quad
+ \exists\,g:\ Y([g])>0,\ E_+(g)\le T
+ \quad\Longleftrightarrow\quad I^+(M)<T .
+\end{equation}
+Indeed, a positive class at or below \(T\) recognizes \(M\) by
+Proposition~\ref{prop:recognition}. Pulling back the round metric then
+gives \(I^+(M)=0\). Conversely, an infimum strictly below \(T\)
+supplies a positive class below \(T\) by the definition of infimum.
+If \(I^+(M)=T\) were attained, its minimizing class would recognize
+\(M\) and force \(I^+(M)=0\), a contradiction. Thus the endpoint
+left open by an estimate \(I^+(M)\le T\) is precisely an unattained
+infimum at \(T\).
+
 Our weaker entry hypothesis is \(I^+(M)<2T\), equivalently the
 existence of one positive class with energy strictly below \(2T\).
 On a nonstandard candidate in this range,
 \begin{equation}\label{eq:band}
  T\le I^+(M)<2T,\qquad E_+(g)>T\quad\text{for every positive class}.
 \end{equation}
-Recognition leaves open \(I^+(M)=T\), in which case the infimum is unattained. Choose positive
-classes approaching the infimum and in each choose a smooth
+Choose positive classes approaching the infimum and in each choose a smooth
 volume-one Yamabe minimizer \(g_i\). Their chiral energies \(e_i=E_+(g_i)\)
 are unchanged by this choice. For a fixed \(\delta>0\) and all
 sufficiently large \(i\), we have \(e_i\le2T-\delta\). Thus \(g_i\)
@@ -275,9 +292,8 @@ Finally \(\sigma_2(A)=s^2/96-|\Ric_0|^2/8\), giving
 \input{marked_cut}
 \input{first_order_splice}
 \input{variational_comparison}
-\input{physical_volume}
 
-\section{What a volume-bearing family would have to control}
+\section{Removing energy on the original smooth type}
 \label{sec:replacement}
 
 For a smoothly parametrized standard ball there is a shorter comparison.
@@ -377,54 +393,43 @@ standard balls. This gives a metric on \(M\) at the stated energy;
 taking the fixed-type infimum gives the last inequality.
 \end{proof}
 
-For a sequence in the band \eqref{eq:band}, write
-\(\mu_i=dV_{g_i}\) and \(\lambda_i=|W^+_{g_i}|_{\rm HS}^2dV_{g_i}\).
-Consider the following uniform absolute continuity condition:
-\begin{equation}\label{eq:ac}
- \omega(a):=\limsup_{i\to\infty}
-    \sup_{\mu_i(U)\le a}\lambda_i(U)\longrightarrow0
-   \quad (a\downarrow0),
-\end{equation}
-where \(U\) ranges over measurable sets. For example a uniform
-physical \(L^{2+\alpha}\) bound on \(W^+\), with \(\alpha>0\), gives
-\(\omega(a)\le C a^{\alpha/(2+\alpha)}\) by H\"older. The critical
-integral bound in \eqref{eq:budgets} alone gives no such modulus.
-
-\begin{corollary}\label{cor:vol-reduction}
-Let \(M\) admit a positive class with \(E_+<2T\) and choose a
-positive-class minimizing sequence of volume-one Yamabe representatives.
-Suppose that for each sufficiently small fixed \(\epsilon>0\) a
-subsequence has a family as in Theorem~\ref{thm:volume-balls}
-covering at least \(1-\epsilon\) of the physical volume and admitting
-the one-sided repairs of Proposition~\ref{prop:replacement}. Assume
-\(\limsup_i\sum_j\gamma_{ij}\le b(\epsilon)\) on this subsequence,
-where \(b(\epsilon)\to0\). If \eqref{eq:ac} holds for the chosen
-sequence, \(M\) is standard.
+\begin{corollary}[How much energy may remain uncovered]\label{cor:vol-reduction}
+In Proposition~\ref{prop:replacement} take \(N_i\ge1\). Write
+\(r_i\) for the raw chiral energy outside the union of the marked
+balls, \(\Gamma_i=\sum_j\gamma_{ij}\), and \(\Delta_i=e_i-I^+(M)\).
+If on one subsequence
+\[
+ \liminf_i\big[r_i+\Gamma_i+(N_i-1)\Delta_i\big]<4\pi^2,
+\]
+then \(M\) is standard. A finite sufficient test using only measured
+data is \(r_i+\Gamma_i+(N_i-1)(e_i-T)\le T\) at one index.
 \end{corollary}
 \begin{proof}
-Argue on a nonstandard candidate. Fix \(\epsilon\) and any positive
-individual curvature tolerance for the ball theorem. The numbers
-\(N_i\) stay bounded on the selected subsequence. Use
-\eqref{eq:replacement} on the union and \eqref{eq:ac} on its
-complement. The smooth boundaries have zero curvature measure.
-Taking \(i\to\infty\) gives
+The \(N_i\) certified upper bounds sum to
+\((N_i-1)e_i+r_i+\Gamma_i\). The finite test makes this sum at most
+\(N_iT\), so at least one actual positive repair has energy at most
+\(T\). For the limiting test, each repair on \(M\) has energy at least
+\(I^+(M)\). Rearranging the sum gives
 \[
- I^+(M)=\lim_i e_i\le b(\epsilon)+\omega(\epsilon).
+ I^+(M)\le r_i+\Gamma_i+(N_i-1)\Delta_i .
 \]
-Let \(\epsilon\downarrow0\). This contradicts \eqref{eq:band}.
-The subsequences may depend on \(\epsilon\) because their energy
-limits all equal the same infimum.
+Taking the lower limit now bounds the infimum. Equation~\eqref{eq:recognition-endpoint}
+applies if this bound is strict. At equality one would still need an
+actual positive class on \(M\) with energy at most \(T\), for example
+from a compactness argument that preserves the smooth type and Yamabe sign
+and gives that energy bound on the limit.
 \end{proof}
 
-Proposition~\ref{prop:joint-vol} gives a second complement test.
-For a jointly selected family of fixed cardinality the replacement
-inequality gives
-\(\lambda(G_\zeta)-\varepsilon\le\limsup_i\sum_j\gamma_{ij}\).
-Thus inexpensive repairs as \(\varepsilon\downarrow0\) already
-exclude positive mass on \(G_\zeta\). Tightness of the chiral measures,
-concentration of their limit on regular points, and absence of atoms
-of that limit also suffice to make the uncovered mass arbitrarily
-small: the excluded large atoms of \(\nu\) form a finite set.
+To use the corollary one must bound \(r_i\) for the very same balls
+that admit the repairs. The descent paper proves that finitely many
+smooth balls at regular points of a positive-Ricci comparison can
+capture almost all physical Yamabe volume. Its joint selection with
+the chiral measure bounds the residual by escaping mass, mass off the
+eligible regular set, and the chosen tolerance
+\cite{Baker2026FixedDescent,Baker2026MarkedLimits}. Uniform absolute
+continuity of chiral mass with respect to physical volume is another
+sufficient complement estimate. Neither a volume mark alone nor
+finite cardinality at each index controls the displayed lower limit.
 
 \input{complete_limits}
 \input{ricci_scales}
@@ -446,13 +451,10 @@ Once in the band it suffices, on each hypothetical nonstandard
 subsequence with the short marked cut of Proposition~\ref{prop:short-cut}.
 The two complete raw sides must each carry a fixed positive chiral
 mass, and both splices must be controlled in the marked chart.
-Theorem~\ref{thm:volume-balls} locates smooth balls in the original
-source. Their construction uses the positive-Ricci distance, whereas
-the splice depends on first derivatives in an actual buffer. Their
-physical volume can be appreciable while their chiral energy is tiny.
-Corollary~\ref{cor:vol-reduction} gives a different sufficient condition
-when curvature on sets of small physical volume can also be controlled.
-For Proposition~\ref{prop:exterior-replacement} the source energy plus collar surcharge must stay below \(8\pi^2\), and the removed chiral mass must exceed the surcharge plus the minimizing excess. The remaining chiral energy can stay in the retained exterior.
+Corollary~\ref{cor:vol-reduction} permits a diffuse alternative
+if a family on the same sequence carries enough repairable chiral
+mass. The unmeasured complement and the positive sign of the actual
+repairs enter independently. For Proposition~\ref{prop:exterior-replacement} the source energy plus collar surcharge must stay below \(8\pi^2\), and the removed chiral mass must exceed the surcharge plus the minimizing excess. The remaining chiral energy can stay in the retained exterior.
 
 Corollary~\ref{cor:energy-radius} locates a second scale in the
 concentrating case. At a shrinking half-energy radius the rescaled

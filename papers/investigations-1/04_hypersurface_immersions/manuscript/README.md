@@ -1,3 +1,9 @@
-# Manuscript
+# Chiral Weyl energy and Morse heights of immersed homotopy four-spheres
 
-Reserved for an authorized immersion manuscript. The current recognition proof belongs to the master.
+[Working manuscript](chiral_energy_of_hypersurface_immersions.tex) by Edward B. Baker III, dated 25 November 2026. The paper proves the pointwise and integrated curvature comparisons, the inclusive immersed recognition threshold, the subcritical height count, and the exterior angular criterion. It distinguishes the induced metric's Yamabe sign from the sign and energy requirements for intrinsic entry.
+
+[Reading copy (PDF)](../../../../output/pdf/04_hypersurface_immersions/chiral_energy_of_hypersurface_immersions.pdf) · Build from the repository root with `python3 tools/build_manuscripts.py 04_hypersurface_immersions`.
+
+The companion papers address [framed immersed handle construction](../01_immersed_handle_constructions/manuscript/marked_immersed_handle_constructions.tex) and [recognition from actual marked heights](../02_two_handle_recognition/manuscript/recognition_from_marked_morse_heights.tex). The [master manuscript](../../../master/manuscript/chiral_weyl_energy_and_smooth_poincare.tex) uses the immersion criteria for smooth recognition and entry into fixed-type descent.
+
+This edition is based on commit `483ad3cef5a0af4328c5d35cabbc1f5224d26b1e`. The principal inputs are the [master immersion section](../../../master/manuscript/immersion_entry.tex), [E23](../../../master/notes/E23_IMMERSION_ENTRY.md), [E26](../../../master/reviews/E26_FOUR_CRITICAL_HEIGHTS.md), [E29](../../../master/notes/E29_GAUSS_DEFICIT.md), [E32](../../../master/notes/E32_ROTATIONAL_TRANSITION.md), [E33](../../../master/reviews/E33_INDEX_TWO_HANDLES.md), [E34](../../../master/reviews/E34_MIDDLE_WEYL_EQUALITY.md), and [E42](../../../master/reviews/E42_HEIGHT_AND_COST_AUDIT.md). [E27](../../../master/reviews/E27_CRITICAL_FLAT_LIMIT.md) concerns the later intrinsic harmonic-annulus comparison. [E35](../../../master/research-progress/handoffs/E35_PARALLEL_SETUP_20261125.md) records the investigation's organization.

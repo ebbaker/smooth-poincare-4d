@@ -6,6 +6,8 @@ unavailable.
 
 The [master section](src/master_variational.tex) follows the fixed-type variational argument. It links the checked positive-energy set and pullback competitor to targets for independent repairs, the short marked cut, local replacement and physical quantile selection. The [parallel investigation section](src/parallel_investigations.tex) adds joint descent, induced-curvature inequalities, the indexed height count and marked handle cancellation. The [current overview](../investigations/research-overview/03_OVERVIEW.md) identifies their proof owners and the [Edition 03 baseline](../investigations/research-progress/03_BASELINE.md) records the checks.
 
+The [Edition 03 integration](../investigations/research-progress/handoffs/ED03_INTEGRATION_20261125.md) records the assessed proofs, their exact dependencies and the physical-metric and immersed endpoint obligations. [Current continuation](../investigations/continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md)
+
 The original sections start with the three formalization targets and the supplied
 chart argument from [Sections and Connections](../../papers/investigations-1/03_first_order_twistor/01_sections_and_connections/manuscript/twistor_sections_and_chiral_weyl_curvature.tex).
 The manuscript was inspected at checkout

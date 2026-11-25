@@ -10,3 +10,5 @@
 | SP4-IMM-E02 | Reserved | B02 and one fully specified implication for an independent audit. |
 
 [Construction register](../01_immersed_handle_constructions/research-progress/REGISTER.md) · [Two-handle register](../02_two_handle_recognition/research-progress/REGISTER.md). Earlier master E23, E26 and E28–E34 retain their original IDs and receipts. No scientific task was executed as part of this setup.
+
+The 25 November [working manuscript](../manuscript/README.md) collects the branch results and their outstanding hypotheses. [Master editorial receipt E51](../../../master/research-progress/handoffs/E51_COMPANION_DRAFTS_20261125.md).

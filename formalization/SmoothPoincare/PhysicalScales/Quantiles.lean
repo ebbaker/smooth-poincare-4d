@@ -262,18 +262,9 @@ theorem isChiralDiffuse_iff_tendsto_limsup (chiral : ∀ i, Measure (X i))
     exact (eventually_lt_of_limsup_lt hlt (hBound t)).mono fun i hi x =>
       ((hSup t i x).trans_lt hi).le
 
-variable [∀ i, BorelSpace (X i)]
-
-/-- On a sequence with positive chiral mass and a uniform full mass budget,
-either the small-ball mass is diffuse or there is a separated subsequence.
-On that subsequence the same attaining centers work for every fixed shell
-ratio and the full shell masses are eventually arbitrarily small. -/
-theorem chiralQuantileAlternatives (chiral full : ∀ i, Measure (X i))
-    [∀ i, IsFiniteMeasure (chiral i)] [∀ i, IsFiniteMeasure (full i)]
-    (quantile : ℕ → ℝ → ℝ)
-    (hquantile : ∀ i θ, 0 < θ → θ ≤ 1 / 2 →
-      IsChiralQuantile (chiral i) θ (quantile i θ))
-    (he : ∀ i, 0 < (chiral i).real univ) (C : ℝ) (hC : ∀ i, (full i).real univ ≤ C) :
+/-- The diffuse alternative or a separated subsequence with measured shells. -/
+def ChiralQuantileAlternatives (chiral full : ∀ i, Measure (X i))
+    (quantile : ℕ → ℝ → ℝ) : Prop :=
     IsChiralDiffuse chiral (fun i => quantile i (1 / 2)) ∨
       (¬ IsChiralDiffuse chiral (fun i => quantile i (1 / 2)) ∧
         ∃ θ : ℝ, 0 < θ ∧ θ < 1 / 2 ∧ ∃ σ : ℕ → ℕ, StrictMono σ ∧
@@ -283,13 +274,29 @@ theorem chiralQuantileAlternatives (chiral full : ∀ i, Measure (X i))
                 θ * (chiral (σ k)).real univ ∧
               (chiral (σ k)).real univ / 2 ≤
                 (chiral (σ k)).real (Metric.ball (x k) (quantile (σ k) (1 / 2)))ᶜ) ∧
-            ∀ q : ℝ, 1 < q → ∀ ε : ℝ, 0 < ε → ∀ᶠ k in atTop, ∃ r : ℝ,
-              quantile (σ k) θ ≤ r ∧ r * q ≤ quantile (σ k) (1 / 2) ∧
+            ∀ q : ℝ, 1 < q → ∀ guard : ℝ, 1 ≤ guard →
+              ∀ ε : ℝ, 0 < ε → ∀ᶠ k in atTop, ∃ r : ℝ,
+              guard * quantile (σ k) θ ≤ r ∧ guard * (r * q) ≤ quantile (σ k) (1 / 2) ∧
               Disjoint (physicalAnnulus (x k) r (r * q))
                 (Metric.ball (x k) (quantile (σ k) θ)) ∧
               Disjoint (physicalAnnulus (x k) r (r * q))
                 (Metric.ball (x k) (quantile (σ k) (1 / 2)))ᶜ ∧
-              (full (σ k)).real (physicalAnnulus (x k) r (r * q)) ≤ ε) := by
+              (full (σ k)).real (physicalAnnulus (x k) r (r * q)) ≤ ε)
+
+variable [∀ i, BorelSpace (X i)]
+
+/-- On a sequence with positive chiral mass and a uniform full mass budget,
+either the small-ball mass is diffuse or there is a separated subsequence.
+On that subsequence the same attaining centers work for every fixed shell
+ratio and multiplicative guard, with eventually arbitrarily small full mass. -/
+theorem chiralQuantileAlternatives (chiral full : ∀ i, Measure (X i))
+    [∀ i, IsFiniteMeasure (chiral i)] [∀ i, IsFiniteMeasure (full i)]
+    (quantile : ℕ → ℝ → ℝ)
+    (hquantile : ∀ i θ, 0 < θ → θ ≤ 1 / 2 →
+      IsChiralQuantile (chiral i) θ (quantile i θ))
+    (he : ∀ i, 0 < (chiral i).real univ) (C : ℝ) (hC : ∀ i, (full i).real univ ≤ C) :
+    ChiralQuantileAlternatives chiral full quantile := by
+  unfold ChiralQuantileAlternatives
   by_cases hd : IsChiralDiffuse chiral (fun i => quantile i (1 / 2))
   · exact Or.inl hd
   refine Or.inr ⟨hd, ?_⟩
@@ -321,23 +328,39 @@ theorem chiralQuantileAlternatives (chiral full : ∀ i, Measure (X i))
   choose x hx using fun k => (hInner (σ k)).attains
   refine ⟨θ, hθ, hθHalf, σ, hσ, hratio, x, fun k => ⟨hx k, ?_⟩, ?_⟩
   · exact medianExterior_mass_ge_half (chiral (σ k)) (hMed (σ k)) (x k)
-  · intro q hq tolerance htol
+  · intro q hq guard hGuard tolerance htol
+    let Q := guard ^ 2 * q
+    have hqPos : 0 < q := zero_lt_one.trans hq
+    have hGuardNonneg : 0 ≤ guard := zero_le_one.trans hGuard
+    have hQ : 1 < Q :=
+      hq.trans_le (le_mul_of_one_le_left hqPos.le (one_le_pow₀ hGuard))
     obtain ⟨n, hn⟩ := exists_nat_gt (max 0 (C / tolerance))
     have hnPos : 0 < n := by exact_mod_cast ((le_max_left _ _).trans_lt hn)
     have hbudget : C / (n : ℝ) ≤ tolerance := by
       apply (div_le_iff₀ (by exact_mod_cast hnPos)).mpr
       have hm := (div_lt_iff₀ htol).mp ((le_max_right _ _).trans_lt hn)
       simpa only [mul_comm tolerance] using hm.le
-    have hqPow : 0 < q ^ n := pow_pos (zero_lt_one.trans hq) _
-    have hevent := hratio.eventually (eventually_lt_nhds (show 0 < 1 / q ^ n by positivity))
+    have hQPow : 0 < Q ^ n := pow_pos (zero_lt_one.trans hQ) _
+    have hevent := hratio.eventually (eventually_lt_nhds (show 0 < 1 / Q ^ n by positivity))
     filter_upwards [hevent] with k hk
-    have hfit : quantile (σ k) θ * q ^ n ≤ quantile (σ k) (1 / 2) := by
-      have h := (div_lt_div_iff₀ (hMed (σ k)).radius_pos hqPow).mp hk
+    have hfit : quantile (σ k) θ * Q ^ n ≤ quantile (σ k) (1 / 2) := by
+      have h := (div_lt_div_iff₀ (hMed (σ k)).radius_pos hQPow).mp hk
       simpa only [one_mul] using h.le
-    obtain ⟨r, ha, hb, _, _, hdInner, hdExterior, hm⟩ :=
+    obtain ⟨s, ha, hb, _, _, hdInner, hdExterior, hm⟩ :=
       exists_lowMass_quantileAnnulus_at (chiral (σ k)) (full (σ k))
-        (hInner (σ k)) (hMed (σ k)) (x k) (hx k) (hC (σ k)) hnPos hq hfit
-    exact ⟨r, ha, hb, hdInner, hdExterior, hm.trans hbudget⟩
+        (hInner (σ k)) (hMed (σ k)) (x k) (hx k) (hC (σ k)) hnPos hQ hfit
+    let r := guard * s
+    have hs : 0 ≤ s := (hInner (σ k)).radius_pos.le.trans ha
+    have hr : s ≤ r := le_mul_of_one_le_left hs hGuard
+    have hOuter : guard * (r * q) = s * Q := by dsimp [r, Q]; ring
+    have hSubset : physicalAnnulus (x k) r (r * q) ⊆ physicalAnnulus (x k) s (s * Q) := by
+      intro y hy
+      have hLe : r * q ≤ s * Q :=
+        hOuter ▸ le_mul_of_one_le_left (mul_nonneg (hs.trans hr) hqPos.le) hGuard
+      exact ⟨lt_of_lt_of_le hy.1 hLe, fun hy' => hy.2 (hy'.trans hr)⟩
+    exact ⟨r, mul_le_mul_of_nonneg_left ha hGuardNonneg, hOuter ▸ hb,
+      hdInner.mono_left hSubset, hdExterior.mono_left hSubset,
+      (measureReal_mono hSubset).trans (hm.trans hbudget)⟩
 
 end Sequence
 
