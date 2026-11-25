@@ -1,0 +1,39 @@
+# Proposed Lean pilot for sections and connections
+
+25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The exact serving model and reasoning effort are unavailable. This is a source assessment and a proposed pilot. The manuscript input is the working source at checkout `fb37f1bbb1a6aea44838f2d7746ed4d6cc164a67`, SHA-256 `329513a3cfd8e939373533fad90f36b9108ce0ea41a22f9cc348587a4110fe66`. [Sections and connections manuscript](../../manuscript/twistor_sections_and_chiral_weyl_curvature.tex)
+
+## Where to start
+
+Use Mathlib for the pointwise algebra and evaluate `DifferentialGeometry` as a pinned Lake dependency for the manifold layer. Its Riemannian metric, Levi–Civita connection, tensor covariant derivatives and curvature conventions give the pilot concrete definitions to compare with the manuscript. The three-dimensional proof also provides an example of keeping neck geometry, analytic estimates and topological reconstruction in separate theorem statements. The relevant hypotheses for Weyl and Bach curvature in four dimensions must come from the four-dimensional argument. [R119](#r119--qin-liao-khaitan-and-chow) · [R120](#r120--chow-liao-and-qin)
+
+| Order | Manuscript target | What the pilot would establish |
+| --- | --- | --- |
+| 1 | §2.1, `secjet:orthogonal` | For a real symmetric trace-free \(3\times3\) matrix with diagonal entries \(d_i\) and off-diagonal entries \(w_{ij}\), prove the cyclic complex-bilinear null evaluations give \(\sum_i q_i^2=\tfrac34\sum_i d_i^2+\sum_{i<j}w_{ij}^2\ge\tfrac12\lVert W^+\rVert_{\mathrm{HS}}^2\). This checks the algebra used in the lower section-energy bound. |
+| 2 | §14.2, `msneck:symbols` | Prove the algebraic symbols at a real covector \(\xi\ne0\) on symmetric amplitudes with \(H\xi=0\) and \(\operatorname{tr}H=0\). With the Fourier convention \(\partial\mapsto \mathrm i\xi\), these are \(\sigma_{B'}(\xi)H=-\tfrac14\lvert\xi\rvert^4H\) and \(\lVert\sigma_{W'}(\xi)H\rVert_{\mathrm{tens}}^2=\tfrac12\lvert\xi\rvert^4\lVert H\rVert^2\). A later bridge can identify the symbols with the derivatives of the geometric definitions. |
+| 3 | §§1.1 and 3.1, `eq:energies`, `lift:projection` | Use an oriented Riemannian four-space to relate the upstream curvature to \(\Lambda^\pm\), then check the round \(K=1\) model. The target is \(C=W^++(s_g/12)I\) in the manuscript's oriented frame and sign convention. Mathlib documents a pointwise Hodge star. Its availability at the chosen pin and the smooth bundle interface require an import check. |
+
+Review the Lean theorem types against the printed equations. The upstream lowered Riemann tensor evaluates \(g(R(X,Y)Z,W)\), while the manuscript pairs the curvature row \(X\wedge Y\) with \(U\wedge V\) using \(g(R(X,Y)V,U)\). The translation exchanges the last two slots. Keep the full four-index norm distinct from the Hilbert–Schmidt norm, with \(|W|_{\mathrm{tens}}^2=4(|W^+|_{\mathrm{HS}}^2+|W^-|_{\mathrm{HS}}^2)\). The manuscript chooses \(W^+=0\) for anti-self-duality. [R120, §3.1](#r120--chow-liao-and-qin) · [R121](#r121--mathlib-hodge-star)
+
+The initial success criterion would be a reproducible targeted build and an axiom audit of the two algebraic results, allowing only the usual Lean axioms. The next test would import the smallest upstream curvature module useful for Step 3 and check the round normalization against its definitions. The local toolchain list lacked both published pins described below. These source checks establish candidate dependencies. The Lean build and proof checks are pending.
+
+## How this informs the neck work
+
+The unit round product cylinder is a second model for the chiral curvature bridge. Its chiral curvature forms have only tangential two-form components, so their pairwise wedges vanish. This tests the metric-based chiral formalization on a conformally flat collar with degenerate curvature reconstruction. [Supplied collar calculation](../../01_neck_geometry/brainstorm/notes/USING_A_SUPPLIED_COLLAR_20261125.md)
+
+Use §15 to map the two mathematical implications that the formal statements should expose. First, a supplied near-Euclidean chart satisfies the §14.3 estimate, with length-independent constants and the displayed derivative or amplitude errors. Obtaining suitable charts or an intrinsic replacement from bounded curvature energy and vanishing total Bach norm is a separate existence problem. Second, complete energy accounting under the supplied smooth base and ALE comparison hypotheses excludes a nonflat bubble by the strict positive residual bound. Smooth recognition still needs control of the original manifold. These are appropriate hypotheses and conclusions for future formal theorem statements. [Neck geometry scope](../../01_neck_geometry/README.md) · [Manuscript §§12, 14–15](../../manuscript/twistor_sections_and_chiral_weyl_curvature.tex)
+
+## Sources inspected on 25 November 2026
+
+### R119 — Qin, Liao, Khaitan and Chow
+
+*A Lean Formalization of the Hamilton–Perelman Proof of the Three-Dimensional Poincaré Conjecture*, arXiv:2609.33842v1, 27 September 2026. Read §§1–3 in the primary HTML. Section 1 distinguishes the smooth three-dimensional theorem, Moise smoothing and the topological endpoint. Section 2 identifies the Ricci-flow, canonical-neighborhood, surgery, extinction and reconstruction dependencies. Section 3 documents `DifferentialGeometry` v0.1.3 at `7a48598d35109aa99d1cc678e2724c213cdf4ff3`, Lean and Mathlib v4.33.1, and the authors' transitive axiom audits of four endpoints. Also inspected the alternating-map bundle definitions at that commit. [Preprint](https://arxiv.org/html/2609.33842v1) · [Alternating-map bundle](https://github.com/qinz1yang/differential-geometry/blob/7a48598d35109aa99d1cc678e2724c213cdf4ff3/DifferentialGeometry/Tensor/Alternating/Bundle/Defs.lean)
+
+Read the subsequent upstream release pages. For the pilot, v0.1.4 (`788efe97894474c032de6dfb1289d515f613d15a`) is a reasonable first candidate because it documents the reorganization of reusable APIs and publishes a build cache. It uses Lean and Mathlib v4.35.0-rc3. The v0.1.5 release (`bafefb7ce5ce7e40417641d67e6e95727b7bba1f`) is presented as a development preview. Platform compatibility of the cache and the proposed imports remain to be checked. [v0.1.4](https://github.com/qinz1yang/differential-geometry/releases/tag/v0.1.4) · [v0.1.5](https://github.com/qinz1yang/differential-geometry/releases/tag/v0.1.5)
+
+### R120 — Chow, Liao and Qin
+
+*A Lean Formalization of Hamilton's Three-Manifold Theorem*, arXiv:2608.21502v1, 21 August 2026. Read selected passages of §§3.1–3.3 for the `SmoothRiemannianMetric`, `metricRm04StdAt`, `LeviCivita` and induced tensor-derivative interfaces, §5.1 for the curvature conventions, and §§10.2–10.4 for decomposition, statement review and build checks. These passages document mathematical representations and a verification workflow. The corresponding declaration names should be checked at the pilot pin. [Preprint](https://arxiv.org/pdf/2608.21502v1)
+
+### R121 — Mathlib Hodge star
+
+Read the generated documentation for `Mathlib.LinearAlgebra.ExteriorPower.HodgeStar`, linked to source commit `bce3fc3a37ff1790b2e3b0ccf8f941053aefde19`. It provides an exterior-power Hodge star given a bijective bilinear form and a volume element. The target here is the middle-degree operator of an oriented Euclidean four-space and eventually its smooth realization on the two-form bundle. The cited documentation tracks a different revision from the proposed Lake pin. [Mathlib documentation](https://leanprover-community.github.io/mathlib4_docs/Mathlib/LinearAlgebra/ExteriorPower/HodgeStar.html) · [Linked source](https://github.com/leanprover-community/mathlib4/blob/bce3fc3a37ff1790b2e3b0ccf8f941053aefde19/Mathlib/LinearAlgebra/ExteriorPower/HodgeStar.lean)

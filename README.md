@@ -31,6 +31,8 @@ The [historical project overview](papers/research-overview/PROJECT_SUMMARY_2026-
 
 ## Local tools
 
+The [Lean formalization](formalization/README.md) has its own Lake package and toolchain in `formalization/`.
+
 ```sh
 python3 tools/check_repository_hygiene.py
 python3 -m unittest discover -s tools/tests

@@ -26,6 +26,10 @@ The [same unregistered public excerpt](UNREGISTERED_PARTIAL_SEC_EXTERIOR_2026112
 
 The same [partial public excerpt](UNREGISTERED_PARTIAL_SEC_EXTERIOR_20261124.md#manuscript-revision-through-sec-e58--partial-public-excerpt) includes the request and completed progress updates for the manuscript revision through SEC-E58.
 
+## Awaiting verified source · 25 November 2026
+
+The Lean scoping discussion has runtime thread ID `6b070119-5344-83ea-96ee-6bdf91c9f0d9`. The exact local source was unavailable, and the app reader returned −32000. The native title and turn ID were unavailable. The recommendations and source inspection are in the [Lean pilot note](../brainstorm/notes/LEAN_FORMALIZATION_PILOT_20261125.md).
+
 ## Claude Cowork conversations · 24 November 2026
 
 Added for Edward B. Baker III with LLM assistance: Claude Fable 5.2 (`claude-fable-5-2`), Claude Cowork, reasoning effort max as configured. Claude conversations about this investigation are registered separately in [claude-cowork](claude-cowork/README.md), from the session's claude.ai event log, under the Claude section of [tools/CHAT_HISTORY.md](../../../../../tools/CHAT_HISTORY.md#claude-cowork-sessions). The first record is the session that executed SEC-B34, B35 and E59–E61. The Codex registrations and the pending items above are unchanged.

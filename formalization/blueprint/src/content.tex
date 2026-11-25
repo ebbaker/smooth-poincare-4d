@@ -1,0 +1,245 @@
+The first three targets are the three-axis Weyl estimate, the flat Weyl and
+Bach symbols, and the chiral curvature projection. The last section records
+the conditional neck argument and the open problem of supplying its
+geometric hypotheses. Section references point to the working
+\emph{Sections and Connections} manuscript.
+
+\section{Three-axis Weyl estimate}
+
+\begin{definition}[Null evaluations]
+\label{def:null-evaluations}
+Let $V$ be a real Euclidean three-space with orthonormal basis
+$n_1,n_2,n_3$. For cyclic $(i,j,k)$ set
+$\zeta_i=(n_j+\mathrm{i}n_k)/\sqrt{2}$. For a real symmetric
+trace-free endomorphism $W$ of $V$, let
+$q_i=|\langle W\zeta_i,\zeta_i\rangle_{\mathbb C}|$.
+The pairing is the complex bilinear extension of the real inner product.
+\end{definition}
+
+\begin{lemma}[Three-axis Weyl estimate]
+\label{lem:three-axis-weyl}
+\uses{def:null-evaluations}
+Write $d_i$ for the diagonal entries of $W$ and $w_{ij}$ for its
+off-diagonal entries in this basis. Then
+\[
+  \sum_i q_i^2
+    =\tfrac34\sum_i d_i^2+\sum_{i<j}w_{ij}^2
+    \ge \tfrac12\lVert W\rVert_{\mathrm{HS}}^2 .
+\]
+\end{lemma}
+
+\begin{proof}
+For cyclic $(i,j,k)$ the complex pairing equals
+$(d_j-d_k)/2+\mathrm{i}w_{jk}$. Summing the squared magnitudes gives
+the equality because $\sum_i d_i=0$ implies
+$\sum_{\mathrm{cyc}}(d_j-d_k)^2=3\sum_i d_i^2$.
+The squared Hilbert--Schmidt norm is
+$\sum_i d_i^2+2\sum_{i<j}w_{ij}^2$. This is the algebraic step used
+for the section-energy lower bound in \S2.1.
+\end{proof}
+
+\section{Flat Weyl and Bach symbols}
+
+\begin{definition}[Flat curvature symbols]
+\label{def:flat-curvature-symbols}
+In Euclidean four-space let $\delta$ denote the metric, $\xi$ a real
+covector, and $H$ a real symmetric two-tensor. Identify covectors and
+vectors using $\delta$. For symmetric two-tensors the Kulkarni--Nomizu
+product has slots
+\[
+  (h\odot k)_{ij\ell m}
+    =h_{i\ell}k_{jm}+h_{jm}k_{i\ell}-h_{im}k_{j\ell}-h_{j\ell}k_{im}.
+\]
+With the Fourier rule $\partial_j\mapsto\mathrm{i}\xi_j$, define
+\[
+\begin{aligned}
+  R_\xi(H) &= \tfrac12(\xi\otimes\xi)\odot H,
+  & (r_\xi(H))_{ij} &= \sum_k(R_\xi(H))_{kikj},\\
+  s_\xi(H) &= \operatorname{tr} r_\xi(H),
+  & A_\xi(H) &= \tfrac12\left(r_\xi(H)-\tfrac16 s_\xi(H)\delta\right),\\
+  W_\xi(H) &= R_\xi(H)-A_\xi(H)\odot\delta,
+  & (B_\xi(H))_{ij} &= -\sum_{k,l}\xi_k\xi_l (W_\xi(H))_{ikjl}.
+\end{aligned}
+\]
+These are the coordinate symbols of the corresponding flat linearizations
+in \S14.2, with the curvature convention giving positive sectional
+curvature on the unit round sphere.
+\end{definition}
+
+\begin{lemma}[Weyl and Bach symbols on transverse traceless amplitudes]
+\label{lem:flat-weyl-bach}
+\uses{def:flat-curvature-symbols}
+Suppose $\xi\ne 0$, $H\xi=0$, and $\operatorname{tr}H=0$. Then
+\[
+  B_\xi(H)=-\tfrac14|\xi|^4H,\qquad
+  \lVert W_\xi(H)\rVert_{\mathrm{tens}}^2
+    =\tfrac12|\xi|^4\lVert H\rVert_{\mathrm{HS}}^2 .
+\]
+The tensor norm on $W_\xi(H)$ sums over all four slots.
+\end{lemma}
+
+\begin{proof}
+In an orthonormal basis with $\xi=|\xi|e^1$, all $H_{1i}$ vanish.
+Thus $r_\xi(H)=|\xi|^2H/2$, $s_\xi(H)=0$, and
+$A_\xi(H)=|\xi|^2H/4$. For transverse indices $a,b$, the curvature
+component $(R_\xi(H))_{1a1b}=|\xi|^2H_{ab}/2$ gives
+$(W_\xi(H))_{1a1b}=|\xi|^2H_{ab}/4$. The double contraction defining
+$B_\xi$ gives its claimed symbol.
+
+Counting the four ordered placements of the longitudinal index pair
+gives $\lVert R_\xi(H)\rVert_{\mathrm{tens}}^2
+=|\xi|^4\lVert H\rVert_{\mathrm{HS}}^2$.
+For trace-free $A$ in dimension four,
+$\lVert A\odot\delta\rVert_{\mathrm{tens}}^2=8\lVert A\rVert_{\mathrm{HS}}^2$.
+The Weyl part pairs to zero with $A_\xi(H)\odot\delta$ by trace-freeness.
+Subtracting its squared norm gives the Weyl symbol identity in \S14.2.
+\end{proof}
+
+\section{Chiral curvature projection}
+
+\begin{definition}[Wedge projection of chiral curvature]
+\label{def:chiral-wedge-projection}
+Let $g$ be a smooth Riemannian metric on an oriented four-manifold and
+$\Sigma_i$ a local frame of self-dual two-forms satisfying
+$\Sigma_i\wedge\Sigma_j=2\delta_{ij}\,dV_g$.
+Use the orientation in \S3.1 for this frame and the internal generators
+$T_i$ with $[T_i,T_j]=\epsilon_{ijk}T_k$.
+For a metric connection $A$ on $\Lambda^+$, express its curvature as
+$F_A^i$ in those generators and define
+\[
+  C_{ij}\,dV_g=-\tfrac12 F_A^i\wedge\Sigma_j .
+\]
+\end{definition}
+
+\begin{proposition}[Chiral curvature of the Levi--Civita connection]
+\label{prop:chiral-curvature}
+\uses{def:chiral-wedge-projection}
+Take $A=\Gamma^+(g)$, the connection on $\Lambda^+$ induced by the
+Levi--Civita connection, and write $s_g$ for scalar curvature. In the
+orthonormal frame $\Sigma_i/\sqrt{2}$ the matrix $C$ satisfies
+\[
+  C=W^++\tfrac{s_g}{12}I .
+\]
+\end{proposition}
+
+\begin{proof}
+Identify each two-form $\alpha$ with the skew operator $K_\alpha$ by
+$g(K_\alpha X,Y)=\alpha(X,Y)$ and take $T_i=K_{\Sigma_i}/2$.
+The curvature operator $\mathcal R$ on two-forms uses the pairing
+$g(R(X,Y)V,U)$ for the slots $(X,Y,U,V)$. In these conventions the
+induced chiral curvature has $F_A^i=-\mathcal R\Sigma_i$.
+This step uses the action of the self-dual summand on $\Lambda^+$ and
+the trivial action of the anti-self-dual summand. The
+$\Lambda^+\to\Lambda^+$ block of $\mathcal R$ is $W^++s_g I/12$.
+Since $\Sigma_j$ is self-dual, wedging with $\Sigma_j$ retains this
+block and the factor $2$ from normalization cancels the $1/2$ in the
+definition of $C$. See \S3.1 for the curvature conventions and block
+calculation.
+\end{proof}
+
+For the unit round $S^4$ the formula gives $C=I$. On the conformally
+flat product cylinder $dt^2+g_{S^3}$ with unit round cross-section the
+chiral curvature two-forms are tangential, so $F_A^i\wedge F_A^j=0$.
+These models test the choice of sign and the behavior of the metric
+formula on a collar with degenerate wedge pairing.
+
+\section{Energy in a supplied annular chart}
+
+\begin{definition}[Annular data]
+\label{def:annular-data}
+For $r>0$ and $R\ge2r$ set
+$A=\{r\le |x|\le R\}$ and $A^*=\{r/2<|x|<2R\}$ in $\mathbb R^4$.
+For a smooth Riemannian metric $g=\delta+v$ on $A^*$ define
+\[
+\begin{aligned}
+  \varepsilon &= \sup_{A^*}|v|,
+  & K &= \lVert D^2v\rVert_{L^2(A^*,dx)},\\
+  \mathcal W_A(g) &= \int_A |W_g|_{\mathrm{tens}}^2\,dV_g,
+  & \mathfrak B_{A^*}(g) &= \int_{A^*}|B_g|_g\,dV_g .
+\end{aligned}
+\]
+The metric deviation and its derivatives use Euclidean norms. Both
+integrals use $g$ for the norms and volume. The Weyl norm sums over
+all four covariant slots.
+\end{definition}
+
+\begin{theorem}[Length-independent annular energy bound]
+\label{thm:one-chart-energy}
+\uses{def:annular-data}
+There are universal constants $C$ and $\varepsilon_0\in(0,1/4]$ such
+that in a supplied chart with $\varepsilon\le\varepsilon_0$ and finite
+$K$ and $\mathfrak B_{A^*}(g)$,
+\[
+  \mathcal W_A(g)\le C\varepsilon
+    \bigl[\mathfrak B_{A^*}(g)+(K+\varepsilon)(1+\varepsilon K)\bigr].
+\]
+The constants are uniform in $R/r$.
+\end{theorem}
+
+\begin{proof}
+The proof in \S14.3 tests the Weyl first variation against $\eta^4v$,
+where $\eta=1$ on $A$ and decays to zero on end shells in $A^*$.
+The leading second-derivative terms of the Weyl variation in direction
+$v$ agree with those of $W_g$. The remaining terms are estimated using
+$\lVert\eta Dv\rVert_{L^4}^2\le C\varepsilon(K+\varepsilon)$.
+Small $\varepsilon$ absorbs the term from varying the contractions of
+the Weyl tensor. Young's inequality bounds the products of the square
+root of the tested energy with the cutoff and interpolation errors.
+Fixed cutoff profiles on the two shells give scale-invariant
+$L^4$ bounds on $D\eta$ and $L^2$ bounds on $D^2\eta$ in dimension
+four. The estimate therefore remains uniform as the annulus gets longer.
+\end{proof}
+
+\begin{definition}[Supplied control along neck scales]
+\label{def:supplied-neck-control}
+\uses{def:annular-data}
+Suppose $r_i/R_i\to0$ at an interface with an annular identification.
+For each fixed large $L$, assume that for all sufficiently large $i$
+the middle region is covered by the chart of Definition~\ref{def:annular-data}
+with radii $Lr_i$ and $R_i/L$, including the enlarged annulus.
+Denote the corresponding data by $\varepsilon_i(L)$, $K_i(L)$ and
+$\mathfrak B_i(L)$. Supplied control means bounds on $K_i(L)$ and
+$\mathfrak B_i(L)$ that are independent of large $L$ and hold for all
+sufficiently large $i$ at each such $L$, together with
+\[
+  \lim_{L\to\infty}\limsup_{i\to\infty}\varepsilon_i(L)=0 .
+\]
+\end{definition}
+
+\begin{corollary}[No neck energy under supplied control]
+\label{cor:supplied-no-neck}
+\uses{def:supplied-neck-control}
+Under the hypotheses of Definition~\ref{def:supplied-neck-control},
+\[
+  \lim_{L\to\infty}\limsup_{i\to\infty}
+  \mathcal W_{\{Lr_i<|x|<R_i/L\}}(g_i)=0 .
+\]
+\end{corollary}
+
+\begin{proof}
+\uses{thm:one-chart-energy}
+For all sufficiently large $L$, the chart deviations are eventually below
+$\varepsilon_0$. The uniform bounds on $K_i(L)$ and $\mathfrak B_i(L)$
+bound the bracket in Theorem~\ref{thm:one-chart-energy} by one constant.
+Take the upper limit in $i$ for fixed $L$ and then let $L$ tend to infinity.
+\end{proof}
+
+\begin{openproblem}[Control of almost Bach-flat necks]
+\label{problem:almost-bach-flat-control}
+\uses{def:supplied-neck-control}
+\notready
+For smooth Riemannian metrics on a fixed oriented smooth homotopy
+four-sphere, consider the positive-Yamabe band
+$4\pi^2\le E_+\le8\pi^2-\gamma$
+for fixed $\gamma>0$, bounded $L^2$ curvature and
+$\int_M|B_{g_i}|_{g_i}\,dV_{g_i}\to0$. At a concentration interface
+with separated scales, can one obtain the compatible charts and
+bounds of Definition~\ref{def:supplied-neck-control}, or prove the
+no-neck estimate by intrinsic control? Here
+$E_+(g)=\int_M |W_g^+|_{\mathrm{HS}}^2\,dV_g$.
+\end{openproblem}
+
+The energy identity discussed in \S15 also needs the smooth base and ALE
+comparison data and control of the full complement of the truncated
+components. The local estimate in Corollary~\ref{cor:supplied-no-neck}
+addresses the energy between a pair of concentration scales.

@@ -24,7 +24,10 @@ def files(root):
         relative = path.relative_to(root)
         if relative.parts[0] == 'smooth-poincare-4d-storage':
             continue
-        if any(part in {'.git', '__pycache__', '.venv', '.chat-history-transaction'} for part in relative.parts):
+        if relative.parts[:3] in {('formalization', 'blueprint', 'print'),
+                                 ('formalization', 'blueprint', 'web')}:
+            continue
+        if any(part in {'.git', '.lake', '__pycache__', '.venv', '.chat-history-transaction'} for part in relative.parts):
             continue
         if path.is_file():
             yield path

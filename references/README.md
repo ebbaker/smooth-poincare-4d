@@ -166,3 +166,7 @@ The [source records R99–R108](SOURCE_NOTES_DIRAC_B23_20261124.md) cover Schoen
 ## Annular energy estimates, linear model and conservation law, 24 November 2026
 
 The [source records R109–R118](SOURCE_NOTES_SEC_ANNULAR_20261124.md) cover the estimates of Bourgain–Brezis, Van Schaftingen and Bousquet–Van Schaftingen for divergence-free fields and canceling operators in \(L^1\), the Lorentz-space endpoint of Hernandez–Spector, Gursky's gap theorem for positive Einstein metrics on the four-sphere as quoted by Akutagawa–Endo–Seshadri, the Pohozaev–Schoen identities of Gover–Ørsted, and the statement of Gursky–Malchiodi that uniqueness of the Einstein metric on the four-sphere is open. All were read through text extraction or search excerpts on that date, at the level of abstracts and stated theorems; each record states its level, and two entries were not read at all. None is used in a proof. The record also notes one missing brace supplied in the bibliography file.
+
+## Lean formalization scoping, 25 November 2026
+
+The [source records R119–R121](../papers/investigations-1/03_first_order_twistor/01_sections_and_connections/brainstorm/notes/LEAN_FORMALIZATION_PILOT_20261125.md#sources-inspected-on-25-november-2026) identify the Hamilton–Perelman and Hamilton formalization papers, the `DifferentialGeometry` releases, and the Mathlib exterior-power Hodge star documentation inspected for a possible four-dimensional Lean pilot.

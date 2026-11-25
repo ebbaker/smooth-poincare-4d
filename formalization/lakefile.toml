@@ -1,0 +1,10 @@
+name = "sections-and-connections"
+defaultTargets = ["SectionsAndConnections"]
+
+[[require]]
+name = "DifferentialGeometry"
+git = "https://github.com/qinz1yang/differential-geometry.git"
+rev = "788efe97894474c032de6dfb1289d515f613d15a"
+
+[[lean_lib]]
+name = "SectionsAndConnections"

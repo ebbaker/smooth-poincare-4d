@@ -41,3 +41,7 @@ The [exterior prescription passages](../../../../../references/SOURCE_NOTES_SEC_
 The [fixed-margin primary passages, R91–R98](../../../../../references/SOURCE_NOTES_SEC_20261124.md#fixed-margin-bach-concentration--24-november-2026) give the geometric and analytic inputs for E49–E58.
 
 The [records R109–R118](../../../../../references/SOURCE_NOTES_SEC_ANNULAR_20261124.md), added by a Claude Cowork session on 24 November 2026, place E59–E61 in the literature on \(L^1\) estimates for divergence-free fields and canceling operators and support the Einstein calibration of the [annular energy assessment](../reviews/SEC_ANNULAR_ENERGY_AND_CONSERVATION_20261124.md). They were read at the level of abstracts and stated theorems and are not used in any proof.
+
+## Lean formalization scoping
+
+The [records R119–R121](../brainstorm/notes/LEAN_FORMALIZATION_PILOT_20261125.md#sources-inspected-on-25-november-2026) identify potentially reusable Riemannian interfaces, release pins and the slot convention to check against §§2–3 and §14.2 of the manuscript.
