@@ -51,6 +51,16 @@ Section 14 and the revised Section 15 were written for Edward B. Baker III with 
 
 The digest of the notes uses the convention stated above; it reproduces the earlier digest for the first 58 notes.
 
+## Review revision · 25 November 2026
+
+Revised for Edward B. Baker III with OpenAI Codex assistance. The exact serving model and reasoning effort are unavailable. This revision applies the [manuscript review](../reviews/SEC_MANUSCRIPT_REVIEW_20261125.md), SHA-256 `c4665208b1721cf0bdb036588c8223f7de9610ae9802cc13c7d67a87cbf02eae`, to the integration at `3a4666d14922ea3bda3099ad3e4c64bedd32ef91`. It states the annular error terms, gives the mixed-density Bach divergence, and distinguishes the Lorentz endpoint from the spatial annulus sum. Using the zero mean of the flat Bach source sharpens the linear amplitude constant to \(1/(4\pi^2)\) and the round-ray ratio to \(16\pi^2\). The Einstein comparison uses the statement of Akutagawa, Endo and Seshadri, [arXiv:1801.10305v2, Theorem 1.2](https://arxiv.org/pdf/1801.10305), for the uniform positive improvement to the lower energy endpoint on the standard sphere.
+
+The revised source SHA-256 is `8e034b514153b2502879f973e2d19cf93c45b95008d46de833c01668d10bee44`. The local build produced 82 pages. The changed mathematical displays and the abstract were inspected in the rendered PDF.
+
+## No-neck application · 25 November 2026
+
+Prepared for Edward B. Baker III with OpenAI Codex assistance. The exact serving model and reasoning effort are unavailable. Section 15 now states the iterated no-neck limit and explains how complete energy accounting, under the smooth comparison hypotheses of Section 12, would exclude a nonflat ALE bubble and constrain the remaining closed critical value. The [neck sub-investigation](../01_neck_geometry/README.md) records the setup and compares the chiral evolution and Dirac manuscripts with a controlled surgery route. The expanded source SHA-256 is `329513a3cfd8e939373533fad90f36b9108ce0ea41a22f9cc348587a4110fe66`. The local rebuild produced 82 pages. Pages 78–79 were inspected in the rendered PDF.
+
 ## Build
 
 From the repository root run
@@ -59,4 +69,4 @@ From the repository root run
 python3 tools/build_manuscripts.py 03_first_order_twistor/01_sections_and_connections
 ```
 
-The build uses LaTeX and Biber. It writes the PDF to `output/pdf/03_first_order_twistor/01_sections_and_connections/twistor_sections_and_chiral_weyl_curvature.pdf`. The revision through E61 was built with `latexmk -pdf` in the session's cloud workspace (TeX Live 2023, biblatex, Biber 2.19, with `BIBINPUTS` pointing to the shared bibliography as the build script sets it): 81 pages, no undefined references or citations, no overfull lines. The PDF was copied to that output path. The computer's own TeX installation has no Biber, so the build script will stop at the bibliography there until Biber and biblatex are installed.
+The build uses LaTeX and Biber and writes the PDF to `output/pdf/03_first_order_twistor/01_sections_and_connections/twistor_sections_and_chiral_weyl_curvature.pdf`. The original E61 integration built in the Claude session's cloud workspace with TeX Live 2023 and Biber 2.19. The review revision built with the local TeX installation using the same repository command.

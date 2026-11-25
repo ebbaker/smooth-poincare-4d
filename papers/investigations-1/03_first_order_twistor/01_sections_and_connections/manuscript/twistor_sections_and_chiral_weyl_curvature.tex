@@ -88,16 +88,21 @@ Bach-flat positive-Yamabe metrics across smooth homotopy four-spheres,
 the set of positive critical values below \(8\pi^2\), if nonempty, has
 an attained minimum strictly above \(4\pi^2\).
 
-For long necks we bound the Weyl energy by the total Bach norm with
-constants independent of the length. In a chart uniformly close to
-Euclidean, the energy of a long annulus is at most a multiple of the
-deviation times the Bach norm. A conserved current for
-diffeomorphisms bounds the energy of nearly conical necks of any
-cross-section and shows that Bach-flat cones are conformally flat. At
-the flat cone the linearized Bach equation has no homogeneous
-solutions with curvature between the exponents \(-2\) and \(2\), and
-the transverse traceless part of a perturbation is bounded by the
-\(L^1\) norm of its linearized Bach tensor divided by \(2\pi^2\). A
+For long annuli the Weyl energy admits bounds with constants
+independent of the length. In a near-Euclidean transverse traceless
+chart with metric deviation \(\varepsilon\), the bound is
+\(C(\varepsilon\mathfrak B+\varepsilon^2)\), where \(\mathfrak B\) is the
+total Bach norm. In a general near-Euclidean chart the error also
+depends on the \(L^2\) norm of the second metric derivatives. A
+conserved current for diffeomorphisms bounds the energy of a neck by
+the Bach norm and the conformal Killing defect of a supplied transverse
+field. It also shows that Bach-flat cones with closed cross-section are
+locally conformally flat. At the flat cone the linearized
+Bach equation has no homogeneous solutions with nonzero linearized
+Weyl curvature between the exponents \(-2\) and \(2\). For a
+compactly supported perturbation the transverse traceless part is
+bounded by the \(L^1\) norm of its linearized Bach tensor divided by
+\(4\pi^2\). A
 non-round positive Einstein metric on \(S^4\) would lie in the band
 with \(E_+>\tfrac{16}3\pi^2\). The remaining global problem is to
 construct and control a deformation or a convergent sequence on the
@@ -258,7 +263,8 @@ scales. Two choices of test variation make the first variation of the
 Weyl functional see the energy of a long neck. The deviation of the
 metric from a flat one gives an Euler relation, and a vector field
 gives the conserved current of diffeomorphism invariance. Both lead to
-energy bounds by the total Bach norm that do not depend on the length.
+length-independent bounds in terms of the total Bach norm and errors
+controlled by the chart or the conformal Killing defect.
 The linearization at the flat cone explains the scales involved and
 isolates the nonlinear amplitude estimate that is still missing.
 
@@ -5173,12 +5179,11 @@ alone gives no positive margin.
 \label{msneck:section}
 
 The concentration results of Section~\ref{msale:section} and the
-compact-gauge theorem of Section~\ref{msgauge:section} leave one place
-where Weyl energy could escape from a sequence with small total Bach
-norm: a long region joining two concentration scales. This section
-bounds the Weyl energy of such a region by its total Bach norm, with
-constants that do not depend on its length, under hypotheses on the
-geometry of the region that are stated explicitly. For an open set
+compact-gauge theorem of Section~\ref{msgauge:section} leave open
+whether a long region joining two concentration scales can carry
+Weyl energy when the total Bach norm tends to zero. This section gives
+length-independent bounds for the energy in terms of the Bach norm
+and error terms controlled by the geometry of that region. For an open set
 \(U\) write
 \[
  \mathcal W_U(g)=\int_U|W_g|^2\,dV_g,\qquad
@@ -5206,9 +5211,9 @@ an almost conformal Killing field, whatever its cross-section, and it
 shows that Bach-flat cones are conformally flat. Finally, the flat
 metric of \(\mathbb R^4\setminus0\) is invariant under dilations. Its
 linearized Bach equation has no homogeneous solution with curvature
-between the exponents \(-2\) and \(2\) (Theorem~\ref{msneck:liouville}),
-and the transverse traceless part of a perturbation is bounded by the
-\(L^1\) norm of its linearized Bach tensor divided by \(2\pi^2\)
+between the exponents \(-2\) and \(2\) (Theorem~\ref{msneck:liouville}).
+For compactly supported perturbations the transverse traceless part is
+bounded by the \(L^1\) norm of the linearized Bach tensor divided by \(4\pi^2\)
 (Corollary~\ref{msneck:amplitude}). The last subsection explains how
 these statements fit together. Section~\ref{sec:outlook} describes
 what remains.
@@ -5654,7 +5659,10 @@ the first inequality of \eqref{msneck:annulus-T} gives
 \end{proof}
 
 \begin{remark}[Sharpness]\label{msneck:sharpness}
-None of the terms in these bounds can be removed.
+Plane waves and cones show the need for the term
+\(\varepsilon\mathfrak B\) in the general bound. The plane-wave and
+end-mode examples show that both terms in the transverse traceless
+bound are necessary.
 \begin{enumerate}[label=(\alph*)]
 \item \emph{A plane wave.} Let \(r=1\), \(R=2\), let \(H\ne0\) be a
 symmetric trace-free matrix with \(He_1=0\), and put
@@ -5679,8 +5687,9 @@ cones \(v=c\,s_H\) of Proposition~\ref{msneck:log}, the quotient
 \(\mathcal W_A(g)/(\varepsilon\mathfrak B_{A^*}(g))\) tends, as \(L\to\infty\)
 and then \(c\to0\), to a number in the interval
 \([\tfrac{10}9(\tfrac{27}{160})^{1/2}|H|/\|H\|_{\mathrm{op}},\,2]\), whose
-left end is at least \(0.45\). The product \(\varepsilon\mathfrak B\) is
-attained at every length.
+left end is at least \(0.45\). The scale-invariant densities give the
+same order \(\varepsilon\mathfrak B\) uniformly for \(R\ge2r\), since
+the end shells contribute the factor \(L/(L+\log4)\).
 \item \emph{End modes.} Let \(\mathsf W\ne0\) be a constant tensor with the
 symmetries of a Weyl tensor, and put
 \(q_{ij}=-\tfrac13\mathsf W_{ikjl}x_kx_l\). The first Bianchi identity
@@ -6156,21 +6165,25 @@ sources it can be replaced by a bounded one.
 \label{msneck:potential}
 Let \(\beta\) be a smooth symmetric tensor field of compact support on
 \(\mathbb R^4\) with \(\partial_i\beta_{ij}=0\). For every \(x\),
-\[
- \frac1{2\pi^2}\int\log|x-y|\,\beta_{ij}(y)\,dy
- =-\frac1{2\pi^2}\int\beta_{ik}(y)\,\hat w_k\hat w_j\,dy,\qquad
+\begin{align*}
+ \frac1{2\pi^2}\int\log|x-y|\,\beta(y)\,dy
+ &=-\frac1{2\pi^2}\int\beta(y)(\hat w\otimes\hat w)\,dy\\
+ &=\frac1{4\pi^2}\int\beta(y)(I-2\hat w\otimes\hat w)\,dy,\qquad
  \hat w=\frac{y-x}{|y-x|}.
-\]
+\end{align*}
 In particular the left side is bounded in norm by
-\((2\pi^2)^{-1}\|\beta\|_{L^1}\).
+\((4\pi^2)^{-1}\|\beta\|_{L^1}\).
 \end{theorem}
 
 \begin{proof}
 Fix \(x\) and \(j\), and let \(\psi(y)=(y-x)_j\log|y-x|\). Then
 \(\partial_k\psi=\delta_{jk}\log|y-x|+\hat w_j\hat w_k\), and \(\psi\) and its
 gradient are locally integrable. Since \(\beta\) is divergence free,
-\(\int\beta_{ik}\partial_k\psi\,dy=0\), which is the identity. The bound
-follows from \(|(\beta\hat w)\otimes\hat w|\le|\beta|\).
+\(\int\beta_{ik}\partial_k\psi\,dy=0\), which gives the first equality.
+Also \(\int\beta_{ij}\,dy=\int\partial_k(y_j\beta_{ik})\,dy=0\), which
+gives the second equality. Right multiplication by the orthogonal
+reflection \(I-2\hat w\otimes\hat w\) preserves the Hilbert--Schmidt
+norm of \(\beta\).
 \end{proof}
 
 \begin{corollary}[Amplitude and energy]\label{msneck:amplitude}
@@ -6179,11 +6192,11 @@ Let \(h\) be a smooth symmetric tensor field of compact support on
 defined by \eqref{msneck:tt-split}. Then
 \(h^{\mathrm{TT}}=(2\pi^2)^{-1}\log|\cdot|*B'(h)\), and
 \begin{equation}\label{msneck:amplitude-bounds}
- \|h^{\mathrm{TT}}\|_{L^\infty}\le\frac1{2\pi^2}\,\|B'(h)\|_{L^1},\qquad
- \int|W'(h)|^2dx\le\frac1{\pi^2}\,\|B'(h)\|_{L^1}^2,
+ \|h^{\mathrm{TT}}\|_{L^\infty}\le\frac1{4\pi^2}\,\|B'(h)\|_{L^1},\qquad
+ \int|W'(h)|^2dx\le\frac1{2\pi^2}\,\|B'(h)\|_{L^1}^2,
 \end{equation}
 and each chiral part satisfies
-\(\int|W'(h)^\pm|_{\HS}^2\,dx\le(8\pi^2)^{-1}\|B'(h)\|_{L^1}^2\).
+\(\int|W'(h)^\pm|_{\HS}^2\,dx\le(16\pi^2)^{-1}\|B'(h)\|_{L^1}^2\).
 \end{corollary}
 
 \begin{proof}
@@ -6214,12 +6227,12 @@ two chiral parts of \(W'(h)\) have equal energy, each one eighth of
 Let \(g\) be the round metric on \(S^4\) and \(h\) a smooth symmetric
 tensor field. Then
 \[
- \int_{S^4}|W'_g[h]|^2dV_g\le\frac1{\pi^2}
+ \int_{S^4}|W'_g[h]|^2dV_g\le\frac1{2\pi^2}
  \Bigl(\int_{S^4}|B'_g[h]|_g\,dV_g\Bigr)^2 .
 \]
 Consequently, along every ray \(g+sh\) with \(W'_g[h]\ne0\),
 \[
- \liminf_{s\to0}\frac{\mathfrak B(g+sh)^2}{E_+(g+sh)}\ge8\pi^2 .
+ \liminf_{s\to0}\frac{\mathfrak B(g+sh)^2}{E_+(g+sh)}\ge16\pi^2 .
 \]
 \end{corollary}
 
@@ -6245,19 +6258,23 @@ and \(B\) give \(W'_g[u^2\tilde h]=u^2W'(\tilde h)\) and
 Corollary~\ref{msneck:amplitude} applies to \(\tilde h\). For the ray,
 \(E_+(g+sh)=s^2\int|W'_g[h]^+|_{\HS}^2+O(s^3)\), and the two chiral parts
 of the second variation are equal because \(E_+-E_-=12\pi^2\tau(S^4)=0\) for
-every metric. Also \(\mathfrak B(g+sh)=s\,\|B'_g[h]\|_{L^1}+O(s^2)\).
+every metric. Also \(\mathfrak B(g+sh)=|s|\,\|B'_g[h]\|_{L^1}+O(s^2)\).
 \end{proof}
 
 \begin{remark}[Sharpness and context]\label{msneck:linear-remark}
-For the source \(\beta=c\rho^{-4}b_H\) on a long annulus, the right side of
-Theorem~\ref{msneck:potential} changes by
-\(-(2\pi^2)^{-1}c\int b_H\nu\otimes\nu\,d\sigma=-\tfrac59cH\) per unit of
-\(\log\rho\) between the point and the outer end. This is the coefficient
-of Proposition~\ref{msneck:log}(iv). The bound changes by
-\((2\pi^2)^{-1}c\int|b_H|\,d\sigma\le(160/27)^{1/2}c|H|\) per unit, so the
-amplitude bound is attained along cones up to a factor less than five.
-It cannot be improved to a bound by the Bach norm of a bounded part of
-the neck. The identity of Theorem~\ref{msneck:potential} is the mechanism
+For \(h=-c\eta s_H\), \(c>0\), with the annular cutoff of
+Section~\ref{msneck:chart}, one has \(\beta=B'(h)=c\rho^{-4}b_H\) on \(A\).
+The end shells contribute \(O(c|H|)\) to \(\|\beta\|_{L^1}\) by
+scale invariance on the two fixed cutoff profiles. At \(x=0\), the
+\(\hat w\otimes\hat w\) representation in Theorem~\ref{msneck:potential}
+gives a contribution
+\(-\tfrac59cH\log(R/r)\) from \(A\), by
+Proposition~\ref{msneck:log}(ii). The two end shells change
+\(h^{\mathrm{TT}}(0)\) by \(O(c|H|)\), since that kernel is bounded.
+Thus the transverse traceless amplitude and the total forcing have
+the same order in the length. The forcing on a subannulus of bounded
+logarithmic length has order at most \(c|H|\). The identity of
+Theorem~\ref{msneck:potential} is the mechanism
 of the estimates of Bourgain and Brezis and of Van Schaftingen for
 divergence-free \(L^1\) fields~\cite{BourgainBrezis2004NewEstimates,
 VanSchaftingen2004L1Vector,VanSchaftingen2013Canceling}. The resulting
@@ -6278,10 +6295,11 @@ of Riesz transforms on \(L^{2,1}\).
 \label{msneck:synthesis}
 
 At the flat metric, identity \eqref{msneck:euler-identity} linearizes to
-Lemma~\ref{msneck:flat-lemma}(iv): the Weyl energy is twice the pairing of
-the Bach tensor with the deviation. Corollary~\ref{msneck:amplitude}
+Lemma~\ref{msneck:flat-lemma}(iv), which gives the Weyl energy as minus
+twice the pairing of the Bach tensor with the deviation.
+Corollary~\ref{msneck:amplitude}
 closes the linear identity by bounding the deviation through the same
-Bach norm. The energy is then at most \(\pi^{-2}\) times the square of
+Bach norm. The energy is then at most \((2\pi^2)^{-1}\) times the square of
 the Bach norm, with no hypothesis on the amplitude and no dependence on
 the length. In the nonlinear setting, Theorem~\ref{msneck:annulus} and
 Corollary~\ref{msneck:tt-chart} carry out the first half of this
@@ -6300,8 +6318,9 @@ numbers \(\kappa,\zeta\ge0\). Then
 Insert the hypothesis into the bound of Corollary~\ref{msneck:tt-chart}.
 \end{proof}
 
-For linearized fields of compact support the hypothesis holds with
-\(\kappa=(2\pi^2)^{-1}\) and \(\zeta=0\) by Corollary~\ref{msneck:amplitude}.
+For compactly supported perturbations the linear amplitude estimate has
+\(\kappa=(4\pi^2)^{-1}\) and \(\zeta=0\) on \(\mathbb R^4\) by
+Corollary~\ref{msneck:amplitude}.
 For a long neck of a sequence with \(\mathfrak B\to0\), a nonlinear version,
 with \(\zeta\) measured by data on the two end shells, would force the
 energy of the neck to be controlled by its ends. The obstructions to
@@ -6338,7 +6357,11 @@ Akutagawa, Endo and Seshadri~\cite[Theorem
 says that a positive Einstein metric on \(S^4\) with
 \(Y\ge Y(S^4)/\sqrt3\) is round. Hence \(Y^2<128\pi^2\) and
 \(E_+>8\pi^2-\tfrac83\pi^2=\tfrac{16}3\pi^2\). Finally \(Y>0\) gives
-\(E_+<8\pi^2\).
+\(E_+<8\pi^2\). Theorem 1.2 of Akutagawa, Endo and
+Seshadri~\cite{AkutagawaEndoSeshadri2019Gap} further decreases the upper
+bound on \(Y\) by a universal positive amount, so the energies of
+such metrics lie a uniform positive distance above
+\(\tfrac{16}3\pi^2\).
 \end{proof}
 
 Thus a positive lower bound for \(\mathfrak B/E_+\) on the band
@@ -6377,7 +6400,7 @@ homotopy sphere satisfy
 A single positive-Yamabe closed Bach-flat class strictly inside this
 band on that manifold would give such a sequence by the shrinking-mark
 construction. Existence of a positive closed critical value below
-\(8\pi^2\) remains open here; Theorem~\ref{msgap:minimum}
+\(8\pi^2\) remains open here. Theorem~\ref{msgap:minimum}
 describes the least value if one exists. A positive lower bound on
 the displayed ratio would remove the strain obstruction in
 \eqref{mscost:strain}. A bound from above on the metric cost of
@@ -6387,17 +6410,16 @@ on that particular direction.
 Proposition~\ref{msneck:einstein} calibrates this question. A non-round
 positive Einstein metric on \(S^4\) would be a closed Bach-flat class
 with \(\tfrac{16}3\pi^2<E_+<8\pi^2\). A lower bound for the ratio on the
-whole band would therefore contain the uniqueness of the positive
-Einstein metric on the four-sphere. Two formulations avoid that
-problem. One restricts the band to energies below \(\tfrac{16}3\pi^2\),
-where no Einstein class can lie, although Bach-flat classes that contain
-no Einstein metric are not excluded there. The other replaces the lower
-bound by an energy identity for sequences with \(\mathfrak B\to0\), which
-would place the energy of such a sequence on closed critical classes,
-on smooth bubbles and on necks, and which the gap theorems of
-Section~\ref{msgap:section} then constrain. Near the round metric the
-ratio is controlled to second order: by Corollary~\ref{msneck:round},
-\(\mathfrak B^2\ge8\pi^2E_+(1+o(1))\) along every ray with nonzero
+whole band for every fixed margin would therefore imply uniqueness of
+the positive Einstein metric on the four-sphere. Restricting the band
+to energies below \(\tfrac{16}3\pi^2\) excludes this Einstein
+obstruction. Non-Einstein closed Bach-flat classes remain a separate
+issue in that range. An energy identity for sequences with
+\(\mathfrak B\to0\) would account for their limiting Weyl energy on
+the base and the bubbles once the necks and other residual regions
+are controlled. Section~\ref{msgap:section} constrains such an identity.
+Near the round metric, Corollary~\ref{msneck:round} gives a lower limit
+of \(16\pi^2\) for \(\mathfrak B^2/E_+\) along every ray with nonzero
 linearized Weyl tensor. Whether an inequality \(E_+\le C\mathfrak B^2\)
 holds on a neighborhood of the round class, in a topology weak enough
 to be useful for compactness, is a \L{}ojasiewicz-type question for
@@ -6405,89 +6427,141 @@ to be useful for compactness, is a \L{}ojasiewicz-type question for
 too weak for the standard elliptic argument.
 
 \paragraph{From the linear to the nonlinear neck estimate.}
-Section~\ref{msneck:section} settles the length-independent annular
-test left open by the concentration analysis of
-Sections~\ref{msale:section}--\ref{msgauge:section}, in two complementary
-forms. In one chart uniformly close to Euclidean, the energy of a long
-annulus is at most a multiple of the deviation times the total Bach
-norm (Theorem~\ref{msneck:annulus}). A neck with a nearly conformal
-Killing field has energy at most a multiple of its Bach norm plus a
-term in the Killing defect (Corollary~\ref{msneck:neck}). For linearized
-fields the deviation itself is bounded by the Bach norm
-(Corollary~\ref{msneck:amplitude}), so the energy is at most
-\(\pi^{-2}\mathfrak B^2\). The corresponding nonlinear amplitude estimate,
+Section~\ref{msneck:section} gives length-independent annular estimates
+under hypotheses on the neck geometry. In one near-Euclidean chart the
+bound is \(C\varepsilon[\mathfrak B+(K+\varepsilon)(1+\varepsilon K)]\),
+where \(\varepsilon=\|v\|_\infty\) and \(K=\|D^2v\|_{L^2}\) on \(A^*\).
+In a transverse traceless chart it is
+\(C(\varepsilon\mathfrak B+\varepsilon^2)\).
+A neck with a nearly conformal Killing field has a bound in terms of
+its Bach norm and the weighted Killing defect
+(Corollary~\ref{msneck:neck}). For compactly supported linearized
+fields the deviation in the transverse traceless gauge is itself
+bounded by the \(L^1\) norm of the linearized Bach tensor
+(Corollary~\ref{msneck:amplitude}), giving the quadratic energy bound
+\((2\pi^2)^{-1}\|B'(h)\|_{L^1}^2\). The corresponding nonlinear amplitude estimate,
 \[
  \sup_{A^*}|v|\le C\bigl(\mathfrak B_{A^*}(g)+\zeta\bigr)
 \]
 in a transverse traceless chart, with \(\zeta\) measured on the end
 shells, would give the neck inequality of
-Corollary~\ref{msneck:conditional}. It fails to follow from the linear
-proof for two reasons. First, \(B_g-B'(v)\) contains the quasilinear
-terms \(v\ast D^4v\) and \(Dv\ast D^3v\), whose \(L^1\) norms are not
-controlled by the energy. Integrating them by parts onto the kernel of
-Theorem~\ref{msneck:potential} leaves
-\(\int(|v||D^2v|+|Dv|^2)\,|x-y|^{-2}dy\), which is bounded by the
-deviation times the Lorentz \(L^{2,1}\) norm of \(D^2v\), not by its
-\(L^2\) norm. Second, \(B_g\) is divergence free for \(g\) and not for
-\(\delta\): its flat divergence has the form \(Dv\ast B_g\), and the
-logarithmic potential of an \(L^1\) field that is not divergence free is
-unbounded. Two tools address these points. The covariant conservation
-laws \(\operatorname{div}_g(B(X,\cdot)^\sharp)=\tfrac12\langle B,L_Xg\rangle\)
-for the fifteen conformal Killing fields \(X\) of the flat model restore
-the cancellation up to terms of size \(|L_Xg-\tfrac12(\operatorname{div}X)g|\,|B|\).
-The Lorentz endpoint of Remark~\ref{msneck:linear-remark} places
-\(D^2h^{\mathrm{TT}}\) in \(L^{2,1}\), a space that embeds in the continuous
-functions and controls the products \(v\ast D^2v\). A fixed-point
-argument in that space, with the cancellation built in, is the natural
-next attempt.
+Corollary~\ref{msneck:conditional}. The nonlinear argument must
+control both the highest derivatives and the divergence constraint.
+The difference \(B_g-B'(v)\) contains terms of the form \(v\ast D^4v\)
+and \(Dv\ast D^3v\). Their \(L^1\) norms can exceed what the curvature
+energy controls. Transferring derivatives to the potential kernel
+leads to terms such as
+\(\int (|v||D^2v|+|Dv|^2)|x-y|^{-2}\,dy\).
+The kernel lies in weak \(L^2\), so a bound uniform in \(x\) follows
+from \(L^{2,1}\) estimates of the products by Lorentz H\"older.
+For example, the first product is bounded in \(L^{2,1}\) by
+\(\|v\|_\infty\|D^2v\|_{L^{2,1}}\). The linear estimate of
+Remark~\ref{msneck:linear-remark} places \(D^2h^{\mathrm{TT}}\) in
+\(L^{2,1}\). The endpoint Sobolev embedding of \(W^{2,(2,1)}\)
+gives continuity of \(h^{\mathrm{TT}}\).
+
+The bounded kernel in Theorem~\ref{msneck:potential} uses flat
+divergence-freeness. In a near-Euclidean chart the Euclidean divergence
+of the covariant components \(B_{ij}\) includes
+\((\delta^{ik}-g^{ik})\partial_i B_{kj}\). The coordinate conservation
+law for the mixed tensor density has only first derivatives of the metric,
+\begin{equation}\label{msneck:bach-density}
+ \partial_i\bigl(\sqrt{\det g}\,B^i{}_j\bigr)
+ =\tfrac12\sqrt{\det g}\,B^{ik}\partial_jg_{ik}.
+\end{equation}
+This follows by expanding \(\nabla_iB^i{}_j=0\) and using the symmetry of
+\(B\) in its contraction with the Christoffel symbols. For each flat
+conformal Killing field \(X\), the corresponding covariant identity is
+\(\operatorname{div}_g(B(X,\cdot)^\sharp)=\tfrac12\langle B,(L_Xg)_0\rangle_g\),
+where the subscript denotes the trace-free part with respect to \(g\).
+An endpoint estimate that uses these identities to control the
+variable-coefficient forcing is still needed.
 
 \paragraph{From dyadic control to one chart.}
-None of the neck estimates produces its hypothesis. Small \(L^2\)
-curvature on each dyadic annulus \(A_j\) gives at best a chart on \(A_j\)
-whose deviation is comparable to the energy \(e_j\) of a neighborhood of
-\(A_j\). Composing the transition maps bounds the accumulated deviation by
-\(\sum_je_j\), while the energy controls only \(\sum_je_j^2\). The
-\(\ell^1\) sum is the dyadic form of the Lorentz norm \(L^{2,1}\) of the
-curvature. Proposition~\ref{msneck:log} shows what an accumulated
-deviation can look like: a logarithmic drift \(cH\log\rho\) is a cone in
-another chart, and its energy and its Bach norm are both proportional
-to the length. The danger is a deviation that drifts without being
-conical. At the linear level Theorem~\ref{msneck:liouville} excludes it:
-an unforced solution has no exponent with \(|\operatorname{Re}\mu|<2\), so its
-energy should decay like \(e^{-4d}\) at logarithmic distance \(d\) from the
-ends of a long annulus. Proving that decay requires completeness of the
-homogeneous solutions modulo the kernel of \(W'\), which is not proved
-here. A three-annulus inequality for almost Bach-flat metrics, with
-forcing measured by the \(L^1\) Bach norm, would convert the decay into
-the chart of Theorem~\ref{msneck:annulus}. Necks whose cross-section is a
-quotient of the three-sphere are covered by Corollary~\ref{msneck:neck}
-only if they carry a nearly conformal Killing field, and producing that
-field is the same problem in another form.
+The one-chart estimate requires compatible geometry across the entire
+neck. Even if each dyadic annulus \(A_j\) admits a chart with
+transition errors controlled by a local curvature norm \(e_j\),
+composing those transitions can accumulate an error of order
+\(\sum_j e_j\). The total curvature energy controls \(\sum_j e_j^2\)
+when \(e_j=\|\Rm\|_{L^2(A_j)}\). A comparison between the spatial
+sum and the Lorentz \(L^{2,1}\) norm, which depends on the distribution
+of curvature values, requires further geometric information.
+Proposition~\ref{msneck:log} exhibits a logarithmic drift \(cH\log\rho\)
+that represents a cone to first order. The Weyl energy and total Bach
+norm of the cone both grow in proportion to the logarithmic length.
+Theorem~\ref{msneck:liouville} excludes homogeneous linearized
+Bach-flat modes with nonzero Weyl curvature in the open strip
+\(-2<\operatorname{Re}\mu<2\). The modes at \(\mu=\pm2\) indicate
+the expected end decay. A uniform estimate for general fields on
+long annuli still requires control of all modes and of the end data.
+A three-annulus inequality for almost Bach-flat metrics with \(L^1\)
+forcing could provide the summability needed to construct a compatible
+gauge. The intrinsic estimate of Corollary~\ref{msneck:neck} applies
+also to spherical quotient necks once a transverse field with small
+conformal Killing defect is available.
 
 \paragraph{Energy between concentration scales.}
-A supplied nonflat smooth ALE component with full embedded core leaves
-a uniformly positive Weyl energy outside that component. The closed
-critical gap prevents a smooth Bach-flat homotopy-sphere base from
-carrying the remainder if it is the only other term of an energy
-identity. For an approximately critical sequence the estimates leave
-open both the extraction of a smooth component and the location of any
-residual energy. The neck estimates of Section~\ref{msneck:section} show
-that a neck cannot carry it if the neck admits either a chart uniformly
-close to Euclidean with bounded second-derivative energy, or a nearly
-conformal Killing field, and if its total Bach norm tends to zero. They
-reduce the location of the residual energy to the two problems above.
-Orbifold intermediate regions also require their own boundary and
-energy analysis.
+At an interface between scales with \(r_i/R_i\to0\), in a supplied
+annular identification with radial coordinate \(\rho\), the desired
+no-neck statement is
+\begin{equation}\label{msneck:no-neck-target}
+ \lim_{L\to\infty}\limsup_{i\to\infty}
+ \mathcal W_{\{Lr_i<\rho<R_i/L\}}(g_i)=0 .
+\end{equation}
+The order of limits allows the end collars to be accounted for by
+convergence on the adjacent components. The estimates of
+Section~\ref{msneck:section} give this conclusion if the chart deviation
+tends to zero in the neck limit, \(K\) stays bounded and
+\(\mathfrak B\to0\). The intrinsic estimate gives it if \(\Lambda\)
+stays bounded and the weighted conformal Killing defect tends to zero.
+The problem is to obtain such control for the necks of an approximately
+critical sequence. An energy identity also requires extraction of the
+components and control of the entire complement of their truncations,
+including any orbifold intermediate regions.
+
+\paragraph{What an energy identity would give.}
+Suppose a sequence on a smooth homotopy four-sphere lies in the
+positive-Yamabe band \(4\pi^2\le E_+\le8\pi^2-\delta\), with
+\(\mathfrak B\to0\), and admits the smooth base and ALE comparison
+data of Section~\ref{msgap:section}. If the no-neck estimate accounts
+for the full complement of the comparison regions, the inequality
+\eqref{msgap:accounting} becomes the identity \(e=e_0+\sum_j e_j\).
+Here \(e\) is the limiting source energy, \(e_0\) is the base energy
+and \(e_j\) are the bubble energies, all in a single chirality. A
+nonflat smooth ALE component \(X\) contributes \(e_X>4\pi^2\).
+The residual estimate \eqref{msgap:strict} then gives
+\[
+ 0<e-e_X<4\pi^2-\delta .
+\]
+Every other bubble is flat, and the smooth positive-Yamabe Bach-flat
+base is conformally round by Theorem~\ref{msgap:closed}. The identity
+would then give \(e=e_X\), contradicting the strict residual bound.
+Thus, in this compactification class an energy identity rules out
+nonflat bubbles. All limiting energy must lie on the smooth closed
+base, so a sequence in the positive band can persist only at a
+closed critical value. In particular, complete accounting rules out
+such a sequence if \(e\) is strictly below the first positive closed
+critical value of Theorem~\ref{msgap:minimum}, or if the set of
+positive subcritical critical values is empty. If complete accounting
+were available for every vanishing-Bach sequence in a closed subband
+strictly below that value, it would give a positive lower bound for
+\(\mathfrak B/E_+\) on the subband whenever the family is nonempty.
+This would exclude the small-gradient cause of diverging radial
+strain in \eqref{mscost:strain}. Controlling the actual radial lift
+would still require an estimate for the inverse in that direction.
 
 \paragraph{Recognizing the original manifold.}
 The metric constructed at the end of a continuation, or recovered in
 a compactness argument, must determine the smooth type of the starting
 manifold. A smoothly capped blow-up core can itself be a homotopy sphere
-of unknown smooth type. The compact-gauge theorem in
+of unknown smooth type, and accounting for its energy alone gives
+no smooth identification with the source. The compact-gauge theorem in
 Section~\ref{msgauge:section} retains the original manifold, provided
 its uniform ellipticity and \(W^{2,q}\) bounds are available. A surviving
-marked volume then forces conformal roundness. Along a deformation the
-alternative is a positive Yamabe checkpoint and continuation within
+marked volume then forces conformal roundness. For a sequence confined
+to the positive band, this would contradict the lower energy bound.
+Along a deformation the alternative is a positive Yamabe checkpoint
+and continuation within
 \(E_+<8\pi^2\) to \(E_+<4\pi^2\), where Proposition~\ref{prop:recognition}
 applies. Producing the required starting geometry and either form of
 control on an arbitrary smooth homotopy four-sphere remains the
