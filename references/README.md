@@ -173,4 +173,4 @@ The [source records R119–R121](../papers/investigations-1/03_first_order_twist
 
 [Joint collar sources R122–R127](SOURCE_NOTES_JOINT_COLLAR_20261125.md) give the smooth disk and boundary identifications, the varying-slice boundary problem and the closed Dirac eigenvalue estimate used in the neck, extraction and matching checks.
 
-[Second collar source records R128–R141](SOURCE_NOTES_SECOND_COLLAR_20261125.md) cover exact compactness and its limits, the Bach gauge, relative characteristic forms, positive Schouten gauges, harmonic Weyl curvature, spinor normalization and the contrast between physical and conformal base limits.
+[Second collar source records R128–R142](SOURCE_NOTES_SECOND_COLLAR_20261125.md) cover exact compactness and its limits, the Bach gauge, relative characteristic forms, positive Schouten gauges, harmonic Weyl curvature, spinor normalization and the contrast between physical and conformal base limits.

@@ -1,0 +1,23 @@
+# FOT-E11a · Numerical ALE end count
+
+25 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance. The packet specified GPT-6.2 Sol at ultra. Actual serving model and reasoning effort were unavailable.
+
+The arithmetic in SEC `msale:end-count` forces exactly one end under the strict upper band. For each positive order $q_j\le Q$, $1/q_j\ge 1/Q$, so the reciprocal sum is at least $k/Q$. If $k\ge 2$, then $4\pi^2(k-2+\sum_j1/q_j)\ge 8\pi^2/Q$. The strict source margin and nonnegative chiral energies would force $y^2/48$ above its supplied upper bound. Nonemptiness leaves $k=1$. The supplied $Q_8$ relation is impossible because $0\le e_+,e_-\le e$ implies $|e_+-e_-|\le e\le8\pi^2-\delta<9\pi^2$. The lower source band is unnecessary for either implication. [Lean module](../../../../FirstOrderTwistor/ALEEndCount.lean) · [SEC end count and links](../../../../../papers/investigations-1/03_first_order_twistor/01_sections_and_connections/manuscript/twistor_sections_and_chiral_weyl_curvature.tex#L4045)
+
+| Declaration in `FirstOrderTwistor` | Explicit inputs and result |
+| --- | --- |
+| `card_div_le_sum_reciprocal_end_orders` | Finset $J$, natural orders $q_j$ on $J$ and $Q$, and $0<q_j\le Q$ on $J$. Gives $|J|/Q\le\sum_{j\in J}1/q_j$ over the reals. |
+| `oneALEEndOfSubcriticalBounds` | The same order data, $J$ nonempty, real $e,e_+,e_-,y,\delta$, the positive margin and upper band, both chiral energies nonnegative, and the two inequalities of `msale:end-count` with this $Q$. Gives `J.card = 1`. |
+| `q8EtaContradictionOfSubcriticalBand` | Real $e,e_+,e_-,\delta$, the positive margin and upper band, $0\le e_+,e_-\le e$, and the absolute chiral difference $9\pi^2$. Gives `False`. |
+
+## External inputs for geometric use
+
+- The family of ends, their free oriented orthogonal actions, differentiable ALE decay, and smooth convergence on the whole compact core remain supplied. The topology uses the Mayer–Vietoris calculation in `msale:mv` and `msale:core-topology` to give $\chi(X)=2-k$ and $\tau(K)=0$. A compact truncation must include every boundary component of that core. [SEC core topology and decay](../../../../../papers/investigations-1/03_first_order_twistor/01_sections_and_connections/manuscript/twistor_sections_and_chiral_weyl_curvature.tex#L3954)
+- The lower bound in `msale:end-count` uses the rescaling and integral comparisons in `msale:budgets`, the source identity `msale:source-euler`, and the ALE Euler correction `msale:ae-euler`. The upper bound uses the transported Sobolev inequality `msale:sobolev` and the dilated radial test on a maximal-order end in `msale:end-yamabe`. The geometric regularity, decay and comparison estimates that justify these transfers and boundary limits remain external. [SEC source and ALE budgets](../../../../../papers/investigations-1/03_first_order_twistor/01_sections_and_connections/manuscript/twistor_sections_and_chiral_weyl_curvature.tex#L3868) · [Primary source records R91–R92](../../../../../references/SOURCE_NOTES_SEC_20261124.md#fixed-margin-bach-concentration--24-november-2026)
+- Hillman's finite-group alternatives for a locally flat embedding in an integral homology four-sphere, the product-boundary signature identity `msale:ae-signature`, and the round quotient eta computation $|\eta_{\mathrm{sig}}(S^3/Q_8)|=3/4$ remain external. The binary icosahedral option still needs the smooth homology-ball and spin obstruction using the $E_8$ plumbing and Rokhlin divisibility. Identifying the trivial spherical link and showing its eta value vanishes belong to the geometric conclusion `msale:ends`. [Primary source records R92–R94](../../../../../references/SOURCE_NOTES_SEC_20261124.md#fixed-margin-bach-concentration--24-november-2026)
+
+## Verification
+
+`lake env lean FirstOrderTwistor/ALEEndCount.lean` and a `lake env lean --stdin` probe passed. The probe printed each declaration type and reported exactly `[propext, Classical.choice, Quot.sound]` for each declaration. It checked a reciprocal sum with orders 1 and 2, a subcritical singleton of order 2, the two-end numerical equality case with both orders 1 at zero margin, and the eta contradiction with the chiral labels interchanged. The order-2 singleton satisfies the arithmetic premises and leaves its geometric exclusion to the link theorem. The two-end probe is an arithmetic boundary case.
+
+Working checkout `ad23403e9be521ebbc8395a9d958c0a02aef3c84`. The plan, manifest and toolchain matched packet base `cf03e8f09359cac317499f6928edb09e4f80c280`. SEC SHA-256 `329513a3cfd8e939373533fad90f36b9108ce0ea41a22f9cc348587a4110fe66`. Lean `4.35.0-rc3`, Mathlib `c55e6e786f49`, DifferentialGeometry `788efe978944`.

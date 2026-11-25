@@ -43,4 +43,6 @@ Two checks sharpened the distinction between the exact and approximate equations
 
 The physical-volume test now gives a sharper conclusion. If a smooth removable base retains volume below the round Yamabe value, the base has the original smooth type and a minimizing sequence leaves no residual Weyl energy. For a round physical base, the source can converge metrically to round \(S^4\) while curvature concentrates at a puncture. I’m checking what the marked cut preserves about the smooth structure at that point.
 
+The nonround case now needs one fewer hypothesis. Two independent arguments show that if physical volume vanishes on a supplied nonround conformal base, a definite amount of Weyl energy must remain outside it. Minimization on the original smooth type forbids that loss. Thus a full nonround conformal comparison already recovers the physical metric, even when no volume lower bound was known on the base.
+
 The same runtime thread ID was observed. The app reader failed, the exact-ID local source was unavailable, and no turn ID was exposed. This is still an unregistered partial public record.

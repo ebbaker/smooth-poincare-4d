@@ -9,3 +9,5 @@ Actual overlap and independent boundary frames assessed. Construction of either 
 [Decision and evidence](../research-progress/REGISTER.md) · [Joint continuation](../../../continuation-notes/AFTER_SECOND_COLLAR_RESEARCH_20261125.md) · [Assessment](../reviews/SECOND_COLLAR_REVIEW_20261125.md)
 
 A physical base gives a measured metric limit and places all unmatched curvature in explicit atoms. Use a mass-normalized ball at such an atom when refining the comparison. [E10](../notes/E10_METRIC_LIMIT_AND_CURVATURE_ATOMS_20261125.md).
+
+Prioritize a smoothly removable *nonround conformal* base on the approximately critical minimizing source. Existence of the entire comparison, including the marked truncations, is the required geometric step. Once it is supplied, the cost of evacuation gives physical recovery. [Derivation](../notes/E11_VANISHING_FACTOR_GREEN_LIMIT_20261125.md).

@@ -9,3 +9,5 @@ Exact extraction, weak-sequence counterexample and a closed critical alternative
 [Decision and evidence](../research-progress/REGISTER.md) · [Joint continuation](../../../continuation-notes/AFTER_SECOND_COLLAR_RESEARCH_20261125.md) · [Assessment](../reviews/SECOND_COLLAR_REVIEW_20261125.md)
 
 In the round-base case, rescale at a fixed positive Weyl mass on the single surviving puncture exterior and test for loss of energy under comparison. [E19](../notes/E19_ROUND_BASE_SINGLE_PUNCTURE_20261125.md).
+
+Prioritize a smoothly removable *nonround conformal* base on the approximately critical minimizing source. Existence of the entire comparison, including the marked truncations, is the required geometric step. Once it is supplied, the cost of evacuation gives physical recovery. [Derivation](../notes/E20_GREEN_LIMIT_RICCI_BUDGET_20261125.md).

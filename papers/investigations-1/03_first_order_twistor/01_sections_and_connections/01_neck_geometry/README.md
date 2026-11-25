@@ -10,4 +10,4 @@ The working notes on [energy between scales](brainstorm/notes/NECK_GEOMETRY_AND_
 
 The [parent investigation](../README.md) owns its existing tasks. [Dirac collar extraction](../02_dirac_collar_extraction/research-overview/OVERVIEW.md) · [Dirac collar matching](../../02_dirac_and_twistor_spinors/01_dirac_collar_matching/research-overview/OVERVIEW.md) share the [route to smooth four-sphere recognition](../../brainstorm/notes/COLLAR_PROGRAM_AND_SPC4_20261125.md). Sustained research was activated on 25 November. [Joint results](../../reviews/JOINT_COLLAR_ASSESSMENT_20261125.md) · [Current branch handoff](continuation-notes/AFTER_JOINT_COLLAR_RESEARCH_20261125.md). [References](references/README.md) · [Milestones](DRAFT_HISTORY.md) · [Public history](chat-histories/README.md)
 
-The [second joint assessment](../../reviews/SECOND_COLLAR_ASSESSMENT_20261125.md) integrates E12–E19. [Current continuation](continuation-notes/AFTER_SECOND_COLLAR_RESEARCH_20261125.md).
+The [second joint assessment](../../reviews/SECOND_COLLAR_ASSESSMENT_20261125.md) integrates E12–E20. [Current continuation](continuation-notes/AFTER_SECOND_COLLAR_RESEARCH_20261125.md).

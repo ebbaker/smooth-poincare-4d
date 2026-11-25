@@ -9,3 +9,5 @@
 [Original decisions](DECISIONS_JOINT_COLLAR_20261125.md) · [Live tasks](../../research-progress/REGISTER.md)
 
 **B05 follow-on.** Compare the entire physical metric and all curvature defect measures with a removable base. Measured Gromov–Hausdorff convergence and paired point masses. The full Riemann atom has weight 16 times the chiral atom. [Derivation](../../notes/E10_METRIC_LIMIT_AND_CURVATURE_ATOMS_20261125.md).
+
+**B05 revision after the volume test.** A supplied nonround smooth conformal base on a minimizing sequence recovers the physical metric automatically. Seek nonround conformal comparison even when the initial conformal factors have no known volume lower bound. [Derivation](../../notes/E11_VANISHING_FACTOR_GREEN_LIMIT_20261125.md).

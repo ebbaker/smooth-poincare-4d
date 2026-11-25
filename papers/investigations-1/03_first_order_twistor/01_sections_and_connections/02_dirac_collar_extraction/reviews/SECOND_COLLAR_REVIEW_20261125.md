@@ -11,3 +11,5 @@ E09 tests the conformal comparison by tracking physical volume on one fixed comp
 [Evidence and requests](../research-progress/REGISTER.md) · [Joint conclusions](../../../reviews/SECOND_COLLAR_ASSESSMENT_20261125.md)
 
 Compare the entire physical metric and all curvature defect measures with a removable base. Measured Gromov–Hausdorff convergence and paired point masses. The full Riemann atom has weight 16 times the chiral atom. [E10](../notes/E10_METRIC_LIMIT_AND_CURVATURE_ATOMS_20261125.md)
+
+Normalize the evacuated Yamabe factor on compared compacts. Scalar-flat Green metric on the punctured base, with the physical volume exit identified. [Proof](../notes/E11_VANISHING_FACTOR_GREEN_LIMIT_20261125.md) · [Independent cap argument](../../../reviews/SECOND_COLLAR_LEAD_CHECK_20261125.md).

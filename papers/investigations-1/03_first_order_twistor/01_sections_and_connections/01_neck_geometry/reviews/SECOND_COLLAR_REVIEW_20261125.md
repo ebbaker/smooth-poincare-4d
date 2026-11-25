@@ -11,3 +11,5 @@ For exact critical metrics the same-type competitor from E02 rules out bubbling 
 [Evidence and requests](../research-progress/REGISTER.md) · [Joint conclusions](../../../reviews/SECOND_COLLAR_ASSESSMENT_20261125.md)
 
 Restart on the capped survivor of a round physical base. Single puncture carries the original nonstandard smooth type and the full limiting energy in the minimizing regime. [E19](../notes/E19_ROUND_BASE_SINGLE_PUNCTURE_20261125.md)
+
+Test the scalar-flat rescaled limit of an evacuated conformal base. One Euclidean end and an exact lower bound for the residual. A nonround minimizing base recovers physical scale. [Proof](../notes/E20_GREEN_LIMIT_RICCI_BUDGET_20261125.md) · [Independent cap argument](../../../reviews/SECOND_COLLAR_LEAD_CHECK_20261125.md).

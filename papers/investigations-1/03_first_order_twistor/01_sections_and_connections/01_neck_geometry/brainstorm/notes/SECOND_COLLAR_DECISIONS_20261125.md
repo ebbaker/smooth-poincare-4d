@@ -9,3 +9,5 @@
 [Original decisions](DECISIONS_JOINT_COLLAR_20261125.md) · [Live tasks](../../research-progress/REGISTER.md)
 
 **B05 follow-on.** Restart on the capped survivor of a round physical base. Single puncture carries the original nonstandard smooth type and the full limiting energy in the minimizing regime. [Derivation](../../notes/E19_ROUND_BASE_SINGLE_PUNCTURE_20261125.md).
+
+**B05 revision after the volume test.** A supplied nonround smooth conformal base on a minimizing sequence recovers the physical metric automatically. Seek nonround conformal comparison even when the initial conformal factors have no known volume lower bound. [Derivation](../../notes/E20_GREEN_LIMIT_RICCI_BUDGET_20261125.md).

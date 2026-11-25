@@ -19,12 +19,12 @@ On 25 November the three proof routes took responsibility for the tasks indicate
 
 | Task (prefix `SP4-FORM-FOT-`) | Local status or owning register | Next input or output |
 | --- | --- | --- |
-| B01 | Ready | Inventory the concrete geometric types and primary dependencies for recognition and the energy budget. |
+| B01 | Partial · Route 02 interfaces adopted | Finite positive energy measures, fixed-domain pullback and oriented orthonormal frame normalization. Recognition and frame-independent Weyl transport remain open. See the dated decision below. |
 | E01 | [Route 02](../02_neck_energy_accounting/research-progress/REGISTER.md#version-01-tasks) | Prove the [finite residual contradiction](../research-plan/01_PLAN.md#first-bounded-proof) in the existing Lean library. |
 | B02 | Dependent | B01 and the pilot's frame interface where needed. Freeze section, mixed-connection and local-prescription packets. |
 | B03 | [Route 02](../02_neck_energy_accounting/research-progress/REGISTER.md#version-01-tasks) | B01. Freeze the compact-gauge, smooth-component and supplied-annulus statements. |
 | B04 | [Route 04](../04_dirac_collar_transmission/research-progress/REGISTER.md#version-01-tasks) | B01. Freeze the spin representation, bundle identification, elliptic and spectral interfaces. |
-| B05 | Dependent | B01 and the three adopted collar plans. Specify how their supplied data enter the conditional theorems. |
+| B05 | Partial · Route 02 interface adopted | Strip and uncovered mass on the physical source, including the free outer-end gap. Cap/trace realization remains with the sibling routes. |
 | E02 | Reserved | B01 and the pilot convention. Four-index to chiral norm conversion. |
 | E03 | Reserved | E02 and signature/development. Exact conformal recognition. |
 | E04 | Reserved | E02, signature and Chang–Gursky–Yang. Strict smooth recognition and its Ricci form. |
@@ -69,3 +69,12 @@ On 25 November the three proof routes took responsibility for the tasks indicate
 | [SEC parent](../../../papers/investigations-1/03_first_order_twistor/01_sections_and_connections/research-progress/REGISTER.md) and [DIR parent](../../../papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/research-progress/REGISTER.md) | Justify entry from arbitrary $M$, resolve persistent closed critical classes, and reach recognition on the same smooth type. A cut giving one decrease still needs a restart or termination argument. |
 
 Append dated evidence for shared tasks here. Record delegated proof returns in the owning route register. Preserve earlier task identities and the numbered [progress baselines](../README.md). Only the designated integrator changes this register.
+
+
+### 25 November 2026 · Shared decisions for the Route 02 activation
+
+For Edward B. Baker III with OpenAI Codex. Lead requested as GPT-6.2 Astra/ultra, serving metadata unavailable. Helper calls selected GPT-6.2 Sol/ultra. The [Route 02 register](../02_neck_energy_accounting/research-progress/REGISTER.md) owns its execution evidence.
+
+**B01.** Use Mathlib measures on Borel domains, `Measure.real` for the finite mass used by E01, and `withDensity` to weight volume. Use the pilot's `SectionsAndConnections.hilbertSchmidtSq` for smooth positive-chirality frames in Riemannian signature. A fixed-domain comparison includes the actual volume Jacobian. Reserve parent E02a for the four-slot coordinate normalization and its local integral consequence. With an oriented orthonormal coframe let $u=(01,02,03)$ and $v=(23,31,12)$ denote complementary wedge pairs. In the $(u±v)/\sqrt2$ bases the blocks are $W^+,W^-$. The full squared norm is four times the sum of their squared Hilbert–Schmidt norms. Each individual strip therefore admits a quarter-full upper bound. Identifying the curvature of a metric with these components is a separate transport theorem. Recognition still requires the topological signature, the conformal development and rigidity dependencies of E03–E04. [Source and API audit](../02_neck_energy_accounting/reviews/GEOMETRIC_PREMISES_20261125.md)
+
+**B05.** Use one common source sequence for every fixed family of images. Remainder data include the finite strip index set at each pair of truncation and source indices, its mass estimates, their sum, and the mass of the uncovered set. This accepts chart, intrinsic and weighted spinor contributions on their actual domains. A diagonal ALE estimate covers only its selected end. Route 03 can use the strict or uniform residual with its respective Ricci and Yamabe inputs. Route 04 can supply a strip contribution under its own differentiated-defect estimate. The existing public library owns the arithmetic E01, and the shared `FirstOrderTwistor` target owns these measure and geometric interfaces. The lead integrating a sibling result should add its import to the existing entry point.

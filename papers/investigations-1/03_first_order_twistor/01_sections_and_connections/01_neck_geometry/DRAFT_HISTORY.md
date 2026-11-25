@@ -13,3 +13,5 @@ Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving mo
 Exact extraction, weak-sequence counterexample and a closed critical alternative assessed. The weak separating chart is open. [Assessment](reviews/SECOND_COLLAR_REVIEW_20261125.md) · [Live register](research-progress/REGISTER.md).
 
 Single puncture carries the original nonstandard smooth type and the full limiting energy in the minimizing regime. [Derivation](notes/E19_ROUND_BASE_SINGLE_PUNCTURE_20261125.md).
+
+One Euclidean end and an exact lower bound for the residual. A nonround minimizing base recovers physical scale. [Derivation](notes/E20_GREEN_LIMIT_RICCI_BUDGET_20261125.md).

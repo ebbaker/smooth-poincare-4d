@@ -42,4 +42,4 @@ The [three-branch proof map and manuscript passages](brainstorm/notes/COLLAR_PRO
 
 The [joint collar assessment](reviews/JOINT_COLLAR_ASSESSMENT_20261125.md) proves conditional descent on the original smooth type, identifies the finite link of a sufficiently controlled cut, and describes the actual spinor transmission estimates. The [joint continuation](continuation-notes/AFTER_JOINT_COLLAR_RESEARCH_20261125.md) starts from the remaining separating-chart problem.
 
-The [second joint assessment](reviews/SECOND_COLLAR_ASSESSMENT_20261125.md) gives the physical-volume criterion for same-type base transfer, the exact and approximate collar tests, and the isolation theorem for a closed critical value. [Current continuation](continuation-notes/AFTER_SECOND_COLLAR_RESEARCH_20261125.md).
+The [second joint assessment](reviews/SECOND_COLLAR_ASSESSMENT_20261125.md) gives full physical recovery of a supplied nonround conformal base at minimization, the exact and approximate collar tests, and the isolation theorem for a closed critical value. [Current continuation](continuation-notes/AFTER_SECOND_COLLAR_RESEARCH_20261125.md).
