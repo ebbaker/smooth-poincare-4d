@@ -1,0 +1,63 @@
+SP4-FOT-SEC-E60 linear model checks
+1. the logarithmic mode h = H log(rho), H symmetric, trace free, rational, generic
+  PASS  B'(H log rho) = -(4/3) H rho^-4 + (4/3)(x Hx + Hx x) rho^-6 - (8/3) H(x,x) delta rho^-6 + 8 H(x,x) x x rho^-8
+  PASS  d_k d_l W'_ikjl = Laplacian A' - Hess tr A' on this field
+  PASS  Ric'(H log rho) = -(x Hx + Hx x) rho^-4
+  PASS  R'(H log rho) = -2 H(x,x) rho^-4
+  PASS  trace of B'(H log rho) vanishes
+  PASS  divergence of B'(H log rho) vanishes
+2. gauge form of the logarithmic mode
+  PASS  H log rho + s_H = L_Z delta with Z = (log rho) H x/2, s_H = (x Hx + Hx x)/(2 rho^2)
+  PASS  W'(H log rho + s_H) = 0
+  PASS  B'(H log rho + s_H) = 0
+  PASS  h_TT = (5/9) H log rho - (7/18) s_H - (1/18) H(nu,nu) nu nu + (1/9) H(nu,nu) delta is divergence free and trace free
+  PASS  W'(h_TT) = W'(H log rho) and B'(h_TT) = B'(H log rho): the same class, with 5/9 of the logarithm
+  PASS  B'(H log rho) x = (20/3) H(x,x) x rho^-6, so the mean over S^3 of b_H(nu) nu (x) nu is (20/3) H/12 = (5/9) H:
+        the potential formula of item 7 then gives the growth (5/9) H per unit of log rho, the coefficient found above
+3. densities of the logarithmic mode
+  PASS  |W'(H log rho)|^2 = (2|H|^2 - 4|H nu|^2 + (4/3) H(nu,nu)^2) rho^-4
+  PASS  B'(H log rho)(x,x) = (20/3) H(x,x) rho^-4
+  PASS  B'(H log rho)(x,Hx) = (20/3) H(x,x)^2 rho^-6
+  PASS  mean of rho^4 |W'(H log rho)|^2 over S^3 = (10/9)|H|^2, so kappa_1 = (20 pi^2/9)|H|^2   [exact value 20808589/2857680 with |H|^2 = 20808589/3175200]
+  PASS  means of H(nu,nu)^2 and |H nu|^2 are |H|^2/12 and |H|^2/4
+  PASS  Bach pairing: 2 mean <b_H, s_H> = (10/9)|H|^2, the same density as the energy
+   numerical quadrature on S^3 (rule exact to degree 2n-1); kappa_2 = int_{S^3} |b_H| dsigma in the Frobenius norm
+   last column: e_2/(sup|s_H| b_1) with e_2 = kappa_1, b_1 = kappa_2 and sup|s_H| = |H|_op, the leading-order ratio of the energy
+   of the cone delta + c s_H to (sup norm of the deviation) x (total Bach norm); Theorem 1 of E59 bounds it by 2 to leading order
+   H                     kappa_1/|H|^2 (n=10)   20 pi^2/9        kappa_2/|H| n=10  n=14       n=18       |H|/|H|_op   e_2/(sup|s_H| b_1)
+   diag(1,1,-1,-1)       21.932454224643        21.932454224643  44.173943        44.252828  44.267954  2.0000       0.9909
+   diag(3,-1,-1,-1)      21.932454224643        21.932454224643  43.297649        43.067780  43.110004  1.1547       0.5875
+   diag(1,-1,0,0)        21.932454224643        21.932454224643  42.528482        42.586560  42.603005  1.4142       0.7281
+   diag(1,.5,-.3,-1.2)   21.932454224643        21.932454224643  43.355249        43.369631  43.373696  1.3894       0.7026
+   random                21.932454224643        21.932454224643  43.303730        43.295097  43.296254  1.4063       0.7124
+   random                21.932454224643        21.932454224643  43.913586        43.917684  43.917613  1.5585       0.7783
+   leading-order energy per unit log length of the cone delta + eps s_H, H = diag(1,.5,-.3,-1.2): (20 pi^2/9)|H|^2 eps^2 = 0.152430557 (eps = 0.05), 5.487500 (eps = 0.30)
+4. operator identities on random polynomial tensors (exact)
+  PASS  tr B'(h) = 0 for a random polynomial h of degree 7
+  PASS  div B'(h) = 0
+  PASS  d_k d_l W'_ikjl = Laplacian A' - Hess tr A'
+  PASS  W' and B' vanish on L_Z delta + f delta for random polynomial Z and f
+  PASS  Laplacian^2 W'(h) = -4 W'(B'(h)) on the 21 independent components
+        (non-trivially: 16 of the 21 components of Laplacian^2 W'(h) are nonzero)
+5. modes of homogeneity +2 and -2
+  PASS  a rational tensor with the symmetries of a Weyl tensor (pair symmetries, Bianchi, trace free), |W|^2 = 17206/27
+  PASS  q = -(1/3) W_ikjl x_k x_l is divergence free and trace free
+  PASS  Rm'[q] = W exactly (so W'[q] = W and B'[q] = 0)
+  PASS  h = W_ikjl x_k x_l rho^-4 is divergence free and trace free
+  PASS  B'(h) = 0 away from the origin
+  PASS  W'(h) != 0 away from the origin (max component at a test point 10.2203)
+  PASS  -pi^-2 int <W_ikjl x_k x_l rho^-4, B'(phi)_ij> dx = W_ikjl d_k d_l phi_ij(0) = -41/15 for a random Gaussian test tensor
+6. energy identity for a generic Gaussian tensor (exact, in units of pi^2/4)
+  PASS  int |W'(h)|^2 = -2 int <B'(h),h> = 883189/1728 * pi^2/4 for a Gaussian tensor that is neither trace free nor divergence free
+7. amplitude identity for a divergence-free trace-free Schwartz tensor
+  PASS  h_jq = 4 W_ijpq x_i x_p exp(-rho^2) is divergence free and trace free
+  PASS  B'(h) = -(1/4) Laplacian^2 h on this tensor
+  PASS  closed form beta = -16 Q(y)(|y|^4 - 10|y|^2 + 20) exp(-|y|^2) agrees with the exact B'(h) at x0 (deviation 8.5e-14)
+  PASS  numerical: h(x0) = -(2 pi^2)^-1 int (beta(y) w)(x)w dy at x0 = (0.3,-0.5,0.2,0.6): max deviation 2.2e-14 (max |h(x0)| = 2.4153)
+  PASS  numerical (1/2) int |Laplacian h|^2 = 94342.451847302 against exact int |W'(h)|^2 = 94342.451847302
+  PASS  sup|h| = 12.91319 <= (2 pi^2)^-1 ||B'(h)||_1 = 473.67212;  int |W'(h)|^2 = 94342.45185 <= pi^-2 ||B'(h)||_1^2 = 8857585.99064
+8. numerical: nonlinear Bach tensor and Weyl density near the flat metric (truncated Taylor arithmetic)
+   s = 1e-02: max|(B(delta + s h) - B(delta - s h))/(2s) - B'(h)| = 2.05e-03 (max|B'(h)| = 5.230);  |W|^2 sqrt(g)/s^2 = 15.69456423, |W'(h)|^2 = 15.69393169
+   s = 1e-03: max|(B(delta + s h) - B(delta - s h))/(2s) - B'(h)| = 2.05e-05 (max|B'(h)| = 5.230);  |W|^2 sqrt(g)/s^2 = 15.69398614, |W'(h)|^2 = 15.69393169
+   s = 1e-04: max|(B(delta + s h) - B(delta - s h))/(2s) - B'(h)| = 2.05e-07 (max|B'(h)| = 5.230);  |W|^2 sqrt(g)/s^2 = 15.69393705, |W'(h)|^2 = 15.69393169
+all assertions passed; time 3.8 s

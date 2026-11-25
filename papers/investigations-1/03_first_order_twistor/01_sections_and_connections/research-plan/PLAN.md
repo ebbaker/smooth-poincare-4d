@@ -258,3 +258,11 @@ B24–B28 and E40–E48 test an exterior change of reference, a fixed-reference 
 ## Fixed-margin concentration and residual energy
 
 B29–B33 and E49–E58 address the complete smooth ALE alternatives, critical closed classes and compact conformal gauges. The [assessment](../reviews/SEC_SUBCRITICAL_BACH_CONCENTRATION_20261124.md) and [dated continuation](../continuation-notes/04_AFTER_SUBCRITICAL_BACH_CONCENTRATION_20261124.md) specify how an annular estimate could narrow the remaining failure of energy accounting.
+
+## Annular energy, the linear model and the conservation law
+
+Added on 24 November 2026 for Edward B. Baker III with LLM assistance: Claude Fable 5.2 (`claude-fable-5-2`), Claude Cowork, reasoning effort max as configured. B34–B35 and E59–E61 settle the single-chart annular test, the linearized Bach equation at the flat cone and the conservation law of the Weyl functional. The [assessment](../reviews/SEC_ANNULAR_ENERGY_AND_CONSERVATION_20261124.md) states what is proved and what is assumed, and the [dated continuation](../continuation-notes/05_AFTER_ANNULAR_ENERGY_AND_CONSERVATION_20261124.md) defines the next decision.
+
+**SP4-FOT-SEC-B36.** Scope: one decision on how the chart of E59 or the vector field of E61 is to be obtained from an \(L^1\) bound on the Bach tensor, or on a changed target, with the candidates of the continuation. Routing: selected lead, since the choice is conceptual and one candidate is partly the author's. Deliverable: one decision note with a frozen first test. Evidence standard: the decision states which hypotheses of E59–E61 remain assumptions. Completion: an issued E62 request or a recorded change of target.
+
+**SP4-FOT-SEC-E62.** Reserved. Proposed scope: the quadratic part of the Bach tensor in divergence-free trace-free gauge and whether its top-order term can be rewritten using the covariant divergence identity, with tests on a wave packet and on a cone. Routing: gpt-6.2-sol/ultra after issuance, because the task is a fixed calculation with a binary outcome. Deliverable: the decomposition or the obstructing term. Completion and escalation: as fixed by B36.

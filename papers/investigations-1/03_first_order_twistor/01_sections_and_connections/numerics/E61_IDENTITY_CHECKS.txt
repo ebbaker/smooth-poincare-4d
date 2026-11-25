@@ -1,0 +1,36 @@
+SP4-FOT-SEC-E61 identity checks (truncated Taylor arithmetic, double precision)
+1. conventions on model metrics
+  round S^4          : |W|^2 = 0.000000000000, max|Bach| = 4.307e-15, R = 12.000000000000; max|Ric - 3g| = 8.88e-16, max|Rm - (g_ik g_jl - g_il g_jk)| = 1.78e-15
+  S^2 x S^2          : |W|^2 = 5.333333333333, max|Bach| = 2.895e-15, R = 4.000000000000; max|Ric - g| = 8.88e-16, |W|^2 - 16/3 = 2.66e-15
+  R^2 x S^2          : |W|^2 = 1.333333333333, max|Bach| = 4.199e-01, R = 2.000000000000; |W|^2 - 4/3 = 8.88e-16, B_tt = -0.166666666667, B_tt + |W|^2/8 = -5.00e-16
+  S^2(1) x S^2(1/4)  : |W|^2 = 2.083333333333, max|Bach| = 5.510e-01, R = 2.500000000000; |W|^2 - (4/3)(1 + 1/4)^2 = 4.44e-16; curvatures 1 and 1/4, not Bach-flat
+2. algebra in dimension four
+  seed 0: max|W_ijkl W_a^jkl - |W|^2 g_ia/4| = 4.12e-18   (|W|^2 = 0.0516)
+  seed 1: max|W_ijkl W_a^jkl - |W|^2 g_ia/4| = 2.49e-18   (|W|^2 = 0.0431)
+  seed 2: max|W_ijkl W_a^jkl - |W|^2 g_ia/4| = 3.90e-18   (|W|^2 = 0.0650)
+  seed 0: |W|^2 sqrt(g) for g and for e^(2f) g: 0.039327814066  0.039327814066   difference -2.8e-17
+  seed 1: |W|^2 sqrt(g) for g and for e^(2f) g: 0.048532332996  0.048532332996   difference +2.1e-17
+  seed 2: |W|^2 sqrt(g) for g and for e^(2f) g: 0.077502175569  0.077502175569   difference +2.8e-17
+3. pointwise first variation: lhs = d/ds |W|^2 sqrt(g) by 6th-order differences, rhs = -4<B,h> sqrt(g) + div(sqrt(g) b)
+  seed 0 step 2e-02: lhs -6.32506115443e-02  rhs -6.32508819431e-02  diff +2.7e-07   [-4<B,h> sqrt(g) = +2.64992e+00, div = -2.71317e+00]
+  seed 0 step 1e-02: lhs -6.32508778609e-02  rhs -6.32508819431e-02  diff +4.1e-09   [-4<B,h> sqrt(g) = +2.64992e+00, div = -2.71317e+00]
+  seed 0 step 5e-03: lhs -6.32508818798e-02  rhs -6.32508819431e-02  diff +6.3e-11   [-4<B,h> sqrt(g) = +2.64992e+00, div = -2.71317e+00]
+  seed 1 step 2e-02: lhs -8.82119018075e-02  rhs -8.82098545594e-02  diff -2.0e-06   [-4<B,h> sqrt(g) = +5.31296e-01, div = -6.19506e-01]
+  seed 1 step 1e-02: lhs -8.82098849676e-02  rhs -8.82098545594e-02  diff -3.0e-08   [-4<B,h> sqrt(g) = +5.31296e-01, div = -6.19506e-01]
+  seed 1 step 5e-03: lhs -8.82098550286e-02  rhs -8.82098545594e-02  diff -4.7e-10   [-4<B,h> sqrt(g) = +5.31296e-01, div = -6.19506e-01]
+  seed 2 step 2e-02: lhs +5.80141689397e-02  rhs +5.80141601992e-02  diff +8.7e-09   [-4<B,h> sqrt(g) = -1.83239e+00, div = +1.89041e+00]
+  seed 2 step 1e-02: lhs +5.80141603316e-02  rhs +5.80141601992e-02  diff +1.3e-10   [-4<B,h> sqrt(g) = -1.83239e+00, div = +1.89041e+00]
+  seed 2 step 5e-03: lhs +5.80141602012e-02  rhs +5.80141601992e-02  diff +2.1e-12   [-4<B,h> sqrt(g) = -1.83239e+00, div = +1.89041e+00]
+  seed 3 step 2e-02: lhs +4.32720958862e-01  rhs +4.32719135758e-01  diff +1.8e-06   [-4<B,h> sqrt(g) = +2.81384e-01, div = +1.51335e-01]
+  seed 3 step 1e-02: lhs +4.32719162109e-01  rhs +4.32719135758e-01  diff +2.6e-08   [-4<B,h> sqrt(g) = +2.81384e-01, div = +1.51335e-01]
+  seed 3 step 5e-03: lhs +4.32719136162e-01  rhs +4.32719135758e-01  diff +4.0e-10   [-4<B,h> sqrt(g) = +2.81384e-01, div = +1.51335e-01]
+4. divergence of sqrt(g) P_X at the base point, by term: |W|^2 X, 8 B(X), -b(W; L_X g)
+  seed 0: +1.119083501e-01  -3.282694288e-01  +2.163610786e-01   sum +2.6e-15
+  seed 1: +5.621463763e-02  -9.656048239e-02  +4.034584477e-02   sum +6.5e-16
+  seed 2: -1.844997918e-01  +1.056816140e+00  -8.723163484e-01   sum +4.0e-15
+  seed 3: -1.694479905e-02  -8.629961038e-01  +8.799409029e-01   sum -1.0e-15
+5. boundary form on a pure trace: max|b(W; f g)| against max|b(W; h)| for a random h
+  seed 0: 2.05e-16   (4.421e-01)
+  seed 1: 1.17e-16   (6.027e-01)
+  seed 2: 7.01e-17   (1.269e-01)
+time 1.7 s

@@ -1,0 +1,16 @@
+# SP4-FOT-SEC-E60 · return v1
+
+24 November 2026, America/New_York. Prepared for Edward B. Baker III with LLM assistance: Claude Fable 5.2 (`claude-fable-5-2`), Claude Cowork, reasoning effort max as configured. Executed by the lead session; the recommended gpt-6.2-sol / ultra helper was not available. [Request](SP4-FOT-SEC-E60_REQUEST_v1.md) · [Evidence](../../notes/SEC_E60_20261124.md) · [Numerical records](../../numerics/README.md) · [Owning register](../REGISTER.md).
+
+Observed HEAD was `fa6ea89938d32c4dd96cfac90846b1201e244b25` and the five working-tree digests matched the request.
+
+| Frozen item | Verdict | Result and scope |
+| --- | --- | --- |
+| (i) logarithmic field | Resolved | \(B'(H\log\rho)=\rho^{-4}b_H(\nu)\ne0\) in closed form. \(H\log\rho+s_H=L_Z\delta\) with \(Z=\tfrac12(\log\rho)Hx\), so the field is the cone \(\delta-c\,s_H\) in another chart. The divergence-free trace-free representative keeps \(\tfrac59H\log\rho\). Per unit of \(\log\rho\): Weyl energy \(\tfrac{20\pi^2}9\lvert H\rvert^2\) exactly; \(L^1\) Bach norm \(42.6\)–\(44.3\,\lvert H\rvert\) by quadrature, three digits. |
+| (ii) homogeneous solutions | Proved | For \(-2<\operatorname{Re}\mu<2\), with any power of \(\log\rho\), \(B'(h)=0\) on \(\mathbb R^4\setminus0\) implies \(W'(h)=0\). At \(\mu=2\): \(q=-\tfrac13\mathsf W_{ikjl}x_kx_l\). At \(\mu=-2\): \(p=\mathsf W_{ikjl}x_kx_l\rho^{-4}\), with \(B'(-\pi^{-2}p)=\mathsf W_{ikjl}\partial_k\partial_l\delta_0\). Completeness of homogeneous solutions on an annulus is not proved. |
+| (iii) \(L^1\) bound | Proved | For compactly supported \(h\): \(\lVert h^{TT}\rVert_\infty\le(2\pi^2)^{-1}\lVert B'(h)\rVert_{L^1}\), \(\int\lvert W'(h)\rvert^2\le\pi^{-2}\lVert B'(h)\rVert_{L^1}^2\), each chiral part at most \((8\pi^2)^{-1}\lVert B'(h)\rVert_{L^1}^2\). The energy inequality holds for linearized fields on the round \(S^4\). The amplitude bound is attained up to a factor about four on cones. |
+| (iv) meaning and obstruction | Recorded | Linear level: no unforced energy in the middle of a neck; forced amplitude at most the total forcing over \(2\pi^2\) in divergence-free trace-free gauge, which is a poor gauge on conical necks. Nonlinear obstruction: the terms \(v*D^4v\), \(Dv*D^3v\) of \(B_g-B'(v)\) need \(D^2v\) in the Lorentz space \(L^{2,1}\), and \(B_g\) is not divergence free for the flat metric. Not proved. |
+
+A correction made while executing: an earlier working statement of this session, that the logarithmic growth is absent in divergence-free trace-free gauge, was wrong. The coefficient there is \(\tfrac59\); it is zero in the cone's own chart. The note states the corrected form and check 2 verifies it exactly.
+
+No escalation: no homogeneous solution of degree zero with nonzero Weyl tensor exists. Numerical records: 37 exact or numerical assertions passed; the mode table covers \(\mu\in\{-2,\dots,2\}\), polynomial degree at most four, at most two powers of the logarithm. Four external papers are named for context at abstract and statement level and nothing is imported from them; one of them, Hernandez–Spector, supplies a lead recorded in the note's last section. The same model wrote the request and the return in one session.

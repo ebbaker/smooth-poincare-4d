@@ -12,3 +12,5 @@ The [sharp spherical transfer](SEC_SPHERICAL_TRANSMISSION_20261124.md) and the [
 The [exterior regularity and radial cost assessment](SEC_EXTERIOR_REGULARITY_AND_RADIAL_COST_20261124.md) integrates E40–E48, including the E45 check and the independent longitudinal calculation in E47.
 
 The [subcritical concentration assessment](SEC_SUBCRITICAL_BACH_CONCENTRATION_20261124.md) integrates E49–E58 and distinguishes exact closed critical compactness from the supplied convergence hypotheses for approximately critical sequences.
+
+The [annular energy and conservation assessment](SEC_ANNULAR_ENERGY_AND_CONSERVATION_20261124.md) integrates B34–B35 and E59–E61 from a Claude Cowork session (Claude Fable 5.2). It separates the proved estimates from the hypotheses they need, records a correction made during the session, and lists proposed manuscript changes that were not made.

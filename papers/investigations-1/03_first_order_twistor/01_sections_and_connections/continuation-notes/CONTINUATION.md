@@ -198,6 +198,6 @@ session; merely saving or reading the prompt does not.
 
 ## Latest assessed handoff
 
-The active branch handoff is [subcritical Bach concentration and the annular residual](04_AFTER_SUBCRITICAL_BACH_CONCENTRATION_20261124.md).
+The active branch handoff is [annular energy and the conservation law](05_AFTER_ANNULAR_ENERGY_AND_CONSERVATION_20261124.md), added on 24 November 2026 by a Claude Cowork session (Claude Fable 5.2, `claude-fable-5-2`) that acted as lead for SEC-B34, B35 and E59–E61. The handoff on [subcritical Bach concentration and the annular residual](04_AFTER_SUBCRITICAL_BACH_CONCENTRATION_20261124.md) precedes it.
 
-The [working manuscript](../manuscript/twistor_sections_and_chiral_weyl_curvature.tex) includes the proofs through SEC-E58. Its final section states the annular estimate proposed for SEC-B34.
+The [working manuscript](../manuscript/twistor_sections_and_chiral_weyl_curvature.tex) includes the proofs through SEC-E58. Its final section states the annular estimate proposed for SEC-B34. That estimate is now proved in [E59](../notes/SEC_E59_20261124.md); the manuscript has not been changed to include it.

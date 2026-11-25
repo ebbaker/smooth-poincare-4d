@@ -1,0 +1,16 @@
+# SP4-FOT-SEC-E61 · return v1
+
+24 November 2026, America/New_York. Prepared for Edward B. Baker III with LLM assistance: Claude Fable 5.2 (`claude-fable-5-2`), Claude Cowork, reasoning effort max as configured. Executed by the lead session; the recommended gpt-6.2-sol / ultra helper was not available. [Request](SP4-FOT-SEC-E61_REQUEST_v1.md) · [Evidence](../../notes/SEC_E61_20261124.md) · [Numerical records](../../numerics/README.md) · [Owning register](../REGISTER.md).
+
+Observed HEAD was `fa6ea89938d32c4dd96cfac90846b1201e244b25` and the five working-tree digests matched the request.
+
+| Frozen item | Verdict | Result and scope |
+| --- | --- | --- |
+| (i) divergence term | Proved and checked | \(D(\lvert W\rvert^2dV)[h]=(-4\langle B,h\rangle+\operatorname{div}\mathfrak b(W;h))dV\) with \(\mathfrak b(W;h)^m=4W^{imkl}\nabla_kh_{il}-4(\nabla_jW^{ijml})h_{il}\), and \(\mathfrak b(W;fg)=0\). Pointwise agreement \(2\times10^{-12}\) to \(5\times10^{-10}\) at four random metrics, limited by the difference quotient. |
+| (ii) conservation law | Proved and checked | \(P_X=\lvert W\rvert^2X+8B(X)^\sharp-\mathfrak b(W;L_Xg)\) is divergence free for every \(g\) and \(X\), and its flux through every compact two-sided hypersurface is zero. No far-boundary term. Divergence verified to \(7\times10^{-15}\); flux verified to \(3\times10^{-9}\) and \(7\times10^{-9}\) for a metric that is not a cone, with all three terms of order one. |
+| (iii) conformal Killing fields | Proved | \(\oint\lvert W\rvert^2g(X,\nu)=-8\oint B(X,\nu)\). Bach-flat with a transverse conformal Killing field implies \(W=0\) nearby; Bach-flat cones over closed three-manifolds, in the wide sense of a transverse homothetic field, are conformally flat; Bach-flat products \(\mathbb R\times N^3\) have \(N\) of constant curvature. Checked by hand on products, with \(\lvert W\rvert^2=\tfrac43\), \(B_{tt}=-\tfrac16\) on \(\mathbb R^2\times S^2\), and by quadrature on three cones. The product statement is elementary and probably known. |
+| (iv) neck estimate | Proved | With \(X(\tau)=1\): \(\int\varphi(\tau)\lvert W\rvert^2\le8\Lambda\int\lvert B\rvert+4\lVert W\rVert_{L^2}\mathfrak d\), \(\Lambda=\sup\lvert X\rvert\lvert\nabla\tau\rvert\), \(\mathfrak d\) built from the trace-free part of \(L_Xg\). No logarithm of the length. Intrinsic, so quotient necks and arbitrary cross-sections are covered. In a chart with \(X=x\): \(\mathfrak d\) is controlled by \(\rho^{-2}\dot g\), \(\rho^{-1}D\dot g\), \(\rho^{-1}\lvert Dv\rvert\lvert\dot g\rvert\) in \(L^2\), \(\dot g=x^k\partial_kg\). |
+
+Comparison with E59: complementary hypotheses. E59 needs a nearly flat chart and gains the factor \(\varepsilon\) on the Bach norm; E61 needs a nearly conformal Killing field and has no such factor, and on nearly flat cones it is not sharp because it discards a cancellation.
+
+No escalation: the flux identity has no term at a far boundary. Not covered: existence of \(X\) and \(\tau\) under the fixed-margin hypotheses, and other choices of \(X\). No external source was used in a proof; Gover–Ørsted is named as related work at abstract level, and novelty of the flux identity was not checked. The same model wrote the request and the return in one session.

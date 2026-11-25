@@ -25,3 +25,7 @@ The exterior-curvature session used runtime thread ID `6b05ddcd-08b0-83ea-9898-a
 The [same unregistered public excerpt](UNREGISTERED_PARTIAL_SEC_EXTERIOR_20261124.md#continuation-on-subcritical-concentration--partial-public-excerpt) also contains completed messages from the subcritical-concentration continuation. Its exact source and native title were still unavailable.
 
 The same [partial public excerpt](UNREGISTERED_PARTIAL_SEC_EXTERIOR_20261124.md#manuscript-revision-through-sec-e58--partial-public-excerpt) includes the request and completed progress updates for the manuscript revision through SEC-E58.
+
+## Claude Cowork conversations · 24 November 2026
+
+Added for Edward B. Baker III with LLM assistance: Claude Fable 5.2 (`claude-fable-5-2`), Claude Cowork, reasoning effort max as configured. Claude conversations about this investigation are registered separately in [claude-cowork](claude-cowork/README.md), from the session's claude.ai event log, under the Claude section of [tools/CHAT_HISTORY.md](../../../../../tools/CHAT_HISTORY.md#claude-cowork-sessions). The first record is the session that executed SEC-B34, B35 and E59–E61. The Codex registrations and the pending items above are unchanged.

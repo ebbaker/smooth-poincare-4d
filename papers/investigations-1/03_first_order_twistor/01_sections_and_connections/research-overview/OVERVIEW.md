@@ -164,3 +164,7 @@ Every marked reference admits arbitrarily close regular references on the same W
 ## Concentration below the Yamabe wall
 
 A supplied nonflat smooth ALE component has one Euclidean end and a smooth compactification, consumes over half the available two-sided energy budget and leaves a uniformly positive residual in each chirality. A compact Sobolev gauge on the original manifold instead produces an actual closed critical class with shrinking marks. [Fixed-margin results and hypotheses](../reviews/SEC_SUBCRITICAL_BACH_CONCENTRATION_20261124.md)
+
+## Energy on long necks
+
+Added on 24 November 2026 with LLM assistance: Claude Fable 5.2 (`claude-fable-5-2`), Claude Cowork. In one Euclidean chart the Weyl energy of an annulus is bounded by the uniform deviation from the flat metric times the total Bach norm, plus end terms, with constants that do not depend on its length; cones show that this is sharp. At the flat cone the linearized Bach equation has no slowly varying solution with curvature, and the part of a perturbation that gauge does not remove is bounded by the \(L^1\) norm of its linearized Bach tensor. A conservation law for the Weyl functional bounds the energy of a neck that has a nearly conformal Killing field, for any cross-section, and shows that Bach-flat cones are conformally flat. The chart and the vector field are hypotheses; obtaining them from a Bach bound in \(L^1\) is the open step. [Results, limits and the Einstein calibration](../reviews/SEC_ANNULAR_ENERGY_AND_CONSERVATION_20261124.md)
