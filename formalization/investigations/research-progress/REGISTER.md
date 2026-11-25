@@ -2,6 +2,20 @@
 
 This is the sole program register across editions. The shared task prefix is `SP4-FORM-FOT`. Each delegated task has one live proof owner. Natural-language results and the search for qualifying metrics and charts are recorded in the [master register](../../../papers/master/research-progress/REGISTER.md) and the [twistor register](../../../papers/investigations-1/03_first_order_twistor/research-progress/REGISTER.md).
 
+## Edition 03 · Parallel master investigations · 25 November 2026
+
+SP4-FORM-FOT-B07 **adopted** the new proof ownership. The four opening proposition types have been checked. The [dated baseline](03_BASELINE.md) records the package, source versions and scope. [Overview](../research-overview/03_OVERVIEW.md) · [Proof plan](../research-plan/03_PLAN.md) · [Continuation](../continuation-notes/AFTER_PARALLEL_ROUTE_SETUP_20261125.md)
+
+| Live owner | Inherited IDs and current scope |
+| --- | --- |
+| [06 · Physical scales](../06_physical_scales_and_marked_annuli/research-progress/REGISTER.md) | VAR-E05, VAR-B03, VAR-E07, VAR-E08 and new SCALE decisions. Physical shell selection, complete limits and related Ricci scales. |
+| [07 · Fixed-type descent](../07_fixed_type_variational_descent/research-progress/REGISTER.md) | VAR-E06 and new DESC tasks. Joint replacement, full residual, closed or round alternatives. |
+| [08 · Immersion bounds](../08_hypersurface_immersion_bounds/research-progress/REGISTER.md) | FOT-E36 and new IMM tasks. The induced curvature inequalities and the energy of one marked global immersion. |
+| [09 · Morse heights](../09_morse_heights_and_handle_recognition/research-progress/REGISTER.md) | New HT family. Indexed Gauss mass, middle count, direction selection and marked cancellation. |
+| [05 · Local comparison](../05_variational_comparison/research-progress/REGISTER.md) and [03 · Single cut](../03_single_cut_descent/research-progress/REGISTER.md) | 05 retains VAR-B01/B02 and E01–E04. 03 retains CUT-E02–E05, including the conditional harmonic-shell theorem. |
+
+The parent retains FOT-E35, recognition at an attained intrinsic threshold, and FOT-E37, coverage on each candidate smooth type. Both are reserved for their indicated geometric inputs. FOT-E34 retains its earlier three-route audit. Earlier assignments below are dated records.
+
 ## Version 02 · Fixed-type comparison · 25 November 2026
 
 Prepared for Edward B. Baker III with OpenAI Codex assistance. The actual serving configuration was unavailable. Issued the [overview](../research-overview/02_OVERVIEW.md), [plan](../research-plan/02_PLAN.md) and [dated evidence baseline](02_BASELINE.md). The proofs below are prospective. The baseline records the already checked imports.
@@ -10,10 +24,10 @@ Prepared for Edward B. Baker III with OpenAI Codex assistance. The actual servin
 | --- | --- | --- |
 | SP4-FORM-FOT-B06 | Adopted | Give the fixed-type comparison priority. Route 03 owns the signed cut, Route 05 the variational and physical-scale arguments. Keep existing import paths and use `SmoothPoincare` for new master modules. [Module index](../../FirstOrderTwistor/README.md) |
 | SP4-FORM-FOT-E35 | Reserved · geometric recognition | Extend the strict CGY interface in E04 to equality at an actual positive class. Rule out the other equality topologies for a homotopy sphere and transfer the normalization. An infimum equal to the threshold requires separate attainment. |
-| SP4-FORM-FOT-E36 | Proposed · independent finite algebra | Prove the principal-curvature deficit bound and its sharp negative-determinant example. A second bound on signature `(2,2)` feeds the current immersion theorem. Height topology, strictness after integration and existence of an immersion meeting a threshold are separate obligations. |
+| SP4-FORM-FOT-E36 | Proposed at issue. Transferred to [Route 08](../08_hypersurface_immersion_bounds/research-progress/REGISTER.md) in Edition 03 | Prove the principal-curvature deficit and the middle-signature bound. The route register owns subsequent progress. |
 | SP4-FORM-FOT-E37 | Reserved · proof-chain audit | Audit entry and the chosen contradiction on one smooth type, tracing membership, signs, costs, markings and remaining mass. E34 retains the original three-route audit. |
 
-**Proof owners.** [Route 05](../05_variational_comparison/research-progress/REGISTER.md) owns VAR-B01–B03 and VAR-E01–E08. [Route 03](../03_single_cut_descent/research-progress/REGISTER.md) owns CUT-B02 and CUT-E02–E05 in addition to its earlier tasks. [Route 02](../02_neck_energy_accounting/research-progress/REGISTER.md) owns complete accounting and [Route 04](../04_dirac_collar_transmission/research-progress/REGISTER.md) owns transmission. The [Sections and Connections pilot](../01_sections_and_connections/research-progress/REGISTER.md) retains its SEC tasks. Shared B01/B05 and E02–E04 supply geometric conventions, measured remainders and recognition for both editions.
+**Edition 02 ownership at issue.** Route 05 initially received VAR-B01–B03 and VAR-E01–E08. The Edition 03 table above records their current owners. [Route 03](../03_single_cut_descent/research-progress/REGISTER.md) owns CUT-B02 and CUT-E02–E05 in addition to its earlier tasks. [Route 02](../02_neck_energy_accounting/research-progress/REGISTER.md) owns complete accounting and [Route 04](../04_dirac_collar_transmission/research-progress/REGISTER.md) owns transmission. The [pilot](../01_sections_and_connections/research-progress/REGISTER.md) retains its SEC tasks.
 
 ## Version 01 · 25 November 2026
 

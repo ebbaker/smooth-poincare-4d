@@ -2,6 +2,10 @@
 
 ## Current edition
 
+Use the [Edition 03 continuation and pasteable Astra/ultra prompt](AFTER_PARALLEL_ROUTE_SETUP_20261125.md). It coordinates the intrinsic cut and local comparison with physical shell selection, diffuse descent, immersed curvature and Morse heights. [Program plan](../research-plan/03_PLAN.md) · [Current registers](../research-progress/REGISTER.md)
+
+## Edition 02 launch record
+
 Version 02 follows the master manuscript on a positive-class minimizing sequence of a fixed smooth type. Read the [overview](../research-overview/02_OVERVIEW.md), [plan](../research-plan/02_PLAN.md), [baseline](../research-progress/02_BASELINE.md) and [current register](../research-progress/REGISTER.md). On activation, start VAR-E01 from the witnessed infimum and compare each repaired metric on the original smooth type. A separate Route 03 session can develop CUT-E02 on two full sides with either cap surviving. VAR-E05 can select the physical annulus independently. [Route 05 continuation](../05_variational_comparison/continuation-notes/CONTINUATION.md) · [Route 03 continuation](../03_single_cut_descent/continuation-notes/CONTINUATION.md) · [Master manuscript and inputs](../../../papers/master/manuscript/README.md)
 
 ## Version 01 launch record

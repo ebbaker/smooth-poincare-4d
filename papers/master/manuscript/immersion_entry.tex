@@ -193,3 +193,141 @@ The immersion theorem supplies the first derivatives needed for
 an immersion. The quantitative tests use its second derivatives
 over the whole domain. Constructing an immersion satisfying either
 test on an arbitrary smooth type remains an existence question.
+
+\subsection{Recognition on a retained immersed region}
+
+The middle-index argument also tests an immersion given on only part
+of the smooth domain. Write \(M=P\cup Q\) along a smooth common boundary
+and let \(F:P\to\mathbb R^5\) be a smooth immersion up to that boundary.
+Measure \(E_+(P)\) with its induced metric. For almost every \(u\in S^4\)
+suppose the function \(\langle F,u\rangle\) on \(P\) extends to a smooth
+Morse function on the given \(M\) with at most \(k(u)\) index-two points
+in \(\operatorname{int}Q\), where \(k\) is measurable. The scalar extensions
+can be chosen separately for each direction.
+
+\begin{proposition}[Exterior height test]\label{prop:exterior-heights}
+Put \(D=\int_{S^4}(2-k(u))_+\,du\) in ordinary spherical area.
+If \(D>0\) and \(E_+(P)\le 4D/3\), then \(M\) is diffeomorphic to \(S^4\).
+\end{proposition}
+
+\begin{proof}
+The normal image of \(\partial P\) and its antipodal image have
+four-dimensional measure zero. For almost every remaining direction the
+exterior height is Morse in the interior. On a nonstandard \(M\) the
+global extension must have at least two middle critical points by
+Theorem~\ref{thm:immersed-entry}'s handle argument. The count on
+\(\operatorname{int}P\) is at least \((2-k(u))_+\).
+The restricted area formula now gives
+\(2\int_{P\cap U}\det A\,dV\ge D\), where \(U\) is the middle-signature
+locus. For \(D>0\) this open locus meets the interior. The strict
+integrated Codazzi comparison following \eqref{eq:middle-weyl} applies
+there and gives \(E_+(P)>4D/3\).
+\end{proof}
+
+For instance, let \(Q\) consist of disjoint marked patches modeled on
+smooth bounded domains \(\Omega_j\subset\mathbb R^2_x\times\mathbb R^2_y\).
+Suppose the exterior immersion agrees across each marked collar with
+the germ of \(F_j(z)=(R_jz,R_jt_j(|y|^2-|x|^2)/2)\), up to a rigid
+motion, where \(R_j,t_j>0\). Fill the scalar heights by these quadratic
+models. The upward Gauss map on each patch is injective, its image on
+the interior being \(N_j\) (rotated into the common ambient frame).
+Every critical point has index two. Thus
+\[
+ k(u)=\sum_j {\bf1}_{N_j\cup(-N_j)}(u),\qquad
+ |N_j|=t_j^4\int_{\Omega_j}(1+t_j^2|z|^2)^{-5/2}\,dz .
+\]
+This follows by differentiating the unit normal
+\((-t_j\operatorname{diag}(-1,-1,1,1)z,1)/\sqrt{1+t_j^2|z|^2}\)
+before the rigid motion. For one patch the threshold is
+\((8/3)(\omega-|N_1|)\). For several patches the directional formula
+retains overlaps. For copies of one domain star-shaped about the origin with the same quadratic splitting
+and common ambient axes, the sets \(N_j\) are nested: projecting
+\(u\mapsto (u_1,u_2,u_3,u_4)/u_5\) onto the affine normal chart gives nested
+dilates of the same star-shaped set. Then \(D/2=\omega-|N_{(1)}|-|N_{(2)}|\)
+uses only the two largest areas, with absent terms zero. The test uses
+the actual marked exterior and its Weyl integral. Curvature in any previously chosen filling is immaterial.
+
+\subsection{The two surviving middle handles}
+
+\begin{proposition}[Marked surgery tests]\label{prop:two-middle-tests}
+Fix a Morse height with two index-two points on a smooth homotopy
+four-sphere. Carry its framed attaching tubes through both spanning-tree
+reductions in the proof of Theorem~\ref{thm:immersed-entry}.
+Each of the following conditions suffices for smooth recognition.
+\begin{enumerate}
+\item With both remaining odd handles at the same end, the two-component
+attaching link from the opposite end has an unknotted component or
+has tunnel number one, possibly after framed slides.
+\item With one odd handle at each end, after a choice of framed slides
+and order of the middle handles, the intermediate surgery boundary is
+diffeomorphic to \(S^3\) or to \(\#_2(S^1\times S^2)\).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+A change of lower handlebody coordinates pulls each framed tube back
+by its actual boundary map. A slide giving a trace diffeomorphism
+\(s:X'\to X\) changes the outgoing gluing \(\varphi\) to
+\(\varphi\circ\partial s\). Apply the same coordinate rule to the upper
+handlebody after turning it over. All the following cuts and surgeries
+therefore describe the original closed manifold.
+
+In the first case the two-component surgery yields
+\(\#_2(S^1\times S^2)\), the boundary of the dual pair of 1-handles.
+Its homology forces the integral surgery matrix to vanish.
+Gompf--Scharlemann--Thompson's unknot case of Property 2R
+\cite[Proposition 3.2]{GompfScharlemannThompson2010}
+slides the link to the zero-framed unlink. In the tunnel-number-one
+case their Proposition 3.1 already identifies the unlink. The trace is the boundary
+connected sum of two copies of \(S^2\times D^2\).
+Its gluing to the opposite 1-handlebody gives \(S^4\) with any boundary
+identification \cite[Theorem A]{LaudenbachPoenaru1972Handlebodies}.
+
+In the mixed case cut at the intermediate boundary \(Y\). Each half
+is \(S^1\times D^3\) with one 2-handle, read from its own end.
+If \(Y=S^3\), cap either half by a standard disk and turn the
+2-handle over. Its dual knot in \(S^3\) surgering to \(S^1\times S^2\)
+has zero framing by the surgery homology and is the unknot by Property R
+\cite[Corollary 8.3]{Gabai1987FoliationsIII}. The capped half is
+\((S^2\times D^2)\cup(S^1\times D^3)\), hence is standard by the
+one-handle gluing theorem. The complement of the actual cap disk is
+a standard disk by the parametrized disk argument of
+Proposition~\ref{prop:cut-energy}. Gluing both halves gives \(S^4\).
+
+For \(Y=\#_2(S^1\times S^2)\) the proof of the same Proposition 3.2, applied with the dotted circle
+drawn as a zero-framed unknot for boundary surgery, isotopes the attaching
+knot in \(S^1\times S^2\) to an unknot in a ball. Its framing there
+is zero by the rank of the surgery homology. Each half is thus
+\((S^1\times D^3)\mathbin{\natural}(S^2\times D^2)\), with the
+induced marking on the cut. In one half replace the interior product
+neighborhood of its core two-sphere by \(D^3\times S^1\). This makes
+that half a genus-two 1-handlebody, with its outer marking unchanged.
+Any difference from the gluing that matches the boundary connected
+summands extends over this 1-handlebody
+\cite[proof of Theorem A]{LaudenbachPoenaru1972Handlebodies}.
+The resulting closed manifold is therefore the connected sum of
+the double of \(S^1\times D^3\) and
+\((S^1\times D^3)\cup(S^2\times D^2)\), hence \(S^1\times S^3\).
+Inverse surgery on the inserted circle recovers \(M\). Its class
+must generate \(\mathbb Z\): general position preserves the fundamental
+group on removing its open tube, and surgery kills that class.
+A free homotopy to the factor circle, orienting it suitably, can be
+perturbed to an isotopy. For a one-parameter family the double-point
+parameters have dimension three and the diagonal has codimension four;
+parametric transversality also avoids a zero tangent. Isotopy extension
+and the one-handle gluing theorem give \(S^4\) for the transported framing.
+\end{proof}
+
+For the mixed test, sliding the two attaching circles normalizes their
+algebraic incidences with the dotted circle to \((1,0)\) since
+\(H_1(M)=0\). Turning the dot to zero gives the full surgery matrix
+\(\left(\begin{smallmatrix}0&1&0\\1&d&b\\0&b&c\end{smallmatrix}\right)\).
+The final boundary is \(S^1\times S^2\), so its determinant vanishes
+and \(c=0\). Attaching the zero-incidence handle first gives
+\(H_1=\mathbb Z^2\) at the cut. The other order gives an integral
+homology sphere since the relevant minor has determinant \(-1\).
+Simple connectivity of the latter would identify \(S^3\) by the
+three-dimensional Poincar\'e theorem. Neither homology computation
+identifies the cut's diffeomorphism type.
+The subcritical height theorem supplies directions with the required
+middle count. Selecting one with either marked surgery property remains open.

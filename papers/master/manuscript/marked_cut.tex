@@ -269,3 +269,71 @@ then the discarded sum has zero upper limit in the same order.
 Indeed the strict energy margin holds eventually in \(i\) for all
 sufficiently large fixed \(\ell\), and the inner upper limit is at
 most \(\limsup_i\Gamma_{i,\ell}\).
+
+\subsection{Positive entry from the retained exterior}
+
+There is a separate test when a metric has been constructed on a punctured
+smooth type and the Yamabe sign of a closed extension is unknown.
+Let \(P\) be the compact complement in \(M\) of the interiors of finitely
+many disjoint parametrized standard four-balls. Suppose \(h\) is a
+smooth metric on \(P\) equal to \(dt^2+\gamma\) on the marked boundary
+collars, with \(\gamma\) the unit round three-sphere metric. Write
+\(Q_h(v)=\int_P(6|dv|^2+R_hv^2)\,dV_h\).
+
+\begin{proposition}[Round boundary form]\label{prop:round-boundary-form}
+There is a smooth closed extension class on \(M\) of energy
+\(E_+(h;P)\). It has positive Yamabe constant exactly when every
+nonzero \(v\in H^1(P)\), with boundary traces \(f_j\), satisfies
+\[
+ Q_h(v)+6\sum_j\langle f_j,\sqrt{1-\Delta_\gamma}\,f_j\rangle>0 ,
+\]
+where \(-\Delta_\gamma\) is nonnegative and the pairing is between
+\(H^{1/2}\) and \(H^{-1/2}\), using \(dV_\gamma\). A sufficient condition is positivity of the lowest
+eigenvalue of \(-6\Delta_h+R_h\) with
+\(\partial_\nu v+v=0\) on each boundary, where \(\nu\) points out of \(P\).
+For nonempty boundary this sufficient condition holds whenever
+\(R_h\ge0\): vanishing of the Robin form would force a constant function
+with zero trace on the connected exterior. Under either sign test,
+\(E_+(h;P)\le4\pi^2\) recognizes \(M\), while
+\(E_+(h;P)<8\pi^2\) supplies positive subcritical entry.
+\end{proposition}
+
+\begin{proof}
+Attach unit half-cylinders pointing out from \(P\). Compactify them
+in the given markings using a conformal factor equal to one near
+\(P\) and to \(e^{-t}\) for large \(t\). In the coordinate
+\(r=e^{-t}\) the compactified metric is exactly flat near each added
+point. The caps have zero Weyl curvature. On the cylinder the scalar
+curvature is six. A spherical harmonic of degree \(l\) has eigenvalue
+\(l(l+2)\) for \(-\Delta_\gamma\); this follows by restricting a
+homogeneous harmonic polynomial in four variables to the unit sphere.
+The least cylinder energy extending its boundary coefficient \(f_l\) is
+\[
+ 6\inf_{w(0)=f_l}\int_0^\infty
+       (|w'|^2+(l+1)^2|w|^2)\,dt
+   =6(l+1)|f_l|^2 ,
+\]
+by completing the square; the minimizer is \(f_l e^{-(l+1)t}\).
+Orthogonal summation gives the stated boundary form on \(H^{1/2}\)
+traces. To justify the energy spaces, let \(X\) denote the exterior
+with cylinders, \(f\) the compactifying factor and \(\widehat g=f^2g_X\).
+On compactly supported tests the map \(v\mapsto u=fv\) preserves the
+Yamabe forms by conformal covariance \cite[\S2]{LeeParker1987Yamabe}.
+Adding \(C\|v\|_{2,\widehat g}^2\) adds
+\(C\int_X f^2u^2\,dV_{g_X}\) to the cylinder-side form.
+For \(C\) sufficiently large the resulting norms are equivalent to the
+respective \(H^1\) norms: on \(P\) the factor is one and the scalar is
+bounded, and on the cylinders the scalar is six.
+Compactly supported tests are dense on \(X\), and tests avoiding the
+finitely many added points are dense on the smooth closed metric by
+zero point capacity. Thus the correspondence holds on the completions.
+
+Consequently the full quadratic form is the displayed expression
+plus a nonnegative sum of zero-trace energies, strictly positive for
+each nonzero zero-trace remainder. A nonpositive boundary-form test
+extends by its minimizing cap functions to a nonpositive closed test.
+On the smooth closed metric the first eigenvalue is attained, so
+strict positivity on all nonzero tests is equivalent to positive
+Yamabe sign. Finally the eigenvalues \(l+1\) of the boundary operator
+are at least one, giving the Robin test by its Rayleigh quotient.
+\end{proof}

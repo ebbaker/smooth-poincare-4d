@@ -148,3 +148,89 @@ the incoming energy is \(o(1)\). The middle sphere is smoothly
 marked and both complete raw sides have positive limiting mass.
 This contradicts the fixed-type cut inequality.
 \end{proof}
+
+\begin{corollary}[A physical annulus located by one point]\label{cor:anchored-annulus}
+Let \(x_i\) attain the smaller physical chiral quantile radius \(a_i=r_i(\theta)\)
+on the separated subsequence, with \(0<\theta<1/2\) and median radius
+\(b_i=r_i(1/2)\). Fix \(A<\infty\) and \(\Lambda\ge1\).
+There is a finite \(L>8\), depending only on \(A,\Lambda\) and the
+lower Yamabe bound \(y_0\), for which the following data are impossible
+on the fixed nonstandard type at its positive-class infimum.
+Suppose \(a_i/\rho_i\to0\), \(\rho_i/b_i\to0\), and there are oriented
+smooth embeddings \(\Phi_i:A(1/8,L)\to M\). Write
+\(S_i(r)=\Phi_i(\{|z|=r\})\) and \(m_i=\rho_i^{-2}\Phi_i^*g_i\).
+Assume
+\[
+ d_{g_i}(x_i,S_i(1))\le A\rho_i,\qquad
+ \Lambda^{-1}\delta_{\rm Euc}\le m_i\le\Lambda\delta_{\rm Euc},\qquad
+ \int_{A(1/8,L)}|\Rm_{m_i}|^2\,dV_{m_i}\longrightarrow0 .
+\]
+On the fixed central subannulus \(A(1/8,8)\) assume the small distortion
+and harmonic or differentiated coordinate-tension hypotheses of
+Proposition~\ref{prop:critical-annulus}. Then the middle sphere separates
+the entire smaller ball from the entire median exterior. No initial
+identification of either complementary region is needed.
+\end{corollary}
+
+\begin{proof}
+Use physical distances and volumes throughout. The Yamabe bound and the
+ball cutoff iteration in Corollary~\ref{cor:energy-radius} give
+\(\operatorname{Vol} B(z,r)\ge c(y_0)r^4\) for \(0<r\le1\). Thus
+the physical diameters are bounded by packing along a minimizing segment,
+so \(\rho_i\to0\). Suppress \(i\) temporarily. The connected, two-sided
+embedded sphere \(S(1)\) separates since \(H_1(M;\mathbb Z)=0\).
+Its two sides are distinguished by the two radial directions in the chart.
+Let \(U\) be either side with physical volume at most one half.
+On that side define \(f\) to rise from zero at \(S(1)\) to one across
+the coordinate strip from radius \(1\) to \(2\) or from \(1\) to
+\(1/2\), according to the side. Extend by one on the rest of \(U\)
+and by zero on the other side. The radial linear ramp gives
+\(\int|df|^2\le C(\Lambda)\rho^2\).
+Since the scalar curvature equals the Yamabe constant \(Y\) at volume one,
+\[
+ (1-2^{-1/2})Y\|f\|_4^2\le6\int|df|^2 .
+\]
+Hence the plateau has volume at most \(C(y_0,\Lambda)\rho^4\).
+Adding the ramp volume gives the same bound for all of \(U\).
+A physical ball about \(z\in U\) of radius
+\(\min\{1,d(z,S(1))\}\) lies in \(U\). Noncollapse shows that
+\(d(z,S(1))\le C'\rho\) for all large \(i\).
+
+If the coordinate outer side had volume at most one half, it would
+contain the embedded shell \(2<|z|<L/2\) of physical volume at least
+\(\Lambda^{-2}|B^4|((L/2)^4-16)\rho^4\). Choose \(L\) so this
+coefficient exceeds the preceding upper bound, and so
+\((L/2-1)/\sqrt\Lambda>A\). These choices precede the limit in \(i\).
+The inner side is therefore the smaller one. Its every point is within
+\((A+C'+\pi\sqrt\Lambda)\rho\) of \(x\), using the intrinsic
+diameter bound on the coordinate unit sphere. In particular it misses
+the entire median exterior for all large \(i\).
+
+For completeness, the location of the charged center also follows
+from the chart tests. Every point of the closed coordinate band
+\(1/4\le |z|\le L/2\) has ambient distance at least \(c(\Lambda)\rho\)
+from the complement of the chart, by first exit across a buffered
+coordinate sphere. If \(B(x,a)\) met this band, the whole ball would
+lie in the chart since \(2a=o(\rho)\). Its chiral mass
+\(\theta e_i\) is bounded below, contrary to the vanishing full
+curvature integral. Thus \(x\) is outside this band. If \(x\) were
+on the outer side of \(S(1)\), a minimizing path to \(S(1)\) would
+cross the embedded band from \(S(L/2)\) to \(S(1)\). Between its last
+hit on \(S(L/2)\) and first hit on \(S(1)\) it stays in that band,
+costing at least \((L/2-1)\rho/\sqrt\Lambda\), contrary to the anchor.
+The connected inner ball is on the inner side. The trim through radius
+four lies within \(C(A,\Lambda)\rho\) of \(x\) by chart paths and thus
+misses the median exterior as well. On the two source sides the raw
+chiral masses are consequently at least \(\theta e_i\) and \(e_i/2\).
+The central splices and positive caps in the proof of
+Proposition~\ref{prop:critical-annulus} now contradict the one-cut
+bound. All energy estimates here concern the single selected sequence.
+\end{proof}
+
+Retain the wide chart, scale, curvature and anchor hypotheses of the corollary. The same marking proof applies if the central metric converges uniformly
+and strongly in \(W^{1,4}\) to the Euclidean metric in the supplied
+chart. Proposition~\ref{prop:short-cut} then furnishes the splices
+directly. In particular a single marked Euclidean annulus on one
+component of a physical limit suffices if it has the stated width,
+scale, anchor and source convergence. Other components of a distance
+shell need no separate parametrizations for this test.

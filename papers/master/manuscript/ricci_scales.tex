@@ -227,3 +227,76 @@ fixed-type minimization. The marked disk description uses no global
 smooth parametrization. The forced divergence concerns balls
 containing the inner mass. A bound confined to a buffered annulus
 requires a separate argument for its global marking.
+
+\subsection{A recognition test near the positive Einstein class}
+
+For a real chiral Weyl endomorphism let \(\lambda_1\le\lambda_2\le
+\lambda_3\) denote its ordered eigenvalues. For \(0\le s<1\) define
+\[
+ H_s^\pm(g)=\int_M
+    (\lambda_2(W^\pm_g)-s\lambda_3(W^\pm_g))_+^2\,dV_g .
+\]
+This measures the failure of the pointwise eigenvalue condition in the
+conformal K\"ahler rigidity theorem of Catino and Dameno
+\cite[Theorem 1.4]{CatinoDameno2026ConformalKahler}.
+
+\begin{theorem}[A uniform near-Einstein recognition criterion]
+\label{thm:near-einstein-recognition}
+Fix \(\delta>0\), \(2<p<\infty\), \(L<\infty\) and \(0\le s<1\).
+There exists \(\epsilon(\delta,p,L,s)>0\) with the following property.
+Let \(g\) be a smooth volume-one positive Yamabe minimizer in its own
+class on a closed oriented smooth homotopy four-sphere \(M\). Suppose
+\[
+ E_+(g)\le8\pi^2-\delta,\qquad \|Z_g\|_{L^p(g)}\le L .
+\]
+Then \(M\) is diffeomorphic to \(S^4\) whenever
+\[
+ \int_M|Z_g|^2\,dV_g+\min\{H_s^+(g),H_s^-(g)\}<\epsilon(\delta,p,L,s).
+\]
+More generally, for every \(\eta>0\) a sufficiently small threshold
+\(\epsilon(\delta,p,L,s,\eta)>0\) in the same defect bound forces
+\(E_+(g)<\eta\) for the tested metric itself. The constants are
+obtained by compactness. The tested metric may have
+nonzero trace-free Ricci tensor. No minimization over conformal classes
+is needed.
+\end{theorem}
+
+\begin{proof}
+If the stronger assertion failed, there would be metrics, possibly on
+different smooth types, for which the displayed sum tends to zero
+while \(E_+(g_i)\ge\eta>0\). Pass to a subsequence using the same
+chirality for the minimum, with \(Y_i\to y\ge\sqrt{48\delta}>0\).
+Lemma~\ref{lem:ricci-radius} at radius one gives a uniform harmonic
+radius and \(W^{2,p}\) bounds on the whole physical manifolds.
+Unit volume and physical noncollapse bound their diameters.
+The harmonic atlas compactness and compact markings in that lemma
+therefore give a closed oriented limit on the same smooth type as all
+sufficiently late members of the subsequence, weakly \(W^{2,p}\) and
+strongly \(C^0\cap W^{1,2p}\) in harmonic chart interiors.
+
+Fix \(2<r<p\). Interpolation gives \(Z_{g_i}\to0\) in \(L^r\).
+In the harmonic metric equation the quadratic first derivatives
+converge strongly in \(L^p\), and \(\Ric_{g_i}\to yh/4\) strongly in
+\(L^r\) for the limiting metric \(h\). The weak equation makes \(h\) Einstein. In harmonic coordinates, the same interior exponent iteration as in Theorem~\ref{thm:ricci-scale} makes it smooth.
+Subtract the Einstein limit equation on nested harmonic chart interiors.
+The product of the uniformly vanishing difference of inverse metric
+coefficients with the uniformly \(L^p\)-bounded Hessians tends to zero
+in \(L^r\). The interior elliptic estimate gives strong \(W^{2,r}\)
+convergence there. Thus the curvatures converge strongly in \(L^2\)
+on the finite covering. The chiral projections converge uniformly in
+oriented frames. Ordered eigenvalues are Lipschitz in a symmetric
+matrix, so the chosen \(H_s^\pm(h)\) is zero, passing the integrals
+with a partition of unity in these charts.
+
+The pointwise eigenvalue inequality follows by continuity. If the
+corresponding Weyl block is nonzero, Theorem 1.4 of Catino and Dameno,
+with orientation reversed for the negative block, makes a cover of
+degree at most two conformally K\"ahler. The limit is simply connected
+and \(H^2(M;\mathbb R)=0\), whereas the square of a K\"ahler class on a
+closed complex surface has positive integral. Hence that Weyl block
+vanishes. Signature zero forces the other block to vanish as well.
+The limit is round up to scale. Strong convergence of the chiral
+curvatures then gives \(E_+(g_i)\to0\), a contradiction. Taking
+\(\eta=4\pi^2\) and applying Proposition~\ref{prop:recognition} proves
+the smooth conclusion on the tested physical class.
+\end{proof}

@@ -9,3 +9,5 @@ Issue future frozen requests and record their returns here with a task ID, input
 [Physical Ricci scales, critical charts and immersed recognition, E16–E34](RICCI_AND_IMMERSION_RETURNS_20261125.md)
 
 [Parallel investigation ownership and registers](PARALLEL_OWNERSHIP_20261125.md) · [E35 setup assignments](E35_PARALLEL_SETUP_20261125.md)
+
+[Marked exteriors, height diagrams, physical anchoring and near-Einstein tests, E36–E48](MARKED_TESTS_20261125.md)

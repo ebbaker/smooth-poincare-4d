@@ -6,6 +6,8 @@ Follow a marked spherical cut through capping, recognition and reassembly on the
 
 [Research overview](research-overview/OVERVIEW.md) · [Research plan](research-plan/PLAN.md) · [Live progress](research-progress/REGISTER.md) · [Continuation](continuation-notes/CONTINUATION.md) · [Milestones](DRAFT_HISTORY.md)
 
+Under Edition 03, [Route 06](../06_physical_scales_and_marked_annuli/README.md) seeks the measured, globally marked shell. Route 03 owns CUT-E05 on a supplied shell and both cap signs and the signed reassembly. [Current program plan](../research-plan/03_PLAN.md)
+
 **Task ownership.** CUT-B02 and CUT-E02–E05 cover the symmetric cut, geometric splice estimate, two cap signs and the harmonic-annulus criterion. FOT-E25, E26, E28, CUT-B01 and CUT-E01 retain their earlier meanings. [Current program plan](../research-plan/02_PLAN.md) · [Program register](../research-progress/REGISTER.md) · [Evidence at issue](../research-progress/02_BASELINE.md)
 
 **Current result.** The strict exterior margin, marked smooth gluing and conditional curvature-energy descent on the original smooth type are Lean-checked. The route uses a single supplied core and explicit cap and recognition hypotheses. [Verified declarations and open geometry](research-progress/REGISTER.md) · [Dated continuation](continuation-notes/AFTER_MARKED_DESCENT_20261125.md)

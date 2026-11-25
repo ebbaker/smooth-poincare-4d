@@ -14,3 +14,5 @@ The [canonical source index](../../../references/README.md) and [shared bibliogr
 The [master variational source record](../../../references/SOURCE_NOTES_MASTER_VARIATIONAL_20261125.md) records exact theorem statements checked for local replacement, the closed Yamabe sign, complete end geometry, first-order compactness, sheet monodromy and the alternative flow selection test. The shared bibliography contains the primary articles cited in the manuscript.
 
 [Physical Ricci scales and immersed recognition](../../../references/SOURCE_NOTES_MASTER_RICCI_IMMERSION_20261125.md) records the exact primary inputs to the critical annular estimate, supercritical physical compactness, indexed height count, handle classification and extrinsic sign test.
+
+The [marked-exterior source update](../../../references/SOURCE_NOTES_MASTER_RICCI_IMMERSION_20261125.md#marked-exteriors-surgery-boundaries-and-closed-limits) records the precise unknot, tunnel, gluing and conformal Kähler theorems imported into the current edition, and the role of the round end's spectral form.

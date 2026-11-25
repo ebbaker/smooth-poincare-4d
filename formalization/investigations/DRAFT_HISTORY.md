@@ -1,5 +1,7 @@
 # Overall formalization milestones
 
+- **25 November 2026 · Edition 03.** Established Routes 06–09 and transferred the existing scale, residual and immersion tasks with their IDs. Checked the four opening Lean proposition types, extended the blueprint and prepared a shared Astra/ultra continuation. [Overview](research-overview/03_OVERVIEW.md) · [Baseline](research-progress/03_BASELINE.md) · [Continuation](continuation-notes/AFTER_PARALLEL_ROUTE_SETUP_20261125.md)
+
 - **25 November 2026 · Version 02.** Adopted the master minimizing-sequence route, opened Route 05 and extended Route 03 to both full sides of a marked cut. Added a neutral Lean import and a master blueprint section. The dated baseline records which dependencies already have checked proofs. [Overview](research-overview/02_OVERVIEW.md) · [Plan](research-plan/02_PLAN.md) · [Baseline](research-progress/02_BASELINE.md)
 
 - **25 November 2026 · Version 01.** Prepared for Edward B. Baker III with OpenAI Codex assistance. Reviewed the pinned Lean pilot and established the first program-wide plan for the first-order twistor manuscripts and the three collar investigations. The opening builds and axiom checks concern the existing three-axis result. [Baseline](research-progress/01_BASELINE.md) · [Plan](research-plan/01_PLAN.md)

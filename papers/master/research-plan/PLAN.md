@@ -12,6 +12,15 @@ Fix an arbitrary closed oriented smooth homotopy four-sphere \(M\) and suppose i
 
 Here \(E_+\) uses the Hilbert–Schmidt norm on \(\Lambda^+\). Existence of a smooth immersion on every type gives the domain of the first two constructions. Its whole-domain curvature budget is open. Master B02 also retains intrinsic entry constructions. One candidate is a branched-cover metric with a warped transition. In the four product patches tested in E15, fixed tangential area and normal disk area \(O(\varepsilon^2)\) force the chiral cost to diverge for every choice of a common cone angle as \(\varepsilon\to0\). A new model must realize the prescribed smooth type, match the exterior jets, and estimate both the full chiral cost and the global scalar quadratic form. [Common-angle calculation and its hypotheses](../notes/E15_SHEET_ANGLES.md)
 
+## Research priorities after the marked tests
+
+1. Seek one source marking on a separated physical sequence at a scale between the smaller and median chiral radii. It suffices to mark one spherical cone component out to a fixed width depending on the Yamabe floor, ellipticity and anchor distance. Obtain the embedding and the central metric estimates in the original physical gauge. The new proof locates both full energy marks.
+2. In parallel, construct an actual retained exterior. For intrinsic entry test the round end form or its scalar Robin sufficient condition and target the strict subcritical energy or inclusive direct threshold. For an immersed exterior keep the angular coverage of each prescribed height filling. On an actual two-middle height record the two surgery orders and their geometric boundary identifications.
+3. On diffuse physical sequences, estimate the square sum of collar errors for charged, parametrized standard balls. Compare their total raw charge against that surcharge and the single minimizing excess. This comparison permits an arbitrary retained exterior and requires no disappearance of all complement energy.
+4. For bounded physical supercritical Ricci, test the two small defects in the new near-Einstein theorem on the same Yamabe representative. If one survives, the deficit estimate narrows the possible limit but supplies no negative variation. Seek a signed comparison on that survivor or a genuinely different round restart with strict gain.
+
+[Current theorem-by-theorem decisions](../brainstorm/notes/MARKED_EXTERIORS_AND_ANNULI_20261125.md) · [Next launch and scope of each owner](../continuation-notes/AFTER_MARKED_EXTERIORS_20261125.md)
+
 ## Four investigations that can run in parallel
 
 | Owner | First finite target | How the result advances the proof |

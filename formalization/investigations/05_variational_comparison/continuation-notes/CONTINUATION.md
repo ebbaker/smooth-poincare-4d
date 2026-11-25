@@ -2,6 +2,14 @@
 
 25 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. The serving configuration was unavailable. [Route overview](../research-overview/OVERVIEW.md) · [Route plan and first exact Lean target](../research-plan/PLAN.md) · [Live register](../research-progress/REGISTER.md) · [Source revisions and toolchain](../../research-progress/02_BASELINE.md)
 
+## Current launch
+
+Use the [Edition 03 program continuation](../../continuation-notes/AFTER_PARALLEL_ROUTE_SETUP_20261125.md). For a Route 05 session, start VAR-E01 and VAR-E02, then VAR-B02, E03 and E04. Coordinate the actual splice with 03 and the aggregate residual with 07. The physical-quantile assignment now belongs to [Route 06](../../06_physical_scales_and_marked_annuli/continuation-notes/CONTINUATION.md).
+
+> Activate sustained Route 05 under Edition 03 with GPT-6.2 Astra at ultra. Read the formalization workflow, current program and route plans and registers, the blueprint and the working master TeX. Prove the witnessed repair inequality and geometric specialization. Pursue the positive-path theorem and local replacement. You may try alternatives, revise B/E tasks, consult primary sources and create gpt-6.2-sol helpers at ultra for bounded independent proofs. Build and check each accepted declaration through the public import, record its hypotheses, update the blueprint and sole register, and continue through useful dependencies.
+
+## Edition 02 launch record
+
 | First assignment | Recommended role | Output and boundary |
 | --- | --- | --- |
 | VAR-E01 | Bounded Sol 6.2/ultra if delegated | `SmoothPoincare/Variational/Replacement.lean`. Finite repair inequality and its specialization to genuine positive competitors. |

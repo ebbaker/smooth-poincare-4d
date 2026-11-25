@@ -23,20 +23,26 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-A positive Yamabe class with chiral Weyl energy at most \(4\pi^2\)
-recognizes the standard smooth four-sphere. We study how a spherical
-cut could yield recognition in the larger range below \(8\pi^2\).
-On a hypothetical nonstandard smooth homotopy sphere, a nearly
-minimizing positive class can discard at most its excess above the
-infimum plus the cost of closing the retained piece. We prove the
-resulting obstruction to a cut separating two positive amounts of
-chiral energy and give a first-order metric criterion for the required
-caps. A subcritical metric path permits the use of two short splices. In the same range we locate disjoint smooth balls on the original
-manifold that carry almost all the volume and individually little full
-curvature. A one-sided replacement inequality identifies what would
-allow those balls to detect the smooth type. Fixed-type minimization forces strong local chiral convergence in a supplied first-order comparison. Every complete smooth limit at a vanishing physical scale is flat. This forces vanishing full energy at scales with locally bounded rescaled \(L^p\) trace-free Ricci curvature, \(p>2\). A low-curvature annulus with a single harmonic marking at sufficiently small fixed distortion gives the separating cut. An independent recognition criterion applies when one conformal class is realized by an immersion into \(\mathbb R^5\): chiral energy at most \(64\pi^2/9\) suffices in that class, with no Yamabe sign condition. The existence of a
-subcritical starting class and of sufficiently inexpensive cuts or
-replacements on general smooth homotopy four-spheres remains open.
+On a smooth homotopy four-sphere a positive Yamabe class with chiral
+Weyl energy at most \(4\pi^2\) recognizes the standard smooth type.
+We study positive classes below \(8\pi^2\) by minimizing on the original
+smooth manifold. Removing disjoint marked standard balls gives a
+positive competitor when the source energy plus the aggregate collar
+error stays below this ceiling. Its energy gain is at least the raw
+charge of the balls minus that error. For separated chiral quantiles,
+a sufficiently wide uniformly elliptic annular chart at an intermediate
+physical scale locates both entire charged sets from one point near the
+inner center. Small full curvature and central harmonic control then
+give a cut incompatible with fixed-type minimization. We also prove
+physical Ricci-scale bounds and a near-Einstein recognition criterion
+using the spectral defect of one Weyl block. On a punctured manifold
+with marked round product collars, an explicit boundary form tests
+positive entry. Independently, a hypersurface immersion in \(\mathbb R^5\)
+with induced energy at most \(64\pi^2/9\) recognizes its domain.
+Below \(8\pi^2\) we give smooth recognition tests for the actual
+two-middle-handle surgery diagrams selected by the height count on a
+putative nonstandard type. Constructing qualifying geometric data on
+every smooth homotopy four-sphere remains open.
 \end{abstract}
 \section{Introduction}
 Isothermal coordinates provide a simple model for using geometry to
@@ -303,6 +309,74 @@ Sum these inequalities. Each comparison tests one competitor, so the
 repairs can be made independently.
 \end{proof}
 
+\begin{proposition}[Removing marked balls using only their collars]
+\label{prop:exterior-replacement}
+Let \(g\) be a positive class of energy \(e<8\pi^2\) on a smooth
+oriented homotopy four-sphere \(M\). Let \(B_1,\ldots,B_N\) be disjoint
+parametrized smooth closed standard balls. Suppose their boundary
+spheres are the middle spheres of disjoint oriented charts on
+\(e^{-1}<|z|<e\), with the given boundary markings, the inward radial
+side corresponding to each ball. In chart \(j\) write the source as
+\(u_j^2m_j\) for a smooth positive function \(u_j\). Put
+\[
+ a_j=\|m_j-\delta_{\rm Euc}\|_\infty,\quad
+ b_j=\|Dm_j\|_{L^4(dz)},\quad
+ K_j=\|\Rm_{m_j}\|_{L^2(m_j)} .
+\]
+Assume \(a_j\le a_*\) for a fixed sufficiently small dimensional
+\(a_*\). For a constant \(C\) of the fixed chart and splice profile let
+\[
+ \eta^2=\sum_j \big[C(a_jK_j+a_j+b_j+b_j^2)\big]^2,\qquad
+ c=2\sqrt e\,\eta+\eta^2,\qquad m=\sum_j E_+(g;B_j).
+\]
+If \(e+c<8\pi^2\), there is a smooth positive class on the original
+\(M\) with energy at most \(e-m+c\). In particular \(e-m+c\le4\pi^2\)
+gives direct recognition. Along a fixed-type minimizing sequence in
+the subcritical band,
+\[
+       m_i\le e_i-I^+(M)+c_i
+\]
+whenever the hypotheses hold. The number of balls may vary with \(i\).
+\end{proposition}
+
+\begin{proof}
+Use the short-cut interpolation of Proposition~\ref{prop:short-cut}
+simultaneously on the collars, restoring the multiplier \(u_j^2\)
+where the path meets the unchanged source. The cutoff \(\psi\) is one
+on a central strip and zero near both faces. For
+\(n_s=\delta_{\rm Euc}+(1-s\psi)(m_j-\delta_{\rm Euc})\), the
+all-lowered curvature formula of Lemma~\ref{weak:splice} gives,
+in the chiral matrix densities whose squared norms integrate to energy,
+\[
+ \|F_+(n_s)-(1-s\psi)F_+(m_j)\|_2
+        \le C(a_jK_j+a_j+b_j+b_j^2).
+\]
+Indeed the projection changes by \(O(a_j)\) on the incoming
+curvature, the two differentiated cutoff terms cost \(O(a_j+b_j)\),
+and the quadratic first derivatives cost \(O(a_j+b_j^2)\).
+The bound is uniform in \(0\le s\le1\) and holds on a half-collar by
+restriction. Take the direct sum over disjoint charts and the unchanged
+region. The triangle inequality bounds total energy along the path by
+\((\sqrt e+\eta)^2\), and the energy on the retained exterior at its
+endpoint by \((\sqrt{e-m}+\eta)^2\le e-m+c\). Conformal changes to
+an exact round product on the flat middle strips preserve these energies.
+
+The path stays in positive classes by \eqref{eq:zero-wall}.
+Stretch all product strips through finite lengths on the original
+closed type. Each stretched metric has the same chiral energy and
+Yamabe constant at least \(\sqrt{48(8\pi^2-e-c)}\).
+Every compactly supported test on the retained exterior with one
+half-infinite cylinder on each boundary extends by zero to a sufficiently
+stretched source. The same lower Yamabe bound holds there.
+Compactify each end in its marked radial coordinate by a smooth
+conformally flat cap as in Proposition~\ref{prop:short-cut}.
+Finitely many added points have zero \(H^1\) capacity at each fixed
+source index, so the closed capped metric has the same lower bound.
+The boundary parametrizations identify its caps with the removed
+standard balls. This gives a metric on \(M\) at the stated energy;
+taking the fixed-type infimum gives the last inequality.
+\end{proof}
+
 For a sequence in the band \eqref{eq:band}, write
 \(\mu_i=dV_{g_i}\) and \(\lambda_i=|W^+_{g_i}|_{\rm HS}^2dV_{g_i}\).
 Consider the following uniform absolute continuity condition:
@@ -362,7 +436,10 @@ The first question is whether every smooth homotopy four-sphere
 admits a positive Yamabe class of energy below \(8\pi^2\).
 This would put every hypothetical counterexample in the band of
 \eqref{eq:band}. A positive class with \(E_+\le4\pi^2\) would
-already settle its smooth type. Theorem~\ref{thm:immersed-entry} gives direct recognition if some immersion into \(\mathbb R^5\) induces chiral energy at most \(64\pi^2/9\). Every smooth type admits immersions, and obtaining this integral bound is open.
+already settle its smooth type. Proposition~\ref{prop:round-boundary-form}
+tests both thresholds on a retained punctured manifold with marked round
+product ends, including the Yamabe sign of the capped class.
+Theorem~\ref{thm:immersed-entry} gives direct recognition if some immersion into \(\mathbb R^5\) induces chiral energy at most \(64\pi^2/9\). Proposition~\ref{prop:exterior-heights} can test the retained immersed region alone when the heights extend with a known middle count. Proposition~\ref{prop:two-middle-tests} recognizes two classes of actual surgery diagrams in the wider band. Every smooth type admits immersions. A quantitative exterior construction or an exhaustive selection of recognized diagrams is still needed.
 
 Once in the band it suffices, on each hypothetical nonstandard
 \(M\), to find \emph{one} positive-class minimizing sequence and a
@@ -375,15 +452,14 @@ the splice depends on first derivatives in an actual buffer. Their
 physical volume can be appreciable while their chiral energy is tiny.
 Corollary~\ref{cor:vol-reduction} gives a different sufficient condition
 when curvature on sets of small physical volume can also be controlled.
-If this control fails, an extraction argument must account for the
-curvature carried by those sets.
+For Proposition~\ref{prop:exterior-replacement} the source energy plus collar surcharge must stay below \(8\pi^2\), and the removed chiral mass must exceed the surcharge plus the minimizing excess. The remaining chiral energy can stay in the retained exterior.
 
 Corollary~\ref{cor:energy-radius} locates a second scale in the
 concentrating case. At a shrinking half-energy radius the rescaled
 curvature must grow without bound within some fixed multiple along a
 subsequence. The smaller curvature radius gives no lower bound for
 the chiral mass near that curvature peak. To turn the scale separation
-into a cut, Proposition~\ref{prop:critical-annulus} asks for one whole harmonic marking with fixed small distortion on the selected physical block. Theorem~\ref{thm:ricci-scale} forces supercritical Ricci growth on shrinking charged windows. Neither estimate constructs the marking in general. Repeated concentration at successively smaller physical
+into a cut, Proposition~\ref{prop:critical-annulus} asks for one whole harmonic marking with fixed small distortion on the selected physical block. Theorem~\ref{thm:ricci-scale} forces supercritical Ricci growth on shrinking charged windows. Corollary~\ref{cor:anchored-annulus} reduces the search to one scale-anchored annular chart. Constructing that chart from the subcritical physical budget remains open. Repeated concentration at successively smaller physical
 diameters need not decrease the limiting energy.
 
 A minimizing sequence could instead approach a smooth nonround
@@ -391,8 +467,10 @@ closed minimizer. At an attained minimum, positive Yamabe sign is open
 under smooth variations. The first variation of chiral energy is a
 nonzero constant times the pairing with the Bach tensor, so the metric
 is Bach-flat \cite[\S3]{ChangGurskyYang2003}. A smooth limit can
-carry all the limiting energy. Classifying such a minimizer or
-constructing a variation that strictly lowers its energy on the same
+carry all the limiting energy. Theorem~\ref{thm:near-einstein-recognition} excludes the part of this
+alternative with small Ricci and chiral spectral defects in a fixed
+physical \(L^p\) Ricci bound. Classifying the remaining minimizers or
+constructing a variation that strictly lowers their energy on the same
 smooth manifold remains an independent problem. A sequence selected
 solely by its energy has no Bach error estimate in the argument above.
 An appeal to fourth-order compactness would require a selection theorem

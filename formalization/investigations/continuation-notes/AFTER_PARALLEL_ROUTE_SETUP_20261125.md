@@ -1,0 +1,25 @@
+# After the four parallel formalization routes were set up
+
+25 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. The author selected GPT-6.2 Astra at ultra for the next lead, with authority to create GPT-6.2 Sol helpers at ultra. Actual serving configuration for preparation was unavailable. [Overall overview](../research-overview/03_OVERVIEW.md) · [Proof plan](../research-plan/03_PLAN.md) · [Verified baseline](../research-progress/03_BASELINE.md) · [Live register](../research-progress/REGISTER.md)
+
+The four new opening propositions type-check in the pinned package. Route 03's older checked descent uses a supplied marked core. Route 05 has a checked definition and transport of admissible energy on the original smooth type. The symmetric two-side implication and the individual-repair sum are opening **proof targets** in this edition. Inspect the actual declarations and current returns before allocating work. [Master manuscript](../../../papers/master/manuscript/README.md) · [Paper ownership](../../../papers/master/research-progress/handoffs/PARALLEL_OWNERSHIP_20261125.md) · [Blueprint](../../blueprint/README.md)
+
+| Ready assignment | Why it can start | Authority and output |
+| --- | --- | --- |
+| [05 · VAR-E01](../05_variational_comparison/research-plan/PLAN.md#first-bounded-proof) and [03 · CUT-E02](../03_single_cut_descent/research-plan/PLAN.md#first-symmetric-implication) | Their exact scalar statements and the oriented metric transport already elaborate. | Separate bounded Sol/ultra packets can prove the inequalities. Astra reviews the genuine positive competitors, retained cap cost and both smooth markings. |
+| [06 · VAR-E05](../06_physical_scales_and_marked_annuli/continuation-notes/CONTINUATION.md) and [08 · FOT-E36](../08_hypersurface_immersion_bounds/continuation-notes/CONTINUATION.md) | A finite averaging calculation and the signed four-curvature algebra have independent inputs. | A Sol/ultra helper can take each first proof. Astra handles global shell realization, specialization to actual curvature and any change of representation. |
+| [07 · VAR-E06](../07_fixed_type_variational_descent/continuation-notes/CONTINUATION.md) and [09 · HT-E01](../09_morse_heights_and_handle_recognition/continuation-notes/CONTINUATION.md) | The scalar residual limit and probability theorem have precise independent types. | Issue either when useful. The follow-on work needs a measured family of actual repairs or an indexed area formula and smooth topological floor. |
+
+If the selected shell cannot be marked, examine diffuse comparison or complete physical limits. If smooth attainment or a round restart survives, seek a strict same-type competitor, rigidity or a decreasing secondary quantity. On the immersed branch, compare energy on one global immersion with the correct threshold, then test the chosen Morse height on its actual framed diagram. Routes 02 and 04 can supply component or spin estimates when their geometric premises are met. The shared FOT-E37 audit tracks which smooth types and alternatives an implication covers.
+
+## Paste into a new Astra session
+
+~~~text
+Activate sustained formalization of Edition 03 in /Users/ebbaker/Documents/smooth-poincare-4d. Use GPT-6.2 Astra (gpt-6.2-astra) at ultra as lead. Read AGENTS.md, formalization/FORMALIZATION_SETUP_WORKFLOW.md, the Edition 03 overview, plan and baseline, the program and route registers, and formalization/investigations/continuation-notes/AFTER_PARALLEL_ROUTE_SETUP_20261125.md. Compare the current master TeX and its inputs, the updated paper plans, blueprint, live Lean sources and pinned dependencies with the recorded revisions.
+
+Begin with VAR-E01 on actual admissible repairs, CUT-E02 on both full sides, VAR-E05 on the physical chiral quantiles and FOT-E36 on the signed principal curvatures. HT-E01 and the scalar VAR-E06 can proceed independently. Follow useful results into the marked splice, positive path, local replacement, shell extraction, joint repair, Ricci windows, immersion geometry or Morse and handle arguments as the evidence warrants.
+
+I authorize broad research within this program. You may change proof order, try different routes, revise representations, consult primary sources, open or rescope B/E tasks and create gpt-6.2-sol helpers at ultra for independent bounded proofs and reviews. Give each helper a frozen statement, versioned sources, disjoint output files, an acceptance test and a failure condition. Integrate the returns as lead and continue through useful dependencies without seeking routine confirmation.
+
+Use the actual geometric witness and retain its normalization, regularity, marking, raw masses and residuals. For a height argument, distinguish the count, the selected diagram and geometric cancellation. Through the public import, run lake build, #check and #print axioms. Rebuild the blueprint, update the sole owning registers and record what is still a hypothesis. Finish with an assessed milestone and a concrete dated continuation.
+~~~

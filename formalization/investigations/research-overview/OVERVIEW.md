@@ -1,5 +1,5 @@
 # Current overall research overview
 
-[Version 02 · Minimizing chiral Weyl energy on the original smooth type](02_OVERVIEW.md) explains the choice of the master route, the entry threshold, the short marked cut and the surviving alternatives. [Research plan](../research-plan/02_PLAN.md) · [Evidence at issue](../research-progress/02_BASELINE.md) · [Live register](../research-progress/REGISTER.md)
+[Edition 03 · Intrinsic descent and immersed recognition](03_OVERVIEW.md) gives the implications on an arbitrary candidate smooth type and the responsibilities of Routes 03 and 05–09. [Current plan](../research-plan/03_PLAN.md) · [Progress at issue](../research-progress/03_BASELINE.md) · [Live program register](../research-progress/REGISTER.md)
 
-The two main proof owners are [03 · Single spherical cut and descent](../03_single_cut_descent/research-overview/OVERVIEW.md) and [05 · Variational comparison and physical scales](../05_variational_comparison/research-overview/OVERVIEW.md). [Version 01](01_OVERVIEW.md) describes the original component and spinor routes. The [investigation index](../README.md) lists all editions and proof owners.
+[Edition 02](02_OVERVIEW.md) develops the fixed-type variational argument. [Edition 01](01_OVERVIEW.md) records the component and spinor routes. The [investigation index](../README.md) lists the full history and all current proof owners.

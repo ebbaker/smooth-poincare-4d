@@ -1,0 +1,106 @@
+\section{Descent, immersed curvature and Morse heights}
+\label{sec:parallel-investigations}
+
+These are proposed formal statements for the third program edition. For
+physical shell selection and the residual of a repair family, the targets
+are Lemma~\ref{lem:master-quantiles} and
+Corollary~\ref{cor:master-repair-residual}. A supplied shell is tested by
+Proposition~\ref{prop:master-harmonic-annulus}. The following results use
+the normalization and oriented smooth category of
+Section~\ref{sec:master-variational}.
+
+\begin{proposition}[A joint competitor on the original smooth type]
+\label{prop:routes-joint-descent}
+\uses{lem:master-competitor}
+Fix a nonempty set of admissible positive-class energies on \(M\) with
+finite infimum \(I\). A source has energy \(e\). Suppose a marked
+replacement of a region, including its transitions, supplies a smooth
+positive metric on the original type, whose total energy is at most
+\(e-m+\gamma\). Here \(m\) is the removed raw energy and \(\gamma\)
+includes the whole replacement cost and any net change outside the
+region. Then \(m-\gamma\le e-I\). A strict reverse inequality for one
+actual competitor gives a contradiction.
+\end{proposition}
+
+\begin{lemma}[Weyl energy on the middle-signature locus]
+\label{lem:routes-middle-weyl}
+In the induced metric of a smooth Euclidean hypersurface, take principal
+curvatures \((-a,-b,c,d)\), all four parameters positive. The three pair
+sums are \(ab+cd,-ac-bd,-ad-bc\). For either Weyl endomorphism the squared
+Hilbert--Schmidt norm is one twelfth of the sum of the three squared
+differences between these sums. It is at least \((8/3)abcd\), with
+equality precisely when \(a=b=c=d\). The scalar algebra and the Gauss
+equation identifying the actual curvature are separate proof targets.
+\end{lemma}
+
+\begin{lemma}[Shape-operator deficit]
+\label{lem:routes-shape-deficit}
+For arbitrary real principal curvatures in the same block normalization,
+\[
+  \tfrac16 |A^\circ|^4-|W^\pm|_{\rm HS}^2
+     \ \ge\ \tfrac89(-\det A)_+ .
+\]
+The tuple \((-1,3,3,3)\) realizes equality with negative determinant.
+\end{lemma}
+
+\begin{lemma}[Indexed Gauss mass]
+\label{lem:routes-indexed-mass}
+Let \(m_2(u)\) count the index-two critical points of the height in a
+regular direction \(u\) for one smooth immersion of a closed oriented
+homotopy four-sphere in \(\mathbb R^5\). With normalized spherical
+probability, \(\omega=|S^4|\) and \(U\) the middle-signature locus,
+\[
+  \mathbb E[m_2]=\frac{2}{\omega}\int_U\det A\,dV_g .
+\]
+Both normal directions contribute. The area formula counts with
+multiplicity on the smooth domain. Identify a measurable count and the
+null exceptional directions before integrating.
+\end{lemma}
+
+\begin{proposition}[The topological floor for the middle count]
+\label{prop:routes-middle-count}
+On a nonstandard smooth homotopy four-sphere every Morse function has at
+least two index-two critical points. The proposed formal argument uses
+the actual extremal handlebody reductions, preserves the framed
+attachments, and applies the one-middle-pair recognition theorem and
+final disk gluing when the reduced count is at most one.
+\end{proposition}
+
+\begin{lemma}[Selecting a two-middle height]
+\label{lem:routes-height-selection}
+On a probability space let \(m\) be an integrable, measurable
+natural-valued count. If \(m\ge2\) almost everywhere and
+\(\mathbb E[m]<9/4\), then \(\Pr(m=2)>3/4\).
+\end{lemma}
+
+\begin{corollary}[Heights of a subcritical immersion]
+\label{cor:routes-subcritical-heights}
+\uses{lem:routes-middle-weyl,lem:routes-indexed-mass,prop:routes-middle-count,lem:routes-height-selection}
+If the induced class of the specified immersion on a nonstandard
+candidate has \(E_+(g)<8\pi^2\), more than three quarters of directions
+have exactly two middle critical points. The direction count uses no
+Yamabe sign. Recognition still requires control of a selected diagram.
+\end{corollary}
+
+\begin{proposition}[A marked mixed cancellation]
+\label{prop:routes-mixed-cancellation}
+\uses{prop:routes-middle-count}
+Suppose a reduced smooth handle presentation of \(M\) has one 0-handle,
+one 1-handle, two 2-handles, one 3-handle and one 4-handle. Supply a
+framed isotopy or a sequence of justified slides that preserves the
+marked presentation and gives a transverse single geometric
+intersection of one 2-handle attaching circle with the 1-handle belt
+sphere. Smooth handle cancellation leaves at most one middle handle,
+so \(M\) is standard. Producing this geometric intersection from a
+selected height is open.
+\end{proposition}
+
+\begin{openproblem}[Coverage on each candidate smooth type]
+\label{problem:routes-coverage}
+\uses{prop:master-recognition,prop:master-immersion,cor:routes-subcritical-heights,prop:routes-mixed-cancellation,prop:master-short-cut,cor:master-repair-residual,prop:routes-joint-descent}
+For each candidate, produce a recognized class, an immersed subcritical
+height with a recognized marked diagram, or a positive-class minimizing
+sequence on which a strict contradiction is realized. Quantitative
+construction and coverage must refer to the same metric, immersion,
+or chosen physical sequence in the implication that uses it.
+\end{openproblem}

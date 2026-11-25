@@ -2,7 +2,13 @@
 
 25 November 2026. Prepared for Edward B. Baker III with OpenAI Codex
 assistance. Actual serving model and reasoning effort are unavailable.
-The current organization uses the 33-page master edition committed at 2689540e6dae1656b7f5ad4be52504db044995f2 and the [accepted parallel proposal](../brainstorm/notes/PARALLEL_INVESTIGATION_PROPOSAL_20261125.md). Earlier editions and their source hashes remain in the provenance sections below.
+The parallel organization began with the 33-page master edition committed at 2689540e6dae1656b7f5ad4be52504db044995f2 and the [accepted parallel proposal](../brainstorm/notes/PARALLEL_INVESTIGATION_PROPOSAL_20261125.md). Earlier editions and their source hashes remain in the provenance sections below.
+
+## Current analytical results on the four routes
+
+The master now has two ways to test a retained exterior before constructing a global competitor. On an intrinsic exterior with marked round ends there is an exact spectral test for the positive Yamabe sign, and the capped energy is the exterior energy. On an immersed exterior the number of index-two critical points needed on its complement gives an explicit directional lower bound for the exterior's Weyl integral on any hypothetical nonstandard type. At two middle handles the transported one-sided surgery link and the two mixed surgery orders give recognizable smooth subclasses. The quantitative construction and the selection of these subclasses remain open.
+
+For intrinsic minimization, a single sufficiently wide embedded spherical annulus at an intermediate physical scale needs only one point near the common quantile center. The hypotheses include uniform ellipticity and small full curvature on the annulus and metric comparison on the central splice; they imply the entire marking. For a diffuse family of actual standard disks, only their boundary collars enter the simultaneous exterior replacement bound. A separate near-Einstein theorem recognizes a volume-one positive Yamabe metric with bounded physical supercritical Ricci norm and sufficiently small joint trace-free Ricci and one-chirality eigenvalue defect. The threshold is non-effective. An exact evacuated restart and closed metrics outside this criterion remain viable. [Quantifiers and surviving smooth types](../brainstorm/notes/MARKED_EXTERIORS_AND_ANNULI_20261125.md) · [Working revisions and audits](../research-progress/handoffs/MARKED_TESTS_20261125.md)
 
 ## How the four investigations fit the proof
 
