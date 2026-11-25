@@ -11,6 +11,10 @@ would rule out that energy, what such a result would imply for smooth
 four-dimensional Poincaré, and what a controlled cut and cap would
 require.
 
+The [proposed research overview and plan](brainstorm/notes/PROPOSED_OVERVIEW_AND_PLAN_20261125.md)
+is open for author review. It includes a [proposed division of the collar work](brainstorm/notes/PROPOSED_OVERVIEW_AND_PLAN_20261125.md#proposed-division-of-the-collar-work)
+covering neck energy, the extraction of a collar for the Dirac equation, and spinor matching on a supplied collar.
+
 - [The neck problem and its role in smooth recognition](brainstorm/notes/NECK_GEOMETRY_AND_ENERGY_ACCOUNTING_20261125.md) states the limiting problem, existing estimates, and the hypotheses of the argument using an energy identity.
 - [Chiral evolution, Dirac methods, and surgery](brainstorm/notes/CHIRAL_DIRAC_AND_SURGERY_APPROACHES_20261125.md) compares the two companion manuscripts and identifies tests for several approaches.
 - [What the companion manuscripts provide on a supplied collar](brainstorm/notes/USING_A_SUPPLIED_COLLAR_20261125.md) works through the cap and Yamabe estimates, the exact cylinder calculation, the chiral and spinorial comparison, and the hypotheses needed to find a collar.

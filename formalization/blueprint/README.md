@@ -9,11 +9,13 @@ chart argument from [Sections and Connections](../../papers/investigations-1/03_
 The manuscript was inspected at checkout
 `fb37f1bbb1a6aea44838f2d7746ed4d6cc164a67` with source SHA-256
 `329513a3cfd8e939373533fad90f36b9108ce0ea41a22f9cc348587a4110fe66`.
-The blueprint gives mathematical statements and proof sketches. It links to
-the [pilot note](../../papers/investigations-1/03_first_order_twistor/01_sections_and_connections/brainstorm/notes/LEAN_FORMALIZATION_PILOT_20261125.md)
-for the upstream geometry sources and to the
-[research register](../../papers/investigations-1/03_first_order_twistor/01_sections_and_connections/research-progress/REGISTER.md)
-for active task status.
+The blueprint gives mathematical statements and proof sketches. The
+[pilot note](../../papers/investigations-1/03_first_order_twistor/01_sections_and_connections/brainstorm/notes/LEAN_FORMALIZATION_PILOT_20261125.md)
+records the upstream geometry sources. The
+[formalization register](../investigations/01_sections_and_connections/research-progress/REGISTER.md)
+tracks Lean proof tasks, and the
+[manuscript research register](../../papers/investigations-1/03_first_order_twistor/01_sections_and_connections/research-progress/REGISTER.md)
+tracks the underlying mathematical investigation.
 
 | Blueprint entry | Manuscript label |
 | --- | --- |

@@ -11,6 +11,10 @@ The proposed targets and conventions are in the [pilot note](../papers/investiga
 The [Lean Blueprint](blueprint/README.md) records their statements, proof
 dependencies, and the open neck hypotheses.
 
+Use the [formalization setup workflow](FORMALIZATION_SETUP_WORKFLOW.md)
+and [investigation index](investigations/README.md) to plan and track
+Lean proofs.
+
 `lakefile.toml` pins `DifferentialGeometry` v0.1.4 to commit
 `788efe97894474c032de6dfb1289d515f613d15a`. That release uses Lean and
 Mathlib v4.35.0-rc3. Lake resolves Mathlib through the upstream dependency.

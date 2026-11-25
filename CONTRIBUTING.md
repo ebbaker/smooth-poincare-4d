@@ -17,9 +17,11 @@ prior evidence and record corrections explicitly. Do not silently promote
 conditional or local claims to global results.
 
 For a formalization, first identify the exact statement, definitions,
-normalizations, dependencies and intended proof assistant. Coordinate ownership
-through a task or issue; place actual formal code under the investigation when
-work begins. No formalization framework or completion is implied by this setup.
+normalizations, and dependencies. Follow the
+[formalization setup workflow](formalization/FORMALIZATION_SETUP_WORKFLOW.md)
+to coordinate ownership through a task or issue. Place Lean modules in the
+[shared Lake package](formalization/README.md) and link them from the
+associated formalization investigation.
 
 Before a code contribution, run relevant existing tests and the repository
 hygiene check. Before a manuscript contribution, build the changed source and
