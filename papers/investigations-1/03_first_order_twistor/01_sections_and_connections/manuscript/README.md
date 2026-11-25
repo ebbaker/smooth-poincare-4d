@@ -1,8 +1,8 @@
 # Twistor sections and chiral Weyl curvature on homotopy four-spheres
 
-Working draft for Edward B. Baker III, 24 November 2026 (America/New_York). [LaTeX source](twistor_sections_and_chiral_weyl_curvature.tex). The [parent manuscript](../../manuscript/first_order_twistor_and_smooth_poincare.tex) gives the earlier first-order program.
+Working draft for Edward B. Baker III, revised 25 November 2026 (America/New_York). [LaTeX source](twistor_sections_and_chiral_weyl_curvature.tex). The [parent manuscript](../../manuscript/first_order_twistor_and_smooth_poincare.tex) gives the earlier first-order program.
 
-The manuscript derives the assessed analytical results through SEC-E58. Sections 2–3 relate the local twistor-section defect to the Weyl energy and develop metric prescription. Sections 4–5 treat exact prescription at a nearby equal-energy exterior reference and the sign criterion at the original reference. Sections 6–9 develop spherical transmission, fixed-boundary obstructions, marked compactness and the sharp Yamabe-zero threshold. Section 10 proves divergence of radial strain along regular marked examples approaching that threshold. Sections 11–13 treat smooth ALE limits, closed Bach-flat critical values, and compact gauges for sequences with small total Bach norm. Section 14 gives the open problems.
+The manuscript derives the assessed analytical results through SEC-E61. Sections 2–3 relate the local twistor-section defect to the Weyl energy and develop metric prescription. Sections 4–5 treat exact prescription at a nearby equal-energy exterior reference and the sign criterion at the original reference. Sections 6–9 develop spherical transmission, fixed-boundary obstructions, marked compactness and the sharp Yamabe-zero threshold. Section 10 proves divergence of radial strain along regular marked examples approaching that threshold. Sections 11–13 treat smooth ALE limits, closed Bach-flat critical values, and compact gauges for sequences with small total Bach norm. Section 14 bounds the Weyl energy of long necks by the total Bach norm: the first variation in divergence form and a conserved current, the Euler relation and the one-chart annulus theorem, cones and nearly conical necks, the linearized Bach equation at the flat cone, and a calibration by Einstein metrics on the four-sphere. Section 15 gives the open problems.
 
 ## Provenance
 
@@ -37,6 +37,20 @@ The last digest hashes the concatenation, in filename order, of each basename, o
 | [58 SEC derivation and audit notes](../notes/) | `3c7e2cf4047dd4005559a916ae7e65bd4b05b897e97cb0b0d53e44c748b8192a` |
 | [Integrated LaTeX source](twistor_sections_and_chiral_weyl_curvature.tex) | `7854160925920435a9b3a90a21f6c1f5c15265d30fe4ba778aa8abae86bc7ed0` |
 
+## Revision through E61 · 25 November 2026
+
+Section 14 and the revised Section 15 were written for Edward B. Baker III with LLM assistance: Claude Opus 5.5 (`claude-opus-5-5`), Claude Cowork, reasoning effort max as the session's configuration records it. The research they integrate, SEC-B34, B35 and E59–E61, was done earlier in the same Claude Cowork session with Claude Fable 5.2 (`claude-fable-5-2`), which acted as lead and executed its own frozen requests; no second reader checked those derivations. The integration started from checkout `15940b9fae9557b26f9abcf84021b159f8c5f2fa`. At the author's request the section develops the results as one argument rather than in the order of the notes, and keeps to the analytical statements. Three statements are new relative to the notes: the closed form \(W'(p)=-3\rho^{-4}P^*\mathsf W\) for the decaying quadrupole fields, obtained by inversion; the bound \(\mathcal W\le4\sqrt3\,\mathfrak B\) on segments of metric cones; and the exact mean \(\tfrac{160}{27}|H|^2\) of \(|b_H|^2\) with the analytic bounds it gives for the Bach density of the logarithmic cones. The first and third were checked numerically with the linear-model code of the [numerics folder](../numerics/README.md), to \(10^{-13}\) or better; those checks are not part of its records. The second is a two-line consequence of the cone identity. The corollary on necks with a nearly conformal Killing field now requires \(0\le\varphi\le1\), which the note E61 used without stating. No numerical result enters the manuscript.
+
+| Input | SHA-256 |
+| --- | --- |
+| [SEC_ANNULAR_ENERGY_AND_CONSERVATION_20261124.md](../reviews/SEC_ANNULAR_ENERGY_AND_CONSERVATION_20261124.md) | `ab23a183e1b0b49987a7d24816ef06b124971c73627dbdf4d19a45a49a1e8ffb` |
+| [SOURCE_NOTES_SEC_ANNULAR_20261124.md](../../../../../references/SOURCE_NOTES_SEC_ANNULAR_20261124.md) | `dc1bb845dc127eaffca47b9f013eca472a3ba8bf447cc103881d54652c46d88f` |
+| [references.bib](../../../../../references/references.bib) | `f98887563d3b5451721c4fe6deada907df21cd717f3525ea879e97564286d711` |
+| [61 SEC derivation and audit notes](../notes/) | `05c0ba8400d5904dabb305eaa87f0d5994026de716eb1177589d1ce2350fbc81` |
+| [Integrated LaTeX source](twistor_sections_and_chiral_weyl_curvature.tex) | `85190fa0b78fd082fe03981b1fd38236198e4967b8ac5f80aae5ce9f07398d74` |
+
+The digest of the notes uses the convention stated above; it reproduces the earlier digest for the first 58 notes.
+
 ## Build
 
 From the repository root run
@@ -45,4 +59,4 @@ From the repository root run
 python3 tools/build_manuscripts.py 03_first_order_twistor/01_sections_and_connections
 ```
 
-The build uses LaTeX and Biber. It writes the PDF to `output/pdf/03_first_order_twistor/01_sections_and_connections/twistor_sections_and_chiral_weyl_curvature.pdf`.
+The build uses LaTeX and Biber. It writes the PDF to `output/pdf/03_first_order_twistor/01_sections_and_connections/twistor_sections_and_chiral_weyl_curvature.pdf`. The revision through E61 was built with `latexmk -pdf` in the session's cloud workspace (TeX Live 2023, biblatex, Biber 2.19, with `BIBINPUTS` pointing to the shared bibliography as the build script sets it): 81 pages, no undefined references or citations, no overfull lines. The PDF was copied to that output path. The computer's own TeX installation has no Biber, so the build script will stop at the bibliography there until Biber and biblatex are installed.

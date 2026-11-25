@@ -37,7 +37,7 @@ Not issued. B36 fixes the statement.
 | SEC-B36 | Selected lead; ready. Candidate 4 is partly the author's decision. | One decision note with the chosen route and a frozen first test. |
 | SEC-E62 | gpt-6.2-sol/ultra recommended; reserved until B36 fixes the statement. | The decomposition of the quadratic Bach term or the obstructing term, with the stated tests. |
 | Independent check | gpt-6.2-sol/ultra recommended; may be issued by B36 as a separate E task with the next unused identifier. | A proof reading of E59 and of the two identities of E61. |
-| Manuscript | Not edited. The assessment lists the proposed section. | Author's decision. |
+| Manuscript | Done on 25 November 2026 at the author's request, by the same session running Claude Opus 5.5 (`claude-opus-5-5`). | Section 14 and the revised Section 15 of the [manuscript](../manuscript/twistor_sections_and_chiral_weyl_curvature.tex); see the [draft history](../DRAFT_HISTORY.md). |
 
 Unchanged from earlier handoffs: the existence of a positive starting class on an arbitrary homotopy four-sphere, the upper bound on the cost of lifting the radial direction, and the pause on the separate chiral metric evolution investigation.
 

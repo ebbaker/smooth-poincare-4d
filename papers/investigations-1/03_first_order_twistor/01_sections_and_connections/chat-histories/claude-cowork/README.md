@@ -45,11 +45,16 @@ therefore one read short, and
      [next continuation](../../continuation-notes/05_AFTER_ANNULAR_ENERGY_AND_CONSERVATION_20261124.md),
      and added the
      [source records R109–R118](../../../../../../references/SOURCE_NOTES_SEC_ANNULAR_20261124.md).
-     The manuscript was not edited.
+     On 25 November, at Edward's request, it put these results into the
+     [manuscript](../../manuscript/twistor_sections_and_chiral_weyl_curvature.tex)
+     as Section 14 and a revised Section 15; the
+     [draft history](../../DRAFT_HISTORY.md) records the version.
    - *Session.* A Claude Cowork cloud session in project Smooth Poincare
      Conjecture 4d with Claude Fable 5.2 (`claude-fable-5-2`, reasoning effort
      max per the session's configuration), started 24 November 2026 at 17:13
-     America/New_York. The first turn was cut off by a usage limit at 19:15
+     America/New_York. Edward switched the session to Claude Opus 5.5
+     (`claude-opus-5-5`, effort max) on 25 November for the manuscript
+     revision. The first turn was cut off by a usage limit at 19:15
      and resumed at 20:42; the log holds the limit notice as the text that
      ends that turn.
    - *Capture.* Captured from the session's claude.ai event log with

@@ -47,13 +47,18 @@
 
 \title{Twistor sections and chiral Weyl curvature\\on homotopy four-spheres}
 \author{Edward B. Baker III}
-\date{Working draft, 24 November 2026}
+\date{Working draft, 25 November 2026}
 % Prepared for Edward B. Baker III with OpenAI Codex assistance.
 % The author-selected lead was retained. Its exact model identifier and effort
 % were unavailable. Bounded analytical work and editorial assistance were
 % configured as gpt-6.2-sol/ultra; backend settings were not independently attested.
 % Manuscript revision based on 3fb565b70247a57e4fcc7e65886c57ce0ca0e1ab.
 % Analytical results through SEC-E58. Input digests in the manuscript README.
+% Section 14 (Weyl energy on long necks) and the revised Section 15 were added on
+% 25 November 2026 with LLM assistance: research (SEC-B34, B35, E59-E61) by Claude Fable 5.2
+% (claude-fable-5-2) and manuscript integration by Claude Opus 5.5 (claude-opus-5-5), Claude Cowork,
+% reasoning effort max as the session's configuration records it. Revision based on
+% 15940b9fae9557b26f9abcf84021b159f8c5f2fa; analytical results through SEC-E61.
 \begin{document}
 \maketitle
 \thispagestyle{plain}
@@ -81,9 +86,22 @@ one Euclidean end. It carries more than \(4\pi^2\) in each chirality
 and leaves a uniformly positive energy remainder. For exactly
 Bach-flat positive-Yamabe metrics across smooth homotopy four-spheres,
 the set of positive critical values below \(8\pi^2\), if nonempty, has
-an attained minimum strictly above \(4\pi^2\). The remaining global
-problem is to construct and control a deformation or a convergent
-sequence on the given smooth manifold.
+an attained minimum strictly above \(4\pi^2\).
+
+For long necks we bound the Weyl energy by the total Bach norm with
+constants independent of the length. In a chart uniformly close to
+Euclidean, the energy of a long annulus is at most a multiple of the
+deviation times the Bach norm. A conserved current for
+diffeomorphisms bounds the energy of nearly conical necks of any
+cross-section and shows that Bach-flat cones are conformally flat. At
+the flat cone the linearized Bach equation has no homogeneous
+solutions with curvature between the exponents \(-2\) and \(2\), and
+the transverse traceless part of a perturbation is bounded by the
+\(L^1\) norm of its linearized Bach tensor divided by \(2\pi^2\). A
+non-round positive Einstein metric on \(S^4\) would lie in the band
+with \(E_+>\tfrac{16}3\pi^2\). The remaining global problem is to
+construct and control a deformation or a convergent sequence on the
+given smooth manifold.
 \end{abstract}
 
 \clearpage
@@ -234,6 +252,15 @@ Section~\ref{msgap:section} uses the resulting compactification to prove
 a gap in the closed critical energies. Section~\ref{msgauge:section}
 treats convergence on the original smooth manifold and the converse
 construction of shrinking marks from a supplied critical class.
+
+Section~\ref{msneck:section} studies the regions between concentration
+scales. Two choices of test variation make the first variation of the
+Weyl functional see the energy of a long neck. The deviation of the
+metric from a flat one gives an Euler relation, and a vector field
+gives the conserved current of diffeomorphism invariance. Both lead to
+energy bounds by the total Bach norm that do not depend on the length.
+The linearization at the flat cone explains the scales involved and
+isolates the nonlinear amplitude estimate that is still missing.
 
 \section{The Weyl energy measured by twistor sections}
 \label{sec:sections}
@@ -5142,6 +5169,1186 @@ Convergence of the invariants still gives a fixed smaller positive
 margin, for example \(\delta_0/2\). At \(E=8\pi^2\), convergence
 alone gives no positive margin.
 
+\section{Weyl energy on long necks}
+\label{msneck:section}
+
+The concentration results of Section~\ref{msale:section} and the
+compact-gauge theorem of Section~\ref{msgauge:section} leave one place
+where Weyl energy could escape from a sequence with small total Bach
+norm: a long region joining two concentration scales. This section
+bounds the Weyl energy of such a region by its total Bach norm, with
+constants that do not depend on its length, under hypotheses on the
+geometry of the region that are stated explicitly. For an open set
+\(U\) write
+\[
+ \mathcal W_U(g)=\int_U|W_g|^2\,dV_g,\qquad
+ \mathfrak B_U(g)=\int_U|B_g|_g\,dV_g ,
+\]
+where in this section \(|W|\) denotes the full four-index norm
+\(|W|_{\mathrm{tens}}\), so that \(\mathcal W_M(g)=8E_+(g)\) on a
+homotopy four-sphere. In the curvature convention in which the unit
+sphere has \(R_{ijkl}=g_{ik}g_{jl}-g_{il}g_{jk}\), the Bach tensor of
+\eqref{var:bach} is
+\begin{equation}\label{msneck:bach}
+ B_{ij}=\nabla^k\nabla^lW_{ikjl}+\tfrac12R^{kl}W_{ikjl}.
+\end{equation}
+
+Three structures of the functional \(\mathcal W\) organize the
+section. The Weyl tensor depends affinely on the second jet of the
+metric, so rescaling the deviation of a metric from a flat one rescales
+the principal part of its Weyl tensor. Testing the first variation
+with the deviation itself therefore gives an Euler relation, and from
+it the energy bound of Theorem~\ref{msneck:annulus} in a chart in which
+the metric is uniformly close to Euclidean. The functional is invariant
+under diffeomorphisms. The corresponding conserved current
+(Theorem~\ref{msneck:noether}) bounds the energy of a neck that carries
+an almost conformal Killing field, whatever its cross-section, and it
+shows that Bach-flat cones are conformally flat. Finally, the flat
+metric of \(\mathbb R^4\setminus0\) is invariant under dilations. Its
+linearized Bach equation has no homogeneous solution with curvature
+between the exponents \(-2\) and \(2\) (Theorem~\ref{msneck:liouville}),
+and the transverse traceless part of a perturbation is bounded by the
+\(L^1\) norm of its linearized Bach tensor divided by \(2\pi^2\)
+(Corollary~\ref{msneck:amplitude}). The last subsection explains how
+these statements fit together. Section~\ref{sec:outlook} describes
+what remains.
+
+\subsection{The first variation in divergence form}
+\label{msneck:divergence}
+
+\begin{lemma}[First variation in divergence form]
+\label{msneck:first-variation}
+Let \(g\) be a smooth Riemannian metric on an oriented four-manifold
+and \(h\) a smooth symmetric two-tensor. Then
+\begin{equation}\label{msneck:div-form}
+ \frac{d}{ds}\Big|_{s=0}\bigl(|W_{g+sh}|^2\,dV_{g+sh}\bigr)
+ =\bigl(-4\langle B_g,h\rangle_g+\operatorname{div}_g\mathfrak b(W;h)\bigr)
+  \,dV_g,
+\end{equation}
+where the vector field \(\mathfrak b(W;h)\) is
+\begin{equation}\label{msneck:boundary-form}
+ \mathfrak b(W;h)^m=4W^{imkl}\nabla_kh_{il}
+                   -4\bigl(\nabla_jW^{ijml}\bigr)h_{il}.
+\end{equation}
+It vanishes when \(h=fg\) for a function \(f\).
+\end{lemma}
+
+\begin{proof}
+In normal coordinates the second-order part of the curvature tensor is
+\(\tfrac12(\partial_j\partial_kg_{il}+\partial_i\partial_lg_{jk}
+-\partial_i\partial_kg_{jl}-\partial_j\partial_lg_{ik})\). Hence the
+derivative of the curvature tensor in the direction \(h\) is
+\[
+ \tfrac12\bigl(\nabla_j\nabla_kh_{il}+\nabla_i\nabla_lh_{jk}
+ -\nabla_i\nabla_kh_{jl}-\nabla_j\nabla_lh_{ik}\bigr)
+\]
+plus a term linear in \(h\) of order zero. For symmetric \(a,b\) write
+\[
+ (a\odot b)_{ijkl}=a_{ik}b_{jl}+a_{jl}b_{ik}-a_{il}b_{jk}-a_{jk}b_{il}.
+\]
+The Weyl tensor is \(\Rm-A\odot g\), with \(A\) the Schouten tensor.
+The derivative of \(A\odot g\) is \(\dot A\odot g+A\odot h\), where \(\dot A\) is the derivative of \(A\). The first
+term is orthogonal to \(W\), which is trace free, and the second has
+order zero. By the symmetries of \(W\) the four second-derivative
+terms have the same contraction with \(W\). The derivatives of the
+four inverse metrics and of the volume form also have order zero in
+\(h\). Therefore the left side of \eqref{msneck:div-form} equals
+\((4W^{ijkl}\nabla_j\nabla_kh_{il}+\mathcal Z(h))\,dV\), with
+\(\mathcal Z\) of order zero. Two integrations by parts give
+\[
+ 4W^{ijkl}\nabla_j\nabla_kh_{il}
+ =\nabla_j\bigl(4W^{ijkl}\nabla_kh_{il}\bigr)
+ -\nabla_k\bigl(4(\nabla_jW^{ijkl})h_{il}\bigr)
+ +4(\nabla_k\nabla_jW^{ijkl})h_{il},
+\]
+and the two divergences together are \(\operatorname{div}\mathfrak b(W;h)\).
+What remains is \(\langle Q,h\rangle\,dV\) for a symmetric tensor \(Q\)
+that is a universal expression in the jet of \(g\) at the point.
+Integrate against \(h\) of compact support. The divergence integrates
+to zero, and the first variation of the full Weyl functional has
+gradient \(-4B\) by Section~\ref{sec:variation}. Hence
+\(\int\langle Q+4B,h\rangle\,dV=0\) for all such \(h\), so \(Q=-4B\).
+The identity holds wherever the metric is defined, since every
+jet of a metric at a point occurs on a closed manifold. Finally
+\(\mathfrak b(W;fg)^m=4W^{imk}{}_i\nabla_kf-4f\nabla_jW^{ijm}{}_i=0\),
+because \(W\) is trace free.
+\end{proof}
+
+\begin{corollary}[Trace, divergence and slope]\label{msneck:slope}
+The Bach tensor is trace free and divergence free. For every open set
+\(U\),
+\begin{equation}\label{msneck:slope-formula}
+ 4\,\mathfrak B_U(g)=\sup\Bigl\{\,\frac{d}{ds}\Big|_{s=0}\mathcal W_U(g+sh):
+ \ h\in C^\infty_c(U),\ |h|_g\le1\Bigr\}.
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+For \(h=fg\) the left side of \eqref{msneck:div-form} vanishes,
+because \(|W|^2dV\) is conformally invariant, and
+\(\mathfrak b(W;fg)=0\). Hence \(f\tr_gB=0\). For a vector field \(X\)
+of compact support, naturality gives
+\(\frac d{ds}\mathcal W(g+sL_Xg)|_{s=0}=\int\operatorname{div}(|W|^2X)\,dV=0\).
+By \eqref{msneck:div-form} the same derivative is
+\(-4\int\langle B,L_Xg\rangle\,dV=8\int(\operatorname{div}B)(X)\,dV\).
+Hence \(\operatorname{div}B=0\). For \eqref{msneck:slope-formula},
+integration of \eqref{msneck:div-form} gives
+\(-4\int_U\langle B,h\rangle\,dV\le4\mathfrak B_U(g)\) when \(|h|\le1\).
+Conversely, let \(0\le\chi_n\le1\) be smooth with compact support in
+\(U\), increasing to the indicator function of \(U\). The tensors
+\(h_n=-\chi_nB/(|B|^2+n^{-2})^{1/2}\) give values increasing to
+\(4\mathfrak B_U(g)\).
+\end{proof}
+
+Thus the total Bach norm of \(U\) is the exact first-order rate at which
+the Weyl energy of \(U\) can be lowered by compactly supported changes
+of the metric of unit size in the supremum norm. The estimates of this
+section control the second-order part of that comparison on long
+regions.
+
+\begin{theorem}[A conserved current]\label{msneck:noether}
+For every smooth metric \(g\) and vector field \(X\) on an oriented
+four-manifold, the vector field
+\begin{equation}\label{msneck:current}
+ P_X=|W|^2X+8\,B(X,\cdot)^\sharp-\mathfrak b(W;L_Xg)
+\end{equation}
+is divergence free. If \(S\) is a closed embedded hypersurface with unit
+normal field \(\nu\) and \(X\) is defined near \(S\), then
+\begin{equation}\label{msneck:flux}
+ \int_S|W|^2g(X,\nu)\,dS
+ =-8\int_SB(X,\nu)\,dS
+  +\int_Sg\bigl(\mathfrak b(W;L_Xg),\nu\bigr)\,dS .
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+By naturality the derivative of \(|W|^2dV\) in the direction \(L_Xg\)
+is \(L_X(|W|^2dV)=\operatorname{div}(|W|^2X)\,dV\). By
+\eqref{msneck:div-form} it is also
+\((-4\langle B,L_Xg\rangle+\operatorname{div}\mathfrak b(W;L_Xg))\,dV\).
+Since \(B\) is symmetric and divergence free,
+\(\langle B,L_Xg\rangle=2\operatorname{div}(B(X,\cdot)^\sharp)\).
+This proves \(\operatorname{div}P_X=0\). The value of \(P_X\) at a point
+depends only on the two-jet of \(X\) there. Choose a collar
+\(S\times(-a,a)\) with \(S=S\times\{0\}\) and \(\nu\) pointing toward
+positive values, and a function \(\chi\) equal to one near
+\(S\times[0,a)\) and to zero near \(S\times\{-a/2\}\). Then
+\(P_{\chi X}\) is divergence free on the collar, equals \(P_X\) near
+\(S\), and vanishes near \(S\times\{-a/2\}\). The divergence theorem on
+\(S\times[-a/2,0]\) gives \(\int_Sg(P_X,\nu)\,dS=0\), which is
+\eqref{msneck:flux}.
+\end{proof}
+
+\begin{remark}\label{msneck:noether-remark}
+Identity \eqref{msneck:flux} is an instance of Noether's second
+theorem for the group of diffeomorphisms. It holds for every metric
+and every vector field, and it has no remainder on a second boundary
+component: the flux through each closed hypersurface vanishes
+separately. It constrains a metric once \(X\) is chosen so that the
+last term is small. For a conformal Killing field that term vanishes
+by Lemma~\ref{msneck:first-variation}, and
+\(\operatorname{div}(B(X,\cdot)^\sharp)=\tfrac12\langle B,L_Xg\rangle=0\)
+is the conservation of the Bach flux. That conservation is a case of
+the Pohozaev--Schoen identities for locally conserved trace-free
+tensors studied by Gover and \O rsted~\cite{GoverOrsted2010Universal}.
+Identity \eqref{msneck:flux} identifies the conserved Bach flux with
+the flux of Weyl energy.
+\end{remark}
+
+\subsection{The flat linearization}
+\label{msneck:flat}
+
+At the Euclidean metric \(\delta\) of an open set of \(\mathbb R^4\)
+write \(R'(h)\), \(\Ric'(h)\), \(A'(h)\), \(W'(h)\) and \(B'(h)\) for
+the derivatives at \(s=0\) of the curvature, Ricci, Schouten, Weyl and
+Bach tensors of \(\delta+sh\). All indices are Euclidean. Explicitly
+\[
+ R'_{ijkl}=\tfrac12\bigl(\partial_j\partial_kh_{il}+\partial_i\partial_lh_{jk}
+ -\partial_i\partial_kh_{jl}-\partial_j\partial_lh_{ik}\bigr),\qquad
+ W'=R'-A'\odot\delta,\qquad B'_{ij}=\partial_k\partial_lW'_{ikjl},
+\]
+since the last term of \eqref{msneck:bach} is quadratic. These are
+constant-coefficient operators and act on distributions. A symmetric
+tensor is \emph{transverse traceless} if it is divergence free and trace
+free.
+
+\begin{lemma}[The flat linearization]\label{msneck:flat-lemma}
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item The operators \(W'\) and \(B'\) vanish on \(L_Z\delta+f\delta\)
+for every vector field \(Z\) and function \(f\). The tensor \(B'(h)\) is
+transverse traceless, and \(B'(h)=\Delta A'-\nabla^2\tr A'\).
+\item For \(\xi\ne0\) put \(\hat\xi=\xi/|\xi|\) and split a complex
+symmetric matrix \(H\) as
+\begin{equation}\label{msneck:tt-split}
+ H=H^{\mathrm{TT}}+\hat\xi\otimes w+w\otimes\hat\xi
+   +\tfrac13\varphi\,(\delta-\hat\xi\otimes\hat\xi),\qquad
+ w=H\hat\xi-\tfrac12(\hat\xi\cdot H\hat\xi)\,\hat\xi,\quad
+ \varphi=\tr H-\hat\xi\cdot H\hat\xi .
+\end{equation}
+The three parts are orthogonal, \(H^{\mathrm{TT}}\hat\xi=0\) and
+\(\tr H^{\mathrm{TT}}=0\). For a tempered \(h\) with Fourier transform
+\(\hat h\) and \(\xi\ne0\),
+\begin{equation}\label{msneck:symbols}
+ \widehat{B'(h)}(\xi)=-\tfrac14|\xi|^4\,\hat h^{\mathrm{TT}}(\xi),\qquad
+ \bigl|\widehat{W'(h)}(\xi)\bigr|^2=\tfrac12|\xi|^4\,
+ \bigl|\hat h^{\mathrm{TT}}(\xi)\bigr|^2 .
+\end{equation}
+\item \(\Delta^2W'(h)=-4\,W'(B'(h))\).
+\item If \(h\) has compact support, then
+\(\int|W'(h)|^2\,dx=-2\int\langle B'(h),h\rangle\,dx\). If moreover
+\(h\) is transverse traceless, then
+\(\int|W'(h)|^2\,dx=\tfrac12\int|D^2h|^2\,dx\).
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) Since \(W_\delta=0\) and \(B_\delta=0\), naturality and the conformal
+weights \(W_{u^2g}=u^2W_g\) and \(B_{u^2g}=u^{-2}B_g\) give the vanishing
+on \(L_Z\delta\) and on \(f\delta\). Linearizing \(\tr_gB_g=0\) and
+\(\operatorname{div}_gB_g=0\) (Corollary~\ref{msneck:slope}) at \(\delta\),
+where \(B_\delta=0\), shows that \(B'(h)\) is transverse traceless.
+Contracting the linearized second Bianchi identity gives
+\(\partial_lR'_{ijkl}=\partial_j\Ric'_{ik}-\partial_i\Ric'_{jk}\). In
+dimension four \(\Ric'=2A'+(\tr A')\delta\), and the contracted Bianchi
+identity gives \(\partial_iA'_{ij}=\partial_j\tr A'\). Substituting
+these in \(W'=R'-A'\odot\delta\) gives
+\[
+ \partial_lW'_{ijkl}=\partial_jA'_{ik}-\partial_iA'_{jk}.
+\]
+A second divergence gives
+\(B'_{ij}=\partial_k\partial_lW'_{ikjl}=\Delta A'_{ij}-\partial_i\partial_j\tr A'\).
+
+(ii) The algebraic statements follow from
+\(w\cdot\hat\xi=\tfrac12\hat\xi\cdot H\hat\xi\) and
+\(\tr(\delta-\hat\xi\otimes\hat\xi)=3\). The middle part of
+\eqref{msneck:tt-split} is the symbol of a Lie derivative of \(\delta\).
+The last part is the sum of a multiple of \(\delta\) and of such a
+symbol. By (i) both symbols in \eqref{msneck:symbols} see only
+\(\hat h^{\mathrm{TT}}\). For a transverse traceless amplitude \(H\) the
+symbol of \(R'\) is \(\tfrac12(\xi\otimes\xi)\odot H\). Its Ricci
+contraction is \(\tfrac12|\xi|^2H\), and its scalar curvature vanishes.
+Thus the symbol of \(A'\) is \(\tfrac14|\xi|^2H\), and (i) gives
+\(-\tfrac14|\xi|^4H\) for \(B'\). For symmetric \(a,b\),
+\begin{equation}\label{msneck:kn-norm}
+ |a\odot b|^2=4|a|^2|b|^2+4\langle a,b\rangle^2-8\tr(a^2b^2),
+\end{equation}
+which equals \(4|\xi|^4|H|^2\) for \(a=\xi\otimes\xi\) and real
+transverse traceless \(b=H\). In dimension four
+\(|W|^2=|\Rm|^2-2|\Ric|^2+\tfrac13\Scal^2\) for an algebraic curvature
+tensor. Hence the symbol of \(W'\) has square norm
+\(|\xi|^4|H|^2-\tfrac12|\xi|^4|H|^2\). The map \(H\mapsto\widehat{W'}\)
+is real linear, so by polarization the identity extends to complex
+\(H\).
+
+(iii) By (ii) the symbol of \(W'\) at
+\(\widehat{B'(h)}=-\tfrac14|\xi|^4\hat h^{\mathrm{TT}}\) is \(-\tfrac14|\xi|^4\)
+times the symbol of \(W'\) at \(\hat h\). Both sides of (iii) have
+polynomial symbols, so the identity holds on distributions.
+
+(iv) Let \(F(s)=\mathcal W_{\mathbb R^4}(\delta+sh)\). Since \(W_\delta=0\),
+\(F(s)=s^2\int|W'(h)|^2dx+O(s^3)\). By Lemma~\ref{msneck:first-variation},
+\(F'(s)=-4\int\langle B_{\delta+sh},h\rangle_{\delta+sh}\,dV_{\delta+sh}\).
+Since \(B_\delta=0\), it follows that \(F''(0)=-4\int\langle B'(h),h\rangle dx\).
+For transverse traceless \(h\), (ii) gives \(B'(h)=-\tfrac14\Delta^2h\), and
+\(\int\langle\Delta^2h,h\rangle=\int|\Delta h|^2=\int|D^2h|^2\) for
+compact support.
+\end{proof}
+
+Part (iv) is the second variation of \(\mathcal W\) at the flat metric.
+It is also the linearization of the Euler relation that drives the
+next subsection.
+
+\subsection{Testing with the metric: one chart on a long annulus}
+\label{msneck:chart}
+
+Let \(g=\delta+v\) be a metric on an open set of \(\mathbb R^4\) with
+\(|v|\le\tfrac14\), where \(|v|\) is the Frobenius norm of the matrix
+\((v_{ij})\). Then \(\tfrac34\delta\le g\le\tfrac54\delta\). Norms of
+tensors taken with \(g\) or with \(\delta\), and the measures \(dV_g\) and
+\(dx\), are comparable with universal factors. Derivatives \(D\) and
+\(L^p\) norms are Euclidean. As in \eqref{msgauge:curvature-map}, write
+\begin{equation}\label{msneck:structure}
+ W_g=\mathfrak A(g)[D^2g]+\mathfrak Q(g)[Dg,Dg],
+\end{equation}
+with \(\mathfrak A(g)\) linear and \(\mathfrak Q(g)\) bilinear, both with
+coefficients that are rational in the components of \(g\) and smooth
+on \(\{|g-\delta|\le\tfrac14\}\). Let \(W'_g[h]\) denote the derivative of
+\(s\mapsto W_{g+sh}\) at \(s=0\), as a tensor with four lower indices,
+so that \(W'_\delta[h]=W'(h)\). In this subsection \(C\) denotes a
+universal constant.
+
+\begin{lemma}[Euler relation]\label{msneck:euler}
+For \(g=\delta+v\) as above, a symmetric tensor \(h\) and a function
+\(\chi\),
+\begin{align}
+ |W'_g[v]-W_g|&\le C\bigl(|v||D^2v|+|Dv|^2\bigr),\label{msneck:euler-defect}\\
+ |W_g-W'(v)|&\le C\bigl(|v||D^2v|+|Dv|^2\bigr),\label{msneck:flat-defect}\\
+ |W'_g[\chi h]-\chi W'_g[h]|&\le C\bigl(|D\chi||Dh|+|D^2\chi||h|
+   +|D\chi||h||Dv|\bigr).\label{msneck:commutator}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+Differentiating \eqref{msneck:structure} gives
+\[
+ W'_g[h]=\mathfrak A(g)[D^2h]+\mathfrak A'(g;h)[D^2g]
+ +2\mathfrak Q(g)[Dg,Dh]+\mathfrak Q'(g;h)[Dg,Dg],
+\]
+where the derivatives \(\mathfrak A'(g;h)\) and \(\mathfrak Q'(g;h)\) of
+the coefficients contain no derivative of \(h\) and are bounded by
+\(C|h|\). For \(h=v\) one has \(Dg=Dv\) and \(D^2g=D^2v\). The terms
+\(\mathfrak A(g)[D^2v]\) then cancel in \(W'_g[v]-W_g\), and the remaining
+terms are bounded as in \eqref{msneck:euler-defect}. Similarly,
+\(W_g-W'(v)=(\mathfrak A(g)-\mathfrak A(\delta))[D^2v]+\mathfrak Q(g)[Dv,Dv]\).
+For \eqref{msneck:commutator}, derivatives of \(\chi\) come only from
+\(D^2(\chi h)\) and \(D(\chi h)\).
+\end{proof}
+
+Inequality \eqref{msneck:euler-defect} is the reason the deviation \(v\)
+is the right test tensor. Let \(f(t)\) be the Weyl energy of
+\(\delta+tv\) on a fixed region. If \(W_{\delta+tv}\) were linear in \(t\),
+then \(f\) would be homogeneous of degree two, and Euler's relation would
+give \(f'(1)=2f(1)\). Inequality \eqref{msneck:euler-defect} measures the
+failure of this relation, and the first variation identifies \(f'(1)\)
+with a pairing against the Bach tensor.
+
+\paragraph{The annular cutoff.}
+Fix smooth functions \(\zeta_1,\zeta_2:[0,\infty)\to[0,1]\) with
+\(\zeta_1=0\) on \([0,\tfrac58]\), \(\zeta_1=1\) on \([\tfrac78,\infty)\),
+\(\zeta_2=1\) on \([0,\tfrac98]\) and \(\zeta_2=0\) on
+\([\tfrac{15}8,\infty)\). For \(r>0\) and \(R\ge2r\) put
+\[
+ A=\{r\le|x|\le R\},\qquad A^*=\{\tfrac r2<|x|<2R\},\qquad
+ \eta(x)=\zeta_1(|x|/r)\,\zeta_2(|x|/R).
+\]
+Then \(\eta=1\) on \(A\), and \(\eta\) has compact support in \(A^*\).
+On each of its two transition shells \(\eta\) is one fixed profile at one
+scale, and \(\int|D\eta|^4\) and \(\int|D^2\eta|^2\) are invariant under
+dilations. Hence
+\begin{equation}\label{msneck:ceta}
+ c_\eta=\|D\eta\|_{L^4}+\|D^2\eta\|_{L^2}
+\end{equation}
+is a universal number. This is the only point at which the length
+\(\log(R/r)\) could have entered.
+
+\begin{lemma}[Interpolation]\label{msneck:interpolation}
+Let \(\eta\) be a smooth function of compact support with \(c_\eta\) as in
+\eqref{msneck:ceta}, and let \(u\) be smooth near the support of \(\eta\)
+with values in a Euclidean space. Put \(X=\|\eta^2D^2u\|_{L^2}\) and
+\(Y=\|\eta\,Du\|_{L^4}\). Then
+\[
+ Y\le4c_\eta\|u\|_\infty+2\bigl(\|u\|_\infty X\bigr)^{1/2},\qquad
+ Y^2\le32c_\eta^2\|u\|_\infty^2+8\|u\|_\infty X .
+\]
+\end{lemma}
+
+\begin{proof}
+Integration by parts gives
+\(Y^4=\int\eta^4|Du|^2\,\partial_au\cdot\partial_au\,dx
+=-\int u\cdot\partial_a(\eta^4|Du|^2\partial_au)\,dx\). The derivative is
+bounded by \(4\eta^3|D\eta||Du|^3+4\eta^4|Du|^2|D^2u|\), since
+\(|\Delta u|\le2|D^2u|\) in four variables. Hölder's inequality gives
+\(Y^4\le\|u\|_\infty(4c_\eta Y^3+4Y^2X)\), so \(Y^2\le aY+b\) with
+\(a=4c_\eta\|u\|_\infty\) and \(b=4\|u\|_\infty X\). Hence
+\(Y\le a+\sqrt b\) and \(Y^2\le2a^2+2b\).
+\end{proof}
+
+\begin{theorem}[Weyl energy of a long annulus in one chart]
+\label{msneck:annulus}
+There are universal constants \(\varepsilon_0\in(0,\tfrac14]\) and \(C\)
+with the following property. Let \(g=\delta+v\) be a smooth metric on
+\(A^*\) with
+\[
+ \varepsilon=\sup_{A^*}|v|\le\varepsilon_0,\qquad K=\|D^2v\|_{L^2(A^*)}.
+\]
+Then
+\begin{equation}\label{msneck:annulus-bound}
+ \mathcal W_A(g)\le C\,\varepsilon\,\bigl[\mathfrak B_{A^*}(g)
+  +(K+\varepsilon)(1+\varepsilon K)\bigr],\qquad
+ \|\eta\,Dv\|_{L^4}^2\le C\varepsilon(K+\varepsilon).
+\end{equation}
+No hypothesis is made on \(\|Dv\|_{L^4}\), on the size of the Bach
+norm, or on the two end shells, and the constants do not depend on
+\(R/r\).
+\end{theorem}
+
+\begin{proof}
+Put \(E=\int\eta^4|W_g|^2dV_g\), \(X=\|\eta^2D^2v\|_{L^2}\le K\) and
+\(Y=\|\eta Dv\|_{L^4}\). The derivatives of the four inverse metrics and
+of the volume form contribute \(\mathcal N(h)=-\tfrac12(\tr_gh)|W|^2\) to
+the left side of \eqref{msneck:div-form}, by the identity
+\(W_{ijkl}W_a{}^{jkl}=\tfrac14|W|^2g_{ia}\) of dimension four. Integrate
+\eqref{msneck:div-form} with \(h=\eta^4v\). The divergence term integrates
+to zero, so
+\[
+ \int\bigl(2\langle W_g,W'_g[\eta^4v]\rangle_g+\mathcal N(\eta^4v)\bigr)\,dV_g
+ =-4\int\eta^4\langle B_g,v\rangle_g\,dV_g .
+\]
+By \eqref{msneck:commutator} and \eqref{msneck:euler-defect},
+\(W'_g[\eta^4v]=\eta^4W_g+\eta^4\mathcal R_2+\mathcal R_1\), where
+\[
+ |\mathcal R_2|\le C\bigl(|v||D^2v|+|Dv|^2\bigr),\qquad
+ |\mathcal R_1|\le C\bigl(\eta^3|D\eta||Dv|
+   +(\eta^3|D^2\eta|+\eta^2|D\eta|^2)|v|\bigr).
+\]
+Therefore
+\begin{equation}\label{msneck:euler-identity}
+ 2E=-4\int\eta^4\langle B_g,v\rangle_g\,dV_g
+   +\tfrac12\int\eta^4(\tr_gv)|W_g|^2dV_g
+   -2\int\langle W_g,\eta^4\mathcal R_2+\mathcal R_1\rangle_g\,dV_g .
+\end{equation}
+The Cauchy--Schwarz and Hölder inequalities bound the four terms by
+\(C\varepsilon\mathfrak B_{A^*}(g)\), \(C\varepsilon E\),
+\(CE^{1/2}(\varepsilon X+Y^2)\) and
+\(CE^{1/2}(c_\eta Y+\varepsilon(c_\eta+c_\eta^2))\); each term of
+\(\mathcal R_1\) carries the factor \(\eta^2\). For \(\varepsilon\le\varepsilon_0\)
+small the second term is absorbed, and Young's inequality gives
+\begin{equation}\label{msneck:annulus-T}
+ E\le C\varepsilon\,\mathfrak B_{A^*}(g)+CE^{1/2}T,\qquad
+ E\le C\varepsilon\,\mathfrak B_{A^*}(g)+CT^2,\qquad
+ T=\varepsilon X+Y^2+Y+\varepsilon .
+\end{equation}
+By Lemma~\ref{msneck:interpolation},
+\(Y^2\le C\varepsilon(X+\varepsilon)\) and
+\(Y\le C(\varepsilon+(\varepsilon X)^{1/2})\), so
+\(T^2\le C\varepsilon(X+\varepsilon)(1+\varepsilon X)\). Since \(\eta=1\) on \(A\)
+and \(X\le K\), this proves \eqref{msneck:annulus-bound}.
+\end{proof}
+
+In particular, if \(\varepsilon_i\to0\) while \(K_i\) and
+\(\mathfrak B_{A_i^*}(g_i)\) stay bounded on annuli of arbitrary length,
+the Weyl energy of \(A_i\) tends to zero. The bound \(K\) on the second
+derivatives can be removed in a gauge.
+
+\begin{corollary}[Transverse traceless charts]\label{msneck:tt-chart}
+Suppose in addition that \(v\) is transverse traceless on \(A^*\),
+\(\partial_iv_{ij}=0=v_{ii}\). After decreasing \(\varepsilon_0\),
+\[
+ \mathcal W_A(g)\le C\bigl(\varepsilon\,\mathfrak B_{A^*}(g)+\varepsilon^2\bigr),
+ \qquad
+ \|D^2v\|_{L^2(A)}^2\le C\bigl(\varepsilon\,\mathfrak B_{A^*}(g)+\varepsilon^2\bigr).
+\]
+\end{corollary}
+
+\begin{proof}
+For \(h\) of compact support, \eqref{msneck:symbols}, the bound
+\(|\xi|^2|\hat h-\hat h^{\mathrm{TT}}|\le C(|\xi||\hat h\,\xi|+|\xi|^2|\tr\hat h|)\)
+and Plancherel's theorem give
+\begin{equation}\label{msneck:korn}
+ \|D^2h\|_{L^2}\le\sqrt2\,\|W'(h)\|_{L^2}
+ +C\bigl(\|D\operatorname{div}h\|_{L^2}+\|D^2\tr h\|_{L^2}\bigr).
+\end{equation}
+Apply this to \(h=\eta^2v\). Then \(\tr h=0\) and
+\(\operatorname{div}h=2\eta\,v(D\eta,\cdot)\), so
+\(\|D\operatorname{div}h\|_{L^2}\le C(Y+\varepsilon)\), and
+\(X\le\|D^2h\|_{L^2}+C(Y+\varepsilon)\). By \eqref{msneck:commutator} at
+\(g=\delta\) and by \eqref{msneck:flat-defect},
+\(\|W'(h)\|_{L^2}\le CE^{1/2}+C(\varepsilon X+Y^2+Y+\varepsilon)\).
+Lemma~\ref{msneck:interpolation} and
+\((\varepsilon X)^{1/2}\le\theta X+\varepsilon/(4\theta)\) give
+\(X\le C(E^{1/2}+\varepsilon)\) for \(\varepsilon\) small; here \(X\) is finite
+because \(v\) is smooth near the support of \(\eta\). Inserting this into
+the first inequality of \eqref{msneck:annulus-T} gives
+\(E\le C\varepsilon\mathfrak B_{A^*}(g)+C\varepsilon E+C\varepsilon E^{1/2}
++C\varepsilon^{1/2}E^{3/4}\), and Young's inequality concludes.
+\end{proof}
+
+\begin{remark}[Sharpness]\label{msneck:sharpness}
+None of the terms in these bounds can be removed.
+\begin{enumerate}[label=(\alph*)]
+\item \emph{A plane wave.} Let \(r=1\), \(R=2\), let \(H\ne0\) be a
+symmetric trace-free matrix with \(He_1=0\), and put
+\(v=a\,k^{-2}\sin(kx_1)H\) with \(a>0\) fixed and \(k\to\infty\). Then
+\(v\) is transverse traceless, \(\varepsilon=a|H|k^{-2}\to0\), and \(K\)
+stays bounded. By Lemma~\ref{msneck:flat-lemma}(ii),
+\(|W'(v)|^2=\tfrac12a^2|H|^2\sin^2(kx_1)\) and
+\(B'(v)=-\tfrac14ak^2\sin(kx_1)H\). By \eqref{msneck:flat-defect}, the
+nonlinear corrections to \(W\) are \(O(\varepsilon a+a^2k^{-2})\). The
+Bach tensor is linear in \(D^4g\), and each of its other terms carries
+four derivatives in total, so the corrections to \(B\) are \(O(a^2)\).
+Hence \(\mathcal W_A(g)\to\tfrac14a^2|H|^2\Vol(A)\) and
+\(\varepsilon\,\mathfrak B_{A^*}(g)\to(2\pi)^{-1}a^2|H|^2\Vol(A^*)\). The
+energy stays comparable with \(\varepsilon\mathfrak B\) as
+\(\varepsilon\to0\) with \(K\) bounded.
+\item \emph{Cones.} If the components of \(v\) are homogeneous of degree
+zero, the dilations satisfy \(D_\lambda^*g=\lambda^2g\). Then \(|W|^2dV\),
+\(|B|\,dV\) and \(|D^2v|^2dx\) are dilation invariant. With
+\(L=\log(R/r)\), the quantities \(\mathcal W_A(g)\), \(\mathfrak B_{A^*}(g)\)
+and \(K^2\) are proportional to \(L\), \(L+\log4\) and \(L+\log4\). For the
+cones \(v=c\,s_H\) of Proposition~\ref{msneck:log}, the quotient
+\(\mathcal W_A(g)/(\varepsilon\mathfrak B_{A^*}(g))\) tends, as \(L\to\infty\)
+and then \(c\to0\), to a number in the interval
+\([\tfrac{10}9(\tfrac{27}{160})^{1/2}|H|/\|H\|_{\mathrm{op}},\,2]\), whose
+left end is at least \(0.45\). The product \(\varepsilon\mathfrak B\) is
+attained at every length.
+\item \emph{End modes.} Let \(\mathsf W\ne0\) be a constant tensor with the
+symmetries of a Weyl tensor, and put
+\(q_{ij}=-\tfrac13\mathsf W_{ikjl}x_kx_l\). The first Bianchi identity
+gives \(R'(q)=\mathsf W\), so \(W'(q)=\mathsf W\) and \(B'(q)=0\), and \(q\)
+is transverse traceless. For \(v=\lambda q\) on \(A^*\), \(\varepsilon\) is
+comparable with \(\lambda|\mathsf W|R^2\), the energy of \(A\) is comparable
+with \(\varepsilon^2\), and \(\mathfrak B_{A^*}(g)\le C\varepsilon^2\). The
+term \(\varepsilon^2\) in Corollary~\ref{msneck:tt-chart} cannot be
+removed. It comes from the outer end of the annulus.
+\end{enumerate}
+\end{remark}
+
+The same Euler relation, applied to the difference between two metrics,
+shows that a metric with small total Bach norm almost minimizes the Weyl
+energy among metrics that are uniformly close to it.
+
+\begin{proposition}[Almost minimality]\label{msneck:comparison}
+Let \(U\subset\mathbb R^4\) be open, let \(\eta\) be a smooth function
+with compact support in \(U\) and \(0\le\eta\le1\), and let \(g\) and
+\(\bar g\) be smooth metrics on \(U\) with \(|g-\delta|\le\tfrac14\) and
+\(|\bar g-\delta|\le\tfrac14\). Put \(k=g-\bar g\),
+\(\varepsilon=\sup_U|k|\) and
+\(M=\|D^2g\|_{L^2}+\|D^2\bar g\|_{L^2}+\|Dg\|_{L^4}+\|D\bar g\|_{L^4}\) on
+\(U\). Then
+\[
+ \int\eta^4|W_g|^2dV_g\le\int\eta^4|W_{\bar g}|^2dV_{\bar g}
+ +4\sup_U|k|_g\,\mathfrak B_U(g)+C(1+M)^4\varepsilon^{1/2},
+\]
+where \(C\) depends only on \(c_\eta\).
+\end{proposition}
+
+\begin{proof}
+Put \(g_s=\bar g+sk\) and \(F(s)=\int\eta^4|W_{g_s}|^2dV_{g_s}\) for
+\(0\le s\le1\). Then \(F(1)=F(0)+F'(1)-\int_0^1sF''(s)\,ds\). By
+\eqref{msneck:structure}, \(F(s)^{1/2}\le C(M+M^2)\).
+
+At \(s=1\), compare \(F'(1)\) with \eqref{msneck:div-form} for
+\(h=\eta^4k\) and use \eqref{msneck:commutator}:
+\[
+ F'(1)=-4\int\eta^4\langle B_g,k\rangle_g\,dV_g
+  -2\int\langle W_g,\mathcal R\rangle_g\,dV_g,\qquad
+ |\mathcal R|\le C\bigl(|D\eta^4||Dk|+|D^2\eta^4||k|+|D\eta^4||k||Dg|\bigr).
+\]
+The first term is at most \(4\sup|k|_g\,\mathfrak B_U(g)\). By
+Lemma~\ref{msneck:interpolation} applied to \(u=k\),
+\(\|\eta Dk\|_{L^4}^2\le C\varepsilon(M+\varepsilon)\), and the second term is
+at most \(C(1+M)^3\varepsilon^{1/2}\).
+
+Differentiating twice,
+\(F''(s)=\int\eta^4(2|W'_{g_s}[k]|^2+2\langle W_{g_s},W''_{g_s}[k,k]\rangle
++\mathcal S_s)\,dV_{g_s}\), where \(\mathcal S_s\) collects the derivatives
+of the inverse metrics and of the volume form and satisfies
+\(|\mathcal S_s|\le C(|k||W_{g_s}||W'_{g_s}[k]|+|k|^2|W_{g_s}|^2)\). The
+nonnegative first term absorbs the cross term of \(\mathcal S_s\). By
+\eqref{msneck:structure},
+\(|W''_{g_s}[k,k]|\le C(|k||D^2k|+|Dk|^2+|k||Dk||Dg_s|
++|k|^2(|D^2g_s|+|Dg_s|^2))\), and Lemma~\ref{msneck:interpolation} gives
+\(\|\eta^2W''_{g_s}[k,k]\|_{L^2}\le C\varepsilon(1+M)^2\). Hence
+\(F''(s)\ge-C\varepsilon^2F(s)-CF(s)^{1/2}\varepsilon(1+M)^2\ge-C\varepsilon(1+M)^4\).
+Together these estimates give the claim.
+\end{proof}
+
+\begin{remark}\label{msneck:comparison-remark}
+Corollary~\ref{msneck:slope} identifies the first-order part of this
+comparison, and the nonnegative term \(2|W'[k]|^2\) in the second
+variation is why only an error of order \(\varepsilon^{1/2}\) remains.
+Suppose \(g_i\to\bar g\) uniformly on \(U\), with \(M\) bounded and
+\(\sup|g_i-\bar g|\,\mathfrak B_U(g_i)\to0\). Lemma~\ref{msneck:interpolation}
+gives \(Dg_i\to D\bar g\) in \(L^4\) where \(\eta>0\), so
+\(\eta^2W_{g_i}\rightharpoonup\eta^2W_{\bar g}\) weakly in \(L^2\). The
+proposition and weak lower semicontinuity then give strong convergence.
+This is the local, quantitative form of the mechanism of
+Theorem~\ref{msgauge:compact}.
+\end{remark}
+
+\subsection{Testing with a vector field: cones and nearly conical necks}
+\label{msneck:conical}
+
+Theorem~\ref{msneck:noether} turns into estimates once \(X\) is chosen
+with \(L_Xg\) close to a multiple of \(g\). In the exact case it gives
+rigidity.
+
+\begin{corollary}[Conformal Killing fields]\label{msneck:ck}
+If \(L_Xg=fg\) near a closed hypersurface \(S\) with unit normal \(\nu\),
+then
+\[
+ \int_S|W|^2g(X,\nu)\,dS=-8\int_SB(X,\nu)\,dS .
+\]
+If moreover \(B=0\) near \(S\) and \(g(X,\nu)>0\) on \(S\), then \(W=0\)
+near \(S\).
+\end{corollary}
+
+\begin{proof}
+The last term of \eqref{msneck:flux} vanishes because \(\mathfrak b(W;fg)=0\).
+If \(B=0\), the left side vanishes and has a positive weight, so \(W=0\)
+on \(S\). The flow of \(X\) carries \(S\) to nearby closed hypersurfaces
+with the same properties, and these fill a neighborhood of \(S\).
+\end{proof}
+
+\begin{theorem}[Cones]\label{msneck:cones}
+Let \((N,g)\) be a Riemannian four-manifold with a complete vector field
+\(X\) such that \(L_Xg=2g\), and let \(S\subset N\) be a closed
+hypersurface such that \((p,t)\mapsto\phi_t(p)\) is a diffeomorphism
+\(S\times\mathbb R\to N\), where \(\phi_t\) is the flow of \(X\). Let
+\(\tau\) be the function with \(\tau(\phi_t(p))=t\), put
+\(S_t=\phi_t(S)\), and choose the normal so that \(g(X,\nu)>0\).
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item The fluxes \(e=\int_{S_t}|W|^2g(X,\nu)\,dS\) and
+\(b=\int_{S_t}B(X,\nu)\,dS\) do not depend on \(t\), \(e=-8b\), and
+\(\mathcal W_{\{t_0\le\tau\le t_1\}}(g)=(t_1-t_0)\,e\).
+\item If \(g\) is Bach flat, it is locally conformally flat.
+\item Let \(g=d\rho^2+\rho^2\gamma\) be the metric cone over a closed
+Riemannian three-manifold \((\Sigma,\gamma)\), with \(X=\rho\partial_\rho\).
+Then \(e=2\int_\Sigma|\Ric_0^\gamma|^2dV_\gamma\), and for \(0<\rho_0<\rho_1\)
+\[
+ \mathcal W_{\{\rho_0\le\rho\le\rho_1\}}(g)\le4\sqrt3\;
+ \mathfrak B_{\{\rho_0\le\rho\le\rho_1\}}(g).
+\]
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) The flow consists of homotheties, and \(|W|^2dV\) is invariant under
+constant rescaling of the metric, so \(\operatorname{div}(|W|^2X)=0\).
+Also \(\operatorname{div}(B(X,\cdot)^\sharp)=\tfrac12\langle B,L_Xg\rangle
+=\tr B=0\). Since \(S_{t_0}\) and \(S_{t_1}\) bound a slab, both fluxes are
+constant, and Corollary~\ref{msneck:ck} gives \(e=-8b\). Since \(X(\tau)=1\),
+\(dV=d\tau\wedge\iota_XdV\), and \(\iota_XdV\) restricts to \(g(X,\nu)\,dS\)
+on \(S_t\). Integration over the slab gives the energy.
+
+(ii) Apply Corollary~\ref{msneck:ck} to each \(S_t\).
+
+(iii) With \(t=\log\rho\) the cone is \(\rho^2(dt^2+\gamma)\), and
+\(|W|^2dV\) is conformally invariant. For the product \(dt^2+\gamma\) the
+field \(\partial_t\) is parallel. The components \(W_{tktl}\) form the
+symmetric tensor \(E=-\tfrac12\Ric_0^\gamma\), the components with exactly
+one index \(t\) vanish, and since the spatial part is a three-dimensional
+algebraic curvature tensor with Ricci contraction \(-E\), it equals
+\(-E\odot\gamma\). By \eqref{msneck:kn-norm} its square norm is
+\(4|E|^2\), so \(|W|^2=8|E|^2=2|\Ric_0^\gamma|^2\). This gives \(e\). For
+the inequality, \(X\) is normal to the level sets of \(\rho\), with
+\(g(X,\nu)\,dS=\rho^4dV_\gamma\) on them, so
+\(e=-8\int_\Sigma\rho^4B(\partial_\rho,\partial_\rho)\,dV_\gamma\) and
+\(\mathfrak B_{\{\rho_0\le\rho\le\rho_1\}}(g)=\log(\rho_1/\rho_0)
+\int_\Sigma\rho^4|B|\,dV_\gamma\), the integrands being dilation invariant.
+A trace-free symmetric bilinear form in dimension four satisfies
+\(|B(\nu,\nu)|\le\tfrac{\sqrt3}2|B|\): if \(\lambda\) is an eigenvalue of
+largest modulus, the other three eigenvalues sum to \(-\lambda\), so
+\(|B|^2\ge\tfrac43\lambda^2\). Part (i) concludes.
+\end{proof}
+
+Products of a line with a closed three-manifold are conformal to cones,
+and for them every term of \eqref{msneck:flux} can be written down.
+
+\begin{corollary}[Products]\label{msneck:products}
+Let \(g=dt^2+\gamma\) on \(\mathbb R\times\Sigma\) with \(\Sigma\) closed.
+Then
+\[
+ |W|^2=2|\Ric_0^\gamma|^2,\qquad
+ B(\partial_t,\partial_t)=-\tfrac14|\Ric_0^\gamma|^2-\tfrac1{12}\Delta_\gamma R^\gamma,
+\]
+so \(\int_\Sigma|W|^2dV_\gamma=-8\int_\Sigma B(\partial_t,\partial_t)\,dV_\gamma\).
+The product is Bach flat if and only if \(\gamma\) has constant sectional
+curvature, and then it is locally conformally flat.
+\end{corollary}
+
+\begin{proof}
+The first identity was shown in the proof of
+Theorem~\ref{msneck:cones}(iii). Since \(\partial_t\) is parallel,
+\eqref{msneck:bach} gives
+\(B(\partial_t,\partial_t)=\operatorname{div}_\gamma\operatorname{div}_\gamma E
++\tfrac12\langle\Ric^\gamma,E\rangle\). In dimension three
+\(\operatorname{div}_\gamma\Ric_0^\gamma=\tfrac16dR^\gamma\), which gives the
+second identity. The integrated identity follows. A Bach-flat product
+therefore has \(\Ric_0^\gamma=0\), that is, constant sectional curvature
+in dimension three, and then \(W=0\) by the first identity.
+\end{proof}
+
+For metrics that are not exactly conical, integrate the conserved
+current against a function of a neck coordinate.
+
+\begin{proposition}[Integrated flux identity]\label{msneck:integrated}
+Let \(X\) be a vector field and \(F\) a function on an open set \(U\)
+such that \(dF\) has compact support in \(U\), and let
+\(k=L_Xg-fg\) for some function \(f\). Then
+\[
+ \int_UX(F)\,|W|^2dV=-8\int_UB(\nabla F,X)\,dV
+ +4\int_UW^{ijkl}\bigl(\nabla_j\nabla_kF\,k_{il}+\nabla_jF\,\nabla_kk_{il}
+ +\nabla_kF\,\nabla_jk_{il}\bigr)\,dV .
+\]
+\end{proposition}
+
+\begin{proof}
+Choose a compact domain \(\Omega\subset U\) with smooth boundary whose
+interior contains the support of \(dF\). Then \(F\) is constant on each
+component of \(\partial\Omega\), and Theorem~\ref{msneck:noether} gives
+\(\int_\Omega g(\nabla F,P_X)\,dV=\int_{\partial\Omega}F\,g(P_X,\nu)\,dS=0\).
+Expanding \(P_X\), and integrating the second term of
+\eqref{msneck:boundary-form} by parts, gives the identity with
+\(h=L_Xg\) in place of \(k\). Replacing \(h\) by \(h-fg\) changes nothing,
+because every term then contains a trace of \(W\).
+\end{proof}
+
+\begin{corollary}[Energy of a nearly conical neck]\label{msneck:neck}
+Let \(\tau\) be a function and \(X\) a vector field on \(U\) with
+\(X(\tau)=1\). Let \(0\le\varphi\le1\) be a smooth function of one
+variable such that \(\varphi\circ\tau\) has compact support
+\(U_\varphi\subset U\), and let \(k=L_Xg-fg\) for any function \(f\). Then
+\[
+ \int\varphi(\tau)\,|W|^2dV\le8\Lambda\,\mathfrak B_{U_\varphi}(g)
+ +4\,\|W\|_{L^2(U_\varphi)}\,\mathfrak d,
+\]
+where
+\[
+ \Lambda=\sup_{U_\varphi}|X||\nabla\tau|,\qquad
+ \mathfrak d=\bigl\|\bigl(|\varphi'(\tau)||\nabla\tau|^2+\varphi(\tau)|\nabla^2\tau|\bigr)|k|\bigr\|_{L^2}
+ +2\bigl\|\varphi(\tau)\,|\nabla\tau|\,|\nabla k|\bigr\|_{L^2}.
+\]
+\end{corollary}
+
+\begin{proof}
+Apply Proposition~\ref{msneck:integrated} to \(F=\Phi\circ\tau\) with
+\(\Phi'=\varphi\). Then \(X(F)=\varphi(\tau)\), \(\nabla F=\varphi(\tau)\nabla\tau\)
+and \(\nabla^2F=\varphi'(\tau)\,d\tau\otimes d\tau+\varphi(\tau)\nabla^2\tau\).
+The Cauchy--Schwarz inequality gives the bound.
+\end{proof}
+
+\begin{remark}\label{msneck:neck-remark}
+The natural choice is \(f=\tfrac12\operatorname{div}X\), for which \(k\) is
+the trace-free part of \(L_Xg\), the defect of \(X\) from a conformal
+Killing field. In a chart \(g=\delta+v\) on \(A^*\) with \(|v|\le\tfrac14\),
+take \(X=x^k\partial_k\), \(\tau=\log|x|\), and \(\varphi\) equal to one on
+\([\log r,\log R]\) with fixed profiles at the two ends. Then
+\(L_Xg=2g+\dot g\) with \(\dot g_{ij}=x^k\partial_kv_{ij}\), so \(k=\dot g\)
+is admissible, \(\Lambda\le(5/3)^{1/2}\), and
+\[
+ \mathcal W_A(g)\le8\sqrt{5/3}\;\mathfrak B_{A^*}(g)+C\,\|W\|_{L^2(A^*)}
+ \Bigl(\|\rho^{-2}\dot g\|_{L^2}+\|\rho^{-1}D\dot g\|_{L^2}
+ +\|\rho^{-1}|Dv||\dot g|\|_{L^2}\Bigr),
+\]
+with norms on \(A^*\) and \(\rho=|x|\). The three norms are dilation
+invariant and vanish exactly when the components of \(g\) are homogeneous
+of degree zero. The amplitude of \(v\) does not enter, the Bach norm has
+no small factor, and the length does not enter. Since the statement of
+Corollary~\ref{msneck:neck} is intrinsic, it applies to necks with any
+cross-section, including quotients of the three-sphere, which
+Theorem~\ref{msneck:annulus} does not cover. For nearly flat cones it is
+weaker than Theorem~\ref{msneck:annulus}: on the cones
+\(\delta+c\,s_H\) of Proposition~\ref{msneck:log} the Bach flux is of
+order \(c^2\), because its part linear in \(c\) has mean zero over the
+sphere, while the bound uses \(\mathfrak B\), which is of order \(c\).
+\end{remark}
+
+\subsection{The linearized Bach equation at the flat cone}
+\label{msneck:linear}
+
+Theorem~\ref{msneck:cones}(ii) is a rigidity statement for exactly
+conical metrics. Its linearization at the flat cone
+\(\mathbb R^4\setminus0\) is stronger: no field that is homogeneous up to
+logarithms, with exponent in the open strip between \(-2\) and \(2\), solves
+the linearized Bach equation unless its linearized Weyl tensor vanishes.
+Moreover, the transverse traceless part of a perturbation is bounded by
+the \(L^1\) norm of its linearized Bach tensor. Throughout, \(\rho=|x|\),
+\(\nu=x/\rho\), \(d\sigma\) is the measure of the unit sphere \(S^3\), of
+total mass \(2\pi^2\), and for a constant symmetric trace-free matrix \(H\)
+\[
+ H_{\nu\nu}=H(\nu,\nu),\qquad s_H=\tfrac12(\nu\otimes H\nu+H\nu\otimes\nu).
+\]
+The spherical means used below are those of \(\nu_i\nu_j\) and
+\(\nu_i\nu_j\nu_k\nu_l\), namely \(\tfrac14\delta_{ij}\) and
+\(\tfrac1{24}(\delta_{ij}\delta_{kl}+\delta_{ik}\delta_{jl}+\delta_{il}\delta_{jk})\).
+In particular \(|H\nu|^2\) and \(H_{\nu\nu}^2\) have means \(\tfrac14|H|^2\)
+and \(\tfrac1{12}|H|^2\), and \(H_{\nu\nu}\nu\otimes\nu\) has mean \(\tfrac1{12}H\).
+
+\begin{proposition}[Cones as logarithmic fields]\label{msneck:log}
+Let \(H\ne0\) be a constant symmetric trace-free matrix.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item \(H\log\rho+s_H=L_Z\delta\) with \(Z=\tfrac12(\log\rho)Hx\). Hence
+\(W'(s_H)=-W'(H\log\rho)\) and \(B'(s_H)=-B'(H\log\rho)\). To first order in
+\(c\), the cone \(\delta+c\,s_H\) is the field \(-cH\log\rho\) written in
+another chart.
+\item \(B'(H\log\rho)=\rho^{-4}b_H\), where
+\[
+ b_H=-\tfrac43H+\tfrac83s_H-\tfrac83H_{\nu\nu}\delta+8H_{\nu\nu}\,\nu\otimes\nu .
+\]
+Moreover \(b_H\nu=\tfrac{20}3H_{\nu\nu}\nu\),
+\(\int_{S^3}b_H\,d\sigma=0\) and
+\(\int_{S^3}b_H\,\nu\otimes\nu\,d\sigma=\tfrac{10\pi^2}9H\).
+\item \(\rho^4|W'(H\log\rho)|^2=2|H|^2-4|H\nu|^2+\tfrac43H_{\nu\nu}^2\),
+hence \(\int_{S^3}\rho^4|W'(H\log\rho)|^2d\sigma=\tfrac{20\pi^2}9|H|^2\).
+Moreover \(\int_{S^3}|b_H|^2d\sigma=\tfrac{320\pi^2}{27}|H|^2\), and
+\[
+ \frac{10\pi^2}9\,\frac{|H|^2}{\|H\|_{\mathrm{op}}}\le\int_{S^3}|b_H|\,d\sigma
+ \le2\pi^2\Bigl(\frac{160}{27}\Bigr)^{1/2}|H| .
+\]
+\item The field
+\(h_H^{\mathrm{TT}}=\tfrac59H\log\rho-\tfrac7{18}s_H-\tfrac1{18}H_{\nu\nu}\,\nu\otimes\nu
++\tfrac19H_{\nu\nu}\delta\) is transverse traceless and equals
+\(H\log\rho+L_Y\delta+f\delta\) with
+\(Y=-\tfrac29(\log\rho)Hx+\tfrac1{72}H_{\nu\nu}x\) and
+\(f=\tfrac1{12}H_{\nu\nu}\).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) \(\partial_iZ_j=\tfrac12\rho^{-2}x_i(Hx)_j+\tfrac12(\log\rho)H_{ij}\);
+symmetrize. The rest follows from Lemma~\ref{msneck:flat-lemma}(i).
+
+(ii) From \(\partial_a\partial_b\log\rho=\rho^{-2}(\delta_{ab}-2\nu_a\nu_b)\),
+\[
+ R'(H\log\rho)=\rho^{-2}(\nu\otimes\nu)\odot H-\tfrac12\rho^{-2}\,\delta\odot H .
+\]
+The Ricci contraction of \(a\odot b\) is \((\tr a)b+(\tr b)a-ab-ba\), so
+\(\Ric'=-2\rho^{-2}s_H\), the scalar curvature is
+\(-2\rho^{-2}H_{\nu\nu}\), and
+\[
+ A'=-\rho^{-2}s_H+\tfrac16\rho^{-2}H_{\nu\nu}\delta,\qquad
+ \tr A'=-\tfrac13\rho^{-2}H_{\nu\nu}.
+\]
+For a homogeneous polynomial \(p\) of degree \(m\) on \(\mathbb R^4\),
+\(\Delta(p\rho^{\alpha})=\rho^{\alpha}\Delta p+\alpha(2m+\alpha+2)\rho^{\alpha-2}p\).
+Applied to \(\rho^{-2}s_H=\tfrac12(x\otimes Hx+Hx\otimes x)\rho^{-4}\) and to
+\(\rho^{-2}H_{\nu\nu}=H(x,x)\rho^{-4}\), with \(m=2\), \(\alpha=-4\),
+\(\Delta(x\otimes Hx+Hx\otimes x)=4H\) and \(\Delta H(x,x)=0\), this gives
+\[
+ \Delta A'=\rho^{-4}\bigl(-2H+8s_H-\tfrac43H_{\nu\nu}\delta\bigr),\qquad
+ -\nabla^2\tr A'=\rho^{-4}\bigl(\tfrac23H-\tfrac{16}3s_H-\tfrac43H_{\nu\nu}\delta
+ +8H_{\nu\nu}\nu\otimes\nu\bigr),
+\]
+the second by direct differentiation of \(\tfrac13H(x,x)\rho^{-4}\). Their
+sum is \(\rho^{-4}b_H\) by Lemma~\ref{msneck:flat-lemma}(i). The identity
+for \(b_H\nu\) uses \(s_H\nu=\tfrac12(H\nu+H_{\nu\nu}\nu)\), and the two means
+follow from the spherical means listed above.
+
+(iii) The tensor \(\delta\odot H\) has no Weyl part, so
+\(W'(H\log\rho)=\rho^{-2}\,\mathrm{Weyl}\bigl((\nu\otimes\nu)\odot H\bigr)\). By
+\eqref{msneck:kn-norm},
+\(|(\nu\otimes\nu)\odot H|^2=4|H|^2+4H_{\nu\nu}^2-8|H\nu|^2\); its Ricci
+contraction is \(H-2s_H\), with square norm
+\(|H|^2-2|H\nu|^2+2H_{\nu\nu}^2\), and its scalar curvature is
+\(-2H_{\nu\nu}\). The identity
+\(|W|^2=|\Rm|^2-2|\Ric|^2+\tfrac13\Scal^2\) gives the density, and the
+spherical means give its integral. Expanding \(|b_H|^2\) with
+\(\langle H,s_H\rangle=|H\nu|^2\), \(|s_H|^2=\tfrac12(|H\nu|^2+H_{\nu\nu}^2)\),
+\(\tr s_H=H_{\nu\nu}\) and \(\langle s_H,\nu\otimes\nu\rangle=H_{\nu\nu}\)
+gives
+\[
+ |b_H|^2=\tfrac{16}9|H|^2-\tfrac{32}9|H\nu|^2+\tfrac{544}9H_{\nu\nu}^2,
+\]
+whose mean is \(\tfrac{160}{27}|H|^2\). The upper bound for
+\(\int|b_H|\) is the Cauchy--Schwarz inequality. For the lower bound,
+\(\langle b_H,s_H\rangle=b_H(\nu,H\nu)=\tfrac{20}3H_{\nu\nu}^2\) has integral
+\(\tfrac{10\pi^2}9|H|^2\), while
+\(|s_H|\le|H\nu|\le\|H\|_{\mathrm{op}}\).
+
+(iv) One has \(L_{(\log\rho)Hx}\delta=2H\log\rho+2s_H\) and
+\(L_{H_{\nu\nu}x}\delta=4s_H-4H_{\nu\nu}\nu\otimes\nu+2H_{\nu\nu}\delta\),
+which gives the stated relation. The trace of \(h_H^{\mathrm{TT}}\) is
+\((-\tfrac7{18}-\tfrac1{18}+\tfrac49)H_{\nu\nu}=0\). Its divergence follows
+from
+\[
+ \begin{aligned}
+ \operatorname{div}(H\log\rho)&=\rho^{-1}H\nu,&\qquad
+ \operatorname{div}s_H&=\rho^{-1}(2H\nu-H_{\nu\nu}\nu),\\
+ \operatorname{div}(H_{\nu\nu}\nu\otimes\nu)&=3\rho^{-1}H_{\nu\nu}\nu,&\qquad
+ \operatorname{div}(H_{\nu\nu}\delta)&=2\rho^{-1}(H\nu-H_{\nu\nu}\nu),
+ \end{aligned}
+\]
+and the coefficients of \(H\nu\) and of \(H_{\nu\nu}\nu\) cancel.
+\end{proof}
+
+The cones \(\delta+c\,s_H\) are uniformly close to \(\delta\): their
+deviation is \(c\sup|s_H|=c\|H\|_{\mathrm{op}}\), whatever the length. In
+the gauge of Lemma~\ref{msneck:flat-lemma}(ii) the same perturbation
+carries the logarithm \(-\tfrac59cH\log\rho\). The transverse traceless
+gauge is therefore a poor gauge on long conical regions, and
+Theorem~\ref{msneck:annulus}, which assumes no gauge, should be applied
+in the cone's own chart. By (iii) the energy and the Bach norm of the
+cone per unit of \(\log\rho\) are \(\tfrac{20\pi^2}9c^2|H|^2+O(c^3)\) and
+\(c\int|b_H|\,d\sigma+O(c^2)\); this is the computation behind
+Remark~\ref{msneck:sharpness}(b).
+
+\begin{theorem}[No slowly varying solutions]\label{msneck:liouville}
+Let \(h=\rho^\mu\sum_{m=0}^N(\log\rho)^mh_m(\nu)\), with \(h_m\) smooth on
+\(S^3\) with values in symmetric matrices and \(-2<\operatorname{Re}\mu<2\).
+If \(B'(h)=0\) on \(\mathbb R^4\setminus0\), then \(W'(h)=0\) on
+\(\mathbb R^4\setminus0\).
+\end{theorem}
+
+\begin{proof}
+Since \(\operatorname{Re}\mu>-4\), \(h\) is locally integrable and
+tempered on \(\mathbb R^4\). The distribution \(T=B'(h)\) on \(\mathbb R^4\)
+is supported at the origin, so \(T=\sum_{|\alpha|\le M}c_\alpha\partial^\alpha\delta_0\)
+with constant symmetric matrices \(c_\alpha\). For \(\lambda>0\),
+\(h(\lambda x)=\lambda^\mu\sum_j(\log\lambda)^jh^{(j)}(x)\) with fields
+\(h^{(j)}\) of the same form and \(h^{(0)}=h\). The identity
+\(B'(h)=0\) away from the origin holds for every \(\lambda\), so each
+\(B'(h^{(j)})\) is also supported at the origin. Since \(B'\) is
+homogeneous of order four and \(\partial^\alpha\delta_0\) is homogeneous of
+degree \(-4-|\alpha|\),
+\[
+ \sum_\alpha c_\alpha\lambda^{-|\alpha|}\partial^\alpha\delta_0
+ =\lambda^\mu\sum_j(\log\lambda)^j\,B'(h^{(j)})\qquad(\lambda>0).
+\]
+The functions \(\lambda^{-k}\) and \(\lambda^\mu(\log\lambda)^j\) are linearly
+independent unless \(\mu=-k\) and \(j=0\). Hence \(T=0\) unless \(\mu\) is a
+nonpositive integer, and then only the terms with \(|\alpha|=-\mu\) remain.
+In the strip this leaves \(\mu=0\) and \(\mu=-1\). Now \(T\) is divergence
+free by Lemma~\ref{msneck:flat-lemma}(i). For \(\mu=0\), \(T=S\delta_0\)
+and \(S_{ij}\partial_i\delta_0=0\) gives \(S=0\). For \(\mu=-1\),
+\(T=S^a\partial_a\delta_0\), and \(S^a_{ij}\partial_i\partial_a\delta_0=0\) gives
+\(S^a_{ij}=-S^i_{aj}\). A tensor that is symmetric in one pair of indices
+and antisymmetric in an overlapping pair vanishes, so \(S=0\). Thus
+\(B'(h)=0\) on \(\mathbb R^4\), and Lemma~\ref{msneck:flat-lemma}(iii) gives
+\(\Delta^2W'(h)=0\). The tempered distribution \(W'(h)\) is therefore a
+polynomial. Away from the origin it is a smooth function bounded by
+\(C\rho^{\operatorname{Re}\mu-2}(1+|\log\rho|)^N\), which tends to zero at
+infinity. Hence the polynomial is zero.
+\end{proof}
+
+The same argument on the boundary lines of the strip leaves only the
+exponents \(\mu=\pm2\). Both occur, and an inversion exchanges them.
+
+\begin{proposition}[The exponents \(\pm2\)]\label{msneck:pm2}
+Let \(\mathsf W\ne0\) be a constant tensor with the symmetries of a Weyl
+tensor, \(q_{ij}=-\tfrac13\mathsf W_{ikjl}x_kx_l\) and
+\(p_{ij}=\mathsf W_{ikjl}x_kx_l\rho^{-4}\). Both fields are transverse
+traceless, \(W'(q)=\mathsf W\) and \(B'(q)=0\). With \(P=\delta-2\nu\otimes\nu\),
+\[
+ W'(p)=-3\rho^{-4}P^*\mathsf W\ne0,\qquad
+ B'(p)=-\pi^2\,\mathsf W_{ikjl}\,\partial_k\partial_l\delta_0
+\]
+on \(\mathbb R^4\setminus0\) and as distributions on \(\mathbb R^4\),
+respectively. In particular \(B'(p)=0\) away from the origin.
+\end{proposition}
+
+\begin{proof}
+The statements about \(q\) are Remark~\ref{msneck:sharpness}(c); the
+divergence and the trace of \(q\) vanish because \(\mathsf W\) is
+antisymmetric in its first two indices and trace free. Let \(\iota(x)=x/\rho^2\).
+Then \(D\iota=\rho^{-2}P\), \(\iota^*\delta=\rho^{-4}\delta\), and
+\(\iota^*q=-\tfrac13\rho^{-4}p\), because \(P\) fixes \(\mathsf W(x,\cdot,x,\cdot)\).
+Hence \(\iota^*(\delta+sq)=\rho^{-4}(\delta-\tfrac s3p)\). Naturality and the
+conformal weight of the covariant Weyl tensor give
+\(\iota^*W_{\delta+sq}=\rho^{-4}W_{\delta-sp/3}\). Differentiating at \(s=0\),
+\(\iota^*\mathsf W=-\tfrac13\rho^{-4}W'(p)\), while
+\(\iota^*\mathsf W=\rho^{-8}P^*\mathsf W\) since \(D\iota=\rho^{-2}P\). The
+tensor \(P^*\mathsf W\) is nonzero because \(P\) is invertible. The same
+argument for \(B\), of conformal weight \(-2\), gives \(B'(p)=0\) away
+from the origin. For the distributional identity, note that
+\(p=-\tfrac12\mathsf W_{ikjl}\partial_k\partial_l\log\rho\) as distributions,
+since \(\partial_l\log\rho\) is homogeneous of degree \(-1\) and its
+derivatives have no part at the origin. Hence \(p\) is transverse
+traceless as a distribution, and
+\(B'(p)=-\tfrac14\Delta^2p=\tfrac18\mathsf W_{ikjl}\partial_k\partial_l\Delta^2\log\rho\).
+Finally \(\Delta\log\rho=2\rho^{-2}\) and \(\Delta\rho^{-2}=-4\pi^2\delta_0\), so
+\(\Delta^2\log\rho=-8\pi^2\delta_0\).
+\end{proof}
+
+At \(\mu=2\) the energy density \(\rho^4|W'|^2\) grows like \(\rho^4\), and at
+\(\mu=-2\) it decays like \(\rho^{-4}\). Neither can be present in the middle
+of a long annulus without being forced from an end. The last statement
+of the proposition says that \(-\pi^{-2}p\) is a fundamental solution of
+the operator \(B'\) for the multipole source \(\mathsf W\partial\partial\delta_0\).
+The fundamental solution of \(\Delta^2\) on \(\mathbb R^4\) is
+\(-(8\pi^2)^{-1}\log\rho\). In the transverse traceless gauge
+\(B'=-\tfrac14\Delta^2\), so the general solution of
+\(B'(h)=\beta\) is governed by convolution of \(\beta\) with
+\((2\pi^2)^{-1}\log\rho\). This kernel is unbounded, but for divergence-free
+sources it can be replaced by a bounded one.
+
+\begin{theorem}[A bounded kernel for divergence-free sources]
+\label{msneck:potential}
+Let \(\beta\) be a smooth symmetric tensor field of compact support on
+\(\mathbb R^4\) with \(\partial_i\beta_{ij}=0\). For every \(x\),
+\[
+ \frac1{2\pi^2}\int\log|x-y|\,\beta_{ij}(y)\,dy
+ =-\frac1{2\pi^2}\int\beta_{ik}(y)\,\hat w_k\hat w_j\,dy,\qquad
+ \hat w=\frac{y-x}{|y-x|}.
+\]
+In particular the left side is bounded in norm by
+\((2\pi^2)^{-1}\|\beta\|_{L^1}\).
+\end{theorem}
+
+\begin{proof}
+Fix \(x\) and \(j\), and let \(\psi(y)=(y-x)_j\log|y-x|\). Then
+\(\partial_k\psi=\delta_{jk}\log|y-x|+\hat w_j\hat w_k\), and \(\psi\) and its
+gradient are locally integrable. Since \(\beta\) is divergence free,
+\(\int\beta_{ik}\partial_k\psi\,dy=0\), which is the identity. The bound
+follows from \(|(\beta\hat w)\otimes\hat w|\le|\beta|\).
+\end{proof}
+
+\begin{corollary}[Amplitude and energy]\label{msneck:amplitude}
+Let \(h\) be a smooth symmetric tensor field of compact support on
+\(\mathbb R^4\), and let \(h^{\mathrm{TT}}\) be its transverse traceless part,
+defined by \eqref{msneck:tt-split}. Then
+\(h^{\mathrm{TT}}=(2\pi^2)^{-1}\log|\cdot|*B'(h)\), and
+\begin{equation}\label{msneck:amplitude-bounds}
+ \|h^{\mathrm{TT}}\|_{L^\infty}\le\frac1{2\pi^2}\,\|B'(h)\|_{L^1},\qquad
+ \int|W'(h)|^2dx\le\frac1{\pi^2}\,\|B'(h)\|_{L^1}^2,
+\end{equation}
+and each chiral part satisfies
+\(\int|W'(h)^\pm|_{\HS}^2\,dx\le(8\pi^2)^{-1}\|B'(h)\|_{L^1}^2\).
+\end{corollary}
+
+\begin{proof}
+Let \(\beta=B'(h)\), which is transverse traceless by
+Lemma~\ref{msneck:flat-lemma}(i), and \(u=(2\pi^2)^{-1}\log|\cdot|*\beta\). Since
+\(\Delta^2\log\rho=-8\pi^2\delta_0\), \(\Delta^2u=-4\beta\); by
+\eqref{msneck:symbols} also \(\Delta^2h^{\mathrm{TT}}=-4\beta\). Hence
+\(u-h^{\mathrm{TT}}\) is a tempered biharmonic field, that is, a polynomial.
+The field \(h^{\mathrm{TT}}\) tends to zero at infinity because its Fourier
+transform is integrable. So does \(u\): by Theorem~\ref{msneck:potential},
+\(\hat w\to-x/|x|\) uniformly on the support of \(\beta\), and
+\(\int\beta\,dy=0\) because \(\beta\) is a divergence. Hence
+\(u=h^{\mathrm{TT}}\), and Theorem~\ref{msneck:potential} gives the first
+inequality. The splitting \eqref{msneck:tt-split} is orthogonal and
+\(\hat\beta\) is transverse traceless at each \(\xi\), so
+\(\int\langle\beta,h\rangle=\int\langle\beta,h^{\mathrm{TT}}\rangle\).
+Lemma~\ref{msneck:flat-lemma}(iv) then gives
+\(\int|W'(h)|^2=-2\int\langle\beta,h^{\mathrm{TT}}\rangle\le2\|\beta\|_{L^1}
+\|h^{\mathrm{TT}}\|_{L^\infty}\). Finally
+\(\int(|W^+|_{\HS}^2-|W^-|_{\HS}^2)\,dV\) is unchanged by compactly supported
+changes of the flat metric, because its integrand is a multiple of the
+first Pontryagin form. Its second variation at \(\delta\) shows that the
+two chiral parts of \(W'(h)\) have equal energy, each one eighth of
+\(\int|W'(h)|^2\).
+\end{proof}
+
+\begin{corollary}[Second order at the round sphere]\label{msneck:round}
+Let \(g\) be the round metric on \(S^4\) and \(h\) a smooth symmetric
+tensor field. Then
+\[
+ \int_{S^4}|W'_g[h]|^2dV_g\le\frac1{\pi^2}
+ \Bigl(\int_{S^4}|B'_g[h]|_g\,dV_g\Bigr)^2 .
+\]
+Consequently, along every ray \(g+sh\) with \(W'_g[h]\ne0\),
+\[
+ \liminf_{s\to0}\frac{\mathfrak B(g+sh)^2}{E_+(g+sh)}\ge8\pi^2 .
+\]
+\end{corollary}
+
+\begin{proof}
+Since \(W_g=0\) and \(B_g=0\), the linearizations do not change when
+\(L_Xg\) is subtracted from \(h\). Fix \(p\in S^4\) and normal coordinates
+at \(p\). Let \(X\) be a vector field with \(X(p)=0\), \(\partial_iX_j(p)=\tfrac12h_{ij}(p)\) and
+\(\partial_i\partial_kX_j(p)=\tfrac12(t_{kij}+t_{ikj}-t_{jik})\), where
+\(t_{kij}=\partial_kh_{ij}(p)\). Then \(L_Xg\) agrees with \(h\) to first order at \(p\), and we replace \(h\) by \(h-L_Xg\). Then
+\(|h|\le Cd^2\) and \(|Dh|\le Cd\) at distance \(d\) from \(p\). Let
+\(\chi_\theta\) be a cutoff equal to one on the ball of radius \(\theta/2\)
+about \(p\) and supported in the ball of radius \(\theta\), with
+\(|D^a\chi_\theta|\le C\theta^{-a}\), and put \(h_\theta=(1-\chi_\theta)h\). The
+terms of \(B'_g[h_\theta]-(1-\chi_\theta)B'_g[h]\) carry \(a\ge1\) derivatives
+of \(\chi_\theta\) and \(b\le4-a\) derivatives of \(h\). On a ball of volume
+\(C\theta^4\) they are at most \(C\theta^{4-a+\max(2-b,0)}\le C\theta^2\) in
+\(L^1\). The corresponding terms for \(W'_g\) are bounded pointwise. Hence
+both sides for \(h_\theta\) converge to those for \(h\). In stereographic
+coordinates from \(p\) write \(g=u^2\delta\) and \(h_\theta=u^2\tilde h\), with
+\(\tilde h\) smooth and of compact support. The conformal weights of \(W\)
+and \(B\) give \(W'_g[u^2\tilde h]=u^2W'(\tilde h)\) and
+\(B'_g[u^2\tilde h]=u^{-2}B'(\tilde h)\). Both integrals are unchanged, and
+Corollary~\ref{msneck:amplitude} applies to \(\tilde h\). For the ray,
+\(E_+(g+sh)=s^2\int|W'_g[h]^+|_{\HS}^2+O(s^3)\), and the two chiral parts
+of the second variation are equal because \(E_+-E_-=12\pi^2\tau(S^4)=0\) for
+every metric. Also \(\mathfrak B(g+sh)=s\,\|B'_g[h]\|_{L^1}+O(s^2)\).
+\end{proof}
+
+\begin{remark}[Sharpness and context]\label{msneck:linear-remark}
+For the source \(\beta=c\rho^{-4}b_H\) on a long annulus, the right side of
+Theorem~\ref{msneck:potential} changes by
+\(-(2\pi^2)^{-1}c\int b_H\nu\otimes\nu\,d\sigma=-\tfrac59cH\) per unit of
+\(\log\rho\) between the point and the outer end. This is the coefficient
+of Proposition~\ref{msneck:log}(iv). The bound changes by
+\((2\pi^2)^{-1}c\int|b_H|\,d\sigma\le(160/27)^{1/2}c|H|\) per unit, so the
+amplitude bound is attained along cones up to a factor less than five.
+It cannot be improved to a bound by the Bach norm of a bounded part of
+the neck. The identity of Theorem~\ref{msneck:potential} is the mechanism
+of the estimates of Bourgain and Brezis and of Van Schaftingen for
+divergence-free \(L^1\) fields~\cite{BourgainBrezis2004NewEstimates,
+VanSchaftingen2004L1Vector,VanSchaftingen2013Canceling}. The resulting
+bound is of the type of the \(L^\infty\) estimate of Bousquet and Van
+Schaftingen for elliptic canceling operators of order equal to the
+dimension~\cite[Theorem 3]{BousquetVanSchaftingen2014Hardy}. That theorem
+is not used here, since \(B'\) is not elliptic on all symmetric tensors;
+the symbol of \(B'\) has image the transverse traceless matrices at
+\(\xi\), and these intersect in zero over \(\xi\ne0\). At the endpoint of
+the Lorentz scale, Theorem 1.1 of Hernandez and
+Spector~\cite{HernandezSpector2024Fractional}, applied to the
+divergence-free columns of \(B'(h)\), gives
+\(\|D^2h^{\mathrm{TT}}\|_{L^{2,1}}\le C\|B'(h)\|_{L^1}\), using the boundedness
+of Riesz transforms on \(L^{2,1}\).
+\end{remark}
+
+\subsection{How the estimates fit together}
+\label{msneck:synthesis}
+
+At the flat metric, identity \eqref{msneck:euler-identity} linearizes to
+Lemma~\ref{msneck:flat-lemma}(iv): the Weyl energy is twice the pairing of
+the Bach tensor with the deviation. Corollary~\ref{msneck:amplitude}
+closes the linear identity by bounding the deviation through the same
+Bach norm. The energy is then at most \(\pi^{-2}\) times the square of
+the Bach norm, with no hypothesis on the amplitude and no dependence on
+the length. In the nonlinear setting, Theorem~\ref{msneck:annulus} and
+Corollary~\ref{msneck:tt-chart} carry out the first half of this
+argument. The second half is missing. We record the reduction.
+
+\begin{corollary}[A conditional neck inequality]\label{msneck:conditional}
+In Corollary~\ref{msneck:tt-chart}, suppose that
+\(\sup_{A^*}|v|\le\kappa\,(\mathfrak B_{A^*}(g)+\zeta)\le\varepsilon_0\) for
+numbers \(\kappa,\zeta\ge0\). Then
+\[
+ \mathcal W_A(g)\le C\kappa(1+\kappa)\bigl(\mathfrak B_{A^*}(g)+\zeta\bigr)^2 .
+\]
+\end{corollary}
+
+\begin{proof}
+Insert the hypothesis into the bound of Corollary~\ref{msneck:tt-chart}.
+\end{proof}
+
+For linearized fields of compact support the hypothesis holds with
+\(\kappa=(2\pi^2)^{-1}\) and \(\zeta=0\) by Corollary~\ref{msneck:amplitude}.
+For a long neck of a sequence with \(\mathfrak B\to0\), a nonlinear version,
+with \(\zeta\) measured by data on the two end shells, would force the
+energy of the neck to be controlled by its ends. The obstructions to
+such a version are described in Section~\ref{sec:outlook}.
+Corollary~\ref{msneck:neck} gives an independent route when the neck
+carries a nearly conformal Killing field.
+
+The last result of this section concerns the global question that
+motivates the neck estimates. It identifies a class of metrics that any
+positive lower bound for the Bach ratio in the band would have to
+exclude.
+
+\begin{proposition}[Einstein metrics in the band]\label{msneck:einstein}
+Let \(g\) be a positive Einstein metric on the standard \(S^4\) that is
+not round. Then \(g\) is Bach flat, \(Y([g])>0\), and
+\[
+ \tfrac{16}3\pi^2<E_+(g)<8\pi^2 .
+\]
+In particular Proposition~\ref{msgauge:reverse} applies to \(g\), with any
+\(0<\delta_0<8\pi^2-E_+(g)\).
+\end{proposition}
+
+\begin{proof}
+An Einstein metric is Bach flat by \eqref{msneck:bach}, since
+\(\nabla^lW_{ikjl}\) is a multiple of the Cotton tensor, which vanishes,
+and \(R^{kl}W_{ikjl}\) is a multiple of \(\tr W=0\). By Obata's
+theorem~\cite{Obata1962Sphere} a constant scalar curvature metric
+conformal to a non-round Einstein metric is a constant multiple of it,
+so the normalized Einstein metric is the unit-volume Yamabe metric of its
+class, and \(Y([g])>0\). Identity \eqref{var:wall} with \(\Ric_0=0\) gives
+\(Y^2=48(8\pi^2-E_+)\). Gursky's gap theorem, in the form quoted by
+Akutagawa, Endo and Seshadri~\cite[Theorem
+1.1]{AkutagawaEndoSeshadri2019Gap}, \cite{Gursky2000EinsteinConstants},
+says that a positive Einstein metric on \(S^4\) with
+\(Y\ge Y(S^4)/\sqrt3\) is round. Hence \(Y^2<128\pi^2\) and
+\(E_+>8\pi^2-\tfrac83\pi^2=\tfrac{16}3\pi^2\). Finally \(Y>0\) gives
+\(E_+<8\pi^2\).
+\end{proof}
+
+Thus a positive lower bound for \(\mathfrak B/E_+\) on the band
+\(4\pi^2\le E_+\le8\pi^2-\delta\), valid for every \(\delta>0\) on the
+standard sphere, would imply that the round metric is the only positive
+Einstein metric on \(S^4\). That uniqueness is a long-standing open
+question~\cite{GurskyMalchiodi2025Mass}. Such a metric would also belong
+to the set \(\mathcal A\) of Theorem~\ref{msgap:minimum}, with energy
+above \(\tfrac{16}3\pi^2\).
+
 \section{Outstanding challenges}\label{sec:outlook}
 
 \paragraph{Continuing a radial contraction.}
@@ -5177,21 +6384,100 @@ the displayed ratio would remove the strain obstruction in
 solving the radial equation would still require an inverse estimate
 on that particular direction.
 
+Proposition~\ref{msneck:einstein} calibrates this question. A non-round
+positive Einstein metric on \(S^4\) would be a closed Bach-flat class
+with \(\tfrac{16}3\pi^2<E_+<8\pi^2\). A lower bound for the ratio on the
+whole band would therefore contain the uniqueness of the positive
+Einstein metric on the four-sphere. Two formulations avoid that
+problem. One restricts the band to energies below \(\tfrac{16}3\pi^2\),
+where no Einstein class can lie, although Bach-flat classes that contain
+no Einstein metric are not excluded there. The other replaces the lower
+bound by an energy identity for sequences with \(\mathfrak B\to0\), which
+would place the energy of such a sequence on closed critical classes,
+on smooth bubbles and on necks, and which the gap theorems of
+Section~\ref{msgap:section} then constrain. Near the round metric the
+ratio is controlled to second order: by Corollary~\ref{msneck:round},
+\(\mathfrak B^2\ge8\pi^2E_+(1+o(1))\) along every ray with nonzero
+linearized Weyl tensor. Whether an inequality \(E_+\le C\mathfrak B^2\)
+holds on a neighborhood of the round class, in a topology weak enough
+to be useful for compactness, is a \L{}ojasiewicz-type question for
+\(\mathcal W\), with the \(L^1\) norm of its gradient. The \(L^1\) norm is
+too weak for the standard elliptic argument.
+
+\paragraph{From the linear to the nonlinear neck estimate.}
+Section~\ref{msneck:section} settles the length-independent annular
+test left open by the concentration analysis of
+Sections~\ref{msale:section}--\ref{msgauge:section}, in two complementary
+forms. In one chart uniformly close to Euclidean, the energy of a long
+annulus is at most a multiple of the deviation times the total Bach
+norm (Theorem~\ref{msneck:annulus}). A neck with a nearly conformal
+Killing field has energy at most a multiple of its Bach norm plus a
+term in the Killing defect (Corollary~\ref{msneck:neck}). For linearized
+fields the deviation itself is bounded by the Bach norm
+(Corollary~\ref{msneck:amplitude}), so the energy is at most
+\(\pi^{-2}\mathfrak B^2\). The corresponding nonlinear amplitude estimate,
+\[
+ \sup_{A^*}|v|\le C\bigl(\mathfrak B_{A^*}(g)+\zeta\bigr)
+\]
+in a transverse traceless chart, with \(\zeta\) measured on the end
+shells, would give the neck inequality of
+Corollary~\ref{msneck:conditional}. It fails to follow from the linear
+proof for two reasons. First, \(B_g-B'(v)\) contains the quasilinear
+terms \(v\ast D^4v\) and \(Dv\ast D^3v\), whose \(L^1\) norms are not
+controlled by the energy. Integrating them by parts onto the kernel of
+Theorem~\ref{msneck:potential} leaves
+\(\int(|v||D^2v|+|Dv|^2)\,|x-y|^{-2}dy\), which is bounded by the
+deviation times the Lorentz \(L^{2,1}\) norm of \(D^2v\), not by its
+\(L^2\) norm. Second, \(B_g\) is divergence free for \(g\) and not for
+\(\delta\): its flat divergence has the form \(Dv\ast B_g\), and the
+logarithmic potential of an \(L^1\) field that is not divergence free is
+unbounded. Two tools address these points. The covariant conservation
+laws \(\operatorname{div}_g(B(X,\cdot)^\sharp)=\tfrac12\langle B,L_Xg\rangle\)
+for the fifteen conformal Killing fields \(X\) of the flat model restore
+the cancellation up to terms of size \(|L_Xg-\tfrac12(\operatorname{div}X)g|\,|B|\).
+The Lorentz endpoint of Remark~\ref{msneck:linear-remark} places
+\(D^2h^{\mathrm{TT}}\) in \(L^{2,1}\), a space that embeds in the continuous
+functions and controls the products \(v\ast D^2v\). A fixed-point
+argument in that space, with the cancellation built in, is the natural
+next attempt.
+
+\paragraph{From dyadic control to one chart.}
+None of the neck estimates produces its hypothesis. Small \(L^2\)
+curvature on each dyadic annulus \(A_j\) gives at best a chart on \(A_j\)
+whose deviation is comparable to the energy \(e_j\) of a neighborhood of
+\(A_j\). Composing the transition maps bounds the accumulated deviation by
+\(\sum_je_j\), while the energy controls only \(\sum_je_j^2\). The
+\(\ell^1\) sum is the dyadic form of the Lorentz norm \(L^{2,1}\) of the
+curvature. Proposition~\ref{msneck:log} shows what an accumulated
+deviation can look like: a logarithmic drift \(cH\log\rho\) is a cone in
+another chart, and its energy and its Bach norm are both proportional
+to the length. The danger is a deviation that drifts without being
+conical. At the linear level Theorem~\ref{msneck:liouville} excludes it:
+an unforced solution has no exponent with \(|\operatorname{Re}\mu|<2\), so its
+energy should decay like \(e^{-4d}\) at logarithmic distance \(d\) from the
+ends of a long annulus. Proving that decay requires completeness of the
+homogeneous solutions modulo the kernel of \(W'\), which is not proved
+here. A three-annulus inequality for almost Bach-flat metrics, with
+forcing measured by the \(L^1\) Bach norm, would convert the decay into
+the chart of Theorem~\ref{msneck:annulus}. Necks whose cross-section is a
+quotient of the three-sphere are covered by Corollary~\ref{msneck:neck}
+only if they carry a nearly conformal Killing field, and producing that
+field is the same problem in another form.
+
 \paragraph{Energy between concentration scales.}
 A supplied nonflat smooth ALE component with full embedded core leaves
 a uniformly positive Weyl energy outside that component. The closed
 critical gap prevents a smooth Bach-flat homotopy-sphere base from
-carrying the remainder if it is the only other term of an energy identity.
-For an approximately critical sequence the estimates leave open both
-the extraction of a smooth component and the location of any residual
-energy. A concrete test is a long annulus on which the total Bach norm
-tends to zero. In a common conformal coordinate gauge, can one test
-the Weyl first variation against the cut-off difference between the
-metric and its Euclidean model and control the two boundary terms
-independently of the annulus length? A geometric application also
-requires estimates that furnish the common gauge across scales.
-Orbifold intermediate regions require their own boundary and energy
-analysis.
+carrying the remainder if it is the only other term of an energy
+identity. For an approximately critical sequence the estimates leave
+open both the extraction of a smooth component and the location of any
+residual energy. The neck estimates of Section~\ref{msneck:section} show
+that a neck cannot carry it if the neck admits either a chart uniformly
+close to Euclidean with bounded second-derivative energy, or a nearly
+conformal Killing field, and if its total Bach norm tends to zero. They
+reduce the location of the residual energy to the two problems above.
+Orbifold intermediate regions also require their own boundary and
+energy analysis.
 
 \paragraph{Recognizing the original manifold.}
 The metric constructed at the end of a continuation, or recovered in
