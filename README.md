@@ -13,9 +13,10 @@ The [master manuscript and research program](papers/master/README.md) study fixe
 | `investigations-1` | [01 — Chiral metric evolution](papers/investigations-1/01_chiral_metric_evolution/README.md) | Direct smooth Poincaré study |
 | `investigations-1` | [02 — Bach flow](papers/investigations-1/02_bach_flow/README.md) | Direct study through the evolution of chiral Weyl curvature |
 | `investigations-1` | [03 — First-order twistor constructions](papers/investigations-1/03_first_order_twistor/README.md) | Shared foundations for separate sections/connections and Dirac/twistor-spinor sub-investigations |
-| `investigations-1` | [04 — Hypersurface immersions](papers/investigations-1/04_hypersurface_immersions/README.md) | Immersed handle constructions and two-middle-handle height recognition |
+| `investigations-1` | [04 — Hypersurface immersions](papers/investigations-1/04_hypersurface_immersions/README.md) | Immersed handle constructions, two-middle-handle recognition and a bounded folded-height test |
 | `investigations-1` | [05 — Collar deformation and surgery](papers/investigations-1/05_collar_deformation_and_surgery/README.md) | Deform a marked spherical collar and use it to isolate handle interactions or compare metrics on the original smooth sphere. |
-| `investigations-1` | [06 — Bour's flow and fixed-type attainment](papers/investigations-1/06_bour_flow_and_fixed_type_attainment/README.md) | Test whether a positive subcritical type carries a smooth Bach-flat minimizer. |
+| `investigations-1` | [06 — Bour's flow and fixed-type attainment](papers/investigations-1/06_bour_flow_and_fixed_type_attainment/README.md) | Working proof of smooth Bach-flat attainment on each strictly entered type, with specialist checks outstanding. |
+| `investigations-1` | [07 — Positive subcritical entry](papers/investigations-1/07_positive_subcritical_entry/README.md) | Construct the first positive subcritical class on a marked smooth type and return its coverage to the master. |
 | Master | [Fixed-type variational descent](papers/master/01_fixed_type_variational_descent/README.md) | Intrinsic competitors, closed minimizers and round restarts |
 | `initial-investigations` | [01 — Generalized isothermal coordinates](papers/initial-investigations/01_generalized_isothermal_coordinates/README.md) | Earlier coordinate and reconstruction study |
 | `initial-investigations` | [02 — Chiral descent and double copy](papers/initial-investigations/02_chiral_descent_and_double_copy/README.md) | Earlier descent and double-copy study |

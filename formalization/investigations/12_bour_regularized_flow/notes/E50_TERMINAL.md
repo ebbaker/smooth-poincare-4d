@@ -1,0 +1,16 @@
+# FOT-E50 · Vanishing dissipation on terminal backward windows
+
+26 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance. Bounded Route 12c calculation. Actual serving model and effort were unavailable. Input checkout 46b5bbb4d34014588eb5fa1891c005077782e77f and the E50 original-gradient module in the working checkout. The claim applies to a smooth original solution on a closed oriented four-manifold, with the ordinary covariant two-tensor norm and physical volume. [Original gradient](../../../SmoothPoincare/Variational/BourOriginalGradient.lean) · [Scientific first extraction](../../../../papers/investigations-1/06_bour_flow_and_fixed_type_attainment/manuscript/fixed_type_attainment.tex) · [Bour, §3.1](https://arxiv.org/html/1012.0342v1#S3)
+
+Write \(g_t\) for the original metric and \(G_t\) for its computed covariant gradient at fixed \(0<\alpha<1\). Assume the metric family is smooth on a time domain \(D\) with order-connected regular time set, the Euler integral is constant throughout those regular times, and \(\partial_t g=-2G\) there. For any two regular times \(a\le b\), the entire closed slab belongs to the regular set. The physical first variation gives
+\[
+ \int_a^b \|G_t\|_{L^2(g_t)}^2\,dt
+ =\frac{\mathcal F^\alpha(g_a)-\mathcal F^\alpha(g_b)}{2}.
+\]
+The energy is nonnegative because its Weyl and trace-free Ricci squares have nonnegative weights. Hence the energy decreases to its infimum along the order filter on the subtype of regular times. This treats a finite terminal time, where the cutoff is approached within the interval, and infinite terminal time in one statement. The proof also applies to the endpoint parameters \(0,1\) whenever the stated smooth solution exists. [Regular slab identity](../../../SmoothPoincare/Variational/BourOriginalGradient.lean#L219)
+
+If \(a_i\le b_i\) are both cofinal in this same subtype of regular times, their energies have that common limit, and the original slab dissipation tends to zero. Given a fixed backward window \([A,0]\), \(A\le0\), and \(c_i>0\), take actual regular times \(a_i=A/c_i^2+b_i\). On the window, use the metric \(c_i g_{s/c_i^2+b_i}\) and the transported covariant gradient \(c_i^{-1}G_{s/c_i^2+b_i}\). The squared speed factor after taking the physical norm and volume is \(c_i^{-2}\) and the time Jacobian is \(c_i^2\). The rescaled integral therefore equals the vanishing original slab integral. Under the native speed equation the transported field is negative one-half of the actual rescaled metric speed. [Physical parabolic scaling](../../../SmoothPoincare/Variational/BourFlowDissipation.lean#L94)
+
+The Lean statements use the original metric family, its computed gradient and Euler input. They quantify over any filter of comparison indices, with explicit regularity and cofinality of the original times. To apply them at first curvature hits, one still supplies the solution, the admissible backward windows and their cofinal endpoints. The vanishing integral is the input for identifying stationarity after smooth pointed extraction. [Lean proof](../../../SmoothPoincare/Variational/BourTerminalDissipation.lean)
+
+The targeted Lake build passed. Axiom inspection of the three public declarations reports propext, Classical.choice and Quot.sound.

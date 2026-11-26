@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | SP4-IMM-HDL-B01 | Assessed for quadratic marked faces | Both solid tori and their rank-four immersion germs occur in the three-patch construction. |
 | SP4-IMM-HDL-E01 | Completed for this reference family | [Relative degree and construction](../notes/E53_RETAINED_EXTERIOR.md). |
-| SP4-IMM-HDL-B02 | Prescribed extension and Robin trace criterion assessed | A PSC extension of the exact eta-zero boundary metric exists. Find a positive Robin trace form on one such extension and measure the half energies after obtaining a totally geodesic filling. [Boundary proof](../manuscript/boundary_class.tex) · [Reader](../reviews/E70_BOUNDARY_CLASS.md) |
+| SP4-IMM-HDL-B02 | Prescribed PSC extension established, standalone Robin sign open | The exact eta-zero boundary metric extends with positive scalar curvature. A swap-invariant positive class on the Mazur double has $e\ge8\pi^2$, ruling out the joint positive reflected strict half-budget trial. A nonumbilic trial requires a new matched seam and whole budget. [Original boundary proof](../manuscript/boundary_class.tex) · [Obstruction and scope](../../../../master/reviews/DIRECT_ENTRY_AND_REDUCIBLE_CUT_PRIORITIES_20261126.md#a-change-to-the-master-entry-problem) |
 | SP4-IMM-HDL-E02 | Completed for the specified example | [Independent cost, degree and sign check](../reviews/E53_RELATIVE_CHECK.md). |
 | SP4-IMM-HDL-B03 | Reserved | Use the assessed first local model or scoped failure to select one extension. |
 

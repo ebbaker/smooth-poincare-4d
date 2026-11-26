@@ -2,6 +2,19 @@
 
 25 November 2026, prepared for Edward B. Baker III with OpenAI Codex assistance. Baseline 2689540e6dae, [source map](../research-overview/OVERVIEW.md). [Status and dependencies](../research-progress/REGISTER.md).
 
+## Folded heights
+
+For this bounded parent pilot the source baseline is `46b5bbb4d340`. The [fold conventions and thresholds](../research-overview/OVERVIEW.md#a-height-on-a-folded-map-to-four-space), [direct-entry review](../../../master/reviews/DIRECT_ENTRY_AND_REDUCIBLE_CUT_PRIORITIES_20261126.md#which-other-proposals-merit-a-test) and [formal existence theorem](../../../../references/SOURCE_NOTES_DIRECT_ENTRY_20261126.md) give the inputs.
+
+| Task | Prerequisite and reason for route | Finite output and next decision |
+| --- | --- | --- |
+| SP4-IMM-B03 · B, Astra/ultra | First selection on activation. A realized fold with controlled shape or exploitable marked height requires a choice of source, seam and construction. | Select one family beyond the round and product controls. Verify the twisted tangent data, exhibit the two physical halves with a common fold germ on the same $M$, then specify either an estimate for $J_{\rm fold}$ or a direction with new marked data. If only a formal map or independently chosen halves are available, record the missing realization or estimate. |
+| SP4-IMM-E03 · E, Sol 6.2/ultra | Dependent on B03 fixing a global example, fold parametrization and a specific estimate or height. | Recompute multiplicities, normal orientations and Morse indices. Check $J_{\rm fold}<2\pi^2$ for recognition or $J_{\rm fold}<3\pi^2$ for a height with at most two middle handles. Alternatively verify an explicit new marked regular direction and trace its framed levels. Return any two-middle-handle presentation to [04/02](../02_two_handle_recognition/research-plan/PLAN.md). A threshold failure concerns the supplied fold. Escalate changed geometry to B03. |
+
+Keep the pilot in 04 until a specified global construction on a family beyond the controls yields a quantitative bound or a new usable marked height. At that point consider a dedicated child for fold construction and retain two-handle recognition in 04/02. This source has no four-dimensional induced metric at the crease. An intrinsic entry claim still requires a smooth closed metric on the stated type.
+
+## Smooth hypersurface immersion tasks
+
 The parent decides which conclusion follows from the two branch outputs and how much of the space of smooth types they cover. Launch the [construction](../01_immersed_handle_constructions/continuation-notes/CONTINUATION.md) and [height](../02_two_handle_recognition/continuation-notes/CONTINUATION.md) questions independently. Their conditioning hypotheses permit work in parallel. Compare a reported result only at the energy, marking and smooth exterior on which it was proved.
 
 | Task | Routing and prerequisites | Bounded deliverable and acceptance test | Follow-on if the test fails |

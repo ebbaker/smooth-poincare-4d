@@ -1,5 +1,7 @@
 # Continuation for immersed index-two handle constructions
 
+The original immersion launch below gives the construction and matching conventions. For the prescribed Mazur boundary, HDL-B02 now asks about the standalone Robin sign. A swap-invariant positive class on its smooth identity double must have $e\ge8\pi^2$. First-entry constructions using different seams go to [07](../../../07_positive_subcritical_entry/continuation-notes/CONTINUATION.md). [Current child register](../research-progress/REGISTER.md) · [Assessment](../../../../master/reviews/DIRECT_ENTRY_AND_REDUCIBLE_CUT_PRIORITIES_20261126.md#a-change-to-the-master-entry-problem)
+
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. GPT-6.2 Sol/ultra was requested for setup. Actual serving model and effort are unavailable. This is a setup handoff. The open question is whether one concrete marked index-two handle can be immersed across both framed faces with estimates that can be used in a single immersed completion. [Exact input versions](../research-overview/OVERVIEW.md#inputs-and-versions) · [Plan](../research-plan/PLAN.md) · [Live register](../research-progress/REGISTER.md)
 
 | ID and type | Recommendation and reason | Prerequisite at setup | Output |

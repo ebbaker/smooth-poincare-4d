@@ -1,5 +1,7 @@
 # Sources for the collar and surgery investigation
 
+For the prescribed-seam obstruction, entry ownership and the upper-band selection see the [26 November primary source receipt](../../../../references/SOURCE_NOTES_DIRECT_ENTRY_20261126.md) and the [scientific input and ownership record](../../../master/research-progress/handoffs/DIRECT_ENTRY_OWNERSHIP_20261126.md).
+
 26 November 2026, America/New_York. Research design for Edward B. Baker III with OpenAI Codex assistance. The exact serving model and reasoning effort for setup were unavailable. The continuation notes recommend settings for future work. [Shared catalog](../../../../references/README.md) · [Bibliography](../../../../references/references.bib)
 
 ## Working inputs

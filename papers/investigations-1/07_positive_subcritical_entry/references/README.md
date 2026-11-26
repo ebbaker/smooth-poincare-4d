@@ -1,0 +1,11 @@
+# Sources and input versions
+
+26 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Exact serving model and reasoning effort were unavailable. The setup baseline is `46b5bbb4d340`. Use the [shared source receipt](../../../../references/SOURCE_NOTES_DIRECT_ENTRY_20261126.md) for theorem-level references, the [shared bibliography](../../../../references/references.bib) for citations, and the [master ownership record](../../../master/research-progress/handoffs/DIRECT_ENTRY_OWNERSHIP_20261126.md) for fixed source generations. This branch imports the following inputs at their recorded evidence levels.
+
+| Input | Branch use |
+| --- | --- |
+| [Master threshold and balanced boundary](../../../master/manuscript/chiral_weyl_energy_and_smooth_poincare.tex) · [fixed-type descent construction](../../../master/01_fixed_type_variational_descent/manuscript/fixed_type_chiral_energy_descent.tex) | Smooth type of the boundary, Gromov–Lawson existence, CGY equivalence, product-cap cost and global sign criteria. |
+| [Claude's note](../../../master/brainstorm/notes/claude/ENTRY_DIRECT_APPROACHES_20261126.md) · [assessed priorities](../../../master/reviews/DIRECT_ENTRY_AND_REDUCIBLE_CUT_PRIORITIES_20261126.md) | Distinguish derived seam necessity and scoped obstructions from proposed metric constructions and numerical flux fits. |
+| [Mazur boundary](../../04_hypersurface_immersions/01_immersed_handle_constructions/manuscript/boundary_class.tex) · [marked double](../../04_hypersurface_immersions/01_immersed_handle_constructions/manuscript/marked_double_exterior.tex) | Actual induced metric, smooth type, identity gluing and standalone Robin problem. |
+| [Physical collar sign criterion](../../05_collar_deformation_and_surgery/01_collar_deformation_and_adapted_coordinates/notes/SCALAR_DEFICIT_AND_CAP_RESPONSE.md) · [all source sheets](../../../master/notes/E15_SHEET_ANGLES.md) | Respect the hypotheses of the complete-metric scalar test and the family used for the common-angle obstruction. |
+| [Existing formal entry interfaces](../../../../formalization/investigations/11_intrinsic_entry_from_marked_exteriors/research-progress/REGISTER.md) | Conditional interfaces with their original formal status. The present branch owns the scientific construction. |

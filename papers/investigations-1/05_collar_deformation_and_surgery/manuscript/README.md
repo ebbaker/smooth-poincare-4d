@@ -1,5 +1,7 @@
 # Marked collars, handle reduction and smooth four-sphere recognition
 
+The current closing section states the reverse band and belt test left by localization from either reducible native cut, and the unresolved rank-two alternative. The [current plan](../research-plan/PLAN.md#the-next-terminal-pair) and [theorem assessment](../reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md) specify their different hypotheses.
+
 The parent draft develops the least-middle-count argument, the two intermediate cuts and the capped-side infimum bound. It uses the charged disk to identify the metric and topological selection problems that remain.
 
 The manuscript treats strict cancellation at arbitrary upper rank, a nonlocal two-attachment family, and a matched round face on the original charged disk. Its complete-side accounting gives a necessary joined peak for retaining the charged core. [Preceding assessment](../reviews/NONLOCAL_BANDS_AND_PHYSICAL_TRANSPORT_20261126.md)

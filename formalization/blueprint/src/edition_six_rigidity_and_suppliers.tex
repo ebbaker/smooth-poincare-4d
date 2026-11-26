@@ -60,7 +60,7 @@ owns the physical deformation on a supplied qualifying cut.
 
 \begin{openproblem}[Trace-free first variation on the original metric]
 \label{prob:ed06-original-variation}
-\uses{prop:ed49-adjoint,prop:ed49-ricci-time,prop:ed48-trace,prop:ed48-slab}
+\uses{prop:ed50-gradient,prop:ed48-trace}
 Route 12. For every smooth symmetric metric velocity $K$ on the closed
 oriented carrier, identify the physical $L^2(dV_g)$ gradient $G^p$ of
 $\mathcal F^p=2(1-p)e+pD/2$ for $0<p<1$. Differentiate the
@@ -77,7 +77,7 @@ fixed-parameter target in Problem~\ref{prop:ed05-bour-alternative}.
 
 \begin{openproblem}[Harmonic radius and uniform stationary interior estimates]
 \label{prob:ed06-stationary-interior}
-\uses{prop:ed49-interior,prop:ed47-mixed,prop:ed48-normal,prop:ed48-harmonic,prop:ed48-trace}
+\uses{prop:ed50-chart,prop:ed47-mixed,prop:ed48-trace}
 Route 13. Use the genuine constant-scalar stationary equation for each
 mixed return $q_j$, with $p_j=\alpha_j$ for a closed regularized return
 and $p_j=0$ for an exact Yamabe return. On the original and
@@ -94,7 +94,7 @@ $(2-p_j)s_j/12$ uniformly, with no division by $p_j$.
 
 \begin{openproblem}[Nonflat ALE end geometry and marked return]
 \label{prob:ed06-ale-return}
-\uses{prop:ed49-end,prop:ed49-exterior,prop:ed47-mark,prop:ed47-ends,prop:ed48-transfer,prop:ed48-cap}
+\uses{prop:ed50-link,prop:ed49-exterior,prop:ed47-mark,prop:ed47-ends,prop:ed48-transfer,prop:ed48-cap}
 Route 13. Treat the fixed-parameter original extraction and the mixed
 stationary extraction at their respective scales. Given a complete
 nonflat scalar-flat Bach-flat pointed limit with finite full curvature,
@@ -325,4 +325,147 @@ a positive marked return satisfying $4e_X\le\liminf D$.
 The strict pinching margin keeps the full trajectory in the positive class.
 Insert $e(t)\ge I$ in the two physical formulas for $F^p$.
 A marked positive metric on the original type has $e_X\ge I$.
+\end{proof}
+
+\subsection{The physical gradient and both extractions}
+
+\begin{proposition}[Ricci velocity on the original path]
+\label{prop:ed50-palatini}
+\uses{prop:ed49-adjoint,prop:ed49-ricci-time}
+\lean{SmoothPoincare.Bour.bourMetricRicciAt_chartKoszul_hasDerivAt, SmoothPoincare.Bour.bourMetricRicciAt_hasDerivAt, SmoothPoincare.Bour.bourKoszulFlux_native_trace, SmoothPoincare.Bour.bourKoszulTraceForm_native}
+\leanok
+Let $K=\dot g$ on an original regular slice and
+$C_{aik}=(\nabla_iK_{ka}+\nabla_kK_{ia}-\nabla_aK_{ik})/2$.
+In the fixed chart axes and intrinsically,
+$\dot{\mathrm{Ric}}_{ik}=\nabla^a C_{aik}-\nabla_k\tau_i$
+with $\tau=\tfrac12 d\operatorname{tr}_gK$.
+\end{proposition}
+\begin{proof}
+\leanok
+Differentiate the chart connection and lower its output in the same chart.
+Metric compatibility combines the differentiated inverse and connection
+terms into the covariant derivative of the lowered flux. Trace output
+and last slot to obtain $\tau$, then use a basis to recover the tensor.
+\end{proof}
+
+\begin{proposition}[A symmetric gradient and its regular time slab]
+\label{prop:ed50-gradient}
+\uses{prop:ed50-palatini,prop:ed49-adjoint,prop:ed48-slab,prop:ed48-trace}
+\lean{SmoothPoincare.Bour.bourEnergy_hasDerivAt_contractions, SmoothPoincare.Bour.bourWeightedPalatini_secondAdjoint, SmoothPoincare.Bour.originalGradient_pairing, SmoothPoincare.Bour.bourCovariantGradient_trace, SmoothPoincare.Bour.originalGradient_regularSlab}
+\leanok
+Write $b=(p-4)/12$, $A=\mathrm{Ric}+bRg$ and
+$B=(|\mathrm{Ric}|^2+bR^2)/2$.
+On a closed regular signed metric family of constant Euler integral,
+the covariant $L^2$ gradient is the symmetric part of
+\[
+ \nabla^a\nabla_i A_{aj}-\tfrac12\nabla^a\nabla_a A_{ij}
+ -\tfrac12(\operatorname{div}\operatorname{div}A)g_{ij}
+ -(\mathrm{Ric}\circ\mathrm{Ric})_{ij}-bR\,\mathrm{Ric}_{ij}+\tfrac12 B g_{ij}.
+\]
+Its integrated trace vanishes. Under local constancy of the Euler integral
+on conformal tests its trace at each point is $-p\,\Delta R/4$ in the
+convention $\Delta=\operatorname{tr}\nabla^2$. On any regular solution
+with $\dot g=-2G^p$, volume is constant, and the integrated squared
+gradient is half the energy drop.
+\end{proposition}
+\begin{proof}
+\leanok
+Differentiate the two inverse metrics in the Ricci square and the
+inverse metric in the scalar trace. Include the volume derivative in
+the same integral. Transfer both derivatives of each Palatini term.
+The symmetric projection pairs with the original velocity. Use actual
+scale and conformal paths for the trace tests and integrate along the given solution.
+\end{proof}
+
+\begin{proposition}[Physical capture by a common harmonic coordinate ball]
+\label{prop:ed50-chart}
+\uses{prop:ed48-normal,prop:ed48-harmonic,prop:ed49-interior}
+\lean{SmoothPoincare.bourUniformHarmonicBalls_of_yamabe, SmoothPoincare.BourHarmonicChart.exists_buffered, SmoothPoincare.BourHarmonicChart.transport_to_original, SmoothPoincare.BourHarmonicChart.exists_model_metric, SmoothPoincare.bourUniformHarmonicMetricTrace_bound}
+\leanok
+Under the quantitative Peters harmonic-radius input at a common positive
+injectivity radius and ordered curvature ceiling, the normalized metrics
+$h=ag$ on the stationary sequence have one radius $r$ and one ellipticity
+constant $L$. The chart is defined on $B(0,4r)$ and its closed radius-$r$
+image contains the physical $h$-ball of radius $r/L$. The same set
+contains the $g$-ball of radius $r/(L\sqrt a)$. An ambient model metric
+agrees with the actual pullback on $B(0,3r)$, where the model's fixed
+coordinates are harmonic. Its metric entries there satisfy a uniform
+pointwise bound on $|h^{ab}\partial_a\partial_b h_{ik}|$ from the actual
+ordered curvature ceiling, the first jets and ellipticity.
+\end{proposition}
+\begin{proof}
+\leanok
+Apply the physical noncollapse and injectivity estimates before choosing the
+Peters chart. Two length comparisons and first exit give the nested balls.
+Extend the pullback on the compact inner ball and use Laplacian naturality. Pull Ricci back on the same ball and insert the curvature and first-jet bounds in the harmonic metric equation.
+\end{proof}
+
+\begin{proposition}[Measured finite Euler correction on an end link]
+\label{prop:ed50-link}
+\uses{prop:ed49-end}
+\lean{SmoothPoincare.bourUnitEuclideanLevel_shape_error, SmoothPoincare.bourImmersedLinkAreaDensity_error, SmoothPoincare.bourImmersedLinkEulerIntegral_error, SmoothPoincare.bourEulerBoundaryDensity_eq_integral_connectionPath}
+\leanok
+On the normalized unit sphere use $u=|x|^2/2$ and the outward normal.
+Under the stated bilinear metric, connection difference, and ordered
+ambient curvature bounds of size $\epsilon$, the shape error is at most
+$20\epsilon$ and the induced area ratio error at most $3\epsilon$.
+On a compact immersed link with the reference unit shape and
+outward-adapted orthonormal frames, the physical boundary integral differs
+from four times the reference area by at most
+$412(20\epsilon)$ times that area when $20\epsilon\le1$.
+The scalar connection-path integral has value
+$2\sum S_{ab}C_{ab}+4\det S$.
+\end{proposition}
+\begin{proof}
+\leanok
+Compare the two Hessians of $u$, bound the length of its gradient and
+compare the two induced volume measures. The norm of the ordered curvature
+controls each complementary component. Integrate the E49 density estimate
+on this fixed link. The tangential quadratic term in the connection
+interpolation has weight $1-t^2$.
+\end{proof}
+
+\begin{proposition}[The same post-attainment Ricci margin at both extractions]
+\label{prop:ed50-second}
+\uses{prop:ed49-selector,prop:ed49-margin,prop:ed48-transfer,prop:ed47-return}
+\lean{SmoothPoincare.Bour.exists_bourLeastRicci_uniformRegularizedStarts, SmoothPoincare.Bour.bourFirstClosedExtraction_bounds, SmoothPoincare.Bour.bourSecondMarkedExtraction_of_canonicalRescaling_impossible, SmoothPoincare.Bour.bourRegularizedMinimum_of_secondClosed, SmoothPoincare.Bour.bourRegularizedMinima_limit_leastRicci}
+\leanok
+Given scientific attainment, first-value compactness, the Yamabe and
+sharp spherical comparison inputs on a type with $0<I\le8\pi^2-\delta$,
+choose one exact least-$D$ metric $g_*$. The same
+$d=(4I+D_*)/2<4I$ works for arbitrarily accurate near-minimizers at
+every sufficiently small positive $p$. At each fixed $p$, physical closed
+endpoints inherit the bound. A second marked positive return on the
+original type with the one-end Ricci identity contradicts it.
+A supplied whole closed second limit with the stated test and integral
+convergences attains the regularized infimum. Along actual global
+minima as $p\downarrow0$, a supplied positive whole Yamabe and Bach
+limit attains the least $D$ and the chiral excess is $o(p)$.
+\end{proposition}
+\begin{proof}
+\leanok
+Compare both physical formulas for the energy with the same exact metric.
+Transfer the bound in the original gauges along each first closed extraction.
+For a second pointed limit the ordinary Ricci lower bound gives
+$4I\le4e_X=D_X\le d$. For whole convergence use both sides of the
+variational infimum bound. Finally compare each global minimizer with $g_*$
+and pass its Ricci integral to the whole limit.
+\end{proof}
+
+\begin{proposition}[Vanishing dissipation on terminal backward windows]
+\label{prop:ed50-terminal}
+\uses{prop:ed50-gradient,prop:ed47-motion}
+\lean{SmoothPoincare.Bour.originalGradient_energy_tendsto_terminal, SmoothPoincare.Bour.originalGradient_dissipation_tendsto_terminal, SmoothPoincare.Bour.originalGradient_parabolicDissipation_tendsto_terminal}
+\leanok
+For $0\le p\le1$, assume the original equation, Euler constancy, and an
+order-connected regular time interval. The energy tends to its infimum
+at the right end of this interval. If both endpoints of original slabs
+are cofinal there, the dissipation on those slabs tends to zero. The same
+holds on the corresponding fixed backward parabolic windows.
+\end{proposition}
+\begin{proof}
+\leanok
+The energy is antitone and the chiral--Ricci formula bounds it below by zero.
+Take the difference of the two cofinal energy limits and apply the exact
+rescaling identity to each window.
 \end{proof}

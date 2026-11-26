@@ -1,5 +1,9 @@
 # Master manuscript milestones
 
+## 26 November 2026 · Research priorities
+
+Positive-entry construction has moved to 07. The master now includes the obstruction on a reflected contractible seam and the terminal descent from either reducible native cut. The active plans identify the reverse test in 05 and the folded-height pilot in 04. [Assignment and input versions](research-progress/handoffs/DIRECT_ENTRY_OWNERSHIP_20261126.md) · [Current plan](research-plan/PLAN.md)
+
 ## 25 November 2026 · first edition
 
 Prepared for Edward B. Baker III with OpenAI Codex assistance. The shared introduction and collar results were read in the working tree over `5ff7014`; the contributing manuscripts were subsequently recorded at `fc60509`. Bounded drafting and proof checks selected GPT-6.2 Sol/ultra. The coordinator's actual serving configuration was unavailable.

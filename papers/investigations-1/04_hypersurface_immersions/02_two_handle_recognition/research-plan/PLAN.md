@@ -4,6 +4,10 @@
 
 Start with a mixed \((1,1)\) marked presentation in the conditional immersed energy range \(E_+<8\pi^2\). The master already handles \(E_+\le 64\pi^2/9\). This plan names the evidence required for each task. Use the register for readiness and freeze each E packet before execution. The routing recommendations apply when research is activated and preserve the author's selected lead.
 
+### Receiving a folded height
+
+The [parent fold pilot](../../research-plan/PLAN.md#folded-heights) may supply a regular direction and its actual framed levels, attaching maps and closing on a smooth folded source. The two-handle tasks below can use those topological data after their own hypotheses are checked. A multiplicity bound provides a candidate height. A sign or energy assertion for a metric induced by an immersion into $\mathbb R^5$ requires its original smooth-immersion hypotheses.
+
 ## SP4-IMM-HT-B01
 
 **B · Astra/ultra.** The connection between the immersed height and an attaching circle with one geometric belt intersection is unresolved. Start under a supplied mixed presentation of one selected height or as a conditional problem with the missing input specified. Use the actual end bodies, boundary identifications, framed attaching embeddings and proposed belt sphere. If an argument uses the original height geometry, give the map from the physical level to the corresponding marked cut of the ordered presentation.

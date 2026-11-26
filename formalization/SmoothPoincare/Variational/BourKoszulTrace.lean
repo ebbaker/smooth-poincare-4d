@@ -149,5 +149,31 @@ theorem bourKoszulTraceForm_native (g : ℝ → SmoothRiemannianMetric I M)
   funext k
   fin_cases k <;> rfl
 
+section Adjoint
+
+variable [I.Boundaryless] [CompactSpace M] [NeZero (Module.finrank ℝ E)]
+
+/-- Transfer both spatial derivatives in the traced connection term to a
+smooth Ricci weight. The minus sign in Palatini is applied after this identity. -/
+theorem bourKoszulTrace_native_secondAdjoint (g : ℝ → SmoothRiemannianMetric I M)
+    {D : RealTimeInterval} (hG : MetricFamilySmoothOn (I := I) D g)
+    {t : ℝ} (ht : t ∈ D.regular) (A : Tensor0SField (I := I) (M := M) ∞ 2) :
+    let K := bourMetricVelocity g hG ht
+    bourClosedTensorPairing (g t) (metricNabla0S (g t) (bourKoszulTraceForm (g t) K)) A =
+      (1 / 2 : ℝ) * bourClosedTensorPairing (g t) (covDiv0SField (g t) (covDiv0SField (g t) A))
+        (metricTraceFirstTwoField (s := 0) (g t) K) := by
+  dsimp only
+  rw [bourKoszulTraceForm_native g hG ht, metricNabla0S_smul]
+  let S := metricTraceFirstTwoField (s := 0) (g t) (bourMetricVelocity g hG ht)
+  rw [bourClosedTensorPairing_smul]
+  congr 1
+  have h₁ := bourRicciDivergence_adjoint (g t) (metricNabla0S (g t) S) A
+  have h₂ := bourRicciDivergence_adjoint (g t) S (covDiv0SField (g t) A)
+  rw [bourClosedTensorPairing_symm (g t) (covDiv0SField (g t) A) (metricNabla0S (g t) S)] at h₁
+  change bourClosedTensorPairing (g t) (metricNabla0S (g t) (metricNabla0S (g t) S)) A = _
+  linarith only [h₁, h₂]
+
+end Adjoint
+
 end
 end SmoothPoincare.Bour

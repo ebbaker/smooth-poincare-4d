@@ -1,5 +1,7 @@
 # Shared reference catalog
 
+The [direct-entry and folded-height source receipt](SOURCE_NOTES_DIRECT_ENTRY_20261126.md) records the primary theorems and their limits for the [positive entry investigation](../papers/investigations-1/07_positive_subcritical_entry/README.md) and the [folded-height test](../papers/investigations-1/04_hypersurface_immersions/research-plan/PLAN.md#folded-heights).
+
 The [direct-entry priorities review](../papers/master/reviews/DIRECT_ENTRY_AND_REDUCIBLE_CUT_PRIORITIES_20261126.md) identifies the primary passages on contractible fillings, prescribed folds, Gluck twists and branched covers used to assess the proposed constructions.
 
 The [Bour flow and fixed-type attainment source receipt](SOURCE_NOTES_BOUR_ATTAINMENT_20261126.md) records the fixed-parameter theorem, the end and compactness hypotheses, and the local revisions for investigation 06.

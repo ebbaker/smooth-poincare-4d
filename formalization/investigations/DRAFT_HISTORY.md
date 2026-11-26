@@ -1,5 +1,7 @@
 # Overall formalization milestones
 
+- **26 November 2026 · FOT-E50.** Derived the original covariant gradient, its conformal trace and terminal dissipation. Verified the physical harmonic chart transport and end-link integral estimate, and carried one post-attainment Ricci margin through both extractions. [Assessment](reviews/ED06_E50_PHYSICAL_VARIATION_AND_EXTRACTIONS.md) · [Verification](research-progress/handoffs/ED06_E50_VERIFICATION_20261126.md) · [Continuation](continuation-notes/AFTER_E50_ORIGINAL_GRADIENT_AND_SECOND_EXTRACTION_20261126.md)
+
 **26 November 2026 · Edition 06 FOT-E49.** Derived the two physical adjoints and the buffered disk extension on the recognized double. Verified conditional end exhaustion, exact least-Ricci selection and the round TT test. [Assessment](reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)
 
 - **26 November 2026 · Edition 06 setup, FOT-B11.** Adopted eight open targets from E48, the master’s exact-minimum rigidity question and scientific 05’s assessed reducible-cut reduction. The existing owners retain entry, marked topology, physical variation and the two compactness extractions. [Plan](research-plan/06_PLAN.md) · [Baseline and evidence](research-progress/06_BASELINE.md)

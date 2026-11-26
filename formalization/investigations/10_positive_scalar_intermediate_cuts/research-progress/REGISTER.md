@@ -1,5 +1,9 @@
 # Positive scalar curvature on intermediate cuts · Progress register
 
+## FOT-E50 · 26 November 2026
+
+The irreducible native levels with $b_1=2$ fail the positive-scalar domination test on those levels. Neither a new qualifying intermediate cut nor physical signed data beating the excess was supplied. The prescribed seam, retained core and complete-side bounds remain necessary for any proposed metric comparison. [Current 05 plan](../../../../papers/investigations-1/05_collar_deformation_and_surgery/research-plan/PLAN.md) · [Assessment](../../reviews/ED06_E50_PHYSICAL_VARIATION_AND_EXTRACTIONS.md) · [Verification](../../research-progress/handoffs/ED06_E50_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E50_ORIGINAL_GRADIENT_AND_SECOND_EXTRACTION_20261126.md)
+
 ## FOT-E49 · 26 November 2026
 
 The two surviving native cuts in the least-three family are irreducible with first Betti number two. The scientific obstruction excludes positive-scalar domination at either of those levels. A geometric application still requires a specified new cut and degree map or measured band. No such competitor was supplied in this intake. [Cut assessment](../../../../papers/investigations-1/05_collar_deformation_and_surgery/reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md) · [Assessment](../../reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](../../research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)

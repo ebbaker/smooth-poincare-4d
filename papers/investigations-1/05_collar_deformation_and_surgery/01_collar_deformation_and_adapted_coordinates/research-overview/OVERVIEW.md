@@ -4,6 +4,10 @@
 
 Work on a smooth embedded bicollar of a cooriented $S^3$ in a Riemannian four-manifold. The outer faces are attached to specified pieces. A spacetime or complex twistor construction would require a separate Riemannian interpretation. For intrinsic spinor tests use the Levi–Civita spin connection of the tested metric. A freely deformed intrinsic metric needs an additional realization to invoke an immersion-specific recognition threshold.
 
+## Physical input for a new comparison
+
+For a specified physical metric, identify the proposed recognition mechanism, the saving required at the finite minimizing index, or the instability to be tested at an exact minimizer. Price the native widths, jets, positive protected core, all connectors and both signs on both whole sides. If the problem is instead the first entering metric on a new type, send the actual data to 07. The prescribed seam test can exclude a trial before any interpolation, while a passing test leaves the full collar cost open. [Physical acceptance criteria](../../research-plan/PLAN.md#conditional-analytic-work) · [07 seam test](../../../07_positive_subcritical_entry/research-overview/OVERVIEW.md#a-test-on-the-proposed-seam)
+
 ## The exact model and the first approximate one
 
 In Gaussian normal coordinates write $g=dt^2+h_t$. Set $K=\frac12\partial_t h_0$, $H=\operatorname{tr}_{h_0}K$, and $K^\circ=K-Hh_0/3$. The target is $[h_0]=[\gamma_{\rm rd}]$ under a compatible angular marking and $K^\circ=0$. For $\widehat g=e^{2u}g$ the new second fundamental form is $e^u(K+\nu(u)h_0)$. The value of $u$ prescribes the round face metric. Independently setting $\nu(u)=-H/3$ there makes the face totally geodesic. Extend the factor smoothly and take normal coordinates again. Record the transported angular marking on both sides. [Conformal hypersurface sources](../references/README.md)

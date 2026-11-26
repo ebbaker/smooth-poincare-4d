@@ -35,6 +35,7 @@ BRANCHES = ('master',
             'investigations-1/06_bour_flow_and_fixed_type_attainment',
             'investigations-1/06_bour_flow_and_fixed_type_attainment/01_regularized_flow_and_energy',
             'investigations-1/06_bour_flow_and_fixed_type_attainment/02_marked_limits_and_attainment',
+            'investigations-1/07_positive_subcritical_entry',
             'initial-investigations/01_generalized_isothermal_coordinates',
             'initial-investigations/02_chiral_descent_and_double_copy')
 

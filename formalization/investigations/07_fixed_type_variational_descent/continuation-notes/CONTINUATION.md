@@ -1,5 +1,7 @@
 # Fixed-type variational descent · Continuation
 
+**FOT-E50 · 26 November 2026.** One exact least-$D$ unit-volume Yamabe representative serves all sufficiently small positive parameters after scientific X and exact first-value compactness. The post-attainment theorem constructs near-$J_p$ starts and retains the strict wall and the same ordinary Ricci ceiling. An actual sequence of global regularized minima with a positive smooth Yamabe and Bach limit returns to the least-$D$ stratum with $e-I=o(p)$. The intake supplies no specific nonround minimizer and signed direction for either rigidity test. [Current tasks and prompt](../../continuation-notes/AFTER_E50_ORIGINAL_GRADIENT_AND_SECOND_EXTRACTION_20261126.md)
+
 **FOT-E49 · 26 November 2026.** Use the selected positive unit-volume representative after X and exact-stratum compactness. Derive a signed Weyl Hessian or recognition on a supplied nonround candidate. [Assessment](../../reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](../../research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)
 
 **Edition 06 · 26 November 2026.** Select the least-$D$ Yamabe minimizer using the stated exact-class compactness input. Test the polarized Weyl Hessian in the non-Einstein branch or the actual transverse-traceless spectral window in the Einstein branch. [Live register](../research-progress/REGISTER.md) · [Edition 06 plan](../../research-plan/06_PLAN.md)

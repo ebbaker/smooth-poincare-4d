@@ -37,14 +37,14 @@ def bourClosedTensorPairing (g : SmoothRiemannianMetric I M) {s : ℕ}
   ∫ x, inner0S g x s (A x) (K x) ∂riemannianVolumeMeasure I M g
 
 omit [NeZero (Module.finrank ℝ E)] [I.Boundaryless] [BoundarylessManifold I M] in
-private theorem bourClosedTensorPairing_symm (g : SmoothRiemannianMetric I M) {s : ℕ}
+theorem bourClosedTensorPairing_symm (g : SmoothRiemannianMetric I M) {s : ℕ}
     (A K : Tensor0SField (I := I) (M := M) ∞ s) :
     bourClosedTensorPairing g A K = bourClosedTensorPairing g K A := by
   apply integral_congr_ae
   exact Filter.Eventually.of_forall fun x => inner0S_symm g x (A x) (K x)
 
 omit [NeZero (Module.finrank ℝ E)] [I.Boundaryless] [BoundarylessManifold I M] in
-private theorem bourClosedTensorPairing_smul (g : SmoothRiemannianMetric I M) {s : ℕ}
+theorem bourClosedTensorPairing_smul (g : SmoothRiemannianMetric I M) {s : ℕ}
     (A K : Tensor0SField (I := I) (M := M) ∞ s) (c : ℝ) :
     bourClosedTensorPairing g (c • A) K = c * bourClosedTensorPairing g A K := by
   unfold bourClosedTensorPairing
@@ -52,7 +52,7 @@ private theorem bourClosedTensorPairing_smul (g : SmoothRiemannianMetric I M) {s
     DifferentialGeometry.Tensor0SBundle.inner0S_smul_left, integral_const_mul]
 
 omit [NeZero (Module.finrank ℝ E)] [I.Boundaryless] [BoundarylessManifold I M] in
-private theorem bourTensorInner_integrable (g : SmoothRiemannianMetric I M) {s : ℕ}
+theorem bourTensorInner_integrable (g : SmoothRiemannianMetric I M) {s : ℕ}
     (A K : Tensor0SField (I := I) (M := M) ∞ s) :
     Integrable (fun x => inner0S g x s (A x) (K x)) (riemannianVolumeMeasure I M g) := by
   let _ := riemannianVolumeMeasure_isFiniteMeasureOnCompacts g
@@ -66,7 +66,7 @@ private theorem bourTensorInner_integrable (g : SmoothRiemannianMetric I M) {s :
     unitScalarRSLiftSection_apply_unit, unitScalarRSLiftSection_apply_unit]
 
 omit [NeZero (Module.finrank ℝ E)] [I.Boundaryless] [BoundarylessManifold I M] in
-private theorem bourClosedTensorPairing_add (g : SmoothRiemannianMetric I M) {s : ℕ}
+theorem bourClosedTensorPairing_add (g : SmoothRiemannianMetric I M) {s : ℕ}
     (A B K : Tensor0SField (I := I) (M := M) ∞ s) :
     bourClosedTensorPairing g (A + B) K =
       bourClosedTensorPairing g A K + bourClosedTensorPairing g B K := by
@@ -75,7 +75,7 @@ private theorem bourClosedTensorPairing_add (g : SmoothRiemannianMetric I M) {s 
   exact integral_add (bourTensorInner_integrable g A K) (bourTensorInner_integrable g B K)
 
 omit [NeZero (Module.finrank ℝ E)] [I.Boundaryless] [BoundarylessManifold I M] in
-private theorem bourClosedTensorPairing_sub (g : SmoothRiemannianMetric I M) {s : ℕ}
+theorem bourClosedTensorPairing_sub (g : SmoothRiemannianMetric I M) {s : ℕ}
     (A B K : Tensor0SField (I := I) (M := M) ∞ s) :
     bourClosedTensorPairing g (A - B) K =
       bourClosedTensorPairing g A K - bourClosedTensorPairing g B K := by
@@ -84,7 +84,7 @@ private theorem bourClosedTensorPairing_sub (g : SmoothRiemannianMetric I M) {s 
   exact integral_sub (bourTensorInner_integrable g A K) (bourTensorInner_integrable g B K)
 
 omit [I.Boundaryless] [BoundarylessManifold I M] in
-private theorem bourClosedTensorPairing_permute (g : SmoothRiemannianMetric I M) {s : ℕ}
+theorem bourClosedTensorPairing_permute (g : SmoothRiemannianMetric I M) {s : ℕ}
     (e : Equiv.Perm (Fin s)) (A K : Tensor0SField (I := I) (M := M) ∞ s) :
     bourClosedTensorPairing g (Tensor0SField.domDomCongr ∞ e A) K =
       bourClosedTensorPairing g A (Tensor0SField.domDomCongr ∞ e.symm K) := by

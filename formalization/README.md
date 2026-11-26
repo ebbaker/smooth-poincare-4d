@@ -1,5 +1,7 @@
 # Lean formalization
 
+**Edition 06 · FOT-E50 · 26 November 2026.** Derived the original covariant gradient, its conformal trace and terminal dissipation. Verified the physical harmonic chart transport and end-link integral estimate, and carried one post-attainment Ricci margin through both extractions. [Assessment](investigations/reviews/ED06_E50_PHYSICAL_VARIATION_AND_EXTRACTIONS.md) · [Verification](investigations/research-progress/handoffs/ED06_E50_VERIFICATION_20261126.md) · [Continuation](investigations/continuation-notes/AFTER_E50_ORIGINAL_GRADIENT_AND_SECOND_EXTRACTION_20261126.md)
+
 **Edition 06 · FOT-E49 · 26 November 2026.** [Assessment](investigations/reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](investigations/research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](investigations/continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)
 
 **Current Edition 06 · 26 November 2026.** The [overview](investigations/research-overview/06_OVERVIEW.md) and [proof plan](investigations/research-plan/06_PLAN.md) assign eight open problems across entry, marked surgery, fixed-type attainment and rigidity. [Setup baseline](investigations/research-progress/06_BASELINE.md) · [Current continuation](investigations/continuation-notes/EDITION_06_RIGIDITY_AND_GEOMETRIC_INPUTS_20261126.md)

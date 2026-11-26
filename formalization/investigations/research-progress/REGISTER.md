@@ -1,5 +1,9 @@
 # Overall formalization progress
 
+## Edition 06 · FOT-E50 · 26 November 2026
+
+Derived the original covariant gradient, its conformal trace and terminal dissipation. Verified the physical harmonic chart transport and end-link integral estimate, and carried one post-attainment Ricci margin through both extractions. Quantitative harmonic radius and elliptic regularity, compact-domain Euler transgression and positive marked return retain their own hypotheses. Universal entry and nonround rigidity remain open. [Assessment](../reviews/ED06_E50_PHYSICAL_VARIATION_AND_EXTRACTIONS.md) · [Verification](../research-progress/handoffs/ED06_E50_VERIFICATION_20261126.md) · [Continuation](../continuation-notes/AFTER_E50_ORIGINAL_GRADIENT_AND_SECOND_EXTRACTION_20261126.md)
+
 ## Edition 06 · FOT-E49 · 26 November 2026
 
 The physical velocity now has checked Koszul adjoints. Recognition and oriented buffered parametrizations give the exterior diffeomorphism with both germs. Exact-stratum compactness and X give a least-Ricci representative. The harmonic PDE estimates, finite geometric end inputs, full original gradient and nonround rigidity have the distinct scopes recorded by their owners. The eight full Edition 06 problems retain open status. [Assessment](../reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](../research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](../continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)

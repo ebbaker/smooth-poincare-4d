@@ -12,6 +12,8 @@ The [26 November parent decision](../../continuation-notes/NARROWED_MARKED_SURGE
 | SP4-CDS-DEF-B02 | Small defect tested under marked smooth compactness | A nondegenerate limiting bicollar with vanishing face defect yields an affordable two-sided path. Its angular change extends over the replaced disk. [Proof](../notes/COMPACT_MARKED_COLLAR_EXCLUSION.md) |
 | SP4-CDS-DEF-E03 | Model and conditional family assessed; physical witness pending | On an actual selected sequence test quantitative footprint, scale, distortion and width-dependent jets or identify the gauge degeneration. The disk theorem supplies no such bounds. [Finite-source review](../../reviews/DISK_AND_COMPACTNESS_READER.md) |
 
+The current DEF-B02 / DEF-E03 intake requires a named physical candidate. An existing charged disk or abstract irreducible cut alone leaves the relevant comparison open. The [parent plan](../../research-plan/PLAN.md#conditional-analytic-work) gives the strict finite-index saving, stability and recognition tests. The [07 construction owner](../../../07_positive_subcritical_entry/research-progress/REGISTER.md) receives marked first-entry data. The entries below preserve the earlier scoped returns.
+
 ### Curved fillings and interior variations, 26 November
 
 | Task | Assessed continuation | Evidence or dependency |

@@ -1,5 +1,7 @@
 # Mathematical references
 
+For the entry, contractible-seam obstruction and folded-height and Gluck proposals see the [26 November primary source receipt](../../../references/SOURCE_NOTES_DIRECT_ENTRY_20261126.md) and the [scientific input and ownership record](../research-progress/handoffs/DIRECT_ENTRY_OWNERSHIP_20261126.md).
+
 The [canonical source index](../../../references/README.md) and [shared bibliography](../../../references/references.bib) own the original publications. The [master overview](../research-overview/OVERVIEW.md) identifies the internal mathematical inputs. The paper uses unsorted numerical citations in order of first appearance.
 
 | Use in the paper | Primary passage and check |

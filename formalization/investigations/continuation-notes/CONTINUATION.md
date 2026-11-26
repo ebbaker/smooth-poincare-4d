@@ -1,5 +1,7 @@
 # Continuing the formalization program
 
+**FOT-E50 · 26 November 2026.** Derived the original covariant gradient, its conformal trace and terminal dissipation. Verified the physical harmonic chart transport and end-link integral estimate, and carried one post-attainment Ricci margin through both extractions. [Current handoff](AFTER_E50_ORIGINAL_GRADIENT_AND_SECOND_EXTRACTION_20261126.md)
+
 **Current Edition 06 · FOT-E49 · 26 November 2026.** [Assessment](../reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](../research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](../continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)
 
 **Current Edition 06 · 26 November 2026.** [Dated handoff and pasteable continuation](EDITION_06_RIGIDITY_AND_GEOMETRIC_INPUTS_20261126.md) · [Proof plan](../research-plan/06_PLAN.md) · [Baseline](../research-progress/06_BASELINE.md) · [Owner register](../research-progress/REGISTER.md)

@@ -4,6 +4,8 @@ The [master manuscript](manuscript/README.md) asks whether the chiral Weyl energ
 
 The master retains the lower recognition gap, the marked cut used in identifying the smooth type, fixed-band finiteness, and the Hessian conditions on an attained minimum. Immersed heights and marked surgery provide independent ways to recognize particular smooth types. The [manuscript guide](manuscript/README.md#where-the-supporting-proofs-now-appear) locates the detailed proofs moved out of the master.
 
+The [positive subcritical entry investigation](../investigations-1/07_positive_subcritical_entry/README.md) owns the first marked non-product metric construction. The master assesses which surviving types it covers. For the next independent recognition tests see the [reverse handle test](../investigations-1/05_collar_deformation_and_surgery/research-plan/PLAN.md) and the [folded-height pilot](../investigations-1/04_hypersurface_immersions/research-plan/PLAN.md#folded-heights).
+
 ## Working papers for the parallel investigations
 
 | Working paper | What it contributes |
@@ -20,6 +22,6 @@ The master retains the lower recognition gap, the marked cut used in identifying
 
 - [Editable manuscript and proof locations](manuscript/README.md) · [Draft history](DRAFT_HISTORY.md)
 - [Research overview](research-overview/OVERVIEW.md) · [Research plan](research-plan/PLAN.md) · [Sole master progress register](research-progress/REGISTER.md)
-- [Claude's review of the earlier master](reviews/claude/EXTERNAL_PROGRAM_REVIEW_20261126.md) · [Later marked-surgery result](../investigations-1/05_collar_deformation_and_surgery/reviews/TWO_POINT_LOCALIZATION_20261126.md) · [Continuation notes](continuation-notes/CONTINUATION.md)
+- [Claude's review of the earlier master](reviews/claude/EXTERNAL_PROGRAM_REVIEW_20261126.md) · [Reducible native-cut theorem](../investigations-1/05_collar_deformation_and_surgery/reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md) · [Direct-entry and folded-height assessment](reviews/DIRECT_ENTRY_AND_REDUCIBLE_CUT_PRIORITIES_20261126.md) · [Continuation notes](continuation-notes/CONTINUATION.md)
 
 Prepared for Edward B. Baker III, 26 November 2026, with OpenAI Codex assistance. Individual working papers identify their authorship, source hypotheses and verification scope.

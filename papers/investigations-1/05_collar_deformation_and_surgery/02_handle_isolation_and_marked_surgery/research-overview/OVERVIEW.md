@@ -8,6 +8,10 @@ On a smooth closed oriented homotopy four-sphere, a rounded individual 2-handle 
 
 At a rank-one inlet with immediate rank-three free outlet, a reducible native single-attachment surgery yields a finite sequence of moving-over-stationary slides to a common ball. The split initial zero cancels with a terminal upper handle, leaving the actual local two-component trace and its induced closing. The explicit alternating families instead admit the Figure 5 reduction all the way to zero. [Theorem and limits](../../reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md)
 
+## Upper co-cores on the next untreated trace
+
+Use the actual reverse attaching tubes in $Y_3$ and the belts of the supplied upper handlebody. Fix a terminal pair with both native cuts irreducible and with the lower split zero accounted for. Homological primitivity and a cyclic word with one belt letter leave a geometric question on the framed band. A single transverse belt crossing permits reverse cancellation. The reduced two-component trace inherits its own closing in both directions. A rank-two link already supplied with that data is a second starting point. [Parent test](../../research-plan/PLAN.md#the-next-terminal-pair) · [Adopted proposal](../../brainstorm/notes/AFTER_REDUCIBLE_CUTS_RESEARCH_PRIORITIES_20261126.md)
+
 ## First application and its successor
 
 Use a control presentation with a 0-handle, a dotted unknot for a 1-handle, a zero-framed meridian for a cancelling 2-handle, and a split zero-framed unknot for a second 2-handle paired with a 3-handle. Cap by the 4-handle. The meridian meets the belt two-sphere transversely once. The extra tube gives a way of checking the outgoing boundary identification in a case with a known outcome. Record both maps of the collar and the residual attaching tubes before and after cancellation. Distinguish the $S^1\times S^2$ level where the belt sphere lives from the $S^3$ obtained after the first cancellation in this control. A geometrically specified level of a given metric needs its own embedding and comparison.

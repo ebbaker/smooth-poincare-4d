@@ -2,15 +2,19 @@
 
 26 November 2026, for Edward B. Baker III with OpenAI Codex. This register owns the joint comparison. The [deformation](../01_collar_deformation_and_adapted_coordinates/research-progress/REGISTER.md) and [surgery](../02_handle_isolation_and_marked_surgery/research-progress/REGISTER.md) registers own the scientific derivations. [Plan](../research-plan/PLAN.md) · [Revision receipt](../references/README.md#activation-revision-check-26-november-2026) · [Assessed milestone](../reviews/TWO_MIXED_CUTS_AND_CHARGED_DISK_20261126.md)
 
-The [four-point milestone](../reviews/FOUR_POINT_RETURNS_20261126.md) gives the current selection problem after the two-point theorem. The [narrowed plan](../research-plan/PLAN.md) governs candidate-specific metric comparisons. The preceding research milestones and their handoffs below retain their original scopes.
+Current selection at `46b5bbb4d340` is the [reverse band and belt test](../research-plan/PLAN.md#the-next-terminal-pair). CDS-B03 integrates an actual untreated terminal irreducible-cut pair or a marked rank-two alternative. No such new diagram was supplied at this revision. The [surgery register](../02_handle_isolation_and_marked_surgery/research-progress/REGISTER.md) owns the geometrical test. Earlier four-point selections below retain their dated scope. [Priority decision](../brainstorm/notes/AFTER_REDUCIBLE_CUTS_RESEARCH_PRIORITIES_20261126.md)
 
 | Task | Assessed state | Evidence or next input |
 | --- | --- | --- |
 | SP4-CDS-B01 | Completed selection | Dotted meridian with residual disk-framed tube, split and slid, plus the separate physical charged-disk sequence. [Frozen requests](handoffs/ACTIVATION_20261126.md) |
 | SP4-CDS-E01 | Completed for the marked control and the conditional costs | The actual two balls admit the pulled-back round metric and both full sides cost zero. The fixed and approximate physical cutoffs and the disk comparison received independent checks. [Control](../notes/PERIPHERAL_TEST_AND_ROUND_CONTROL.md) · [Costs](../reviews/TWO_WIDTH_READER.md) |
 | SP4-CDS-B02 | Completed this mixed and three-handle comparison | Both normalized orders admit PSC recognition. A three-handle subclass closes after two prefix tests. The entire mixed lower cluster has boundary $S^1\times S^2$. [Mixed-cut proof](../02_handle_isolation_and_marked_surgery/notes/POSITIVE_SCALAR_INTERMEDIATE_CUTS.md) |
-| SP4-CDS-B03 | Scoped subclasses established, universal selection open | With one lower 1-handle the winding-one cancellation carries arbitrary residual tubes. Select a qualifying marked prefix on an untreated presentation, or enough physical geometry for a strict comparison on an entered type. |
+| SP4-CDS-B03 | Reducible-cut terminal descent assessed, next input open | Integrate a strict same-type reduction from the upper-band test, a checked rank-two recognition, or a precise obstruction on the actual band and belt. An analytical comparison needs a physical recognition, excess-beating or stability candidate. [Evidence and conditions](../research-plan/PLAN.md) |
 | SP4-CDS-E02 | Completed case and threshold audit | [Winding-one cut](../reviews/POSITIVE_FACE_READER.md), [reverse order](../reviews/REVERSE_ORDER_READER.md), [boundary curvature](../reviews/END_CURVATURE_READER.md), [third tube](../reviews/THREE_HANDLE_READER.md) and [disk quantifiers](../reviews/DISK_AND_COMPACTNESS_READER.md). |
+
+## Dated outcomes and routing at each milestone
+
+The tables below preserve the evidence and outstanding inputs recorded at each date. The current selection is given above.
 
 ### Penultimate cuts and the physical filling
 

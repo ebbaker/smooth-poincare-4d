@@ -110,6 +110,41 @@ a representative with \(R>0\) and pointwise positive \(\sigma_2\)
 This also gives \(0<2\Ric<Rg\), since each eigenvalue of the trace-free \(Z\) has absolute value at most \(\sqrt{3/4}\,|Z|\). Conversely, integrating the Schouten inequality in a positive-scalar metric gives \(e<2T\).
 \end{proof}
 
+\paragraph{A necessary test at a prescribed seam.}
+Let \(h\) be the induced metric on a closed two-sided embedded
+hypersurface, with second fundamental form \(B\), trace \(H\) and
+trace-free part \(B^\circ\). In the representative from
+Proposition~\ref{prop:entry}, the Gauss equation gives
+\[
+ R_h+|B^\circ|^2=R-2\Ric(\nu,\nu)+\tfrac23 H^2>0 .
+\]
+For \(\Delta=\operatorname{div}\nabla\), put
+\(P_{h,B}=-8\Delta_h+R_h+|B^\circ|^2\).
+Under an ambient conformal change inducing \(\hat h=v^4h\),
+the three-dimensional conformal Laplacian has weight \((-5,1)\) and
+\(|\hat B^\circ|_{\hat h}^2=v^{-4}|B^\circ|_h^2\). Thus
+\(P_{\hat h,\hat B}u=v^{-5}P_{h,B}(vu)\). An entering ambient class requires a positive first
+eigenvalue for the prescribed seam data. In particular a totally
+umbilic seam has positive induced Yamabe class.
+
+If such a seam bounds a compact smooth contractible \(W\), its boundary
+is an integral homology sphere. The positive-scalar-curvature
+classification and the contractible-filling obstruction give
+\(\partial W\cong S^3\)
+\cite[Corollary 2.3 and Proposition 4.2]{ChodoshMaximoMukherjee2024Complete}.
+A swap-invariant class on a smooth identity double has a swap-invariant
+representative, obtained by summing a metric and its pullback within the
+class. Its seam is totally geodesic, hence umbilic throughout the class.
+For the identity double of the marked Mazur manifold \(W^-(0,3)\),
+the seam is \(\Sigma(2,5,7)\)
+\cite[Proposition 1 and Theorem 2(1)]{AkbulutKirby1979Mazur}%
+\cite[Figure 37 and Theorem 3.3]{Isoshima2025MazurDoubles}.
+Any such positive class on this double therefore satisfies \(e\ge 2T\). Reflection exchanges the Weyl
+blocks, so on the invariant representative \(e=E_+(W)+E_-(W)\).
+This rules out the joint reflected sign and strict half-budget target.
+A prescribed filling's Robin sign and the cost of an asymmetric
+assembly remain separate questions.
+
 One concrete family separates the two requirements. Let \(H_P^5\) be an
 oriented five-dimensional handlebody with one zero-handle, a one-handle for each generator, and a two-handle for
 each relator of a balanced presentation \(P\) of the trivial group.
@@ -234,7 +269,8 @@ are the two open geometric assertions in this reduction.
 Edward B. Baker III developed this research with assistance from OpenAI
 and Anthropic language models. The 26 November 2026 editorial revision
 uses Claude Fable 5.2's review of the master at \texttt{c8fb08d}, the later
-marked-surgery results, and the working proof of fixed-type attainment
+reducible-cut and direct-entry assessments used at \texttt{46b5bbb4d340},
+and the working proof of fixed-type attainment
 \cite{Baker2026BourAttainment}. The companion proofs and their model
 readings are research manuscripts. Human specialist verification of the
 recognition gap and fixed-type attainment remains outstanding. Actual

@@ -2,6 +2,12 @@
 
 26 November 2026 · Prepared for Edward B. Baker III with OpenAI Codex assistance. [Starting diagram](../research-overview/OVERVIEW.md) · [Versioned inputs](../references/README.md) · [Sole register](../research-progress/REGISTER.md)
 
+## Next reverse test
+
+Under SUR-B04 select one terminal native $Y_1\to Y_3$ pair with the actual integral framings, lower split zero, a true immediate upper closing and independent irreducibility evidence in both orders. Identify the co-core duals, upper belts and one embedded framed band in the cut exterior. Use algebraic intersection $\pm1$ and cyclic reduction to filter that choice. Require a single transverse geometric intersection for cancellation. Carry the residual tube at every actual level, all stabilizations, the upper-basis change and inverse, $\gamma P^{-1}$ and $P\gamma^{-1}$, and the induced rank-two closing and inverse. A new SUR-E02 check needs a frozen move. If no qualifying pair is available, test a named unrecognized two-component link in $S^3$ with actual $Y_2$ surgery and its original closing. A genus reduction can continue when the new component meets the next fiber or recognition hypothesis. [Full test and limits](../../research-plan/PLAN.md#the-next-terminal-pair) · [Framed reverse-band proposal](../../brainstorm/notes/AFTER_REDUCIBLE_CUTS_RESEARCH_PRIORITIES_20261126.md)
+
+## Earlier applications and fixed tests
+
 For each application record the presentation before and after, which regular level is physical, the two boundary markings, what is kept or capped, and the diffeomorphism carrying the rest of the attaching data. If a metric comparison is used, keep the full masses and cap costs distinct from handle counts. The [parent roadmap](../../research-plan/PLAN.md) specifies what each stage must contribute to SPC4.
 
 | ID and routing | Prerequisite and finite scope | Completion test | Next application or obstruction |
@@ -26,4 +32,4 @@ Fix such a diagram in which both circles meet the belt sphere. Suppose the first
 
 If every candidate disk meets the second tube, test a marked slide involving that tube, reverse the order, or include both attachments in the region to be isolated. Record the obstructing arc or the topology of the new boundary. For a next class, allow an arbitrary odd number of crossings of the chosen circle with algebraic intersection of absolute value one. An induction on crossings would need a removable pair for **each** member of the stated class, with a move that keeps it in that class. This subsidiary count can lead to an eventual handle cancellation. Every claimed decrease in the global $n_2$ is measured after restoring all residual attachments.
 
-The first worked diagram tests the method. The first substantive success would be a geometric or smooth reduction previously missing on a specified family. The [first test with three middle handles](../../research-plan/PLAN.md#from-two-middle-handles-to-three) asks whether the move works relative to a third framed tube and how to treat the one-sided link. The universal result needs a proof that every unresolved type supplies a member of a covered family, with the side identifications and energy estimates used on that very member.
+The first worked diagram tests the method. The first substantive success would be a geometric or smooth reduction previously missing on a specified family. The [first test with three middle handles](../../research-plan/PLAN.md#scope-of-a-successful-return) asks whether the move works relative to a third framed tube and how to treat the one-sided link. The universal result needs a proof that every unresolved type supplies a member of a covered family, with the side identifications and energy estimates used on that very member.

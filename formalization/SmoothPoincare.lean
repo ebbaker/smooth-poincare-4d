@@ -215,4 +215,16 @@ import SmoothPoincare.Variational.AttainedEinsteinSpectrum
 import SmoothPoincare.Variational.BourAttainedSublevel
 import SmoothPoincare.Variational.BourChristoffelTime
 
+import SmoothPoincare.Variational.BourKoszulTrace
+import SmoothPoincare.Variational.BourTransportedInterior
+import SmoothPoincare.Variational.BourSecondExtraction
+
+import SmoothPoincare.Variational.BourOriginalGradient
+import SmoothPoincare.Variational.BourMarkedBoundaryJets
+
+import SmoothPoincare.Variational.BourGradientBianchi
+import SmoothPoincare.Variational.BourCrossedRicci
+import SmoothPoincare.Variational.BourTerminalDissipation
+import SmoothPoincare.Variational.BourGradientComparison
+
 /-! # Public imports for fixed-type descent, immersed recognition, marked cuts and Bour attainment -/

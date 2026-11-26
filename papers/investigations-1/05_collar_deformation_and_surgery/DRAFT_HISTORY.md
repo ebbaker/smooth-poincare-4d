@@ -1,5 +1,9 @@
 # Collar deformation and surgery · draft history
 
+## 26 November 2026 · Research priorities
+
+Adopted the upper co-core, band and belt test on one untreated irreducible-cut pair. A genuine unresolved rank-two closing is the alternative. The deformation child supplies estimates on a qualifying physical candidate. [Current plan](research-plan/PLAN.md) · [Adopted proposal](brainstorm/notes/AFTER_REDUCIBLE_CUTS_RESEARCH_PRIORITIES_20261126.md)
+
 ## 26 November 2026 · Investigation established
 
 The approved design couples two independent investigations through one marked collar on the original smooth manifold. The plan names the next handle configurations, the independent charged-disk test, and the selection theorem needed for a conclusion on arbitrary smooth homotopy spheres.

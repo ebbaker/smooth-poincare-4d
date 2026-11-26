@@ -2,7 +2,7 @@
 
 26 November 2026 · Prepared for Edward B. Baker III with OpenAI Codex assistance. [Model and notation](../research-overview/OVERVIEW.md) · [Input versions](../references/README.md) · [Sole register](../research-progress/REGISTER.md)
 
-The [sibling application](../../02_handle_isolation_and_marked_surgery/research-plan/PLAN.md) can begin locating the first handle pair immediately. For every proposed cut, record the actual marking and inverse, physical metric, allowed conformal changes, available widths $w_L,w_R$, and whether the object being varied is the embedding, the coordinates, the metric, or an immersion. Record $E_+$ and $E_-$ on both sides. The [comparison required for surgery](../../brainstorm/notes/MARKED_COLLAR_AND_CUT_20261126.md) supplies the numerical test.
+Under DEF-B02 choose a named physical recognition, excess-beating or stability candidate, with its physical marking, two native widths, protected core, complete signed sides and every connector. DEF-E03 can check one frozen comparison. Require a joined peak $<2T$ when crossing the scalar wall supplies positivity, or a total $\le2T$ for independently positive caps. A new first-entry construction goes to 07 with closed sign and both signed budgets. The [sibling topology test](../../02_handle_isolation_and_marked_surgery/research-plan/PLAN.md#next-reverse-test) requires the metric on its own qualifying carrier. [Parent acceptance criteria](../../research-plan/PLAN.md#conditional-analytic-work)
 
 | ID and model recommendation | Dependencies and finite experiment | Deliverable and pass condition | Where a failed test leads |
 | --- | --- | --- | --- |

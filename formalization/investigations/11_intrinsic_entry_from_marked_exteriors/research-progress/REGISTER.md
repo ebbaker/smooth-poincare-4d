@@ -1,5 +1,9 @@
 # Intrinsic entry from marked exteriors · Live register
 
+## FOT-E50 · 26 November 2026
+
+Scientific Investigation 07 now owns selection of the marked balanced-presentation filling and sign and complete closed energy accounting. Its setup register records the missing specimen. This formal owner continues to require a constructed positive metric with $E_++E_-<16\pi^2$ on the identified smooth type. The post-X Ricci ceiling uses an entered type. [Scientific entry register](../../../../papers/investigations-1/07_positive_subcritical_entry/research-progress/REGISTER.md) · [Assessment](../../reviews/ED06_E50_PHYSICAL_VARIATION_AND_EXTRACTIONS.md) · [Verification](../../research-progress/handoffs/ED06_E50_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E50_ORIGINAL_GRADIENT_AND_SECOND_EXTRACTION_20261126.md)
+
 ## FOT-E49 · 26 November 2026
 
 The recognized exterior-disk extension in Route 13 begins after positive capped recognition; using it to establish that same recognition would be circular. No new unrecognized marked boundary came with a complete non-product metric, positive sign and both measured Weyl energies. Positive subcritical entry remains open on the residual types. [Master entry problem](../../../../papers/master/research-plan/PLAN.md) · [Assessment](../../reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](../../research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)

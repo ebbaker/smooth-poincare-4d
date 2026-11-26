@@ -1,5 +1,9 @@
 # Fixed-type variational descent · Progress register
 
+## FOT-E50 · 26 November 2026
+
+One exact least-$D$ unit-volume Yamabe representative serves all sufficiently small positive parameters after scientific X and exact first-value compactness. The post-attainment theorem constructs near-$J_p$ starts and retains the strict wall and the same ordinary Ricci ceiling. An actual sequence of global regularized minima with a positive smooth Yamabe and Bach limit returns to the least-$D$ stratum with $e-I=o(p)$. The intake supplies no specific nonround minimizer and signed direction for either rigidity test. [Derivation](../notes/E50_SECOND_EXTRACTION.md) · [Assessment](../../reviews/ED06_E50_PHYSICAL_VARIATION_AND_EXTRACTIONS.md) · [Verification](../../research-progress/handoffs/ED06_E50_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E50_ORIGINAL_GRADIENT_AND_SECOND_EXTRACTION_20261126.md)
+
 ## FOT-E49 · 26 November 2026
 
 Given scientific X, exact first-value smooth compactness and the geometric comparison suppliers, Lean selects a unit-volume positive minimizer of least ordinary Ricci energy and a separate maximum of the squared Yamabe constant. On the named unit round metric the Green estimate excludes the strict TT window. The sharp round TT calculation is in the reading note. An admissible Hessian on a surviving nonround metric and universal rigidity remain open. [Selection](../notes/E49_ATTAINED_SELECTION.md) · [TT calculation](../notes/E49_RIGIDITY_TEST.md) · [Assessment](../../reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](../../research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)
