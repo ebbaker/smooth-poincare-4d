@@ -22,6 +22,8 @@ The [proof plan](research-plan/PLAN.md) has four specialist investigations. The 
 
 ## Master manuscript and research records
 
+The [collar deformation and surgery investigation](../investigations-1/05_collar_deformation_and_surgery/README.md) asks whether a topologically useful sphere can be deformed into a marked round collar at an affordable energy cost. Its [plan](../investigations-1/05_collar_deformation_and_surgery/research-plan/PLAN.md) starts with a cancelling pair, proceeds to two interacting attachments and states the selection and termination problems for arbitrary smooth types.
+
 - [Read the manuscript (PDF)](../../output/pdf/master/chiral_weyl_energy_and_smooth_poincare.pdf) · [Editable manuscript and build](manuscript/README.md)
 - [Research overview and map of the contributing investigations](research-overview/OVERVIEW.md) · [What belongs in the master proof](research-overview/OVERVIEW.md#what-belongs-in-the-master-proof)
 - [Research plan](research-plan/PLAN.md) · [Live progress register](research-progress/REGISTER.md)

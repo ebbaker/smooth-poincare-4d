@@ -1,5 +1,7 @@
 # Physical scales and marked annuli · Milestones
 
+- **25 November 2026 · FOT-E42.** Carried the original marked width and four exterior residuals through the protected-core construction. The modified-flow distance and charge estimates retain their own metric. [Assessment](../reviews/MARKED_GLUE_AND_CURVED_COST_20261125.md).
+
 - **25 November 2026 · FOT-E41.** A single protected width now supports the constructed physical reference, its full exterior and all four incoming trim measures. The measured replacement cost belongs to fixed-type descent. [Assessment](../reviews/ROUNDED_EDGES_AND_REFERENCE_COST_20261125.md).
 
 - **25 November 2026 · FOT-E40.** Follow the two-jet calculation at the same physical width. Compare the actual reference metric with the incoming marked lift in the protected physical window. [Assessment](../reviews/NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md) · [Continuation](../continuation-notes/AFTER_NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md)

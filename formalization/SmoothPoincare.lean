@@ -100,6 +100,35 @@ import SmoothPoincare.Variational.SpatialEulerVariation
 import SmoothPoincare.Variational.SelectedReferenceCost
 import SmoothPoincare.Variational.SpatialEulerFlux
 
+import SmoothPoincare.Heights.SurvivingBirthBodies
+import SmoothPoincare.Heights.MarkedEdgeGluing
+import SmoothPoincare.Heights.SelectedBirthEdge
+import SmoothPoincare.Heights.CompatibleBirthCollars
+import SmoothPoincare.Heights.RetainedRoundedTrace
+import SmoothPoincare.Heights.OriginalRoundedTrace
+import SmoothPoincare.Heights.RetainedOutgoingCollar
+import SmoothPoincare.Heights.RetainedInwardCollar
+import SmoothPoincare.Heights.OutgoingTraceAdjustment
+import SmoothPoincare.Variational.MatchedCurvedDisk
+import SmoothPoincare.Variational.CurvedCapPrice
+import SmoothPoincare.Variational.ConformalCoreReference
+import SmoothPoincare.Variational.NativeRoundCore
+import SmoothPoincare.Variational.ConformalChiralCharges
+import SmoothPoincare.Variational.ProtectedConformalDivision
+import SmoothPoincare.Variational.ConformalCoreCosts
+import SmoothPoincare.Variational.EulerBaseChange
+import SmoothPoincare.Variational.EulerGaugeFrames
+import SmoothPoincare.Variational.TestedEulerIntegral
+import SmoothPoincare.Variational.GlobalEulerCurrent
+import SmoothPoincare.Variational.LipschitzEulerFlux
+import SmoothPoincare.Variational.TerminalMetricPowerBound
+import SmoothPoincare.Variational.TerminalLipschitzEuler
+import SmoothPoincare.Variational.TerminalBallEulerCharge
+import SmoothPoincare.Variational.IntrinsicTerminalCharge
+import SmoothPoincare.Variational.IntrinsicEulerDensity
+import SmoothPoincare.Variational.TestedEulerTransgression
+import SmoothPoincare.Variational.TestedEulerTransport
+
 /-! # Fixed-type descent and immersed recognition
 
 Public imports for the master formalization. The Edition 03 blueprint identifies

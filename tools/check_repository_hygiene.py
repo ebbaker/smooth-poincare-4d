@@ -29,6 +29,9 @@ BRANCHES = ('master',
             'investigations-1/04_hypersurface_immersions',
             'investigations-1/04_hypersurface_immersions/01_immersed_handle_constructions',
             'investigations-1/04_hypersurface_immersions/02_two_handle_recognition',
+            'investigations-1/05_collar_deformation_and_surgery',
+            'investigations-1/05_collar_deformation_and_surgery/01_collar_deformation_and_adapted_coordinates',
+            'investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery',
             'initial-investigations/01_generalized_isothermal_coordinates',
             'initial-investigations/02_chiral_descent_and_double_copy')
 

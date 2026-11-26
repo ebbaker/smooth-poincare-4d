@@ -1,0 +1,379 @@
+import SmoothPoincare
+
+/-! # FOT-E42 public signatures and foundations
+
+26 November 2026 UTC. Prepared for Edward B. Baker III with OpenAI Codex assistance.
+The serving model and reasoning effort were unavailable.
+The intake was 95a4f50eb9ec6e0e98454170279f45a66b000211.
+
+These 156 authored public declarations enter after the frozen FOT-E41 inventory.
+The declaration names and source positions come from the compiled interface indexes.
+-/
+
+/-! ## SmoothPoincare.Heights.CompatibleBirthCollars -/
+#check @SmoothPoincare.exists_bufferedBirthCollarOverlap
+#print axioms SmoothPoincare.exists_bufferedBirthCollarOverlap
+#check @SmoothPoincare.IsolatedOneHandle.exists_bufferedNativeFootBirthOverlap
+#print axioms SmoothPoincare.IsolatedOneHandle.exists_bufferedNativeFootBirthOverlap
+#check @SmoothPoincare.IsolatedOneHandle.exists_bufferedNativeBlockBirthOverlap
+#print axioms SmoothPoincare.IsolatedOneHandle.exists_bufferedNativeBlockBirthOverlap
+
+/-! ## SmoothPoincare.Heights.MarkedEdgeGluing -/
+#check @SmoothPoincare.markedEdgeInverseOverlap
+#print axioms SmoothPoincare.markedEdgeInverseOverlap
+#check @SmoothPoincare.markedEdgePatchUnion
+#print axioms SmoothPoincare.markedEdgePatchUnion
+#check @SmoothPoincare.markedEdgePatchUnion_domains
+#print axioms SmoothPoincare.markedEdgePatchUnion_domains
+#check @SmoothPoincare.markedEdgePatchUnion_eqOn
+#print axioms SmoothPoincare.markedEdgePatchUnion_eqOn
+#check @SmoothPoincare.markedEdgePatchDiffeomorph
+#print axioms SmoothPoincare.markedEdgePatchDiffeomorph
+#check @SmoothPoincare.markedEdgePatchDiffeomorph_eqOn
+#print axioms SmoothPoincare.markedEdgePatchDiffeomorph_eqOn
+#check @SmoothPoincare.exists_disjointIncomingEdgePatches
+#print axioms SmoothPoincare.exists_disjointIncomingEdgePatches
+#check @SmoothPoincare.markedEdgeSignedCollar
+#print axioms SmoothPoincare.markedEdgeSignedCollar
+#check @SmoothPoincare.markedEdgeSignedCollar_eqOn
+#print axioms SmoothPoincare.markedEdgeSignedCollar_eqOn
+#check @SmoothPoincare.markedEdgeSignedCollar_height
+#print axioms SmoothPoincare.markedEdgeSignedCollar_height
+#check @SmoothPoincare.IsolatedOneHandle.nativeFeet_on_oppositeIncomingSpheres
+#print axioms SmoothPoincare.IsolatedOneHandle.nativeFeet_on_oppositeIncomingSpheres
+#check @SmoothPoincare.IsolatedOneHandle.nativeDeepLower
+#print axioms SmoothPoincare.IsolatedOneHandle.nativeDeepLower
+#check @SmoothPoincare.IsolatedOneHandle.nativeDeepTrace
+#print axioms SmoothPoincare.IsolatedOneHandle.nativeDeepTrace
+#check @SmoothPoincare.IsolatedOneHandle.nativeDeepTraceDiffeomorph
+#print axioms SmoothPoincare.IsolatedOneHandle.nativeDeepTraceDiffeomorph
+#check @SmoothPoincare.IsolatedOneHandle.nativeDeepTraceDiffeomorph_apply
+#print axioms SmoothPoincare.IsolatedOneHandle.nativeDeepTraceDiffeomorph_apply
+#check @SmoothPoincare.IsolatedOneHandle.nativeDeepTraceDiffeomorph_symm_apply
+#print axioms SmoothPoincare.IsolatedOneHandle.nativeDeepTraceDiffeomorph_symm_apply
+#check @SmoothPoincare.IsolatedOneHandle.markedEdgeTraceMap
+#print axioms SmoothPoincare.IsolatedOneHandle.markedEdgeTraceMap
+#check @SmoothPoincare.IsolatedOneHandle.markedEdgeTraceMap_domains
+#print axioms SmoothPoincare.IsolatedOneHandle.markedEdgeTraceMap_domains
+#check @SmoothPoincare.IsolatedOneHandle.markedEdgeTraceMap_apply
+#print axioms SmoothPoincare.IsolatedOneHandle.markedEdgeTraceMap_apply
+#check @SmoothPoincare.IsolatedOneHandle.markedEdgeTraceMap_symm_apply
+#print axioms SmoothPoincare.IsolatedOneHandle.markedEdgeTraceMap_symm_apply
+#check @SmoothPoincare.IsolatedOneHandle.markedEdgeTraceMap_deepLower
+#print axioms SmoothPoincare.IsolatedOneHandle.markedEdgeTraceMap_deepLower
+#check @SmoothPoincare.IsolatedOneHandle.markedEdgeTraceMap_transportTube
+#print axioms SmoothPoincare.IsolatedOneHandle.markedEdgeTraceMap_transportTube
+#check @SmoothPoincare.IsolatedOneHandle.markedEdgeTraceMap_transportOutgoingTube
+#print axioms SmoothPoincare.IsolatedOneHandle.markedEdgeTraceMap_transportOutgoingTube
+#check @SmoothPoincare.IsolatedOneHandle.exists_markedEdgeTraceDiffeomorph_of_cover
+#print axioms SmoothPoincare.IsolatedOneHandle.exists_markedEdgeTraceDiffeomorph_of_cover
+
+/-! ## SmoothPoincare.Heights.OriginalRoundedTrace -/
+#check @SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.exists_originalTraceComparison
+#print axioms SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.exists_originalTraceComparison
+
+/-! ## SmoothPoincare.Heights.OutgoingTraceAdjustment -/
+#check @SmoothPoincare.IsolatedOneHandle.withUpperMarking
+#print axioms SmoothPoincare.IsolatedOneHandle.withUpperMarking
+#check @SmoothPoincare.IsolatedOneHandle.withUpperMarking_maps
+#print axioms SmoothPoincare.IsolatedOneHandle.withUpperMarking_maps
+#check @SmoothPoincare.IsolatedOneHandle.withUpperMarking_moves
+#print axioms SmoothPoincare.IsolatedOneHandle.withUpperMarking_moves
+#check @SmoothPoincare.IsolatedOneHandle.exists_outgoingTraceAdjustment
+#print axioms SmoothPoincare.IsolatedOneHandle.exists_outgoingTraceAdjustment
+
+/-! ## SmoothPoincare.Heights.RetainedInwardCollar -/
+#check @SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.exists_twoSidedCollar_extending_toUpper
+#print axioms SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.exists_twoSidedCollar_extending_toUpper
+
+/-! ## SmoothPoincare.Heights.RetainedOutgoingCollar -/
+#check @SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.outgoingLevel
+#print axioms SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.outgoingLevel
+#check @SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.outgoingLevel_inclusions
+#print axioms SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.outgoingLevel_inclusions
+#check @SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.exists_outgoingLevelCollars_toNextCut
+#print axioms SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.exists_outgoingLevelCollars_toNextCut
+
+/-! ## SmoothPoincare.Heights.RetainedRoundedTrace -/
+#check @SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace
+#print axioms SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace
+#check @SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.inverse
+#print axioms SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.inverse
+#check @SmoothPoincare.IsolatedOneHandle.exists_retainedRoundedTrace
+#print axioms SmoothPoincare.IsolatedOneHandle.exists_retainedRoundedTrace
+
+/-! ## SmoothPoincare.Heights.SelectedBirthEdge -/
+#check @SmoothPoincare.IsolatedOneHandle.exists_twoBirthCharts_withNativeEdgeFeet
+#print axioms SmoothPoincare.IsolatedOneHandle.exists_twoBirthCharts_withNativeEdgeFeet
+
+/-! ## SmoothPoincare.Heights.SurvivingBirthBodies -/
+#check @SmoothPoincare.IsolatedZeroHandle.birthBodyChart_inter_sublevel
+#print axioms SmoothPoincare.IsolatedZeroHandle.birthBodyChart_inter_sublevel
+#check @SmoothPoincare.IsolatedZeroHandle.exists_birthExcisionHeight
+#print axioms SmoothPoincare.IsolatedZeroHandle.exists_birthExcisionHeight
+#check @SmoothPoincare.IsolatedZeroHandle.exists_survivingBirthTransport
+#print axioms SmoothPoincare.IsolatedZeroHandle.exists_survivingBirthTransport
+#check @SmoothPoincare.IsolatedZeroHandle.exists_firstBirthChart_at_regularCut
+#print axioms SmoothPoincare.IsolatedZeroHandle.exists_firstBirthChart_at_regularCut
+#check @SmoothPoincare.IsolatedZeroHandle.exists_twoBirthCharts_at_regularCut
+#print axioms SmoothPoincare.IsolatedZeroHandle.exists_twoBirthCharts_at_regularCut
+#check @SmoothPoincare.IsolatedZeroHandle.exists_twoBirthCharts_after_emptyCut
+#print axioms SmoothPoincare.IsolatedZeroHandle.exists_twoBirthCharts_after_emptyCut
+
+/-! ## SmoothPoincare.Variational.ConformalChiralCharges -/
+#check @SmoothPoincare.antiSelfDualCurvatureBlock_metricKulkarniNomizu
+#print axioms SmoothPoincare.antiSelfDualCurvatureBlock_metricKulkarniNomizu
+#check @SmoothPoincare.OrderedEndpointSpectrum.smul
+#print axioms SmoothPoincare.OrderedEndpointSpectrum.smul
+#check @SmoothPoincare.conformalOrientedFrameAt
+#print axioms SmoothPoincare.conformalOrientedFrameAt
+#check @SmoothPoincare.conformalOrientedFrameAt_basis
+#print axioms SmoothPoincare.conformalOrientedFrameAt_basis
+#check @SmoothPoincare.signedCollarWeylBlock_conformal
+#print axioms SmoothPoincare.signedCollarWeylBlock_conformal
+#check @SmoothPoincare.signedChiralEnergyMeasure_conformalMetric
+#print axioms SmoothPoincare.signedChiralEnergyMeasure_conformalMetric
+#check @SmoothPoincare.SignedCollarMetric.conformal
+#print axioms SmoothPoincare.SignedCollarMetric.conformal
+#check @SmoothPoincare.SignedCollarMetric.chiralMeasure_conformal
+#print axioms SmoothPoincare.SignedCollarMetric.chiralMeasure_conformal
+#check @SmoothPoincare.SignedCollarMetric.charge_conformal
+#print axioms SmoothPoincare.SignedCollarMetric.charge_conformal
+#check @SmoothPoincare.SignedCollarMetric.energy_conformal
+#print axioms SmoothPoincare.SignedCollarMetric.energy_conformal
+#check @SmoothPoincare.SignedCollarMetric.orderedSpectrum_conformal
+#print axioms SmoothPoincare.SignedCollarMetric.orderedSpectrum_conformal
+#check @SmoothPoincare.balancedPhysicalSpectralMeasure_conformal
+#print axioms SmoothPoincare.balancedPhysicalSpectralMeasure_conformal
+
+/-! ## SmoothPoincare.Variational.ConformalCoreCosts -/
+#check @SmoothPoincare.conformalCoreGradientSq
+#print axioms SmoothPoincare.conformalCoreGradientSq
+#check @SmoothPoincare.conformalCoreScalarPolynomial
+#print axioms SmoothPoincare.conformalCoreScalarPolynomial
+#check @SmoothPoincare.conformalCoreScalarCost
+#print axioms SmoothPoincare.conformalCoreScalarCost
+#check @SmoothPoincare.conformalCoreFullCost
+#print axioms SmoothPoincare.conformalCoreFullCost
+#check @SmoothPoincare.conformalCore_scalarCost_eq
+#print axioms SmoothPoincare.conformalCore_scalarCost_eq
+#check @SmoothPoincare.conformalCore_scalarCost_two_direction
+#print axioms SmoothPoincare.conformalCore_scalarCost_two_direction
+#check @SmoothPoincare.scalarSq_div_six_le_intrinsicCurvatureSq
+#print axioms SmoothPoincare.scalarSq_div_six_le_intrinsicCurvatureSq
+#check @SmoothPoincare.conformalCore_fullCost_eq_metricMeasure_real
+#print axioms SmoothPoincare.conformalCore_fullCost_eq_metricMeasure_real
+#check @SmoothPoincare.conformalCore_scalarCost_div_six_le_fullCost
+#print axioms SmoothPoincare.conformalCore_scalarCost_div_six_le_fullCost
+#check @SmoothPoincare.conformalCore_fullCost_two_direction
+#print axioms SmoothPoincare.conformalCore_fullCost_two_direction
+#check @SmoothPoincare.conformalCore_integral_gradientSq_sq_pos
+#print axioms SmoothPoincare.conformalCore_integral_gradientSq_sq_pos
+#check @SmoothPoincare.conformalCore_exists_fullCost_gt
+#print axioms SmoothPoincare.conformalCore_exists_fullCost_gt
+#check @SmoothPoincare.exists_selectedConformalCoreCosts_unbounded
+#print axioms SmoothPoincare.exists_selectedConformalCoreCosts_unbounded
+
+/-! ## SmoothPoincare.Variational.ConformalCoreReference -/
+#check @SmoothPoincare.classYamabeFour_conformalCore
+#print axioms SmoothPoincare.classYamabeFour_conformalCore
+#check @SmoothPoincare.exists_selectedConformalCoreBump
+#print axioms SmoothPoincare.exists_selectedConformalCoreBump
+#check @SmoothPoincare.conformalCore_scalar_quadratic
+#print axioms SmoothPoincare.conformalCore_scalar_quadratic
+#check @SmoothPoincare.exists_nonzeroScalar_conformalCore
+#print axioms SmoothPoincare.exists_nonzeroScalar_conformalCore
+#check @SmoothPoincare.exists_selectedPositiveConformalCoreReference
+#print axioms SmoothPoincare.exists_selectedPositiveConformalCoreReference
+
+/-! ## SmoothPoincare.Variational.CurvedCapPrice -/
+#check @SmoothPoincare.curvedCap_exteriorPrice
+#print axioms SmoothPoincare.curvedCap_exteriorPrice
+#check @SmoothPoincare.curvedCap_outerTrimPrice
+#print axioms SmoothPoincare.curvedCap_outerTrimPrice
+#check @SmoothPoincare.exists_depth_eventually_curvedCap_price_gt
+#print axioms SmoothPoincare.exists_depth_eventually_curvedCap_price_gt
+
+/-! ## SmoothPoincare.Variational.EulerBaseChange -/
+#check @SmoothPoincare.eulerPfaffianAlternatingMap
+#print axioms SmoothPoincare.eulerPfaffianAlternatingMap
+#check @SmoothPoincare.eulerPfaffian_baseChange
+#print axioms SmoothPoincare.eulerPfaffian_baseChange
+#check @SmoothPoincare.metricEulerBaseCoefficient
+#print axioms SmoothPoincare.metricEulerBaseCoefficient
+#check @SmoothPoincare.metricEulerBaseCoefficient_eq_pfaffian_mul_det
+#print axioms SmoothPoincare.metricEulerBaseCoefficient_eq_pfaffian_mul_det
+#check @SmoothPoincare.riemannianVolumeDensity_eq_orientedBasisDet
+#print axioms SmoothPoincare.riemannianVolumeDensity_eq_orientedBasisDet
+#check @SmoothPoincare.ricciFlowEulerPfaffian_fixedBase_eq_slicePfaffian_mul_volume
+#print axioms SmoothPoincare.ricciFlowEulerPfaffian_fixedBase_eq_slicePfaffian_mul_volume
+#check @SmoothPoincare.ricciFlowEulerPfaffian_fixedBase_eq_chargeDensity_mul_volume
+#print axioms SmoothPoincare.ricciFlowEulerPfaffian_fixedBase_eq_chargeDensity_mul_volume
+
+/-! ## SmoothPoincare.Variational.EulerGaugeFrames -/
+#check @SmoothPoincare.exists_localEulerGaugeFrame
+#print axioms SmoothPoincare.exists_localEulerGaugeFrame
+
+/-! ## SmoothPoincare.Variational.GlobalEulerCurrent -/
+#check @SmoothPoincare.frameEulerDoubleDual
+#print axioms SmoothPoincare.frameEulerDoubleDual
+#check @SmoothPoincare.frameEulerCurrentCoefficient
+#print axioms SmoothPoincare.frameEulerCurrentCoefficient
+#check @SmoothPoincare.frameEulerCurrentCoefficient_eq_doubleDual
+#print axioms SmoothPoincare.frameEulerCurrentCoefficient_eq_doubleDual
+#check @SmoothPoincare.frameEulerPrimitiveVolumeJet
+#print axioms SmoothPoincare.frameEulerPrimitiveVolumeJet
+#check @SmoothPoincare.eulerDoubleDualField
+#print axioms SmoothPoincare.eulerDoubleDualField
+#check @SmoothPoincare.eulerCurrentOneForm
+#print axioms SmoothPoincare.eulerCurrentOneForm
+#check @SmoothPoincare.globalEulerCurrent
+#print axioms SmoothPoincare.globalEulerCurrent
+#check @SmoothPoincare.ricciFlowEulerCurrent
+#print axioms SmoothPoincare.ricciFlowEulerCurrent
+#check @SmoothPoincare.globalEulerCurrent_inner_orthonormal
+#print axioms SmoothPoincare.globalEulerCurrent_inner_orthonormal
+#check @SmoothPoincare.eulerDoubleDualField_apply_frame
+#print axioms SmoothPoincare.eulerDoubleDualField_apply_frame
+#check @SmoothPoincare.globalEulerCurrent_eq_frameTransgression
+#print axioms SmoothPoincare.globalEulerCurrent_eq_frameTransgression
+#check @SmoothPoincare.globalEulerCurrent_norm_le
+#print axioms SmoothPoincare.globalEulerCurrent_norm_le
+#check @SmoothPoincare.globalEulerCurrent_divergence_trace
+#print axioms SmoothPoincare.globalEulerCurrent_divergence_trace
+#check @SmoothPoincare.eulerDoubleDualField_nabla_apply_frame
+#print axioms SmoothPoincare.eulerDoubleDualField_nabla_apply_frame
+#check @SmoothPoincare.globalEulerCurrent_divergence_eq_primitiveJet
+#print axioms SmoothPoincare.globalEulerCurrent_divergence_eq_primitiveJet
+#check @SmoothPoincare.ricciFlowEulerPfaffian_fixedBase_hasDerivAt_divergence
+#print axioms SmoothPoincare.ricciFlowEulerPfaffian_fixedBase_hasDerivAt_divergence
+
+/-! ## SmoothPoincare.Variational.IntrinsicEulerDensity -/
+#check @SmoothPoincare.intrinsicEulerDensity
+#print axioms SmoothPoincare.intrinsicEulerDensity
+#check @SmoothPoincare.normSq0S_rm04_eq_frameTensorNormSq
+#print axioms SmoothPoincare.normSq0S_rm04_eq_frameTensorNormSq
+#check @SmoothPoincare.intrinsicEulerDensity_eq_frameEulerPfaffian
+#print axioms SmoothPoincare.intrinsicEulerDensity_eq_frameEulerPfaffian
+#check @SmoothPoincare.intrinsicEulerDensity_eq_modifiedChargeDensity
+#print axioms SmoothPoincare.intrinsicEulerDensity_eq_modifiedChargeDensity
+#check @SmoothPoincare.intrinsicEulerDensity_continuous_carrier
+#print axioms SmoothPoincare.intrinsicEulerDensity_continuous_carrier
+#check @SmoothPoincare.intrinsicEulerDensity_continuousOn_carrier
+#print axioms SmoothPoincare.intrinsicEulerDensity_continuousOn_carrier
+#check @SmoothPoincare.intrinsicEulerDensity_contMDiffOn_regular
+#print axioms SmoothPoincare.intrinsicEulerDensity_contMDiffOn_regular
+
+/-! ## SmoothPoincare.Variational.IntrinsicTerminalCharge -/
+#check @SmoothPoincare.intrinsicCurvatureSq
+#print axioms SmoothPoincare.intrinsicCurvatureSq
+#check @SmoothPoincare.intrinsicTraceFreeRicciSq
+#print axioms SmoothPoincare.intrinsicTraceFreeRicciSq
+#check @SmoothPoincare.intrinsicWeylScalarCharge
+#print axioms SmoothPoincare.intrinsicWeylScalarCharge
+#check @SmoothPoincare.intrinsicTerminalCharge_eq_modifiedChargeDensity
+#print axioms SmoothPoincare.intrinsicTerminalCharge_eq_modifiedChargeDensity
+#check @SmoothPoincare.intrinsicTerminalRicci_lower_of_testedEuler
+#print axioms SmoothPoincare.intrinsicTerminalRicci_lower_of_testedEuler
+#check @SmoothPoincare.ricciFlow_terminalBall_intrinsicRicciCharge
+#print axioms SmoothPoincare.ricciFlow_terminalBall_intrinsicRicciCharge
+
+/-! ## SmoothPoincare.Variational.LipschitzEulerFlux -/
+#check @SmoothPoincare.metricLipschitzCutoff_continuous
+#print axioms SmoothPoincare.metricLipschitzCutoff_continuous
+#check @SmoothPoincare.lipschitzEulerSpatialFlux_integral_bound
+#print axioms SmoothPoincare.lipschitzEulerSpatialFlux_integral_bound
+#check @SmoothPoincare.lipschitzEulerSpatialFlux_integral_bound_of_pointwise
+#print axioms SmoothPoincare.lipschitzEulerSpatialFlux_integral_bound_of_pointwise
+
+/-! ## SmoothPoincare.Variational.MatchedCurvedDisk -/
+#check @SmoothPoincare.nativeCurvedGerm_nonflat
+#print axioms SmoothPoincare.nativeCurvedGerm_nonflat
+#check @SmoothPoincare.exists_selectedMatchedCurvedDisk
+#print axioms SmoothPoincare.exists_selectedMatchedCurvedDisk
+#check @SmoothPoincare.exists_selectedClampedCorePath
+#print axioms SmoothPoincare.exists_selectedClampedCorePath
+#check @SmoothPoincare.selectedMatchedCurvedDisk_trim_charge
+#print axioms SmoothPoincare.selectedMatchedCurvedDisk_trim_charge
+#check @SmoothPoincare.selectedMatchedCurvedDisk_energy
+#print axioms SmoothPoincare.selectedMatchedCurvedDisk_energy
+#check @SmoothPoincare.selectedMatchedCurvedDisk_cost_window
+#print axioms SmoothPoincare.selectedMatchedCurvedDisk_cost_window
+#check @SmoothPoincare.selectedMatchedCurvedDisk_core_charge_of_division
+#print axioms SmoothPoincare.selectedMatchedCurvedDisk_core_charge_of_division
+
+/-! ## SmoothPoincare.Variational.NativeRoundCore -/
+#check @SmoothPoincare.exists_selectedCoreGermPath
+#print axioms SmoothPoincare.exists_selectedCoreGermPath
+#check @SmoothPoincare.standardRoundFour_curvature_ne_zero
+#print axioms SmoothPoincare.standardRoundFour_curvature_ne_zero
+#check @SmoothPoincare.exists_selectedNativeRoundCorePath
+#print axioms SmoothPoincare.exists_selectedNativeRoundCorePath
+
+/-! ## SmoothPoincare.Variational.ProtectedConformalDivision -/
+#check @SmoothPoincare.SignedCollarMetric.conformal_metric_frame_eventually_eq
+#print axioms SmoothPoincare.SignedCollarMetric.conformal_metric_frame_eventually_eq
+#check @SmoothPoincare.metricFullCurvatureMeasure_conformal_restrict_of_disjoint
+#print axioms SmoothPoincare.metricFullCurvatureMeasure_conformal_restrict_of_disjoint
+#check @SmoothPoincare.metricFullCurvatureMeasure_conformal_restrict_closedExteriors
+#print axioms SmoothPoincare.metricFullCurvatureMeasure_conformal_restrict_closedExteriors
+#check @SmoothPoincare.BalancedPhysicalExteriorDivision.conformal_of_support
+#print axioms SmoothPoincare.BalancedPhysicalExteriorDivision.conformal_of_support
+#check @SmoothPoincare.exists_protectedPositiveConformalDivision
+#print axioms SmoothPoincare.exists_protectedPositiveConformalDivision
+
+/-! ## SmoothPoincare.Variational.TerminalBallEulerCharge -/
+#check @SmoothPoincare.terminalBallCutoff
+#print axioms SmoothPoincare.terminalBallCutoff
+#check @SmoothPoincare.terminalBallCutoff_properties
+#print axioms SmoothPoincare.terminalBallCutoff_properties
+#check @SmoothPoincare.ricciFlow_terminalBall_RicciCharge
+#print axioms SmoothPoincare.ricciFlow_terminalBall_RicciCharge
+
+/-! ## SmoothPoincare.Variational.TerminalLipschitzEuler -/
+#check @SmoothPoincare.ricciFlow_terminalLipschitzEuler_transport
+#print axioms SmoothPoincare.ricciFlow_terminalLipschitzEuler_transport
+
+/-! ## SmoothPoincare.Variational.TerminalMetricPowerBound -/
+#check @SmoothPoincare.ricciFlow_terminalDistance_power_bound
+#print axioms SmoothPoincare.ricciFlow_terminalDistance_power_bound
+
+/-! ## SmoothPoincare.Variational.TestedEulerIntegral -/
+#check @SmoothPoincare.ricciFlow_volumeRatio_hasDerivAt
+#print axioms SmoothPoincare.ricciFlow_volumeRatio_hasDerivAt
+#check @SmoothPoincare.ricciFlow_testedDensity_hasDerivAt
+#print axioms SmoothPoincare.ricciFlow_testedDensity_hasDerivAt
+#check @SmoothPoincare.ricciFlow_testedIntegral_hasDerivAt
+#print axioms SmoothPoincare.ricciFlow_testedIntegral_hasDerivAt
+#check @SmoothPoincare.ricciFlow_testedIntegral_of_frozenVolume
+#print axioms SmoothPoincare.ricciFlow_testedIntegral_of_frozenVolume
+#check @SmoothPoincare.ricciFlow_testedIntegral_of_smoothDensity
+#print axioms SmoothPoincare.ricciFlow_testedIntegral_of_smoothDensity
+
+/-! ## SmoothPoincare.Variational.TestedEulerTransgression -/
+#check @SmoothPoincare.ricciFlow_eulerVolume_hasDerivAt
+#print axioms SmoothPoincare.ricciFlow_eulerVolume_hasDerivAt
+#check @SmoothPoincare.ricciFlow_testedEuler_hasDerivAt
+#print axioms SmoothPoincare.ricciFlow_testedEuler_hasDerivAt
+#check @SmoothPoincare.ricciFlow_testedEuler_hasDerivAt_gradient
+#print axioms SmoothPoincare.ricciFlow_testedEuler_hasDerivAt_gradient
+
+/-! ## SmoothPoincare.Variational.TestedEulerTransport -/
+#check @SmoothPoincare.testedEulerCurvatureNorm
+#print axioms SmoothPoincare.testedEulerCurvatureNorm
+#check @SmoothPoincare.testedEulerRicciDerivativeNorm
+#print axioms SmoothPoincare.testedEulerRicciDerivativeNorm
+#check @SmoothPoincare.testedEulerMoment
+#print axioms SmoothPoincare.testedEulerMoment
+#check @SmoothPoincare.globalEulerCurrent_norm_le_testedEulerNorms
+#print axioms SmoothPoincare.globalEulerCurrent_norm_le_testedEulerNorms
+#check @SmoothPoincare.ricciFlow_testedEulerMoment_continuousOn_carrier
+#print axioms SmoothPoincare.ricciFlow_testedEulerMoment_continuousOn_carrier
+#check @SmoothPoincare.ricciFlow_testedEuler_transport_of_derivative
+#print axioms SmoothPoincare.ricciFlow_testedEuler_transport_of_derivative
+#check @SmoothPoincare.ricciFlow_testedEuler_transport
+#print axioms SmoothPoincare.ricciFlow_testedEuler_transport
+#check @SmoothPoincare.testedEulerMoment_eq_modifiedEulerMoment
+#print axioms SmoothPoincare.testedEulerMoment_eq_modifiedEulerMoment
+#check @SmoothPoincare.modifiedTerminalRicci_lower_of_testedEulerMomentTransport
+#print axioms SmoothPoincare.modifiedTerminalRicci_lower_of_testedEulerMomentTransport

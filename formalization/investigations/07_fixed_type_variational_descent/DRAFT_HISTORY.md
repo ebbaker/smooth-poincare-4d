@@ -1,5 +1,7 @@
 # Fixed-type variational descent · Milestones
 
+- **25 November 2026 · FOT-E42.** Constructed positive curved matched references on the exact width and priced a separate positive cap. The physical core can have arbitrarily large full cost while both chiral measures and the four exterior tests persist. Proved the tested global Euler transgression and finite terminal-ball charge with the actual varying volumes. [Assessment](../reviews/MARKED_GLUE_AND_CURVED_COST_20261125.md).
+
 - **25 November 2026 · FOT-E41.** Realized a reference on the selected disk. Priced both signed trim costs and the complete exterior, identified the exact-matching case and advanced the spatial modified-flow transgression. [Assessment](../reviews/ROUNDED_EDGES_AND_REFERENCE_COST_20261125.md).
 
 - **25 November 2026 · FOT-E40.** Use the genuine single marked disk and its physical two-jet estimates. Seek one matched positive endpoint with quantified savings in both signs. For modified smoothing, establish the spatial transgression against the common terminal test. [Assessment](../reviews/NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md) · [Continuation](../continuation-notes/AFTER_NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md)

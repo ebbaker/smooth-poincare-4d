@@ -1,5 +1,7 @@
 # Morse heights and handle recognition · Milestones
 
+- **25 November 2026 · FOT-E42.** Constructed two complete birth charts, the open overlaps at the actual native feet, and the full original-to-refined rounded trace with marked outgoing level. An open two-sided collar extends the retained map on every inward slice. [Assessment](../reviews/MARKED_GLUE_AND_CURVED_COST_20261125.md).
+
 - **25 November 2026 · FOT-E41.** Computed the actual component incidence and the birth body. Both native feet and the signed outgoing rims now have explicit block maps with inverses. [Assessment](../reviews/ROUNDED_EDGES_AND_REFERENCE_COST_20261125.md).
 
 - **25 November 2026 · FOT-E40.** Both marked feet of a merging edge now admit one ambient height-preserving normalization on disjoint component strips, fixing a signed outgoing neighborhood. Normalize the rounded four-dimensional rim using that map. Transport the remaining attachments and the native outgoing map. [Assessment](../reviews/NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md) · [Continuation](../continuation-notes/AFTER_NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md)

@@ -14,6 +14,7 @@ The [master manuscript and research program](papers/master/README.md) study fixe
 | `investigations-1` | [02 — Bach flow](papers/investigations-1/02_bach_flow/README.md) | Direct study through the evolution of chiral Weyl curvature |
 | `investigations-1` | [03 — First-order twistor constructions](papers/investigations-1/03_first_order_twistor/README.md) | Shared foundations for separate sections/connections and Dirac/twistor-spinor sub-investigations |
 | `investigations-1` | [04 — Hypersurface immersions](papers/investigations-1/04_hypersurface_immersions/README.md) | Immersed handle constructions and two-middle-handle height recognition |
+| `investigations-1` | [05 — Collar deformation and surgery](papers/investigations-1/05_collar_deformation_and_surgery/README.md) | Deform a marked spherical collar and use it to isolate handle interactions or compare metrics on the original smooth sphere. |
 | Master | [Fixed-type variational descent](papers/master/01_fixed_type_variational_descent/README.md) | Intrinsic competitors, closed minimizers and round restarts |
 | `initial-investigations` | [01 — Generalized isothermal coordinates](papers/initial-investigations/01_generalized_isothermal_coordinates/README.md) | Earlier coordinate and reconstruction study |
 | `initial-investigations` | [02 — Chiral descent and double copy](papers/initial-investigations/02_chiral_descent_and_double_copy/README.md) | Earlier descent and double-copy study |

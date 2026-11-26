@@ -1,5 +1,15 @@
 # Overall formalization progress
 
+## Edition 03 marked birth bodies, positive curved references and tested Euler transport · 25 November 2026
+
+**FOT-E42.** The first two births give ambient ball charts for the entire selected incoming sublevel. On a merging edge, each whole native foot, including an open neighborhood past its rim, meets the corresponding ball chart. The original trace maps diffeomorphically to a retained rounded body by refining the cuts in the same Morse chart and transporting back through the actual upper band. The lower and handle representatives and outgoing insertion squares are explicit. One open ambient collar agrees with the retained map and its inverse on the full inward half. A second transports the signed height to the next cut. Comparison with a separately prescribed standard marked ball still requires a common smooth germ on the interior of the outgoing collar and a covering of the model.
+
+Every finite positive source has an arbitrarily small, distinct positive curved conformal replacement on the selected width. It preserves the two signed chiral measures and spectral-square measure. The finite signed gain on this family is zero. A genuinely nonconformal finite saving and a positive cap obey separate bounds. For each $a<I$ a fixed positive depth forces the late exterior increment plus cap allowance above $a$ in both signs. All four complete exterior divisions persist on the original marks. The full cost inside the protected core has a two-direction quartic lower estimate and can grow arbitrarily large.
+
+The spatial Euler current on an actual compact modified Ricci flow and the derivative of its continuous-cutoff integral are now constructed. A terminal Lipschitz plateau, a lower Ricci form bound and the stated spacetime budgets give a trace-free Ricci lower bound on the actual terminal ball. Transferring a ball through pointed convergence or into the physical gauge is a separate step.
+
+[Assessment](../reviews/MARKED_GLUE_AND_CURVED_COST_20261125.md) · [Exact public checks](handoffs/ED03_MARKED_GLUE_CHECKS.lean) · [Continuation](../continuation-notes/AFTER_MARKED_GLUE_AND_CURVED_COST_20261125.md) · [Input comparisons](handoffs/ED03_MARKED_GLUE_INPUTS_20261125.md)
+
 ## Edition 03 rounded edge, matched disk and spatial Euler variation · 25 November 2026
 
 **FOT-E41.** The actual trace identifies precisely the native foot components. A birth component is a marked smooth ball through its next regular band. The block chart, inverse and pulled-back outgoing collar match both complete native rims on a common signed width. A whole marked merger still requires compatible incoming body charts, residual tubes and the actual rounded adjunction.

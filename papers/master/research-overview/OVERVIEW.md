@@ -49,6 +49,8 @@ The [immersion parent](../../investigations-1/04_hypersurface_immersions/README.
 
 ## The variational problem on a fixed smooth type
 
+The [collar deformation and surgery investigation](../../investigations-1/05_collar_deformation_and_surgery/README.md) asks where a cut that simplifies a handle presentation can be realized with controlled curvature on the same manifold. Its [route to smooth recognition](../../investigations-1/05_collar_deformation_and_surgery/research-plan/PLAN.md) tracks the residual attaching tubes after each move and tests the geometric cost separately on the disk supplied by the fixed-type argument.
+
 Let $M$ be a closed connected oriented smooth homotopy four-sphere,
 with smooth Riemannian metrics. Use $W^\pm$ as endomorphisms of the
 real bundles $\Lambda^\pm$, and write

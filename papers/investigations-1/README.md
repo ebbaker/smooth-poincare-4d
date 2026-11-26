@@ -4,6 +4,7 @@
 2. [Bach flow](02_bach_flow/README.md) explores metric evolution toward vanishing positive Weyl curvature.
 3. [First-order twistor constructions](03_first_order_twistor/README.md) provides shared foundations and two separately planned sub-investigations: [sections and connections](03_first_order_twistor/01_sections_and_connections/README.md), and [Dirac operators and twistor spinors](03_first_order_twistor/02_dirac_and_twistor_spinors/README.md).
 4. [Hypersurface immersions](04_hypersurface_immersions/README.md) links [immersed handle constructions](04_hypersurface_immersions/01_immersed_handle_constructions/README.md) with [two-handle recognition](04_hypersurface_immersions/02_two_handle_recognition/README.md).
+5. [Collar deformation and surgery](05_collar_deformation_and_surgery/README.md) pairs [deformation and adapted coordinates](05_collar_deformation_and_surgery/01_collar_deformation_and_adapted_coordinates/README.md) with [handle isolation and marked surgery](05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/README.md). The [research plan](05_collar_deformation_and_surgery/research-plan/PLAN.md) goes from a single cancelling pair to interactions between several attachments and states what a reduction on arbitrary smooth types would require.
 
 The earlier generalized-isothermal and double-copy studies are separately housed in [initial-investigations](../initial-investigations/README.md). They are not members of this direct-conjecture series.
 

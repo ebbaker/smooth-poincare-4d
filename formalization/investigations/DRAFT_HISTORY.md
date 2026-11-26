@@ -1,5 +1,7 @@
 # Overall formalization milestones
 
+- **25 November 2026 · FOT-E42.** The original marked trace now has a whole rounded comparison. Positive curved disk references are attained, with separate signed and full costs. A global Euler current transports a fixed terminal test on the actual modified flow. [Assessment](reviews/MARKED_GLUE_AND_CURVED_COST_20261125.md).
+
 - **25 November 2026 · FOT-E41.** The native block and its common signed rim strip are explicit. Every positive flat replacement on a balanced disk has a quantified mandatory price. The modified-flow calculation reaches the local spatial Euler coefficients. [Assessment](reviews/ROUNDED_EDGES_AND_REFERENCE_COST_20261125.md).
 
 - **25 November 2026 · FOT-E40.** The selected native foot components and outgoing signed-height collars now carry explicit marks. The single balanced disk admits physical chart lifts and differentiated cutoff estimates. The finite variational and modified-gauge conclusions have separate supplying data. [Assessment](reviews/NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md) · [Continuation](continuation-notes/AFTER_NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md)

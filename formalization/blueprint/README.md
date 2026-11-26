@@ -1,5 +1,7 @@
 # Lean Blueprint
 
+**Marked birth bodies, curved disk cost and the tested Euler current, 25 November 2026.** [Chapter](src/marked_glue_and_curved_cost.tex) · [Assessment](../investigations/reviews/MARKED_GLUE_AND_CURVED_COST_20261125.md) · [Public checks](../investigations/research-progress/handoffs/ED03_MARKED_GLUE_CHECKS.lean) · [Continuation](../investigations/continuation-notes/AFTER_MARKED_GLUE_AND_CURVED_COST_20261125.md)
+
 **Rounded edges and the cost of a flat disk reference, 25 November 2026.** [Chapter](src/rounded_edges_and_reference_cost.tex) · [Assessment](../investigations/reviews/ROUNDED_EDGES_AND_REFERENCE_COST_20261125.md) · [Public checks](../investigations/research-progress/handoffs/ED03_ROUNDED_EDGE_CHECKS.lean) · [Continuation](../investigations/continuation-notes/AFTER_ROUNDED_EDGES_AND_REFERENCE_COST_20261125.md)
 
 **Native feet and physical disk jets, 25 November 2026.** [Chapter](src/native_feet_and_physical_jets.tex) · [Assessment](../investigations/reviews/NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md) · [Public checks](../investigations/research-progress/handoffs/ED03_NATIVE_FEET_AND_PHYSICAL_JETS_CHECKS.lean)

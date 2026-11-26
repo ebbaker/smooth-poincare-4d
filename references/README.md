@@ -1,5 +1,7 @@
 # Shared reference catalog
 
+The [collar deformation and surgery source map](../papers/investigations-1/05_collar_deformation_and_surgery/references/README.md) identifies the precise manuscript versions and the conformal, spinorial and handle-surgery passages used by its two branches.
+
 The initial program was motivated by Edward B. Baker III's three unfinished draft papers, preserved in [unfinished_notes](unfinished_notes/README.md). The [reusable bibliography](references.bib) includes all three and selected sources from the current sphere manuscript. Existing manuscripts retain their self-contained bibliographies. This setup does not rewrite their scientific text or silently convert draft references into published works.
 
 The catalog below is inherited from the supplied [20 November overview](../papers/research-overview/PROJECT_SUMMARY_2026-11-20.md). Titles, dates, passage notes, and earlier inspection claims are inherited metadata, not a new full-paper check in this setup. File hashes and sizes are in [IMPORT_MANIFEST.json](../IMPORT_MANIFEST.json). Follow [REFERENCE_WORKFLOW.md](../REFERENCE_WORKFLOW.md) before newly relying on a theorem.

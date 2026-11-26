@@ -1,0 +1,263 @@
+\section{Marked birth bodies, curved disk cost and the tested Euler current}
+\label{sec:ed03-marked-glue}
+
+\begin{theorem}[Two actual incoming birth bodies]
+\label{thm:ed03-birth-survivors}
+\uses{thm:ed03-birth-edge-incidence}
+\lean{SmoothPoincare.IsolatedZeroHandle.exists_survivingBirthTransport, SmoothPoincare.IsolatedZeroHandle.exists_twoBirthCharts_after_emptyCut, SmoothPoincare.IsolatedOneHandle.nativeFeet_on_oppositeIncomingSpheres, SmoothPoincare.IsolatedOneHandle.exists_twoBirthCharts_withNativeEdgeFeet}
+\leanok
+Suppose an empty incoming sublevel meets two successive isolated births with
+regular intervening bands, followed by a selected index-one cut. Two ambient
+smooth ball charts cover its entire incoming sublevel by disjoint closed
+unit balls. Their unit spheres give the complete incoming level. If the two
+body labels of the edge differ, each whole native attaching disk lands on a
+different one of these spheres, up to interchange.
+\end{theorem}
+\begin{proof}
+\leanok
+Raise the height by a smooth bump on the second birth chart. The modified
+regular band carries the old sublevel and its whole boundary past the new
+ball. Transport both charts to the incoming level and separate their compact
+images by open neighborhoods. Each native disk is connected. Its component
+label determines which sphere contains all of its parameters.
+\end{proof}
+
+\begin{theorem}[Gluing at a selected trace]
+\label{thm:ed03-marked-glue}
+\uses{thm:ed03-birth-survivors,thm:ed03-rounded-native-rims}
+\lean{SmoothPoincare.markedEdgeInverseOverlap, SmoothPoincare.markedEdgeSignedCollar_height, SmoothPoincare.IsolatedOneHandle.nativeDeepTraceDiffeomorph, SmoothPoincare.IsolatedOneHandle.markedEdgeTraceMap_transportTube, SmoothPoincare.IsolatedOneHandle.markedEdgeTraceMap_transportOutgoingTube, SmoothPoincare.IsolatedOneHandle.exists_markedEdgeTraceDiffeomorph_of_cover, SmoothPoincare.IsolatedOneHandle.exists_outgoingTraceAdjustment}
+\leanok
+On the strict deep lower region the stored trace is the actual lower
+inclusion, with a smooth inverse. On a cover of the upper body and its
+model by the two incoming patches, the rounded patch and the outgoing
+patch, agreement of both maps on their open overlaps glues them to a
+diffeomorphism $F$. Its map from the stored trace is $F\circ e$, for the
+actual trace identification $e$. It acts on the lower and handle
+representatives and every furnished framed tube by the corresponding patch
+maps. A collar comparison preserves the signed height difference in each
+direction. A compactly supported level isotopy can change the outgoing
+trace marking while fixing the deep lower region and protected tubes.
+\end{theorem}
+\begin{proof}
+\leanok
+Glue the forward local maps on the source and their inverses on the target.
+The two composites restrict to identities. On a common product strip the
+transition is $B\circ(d\times\mathrm{id})\circ A^{-1}$. The trace
+equations follow by composition with $e$ and $e^{-1}$. The two deep
+identities in the isolated-handle data prove smooth restriction there.
+A prescribed rounded model elsewhere requires its open comparison with
+the actual trace.
+\end{proof}
+
+\begin{theorem}[A curved replacement on the selected width]
+\label{thm:ed03-matched-curved}
+\uses{thm:ed03-realized-disk-reference,prop:ed03-native-matched-flat}
+\lean{SmoothPoincare.exists_selectedMatchedCurvedDisk, SmoothPoincare.exists_selectedClampedCorePath, SmoothPoincare.selectedMatchedCurvedDisk_trim_charge, SmoothPoincare.selectedMatchedCurvedDisk_energy, SmoothPoincare.selectedMatchedCurvedDisk_cost_window, SmoothPoincare.selectedMatchedCurvedDisk_core_charge_of_division}
+\leanok
+Let $Q\subset B$ be the selected marked disks, $W$ the actual native trim,
+$e$ the incoming chiral energy, $q=2^{-k}$ and $I$ the fixed smooth-type
+positive infimum. A curved native reference matching the source near the
+closed trim extends to an affine path of positive-definite metrics, with
+the same full trim and closed exterior germs at all times. The endpoint
+realizes the reference on an open neighborhood of $B$. If this endpoint
+$h$ lies in a positive class and exterior frames match, then for either
+sign $s$ the attained saving is the decrease of disk charge. The retained
+charge inside the disk away from its trim obeys
+\[
+ \lambda_h^s(B\setminus W)>
+ I-q\bigl(e-\lambda_g^s(Q)\bigr)-\epsilon-\lambda_g^s(B\cap W).
+\]
+\end{theorem}
+\begin{proof}
+\leanok
+Use the marked metric lift and the cutoff of width $1/(n+1)$.
+On the full transition the two metrics agree, so interpolation fixes its
+germ. Decompose the actual signed energy over the disk and its complete
+exterior and apply the four-measure division and the positive-class floor.
+A matched curved trim can carry positive charge throughout the path.
+\end{proof}
+
+\begin{proposition}[Price of a separate positive cap]
+\label{prop:ed03-curved-cap-price}
+\uses{thm:ed03-matched-curved,thm:ed03-mandatory-flat-cost}
+\lean{SmoothPoincare.curvedCap_exteriorPrice, SmoothPoincare.curvedCap_outerTrimPrice, SmoothPoincare.exists_depth_eventually_curvedCap_price_gt}
+\leanok
+Write $V=(\operatorname{int} B)^c$ and
+$\Delta_s(A)=\lambda_h^s(A)-\lambda_g^s(A)$. A positive cap with
+$E_s(\mathrm{cap})\le\lambda_h^s(V)+\delta$ requires
+\[
+ I-q\bigl(e-\lambda_g^s(Q)\bigr)-\epsilon
+ < \Delta_s(V\cap W)+\Delta_s(V\setminus W)+\delta .
+\]
+Along a minimizing sequence, for each $a<I$ one can fix a positive depth
+before choosing the divisions. Eventually every such cap in either sign
+has $\Delta_s(V)+\delta>a$ as the division errors tend to zero.
+\end{proposition}
+\begin{proof}
+\leanok
+Compare the attained cap energy with $I$ and use the upper estimate
+on the complete original exterior. Split this exterior into two disjoint
+measurable pieces at the actual trim. Choose $k$ with
+$(1-2^{-k})I>a$ before passing along the sequence.
+\end{proof}
+
+\begin{theorem}[The Euler current on the modified flow]
+\label{thm:ed03-tested-euler}
+\uses{prop:ed03-spatial-euler-flux}
+\lean{SmoothPoincare.globalEulerCurrent, SmoothPoincare.globalEulerCurrent_norm_le, SmoothPoincare.globalEulerCurrent_divergence_eq_primitiveJet, SmoothPoincare.exists_localEulerGaugeFrame, SmoothPoincare.riemannianVolumeDensity_eq_orientedBasisDet, SmoothPoincare.intrinsicEulerDensity_eq_modifiedChargeDensity, SmoothPoincare.ricciFlow_eulerVolume_hasDerivAt, SmoothPoincare.ricciFlow_testedEuler_hasDerivAt, SmoothPoincare.ricciFlow_testedEuler_hasDerivAt_gradient}
+\leanok
+Let $g(t)$ be the supplied smooth Ricci flow on a closed oriented
+four-manifold, in the gauge of the modified solution. For every fixed
+continuous test $\chi$ and every regular time,
+\[
+ \frac{d}{dt}\int\chi e(g)\,dV_g=\int\chi\,\operatorname{div}_g X\,dV_g,
+ \qquad e(g)=\tfrac14|\mathrm{Rm}|^2-|\mathrm{Ric}|^2+\tfrac14R^2.
+\]
+In an oriented orthonormal frame $X_i=2\sum_{jab}
+({*}\mathrm{Rm}{*})_{ijab}\nabla_a\mathrm{Ric}_{jb}$. The smooth global
+field satisfies $|X|\le144|\mathrm{Rm}|\,|\nabla\mathrm{Ric}|$ in the
+ordered tensor norms. For a smooth test the derivative equals
+$-\int d\chi(X)\,dV_g$.
+\end{theorem}
+\begin{proof}
+\leanok
+Raise the one-form obtained by contracting the double dual of curvature
+against the first covariant derivative of Ricci. Trace its covariant
+derivative and use differential Bianchi to identify it with the variation
+of twice the fixed-base Pfaffian. Transport the two bundle slots by the
+Ricci gauge through a prescribed oriented frame. The determinant changing
+the four base vectors is the evolving volume ratio. Relative to one fixed
+volume the weighted density is smooth in spacetime. Its time derivative
+may therefore be integrated against a fixed continuous cutoff. Spatial
+integration by parts gives the smooth-test formula.
+\end{proof}
+
+\begin{theorem}[The retained mark on the whole original trace]
+\label{thm:ed03-original-rounded-trace}
+\uses{thm:ed03-birth-survivors,thm:ed03-marked-glue}
+\lean{SmoothPoincare.IsolatedOneHandle.exists_bufferedNativeFootBirthOverlap, SmoothPoincare.IsolatedOneHandle.exists_bufferedNativeBlockBirthOverlap, SmoothPoincare.IsolatedOneHandle.exists_retainedRoundedTrace, SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.inverse, SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.exists_originalTraceComparison, SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.outgoingLevel_inclusions, SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.exists_outgoingLevelCollars_toNextCut, SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.exists_twoSidedCollar_extending_toUpper}
+\leanok
+For each full incoming foot of the selected merger there is an open
+four-dimensional comparison on $B(b,r)\times B(0,\sigma)$ with $r>0$ and
+$1<\sigma<2$. The actual block coordinates and their pulled-back ball
+coordinates agree under the birth chart $P$, and $P^{-1}$ recovers them
+on the whole image. In the same Morse chart refine the two regular cuts.
+The new trace factors as $U\circ C$, with explicit lower and handle-cell
+representatives in the rounded sublevel. If $H$ is the upper regular
+comparison from the new cut to the old and $e$ is the original stored
+trace, the whole original trace maps to this rounded sublevel by
+\[
+ F=U^{-1}H^{-1}e,\qquad F^{-1}=e^{-1}HU .
+\]
+On each outgoing level the restrictions respect the marked-band square
+in both directions, including every parameter of a supplied tube. Restricting $U$ to its entire boundary gives a smooth level map. On a common two-sided height strip its product transport goes from the rounded level through the actual outgoing level to the next cut. It agrees with $U$ at height zero. There is also an open two-sided ambient collar $D$ that agrees with $U$ on the entire inward half of the supplied rounded collar $A$. For every $0\le s<r$, its forward equation is $D(x,s)=U(A(x,-s))$ under sublevel inclusion, and its inverse recovers $A(x,-s)$.
+\end{theorem}
+\begin{proof}
+\leanok
+The compact native feet lie in the open target of their assigned birth
+chart. Shrink the product neighborhood of each complete disk inside the
+open domain of the block followed by $P^{-1}$. Retain both smooth factors
+in the isolated-handle construction, including their literal point maps
+and deep-lower identities. Restrict the upper regular band to sublevels
+and levels, compose these diffeomorphisms and apply the inclusion square.
+The inward restriction has bijective derivative through both sublevel inclusions at the boundary. Extend this smooth half collar across its zero section. The extension and the height-calibrated product collar have the same boundary marking. Comparing them on a whole strip requires further control.
+This constructs the comparison for the particular rounded sublevel of
+the height. A comparison carrying independently prescribed standard
+ball charts still requires agreement on their model overlaps.
+\end{proof}
+
+\begin{theorem}[Positive curved references and signed charge]
+\label{thm:ed03-positive-conformal-core}
+\uses{thm:ed03-matched-curved,prop:ed03-curved-cap-price}
+\lean{SmoothPoincare.exists_selectedNativeRoundCorePath, SmoothPoincare.exists_selectedPositiveConformalCoreReference, SmoothPoincare.conformalCore_scalar_quadratic, SmoothPoincare.signedCollarWeylBlock_conformal, SmoothPoincare.SignedCollarMetric.chiralMeasure_conformal, SmoothPoincare.SignedCollarMetric.orderedSpectrum_conformal, SmoothPoincare.balancedPhysicalSpectralMeasure_conformal}
+\leanok
+On a connected closed positive-class source, every buffered native disk
+and every $\eta>0$ admit a smooth $u$ supported strictly inside the native
+inner ball and an attained $0<|t|\le\eta$ such that $g_t=e^{2tu}g$ is
+distinct from $g$ and has nonzero scalar curvature there. All $g_s$ lie
+in the original positive class. Both chiral measures and the spectral-square
+measure agree on every region in their respective metrics. The entire
+trim and closed exterior remain fixed as metric germs. A second construction
+inserts an actual unit-round neighborhood on the same disk by an affine
+splice. Its Yamabe sign needs a separate estimate.
+\end{theorem}
+\begin{proof}
+\leanok
+Take a nonconstant smooth bump supported strictly inside the protected
+width. At a point with $du\ne0$, the scalar-curvature numerator
+$R-6t\Delta u-6t^2|du|^2$ cannot vanish at all three parameters
+$\eta/2,-\eta/2,\eta$. Translation of the logarithmic conformal factor
+gives equality of the class infima. In rescaled oriented frames the
+Kulkarni--Nomizu correction has pure trace in each chiral block. After
+the trace is removed both operators scale by $e^{-2tu}$ and their
+squared coefficients cancel the factor $e^{4tu}$ in the volume.
+\end{proof}
+
+\begin{theorem}[Terminal ball charge in the modified metric]
+\label{thm:ed03-terminal-ball-euler}
+\uses{thm:ed03-tested-euler,thm:ed03-modified-euler-transport}
+\lean{SmoothPoincare.lipschitzEulerSpatialFlux_integral_bound, SmoothPoincare.ricciFlow_terminalDistance_power_bound, SmoothPoincare.ricciFlow_terminalLipschitzEuler_transport, SmoothPoincare.terminalBallCutoff_properties, SmoothPoincare.ricciFlow_terminalBall_RicciCharge, SmoothPoincare.intrinsicTerminalCharge_eq_modifiedChargeDensity, SmoothPoincare.ricciFlow_terminalBall_intrinsicRicciCharge}
+\leanok
+Assume $[0,\tau]$ belongs to the carrier of the compact modified solution,
+with regular interior and $\mathrm{Ric}_s\ge-(b/s)g_s$, $b<1/2$.
+Suppose $\|\mathrm{Rm}\|_{L^2(g_s)}\le A$ and the time integral of the
+squared $L^2(g_s)$ norm of $\nabla\mathrm{Ric}$ is finite and at most $L^2$.
+For one fixed terminal $\delta$-Lipschitz cutoff the absolute change
+of its Euler integral is at most $144\delta A L\sqrt{\tau/(1-2b)}$.
+On a connected source take the terminal distance cutoff with plateau
+$\{d_\tau\le R\}$ and vanishing on $\{d_\tau\ge R+1\}$. If a measurable
+initial set in that plateau has full curvature charge at least
+$\epsilon^2$, the terminal open ball satisfies
+\[
+ \int_{B_\tau(p,R+1)} |Z_\tau|^2\,dV_\tau\ \ge \tfrac{1}{2}\epsilon^2-4(m_++m_-)-\tfrac{1}{6}m_{R^2}
+ -288 A L\sqrt{\tau/(1-2b)}.
+\]
+Here $Z_\tau$ denotes the trace-free part at the terminal time.
+The $m$'s are the initial cutoff moments. The frame-independent version
+combines their contribution as one integral of $\chi(|\mathrm{Rm}|^2/2+2e)$
+in the initial volume. Endpoint integrability then follows from continuity
+on the compact slices.
+\end{theorem}
+\begin{proof}
+\leanok
+The Ricci inequality makes $s^{-2b}g_s(v,v)$ nonincreasing for fixed
+$x,v$. Thus $d_\tau\le(\tau/s)^b d_s$. Smooth approximation on each
+slice gives the spatial flux bound with the exact Lipschitz constant
+of the original cutoff. Integrate the derivative of its Euler moment,
+use the carrier continuity at the endpoints and apply time
+Cauchy--Schwarz. At the initial set the full tensor lower bound and
+the two Weyl charges control the sign of the Euler moment. At the
+terminal ball the two nonnegative Weyl terms and scalar-square term
+give the displayed lower bound.
+\end{proof}
+
+\begin{proposition}[Four unchanged exterior tests and the cost inside the core]
+\label{prop:ed03-protected-conformal-cost}
+\uses{thm:ed03-positive-conformal-core,prop:ed03-curved-cap-price}
+\lean{SmoothPoincare.metricFullCurvatureMeasure_conformal_restrict_closedExteriors, SmoothPoincare.BalancedPhysicalExteriorDivision.conformal_of_support, SmoothPoincare.exists_protectedPositiveConformalDivision, SmoothPoincare.conformalCore_scalarCost_eq, SmoothPoincare.conformalCore_fullCost_two_direction, SmoothPoincare.exists_selectedConformalCoreCosts_unbounded}
+\leanok
+One can make the positive curved change inside the protected disk $Q$
+itself. At every amplitude the original four exterior divisions hold on
+the same marked pair. The restriction of the full-curvature measure to
+either complete closed exterior and to the supplied disjoint outer trim
+is unchanged. On any measurable $A$, let $C(t,A)$ be the integral of
+$|\mathrm{Rm}_{g_t}|^2$ in its own volume. Then
+\[
+ \tfrac12\bigl(C(t,A)+C(-t,A)\bigr)
+ \ge 3t^4\int_A |du|_g^4\,dV_g-\tfrac16\int_A R_g^2\,dV_g .
+\]
+The coefficient of $t^4$ is positive on the inner ball for the constructed
+bump. Full costs there exceed arbitrary ceilings at one of the two signs
+for sufficiently large amplitudes.
+\end{proposition}
+\begin{proof}
+\leanok
+Off the core support the conformal metric, its adapted frames and both
+volume forms agree as germs. Restrict this identity to each closed
+exterior and use the signed and spectral measure identities globally.
+In dimension four the transformed volume cancels the exponential in
+the square of the scalar-curvature formula. Average the two resulting
+squares at $t$ and $-t$, and use $|\mathrm{Rm}|^2\ge R^2/6$.
+A nonzero differential on an open subset gives positive integral
+against the actual source volume.
+\end{proof}
