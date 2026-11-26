@@ -4,6 +4,10 @@
 
 The [working papers](../README.md#working-papers-for-the-parallel-investigations) develop intermediate estimates and marked constructions. The master imports a result when it recognizes a specified smooth class, yields an admissible improvement, or eliminates an alternative under identified geometric hypotheses. The [editorial crosswalk](../research-progress/handoffs/E51_COMPANION_DRAFTS_20261125.md) locates the longer arguments.
 
+## Current route through entry and the charged disk
+
+Test $P=4e+3\int L^2dV$ on an actual positive class first. Given only entry $I^+<2T$, begin on the one disk at a regular density point in the selected comparison scale. Choose its actual width once, measure both sides and the cost of any change of marking, and seek a positive same-type gain exceeding $e_i-I^+$. The retained metric on a double with the altered Mazur boundary germ is a parallel entry test. For separated physical quantiles test an annular radial Ricci lower bound, transition volume and compatible flat embeddings. A whole comparison covering the charged core cannot restart round under strong local convergence. At an attained class test the Ricci-flow Hessian or the Einstein restrictions. [Latest continuation](../continuation-notes/AFTER_SUBCRITICAL_CHARGED_DISKS_20261125.md)
+
 ## First comparison after the recognition gap
 
 The uniform gap removes the old endpoint from the list of nonstandard smooth types. On one physical minimizing sequence with $T+\varepsilon_*<I^+(M)<4T/3$, choose the fixed finite disks supplied by the spectral median. Test a single charged disk or the whole family's actual collars before varying the tolerance. In determinant-one gauge the measured flux residual and conformal distortion give a first-order cost on a supplied parametrization. For the whole wider band, retain the physical two-quantile shell, full residual, closed rigidity and strict restart alternatives. Positive subcritical entry on arbitrary smooth types is an independent task. [Next packets](../continuation-notes/AFTER_UNIFORM_RECOGNITION_GAP_20261125.md)

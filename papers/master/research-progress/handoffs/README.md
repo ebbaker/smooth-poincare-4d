@@ -13,3 +13,5 @@ Issue future frozen requests and record their returns here with a task ID, input
 [Marked exteriors, height diagrams, physical anchoring and near-Einstein tests, E36–E48](MARKED_TESTS_20261125.md)
 
 [Uniform recognition and physical charge above the endpoint](E56_E58_RECOGNITION_GAP_20261125.md) records the next assessed working generation.
+
+[Charged disks throughout the subcritical band and a spectral recognition gap](E59_E62_SPECTRAL_WINDOWS_20261125.md) records E59–E62, the boundary-metric calculation and the surviving smooth cases.

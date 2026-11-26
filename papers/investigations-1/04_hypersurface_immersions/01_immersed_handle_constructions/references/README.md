@@ -10,3 +10,5 @@
 | [E33 marked middle-handle reduction](../../../../master/reviews/E33_INDEX_TWO_HANDLES.md) and its named passages. | Read as a repository result for the actual smooth markings and the distinction between a height and an auxiliary reordered handle presentation. Published topology inputs retain their inspection status in the [canonical record](../../../../../references/SOURCE_NOTES_MASTER_RICCI_IMMERSION_20261125.md). |
 
 The setup uses these selected passages and repository results. It proposes a new model and leaves proof of the marked construction for its B/E tasks. [Reference workflow](../../../../../REFERENCE_WORKFLOW.md)
+
+The [E59–E62 primary source record](../../../../../references/SOURCE_NOTES_MASTER_SPECTRAL_WINDOWS_20261125.md) identifies the APS signature and lens formulas, the Seifert spectral series and the marked cork presentation.

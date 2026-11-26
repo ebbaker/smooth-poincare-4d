@@ -184,3 +184,5 @@ The [source records R119–R121](../papers/investigations-1/03_first_order_twist
 [Endpoint charge and marked diagram sources](SOURCE_NOTES_MASTER_ENDPOINT_20261125.md) record the modified Yamabe classification and the specific stabilized and mixed handle presentations used in the endpoint edition.
 
 [Uniform recognition gap](SOURCE_NOTES_MASTER_RECOGNITION_GAP_20261125.md) records the entropy, Sobolev, compactness and finite equality inputs to the positive-time argument.
+
+[Charged disks, spectral recognition and marked boundaries](SOURCE_NOTES_MASTER_SPECTRAL_WINDOWS_20261125.md) records the comparison scales, isotropic flow blocks and APS boundary conventions used in E59–E62.

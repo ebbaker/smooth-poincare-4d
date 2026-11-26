@@ -66,3 +66,5 @@ B04/B05 now have a conditional replacement for a prescribed global cone chart. O
 ## Two physical shell volumes
 
 B04/B05 and master E56c replace the vanishing radial defect by equality of two positive normalized physical image-shell volumes on a supplied proper flat band. Backward calibration fixes the inner radial shift. The entire smaller ball and median exterior are retained when the width, chart and anchoring conditions hold. Extracting the proper source comparison and proving saturation remain open. [Derivation](../notes/E56_PHYSICAL_RADIAL_FLUX.md) · [Independent flux and marking check](../reviews/E56_FLUX_CHECK.md)
+
+Under B04/B05, [E59b](../notes/E59_LOG_SHELLS.md) and [E60r3](../reviews/E60_LOG_SHELLS.md) give the radial defect on a selected physical block under centered Ricci comparison, or protected annular comparison with one inner transition-volume bound. Construct these data and proper first-order embeddings on that same scale. [Working proof](../manuscript/physical_ricci_flux.tex)

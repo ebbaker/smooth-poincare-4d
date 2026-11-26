@@ -4,7 +4,7 @@
 
 ## Current comparison
 
-The uniform recognition theorem eliminates $I^+=T$ even over varying smooth types. Work on one source in the surviving band. Below $4T/3$ apply the [two-sign charge bound](../manuscript/subcritical_charge.tex) at fixed tolerance and test the [marked flux and distortion](../manuscript/disk_collar_comparison.tex) on a charged disk or the measured aggregate. A single marked disk suffices if its gain exceeds the minimizing excess. At higher energies continue through the general residual, a closed minimizer or an equal-energy restart.
+For every surviving $I^+(M)<2T$, a subsequence has a positive-Ricci comparison scale with absolutely continuous chiral mass in the original conformal measures. One marked disk carries positive mass of the same sign on both complete sides, and its bicollar can have arbitrarily small incoming full curvature relative to its core charge. Its normalized chart and its repair cost remain to be controlled. Test the weighted conformal metric estimate at the measured collar widths. A variation of a closed minimizer can instead use the reduced Cotton contraction. [Master assessment](../../research-progress/handoffs/E59_E62_SPECTRAL_WINDOWS_20261125.md)
 
 ## Diffuse energy
 

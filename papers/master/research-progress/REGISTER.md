@@ -6,12 +6,12 @@
 | --- | --- | --- |
 | SP4-MASTER-B01 | Initial edition assessed; route revised | [Initial editorial choice](../brainstorm/notes/INITIAL_PROOF_ROUTE_20261125.md) and [entry, short cuts and physical scales](../brainstorm/notes/ENTRY_AND_CONCENTRATION_20261125.md). |
 | SP4-MASTER-E00 | Initial synthesis completed | [Initial review](../reviews/INITIAL_EDITION_20261125.md). |
-| SP4-MASTER-B02 | Further exterior tested | A sufficiently long conformally product Mazur seam obstructs ordinary and modified positivity on any completion retaining that strip. A qualifying retained exterior on a further type remains open. |
+| SP4-MASTER-B02 | Short marked seams assessed | At the rescaled homogeneous face the APS term vanishes. Test the free-trace sign and both interior energies on actual matching halves. A further smooth type remains open. |
 | SP4-MASTER-E01 | Assessed for fixed seeds | [Normal-ball flattening and round insertion](../notes/E01_LOCAL_ENTRY.md). Fixed nonzero signs persist; annular cost is \(O(r^4)\). |
-| SP4-MASTER-B03 | Lower-band disk residual bounded | Both chiralities have the E58 complement bound on one physical sequence for $I<4T/3$. Construct inexpensive collars on that charged family or a proper saturated two-volume shell. |
+| SP4-MASTER-B03 | Charged disk throughout the strict band | E61 supplies both raw sides and a small incoming-curvature bicollar at one regular point. Establish the repair on that width or a proper physical shell at separated quantiles. |
 | SP4-MASTER-E02 | Marking implication fails in the tested gauge | [Near-isometric flat shear and actual splice surcharge](../notes/E02_QUANTILE_CHART.md). |
 | SP4-MASTER-E03 | Joint selection assessed; repair conditional | [Joint volume/chiral balls and residual](../notes/E03_JOINT_SELECTION.md). Escaping mass, excluded atoms and nonregular points remain possible. |
-| SP4-MASTER-B04 | Old endpoint excluded across smooth types | E57 gives universal infimum recognition up to $T+\varepsilon_*$. The remaining closed class and equal-energy restart lie in the higher band. |
+| SP4-MASTER-B04 | Conformal spectral gap and closed variation assessed | E62 applies to varying smooth types. A remaining smooth nonstandard minimizer must pass the Cotton Hessian test. A round restart must miss the E61 charge on every fixed compared compact. |
 | SP4-MASTER-E04 | Lead comparison completed under whole markings | [Marked base and positive paths](../manuscript/variational_comparison.tex) and [complete physical limit](../manuscript/complete_limits.tex). Revised mechanism executed through E08/E11–E14. |
 | SP4-MASTER-E05 | Einstein subclass assessed | [Chiral eigenvalue estimate and uniform non-effective gap](../notes/E05_CLOSED_STABILITY.md). General closed minimizer remains reachable. |
 | SP4-MASTER-B05 | Additional marked diagrams recognized | Tunnel-number-two links, generalized square knots and the mixed belt-circle hypothesis enlarge the recognized presentation classes. Selection from an actual qualifying immersion remains open. [E53–E55 assessment](handoffs/E53_E55_ENDPOINT_CHARGE_20261125.md) |
@@ -68,6 +68,10 @@
 | SP4-MASTER-E56 | Four branch tests assessed | Curvature-tail smoothing, marked conformal coordinate cost, two-volume shell criterion and a scoped double-seam obstruction. [Packets and checks](handoffs/E56_E58_RECOGNITION_GAP_20261125.md) |
 | SP4-MASTER-E57 | Uniform strict gap above the old infimum endpoint | [Master theorem](../manuscript/recognition_gap.tex), [critical estimates](../01_fixed_type_variational_descent/reviews/E57_CRITICAL_SMOOTHING.md) and [closed-limit audit](../01_fixed_type_variational_descent/reviews/E57_RIGIDITY.md). The old endpoint no longer requires independently supplied collars or attainment. |
 | SP4-MASTER-E58 | Both physical disk residuals bounded in the lower band | [Selection and mass proof](../01_fixed_type_variational_descent/manuscript/subcritical_charge.tex) and [independent check](../01_fixed_type_variational_descent/reviews/E58_BAND_CHARGE.md). Strict marked repairs and complete higher-band control remain open. |
+| SP4-MASTER-E59 | Four bounded returns | Disk capacity and cost, radial flux, short marked seams and a closed variation. [Issued packets and returns](handoffs/E59_E62_SPECTRAL_WINDOWS_20261125.md) |
+| SP4-MASTER-E60 | Independent checks integrated | Exterior sign convention corrected using two APS checks. [Assessment](handoffs/E59_E62_SPECTRAL_WINDOWS_20261125.md) |
+| SP4-MASTER-E61 | Diffuse Weyl mass throughout the strict band | A finite search for the comparison scale gives at least $y^2/48$ in one absolutely continuous physical chiral measure. [Proof](../01_fixed_type_variational_descent/manuscript/spectral_windows.tex) |
+| SP4-MASTER-E62 | Uniform spectral recognition | The inclusive infimum test for the weighted Weyl integral also gives the ordinary energy gap. [Proof](../manuscript/recognition_gap.tex) |
 
 [Integrated returns, requests and assessment](handoffs/VARIATIONAL_RETURNS_20261125.md) · [Manuscript](../manuscript/README.md). No theorem here constructs entry on arbitrary smooth homotopy spheres or establishes smooth Poincaré. The new results have manuscript proofs and scoped model checks. The earlier formalization receipts retain their original scopes.
 

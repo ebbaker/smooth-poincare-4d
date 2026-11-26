@@ -22,3 +22,5 @@ The [marked-exterior source update](../../../references/SOURCE_NOTES_MASTER_RICC
 The [smoothing derivation and primary passages](../01_fixed_type_variational_descent/notes/E56_SMOOTHING.md) and [independent compactness check](../01_fixed_type_variational_descent/reviews/E57_RIGIDITY.md) document the precise entropy, Sobolev, injectivity, marked compactness and equality results used for the uniform gap. The [disk gauge check](../01_fixed_type_variational_descent/notes/E56_DISK_COLLARS.md) identifies the conformally invariant coordinate equation and the analytic estimate needed on the actual marking.
 
 [Canonical gap source record](../../../references/SOURCE_NOTES_MASTER_RECOGNITION_GAP_20261125.md).
+
+[Charged-disk and marked-boundary sources](../../../references/SOURCE_NOTES_MASTER_SPECTRAL_WINDOWS_20261125.md) identifies the primary inputs to the spectral recognition, Ricci flux and eta calculations.

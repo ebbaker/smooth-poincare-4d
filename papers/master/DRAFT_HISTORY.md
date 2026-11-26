@@ -39,3 +39,7 @@ Located both physical chiral energies on finite regular disks at the unattained 
 ## 25 November 2026 · recognition gap and source comparisons
 
 The uniform recognition gap replaces the unattained endpoint. The two-sign selection bounds both raw disk residuals in an explicit higher band. [Working versions and assessment](research-progress/handoffs/E56_E58_RECOGNITION_GAP_20261125.md)
+
+## 25 November 2026 · charged disks and conformal recognition
+
+Uniform recognition now uses a conformal Weyl integral. On every subcritical minimizing sequence the master locates one marked sphere with positive source charge on each side. Prepared for Edward B. Baker III with OpenAI Codex assistance. [Inputs, independent checks and outputs](research-progress/handoffs/E59_E62_SPECTRAL_WINDOWS_20261125.md)

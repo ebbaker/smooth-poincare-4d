@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | SP4-IMM-HDL-B01 | Assessed for quadratic marked faces | Both solid tori and their rank-four immersion germs occur in the three-patch construction. |
 | SP4-IMM-HDL-E01 | Completed for this reference family | [Relative degree and construction](../notes/E53_RETAINED_EXTERIOR.md). |
-| SP4-IMM-HDL-B02 | Relative exterior and Mazur seam assessed | The earlier marked graph meets positive entry on the standard sphere. [Marked punctured double](../notes/E56_MARKED_EXTERIOR.md) rules out the specified long product seams independently of the filling. A qualifying further type is open. |
+| SP4-IMM-HDL-B02 | Short marked seams and signature cost assessed | [Exact trace criterion and altered boundary metric](../manuscript/short_seam.tex), [APS sign check](../reviews/E60_HOMOGENEOUS_ETA.md). Find the retained half geometry and total costs in these markings or on another presentation. |
 | SP4-IMM-HDL-E02 | Completed for the specified example | [Independent cost, degree and sign check](../reviews/E53_RELATIVE_CHECK.md). |
 | SP4-IMM-HDL-B03 | Reserved | Use the assessed first local model or scoped failure to select one extension. |
 

@@ -13,3 +13,5 @@ The linked records own the source metadata and earlier inspection history. The s
 The [second collar source record](../../../../../../references/SOURCE_NOTES_SECOND_COLLAR_20261125.md) identifies the primary passages used in the [new branch assessment](../reviews/SECOND_COLLAR_REVIEW_20261125.md).
 
 The [third collar source record](../../../../../../references/SOURCE_NOTES_THIRD_COLLAR_20261125.md) gives the exact primary passages behind the new derivations and checks.
+
+The [E59–E62 primary source record](../../../../../../references/SOURCE_NOTES_MASTER_SPECTRAL_WINDOWS_20261125.md) identifies the distributional distance comparison used on protected physical annuli.

@@ -21,3 +21,5 @@ The draft uses the shared [bibliography](../../../../../references/references.bi
 [Build and storage policy](../../../../../LARGE_FILES.md)
 
 Prepared with OpenAI Codex assistance under editorial assignment SP4-MASTER-E51a. GPT-6.2 Sol/ultra was requested. Actual serving model and reasoning effort are unavailable.
+
+The [short-seam section](short_seam.tex) treats the ordinary free-trace form, the signature cost of a product face and the vertical metric on the Mazur boundary with zero signature eta. The [boundary calculation](../reviews/E60_HOMOGENEOUS_ETA.md) fixes the orientation and the Dedekind-sum convention.

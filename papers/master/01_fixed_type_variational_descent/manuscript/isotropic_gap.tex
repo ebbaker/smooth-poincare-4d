@@ -1,0 +1,222 @@
+\section{A uniform isotropic spectral gap}\label{sec:isotropic-gap}
+
+On a smooth closed oriented homotopy four-sphere let \([g]\) be
+a positive Yamabe class and take its volume-one Yamabe metric
+\(g\). Put \(e=E_+(g)=E_-(g)\), \(Y=Y([g])\),
+\(D=\int |Z_g|^2dV_g\), and
+\[
+ L=\max\{\lambda_{\max}(W^+),\lambda_{\max}(W^-)\},\qquad
+ \sigma=\int L^2dV,\qquad \mathcal P([g])=4e+3\sigma .
+\]
+The integrals defining \(\mathcal P\) are conformally invariant.
+Gauss--Bonnet and the trace-free rank-three spectral bounds give
+\begin{equation}\label{eq:isotropic-quantity}
+ \mathcal P-8T=D+\frac{36\sigma-Y^2}{12},\qquad
+ \frac92e\le\mathcal P\le8e .
+\end{equation}
+In fact, for a block with largest eigenvalue \(z\), its squared
+Hilbert--Schmidt norm lies between \(3z^2/2\) and \(6z^2\).
+The lower bound uses Cauchy--Schwarz on the two smaller
+eigenvalues whose sum is \(-z\). The upper bound uses that each
+of those eigenvalues is at most \(z\), with extreme pair \((-2z,z)\).
+The bounds imply \(e/6\le\sigma\le4e/3\) by signature.
+
+\begin{theorem}[Recognition with a spectral term]\label{thm:isotropic-gap}
+There is a universal \(\kappa>0\) such that every positive Yamabe
+class on a nonstandard smooth homotopy four-sphere has
+\(\mathcal P\ge8T+\kappa\). For any fixed \(0<\varepsilon<\kappa\),
+the bound \(\inf_{Y([g])>0}\mathcal P([g])\le8T+\varepsilon\)
+recognizes the standard smooth type, including an unattained
+infimum. An empty family has infinite infimum.
+\end{theorem}
+
+\begin{proof}
+On a nonstandard type \(36\sigma-Y^2>0\) by the strict and
+equality classifications \cite[Theorems~1.4 and 1.6]{ChenZhu2014Conformal}.
+If the uniform gap failed, choose positive classes on possibly
+varying nonstandard types with \(\mathcal P_i\to8T\).
+Equation~\eqref{eq:isotropic-quantity} gives
+\(D_i\to0\), \(36\sigma_i-Y_i^2\to0\), and
+\(\limsup e_i\le16T/9\). The sources are eventually in a fixed
+strict band \(e_i\le2T-\delta\) for some \(\delta>0\).
+In that band Gauss--Bonnet and the Yamabe upper bound give
+\(\sqrt{48\delta}\le Y_i\le8\sqrt6\,\pi\). Pass to a subsequence
+with \(Y_i\to y>0\), so that \(6\sqrt{\sigma_i}\to y\).
+
+Take the volume-one modified Yamabe representatives \(q_i\)
+as in Section~\ref{sec:endpoint-charge}. They satisfy
+\[
+ R_{q_i}-6L_{q_i}=c_i\le0,\qquad
+ Y_i\le c_i+6\int L_{q_i}dV_{q_i}\le c_i+6\sqrt{\sigma_i}
+ \quad\cite[Lemma~2.1 and Theorem~1.7]{ChenZhu2014Conformal}.
+\]
+Thus \(c_i\to0\) and \(\int L_{q_i}dV_{q_i}-\sqrt{\sigma_i}\to0\).
+Since the volume is one, \(L_{q_i}\to y/6\) and \(R_{q_i}\to y\)
+in \(L^2(q_i)\). In this gauge Gauss--Bonnet gives
+\[
+ \int |Z_{q_i}|^2dV_{q_i}
+ =D_i+\frac{\int R_{q_i}^2dV_{q_i}-Y_i^2}{12}\longrightarrow0.
+\]
+Smooth approximations of the conformal factors in \(C^2\),
+chosen separately on each source and rescaled to volume one,
+give smooth representatives \(h_i\) with these same limits and
+\(R_{h_i}-6L_{h_i}=o(1)\) uniformly. In particular \(R_{h_i}\ge-1\)
+eventually.
+
+Write \(U_i=|\Rm_{h_i}|_{\rm tens}\) for the full ordered-index
+norm. The upper spectral bound and the curvature decomposition give
+\[
+ U_i\le\sqrt{48}\,L_{h_i}+\sqrt2\,|Z_{h_i}|+|R_{h_i}|/\sqrt6.
+\]
+For a fixed \(K_0>(\sqrt{48}/6+1/\sqrt6)8\sqrt6\,\pi\) this
+implies \(\|(U_i-K_0)_+\|_{2,h_i}\to0\). The Yamabe inequality
+gives a uniform Sobolev constant since
+\[
+ (Y_i-\|R_{h_i}-Y_i\|_2)\|f\|_4^2
+ \le6\|df\|_2^2+Y_i\|f\|_2^2.
+\]
+The initial Einstein defects \(\|\Ric_{h_i}-(y/4)h_i\|_2\)
+tend to zero as well. Apply Lemma~\ref{lem:endpoint-smoothing}.
+The unnormalized flows exist on a common short interval,
+and at any fixed interior positive time a subsequence converges
+smoothly to a positive Einstein metric on a closed manifold,
+via whole-manifold diffeomorphisms. We use also the lemma's
+uniform Sobolev estimate along the flow and the estimate
+\(\sup_t\|v_i(t)\|_2\to0\) for its evolving excess
+\(v_i=(|\Rm_{h_i(t)}|_{\rm tens}-\phi(t))_+\) with bounded \(\phi\).
+
+For either diagonal chiral curvature-operator block
+\(A=W^\pm+RI/12\) let \(a\le b\le d\) be its eigenvalues.
+Set \(F_\pm=a+b=R/6-\lambda_{\max}(W^\pm)\). Nonnegative
+isotropic curvature is equivalent to \(F_+,F_-\ge0\)
+\cite[Section~3, (3.1)--(3.2)]{ChenZhu2014Conformal}.
+In moving orthonormal frames Hamilton's block equation is
+\((D_t-\Delta)A=2(A^2+2\operatorname{adj}A+BB^*)\), using
+the appropriate off-diagonal block or its transpose \(B\)
+\cite[Section~2, pp.~157--158]{Hamilton1986}.
+The trace on any minimizing two-plane gives the lower heat
+bound \(2(a^2+b^2)+4dF_\pm\) for \(F_\pm\) after discarding
+the nonnegative off-diagonal term. Hence \(w_\pm=(-F_\pm)_+\)
+obeys \((\partial_t-\Delta)w_\pm\le C|\Rm|_{\rm tens}w_\pm\)
+weakly. One may smooth \(w_\pm\) as the convex maximum of zero
+and the negative two-plane traces in the symmetric endomorphism
+fibers. Its nonnegative Hessian has the required Laplacian sign.
+The active traces have the asserted bound also at zero, and
+the quadratic reaction error tends to zero with the mollifier
+scale on each smooth flow.
+
+Initially \(w_\pm=o(1)\) uniformly by the modified scalar
+equation. Testing its inequality by \(w_\pm\) using \(R\ge-1\)
+and \(|\Rm|_{\rm tens}\le v_i+\phi\) gives
+\[
+ \frac d{dt}\|w_\pm\|_2^2+2\|dw_\pm\|_2^2
+ \le C\|w_\pm\|_2^2+C\|v_i\|_2\|w_\pm\|_4^2.
+\]
+The uniform Sobolev constant absorbs the last term for large
+\(i\), and Gronwall gives \(\sup_t\|w_\pm(t)\|_2\to0\).
+Consequently the smooth closed positive-time limit has
+nonnegative isotropic curvature.
+
+The positive Einstein limit \(h_\infty\) realizes its class Yamabe
+constant. Indeed, if \(h_\infty=u^{-2}\widehat g\) for a Yamabe
+minimizer \(\widehat g\), the trace-free Ricci transformation gives
+\(u Z_{\widehat g}=-2(\nabla^2_{\widehat g}u)^0\). Integrating its
+pairing with the divergence-free \(Z_{\widehat g}\) makes \(\widehat g\)
+Einstein. The remaining Hessian is pure trace, so either \(u\) is
+constant or Obata's theorem gives the standard round type directly
+\cite{Obata1962Sphere}. In the constant case the homothety
+preserves the normalized scalar integral. Thus
+\[
+ Y([h_\infty])^2=\int R_{h_\infty}^2dV_{h_\infty}
+ \ge36\int L_{h_\infty}^2dV_{h_\infty}.
+\]
+At strict inequality Chen--Zhu's classification gives the
+standard smooth sphere in the simply connected case. At equality
+the extra cases have nonzero second homology, since they are
+\(\mathbb{CP}^2\) or have a compact simply connected cover
+conformal to a product of two surfaces
+\cite[Theorems~1.4 and 1.6]{ChenZhu2014Conformal}. The limit is
+therefore standard, as are all sufficiently late sources of the
+subsequence. This contradiction gives the universal gap. If
+the infimum on any type is at most \(8T+\varepsilon<8T+\kappa\),
+an actual class has energy quantity strictly below \(8T+\kappa\)
+by the definition of infimum.
+\end{proof}
+
+In the notation \(B=4e/3-\sigma\) of Section~\ref{sec:endpoint-charge},
+the theorem gives \(8(e-T)\ge3B+\kappa\) on a nonstandard type.
+The theorem supplies a non-effective lower bound for
+\(D+(36\sigma-Y^2)/12\) throughout the strict band and also for
+arbitrary positive classes above the band. The upper bound
+\(\mathcal P\le8e\) recovers a uniform recognition interval for
+\(e\) alone.
+
+\begin{corollary}[Where a vanishing spectral deficit can persist]
+\label{cor:isotropic-ricci-tail}
+Suppose \(e_i\le2T-\delta\) with \(\delta>0\) for positive Yamabe
+classes on nonstandard types and \(36\sigma_i-Y_i^2\to0\).
+Write \(\mu_i=dV_{q_i}\) for the volume measure of the volume-one
+modified metric. On a subsequence there are measurable sets \(H_i\) with
+\[
+ \mu_i(H_i)\to0,\qquad
+ \liminf_i\int_{H_i}|Z_{q_i}|^2d\mu_i>0,\qquad
+ \int_{H_i}(R_{q_i}^2+|W_{q_i}|_{\rm tens}^2)d\mu_i\to0 .
+\]
+\end{corollary}
+\begin{proof}
+Suppose instead the high tails of \(|Z_{q_i}|\) are uniformly
+integrable in squared norm, that is,
+\(\lim_{K\to\infty}\limsup_i\|(|Z_{q_i}|-K)_+\|_2=0\).
+As in the theorem, the spectral deficit gives \(c_i\to0\) as real
+numbers, and both \(R_{q_i}-Y_i\) and \(L_{q_i}-Y_i/6\) tend to zero
+in \(L^2(q_i)\).
+The curvature decomposition therefore gives the same tail condition
+for the full curvature norm of the smooth approximations.
+We explain why one sufficiently small tail at a sufficiently large
+fixed cutoff suffices here. In the proof of
+Lemma~\ref{lem:endpoint-smoothing} keep the two coefficients of the
+ordinary Sobolev inequality separate. With \(K\ge1\) and
+\(\phi\le2K\), absorption in \eqref{eq:smoothing-weighted-sob}
+gives a gradient coefficient bounded independently of \(K\) and
+a lower-order coefficient at most \(C(1+K)\), as long as
+\(\|v_i\|_2\) is below a fixed small constant. In the energy
+estimates for \(v_i\) and \(w_\pm\) the gradient absorption
+threshold is thus independent of \(K\). The remaining Gronwall
+coefficient is at most \(C(1+K)\). On a horizon \(c/(1+K)\)
+the growth factor is uniform. The ball cutoff iteration on radii
+\(r\le(1+K)^{-1/2}\) gives a uniform volume ratio floor since
+\((1+K)r^2\le1\). A curvature record above a sufficiently large
+multiple of \(1+K\) uses only these radii, so its lower bound on
+the squared excess is also independent of \(K\).
+Choose \(K\) once by the tail condition and take late indices.
+The common flow and smooth positive-time compactness follow,
+and the negative chiral sums still tend to zero in squared norm.
+The limit has nonnegative isotropic curvature.
+
+For completeness, a smooth closed homotopy sphere with this curvature
+has a positive-isotropic metric. Restart its Ricci flow; the lower
+pair-sum inequality preserves both nonnegative sums. The scalar
+curvature is nonnegative and somewhere positive, since if it vanished
+identically both Weyl blocks would vanish and Gauss--Bonnet would
+contradict positive Euler characteristic. At positive time scalar
+curvature is positive. If a lower pair sum vanishes there, the
+strong minimum principle gives vanishing on all earlier positive
+slices. The reaction bound forces its two eigenvalues to be zero.
+The block has rank one with positive trace. For a local section of
+its kernel, differentiate its annihilation by the block, and test
+the block evolution on that section. The sum of the off-diagonal
+square and the squared norm of the component of its derivative in
+the positive line is zero. Thus the kernel and its orthogonal line
+are parallel. Simple connectivity gives a nonzero parallel two-form,
+contrary to \(b_2=0\). The strict positive-isotropic classification
+now gives the standard sphere \cite[Main Theorem]{ChenTangZhu2012}.
+This contradicts the smooth identification of the limit with
+late sources.
+
+The tail condition must therefore fail. Taking increasing cutoffs
+and a subsequence gives \(H_i=\{|Z_{q_i}|>K_i\}\) with definite
+squared integral and \(K_i\to\infty\). The uniformly bounded total
+Ricci energy, by Gauss--Bonnet in \(q_i\), gives \(\mu_i(H_i)\to0\).
+The scalar and spectral squared-integral limits and
+\(|W|_{\rm tens}^2\le48L^2\) prove the last assertion.
+\end{proof}

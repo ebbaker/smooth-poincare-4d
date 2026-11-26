@@ -17,3 +17,7 @@ Proved full endpoint disk capture by modified Yamabe normalization, a necessary 
 ## 25 November 2026 · recognition gap and source comparisons
 
 The modified Yamabe representatives admit common-time Ricci smoothing. The closed Einstein limit recognizes the smooth type. The spectral median and marked coordinate estimate address higher-band disk removal. [Working versions and assessment](../research-progress/handoffs/E56_E58_RECOGNITION_GAP_20261125.md)
+
+## 25 November 2026 · charged disks and conformal recognition
+
+Finite spectral-scale selection gives diffuse chiral mass throughout the strict band. The draft also derives the signed patch cost, the critical spectral recognition test and the reduced Ricci-flow variation. Prepared for Edward B. Baker III with OpenAI Codex assistance. [Inputs, independent checks and outputs](../research-progress/handoffs/E59_E62_SPECTRAL_WINDOWS_20261125.md)

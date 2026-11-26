@@ -4,7 +4,7 @@
 
 ## Uniform recognition and charged disks
 
-There is a universal $\varepsilon_*>0$ such that $I^+(M)\le4\pi^2+\varepsilon_*$ recognizes every smooth homotopy four-sphere satisfying this bound. This includes an infimum equal to $4\pi^2$ without attainment. The proof yields no numerical value for $\varepsilon_*$. The [proof](../manuscript/endpoint_smoothing.tex) and [current disk residual](../manuscript/subcritical_charge.tex) set the lower boundary and the next actual collar test for this branch.
+There is a universal $\eta>0$ such that a smooth homotopy four-sphere is standard if the infimum of $4e+3\int L^2dV$ over its positive Yamabe classes is at most $8T+\eta$. Here $e=E_+=E_-$, $T=4\pi^2$, and $L$ is the larger top eigenvalue of the two Weyl blocks. This also gives the inclusive recognition gap for $I^+(M)$. For every surviving $I^+(M)<2T$, a subsequence has a positive-Ricci comparison scale with absolutely continuous chiral mass in the original conformal measures. One marked disk carries positive mass of the same sign on both complete sides, and its bicollar can have arbitrarily small incoming full curvature relative to its core charge. Its normalized chart and its repair cost remain to be controlled. [Spectral scale](../manuscript/spectral_windows.tex) · [Isotropic curvature test](../manuscript/isotropic_gap.tex)
 
 ## Fixed variational problem
 
@@ -13,7 +13,7 @@ $$
 E_\pm(g;U)=\int_U |W_g^\pm|_{\mathrm{HS}}^2\,dV_g,
 \qquad I=I^+(M)=\inf\{E_+(g;M):g\text{ smooth on }M,\ Y([g])>0\}.
 $$
-Here \(W^\pm\) are the real Weyl endomorphisms on \(\Lambda^\pm\) for the chosen orientation. The two total chiral energies agree by signature on \(M\), and their local measures are conformally invariant. Their sum is one quarter of the full four-index tensor Weyl integral. The local two chiral energies may differ. On a hypothetical nonstandard \(M\), positive classes have \(E_+>T=4\pi^2\) and \(I\ge T\). The possibility \(I=T\) without attainment remains. Universal construction of the entry class belongs to the master program. [Master conventions and recognition](../../research-overview/OVERVIEW.md#the-variational-problem-on-a-fixed-smooth-type)
+Here \(W^\pm\) are the real Weyl endomorphisms on \(\Lambda^\pm\) for the chosen orientation. The two total chiral energies agree by signature on \(M\), and their local measures are conformally invariant. Their sum is one quarter of the full four-index tensor Weyl integral. The local two chiral energies may differ. On a hypothetical nonstandard \(M\) with a positive class, the uniform gap gives \(I>T+\varepsilon_*\). Universal construction of the entry class belongs to the master program. [Master conventions and recognition](../../research-overview/OVERVIEW.md#the-variational-problem-on-a-fixed-smooth-type)
 
 Use a single subsequence of smooth volume-one Yamabe metrics \(g_i\) with \(e_i=E_+(g_i;M)\to I\) and \(e_i\le8\pi^2-\delta\) for a fixed \(\delta>0\). In this physical gauge \(R_{g_i}=Y_i\ge\sqrt{48\delta}\). Set \(\mu_i=dV_{g_i}\), \(\lambda_i=|W_{g_i}^+|_{\mathrm{HS}}^2dV_{g_i}\) and \(\nu_i=|\operatorname{Rm}_{g_i}|_{\mathrm{tens}}^2dV_{g_i}\). The inherited bound gives \(4\lambda_i\le\nu_i\) and a uniform bound for \(\nu_i(M)\). Write \(r_i\) for the least physical radius at which some ball carries half of \(e_i\). The diffuse alternative supplied by the master is
 $$

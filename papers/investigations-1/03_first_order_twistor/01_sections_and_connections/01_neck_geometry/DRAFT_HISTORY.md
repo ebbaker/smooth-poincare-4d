@@ -39,3 +39,7 @@ Added the conditional radial Laplacian criterion, its quotient-link check, and a
 ## 25 November 2026 · recognition gap and source comparisons
 
 Equality of two adjacent normalized source shell volumes on a proper flat radial comparison supplies the shifted cone and both marks. The finite-band shifted example distinguishes the remaining assumptions. [Working versions and assessment](../../../../master/research-progress/handoffs/E56_E58_RECOGNITION_GAP_20261125.md)
+
+## 25 November 2026 · charged disks and conformal recognition
+
+The draft derives the full radial defect from a physical radial Ricci comparison, including a protected annulus with measured inner volume. Proper flat comparison embeddings remain necessary. Prepared for Edward B. Baker III with OpenAI Codex assistance. [Inputs, independent checks and outputs](../../../../master/research-progress/handoffs/E59_E62_SPECTRAL_WINDOWS_20261125.md)

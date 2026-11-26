@@ -15,3 +15,7 @@ Gave an actual three-patch retained exterior on the standard sphere and computed
 ## 25 November 2026 · recognition gap and source comparisons
 
 The reflected double has a one-half free-trace test. A long conformally product strip on the Mazur seam has a Dirichlet obstruction independent of both fillings, with exact chiral cost. [Working versions and assessment](../../../master/research-progress/handoffs/E56_E58_RECOGNITION_GAP_20261125.md)
+
+## 25 November 2026 · charged disks and conformal recognition
+
+Both Dirichlet-to-Neumann operators appear in the marked short-seam test. The homogeneous Mazur cross-section has a signature cost at every length. Rescaling its fiber gives an explicit metric where that cost vanishes. Prepared for Edward B. Baker III with OpenAI Codex assistance. [Inputs, independent checks and outputs](../../../master/research-progress/handoffs/E59_E62_SPECTRAL_WINDOWS_20261125.md)

@@ -1,6 +1,6 @@
 # Fixed-type descent continuation
 
-For the current research launch, use the [uniform gap and lower-band disk comparison](../../continuation-notes/AFTER_UNIFORM_RECOGNITION_GAP_20261125.md). The setup request below is historical.
+For the current research launch, use the [charged-disk and spectral-gap continuation](../../continuation-notes/AFTER_SUBCRITICAL_CHARGED_DISKS_20261125.md). The setup request below is historical.
 
 25 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance. E35c requested GPT-6.2 Sol/ultra for setup. Independent serving telemetry is unavailable. The [overview](../research-overview/OVERVIEW.md#ownership-and-versioned-inputs) records the exact source commit and hashes of the approved proposal and frozen setup request. This dated handoff leaves all scientific work unactivated. Re-read the [live register](../research-progress/REGISTER.md) to determine current readiness.
 

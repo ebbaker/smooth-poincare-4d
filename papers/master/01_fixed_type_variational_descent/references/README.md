@@ -14,3 +14,5 @@ Incoming model, theorem and version provenance remains with its respective owner
 [Endpoint source record](../../../../references/SOURCE_NOTES_MASTER_ENDPOINT_20261125.md) for the two spectral classifications and the modified Yamabe measure.
 
 The [canonical recognition-gap record](../../../../references/SOURCE_NOTES_MASTER_RECOGNITION_GAP_20261125.md) gives the sources for the smoothing and marked coordinate estimates.
+
+The [E59–E62 source record](../../../../references/SOURCE_NOTES_MASTER_SPECTRAL_WINDOWS_20261125.md) identifies the curvature evolution, conformal rigidity and comparison-ball inputs for the spectral estimates.

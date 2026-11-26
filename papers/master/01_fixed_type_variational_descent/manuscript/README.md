@@ -2,7 +2,7 @@
 
 Working paper by Edward B. Baker III, 25 November 2026. [LaTeX manuscript](fixed_type_chiral_energy_descent.tex) · [Branch overview](../research-overview/OVERVIEW.md) · [Master manuscript](../../manuscript/README.md)
 
-The [endpoint estimates](endpoint_charge.tex) and [Ricci-flow proof](endpoint_smoothing.tex) yield a uniform intrinsic recognition gap. The [higher-energy disk selection](subcritical_charge.tex) bounds both chiral residuals on the physical source. Its [collar comparison](disk_collar_comparison.tex) estimates the splice in an actual marked parametrization. The remaining alternatives include smooth closed attainment in the surviving band and a round same-energy restart.
+The [uniform spectral gap](isotropic_gap.tex) uses a common Ricci-flow time and propagation of the isotropic curvature defect. The [full subcritical disk theorem](spectral_windows.tex) locates physical charge on both sides of one marked sphere. The [capacity and cost estimates](collar_capacity.tex) apply to prescribed smooth charts. The [closed variation](cotton_variation.tex) gives a separate test at an attained class.
 
 [Reading copy (PDF)](../../../../output/pdf/master/01_fixed_type_variational_descent/fixed_type_chiral_energy_descent.pdf) · Build from the repository root with `python3 tools/build_manuscripts.py master/01_fixed_type_variational_descent`.
 
