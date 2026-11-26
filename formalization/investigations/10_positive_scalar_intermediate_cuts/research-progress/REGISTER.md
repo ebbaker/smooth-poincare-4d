@@ -1,5 +1,11 @@
 # Positive scalar curvature on intermediate cuts · Progress register
 
+## Edition 06 · Qualifying cuts after native localization · 26 November 2026
+
+In the marked terminal integral $Y_1\to Y_3$ class, a reducible native second cut in either order gives a topological $3\to2$ reduction through Route 09. The surviving least-three case has both old native second cuts irreducible with $b_1=2$. The scientific three-manifold classification excludes a nonzero-degree map from a closed oriented positive-scalar three-manifold to either cut. A degree certificate must therefore use a different actual cut, such as one on a changed order after a slide or on a genuinely different regular level.
+
+For a metric application on that cut, keep the marking and transfer of the degree witness, or the scalar floor, native widths and outward means of the band. Charge both complete signed sides and all connector costs, and preserve the protected core, strict joined peak and inclusive cap tests. A metric claim still needs its own certificate at the chosen level. [Native-cut scope](../../../../papers/investigations-1/05_collar_deformation_and_surgery/reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md) · [Route 09](../../09_morse_heights_and_handle_recognition/research-progress/REGISTER.md) · [Edition 06 plan](../../research-plan/06_PLAN.md)
+
 ## Edition 05 setup · 26 November 2026
 
 Retain the algebraic and boundary criteria for a specified cut that could remove a recognition or reduction premise. On its actual marking, record the scalar floor, physical widths and outward means for a band, or the stability and nonzero projection degree for a separator. Price the complete comparison when a metric conclusion uses it. The later knotted-port closing note is working scientific intake. Its proposed change of internal level calls for a separate marking and physical certificate. Route 09 owns the smooth replacement and upper extension, with purely topological tests independent of a metric packet. [Edition 05 plan](../../research-plan/05_PLAN.md) · [Route 09](../../09_morse_heights_and_handle_recognition/research-progress/REGISTER.md) · [Closing intake](../../../../papers/investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/notes/KNOTTED_PORT_CLOSING.md)

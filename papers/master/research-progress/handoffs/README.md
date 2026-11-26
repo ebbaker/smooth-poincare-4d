@@ -19,3 +19,5 @@ Issue future frozen requests and record their returns here with a task ID, input
 [Balanced disks, eta-zero fillings and the exact spectral gap](E63_E67_BALANCED_DISKS_20261125.md) records E63–E67.
 
 [E69–E72 · Core variations and the nonflat modified flow](E69_E72_CHARGED_FLOW_20261125.md)
+
+[Strict terminal descent from either reducible native individual cut](REDUCIBLE_NATIVE_CUT_20261126.md) gives the new Investigation 05 selection criterion.

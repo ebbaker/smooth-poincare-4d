@@ -4,6 +4,10 @@
 
 Let $M$ be a closed, connected, oriented smooth four-manifold homotopy equivalent to $S^4$. Metrics and embeddings are smooth and Riemannian. A finite Morse presentation supplies framed attaching maps and identifications of regular levels. A relative handle move must reassemble the same $M$. A metric cut must identify the capped smooth type using the original boundary marking. The two methods can be combined when a marked identification and geometric estimates put the handle level and the metric on the same physical source.
 
+## Reduction on the entire stationary-filled level
+
+A reducible single-attachment cut in either order of an integral rank-one pair with immediate rank-three free outlet forces joint localization. An immediate terminal closing with the original split lower zero permits a strict three-to-two cancellation even for an unknown local two-component closure. On the four-point cut, two opposite mixed returns cannot both survive the capped filling. Four alternating returns can have three surviving classes and arbitrarily high sharp bridge cost at sphere minimum four. [Proof and remaining irreducible cuts](../reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md)
+
 ## A geometric obstruction on the whole lower face
 
 A marked nonlocal example of minimum four has a unique lower compressing slope and no lower bridge, even with free endpoints and wall windings. An upper Whitehead return and its second, two-point successor each require two opposite passages through the stationary core. These two disks restore the Figure 5 pair and yield three terminal cancellations. An independent finite triangulation distinguishes a failed prescribed chord from a successful free chord on the same exterior. [Assessment and scope](../reviews/WHITEHEAD_MIXED_RETURNS_20261126.md)

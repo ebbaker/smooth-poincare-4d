@@ -1,3 +1,4 @@
+% Reducible native cuts and the cost of a return, intake 9c80575988ad, 26 November 2026.
 % One-mouth and Whitehead-pattern exteriors, intake 226b8f404b6e, 26 November 2026.
 % Four-point marked returns, working intake 4d73fdde6804, 26 November 2026.
 % Two-point localization and the knotted opposite completion, intake 4da586548b44, 26 November 2026.
@@ -53,8 +54,10 @@ On an actual selected disk we can produce a round face with joined
 peak arbitrarily close to the incoming energy by transporting its
 full charge into the exterior. We quantify the protected mass lost
 in this construction and the additional estimates needed for descent.
-A band can be read directly from a stationary longitude on a marked
-cut tangle. For the variational comparison, the lower bound for a
+For an integral pair from rank one to the rank-three free outlet,
+reducibility of either native single-attachment cut localizes the pair
+by framed slides. A terminal split lower attachment then cancels even
+when the remaining local trace is unknown. For the variational comparison, the lower bound for a
 matched peak with prescribed numerical core charges is asymptotically
 attainable. The complete exterior cost remains decisive.
 \end{abstract}
@@ -541,9 +544,73 @@ produces a two-point cut, and the second disk restores the actual
 local Figure~5 link. Its indicated slide in the returned order then
 gives three terminal cancellations, \(3\to2\to1\to0\), including
 the initial split attachment. All pre-cancellation moves preserve
-the middle count. It remains open whether both faces can fail the free-chord test
-on a mixed free-outlet pair and, if so, which other reducing system
-its exterior supplies \cite{Baker2026HandleCuts}.
+the middle count. Whether a particular capped-trivial return admits any drilled bridge
+remains a geometric question; the following argument obtains a separate
+reducing sphere in the whole stationary-filled exterior \cite{Baker2026HandleCuts}.
+
+\paragraph{Selection from the whole filled exterior.}
+There is a strict reduction for \emph{every} such rank-one terminal
+pair when one stationary component \(Q\) misses a nonseparating sphere.
+It applies for any crossing count of the other component \(K\).
+Indeed let \(Y_r=\#_r(S^1\times S^2)\). For nontrivial local \(Q\) the
+cut after it is \(Z=Y_1\#S^3_0(Q)\), with the second summand irreducible.
+The single surgery on \(K\) takes \(Z\) to the actual \(Y_3\).
+Scharlemann's reducible-surgery theorem forces the exterior of \(K\)
+in \(Z\) to contain an essential sphere. The cabling-slope alternative
+would put torsion in \(H_1(Y_3)\); the correction added in proof has
+a rational-homology-sphere outlet. If the exterior sphere separates,
+its side away from the filling torus caps to a nontrivial common
+prime sum, necessarily \(Y_1\). Hence there is a nonseparating sphere
+missing \(K\) in \(Z\). Conversely, applying the same theorem to
+\(Y_1\to Z\) shows that a reducible native cut already forces its
+stationary component to be local
+\cite[Theorem 6.1 and added correction]{Scharlemann1990Reducible}
+\cite[Corollary 8.3]{Gabai1987FoliationsIII}.
+
+All nonseparating spheres of \(Z\) are isotopic. Adjacent disjoint ones
+cobound a product by irreducibility of the capped cut, and innermost-disk
+surgery joins any two by a chain of disjoint pairs
+\cite[Proposition 4]{Trace1982ThreeHandles}.
+Isotope the sphere to the \emph{original} marked seam, carrying the
+whole moving tube. Its finitely many generic passages across the
+fixed stationary filling core give actual framed slides of \(K\)
+over \(Q\). The resulting unfilled pair lies in a slab ball and has
+local surgery \(Y_2\). Put the split lower zero \(A\) last and match its
+product sphere to an upper belt by an extending change of closing.
+This cancels \(A\) even when the local two-handle closure is unknown,
+giving \(n_2=n_3:3\to2\) without births. A stationary local unknot gives
+a split unlink by the \(Y_2\to Y_3\) knot-surgery theorem. Thus a
+remaining least-three terminal pair in these orders must have
+\emph{two irreducible native second cuts}, each with first Betti number
+two \cite{MeierSchirmerZupan2016Trisections,Baker2026HandleCuts}.
+
+For nontrivial local \(Q\), the moving class after stationary filling is
+conjugate to a nonidentity element of the stationary group. Nonidentity
+follows since the reverse single-handle trace has a two-dimensional
+aspherical one-relator group, into which the closed aspherical
+\(S^3_0(Q)\) group cannot embed. On the two-through-arc pairing, among the two return
+classes and the central through completion, exactly one is nontrivial. Opposite capped returns therefore cannot both obstruct.
+A null class still has to be tested in the drilled exterior to decide a
+particular face move \cite{AntolinDicksLinnell2011,Baker2026HandleCuts}.
+
+\paragraph{The cost of using a particular return.}
+A different pairing has two returns on each face, lower \(12,34\) and
+upper \(23,41\). The lower returns are opposite long sides of a ribbon
+on the opened Figure~5 unknot \(U\); the upper \(41\) is another parallel
+of \(U\). All three survive in the stationary square-knot filling.
+For the upper \(23\), join \(n\) disjoint zero parallels of the square
+knot by oriented bands along a tree. Their meridian disks in the
+stationary filling join to one embedded bridge with \(n\) positive
+core punctures. Any competing bridge, with any wall section and any
+chord, differs after capping by a sphere map in the aspherical filling.
+It therefore has the same signed intersection. This gives an unbounded
+sharp bridge cost at a fixed original sphere minimum of four. A twisted
+upper chord is obstructed by the meridian of the other upper return,
+and the original short chord realizes the minimum. Pushing its disk
+gives a two-point cut with an unfilled ribbon bridge; the returned
+Figure~5 slide and actual closing give \(3\to2\to1\to0\). The
+global filled-exterior argument requires no uniform bound for this
+particular disk \cite{Baker2026HandleCuts}.
 
 \section{The cost of making a spherical cut}\label{sec:cost}
 

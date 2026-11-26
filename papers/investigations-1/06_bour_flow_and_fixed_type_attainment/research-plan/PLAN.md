@@ -2,9 +2,47 @@
 
 26 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Source baseline \(\texttt{65f06ea}\) and Bour v1. The [overview](../research-overview/OVERVIEW.md) fixes the norms, smooth category and quantifiers. The [parent register](../research-progress/REGISTER.md) owns the integration decisions. Each child owns its proof and reading packets.
 
-The [assessment](../reviews/FIXED_TYPE_ATTAINMENT_20261126.md) records the completed test. The [dated handoff](../continuation-notes/AFTER_ATTAINMENT_20261126.md) gives the next research decision. The packet specifications below are the original activation plan.
+The [assessment](../reviews/FIXED_TYPE_ATTAINMENT_20261126.md) records the working attainment theorem and both model readings. The remaining audit of that theorem reconstructs the original-flow extraction through its terminal time and the general one-core marked compactification, including the compatible exterior map. The following agenda assumes the working theorem on its stated strict entered band. [Current handoff](../continuation-notes/POST_ATTAINMENT_20261126.md) · [E48 priorities review](../../../../formalization/investigations/reviews/PRIORITIES_AFTER_WHITEHEAD_AND_BOUR_E48_20261126.md)
 
-## Order of work
+## Post-attainment packets
+
+Fix one closed oriented nonstandard smooth homotopy four-sphere with positive subcritical entry. Write \(e=E_+=E_-\), \(T=4\pi^2\), \(I=I^+(M)<2T\), \(D=\int_M|\operatorname{Ric}_0|^2\,dV\) and \(S=\int_M R^2\,dV\). Use the Weyl operator Hilbert–Schmidt normalization and the physical two-tensor norm for \(D\). The assessed theorem gives a positive Bach-flat minimum and \(I=a_M\). These are execution packets for bounded GPT-6.2 Sol/ultra because the inputs, comparison and acceptance test are specified. The Astra/ultra lead and the single live register for each owner govern activation and assessment.
+
+### BFA-E02 — Select the exact minimum
+
+Apply the first fixed-type critical value theorem with \(b=a_M=I\) and \(I\le 2T-\delta\). Verify that every volume-one Yamabe representative of a positive Weyl minimizer is in the theorem's compact stratum. On a pulled-back smooth subsequence, use the Yamabe inequality on fixed smooth tests and the constant test in the limit to show \(Y_j=R_j\to Y_\infty\). Record attained minimum and maximum values of \(Y^2\) and the equivalent selection by least \(D\) from \(D=4I-(Y_{\rm rd}^2-Y^2)/12\). Check the strict spherical inequality at the attained maximum and the uniform margin over the finite set of nonstandard types in each fixed band, including its upper endpoint. The return is a short proof for the exact stratum or the first unmet compactness or normalization premise. The [master rigidity owner](../../../master/research-progress/REGISTER.md) can use the selected representative once this return is assessed. [First fixed-type critical value](../../03_first_order_twistor/01_sections_and_connections/01_neck_geometry/manuscript/closed_and_conformal_alternatives.tex) · [Fixed-band finiteness](../../../master/manuscript/exact_closed_types.tex)
+
+### BFE-E04 — Extract from each original flow at fixed \(p\)
+
+Use any attained positive volume-one Yamabe metric \(g_*\) for comparison. Set \(D_*=D(g_*)\), \(Y_*=Y([g_*])\), \(\Delta_D=4I-D_*>0\), and
+\[
+ F^p=2(1-p)e+pD/2=2e+pS/24-16p\pi^2,\qquad
+ J_p=\inf_{Y([g])>0}F^p(g).
+\]
+Fix \(0<p<1\) with \(m_p=2(2T-I)-pY_*^2/24>0\). Take a sequence of positive starts with \(F^p(g_{k,0})\le J_p+\epsilon_k\le F^p(g_*)+\epsilon_k\), where \(\epsilon_k\downarrow0\), \(\epsilon_k\le m_p/2\) and \(\epsilon_k/p\le\Delta_D/4\). Justify choosing these starts in volume-one Yamabe gauge using \(Y([g])^2\le S(g)\) in a positive class, with equality in a Yamabe representative and \(e\) preserved.
+
+Use the strict sublevel to keep \(e(t)\le 2T-(m_p-\epsilon_k)/(2(1-p))\). The positive sign persists on each original trajectory by continuity of the conformal-Laplacian sign and the zero wall. Gauss–Bonnet in the Yamabe representative gives a positive lower Yamabe bound. Insert the resulting same-type inequality \(e(t)\ge I\) into the decreasing functional to derive the physical bounds \(D(t)\le D_*+2\epsilon_k/p\le 4I-\Delta_D/2\) and \(S(t)\le Y_*^2+24\epsilon_k/p\). Account for the full curvature integral and both chiralities on the uncut metrics.
+
+For each original flow, verify Bour's strict alternatives, including first-hit normalization through the terminal slice in the pointed case. Apply 06's marked lemma to the entire core of that model, with both signed budgets and a positive compactification on \(M\). Only after recovering admissibility on \(M\), use \(4I\le 4e_X=D_X\le\liminf D(t_i)<4I\). Return the physical volume-one closed critical sequence on \(M\), with \(J_p\le F^p(q_{p,k})\le J_p+\epsilon_k\) and constant positive scalar curvature. If the extraction or marking fails, identify the first missing hypothesis and the bounds still proved. [Fixed positive regularization and marked lemma](../manuscript/fixed_type_attainment.tex) · [Strict flow audit](../01_regularized_flow_and_energy/notes/BOUR_AUDIT_20261126.md)
+
+### BML-E07 — Extract from the closed critical sequence at the same \(p\)
+
+Use the BFE-E04 endpoint metrics in their physical constant-scalar gauge. Hold \(p\) fixed while \(k\to\infty\). Check the common Yamabe lower bound, scalar upper bound from volume one and \(S\), and the uniform stationary bootstrap and comparison maps from 06. At a curvature maximum rescale by \(Q_k=\max|\mathrm{Rm}(q_{p,k})|\to\infty\). The normalized scalar is \(R_k/Q_k\to0\). On the rescaled representatives the equation is \(\operatorname{grad}F_W=p(R_k/Q_k)\operatorname{Ric}_0/12\) in 06's convention. With bounded normalized curvature, the complete nonflat pointed limit is scalar-flat and Bach-flat at this fixed \(p\). Reapply the marked lemma to this sequence and independently exclude blow-up by the strict \(D\) margin. In the bounded alternative use smooth convergence on all of the oriented \(M\) to attain \(J_p\). Verify \(S=Y^2\) at the limit by comparison with its own Yamabe representative. Return one proof covering both alternatives or the first failed stationary or marked premise. [Uniform stationary estimates](../02_marked_limits_and_attainment/notes/CSC_ESTIMATES_20261126.md) · [Whole-core markings](../02_marked_limits_and_attainment/notes/MARKED_CORE_20261126.md)
+
+### BFA-E03 — Test the regularized selection and its variation
+
+With the verified \(J_p\) branch, compare \(q_p\) with the same \(g_*\) to get \(D(q_p)\le D_*<4I\) uniformly as \(p\downarrow0\). Reuse the stationary extraction with the varying parameters. Verify positivity and Yamabe gauge of a smooth same-type limit and compare \(Y(q_p)^2+48(e(q_p)-I)/p\) with the attained least \(Y^2\) of BFA-E02. Check that every smooth limit is a Weyl minimizer with least \(D\) and that \(e(q_p)-I=o(p)\). Global minima give nonnegative \(F^p\) second variation on the open positive set.
+
+The Taylor check can run while the critical sequence is being extracted. For a non-Einstein exact comparator with constant scalar \(s>0\), set \(Z=\operatorname{Ric}_0(g_*)\) and \(H=\mathrm d^2e(g_*)\). Derive \(S'[Z]=-2sD_*\) with the physical norms and contracted Bianchi identity. On the same type consider \(g_*+\kappa pZ\) for fixed \(\kappa>0\), with positivity verified for small \(p\). Check the sign and remainder in
+\[
+ F^p(g_*+\kappa pZ)-F^p(g_*)
+ =p^2\bigl(\kappa^2 H(Z,Z)-\kappa sD_*/12\bigr)+o(p^2).
+\]
+A small fixed \(\kappa\) tests for a strict regularized saving. If \(g_*\) is the least-\(D\) representative and \(D_*>0\), check that the saving puts \(J_p\) strictly below the minimum of \(F^p\) on the exact Weyl-minimizing stratum for all sufficiently small \(p>0\). If the least \(D\) is zero, the selected Einstein representative already minimizes \(F^p\) globally for every \(0<p<1\). Return the Taylor calculation with its precise scope and, after both extractions, the selection and stability statement or first failed premise. The master owns any further use toward a negative Weyl direction, a lower Weyl competitor or smooth recognition. [Physical variation conventions](../../../master/notes/E20_CLOSED_VARIATION.md)
+
+Freeze each bounded request in its owner's handoffs and put its written proof or scoped failure in that owner's notes. Have an independent reader reconstruct the two extractions and the Taylor sign before any result is imported. The compactness on the exact stratum is post-attainment input, and the original-flow sign and budget for near-\(J_p\) starts use a comparator already on \(M\). Arbitrary near-Weyl-minimizing starts before attainment remain a separate question. [Formal E48 start criterion](../../../../formalization/investigations/12_bour_regularized_flow/notes/E48_START_DEFICIT.md)
+
+## Original order of work
 
 1. Freeze one hypothetical nonstandard entered \(M\), one gap below \(2T\) and one sequence of positive unit-volume Yamabe starts within \(\alpha_j^2\) of \(I^+(M)\). Audit §8 of Bour and the specific results it uses. Reconcile the dissipation coefficient in §8 with the stated gradient equation and identify which uses require only finiteness. Record at each step the constants for fixed \(\alpha_j\) and the estimates that persist in \(j\). A failing import can be replaced by a theorem with checked hypotheses or a local proof of the precise missing estimate. [Flow and energy plan](../01_regularized_flow_and_energy/research-plan/PLAN.md)
 2. On the first uncut flows test the full Ricci energy ceiling at every smooth time. Identify the common positive Yamabe and Sobolev information for outputs in their actual gauges. Independently derive both the signs and constants before applying an end formula. The end-group, transfer and regularity source comparisons can be prepared in parallel on explicitly assumed input.

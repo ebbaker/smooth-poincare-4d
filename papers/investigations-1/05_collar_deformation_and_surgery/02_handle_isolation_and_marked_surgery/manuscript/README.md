@@ -15,3 +15,5 @@ The two-point theorem forces a marked bridge disk on every pair in its stated fr
 The mixed four-point section derives the subsurface compression, the unique-slope disk decision and the free-product obstruction on a specific free outlet. [Proof, readings and scope](../../reviews/FOUR_POINT_RETURNS_20261126.md)
 
 The Whitehead example gives a lower face compression whose return cannot be bridged at any winding. The opposite face and the actual two-point successor supply disks with opposite core punctures, and their terminal trace is recognized. [Assessment](../../reviews/WHITEHEAD_MIXED_RETURNS_20261126.md)
+
+The [reducible native cut theorem and alternating return family](../../reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md) give a strict cancellation for any terminal pair with either native individual cut reducible, and an exact unbounded cost for the only bridged return on a four-point family.

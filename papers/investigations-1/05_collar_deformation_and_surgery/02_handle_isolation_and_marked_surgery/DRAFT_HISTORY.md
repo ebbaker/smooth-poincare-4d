@@ -41,3 +41,7 @@ The mixed-pairing cut forces a subsurface compression. A bridge, when present, c
 ## 26 November 2026 · Whitehead returns and the lower face word
 
 A minimum-four exterior has no lower bridge on any chord. The other face and its two-point successor each require two core passages, recover the actual Figure 5 trace and give three terminal cancellations. [Assessment and input distinctions](../reviews/WHITEHEAD_MIXED_RETURNS_20261126.md)
+
+## 26 November 2026 · Reducible native cuts and an unbounded bridge cost
+
+Integrated the strict terminal reduction from either reducible native surgery, the capped-return restriction and alternating four-point families with sharp geometric costs. The next case has two irreducible single-attachment cuts or an unrecognized rank-two closure. [Assessment](../reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md)

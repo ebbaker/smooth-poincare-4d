@@ -80,3 +80,13 @@ The [initial working manuscript](../manuscript/recognition_from_marked_handle_cu
 | SUR-E02ah, ak / SUR-B04 | Unfilled compression on the shallow specimen. Two Whitehead insertions instead force minimum four, forbid every unfilled face disk and leave an upper bridge and a two-point successor with exactly two core punctures each. Figure 5 then exposes the actual split duals. | Terminal middle and upper counts each go from three to zero with no births; later unspecified handles give a relative trace. [Disk and cuts](../notes/WHITEHEAD_RAIL_DISK.md) · [Assessment and independent checks](../../reviews/WHITEHEAD_MIXED_RETURNS_20261126.md) |
 
 The [optional direct Figure 5 colour calculation](../notes/ONE_MOUTH_FOX.md) (SUR-E02aj) did not verify the complete marked projection. The surface-bundle quotient above supplies the lower-word certificate. The observed terminal count and the computational claims are unchanged in this respect.
+
+### Reducing the pair from either native cut, 26 November
+
+| Task | Assessed result |
+| --- | --- |
+| SUR-B04 / SUR-E02am–an | The dual one-relator group and chamber normal form force exactly one nontrivial chamber projection for nontrivial stationary knot. Both mixed returns cannot survive. |
+| SUR-B04 / SUR-E02as | Applying the reducible-surgery theorem at both native orders gives the local-knot criterion and finite framed localization. Immediate terminal split lower zero cancels once for an arbitrary local \(Y_2\) trace. Remaining least-three diagrams of this shape have two irreducible cuts with \(b_1=2\). |
+| SUR-E02ao–ar / CDS-B03 | Actual alternating shallow, banded-longitude and Whitehead specimens. Three obstructed returns, an unbounded exact first bridge cost on the banded family at minimum four, and a different minimum-four witness from face incompressibility for a trivial unfilled word. The actual Figure 5 successor cancels three times. |
+
+[Assessment](../../reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md) · [Independent reading record](../../research-progress/handoffs/REDUCIBLE_CUT_READINGS_20261126.md) · [Next cut](../../continuation-notes/AFTER_REDUCIBLE_NATIVE_CUTS_20261126.md)

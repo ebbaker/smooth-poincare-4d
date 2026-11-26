@@ -1,3 +1,4 @@
+% Reducible native cuts and alternating returns, intake 9c80575988ad, 26 November 2026.
 % One-mouth and Whitehead-pattern exteriors, intake 226b8f404b6e, 26 November 2026.
 % Four-point marked returns, working intake 4d73fdde6804, 26 November 2026.
 % Two-point localization and the knotted opposite completion, intake 4da586548b44, 26 November 2026.
@@ -61,7 +62,11 @@ winding-zero cuts give a separate recognizing family. In a nonlocal
 two-attachment block the minimum geometric intersection with a
 nonseparating sphere missing the stationary component can be any
 positive even number. Two specified framed slides still give an
-unstabilized reduction. An independent finite comparison on a subcritical
+unstabilized reduction. More generally, a reducible native second cut
+for an integral rank-one pair with rank-three free outlet forces joint
+localization by framed slides and a strict terminal cancellation. At a
+fixed four-point minimum the least puncture count of the only bridged
+return can be any positive integer. An independent finite comparison on a subcritical
 minimizing sequence shows that an exactly conformally round, umbilic
 face of a parametrized disk forces equal chiral disk masses bounded by
 the minimizing excess. We derive the required full-side savings for
@@ -2013,6 +2018,305 @@ attachments the proved replacement is relative, with zero net
 middle change until a further cancellation is identified.
 \end{proof}
 
+\subsection{A reducing sphere for the entire stationary-filled exterior}
+\label{sec:filled-sphere}
+The previous tests keep a particular punctured face fixed. Allowing the
+sphere to move in the stationary filling gives a selection theorem which
+does not depend on the number of punctures. A knot is called local in a
+three-manifold if it lies in an embedded ball. In \(Y_1\) this is equivalent
+to missing a nonseparating sphere, by cutting to a slab and choosing
+an arc between its two spherical faces off the knot.
+
+\begin{theorem}[Localization at a reducible native cut]\label{thm:filled-localization}
+Let a smooth integrally framed pair \(Q,K\) in \(Y_1\) have immediate
+joint surgery \(Y_3\). The cut \(Z\) after \(Q\) alone is reducible if
+and only if \(Q\) is local in \(Y_1\). Whenever \(Q\) is local, the pair can be put in one ball of the original
+\(Y_1\) by isotopy and finitely many framed slides of \(K\) over \(Q\).
+The resulting local pair has surgery \(Y_2\) in the capped ball.
+With a single split lower zero \(A\) and an immediate rank-three upper
+closing, there is an unstabilized reduction from three middle handles to
+two. If \(Q\) is a local unknot, all three cancel.
+\end{theorem}
+\begin{proof}
+An integral surgery increases \(b_1\) by at most one. Equality at both
+steps forces both attaching knots to be rationally null in their
+respective inlets. For the first, \(H_1(Y_1)=\mathbb Z\) is torsion-free.
+The complement of a null-homologous knot has one extra free meridian
+generator, as is seen using a Seifert surface. The increase forces its
+integral framing relative to that surface to be zero. In particular
+\(H_1(Z)=\mathbb Z^2\). If \(Q\) is local then
+\(Z=Y_1\#M\), \(M=S^3_0(Q)\); both summands have positive \(b_1\).
+
+We will apply Scharlemann's reducible-surgery theorem twice
+\cite[Theorem 6.1 and correction added in proof, pp.~497--500]{Scharlemann1990Reducible}.
+In each application the two closed fillings are distinct fillings of
+the same one-torus exterior. The input contains a nonseparating sphere,
+which bounds no rational homology ball. The output is reducible, with
+positive \(b_1\) and torsion-free first homology. If the exterior were
+irreducible, its torus would be incompressible: compression gives a
+sphere, whose complementary ball would make the exterior a solid
+torus. Its fillings have cyclic first homology, impossible for our
+rank-two or rank-three filling. The two solid-torus exceptions of
+the theorem have boundary. Cabling-annulus surgery on a genuine cable
+of winding \(p\), \(\lvert p\rvert\ge2\), splits off a lens space
+with cyclic first homology of order \(\lvert p\rvert\): compress the
+cabling torus with the filled annulus to see the two solid tori on that
+side, with meridians at distance \(\lvert p\rvert\).
+The remaining exception added in proof requires a rational-homology-sphere
+output. Consequently the common exterior is reducible.
+
+Apply this first to \(Y_1\to Z\) if \(Z\) is reducible. An essential
+sphere in the exterior which is nonseparating misses \(Q\).
+For a separating sphere, cap the side away from its torus boundary.
+This closed summand survives both fillings. It is nontrivial since
+the sphere was essential. By prime uniqueness in \(Y_1\) this summand
+is \(Y_1\); its punctured copy contains a nonseparating sphere disjoint
+from \(Q\). This proves the equivalence.
+
+Now take \(Q\) local and nontrivial. Its zero surgery \(M\) is
+irreducible by Gabai's Corollary 8.3 and Remark \(8.3'\)
+\cite{Gabai1987FoliationsIII}. Apply the same exterior argument to
+\(Z\to Y_3\) at the moving knot. If an essential sphere separates,
+its capped side away from the moving torus is a nontrivial common summand
+of \(M\#Y_1\) and \(Y_3\). Prime uniqueness forces precisely \(Y_1\)
+\cite{Milnor1962Prime}. Thus in all cases there is a nonseparating
+sphere \(S'\) in \(Z\) disjoint from the moving tube.
+
+Let \(S\) be the original marked inlet sphere missing \(Q\), retained
+in \(Z\). In \(M\#Y_1\) all nonseparating spheres are ambient isotopic.
+For disjoint spheres, cut along the first and cap both ends to obtain
+the irreducible \(M\) by prime uniqueness. The other bounds a ball
+containing exactly one cap, since otherwise it separates upon regluing.
+The region between the two spheres there is a product. For intersecting
+spheres, surger one on an innermost disk of the other and push the
+results off the original. At least one result is nonseparating by
+the oriented homology sum. This gives an adjacent disjoint sphere
+with fewer intersection circles, proving the assertion by induction
+\cite[Proposition 4]{Trace1982ThreeHandles}.
+
+Carry the framed \(K\) by an ambient isotopy taking \(S'\) to \(S\).
+At the endpoint \(K'\) misses \(S\); perturb it off the stationary
+filling core \(Q^*\) there. Take the track of the moving core transverse
+to \(Q^*\times I\), keeping the end conditions. Its compact intersection
+is finite. Between events the isotopy pulls back through the common
+torus exterior with a product collar. Each signed event is a band sum
+over the parametrized surgery parallel of \(Q\), with framing induced
+by the moving normal frame
+\cite[proof of Proposition 3.2]{GompfScharlemannThompson2010}.
+Shrinking the core neighborhood and expanding the outside collar,
+away from \(S\), puts the outgoing tube literally in the original
+unfilled slab. These are slides of \(K\) with the stationary handle
+fixed. There is no assumed isotopy relative to \(Q^*\).
+When \(Q\) is the unknot, \(Z=Y_2\). The \(Y_2\to Y_3\) theorem gives
+a disk-framed local unknot for \(K\)
+\cite[Theorem 5.1]{MeierSchirmerZupan2016Trisections}.
+Carry its ball to a small ball away from \(S,Q^*\) and the original
+\(Q\) ball, using the same crossing argument.
+
+In the unfilled slab take a thin arc joining the two capping balls
+disjoint from the link. Their joined regular neighborhood is a ball,
+whose complementary ball contains the link. Transport both integral
+tubes there. Thus \(Y_3=Y_1\#S^3_L\) for the returned local
+integral link \(L\), and \(S^3_L=Y_2\).
+Apply the reordering, extending upper boundary map and geometric
+cancellation in Corollary~\ref{cor:two-port-count}. The residual closing
+of the actual local trace is \((\partial C)b\), with inverse
+\(b^{-1}\partial(C^{-1})\) in the notation there. With the trivial
+stationary knot the returned link is the split zero unlink, giving
+three cancellations. If the local pair instead contains a nontrivial
+generalized square knot, its one-sided simply connected two-middle
+homotopy-sphere closure has the standard smooth type by the
+Meier--Zupan recognition theorem \cite[Theorem 1.1]{MeierZupan2022SquareKnots}. With subsequent attachments the comparison through
+the given block is relative. Its final map \(P\) gives
+\(\gamma P^{-1}\), inverse \(P\gamma^{-1}\), after transporting each
+full later tube by \(P_jt_j\) at its own cut. The inverse on that image
+is \(t_j^{-1}P_j^{-1}\). Every preliminary slide has zero net change
+and there are no births.
+\end{proof}
+
+\paragraph{What the outlet forces on a capped return.}
+Put \(G=\pi_1M\) and let \(t\) cross the original seam. For nontrivial
+local \(Q\), the ambient class of \(K\) in \(G*\langle t\rangle\)
+is conjugate to a \emph{nonidentity} element of \([G,G]\).
+Localization gives conjugacy into \(G\), and zero abelianization follows
+from the two presentations of the single moving trace,
+\[
+ \Pi=(G*\langle t\rangle)/\langle\!\langle K\rangle\!\rangle
+    =F_3/\langle\!\langle d\rangle\!\rangle .
+\]
+Here \(d\) is its actual reverse attaching core in \(Y_3\).
+The abelianizations give \(\mathbb Z^2/\langle[K]\rangle
+=\mathbb Z^3/\langle[d]\rangle\), forcing \([K]=0\) and
+\([d]\) primitive nonzero. Thus \(d\) is a nonpower and the dual
+one-relator presentation has an aspherical two-complex
+\cite[Corollary 6.5(i), applied to the free-group relation module]{AntolinDicksLinnell2011}.
+Indeed the lifted relators form a basis for the first homology of the
+covering graph of the normal closure, so the universal cover after
+attaching the lifted disks is simply connected and acyclic.
+If \(K=1\), \(G\) embeds in \(\Pi\). But \(M\) is closed, oriented,
+irreducible with infinite fundamental group, hence aspherical
+by the sphere theorem and Hurewicz applied to its open universal cover.
+Its third group homology is \(\mathbb Z\), impossible in a cover of the
+two-complex. Alternatively, local indicability of \(G\) and the
+Freiheitssatz would also embed it if a cyclically reduced relator
+used both factors
+\cite[Theorem 3.1]{BoyerRolfsenWiest2005}\cite[Corollary 4.4]{AntolinDicksLinnell2011}.
+
+In the height cover write \(g_j=t^jgt^{-j}\) in the free product of
+the chamber groups \(G_j\). The moving lift is conjugate into one chamber,
+and exactly one chamber retraction is nonidentity. For the earlier mixed
+pairing, in oriented order the two through arcs and the two returns give
+\(a_0 b_1 c_0 d_{-1}\). Use common base paths on each restored face
+and one path between the two face basepoints. Projection gives
+\(ac,b,d\) in the respective chambers. Exactly one survives. For the
+unknot all are trivial by the local disk. Thus both opposite returns
+cannot survive on a true mixed outlet. Capping forgets all moving
+meridians and all chord changes on a restored sphere. Vanishing in
+this quotient supplies no drilled bridge by itself.
+
+\subsection{Three obstructed returns and an arbitrarily punctured fourth}
+\label{sec:longitude-returns}
+Use the identity seam and lower returns \(12,34\), upper returns \(23,41\).
+Traverse upper \(41\), lower \(12\), upper \(23\), lower \(34\).
+The chamber word becomes \(a_0 b_1 c_0 d_1\). If all four letters
+survive the word is cyclically reduced of length four. If one vanishes,
+cyclic reduction leaves at most the two opposite-face products \(ac,bd\),
+up to conjugacy in each face group. At least one product must then be
+trivial. Three nontrivial returns are possible when the two on one
+face are inverse under the common basing.
+
+\begin{proposition}\label{prop:arbitrary-punctures}
+For each \(n\ge1\) there is an integral \(Y_1\to Y_3\) example with
+this alternating pairing such that the original minimum number of sphere
+intersections with \(K\), over nonseparating spheres disjoint from \(Q\),
+is four. Three returns admit no bridge even after stationary filling.
+The least number of geometric core passages for a filled bridge on the
+fourth, allowing every chord, winding and disk, is \(n\). The supplied
+local successor cancels all three terminal middle handles.
+\end{proposition}
+\begin{proof}
+In a slab ball take the actual zero-framed Figure~5 pair \(Q,U\) of
+Section~\ref{sec:whitehead-returns}. Use an untwisted ribbon on a
+parallel of \(U\) opened at a short gap. Its long sides give the lower
+\(12,34\) returns in opposite directions; its short ends run by
+untied strips to the lower \(14,23\) chords. Put a second open
+parallel of \(U\) at the upper \(41\) patch in a distinct normal
+sector. A shallow upper \(23\) cap would now allow first a push through
+the seam and then a push across the entire lower ribbon, closing up
+the actual upper \(U\) joint with \(Q\).
+
+For the fourth arm take \(n\) disjoint zero parallels of \(Q\) in
+one thin torus about a pushed-off preferred longitude. Join successive
+parallels by disjoint oriented fusion bands in a short product box,
+each on the outside of its pair of parallel annuli, so their incidence
+graph is a path. Open a short boundary gap and use an untied access
+strip to the upper \(23\) patch. Use disjoint access arcs to the lower
+ribbon, the upper \(41\) gap and this longitude box, then thicken them.
+The longitude collars at \(Q\) miss the neighborhoods of the \(U\)
+parallels. In the unfilled knot exterior the new completion is conjugate
+to \(\lambda_Q^n\) by its degree in the pushed-off torus.
+In the stationary filling cap each annulus by a different meridian
+disk of the filling solid torus. The same bands join these coherently
+oriented disks to an embedded disk meeting \(Q^*\) \(n\) times,
+all positively. The access strip turns it into a proper bridge,
+disjoint from the other arms. Its frontier gives the filled face disk
+with slope surrounding the short \(23\) chord. The other three
+completions represent conjugates of \(U^{\pm1}\); these survive in
+\(G\) by Section~\ref{sec:whitehead-returns}. For any competing
+bridge, restore the moving tubes and cap the faces. The wall and
+chord homotopies are disjoint from \(Q^*\). Gluing its disk to
+the negative of the displayed disk gives a sphere map into the
+aspherical \(M\). Its signed intersection with \(Q^*\) vanishes.
+Every bridge therefore pays at least \(n\).
+
+For example, twist the prescribed \(23\) chord \(k\ne0\) times about
+a face circle enclosing \(2,4\) which crosses it once. Restore all
+other drills except the capped \(41\) knot. This knot is null-homologous
+in \(M\), so its meridian has infinite order in its exterior.
+The twist changes the word in homology by \(\pm k\) such meridians.
+Winding on \(23\) dies in this test. The prescribed chord fails, while
+the original short chord attains the bound on the same exterior.
+
+To check the unfilled minimum let \(H=\pi_1(E_Q)\) in
+\(\pi_1(Y_1\setminus Q)=H*\langle t\rangle\).
+Any other nonseparating sphere in the unfilled exterior of \(Q\)
+is ambient isotopic there to the original seam. In fact, cutting and
+capping along any such sphere gives a knot exterior in \(S^3\):
+after meridional filling its capped ambient manifold summed with
+\(Y_1\) is \(Y_1\), so its ambient manifold is \(S^3\).
+Every knot exterior in \(S^3\) is irreducible. The disjoint-pair
+and innermost-disk proof of Theorem~\ref{thm:filled-localization}
+therefore works in the unfilled exterior as well, relative to its
+torus boundary. Carrying a competing sphere back to the seam gives
+an isotopic moving knot. Reading its transverse crossings gives a
+word with at most one stable letter per crossing. Thus the minimum
+number of stable letters among conjugates in this fixed splitting
+bounds the intersections below.
+
+All four unfilled segments are nonidentity: three survive stationary
+filling, and the fourth is a nonzero power of the longitude on the
+incompressible torus of the square-knot exterior. The word
+\(a t b t^{-1} c t d t^{-1}\) has four stable letters even cyclically,
+as is seen by taking its powers. The seam attains four.
+An unfilled essential face compression would give two spheres with
+two points each, at least one nonseparating by the oriented homology
+sum. This rules out either face before filling.
+
+Push the constructed disk through \(23\). Each of its \(n\) core
+crossings is a framed slide. Assign the original integral framing by
+transport from the shallow diagram: zero mutual linking and zero
+stationary coefficient preserve both zero framings at every slide.
+On the actual two-point successor the joined lower sides bound the
+unfilled ribbon against \(14\). This last push closes the original
+\(41\) gap and gives the local Figure~5 link. Its disjoint sphere
+pulls back to the two-point successor, whose absolute minimum is
+already zero. In the original order the second cut is \(Y_1\#M\).
+Local reordering to \(U\) first gives \(Y_2\); slide \(Q\) over \(U\)
+as in the figure. The three new split duals give the successive counts
+\((0,3,3),(0,2,2),(0,1,1),(0,0,0)\) under the terminal closing.
+The tube and closing comparisons in Theorem~\ref{thm:filled-localization}
+apply at every stage. There are no temporary stabilizations.
+\end{proof}
+
+\paragraph{A four-point minimum invisible to the unfilled word.}
+The same four ports also admit an upper \(23\) Whitehead return in a
+thin torus about a zero parallel of \(Q\). Its group element vanishes
+already before filling by winding zero. Its bridge has exactly two
+opposite core punctures by the punctured-disk and nonsplitting argument
+of Section~\ref{sec:whitehead-returns}. All four individual completions
+before filling are nonsplit from their stationary knot: the three \(U\)
+parallels by the fiber witness, and the Whitehead pattern by the
+incompressible carrier torus and the nonsplit parallel pair.
+
+Here is a geometric lower bound independent of the stable-letter test.
+In the compactified cyclic cover retain the moving lift \(k\) and the
+two adjacent stationary copies \(Q_0,Q_1\) across their seam \(S_0\).
+The four-holed seam is incompressible on both sides of this sublink.
+A disk on a side would cut its ball into two balls. It cannot split
+the endpoints of a return, and separating the two whole returns
+would put one completion in a ball away from the stationary knot.
+A peripheral disk would split the endpoints of one arc.
+Suppose that \(T\) separates \(Q_0,Q_1\) with at most two intersections
+with \(k\), minimizing the circles of \(T\cap S_0\). An innermost
+unpunctured disk on \(T\) has boundary bounding an unpunctured disk on
+\(S_0\) by incompressibility. Surgery using an innermost such disk on
+\(S_0\) retains a separating sphere by the mod-two intersection with
+a path joining \(Q_0,Q_1\), with at most two punctures and fewer
+circles. Every remaining circle must therefore separate the two
+punctures of \(T\). Its mod-two linking with \(k\) is one, so it
+cuts off a once-punctured disk on \(S_0\). Surgery on an innermost
+such disk (after the unpunctured case has been removed) again gives
+two spheres with two punctures apiece, one
+retaining separation. Thus a minimizing \(T\) would be disjoint from
+\(S_0\). On its side of \(S_0\) the ball it cuts off away from \(S_0\)
+contains the stationary knot. Of the two returns on this side at least
+one misses \(T\), since each crosses it evenly. This would split that
+completion from the knot. Any nonseparating inlet sphere missing \(Q\)
+has a lift between these consecutive stationary copies, so the native
+seam realizes an absolute minimum of four. After the Whitehead disk
+push, the actual two-point successor has the unfilled lower ribbon disk
+and absolute minimum zero, with the same terminal closing as above.
+
 \section{Metric criteria on the given levels}\label{sec:bands}
 These criteria give PSC domination for the actual slice
 or prefix in Theorems~\ref{thm:mixed} and~\ref{thm:three}.
@@ -2665,6 +2969,12 @@ and strictly reduces \(n_2\). The first unresolved
 three-middle-handle successor after that move is the
 actual two-component link when its second prefix and
 other one-sided recognition tests are undecided.
+For the terminal rank-one pair, reducibility of either native second cut
+now suffices for strict descent by Theorem~\ref{thm:filled-localization}.
+The untreated case in these orders has two irreducible second cuts
+with first Betti number two. Neither admits a nonzero-degree map from
+a closed oriented PSC three-manifold by the prime classification in
+Section~\ref{sec:psc}.
 A general one-sided three-component link and a presentation
 with several lower 1-handles require additional link
 or trace selection. A result on a freely selected

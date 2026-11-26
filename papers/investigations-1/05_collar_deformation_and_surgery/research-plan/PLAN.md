@@ -2,6 +2,10 @@
 
 26 November 2026 · Prepared for Edward B. Baker III with OpenAI Codex assistance. Exact serving model and reasoning effort for this planning revision are unavailable. The input repository revision was `65f06eaac3ff`. This setup snapshot activates no research. The [parent register](../research-progress/REGISTER.md) owns live readiness. [Overview](../research-overview/OVERVIEW.md) · [Source versions](../references/README.md) · [Input assessment](../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)
 
+## After localization from a reducible native surgery
+
+The earlier question about survival of both mixed returns has been decided. At a native \(Y_1\to Y_3\) pair, either reducible single-attachment cut yields joint localization by framed slides. With the terminal split lower zero and rank-three upper body this gives strict \(3\to2\) descent for every port count. The next selection starts with two actual irreducible single-attachment cuts or an unrecognized capped two-component successor. Test a geometric slide or dual order on that input. Both residual irreducible cuts have \(b_1=2\) and exclude PSC domination on those levels. [Assessment](../reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md) · [Current handoff](../continuation-notes/AFTER_REDUCIBLE_NATIVE_CUTS_20261126.md)
+
 ## After the return with no bridge
 
 On the double Whitehead exterior, the correct lower disk slope and even its complete enlarged-port kernel are known, yet every possible lower chord is obstructed in the closed stationary filling. The opposite return still gives a strict terminal reduction. On a different actual four-point pair, first test whether both completed returns can survive in the capped stationary filling. If so, seek a different reducing system on that pair. For another port pairing, derive its native groups and fillings before using a mixed-pairing result. [Assessment](../reviews/WHITEHEAD_MIXED_RETURNS_20261126.md) · [Next handoff](../continuation-notes/AFTER_WHITEHEAD_MIXED_RETURNS_20261126.md)

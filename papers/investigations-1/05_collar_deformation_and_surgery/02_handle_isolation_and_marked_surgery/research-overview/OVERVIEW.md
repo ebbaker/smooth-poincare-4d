@@ -4,6 +4,10 @@
 
 On a smooth closed oriented homotopy four-sphere, a rounded individual 2-handle is a standard four-ball. The relevant information lies in the attaching map of $S^1\times D^2$, the outgoing $D^2\times S^1$, the framing, neighboring tubes, and the exterior to which these pieces are attached. A three-sphere enclosing a region, an intermediate surgery boundary, and the boundary of the individual handle are different candidates for a cut. Identify each object actually used on $M$.
 
+## Localization and the residual rank-two trace
+
+At a rank-one inlet with immediate rank-three free outlet, a reducible native single-attachment surgery yields a finite sequence of moving-over-stationary slides to a common ball. The split initial zero cancels with a terminal upper handle, leaving the actual local two-component trace and its induced closing. The explicit alternating families instead admit the Figure 5 reduction all the way to zero. [Theorem and limits](../../reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md)
+
 ## First application and its successor
 
 Use a control presentation with a 0-handle, a dotted unknot for a 1-handle, a zero-framed meridian for a cancelling 2-handle, and a split zero-framed unknot for a second 2-handle paired with a 3-handle. Cap by the 4-handle. The meridian meets the belt two-sphere transversely once. The extra tube gives a way of checking the outgoing boundary identification in a case with a known outcome. Record both maps of the collar and the residual attaching tubes before and after cancellation. Distinguish the $S^1\times S^2$ level where the belt sphere lives from the $S^3$ obtained after the first cancellation in this control. A geometrically specified level of a given metric needs its own embedding and comparison.

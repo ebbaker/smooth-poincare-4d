@@ -9,3 +9,7 @@ A separate model reader checked task ownership, gauges and thresholds against th
 ## 26 November 2026 · Original-flow attainment
 
 Integrated the [fixed-type attainment manuscript](manuscript/fixed_type_attainment.tex). Both parameter limits preserve positive energy-minimizer admissibility on the original smooth manifold. [Assessment and readbacks](reviews/FIXED_TYPE_ATTAINMENT_20261126.md)
+
+## 26 November 2026 · Post-attainment packets prepared
+
+Routed exact least-\(Y^2\) selection, the two fixed-\(p\) extractions and the regularized Taylor test through the existing owners. The working attainment assessment and its specialist audit retain their previous scope. [Current plan](research-plan/PLAN.md#post-attainment-packets) · [Continuation](continuation-notes/POST_ATTAINMENT_20261126.md)

@@ -1,6 +1,6 @@
 # Activate the investigation of Bour's attainment proposal
 
-**Current handoff, after the attainment proof.** Use the [assessed result and next routing](AFTER_ATTAINMENT_20261126.md). The original activation instructions below record the starting question.
+**Current handoff.** Use the [post-attainment packets and continuation prompt](POST_ATTAINMENT_20261126.md). The [original proof handoff](AFTER_ATTAINMENT_20261126.md) records the assessed result and outstanding audit. The original activation instructions below record the starting question.
 
 26 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. This launch was prepared against research revision \(\texttt{65f06ea}\). Verify the [external source passages and current revisions](../../../../references/SOURCE_NOTES_BOUR_ATTAINMENT_20261126.md), [master review F2](../../../master/reviews/claude/EXTERNAL_PROGRAM_REVIEW_20261126.md), [master status](../../../master/research-progress/REGISTER.md) and [marked-neck manuscript](../../03_first_order_twistor/01_sections_and_connections/01_neck_geometry/manuscript/marked_necks_and_chiral_energy.tex) on resumption. The [parent register](../research-progress/REGISTER.md), [flow register](../01_regularized_flow_and_energy/research-progress/REGISTER.md) and [limits register](../02_marked_limits_and_attainment/research-progress/REGISTER.md) are authoritative for readiness.
 

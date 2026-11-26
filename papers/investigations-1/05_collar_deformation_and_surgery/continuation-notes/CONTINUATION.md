@@ -1,6 +1,6 @@
 # Continue collar deformation and marked surgery
 
-Resume from [the Whitehead mixed-returns handoff](AFTER_WHITEHEAD_MIXED_RETURNS_20261126.md). It records the new obstruction for every lower chord, the marked two-point successor and the unreduced selection problem.
+Resume from [the reducible-native-cuts handoff](AFTER_REDUCIBLE_NATIVE_CUTS_20261126.md). It gives the independently checked strict terminal reduction, the residual irreducible native cuts and a pasteable continuation. The [Whitehead handoff](AFTER_WHITEHEAD_MIXED_RETURNS_20261126.md) records the preceding four-point selection.
 
 The preceding session used [the four-point handoff](AFTER_FOUR_POINT_RETURNS_20261126.md) for the next session. The [two-point handoff](AFTER_TWO_POINT_LOCALIZATION_20261126.md) records the preceding theorem. The [narrowed marked-surgery plan](NARROWED_MARKED_SURGERY_20261126.md) records the candidate selection that led to it. The [exterior recovery and core retention handoff](AFTER_EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md) preserves the previous scientific milestone. The activation request below is retained at its original scope.
 

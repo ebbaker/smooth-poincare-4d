@@ -32,7 +32,9 @@ $$
  \tfrac14\int_{B_h(x,r)} |\nabla E|^2+c\int_{B_h(x,r)}|E|^2
  \le \bigl((1+1/\sqrt2)K+4/r^2\bigr)\int_{B_h(x,2r)}|E|^2 .
 $$
-Using the paired cancellation also replaces $c$ by $(1-p)s/12$ and $(1+1/\sqrt2)K$ by $K$ in this ball estimate. These inequalities use the full ordinary Ricci norm and $p$ only through a nonnegative scalar coefficient. The input is stationarity in physical tensor form. They apply before taking a compact or pointed limit. [CSC equation and signs](../../../../papers/investigations-1/06_bour_flow_and_fixed_type_attainment/02_marked_limits_and_attainment/notes/CSC_ESTIMATES_20261126.md) · [Pinned closed tensor Green identity](https://github.com/qinz1yang/differential-geometry/blob/788efe97894474c032de6dfb1289d515f613d15a/DifferentialGeometry/Analysis/Elliptic/ConnectionLaplacian/IntegrationByParts/CovariantTwoTensor/Basic.lean)
+Using the paired cancellation also replaces $c$ by $(1-p)s/12$ and $(1+1/\sqrt2)K$ by $K$ in this ball estimate. These inequalities use the full ordinary Ricci norm and $p$ only through a nonnegative scalar coefficient. The supplementary Lean check constructs the actual CSC section $\operatorname{Ric}-(s/4)h$, identifies its squared tensor pairing with the physical Ricci mass, and proves the closed Green identity on that section. Matching the nonlinear Euler tensor to the four-slot curvature action remains the formal step for the estimate. [Physical Ricci Green check](../reviews/E48_PHYSICAL_RICCI_GREEN.lean)
+
+The input is stationarity in physical tensor form. They apply before taking a compact or pointed limit. [CSC equation and signs](../../../../papers/investigations-1/06_bour_flow_and_fixed_type_attainment/02_marked_limits_and_attainment/notes/CSC_ESTIMATES_20261126.md) · [Pinned closed tensor Green identity](https://github.com/qinz1yang/differential-geometry/blob/788efe97894474c032de6dfb1289d515f613d15a/DifferentialGeometry/Analysis/Elliptic/ConnectionLaplacian/IntegrationByParts/CovariantTwoTensor/Basic.lean)
 
 ## Interior bounds independent of the regularization
 

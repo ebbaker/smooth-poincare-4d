@@ -1,6 +1,8 @@
 # Collar deformation and surgery on homotopy four-spheres
 
-On a new four-point exterior the lower return fails on every chord, and the upper bridge needs two stationary-core passages. Its successive two-point and local cuts give three terminal cancellations. [Assessment](reviews/WHITEHEAD_MIXED_RETURNS_20261126.md) · [Current continuation](continuation-notes/AFTER_WHITEHEAD_MIXED_RETURNS_20261126.md)
+Either reducible native individual cut of an integral rank-one pair with immediate rank-three free outlet gives joint localization. The terminal split lower zero then cancels even for an unknown local two-component trace. At a four-point minimum a specified return can require arbitrarily many core passages. [Assessment](reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md) · [Current continuation](continuation-notes/AFTER_REDUCIBLE_NATIVE_CUTS_20261126.md)
+
+On a new four-point exterior the lower return fails on every chord, and the upper bridge needs two stationary-core passages. Its successive two-point and local cuts give three terminal cancellations. [Assessment](reviews/WHITEHEAD_MIXED_RETURNS_20261126.md) · [Whitehead continuation](continuation-notes/AFTER_WHITEHEAD_MIXED_RETURNS_20261126.md)
 
 The [four-point assessment](reviews/FOUR_POINT_RETURNS_20261126.md) gives a finite test for a return bridge on a marked mixed four-point exterior, a terminal reduction with sharp sphere-intersection minima 4, 2, 0, and an obstruction invisible in integral homology. [Earlier continuation](continuation-notes/AFTER_FOUR_POINT_RETURNS_20261126.md)
 

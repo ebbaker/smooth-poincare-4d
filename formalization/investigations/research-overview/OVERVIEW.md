@@ -1,5 +1,5 @@
 # Current overall research overview
 
-[Edition 04 · Recognizing a smooth type from a marked cut](04_OVERVIEW.md) gives the universal coverage target, the positive-class and immersion thresholds, the two normalized mixed cuts, and the first unrecognized cases. [Current plan](../research-plan/04_PLAN.md) · [Baseline 04](../research-progress/04_BASELINE.md) · [Live program register](../research-progress/REGISTER.md)
+[Edition 06 · Attained rigidity, entry and the geometric inputs to Bour compactness](06_OVERVIEW.md) distinguishes the manuscript attainment theorem on an entered smooth type from the remaining public Lean obligations. It selects the exact Yamabe minimizer of least trace-free Ricci energy for rigidity and identifies the first uncovered marked cuts for surgery. [Current plan](../research-plan/06_PLAN.md) · [Baseline](../research-progress/06_BASELINE.md) · [Live program register](../research-progress/REGISTER.md)
 
-[Edition 03](03_OVERVIEW.md) introduced the parallel intrinsic and immersed routes. [Edition 02](02_OVERVIEW.md) develops the fixed-type variational argument. [Edition 01](01_OVERVIEW.md) records the component and spinor routes. The [investigation index](../README.md) lists the full history and all current proof owners.
+The issued overviews record the earlier programs for [Bour attainment](05_OVERVIEW.md), [marked cuts](04_OVERVIEW.md), [intrinsic and immersed routes](03_OVERVIEW.md), [fixed-type variation](02_OVERVIEW.md), and [component and spinor methods](01_OVERVIEW.md).

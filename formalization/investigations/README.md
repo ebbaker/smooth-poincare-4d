@@ -1,10 +1,12 @@
 # Formalization investigations
 
-**FOT-E48 · 26 November 2026.** [Assessment](reviews/ED05_E48_STATIONARY_BALLS_AND_VARIATION.md) · [Public verification](research-progress/handoffs/ED05_E48_VERIFICATION_20261126.md) · [Continue here](continuation-notes/AFTER_STATIONARY_BALLS_AND_VARIATION_20261126.md)
+**Edition 06 · 26 November 2026.** Select the attained metric of least trace-free Ricci energy, construct entry on a further marked boundary, and discharge the physical hypotheses of the Bour argument. [Overview](research-overview/06_OVERVIEW.md) · [Proof plan](research-plan/06_PLAN.md) · [Baseline](research-progress/06_BASELINE.md) · [Current continuation](continuation-notes/EDITION_06_RIGIDITY_AND_GEOMETRIC_INPUTS_20261126.md)
 
-**FOT-E47 · 26 November 2026.** [Geometric milestone](reviews/ED05_E47_BOUR_BUDGET_AND_MARKED_RETURN.md) · [Public checks](research-progress/handoffs/ED05_E47_VERIFICATION_20261126.md) · [Continue here](continuation-notes/AFTER_BOUR_BUDGET_AND_MARKED_RETURN_20261126.md)
+**FOT-E48 · 26 November 2026.** [Assessment](reviews/ED05_E48_STATIONARY_BALLS_AND_VARIATION.md) · [Public verification](research-progress/handoffs/ED05_E48_VERIFICATION_20261126.md) · [E48 handoff](continuation-notes/AFTER_STATIONARY_BALLS_AND_VARIATION_20261126.md)
 
-**Edition 05 · 26 November 2026.** The formal research program follows a smooth type through entry, the Bour attainment argument, and rigidity of an attained minimum. [Overview](research-overview/05_OVERVIEW.md) · [Proof plan](research-plan/05_PLAN.md) · [Progress at issue](research-progress/05_BASELINE.md) · [Start here](continuation-notes/EDITION_05_BOUR_ATTAINMENT_20261126.md)
+**FOT-E47 · 26 November 2026.** [Geometric milestone](reviews/ED05_E47_BOUR_BUDGET_AND_MARKED_RETURN.md) · [Public checks](research-progress/handoffs/ED05_E47_VERIFICATION_20261126.md) · [E47 handoff](continuation-notes/AFTER_BOUR_BUDGET_AND_MARKED_RETURN_20261126.md)
+
+**Edition 05 · 26 November 2026.** The formal research program follows a smooth type through entry, the Bour attainment argument, and rigidity of an attained minimum. [Overview](research-overview/05_OVERVIEW.md) · [Proof plan](research-plan/05_PLAN.md) · [Progress at issue](research-progress/05_BASELINE.md) · [Edition 05 handoff](continuation-notes/EDITION_05_BOUR_ATTAINMENT_20261126.md)
 
 Use the [formalization setup workflow](../FORMALIZATION_SETUP_WORKFLOW.md)
 to plan and track families of Lean proofs. The [shared blueprint](../blueprint/README.md)
@@ -12,10 +14,11 @@ records mathematical dependencies across these investigations.
 
 ## Overall research program
 
-Routes 12 and 13 own the original fourth-order flows and the return of their limits to the same oriented smooth manifold. Marked surgery can proceed on a supplied exterior. A collar comparison needs a named candidate for recognition, strict descent beyond the minimizing excess, or instability. The latest checked Lean milestone is [FOT-E46](reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md). [Live program register](research-progress/REGISTER.md) · [Milestones](DRAFT_HISTORY.md)
+Routes 12 and 13 own the original fourth-order flows and the return of their limits to the same oriented smooth manifold. Marked surgery can proceed on a supplied exterior. A collar comparison needs a named candidate for recognition, strict descent beyond the minimizing excess, or instability. The latest checked Lean milestone is [FOT-E48](reviews/ED05_E48_STATIONARY_BALLS_AND_VARIATION.md). [Live program register](research-progress/REGISTER.md) · [Milestones](DRAFT_HISTORY.md)
 
 | Edition | Research overview | Research plan | Progress at issue |
 | --- | --- | --- | --- |
+| 06 · 26 November 2026 | [Overview 06](research-overview/06_OVERVIEW.md) | [Plan 06](research-plan/06_PLAN.md) | [Baseline 06](research-progress/06_BASELINE.md) |
 | 05 · 26 November 2026 | [Overview 05](research-overview/05_OVERVIEW.md) | [Plan 05](research-plan/05_PLAN.md) | [Baseline 05](research-progress/05_BASELINE.md) |
 | 04 · 26 November 2026 | [Overview 04](research-overview/04_OVERVIEW.md) | [Plan 04](research-plan/04_PLAN.md) | [Baseline 04](research-progress/04_BASELINE.md) |
 | 03 · 25 November 2026 | [Overview 03](research-overview/03_OVERVIEW.md) | [Plan 03](research-plan/03_PLAN.md) | [Baseline 03](research-progress/03_BASELINE.md) |

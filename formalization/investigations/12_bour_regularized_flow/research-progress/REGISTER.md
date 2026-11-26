@@ -2,14 +2,18 @@
 
 26 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving model and reasoning effort were unavailable. This is the sole live formalization register for `BRF-Bxx` and `BRF-Exx`. [Plan](../research-plan/PLAN.md) · [Overview and source versions](../research-overview/OVERVIEW.md) · [Launch](../continuation-notes/CONTINUATION.md)
 
-| Packet | Current disposition through E48 | Next geometric input |
+## Edition 06 · Original flow and full spatial first variation
+
+[Edition 06 plan](../../research-plan/06_PLAN.md)
+
+| Packet | Checked disposition | Next geometric input |
 | --- | --- | --- |
 | BRF-B01 | Norm and fixed-type interfaces adopted. | The geometric hypotheses still include the Euler value, closed signature, Yamabe realization with measured conformal invariance and the start's round upper bound. |
-| BRF-B02 | The actual metric derivative, covariant two-tensor pairing and squared parabolic time change are fixed. | The conformal trace and full pre-integration-by-parts differential are now checked. Identify the arbitrary trace-free gradient by spatial integrations by parts and produce the original maximal solution and fixed-parameter comparisons. |
+| BRF-B02 | The actual metric derivative, covariant two-tensor pairing and squared parabolic time change are fixed. | Combine the pinned covariant Ricci linearization with both weighted spatial integrations by parts on the physical closed slice. Match the resulting tensor to Bour’s conventions in every smooth metric direction. |
 | BRF-E01 | Checked on measured closed metrics. The local four-slot identity retains both signs, and the conformal-class minimum and actual round normalization are checked. | Discharge the global characteristic identities from the oriented homotopy-sphere geometry. |
 | BRF-E02 | Checked on the connected original time domain under its stated analytic suppliers. | Realize the continuous spectral sign detector and normalized representative on each slice. |
 | BRF-E03 | Checked. Prescribed-excess starts and the actual finite and eventual budgets give a uniform two-tensor Ricci ceiling and chiral convergence, with one cutoff for all smooth original times. | The E48 restricted-infimum test characterizes exactly when one fixed squared Yamabe deficit can be imposed at the same excess. Supply a geometric family meeting this test or follow the saturating return. |
-| BRF-E04 | The actual native velocity trace, full smooth-path density derivative, scale variation and conformal trace are checked. Compact positive-parameter conformal criticality gives constant scalar. | Identify the trace-free gradient in the physical pairing for all metric directions and apply it along the produced flow. |
+| BRF-E04 | The actual native velocity trace, full smooth-path density derivative, scale variation and conformal trace are checked. Compact positive-parameter conformal criticality gives constant scalar. | Use the full physical pairing to identify the trace-free gradient along the original smooth path. Retain the negative twice-gradient velocity and the half-energy-drop factor on regular slabs. |
 | BRF-E05 | Closed/pointed transfer of the measured budget checked from the supplied first extraction. | E48 transfers both signed totals on a supplied compact comparison and both signed image masses on a pointed one. Prove fixed-parameter gauge, smoothing and extraction, inheritance of criticality, and the pointed scalar-flat Bach equation. |
 
 The global cutoff gives $D_t\le32\pi^2-2(8\pi^2-I)$. The bound applies to the original metric with ordinary Ricci slots. The exact expression also carries the original Yamabe deficit and passes to the closed first return. [Source versions](../../research-progress/handoffs/ED05_E47_INPUTS_20261126.md) · [Flow derivation and independent checks](../notes/E47_ORIGINAL_FLOW.md) · [Public verification](../../research-progress/handoffs/ED05_E47_VERIFICATION_20261126.md) · [E47 assessment](../../reviews/ED05_E47_BOUR_BUDGET_AND_MARKED_RETURN.md) · [Next work](../continuation-notes/CONTINUATION.md)

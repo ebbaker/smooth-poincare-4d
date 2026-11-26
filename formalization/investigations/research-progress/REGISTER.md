@@ -1,5 +1,9 @@
 # Overall formalization progress
 
+## Edition 06 · Attained rigidity, entry and Bour compactness · 26 November 2026
+
+**FOT-B11 · Setup adopted.** Start from the verified E48 public interfaces. Route 07 owns exact least-Ricci selection and both signed Hessian tests, Route 11 owns construction of entry, Routes 09–10 own the marked surgery and intermediate cuts, and Routes 12–13 own the original flow and both geometric returns. The eight Edition 06 blueprint questions are open. FOT-B10 retains the attained-rigidity obligation and FOT-E37 retains coverage. The last assessed formal proof milestone is FOT-E48. [Overview](../research-overview/06_OVERVIEW.md) · [Plan and declaration map](../research-plan/06_PLAN.md) · [Baseline](06_BASELINE.md) · [Source and public replay](handoffs/ED06_SETUP_INPUTS_20261126.md) · [Continuation](../continuation-notes/EDITION_06_RIGIDITY_AND_GEOMETRIC_INPUTS_20261126.md)
+
 ## Edition 05 · Entry, Bour attainment and rigidity · 26 November 2026
 
 | Parent task | Status | Responsibility |

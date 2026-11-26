@@ -1,5 +1,9 @@
 # Intrinsic entry from marked exteriors · Continuation
 
+**Edition 06 · 26 November 2026.** Choose a marked balanced-presentation boundary beyond the standard controls. Check the global sign and both complete chiral energies of one proposed non-product filling. [Live register](../research-progress/REGISTER.md) · [Edition 06 plan](../../research-plan/06_PLAN.md)
+
+## Edition 04 setup handoff
+
 26 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving model and reasoning effort were unavailable. This handoff is for use upon activation. [Overview](../research-overview/OVERVIEW.md) · [Plan](../research-plan/PLAN.md) · [Sole register](../research-progress/REGISTER.md) · [Frozen sources](../research-progress/handoffs/ED04_ENTRY_SETUP_INPUTS_20261126.md)
 
 | Packet | Role upon activation | First return |

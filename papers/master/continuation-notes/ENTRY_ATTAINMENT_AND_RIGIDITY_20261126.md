@@ -1,5 +1,13 @@
 # Continue the master program through entry, attainment and rigidity
 
+## Current routing after attainment and the native-cut return
+
+26 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving model and reasoning effort are unavailable. This routing incorporates the independent E48 priority review and the integrated 05 return on the working tree over `9c80575988ad`. [Current master plan](../research-plan/PLAN.md) · [Sole register](../research-progress/REGISTER.md) · [06 attainment assessment](../../investigations-1/06_bour_flow_and_fixed_type_attainment/reviews/FIXED_TYPE_ATTAINMENT_20261126.md) · [05 terminal descent](../research-progress/handoffs/REDUCIBLE_NATIVE_CUT_20261126.md)
+
+On activation, pursue independent bounded tests for E and R. For E, fix one marked balanced-presentation boundary beyond the recognized controls and seek a non-product cap with its global conformal-Laplacian sign and complete signed energy. For R, use exact-stratum compactness to select a least-\(D\) Weyl minimum, then test either the physical Hessian on \(Z,(Z^2)^0\) or the positive Einstein spectral window. Use finite-parameter minimization only for a proposed test that needs that stability. In 05, start from an actual pair with two irreducible cuts or an unrecognized localized rank-two closing. State explicitly which class a result covers and what remains for universal coverage. [Detailed acceptance conditions](../research-plan/PLAN.md#decisions-and-manuscript-promotion)
+
+## Preceding launch record
+
 26 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Baseline 65f06ea. Start from the [master plan](../research-plan/PLAN.md), [sole register](../research-progress/REGISTER.md), [current manuscript](../manuscript/README.md), [external review](../reviews/claude/EXTERNAL_PROGRAM_REVIEW_20261126.md), [Bour source receipt](../../../references/SOURCE_NOTES_BOUR_ATTAINMENT_20261126.md) and [05 assessment](../../investigations-1/05_collar_deformation_and_surgery/reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md). The latest scientific master receipt is [E69–E73](../research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md).
 
 | Aim | Owner and routing on activation | First consequential output |

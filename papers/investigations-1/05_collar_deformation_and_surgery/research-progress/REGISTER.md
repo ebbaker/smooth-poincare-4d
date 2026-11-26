@@ -89,3 +89,12 @@ Generic charged-disk extraction and new collar-price campaigns are reserved whil
 | CDS-B03 / E02 | On a different minimum-four exterior, a capped word excludes every lower chord. Two twice-punctured upper and successor disks restore the actual local Figure 5 link and give three terminal cancellations. The finite triangulated control tests prescribed and selectable chords independently. Explore survival of both return words on a true free outlet or another port pairing. [Assessment](../reviews/WHITEHEAD_MIXED_RETURNS_20261126.md) · [Native surgery owner](../02_handle_isolation_and_marked_surgery/research-progress/REGISTER.md) · [Handoff](../continuation-notes/AFTER_WHITEHEAD_MIXED_RETURNS_20261126.md) |
 
 The example supplies no candidate-specific physical metric. The existing complete-side conditions and ownership remain in the [research plan](../research-plan/PLAN.md).
+
+### Localization at either reducible native second cut, 26 November
+
+| Task | Assessed result | Remaining selection |
+| --- | --- | --- |
+| CDS-B03 / SUR-B04 | For any integral rank-one pair with actual immediate rank-three free outlet, reducibility of either native single-attachment cut is equivalent to locality of that stationary knot and gives joint localization. A terminal split lower zero then cancels \(3\to2\) without births. | Both irreducible native cuts, or the actual rank-two local trace. |
+| CDS-E02 | Opposite mixed returns cannot both survive the capped filling. With the alternating pairing, three survive and the sharp cost of the only bridge ranges over all positive integers at unfilled sphere minimum four. The explicit terminal trace cancels all three. | A particular marked bridge and the independent whole-exterior reducing sphere measure different geometric data. |
+
+[Assessment](../reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md) · [Derivations and checks](handoffs/REDUCIBLE_CUT_READINGS_20261126.md) · [Continuation](../continuation-notes/AFTER_REDUCIBLE_NATIVE_CUTS_20261126.md) · [Master return](../../../master/research-progress/handoffs/REDUCIBLE_NATIVE_CUT_20261126.md)

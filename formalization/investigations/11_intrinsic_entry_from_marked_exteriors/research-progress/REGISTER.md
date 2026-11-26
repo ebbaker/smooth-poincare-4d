@@ -1,5 +1,11 @@
 # Intrinsic entry from marked exteriors · Live register
 
+## Edition 06 · Entry on one further marked carrier · 26 November 2026
+
+On a closed oriented homotopy four-sphere, the entry target is a positive Yamabe class with $E_+=E_-<8\pi^2$. The scientific Euler identity $4\int_M\sigma_2(g^{-1}A_g)\,dV_g=16\pi^2-2e$ gives the equivalent criterion $Y>0$ and positive total Schouten $\sigma_2$. The pointwise positive Schouten representative additionally uses the stated conformal existence theorem. A positive-scalar boundary alone supplies the sign part.
+
+Fix one actual balanced-presentation boundary $\Sigma_P=\partial H_P^5$ beyond the recognized controls, including its attaching circles, framings, retained exterior and closing. Test a non-product modification with a global positive conformal-Laplacian form and full $E_++E_-<16\pi^2$, keeping both signs on all the physical pieces. The specified product circle cap has a two-sided lower cost of $64\pi^2/3$. A successful test covers the named carrier. Universal entry remains the master's problem and Routes 12–13 consume an actual entered class. [Master entry and cap scope](../../../../papers/master/research-plan/PLAN.md#e--entry) · [Priority assessment](../../reviews/PRIORITIES_AFTER_WHITEHEAD_AND_BOUR_E48_20261126.md) · [Edition 06 plan](../../research-plan/06_PLAN.md)
+
 ## Edition 05 setup · 26 November 2026
 
 Retain conditional marked-exterior, Robin and cap interfaces in support of the master's entry problem. A bounded new test needs one actual exterior and closing on an identified smooth type, and a candidate mechanism for a complete positive class with \(E_+<2T\), \(T=4\pi^2\), or direct recognition. Record the smooth carrier, global sign and both complete signed energies. Routes 12 and 13 take the regularized-flow and fixed-type attainment inputs after entry. General positive subcritical entry remains with the master. [Edition 05 plan](../../research-plan/05_PLAN.md) · [Master entry](../../../../papers/master/research-plan/PLAN.md#e--entry) · [Route 12](../../12_bour_regularized_flow/research-progress/REGISTER.md) · [Route 13](../../13_bour_marked_limits_and_attainment/research-progress/REGISTER.md)

@@ -1,5 +1,11 @@
 # Fixed-type variational descent · Progress register
 
+## Edition 06 · Rigidity of an attained minimum · 26 November 2026
+
+On one entered nonstandard type, the working attainment theorem gives $I^+(M)=a_M$. Exact-class compactness at this least positive subcritical critical value supplies a unit-volume Yamabe minimizer of $I=I^+(M)$ with least $D=\int|\operatorname{Ric}_0|^2$. At fixed $e=I$, the identity $D=4I-(384\pi^2-Y^2)/12$ makes this the least-$Y^2$ selection. Keep attainment and compactness explicit in Lean. The deficit on exact minimizers uses compactness at that value. Route 12 owns deficit recovery for near-infimal starts.
+
+For a non-Einstein selected metric, test the polarized Weyl Hessian on the span of $Z=\operatorname{Ric}_0$ and $(Z\circ Z)^0$ when the directions are independent modulo diffeomorphism and conformal variations. A negative determinant gives a negative direction. If $H(Z,Z)=0$, a nonzero mixed pairing suffices. For an Einstein selection with scalar $s$, the transverse-traceless test needs an actual $-\Delta_L$ eigenmode in the open window $(s/3,s/2)$, where $\Delta_L$ has leading term $\nabla^i\nabla_i$. The endpoints give zero. The checked two-sided variation converts an actual strict sign into positive same-type descent. The geometric Hessian test and its mode or negative direction remain open. [Master rigidity](../../../../papers/master/research-plan/PLAN.md#r--rigidity-of-an-attained-minimum) · [Weyl Hessian source](../../../../papers/master/01_fixed_type_variational_descent/manuscript/cotton_variation.tex) · [Edition 06 plan](../../research-plan/06_PLAN.md)
+
 ## E48 · Rigidity of an attained minimum
 
 The round signed metric is a minimum of the regularized functional for the full parameter interval from zero to one. Its physical derivative vanishes along arbitrary smooth regular metric paths. The negative-direction criterion still needs a named nonround candidate. The fixed-deficit recovery test for near-infimal starts belongs to Route 12. [Round calculation](../../../SmoothPoincare/Variational/BourScaleCalibration.lean) · [Start criterion](../../12_bour_regularized_flow/notes/E48_START_DEFICIT.md) · [Assessment](../../reviews/ED05_E48_STATIONARY_BALLS_AND_VARIATION.md)

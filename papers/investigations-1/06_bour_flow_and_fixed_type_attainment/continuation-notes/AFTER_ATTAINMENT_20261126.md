@@ -1,5 +1,7 @@
 # After fixed-type attainment
 
+See the [current post-attainment agenda](POST_ATTAINMENT_20261126.md) for the next research activation.
+
 26 November 2026, America/New_York. For Edward B. Baker III with OpenAI Codex assistance. Selected GPT-6.2 Astra/ultra lead and bounded GPT-6.2 Sol/ultra workers. Serving telemetry unavailable. The [working manuscript](../manuscript/fixed_type_attainment.tex), [source receipt](../../../../references/SOURCE_NOTES_BOUR_ATTAINMENT_20261126.md) and [independent readings](../reviews/FIXED_TYPE_ATTAINMENT_20261126.md) are the handoff inputs. The [integration register](../research-progress/REGISTER.md) owns the disposition.
 
 | Owner | Route and status | Finite next test |

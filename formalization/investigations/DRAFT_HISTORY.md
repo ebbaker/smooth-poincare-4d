@@ -1,5 +1,7 @@
 # Overall formalization milestones
 
+- **26 November 2026 · Edition 06 setup, FOT-B11.** Adopted eight open targets from E48, the master’s exact-minimum rigidity question and scientific 05’s assessed reducible-cut reduction. The existing owners retain entry, marked topology, physical variation and the two compactness extractions. [Plan](research-plan/06_PLAN.md) · [Baseline and evidence](research-progress/06_BASELINE.md)
+
 - **26 November 2026 · FOT-E48.** Reached injectivity and physical normal charts at both stationary scales, differentiated the lowered harmonic gauge and the conformal energy, and tested signed return, the buffered cap and the restricted start infimum. [Assessment](reviews/ED05_E48_STATIONARY_BALLS_AND_VARIATION.md) · [Public verification](research-progress/handoffs/ED05_E48_VERIFICATION_20261126.md) · [Continue here](continuation-notes/AFTER_STATIONARY_BALLS_AND_VARIATION_20261126.md)
 
 - **26 November 2026 · FOT-E47.** Checked the original physical budget, the marked return and stationary noncollapse under explicit geometric inputs. A second marked bubble forces the initial Yamabe constants to approach the round value along the extracted subsequence. [Assessment](reviews/ED05_E47_BOUR_BUDGET_AND_MARKED_RETURN.md) · [Public verification](research-progress/handoffs/ED05_E47_VERIFICATION_20261126.md)

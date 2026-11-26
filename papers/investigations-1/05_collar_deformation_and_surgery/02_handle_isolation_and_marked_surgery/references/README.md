@@ -11,3 +11,5 @@
 | [Recognition, disk replacement and the charged disk](../../../../master/manuscript/chiral_weyl_energy_and_smooth_poincare.tex) · [Necessary saving in the enlarged disk](../../../../master/manuscript/balanced_disk.tex) · [Shell between separated quantiles](../../../../master/manuscript/critical_annulus.tex) | The master supplies the charged disk after positive subcritical entry. Its balanced enlargement has an additional protected-core term in the necessary disk-side saving. On separated scales the comparison uses the specified physical shell. These are alternative marked benchmark inputs. |
 
 The [surgery register](../research-progress/REGISTER.md) owns new diagram and reduction checks. The [parent reference map](../../references/README.md) gives the available setup metadata and the exact working files used.
+
+[Reducible native surgery and the chamber test](../../../../../references/SOURCE_NOTES_COLLAR_SURGERY_20261126.md#reducible-native-surgery-and-the-chamber-test) records the Scharlemann exceptions and correction, sphere isotopy, free-product and relation-module passages used for the 26 November localization result.

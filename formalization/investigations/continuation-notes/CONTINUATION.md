@@ -1,6 +1,8 @@
 # Continuing the formalization program
 
-**Current Edition 05 milestone, FOT-E48 · 26 November 2026.** [Assessment](../reviews/ED05_E48_STATIONARY_BALLS_AND_VARIATION.md) · [Public verification](../research-progress/handoffs/ED05_E48_VERIFICATION_20261126.md) · [Continue here](../continuation-notes/AFTER_STATIONARY_BALLS_AND_VARIATION_20261126.md)
+**Current Edition 06 · 26 November 2026.** [Dated handoff and pasteable continuation](EDITION_06_RIGIDITY_AND_GEOMETRIC_INPUTS_20261126.md) · [Proof plan](../research-plan/06_PLAN.md) · [Baseline](../research-progress/06_BASELINE.md) · [Owner register](../research-progress/REGISTER.md)
+
+**Last checked Edition 05 milestone, FOT-E48 · 26 November 2026.** [Assessment](../reviews/ED05_E48_STATIONARY_BALLS_AND_VARIATION.md) · [Public verification](../research-progress/handoffs/ED05_E48_VERIFICATION_20261126.md) · [E48 handoff](AFTER_STATIONARY_BALLS_AND_VARIATION_20261126.md)
 
 **Previous Edition 05 milestone, FOT-E47 · 26 November 2026.** [Continuation and pasteable prompt](AFTER_BOUR_BUDGET_AND_MARKED_RETURN_20261126.md) · [Assessment](../reviews/ED05_E47_BOUR_BUDGET_AND_MARKED_RETURN.md) · [Independent verification](../research-progress/handoffs/ED05_E47_VERIFICATION_20261126.md)
 

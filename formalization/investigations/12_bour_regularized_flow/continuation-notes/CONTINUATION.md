@@ -1,6 +1,8 @@
 # Launch Route 12 · Original fixed-parameter Bour flow
 
-**Current handoff after FOT-E48.** Start from the checked physical density and conformal trace. Identify the general trace-free pairing on the original smooth path and pass its tests through a fixed-parameter extraction. [Assessed continuation](../../continuation-notes/AFTER_STATIONARY_BALLS_AND_VARIATION_20261126.md) · [Sole register](../research-progress/REGISTER.md)
+**Edition 06 · 26 November 2026.** Complete both spatial integrations by parts for the weighted Ricci variation on the original physical metric. Then prove the geometric fixed-parameter comparison and its terminal inherited criticality. [Live register](../research-progress/REGISTER.md) · [Edition 06 plan](../../research-plan/06_PLAN.md)
+
+**FOT-E48 handoff.** Start from the checked physical density and conformal trace. Identify the general trace-free pairing on the original smooth path and pass its tests through a fixed-parameter extraction. [Assessed continuation](../../continuation-notes/AFTER_STATIONARY_BALLS_AND_VARIATION_20261126.md) · [Sole register](../research-progress/REGISTER.md)
 
 **E47 handoff.** Start from the checked physical sublevel and slab dissipation. Realize the first-variation and velocity-trace identities and recover one fixed-parameter comparison on the genuine original solution. [Assessed continuation and prompt](../../continuation-notes/AFTER_BOUR_BUDGET_AND_MARKED_RETURN_20261126.md) · [Sole register](../research-progress/REGISTER.md)
 

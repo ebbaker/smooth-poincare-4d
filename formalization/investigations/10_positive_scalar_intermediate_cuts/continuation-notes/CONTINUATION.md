@@ -1,4 +1,8 @@
-# Edition 04 activation prompt · Positive scalar curvature on actual cuts
+# Positive scalar curvature on actual cuts · Continuation
+
+**Edition 06 · 26 November 2026.** Select a new actual cut before testing PSC domination on the surviving terminal class. For a metric comparison keep the native band data, both complete signed prices and the protected core. [Live register](../research-progress/REGISTER.md) · [Edition 06 plan](../../research-plan/06_PLAN.md)
+
+## Edition 04 activation prompt
 
 26 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving model and effort for setup were unavailable.
 
