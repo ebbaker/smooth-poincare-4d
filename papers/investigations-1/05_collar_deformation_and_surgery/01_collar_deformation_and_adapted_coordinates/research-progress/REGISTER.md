@@ -20,3 +20,13 @@
 The leading positive cost is for the fixed profile; the charged disk would require a strict positive comparison on its own smooth type. An alternative on a marked intermediate handle level is the [intrinsic slice and band test](../../02_handle_isolation_and_marked_surgery/notes/POSITIVE_SCALAR_INTERMEDIATE_CUTS.md).
 
 The [initial working manuscript](../manuscript/deformation_of_marked_spherical_collars.tex) develops these assessed results and ends with the open selection problems. [Reading copy and sources](../manuscript/README.md)
+
+### Finite curved comparisons and an overlapping path, 26 November
+
+| Task | Checked result | Remaining measurement |
+| --- | --- | --- |
+| DEF-B02 / E03c–d | First-jet error in a trace-matched convex filling has inverse-width cost in each sign. The boundary transgression fixes their difference. The scalar form error is bounded at finite width. [Connector](../notes/FINITE_CURVED_CONNECTOR.md) · [Flux](../notes/BOUNDARY_TRANSGRESSION.md) | The same face, common inward physical width, discrepancy, derivative bounds and positive capped exterior are needed at a charged source index. |
+| DEF-B02 / CDS-E02h | A hyperbolic ball exactly matches a nonround induced ellipsoid height after conformal normalization. The positive near-round path saves in both signs on the standard sphere. [Construction](../../notes/SPACE_FORM_REFERENCE.md) · [Independent reading](../../reviews/SPACE_FORM_READER.md) | The original selected Yamabe metric supplies the exterior sign; the corresponding cap form and physical shape are unmeasured. |
+| DEF-E03 / SUR-E03 | Isolating each complete side of an arbitrary coupled matched path on its native strip gives an endpoint concentration or a first-crossing bound on the actual two-connector interaction. [Derivation](../notes/ISOLATING_A_COUPLED_PATH.md) · [Independent check](../../reviews/CONNECTOR_AND_ISOLATION_READER.md) | Test the whole joined path and both isolated energies, keeping the protected core in the enlarged-disk mass formula. |
+
+[Joint assessment](../../reviews/TWO_ATTACHMENTS_AND_PHYSICAL_FACE_COST_20261126.md)

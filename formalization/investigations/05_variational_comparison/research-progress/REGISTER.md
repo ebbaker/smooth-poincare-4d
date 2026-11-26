@@ -8,8 +8,8 @@
 
 | Task | Current state | Next proof or premise |
 | --- | --- | --- |
-| SP4-FORM-VAR-E04e | Planned, awaiting activation | Construct one fixed-source exact-face path in its actual signed chart, with independently allowed widths, outer metric germs and the uniform-in-path complete-side cost. |
-| SP4-FORM-VAR-E04f | Planned, awaiting activation | Bound the two prescribed physical widths by the measured Gaussian jets under ellipticity. Apply the bound to an actual sequence only with independently supplied chart and smallness data. |
+| SP4-FORM-VAR-E04e | Metric construction checked on a supplied marked normalized bicollar | The exponent and original-chart tangential face jets, actual smooth metric slices, exact product endpoint and both outer germs are constructed. Complete signed side identities and the strict joined bound use the actual strip estimates, matched frames and null-seam inputs. Construct the normalized Gaussian tube and geometric strip estimates. [Proof](handoffs/ED04_EXACT_FACE_PHYSICAL_INTERPOLATION_20261126.md) |
+| SP4-FORM-VAR-E04f | Scalar normal jet formulas and cutoff bounds checked | Complete the angular and mixed estimates in the actual normalized chart and transfer to both chiral energy densities under the measured ellipticity. Sequence applications need the physical chart and smallness data at each source. [Proof boundaries](handoffs/ED04_EXACT_FACE_PHYSICAL_INTERPOLATION_20261126.md) |
 
 ## Earlier tasks
 

@@ -14,3 +14,5 @@ The [route to smooth Poincaré](research-plan/PLAN.md) gives the successor to ea
 Prepared 26 November 2026 for Edward B. Baker III with OpenAI Codex assistance. The [first research assessment](reviews/TWO_MIXED_CUTS_AND_CHARGED_DISK_20261126.md) gives the two mixed-cut recognition tests, the three-handle application, and the obstruction on the charged disk.
 
 The [current assessment](reviews/PENULTIMATE_CUTS_AND_CURVED_FILLINGS_20261126.md) gives the all-rank last-handle reduction, the successive zero-winding criterion and the nonumbilic disk-filling test.
+
+The [two-attachment and physical face assessment](reviews/TWO_ATTACHMENTS_AND_PHYSICAL_FACE_COST_20261126.md) gives the two failed individual cuts, measured round band on the returned level, nonround hyperbolic filling and finite-width tests on the positive minimizing source. [Current continuation](continuation-notes/AFTER_TWO_ATTACHMENTS_AND_FACE_COST_20261126.md)

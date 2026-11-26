@@ -16,6 +16,16 @@ These assignments await activation. [Route plan](../research-plan/PLAN.md#editio
 | SP4-FORM-HT-E11a | Dependent on the supplied marked three-middle presentation and a cancellation certificate | Reduce three to two on the same type, returning both transported framed attachments and the actual two-sided upper gluing. |
 | SP4-FORM-HT-E11b | Dependent on E11a and a certificate for the transported second prefix or a known one-sided case | Use the applicable boundary result from [Route 10](../../10_positive_scalar_intermediate_cuts/research-progress/REGISTER.md) on the actual prefix. Identify the original closed smooth type through the marked assembly. |
 
+## Edition 04 activated evidence · 26 November 2026
+
+| Task | Checked output | Remaining supplying geometry |
+| --- | --- | --- |
+| SP4-FORM-HT-B03, E10b | The split product meridian has a smooth signed radial face chart with its full disk coordinate and inverse. The smooth closed comparison follows on a supplied open cover with one signed seam and the two interiors. The two mixed controls and the published Mazur double have separate checks for each actual attachment order. | Complete all rounded rim and interior charts on the closed control. Verify that a native chosen edge matches the same marks and full tube germs. |
+| SP4-FORM-HT-E11a | A supplied native Morse cancelling pair gives exactly the two-point deletion in every index. A lower $1/2$ cancellation moves the index-two count from three to two. The higher actual cut and its lower body are identical subsets of the original smooth source. Both residual framed tubes and the actual upper closing map have explicit smooth transport and inverse. | Produce the cancelling pair or the marked relative ball comparison from a boundary certificate on the actual chosen level. |
+| SP4-FORM-HT-E11b | The first successor and full trace maps commute with the original prefix inclusions in both directions. The actual inverse second-prefix comparison carries a nonzero integral degree witness, with either target orientation. | The second boundary classification and the resulting knot identification, actual two-component slides and upper extension supply closed smooth recognition. |
+
+[Proof handoff and exact order checks](handoffs/ED04_TRANSPORTED_PREFIX_TRACE_20261126.md)
+
 ## Edition 03 evidence
 
 | Task | Current state | Next evidence |

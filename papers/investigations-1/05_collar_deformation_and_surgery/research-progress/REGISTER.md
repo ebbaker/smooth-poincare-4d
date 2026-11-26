@@ -20,3 +20,12 @@
 The [coverage assessment](../reviews/TWO_MIXED_CUTS_AND_CHARGED_DISK_20261126.md#first-uncovered-inputs) and [continuation](../continuation-notes/AFTER_TWO_MIXED_CUTS_20261126.md) locate the missing witness in each class. Positive subcritical entry for arbitrary smooth types remains open. No new global SPC4 conclusion follows. [Dated history](../DRAFT_HISTORY.md)
 
 The [initial working manuscript](../manuscript/marked_collars_and_smooth_recognition.tex) develops these assessed results and ends with the open selection problems. [Reading copy and sources](../manuscript/README.md)
+
+### Two attachments and physical face costs, 26 November
+
+| Task | Assessed continuation | Outstanding selection |
+| --- | --- | --- |
+| CDS-B03 / SUR-B04 | Two individually undominated cuts bridged by a marked pair. Strict two-end witness on the returned cut. Local smooth recognition can bridge one omitted zero-winding prefix. [Assessment](../reviews/TWO_ATTACHMENTS_AND_PHYSICAL_FACE_COST_20261126.md) | Produce a relative trace or certificate on a further nonlocal block; all later tubes and both directions of gluing matter. |
+| CDS-B03 / DEF-B02 | Nonround induced height has a positive hyperbolic cap, measured whole path and genuine two-sign saving. On the original positive minimizing disk a finite-width mismatch has a signed price and a coupled path has two testable isolated collar costs. [Manuscript readback](../reviews/PAIRED_MANUSCRIPT_READER.md) | Select a positive affordable physical reference or coupled deformation on the original disk. Positive subcritical entry and smooth marked compactness still have separate premises. |
+
+[Continuation after the pair and face tests](../continuation-notes/AFTER_TWO_ATTACHMENTS_AND_FACE_COST_20261126.md)

@@ -1,3 +1,4 @@
+% Two attachments and finite face error, 26 November 2026, input 5ddaabd76595.
 % Continuation of 26 November 2026 at e2968b2898b5. Current proofs and primary
 % passages are recorded in the prefix and curved-filling assessment in parent reviews.
 % Prepared for Edward B. Baker III with OpenAI Codex assistance.
@@ -981,6 +982,250 @@ so the slice is round. A transverse immersed height therefore gives a
 specific first-jet obstruction on its own nonround convex sections.
 An intrinsic deformation or a different comparison gauge would
 require new boundary measurements.
+
+\section{Finite errors at a curved face}\label{sec:finite-face}
+
+Keep the convex Euclidean filling and the actual marking of
+Theorem~\ref{thm:convex}, now allowing
+\(D_0=h((K^\circ-S^\circ)\cdot,\cdot)\ne0\).
+Prescribe the same conformal normal derivative on the cap so that
+the two mean traces agree. Let \(a_t,p_t\) be the tangential
+families in their paired Gaussian coordinates, with the original
+exterior extended into the disk by its own metric. They agree in
+value and \(a'_0-p'_0=2D_0\). For \(-w\le t\le0\) set \(x=-t/w\)
+and interpolate by \(q_t=p_t+\chi(x)(a_t-p_t)\), with \(\chi=1\)
+near zero and zero near one. Take \(w\) within both actual inward
+radii. The complete exterior remains in its original metric.
+
+\begin{proposition}\label{prop:finite-curved}
+Let \(\psi=x\chi\) and write \(c_\sigma(w)\) for the entire new
+cap energy, supported in this one strip. At each fixed source and
+fill there are bounded curvature remainder constants \(B_\sigma(w)\)
+for sufficiently small \(w>0\) such that, with
+\[
+ L=\frac{\|\psi''\|_{L^2(0,1)}\|D_0\|_{L^2(h)}}{2\sqrt w},
+ \qquad b_\sigma=B_\sigma(w)\sqrt{w\operatorname{area}_h(\Sigma)},
+\]
+one has \((L-b_\sigma)_+^2\le c_\sigma(w)\le(L+b_\sigma)^2\).
+The scalar curvature stays bounded on this strip. If the limiting
+boundary form of Theorem~\ref{thm:convex} is coercive, all sufficiently
+small positive widths give positive capped exterior metrics and
+\[
+   I\le e-m^\sigma+c_\sigma(w),\qquad
+   c_+(w)-c_-(w)=m^+-m^- .
+\]
+\end{proposition}
+\begin{proof}
+The sole second derivative term growing as \(w^{-1}\) is
+\(q''_t=-2\psi''D_0/w+O(1)\). In Gaussian coordinates its normal
+curvature block is \(\psi''D_0/w+O(1)\); all tangential and mixed
+curvature blocks are bounded. In each chiral Weyl block this
+trace-free normal block enters with coefficient \(1/2\). The
+change to orthonormal frames and the square root of the volume
+density relative to \(dt\,dA_h\) differ from their face values by
+\(O(w)\). Bound the residual matrix in pointwise Hilbert--Schmidt
+norm by \(B_\sigma(w)\) and apply the two triangle inequalities
+in \(L^2\). One can compute these remainders from the two native
+tangential families by subtracting the displayed matrix from the
+density-weighted Weyl blocks. Taylor bounds on their second jets
+over a buffered interval also bound them from above.
+
+In the scalar contraction \(\tr_{q_t}D_0=O(w)\).
+The scalar potential error relative to the piecewise form has
+bounded size on a strip of width \(w\); its integral against
+\(f^2\) is \(O(w)\|f\|_{H^1}^2\) by the uniform slice trace
+inequality in a fixed collar. The principal part changes by
+\(O(w)\) in quadratic form norm. The boundary form is exactly
+the one from integration by parts on the two pieces, since the
+mean traces agree. Coercivity persists at positive widths.
+The two final statements follow by complete-side accounting,
+the fixed-type infimum and closed signature.
+\end{proof}
+
+Thus a nonzero fixed error costs
+\(\|\psi''\|_2^2\|D_0\|_2^2/(4w)+O(1)\) in \emph{each} sign.
+For a finite test one needs a width in the admissible chart for
+which coercivity survives and the upper cost is below \(m^\sigma-d\)
+in a sign. The signed difference alone cannot price this comparison.
+
+\paragraph{What the signed difference measures.}
+Write \(\delta(g;D)=E_+(g;D)-E_-(g;D)\). Let a reference ball
+\((B,b)\) induce exactly \(h\) via an oriented boundary marking, and
+denote the two outward shapes by \(K,S\). View them as
+\(T\Sigma\)-valued one-forms \(k,s\), set \(a=(k-s)^\circ\) and write
+\(\mathsf D=d_{\nabla^h}\). Then
+\[
+ \delta(g;D)-\delta(b;B)
+ =\int_{\partial D}\bigl(\langle a\wedge\mathsf D a\rangle+
+                 2\langle a\wedge\mathsf D s\rangle\bigr).
+\]
+Indeed the signed density is \(-\tr(F\wedge F)/2=4\pi^2p_1\).
+The connection at the face differs from the product connection
+by normal-tangent off-diagonal entries \(k,-k^{\mathsf T}\).
+Transgression gives \(\langle k\wedge\mathsf D k\rangle\) in
+outward-first orientation. Apply the same calculation to the reference
+and glue product germs. The topological term is
+\(12\pi^2\tau(D\cup(-B))=0\) for balls. Symmetry and torsion-freeness
+remove the scalar trace, and integration by parts on the closed
+face gives the formula
+\cite[\S3]{ChernSimons1974Characteristic}\cite{Hirzebruch1971Signature}.
+Codazzi kills the mixed term for a space form. On a Euclidean
+hypersurface height with \(K=\beta S\), the flux against its own
+Euclidean fill vanishes even when the two trace-free shapes differ.
+In fact the Gauss curvature operator of a Euclidean hypersurface is
+diagonal on principal two-planes, so the complementary chiral
+blocks have the same Weyl spectrum pointwise.
+
+The cutoff coefficient has a sharp lower envelope within this
+fixed-profile construction. The conditions on \(\psi\) are
+\(\psi(0)=\psi(1)=\psi'(1)=0\), \(\psi'(0)=1\).
+The cubic \(x(1-x)^2\) minimizes \(\int|\psi''|^2\) with
+these four data: integration by parts annihilates the cross term
+with every clamped variation. Its integral is four. Replacing the
+cubic by \(x\) near zero and zero near one on shrinking end
+intervals changes its \(H^2\) norm by \(o(1)\), by its quadratic
+contact at both ends. Thus even optimizing fixed clamped profiles
+leaves the leading coefficient at least \(\|D_0\|_2^2/w\).
+This is a bound for the specified interpolation and does not
+optimize over general metrics.
+
+For a flat convex reference write
+\(\Delta=\delta(g;D)\). In the flux integral one can replace
+\(\mathsf D a\) by \(\mathsf D k\), since \(\mathsf D s=0\)
+and terms from the trace pair to zero. In particular
+\[
+ |\Delta|\le \|D_0\|_2\|\mathsf D k\|_2 .
+\]
+A measured imbalance and finite nonzero Codazzi norm now give a
+lower bound on \(L\) in Proposition~\ref{prop:finite-curved}
+by substitution of \(|\Delta|/\|\mathsf D k\|_2\) for
+\(\|D_0\|_2\). In a physical Gaussian strip \(U\) of width \(w_0\)
+the Codazzi curvature occupies one of two transposed mixed blocks.
+The ordered tensor norm has squared norm four times the squared
+curvature-operator norm. Coarea therefore gives a parallel face with
+\(\|\mathsf D k\|_2^2\le \int_U|\Rm_g|_{\rm tens}^2/(8w_0)\).
+The boundary isometry, imbalance and common inward interpolation
+width must belong to this very face for these conclusions to combine.
+
+\subsection{A hyperbolic reference for an induced height}
+A change in reference curvature can repair the trace-free mismatch
+on a specific nonround height. For a strictly convex Euclidean
+section of shape \(S\), a fit at sectional curvature \(\kappa\)
+has candidate shape \(\beta S+c\operatorname{Id}\) where
+\(K=\beta S\), \(|\beta|<1\). Subtracting the Gauss equations for
+pairs of eigenvalues \(s_i\) yields
+\((s_j-s_l)((1-\beta^2)s_i-\beta c)=0\).
+Three distinct principal curvatures preclude a fit. If the repeated
+one is \(u\), a positive nonumbilic fit requires \(\beta>0\) and
+\[
+ \kappa=-k^2=-\frac{(1-\beta^2)u^2}{\beta^2},\qquad
+ c=\frac{k^2}{\sqrt{u^2+k^2}}.
+\]
+Here \(k\) must be constant on the face and the reconstructed shape
+must be positive. For the ellipsoid
+\[
+ |x|^2/A^2+y^2/B^2+z^2/C^2=1\quad(x\in\mathbb R^3),
+ \qquad D=\{z\ge z_0\},\quad 0<z_0<C,
+\]
+the repeated principal curvature of the section is
+\(u=1/(A^2|(x/A^2,y/B^2)|)\) and
+\(\beta=u/\sqrt{u^2+k^2}\), \(k=C^2/(A^2z_0)\).
+For completeness write the Euclidean meridian as \((r(s),y(s))\)
+in arclength, with \(u=y'/r\). In axial hyperbolic coordinates the
+warped coefficients of \(dZ^2,g_{S^2}\) are respectively
+\(\cosh^2(k\rho),k^{-2}\sinh^2(k\rho)\). Set
+\[
+ \rho=k^{-1}\operatorname{arsinh}(kr),\qquad
+ Z'=\frac{r\sqrt{u^2+k^2}}{1+k^2r^2}.
+\]
+The induced metric is \(ds^2+r^2g_{S^2}\); the poles are smooth by
+the parity of the ellipsoid meridian. The axial coordinate is strictly
+increasing in the interior. The angular principal curvature in the
+outward normal is \(\sqrt{u^2+k^2}\), and the meridional curvature
+follows from Gauss, giving precisely \(\beta S+c\operatorname{Id}\).
+This explicit embedded profile bounds a ball.
+
+Write the hyperbolic metric in centered Poincar\'e coordinates as
+\(\Omega^2g_{\rm E}\), and normalize the cap by \(\mu^2\) with
+\(\mu=1,\ \partial_\nu\log\mu=-c\) on the face. The boundary
+term remaining after integration by parts on the cap is
+\(6\int_\Sigma(c-\partial_\nu\log\Omega)f^2\), in addition to
+\(6\int |d(\mu\Omega f)|^2_{g_{\rm E}}dV_{g_{\rm E}}\).
+For a round face of intrinsic radius \(R\) the difference in parentheses
+is \(k^2R/[\sqrt{1+k^2R^2}(1+\sqrt{1+k^2R^2})]>0\).
+The inequality persists for nearby ellipsoids. The entire exterior
+has positive scalar curvature. Thus the one-sided exact-jet smoothing
+gives a positive capped exterior in the actual induced gauge.
+
+Keep \(z_0/C\) fixed and take \(B,C\) close to \(A\), each different
+from \(A\). On \(y=0\) the four principal curvatures are
+\((p,p,q,v)\), with \(p\ne q,p\ne v\) away from the axes; the
+complementary Weyl entry is \((p-q)(p-v)/3\).
+Both complete sides have positive mass in both signs.
+At the round parameter the intrinsic disk and the normalized cap
+can be made identical by radial conformal coordinates. Transport this
+choice smoothly and correct the normal jet in a fixed collar. With
+\(\epsilon=|B/A-1|+|C/A-1|\), the paired tangential difference is
+\(O(\epsilon t^2)\) through its differentiated Taylor bounds.
+Clamping inside a common native width leaves a uniform
+\(O(\epsilon)\) second-jet bound relative to round. Affine
+interpolation of the two metrics on the fixed marked sphere keeps
+positive scalar curvature for small \(\epsilon\). Its whole peak in
+either sign is at most \(E_\sigma(g;V)+O(\epsilon^2)\);
+the endpoint adds only \(O(\epsilon^2w)\) to that exterior.
+At a fixed charged member one positive width therefore saves energy
+in both signs. The entire disk is replaced. These are induced
+metrics on the standard sphere. The selected minimizing disk has
+its own marking; no supplied calculation identifies its shape or
+its boundary coercivity with this one.
+
+\section{Testing a coupled path on the original marking}\label{sec:isolate}
+Let \(g\) be the incoming positive source and \(h_t\) a proposed
+matched path on that same sphere with \(h_0=g\) and full joined peak
+\(H<2T\). Write \(e_t=E_+(h_t;M)\), \(d=e-I\). Choose an actual
+disk-side collar \(A\) up to the face and a smooth cutoff \(\chi\)
+from zero at its inner edge to one at the face, constant near both.
+Extend it by zero on the deep disk and by one on all of \(V\).
+Set \(p_t=g+(1-\chi)(h_t-g)\) and \(q_t=g+\chi(h_t-g)\).
+These are closed smooth metrics on the same marking. Write
+\[
+ \begin{split}
+ J^\sigma(t)&=E_\sigma(p_t;A)+E_\sigma(q_t;A)
+                    -E_\sigma(h_t;A)-E_\sigma(g;A),\\
+ R^\sigma(t)&=E_\sigma(p_t;A)-E_\sigma(h_t;A).
+ \end{split}
+\]
+The complete closed energies of the two isolated paths sum to
+\(e+e_t+J^\sigma(t)\), so \(J^+=J^-\). Also
+\(E_\sigma(p_t;M)=e-m^\sigma+E_\sigma(h_t;D)+R^\sigma(t)\).
+At the matched round-product endpoint Lemma~\ref{lem:cap} supplies
+a positive Weyl-free cap in the original disk marking, so the complete
+exterior forces
+\(E_\sigma(h_1;V)\ge I\), including all exterior connectors.
+If \(p_1\) is positive this gives
+\[
+ R^\sigma(1)\ge m^\sigma+I-e_1-d\quad(\sigma=+,-).
+\]
+Otherwise one of the two isolated paths reaches \(2T\). At their
+first such time \(s\), the other still has energy at least \(I\)
+by the scalar-flat wall and continuity. Reaching the energy level
+need not make the isolated metric scalar-flat. Hence
+\[
+ J^+(s)=J^-(s)\ge2T-d-e_s\ge2T-d-H.
+\]
+These alternatives apply also when both changes use the same
+physical strip. For an enlarged disk substitute exactly
+\(m^\sigma=(1-2^{-k})e+2^{-k}q^\sigma-r^\sigma\).
+If the protected core is kept up to conformal scale, also
+\(e_1\ge I+\max_\sigma q^\sigma\).
+At large fixed depth on a late sequence with \(I>T\), the
+endpoint bound is strictly positive. For \(H\le2T-\eta\)
+the crossing bound costs at least \(\eta-d\).
+A raw small incoming collar does not bound either isolated
+connector. For example a native cutoff derivative of order
+\(w^{-2}\) multiplies the full tensor \(h_t-g\) in its curvature.
+The isolation test requires measured metrics on the whole path.
+
 
 \section{Outstanding challenges}
 

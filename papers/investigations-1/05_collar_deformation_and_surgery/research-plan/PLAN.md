@@ -52,3 +52,7 @@ B tasks are conceptual decisions for GPT-6.2 Astra at ultra effort on activation
 ## Selecting the penultimate cut
 
 On a one-sided presentation, or on a normalized one-lower presentation whose penultimate prefix includes the winding-one attachment, test that boundary first. A PSC-dominated prefix now removes the last middle handle and an upper 3-handle. Compare this mixed successor with the one-sided successor from a winding-one first cut. When the winding-one component is placed last instead, test the consecutive zero-winding levels. A full chain recognizes by a single inverse circle surgery. A gap of two successive attachments over a free boundary is the first case beyond the single-knot argument. The [assessment](../reviews/PENULTIMATE_CUTS_AND_CURVED_FILLINGS_20261126.md) identifies the remaining selection and metric premises.
+
+## Beyond the single-cut test
+
+On two consecutive attachments retain both peripheral meridians and both actual filling slopes. A relative split pair is sufficient inside a longer chain, while the terminal tunnel criterion can use temporary 2/3 pairs. On the physical disk evaluate both finite costs at an admissible width and the positive capped exterior form. For a path with common support, test the actual isolated collar energies over the entire deformation. [Checked scope](../reviews/TWO_ATTACHMENTS_AND_PHYSICAL_FACE_COST_20261126.md) · [Next packet](../continuation-notes/AFTER_TWO_ATTACHMENTS_AND_FACE_COST_20261126.md)

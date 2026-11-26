@@ -17,3 +17,7 @@ The parent manuscript connects the mixed-handle recognition tests to the route b
 ## 26 November 2026 · Penultimate cuts and curved fillings
 
 The [assessment](reviews/PENULTIMATE_CUTS_AND_CURVED_FILLINGS_20261126.md) extends strict handle descent to a simply connected penultimate sublevel at any upper rank and identifies a class recognized along successive zero-winding cuts. A physical Mazur band, a convex cap test and a disjoint-support obstruction distinguish the available smooth and metric witnesses.
+
+## 26 November 2026 · Two attachments and physical face costs
+
+The parent manuscript now includes a two-attachment move across two failed individual cuts, a measured band on the returned section, a hyperbolic height comparison, and finite-width and overlapping-path tests on the physical minimizing disk. [Checked milestone](reviews/TWO_ATTACHMENTS_AND_PHYSICAL_FACE_COST_20261126.md)

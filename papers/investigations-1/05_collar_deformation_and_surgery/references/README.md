@@ -42,3 +42,7 @@ The [manuscript receipt](../research-progress/handoffs/INITIAL_MANUSCRIPTS_20261
 ## Continuation after the two mixed cuts
 
 At input commit `e2968b2898b5aab00b307f6b6580454d0f325bb4` the 17 working pins, the 21-file transitive TeX union and the three manuscript hashes in the [initial receipt](../research-progress/handoffs/INITIAL_MANUSCRIPTS_20261126.md) matched. The [primary passage record](../../../../references/SOURCE_NOTES_COLLAR_SURGERY_20261126.md#penultimate-cuts-the-mazur-metric-and-a-curved-fill) adds the free-group and null-homotopic-knot inputs, PSC metric extension and concordance, and the Euclidean hypersurface theorem. The [physical source audit](../notes/SOURCE_WITNESSES.md) reads the later E61 and E68 companion and Edition 03 examples in their own marked metrics. The new conclusions are in the [assessed return](../reviews/PENULTIMATE_CUTS_AND_CURVED_FILLINGS_20261126.md).
+
+## Continuation after the penultimate cuts
+
+The 17 named baseline hashes and the transitive 21-file TeX union matched again at 5ddaabd76595. The new [primary passages](../../../../references/SOURCE_NOTES_COLLAR_SURGERY_20261126.md#two-attachments-and-a-finite-curved-comparison) give the single-knot attribution, actual Figure 5–6 slides, two-ended saddle complement, tunnel stabilizations, local filling and chiral normalization. [Full source and reading-copy receipt](../reviews/TWO_ATTACHMENTS_AND_PHYSICAL_FACE_COST_20261126.md)

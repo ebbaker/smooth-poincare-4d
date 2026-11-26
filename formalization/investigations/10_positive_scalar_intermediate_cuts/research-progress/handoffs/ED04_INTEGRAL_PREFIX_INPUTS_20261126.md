@@ -1,0 +1,33 @@
+# Edition 04 · Integral inputs for prefix classification
+
+26 November 2026 (UTC). Prepared for Edward B. Baker III with OpenAI Codex assistance. Bounded proof handoff for PSC-E02 and PSC-E03, with the integral matrix input from PSC-E01. Actual serving model and reasoning effort were unavailable. Input `5ddaabd76595b3679d1ea415e9f6d9643802f9ef`. Lean `4.35.0-rc3`, DifferentialGeometry `788efe97894474c032de6dfb1289d515f613d15a`, Mathlib `c55e6e786f49471c72fbddbec5415808896aec1e`. The working surgery manuscript has SHA-256 `e53bc30bb034b6db9d2576cc370d1d6f032cfca8a815c284956deaba15869b7d`. [Surgery manuscript, `lem:zero`, `thm:mixed`, `thm:three` and `thm:last`](../../../../../papers/investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/manuscript/recognition_from_marked_handle_cuts.tex)
+
+## Checked declarations
+
+All four declarations are in `SmoothPoincare.PositiveScalarCuts`.
+
+| Lean declaration | Hypotheses and return |
+| --- | --- |
+| `windingZeroBlock_eq_zero_of_integralCokernel` | For the full normalized integral matrix $L$ on `Fin 2 ⊕ Fin k`, an explicit $\mathbb Z$-linear equivalence $\operatorname{coker} L\simeq\mathbb Z^k$ forces its entire winding-zero block $C$ to vanish. The proof obtains rank two and tests a minor for each potentially nonzero $C_{ij}$, including off-diagonal entries. |
+| `unitWinding_relation` | For any $u\in\mathbb Z^\times$, its additive multiples fill $\mathbb Z$ and multiplication by $u$ is bijective. These give the group-relation and cellular-boundary calculations once the actual trace supplies the corresponding presentations. |
+| `boundaryInclusionEquiv` | For any $\mathbb Z$-linear $i:B\to V$, exactness at $B$ and $V$ in $P\xrightarrow{0}B\xrightarrow{i}V\xrightarrow{0}Q$ makes this particular $i$ an integral linear equivalence. |
+| `compressionBoundary_bijective` | With the preceding exactness, bases $h_\iota$ of $A$ and $s_\iota$ of $B$ indexed by the same type, and a map $\delta:A\to V$ satisfying $\delta(h_\iota)=i(s_\iota)$, Lean proves $\delta$ bijective. The geometric application takes $A=H_3(V',V;\mathbb Z)$ and uses the basis of actual factor spheres in $B=H_2(\partial V;\mathbb Z)$. |
+
+[Checked Lean leaf](../../../../SmoothPoincare/Heights/PrefixCompressionHomology.lean) · [Integer matrix handoff](ED04_PREFIX_SURGERY_MATRIX_20261126.md)
+
+## Inputs on the actual marked cuts
+
+Write $Y_j=\#_j(S^1\times S^2)$, with $Y_0=S^3$, and orient each level outward from its lower side.
+
+| Order | Filling or trace supplied by the scientific argument | Remaining geometric use |
+| --- | --- | --- |
+| Mixed winding-one $a$ first | The native trace has one lower generator, a unit winding-one relation and a unit degree-two cellular differential. The paper obtains a smooth contractible filling of the actual homology-sphere cut. | Apply the PSC decomposition and smooth obstruction to every nonempty signed Poincaré sum. A resulting spherical boundary supplies a separate peripheral or actual geometric cancellation argument. |
+| Mixed winding-zero $b$ first | The actual upper $Y_1$ identifies the integral cokernel of the **full** normalized matrix. For the prefix use the ordinary auxiliary $U_0\cup b$ two-handle trace with zero matrix, where $U_0$ replaces the dotted circle in the boundary diagram. | The actual lower trace still has its 1-handle. On the auxiliary trace duality and the zero intersection map give exactness around $i$. Pull back two disjoint factor spheres and their normal neighborhoods, then attach the auxiliary 3-handles along that basis. The compression only classifies the common boundary. |
+| Three middle handles, $a$ first followed by $b$ after lower cancellation | The actual cancellation of $a$ gives a new lower ball with the two residual framed tubes and the transported full upper $Y_2$. The residual $2\times2$ matrix is zero because its own full integral cokernel is free of rank two. The first successor trace is an ordinary one-knot zero-framed filling. | Apply rank-one compression to this actual second cut using the inverse second-cut comparison for the degree witness. Use Property R and the two-component slide theorem on the returned link, then the boundary extension on the actual upper assembly. |
+| Three middle handles, penultimate $a,b$ cut without lower cancellation | The native $a,b$ trace is simply connected and has $H_2\cong\mathbb Z$. Its intersection form vanishes in the ambient homotopy sphere. The same integral compression interface applies with one pulled-back product sphere. | A PSC certificate can give $Y_1$ here even when the first $a$ cut fails. The geometric upper cancellation of the remaining handle then returns the mixed trace, with the $a,b$ framings and actual closing map. |
+
+For the ordinary zero-matrix filling of a prefix with $j$ components, the scientific proof supplies $H_3(V,\partial V)=0$ from $H^1(V)=0$, the zero intersection map, and the integral basis of disjoint factor spheres on the actual boundary. With the stipulated relative boundary map, Lean supplies its bijectivity. The paper continues with simple connectivity after the 3-handle attachments, acyclicity, the contractible filling, and the PSC and signed-sum classification. The Lean leaf gives the algebra at these interfaces. The degree comparison uses the separate native prefix mark from Route 09. [Three-prefix derivation](../../../../../papers/investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/notes/THREE_PREFIX.md) · [Marked transport and native cancellation](../../../09_morse_heights_and_handle_recognition/research-progress/handoffs/ED04_TRANSPORTED_PREFIX_TRACE_20261126.md) · [Chodosh–Maximo–Mukherjee, Proposition 2.2, Corollary 2.3 and Proposition 4.2](https://arxiv.org/pdf/2407.05574v1)
+
+## Verification
+
+The checked `PrefixCompressionHomology.lean` SHA-256 is `1d0844987bc4a32ef8804fccacf2842d5857c82f6a68da289f70abddff53df04`. The independent readback records type and axiom checks and exercises compression with the standard basis of $\mathbb Z^j$ for arbitrary $j$. This tests the algebraic interface, including the empty, rank-one and rank-two bases. The geometric controls, including the two failed prefixes of the specified GST Figure 6 pair, are recorded separately. [Independent prefix readback](../../reviews/ED04_PREFIX_READBACK.md)

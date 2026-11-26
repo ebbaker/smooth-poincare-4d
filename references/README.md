@@ -196,3 +196,5 @@ The [E69–E71 source record](SOURCE_NOTES_MASTER_CHARGED_FLOW_20261125.md) give
 ## Marked mixed surgery cuts, 26 November 2026
 
 The [primary passage record](SOURCE_NOTES_COLLAR_SURGERY_20261126.md) documents positive-scalar-curvature domination and compact band comparison on the two normalized mixed cuts, the probe-framing test, and the corresponding smooth topology inputs.
+
+The [two-attachment and face-error passages](SOURCE_NOTES_COLLAR_SURGERY_20261126.md#two-attachments-and-a-finite-curved-comparison) record the primary single-knot and low-tunnel classification, the two square-knot slides, the saddle exterior, the local filling recognition and the chiral boundary normalization.

@@ -10,8 +10,8 @@ This is the sole live status register for `SP4-FORM-DESC` and `VAR-E06`. The [pr
 
 | Task | Current state | Next proof or premise |
 | --- | --- | --- |
-| SP4-FORM-DESC-E10a | Planned, awaiting activation | Apply the positive caps on fixed marked types to the two complete raw sides. Prove the signed mass identities and infimum inequalities, with recognition and reassembly at an actual positive width. |
-| SP4-FORM-DESC-E10b | Planned, awaiting activation | Take the fixed-source width comparison before applying the minimizing-tail test to the original selected charged disks. Formulate the finite marked-family extraction under its supplied charge and full-curvature bounds. |
+| SP4-FORM-DESC-E10a | Verified from independently supplied positive caps on fixed marked types, both signed errors and actual replacement data. | Both signed masses agree and bound the corresponding infima. The actual finite recognition test fixes the same marked survivor for both chiralities and bounds the smaller mass by the excess. Native cap realization remains with Routes 03 and 05. [Proof return](handoffs/ED04_FIXED_SOURCE_SIDE_MASSES_20261126.md) |
+| SP4-FORM-DESC-E10b | The already selected charged original disk excludes arbitrarily small signed cap drift eventually on the minimizing sequence. | Produce the finite marked comparison family and the common physical windows with the full-curvature bounds. The late comparison uses the fixed-source statement before taking the limit of the excess. [Proof return](handoffs/ED04_FIXED_SOURCE_SIDE_MASSES_20261126.md) |
 
 ## Earlier tasks
 

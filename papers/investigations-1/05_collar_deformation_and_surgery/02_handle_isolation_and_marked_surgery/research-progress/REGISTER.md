@@ -23,3 +23,11 @@
 Next select a protected separator, a measured band or actual link move on an untreated presentation. A different smooth type or a freely re-marked face supplies no energy bound on the minimizing source. [Continuation](../../continuation-notes/AFTER_TWO_MIXED_CUTS_20261126.md)
 
 The [initial working manuscript](../manuscript/recognition_from_marked_handle_cuts.tex) develops these assessed results and ends with the open selection problems. [Reading copy and sources](../manuscript/README.md)
+
+### A marked pair across an untreated prefix, 26 November
+
+| Task | Checked result | Evidence |
+| --- | --- | --- |
+| SUR-B04 / E02h–j | Both original Figure 6 single cuts fail for a chosen band. Inverse slides recover the unknot-first order and two upper cancellations. The clean one-lower control carries both failed components through its first reduction. | [Figure and inverse](../notes/GST_PAIR_MOVE.md) · [Pair reading](../../reviews/TWO_ATTACHMENT_READER.md) |
+| SUR-B02 / E02 | The returned unknot-first section admits a round band of width π/12 with strictly qualifying two-end means, zero Weyl energy and two complete sides. | [Measured band](../notes/ROUND_BAND_ON_RETURNED_UNKNOT.md) · [Readback](../../reviews/RETURNED_BAND_READER.md) |
+| SUR-B04 / CDS-B03 | A recognized local closure identifies a relative split pair. A missing zero-winding cut can be bypassed in a full chain. A terminal exterior or tunnel certificate lowers the count by two, accounting for every stabilization. Incoming null-homotopy and zero linking alone leave the geometric move open. | [Exterior tests](../notes/TWO_ATTACHMENT_GROUP.md) · [Local recognition](../../reviews/LOCAL_FILLING_READER.md) · [Assessment](../../reviews/TWO_ATTACHMENTS_AND_PHYSICAL_FACE_COST_20261126.md) |

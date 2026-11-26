@@ -10,8 +10,8 @@ This is the sole live status register for Route 03, including inherited FOT-E25,
 
 | Task | Current state | Next proof or premise |
 | --- | --- | --- |
-| SP4-FORM-CUT-E04a | Planned, awaiting activation | On the same positive subcritical path from Route 05, construct actual round stretching, compactification and the scalar and volume test transplants for each cap. |
-| SP4-FORM-CUT-E04b | Planned, awaiting activation | Construct the two marked capped pieces and actual smooth reassembly, including inverse collar maps, cap attachments and original oriented type. Apply the inclusive recognition interface when its premises hold. |
+| SP4-FORM-CUT-E04a | Smooth stretch and cutoff derivation recorded. Lean constructs genuine smooth log-tests from marked nonnegative transplants with both scalar and volume errors. | Implement the smooth metric stretch, radial center chart, capacity estimates and change of domain on the same native marked metrics. The uniform Yamabe floor uses the strict joined wall. [Proof return](handoffs/ED04_MARKED_CAP_TEST_FACTORS_20261126.md) |
+| SP4-FORM-CUT-E04b | The fixed marked core data are retained at every tolerance. Finite recognition reassembles the opposite cap with both full side images. | Realize both signed open patches and the capped homotopy-sphere topology from a native cut. With independently supplied cap signs the finite test on the actual energy sum is inclusive. [Fixed-source reassembly](../../07_fixed_type_variational_descent/research-progress/handoffs/ED04_FIXED_SOURCE_SIDE_MASSES_20261126.md) |
 
 ## Version 02 tasks
 

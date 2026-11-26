@@ -1,3 +1,4 @@
+% Two attachments and finite face error, 26 November 2026, input 5ddaabd76595.
 % Continuation of 26 November 2026 at e2968b2898b5. Current proofs and primary
 % passages are recorded in the prefix and curved-filling assessment in parent reviews.
 % Prepared for Edward B. Baker III with OpenAI Codex assistance, 26 November 2026.
@@ -690,6 +691,10 @@ rank determines the knot as well as the boundary.
 If integral surgery on a knot \(K\subset Y_r\) gives \(Y_{r+1}\),
 then \(K\) is a zero-framed unknot in a ball in \(Y_r\).
 \end{lemma}
+This is the increasing-rank case of Meier--Schirmer--Zupan's
+Theorem~5.1, which also covers rational slopes
+\cite{MeierSchirmerZupan2016Trisections}. We give an alternative
+argument to identify the marked group data.
 \begin{proof}
 The surgery trace group \(G\) is the quotient of the free group
 \(F_r\) by the normal closure \(N\) of the knot word. Read backwards
@@ -842,6 +847,171 @@ chain likewise gives split zero-framed attachments successively
 from \(Y_0\) through \(Y_m\), and the upper handlebody extension
 recognizes the closure. These implications leave selection of an
 ordering with the required geometric certificates open.
+
+\section{Crossing a missing intermediate level}\label{sec:pair}
+
+Let two marked integral attachments take a measured boundary type
+\(Y_r\) to \(Y_{r+2}\). Here the identifications at both ends are
+smooth. They may come from the preceding PSC criterion if its filling
+hypotheses have been verified, or directly from the marked bodies.
+Read the trace group from both ends as in Lemma~\ref{lem:last-knot}.
+The incoming two relators vanish on abelianization since the reverse
+two relators in rank \(r+2\) leave rank at least \(r\). The reverse
+cellular boundary in degree two is injective, so the trace group has
+zero second group homology. Hopf's formula and residual nilpotence
+now kill the normal closure of \emph{both} incoming words in \(F_r\).
+The meridians freely augment the rank-\(r\) first homology of the
+ambient manifold in the exterior, by excision. Both prescribed surgery
+slopes are therefore zero in the exterior's first homology since the
+outlet retains the full rank \(r+2\). This gives zero framings and
+linking number zero. It supplies neither a spanning disk in the common
+exterior nor the type of either individual prefix.
+
+There are geometric tests one can apply directly to this exterior.
+For example, a separating sphere between its two tori splits the inlet
+and outlet into connected summands. Prime decomposition and the bound
+of one on the first Betti increase of a single knot surgery give
+\(Y_a\to Y_{a+1}\) on each side. Lemma~\ref{lem:last-knot} gives
+disjoint zero-framed local unknots after moving the capping balls off
+the disks. A complete tunnel system with \(r+1\) arcs gives the unlink
+directly. At tunnel number \(r+2\), introduce \(r+1\) distant cancelling
+2/3 pairs; framed slides then produce the \((r+3)\)-component
+zero-framed unlink \cite[Corollary 1.3]{MeierSchirmerZupan2016Trisections}.
+At a terminal block the whole upper body has rank \(2r+3\) after
+stabilization. Extend the boundary marking over it to align the
+\(r+3\) new summand cores with distinct upper belt spheres. These
+cancellations leave rank \(r\), a net decrease by two of both the
+middle and upper counts. Any earlier lower body is retained.
+
+\subsection{An actual pair with two failed prefixes}
+Take the square knot \(Q\) and the unknot \(U\) in Figure~5 of
+Gompf--Scharlemann--Thompson. Sliding \(Q\) over \(U\) along their
+indicated band gives the split zero-framed unlink. Instead start
+at Figure~6, which slides \(U\) over a framed parallel \(Q^+\) of
+\(Q\) to give \(V\), with the band free to vary
+\cite[Figures 5--6 and \S6]{GompfScharlemannThompson2010}.
+The following choice makes both single-attachment tests fail.
+The exterior of \(U\cup Q^+\) surjects by its indicated surgery onto
+\(F_2\), inducing an isomorphism on abelianizations. Give both
+meridians odd parity. Choose a free basis of \(F_2\) odd on
+both elements (multiply an even generator by the odd one if
+necessary). Sending them to distinct transpositions gives an
+epimorphism onto \(\mathfrak S_3\). Both meridians go to transpositions.
+Choose the band path to transport one meridian to the other in this
+quotient: prepend a loop realizing the required conjugator to a path
+between the prescribed mouths. Perturb the arc off itself and the
+stationary \(Q\), fixing its ends, and use a narrow oriented ribbon.
+The single saddle exterior adds one 2-handle in either time direction.
+From the link end its relator identifies the transported meridians
+\cite[\S3.1]{Sunukjian2015Surfaces}. Hence the epimorphism factors
+through the saddle exterior, which the knot group of \(V\) surjects
+onto. Thus \(V\) is nontrivial. This prescribes a class of embedded
+bands; the conclusion holds for each such choice.
+
+Both \(Q\) and \(V\) now have nontrivial knot type. Each zero
+trace on the incoming four-ball is simply connected, has zero form
+and has second Betti number one. PSC domination of its boundary
+would identify that boundary with \(Y_1\) by the compression argument
+of Theorem~\ref{thm:last}, forcing the knot to be trivial by Property~R.
+Undoing the actual Figure~6 slide returns \(U\); undoing the
+complication in Figure~5 gives the split pair. For the outgoing
+diffeomorphism \(P\) of these trace moves, an inherited tube \(a\)
+becomes \(Pa\), with inverse \(a^{-1}P^{-1}\) on its image. A closing
+\(\gamma\) from the old outlet to the actual upper body becomes
+\(\gamma P^{-1}\), with inverse \(P\gamma^{-1}\). Two distinct
+upper belt spheres meet the split surgery cores once each after
+the extending upper change of coordinates. This is \(2\to1\to0\)
+in the closed one-sided example, with no temporary pairs.
+
+\paragraph{A round band on the returned penultimate cut.}
+In the returned \(U\)-first order the pieces at the cut are
+\(S^2\times D^2\) below and \(S^1\times D^3\) above. Indeed the
+remaining surgery goes from \(Y_1\) to \(Y_2\) and cancels at the top
+by Lemma~\ref{lem:last-knot}. For a chosen lower marking, the
+remaining boundary change extends over the upper rank-one body.
+This identifies the \emph{pair} with the unit round sphere split
+as \((\cos\theta\,x,\sin\theta\,y)\) in \(\mathbb R^3\oplus\mathbb R^2\),
+where \(x\in S^2,y\in S^1\). At \(\theta_0=7\pi/24\) the degree-one
+slice has scalar curvature \(2/\cos^2\theta_0\). Use ends
+\(\pi/4,\pi/3\); their distances to the slice are both \(\pi/24\).
+The ambient scalar curvature is 12, and the two outward means are
+\(-H(\pi/4),H(\pi/3)\) with \(H=\cot\theta-2\tan\theta\).
+The left side of \eqref{eq:mean} is the increment of
+\(\arctan(H/3)+2\theta\), whose derivative is
+\((2\tan^2\theta-1)/(1+4\tan^2\theta)>0\) on this interval.
+Thus the two-end test certifies the cut, although
+\(12(\pi/12)^2=\pi^2/12\) falls below the width threshold.
+Each complete side and the band have zero Weyl energy in both
+signs. This round metric realizes the returned section. Neither
+pre-slide prefix is that section.
+
+\subsection{A relative two-attachment replacement}
+Suppose the pair is contained in a specified three-ball of \(Y_r\).
+The local filling of the pair in \(S^3\) has boundary \(Y_2\)
+by prime decomposition at the boundary of the patch. The capped
+local trace is a homotopy sphere: the lower trace on \(D^4\) is
+simply connected, the top contributes only 3- and 4-handles,
+and the Euler characteristic is two. If one of the two attaching
+knots in the ball is a generalized square knot, Meier--Zupan
+identify this closure as smooth \(S^4\)
+\cite[Theorem 1.1]{MeierZupan2022SquareKnots}.
+More generally take any independent smooth recognition of this
+local closure. By Laudenbach--Po\'enaru's uniqueness of the embedded
+rank-two upper body in \(S^4\), its actual complement is
+\(\TB2=(S^2\times D^2)\natural(S^2\times D^2)\)
+\cite[\S2, Lemma 1]{LaudenbachPoenaru1972Handlebodies}.
+The bottom and vertical boundary of the local trace on the
+three-ball constitute a single collared three-disk after rounding.
+Isotope its induced parametrization on the entire connected rounded
+boundary \(\partial\TB2=Y_2\) of the model filling to the prescribed
+disk marking and extend the isotopy over a collar
+\cite[Theorem B and Corollary 1]{Palais1960Extending}.
+Straighten collars and restore the corners. The diffeomorphism
+then glues by the identity to the product on the rest of \(Y_r\).
+All later attaching tubes and the closing map are transported by
+the outgoing diffeomorphism and its inverse as above. At a terminal
+block the split replacement cancels twice at the upper end. An
+interior replacement carries its successor data and makes no count
+decrease until further cancellations are exhibited. This smooth
+replacement makes no assertion about unstabilized slides for an
+arbitrary two-component R-link. It requires a marked ball or a
+separate global exterior criterion.
+
+
+\paragraph{A zero-winding chain with an omitted cut.}
+In the one-lower presentation of Section~\ref{sec:zero-sequence},
+permit two consecutive winding-zero attachments to skip their common
+intermediate test. Require the known end types \(Y_j,Y_{j+2}\) of
+this block and a relative identification with two split attachments
+as above. The preceding lower trace is unchanged. The split block
+adds two boundary summands \(S^2\times D^2\); all later tubes,
+the winding-one tube and every certified cut above it are carried by
+the comparison. The two pieces at the last pure level are therefore
+exactly those used in Section~\ref{sec:zero-sequence}. Its interior
+surgery and inverse generator-circle argument gives \(M\cong S^4\).
+This proof bypasses one missing certificate; no initial simple
+connectivity of the pure lower sublevel is needed.
+
+For an explicit one-lower, three-middle example, put the selected
+Figure~6 pair \(b,c\) in a ball of \(\partial\HB1\) disjoint from
+a clean meridian attachment \(a\) through the 1-handle. Close with
+the actual rank-two upper body. Cancelling \(a\) first gives a
+map \(P_a\) to the outgoing \(S^3\), product on that ball in the
+chosen control. The entire returned two tubes are \(P_ab,P_ac\).
+Each fails its single-prefix test; the two inverse slides and
+upper cancellations just calculated give \(3\to2\to0\).
+Extend \(P_a\) across both returned handles by the identity in
+handle coordinates. Let \(\widehat P_a\) be its map on the final
+outlet, and \(P_s\) the outgoing map of the two slides.
+Before upper cancellation the new closing is
+\(\gamma\widehat P_a^{-1}P_s^{-1}\), with inverse
+\(P_s\widehat P_a\gamma^{-1}\). On the earlier surviving patch
+the inverse lower cancellation uses \(P_a^{-1}\). In the zero-first order the
+two single-prefix boundaries are \(Y_1\# S^3_0(b)\) and
+\(Y_1\# S^3_0(c)\); pinching to the second summand has degree
+one, so both fail PSC domination. The full pair reaches \(Y_3\)
+and satisfies the relative two-attachment test. Only the split
+meridian control was used to display that particular lower cancellation.
 
 \section{Metric criteria on the given levels}\label{sec:bands}
 These criteria give PSC domination for the actual slice

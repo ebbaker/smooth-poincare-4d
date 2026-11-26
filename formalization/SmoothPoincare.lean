@@ -141,8 +141,16 @@ import SmoothPoincare.Variational.TerminalChargeTransferPointed
 import SmoothPoincare.PhysicalScales.TerminalVolumeEscape
 import SmoothPoincare.Variational.TerminalVolumeLimit
 
-/-! # Fixed-type descent and immersed recognition
+import SmoothPoincare.Heights.PrefixCompressionHomology
+import SmoothPoincare.Heights.NativePrefixCancellation
+import SmoothPoincare.Heights.SmoothClosedMarkedControl
+import SmoothPoincare.Heights.TransportedPrefixTrace
+import SmoothPoincare.IntrinsicEntry.RoundBoundaryForm
+import SmoothPoincare.Variational.FixedSourceMarkedCaps
+import SmoothPoincare.Variational.MarkedCapTestFactors
+import SmoothPoincare.Variational.RoundEquatorialCaps
+import SmoothPoincare.PhysicalScales.PositiveProductBand
+import SmoothPoincare.Variational.ExactFacePhysicalInterpolation
+import SmoothPoincare.Variational.RoundMarkedFaceControl
 
-Public imports for the master formalization. The Edition 03 blueprint identifies
-the geometric witness and outstanding hypotheses of each implication.
--/
+/-! # Public imports for fixed-type descent, immersed recognition and marked cuts -/

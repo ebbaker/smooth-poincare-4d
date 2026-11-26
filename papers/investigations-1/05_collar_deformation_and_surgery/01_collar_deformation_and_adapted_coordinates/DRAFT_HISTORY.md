@@ -17,3 +17,7 @@ The deformation manuscript derives the fixed smooth cutoff, its peak at a nonzer
 ## 26 November 2026 · Curved replacement at a physical boundary
 
 Added the convex Euclidean cap, its boundary form and transverse-height obstruction, together with the finite limit on an independent interior preparation. [Manuscript](manuscript/README.md) · [Independent filling review](../reviews/CURVED_FILL_READER.md)
+
+## 26 November 2026 · Finite face error and overlapping changes
+
+The deformation manuscript derives a two-sign cost at native width, the relative boundary flux, the hyperbolic fit for a nonround induced height, and the isolated-connector test for a coupled path. [Independent manuscript reading](../reviews/PAIRED_MANUSCRIPT_READER.md)

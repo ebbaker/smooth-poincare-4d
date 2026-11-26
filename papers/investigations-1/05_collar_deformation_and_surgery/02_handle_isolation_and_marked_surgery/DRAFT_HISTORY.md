@@ -17,3 +17,7 @@ The surgery manuscript develops the marked trace and the two orders, the positiv
 ## 26 November 2026 · Upper cancellation and successive cuts
 
 Added the all-rank penultimate reduction, the zero-winding chain and the actual global PSC metric on the meridian-first Mazur level. [Manuscript](manuscript/README.md) · [Independent upper cancellation](../reviews/LAST_HANDLE_READER.md)
+
+## 26 November 2026 · Marked pairs and the returned round band
+
+The surgery manuscript derives the two-relator and peripheral constraints, constructs a square-knot pair with two failed prefixes, measures the returned two-end band, and gives relative and terminal two-attachment tests. All three-to-two successors, inverse identifications and temporary handles are accounted for. [Independent manuscript reading](../reviews/PAIRED_MANUSCRIPT_READER.md)

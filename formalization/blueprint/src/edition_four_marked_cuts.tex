@@ -1,6 +1,6 @@
 \section{Edition 04: geometric inputs for smooth recognition}
 \label{sec:ed04}
-The following are proposed formalization targets and a coverage question.
+The seven program targets below are followed by checked results on fixed sources and supplied marked presentations.
 The smooth category, the markings, and the quantifiers are part of each
 target. Write $T=4\pi^2$. For an oriented metric, $E_\sigma(g;U)$
 is the integral of the squared Hilbert--Schmidt norm of the signed Weyl
@@ -9,6 +9,7 @@ positive Yamabe classes on the indicated smooth type.
 
 \begin{openproblem}[Round product at a fixed physical face]
 \label{ed04:exact-face}
+\uses{prop:ed04-physical-face}
 On a closed oriented smooth homotopy four-sphere in a positive class
 of energy $e<2T$, fix one smoothly marked separating three-sphere with
 conformally round induced metric and umbilic second fundamental form.
@@ -22,7 +23,7 @@ this fixed source.
 
 \begin{openproblem}[Positivity on the two actual caps]
 \label{ed04:caps}
-\uses{ed04:exact-face,lem:master-wall,prop:ed03-inclusive-caps}
+\uses{ed04:exact-face,lem:master-wall,prop:ed03-inclusive-caps,prop:ed04-positive-class,prop:ed04-round-face-control}
 From the joined path, insert a round product cylinder of arbitrary
 finite length. Transplant each compactly supported test to the joined
 metric, retain a uniform positive Yamabe bound, and pass through the
@@ -34,7 +35,7 @@ the corresponding endpoint side energy.
 
 \begin{openproblem}[Limiting raw masses on fixed capped types]
 \label{ed04:side-masses}
-\uses{ed04:caps,prop:ed03-inclusive-caps}
+\uses{ed04:caps,prop:ed03-inclusive-caps,prop:ed04-fixed-cap-masses}
 Under the exact-face hypotheses, prove that on each original side the
 two chiral masses agree at a value $m_j$ and $I^+(\widehat P_j)\le m_j$.
 For a nonstandard source precisely one capped side has its smooth type
@@ -47,6 +48,7 @@ specialization recorded in Proposition~\ref{prop:ed03-net-saving}.
 
 \begin{openproblem}[Recognition of the intermediate three-manifold]
 \label{ed04:prefix}
+\uses{prop:ed04-integral-prefix,prop:ed04-product-price}
 For a closed smooth homotopy sphere in a reduced mixed presentation
 with one lower, two middle and one upper handle of indices one, two and
 three respectively, realize the winding row $(1,0)$ by marked slides.
@@ -62,6 +64,7 @@ identify the closed four-manifold.
 
 \begin{openproblem}[Reduction followed by a transported second test]
 \label{ed04:successor}
+\uses{prop:ed04-native-prefix}
 For a reduced presentation with handle counts $(1,1,3,2,1)$ in index
 order and normalized winding row $(1,0,0)$, a positive-scalar-curvature
 domination certificate on the first winding-one boundary gives a
@@ -74,6 +77,7 @@ use the reversed presentation with its own cuts and markings.
 
 \begin{openproblem}[Positive entry on a marked double]
 \label{ed04:entry}
+\uses{prop:ed04-round-mode}
 Fix a smooth compact oriented contractible half $W$, a boundary metric
 $\gamma$ in its marking and an orientation-preserving $\gamma$-isometry
 $f$. Seek a positive-scalar-curvature extension of the exact tensor
@@ -101,3 +105,192 @@ The alternative used may depend on $M$. A single entry metric, an
 excluded shape of a charged disk, and a boundary test on a known
 presentation each address only part of this selection problem.
 \end{openproblem}
+
+\subsection{Fixed-source and marked-prefix results}
+\label{sec:ed04-fixed-source-results}
+
+\begin{proposition}[Normalization of the entire ordinary surgery matrix]
+\label{prop:ed04-integral-prefix}
+\lean{SmoothPoincare.PositiveScalarCuts.normalizedBlockCongr, SmoothPoincare.PositiveScalarCuts.windingZeroBlock_eq_zero_of_rank, SmoothPoincare.PositiveScalarCuts.mixedSurgeryMatrix_det, SmoothPoincare.PositiveScalarCuts.windingZeroBlock_eq_zero_of_integralCokernel, SmoothPoincare.PositiveScalarCuts.unitWinding_relation, SmoothPoincare.PositiveScalarCuts.boundaryInclusionEquiv, SmoothPoincare.PositiveScalarCuts.compressionBoundary_bijective}
+\leanok
+In the normalized integral order (dot, winding-one component, remaining
+components), write $L$ for the full matrix and $C$ for its last $k$ rows
+and columns restricted to those components. An integral change of generators
+gives $A\oplus C$, where $A=\left(\begin{smallmatrix}0&1\\1&d\end{smallmatrix}\right)$.
+An identification $\operatorname{coker}_{\mathbb Z}L\cong\mathbb Z^k$
+forces every entry of $C$ to vanish. For $k=1$, $\det L=-C_{00}$.
+The unit winding relation kills the cyclic generator. For the other order,
+if the integral pair sequence of the ordinary comparison filling has its
+two flanking maps zero, boundary inclusion is an isomorphism on $H_2$.
+If its factor spheres form a basis, attaching the relative three-handles
+along those spheres gives a bijective boundary map in degree three.
+\end{proposition}
+\begin{proof}
+\leanok
+The leading block is unimodular and the Schur correction is zero.
+Rank-nullity gives integral rank two. A nonzero $C_{ij}$ would give a
+three-by-three minor of determinant $-C_{ij}$ in the transformed matrix.
+Exactness gives the inclusion isomorphism. On the specified handle basis
+the relative boundary agrees with that isomorphism composed with the
+change to the sphere basis.
+\end{proof}
+
+\begin{proposition}[Transport past a supplied cancelling pair]
+\label{prop:ed04-native-prefix}
+\lean{SmoothPoincare.exists_nativeThreeToTwo, SmoothPoincare.prefixResidualTubes_disjoint, SmoothPoincare.prefixTraceHomeomorph_commutes, SmoothPoincare.prefixClosingMark_marked, SmoothPoincare.orientedDegree_prefixTransport_ne_zero_iff, SmoothPoincare.ClosedMarkedControl.splitAbsorptionFace_product, SmoothPoincare.smoothMarkedAssembly_marked}
+\leanok
+A native geometric index-one/two cancelling pair in the specified regular
+Morse strip of a three-middle presentation removes precisely its two
+critical points. Above that strip the cuts retain their original points.
+Given the boundary comparison $e$ from the successor to the original cut,
+both framed tubes pull back by $e^{-1}$, including their disk parameters.
+The quotient trace comparison commutes with first attaching just one of the
+two handles. Its upper boundary comparison $e_{\rm top}$, when supplied,
+gives closing map $\varphi e_{\rm top}$ and inverse
+$e_{\rm top}^{-1}\varphi^{-1}$. An incoming certificate keeps nonzero
+integral degree under the inverse marking of its own cut.
+\end{proposition}
+\begin{proof}
+\leanok
+Remove the two points in the pinned smooth cancellation theorem and count
+the remaining indexed critical points. Apply the actual lower comparison
+on the body and the identity on each handle. These maps and their inverses
+respect the attaching relations. Degree under a diffeomorphism changes by
+a unit. Smooth closed assembly requires local smoothness in the two
+interiors and across the whole marked seam in both directions.
+\end{proof}
+
+\begin{proposition}[Energy of the physical product band]
+\label{prop:ed04-product-price}
+\lean{SmoothPoincare.PositiveScalarCuts.cylinderMetric_chiralWeylDensities, SmoothPoincare.PositiveScalarCuts.riemannianProductBand_integral_eq, SmoothPoincare.PositiveScalarCuts.riemannianProductBand_completeSideLedger, SmoothPoincare.PositiveScalarCuts.exists_productBand_width_and_budget_iff, SmoothPoincare.PositiveScalarCuts.exists_shortProductBand_twoMean_and_budget_iff}
+\leanok
+On the marked product cylinder in the three-dimensional Ricci frame write
+$J=\int|\mathrm{Ric}^{\circ}_h|^2$ and $A_\sigma$ for both retained
+sides plus the entire fixed transition in sign $\sigma$. Each half of
+the band contributes $LJ/8$ in each chirality. Suppose $\rho>0$ and
+$J\ge0$. There is a length with $\rho L^2\ge3\pi^2$ and joined
+endpoint energy strictly below $2T$ in both signs if and only if
+$A_\sigma+\pi\sqrt{3/\rho}\,J/4<2T$ in both signs. With zero end
+means, an arbitrarily short positive length passes the strict end-mean
+test and this energy budget exactly when both $A_\sigma<2T$.
+\end{proposition}
+\begin{proof}
+\leanok
+The complementary spatial sectional curvatures are $R/2-r_i$ and the
+axial curvatures vanish. Both trace-free chiral compressions therefore
+have entries $-(r_i-R/3)/2$ in the adapted frame. Product integration
+gives the two half prices. The full energy is nondecreasing in $L$.
+\end{proof}
+
+\begin{proposition}[A fixed positive cap family tests the original masses]
+\label{prop:ed04-fixed-cap-masses}
+\lean{SmoothPoincare.FixedMarkedCutCore.rawMasses_of_positiveCaps, SmoothPoincare.fixedSourceRawSideMasses, SmoothPoincare.eventually_no_smallDriftCaps_of_chargedOriginalDisk}
+\leanok
+On two fixed marked closures assume actual positive cap metrics approximate
+the corresponding full raw energies in both signs at every tolerance.
+Each original side then has equal signed masses $m_j$ and
+$I^+(\widehat P_j)\le m_j$. With complete a.e.-disjoint coverage,
+$e<2T$, and the two furnished recognition and reassembly comparisons,
+a nonstandard source is the surviving capped type and the discarded
+side has mass at most $e-I^+(M)$ in each sign.
+\end{proposition}
+\begin{proof}
+\leanok
+The cap has equal signed totals at every tolerance. Test each actual
+cap in the infimum of its fixed marked type, then let its error tend
+to zero on that source. One raw mass is strictly below $T$. Choose a
+positive tolerance leaving its actual cap within the inclusive recognition
+bound and apply the marked comparison in that direction. The charged-disk
+sequence exclusion uses this finite-source implication at each index.
+\end{proof}
+
+\begin{proposition}[Attained energy of a round end mode]
+\label{prop:ed04-round-mode}
+\lean{SmoothPoincare.IntrinsicEntry.roundCylinderMode_isLeast, SmoothPoincare.IntrinsicEntry.roundCylinderMode_inf_eq}
+\leanok
+For a unit round degree-$l$ mode of trace $f$, in the finite-energy
+classical half-cylinder domain with decay, the least energy is
+$6(l+1)f^2$ and the profile $w(t)=f\exp(-(l+1)t)$ attains it.
+\end{proposition}
+\begin{proof}
+\leanok
+Integrate the cross term in the square of $w'+(l+1)w$. Its endpoint
+contribution uses the prescribed trace and decay. The remaining square
+vanishes for the displayed admissible exponential.
+\end{proof}
+
+\begin{proposition}[Physical interpolation on a supplied normalized bicollar]
+\label{prop:ed04-physical-face}
+\lean{SmoothPoincare.exactFaceNormalizingExponent_face_jet, SmoothPoincare.exactFaceNormalizedMetric_first_tangential_jet, SmoothPoincare.exists_exactFacePhysicalPath, SmoothPoincare.exactFacePhysicalPath_joint_coefficient, SmoothPoincare.exactFaceNormalizedPath_pullback_sub_round, SmoothPoincare.exactFaceDefect_taylor_bounds, SmoothPoincare.exactFacePhysicalPath_joined_bound, SmoothPoincare.exists_exactFace_subwidth_budgets}
+\leanok
+An original signed Gaussian chart supplies the conformal normalizing
+exponent with prescribed value and derivative $-H/3$ on the face.
+Given the normalized marked bicollar and its two available physical
+widths, each positive subwidth pair supports a smooth metric path from
+the incoming metric to a metric equal to the round product near the
+face. It preserves the outer germs. Suppose on that path the original
+and deformed strips of side $j$ each have signed charge at most
+$C_jw_j$, the oriented frames agree off the strips, and the complete
+measurable sides cover with null common seam. Then each absolute
+full-side drift is at most $C_jw_j$, and the peak of the joined energy
+is at most $e+C_Lw_L+C_Rw_R$. For $e<2T$ the widths can be chosen
+independently small enough to preserve the strict wall and meet both
+drift tolerances.
+\end{proposition}
+\begin{proof}
+\leanok
+Extend the product tensor from a fixed compact slab, interpolate with
+the normalized metric, and apply the smooth conformal factor that
+restores the physical metric away from the face. The two cutoff
+derivatives scale with the actual width on their respective halves.
+Locality cancels the unchanged portion of each complete signed measure.
+Both old and new strip masses lie between zero and $C_jw_j$.
+\end{proof}
+
+\begin{proposition}[Positive closed classes and transplanted cap tests]
+\label{prop:ed04-positive-class}
+\lean{SmoothPoincare.capFactorScalar_eq_dirichletForm, SmoothPoincare.classYamabeFour_pos_of_scalar_pos, SmoothPoincare.standardRoundFour_yamabe_pos, SmoothPoincare.exists_capLogTest_of_nonnegativeFactor, SmoothPoincare.hasJoinedCapTests_of_transplantedFactors}
+\leanok
+A positive scalar curvature metric on a nonempty compact smooth
+Riemannian four-manifold without boundary has positive ordinary
+class Yamabe constant. In the cap comparison, a smooth nonnegative
+transplant with the specified scalar and volume errors and positive
+volume can be used through smooth logarithmic conformal tests.
+\end{proposition}
+\begin{proof}
+\leanok
+The minimum of the scalar curvature is positive. Green's identity
+bounds the conformal numerator from below by a positive multiple of
+the sum of the squared $L^2$ norms of the factor and its gradient.
+The compact critical Sobolev inequality bounds the squared $L^4$
+norm from above by a fixed multiple of that same sum. For a
+nonnegative tested factor use its positive constant regularizations
+and continuity of the two integrals.
+\end{proof}
+
+\begin{proposition}[A round equatorial cut with two physical widths]
+\label{prop:ed04-round-face-control}
+\uses{prop:ed04-positive-class,prop:ed04-fixed-cap-masses}
+\lean{SmoothPoincare.RoundEquatorialCaps.logFactor_jointly_smooth, SmoothPoincare.RoundEquatorialCaps.marked_product_endpoint, SmoothPoincare.RoundEquatorialCaps.cap_restrictions, SmoothPoincare.RoundEquatorialCaps.flip_fixes_equator, SmoothPoincare.RoundEquatorialCaps.roundInclusion, SmoothPoincare.RoundEquatorialCaps.fixedSource_at_physical_widths}
+\leanok
+Fix the round oriented unit four-sphere and its signed last-coordinate
+equator. Any two geodesic latitude widths in $(0,\pi/2)$ admit a
+smooth path with the incoming metric on the two outer collars and
+a round product germ at the endpoint. Both entire marked hemispheres
+admit smooth positive-class caps agreeing with their retained endpoint
+metrics. The joined charge at every time and each signed charge on every
+measurable subset are zero. The fixed capped-type infimum test holds on
+both original closed hemispheres.
+\end{proposition}
+\begin{proof}
+\leanok
+Set $a=\sin w_L$, $b=\sin w_R$ and write $z=\cos r$ for the signed
+height. With the two-sided cutoff $\chi$, use the global log factor
+$-s\log(1-\chi z^2)/2$. At the product endpoint the cylinder coordinate
+is $t=-\operatorname{artanh}(\cos r)$. The symmetric choices $(a,a)$
+and $(b,b)$ extend the two complete retained halves, and reflection in
+the equator fixes its entire angular parametrization. Conformal
+invariance preserves the positive round class and both vanishing
+Weyl measures. The cap comparison therefore has zero drift at every
+positive tolerance on this fixed source.
+\end{proof}

@@ -22,30 +22,35 @@ private local instance : BorelSpace StandardFourSphere := ⟨rfl⟩
 noncomputable abbrev standardRoundFourMetric :
     SmoothRiemannianMetric (𝓡 4) StandardFourSphere := roundMetric
 
+/-- All curvature slots of the actual round metric in an oriented orthonormal frame. -/
+theorem standardRoundFour_curvatureFrameTensor
+    (o : ManifoldOrientation (𝓡 4) StandardFourSphere 4) (x : StandardFourSphere)
+    (frame : OrientedOrthonormalFrameAt standardRoundFourMetric o x) :
+    metricCurvatureFrameTensor standardRoundFourMetric o x frame =
+      constantSectionalFrameTensor 1 := by
+  have : IsManifold (𝓡 4) 1 StandardFourSphere := IsManifold.of_le (by decide : (1 : ℕ∞ω) ≤ ∞)
+  funext a b c d
+  unfold metricCurvatureFrameTensor
+  rw [metricRm04StandardAt_eq_inner_riemannOp, standardRoundFourMetric.symm x,
+    round_riemann_one]
+  change standardRoundFourMetric.inner x
+    (standardRoundFourMetric.inner x (frame.basis b) (frame.basis d) • frame.basis a -
+      standardRoundFourMetric.inner x (frame.basis a) (frame.basis d) • frame.basis b)
+    (frame.basis c) = _
+  simp only [map_sub, map_smul, sub_apply, smul_apply, smul_eq_mul, frame.orthonormal]
+  change (if b = d then (1 : ℝ) else 0) * (if a = c then 1 else 0) -
+    (if a = d then 1 else 0) * (if b = c then 1 else 0) =
+      1 * ((if a = c then 1 else 0) * (if b = d then 1 else 0) -
+        (if a = d then 1 else 0) * (if b = c then 1 else 0))
+  ring
+
 /-- The positive Weyl block of the round metric vanishes in any of its
 oriented orthonormal frames. -/
 theorem standardRoundFour_chiralBlock_eq_zero
     (o : ManifoldOrientation (𝓡 4) StandardFourSphere 4) (x : StandardFourSphere)
     (frame : OrientedOrthonormalFrameAt standardRoundFourMetric o x) :
     geometricChiralBlock standardRoundFourMetric o x frame = 0 := by
-  have : IsManifold (𝓡 4) 1 StandardFourSphere := IsManifold.of_le (by decide : (1 : ℕ∞ω) ≤ ∞)
-  have hTensor : metricCurvatureFrameTensor standardRoundFourMetric o x frame =
-      constantSectionalFrameTensor 1 := by
-    funext a b c d
-    unfold metricCurvatureFrameTensor
-    rw [metricRm04StandardAt_eq_inner_riemannOp, standardRoundFourMetric.symm x,
-      round_riemann_one]
-    change standardRoundFourMetric.inner x
-      (standardRoundFourMetric.inner x (frame.basis b) (frame.basis d) • frame.basis a -
-        standardRoundFourMetric.inner x (frame.basis a) (frame.basis d) • frame.basis b)
-      (frame.basis c) = _
-    simp only [map_sub, map_smul, sub_apply, smul_apply, smul_eq_mul, frame.orthonormal]
-    change (if b = d then (1 : ℝ) else 0) * (if a = c then 1 else 0) -
-      (if a = d then 1 else 0) * (if b = c then 1 else 0) =
-        1 * ((if a = c then 1 else 0) * (if b = d then 1 else 0) -
-          (if a = d then 1 else 0) * (if b = c then 1 else 0))
-    ring
-  rw [geometricChiralBlock, hTensor, traceFreeSelfDualBlock_constantSectional]
+  rw [geometricChiralBlock, standardRoundFour_curvatureFrameTensor, traceFreeSelfDualBlock_constantSectional]
 
 variable {E H M : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimensional ℝ E]
   [TopologicalSpace H] {I : ModelWithCorners ℝ E H} [I.Boundaryless]

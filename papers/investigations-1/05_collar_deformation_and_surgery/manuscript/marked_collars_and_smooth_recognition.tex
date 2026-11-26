@@ -1,3 +1,4 @@
+% Two attachments and finite face error, 26 November 2026, input 5ddaabd76595.
 % Continuation of 26 November 2026 at e2968b2898b5. Current proofs and primary
 % passages are recorded in the prefix and curved-filling assessment in parent reviews.
 % Drafted for Edward B. Baker III with OpenAI Codex assistance, 26 November 2026.
@@ -263,7 +264,9 @@ a smooth contractible manifold bounding the remaining spherical
 homology sum, so that sum is trivial
 \cite[Proposition 4.2]{ChodoshMaximoMukherjee2024Complete}.
 Thus the actual final attachment goes from \(Y_{q-1}\) to \(Y_q\).
-Its trace group has free presentations from both ends. The upper
+This is precisely the rank-increasing case of the single-knot theorem
+of Meier--Schirmer--Zupan \cite[Theorem 5.1]{MeierSchirmerZupan2016Trisections}.
+Alternatively its trace group has free presentations from both ends. The upper
 one has a single relator with primitive abelianization and gives
 zero second group homology. Applied at the lower end, Hopf's
 formula and residual nilpotence of the free group force the attaching
@@ -300,6 +303,55 @@ and either framing recovers \(S^4\) \cite{Baker2026HandleCuts}.
 This recognizes the whole chain. A single penultimate certificate
 with a simply connected lower sublevel already gives strict descent
 on a least-count presentation.
+
+\subsection{Using two attachments when both individual cuts fail}
+A test on the pair can be strictly stronger than testing both orders.
+In Figures~5--6 of Gompf--Scharlemann--Thompson start with the square
+knot and an unknot. Slide the unknot over the square knot along a
+band selected so that the knot group of the resulting component
+surjects onto \(\mathfrak S_3\). Such a band exists: zero surgery
+on the unslid link gives the free group of rank two, and a choice of
+band conjugator equates the meridian transpositions at the saddle
+\cite[Figures 5--6]{GompfScharlemannThompson2010}\cite{Baker2026HandleCuts}.
+Both knots are then nontrivial. The individual zero traces are simply
+connected with second Betti number one, so PSC domination would force
+\(S^1\times S^2\) zero surgery and hence an unknot. Both original
+penultimate levels thus fail the test. The inverse slide recovers
+the unknot-first section. A second indicated slide gives the split
+unlink and two actual upper cancellations, with middle count
+\(2\to1\to0\). Each remaining attaching tube is carried by the
+outgoing trace diffeomorphism \(P\); the closing map becomes
+\(\gamma P^{-1}\), with inverse \(P\gamma^{-1}\).
+
+The returned section bounds \(S^2\times D^2\) on one side and
+\(S^1\times D^3\) on the other. The upper boundary change extends,
+so the unit round four-sphere can be marked along precisely this
+section. In the round orbit coordinates \((\cos\theta\,x,\sin\theta\,y)\)
+for \(x\in S^2,y\in S^1\), take \(\pi/4\le\theta\le\pi/3\).
+The central section has positive scalar curvature and projects with
+degree one. With the actual two outward mean traces and scalar curvature
+12, the two-end comparison is strict although the measured width
+\(\pi/12\) is below the width-only threshold. The whole round metric
+has zero Weyl energy in both signs. Its marked band certifies the
+returned cut; the earlier meridian-first Mazur band was constructed
+on a different trace.
+
+More generally a marked two-component block \(Y_r\to Y_{r+2}\)
+can be removed at the upper end if it meets the low tunnel-number
+criterion \cite[Corollary 1.3]{MeierSchirmerZupan2016Trisections}.
+A pair in a specified three-ball admits another test. A generalized
+square-knot component recognizes its local closure by Meier--Zupan
+\cite[Theorem 1.1]{MeierZupan2022SquareKnots}. Uniqueness of the
+embedded upper body in \(S^4\) and isotopy of the parametrized bottom
+and side three-ball identify the local filling with the split one
+relative to the lower interface. This can replace an interior block
+with all its successors transported. At the top it reduces the middle
+count by two. In the one-lower zero-winding chain a relative split pair can
+therefore bridge a missing single-prefix certificate. For instance a
+clean winding-one first reduction carries the selected square-knot pair
+in its untouched ball to \(S^3\). Its two failed single cuts are now
+crossed jointly, giving \(3\to2\to0\) on this marked closure.
+
 
 \section{The cost of making a spherical cut}\label{sec:cost}
 
@@ -618,6 +670,58 @@ seam change, the capped exterior has exactly the same energy as for
 the seam change alone \cite{Baker2026CollarDeformation}.
 The selected minimizing sequence still lacks a measured fit or a
 saving that pays the complete exterior cost.
+
+\subsection{What a measured discrepancy would cost}
+A convex reference ball can have exactly the induced face metric while
+its shape \(S\) misses the physical trace-free shape \(K^\circ\).
+Normalize its mean trace by a conformal normal derivative. In a
+native inward strip of width \(w\), use an interpolating cutoff
+\(\chi(-t/w)\), equal to one on the physical side. Each signed
+energy of the entire new cap then has leading term
+\[
+ \frac{\|(x\chi)''\|_{L^2(0,1)}^2}{4w}
+      \int_{\partial D}|K^\circ-S^\circ|^2\,dA_h
+\]
+and bounded fixed-source remainder. The scalar singularity cancels
+because the discrepancy is trace-free. The finite bounds in the
+deformation manuscript compare the complete cost with \(m^\sigma-d\)
+at a width where the capped exterior is genuinely positive.
+The boundary transgression determines the difference of the two costs.
+It leaves their common leading expense to be measured
+\cite{Baker2026CollarDeformation}.
+
+A nonround rotational ellipsoid in \(\R^5\) supplies an exact
+hyperbolic fit on one transverse height. A conformal normalization
+matches its first jet. Its positive cap form includes the outward
+normal derivative of the hyperbolic conformal factor in flat
+coordinates. Near the round member one obtains a whole positive path
+with peak below \(2T\), positive incoming mass on both sides in both
+signs and a strict saving at a finite width. This uses the induced
+metric on a known standard sphere and consumes the full disk.
+On the minimizing source an exact fit with positive capped exterior
+would force \(m_i^\sigma\le d_i\) at the same index. It is already
+excluded on the late charged disks. An affordable approximate fit
+on the original marking still requires physical boundary data.
+
+For a proposed coupled path \(h_s\) from \(g\), use an actual
+disk-side collar \(A\) to interpolate separately from the complete
+interior and exterior states to \(g\), obtaining two closed metrics
+\(p_s,q_s\). Put \(e_s=E_+(h_s;M)\). Their energy sum is
+\(e+e_s+J(s)\), where \(J\) is the sum of their two collar energies
+minus both the incoming and joined collar energies, identically in
+either sign. With \(p_s=g\) on the entire exterior, put
+\(R^\sigma(s)=E_\sigma(p_s;A)-E_\sigma(h_s;A)\).
+At a matched endpoint of a path with \(H=\sup e_s<2T\),
+either \(R^\sigma(1)\ge m^\sigma+I-e_1-d\) in both signs, or at
+some time \(J(s)\ge2T-d-H\). The first bound follows by isolating
+the disk and using the positive cap on the complete exterior. The
+second uses the first time an isolated path reaches energy \(2T\). These apply even with overlapping changes. For an
+enlarged disk insert the full mass with its protected term
+\(2^{-k}q_i^\sigma\); preserving the whole core adds
+\(e_1\ge I+\max q_i^\sigma\). A merely strict width-dependent
+peak can approach \(2T\), in which case the second lower bound
+need not remain positive.
+
 
 \section{Selection, termination and outstanding challenges}
 
