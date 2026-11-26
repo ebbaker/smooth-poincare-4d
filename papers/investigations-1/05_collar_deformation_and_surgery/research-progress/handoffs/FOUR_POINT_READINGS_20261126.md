@@ -11,3 +11,15 @@
 4. Read surgery notes/FOUR_PORT_BOUNDARY_PATTERN.md (96591a372a0c), FOUR_PORT_EQUIVARIANT_LINKING.md (6042e3619b0b), and the cohomology calculation in FOUR_POINT_TWISTED_CHORDS.md (48e5a935dc2d). Verify all equivariant coefficients, the slab and capped link homology comparison, the two surface tests, and the possible geometric sufficient test. Additionally test the following lead corollary: for freely chosen disjoint common face chords, a simultaneous twist about the 13 curve can set both opposite linking coefficients to zero. Show whether both complete abelian return classes then vanish at their unique wall windings. Write reviews/FOUR_POINT_HOMOLOGY_READER.md.
 
 5. Read the integrated surgery manuscript at c3a181b37e55, section “Four points with two through arcs,” the parent synthesis at c90361605035, and the unique-slope proof 66d52926f68f. Independently try to break the uniqueness theorem, the boundary-pattern prime/word algorithm and the double-face equality test. Check the null-homologous twist (including intersection count), the unfilled disk/two-point corollary, and all count statements. Check the theorem numbers cited and identify any unproved statement that needs qualification. Write reviews/FOUR_POINT_MANUSCRIPT_READER.md.
+
+**Final manuscript readback.** Reading 5 also checks final surgery c293209e5205 against first integrated reading c3a181b37e55, parent c90361605035 unchanged, plus the completed geometric decision 4ae503e80d03 and null-homologous obstruction d79571f7afe9. The source issue acquired its bounded follow-ups E02ac–ae after ac934a5d0253 and is now 7e808251d2d8. In E02aa, replacing the literal punctuation “.+If” with a line break before “If” changed 96591a372a0c to 58df53e34c84 without changing any calculation.
+
+| Frozen independent reading | Scope |
+| --- | --- |
+| [Twisted chords](../../reviews/FOUR_POINT_TWIST_READER.md) | Fixed-endpoint integral obstruction, arbitrary wall windings and separate free-chord question. |
+| [Exterior and closing](../../reviews/FOUR_POINT_FIXTURE_READER.md) | Original joint diagram, two sheets, supports, successors, both directions of the native maps and the terminal count. |
+| [Subsurface compression](../../reviews/FOUR_POINT_COMPRESSION_READER.md) | Native filling sectors, both HNN maps and the nonperipheral Loop Theorem disk. |
+| [Homology and the surface tests](../../reviews/FOUR_POINT_HOMOLOGY_READER.md) | Equivariant coefficients, oriented simultaneous normalization, sufficient separator test and the distinction from disk existence. |
+| [Integrated theorem](../../reviews/FOUR_POINT_MANUSCRIPT_READER.md) | Face-slope uniqueness, relative prime and disk algorithms, seam matching, twists, unfilled face criterion, and actual closing. |
+
+Scientific readback SHA-256 prefixes in assignment order are `3f4480a6eda2413d`, `6a09542ae2cc709b`, `80e1b2ff5119ecba`, `53903033b4b6a89d`, `264b0f97b26153b7`.

@@ -1,12 +1,14 @@
 # Lean formalization
 
+**Edition 05 · FOT-E48.** Uniform normal charts on both physical stationary scales, harmonic-coordinate Ricci estimates, and the conformal trace of the original functional are checked. [Assessment](investigations/reviews/ED05_E48_STATIONARY_BALLS_AND_VARIATION.md) · [Public verification](investigations/research-progress/handoffs/ED05_E48_VERIFICATION_20261126.md) · [Continue here](investigations/continuation-notes/AFTER_STATIONARY_BALLS_AND_VARIATION_20261126.md)
+
 **Edition 05 setup · 26 November 2026.** [Start with the original flows and marked return](investigations/continuation-notes/EDITION_05_BOUR_ATTAINMENT_20261126.md).
 
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III
 with OpenAI Codex assistance. The exact serving model and reasoning effort
 are unavailable.
 
-The [Edition 05 overview](investigations/research-overview/05_OVERVIEW.md) pairs the two Bour investigations with the separate entry and attained-rigidity problems. [Current plan](investigations/research-plan/05_PLAN.md) · [Proof owners](investigations/README.md#proof-investigations) · [Baseline and pins](investigations/research-progress/05_BASELINE.md) · [Checked Lean milestone](investigations/reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)
+The [Edition 05 overview](investigations/research-overview/05_OVERVIEW.md) pairs the two Bour investigations with the separate entry and attained-rigidity problems. [Current plan](investigations/research-plan/05_PLAN.md) · [Proof owners](investigations/README.md#proof-investigations) · [Baseline and pins](investigations/research-progress/05_BASELINE.md) · [Checked E47 milestone](investigations/reviews/ED05_E47_BOUR_BUDGET_AND_MARKED_RETURN.md)
 
 The Lake package has three public imports.
 

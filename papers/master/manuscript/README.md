@@ -10,7 +10,7 @@ The master asks what would rule out a nonstandard smooth structure on a homotopy
 | Recognition and cutting | [Inclusive recognition gap](recognition_gap.tex) · [Complete capped pieces and smooth reassembly](marked_cut.tex) |
 | Fixed smooth type | [Proof outline for original flows, both limiting alternatives and the smooth marking](attainment_on_the_original_sphere.tex) · [Full 06 paper](../../investigations-1/06_bour_flow_and_fixed_type_attainment/manuscript/README.md) · [Assessment and independent readings](../../investigations-1/06_bour_flow_and_fixed_type_attainment/reviews/FIXED_TYPE_ATTAINMENT_20261126.md) |
 | Consequences of attainment | [Finiteness up to a fixed distance below the wall](exact_closed_types.tex) · [Signed Hessian, Einstein alternative and constant-Schouten gauge](chiral_weyl_energy_and_smooth_poincare.tex) |
-| Independent smooth recognition | [Immersed energy threshold, height distribution and two-point marked reduction](immersion_entry.tex) · [05 assessment and remaining diagrams](../../investigations-1/05_collar_deformation_and_surgery/reviews/TWO_POINT_LOCALIZATION_20261126.md) |
+| Independent smooth recognition | [Immersed energy threshold, height distribution and two-point marked reduction](immersion_entry.tex) · [05 two-point theorem](../../investigations-1/05_collar_deformation_and_surgery/reviews/TWO_POINT_LOCALIZATION_20261126.md) · [Four-point face-slope decision and terminal example](../../investigations-1/05_collar_deformation_and_surgery/reviews/FOUR_POINT_RETURNS_20261126.md) |
 
 ## Where the supporting proofs now appear
 

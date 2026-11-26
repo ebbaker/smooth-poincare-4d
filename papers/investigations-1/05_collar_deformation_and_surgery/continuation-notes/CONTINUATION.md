@@ -1,6 +1,8 @@
 # Continue collar deformation and marked surgery
 
-Use [the handoff after two-point localization](AFTER_TWO_POINT_LOCALIZATION_20261126.md) for the next session. The [narrowed marked-surgery plan](NARROWED_MARKED_SURGERY_20261126.md) records the candidate selection that led to it. The [exterior recovery and core retention handoff](AFTER_EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md) preserves the previous scientific milestone. The activation request below is retained at its original scope.
+Resume from [the Whitehead mixed-returns handoff](AFTER_WHITEHEAD_MIXED_RETURNS_20261126.md). It records the new obstruction for every lower chord, the marked two-point successor and the unreduced selection problem.
+
+The preceding session used [the four-point handoff](AFTER_FOUR_POINT_RETURNS_20261126.md) for the next session. The [two-point handoff](AFTER_TWO_POINT_LOCALIZATION_20261126.md) records the preceding theorem. The [narrowed marked-surgery plan](NARROWED_MARKED_SURGERY_20261126.md) records the candidate selection that led to it. The [exterior recovery and core retention handoff](AFTER_EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md) preserves the previous scientific milestone. The activation request below is retained at its original scope.
 
 26 November 2026 · Prepared for Edward B. Baker III with OpenAI Codex assistance. [Source versions](../references/README.md) · [Parent register](../research-progress/REGISTER.md) · [Road to SPC4](../research-plan/PLAN.md) · [Measurements](../brainstorm/notes/MARKED_COLLAR_AND_CUT_20261126.md). This handoff starts from an approved design. The exact-face calculation is a discussion input and the universal selection theorem remains open.
 

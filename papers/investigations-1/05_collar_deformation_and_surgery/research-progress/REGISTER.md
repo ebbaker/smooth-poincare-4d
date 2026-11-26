@@ -2,7 +2,7 @@
 
 26 November 2026, for Edward B. Baker III with OpenAI Codex. This register owns the joint comparison. The [deformation](../01_collar_deformation_and_adapted_coordinates/research-progress/REGISTER.md) and [surgery](../02_handle_isolation_and_marked_surgery/research-progress/REGISTER.md) registers own the scientific derivations. [Plan](../research-plan/PLAN.md) · [Revision receipt](../references/README.md#activation-revision-check-26-november-2026) · [Assessed milestone](../reviews/TWO_MIXED_CUTS_AND_CHARGED_DISK_20261126.md)
 
-The [two-point milestone](#two-point-localization-26-november-2026) sets the next topological selection. The [narrowed plan](../research-plan/PLAN.md) governs candidate-specific metric comparisons. The preceding research milestones and their handoffs below retain their original scopes.
+The [four-point milestone](../reviews/FOUR_POINT_RETURNS_20261126.md) gives the current selection problem after the two-point theorem. The [narrowed plan](../research-plan/PLAN.md) governs candidate-specific metric comparisons. The preceding research milestones and their handoffs below retain their original scopes.
 
 | Task | Assessed state | Evidence or next input |
 | --- | --- | --- |
@@ -72,3 +72,20 @@ Generic charged-disk extraction and new collar-price campaigns are reserved whil
 | CDS-B03 / DEF-B02 | No physical comparison was opened for this topological source. | Any analytic packet needs a candidate giving recognition, strict same-type saving or an admissible instability on its supplying metric. [Deformation owner](../01_collar_deformation_and_adapted_coordinates/research-progress/REGISTER.md) |
 
 [Current handoff](../continuation-notes/AFTER_TWO_POINT_LOCALIZATION_20261126.md) · [Return to the master](../../../master/research-progress/handoffs/TWO_POINT_TERMINAL_REDUCTION_20261126.md)
+
+### Four-point face slopes, 26 November 2026
+
+| Task | Assessed result | Next geometric input |
+| --- | --- | --- |
+| CDS-B03 / SUR-B04 | For one return on each face and two through arcs, a nonperipheral compression exists in the filled slab. Any return bridge determines a unique disk-bounding face slope, recoverable and testable on a triangulation. The specified terminal fixture descends from three middle handles to zero. | On a different exterior seek a marked return-side solid torus, a face disk before filling, or another reducing system. An arbitrary localized terminal pair with the single split lower attachment already drops to two. |
+| CDS-E02 / SUR-E02x–ae | Two disjoint one-puncture disks, support at three consecutive deck indices, actual two-point successor, and sharp four-to-two-to-zero minima. One re-marking obstructs both prescribed words in homology; another obstructs both only after testing the fundamental group. | The narrowed physical gate applies to a separately specified candidate on the entered smooth type. |
+
+[Assessment](../reviews/FOUR_POINT_RETURNS_20261126.md) · [Frozen readers](handoffs/FOUR_POINT_READINGS_20261126.md) · [Next handoff](../continuation-notes/AFTER_FOUR_POINT_RETURNS_20261126.md)
+
+### Mixed exterior with one obstructed face, 26 November
+
+| Task | Assessed outcome and remaining selection |
+| --- | --- |
+| CDS-B03 / E02 | On a different minimum-four exterior, a capped word excludes every lower chord. Two twice-punctured upper and successor disks restore the actual local Figure 5 link and give three terminal cancellations. The finite triangulated control tests prescribed and selectable chords independently. Explore survival of both return words on a true free outlet or another port pairing. [Assessment](../reviews/WHITEHEAD_MIXED_RETURNS_20261126.md) · [Native surgery owner](../02_handle_isolation_and_marked_surgery/research-progress/REGISTER.md) · [Handoff](../continuation-notes/AFTER_WHITEHEAD_MIXED_RETURNS_20261126.md) |
+
+The example supplies no candidate-specific physical metric. The existing complete-side conditions and ownership remain in the [research plan](../research-plan/PLAN.md).

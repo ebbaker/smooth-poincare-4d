@@ -137,7 +137,9 @@ private theorem metricFamilySmoothOn_constLogScaling
     · intro t _ x
       apply ContinuousMultilinearMap.ext
       intro v
-      simp only [metricTensorField_apply, smul_apply, smul_eq_mul]
+      change (Real.exp (2 * t) • metricTensorField g x) v =
+        metricTensorField (conformalMetric g (.const t)) x v
+      rw [smul_apply, smul_eq_mul, metricTensorField_apply, metricTensorField_apply]
       exact (hMult t x (v 0) (v 1)).symm
   · intro Idx _ frame u hFrame i j
     simp only [hMult]

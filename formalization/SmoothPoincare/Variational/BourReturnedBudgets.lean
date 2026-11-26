@@ -28,6 +28,7 @@ private local instance : BorelSpace M := ⟨rfl⟩
 
 private local instance : IsManifold I 1 M := IsManifold.of_le (by decide : (1 : WithTop ℕ∞) ≤ ∞)
 
+omit [I.Boundaryless] [Nonempty M] [BoundarylessManifold I M] in
 /-- An actual first variation along the negative twice-gradient equation
 supplies the functional sublevel used by the budget. This direction does
 not assume an original-trajectory sublevel record. -/
@@ -47,6 +48,7 @@ theorem original_gradient_sublevel (q : ℝ → SignedCollarMetric o) (α a b : 
     intervalIntegral.integral_nonneg hab (fun t _ => integral_nonneg (fun x => normSq0S_nonneg _ _ _ _))
   exact ⟨by linarith, by linarith⟩
 
+omit [I.Boundaryless] [Nonempty M] in
 /-- The functional is unchanged on actual constant rescalings in dimension
 four, with the closed Euler evaluations stated on the supplying metrics. -/
 theorem bourEnergy_scale (q scaled : SignedCollarMetric o) (α c : ℝ) (hc : 0 < c)
@@ -140,7 +142,9 @@ theorem mixedReturn_energy_and_parameter {P : ℕ → Type*} [∀ j, Topological
       change (f j).energy (s j) - Istar ≤ _ at h
       linarith
   have hQuot : Tendsto (fun j => (f j).energy (s j) / (1 - α j)) atTop (𝓝 Istar) := by
-    simpa using hStart.div ((hConst 1).sub hα) (by norm_num : (1 : ℝ) - 0 ≠ 0)
+    have h := hStart.div ((hConst 1).sub hα) (by norm_num : (1 : ℝ) - 0 ≠ 0)
+    rw [sub_zero, div_one] at h
+    exact h.congr fun j => by rfl
   have hBounds : ∀ᶠ j in atTop, Istar ≤ (q j).energy .plus ∧
       (q j).energy .plus ≤ (f j).energy (s j) / (1 - α j) ∧ 0 ≤ p j ∧ p j ≤ α j := by
     filter_upwards [hBud, hr, hY] with j hb ht hy
@@ -153,6 +157,54 @@ theorem mixedReturn_energy_and_parameter {P : ℕ → Type*} [∀ j, Topological
   cases sign with
   | plus => exact hPlus
   | minus => exact hPlus.congr fun j => (q j).signature_zero
+
+/-- One cutoff for the mixed physical representatives. The closed arm keeps
+the physical Ricci transfer. On the exact arm the Yamabe scalar-square bound
+is applied on the new representative. A Yamabe representative of the
+returned class also yields its positive class floor. -/
+theorem mixedReturn_uniform_physical_budget {P : ℕ → Type*} [∀ j, TopologicalSpace (P j)]
+    {α p : ℕ → ℝ} {s : ∀ j, P j} (f : ∀ j, OriginalTrajectory o (α j) (s j))
+    (q : ℕ → SignedCollarMetric o) (hα : Tendsto α atTop (𝓝 0)) (hp : ∀ j, 0 < α j)
+    (he : ∀ j, (f j).excess ≤ α j ^ 2) (hb : ∀ᶠ j in atTop, ∀ t, TimeBudget (f j) t)
+    (hr : ∀ᶠ j in atTop, ReturnedMeasurements (f j) (q j) (p j))
+    (hY : ∀ᶠ j in atTop, 0 < classYamabeFour o.dimension_eq (q j).metric)
+    (rep : ∀ j, UnitYamabeRepresentative (q j))
+    (hEuler : ∀ m : SignedCollarMetric o, bourEuler m = 16 * Real.pi^2)
+    (hEntry : sInf (geometricPositiveEnergies o) < 8 * Real.pi^2) :
+    let δ := 8 * Real.pi^2 - sInf (geometricPositiveEnergies o)
+    ∀ᶠ j in atTop, Real.sqrt (24 * δ) ≤ classYamabeFour o.dimension_eq (q j).metric ∧
+      bourRicci (q j) ≤ 32 * Real.pi^2 - 2 * δ ∧
+      bourScalar (q j) ≤ 384 * Real.pi^2 + 48 * α j ∧
+      bourFullCurvature (q j) ≤ 48 * Real.pi^2 - 2 * δ := by
+  intro δ
+  let Istar := sInf (geometricPositiveEnergies o)
+  have hδ : 0 < δ := sub_pos.mpr hEntry
+  have hEnergy := (mixedReturn_energy_and_parameter f q hα hp he hb hr hY (fun j => hEuler (q j))).1 .plus
+  have hE : ∀ᶠ j in atTop, (q j).energy .plus < Istar + δ/2 :=
+    hEnergy.eventually (gt_mem_nhds (lt_add_of_pos_right _ (half_pos hδ)))
+  filter_upwards [hb,hr,hY,hE,hα.eventually (gt_mem_nhds (half_pos hδ))] with j hj hret hy hUpper hSmall
+  have h := fixedReturn_budget _ _ hret (hp j) (he j) hj hy (hEuler _)
+  have hI := h.1
+  have hD := h.2.2.2.2
+  have hYGB := bourEuler_eq_charges (rep j).rep
+  rw [hEuler, (rep j).scalar_square, (rep j).energy_eq] at hYGB
+  have hPos := bourRicci_nonneg (rep j).rep
+  have hQGB := bourEuler_eq_charges (q j)
+  rw [hEuler] at hQGB
+  have hR0 := (f j).start_yamabe_sq_le
+  dsimp only [δ, Istar] at hUpper hSmall ⊢
+  have hyFloor : Real.sqrt (24 * δ) ≤ classYamabeFour o.dimension_eq (q j).metric := by
+    apply (Real.sqrt_le_iff).2
+    exact ⟨hy.le, by dsimp [δ,Istar] at *; linarith only [hYGB,hPos,hUpper]⟩
+  have hPair : bourRicci (q j) ≤ 32 * Real.pi^2 - 2 * δ ∧
+      bourScalar (q j) ≤ 384 * Real.pi^2 + 48 * α j := by
+    dsimp [δ]
+    rcases hD with hd | ⟨_, hd⟩
+    · constructor <;> linarith only [hd, hR0, hSmall, hQGB, hI]
+    · constructor <;> linarith only [hd, hUpper, hQGB, (hp j)]
+  refine ⟨hyFloor,hPair.1,hPair.2,?_⟩
+  rw [bourFullCurvature_eq_euler_add_ricci, hEuler]
+  linarith only [hPair.1]
 
 /-- The actual fixed-flow measurements, with either branch at each index,
 supply the deficit test on the specific second marked sequence.

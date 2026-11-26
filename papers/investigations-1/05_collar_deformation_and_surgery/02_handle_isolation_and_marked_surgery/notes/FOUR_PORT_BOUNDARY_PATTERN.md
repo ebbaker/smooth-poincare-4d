@@ -141,7 +141,8 @@ candidate's actual null word is the disk test.
 
 An essential separating boundary has a planar side. If that side contains one
 through hole, the curve is peripheral and its meridian image in \(H_1(X)\)
-excludes a disk. If it contains neither, the curve bounds a disk in \(U\).+If it contains both, the planar side is a pair of pants and the other side a
+excludes a disk. If it contains neither, the curve bounds a disk in \(U\).
+If it contains both, the planar side is a pair of pants and the other side a
 once-holed torus. The boundary represents zero in \(H_1(U)\). Its algebraic
 intersection with the return meridian is zero even if its geometric
 intersection is positive. The longitude calculation does not exclude this

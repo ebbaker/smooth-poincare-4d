@@ -43,7 +43,7 @@ theorem bourFirstPointed_excess_and_deficit (start returned : SignedCollarMetric
 
 /-- A second marked pointed return forces saturation of the round Yamabe
 bound by the *initial* representatives on this subsequence, even if the
-regularized closed and exact pointed returns alternate. The limit's strict
+regularized closed and exact pointed returns alternate. The limit's upper
 energy comparison and the full Ricci lower semicontinuity come from different
 geometric inputs. -/
 theorem bourMixedPointed_startYamabeSq_tendsto (start q : ℕ → SignedCollarMetric o)

@@ -33,3 +33,11 @@ Recovered the first radial slide from a peripheral annulus in the given marked e
 ## 26 November 2026 · Two-point localization and a knotted completion
 
 Proved localization on the twice-intersecting meridional cut, identified the successful longitude and established a strict terminal three-to-two reduction for an arbitrary returned local pair. The selected nonlocal exterior with knotted opposite completion gives three cancellations. [Assessment and independent checks](../reviews/TWO_POINT_LOCALIZATION_20261126.md)
+
+## 26 November 2026 · Recovering the four-point bridge chord
+
+The mixed-pairing cut forces a subsurface compression. A bridge, when present, cuts off a marked solid torus and determines the unique compressible face slope. The [proof and fixture](../reviews/FOUR_POINT_RETURNS_20261126.md) also distinguish fixed-word failure from the existence of another reducing arc.
+
+## 26 November 2026 · Whitehead returns and the lower face word
+
+A minimum-four exterior has no lower bridge on any chord. The other face and its two-point successor each require two core passages, recover the actual Figure 5 trace and give three terminal cancellations. [Assessment and input distinctions](../reviews/WHITEHEAD_MIXED_RETURNS_20261126.md)

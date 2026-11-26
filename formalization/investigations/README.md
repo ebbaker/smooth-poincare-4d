@@ -1,5 +1,9 @@
 # Formalization investigations
 
+**FOT-E48 · 26 November 2026.** [Assessment](reviews/ED05_E48_STATIONARY_BALLS_AND_VARIATION.md) · [Public verification](research-progress/handoffs/ED05_E48_VERIFICATION_20261126.md) · [Continue here](continuation-notes/AFTER_STATIONARY_BALLS_AND_VARIATION_20261126.md)
+
+**FOT-E47 · 26 November 2026.** [Geometric milestone](reviews/ED05_E47_BOUR_BUDGET_AND_MARKED_RETURN.md) · [Public checks](research-progress/handoffs/ED05_E47_VERIFICATION_20261126.md) · [Continue here](continuation-notes/AFTER_BOUR_BUDGET_AND_MARKED_RETURN_20261126.md)
+
 **Edition 05 · 26 November 2026.** The formal research program follows a smooth type through entry, the Bour attainment argument, and rigidity of an attained minimum. [Overview](research-overview/05_OVERVIEW.md) · [Proof plan](research-plan/05_PLAN.md) · [Progress at issue](research-progress/05_BASELINE.md) · [Start here](continuation-notes/EDITION_05_BOUR_ATTAINMENT_20261126.md)
 
 Use the [formalization setup workflow](../FORMALIZATION_SETUP_WORKFLOW.md)

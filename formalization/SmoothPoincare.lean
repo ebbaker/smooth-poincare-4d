@@ -196,4 +196,14 @@ import SmoothPoincare.Variational.BourFlowBranches
 import SmoothPoincare.Variational.BourReturnedBudgets
 import SmoothPoincare.Variational.BourAttainedVariation
 
+import SmoothPoincare.Variational.BourHarmonicBalls
+import SmoothPoincare.Variational.BourHarmonicRicci
+import SmoothPoincare.Variational.BourConformalTrace
+import SmoothPoincare.Variational.BourSlabVariation
+import SmoothPoincare.Variational.BourScaleCalibration
+import SmoothPoincare.Variational.BourCompactTransfer
+import SmoothPoincare.Variational.BourPointedTransfer
+import SmoothPoincare.Variational.BourMarkedEnd
+import SmoothPoincare.Variational.BourStartDeficit
+
 /-! # Public imports for fixed-type descent, immersed recognition, marked cuts and Bour attainment -/

@@ -1,3 +1,4 @@
+% One-mouth and Whitehead-pattern exteriors, intake 226b8f404b6e, 26 November 2026.
 % Four-point marked returns, working intake 4d73fdde6804, 26 November 2026.
 % Two-point localization and the knotted opposite completion, intake 4da586548b44, 26 November 2026.
 % 26 November 2026. Exterior recovery and native caps, intake 8471728a1549.
@@ -1658,7 +1659,15 @@ irreducibility.
 
 Here is how to find the candidate without a supplied bridge. The
 boundary of \(X\) is connected. Prime decomposition retains its
-marked boundary on one summand. Disk-bounding for simple curves
+marked boundary on one summand. For example, in the boundary-bearing
+piece test the finite normal candidates for an essential sphere,
+including doubles of one-sided projective planes. A nonseparating
+sphere is essential. For a separating sphere test the side away
+from the original boundary for a ball by capping and recognizing
+the three-sphere. Cut and cap at an essential sphere and retain
+the piece carrying the marked boundary. Kneser finiteness gives
+termination at its irreducible factor
+\cite[Theorem 4.1.12 and Chapter 5]{Matveev2007Algorithmic}. Disk-bounding for simple curves
 there is unchanged by the closed summands, by free-product
 injectivity and Dehn's lemma. On the irreducible boundary-bearing
 summand put a boundary pattern on the four cuffs and a graph cutting
@@ -1667,7 +1676,7 @@ can contain the boundary of an essential clean disk is \(F_0\).
 Its cuffs have infinite-order meridians, so its essential
 nonperipheral circles are essential in the entire boundary.
 Matveev's algorithm gives an essential clean disk or verifies its
-absence \cite[Theorems 4.1.12--4.1.13]{Matveev2007Algorithmic}.
+absence \cite[Theorem 4.1.13]{Matveev2007Algorithmic}.
 If no disk is found, no bridge exists. Otherwise try its separator.
 A different partition of the holes rules out the return by uniqueness.
 For the correct partition choose the arc in the return-side pants,
@@ -1684,9 +1693,10 @@ Indeed disjoint arcs joining \(12\) and \(34\) determine a common
 separating slope. Conversely a common separator puts the arcs in
 opposite pairs of pants. Use boundary collars and the wall sections
 to fit their marked end germs, then remove interior disk intersections
-by innermost-circle replacement. If individual face arcs were
-prescribed initially, the same test compares their separators
-with the recovered classes.
+by innermost-circle replacement. For fixed face arcs the separator comparison tests each arc up to
+endpoint turns with a free wall section. For a literally prescribed
+pair, check matching and disjointness of the given representatives
+as well. A prescribed wall winding must itself pass the word test.
 \end{proof}
 
 There is also a test before stationary filling. If an essential
@@ -1699,7 +1709,9 @@ core twice each, and, with induced orientations, sum to the original
 nonzero sphere class in the inlet. At least one is nonseparating.
 Theorem~\ref{thm:two-port} therefore localizes the original pair.
 In a fixture with minimum four, every compressing disk on the face
-after stationary filling must meet the filling core.
+after stationary filling must meet the filling core: otherwise
+shrink a tube around that core away from the disk and absorb the
+remaining torus collar into the unfilled exterior.
 
 The abelian tests for freely chosen chords can always be passed
 simultaneously. Before stationary filling the slab exterior has
@@ -1711,9 +1723,12 @@ zero by the cover calculation. With a zero-longitude section the
 two return classes in this basis are therefore \(b_\pm\mu_t\), where
 \(b_\pm=\operatorname{lk}(J_\pm,C)\) and \(b_-+b_+=0\).
 A common twist about a circle enclosing \(1,3\) as above changes
-one through coefficient by one per turn. The other changes by its
-negative: recapping gives the same meridian coordinates and the
-distance-one cover relation still holds. Choose the power which
+one through coefficient by one per turn. The two chords in the oriented return boundaries run from
+\(2\) to \(1\) and from \(3\) to \(4\). They cross the circle
+in opposite directions in a common face chart. On each face its
+two enclosed holes contribute the own-return and through meridians
+with the same sign in that chart. Thus the through coefficients
+shift oppositely. Choose the power which
 sets both to zero, and absorb each own-meridian term in its wall
 section. Null-homology alone still allows a geometric obstruction.
 
@@ -1759,6 +1774,244 @@ alone needs only localization. The separate stabilized diagram
 comparison for this local link temporarily raises the middle count
 to four, removes that same Hopf pair, and returns to three before
 the cancellations \cite[\S10]{GompfScharlemannThompson2010}.
+
+\subsection{A compressible face with no bridge on any lower chord}
+\label{sec:whitehead-returns}
+
+Start from the joint zero-framed link of Figure~5 of
+Gompf--Scharlemann--Thompson, with square knot \(Q\) and unknot \(U\).
+Cut a short mouth from \(U\) in a ball missing \(Q\). Place its
+complementary ball against a disk containing ports \(1,2\) on the
+lower face of \(S^2\times I\). The long part of \(U\) is the lower
+return. Put a shallow cap at \(3,4\) on the upper face and take the
+two through strands to be the sides of a rectangle swept from the
+short \(34\) chord at the bottom to the \(12\) chord at the top.
+Keep the two end patches disjoint on the common sphere and identify
+the seams by the identity. The rectangles and mouth recover the
+joint diagram relative to its stationary tube. Both closed components
+have winding zero; give each its integral zero framing.
+
+\begin{proposition}\label{prop:opaque-return}
+After stationary filling, the lower four-holed face has a unique
+compressible slope. Even on its twice-punctured torus obtained by
+adjoining the return wall, every simple essential disk boundary is
+isotopic to that separator. No lower chord and wall section gives a
+bridge. The upper short chord gives a bridge.
+\end{proposition}
+\begin{proof}
+The hemisphere \(E\) complementary to the lower mouth disk is an
+unfilled separating disk in the drilled slab. On its return side,
+stationary filling gives
+\[
+ P=S^3_0(Q)\setminus\operatorname{int}\nu U.
+\]
+Restoring the omitted trivial short-arc exterior just adds an annulus
+collar. Write \(M=S^3_0(Q)\) and \((\mu,\lambda)\) for the meridian and
+zero longitude of \(U\). Algebraic splitting gives
+\(H_1(P)=\mathbb Z^2\), with \(\mu\) primitive and \(\lambda\) zero.
+The native fillings are \(P(\mu)=M\) and \(P(\lambda)=Y_2\).
+A compression of the boundary torus has primitive slope \(\lambda\).
+Compressing its collar would exhibit a punctured solid torus, so
+these two fillings would give \(M\) and \(M\#Y_1\) respectively.
+Prime uniqueness would give \(M=Y_1\), contrary to Property~R for
+the square knot. Thus the Loop Theorem gives injection of the full
+peripheral \(\mathbb Z^2\). This argument also applies to any such
+local two-component zero-surgery link with a nontrivial stationary
+knot \cite[Theorem 1.1 and Figure 5]{GompfScharlemannThompson2010}.
+
+Cutting at \(E\) gives a free product. On the lower enlarged port,
+killing \(s=\partial E\) gives a torus group on the return side and
+an infinite cyclic group on the through side. The torus injects by
+the preceding argument. A through meridian has infinite order by
+the oriented meridian calculation in Section~\ref{sec:four-port};
+it lies in the other factor. Thus the quotient
+\(\mathbb Z^2*\mathbb Z\) embeds. A simple loop crossing \(s\)
+minimally has alternating essential waves. In the once-holed torus
+a wave caps to a nonzero torus class, since an essential proper
+arc from its sole boundary to itself is nonseparating. In the
+through pair of pants a wave encloses one through cuff.
+The alternating word survives. A simple curve disjoint from \(s\)
+is detected in its own factor unless parallel to \(s\) or inessential.
+The same argument on the four-holed face uses the return meridian
+in place of the torus. Every clipped bridge runs algebraically once
+across the return meridian, whereas \(s\) is disjoint from it.
+This excludes every lower chord, including endpoint turns. The
+upper cap itself supplies its disk.
+\end{proof}
+
+There is a shorter independent word test which survives changes of
+all the other strands. Restore the moving neighborhoods and cap both
+faces. Every completed lower chord now represents \(U\) up to
+conjugacy and inversion in \(\pi_1M\), since the restored face is a
+sphere and a wall winding bounds a meridian disk. In the genus-two
+bundle description, Figure~5 and Corollary~6.4 put \(U\), up to
+slides over the stationary longitude, on a nonseparating simple
+curve \(c\) of the closed fiber \(F\). Those slides are isotopies in
+\(M\) \cite[Lemma 6.2 and Corollary 6.4]{GompfScharlemannThompson2010}.
+In \(V=H_1(F;\mathbb F_2)\) the class \([c]\) is nonzero.
+The monodromy \(h\) has \(h_*^3=1\) there by the hyperelliptic
+involution. Since \(H_1(M;\mathbb F_2)=\mathbb F_2\), the
+coinvariants vanish and \(h_*-1\) is invertible. Hence
+\(h_*^2+h_*+1=0\). Regard \(V\) as \(\mathbb F_4^2\), with
+\(h_*\) acting by a primitive cube root \(\omega\).
+Project onto the coordinate of a basis beginning with \([c]\).
+The resulting quotient of \(\pi_1 M\) acts on \(\mathbb F_4\) by
+\(z\mapsto a+\omega^k z\); it is \(A_4\).
+The lower word acts by a nonidentity translation up to conjugacy.
+More generally, in any stationary-filled slab, restore every moving
+tube and cap the two spherical faces. If the closure of a return has
+nonidentity class there, every chord and every wall winding for that
+return fails the drilled word test. The restoration kills the meridian
+and any two choices of chord become homotopic on the restored sphere.
+
+\paragraph{An unfilled two-point sphere.}
+In the shallow-cap model, compress the original sphere along \(E\).
+The component capping the \(12\) patch bounds the mouth ball
+containing \(Q\) and the long return. The other sphere represents
+the original primitive class and meets the moving knot only at
+\(3,4\). Across this sphere the shallow cap joins the rails. Their
+rectangle carries the resulting interval to the missing mouth of
+\(U\), recovering Figure~5 in a ball. In fact this input has a
+disjoint product sphere up to isotopy. A second exterior gives the
+same failed lower word at minimum intersection four.
+
+\begin{theorem}\label{thm:whitehead-four}
+There is a marked mixed four-point pair in \(Y_1\) with outlet
+\(Y_3\) for which the moving core has minimum intersection four
+over transverse nonseparating spheres disjoint from \(Q\).
+Precisely the upper return admits a
+bridge after stationary filling. Its short-chord disk requires two
+stationary-core punctures, with opposite signs attained. Its actual
+two-point successor has a second such disk and returns the local
+Figure~5 link. At an immediate rank-three closing the three middle
+handles cancel without stabilization.
+\end{theorem}
+\begin{proof}
+At two distinct azimuths take narrow zero-framed solid tori around
+two zero parallels of \(Q\). In each insert the untwisted Whitehead
+pattern \(J\), of algebraic winding zero and geometric index two
+\cite[Figure 3(a) and \S5]{AndristEtAl2017GeometricIndex}.
+Open a mouth on each pattern. Use one for the upper \(34\) return
+and insert the other along one through rail via a narrow access
+rectangle. Use disjoint access boxes, untwisted relative to the
+short chords. They enter the two stationary charts at their
+respective azimuths and miss the long lower return. Route the paths from the outward sides of the two carrier tori inside
+the mouth ball. They can cross the old hemisphere \(E\) and avoid
+the radial sheets, which lie on the inward sides. Outside those
+charts one can pass around the free rail edges of the swept rectangle.
+Keep its interior clear except at the rail gap. Perturb the two paths
+off each other and the remaining cores before thickening them. The capped lower
+word is still \(U\).
+
+In the stationary filling, a radial sheet and filling meridian disk
+cap each companion longitude in the chart of its zero framing.
+Two parallel copies of this cap, truncated at the companion torus,
+are disjoint and each meets the filling core once. In the pattern
+torus the Whitehead component bounds a pair of pants with two
+oppositely oriented zero-longitude cuffs. Indeed, use the spanning
+disk of that component pierced twice by the other component of the
+ordinary Whitehead link, and remove the two small meridian disks
+of the other component. In the complementary unknotted solid torus
+these meridians are precisely the zero longitudes
+\cite[Example 1 and Figure 2]{Thurston1986ManifoldNorm}; the component interchange is also exhibited in \cite[Figure 4]{HeddenKirk2012Whitehead}.
+Capping gives a disk for \(J\) with one intersection of each sign.
+Use the disjoint azimuths and narrow thickenings of the two cap
+sheets; the resulting disks and their access rectangles avoid the
+other moving strands. Opening the chosen mouths extends these
+disks along the product fingers to the required chords. For the
+rail, attach the swept rectangle after the upper cap has been pushed
+through the seam.
+
+Here the puncture count is sharp even allowing disks outside the
+chosen chart. In the capped unfilled exterior \(S^3\setminus\nu Q\),
+\(J\) is null-homotopic by its zero winding about the companion.
+One puncture would make its class conjugate to the nontrivial
+\(\lambda_Q^{\pm1}\), by deleting a small disk about the transverse
+intersection. A longitude disk would unknot \(Q\). Zero punctures
+would span \(J\) in the unfilled exterior. To exclude them, the
+Whitehead pattern exterior is irreducible, since the standard
+Whitehead link is nonsplit, and its outer torus is incompressible
+by positive geometric index. The other piece, the exterior of \(Q\)
+and its parallel, is irreducible: a sphere separating the parallel
+pair would carry an essential circle of their spanning annulus,
+unknotting \(Q\). The gluing torus injects there already on
+forgetting \(Q\), by the nontriviality of its parallel. Innermost
+disk surgery at this incompressible torus gives irreducibility
+of the union. Hence the joint pair \((Q,J)\) is nonsplit. A disk
+in the unfilled exterior would put \(J\) in a ball missing \(Q\).
+After the other drills have been restored, all face chords between
+the two endpoints are isotopic on the capped sphere. The mouth
+therefore gives the same capped knot for the zero-puncture test.
+The genus-two bundle \(M\) has \(\pi_2(M)=0\) by its fibration
+sequence. Gluing a rival disk to the exhibited one along their
+common boundary, with any chord isotopy in the cap, gives a sphere
+map in \(M\). Thus their signed core counts agree, including for
+disks leaving the chosen chart. Endpoint turns preserve the freely selectable
+upper bridge-chord class from Theorem~\ref{thm:four-face}.
+
+In the filled slab, first shorten each insertion to a shallow interior
+copy of its short arc, fixing the endpoint collars and both faces
+throughout. This precedes any push across the seam. The resulting
+ambient isotopy identifies the marked drilled exterior with the
+shallow-cap model. For the rail this smoothing erases the inserted
+mouth before moving the rail itself. Thus the lower separating
+slope and the injection of its capped torus group persist there.
+This identification transports the stationary filling core. The support
+calculation below excludes an unfilled face compression on either side.
+
+For the last assertion about the unfilled level, number the chambers
+so the through rails lie in chamber \(0\), the lower mouth in \(1\)
+and the upper return in \(-1\). Cutting a moving lift at the two
+seams exhibits the capped sublinks
+\((Q_{-1},J),(Q_0,J),(Q_1,U)\).
+The first two are nonsplit as just proved. The last is nonsplit by
+the nonidentity capped word. The other chambers give local knot
+summands on forgetting their stationary copies. Such additions
+preserve nonsplitting by the twice-punctured tying-sphere argument
+in Section~\ref{sec:four-port}. All unoccupied copies have separating
+balls. Thus the support is exactly \(\{-1,0,1\}\).
+Any transverse nonseparating sphere missing \(Q\) has separating
+lifts between consecutive stationary chambers. The closed moving
+lift must cross each intervening sphere at least twice. The given
+seam attains four. An unfilled face compression would instead give
+a nonseparating two-point sphere by the oriented sum, an impossibility.
+
+Push the upper disk through the \(34\) seam first in the
+stationary-filled level. In the unfilled handle picture its two
+transverse core passages are framed slides over \(Q\), one with
+each sign \cite[proof of Proposition 3.2]{GompfScharlemannThompson2010}.
+The shortened interval restores the lower end of the rail rectangle.
+The two-point successor has support \(\{0,1\}\), its \(12\) rail
+completion is the second \(J\), and its opposite completion is the
+unchanged \(U\) relative to \(Q\). The second disk and seam push
+remove the rail excursion and restore the short mouth in the
+original joint diagram. Its support is \(\{1\}\). In each case
+the displayed seam attains the respective minimum \(2,0\).
+The opposite signs account for four actual core passages in this
+ordered pair of disk moves. A shortest unrestricted slide sequence
+is a different minimization problem.
+
+The \(Q\)-first cut through these moves is \(Y_1\#M\). Mutual
+linking is zero by the three chord completions and the specified
+windings. Each framed slide preserves both zero coefficients.
+Use the stationary-filled isotopy on the collar and the transported
+moving handle coordinates to extend each comparison over the trace.
+Localize first; the Figure~5 slide of \(Q\) over \(U\) then requires
+the \(U\)-first order, whose intermediate cut is \(Y_2\). This slide
+leaves the split zero-framed unlink. At each actual successor the
+map \(P_j\) sends the parametrized tube \(t_j\) to \(P_j t_j\)
+with inverse \(t_j^{-1}P_j^{-1}\); extend in the next handle's
+coordinates before transporting its successors. At the final cut
+the closing is \(\gamma P^{-1}\), inverse \(P\gamma^{-1}\).
+The transported old reverse tube \((\gamma P^{-1})(Po_i)\tau\)
+remains \(\gamma o_i\tau\). For an immediate rank-three cap the
+new split cores have distinct dual belt spheres after an extending
+upper re-marking. Geometric cancellations give
+\(n_2=n_3:3\to2\to1\to0\), including the initial split zero
+\(A\). There are no births. With unspecified subsequent
+attachments the proved replacement is relative, with zero net
+middle change until a further cancellation is identified.
+\end{proof}
 
 \section{Metric criteria on the given levels}\label{sec:bands}
 These criteria give PSC domination for the actual slice

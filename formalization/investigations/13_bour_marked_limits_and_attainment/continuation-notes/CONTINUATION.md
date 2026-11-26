@@ -1,5 +1,11 @@
 # Continue the Bour marked-limit formalization
 
+**Current handoff after FOT-E48.** Start with uniform injectivity at both physical scales and the harmonic-coordinate Ricci identity. Construct the uniform harmonic charts or formalize the coupled interior estimates. On a marked core use the signed physical transfer and the buffered cap inputs. [Assessed continuation](../../continuation-notes/AFTER_STATIONARY_BALLS_AND_VARIATION_20261126.md) · [Sole register](../research-progress/REGISTER.md)
+
+**E47 handoff.** Start from the physical ball-volume lower bound in both stationary gauges. Establish the uniform harmonic-radius and Ricci coordinate estimates, or construct the missing disk-neighborhood extension for one supplied whole marked core. [Assessed continuation and prompt](../../continuation-notes/AFTER_BOUR_BUDGET_AND_MARKED_RETURN_20261126.md) · [Sole register](../research-progress/REGISTER.md)
+
+## Historical setup handoff
+
 26 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving model and effort were unavailable. [Overview and versions](../research-overview/OVERVIEW.md) · [Proof plan](../research-plan/PLAN.md) · [Sole register](../research-progress/REGISTER.md)
 
 The first ready packet is BAT-E01. On a supplied closed carrier use the actual oriented signed pullback and bound its positive energy from below by the fixed-type infimum. This checked implication can later receive either of the two attained candidates. For the closed branch, treat smooth whole-manifold convergence as an explicit lemma input. For the integrated theorem, obtain that input from the separate uniform stationary compactness packet. The pointed comparison must use one orientation-preserving embedding on a neighborhood of the whole marked compact domain including every buffer. Check the strict Ricci limit and the complete exterior cap price before using smooth recognition.

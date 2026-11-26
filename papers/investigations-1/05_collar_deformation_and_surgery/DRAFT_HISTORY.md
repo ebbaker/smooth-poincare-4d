@@ -37,3 +37,11 @@ The [revised plan](research-plan/PLAN.md) prioritizes one untreated marked exter
 ## 26 November 2026 · Two-point localization and a knotted completion
 
 Proved localization on the twice-intersecting meridional cut, identified the successful longitude and established a strict terminal three-to-two reduction for an arbitrary returned local pair. The selected nonlocal exterior with knotted opposite completion gives three cancellations. [Assessment and independent checks](reviews/TWO_POINT_LOCALIZATION_20261126.md)
+
+## 26 November 2026 · Four points and the unique return slope
+
+The [assessment](reviews/FOUR_POINT_RETURNS_20261126.md) proves a face-slope decision for the mixed pairing. The explicit exterior reaches the actual two-point and recognized local successors. On the same free outlet both newly prescribed return words can be homologically zero and geometrically obstructed.
+
+## 26 November 2026 · Whitehead returns and the lower face word
+
+A minimum-four exterior has no lower bridge on any chord. The other face and its two-point successor each require two core passages, recover the actual Figure 5 trace and give three terminal cancellations. [Assessment and input distinctions](reviews/WHITEHEAD_MIXED_RETURNS_20261126.md)

@@ -1,5 +1,7 @@
 # Continue handle isolation and marked surgery
 
+Resume from [the Whitehead mixed-returns handoff](../../continuation-notes/AFTER_WHITEHEAD_MIXED_RETURNS_20261126.md). It records the new obstruction for every lower chord, the marked two-point successor and the unreduced selection problem.
+
 Use the [current joint handoff](../../continuation-notes/NARROWED_MARKED_SURGERY_20261126.md) for continuation. The original activation packet follows.
 
 26 November 2026 · For Edward B. Baker III with OpenAI Codex assistance. [First diagram](../research-overview/OVERVIEW.md) · [Application sequence](../research-plan/PLAN.md) · [Sole register](../research-progress/REGISTER.md) · [Exact inputs](../references/README.md). The control is recognized in advance. A general selection of reducing moves or usable cuts remains open.

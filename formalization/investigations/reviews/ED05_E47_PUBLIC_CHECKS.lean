@@ -410,8 +410,8 @@ example {P : Type*} [TopologicalSpace P] {α p : ℝ} {s : P}
   cases sign with
   | plus => exact ⟨hL, hU⟩
   | minus =>
-    rw [← q.signature_zero]
-    exact ⟨hL, hU⟩
+    have hSign : q.energy .plus = q.energy .minus := q.signature_zero
+    exact ⟨hL.trans_eq hSign, hSign.symm.trans_le hU⟩
 
 example {P : ℕ → Type*} [∀ j, TopologicalSpace (P j)] {α p : ℕ → ℝ} {s : ∀ j, P j}
     (f : ∀ j, OriginalTrajectory o (α j) (s j)) (q : ℕ → SignedCollarMetric o)
@@ -425,6 +425,33 @@ example {P : ℕ → Type*} [∀ j, TopologicalSpace (P j)] {α p : ℕ → ℝ}
       Tendsto p atTop (𝓝 0) := by
   obtain ⟨hE, hp⟩ := mixedReturn_energy_and_parameter f q hα hPos hExcess hBud hReturn hY hEuler
   exact ⟨hE .minus, hp⟩
+
+example {P : ℕ → Type*} [∀ j, TopologicalSpace (P j)] {α p : ℕ → ℝ} {s : ∀ j, P j}
+    (f : ∀ j, OriginalTrajectory o (α j) (s j)) (q : ℕ → SignedCollarMetric o)
+    (hα : Tendsto α atTop (𝓝 0)) (hPos : ∀ j, 0 < α j)
+    (hExcess : ∀ j, (f j).excess ≤ α j ^ 2)
+    (hBud : ∀ᶠ j in atTop, ∀ t, TimeBudget (f j) t)
+    (hReturn : ∀ᶠ j in atTop, ReturnedMeasurements (f j) (q j) (p j))
+    (hY : ∀ᶠ j in atTop, 0 < classYamabeFour o.dimension_eq (q j).metric)
+    (rep : ∀ j, UnitYamabeRepresentative (q j))
+    (hEuler : ∀ q : SignedCollarMetric o, bourEuler q = 16 * Real.pi ^ 2)
+    (hEntry : sInf (geometricPositiveEnergies o) < 8 * Real.pi ^ 2)
+    (r : SignedCollarMetric o) (hPositive : 0 < classYamabeFour o.dimension_eq r.metric)
+    (hE : r.energy .plus ≤ liminf (fun j => (q j).energy .plus) atTop)
+    (hD : 4 * r.energy .plus ≤ liminf (fun j => bourRicci (q j)) atTop) :
+    (∃ y > 0, ∃ d < 32 * Real.pi ^ 2, ∀ᶠ j in atTop,
+      y ≤ classYamabeFour o.dimension_eq (q j).metric ∧ bourRicci (q j) ≤ d) ∧
+    r.energy .minus = sInf (geometricPositiveEnergies o) ∧
+      Tendsto (fun j => (f j).yamabe (s j) ^ 2) atTop (𝓝 (384 * Real.pi ^ 2)) := by
+  let δ := 8 * Real.pi ^ 2 - sInf (geometricPositiveEnergies o)
+  have hδ : 0 < δ := sub_pos.mpr hEntry
+  have hUniform := mixedReturn_uniform_physical_budget f q hα hPos hExcess hBud hReturn hY
+    rep hEuler hEntry
+  obtain ⟨hEnergy, hSat⟩ := mixedReturn_pointed_saturation f q r hα hPos hExcess hBud hReturn hY
+    (fun j => hEuler (q j)) hPositive hE hD
+  exact ⟨⟨Real.sqrt (24 * δ), Real.sqrt_pos.mpr (by positivity), 32 * Real.pi ^ 2 - 2 * δ,
+    by linarith only [hδ], hUniform.mono fun _ h => ⟨h.1, h.2.1⟩⟩,
+    r.signature_zero.symm.trans hEnergy, hSat⟩
 
 end FixedReturnBudgetChecks
 
@@ -445,7 +472,8 @@ example (g : SmoothRiemannianMetric I M) (x : M) {r : ℝ} (hr : 0 < r) (hr₁ :
       8 * Real.sqrt (bourBallVolume g x (r / 2)) ≤ (24 / r ^ 2 + 8) * bourBallVolume g x r) :
     r ^ 4 / 256 ≤ bourBallVolume g x r := by
   convert bourBallVolume_lower_of_cutoff (by simp) g (by norm_num : (0 : ℝ) < 8)
-      (by norm_num : (0 : ℝ) ≤ 8) hCut x hr hr₁ using 1 <;> ring
+      (by norm_num : (0 : ℝ) ≤ 8) hCut x hr hr₁ using 1
+  ring
 
 example (g : SmoothRiemannianMetric I M) {y R : ℝ} (hy : 0 < y)
     (hY : y ≤ classYamabeFour (by simp) g) (hR : ∀ x, metricScalarAt g x = R)
@@ -478,7 +506,7 @@ variable {H M : Type*} [TopologicalSpace H]
 
 local instance : MeasurableSpace M := borel M
 local instance : BorelSpace M := ⟨rfl⟩
-local instance : IsManifold I 1 M := IsManifold.of_le (by decide : (1 : ℕ∞ω) ≤ ⊤)
+local instance : IsManifold I 1 M := IsManifold.of_le (by decide : (1 : ℕ∞ω) ≤ (∞ : ℕ∞ω))
 
 -- The unit backward interval for a metric rescaled by two uses one quarter
 -- of a unit of original time, and the physical squared-gradient integrals agree.
@@ -515,6 +543,15 @@ example (v : BourPositiveMetricVariation o)
   obtain ⟨t, ht, hClose, hPos, hDecrease⟩ := hSmall ε hε
   exact ⟨t, ht, hClose, hPos, hDecrease .plus⟩
 
+local instance : Fact (Module.finrank ℝ (EuclideanSpace ℝ (Fin 5)) = 4 + 1) := ⟨by simp⟩
+
+example {oS : ManifoldOrientation (𝓡 4) StandardFourSphere 4}
+    (Φ : M ≃ₘ⟮I, 𝓡 4⟯ StandardFourSphere) (hΦ : Φ.preservesOrientation o oS) :
+    ∃ v : BourPositiveMetricVariation o, (v.path 1).energy .minus = 0 ∧
+      deriv (deriv (fun t => (v.path t).energy .plus)) 0 = 0 := by
+  obtain ⟨v, _, _, hEnergy, hDeriv⟩ := bourRoundScalingVariation Φ hΦ
+  exact ⟨v, hEnergy 1 .minus, (hDeriv .plus).2⟩
+
 end VariationChecks
 
 #print axioms SmoothPoincare.Bour.bourEuler_eq_charges
@@ -539,6 +576,7 @@ end VariationChecks
 #print axioms SmoothPoincare.bourMixedPointed_startYamabeSq_tendsto
 #print axioms SmoothPoincare.Bour.fixedReturn_budget
 #print axioms SmoothPoincare.Bour.mixedReturn_energy_and_parameter
+#print axioms SmoothPoincare.Bour.mixedReturn_uniform_physical_budget
 #print axioms SmoothPoincare.Bour.mixedReturn_pointed_saturation
 #print axioms SmoothPoincare.bourBallVolume_lower_of_cutoff
 #print axioms SmoothPoincare.bourYamabe_smooth_test_scale

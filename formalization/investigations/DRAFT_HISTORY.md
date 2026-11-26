@@ -1,5 +1,9 @@
 # Overall formalization milestones
 
+- **26 November 2026 · FOT-E48.** Reached injectivity and physical normal charts at both stationary scales, differentiated the lowered harmonic gauge and the conformal energy, and tested signed return, the buffered cap and the restricted start infimum. [Assessment](reviews/ED05_E48_STATIONARY_BALLS_AND_VARIATION.md) · [Public verification](research-progress/handoffs/ED05_E48_VERIFICATION_20261126.md) · [Continue here](continuation-notes/AFTER_STATIONARY_BALLS_AND_VARIATION_20261126.md)
+
+- **26 November 2026 · FOT-E47.** Checked the original physical budget, the marked return and stationary noncollapse under explicit geometric inputs. A second marked bubble forces the initial Yamabe constants to approach the round value along the extracted subsequence. [Assessment](reviews/ED05_E47_BOUR_BUDGET_AND_MARKED_RETURN.md) · [Public verification](research-progress/handoffs/ED05_E47_VERIFICATION_20261126.md)
+
 - **26 November 2026 · Edition 05 setup, FOT-B09.** Adopted separate owners for the original regularized flow and the marked fixed-type return, retained the master’s separate entry and rigidity questions, and restricted new physical comparisons to identified candidates. [Overview](research-overview/05_OVERVIEW.md) · [Plan](research-plan/05_PLAN.md) · [Baseline](research-progress/05_BASELINE.md)
 
 - **26 November 2026 · FOT-E46.** Derived the native curvature and positive-slice estimates, matched both complete cap costs at one radius, and located the mass outside the protected core when the peak approaches its sharp bound. Checked the reverse-core homology and applied local filling recognition to the specified square-knot successor. [Assessment](reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md) · [Verification](research-progress/handoffs/ED04_E46_VERIFICATION_20261126.md)

@@ -1,6 +1,10 @@
 # Continuing the formalization program
 
-**Current Edition 05 setup, 26 November 2026.** [Dated continuation and pasteable activation](EDITION_05_BOUR_ATTAINMENT_20261126.md) · [Original-flow launch](../12_bour_regularized_flow/continuation-notes/CONTINUATION.md) · [Marked-limit launch](../13_bour_marked_limits_and_attainment/continuation-notes/CONTINUATION.md).
+**Current Edition 05 milestone, FOT-E48 · 26 November 2026.** [Assessment](../reviews/ED05_E48_STATIONARY_BALLS_AND_VARIATION.md) · [Public verification](../research-progress/handoffs/ED05_E48_VERIFICATION_20261126.md) · [Continue here](../continuation-notes/AFTER_STATIONARY_BALLS_AND_VARIATION_20261126.md)
+
+**Previous Edition 05 milestone, FOT-E47 · 26 November 2026.** [Continuation and pasteable prompt](AFTER_BOUR_BUDGET_AND_MARKED_RETURN_20261126.md) · [Assessment](../reviews/ED05_E47_BOUR_BUDGET_AND_MARKED_RETURN.md) · [Independent verification](../research-progress/handoffs/ED05_E47_VERIFICATION_20261126.md)
+
+**Edition 05 setup, 26 November 2026.** [Dated continuation and pasteable activation](EDITION_05_BOUR_ATTAINMENT_20261126.md) · [Original-flow launch](../12_bour_regularized_flow/continuation-notes/CONTINUATION.md) · [Marked-limit launch](../13_bour_marked_limits_and_attainment/continuation-notes/CONTINUATION.md).
 
 **Last checked Edition 04 milestone, FOT-E46 · 26 November 2026.** [Finite disk and marked successor handoff](AFTER_FINITE_POSITIVE_POCKETS_20261126.md) · [Assessment](../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md) · [Public verification](../research-progress/handoffs/ED04_E46_VERIFICATION_20261126.md)
 

@@ -1,5 +1,10 @@
 # Lean Blueprint
 
+**FOT-E48 · 26 November 2026.** Seven new propositions cover stationary balls, the physical first variation, signed transfer, the marked cap and the uniform-deficit test. The ten Edition 05 geometric targets retain their open status. [Edition 05 chapter](src/edition_five_bour_attainment.tex) · [Assessment](../investigations/reviews/ED05_E48_STATIONARY_BALLS_AND_VARIATION.md) · [Public verification](../investigations/research-progress/handoffs/ED05_E48_VERIFICATION_20261126.md) · [Continue here](../investigations/continuation-notes/AFTER_STATIONARY_BALLS_AND_VARIATION_20261126.md)
+
+**FOT-E47 · 26 November 2026.** The Edition 05 chapter proves the physical original budget, conditional marked returns, uniform stationary noncollapse and the initial Yamabe saturation criterion. Its ten geometric targets retain their open status. [Edition 05 chapter](src/edition_five_bour_attainment.tex) · [Assessment](../investigations/reviews/ED05_E47_BOUR_BUDGET_AND_MARKED_RETURN.md)
+
+
 **Edition 05 setup · 26 November 2026.** The [entry, Bour and rigidity chapter](src/edition_five_bour_attainment.tex) gives the open formal targets for the original flows, the two uses of marked compactification, uniform stationary estimates, the infimum gap and final coverage. [Plan and owners](../investigations/research-plan/05_PLAN.md) · [Setup receipt](../investigations/research-progress/handoffs/ED05_SETUP_INPUTS_20261126.md)
 
 **FOT-E46 · 26 November 2026.** The native flattening of the finite charged disk now has physical curvature and scalar estimates at one radius, an exact central cylinder and two complete cap costs. A separate marked successor comparison uses the published square-knot diagram. [Finite positive pockets and marked successors](../investigations/reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)

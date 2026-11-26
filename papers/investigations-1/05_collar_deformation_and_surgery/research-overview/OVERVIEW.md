@@ -4,6 +4,14 @@
 
 Let $M$ be a closed, connected, oriented smooth four-manifold homotopy equivalent to $S^4$. Metrics and embeddings are smooth and Riemannian. A finite Morse presentation supplies framed attaching maps and identifications of regular levels. A relative handle move must reassemble the same $M$. A metric cut must identify the capped smooth type using the original boundary marking. The two methods can be combined when a marked identification and geometric estimates put the handle level and the metric on the same physical source.
 
+## A geometric obstruction on the whole lower face
+
+A marked nonlocal example of minimum four has a unique lower compressing slope and no lower bridge, even with free endpoints and wall windings. An upper Whitehead return and its second, two-point successor each require two opposite passages through the stationary core. These two disks restore the Figure 5 pair and yield three terminal cancellations. An independent finite triangulation distinguishes a failed prescribed chord from a successful free chord on the same exterior. [Assessment and scope](../reviews/WHITEHEAD_MIXED_RETURNS_20261126.md)
+
+## What the four-point case decides
+
+For one return on each face and two through arcs, the integral free outlet forces a compression. A return bridge, when present, determines the unique compressible slope on the four-holed face. This turns the search for an arbitrary face chord into a finite decision on a specified triangulation. The worked example has sharp intersection counts 4, 2 and 0 in succession. Changing both prescribed chords can obstruct both bridge disks even when their boundary classes vanish in integral homology. General existence of a usable bridge or a different reducing system is the remaining selection problem. [Four-point assessment](../reviews/FOUR_POINT_RETURNS_20261126.md)
+
 ## What the two-point case decides
 
 The integral rank jump from \(Y_1\) to \(Y_3\) forces a longitude bridge disk when a supplied nonseparating sphere avoids one tube and meets the other twice. On the stated terminal assembly this excludes a least-three presentation. The knotted opposite completion supplies a worked case in which all three handles cancel. The next selection must reach an exterior or a residual local closure still outside this result. [Assessed theorem and limitations](../reviews/TWO_POINT_LOCALIZATION_20261126.md)

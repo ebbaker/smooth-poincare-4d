@@ -17,7 +17,7 @@ closed representative. Record which smooth types the construction covers.
 
 \begin{openproblem}[Budget on the original regularized trajectory]
 \label{prop:ed05-bour-energy}
-\uses{lem:ed03-positive-sequence,prop:ed47-budget,prop:ed47-motion}
+\uses{lem:ed03-positive-sequence,prop:ed47-budget,prop:ed47-motion,prop:ed48-slab}
 Given entry, choose $0<\alpha_j<1$ decreasing to zero and unit-volume
 positive Yamabe metrics with $0\le e_{j,0}-I\le\alpha_j^2$. Write
 $D=\int|\operatorname{Ric}_0|^2$ and $S=\int R^2$. Along the original
@@ -31,7 +31,7 @@ with $y,\eta,d_*$ independent of $j$ and time.
 
 \begin{openproblem}[The two outputs of one fixed-parameter flow]
 \label{prop:ed05-bour-alternative}
-\uses{prop:ed05-bour-energy}
+\uses{prop:ed05-bour-energy,prop:ed48-transfer,prop:ed48-trace}
 At a fixed sufficiently small positive $\alpha_j$, instantiate Bour's
 strictly pinched alternative on that original maximal solution. Return either
 a closed $\mathcal F^{\alpha_j}$-critical metric via whole smooth comparison
@@ -42,7 +42,7 @@ the short-time gauge and derivative estimates at fixed parameter.
 
 \begin{openproblem}[Smooth identification of a pointed limit]
 \label{prop:ed05-bour-pointed}
-\uses{prop:ed47-mark,prop:ed47-ends}
+\uses{prop:ed47-mark,prop:ed47-ends,prop:ed48-cap,prop:ed48-transfer}
 Take a smooth pointed limit of rescaled original metrics with the uniform
 positive Yamabe, subcritical chiral and strict Ricci bounds of the preceding
 budget, finite full curvature, and $R=B=0$ on the complete nonflat limit.
@@ -56,7 +56,7 @@ agreeing on the actual cap collar. Prove $I\le e_X\le\liminf_i e_i$.
 
 \begin{openproblem}[Uniform estimates for the mixed critical sequence]
 \label{prop:ed05-bour-stationary}
-\uses{prop:ed05-bour-alternative,prop:ed05-bour-pointed,prop:ed47-balls,prop:ed47-mixed}
+\uses{prop:ed05-bour-alternative,prop:ed05-bour-pointed,prop:ed47-balls,prop:ed47-mixed,prop:ed48-normal,prop:ed48-harmonic,prop:ed48-trace}
 Return one unit-volume constant-scalar metric $q_j$ on $M$ at each late
 index. Its parameter is $p_j=\alpha_j$ for a closed regularized return
 and $p_j=0$ for an exact pointed return in Yamabe gauge.
@@ -69,7 +69,7 @@ as $p_j\to0$, also on curvature-normalized balls in the unbounded branch.
 
 \begin{openproblem}[Closed return at bounded curvature]
 \label{prop:ed05-bour-closed}
-\uses{prop:ed05-bour-stationary,prop:ed47-return}
+\uses{prop:ed05-bour-stationary,prop:ed47-return,prop:ed48-transfer}
 If the unscaled curvature of the selected critical sequence is bounded
 on a subsequence, obtain smooth convergence with whole oriented
 comparison diffeomorphisms. Pass the positive Yamabe floor, the
@@ -251,13 +251,13 @@ then iterate the ball-volume inequality from the small-radius lower bound.
 \begin{proposition}[Initial Yamabe saturation in a second pointed return]
 \label{prop:ed47-mixed}
 \uses{prop:ed47-budget,prop:ed47-mark,prop:ed47-ends}
-\lean{SmoothPoincare.bourFirstPointed_excess_and_deficit, SmoothPoincare.Bour.fixedReturn_budget, SmoothPoincare.Bour.mixedReturn_energy_and_parameter, SmoothPoincare.Bour.mixedReturn_pointed_saturation}
+\lean{SmoothPoincare.bourFirstPointed_excess_and_deficit, SmoothPoincare.Bour.fixedReturn_budget, SmoothPoincare.Bour.mixedReturn_energy_and_parameter, SmoothPoincare.Bour.mixedReturn_uniform_physical_budget, SmoothPoincare.Bour.mixedReturn_pointed_saturation}
 \leanok
 Suppose the closed first returns give convergence of their physical
 energies, and the pointed first returns give the marked Weyl and Ricci
 comparisons and the scalar bound in their new Yamabe gauge. Positivity,
 the closed Euler evaluations and original budgets supply $p_j\to0$ and
-$E_\pm(q_j)\to I$. On a second marked pointed subsequence, let the
+$E_\pm(q_j)\to I$. With normalized Yamabe representatives for these positive classes, the mixed metrics also inherit the common Yamabe floor, strict Ricci ceiling and scalar-square bound. On a second marked pointed subsequence, let the
 positive returned metric have $e_X\le\liminf E_+(q_j)$ and
 $4e_X\le\liminf D(q_j)$. Then $e_X=I$ and, on that subsequence,
 $Y_{j,0}^2\to384\pi^2$.
@@ -294,17 +294,166 @@ conformal test separately and take the limit of the supplied Euler identity.
 \begin{proposition}[Second variation at an attained geometric metric]
 \label{prop:ed47-variation}
 \uses{prop:ed47-return}
-\lean{SmoothPoincare.bourAttainedVariation, SmoothPoincare.bourNegativeSecondVariationExcludesAttainment, SmoothPoincare.bourRoundAttainedVariation}
+\lean{SmoothPoincare.bourAttainedVariation, SmoothPoincare.bourNegativeSecondVariationExcludesAttainment, SmoothPoincare.bourRoundAttainedVariation, SmoothPoincare.bourRoundScalingVariation}
 \leanok
 Along a two-sided, jointly smooth positive metric variation with twice
 continuously differentiable measured Weyl energy, an attaining metric
 has zero first and nonnegative second derivative. Negative second
 derivative in a supplied direction produces arbitrarily close positive
 competitors of strictly lower energy. The signed round pullback satisfies
-the necessary variation conditions.
+the necessary variation conditions. Its explicit scaling path has zero second variation in both signs.
 \end{proposition}
 \begin{proof}
 \leanok
 Positive-class membership gives a local minimum along the path.
 Apply the second-derivative test to the real energy function.
+\end{proof}
+
+\begin{proposition}[Uniform injectivity and normal balls at both physical scales]
+\label{prop:ed48-normal}
+\uses{prop:ed47-balls}
+\lean{SmoothPoincare.bourUniformInjectivity_of_ballVolume, SmoothPoincare.bourFullCurvatureNorm_le_of_quarterSq, SmoothPoincare.bourCurvatureMaximum_scale, SmoothPoincare.bourUniformNormalBalls_of_yamabe, SmoothPoincare.bourStationary_scalarCoefficient_bound, SmoothPoincare.bourStationary_residualSq_tendsto_zero}
+\leanok
+For the connected closed constant-scalar metrics with common positive Yamabe floor
+and scalar ceiling, fix a curvature bound on the normalized metrics $h=aq$,
+$a\ge1$. One normal radius works at every center of every such metric.
+The charts map onto the physical balls and the metric lies between one
+half and twice the Euclidean quadratic form. The curvature-operator square
+is one quarter of the ordered four-slot square. If $0\le p<1$ and $R\le C$,
+the stationary coefficient $(2-p)R/(12a)$ lies in $[0,C/6]$.
+A common integral bound for ordinary trace-free Ricci and $p\to0$
+force the integral squared size of $(p/12)(R/a)\operatorname{Ric}_0$ to vanish.
+\end{proposition}
+\begin{proof}
+\leanok
+The physical volume bound and the uniform Jacobi scale give a common
+injectivity lower bound. Restrict each exponential chart inside that
+radius. Constant metric scaling gives the two norm conversions and
+preserves the four-dimensional Ricci-square integral.
+\end{proof}
+
+\begin{proposition}[The metric Ricci equation on a supplied harmonic chart]
+\label{prop:ed48-harmonic}
+\lean{SmoothPoincare.bourChartHarmonicRicci_principal, SmoothPoincare.bourChartHarmonicRicciError_bound, SmoothPoincare.bourChartHarmonicRicci_trace_bound, SmoothPoincare.bourLaplacian_chartCoordinate, SmoothPoincare.bourChartHarmonicRicci_principal_of_laplacian}
+\leanok
+Suppose each coordinate function in the supplying metric chart has zero
+Levi--Civita Laplacian in a neighborhood. If the inverse entries are bounded by $A$,
+the first metric derivatives by $L$, and $|\mathrm{Ric}_{ik}|\le H$, then
+\[
+ \left|\sum_{a,b}g^{ab}\partial_a\partial_b g_{ik}\right|
+ \le 2H+18 n^4 A^2 L^2 .
+\]
+\end{proposition}
+\begin{proof}
+\leanok
+Compute the physical Laplacians of the coordinate functions, lower the
+contracted Christoffel symbol and differentiate in both free directions.
+The remaining second derivative in Ricci is $-\tfrac12 g^{ab}\partial_{ab}g_{ik}$.
+Expand the derivative of the inverse matrix and bound each first-jet product.
+\end{proof}
+
+\begin{proposition}[The closed conformal trace and constant scalar curvature]
+\label{prop:ed48-trace}
+\lean{SmoothPoincare.Bour.scalarSq_hasDerivAt_conformal, SmoothPoincare.Bour.metricVelocity_conformal, SmoothPoincare.Bour.bourEnergy_conformal_firstVariation, SmoothPoincare.Bour.gradientTrace_eq_scalarLaplacian, SmoothPoincare.Bour.scalar_constant_of_conformal_critical}
+\leanok
+On $g_t=e^{2tu}g$ assume the closed Euler integral is constant near $t=0$.
+With $\Delta=\mathrm{div}\,\mathrm{grad}$,
+$(\mathcal F^p)'(0)=-(p/2)\int u\Delta R\,dV_g$. Any gradient
+representing all these variations with smooth trace has
+$\mathrm{tr}_g G=-p\Delta R/4$. A positive-parameter conformally critical
+metric on a closed connected four-manifold has constant scalar curvature.
+\end{proposition}
+\begin{proof}
+\leanok
+In the physical scalar-square integral the conformal weights cancel.
+Differentiate its quartic polynomial and use Green's identity.
+Testing the trace difference against itself identifies the gradient trace.
+For a critical metric use $u=\Delta R$ and compact harmonic rigidity.
+\end{proof}
+
+\begin{proposition}[Physical first variation on a regular time slab]
+\label{prop:ed48-slab}
+\uses{prop:ed47-motion}
+\lean{SmoothPoincare.Bour.bourEnergy_hasDerivAt_fullDensity, SmoothPoincare.Bour.bourMetric_hasDerivAt_regular, SmoothPoincare.Bour.traceTimeDerivMetric_eq_inner_of_velocity, SmoothPoincare.Bour.bourOriginal_slab_of_pairings, SmoothPoincare.Bour.bourOriginal_regularSlab_of_pairings, SmoothPoincare.Bour.bourEulerIntegral_homothety, SmoothPoincare.Bour.bourRound_fullFirstVariation}
+\leanok
+The derivative of the full physical functional on a regular metric path
+is the integral of its differentiated curvature density plus the volume
+variation term. The metric velocity supplies the volume trace. With the
+moving and scale pairings of a common tensor, the negative twice-gradient
+equation, endpoint continuity and integrable squared speed give constant
+volume and the half-factor dissipation identity on a finite slab.
+If the closed slab lies in the regular time set, smoothness of the metric
+supplies endpoint continuity and integrability of the physical squared speed.
+At the actual unit round metric the full functional has zero derivative
+on every regular variation for $0\le p\le1$.
+\end{proposition}
+\begin{proof}
+\leanok
+Differentiate the intrinsic four-curvature, Ricci and scalar contractions
+in the physical measure. Evaluate the time derivative of the Gram entries.
+The signed scale path has zero energy derivative, and the scale weights
+cancel in the Euler integral on each measurable region. At round data the
+full nonnegative functional attains zero.
+\end{proof}
+
+\begin{proposition}[Whole-slice transfer and signed compact images]
+\label{prop:ed48-transfer}
+\uses{prop:ed47-mark}
+\lean{SmoothPoincare.Bour.pointedScalarSq_integral_image, SmoothPoincare.Bour.pointedScalarSq_le_liminf, SmoothPoincare.Bour.compactReturn_ricci_scalar, SmoothPoincare.Bour.compactReturn_signed_energy, SmoothPoincare.bourPointedSignedWeylPhysicalMass, SmoothPoincare.bourPointedSignedExterior_small_of_saturation}
+\leanok
+Canonical metric comparison transfers scalar-square mass on each compact
+image. For a compact limit and connected sources it transfers the full
+Ricci and scalar masses, and hence both signature-zero Weyl totals when the
+Euler integrals agree. On a proper compact image each signed mass transfers
+with compatible frame curvature, measurability and normalized curvature
+control. Matched conformal frames recover the original source measures.
+Saturation of the two totals gives arbitrarily small exterior mass in
+both signs, first choosing the truncation and then the source index.
+\end{proposition}
+\begin{proof}
+\leanok
+Use physical change of variables on compact images. A compact comparison
+eventually globalizes. On this whole image $2e=\mathrm{Euler}-S/24+D/2$.
+On a pointed image the curvature-operator square dominates the sum of the
+two Weyl squares. For a fixed truncation subtract its convergent mass
+from the source total, then exhaust the model.
+\end{proof}
+
+\begin{proposition}[Buffered exterior identification and the flat link term]
+\label{prop:ed48-cap}
+\uses{prop:ed47-mark,prop:ed47-ends}
+\lean{SmoothPoincare.bourMarkedExterior_of_commonChart, SmoothPoincare.bourMarkedTranslatedRoundCap, SmoothPoincare.bourEuclideanOutwardRadialDerivative, SmoothPoincare.bourEuclideanSphereCubicBoundaryIntegral}
+\leanok
+Given oriented recognition and two compatibly parameterized buffered caps
+in a common chart with the required center segment and matching signs,
+there is a smooth oriented ambient correction with the prescribed forward
+and inverse collar maps. This applies to translated stereographic caps
+of $S^4$. In the exact flat model the integral of $4\det A$ on a
+radius-$r$ sphere with the outward normal is $8\pi^2$ for all $r>0$.
+\end{proposition}
+\begin{proof}
+\leanok
+Extend the chart isotopy by identity and restrict the resulting bijection
+to the open buffered images and their complements. In the Euclidean model
+the radial derivative is $r^{-1}I$ on the tangent space and the polar
+area is $2\pi^2r^3$.
+\end{proof}
+
+\begin{proposition}[Recovering a uniform deficit at the original infimum]
+\label{prop:ed48-deficit}
+\uses{prop:ed47-mixed}
+\lean{SmoothPoincare.bourUniformDeficitTail_iff, SmoothPoincare.bourUniformDeficitStarts_iff, SmoothPoincare.bourStartYamabeSq_tendsto_of_no_deficitRecovery, SmoothPoincare.Bour.start_deficit_eq_ricciGap, SmoothPoincare.Bour.mixedReturn_pointed_impossible_of_startDeficit}
+\leanok
+Fix a positive squared Yamabe deficit $b$. On an entered smooth type
+with the Yamabe normalization supplier, arbitrary positive schedules admit
+starts with $e-I\le\alpha_j^2$ and deficit at least $b$ precisely when
+the restricted positive energy set is nonempty and has infimum $I$.
+Such a deficit on a tail excludes a second marked pointed return on any
+extracted subsequence of that tail.
+\end{proposition}
+\begin{proof}
+\leanok
+Select within each tolerance in the restricted set and normalize on the
+same type. Conversely a tail with vanishing tolerance supplies restricted
+energies arbitrarily close to $I$. Apply the extracted saturation theorem.
 \end{proof}

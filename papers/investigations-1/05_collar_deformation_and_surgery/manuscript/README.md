@@ -11,3 +11,7 @@ The two companion drafts give the proofs for [collar deformation](../01_collar_d
 The current manuscript derives the finite exterior band, the mixed penultimate comparison and the sharp numerical-charge peak. It also separates endpoint subball recovery from all-time preservation of the full original core. [Physical core and exterior assessment](../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)
 
 The two-point theorem forces a marked bridge disk on every pair in its stated free-boundary class. The terminal one-sided presentation reduces from three middle handles to two, and the selected knotted completion reduces to zero. [Two-point assessment](../reviews/TWO_POINT_LOCALIZATION_20261126.md)
+
+The four-point section follows the actual terminal reduction and the fixed-chord obstruction, including the case where both candidate words vanish in homology. [Assessed four-point edition](../reviews/FOUR_POINT_RETURNS_20261126.md)
+
+The Whitehead example gives a lower face compression whose return cannot be bridged at any winding. The opposite face and the actual two-point successor supply disks with opposite core punctures, and their terminal trace is recognized. [Assessment](../reviews/WHITEHEAD_MIXED_RETURNS_20261126.md)

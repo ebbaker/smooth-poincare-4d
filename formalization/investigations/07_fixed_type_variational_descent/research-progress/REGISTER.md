@@ -1,5 +1,13 @@
 # Fixed-type variational descent · Progress register
 
+## E48 · Rigidity of an attained minimum
+
+The round signed metric is a minimum of the regularized functional for the full parameter interval from zero to one. Its physical derivative vanishes along arbitrary smooth regular metric paths. The negative-direction criterion still needs a named nonround candidate. The fixed-deficit recovery test for near-infimal starts belongs to Route 12. [Round calculation](../../../SmoothPoincare/Variational/BourScaleCalibration.lean) · [Start criterion](../../12_bour_regularized_flow/notes/E48_START_DEFICIT.md) · [Assessment](../../reviews/ED05_E48_STATIONARY_BALLS_AND_VARIATION.md)
+
+## E47 · Attained variation on the original carrier
+
+The positive-class infimum now has a checked two-sided variation test through each supplied attained metric. A strictly negative second derivative of either signed energy produces arbitrarily close positive competitors lowering both signed energies. Through the named oriented round pullback the measured infimum is zero and the explicit scaling path has identically zero energy. A geometric negative direction on a nonround minimizer remains to be found. [Variation theorem](../../../SmoothPoincare/Variational/BourAttainedVariation.lean) · [Parent owner](../../research-progress/REGISTER.md) · [E47 assessment](../../reviews/ED05_E47_BOUR_BUDGET_AND_MARKED_RETURN.md)
+
 ## Edition 05 setup · 26 November 2026
 
 Keep the complete signed ledgers, positive cap tests and retained-core comparisons for an identified source. At a specified minimizing index with incoming energy \(e_i\), a positive same-type competitor must save strictly more than \(e_i-I^+(M)\) to contradict the infimum. A direct recognition bound or a stability contradiction for a specified attained candidate is also a bounded target. Route 13 checks the working Bour attainment theorem on the entered type. Reserve generic extraction and restart work for a class with an identified gap in that argument and a concrete comparison that could close it. The master owns the rigidity consequence. [Edition 05 plan](../../research-plan/05_PLAN.md) · [Route 13](../../13_bour_marked_limits_and_attainment/research-progress/REGISTER.md) · [Master rigidity](../../../../papers/master/research-plan/PLAN.md#r--rigidity-of-an-attained-minimum)

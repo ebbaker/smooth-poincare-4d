@@ -2,6 +2,14 @@
 
 26 November 2026 · Prepared for Edward B. Baker III with OpenAI Codex assistance. Exact serving model and reasoning effort for this planning revision are unavailable. The input repository revision was `65f06eaac3ff`. This setup snapshot activates no research. The [parent register](../research-progress/REGISTER.md) owns live readiness. [Overview](../research-overview/OVERVIEW.md) · [Source versions](../references/README.md) · [Input assessment](../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)
 
+## After the return with no bridge
+
+On the double Whitehead exterior, the correct lower disk slope and even its complete enlarged-port kernel are known, yet every possible lower chord is obstructed in the closed stationary filling. The opposite return still gives a strict terminal reduction. On a different actual four-point pair, first test whether both completed returns can survive in the capped stationary filling. If so, seek a different reducing system on that pair. For another port pairing, derive its native groups and fillings before using a mixed-pairing result. [Assessment](../reviews/WHITEHEAD_MIXED_RETURNS_20261126.md) · [Next handoff](../continuation-notes/AFTER_WHITEHEAD_MIXED_RETURNS_20261126.md)
+
+## After the four-point face test
+
+On the mixed pairing with two through strands, a return bridge determines a unique disk-bounding face circle. The patterned disk and word tests now decide freely selectable as well as prescribed chords on a triangulated input. The explicit example with three consecutive nonsplit stationary lifts already reaches the two-point and local successors. Test a different exterior with no exhibited peripheral annuli. Seek a face disk cutting off the marked solid torus, an unfilled face compression, or another measured topological reduction. A negative test on prescribed arcs can coexist with a positive test for movable arcs. [Assessment](../reviews/FOUR_POINT_RETURNS_20261126.md) · [Current handoff](../continuation-notes/AFTER_FOUR_POINT_RETURNS_20261126.md)
+
 ## After the two-point theorem
 
 For an integral rank-one to rank-three free-boundary pair, a sphere missing one tube and meeting the other core twice now suffices for localization. With a single split zero below and an immediate rank-three upper closing, it gives a strict reduction even for an unrecognized local pair. Seek a usable return system on a marked four-point cut outside the known winding lanes, or exhibit a previously unidentified twice-punctured nonseparating sphere on another actual exterior. The first residual problem after a general terminal reduction is recognition of the resulting local two-component closure. [Assessed theorem](../reviews/TWO_POINT_LOCALIZATION_20261126.md) · [Active handoff](../continuation-notes/AFTER_TWO_POINT_LOCALIZATION_20261126.md)

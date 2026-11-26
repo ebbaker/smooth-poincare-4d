@@ -58,3 +58,9 @@ The [assessment](../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md) re
 ## Two-point localization
 
 The [source record](../../../../references/SOURCE_NOTES_COLLAR_SURGERY_20261126.md#a-forced-bridge-disk-at-a-two-point-cut) identifies the groups, disks and marked local recognition results used on the knotted opposite completion. The [assessment](../reviews/TWO_POINT_LOCALIZATION_20261126.md) records the frozen scientific inputs and the two rebuilt reading copies.
+
+## The four-point cut and face-slope decision
+
+The [canonical passage notes](../../../../references/SOURCE_NOTES_COLLAR_SURGERY_20261126.md#four-point-faces-and-the-marked-slope-search) identify the HNN normal form, essential disk algorithm, geometric twist count and local trace inputs. The [assessment](../reviews/FOUR_POINT_RETURNS_20261126.md) and [frozen readings](../research-progress/handoffs/FOUR_POINT_READINGS_20261126.md) record the working sources and their generations.
+
+The [one-mouth and Whitehead passage record](../../../../references/SOURCE_NOTES_COLLAR_SURGERY_20261126.md#a-lower-word-surviving-every-chord-and-two-whitehead-patterns) identifies the stationary-filled fiber class, the pattern index and its twice-punctured disk. The [assessment](../reviews/WHITEHEAD_MIXED_RETURNS_20261126.md) records the separate diagrams and exact verification scope.

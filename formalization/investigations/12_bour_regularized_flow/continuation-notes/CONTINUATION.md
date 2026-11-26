@@ -1,5 +1,11 @@
 # Launch Route 12 · Original fixed-parameter Bour flow
 
+**Current handoff after FOT-E48.** Start from the checked physical density and conformal trace. Identify the general trace-free pairing on the original smooth path and pass its tests through a fixed-parameter extraction. [Assessed continuation](../../continuation-notes/AFTER_STATIONARY_BALLS_AND_VARIATION_20261126.md) · [Sole register](../research-progress/REGISTER.md)
+
+**E47 handoff.** Start from the checked physical sublevel and slab dissipation. Realize the first-variation and velocity-trace identities and recover one fixed-parameter comparison on the genuine original solution. [Assessed continuation and prompt](../../continuation-notes/AFTER_BOUR_BUDGET_AND_MARKED_RETURN_20261126.md) · [Sole register](../research-progress/REGISTER.md)
+
+## Historical setup handoff
+
 26 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving model and reasoning effort were unavailable. Edition 05 setup. [Sources and pins](../research-overview/OVERVIEW.md#setup-sources-and-pins) · [Plan](../research-plan/PLAN.md) · [Sole live register](../research-progress/REGISTER.md)
 
 | Packet | Routing and readiness | Bounded return |

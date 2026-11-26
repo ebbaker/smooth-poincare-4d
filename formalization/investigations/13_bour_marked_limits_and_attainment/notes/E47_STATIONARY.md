@@ -146,7 +146,11 @@ compact Sobolev tests and physical charge bounds is a separate operation.
 
 `lake build +SmoothPoincare.Variational.BourStationary` succeeded.
 `#print axioms` on the six public theorems above reported only
-`propext`, `Classical.choice` and `Quot.sound`. The Cheeger–Gromov–Taylor
+`propext`, `Classical.choice` and `Quot.sound`. A scratch Lean application
+on the actual standard round four-sphere succeeded for every center,
+every $0<r\le1$ and every $a\ge1$, using its existing positive Yamabe
+theorem and the scalar value $12$ computed from sectional curvature
+one. The Cheeger–Gromov–Taylor
 dependency compiled. The harmonic replacement, interior Schauder
 and canonical compactness candidates were inspected at their pinned
 source signatures. A build of those optional targets was stopped during

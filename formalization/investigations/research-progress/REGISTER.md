@@ -4,12 +4,15 @@
 
 | Parent task | Status | Responsibility |
 | --- | --- | --- |
-| FOT-B09 | Setup adopted | Edition 05 allocates the original regularized flow to [Route 12](../12_bour_regularized_flow/research-progress/REGISTER.md) and marked limits and attainment to [Route 13](../13_bour_marked_limits_and_attainment/research-progress/REGISTER.md). These registers alone own the BRF and BAT tasks. |
-| FOT-B10 | Ready on activation with a specified candidate | Coordinate the attained-rigidity test with the master's B06. Freeze a candidate, gauge and admissible variation and test whether it forces recognition or a strictly lower positive competitor. |
-| FOT-E47 | Dependent on the candidate statements | Integrate the actual fixed-type return with the uniform-gap and attained-rigidity statements. Read the exact types and identify remaining analytic imports. |
-| FOT-E37 | Continuing coverage audit | Require entry or direct recognition on each claimed type. Keep the positive energy set inhabited, smooth identifications explicit, and the positive Einstein subclass visible. |
+| FOT-B09 | Active | [Route 12](../12_bour_regularized_flow/research-progress/REGISTER.md) owns the original flow. [Route 13](../13_bour_marked_limits_and_attainment/research-progress/REGISTER.md) owns the marked returns and stationary estimates. |
+| FOT-B10 | Attained variation and named round calibration checked | A two-sided positive path with a negative second variation yields arbitrarily close lower-energy competitors on the same carrier. The actual round homothety has zero variation in both signs. A supplied nonround candidate and an admissible negative mode or independent recognition are still required in the surviving band. |
+| FOT-E48 | Assessed geometric milestone | Uniform physical injectivity, harmonic-gauge Ricci bound, conformal trace and regular metric-path variation. Signed compact and pointed transfer, a buffered cap extension and the precise uniform-deficit criterion are checked. The general trace-free pairing, harmonic atlas, and ALE cap remain open. |
+| FOT-E47 | Assessed conditional geometric milestone | One original-time Ricci margin, whole-core comparison with both inverse germs, mixed-return physical budget, uniform noncollapse, and initial Yamabe saturation on a second marked pointed subsequence. Public finite and limiting hypotheses are explicit. |
+| FOT-E37 | Coverage open | The uniform recognition-gap import, universal entry and rigidity on the remaining types retain separate proof obligations. No new smooth type was classified in this session. |
 
-FOT-E46 remains the latest checked Lean return. The new scientific attainment theorem is a working manuscript result. [Edition 05 overview](../research-overview/05_OVERVIEW.md) · [Plan](../research-plan/05_PLAN.md) · [Progress at issue](05_BASELINE.md) · [Source receipt](handoffs/ED05_SETUP_INPUTS_20261126.md) · [Activation](../continuation-notes/EDITION_05_BOUR_ATTAINMENT_20261126.md)
+[Assessment](../reviews/ED05_E48_STATIONARY_BALLS_AND_VARIATION.md) · [Public verification](../research-progress/handoffs/ED05_E48_VERIFICATION_20261126.md) · [Continue here](../continuation-notes/AFTER_STATIONARY_BALLS_AND_VARIATION_20261126.md)
+
+[E47 assessment](../reviews/ED05_E47_BOUR_BUDGET_AND_MARKED_RETURN.md) · [Independent exact applications](../reviews/ED05_E47_PUBLIC_CHECKS.lean) · [Verification and pins](handoffs/ED05_E47_VERIFICATION_20261126.md) · [Next geometric inputs](../continuation-notes/AFTER_BOUR_BUDGET_AND_MARKED_RETURN_20261126.md) · [Edition 05 baseline](05_BASELINE.md)
 
 ## Edition 04 · Positive native slices on the finite charged disk · 26 November 2026
 
