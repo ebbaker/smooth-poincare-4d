@@ -1,3 +1,4 @@
+% Two-point localization and the knotted opposite completion, intake 4da586548b44, 26 November 2026.
 % 26 November 2026. Exterior recovery and native caps, intake 8471728a1549.
 % 26 November 2026. Exterior recovery and native caps, intake 8471728a1549.
 % 26 November 2026, nonlocal pairs and rank-two band. Input 62b372832a0a;
@@ -1198,6 +1199,250 @@ The core-crossing argument of Section~\ref{sec:pair} lifts its
 isotopy to finitely many slides over the first component. This
 conditional conclusion uses the geometric annulus and the opposite
 completion. The intersection count alone supplies neither.
+
+\subsection{A disk forced by a two-point cut}\label{sec:two-port}
+
+\begin{theorem}[Localization at two points]\label{thm:two-port}
+Let two disjoint marked integral attachments \(Q,K\) in
+\(Y_1=S^1\times S^2\) have joint outlet \(Y_3\). Suppose a marked
+nonseparating sphere \(S\), with cut manifold \(W=S^2\times I\), misses
+the \(Q\)-tube and meets the \(K\)-core transversely twice with opposite
+signs. Use small transverse tube disks at the intersections.
+After filling \(Q\), one of the two returning arcs cobounds a disk with
+its marked face chord, disjoint in its interior from both arcs.
+Finitely many framed slides of \(K\) over \(Q\) and isotopies put the
+pair in a ball of the inlet. The resulting integral surgery in the
+capped ball is \(Y_2\). If \(Q\) is nontrivial in the capped slab,
+exactly one of the two ports admits this disk. If the capped \(Q\) is
+an unknot, both ports admit it.
+\end{theorem}
+
+\begin{proof}
+Cut at \(S\). The two returns have their endpoints respectively on
+the two different copies of \(S\). Complete each by matching chords
+in the two distinct capping balls and call the resulting knots \(J,V\)
+in \(S^3\), oriented by the corresponding arcs of \(K\). Each drilled
+trivial cap arc has exterior \(S^1\) times a disk. Its attachment to
+the punctured face is \(S^1\) times a boundary interval, so adjoining
+it just extends the annular collar. Thus drilling both returns and
+\(Q\) identifies the three boundary tori with those of the marked
+link \(Q,J,V\). On either return torus the two annuli are the punctured
+face and the lateral wall of the drilled arc. Their common circle
+slope is its meridian. Fill \(Q\) by its given longitude and call
+the resulting connected, two-torus-boundary manifold \(X\).
+
+To see \(X\) inside the \emph{joint outlet}, work in the actual
+filling solid torus for \(K\). The two meridians cut out on
+\(\partial\nu K\) have distance one from the filling slope, by
+integrality. In a chart of the filling solid torus they are two
+longitudinal circles. Take their product with a joining chord in a
+disk section, that is, the annulus \(S^1\times d\) spanning those
+circles. The opposite intersection signs give compatible circle
+directions on the two annuli, so together they form a torus. Cutting the filling disk on \(d\) leaves two half-disks.
+Each product half attaches along the lateral annulus of its respective
+return, extending its collar. The cut-open outlet is therefore \(X\),
+with its true port tori. The gluing uses the original sphere marking
+on the punctured faces and the two copies of the same spanning annulus
+in the specified filling on the other halves. Any framing twist is
+included in this identification.
+
+If both tori injected on fundamental groups into \(X\), van Kampen
+and the base-group injection for an HNN extension
+\cite[Theorem~I]{HigmanNeumannNeumann1949} would embed a torus group in
+\(\pi_1(Y_3)=F_3\). Every abelian subgroup of a free group is cyclic.
+The Loop Theorem consequently supplies a proper compression disk at
+one port \cite{Stallings1960Loop}. This argument permits reducible
+\(X\).
+
+It remains to identify what the disk does to a \emph{marked arc}.
+Put \(a=\operatorname{lk}(Q,J)\), \(b=\operatorname{lk}(Q,V)\),
+\(c=\operatorname{lk}(J,V)\) in the capped slab. The rank increase
+at the free ends gives zero incoming coefficients and
+\(\operatorname{lk}_{Y_1}(Q,K)=0\) by Section~\ref{sec:pair}.
+A Seifert surface for \(Q\) inside the slab gives \(a+b=0\).
+With \(m_Q,m_J,m_V\) the three oriented meridians, the preferred
+longitudes in the three-link exterior give
+\[
+ H_1(X)=\mathbb Z\langle m_Q,m_J,m_V\rangle/
+               \langle a m_J+b m_V\rangle,\qquad
+ [\lambda_J]=a m_Q+c m_V,\quad [\lambda_V]=b m_Q+c m_J .
+\]
+For a disk on the \(J\)-torus its primitive boundary
+\(p m_J+q\lambda_J\) satisfies
+\[
+ (qa,p,qc)=k(0,a,b).
+\]
+If \(q=0\), then \(p=\pm1\), \(ka=p\) and \(kb=0\), contrary to
+\(b=-a\). Hence \(q\ne0\), first \(a=b=0\), and then \(p=c=0\).
+Thus \(q=\pm1\). Interchanging \(J,V\) gives the same conclusion.
+The compressing slope is precisely the preferred longitude and
+meets the meridian once.
+
+Represent this longitude by the prescribed chord on the punctured
+face and a section of the lateral annulus on the drilled return.
+Twisting this section relative to its endpoints realizes all
+meridian translates, so the chord can be held fixed. Isotope the
+disk boundary on its torus to this representative, extend over a
+collar, and restore the radial strip to the return. This gives the
+bridge disk in the \(Q\)-filled slab, missing the opposite tube.
+The section specifies the edge of this disk. During the ensuing
+isotopy one transports the entire original attaching framing.
+With a triangulated marked input, one can also test the two
+preferred longitude words in \(\pi_1 X\). A trivial word bounds a
+disk by Dehn's lemma, and the 3-manifold word problem is uniformly
+decidable \cite{Papakyriakopoulos1957Dehn,AschenbrennerFriedlWilton2015Decision}.
+For this class at least one word passes.
+
+Make the bridge disk transverse to the \(Q\)-filling core. Cut out
+small meridian disks at its finitely many intersection points. In
+the unfilled exterior each new boundary has the original \(Q\)-surgery
+slope. On this punctured disk take disjoint arcs from the holes
+to distinct subintervals of the returning edge. Thickening them
+gives slide bands to signed framed parallels of \(Q\). Cutting the
+punctured disk along these bands gives the disk from the slid arc
+to the chord. Equivalently the framed disk push in the filled level
+crosses the filling core once for each such slide
+\cite[proof of Proposition~3.2]{GompfScharlemannThompson2010}.
+Choose the filling core neighborhood sufficiently small, identify
+its complement in the filling with a torus collar, and extend the
+parallels through that collar. The other return stays outside the
+disk. Gluing the two face markings and pushing across their common
+collar now places both attaching cores in the interior of the slab.
+Their smooth projections to \(S^2\) miss a small open disk. Removing
+that disk times \(I\) and shrinking the end collars gives a rounded
+three-ball containing both cores. Their transported tubes fit there
+after an isotopy of tubular neighborhoods. The joint surgery is
+\(Y_1\) summed with the surgery in the capped ball. Prime uniqueness
+identifies the latter with \(Y_2\) \cite{Milnor1962Prime}.
+
+If both ports compress, their disks can be made disjoint by innermost
+disk replacement, since their boundaries are on distinct tori.
+Use the matched chords to straighten both returns in the \(Q\)-filled
+level. Their union is then a local unknot at the seam. Before this last
+surgery the closed level is \(Y_1\# S^3_0(Q)\). The required increase
+in first Betti number forces the local unknot's coefficient to be zero.
+Thus \(Y_3=Y_2\# S^3_0(Q)\). Prime uniqueness and Property R give
+that \(Q\) is the unknot \cite{Gabai1987FoliationsIII}.
+
+Conversely let \(Q\) be the unknot. Name the port already compressed
+\(J\). In the capped, \(Q\)-filled slab \(S^3_0(Q)=Y_1\), its bridge
+disk joined to the trivial cap disk puts \(J\) in a ball disjoint from
+\(V\), as an unknot. The local link obtained by pushing through the
+seam is precisely \(Q,V\) in the capped slab, with transported
+framing. Its joint surgery gives \(Y_2\). Hence the surgery on \(V\)
+in \(S^3_0(Q)\) goes from \(Y_1\) to \(Y_2\), so \(V\) is a local
+unknot by Lemma~\ref{lem:last-knot}. Shrink the ball about \(J\)
+into a subball off a spanning disk of \(V\) by an ambient isotopy
+fixing \(V\). Pull the disk back. It now misses \(J\), and clipping
+it along the \(V\)-tube and identifying the cap collars gives the
+other compression in \(X\).
+\end{proof}
+
+\begin{corollary}[One unconditional terminal cancellation on this class]
+\label{cor:two-port-count}
+Suppose the inlet in Theorem~\ref{thm:two-port} is the boundary after
+one split zero-framed attachment \(A\) on \(D^4\), and close the
+joint outlet by any supplied rank-three upper handlebody. The same
+closed smooth manifold has a one-sided presentation with two middle
+handles, the local link obtained in the theorem. If a component of
+that local link is a generalized square knot, the closure is \(S^4\).
+\end{corollary}
+\begin{proof}
+Transport the localized ball into a small inlet patch away from the
+initial attachment by a parametrized ball isotopy, extended through
+a collar. In these coordinates the three attachments in \(S^3\)
+are the local pair \(L\) and the distant zero-framed \(A\). Attach
+\(L\) first. Its trace on \(D^4\) has boundary \(Y_2\). Attaching
+\(A\) last adds a separate \(S^2\times D^2\) summand. Choose a
+closing \(\lambda\) matching its product sphere to the last reverse
+belt sphere of the rank-three upper body. If \(\gamma'\) is the
+transported closing, \(\lambda(\gamma')^{-1}\) extends over that
+body with inverse restricting to \(\gamma'\lambda^{-1}\)
+\cite{LaudenbachPoenaru1972Handlebodies}. The split reverse circle
+meets the selected belt once. More precisely, take \(\lambda\) with
+the same boundary orientation sign as \(\gamma'\). Use the extending
+map on the actual upper body and its inverse in reverse. After
+reordering, the dual for cancellation belongs to the newly exposed
+last \(A\)-face. If \(D_L\) is the local trace, \(b\) its gluing
+to this upper cobordism and \(C\) the comparison after upper
+re-marking and cancellation with the remaining \(\HB2\), the residual
+closing and inverse are \((\partial C)b\) and \(b^{-1}\partial(C^{-1})\).
+Thus the original closed assembly is identified with that actual
+rank-two closure of \(D_L\). This is a net
+\(3\to2\) in both counts without births. A sphere missing both components puts them directly
+in a slab ball by the same projection argument. Since the original
+attaching knots are null-homologous by the free-end rank calculation,
+their intersection counts with any transverse sphere are even.
+Consequently in a presentation of this terminal form of least middle
+count three, every nonseparating sphere missing either tube must meet
+the other core at least four times. The capped local trace is
+simply connected with Euler characteristic two. In the stated
+generalized-square-knot case Meier--Zupan's Theorem~1.1 identifies
+this homotopy sphere \cite{MeierZupan2022SquareKnots}. The relative
+local-filling argument of Section~\ref{sec:pair} then replaces the
+local trace by the split pair, fixing the buffered incoming disk.
+\end{proof}
+
+\paragraph{The side selected on a knotted opposite completion.}
+Use the actual zero-framed \(L_{4,1}=Q\cup V_4\) of Figure~1 of
+\cite{GompfScharlemannThompson2010} in the one-period slab.
+Keep the square knot \(Q\) stationary. On one face the return runs
+along its zero parallel with one gap and two product access rails.
+On the other, remove a short mouth arc of
+\(V_4=T_{4,5}\#\overline{T}_{4,5}\) and run its ends to the matching
+ports in a disjoint box. Reattach the faces and take the moving
+zero-framed tube. The relative positions of \(Q,V_4\) in the
+published diagram determine the opposite tangle. Its two zero
+surgeries give \(Y_2\) \cite[\S7]{GompfScharlemannThompson2010}.
+
+Completing the lower rails gives \(J=Q^+\) disjoint from \(V_4\).
+The radial annulus and the rectangle between the observed rails
+give a peripheral annulus between the lower longitude and the
+\(Q\)-filling slope. A filling meridian disk caps it and crosses
+the filling core exactly once. A bridge disk missing that core
+would extend in the unfilled collar and span the capped square
+knot \(J\) in \(S^3\). Thus one is the minimum for \emph{this}
+bridge problem. Slit the annulus along a short radial band in the
+exposed stationary collar. The disk push across the seam returns
+the actual local \(V_4\) alongside \(Q\). The slide formula gives
+zero from the two zero coefficients and vanishing linking.
+This first move proves the required outlet \(Y_1\#Y_2\)
+independently of the compression argument. The opposite port
+cannot compress by Theorem~\ref{thm:two-port}.
+
+In the compactified cyclic cover the moving lift is
+\(V_4\# Q^+\). It is nonsplit with exactly the two adjacent
+stationary lifts. At one end the link is \(L_{4,1}\) with a local
+\(Q^+\) tied into the partner. At the other it is the parallel
+square-knot pair with a local \(V_4\) tied in. The first link is
+nonsplit by its joint \(Y_2\) surgery, prime uniqueness and
+Property R. The parallel-pair obstruction follows from its spanning annulus. The local-knot and
+deck arguments of Section~\ref{sec:generator} now exclude any
+inlet ball for the original pair. Both original first attachments
+have nontrivial lifted knot and hence fail the rank-increasing
+single-knot test. The returned first cut with \(Q\) first is still
+\(Y_1\# S^3_0(Q)\). A recognized local \emph{trace} changes the
+intermediate height.
+
+For the composition of the slide and relative local trace
+comparisons let \(P\) be the actual outlet diffeomorphism. Every
+remaining framed tube \(t\) transports as \(Pt\) with inverse
+\(t^{-1}P^{-1}\) on its image. Extend by identical handle coordinates
+at each later attachment. The final closing is
+\(\gamma\widehat P^{-1}\), with inverse \(\widehat P\gamma^{-1}\).
+At an immediate closing an original outgoing face \(o_i\) gives the
+same dual marking \((\gamma P^{-1})(P o_i)\tau=\gamma o_i\tau\),
+where \(\tau\) exchanges the factors. Use the corresponding actual
+outlet for a later face. The geometric cancellations use the
+\emph{new} split duals. In the terminal assembly they take both
+middle and upper counts \(3\to2\to1\to0\) with no stabilization.
+For an interior block the relative trace equivalence has net change
+zero until a successor cancellation is supplied. The published
+diagrammatic alternative for the returned \(L_{4,1}\) introduces
+one cancelling Hopf pair, changes the local diagram and removes the
+pair \cite[\S10]{GompfScharlemannThompson2010}. Its temporary middle
+count is four. The smooth local comparison requires no assertion of
+unstabilized unlinking slides for that diagram.
 
 \section{Metric criteria on the given levels}\label{sec:bands}
 These criteria give PSC domination for the actual slice

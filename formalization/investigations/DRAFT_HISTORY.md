@@ -1,5 +1,7 @@
 # Overall formalization milestones
 
+- **26 November 2026 · Edition 05 setup, FOT-B09.** Adopted separate owners for the original regularized flow and the marked fixed-type return, retained the master’s separate entry and rigidity questions, and restricted new physical comparisons to identified candidates. [Overview](research-overview/05_OVERVIEW.md) · [Plan](research-plan/05_PLAN.md) · [Baseline](research-progress/05_BASELINE.md)
+
 - **26 November 2026 · FOT-E46.** Derived the native curvature and positive-slice estimates, matched both complete cap costs at one radius, and located the mass outside the protected core when the peak approaches its sharp bound. Checked the reverse-core homology and applied local filling recognition to the specified square-knot successor. [Assessment](reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md) · [Verification](research-progress/handoffs/ED04_E46_VERIFICATION_20261126.md)
 
 - **26 November 2026 · FOT-E45.** Derived the finite exterior gain and protected-core loss for transport of the original charged disk, measured its endpoint density against incoming volume, and followed a relative framed pair through the closed trace. Added actual native jet, volume, cap, width, isolation and finite round-end results. [Assessment](reviews/PHYSICAL_STRIPS_AND_TRANSPORTED_DISKS_20261126.md) · [Public verification](research-progress/handoffs/ED04_E45_VERIFICATION_20261126.md)

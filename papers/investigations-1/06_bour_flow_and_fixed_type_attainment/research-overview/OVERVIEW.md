@@ -2,7 +2,11 @@
 
 26 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. The author selected GPT-6.2 Astra/ultra leadership and bounded GPT-6.2 Sol/ultra packets. Serving settings are not independently attested. The scientific baseline is repository revision \(\texttt{65f06ea}\), Bour's v1 preprint and the source passages identified in the [version receipt](../../../../references/SOURCE_NOTES_BOUR_ATTAINMENT_20261126.md).
 
-## The proposed implication
+## Assessed result
+
+On any fixed entered type the [working proof](../manuscript/fixed_type_attainment.tex) produces a smooth positive Bach-flat class of energy \(I^+(M)\). The physical bound \(D\le4I+4\alpha\) applies at every time on the original late flows. It excludes multiple ends after the closed-source link test. The attainment argument then uses a marked normal ball and a uniform CSC elliptic system in the vanishing-parameter limit. [Independent readings and scope](../reviews/FIXED_TYPE_ATTAINMENT_20261126.md)
+
+## Initial formulation
 
 Fix a closed, connected, oriented, smooth Riemannian homotopy four-sphere \(M\). In curvature-operator Hilbert–Schmidt normalization, \(E_\pm=\int_M |W^\pm|^2\,dV\). The signature vanishes, so \(E_+=E_-=e\) on a closed source. Write \(T=4\pi^2\) and \(I=I^+(M)=\inf_{Y([g])>0}e([g])\). The input is an actual positive class with \(e<2T\). The desired conclusion is a smooth positive conformal class on this very \(M\) with \(B=0\) and \(e=I\). On a putative nonstandard type the master's recognition gap places \(I\) in the open band \((T+\varepsilon_*,2T)\). In this band attainment would also identify \(I\) with the least subcritical positive exact critical value \(a_M\). Establishing entry for every smooth type and excluding an attained minimizer in this band are separate master problems. [Master overview](../../../master/research-overview/OVERVIEW.md) · [Exact closed types](../../../master/manuscript/exact_closed_types.tex)
 

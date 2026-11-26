@@ -18,7 +18,7 @@
 \newcommand{\CP}{\mathbb{CP}}
 \title{Chiral Weyl energy and the smooth\\four-dimensional Poincar\'e conjecture}
 \author{Edward B. Baker III}
-\date{Working draft, 25 November 2026}
+\date{Working draft, 26 November 2026}
 
 \begin{document}
 \maketitle
@@ -49,9 +49,12 @@ recognition criterion. Independently, a hypersurface immersion in
 \(\mathbb R^5\) with induced energy at most \(64\pi^2/9\) recognizes its
 domain. In the wider immersed band below \(8\pi^2\), we give recognition
 tests for the framed surgery diagrams of selected Morse heights.
-In each fixed strict band only finitely many nonstandard smooth types
-can support a positive Bach-flat class. Their least spectral deficit,
-when this family is nonempty, is attained and positive. Constructing
+Using the companion fixed-type attainment theorem, we deduce that
+the infimum after positive subcritical entry is realized on its original smooth
+type. In each fixed strict band only finitely many nonstandard smooth
+types can have such an infimum. Among positive Bach-flat classes in
+that band on those types, the least spectral deficit is attained and
+positive whenever the family is nonempty. Constructing
 qualifying data on every smooth homotopy four-sphere remains open.
 \end{abstract}
 \section{Introduction}
@@ -162,8 +165,9 @@ The proof has two starting points. A single metric can recognize its
 domain by Theorem~\ref{thm:recognition-gap} or
 Theorem~\ref{thm:immersed-entry}. In the wider immersed band the
 question passes to the attaching maps of one selected Morse height.
-Intrinsically, a positive subcritical class allows us to minimize chiral
-energy on the given smooth type. If a spherical cut gives two positive
+Intrinsically, a positive subcritical class gives a smooth Bach-flat
+minimizer of chiral energy on the given smooth type by
+Corollary~\ref{cor:entered-type-attainment}. If a spherical cut gives two positive
 capped classes of combined energy at most \(8\pi^2\), one has energy
 at most \(4\pi^2\) and is standard. The other then retains the original
 smooth type. Its energy bounds how much chiral mass the cut can discard
@@ -544,8 +548,10 @@ the chiral mass near that curvature peak. To turn the scale separation
 into a cut, Proposition~\ref{prop:critical-annulus} asks for one whole harmonic marking with fixed small distortion on the selected physical block. Theorem~\ref{thm:ricci-scale} forces supercritical Ricci growth on shrinking charged windows. Corollary~\ref{cor:anchored-annulus} reduces the search to one scale-anchored annular chart. Constructing that chart from the subcritical physical budget remains open. Repeated concentration at successively smaller physical
 diameters need not decrease the limiting energy.
 
-A minimizing sequence could instead approach a smooth nonround
-closed minimizer. At an attained minimum, positive Yamabe sign is open
+The fixed-type result in Corollary~\ref{cor:entered-type-attainment}
+supplies a smooth closed minimizer on every entered type. Its constant
+sequence already realizes the infimum, so an energy-lowering cut on
+that sequence would directly contradict minimality. Positive Yamabe sign is open
 under smooth variations. The first variation of chiral energy is a
 nonzero constant times the pairing with the Bach tensor, so the metric
 is Bach-flat \cite[\S3]{ChangGurskyYang2003}. A smooth limit can
@@ -555,7 +561,7 @@ physical \(L^p\) Ricci bound. Classifying the remaining minimizers or
 constructing a variation that strictly lowers their energy on the same
 smooth manifold remains an independent problem. The disk variation estimate bounds the Bach pairing in a critical
 test norm by the square root of the minimizing excess. Fourth-order
-compactness would require control in the norm used by its regularity theorem.
+compactness for an arbitrary such sequence would require control in the norm used by its regularity theorem. The companion proof obtains attainment by choosing stationary outputs of the regularized flow.
 
 \section*{Disclosure of language-model assistance}
 The research underlying this manuscript used large language models from
@@ -570,6 +576,11 @@ assistance on 25 November 2026. It starts from the assessed E63--E67 manuscript 
 recorded at \texttt{5706ef811adc}. The E69--E72 research assessment
 records the manuscript generations, independent readers and evidence
 for the results used here.
+
+The 26 November 2026 revision imports the fixed-type implication
+from \cite{Baker2026BourAttainment} and derives fixed-band finiteness
+for entered nonstandard types. Its analytical dependencies and the
+model readbacks are documented in investigation 06.
 
 \bibliographystyle{unsrturl}
 \bibliography{references}

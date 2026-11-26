@@ -2,6 +2,8 @@
 
 26 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Source baseline \(\texttt{65f06ea}\) and Bour v1. The [overview](../research-overview/OVERVIEW.md) fixes the norms, smooth category and quantifiers. The [parent register](../research-progress/REGISTER.md) owns the integration decisions. Each child owns its proof and reading packets.
 
+The [assessment](../reviews/FIXED_TYPE_ATTAINMENT_20261126.md) records the completed test. The [dated handoff](../continuation-notes/AFTER_ATTAINMENT_20261126.md) gives the next research decision. The packet specifications below are the original activation plan.
+
 ## Order of work
 
 1. Freeze one hypothetical nonstandard entered \(M\), one gap below \(2T\) and one sequence of positive unit-volume Yamabe starts within \(\alpha_j^2\) of \(I^+(M)\). Audit §8 of Bour and the specific results it uses. Reconcile the dissipation coefficient in §8 with the stated gradient equation and identify which uses require only finiteness. Record at each step the constants for fixed \(\alpha_j\) and the estimates that persist in \(j\). A failing import can be replaced by a theorem with checked hypotheses or a local proof of the precise missing estimate. [Flow and energy plan](../01_regularized_flow_and_energy/research-plan/PLAN.md)

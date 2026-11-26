@@ -78,4 +78,63 @@ At 13:25:11 EST the comparison HEAD was `39445abb3f80eca42649813600fc07c47a56af0
 | [Bibliography](../../../../references/references.bib) | `b80860efc0a76f4497890c82232fc31ad22f16ab31f8acc9338bcb219688f757` | `252fd664524f4923785ddbfb19bdd7a6121fabdc15142103c25707a43b495f7b` |
 | [Canonical collar and surgery source notes](../../../../references/SOURCE_NOTES_COLLAR_SURGERY_20261126.md) | `1839c577f07d3e8eef124f2946fe09783481781c52690bcab140b5c721b59b20` | `1839c577f07d3e8eef124f2946fe09783481781c52690bcab140b5c721b59b20` |
 
-The native comparison starts with one buffered marked disk in a closed smooth oriented four-manifold and a strictly positive scalar floor on the source. Under strict subcritical headroom, one small radius controls the full affine metric slices and selects the product subslab and both actual matched caps. Chart-oriented smooth frames furnish the required chiral measurability. Constructing the signed slice still uses equality of the two relative integral differences on the changed ball at each time. The signed ledger measures the complete retained exterior and both original charges. The reverse-core theorem uses the two integral relative homology groups and the actual factor-exchanged outgoing face. The further square-knot diagram supplies a separate mathematical application through its local filling and transported markings. [Finite balanced caps](../../../SmoothPoincare/Variational/FinitePocketBalance.lean) · [Marked reverse core](../../../SmoothPoincare/Heights/ReverseMiddleAttachment.lean) · [Square-knot successor reading](../../09_morse_heights_and_handle_recognition/research-progress/handoffs/E46_SQUARE_KNOT_SUCCESSOR_20261126.md)
+The native comparison starts with one buffered marked disk in a closed smooth oriented four-manifold and a strictly positive scalar floor on the source. Under strict subcritical headroom, one small radius controls the full affine metric slices and selects the product subslab and both actual matched caps. Chart-oriented smooth frames furnish the required chiral measurability. Constructing the signed slice uses equality of the incoming and outgoing signed differences on the changed ball at each time. The paper readback obtains that equality by compactly supported Pontryagin transgression. Its normalization and integral argument are separate from the kernel verification. The signed ledger measures the complete retained exterior and both original charges. The reverse-core theorem uses the two integral relative homology groups and the actual factor-exchanged outgoing face. The further square-knot diagram supplies a separate mathematical application through its local filling and transported markings. [Finite balanced caps](../../../SmoothPoincare/Variational/FinitePocketBalance.lean) · [Native transgression](../../../../papers/investigations-1/05_collar_deformation_and_surgery/01_collar_deformation_and_adapted_coordinates/notes/BOUNDARY_TRANSGRESSION.md) · [Marked reverse core](../../../SmoothPoincare/Heights/ReverseMiddleAttachment.lean) · [Square-knot successor reading](../../09_morse_heights_and_handle_recognition/research-progress/handoffs/E46_SQUARE_KNOT_SUCCESSOR_20261126.md)
+
+## Exact replay on the frozen public build
+
+The audit resolves explicitly authored declarations against their positions in the compiled `.ilean` index. The topic and Blueprint queries used the same owning imports and pretty-print settings as the intake. Each inherited type and axiom record compared byte for byte by name. Each inherited kernel expression hash, ordered universe parameter list and transitive axiom set matched its E45 fingerprint. The full transitive axiom union is `Classical.choice`, `Quot.sound` and `propext`.
+
+| Set | Matched E45 | Added | Final total | Final output SHA-256 |
+| --- | ---: | ---: | ---: | --- |
+| Authored topics across 225 contributing modules | 1,427 | 89 | 1,516 | `59e24b9d5583f1937357f7c11ab1c2b52cb5d219324ada45c7996a0c8f3e7644` |
+| Distinct Blueprint declarations | 663 | 37 | 700 | `febcfaab5bad9b7a80b8912fdca0632db89b1aee725595857c1e2931da11fe1e` |
+| Distinct kernel fingerprints | 1,598 | 89 | 1,687 | `2363712b3d7e8ad5ebeb5ae870484ac24dbb270dacec10a52e94e31ccc903350` |
+
+The added authored records hash to `8cc5c909a3125bf9fc4066826e347448e084daabb7c51d1a305240269b4c7901`. The added Blueprint declaration records hash to `0cfd98dc77eecde4eff2b7165fc9a162ebe18cbdc378cb662cfdb36726e060e5`. Both subsets use sorted declaration order.
+
+| Selected declaration under `SmoothPoincare` | SHA-256 of exact type and axiom record |
+| --- | --- |
+| `exists_nativePocketPath_frameTensorNormSq_bounds` | `91ae6f2e5fdfd62345d5c0377ca32f3566761b99ff0a6a89396931deb726dc96` |
+| `exists_nativePocketPath_measurableFrames` | `5d88a7e81c5fd4fe0de56bcfd5edf75201cb8f91c163e637b316a5719df761d1` |
+| `exists_nativePocket_positive_geometry_bounds` | `bc649e85d7a98266bc5e616bce17a93e3d256299a810297d3db2adb749af896b` |
+| `nativePocketCylinder_substrip_width` | `976d33331ad77aa9e4e27904485bf5c80b8d598c6e195b350e5da4f094984c27` |
+| `nativePocket_matchedCylinderCaps_of_reference` | `d988253238f454f2abf4e07b103330137137c05a3c43c56191c727060ae3fa2d` |
+| `originalDisk_finite_positive_caps_of_balance` | `48dedafed848ae8dd89751679871b14757a961095a6bde3172fe85f9b981c733` |
+| `selectedMatchedCap_scalarTest` | `aa70d131b277a8eac166b82e8a1d4dc2b19ce9acc31035c61a4a475952a322d0` |
+| `exists_retainedChargeCalibration` | `ba7e3b1e00a0d8a2fee6a93436da992bb4960f41ad5b20fa58d814cb7d5fbad0` |
+| `retainedCore_nearSharp_limits` | `86984e6c3a84cbe9fb6e57a7bceba334853ccf8f15b8aa70cc54469b26c028bb` |
+| `reverseMiddleCore_nullHomologous` | `7cdadd61f857ec76bfd7a4c5c494824c0f1e5ea5d78c4d4c9b88ed59e75e9290` |
+
+## Print, web and dependency checks
+
+The print and web builds passed `make -C formalization/blueprint all`. Ghostscript interpreted the full print PDF with `-dPDFSTOPONERROR`. The audit confirmed all TeX labels as HTML IDs and actual PDF named destinations, with all 35 Chapter 17 titles found on their expected pages. It resolved every declaration link in the text and graph to the compiled Lean module and exact line. It compared the full generated text of every referenced Lean source page against the working file, verified each declared dependency as a path in the transitive reduction, and checked the HTML and graph proof markings.
+
+The six new checked proposition and proof pairs extend all 19 inherited pairs, whose bytes give `c21b158cef369308fc50867689b7a4a92b30aea8bef0d5541a4e28e5c265620c`. The seven open problem blocks reproduce `70d34adbc8922f49a5a5eda635e44d38a2e5e3b68021ade7e7c2296aa3001d56`.
+
+| Final render check | Result |
+| --- | ---: |
+| Printed pages | 51 |
+| Labels with both HTML IDs and named PDF destinations | 196 |
+| Chapter 17 checked proposition and proof pairs | 25 |
+| Chapter 17 open targets | 7 |
+| Chapter 17 graph nodes | 32 |
+| Chapter 17 paths for declared dependencies | 36, with 31 direct edges |
+| Lean link occurrences in each of rendered text and graph | 701 |
+| Distinct compiled Lean source anchors | 700 |
+| Referenced Lean source pages and exact full-text line anchors | 309 pages, 60,601 lines |
+| Internal HTML Blueprint label links | 679 |
+
+| Rendered input or artifact | SHA-256 |
+| --- | --- |
+| Blueprint PDF | `7c16b6109519b808ec775b8385adb4fe7e622ad64b871dd8ff48f2cd000b2a81` |
+| [Edition 04 chapter TeX](../../../blueprint/src/edition_four_marked_cuts.tex) | `83c155ddd132a79b9d6d5805e3c46cabe8b86390be3e817edc06f958a169f7a2` |
+| Edition 04 chapter HTML | `a74632a0f983cfedd44abacc8179e5374812ca901c8ac1fc6885bdd5bf9e6995` |
+| Dependency graph HTML | `0222d4e2c2c93aab80dfb09b0ce6b714f6f59274fe4104e9ecf557f30acea50b` |
+
+## Final applications and documentation check
+
+All 73 inherited applications passed on the final build. All 22 applications in the frozen E46 public fixture, with SHA-256 `7b11ce810016b187a488bacd8d6896f7f2b3e0e193f69c803c183b6755b0bdea`, passed `lake env lean -j1` using only `import SmoothPoincare`. The fixture applies the two signed ledgers, normalized chart, native radius and measured subwidths, exact scalar-wall equality, rank-three/rank-two reverse core, measurable signed slices from local balance, and the one-radius original marked cap assembly from that balance. Five separate root-only probes checked the minus-dominant maximizing sign, full saturation of the peak bound, positivity at the inclusive scalar budget, the prescribed cylinder radius, and the marked reverse core. The companion geometric reading hashes to `ff8d627518fa176630f8673bba11c495f2f6f1eab65a4b3944b9afc9182254b1`. [Public applications](../../reviews/ED04_E46_PUBLIC_CHECKS.lean) · [Geometric readback](../../reviews/ED04_E46_GEOMETRIC_READBACK.md)
+
+At 13:27:17 EST the completed 44-file formal planning and owning-register group had working SHA-256 `02e21cbabc37d96c9c28fd825a3671339f1d51e4abe882b68b164b4406ed7f79`. This later documentation check reproduced the frozen Lean, Blueprint and scientific source inputs above.
+
+The subsequent comparison HEAD `4da586548b445ccfe9145c6a5671c0f7ecd433f3` contains the frozen root, all 227 topic files, all 17 top-level Blueprint sources, and the later registers at identical hashes. Its scoped scientific TeX, planning files and reference records reproduce the checked working generations. Repository hygiene and whitespace checks passed, and the tools suite ran 142 tests with three skips.

@@ -55,3 +55,7 @@ A clamped variation on the E61 disk can save at most the minimizing excess. At v
 ## 26 November 2026 · Entry, attainment and rigidity
 
 Revised the [overview](research-overview/OVERVIEW.md), [plan](research-plan/PLAN.md) and [master register](research-progress/REGISTER.md) in response to the [external review](reviews/claude/EXTERNAL_PROGRAM_REVIEW_20261126.md). Investigation 06 owns the proposed attainment proof. The master gives rigidity of an attained minimizer a distinct task alongside universal entry. [Current continuation](continuation-notes/ENTRY_ATTAINMENT_AND_RIGIDITY_20261126.md). This is a planning milestone.
+
+## 26 November 2026 · Attainment after positive subcritical entry
+
+The [master corollary](manuscript/exact_closed_types.tex) imports the 06 fixed-type proof and extends fixed-band finiteness to entered nonstandard types by their actual infima. The intrinsic route now needs universal entry and rigidity of its attained minimum. [Working proof](../investigations-1/06_bour_flow_and_fixed_type_attainment/manuscript/fixed_type_attainment.tex) · [Assessment](../investigations-1/06_bour_flow_and_fixed_type_attainment/reviews/FIXED_TYPE_ATTAINMENT_20261126.md)

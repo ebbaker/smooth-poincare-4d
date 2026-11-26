@@ -1,5 +1,9 @@
 # Physical scales and marked annuli · Progress register
 
+## Edition 05 setup · 26 November 2026
+
+Retain ownership of intrinsic lengths, separated physical quantiles and proper comparison windows. For a new cut, supply widths, scalar floor and outward means on its actual marking when these could support a recognition or finite comparison. A fallback physical-shell packet needs a class left uncovered by the Bour audit, the concrete missing radius or marking estimate, and a proposed gain on that source. Route 13 owns the marked compactness and same-type tests in the Bour argument. [Edition 05 plan](../../research-plan/05_PLAN.md) · [Route 10](../../10_positive_scalar_intermediate_cuts/research-progress/REGISTER.md) · [Route 13](../../13_bour_marked_limits_and_attainment/research-progress/REGISTER.md)
+
 ## FOT-E46 · 26 November 2026
 
 The exponential radius and angular derivative now give both slots of the actual endpoint cylinder. Its axis coordinate gives the attained intrinsic width of every contained subinterval. This is a finite source at its own cutoff scale. A sequence of such radii supplies no proper limit embedding at separated physical quantiles. [Fixed marking and width](../../03_single_cut_descent/research-progress/handoffs/E46_NATIVE_POCKET_CYLINDER_20261126.md) [Program assessment](../../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)

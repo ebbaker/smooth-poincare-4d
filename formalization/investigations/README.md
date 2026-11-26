@@ -1,6 +1,6 @@
 # Formalization investigations
 
-**FOT-E46 · 26 November 2026.** The native flattening of the finite charged disk now has physical curvature and scalar estimates at one radius, an exact central cylinder and two complete cap costs. A separate marked successor comparison uses the published square-knot diagram. [Finite positive pockets and marked successors](reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)
+**Edition 05 · 26 November 2026.** The formal research program follows a smooth type through entry, the Bour attainment argument, and rigidity of an attained minimum. [Overview](research-overview/05_OVERVIEW.md) · [Proof plan](research-plan/05_PLAN.md) · [Progress at issue](research-progress/05_BASELINE.md) · [Start here](continuation-notes/EDITION_05_BOUR_ATTAINMENT_20261126.md)
 
 Use the [formalization setup workflow](../FORMALIZATION_SETUP_WORKFLOW.md)
 to plan and track families of Lean proofs. The [shared blueprint](../blueprint/README.md)
@@ -8,10 +8,11 @@ records mathematical dependencies across these investigations.
 
 ## Overall research program
 
-Edition 04 asks which marked construction can recognize each hypothetical nonstandard smooth type or contradict its minimality. The [first assessed milestone](reviews/FIXED_FACES_AND_NORMALIZED_PREFIXES_20261126.md) constructs both positive caps on the round control and tests the geometry and algebra of actual handle prefixes. The [current milestone](reviews/PHYSICAL_STRIPS_AND_TRANSPORTED_DISKS_20261126.md) prices the transport of the original charged disk, treats marked cap metrics and follows an actual framed pair through the closure. [Current overview](research-overview/04_OVERVIEW.md) · [Proof plan](research-plan/04_PLAN.md) · [Live program register](research-progress/REGISTER.md) · [Continuation](continuation-notes/CONTINUATION.md) · [Milestones](DRAFT_HISTORY.md)
+Routes 12 and 13 own the original fourth-order flows and the return of their limits to the same oriented smooth manifold. Marked surgery can proceed on a supplied exterior. A collar comparison needs a named candidate for recognition, strict descent beyond the minimizing excess, or instability. The latest checked Lean milestone is [FOT-E46](reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md). [Live program register](research-progress/REGISTER.md) · [Milestones](DRAFT_HISTORY.md)
 
 | Edition | Research overview | Research plan | Progress at issue |
 | --- | --- | --- | --- |
+| 05 · 26 November 2026 | [Overview 05](research-overview/05_OVERVIEW.md) | [Plan 05](research-plan/05_PLAN.md) | [Baseline 05](research-progress/05_BASELINE.md) |
 | 04 · 26 November 2026 | [Overview 04](research-overview/04_OVERVIEW.md) | [Plan 04](research-plan/04_PLAN.md) | [Baseline 04](research-progress/04_BASELINE.md) |
 | 03 · 25 November 2026 | [Overview 03](research-overview/03_OVERVIEW.md) | [Plan 03](research-plan/03_PLAN.md) | [Baseline 03](research-progress/03_BASELINE.md) |
 | 02 · 25 November 2026 | [Overview 02](research-overview/02_OVERVIEW.md) | [Plan 02](research-plan/02_PLAN.md) | [Baseline 02](research-progress/02_BASELINE.md) |
@@ -34,5 +35,7 @@ Each revision receives the next two-digit number in all three folders. Preserve 
 | [09 · Morse heights and handle recognition](09_morse_heights_and_handle_recognition/README.md) | The probability implication for index-two counts and its separate smooth-topology inputs. | [Overview](09_morse_heights_and_handle_recognition/research-overview/OVERVIEW.md) · [Plan](09_morse_heights_and_handle_recognition/research-plan/PLAN.md) · [Register](09_morse_heights_and_handle_recognition/research-progress/REGISTER.md) |
 | [10 · Positive scalar curvature on intermediate cuts](10_positive_scalar_intermediate_cuts/README.md) | Prefix surgery matrices, PSC domination and smooth boundary classifications for the marked reductions in Route 09. | [Overview](10_positive_scalar_intermediate_cuts/research-overview/OVERVIEW.md) · [Plan](10_positive_scalar_intermediate_cuts/research-plan/PLAN.md) · [Register](10_positive_scalar_intermediate_cuts/research-progress/REGISTER.md) |
 | [11 · Intrinsic entry from marked exteriors](11_intrinsic_entry_from_marked_exteriors/README.md) | Prescribed boundary class, positive filling, full chiral budget and positive entry on the identified smooth double. | [Overview](11_intrinsic_entry_from_marked_exteriors/research-overview/OVERVIEW.md) · [Plan](11_intrinsic_entry_from_marked_exteriors/research-plan/PLAN.md) · [Register](11_intrinsic_entry_from_marked_exteriors/research-progress/REGISTER.md) |
+| [12 · Bour's regularized flow](12_bour_regularized_flow/README.md) | Original positive-parameter trajectory, physical curvature budget and fixed-parameter dichotomy. | [Overview](12_bour_regularized_flow/research-overview/OVERVIEW.md) · [Plan](12_bour_regularized_flow/research-plan/PLAN.md) · [Register](12_bour_regularized_flow/research-progress/REGISTER.md) |
+| [13 · Bour marked limits and attainment](13_bour_marked_limits_and_attainment/README.md) | Smooth same-type return, uniform stationary compactness, and an attained positive Bach-flat class. | [Overview](13_bour_marked_limits_and_attainment/research-overview/OVERVIEW.md) · [Plan](13_bour_marked_limits_and_attainment/research-plan/PLAN.md) · [Register](13_bour_marked_limits_and_attainment/research-progress/REGISTER.md) |
 
 The [program register](research-progress/REGISTER.md) owns shared foundations, intrinsic recognition and the final premise audit. Each transferred task keeps its ID and has one current route owner. The [Lean module index](../FirstOrderTwistor/README.md) locates the existing shared proofs.

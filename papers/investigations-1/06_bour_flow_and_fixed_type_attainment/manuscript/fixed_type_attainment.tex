@@ -1,0 +1,444 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\DeclareMathOperator{\Ric}{Ric}
+\DeclareMathOperator{\Rm}{Rm}
+\newcommand{\Yrd}{Y_{\mathrm{rd}}}
+\newcommand{\F}{\mathcal F}
+\newcommand{\dV}{\,dV}
+\title{Attainment of subcritical chiral Weyl energy\\on a fixed smooth homotopy four-sphere}
+\author{Edward B. Baker III}
+\date{Working draft, 26 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+On a smooth homotopy four-sphere admitting a positive Yamabe class of chiral
+Weyl energy below \(8\pi^2\), we obtain a smooth positive Bach-flat class
+realizing the fixed-type infimum. The argument uses Bour's fixed-parameter
+dichotomy and the marked spherical-cut results. Starting within \(\alpha^2\)
+of the infimum gives an estimate for the physical trace-free Ricci integral
+throughout the original flow. This excludes every multi-ended singularity
+model. In the one-ended case a comparison on the entire punctured core
+identifies its smooth compactification with the source. The remaining
+parameter limit uses a uniformly elliptic equation for Ricci at
+constant-scalar critical metrics. Positive subcritical entry and rigidity
+of a minimizing class are separate questions.
+\end{abstract}
+
+\section{The variational problem}
+Let \(M\) be a smooth closed connected oriented homotopy four-sphere,
+with smooth Riemannian metrics. Put
+\[
+ E_\pm(g)=\int_M |W^\pm_g|_{\rm HS}^2\dV_g,\qquad
+ I=I^+(M)=\inf_{Y([g])>0}E_+(g),\qquad T=4\pi^2.
+\]
+The norms are the Hilbert--Schmidt norms of the curvature endomorphisms
+on \(\Lambda^\pm\). The Yamabe quotient uses \(6|du|^2+Ru^2\) over
+\(\|u\|_4^2\) after integration in the numerator. The unit sphere
+has positive sectional curvature and \(\Yrd=8\sqrt6\,\pi\).
+On \(M\) the signature formula gives \(E_+=E_-=e\). On domains we
+keep the two integrals separately. All diffeomorphisms identifying
+oriented manifolds in this argument preserve the chosen orientations.
+
+\begin{theorem}\label{thm:main}
+If \(M\) admits a smooth class with \(Y>0\) and \(e<2T\), there is a
+smooth class on \(M\) with \(Y>0\), Bach tensor zero and \(e=I\).
+On a nonstandard smooth type \(I=a_M\), the least positive subcritical
+Bach-flat value. Its Weyl second variation is nonnegative along
+smooth metric variations at any metric in a minimizing class.
+\end{theorem}
+
+The standard smooth type has the round metric. Our interest is therefore
+in a putative nonstandard type. The hypothesis gives \(I<2T\).
+We can choose any sequence \(0<\alpha_j\downarrow0\) and unit-volume
+Yamabe representatives in positive classes with
+\(0\le\epsilon_j=e_{j,0}-I\le\alpha_j^2\). The inequality
+\(Y([g])\le\Yrd\) and existence of smooth Yamabe representatives have
+their usual compact four-dimensional hypotheses \cite{LeeParker1987Yamabe}.
+
+\section{An estimate along the original trajectory}
+Write \(D=\int|\Ric_0|^2\dV\), \(S=\int R^2\dV\), using the ordinary
+two-tensor norm. Gauss--Bonnet and Bour's functional give
+\[
+ 16\pi^2=2e+S/24-D/2,\qquad
+ \F^\alpha=2(1-\alpha)e+\alpha D/2
+           =2e+\alpha S/24-16\alpha\pi^2 .
+\]
+Let \(g(t)\) solve \(\partial_tg=-2\operatorname{grad}\F^\alpha\)
+from one chosen initial representative. Set \(Y_0=Y([g(0)])\).
+On this representative \(S_0=Y_0^2\) and
+\(D_0=4e_0-(\Yrd^2-Y_0^2)/12\le4e_0\).
+
+\begin{proposition}\label{prop:budget}
+There are \(y>0\), \(\eta>0\) and \(j_0\) depending on the
+entered sequence such that, for \(j\ge j_0\) and every smooth time on
+the original maximal trajectory,
+\[
+ \begin{gathered}
+ Y([g(t)])\ge y,\qquad I\le e(t)\le e_0/(1-\alpha)\le 2T-\eta,\\
+ S(t)\le Y_0^2+48\epsilon/\alpha,\qquad
+ D(t)\le 4I+4\epsilon/\alpha\le4I+4\alpha<32\pi^2 .
+ \end{gathered}
+\]
+The last strict bound has a uniform positive margin after increasing
+\(j_0\).
+\end{proposition}
+\begin{proof}
+Put \(m=(1-\alpha)16\pi^2-\F^\alpha(g(0))
+=16\pi^2-2e_0-\alpha Y_0^2/24\). Strict pinching is equivalent to
+\(\alpha Y_0^2<48(2T-e_0)\). In particular \(m\) tends to
+\(2(2T-I)>0\). The functional decreases. Since \(\F^\alpha\ge2(1-\alpha)e\),
+the physical energy is at most \(2T-m/[2(1-\alpha)]\). In a
+unit-volume Yamabe representative of the current class, Gauss--Bonnet
+gives \(Y^2=48(2T-e)+12D_{\rm Yam}\), hence \(Y^2\ge24m/(1-\alpha)\).
+The sign of \(Y\) agrees with the sign of the first eigenvalue of
+the conformal Laplacian, which is continuous along a smooth path of
+compact metrics. The initial sign is positive, so \(Y\ge\sqrt{24m}\)
+throughout. This also verifies the strict application of
+\cite[Lemma 4.5]{Bour2010FourthOrderCurvatureFlows}.
+Thus every time slice is admissible on the original \(M\), and \(e(t)\ge I\).
+Since \(\F^\alpha(g(0))\le2e_0\), the first form of \(\F^\alpha\)
+gives the upper chiral bound. The second gives
+\(S(t)-S_0\le48(e_0-e(t))/\alpha\).
+Finally the first form gives
+\[
+ D(t)\le D_0+\frac{4(1-\alpha)}{\alpha}(e_0-e(t))
+ \le 4e_0+\frac{4(1-\alpha)}{\alpha}\epsilon
+ =4I+\frac{4\epsilon}{\alpha}.
+\]
+The full curvature integral in curvature-operator norm is
+\(16\pi^2+D(t)\), also uniformly bounded.
+\end{proof}
+
+\section{Fixed positive regularization}
+We use the strictly pinched case of
+\cite[Theorems 1.4, 1.9, 1.11 and \S8]{Bour2010FourthOrderCurvatureFlows}.
+We record here the proof inputs that determine its scope.
+Short-time existence and uniqueness on compact smooth data also follow
+from \cite[Theorem A, equation (4)]{BahuaudHelliwell2015Uniqueness}
+with \(k=1,\ c=1,\ a=-(1-\alpha)/6,\ b=(2+\alpha)/6\).
+The strict symbol inequality is \(a>-1/6\). This application supplies
+the reverse DeTurck step: the vector field in Bour's Proposition 2.1
+depends on the fixed background and its pullback changes that background.
+
+On a slab with bounded normalized curvature, the positive Yamabe bound
+gives a Sobolev inequality with bounded lower-order term. A cutoff test
+on balls gives a positive lower volume ratio at bounded scales, hence
+injectivity at bounded curvature. Bour's Lemma 6.2 bounds the time
+derivative of a curvature derivative energy \(\mathcal R_m\) plus
+\(c_\alpha\mathcal R_{m+2}\) by
+\(C_{m,\alpha}\|\Rm\|_\infty^{m+2}\mathcal R_0\).
+In the subsequent time-weighted sum \(m=2j\), so the power on the right
+is \(2j+2\). For \(K=\sup|\Rm|\) the resulting Gronwall coefficient
+is bounded by \(C_{\alpha,k}K^2(1+K^2t)^k\), sufficient on
+every bounded normalized slab. The resulting even-derivative
+\(L^2\) bounds control the odd derivatives by integration by parts.
+With the scalar Sobolev inequality, Kato's inequality gives \(L^4\)
+bounds on every curvature derivative. Applying the same inequality
+to the square of each tensor norm gives \(L^8\) bounds, and the
+multiplicative Sobolev inequality \cite[Proposition 9.16]{Bour2010FourthOrderCurvatureFlows}
+with \(q=m=8,\ p=\infty\) gives the pointwise bounds. This suffices for the positive-time
+derivative estimates used here. These estimates are for fixed \(\alpha\).
+The flow preserves volume since the functional is invariant under
+constant metric scaling in dimension four. With bounded curvature,
+the fixed-slab estimates give finite-time continuation, and in infinite
+time there are times tending to infinity with gradient norm tending
+to zero. Unit volume and ball noncollapse bound diameter. Compact
+smooth convergence therefore gives a critical metric on the whole
+original smooth type, up to diffeomorphism.
+
+If curvature is unbounded, use first hits of increasing curvature
+levels \(Q_i\to\infty\) and base at a maximum point at time \(t_i\).
+On every fixed backward interval in \(s=Q_i^2(t-t_i)\) the metrics
+\(Q_i g(t_i+s/Q_i^2)\) have bounded curvature, full curvature energy,
+and the same Yamabe lower bound. The positive-time estimates starting
+on a longer backward interval control derivatives through \(s=0\).
+Pointed smooth compactness can use the markings of the final slice
+and the evolution equation to compare on the same compact domains in
+space and time: bounds on the flow tensor and its covariant derivatives
+give uniform metric equivalence and bounds on the change of connection
+by integrating \(\partial_s\Gamma=h^{-1}*\nabla\partial_s h\) backwards.
+Differentiating in the terminal reference connection gives interior
+bounds in every fixed spatial coordinate order. The equation gives
+the time derivatives on a shorter closed slab through \(s=0\). The rescaled dissipation on a fixed backward interval
+equals the dissipation on its original time interval. It tends to
+zero because the total is finite:
+\[
+ \int_0^t\|\operatorname{grad}\F^\alpha\|_{L^2}^2\,ds
+   =\tfrac12\big(\F^\alpha(g(0))-\F^\alpha(g(t))\big).
+\]
+The rescaled limit is stationary, including at the final slice by
+smoothness. Its curvature norm equals one at the base point. It is
+noncompact: a compact limit would embed onto all of \(M\), whereas
+the rescaled volumes diverge. Its complete geometry has infinite
+volume by the uniform lower bounds on unit balls. The trace equation
+is \(\alpha\Delta R=0\). The inherited \(S\)-bound and a cutoff
+test against \(R\) show that this harmonic function is constant,
+hence zero. The remaining Euler equation is Bach-flatness.
+Compactly supported Yamabe tests transport to the source, giving
+\(Y_c(X,h)\ge y\). In particular \(y\|u\|_4^2\le6\|du\|_2^2\)
+on this scalar-flat limit.
+
+In either alternative, smooth comparison on compact sets preserves
+the integrals there. Exhaustion bounds each of \(E_+,E_-,D,S\) and
+the full curvature integral on the pointed limit separately. The
+lower bound \(I\le e\) can be used again on a compactified limit only
+after identifying its smooth type and positive class.
+
+\section{Recovering the compact smooth type}
+\begin{lemma}\label{lem:mark}
+Suppose closed metrics on the oriented \(M\) have \(Y\ge y>0\),
+\(E_\pm\le2T-\eta\), \(D\le d_*<32\pi^2\), and bounded full
+curvature integral. Suppose constant rescalings converge in the smooth
+pointed sense to a complete noncompact connected nonflat scalar-flat
+Bach-flat \((X,h)\). Then \(X\) has one asymptotically Euclidean end.
+Its smooth conformal compactification is orientation-preservingly
+diffeomorphic to \(M\), has \(Y\ge y\), and has common chiral energy
+satisfying
+\[
+   T<e_X\le\liminf e_i,\qquad 4e_X=\int_X|\Ric_h|^2\dV_h\le d_* .
+\]
+Here the liminf is along the converging subsequence.
+\end{lemma}
+\begin{proof}
+Choose the limit orientation by the comparison at the base point,
+passing to a subsequence for consistency. Use comparison embeddings
+on a connected neighborhood of each \emph{whole} compact truncation
+and both buffers on every end in that truncation. These embeddings
+come from pointed smooth convergence on an exhaustion. Compact tests
+and compact exhaustion give the homogeneous Sobolev inequality and
+finite full curvature. Tian--Viaclovsky's decay theorem gives
+\(|\nabla^m\Rm|=o(r^{-2-m})\) \cite[Theorem 1.1, first part]{TianViaclovsky2005ALE}.
+The negative Ricci tensor is in \(L^2\), so the homogeneous Sobolev
+inequality and this decay give finitely many order-zero ALE ends
+\cite[Theorem 1.1]{TianViaclovsky2008Volume}. In particular the
+end topology is finite and \(b_1(X)<\infty\), so the differentiated
+order-zero charts in the first theorem are available.
+Ache--Viaclovsky improve the scalar-flat Bach-flat ends to order two
+with differentiated decay \cite[Theorem 1.2]{AcheViaclovsky2011Obstruction}.
+
+On a large annulus of each end conformally multiply by \(r^{-2}\);
+in logarithmic radius the metric approaches the round product on
+\(S^3/\Gamma\). Fix buffer length, then radius, then comparison index.
+Extend the positive change of gauge over the source using a cutoff
+of its logarithm. A fixed smooth cutoff interpolation to the exact
+product in a central subcollar has added \(E_\pm\) at most \(C\eta_2^2\)
+per splice when the product \(C^2\) error is \(\eta_2\).
+Use disjoint splices on the \emph{uncut} source. Their total can be
+made arbitrarily small. In particular the resulting closed metric
+has \(E_+<9\pi^2\) and is exactly product at all selected slices.
+The closed-source quotient obstruction \cite[A quotient obstruction on the closed source]{Baker2026MarkedNecks}
+applies to each. It uses Hillman's finite-group restriction, the spin
+obstruction for the binary icosahedral link, and the product-boundary
+signature contribution \(9\pi^2\) on one side of a quaternionic link.
+Thus all end groups are trivial.
+
+Let \(k\) be the number of ends. The embedded connected core with its
+\(k\) disjoint boundary spheres has one exterior component per sphere:
+each sphere separates in \(M\), and the incidence graph is a tree.
+Mayer--Vietoris and van Kampen show that every capped piece is simply
+connected with \(H_2=0\), hence a homotopy sphere. Removing \(k\) balls
+from the central capped piece gives \(\chi(X)=2-k\). In Gauss--Bonnet
+each outgoing Euclidean end contributes \(8\pi^2\), by convergence of
+the rescaled boundary metric and second fundamental form to those of
+the round unit sphere \cite[\S7]{TianViaclovsky2005ALE}. Hence
+\[
+ D_X=2\big(E_+(h)+E_-(h)\big)+32\pi^2(k-1).
+\]
+The bound \(D_X\le d_*\) forces \(k=1\).
+
+On that end choose a positive harmonic function
+\(a=r^{-2}(1+O(r^{-\beta}))\), with the expansion differentiated
+through order five for \(0<\beta<1\). For example solve exterior
+Dirichlet problems on \(r_0\le r\le L\) with boundary values
+\(r_0^{-2}\) and \(L^{-2}\), taking \(r_0\) sufficiently large.
+Small and large positive multiples
+of \(r^{-2}(1+r^{-\beta})\) and \(r^{-2}(1-r^{-\beta})\) give lower
+and upper barriers at sufficiently large radius. The resulting
+two-sided comparison with \(r^{-2}\) and interior elliptic estimates
+give \(\Delta_{\rm Euc}a=O(r^{-6})\) in the ALE chart. Cut off at
+the inner boundary and expand the Euclidean Newton potential using
+its finite \(\beta\)-moment. In the region \(|z|\le r/2\), the kernel
+difference from \(r^{-2}\) is bounded by \(C r^{-2-\beta}|z|^\beta\).
+On the tail, split at \(|z-x|=r/4\) and use the \(O(|z|^{-6})\)
+source bound near \(x\) and the integrable tail mass elsewhere.
+The decaying entire harmonic difference is zero.
+The leading coefficient of \(r^{-2}\)
+is positive by the lower barrier. After normalization, rescaled interior estimates give the differentiated remainder. Extend \(a\) positively
+across the core. After inversion \(a^2h\) is scalar-flat near the
+puncture, Bach-flat there and \(O(\rho^\beta)\) close to Euclidean
+with \(m\)th derivative error \(O(\rho^{\beta-m})\).
+The removable point theorem \cite[Definition 1.6, Theorem 1.8 and
+Remark 7.2]{AcheViaclovsky2011Obstruction} gives a smooth chart
+for the compactification \(N\). Bach-flatness holds on the punctured
+manifold by conformal covariance and extends across the point by
+smoothness. Its topology is the one-point
+compactification of the one-ended interior, hence that of a homotopy
+sphere. A point has zero \(H^1\) capacity in dimension four.
+Transport compact tests and cut off near the point to obtain
+\(Y(N,[a^2h])=Y_c(X,h)\ge y\). Conformal invariance gives both
+energies, equal by the signature of \(N\), whence \(D_X=4e_X\).
+If the compactification were conformally round then \(e_X=D_X=0\)
+would give \(\Rm_h=0\). The closed critical gap on a homotopy sphere
+therefore gives \(e_X>T\)
+\cite{ChangGurskyYang2003,ChangChen2021RicciSphere,Baker2026MarkedNecks}.
+
+For the smooth identification use a small \emph{normal} ball of radius
+\(s\) in the removable chart of \(N\). Its complement and both
+logarithmic buffers are contained in a single larger compact truncation
+of \(X\). Under the same embedding of this truncation, multiplying the
+pulled-back, constantly rescaled source by \(a^2\rho^{-2}\) gives
+product error \(O_\ell(s^2)+o_i(1;s,\ell)\) in \(C^2\) around
+the normal sphere of radius \(\rho=s\). If \(e_i\) has no limit,
+pass to a subsequence with convergent \(e_i\), or use the common
+upper bound. The raw exterior energy has upper limit at most
+\(2T-\eta-e_X+E_+(N;B_s)<T\) for small \(s\).
+Choose \(\ell\) first to absorb the \(O(\ell^{-3/2})\) Yamabe
+localization loss in the buffered cap theorem
+\cite[One buffered cut and finite ordinary punctures]{Baker2026MarkedNecks}.
+Then choose \(s\) small and the comparison index large to retain
+positive exterior Yamabe sign and capped energy strictly less than
+\(T\), including the splice cost. The exterior capped by the actual
+parametrized ball is diffeomorphic to \(S^4\) by positive recognition.
+
+Double the removed normal ball in \(N\). The capped source exterior
+and this double are recognized oriented standard spheres. Send the
+actual cap and a collar to the opposite ball in the double by the
+given collar coordinates, with the prescribed inverse comparison on
+the adjoining strip. In collar polar coordinates the ball map can
+be made linear near its center. The disk-neighborhood extension
+theorem \cite[Theorem C]{Palais1960Extending} realizes this local
+identification by an oriented diffeomorphism of the two spheres,
+after shrinking the collar if needed. Its restriction identifies the
+source exterior with the actual deleted normal ball and agrees with
+the inverse core comparison near the seam. Gluing these maps gives
+\(M\to N\), and the two inverse restrictions give \(N\to M\).
+Lastly \(E_\pm(h)\le\liminf E_\pm(g_i)\) by compact exhaustion.
+More precisely, if \(e_i\to e_{\rm src}\), the limiting raw exterior
+mass at fixed \(s\) is \(e_{\rm src}-e_X+E_\pm(N;B_s)\) for each
+sign, by subtraction on the original closed metric. Only after this
+limit do we let \(s\downarrow0\).
+\end{proof}
+
+\paragraph{Restriction on fixed-flow bubbling.}
+If one of the late original flows has a noncompact model, the marked
+identification gives \(I\le e_X\). Keeping the exact \(D_0\) in
+Proposition~\ref{prop:budget} and using \(D_X=4e_X\) gives
+\[
+  4(e_X-I)+\frac{\Yrd^2-Y_0^2}{12}
+     \le\frac{4(e_0-I)}{\alpha}.
+\]
+Thus a subsequence of such original flows can bubble only if its
+\emph{initial} Yamabe constants satisfy
+\(\Yrd^2-Y_{j,0}^2\le48\alpha_j\). The iterated upper limit of raw exterior mass in
+either chirality is at most \(e_{j,0}/(1-\alpha_j)-I\) at fixed \(j\),
+and hence tends to zero along that subsequence.
+
+\section{The limit of critical metrics}
+At each late \(j\), choose the closed critical metric of Bour's
+alternative if this is the output. Keep its physical volume-one
+representative. If the output is pointed, apply Lemma~\ref{lem:mark}
+to the source slices, pull back the exact compact class and choose
+its volume-one Yamabe representative. Write \(p_j=\alpha_j\) in
+the first case and \(p_j=0\) in the second. These closed metrics
+\(q_j\) all lie on \(M\). They have \(I\le e(q_j)\le e_{j,0}/(1-\alpha_j)\),
+so \(e(q_j)\to I\). In the second case we recompute \(D(q_j)\le4e(q_j)\)
+in Yamabe gauge. In the first case Proposition~\ref{prop:budget}
+passes through whole-manifold smooth convergence. In both cases
+\(D(q_j)\le d_*<32\pi^2\) eventually and the full curvature integral
+is uniformly bounded.
+
+All these metrics are constant-scalar. For a regularized critical
+point the trace gives \(\Delta R=0\) since \(p_j>0\).
+The unit-volume constant test and scalar square bound give
+\(y\le R_j\le C\); the same bounds hold in the exact Yamabe case.
+Write \(E=\Ric_0\), use Bour's nonnegative rough Laplacian and
+\(\mathring W(E)\) for his curvature action. On these representatives
+the trace-free Euler equation is
+\[
+ 0=\tfrac12\nabla^*\nabla E-\mathring W(E)
+       +E\circ E-\tfrac14|E|^2q_j+\tfrac{2-p_j}{12}R_j E
+ \quad\text{\cite[Proposition 4.4]{Bour2010FourthOrderCurvatureFlows}.}
+\]
+In particular \(\operatorname{grad}\F_W=p_j R_j E/12\) in this
+convention, and its vanishing is Bach-flatness. The principal
+coefficient is independent of \(p_j\).
+
+For \(g=\lambda q_j\), \(\lambda\ge1\), the scalar curvature is
+\(R_j/\lambda\) and
+\[
+ y\|u\|_{4,g}^2\le6\|du\|_{2,g}^2+(R_j/\lambda)\|u\|_{2,g}^2 .
+\]
+Testing a cutoff of \(B(x,r/2)\) in \(B(x,r)\) gives
+\(y V(r/2)^{1/2}\le(24/r^2+C/\lambda)V(r)\).
+Iterating on halved radii gives \(V(r)\ge c r^4\) for \(0<r\le1\),
+with \(c>0\) uniform. Volume one then bounds the unscaled diameter.
+Choose \(\lambda=1\) on a subsequence where \(\sup|\Rm|\) is bounded;
+otherwise take \(\lambda_j=\max|\Rm(q_j)|\to\infty\), based at a
+maximum. In either normalized gauge curvature is bounded and the
+injectivity radius has a uniform positive lower bound by
+\cite[Theorem 4.7]{CheegerGromovTaylor1982}.
+
+Bounded sectional curvature and injectivity give harmonic charts of
+uniform \(C^{1,\gamma}\) size, \(0<\gamma<1\)
+\cite[Theorem 4.3]{Peters1987Convergence}.
+For clarity, the interior elliptic bootstrap in these charts uses
+no bound on a derivative of the scalar. The harmonic-coordinate
+Ricci identity gives uniform \(W^{2,p}\) control of the metric \cite[Lemma 4.1 and (4.3)]{DeTurckKazdan1981Regularity} for
+fixed \(p>4\) on smaller balls. In the rough Laplacian of \(E\),
+\((\partial\Gamma)E\) is therefore \(L^p\), and \(\Gamma\partial E\)
+is a bounded first-order coefficient. The displayed Euler equation
+has uniformly bounded algebraic right side and gives a \(W^{2,p}\)
+bound for \(E\) by interior estimates with lower-order terms.
+Thus \(E\) is \(C^{1,\gamma'}\) for some \(\gamma'>0\).
+Alternating the metric equation and the \(E\) equation now gives
+uniform interior estimates of every order. Both equations have the
+same form with the rescaled tensors, with \(R_j/\lambda\) in the
+zeroth-order term. Smooth pointed compactness gives one comparison
+on every connected compact domain.
+
+At bounded unscaled curvature the diameter bound gives a closed
+limit and whole oriented comparison diffeomorphisms. It has \(Y\ge y\)
+by testing smooth convergence. Since \(p_j\to0\), its limiting Euler
+equation is Bach-flat and smooth convergence gives \(e=I\).
+At unbounded curvature the complete smooth limit has curvature norm
+one at its base point. The volumes of the rescaled metrics tend to
+infinity, precluding a compact limit with a whole comparison
+diffeomorphism. The scalar vanishes since \(R_j/\lambda_j\to0\);
+the Euler equation gives Bach-flatness. Lemma~\ref{lem:mark} applies
+to this second pointed sequence, giving a positive smooth compactification
+on \(M\) with
+\[
+ I\le e_X\le\liminf_j e(q_j)=I .
+\]
+In this second pointed case the iterated raw exterior mass is
+\(I-e_X=0\) for both signs. This finishes both alternatives without
+a restart. On a nonstandard
+type, positive recognition below \(T\) excludes \(I=0\). The attained
+value thus belongs to the set of positive subcritical exact values.
+Its infimum \(a_M\) satisfies \(I\le a_M\le I\). Finally positive Yamabe
+sign is open under smooth variations, so the usual second derivative
+test at the minimizing metric proves the stability assertion of
+Theorem~\ref{thm:main}.
+
+\paragraph{Scope and provenance.}
+Drafted for Edward B. Baker III with OpenAI Codex assistance,
+26 November 2026, from checkout \texttt{4da5865}. The starting proposal
+was F2 of the author's Claude review; the fixed-parameter source is
+Bour v1. The selected research configuration was GPT-6.2 Astra/ultra
+with bounded GPT-6.2 Sol/ultra calculations and readings. Serving
+telemetry is unavailable. The argument uses the cited literature and
+the project's marked-neck working results. The present theorem leaves
+the construction of positive subcritical entry on an arbitrary type
+and the exclusion of an attained nonround minimum on a nonstandard type
+open.
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+\end{document}

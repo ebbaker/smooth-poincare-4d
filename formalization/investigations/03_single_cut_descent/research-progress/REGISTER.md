@@ -1,5 +1,9 @@
 # Single spherical cut and descent · Progress register
 
+## Edition 05 setup · 26 November 2026
+
+Keep the finite marked cut, cap and same-type reassembly interfaces active for an identified candidate. On the actual source, test a complete recognition bound, a same-type positive competitor with a strictly qualifying saving at the specified index, or a stability variation on a specified attained candidate. Use the strict joined peak when invoking the scalar-flat wall and the inclusive total for independently positive caps. Route 07 owns the finite descent ledger. Route 13 checks the Bour marked-limit and attainment argument, with further legacy extraction reserved for a named uncovered class and a concrete missing comparison. [Edition 05 plan](../../research-plan/05_PLAN.md) · [Route 07](../../07_fixed_type_variational_descent/research-progress/REGISTER.md) · [Route 13](../../13_bour_marked_limits_and_attainment/research-progress/REGISTER.md)
+
 ## FOT-E46 · 26 November 2026
 
 On a fixed positive-scalar disk one radius and Euclidean reference now serve the physical flattening, exact central product, stereographic disk cap and same-type exterior cap. The complete outgoing disk charge is zero and the complete exterior gains the original disk mass up to the flattening increment. The constructed oriented chart frames give measurable densities in both signs. At each time, the remaining Lean input is equality of the signed charge difference on the changed ball. The assessment derives that equality by relative transgression at paper level. [Original disk assembly](../../../SmoothPoincare/Variational/FinitePocketBalance.lean). [Native cylinder and both cap markings](handoffs/E46_NATIVE_POCKET_CYLINDER_20261126.md) [Program assessment](../../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)

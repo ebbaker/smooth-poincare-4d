@@ -16,7 +16,7 @@
 \newcommand{\R}{\mathbb R}
 \title{Chiral Weyl energy and Morse heights of\\immersed homotopy four-spheres}
 \author{Edward B. Baker III}
-\date{Working draft, 25 November 2026}
+\date{Working draft, 26 November 2026}
 
 \begin{document}
 \maketitle
@@ -55,13 +55,15 @@ On a closed homotopy sphere the signature is zero,
 so \(E_+=E_-\) and the full four-index Weyl integral is \(8E_+\)
 \cite[Remark 2 and (0.4)]{ChangGurskyYang2003}.
 
-An actual smooth immersion \(F:M\to\R^5\) exists on each such smooth
-type. The stable triviality of \(TM\) follows from
-Kervaire--Milnor \cite[Theorem 3.1]{KervaireMilnor1963Groups}, and the
-rank-five bundle \(TM\oplus\R\) is in the stable range over a
-four-dimensional complex. Its trivialization supplies a bundle
-monomorphism over a constant map, which Hirsch's immersion theorem
-realizes in positive codimension \cite[\S6]{Hirsch1959Immersions}.
+Every smooth homotopy four-sphere has an embedding in \(\R^5\).
+Kervaire's Theorem~3 gives a compact smooth contractible five-manifold
+with boundary \(M\) \cite{Kervaire1969HomologySpheres}. Its double is
+a simply connected homology five-sphere by van Kampen and
+Mayer--Vietoris, hence a homotopy five-sphere. Since \(\Theta_5=0\)
+\cite{KervaireMilnor1963Groups}, the seam embeds in \(S^5\).
+Removing a point away from the seam gives the claimed embedding.
+The curvature and height estimates apply more generally to any
+smooth hypersurface immersion on this domain.
 Use the induced Riemannian metric \(g=F^*\delta\), the
 orientation-compatible Gauss map \(\nu:M\to S^4\), and the
 shape operator \(A=-dF^{-1}d\nu\). Write
@@ -351,6 +353,52 @@ and the quotient of its multiplier by \(r\) extends
 smoothly and positively over the round cap charts.
 These immersions have zero Weyl energy and positive Yamabe
 sign, including the six-critical-point case at \(J=\omega\).
+
+\subsection{Which two-handle heights give recognition?}
+
+\begin{proposition}[Marked surgery tests]\label{prop:two-middle-tests}
+Carry the attaching tubes of one selected two-middle-point height
+through the tree reductions of Lemma~\ref{lem:one}. If the odd handles lie at
+one end, smooth recognition follows when the other end's two-component
+link has an unknot component, has tunnel number at most two,
+or contains a generalized square knot \(T_{p,q}\#T_{-p,q}\)
+for coprime \(p,q\ge2\), possibly after framed slides. If there is one odd handle at each end, recognition
+follows when some framed slide and order of the two middle handles
+gives intermediate surgery boundary \(S^3\) or \(\#_2(S^1\times S^2)\).
+It also follows if the second attaching circle on the intermediate
+boundary is isotopic there to the first belt circle.
+The intermediate cut belongs to the transported trace. Its identification
+with a regular level of the original height would require a separate marking.
+\end{proposition}
+\begin{proof}
+A slide inducing \(s:X'\to X\) on a trace transports the outgoing
+boundary gluing \(\varphi\) to \(\varphi\circ\partial s\). At the
+one-sided end surgery yields \(\#_2(S^1\times S^2)\), so the cited
+unknot and tunnel-number-one conditions reduce the trace to the zero-framed unlink
+\cite[Propositions 3.1--3.2]{GompfScharlemannThompson2010}. Its
+opposite 1-handlebody absorbs the final marking by the extension
+theorem \cite[Theorem A]{LaudenbachPoenaru1972Handlebodies}.
+For tunnel number two a
+split zero-framed unknot and its cancelling 3-handle give the
+stabilization in Meier--Schirmer--Zupan's slide theorem
+\cite[Corollary 1.3(2)]{MeierSchirmerZupan2016Trisections}. The
+generalized square-knot case is the closed-manifold recognition
+theorem of Meier and Zupan \cite[Theorem 1.1]{MeierZupan2022SquareKnots}.
+For the mixed case apply the marked intermediate-boundary result of the
+companion paper \cite{Baker2026MarkedHeights} to these transported tubes.
+For an \(S^3\) cut, dual Property R identifies both halves as disks.
+For the other cut, each half is
+\((S^1\times D^3)\mathbin{\natural}(S^2\times D^2)\).
+Surgery on the standard core sphere in one half gives \(S^1\times S^3\);
+the inverse framed surgery is on a generator circle and yields \(S^4\).
+The companion proves these identifications with the actual outer marking
+and both circle framings. For the belt-circle isotopy, the second
+handle is attached along a meridian of the first. Its framing is forced
+by the outgoing \(S^1\times S^2\); the companion's belt-circle theorem
+identifies the result with the double of a one-1-handle, one-2-handle
+contractible manifold \(V\). The handles of \(V\times[0,1]\) cancel
+in dimension five, so its boundary is standard.
+\end{proof}
 
 \section{The retained exterior and directional counts}\label{sec:exterior}
 
@@ -817,10 +865,8 @@ count give no such attaching-map information by themselves.
 
 If a positive subcritical class passes to intrinsic fixed-type
 minimization, its initial immersion need not extend to any
-minimizing class. The
-master manuscript
-treats that separate question. In particular the harmonic-annulus
-comparison there takes a supplied oriented embedded comparison
+minimizing class. The fixed-type attainment paper treats minimization after entry
+\cite{Baker2026BourAttainment}. The harmonic-annulus comparison in the marked-neck paper \cite{Baker2026MarkedNecks} takes a supplied oriented embedded comparison
 with small fixed distortion, vanishing full curvature in that
 gauge, harmonic or controlled-tension coordinates, and protected
 placements of the two charged sides. It does not extract those

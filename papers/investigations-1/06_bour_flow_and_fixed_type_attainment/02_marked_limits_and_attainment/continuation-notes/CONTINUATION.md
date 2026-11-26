@@ -1,5 +1,7 @@
 # Continue marked limits and attainment
 
+**Current handoff, after the attainment proof.** Use the [assessed result and next routing](../../continuation-notes/AFTER_ATTAINMENT_20261126.md). The original activation instructions below record the starting question.
+
 26 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. Exact serving model and reasoning effort are unavailable. Setup only. The question is whether a near-minimizing first Bour flow and a vanishing-regularization sequence provide an admissible smooth Bach-flat class on the original smooth type. [Overview](../research-overview/OVERVIEW.md) · [Plan](../research-plan/PLAN.md) · [Live register](../research-progress/REGISTER.md) · [Exact input passages](../references/README.md)
 
 | Task | Recommended routing and setup readiness | Finite output |

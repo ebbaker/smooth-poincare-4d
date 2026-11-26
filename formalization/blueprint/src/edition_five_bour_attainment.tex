@@ -1,0 +1,115 @@
+\section{Edition 05: entry, fixed-type attainment and rigidity}
+\label{sec:ed05}
+These are proposed formalization targets. Fix a closed connected oriented
+smooth homotopy four-sphere $M$. Put $T=4\pi^2$,
+$e=E_+=E_-$ on closed metrics, and $I=I^+(M)$.
+The equality of the two closed integrals does not identify their restrictions
+to a subdomain. All energy and volume measurements use their supplying metric.
+
+\begin{openproblem}[Positive entry on a specified smooth type]
+\label{prop:ed05-entry}
+On a specified $M$ construct a positive Yamabe class with $e<2T$.
+One target is a smooth representative with $R>0$ and
+$|\operatorname{Ric}_0|^2<R^2/12$ everywhere. For a marked handle
+boundary establish the smooth identification and the estimates on the entire
+closed representative. Record which smooth types the construction covers.
+\end{openproblem}
+
+\begin{openproblem}[Budget on the original regularized trajectory]
+\label{prop:ed05-bour-energy}
+\uses{lem:ed03-positive-sequence}
+Given entry, choose $0<\alpha_j<1$ decreasing to zero and unit-volume
+positive Yamabe metrics with $0\le e_{j,0}-I\le\alpha_j^2$. Write
+$D=\int|\operatorname{Ric}_0|^2$ and $S=\int R^2$. Along the original
+negative twice-gradient flow of
+$\mathcal F^\alpha=2(1-\alpha)e+\alpha D/2$,
+prove that for all sufficiently large $j$ and every smooth time,
+$Y\ge y>0$, $I\le e(t)\le 2T-\eta$ and
+$D(t)\le4I+4(e_{j,0}-I)/\alpha_j\le d_*<32\pi^2$,
+with $y,\eta,d_*$ independent of $j$ and time.
+\end{openproblem}
+
+\begin{openproblem}[The two outputs of one fixed-parameter flow]
+\label{prop:ed05-bour-alternative}
+\uses{prop:ed05-bour-energy}
+At a fixed sufficiently small positive $\alpha_j$, instantiate Bour's
+strictly pinched alternative on that original maximal solution. Return either
+a closed $\mathcal F^{\alpha_j}$-critical metric via whole smooth comparison
+or a complete nonflat scalar-flat Bach-flat pointed limit with the
+physical bounds and coherent embeddings on compact domains. Account for
+the short-time gauge and derivative estimates at fixed parameter.
+\end{openproblem}
+
+\begin{openproblem}[Smooth identification of a pointed limit]
+\label{prop:ed05-bour-pointed}
+Take a smooth pointed limit of rescaled original metrics with the uniform
+positive Yamabe, subcritical chiral and strict Ricci bounds of the preceding
+budget, finite full curvature, and $R=B=0$ on the complete nonflat limit.
+Use one oriented embedding on a neighborhood of the connected truncated
+core and every end buffer. Exclude nontrivial end groups before using
+$D_X=2(E_+(X)+E_-(X))+32\pi^2(k-1)$ to deduce $k=1$.
+Construct the smooth conformal compactification $N$ and its positive
+class. Identify $N$ with $M$ by forward and inverse smooth maps
+agreeing on the actual cap collar. Prove $I\le e_X\le\liminf_i e_i$.
+\end{openproblem}
+
+\begin{openproblem}[Uniform estimates for the mixed critical sequence]
+\label{prop:ed05-bour-stationary}
+\uses{prop:ed05-bour-alternative,prop:ed05-bour-pointed}
+Return one unit-volume constant-scalar metric $q_j$ on $M$ at each late
+index. Its parameter is $p_j=\alpha_j$ for a closed regularized return
+and $p_j=0$ for an exact pointed return in Yamabe gauge.
+Recover the scalar, physical Ricci and energy bounds in the gauges used.
+From the constant-scalar trace-free Ricci equation with principal term
+$\tfrac12\nabla^*\nabla\operatorname{Ric}_0$, prove noncollapse,
+harmonic-coordinate regularity and estimates of every order uniform
+as $p_j\to0$, also on curvature-normalized balls in the unbounded branch.
+\end{openproblem}
+
+\begin{openproblem}[Closed return at bounded curvature]
+\label{prop:ed05-bour-closed}
+\uses{prop:ed05-bour-stationary}
+If the unscaled curvature of the selected critical sequence is bounded
+on a subsequence, obtain smooth convergence with whole oriented
+comparison diffeomorphisms. Pass the positive Yamabe floor, the
+vanishing Bach limit and $e(q_j)\to I$ to the limit and pull back to $M$.
+\end{openproblem}
+
+\begin{openproblem}[An attained positive Bach-flat class on the entered type]
+\label{thm:ed05-bour-attainment}
+\uses{prop:ed05-bour-closed,prop:ed05-bour-pointed,prop:ed05-bour-stationary}
+From one positive subcritical entry on $M$ construct a smooth positive
+Bach-flat class on $M$ of energy exactly $I$. In the unbounded-curvature
+branch of the mixed critical sequence, use its own nonflat normalized
+pointed limit, the marked return, and $I\le e_X\le\liminf e(q_j)=I$.
+\end{openproblem}
+
+\begin{openproblem}[Uniform infimum gap on an entered type]
+\label{prop:ed05-uniform-gap}
+\uses{prop:master-recognition}
+Realize the master's uniform recognition gap as a separate formal
+dependency. There is an $\varepsilon_*>0$, independent of the
+oriented smooth homotopy four-sphere $M$, such that a nonempty
+positive-class energy set with $I^+(M)\le T+\varepsilon_*$ implies
+that $M$ is diffeomorphic to the standard sphere. Trace the
+positive-time smoothing, compactness and smooth type hypotheses.
+\end{openproblem}
+
+\begin{openproblem}[Rigidity of an attained minimizer]
+\label{prop:ed05-rigidity}
+Assume a smooth positive class attains $I$ in the band above the
+recognition gap and below $2T$. For a specified candidate prove smooth
+recognition of $M$ or produce a strictly lower positive competitor on
+$M$. In a Hessian test exhibit an actual admissible negative direction
+modulo gauge. Record the surviving Einstein and non-Einstein cases.
+\end{openproblem}
+
+\begin{openproblem}[Coverage of the smooth types]
+\label{thm:ed05-coverage}
+\uses{prop:ed05-entry,thm:ed05-bour-attainment,prop:ed05-rigidity,prop:ed05-uniform-gap,prop:master-recognition,prop:master-immersion}
+For every oriented smooth homotopy four-sphere give either an applicable
+direct recognition certificate or an entry witness and a rigidity
+argument covering the minimizing class returned on that same type.
+For a handle argument preserve the actual markings and establish
+exhaustiveness of its allowed presentations and successors.
+\end{openproblem}

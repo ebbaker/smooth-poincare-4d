@@ -1,5 +1,9 @@
 # Fixed-type variational comparison · Progress register
 
+## Edition 05 setup · 26 November 2026
+
+Reserve additional jet, curvature and cap-price calculations for a fixed physical candidate whose comparison could prove recognition, pay a complete same-type saving, or contradict stability of a specified attained minimum. Freeze the actual metric, its marking and widths, the protected core condition, and the full two-sign costs and positivity hypotheses before a bounded calculation. Earlier finite proofs supply comparison interfaces. The master owns attained-minimizer rigidity and Routes 12 and 13 check the regularized-flow and attainment inputs. [Edition 05 plan](../../research-plan/05_PLAN.md) · [Master rigidity](../../../../papers/master/research-plan/PLAN.md#r--rigidity-of-an-attained-minimum) · [Route 12](../../12_bour_regularized_flow/research-progress/REGISTER.md) · [Route 13](../../13_bour_marked_limits_and_attainment/research-progress/REGISTER.md)
+
 ## FOT-E46 · 26 November 2026
 
 At a fixed source, a native center-value fit gives an ordered curvature-square bound $K^2/r^2$ in every physical oriented orthonormal frame, uniformly through the flattening. If the first jet also vanishes the bound improves to $K^2$. The same Euclidean reference gives volume at most $Vr^4$. A uniform Sobolev comparison gives an $O(r)$ scalar shortfall and $O(r^2)$ signed-energy allowance. Every raw smooth metric slice has a uniform positive Yamabe lower bound at these radii. [Raw metric positivity](../../../SmoothPoincare/Variational/NativePocketPositiveMetric.lean). [Metric, frame and radius quantifiers](handoffs/E46_NATIVE_POCKET_FRAME_AND_GEOMETRY_20261126.md) [Program assessment](../../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)

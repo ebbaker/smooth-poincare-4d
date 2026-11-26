@@ -1,0 +1,302 @@
+\section{Physical Ricci scales and marked annuli}\label{sec:ricci-scales}
+
+Write \(Z_g=\Ric_g-\tfrac14 R_g g\). For \(2<p<\infty\) put
+\(\gamma=2-4/p\), and, for a physical ball, set
+\[
+ P_i(x,a)=a^\gamma\|Z_{g_i}\|_{L^p(B_{g_i}(x,a),g_i)}.
+\]
+This quantity is invariant under simultaneous constant rescaling of
+metric and length. In general it changes under the conformal
+transformation used to locate physical volume.
+
+\begin{lemma}[Interior Ricci control]\label{lem:ricci-radius}
+Let \(g_i\) be smooth unit-volume positive Yamabe metrics on oriented
+smooth homotopy four-spheres, with \(E_+(g_i)\le8\pi^2-\delta\)
+for fixed \(\delta>0\). If \(0<a_i\le1\) and \(P_i(x_i,a_i)\le L\),
+then each point of \(B_{g_i}(x_i,a_i/2)\) has a harmonic chart of
+radius at least \(c(p,\delta,L)a_i\). At this radius the scaled metric
+is uniformly elliptic with bounded \(W^{2,p}\) components.
+For \(0<b\le c a_i\), after reducing \(c\),
+\begin{equation}\label{eq:ricci-mass}
+ \int_{B_{g_i}(x_i,b)}|\Rm_{g_i}|^2\,dV_{g_i}
+       \le C(p,\delta,L)(b/a_i)^{4-8/p}.
+\end{equation}
+The lemma does not require minimization.
+\end{lemma}
+
+\begin{proof}
+Use the harmonic radius \(h\) defined by eigenvalues between \(1/2\)
+and \(2\) and, in length coordinates on a ball of radius \(s\), by
+\[
+ s^{1-2/p}\|Dg\|_{2p}+s^{2-4/p}\|D^2g\|_p\le1 .
+\]
+All chart derivative norms here are Euclidean. The supremum of
+admissible \(s\) scales as length and is 1-Lipschitz by restricting
+charts to smaller balls. These are the harmonic-radius compactness
+coordinates of \cite[\S2]{AndersonCheegerGromovAuthorSurvey}.
+Suppose the asserted interior floor fails. Minimize \(h/d\) on the
+protected ball, where \(d(z)=a_i-d_{g_i}(x_i,z)>0\), and let \(b_i\)
+be the harmonic radius at a minimizing point \(z_i\). Smoothness and
+compactness give an interior minimum. Then \(b_i/d(z_i)\to0\).
+On every fixed pointed ball for \(b_i^{-2}g_i\), harmonic radii are
+at least \(1-o(1)\), while the central radius equals one. The
+trace-free Ricci norm on that ball is at most
+\(L(b_i/a_i)^\gamma\). The scalar curvature is the constant
+\(b_i^2Y_i\to0\).
+
+We give the compactness details pertinent to the critical energy.
+Uniform charts on slightly larger windows give local upper and lower
+volume bounds on balls of a fixed small radius by ellipticity.
+Small balls thus have a uniform finite covering number at half that
+radius. Iteration along minimizing segments gives finite nets on each
+fixed pointed window, and a uniform upper volume there. In particular
+the scalar part of Ricci tends to zero in \(L^p\) on these windows
+as well. The harmonic atlas gives a complete pointed limit on a
+diagonal, weakly \(W^{2,p}\) and strongly \(C^0\cap W^{1,2p}\)
+on chart interiors. Indeed \(2p<4p/(4-p)\) when \(2<p<4\);
+the other exponents follow by the usual finite-exponent embeddings.
+Harmonic transition functions satisfy the scalar harmonic equation.
+Interior estimates first give bounded \(W^{2,s}\) for finite \(s\)
+on smaller overlaps (the transitions have bounded first derivatives
+by ellipticity). Differentiating gives bounded \(W^{3,p}\), using
+\(Dg\in L^{2p}\) and \(D^2\) of the transition in \(L^{2p}\).
+Thus the charts glue with \(C^1\) convergence of transitions and
+strong \(W^{2,2p}\) on smaller overlaps. These estimates give
+whole compact markings: on a finite subatlas embed with the coordinate
+blocks \((\eta,\eta x)\) for cutoffs whose positive sets cover the
+compact, project the corresponding source atlas to the limiting
+embedded manifold, and invert on a slightly smaller neighborhood.
+The maps have local inverses on uniform neighborhoods by \(C^1\)
+convergence. Injectivity on the smaller neighborhood follows from
+the separated chart nets and the injective limiting embedding.
+After smoothness of the limit is established in its harmonic atlas
+this construction uses smooth cutoffs and a smooth tubular projection.
+It gives oriented smooth embeddings, with the same strong first-order
+metric convergence. The image of a larger fixed ball contains each
+smaller source ball, by metric comparison up to first exit.
+
+The harmonic-coordinate equation
+\(g^{ab}\partial_{ab}g_{jk}=-2\Ric_{jk}+Q_{jk}(g,Dg)\)
+passes to the limit, since \(Q\) is quadratic in \(Dg\).
+The limiting metric is Ricci-flat and smooth by interior elliptic
+regularity. In fact in these charts the convergence is strong in
+\(W^{2,p}_{\rm loc}\): subtract the limiting equation, apply the
+interior estimate for its continuous elliptic principal coefficients,
+and absorb the uniformly small coefficient difference. The right
+side converges strongly in \(L^p\). The transition equations then
+give strong \(W^{3,p}_{\rm loc}\) for transitions (differentiate in
+the harmonic coordinates); the compact markings have the same order
+of convergence.
+
+The global curvature bound \eqref{eq:budgets} and the transported
+homogeneous Yamabe inequality in the proof of
+Theorem~\ref{thm:complete-limit} give finite total curvature and
+Euclidean lower volume growth on this Ricci-flat limit. The end
+argument of that proof up through the exclusion of quotient links
+uses only the exact critical equation on the limit, the marked
+first-order end comparisons, the topology of the sources and their
+energy bound. It therefore applies here before any minimization.
+Every end is Euclidean at infinity. Such an end alone gives
+asymptotic volume ratio at least one; Bishop--Gromov monotonicity
+and its equality case on the complete Ricci-flat manifold give
+Euclidean space. To see the contradiction with unit central radius,
+take a Euclidean ball of radius four in this limit and pull the
+metrics back by its compact markings. They converge strongly to
+\(\delta_{\rm Euc}\) in \(W^{2,p}\) on radius three. Solve the
+harmonic Dirichlet problem there with affine coordinate boundary
+data. For the coordinate correction the contracted Christoffels
+tend to zero in \(L^{2p}\); the small principal coefficient error
+and the first-order term are absorbed by the flat Dirichlet
+\(W^{2,2p}\) estimate, since \(2p>4\). The corrected coordinates
+converge in \(C^1\) to the identity. Differentiating their equation
+on an interior ball gives convergence in \(W^{3,p}\), using
+\(Dg,D^2u\in L^{2p}\), \(D^2g\in L^p\), and the convergence just
+proved. They give an admissible chart on a source ball of radius
+strictly larger than one. This proves the floor.
+Finally on the scaled central chart, \(D^2g\in L^p\) and
+\(Dg\in L^{2p}\) bound \(\|\Rm\|_p\). Ellipticity bounds the
+volume of each concentric subball of radius \(b/a_i\) by
+\(C(b/a_i)^4\). H\"older gives \eqref{eq:ricci-mass}.
+\end{proof}
+
+\begin{theorem}[Ricci scale of a minimizing sequence]\label{thm:ricci-scale}
+Keep the hypotheses of Corollary~\ref{cor:energy-radius}. Suppose
+\(a_i\to0\) and for one fixed finite \(p>2\) the bounds
+\[
+  a_i^\gamma\|Z_{g_i}\|_{L^p(B_{g_i}(x_i,D a_i),g_i)}
+       \le C_D
+\]
+hold for each fixed \(D<\infty\) eventually on the same subsequence.
+For every fixed \(A<\infty\),
+\begin{equation}\label{eq:ricci-vanish}
+ \int_{B_{g_i}(x_i,A a_i)}|\Rm_{g_i}|^2\,dV_{g_i}\longrightarrow0 .
+\end{equation}
+In particular, write \(N_i=\|Z_{g_i}\|_{L^p(M,g_i)}\). A bounded
+subsequence of \(N_i\) gives a smooth closed positive Yamabe
+minimizer on the original smooth type. On any subsequence with
+\(N_i\to\infty\), \eqref{eq:ricci-vanish} holds uniformly in the
+center at \(a_i=N_i^{-1/\gamma}\), and
+\[
+              r_i(\theta)N_i^{1/\gamma}\longrightarrow\infty
+              \qquad(0<\theta\le1/2).
+\]
+\end{theorem}
+
+\begin{proof}
+Apply Lemma~\ref{lem:ricci-radius} on successively larger protected
+windows. The same harmonic atlas construction gives a complete
+\(W^{2,p}_{\rm loc}\) limit, with uniform and strong \(W^{1,2p}\)
+convergence. Ricci now has only a bounded scaled \(L^p\) norm.
+We justify smoothness without an equation on the source metrics.
+
+In each fixed chart the cutoff interpolation in the proof of
+Corollary~\ref{cor:energy-radius} applies to a \(W^{2,p}\) comparison.
+Smooth approximation in that norm is strong in \(C^0\cap W^{1,4}\);
+the all-lowered curvature formula and chiral projection are continuous
+from this topology with strong \(W^{2,p}\) approximation into \(L^2\).
+The source curvatures are bounded in \(L^2\), their lower jets converge
+strongly, and their second jets converge weakly in \(L^p\). Thus the
+same quadratic defect identity yields strong \(L^2\) convergence of both
+Weyl matrices at the infimum. The compactly supported first variations
+then pass to the limit as in that proof: the varied Weyl matrix has
+weakly convergent derivative, paired with a strongly convergent matrix,
+and the second variation along each fixed smooth test has a uniform
+bound. The sign is protected by Lemma~\ref{lem:wall}. The limit is
+stationary with distributional scalar zero (constant scalar \(y>0\)
+in the unscaled case).
+
+For clarity, local stationarity gives \(B_h=0\) in \(W^{-2,p}\)
+by strong \(W^{2,p}\) approximation of the smooth first-variation
+identity. The contractions with \(h^{-1}\) and density can be
+inverted on tests by Sobolev multiplication, since \(p>2\)
+(in the second derivative product rule use \(Dh\in L^{2p}\), \(D\phi\in L^{2p/(2p-3)}\) and \(\phi\in L^{p/(p-2)}\) for \(\phi\in W^{2,p/(p-1)}_0\)) \cite[Lemma 2.1 and proof of Theorem 1.1]{AvalosCogoRoyoAbrego2026Bach}.
+In dimension four and constant scalar, the weak tensor equation is
+\(\Delta_h\Ric_h=\Rm_h*\Ric_h\)
+\cite[Lemma 5.1]{AvalosCogoRoyoAbrego2026Bach}. Its right side
+belongs to \(L^{p/2}_{\rm loc}\), and \(\Ric_h\in L^p\subset
+L^{p/(p-1)}_{\rm loc}\). The interior tensor estimate
+\cite[Theorem 2.2(ii)]{AvalosCogoRoyoAbrego2026Bach} gives
+\(\Ric_h\in W^{2,p/2}_{\rm loc}\). For \(2<p<4\) this yields
+\(\Ric_h\in L^t_{\rm loc}\) with \(t=2p/(4-p)>p\).
+The harmonic metric equation has right side in this same \(L^t\),
+since \(Dh\in L^{2t}\). For this gain in exponent, localize by a smooth cutoff, freeze the inverse metric on a small ball and invert the small principal perturbation of the flat Dirichlet Laplacian at \(t\). The cutoff right side belongs to \(L^t\); uniqueness at \(p\) identifies the solution. Thus interior estimates for the
+continuous coefficients upgrade \(h\) to \(W^{2,t}_{\rm loc}\).
+Iteration reaches \(p\ge4\) in finitely many steps
+(\(1/t=2/p-1/2\)). At \(p=4\) use any finite \(t>4\);
+above four the Ricci and harmonic equations bootstrap on nested
+interiors to smoothness. Transition maps are then smooth in the
+limiting harmonic atlas.
+
+Theorem~\ref{thm:complete-limit} makes the complete limit flat.
+The localized Euler transgression in the proof of
+Corollary~\ref{cor:energy-radius}, strong Weyl convergence, and
+vanishing rescaled scalar imply \eqref{eq:ricci-vanish} on each
+fixed marked compact interior. The first-exit observation covers
+the whole indicated source ball. Subsequence selection proves
+the uniform assertion when \(N_i\to\infty\); a bounded multiple
+of this length cannot contain \(\theta e_i\) of chiral mass.
+If \(N_i\) is bounded, the radius floor holds everywhere at fixed
+scale. Unit volume and the physical small-ball lower bound give a
+bounded diameter. The compact marked limit is thus closed and
+diffeomorphic to the source. The preceding local argument gives
+strong chiral convergence and smoothness there. Passing all Yamabe
+tests and the unit-volume constant test to the limit identifies its
+positive Yamabe constant and proves attainment.
+\end{proof}
+
+In the separated-quantile case, let \(u_i=r_i(\theta)\ll r_i\)
+and let \(x_i\) be its attaining center. For every choice
+\(u_i\ll a_i\le\min(1,r_i)\), \(P_i(x_i,a_i)\to\infty\).
+Indeed a bounded subsequence would contradict \eqref{eq:ricci-mass}
+at \(b=u_i\). One can also construct the marked cut on the hypothetical bounded
+subsequence. Use the central harmonic chart, normalize its metric at
+the origin by an oriented linear map, and dilate coordinates by
+\(s_i=\sqrt{u_i a_i}\). On the previously fixed annulus
+\(e^{-2}<|x|<e^2\), the uniform error and the \(L^4\) norm of the
+first derivative are \(O((s_i/a_i)^{1-2/p})\) by Morrey and
+H\"older applied to \(Dg\in L^{2p}\). The metric here is a constant
+physical rescaling. The chart contains a whole physical ball of
+comparable radius and distances are comparable up to first exit.
+Thus the middle sphere encloses the whole \(u_i\)-ball, and its
+entire coordinate disk is inside the physical \(r_i\)-ball. The
+opposite side retains the entire median exterior. The two chiral
+masses are at least \(\theta e_i\) and \(e_i/2\), respectively.
+The full curvature is bounded on the splice; Proposition~\ref{prop:short-cut}
+would give two positive caps with total excess \(o(1)\), contradicting
+fixed-type minimization. The marked disk description uses no global
+smooth parametrization. The forced divergence concerns balls
+containing the inner mass. A bound confined to a buffered annulus
+requires a separate argument for its global marking.
+
+\subsection{A recognition test near the positive Einstein class}
+
+For a real chiral Weyl endomorphism let \(\lambda_1\le\lambda_2\le
+\lambda_3\) denote its ordered eigenvalues. For \(0\le s<1\) define
+\[
+ H_s^\pm(g)=\int_M
+    (\lambda_2(W^\pm_g)-s\lambda_3(W^\pm_g))_+^2\,dV_g .
+\]
+This measures the failure of the pointwise eigenvalue condition in the
+conformal K\"ahler rigidity theorem of Catino and Dameno
+\cite[Theorem 1.4]{CatinoDameno2026ConformalKahler}.
+
+\begin{theorem}[A uniform near-Einstein recognition criterion]
+\label{thm:near-einstein-recognition}\label{prop:ein}
+Fix \(\delta>0\), \(2<p<\infty\), \(L<\infty\) and \(0\le s<1\).
+There exists \(\epsilon(\delta,p,L,s)>0\) with the following property.
+Let \(g\) be a smooth volume-one positive Yamabe minimizer in its own
+class on a closed oriented smooth homotopy four-sphere \(M\). Suppose
+\[
+ E_+(g)\le8\pi^2-\delta,\qquad \|Z_g\|_{L^p(g)}\le L .
+\]
+Then \(M\) is diffeomorphic to \(S^4\) whenever
+\[
+ \int_M|Z_g|^2\,dV_g+\min\{H_s^+(g),H_s^-(g)\}<\epsilon(\delta,p,L,s).
+\]
+More generally, for every \(\eta>0\) a sufficiently small threshold
+\(\epsilon(\delta,p,L,s,\eta)>0\) in the same defect bound forces
+\(E_+(g)<\eta\) for the tested metric itself. The constants are
+obtained by compactness. The tested metric may have
+nonzero trace-free Ricci tensor. No minimization over conformal classes
+is needed.
+\end{theorem}
+
+\begin{proof}
+If the stronger assertion failed, there would be metrics, possibly on
+different smooth types, for which the displayed sum tends to zero
+while \(E_+(g_i)\ge\eta>0\). Pass to a subsequence using the same
+chirality for the minimum, with \(Y_i\to y\ge\sqrt{48\delta}>0\).
+Lemma~\ref{lem:ricci-radius} at radius one gives a uniform harmonic
+radius and \(W^{2,p}\) bounds on the whole physical manifolds.
+Unit volume and physical noncollapse bound their diameters.
+The harmonic atlas compactness and compact markings in that lemma
+therefore give a closed oriented limit on the same smooth type as all
+sufficiently late members of the subsequence, weakly \(W^{2,p}\) and
+strongly \(C^0\cap W^{1,2p}\) in harmonic chart interiors.
+
+Fix \(2<r<p\). Interpolation gives \(Z_{g_i}\to0\) in \(L^r\).
+In the harmonic metric equation the quadratic first derivatives
+converge strongly in \(L^p\), and \(\Ric_{g_i}\to yh/4\) strongly in
+\(L^r\) for the limiting metric \(h\). The weak equation makes \(h\) Einstein. In harmonic coordinates, the same interior exponent iteration as in Theorem~\ref{thm:ricci-scale} makes it smooth.
+Subtract the Einstein limit equation on nested harmonic chart interiors.
+The product of the uniformly vanishing difference of inverse metric
+coefficients with the uniformly \(L^p\)-bounded Hessians tends to zero
+in \(L^r\). The interior elliptic estimate gives strong \(W^{2,r}\)
+convergence there. Thus the curvatures converge strongly in \(L^2\)
+on the finite covering. The chiral projections converge uniformly in
+oriented frames. Ordered eigenvalues are Lipschitz in a symmetric
+matrix, so the chosen \(H_s^\pm(h)\) is zero, passing the integrals
+with a partition of unity in these charts.
+
+The pointwise eigenvalue inequality follows by continuity. If the
+corresponding Weyl block is nonzero, Theorem 1.4 of Catino and Dameno,
+with orientation reversed for the negative block, makes a cover of
+degree at most two conformally K\"ahler. The limit is simply connected
+and \(H^2(M;\mathbb R)=0\), whereas the square of a K\"ahler class on a
+closed complex surface has positive integral. Hence that Weyl block
+vanishes. Signature zero forces the other block to vanish as well.
+The limit is round up to scale. Strong convergence of the chiral
+curvatures then gives \(E_+(g_i)\to0\), a contradiction. Taking
+\(\eta=4\pi^2\) and applying the positive recognition theorem \cite[Theorems A and B]{ChangGurskyYang2003} proves
+the smooth conclusion on the tested physical class.
+\end{proof}

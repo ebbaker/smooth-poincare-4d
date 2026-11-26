@@ -1,5 +1,16 @@
 # Overall formalization progress
 
+## Edition 05 · Entry, Bour attainment and rigidity · 26 November 2026
+
+| Parent task | Status | Responsibility |
+| --- | --- | --- |
+| FOT-B09 | Setup adopted | Edition 05 allocates the original regularized flow to [Route 12](../12_bour_regularized_flow/research-progress/REGISTER.md) and marked limits and attainment to [Route 13](../13_bour_marked_limits_and_attainment/research-progress/REGISTER.md). These registers alone own the BRF and BAT tasks. |
+| FOT-B10 | Ready on activation with a specified candidate | Coordinate the attained-rigidity test with the master's B06. Freeze a candidate, gauge and admissible variation and test whether it forces recognition or a strictly lower positive competitor. |
+| FOT-E47 | Dependent on the candidate statements | Integrate the actual fixed-type return with the uniform-gap and attained-rigidity statements. Read the exact types and identify remaining analytic imports. |
+| FOT-E37 | Continuing coverage audit | Require entry or direct recognition on each claimed type. Keep the positive energy set inhabited, smooth identifications explicit, and the positive Einstein subclass visible. |
+
+FOT-E46 remains the latest checked Lean return. The new scientific attainment theorem is a working manuscript result. [Edition 05 overview](../research-overview/05_OVERVIEW.md) · [Plan](../research-plan/05_PLAN.md) · [Progress at issue](05_BASELINE.md) · [Source receipt](handoffs/ED05_SETUP_INPUTS_20261126.md) · [Activation](../continuation-notes/EDITION_05_BOUR_ATTAINMENT_20261126.md)
+
 ## Edition 04 · Positive native slices on the finite charged disk · 26 November 2026
 
 **FOT-E46.** On the marked positive-scalar source the center metric can be normalized inside the disk. The resulting native curvature and volume bounds give a positive flattening at every sufficiently small radius. A common exponent and compression install the exact cylinder and both capped metrics. The finite two-sign price still transfers the original disk charge to the complete exterior. Frame measurability is constructed. The remaining signed balance is derived by relative transgression on paper. Its formal status, numerical charge calibration, the four-term peak equality test, and their scope are recorded individually. The new square-knot successor admits a relative whole-filling comparison on its specified presentation. The marked reverse core on a separate mixed trace has an integral homology obstruction to direct upper cancellation. [Assessment](../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md) · [Verification](handoffs/ED04_E46_VERIFICATION_20261126.md) · [Next geometric objects](../continuation-notes/AFTER_FINITE_POSITIVE_POCKETS_20261126.md)

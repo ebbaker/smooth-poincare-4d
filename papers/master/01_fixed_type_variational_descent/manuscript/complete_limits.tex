@@ -1,0 +1,316 @@
+\section{Concentration at a physical energy radius}\label{sec:energy-radius}
+
+A complete comparison obtained by magnifying the physical metric has
+more structure than a collection of unrelated annular comparisons.
+We first determine its ends, then test its entire interior and exterior
+on the original smooth type.
+
+\begin{theorem}[Complete physical limits]\label{thm:complete-limit}
+Let \(M\) and \(g_i\) be as in Theorem~\ref{thm:local-min}, with \(M\)
+nonstandard. Suppose \(a_i\downarrow0\) and a connected, complete,
+boundaryless, smooth oriented Riemannian four-manifold \((X,h)\)
+admits oriented smooth embeddings of neighborhoods of a compact
+exhaustion into \(M\), with
+\(\Phi_i^*(a_i^{-2}g_i)\to h\) locally uniformly and strongly in
+\(W^{1,4}\). Then \(h\) is flat.
+\end{theorem}
+
+\begin{proof}
+Pass to \(Y_i\to y>0\), and put \(e=I^+(M)\), \(S=8\sqrt6\,\pi\).
+On each compact the full curvature integral of the rescaled
+physical metric has the source bound. The weak curvature limit
+has scalar curvature zero since the rescaled scalars are \(a_i^2Y_i\).
+Theorem~\ref{thm:local-min} gives \(B_h=0\) and strong local
+convergence of both chiral energy densities.
+Transporting smooth compactly supported Yamabe tests gives
+\(6\|df\|_2^2\ge y\|f\|_4^2\) on \(X\), by the scalar rescaling
+and uniform convergence there. Hence \(X\) is noncompact. Weak
+lower semicontinuity on fixed compacts followed by exhaustion gives
+\begin{equation}\label{eq:limit-ric-budget}
+ \int_X|\Rm_h|^2<\infty,\qquad d:=\int_X|\Ric_h|^2
+ \le 4e+y^2/12-32\pi^2 .
+\end{equation}
+The second estimate uses the physical trace-free Ricci tensors in
+\eqref{eq:budgets}. Integrated tensor norms here use \(h\).
+
+The homogeneous Sobolev inequality implies
+\(\operatorname{Vol}_h B_s(x)\ge c(y)s^4\) at every radius.
+Indeed a cutoff of slope \(2/s\) yields
+\(yV(s/2)^{1/2}\le24s^{-2}V(s)\). Iteration of this inequality
+for \(V(s)/s^4\) uses the Euclidean small-ball limit at \(x\).
+The scalar-flat Bach equation has the form
+\(\Delta\Ric=\Rm*\Ric\) \cite[\S2.1]{TianViaclovsky2004Moduli}.
+Apply critical-metric interior regularity on a ball of radius
+\(r/2\) centered at distance \(r\) from a fixed origin. Its
+curvature integral is bounded by the tail beyond \(r/2\).
+Thus \(r^2\sup_{\partial B_r}|\Rm_h|\to0\).
+The finite Sobolev constant, this decay and
+\(\int|\Ric_-|^2<\infty\) give finitely many asymptotically locally
+Euclidean (ALE) ends of order zero
+\cite[Theorems 1.2 and 1.1]{TianViaclovsky2008Volume}.
+Scalar-flat obstruction regularity improves the end order to two
+in a suitable chart \cite[Definition 1.1 and Theorem 1.2]{AcheViaclovsky2011Obstruction}.
+All assertions here concern the exact limit equation.
+
+We give the topology and energy argument for these ends. At large
+radius \(R\) an end is modeled on a Euclidean annulus modulo a finite
+group \(\Gamma\) acting freely on the unit sphere. Rescale this
+annulus to unit size in its end coordinates. On any fixed short
+logarithmic interval about \(R\), the limiting metric differs from
+the quotient flat metric in \(C^2\) by \(O(R^{-2})\). At fixed \(R\)
+the same marked source has an additional \(o_i(1;R)\) first-order
+error. The energy estimate for a radial cutoff in log radius descends in rotated Euclidean frames
+on the finite cover. The full curvature integral of the pulled-back, twice rescaled
+source on the splice is bounded by its physical total in dimension four. It produces one closed metric on
+\(M\) exactly product near this link with energy
+\(e_i+O(R^{-2})+o_i(1;R)<9\pi^2\), for \(R\) large and then \(i\)
+large. Extending the radial multiplier away from the splice preserves
+both Weyl integrals there.
+
+For clarity, a spherical space form embedded in an integral homology
+four-sphere has, in the finite group case, group \(1,Q_8\) or the
+binary icosahedral group \cite[Theorem 5.2(1)]{Hillman2024LocallyFlat}.
+The link separates. Each side has \(H_2=0\) by Mayer--Vietoris
+and thus signature zero. In the icosahedral case the homology
+sphere bounds the even \(E_8\) plumbing up to orientation
+\cite{KirbyScharlemann1979Poincare}. Each side is spin, and gluing
+the plumbing uses the unique boundary spin structure. The resulting
+closed smooth spin signature \(\pm8\) contradicts Rokhlin divisibility
+\cite{Rokhlin1971Submanifolds}. For \(Q_8\) a free orthogonal
+action is quaternionic up to orientation: the central involution is
+\(-1\), and two generators yield an orthonormal quaternion basis.
+The signature eta invariant on even forms has absolute value \(3/4\).
+Indeed each cyclic subgroup of order four gives \(-1/2\) in the
+quaternion orientation by the cotangent formula, while their common
+order-two subgroup gives zero. Averaging gives
+\(8\eta=3\cdot4(-1/2)\)
+\cite[Proposition 2.12]{APS1975SpectralII}. On a product boundary
+the signature formula gives opposite values \(\pm9\pi^2\) for
+\(E_+-E_-\) on the two sides \cite[Theorem 4.14]{APS1975SpectralI}.
+The positive value contradicts the global \(E_+<9\pi^2\).
+Every end therefore has trivial group.
+
+Take a whole truncated core with \(k\) spherical faces. Connectedness
+and Mayer--Vietoris in degrees zero and one give one complementary
+component per face in the source. Van Kampen and Mayer--Vietoris in
+degree two give trivial fundamental group and \(H_2=0\) on the core.
+Capping it by \(k\) ordinary disks gives a homotopy sphere.
+Thus \(\chi(X)=2-k\), and the two limiting chiral energies agree,
+say \(E_+(h)=E_-(h)=e_X\). For the latter equality apply signature
+after interpolating to round cylindrical ends and capping; the Weyl
+cost tends to zero by the differentiated end estimates.
+In the scalar-flat Gauss--Bonnet formula each Euclidean end contributes
+the boundary integral \(8\pi^2\), by rescaling its outer face to the
+unit Euclidean sphere \cite[\S7]{TianViaclovsky2005ALE}. Hence
+\[
+ 2e_X-\tfrac12d=8\pi^2(2-2k),\qquad
+ d=4e_X+32\pi^2(k-1).
+\]
+Since \(d\le4e<32\pi^2\), we have \(k=1\). If \(h\) is nonflat,
+then \(e_X>0\), since \(d=4e_X\) and \(R_h=0\).
+
+We need strictness of the limiting Yamabe comparison. Invert the
+order-two Euclidean end, writing \(\rho=|z|=1/|x|\). The conformal
+metric \(|x|^{-4}h\) there is Euclidean plus an error whose derivatives
+of order \(j\) are \(O(\rho^{2-j})\). It extends as a \(C^{1,1}\)
+metric at the origin with bounded scalar curvature. On a sufficiently
+small ball solve its conformal Laplacian Dirichlet problem with
+boundary value one. To see positivity, after scaling the ball to
+unit size the potential is \(O(b^2)\) at radius \(b\), the principal
+coefficients are uniformly elliptic and \(C^1\)-close to Euclidean.
+The Dirichlet inverse for the Laplacian and absorption give a solution
+\(w\) with \(\|w-1\|_{W^{2,p}}\le C_p b^2\) there for a fixed
+\(p>4\). It is smooth off the origin. On annuli of radius \(\rho\),
+interior rescaled elliptic estimates and the Lipschitz oscillation
+of \(w\) give \(D^jw=O_j(\rho^{1-j})\) for \(j\ge1\): the rescaled scalar potential and each of its fixed-order derivatives on a unit annulus are \(O_j(\rho^2)\) by the differentiated metric bounds.
+Thus \(w^2|x|^{-4}h\) is scalar-flat near the puncture and has
+the order-zero point bounds of the obstruction-flat removable
+singularity theorem (after a constant coordinate normalization).
+Bach-flatness is conformally invariant. The trivial group gives
+a smooth extending chart \cite[Definition 1.6, Theorem 1.8 and
+Remark 7.2]{AcheViaclovsky2011Obstruction}. Extend the positive
+multiplier into the core to obtain a closed smooth conformal
+compactification. Its chiral energy is \(e_X>0\). The compact-test
+Yamabe constant of \(X\) equals the closed class constant by conformal
+covariance and the zero \(H^1\) capacity of the smooth point.
+The closed class cannot be conformally round, so sharp Yamabe
+rigidity gives \(y\le Y_{\rm closed}<S\) \cite[Theorem 2]{Schoen1984Yamabe}.
+Using \(d=4e_X\) in \eqref{eq:limit-ric-budget} yields
+\begin{equation}\label{eq:physical-residual}
+ e-e_X\ \ge\ (S^2-y^2)/48>0 .
+\end{equation}
+
+Finally take the middle sphere of the single end at radius \(R\).
+Its entire inner raw side is the marked compact truncation, and
+its entire outer raw side is the source complement. For each fixed
+\(R\) their limiting chiral energies are \(E_+(h;K_R)\) and
+\(e-E_+(h;K_R)\) by Theorem~\ref{thm:local-min}. As \(R\to\infty\)
+these tend to \(e_X>0\) and \(e-e_X>0\).
+On a slow diagonal the marked short charts have
+\(a+d_{\rm chart}=O(R^{-2})+o_i(1;R)\) in the norms of
+Proposition~\ref{prop:short-cut}; here \(d_{\rm chart}\) denotes
+the first-derivative norm. Choose the source threshold at each fixed
+\(R\) for both full-side integrals and the whole short chart.
+The resulting cut contradicts Proposition~\ref{prop:short-cut}.
+\end{proof}
+
+\begin{corollary}[Energy and curvature scales]\label{cor:energy-radius}
+Keep the hypotheses on the closed minimizing sequence. Let
+\(\lambda_i=|W^+_{g_i}|_{\rm HS}^2dV_{g_i}\),
+\(K_i=\max_M|\Rm_{g_i}|_{\rm tens}\), and let \(r_i\) be the
+least physical radius of a ball with \(\lambda_i\)-mass \(e_i/2\),
+attained at \(p_i\). If \(K_i\to\infty\), then for each fixed \(A>0\)
+\begin{equation}\label{eq:peak-energy}
+ \sup_{x\in M}\int_{B_{g_i}(x,A/\sqrt{K_i})}
+              |\Rm_{g_i}|_{\rm tens}^2\,dV_{g_i}\longrightarrow0,
+ \qquad r_i\sqrt{K_i}\longrightarrow\infty .
+\end{equation}
+On every subsequence with \(r_i\to0\) there is also a fixed finite
+\(A\) and a further subsequence on which
+\[
+ r_i^2\sup_{B_{g_i}(p_i,A r_i)}|\Rm_{g_i}|_{\rm tens}\to\infty .
+\]
+If \(K_i\) is bounded on a subsequence, the infimum is attained by
+a smooth closed positive Yamabe minimizer on \(M\).
+\end{corollary}
+
+\begin{proof}
+Distance spheres have zero physical four-volume and zero chiral
+mass. The ball mass is continuous in center and radius, which
+gives the stated attainment. Consider more generally \(a_i\to0\)
+and centers \(x_i\) with \(a_i^2|\Rm_{g_i}|\le C_D\) on each
+\(B_{g_i}(x_i,Da_i)\), where \(D\) is fixed before \(i\).
+Put \(\widehat g_i=a_i^{-2}g_i\). The source Yamabe cutoff inequality
+gives uniform small-ball noncollapse on these metrics:
+for \(s\le1\), \(y_0 V(s/2)^{1/2}\le(24/s^2+a_i^2Y_i)V(s)\).
+Iteration gives \(V(s)\ge cs^4\), as in the preceding proof.
+Local sectional curvature and volume bounds give uniform injectivity
+radii on smaller fixed windows \cite[\S4]{CheegerGromovTaylor1982}.
+The local harmonic radius bound gives uniformly elliptic charts with bounded \(W^{1,p}\) coefficients, for any fixed \(p>8\) \cite[Theorem 0.3]{AndersonCheeger1992Harmonic}. In these coordinates the Ricci equation
+\[
+ g^{ab}\partial_{ab}g_{cd}=-2\Ric_{cd}+Q_{cd}(g^{-1},\partial g)
+\]
+first gives an interior \(W^{2,p/2}\) bound, since the coefficients are H\"older and the quadratic term lies in \(L^{p/2}\). This bounds the first derivatives in \(C^{0,\alpha}\) for some \(\alpha>0\); reinserting it gives bounds in every finite \(W^{2,q}_{\rm loc}\) and subsequential \(C^{1,\beta}\) convergence on smaller charts for \(\beta<\alpha\).
+Here one uses a bound on each larger window before passing to
+a diagonal in the windows. Local volume comparison and the
+injectivity bound give finite chart covers there. The harmonic
+compactness construction identifies smaller whole compact domains
+by embeddings in a complete pointed limit, with image containing the source ball of any fixed smaller radius \cite[Theorem 3.1 and its proof]{BelegradekKapovitch2000Finiteness}.
+Indeed a path leaving the image of the limit ball of radius \(D+1\)
+from the base point must traverse length at least \((1-o(1))(D+1)\)
+before first exit. Harmonic transition maps satisfy the scalar
+harmonic equation and converge in \(C^{3,\beta'}\) on smaller
+overlaps for \(\beta'<\beta\). Once the limiting charts are smooth
+the compact-domain identifications can be taken smooth, by gluing
+the charts using cutoff coordinate embeddings and tubular projection.
+These identifications preserve the first-order convergence.
+
+We justify regularity of the limit \(h\) before applying
+Theorem~\ref{thm:complete-limit}. In a single limiting harmonic
+chart it is \(W^{2,p}_{\rm loc}\), with \(R_h=0\) and locally bounded
+curvature by the weak limit of the bounded rescaled curvatures.
+The interpolation proof of Theorem~\ref{thm:local-min} applies
+first to a smooth approximation \(h_j\to h\) in \(W^{2,p}\),
+\(p>4\), on the cutoff support. In comparison with the formal
+interpolation using \(h\), the \(L^2\) curvature-density error is
+at most \(C\|h_j-h\|_{W^{2,p}}\), uniformly in \(i,s\), by the
+local \(W^{2,p}\) bounds and the all-lowered formula. Use first
+large fixed \(j\) to retain the strict path margin. Taking \(i\to
+\infty\) and then \(j\to\infty\) gives strong chiral convergence.
+For a smooth variation \(H\) supported where \(\chi=1\), the energy
+change after repair to \(h_j\) is exactly that of \(h_j+sH\)
+relative to \(h_j\). For small fixed \(s\) the additional energy
+along the path stays below the remaining margin uniformly in \(j\).
+The repaired source energy differs from \(e_i\) by at most
+\(o_i(1)+O(\|h_j-h\|_{W^{2,p}})\) after strong convergence.
+Take \(i\to\infty\) and \(j\to\infty\). Continuity of the density
+in \(W^{2,p}\) gives nonnegative energy change for \(h+sH\)
+and hence the weak Bach equation.
+
+The distributional Ricci equation for a scalar-flat \(W^{2,p}\)
+Bach-flat metric reads \(\Delta_h\Ric_h=\Rm_h*\Ric_h\), with locally
+bounded right-hand side. This identity also follows by smooth
+approximation in \(W^{2,p}\) in the formula with its scalar
+Hessian terms. Local regularity for the rough tensor Laplacian
+gives \(\Ric_h\in W^{2,p}_{\rm loc}\)
+\cite[Theorem 2.2(ii), Lemma 5.1]{AvalosCogoRoyoAbrego2026Bach}.
+The harmonic-coordinate Ricci equation and the Ricci Laplacian
+equation then bootstrap together to smoothness. Thus the whole
+compact comparisons meet Theorem~\ref{thm:complete-limit} and
+\(h\) is flat.
+
+On a fixed Euclidean coordinate patch of this flat limit the
+comparison connection forms tend to zero in \(L^4\). The Euler
+transgression estimate following Theorem~\ref{thm:local-min}
+therefore gives \(\int\chi\mathcal E_i\,dV_{\widehat g_i}\to0\)
+for every smooth compact cutoff. The Weyl energies tend to zero
+there by strong convergence, and \(a_i^2Y_i\to0\) with bounded
+local rescaled volume. The same Euler identity gives vanishing
+of the full curvature integral on smaller compacts. A finite
+cover gives the result on each entire fixed source ball in the
+pointed comparison.
+
+For \(a_i=K_i^{-1/2}\) the rescaled curvature is bounded by one for
+every center. Failure of the supremum estimate in
+\eqref{eq:peak-energy} would select a subsequence and centers with
+a fixed positive integral, contradicting the preceding conclusion.
+The median ball has full curvature integral at least \(4(e_i/2)\);
+this proves the scale separation. At \(a_i=r_i\to0\), bounded
+rescaled curvature on every fixed multiple about \(p_i\) gives the
+same contradiction already on the unit ball. This proves the
+local assertion with its stated subsequences.
+
+Finally, at bounded unscaled curvature the small-ball noncollapse
+and unit total volume bound the physical diameter by packing
+disjoint small balls along a minimizing segment. Harmonic compactness
+now identifies a whole closed limit with the original smooth type.
+The same local substitution and elliptic regularity apply with
+constant limiting scalar \(y=\lim Y_i>0\). The closed embeddings
+are diffeomorphisms. Passing the Yamabe inequality to all fixed tests
+and using the constant test gives \(Y([h])=y\) at unit volume.
+Strong chiral convergence on the compact manifold gives \(E_+(h)=e\).
+\end{proof}
+
+On a nonstandard type in the surviving band, a bounded physical curvature
+maximum gives the closed alternative above. Along a subsequence with
+diverging maximum, the estimate \eqref{eq:peak-energy} applies. A point of maximum curvature
+need not retain positive integrated curvature on its own scale.
+
+There is a measured choice of the next annulus which does not
+place any chiral mass at the maximum-curvature point. Define, for
+\(0<\theta\le1/2\),
+\[
+ r_i(\theta)=\inf\{s:\max_{x\in M}\lambda_i(B_{g_i}(x,s))
+                         \ge\theta e_i\},\qquad r_i=r_i(1/2).
+\]
+If \(K_i\to\infty\), \eqref{eq:peak-energy} gives
+\(r_i(\theta)\sqrt{K_i}\to\infty\) for each fixed \(\theta>0\).
+Exactly one of the following holds on a given sequence.
+\begin{enumerate}
+\item For some fixed \(0<\theta<1/2\) there is a subsequence with
+\(r_i(\theta)/r_i\to0\). Choose any attaining center \(x_i\) for
+\(r_i(\theta)\). The full inner ball has positive chiral mass
+\(\theta e_i\), and the entire exterior of \(B_{g_i}(x_i,r_i)\)
+has mass at least \(e_i/2\) by the defining maximum.
+Between them fit increasingly many disjoint metric annuli of any
+previously fixed logarithmic width. One has full curvature integral
+tending to zero by \eqref{eq:budgets}. It supplies genuine opposite
+mass sets to a short marked cut if the embedded middle sphere of
+such a chart separates these sets on the source.
+\item The positive chiral measure satisfies
+\[
+ \lim_{b\downarrow0}\limsup_i\sup_{x\in M}
+       \frac{\lambda_i(B_{g_i}(x,b r_i))}{e_i}=0 .
+\]
+Indeed failure supplies a positive \(\theta<1/2\), \(b_j\downarrow0\)
+and a subsequence with \(r_i(\theta)\le b_j r_i\). Conversely the
+first case gives a lower bound \(\theta\) in the displayed limit.
+Here a bounded number of balls of radii \(o(r_i)\) captures
+vanishing chiral mass, even if the pointwise curvatures in them
+diverge. The half-energy ball itself still carries \(e_i/2\).
+\end{enumerate}
+The annuli in the first case are distance sets; their topology and
+the first derivatives in any proposed splice chart require separate
+estimates. In the second case the estimate is for metric balls and
+does not imply uniform absolute continuity on all sets of small
+physical volume.

@@ -16,7 +16,7 @@
 \newcommand{\Eucl}{\delta_{\rm Euc}}
 \title{Fixed-type descent for chiral Weyl energy on homotopy four-spheres}
 \author{Edward B. Baker III}
-\date{Working draft, 25 November 2026}
+\date{Working draft, 26 November 2026}
 
 \begin{document}
 \maketitle
@@ -133,7 +133,7 @@ positive class the first equality in \eqref{eq:budgets} proves
 the quantitative claim.
 \end{proof}
 
-\input{../../manuscript/physical_volume}
+\input{physical_volume}
 \input{endpoint_charge}
 \input{endpoint_smoothing}
 \input{isotropic_gap}
@@ -644,151 +644,7 @@ coupled family with changed intervening geometry.
 
 \section{Whole marked limits and round restarts}
 
-\subsection{Short spherical cuts and strict comparison}
-
-The interpolation and stretching in Theorem~\ref{thm:simultaneous}
-can be applied on a short marked spherical collar without assuming
-either raw side is a standard ball. For each side, append an
-infinite cylinder into the other side, compactify, and test in
-the same joined stretched source. Thus both caps are positive
-provided that the joined-path energy ceiling is strictly below
-\(8\pi^2\). Both raw side energies use the entire physical
-source sides. Each cap energy is at most its corresponding
-raw charge plus the correction obtained by restricting the
-collar error to that side.
-
-Here it is necessary to identify the smooth type after cutting.
-In a homotopy sphere every embedded \(S^3\) separates, since
-otherwise a closed loop could have intersection one with that
-sphere. For a finite disjoint family of cuts the incidence graph
-of pieces is a tree. Capping each piece with balls, van Kampen and
-Mayer--Vietoris identify \(\pi_1(M)\) with the free product of
-the capped groups and \(H_2(M;\mathbb Z)\) with the sum of the
-capped groups in degree two. Therefore every capped piece is a
-simply connected integral homology four-sphere and hence a
-homotopy sphere. If the sum of the capped energies is below \(2T\),
-at most one has energy \(\ge T\), and the remaining positive
-caps are standard by recognition. A standard capped leaf with
-its parametrized cap deleted is a standard ball: ambient
-isotopy carries the embedded standard cap to a coordinate ball
-\cite[Theorem B]{Palais1960Extending}. The actual boundary map
-extends over the standard ball, since each \(S^3\) diffeomorphism
-is isotopic to an orthogonal map \cite[p.~553]{Hatcher1983Smale}.
-Eliminating standard leaves in the tree shows that the capped
-root has the same oriented smooth type as \(M\). This argument
-uses marked standard cap disks in already recognized spheres.
-
-In particular, along a minimizing sequence on a hypothetical
-nonstandard \(M\), a marked short collar with errors \(o(1)\)
-cannot have a fixed positive raw chiral charge on both sides.
-The strict joined path and the fixed margin give positive caps
-and their sum \(<2T\) at large indices. The possible nonstandard
-cap has energy at most the source energy minus the opposite
-raw charge plus \(o(1)\), below \(I\) if that charge is bounded
-away from zero. This criterion also tests a physical
-separated-quantile comparison when the \emph{whole} inner
-charged ball and \emph{whole} outer charged set are on opposite
-sides of the same actual collar. A first-order chart around
-one point, or enclosing only parts of those sets, supplies no
-such separation of the specified charges.
-
-\subsection{Local minimization and smooth filled bases}
-
-\begin{proposition}[Strong local chiral convergence]\label{prop:local-min}
-Suppose, on an open oriented four-manifold \(U\), there are
-oriented smooth embeddings of neighborhoods of a compact
-exhaustion into the physical sources with pullbacks \(u_i^2m_i\).
-Assume \(m_i\to h\) locally uniformly and strongly in \(W^{1,4}\),
-where \(h\) is smooth, and \(\Rm_{m_i}\) is bounded in \(L^2\)
-on each fixed compared compact in that gauge. Then the two chiral
-matrix densities converge strongly in \(L^2_{\rm loc}\). The
-limit locally minimizes chiral energy against small smooth
-compactly supported metric perturbations, and is Bach-flat.
-\end{proposition}
-
-\begin{proof}
-In a relatively compact coordinate domain write
-\(r_i=F_\pm(m_i)-F_\pm(h)\). The constant-coefficient principal
-curvature formula, bounded curvature and strong first derivatives
-give weak \(L^2\) convergence \(r_i\rightharpoonup0\).
-Transplant \(h+(1-s\psi)(m_i-h)\) to the source using \(u_i^2\),
-where \(0\le\psi\le1\) is a smooth cutoff supported in the domain.
-The product-rule terms in the first-order splice estimate tend
-to zero in \(L^2\), as do the terms quadratic in the differences
-of first derivatives. The change of the algebraic Weyl projection
-uses uniform convergence and the curvature bound. The resulting
-matrix density is
-\(F_\pm(h)+(1-s\psi)r_i+o_{L^2}(1)\), uniformly in \(s\in[0,1]\).
-The cross term with \(\psi F_\pm(h)\) vanishes in the limit by weak
-convergence. Thus the change of either total energy is
-\[
- -\int(2s\psi-s^2\psi^2)|r_i|^2\,dx+o(1).
-\]
-The path stays positive by Lemma~\ref{lem:wall}. At \(s=1\)
-its energy is at least \(I\), giving strong convergence where
-\(\psi=1\). Work on a finite cover for a fixed compact.
-
-The repairs at \(s=1\) themselves approach the infimum and give
-exact \(h\) in their comparison gauge on the smaller region.
-A supported variation there changes the source energy by exactly
-the corresponding local variation of \(h\). For small parameter
-the whole path has a fixed subcritical margin, so the change
-cannot be negative in the limit. The first variation of the full
-Weyl functional is a nonzero multiple of the Bach pairing
-\cite[\S2.1]{TianViaclovsky2004Moduli}. Here the total two chiral
-variations agree by the closed signature identity on the source,
-so this gives Bach-flatness.
-\end{proof}
-
-Suppose in Proposition~\ref{prop:local-min} the open manifold
-is \(N\setminus P_0\), for a closed oriented homotopy four-sphere
-\(N\) and finitely many ordinary points \(P_0\), with smooth
-extension of \(h\) to \(N\). Write \(e_N=E_+(h;N)\).
-Transfer fixed compactly supported Yamabe tests in the
-comparison gauge. The scalar density is locally a divergence
-linear in first derivatives plus a term quadratic in them,
-with smooth coefficient dependence on the metric. Integration
-against a fixed test square passes to the limit under the
-first-order convergence. Zero point capacity then yields
-\(Y([h])\ge\limsup_iY_i>0\).
-
-At fixed small normal radius \(b\) the whole core of \(N\) with
-those balls deleted has a marked embedding into each late
-source. Its boundary components meet distinct raw exteriors:
-in the Mayer--Vietoris sequence the map from the reduced
-degree-zero group of the boundary to that of the complement
-is an isomorphism, since the core and \(M\) are connected and
-\(H_1(M)=0\). Every exterior touches a face, so there is one
-per label. First install \(h\) on a thin neighborhood of each
-face using the interpolation just proved. At fixed \(b\) the
-change in both chiral integrals tends to zero by strong local
-convergence. The smooth normal annuli of \(h\) are then
-\(O(b^2)\)-close to Euclidean through second derivatives after
-rescaling. Straighten them and cap all the pieces with
-vanishing surcharge on a slow diagonal, taking the source
-limit for each fixed \(b\) first. This order ensures the second
-splice tests the curvature of \(h\) even if the source
-curvature bound was only local in a variable conformal gauge.
-The capped core has limiting energy \(e_N\), while the raw
-exterior energies have sum tending to \(I-e_N\).
-
-If \(e_N>0\) and a raw exterior retained positive limiting
-charge, it would have positive charge opposite that of the
-core across one cut. The preceding short-cut comparison
-excludes this on a nonstandard minimizing type. Therefore all
-exterior caps are eventually standard and their removal
-identifies \(N\) with \(M\). The metric \(h\) attains \(I=e_N\).
-If \(e_N=0\), signature implies both Weyl blocks vanish.
-The conformal developing map identifies \(N\) with the round
-conformal sphere \cite{Kuiper1949}. For \(I>0\), after passing
-to limits of the finitely many exit charges, exactly one carries
-\(I\). Two positive charges would again be opposite across
-one cut. The round core cap and the other exterior caps have
-vanishing energy and are eventually standard, so the surviving
-cap is on \(M\). The same energy concentration holds for the
-opposite chirality by signature on each cap and the small
-two-chirality splices. On the standard type \(I=0\) all of these
-limiting charges are zero.
+\input{variational_comparison}
 
 \subsection{Signed restart estimates and exact equality}
 
@@ -904,6 +760,9 @@ preserves the Yamabe constant even at finite indices. This
 construction starts from the existence of an admissible
 minimizing sequence and gives no new entry class on an arbitrary
 type.
+
+\input{complete_limits}
+\input{ricci_scales}
 
 \section{The closed alternative}
 
@@ -1062,79 +921,10 @@ equals \(12(3+\theta)z^2\). In particular it is at least
 \(16(x-y)^2\) throughout, giving the lower eigengap
 correction \(2\max_\pm\int(x-y)^2/9\) to \(16\pi^2/3\).
 
-There is also a uniform recognition test for almost Einstein
-physical metrics. The additional compactness input used here is
-the physical harmonic-radius estimate in the master Ricci-scale
-argument. For smooth volume-one Yamabe metrics in the band
-\(e\le8\pi^2-\delta\) on oriented homotopy spheres and \(p>2\),
-a bound \(\|Z\|_p\le L\) gives a uniform harmonic-radius floor,
-local \(W^{2,p}\) metric bounds and a whole marked closed
-subsequence limit, weakly \(W^{2,p}\) and strongly
-\(C^0\cap W^{1,2p}\) in its charts. The diameter bound in
-that argument follows from physical noncollapse and unit volume.
-Its harmonic-radius proof uses the exclusion of nonflat
-Ricci-flat blow-up limits with the marked ends and band in
-this topological setting \cite{Baker2026MarkedNecks}.
-
-\begin{proposition}[A near-Einstein recognition test]\label{prop:ein}
-Fix \(\delta>0\), \(p>2\) finite, \(L<\infty\), and \(0\le q<1\).
-For one real Weyl block with ordered eigenvalues
-\(\lambda_1\le\lambda_2\le\lambda_3\), set
-\[
- D_q^\pm(g)=\int_M
-   (\lambda_2(W^\pm)-q\lambda_3(W^\pm))_+^2\,dV_g .
-\]
-Under the preceding energy and \(L^p\) bounds, for every
-\(\epsilon_0>0\) there is a threshold depending only on
-\(\delta,p,L,q,\epsilon_0\) such that
-\(\|Z\|_2^2+\min_\pm D_q^\pm(g)\) below that threshold
-forces \(E_+(g)<\epsilon_0\). In particular one can take
-\(\epsilon_0=T\) for smooth recognition. No minimizing
-assumption across conformal classes is needed.
-\end{proposition}
-\begin{proof}
-On a counterexample sequence the defects tend to zero. Pass
-to one fixed chirality and a closed marked harmonic limit,
-with \(Y_i\to y\ge\sqrt{48\delta}\). Interpolation gives
-\(Z_{g_i}\to0\) in \(L^r\) for any \(2<r<p\).
-The harmonic-coordinate metric equation passes to the positive
-Einstein equation. Its interior regularity gives a smooth limit.
-Subtract the limiting harmonic equation on smaller charts.
-The quadratic first derivatives converge strongly, the Ricci
-right-hand sides converge in \(L^r\), and the coefficient error
-from the Hessians is controlled by the uniform convergence
-and the \(W^{2,p}\) bounds. Interior elliptic estimates give
-strong \(W^{2,r}\) convergence, hence strong \(L^2\) convergence
-of the curvature and of the chiral densities on the closed
-limit. Ordered eigenvalues are Lipschitz in a real symmetric
-matrix, so the chosen defect vanishes on the limit.
-
-The pointwise inequality on that block follows by continuity.
-If the block is nonzero, Catino--Dameno's Einstein theorem
-makes a cover of degree at most two conformally K\"ahler, with
-the orientation reversed when testing \(W^-\)
-\cite[Theorem 1.4]{CatinoDameno2026ConformalKahler}.
-The cover is trivial on each connected component by simple
-connectivity. The positive integral of the square of a K\"ahler
-form contradicts \(b_2=0\). Hence the tested block and, by
-signature, the other vanish. The limit is round, so the tested
-sequence has energies tending to zero by strong convergence.
-This contradicts \(E_+\ge\epsilon_0\).
-\end{proof}
-
-When the source is a minimizing sequence, bounded physical
-\(L^p\) trace-free Ricci for one \(p>2\) likewise gives smooth
-positive attainment on the original type. In that case the
-strong chiral convergence and local stationarity argument of
-Proposition~\ref{prop:local-min} starts from the rough harmonic
-limit, uses strong \(W^{2,p}\) approximation by smooth local
-comparisons, and passes the Bach identity to the limit.
-The constant-scalar Bach equation for the limiting Ricci
-tensor then bootstraps the harmonic metric to smoothness
-\cite[Lemma 5.1 and Theorem 2.2]{AvalosCogoRoyoAbrego2026Bach}.
-This attainment conclusion uses the bounded Ricci subsequence.
-A sequence selected only by its chiral energies need not meet
-that hypothesis or a prescribed Bach-error bound.
+Theorem~\ref{thm:near-einstein-recognition} proves the corresponding
+uniform test for almost Einstein Yamabe metrics under a fixed physical
+\(L^p\) Ricci bound, \(p>2\). The preceding signed inequalities concern
+the exactly Einstein case.
 
 \input{endpoint_windows}
 \input{exact_spectral_gap}

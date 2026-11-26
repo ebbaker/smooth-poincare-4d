@@ -9,4 +9,4 @@ Can Bour's fourth-order flow, started at volume-one Yamabe minimizers close to t
 
 The [parent investigation](../README.md) integrates this output with [marked limits and attainment](../02_marked_limits_and_attainment/README.md). The existing [Bach flow investigation](../../02_bach_flow/README.md) studies modified Bach flow and finite-time recognition in its own scope.
 
-26 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance. The exact serving model and reasoning effort were unavailable. Research awaits activation.
+26 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance. The exact serving model and reasoning effort were unavailable. The first-flow budget and fixed-parameter audit are integrated in the [working proof](../manuscript/fixed_type_attainment.tex).

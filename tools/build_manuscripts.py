@@ -50,6 +50,9 @@ MANUSCRIPTS = {
     '05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery': (
         'investigations-1', 'recognition_from_marked_handle_cuts.tex'
     ),
+    '06_bour_flow_and_fixed_type_attainment': (
+        'investigations-1', 'fixed_type_attainment.tex'
+    ),
     '01_generalized_isothermal_coordinates': ('initial-investigations', 'generalized_isothermal_wave_metrics.tex'),
     '02_chiral_descent_and_double_copy': ('initial-investigations', 'chiral_connection_descent_and_double_copy.tex'),
 }

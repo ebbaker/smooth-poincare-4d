@@ -1,0 +1,14 @@
+# Original-flow and attainment packets, revision 1
+
+26 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Selected lead GPT-6.2 Astra/ultra. Worker configuration GPT-6.2 Sol/ultra. Serving telemetry unavailable. Owners are the [parent](../REGISTER.md), [flow](../../01_regularized_flow_and_energy/research-progress/REGISTER.md) and [marked-limit](../../02_marked_limits_and_attainment/research-progress/REGISTER.md) registers. Frozen inputs are checkout 4da586548b445ccfe9145c6a5671c0f7ecd433f3, the three local plans, root Bour source receipt, F2, marked-neck and closed alternatives at that checkout, and the versioned primary sources in the receipt. Recompute actual versions on integration.
+
+BFA-B01 selects the original flow of each unit-volume positive Yamabe representative on a fixed oriented smooth homotopy four-sphere, I < 8π², excess at most α², α decreasing to zero. BML-B01 selects TV 2005 decay, TV 2008 finite ends and Ache–Viaclovsky upgrade, then the actual entire core at a fixed large radius. BML-B03 selects harmonic coordinates at bounded normalized curvature for the CSC elliptic system. Comparison branches below can be checked as implications before their premises are supplied. A positive same-type exact minimizer is the integration test. A specific unproved step is a legitimate return. All estimates use both chiral Hilbert–Schmidt norms, ordinary Ricci norm and real Riemannian signature.
+
+| Packet | Fixed work and completion test | Sole output |
+| --- | --- | --- |
+| BFE-E01 | Audit Bour v1 Theorems 1.4, 1.9, 1.11, §§2–8, strict subcase, noncollapse and dissipation. Check hypotheses against Streets. Identify a fatal or repairable gap by location. | 01 notes/BOUR_AUDIT_20261126.md |
+| BFE-E02/E03 | Derive the original-interval strict pinching, uniform Ricci ceiling, both Weyl and scalar budgets and their exact transfers to each output. Mark theorem use conditional pending E01. | 01 notes/ORIGINAL_FLOW_20261126.md |
+| BML-E01/E02/E03 | For a complete pointed scalar-flat Bach-flat output, audit ALE sources, one embedding with all buffers, both signed budgets, topology, one-end test, precise normal marking and exterior recognition. Check applicability without source Yamabe gauge. | 02 notes/MARKED_CORE_20261126.md |
+| BML-E04 | Given physical CSC critical metrics with source bounds, derive uniform gauged estimates as α tends to zero, choose the comparison maps, verify both limit equations and scalings. Scope any obstruction precisely. | 02 notes/CSC_ESTIMATES_20261126.md |
+
+Independent reading requests will identify the frozen return bytes. Each worker stops after the specified case or an evidenced obstacle, including references at use, and edits only the named file. Larger changes of method, parameter regime or cases return to BFA-B02. The lead owns all shared files. No numerical experiments, general restart or universal-entry assumption.

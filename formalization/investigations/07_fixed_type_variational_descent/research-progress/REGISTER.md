@@ -1,5 +1,9 @@
 # Fixed-type variational descent · Progress register
 
+## Edition 05 setup · 26 November 2026
+
+Keep the complete signed ledgers, positive cap tests and retained-core comparisons for an identified source. At a specified minimizing index with incoming energy \(e_i\), a positive same-type competitor must save strictly more than \(e_i-I^+(M)\) to contradict the infimum. A direct recognition bound or a stability contradiction for a specified attained candidate is also a bounded target. Route 13 checks the working Bour attainment theorem on the entered type. Reserve generic extraction and restart work for a class with an identified gap in that argument and a concrete comparison that could close it. The master owns the rigidity consequence. [Edition 05 plan](../../research-plan/05_PLAN.md) · [Route 13](../../13_bour_marked_limits_and_attainment/research-progress/REGISTER.md) · [Master rigidity](../../../../papers/master/research-plan/PLAN.md#r--rigidity-of-an-attained-minimum)
+
 ## FOT-E46 · 26 November 2026
 
 Supplied disjoint physical Hessian bounds yield a calibrated affine metric ramp with an exact common signed increment. [Calibration and its geometric inputs](handoffs/E46_RETAINED_CHARGE_CALIBRATION_20261126.md). The peak above $I+q^\sigma$ equals the sum of the peak slack, same-type cap excess, actual off-core disk mass and retained-core excess at one finite index. If the peak saturates asymptotically in the larger incoming sign, all four terms vanish separately, including when the maximizing sign changes. On a matched cap, the negative scalar norm and Weyl mass are computed on the same complete pieces. The inclusive scalar test at a strict energy gap uses attainment for a hypothesized negative class. [Cap sign and same-index test](handoffs/E46_RETAINED_SCALAR_DEFICIT_20261126.md) [Program assessment](../../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)

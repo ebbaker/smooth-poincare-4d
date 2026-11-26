@@ -1,5 +1,9 @@
 # Hypersurface immersion bounds · Progress register
 
+## Edition 05 setup · 26 November 2026
+
+The induced route retains independent recognition and height selection. Open a new metric packet on an actual whole immersion of an identified smooth type with a complete induced bound that could recognize it, select an actual qualifying height for Route 09, or supply positive subcritical entry. A metric used for intrinsic entry also needs its ordinary Yamabe sign on the same carrier. The master owns general entry and Route 13 takes the Bour attainment question after entry. [Edition 05 plan](../../research-plan/05_PLAN.md) · [Route 09](../../09_morse_heights_and_handle_recognition/research-progress/REGISTER.md) · [Master entry](../../../../papers/master/research-plan/PLAN.md#e--entry)
+
 ## FOT-E46 · 26 November 2026
 
 The new marked square-knot successor has an independently recognized smooth filling. Neither its handle trace nor its scalar-positive disk construction supplies a whole Euclidean hypersurface immersion of another smooth type with measured induced energy. The induced-energy and height thresholds retain their respective complete-metric hypotheses. [Program assessment](../../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)

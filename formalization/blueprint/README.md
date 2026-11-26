@@ -1,5 +1,7 @@
 # Lean Blueprint
 
+**Edition 05 setup · 26 November 2026.** The [entry, Bour and rigidity chapter](src/edition_five_bour_attainment.tex) gives the open formal targets for the original flows, the two uses of marked compactification, uniform stationary estimates, the infimum gap and final coverage. [Plan and owners](../investigations/research-plan/05_PLAN.md) · [Setup receipt](../investigations/research-progress/handoffs/ED05_SETUP_INPUTS_20261126.md)
+
 **FOT-E46 · 26 November 2026.** The native flattening of the finite charged disk now has physical curvature and scalar estimates at one radius, an exact central cylinder and two complete cap costs. A separate marked successor comparison uses the published square-knot diagram. [Finite positive pockets and marked successors](../investigations/reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)
 
 **Finite transport on the original charged disk, 26 November 2026.** The Edition 04 chapter now derives the complete exterior gain, protected-core and incoming-density prices, and the cap tests for the supplied transport. It records the conditions for a relative pair move and for two successive native cancellations. [Checked chapter](src/edition_four_marked_cuts.tex) · [Assessment](../investigations/reviews/PHYSICAL_STRIPS_AND_TRANSPORTED_DISKS_20261126.md) · [Independent verification](../investigations/research-progress/handoffs/ED04_E45_VERIFICATION_20261126.md)

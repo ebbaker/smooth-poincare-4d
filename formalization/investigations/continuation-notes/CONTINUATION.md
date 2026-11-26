@@ -1,6 +1,8 @@
 # Continuing the formalization program
 
-**Current Edition 04 milestone, FOT-E46 · 26 November 2026.** [Finite disk and marked successor handoff](AFTER_FINITE_POSITIVE_POCKETS_20261126.md) · [Assessment](../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md) · [Public verification](../research-progress/handoffs/ED04_E46_VERIFICATION_20261126.md)
+**Current Edition 05 setup, 26 November 2026.** [Dated continuation and pasteable activation](EDITION_05_BOUR_ATTAINMENT_20261126.md) · [Original-flow launch](../12_bour_regularized_flow/continuation-notes/CONTINUATION.md) · [Marked-limit launch](../13_bour_marked_limits_and_attainment/continuation-notes/CONTINUATION.md).
+
+**Last checked Edition 04 milestone, FOT-E46 · 26 November 2026.** [Finite disk and marked successor handoff](AFTER_FINITE_POSITIVE_POCKETS_20261126.md) · [Assessment](../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md) · [Public verification](../research-progress/handoffs/ED04_E46_VERIFICATION_20261126.md)
 
 **Earlier Edition 04 proof milestone, FOT-E45 · 26 November 2026.** Start on the original charged disk after its exterior gain has been accounted for, or on a residual framed pair outside the treated generator family. [Current handoff and pasteable prompt](AFTER_PHYSICAL_STRIPS_AND_TRANSPORTED_DISKS_20261126.md) · [Assessment](../reviews/PHYSICAL_STRIPS_AND_TRANSPORTED_DISKS_20261126.md) · [Verification](../research-progress/handoffs/ED04_E45_VERIFICATION_20261126.md)
 

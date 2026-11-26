@@ -1,5 +1,9 @@
 # Positive scalar curvature on intermediate cuts · Progress register
 
+## Edition 05 setup · 26 November 2026
+
+Retain the algebraic and boundary criteria for a specified cut that could remove a recognition or reduction premise. On its actual marking, record the scalar floor, physical widths and outward means for a band, or the stability and nonzero projection degree for a separator. Price the complete comparison when a metric conclusion uses it. The later knotted-port closing note is working scientific intake. Its proposed change of internal level calls for a separate marking and physical certificate. Route 09 owns the smooth replacement and upper extension, with purely topological tests independent of a metric packet. [Edition 05 plan](../../research-plan/05_PLAN.md) · [Route 09](../../09_morse_heights_and_handle_recognition/research-progress/REGISTER.md) · [Closing intake](../../../../papers/investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/notes/KNOTTED_PORT_CLOSING.md)
+
 ## FOT-E46 · 26 November 2026
 
 The original square-knot-first cut of the new $L_{4,1}$ control is $S^3_0(Q)$. Its split replacement has $Y_1$ after its first attachment. The native reverse-core obstruction instead applies to the separate rank-three/rank-two control. The three fixed filling cylinders in the scientific mixed metric exceed the strict joined allowance at every positive length. [Marked successor and cut](../../09_morse_heights_and_handle_recognition/research-progress/handoffs/E46_SQUARE_KNOT_SUCCESSOR_20261126.md) [Program assessment](../../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)

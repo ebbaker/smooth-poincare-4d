@@ -1,5 +1,9 @@
 # Intrinsic entry from marked exteriors · Live register
 
+## Edition 05 setup · 26 November 2026
+
+Retain conditional marked-exterior, Robin and cap interfaces in support of the master's entry problem. A bounded new test needs one actual exterior and closing on an identified smooth type, and a candidate mechanism for a complete positive class with \(E_+<2T\), \(T=4\pi^2\), or direct recognition. Record the smooth carrier, global sign and both complete signed energies. Routes 12 and 13 take the regularized-flow and fixed-type attainment inputs after entry. General positive subcritical entry remains with the master. [Edition 05 plan](../../research-plan/05_PLAN.md) · [Master entry](../../../../papers/master/research-plan/PLAN.md#e--entry) · [Route 12](../../12_bour_regularized_flow/research-progress/REGISTER.md) · [Route 13](../../13_bour_marked_limits_and_attainment/research-progress/REGISTER.md)
+
 ## FOT-E46 · 26 November 2026
 
 The retained-scalar criterion tests a complete candidate already supplied on its identified smooth type. An entered positive-scalar disk now yields a positive matched exterior with full cost $e+\Delta\ge I^+(M)$. The inspected exterior, immersion and proper-window sources do not provide entry on a further smooth type. [Independent source inventory](../../reviews/ED04_E46_GEOMETRIC_READBACK.md) [Program assessment](../../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)

@@ -1,12 +1,12 @@
 # Lean formalization
 
-**FOT-E46 · 26 November 2026.** The native flattening of the finite charged disk now has physical curvature and scalar estimates at one radius, an exact central cylinder and two complete cap costs. A separate marked successor comparison uses the published square-knot diagram. [Finite positive pockets and marked successors](investigations/reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)
+**Edition 05 setup · 26 November 2026.** [Start with the original flows and marked return](investigations/continuation-notes/EDITION_05_BOUR_ATTAINMENT_20261126.md).
 
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III
 with OpenAI Codex assistance. The exact serving model and reasoning effort
 are unavailable.
 
-The [Edition 04 overview](investigations/research-overview/04_OVERVIEW.md) follows a single smooth type from its marked handle presentation or positive geometric entry to recognition or a strict contradiction. [Edition 04 plan](investigations/research-plan/04_PLAN.md) · [Proof owners](investigations/README.md#proof-investigations) · [Baseline and pins](investigations/research-progress/04_BASELINE.md) · [Latest checked Lean milestone](investigations/reviews/PHYSICAL_STRIPS_AND_TRANSPORTED_DISKS_20261126.md)
+The [Edition 05 overview](investigations/research-overview/05_OVERVIEW.md) pairs the two Bour investigations with the separate entry and attained-rigidity problems. [Current plan](investigations/research-plan/05_PLAN.md) · [Proof owners](investigations/README.md#proof-investigations) · [Baseline and pins](investigations/research-progress/05_BASELINE.md) · [Checked Lean milestone](investigations/reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)
 
 The Lake package has three public imports.
 
