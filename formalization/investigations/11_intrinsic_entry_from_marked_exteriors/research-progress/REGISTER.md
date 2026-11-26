@@ -1,5 +1,9 @@
 # Intrinsic entry from marked exteriors · Live register
 
+## FOT-E49 · 26 November 2026
+
+The recognized exterior-disk extension in Route 13 begins after positive capped recognition; using it to establish that same recognition would be circular. No new unrecognized marked boundary came with a complete non-product metric, positive sign and both measured Weyl energies. Positive subcritical entry remains open on the residual types. [Master entry problem](../../../../papers/master/research-plan/PLAN.md) · [Assessment](../../reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](../../research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)
+
 ## Edition 06 · Entry on one further marked carrier · 26 November 2026
 
 On a closed oriented homotopy four-sphere, the entry target is a positive Yamabe class with $E_+=E_-<8\pi^2$. The scientific Euler identity $4\int_M\sigma_2(g^{-1}A_g)\,dV_g=16\pi^2-2e$ gives the equivalent criterion $Y>0$ and positive total Schouten $\sigma_2$. The pointwise positive Schouten representative additionally uses the stated conformal existence theorem. A positive-scalar boundary alone supplies the sign part.

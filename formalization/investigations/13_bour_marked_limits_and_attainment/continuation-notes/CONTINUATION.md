@@ -1,5 +1,7 @@
 # Continue the Bour marked-limit formalization
 
+**FOT-E49 · 26 November 2026.** Realize the positive cap and its prescribed collar on the actual whole core, or supply the physical finite Euler boundary identity. Formalize the normalized harmonic chart and the coupled elliptic estimate. [Assessment](../../reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](../../research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)
+
 **Edition 06 · 26 November 2026.** Construct the harmonic chart and coupled interior bootstrap on the actual normalized stationary ball. On a supplied whole-core comparison, control the nonflat ALE boundary and construct the recognized positive capped exterior with its two inverse germs. [Live register](../research-progress/REGISTER.md) · [Edition 06 plan](../../research-plan/06_PLAN.md)
 
 **FOT-E48 handoff.** Start with uniform injectivity at both physical scales and the harmonic-coordinate Ricci identity. Construct the uniform harmonic charts or formalize the coupled interior estimates. On a marked core use the signed physical transfer and the buffered cap inputs. [Assessed continuation](../../continuation-notes/AFTER_STATIONARY_BALLS_AND_VARIATION_20261126.md) · [Sole register](../research-progress/REGISTER.md)

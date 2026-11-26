@@ -1,0 +1,67 @@
+# E50 · Independent calculation and public readback
+
+26 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. The issued independent-reader configuration was GPT-6.2 Sol/ultra. Actual serving model and reasoning effort were unavailable. This bounded E packet recomputes the local variation, checks the marked limit conditions, and tests the exported Lean statements on their geometric carriers. The read used checkout HEAD `2a132b6d335f695183fecdb4537905cf180b0363` and the working source SHA-256 prefixes `c28f8f658e3e` for the packet, `d86d59c000b9` for the plan, `28ac4549db77` for the E49 readback, `719bbea527c6` for scientific attainment, and `5abc9c7713da` for the closed and conformal alternatives. [E50 packets](../research-progress/handoffs/ED06_E50_PACKETS_20261126.md) · [Edition 06 plan](../research-plan/06_PLAN.md) · [E49 readback](E49_INDEPENDENT_READBACK_20261126.md)
+
+## Palatini on fixed axes
+
+Fix a smooth Riemannian metric path and a chart independent of time. Use \(C^a{}_{ij}=\dot\Gamma^a{}_{ij}\) and \(K=\dot g\) at the chosen time. Torsion freedom gives lower-slot symmetry for both \(C\) and \(\Gamma\). The derivative of the covariant Ricci tensor in the same chart is
+
+\[
+ \dot R_{ij}=\partial_a C^a{}_{ij}-\partial_j C^a{}_{ia}
+   +C^a{}_{am}\Gamma^m{}_{ij}+\Gamma^a{}_{am}C^m{}_{ij}
+   -C^a{}_{jm}\Gamma^m{}_{ia}-\Gamma^a{}_{jm}C^m{}_{ia}.
+\]
+
+For \(\nabla_a C^a{}_{ij}\), the connection part is \(\Gamma^a{}_{am}C^m{}_{ij}-\Gamma^m{}_{ai}C^a{}_{mj}-\Gamma^m{}_{aj}C^a{}_{im}\). For \(\nabla_j C^a{}_{ia}\), it is \(\Gamma^a{}_{jm}C^m{}_{ia}-\Gamma^m{}_{ji}C^a{}_{ma}-\Gamma^m{}_{ja}C^a{}_{im}\). In their difference the last terms cancel by symmetry of \(\Gamma\). The remaining terms match the four product derivatives using the other lower-slot symmetries. Thus \(\dot R_{ij}=\nabla_aC^a{}_{ij}-\nabla_j C^a{}_{ia}\). The algebra needs the lower-slot symmetry of the varied connection. An arbitrary three-index array can fail this comparison.
+
+Metric compatibility lowers the raised slot before either covariant derivative, with no extra connection variation at the fixed time. The flux \(V_{aij}=g_{ab}C^b{}_{ij}=(\nabla_i K_{ja}+\nabla_j K_{ia}-\nabla_aK_{ij})/2\) is the E49 Koszul flux for the native speed. Therefore the actual Ricci derivative has the covariant form
+
+\[
+ \dot R_{ij}=g^{am}(\nabla_m V)_{aij}-g^{am}(\nabla_j V)_{aim},\qquad
+ g^{am}V_{aim}=\tfrac12\nabla_i\operatorname{tr}_g K.
+\]
+
+The second term survives for arbitrary speed. The original fourth-order flow preserves total volume, which is compatible with a pointwise nonzero trace of the speed. [Bour, quadratic gradients and Laplacian convention](https://arxiv.org/html/1012.0342v1#S3) · [E49 fixed-chart Ricci derivative](../../SmoothPoincare/Variational/BourChristoffelTime.lean)
+
+## Inverse, scalar and physical volume contractions
+
+Use \(\Delta=\nabla^i\nabla_i\) with nonpositive integrated sign, \(F_W=E_++E_-\) with curvature-operator Hilbert–Schmidt norm, and ordinary two-tensor norm for Ricci. On a closed smooth oriented four-manifold write \(A=\mathrm{Ric}+cRg\), \(c=(p-4)/12\), and \(b=(|\mathrm{Ric}|^2+cR^2)/2\). The energy is \(F_p=(1-p)8\pi^2\chi+\int b\,dV_g\). On the fixed chart axes, differentiating \(g^{-1}g=1\) yields \(\dot g^{ij}=-K^{ij}\). The two inverse entries in the Ricci norm contribute \(-2\langle\mathrm{Ric}^2,K\rangle\) before multiplication by \(1/2\). The scalar derivative contributes \(\dot R=\operatorname{tr}_g\dot{\mathrm{Ric}}-\langle\mathrm{Ric},K\rangle\), and the physical volume contributes \(\dot dV_g=(\operatorname{tr}_g K)dV_g/2\). The complete derivative is
+
+\[
+ \left.\frac{d}{dt}\right|_{t_0} F_p(g_t)
+   =\int_M\left[\langle A,\dot{\mathrm{Ric}}\rangle_g
+    +\left\langle -\mathrm{Ric}^2-cR\mathrm{Ric}+\tfrac12 b g,K\right\rangle_g\right]dV_g.
+\]
+
+With this density the algebraic tensor has zero trace in dimension four. Under homothety \(K=g\), the connection and covariant Ricci derivatives vanish and the remaining density variation cancels pointwise against the volume term. For a nonconstant conformal speed \(K=2ug\), the Palatini formula instead gives \(\dot{\mathrm{Ric}}=-2\operatorname{Hess}u-(\Delta u)g\). Using contracted Bianchi in the integrated pairing gives \(\operatorname{tr}G_p=-p\Delta R/4\). Equivalently, the sign follows from \(\dot R=-2uR-6\Delta u\) and \(\dot dV=4u\,dV\), which yield \(\delta\int R^2=-12\int u\Delta R\) on the closed slice. Applying both spatial adjoints transfers the outer derivative first and reverses the order of crossed derivatives. The gradient flow normalized by \(K=-2G_p\) gives \(\dot F_p=-2\|G_p\|_{L^2}^2\). This factor is independent of whether the gradient is presented before or after commuting derivatives. [Gursky–Viaclovsky, (2.2)–(2.9)](https://arxiv.org/html/1105.4648v2#S2) · [Scientific 06, Proposition `prop:budget`](../../../papers/investigations-1/06_bour_flow_and_fixed_type_attainment/manuscript/fixed_type_attainment.tex)
+
+## Whole marked truncation and interior normalization
+
+In an end chart use \(u(y)=|y|\) on the fixed annulus and \(h_r=r^{-2}\delta_r^*h\). Its regular unit level has outward normal \(\nabla^{h_r}u/|du|_{h_r}\). In an adapted orthonormal tangent frame the shape entries equal \(\operatorname{Hess}_{h_r}u(e_i,e_j)/|du|_{h_r}\), and the area ratio is the square root of the induced Gram determinant relative to the round measure. Uniform annular metric two-jet convergence gives \(S_r\to I\), ambient tangential curvature \(C_r\to0\), and \(J_r\to1\) on the actual level. The Euclidean-normal scaling gives shape of size \(r^{-1}\), curvature of size \(r^{-2}\) and area of size \(r^3\) in the physical metric. Hence both cubic and mixed boundary terms have the appropriate scale invariant integral. The unit round quotient area is \(2\pi^2/|\Gamma|\) using the actual sphere covering measure identity.
+
+The finite transgression on an oriented smooth compact truncation with smooth boundary, in \(8\pi^2\chi\) units, has boundary density \(4\det S+2\sum_{\rm cyc}k_a K^X_{bc}\) in an outward-positive principal frame. In the product-to-Levi–Civita interpolation the tangential plane curvature is \(K^X_{bc}+(1-t^2)k_bk_c\). Integrating gives the stated cubic term, calibrated by the outward Euclidean ball. In an annulus the inner boundary uses the inverse normal, reversing both terms. The actual finite Euler identity must cover the entire compact truncation with the boundary orientation and all components. The asymptotic boundary coefficient on one local end alone carries no Euler characteristic of the core. Once the groups are independently excluded, a single connected oriented embedding of the whole truncation with all buffers lets the topology provide \(\chi(X)=2-k\). The scalar-flat identity then gives \(D_X=2(E_++E_-)+32\pi^2(k-1)\), so \(D_X<32\pi^2\) gives one end. The equality \(D_X=4e_X\) additionally requires equality of the signed charges from the oriented compactification. The limit uses finite transgression, exhaustion and area transport on the pointed metric. The topological calculations, quotient-group exclusion by splicing the same closed source, and the recognition of the capped exterior each have separate hypotheses. [Cibotaru–Moroianu, (1.1), §3 and Example 3.4](https://www.imar.ro/~sergium/fisiere/pfa.pdf) · [Tian–Viaclovsky, (7.2)](https://arxiv.org/pdf/math/0310302v3#page=51) · [Scientific 06, Lemma `lem:mark`](../../../papers/investigations-1/06_bour_flow_and_fixed_type_attainment/manuscript/fixed_type_attainment.tex)
+
+Peters' Theorem 4.3 gives uniform-radius harmonic charts with uniform metric \(C^{1,\gamma}\) bounds for compact metrics under common curvature and injectivity bounds. A common coordinate radius for these chosen charts can be used in the bounded and curvature-rescaled regimes. An arbitrary transported chart can have nonzero contracted Christoffel trace. On it the metric Ricci equation includes derivatives of the gauge term, so its second-order estimate cannot be obtained by dropping that term. In a genuinely harmonic ball the metric equation has principal term \(-g^{ab}\partial_{ab}g_{ij}/2\). The Ricci equation has a diagonal second-order part and lower-order terms \(\Gamma\partial E\) and \((\partial\Gamma+\Gamma^2)E\). With bounded \(E\) and an independent metric interior \(W^{2,b}\) estimate, the last product is uniformly \(L^b\). On nested smaller balls the first-order term is handled by interpolation in the \(W^{2,b}\) estimate for \(E\). For \(b>4\), the gain in first derivative Hölder regularity starts the coupled Schauder bootstrap. These analytic steps require uniform coordinate inverse, ellipticity, and appropriate source and coefficient norms. The same constants need no derivative of the constant scalar. The actual scalar is \(R_j/a_j\) and its coefficient \((2-p_j)R_j/(12a_j)\) vanishes at a divergent curvature scale, including for fixed positive \(p_j\). [Peters, Theorem 4.3](https://www.numdam.org/item/CM_1987__62_1_3_0.pdf#page=10) · [DeTurck–Kazdan, Lemma 4.1 and (4.3)](https://www.numdam.org/item/10.24033/asens.1405.pdf#page=7) · [Bour, Proposition 4.4](https://arxiv.org/html/1012.0342v1#S4)
+
+## Post-X margin and candidate selection
+
+Let \(M\) be a fixed smooth closed connected oriented homotopy four-sphere with positive subcritical entry \(I<8\pi^2\). Use X and the exact-stratum selection to supply a unit-volume Yamabe attained metric \(g_*\) with \(e_*=I\) and least \(D_*<4I\). The strict inequality follows from the sharp Yamabe comparison on a nonstandard type, or is supplied directly as the hypothesis for this comparison. Set \(d=(D_*+4I)/2\), and choose \(p>0\) small enough that the comparator lies a common positive distance from the flow wall as \(p\downarrow0\). For near-global-minimum starts with error \(\epsilon\), the strict wall keeps the original smooth trajectory positive. Its monotonicity and \(e(t)\ge I\) give
+
+\[
+ D(t)\le D_*+2\epsilon/p\le d,
+ \qquad S(t)\le S_*+24\epsilon/p,
+ \qquad 4\epsilon\le p(4I-D_*).
+\]
+
+For a first pointed return on these physical sources, the same-type positive compactification and marked Ricci liminf would give \(4I\le4e_X=D_X\le d<4I\). Along a first whole smooth return the same \(d\) passes to the physical endpoint before changing a conformal representative. This uses the actual whole comparison. Diffeomorphisms and constant scaling preserve \(D\), whereas an arbitrary conformal replacement of the endpoints can change it. The constant-scalar equation at a positive parameter and the converging scalar budget give a common upper bound on \(R\) in the volume-one gauge, and the positive Yamabe lower bound gives a common positive scalar lower bound by the constant test. At the stationary-family extraction, the same contradiction excludes a marked pointed return of these endpoints. In its divergent branch the normalized scalar tends to zero and the normalized critical equation is Bach-flat in the smooth limit even at fixed positive parameter. The exclusions are conditional on the actual compactness alternatives and the marked positive return at both stages.
+
+At fixed \(p\), first send the error above \(J_p=\inf_{Y>0}F_p\) to zero. Whole smooth convergence of the positive critical endpoints preserves both energy and the Yamabe floor, so the resulting metric realizes \(J_p\). Repeating the stationary compactness argument as \(p\downarrow0\) uses these actual fixed-parameter minimizers. A diagonal choice with \(\epsilon=O(p)\) suffices for the Ricci exclusion but does not establish the attainment or stability of each \(J_p\).
+
+Every positive-class metric satisfies \(Y\le \int R\,dV/\sqrt{\operatorname{Vol}}\le\sqrt S\). A unit-volume Yamabe representative in the same class realizes equality and preserves \(e\). For an actual positive global minimizer \(q_p\) of \(F_p=2e+pS/24-16p\pi^2\), this comparison forces \(S=Y^2\). Equality in both inequalities shows the constant factor attains the Yamabe quotient, so the volume-normalized \(q_p\) is itself a Yamabe representative. Constant scalar alone would not give that conclusion. The other form of the comparator inequality gives
+
+\[
+ D(q_p)\le D_*,\qquad
+ 0\le e(q_p)-I\le \frac{p}{4(1-p)}\bigl(D_*-D(q_p)\bigr).
+\]
+
+A whole smooth \(p\downarrow0\) limit with the positive Yamabe floor and the limiting Bach equation is therefore on the exact stratum with \(D\le D_*\). The exact least-Ricci property then gives equality, and the normalized Yamabe quotient passes to the limit by fixed tests. Along such a subsequence \(e(q_p)-I=o(p)\). This conclusion allows more than one least-Ricci representative. It gives no universal negative direction or existence of entry on arbitrary types. [E49 attained comparator](../../SmoothPoincare/Variational/BourAttainedSublevel.lean) · [E49 exact selection](../../SmoothPoincare/Variational/AttainedYamabeSelection.lean) · [Working post-X extension](../research-plan/06_PLAN.md#decisions-on-the-surviving-candidate)

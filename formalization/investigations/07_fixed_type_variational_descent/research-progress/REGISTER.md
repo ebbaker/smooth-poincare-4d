@@ -1,5 +1,9 @@
 # Fixed-type variational descent · Progress register
 
+## FOT-E49 · 26 November 2026
+
+Given scientific X, exact first-value smooth compactness and the geometric comparison suppliers, Lean selects a unit-volume positive minimizer of least ordinary Ricci energy and a separate maximum of the squared Yamabe constant. On the named unit round metric the Green estimate excludes the strict TT window. The sharp round TT calculation is in the reading note. An admissible Hessian on a surviving nonround metric and universal rigidity remain open. [Selection](../notes/E49_ATTAINED_SELECTION.md) · [TT calculation](../notes/E49_RIGIDITY_TEST.md) · [Assessment](../../reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](../../research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)
+
 ## Edition 06 · Rigidity of an attained minimum · 26 November 2026
 
 On one entered nonstandard type, the working attainment theorem gives $I^+(M)=a_M$. Exact-class compactness at this least positive subcritical critical value supplies a unit-volume Yamabe minimizer of $I=I^+(M)$ with least $D=\int|\operatorname{Ric}_0|^2$. At fixed $e=I$, the identity $D=4I-(384\pi^2-Y^2)/12$ makes this the least-$Y^2$ selection. Keep attainment and compactness explicit in Lean. The deficit on exact minimizers uses compactness at that value. Route 12 owns deficit recovery for near-infimal starts.

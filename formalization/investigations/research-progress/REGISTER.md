@@ -1,8 +1,12 @@
 # Overall formalization progress
 
+## Edition 06 · FOT-E49 · 26 November 2026
+
+The physical velocity now has checked Koszul adjoints. Recognition and oriented buffered parametrizations give the exterior diffeomorphism with both germs. Exact-stratum compactness and X give a least-Ricci representative. The harmonic PDE estimates, finite geometric end inputs, full original gradient and nonround rigidity have the distinct scopes recorded by their owners. The eight full Edition 06 problems retain open status. [Assessment](../reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](../research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](../continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)
+
 ## Edition 06 · Attained rigidity, entry and Bour compactness · 26 November 2026
 
-**FOT-B11 · Setup adopted.** Start from the verified E48 public interfaces. Route 07 owns exact least-Ricci selection and both signed Hessian tests, Route 11 owns construction of entry, Routes 09–10 own the marked surgery and intermediate cuts, and Routes 12–13 own the original flow and both geometric returns. The eight Edition 06 blueprint questions are open. FOT-B10 retains the attained-rigidity obligation and FOT-E37 retains coverage. The last assessed formal proof milestone is FOT-E48. [Overview](../research-overview/06_OVERVIEW.md) · [Plan and declaration map](../research-plan/06_PLAN.md) · [Baseline](06_BASELINE.md) · [Source and public replay](handoffs/ED06_SETUP_INPUTS_20261126.md) · [Continuation](../continuation-notes/EDITION_06_RIGIDITY_AND_GEOMETRIC_INPUTS_20261126.md)
+**FOT-B11 · Setup adopted.** Start from the verified E48 public interfaces. Route 07 owns exact least-Ricci selection and both signed Hessian tests, Route 11 owns construction of entry, Routes 09–10 own the marked surgery and intermediate cuts, and Routes 12–13 own the original flow and both geometric returns. The eight Edition 06 blueprint questions are open. FOT-B10 retains the attained-rigidity obligation and FOT-E37 retains coverage. At adoption the latest assessed formal proof milestone was FOT-E48. [Overview](../research-overview/06_OVERVIEW.md) · [Plan and declaration map](../research-plan/06_PLAN.md) · [Baseline](06_BASELINE.md) · [Source and public replay](handoffs/ED06_SETUP_INPUTS_20261126.md) · [Continuation](../continuation-notes/EDITION_06_RIGIDITY_AND_GEOMETRIC_INPUTS_20261126.md)
 
 ## Edition 05 · Entry, Bour attainment and rigidity · 26 November 2026
 

@@ -1,5 +1,7 @@
 # Launch Route 12 · Original fixed-parameter Bour flow
 
+**FOT-E49 · 26 November 2026.** Identify the covariant Ricci derivative and moving contractions using the checked regular-path coordinate formula and the two spatial adjoints. Carry the complete gradient through the original time normalization. [Assessment](../../reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](../../research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)
+
 **Edition 06 · 26 November 2026.** Complete both spatial integrations by parts for the weighted Ricci variation on the original physical metric. Then prove the geometric fixed-parameter comparison and its terminal inherited criticality. [Live register](../research-progress/REGISTER.md) · [Edition 06 plan](../../research-plan/06_PLAN.md)
 
 **FOT-E48 handoff.** Start from the checked physical density and conformal trace. Identify the general trace-free pairing on the original smooth path and pass its tests through a fixed-parameter extraction. [Assessed continuation](../../continuation-notes/AFTER_STATIONARY_BALLS_AND_VARIATION_20261126.md) · [Sole register](../research-progress/REGISTER.md)

@@ -5,7 +5,7 @@ Setup date: 2026-11-21; navigation updated 2026-11-26, America/New_York. Prepare
 | Program | Destination | Next-session entry |
 | --- | --- | --- |
 | Master program | [Master investigation](papers/master/README.md) | [Program continuation](papers/master/continuation-notes/CONTINUATION.md) |
-| Formalization | [Edition 06 proof plan](formalization/investigations/research-plan/06_PLAN.md) | [Continue from the E48 public interfaces](formalization/investigations/continuation-notes/EDITION_06_RIGIDITY_AND_GEOMETRIC_INPUTS_20261126.md) |
+| Formalization | [Edition 06 proof plan](formalization/investigations/research-plan/06_PLAN.md) | [Continue from the E49 physical adjoints and marked exterior](formalization/investigations/continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md) |
 | Fixed-type attainment | [Bour investigation](papers/investigations-1/06_bour_flow_and_fixed_type_attainment/README.md) | [Attainment audit and post-attainment tests](papers/investigations-1/06_bour_flow_and_fixed_type_attainment/continuation-notes/CONTINUATION.md) |
 | Marked recognition | [Collar deformation and surgery](papers/investigations-1/05_collar_deformation_and_surgery/README.md) | [Current surgery continuation](papers/investigations-1/05_collar_deformation_and_surgery/continuation-notes/CONTINUATION.md) |
 | Master parallel branches | [Branch owners](papers/master/research-progress/handoffs/PARALLEL_OWNERSHIP_20261125.md) | [Four individual launch prompts](papers/master/continuation-notes/PARALLEL_PROGRAM_20261125.md) |

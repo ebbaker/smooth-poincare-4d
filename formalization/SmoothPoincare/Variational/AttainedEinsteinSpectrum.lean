@@ -19,7 +19,7 @@ open DifferentialGeometry DifferentialGeometry.Analysis.Elliptic
 open DifferentialGeometry.Analysis.Parabolic.TensorSpectral
 open DifferentialGeometry.Geometry.Curvature DifferentialGeometry.Integral.L2
 open FirstOrderTwistor
-open scoped ContDiff Manifold RealInnerProductSpace
+open scoped ContDiff Manifold RealInnerProductSpace InnerProductSpace InnerProductSpace
 
 namespace SmoothPoincare
 
@@ -31,13 +31,12 @@ def einsteinWeylTTFactor (s eigenvalue : ℝ) : ℝ :=
 theorem einsteinWeylTTFactor_neg_iff {s eigenvalue : ℝ} (hs : 0 < s) :
     einsteinWeylTTFactor s eigenvalue < 0 ↔ s / 3 < eigenvalue ∧ eigenvalue < s / 2 := by
   unfold einsteinWeylTTFactor
-  rw [div_neg_iff]
+  rw [div_lt_iff₀ (by norm_num : (0 : ℝ) < 8), zero_mul]
   constructor
-  · rintro (⟨h, _⟩ | ⟨_, h⟩)
-    · rcases mul_neg_iff.mp h with h | h <;> constructor <;> linarith [h.1, h.2]
-    · norm_num at h
+  · intro h
+    rcases mul_neg_iff.mp h with ⟨h₁, h₂⟩ | ⟨h₁, h₂⟩ <;> constructor <;> linarith
   · rintro ⟨hLower, hUpper⟩
-    exact Or.inl ⟨mul_neg_of_neg_of_pos (sub_neg.mpr hUpper) (sub_pos.mpr hLower), by norm_num⟩
+    exact mul_neg_of_neg_of_pos (sub_neg.mpr hUpper) (sub_pos.mpr hLower)
 
 theorem einsteinWeylTTFactor_endpoints (s : ℝ) :
     einsteinWeylTTFactor s (s / 3) = 0 ∧ einsteinWeylTTFactor s (s / 2) = 0 := by
@@ -50,20 +49,33 @@ variable {E H M : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimen
   [TopologicalSpace M] [ChartedSpace H M] [IsManifold I ∞ M] [T2Space M]
   [CompactSpace M] [Nonempty M] {o : ManifoldOrientation I M 4}
 
+omit [I.Boundaryless] [Nonempty M] in
+private theorem physicalL2Inner_self_pos {g : SmoothRiemannianMetric I M}
+    (h : SmoothCcTensor g 0 2) (hNe : h ≠ 0) : 0 < ⟪h, h⟫_ℝ := by
+  have hL2 : SmoothCcTensor.toL2 h ≠ 0 := by
+    intro hZero
+    apply hNe
+    apply SmoothCcTensor.smoothCcTensor_eq_of_toL2_eq
+    rw [hZero, map_zero]
+  rw [← SmoothCcTensor.inner_toL2]
+  exact real_inner_self_pos.mpr hL2
+
 /-- A supplied physical TT Hessian on a positive two-sided path gives
 same-type descent for every strict step bound when the mode lies in the open window. -/
 theorem bourStrictTTWindowExcludesAttainment (v : BourPositiveMetricVariation o)
-    (sign : CollarChirality) {s eigenvalue normSq : ℝ} (hs : 0 < s) (hMode : 0 < normSq)
+    (sign : CollarChirality) (h : SmoothCcTensor (v.path 0).metric 0 2)
+    (hNe : h ≠ 0) {s eigenvalue : ℝ} (hs : 0 < s)
     (hWindow : s / 3 < eigenvalue ∧ eigenvalue < s / 2)
     (hHessian : deriv (deriv (fun t => (v.path t).energy sign)) 0 =
-      einsteinWeylTTFactor s eigenvalue * normSq) :
+      einsteinWeylTTFactor s eigenvalue * ⟪h, h⟫_ℝ) :
     (v.path 0).energy .plus ≠ sInf (geometricPositiveEnergies o) ∧
       ∀ ε > 0, ∃ t ∈ v.domain.regular, |t| < ε ∧
         0 < classYamabeFour o.dimension_eq (v.path t).metric ∧
           ∀ chirality, (v.path t).energy chirality < (v.path 0).energy chirality := by
   apply bourNegativeSecondVariationExcludesAttainment v sign
   rw [hHessian]
-  exact mul_neg_of_neg_of_pos ((einsteinWeylTTFactor_neg_iff hs).mpr hWindow) hMode
+  exact mul_neg_of_neg_of_pos ((einsteinWeylTTFactor_neg_iff hs).mpr hWindow)
+    (physicalL2Inner_self_pos h hNe)
 
 end Variation
 
@@ -116,19 +128,14 @@ theorem standardRoundFour_negLichnerowicz_eigenvalue_ge_eight
   have hGreen := tensorL2Inner_covGrad_self_eq_neg_rawConnLap_inner g h
   have hGrad := tensorL2Inner_nonneg g 0 (2 + 1) (covGrad g 0 2 h).toFun
   have hΔ : 0 ≤ - ⟪Δh, h⟫_ℝ := by
-    rw [SmoothCcTensor.inner_def]
-    exact hGreen ▸ hGrad
-  have hL2 : SmoothCcTensor.toL2 h ≠ 0 := by
-    intro hZero
-    apply hNe
-    apply SmoothCcTensor.smoothCcTensor_eq_of_toL2_eq
-    rw [hZero, map_zero]
-  have hNorm : 0 < ⟪h, h⟫_ℝ := by
-    rw [← SmoothCcTensor.inner_toL2]
-    exact inner_self_pos.mpr hL2
+    rw [SmoothCcTensor.inner_def, show Δh = rawTensorConnLapSmooth g 0 2 h from rfl, ← hGreen]
+    exact hGrad
+  have hNorm := physicalL2Inner_self_pos h hNe
+  have hScale (c : ℝ) : ⟪c • h, h⟫_ℝ = c * ⟪h, h⟫_ℝ := by
+    simp only [SmoothCcTensor.inner_def, SmoothCcTensor.toFun_smul, tensorL2Inner_smul_left]
   have hPair := congrArg (fun k : SmoothCcTensor g 0 2 => ⟪k, h⟫_ℝ) hMode
   change ⟪(8 : ℝ) • h - Δh, h⟫_ℝ = ⟪eigenvalue • h, h⟫_ℝ at hPair
-  rw [inner_sub_left, real_inner_smul_left, real_inner_smul_left] at hPair
+  simp only [inner_sub_left, hScale] at hPair
   by_contra! hLt
   have hProduct := mul_pos (sub_pos.mpr hLt) hNorm
   nlinarith only [hPair, hΔ, hProduct]

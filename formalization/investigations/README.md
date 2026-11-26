@@ -1,5 +1,7 @@
 # Formalization investigations
 
+**Edition 06 · FOT-E49 · 26 November 2026.** [Assessment](reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)
+
 **Edition 06 · 26 November 2026.** Select the attained metric of least trace-free Ricci energy, construct entry on a further marked boundary, and discharge the physical hypotheses of the Bour argument. [Overview](research-overview/06_OVERVIEW.md) · [Proof plan](research-plan/06_PLAN.md) · [Baseline](research-progress/06_BASELINE.md) · [Current continuation](continuation-notes/EDITION_06_RIGIDITY_AND_GEOMETRIC_INPUTS_20261126.md)
 
 **FOT-E48 · 26 November 2026.** [Assessment](reviews/ED05_E48_STATIONARY_BALLS_AND_VARIATION.md) · [Public verification](research-progress/handoffs/ED05_E48_VERIFICATION_20261126.md) · [E48 handoff](continuation-notes/AFTER_STATIONARY_BALLS_AND_VARIATION_20261126.md)

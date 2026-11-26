@@ -1,8 +1,10 @@
 import SmoothPoincare.Variational.BourYamabeStarts
-import SmoothPoincare.Variational.BourAttainedVariation
+import SmoothPoincare.Variational.BourFixedTypeReturn
+import SmoothPoincare.Variational.BourTrajectoryBudget
 import SmoothPoincare.Variational.RetainedScalarDeficit
 import DifferentialGeometry.Analysis.Integration.Measure.Riemannian.MetricConvergence
-import DifferentialGeometry.Geometry.Compactness.CheegerGromov.Limit.Metric.ScalarConvergence
+import DifferentialGeometry.Geometry.Metric.Convergence.Curvature.RicciFromJets
+import DifferentialGeometry.Geometry.Metric.Convergence.Metric.QuadraticBounds
 import DifferentialGeometry.Geometry.Operator.MetricComparison
 import Mathlib.Topology.Order.IsLUB
 
@@ -18,7 +20,9 @@ open DifferentialGeometry DifferentialGeometry.CheegerGromovCompactness
   DifferentialGeometry.Geometry.Curvature DifferentialGeometry.Geometry.Operator
   DifferentialGeometry.Integral.Measure Filter FirstOrderTwistor MeasureTheory
   SectionsAndConnections Set
-open scoped ContDiff ENNReal Manifold Topology
+open scoped ContDiff Manifold Topology
+
+set_option autoImplicit false
 
 noncomputable section
 
@@ -44,6 +48,7 @@ private theorem tendsto_nonnegativeIntegral_of_metricConvergence [SigmaCompactSp
     (hMeas : ∀ j, Measurable (f j))
     (hNonnegative : ∀ j x, 0 ≤ f j x) (hLimitNonnegative : ∀ x, 0 ≤ fLimit x)
     (hBound : Integrable b (riemannianVolumeMeasure I M limit))
+    (hBoundNonnegative : ∀ x, 0 ≤ b x)
     (hDom : ∀ᶠ j in atTop, ∀ x, f j x ≤ b x)
     (hPoint : ∀ x, Tendsto (fun j => f j x) atTop (𝓝 (fLimit x))) :
     Tendsto (fun j => ∫ x, f j x ∂riemannianVolumeMeasure I M (g j)) atTop
@@ -57,7 +62,9 @@ private theorem tendsto_nonnegativeIntegral_of_metricConvergence [SigmaCompactSp
         (f := fun x => ENNReal.ofReal (fLimit x)) (fun x => ENNReal.ofReal (b x))
         (Eventually.of_forall fun j => (ENNReal.measurable_ofReal.comp (hMeas j)).aemeasurable)
         (hDom.mono fun j hj => ae_of_all _ fun x => ENNReal.ofReal_le_ofReal (hj x))
-        (by simpa only [Measure.restrict_univ] using hBound.lintegral_ofReal_ne_top)
+        (by simpa only [Measure.restrict_univ] using
+          (lintegral_ofReal_ne_top_iff_integrable hBound.aestronglyMeasurable
+            (ae_of_all _ hBoundNonnegative)).mpr hBound)
         (ae_of_all _ fun x => ENNReal.continuous_ofReal.continuousAt.tendsto.comp (hPoint x)))
   rw [← ofReal_integral_eq_lintegral_ofReal hLimitIntegral (ae_of_all _ hLimitNonnegative)] at h
   have h' := (ENNReal.continuousAt_toReal ENNReal.ofReal_ne_top).tendsto.comp h
@@ -108,6 +115,40 @@ private theorem tendsto_normGradSqFun_of_metricConvergence
     ((mul_le_mul_of_nonneg_left hBound hη.le).trans_lt ?_)
   nlinarith only [hηsmall, mul_nonneg hη.le hA, hη]
 
+omit [Nonempty M] in
+private theorem tendsto_scalar_of_metricConvergence
+    {g : ℕ → SmoothRiemannianMetric I M} {limit : SmoothRiemannianMetric I M}
+    (hMetric : MetricCInfConvergenceOnCompacts g limit limit) (x : M) :
+    Tendsto (fun j => metricScalarAt (g j) x) atTop (𝓝 (metricScalarAt limit x)) := by
+  have hJet (ε : ℝ) (hε : 0 < ε) : ∀ᶠ j in atTop, ∀ a ≤ 2,
+      metricDerivNorm a (g j) limit limit x < ε := by
+    obtain ⟨n, hn⟩ := hMetric univ isCompact_univ 2 ε hε
+    filter_upwards [eventually_ge_atTop n] with j hj a ha
+    exact (derivNorm_le_sup isCompact_univ ha (g j) limit limit (mem_univ x)).trans_lt (hn j hj)
+  let B := max 0 (max (metricCovDerivNorm 0 limit limit x)
+    (max (metricCovDerivNorm 1 limit limit x) (metricCovDerivNorm 2 limit limit x))) + 1
+  have hB : 0 ≤ B := by dsimp [B]; positivity
+  have hLim (a : ℕ) (ha : a ≤ 2) : metricCovDerivNorm a limit limit x ≤ B - 1 := by
+    interval_cases a <;> dsimp [B] <;> grind
+  obtain ⟨C, hC, hEst⟩ := scalarSub_le_dNorm limit x (1 / 2) B (by norm_num) hB
+  apply Metric.tendsto_nhds.mpr
+  intro ε hε
+  have hε' : 0 < ε / (3 * C) := by positivity
+  have hQuad := (hMetric univ isCompact_univ 0).eventually_quadratic_bounds
+    isCompact_univ (show 0 < (1 / 2 : ℝ) by norm_num)
+  filter_upwards [hQuad, hJet 1 zero_lt_one, hJet _ hε'] with j hq hj₁ hj₂
+  have hBound (a : ℕ) (ha : a ≤ 2) : metricCovDerivNorm a (g j) limit x ≤ B := by
+    linarith only [covNorm_le_add a (g j) limit limit x, hLim a ha, hj₁ a ha]
+  have h := hEst (g j) limit (fun v => by simpa only [sub_half] using (hq x (mem_univ x) v).1)
+    (fun v => by linarith only [metric_inner_self_nonneg limit x v])
+    hBound (fun a ha => (hLim a ha).trans (by linarith))
+  rw [Real.dist_eq]
+  have hSum : ∑ a ∈ Finset.range 3, metricDerivNorm a (g j) limit limit x <
+      3 * (ε / (3 * C)) := by
+    rw [Finset.sum_range_succ, Finset.sum_range_succ, Finset.sum_range_one]
+    linarith only [hj₂ 0 (by decide), hj₂ 1 (by decide), hj₂ 2 (by decide)]
+  exact h.trans_lt ((mul_lt_mul_of_pos_left hSum hC).trans_eq (by field_simp))
+
 /-- A smooth limit of unit-volume positive Yamabe metrics with a common
 positive Yamabe floor remains a unit-volume Yamabe metric. The convergence
 uses the physical volume, scalar curvature and gradient of each fixed
@@ -126,12 +167,12 @@ theorem attainedYamabe_limit_of_metricConvergence
   let gVolume (q : SmoothRiemannianMetric I M) := riemannianVolumeMeasure I M q
   let s := metricScalarAt limit (Classical.choice (inferInstance : Nonempty M))
   let Y := fun q : SmoothRiemannianMetric I M => classYamabeFour hDim q
-  have hScalarConv := (hMetric univ isCompact_univ 2).tendstoUniformlyOn_metricScalarAt isCompact_univ
+  have hScalarConv := tendsto_scalar_of_metricConvergence hMetric
   have hY : Tendsto (fun j => Y (g j)) atTop (𝓝 s) := by
-    simpa only [hScalar] using hScalarConv.tendsto_at (mem_univ (Classical.choice (inferInstance : Nonempty M)))
+    simpa only [hScalar] using hScalarConv (Classical.choice (inferInstance : Nonempty M))
   have hCSC (x : M) : metricScalarAt limit x = s :=
-    tendsto_nhds_unique (by simpa only [hScalar] using hScalarConv.tendsto_at (mem_univ x)) hY
-  have hs : y ≤ s := le_of_tendsto hY (Eventually.of_forall hFloor)
+    tendsto_nhds_unique (by simpa only [hScalar] using hScalarConv x) hY
+  have hs : y ≤ s := ge_of_tendsto hY (Eventually.of_forall hFloor)
   have hZero : MetricCPConvergenceOn univ 0 g limit limit := hMetric univ isCompact_univ 0
   have hDen : TendstoUniformlyOn (fun j x => metricDerivNorm 0 (g j) limit limit x)
       (fun _ => 0) atTop univ := by
@@ -140,7 +181,8 @@ theorem attainedYamabe_limit_of_metricConvergence
     obtain ⟨n, hn⟩ := hZero ε hε
     filter_upwards [eventually_ge_atTop n] with j hj
     intro x hx
-    rw [Real.dist_eq, zero_sub, abs_neg, abs_of_nonneg (Real.sqrt_nonneg _)]
+    have hn₀ : 0 ≤ metricDerivNorm 0 (g j) limit limit x := Real.sqrt_nonneg _
+    rw [Real.dist_eq, zero_sub, abs_neg, abs_of_nonneg hn₀]
     exact (derivNorm_le_sup isCompact_univ le_rfl (g j) limit limit hx).trans_lt (hn j hj)
   have hInt (q : SmoothRiemannianMetric I M) {f : M → ℝ} (hf : Continuous f) :
       Integrable f (gVolume q) := by
@@ -150,12 +192,13 @@ theorem attainedYamabe_limit_of_metricConvergence
       Tendsto (fun j => ∫ x, f x ∂gVolume (g j)) atTop (𝓝 (∫ x, f x ∂gVolume limit)) :=
     tendsto_nonnegativeIntegral_of_metricConvergence hDen (fun j => hInt (g j) hf)
       (hInt limit hf) (fun _ => hf.measurable) (fun _ => hn) hn
-      (hInt limit hf) (Eventually.of_forall fun _ _ => le_rfl) (fun _ => tendsto_const_nhds)
+      (hInt limit hf) hn (Eventually.of_forall fun _ _ => le_rfl) (fun _ => tendsto_const_nhds)
   have hMass := hIntConst (f := fun _ => (1 : ℝ)) continuous_const (fun _ => zero_le_one)
   have hMassReal : (gVolume limit).real univ = 1 := by
-    apply tendsto_nhds_unique _ (tendsto_const_nhds (x := (1 : ℝ)))
-    simpa only [integral_const, smul_eq_mul, mul_one, Measure.real, gVolume, hVolume,
-      ENNReal.toReal_one] using hMass
+    have hm : Tendsto (fun _ : ℕ => (1 : ℝ)) atTop (𝓝 ((gVolume limit).real univ)) := by
+      simpa only [integral_const, smul_eq_mul, mul_one, Measure.real, gVolume, hVolume,
+        ENNReal.toReal_one] using hMass
+    exact tendsto_nhds_unique hm tendsto_const_nhds
   have hVol : gVolume limit univ = 1 := by
     let : IsFiniteMeasureOnCompacts (gVolume limit) :=
       riemannianVolumeMeasure_isFiniteMeasureOnCompacts limit
@@ -171,6 +214,7 @@ theorem attainedYamabe_limit_of_metricConvergence
       (fun j => hInt (g j) (hCont (g j))) (hInt limit (hCont limit))
       (fun j => (hCont (g j)).measurable) (fun j => normGradSqFun_nonneg (g j) f)
       (normGradSqFun_nonneg limit f) (hInt limit (continuous_const.mul (hCont limit)))
+      (fun x => mul_nonneg (by norm_num : (0 : ℝ) ≤ 2) (normGradSqFun_nonneg _ _ x))
     · filter_upwards [hZero.eventually_quadratic_bounds isCompact_univ
         (show 0 < (1 / 2 : ℝ) by norm_num)] with j hj
       intro x
@@ -226,7 +270,9 @@ theorem attainedYamabe_limit_of_metricConvergence
     simpa only [conformalMetric_zero, capTestScalar, capTestVolume, hCSC, integral_const,
       hMassReal, gVolume, one_smul, Real.sqrt_one, div_one] using ht
   have heq := le_antisymm hUpper hLower
-  exact ⟨hVol, fun x => (hCSC x).trans heq.symm, hs.trans hLower, heq.symm ▸ hY⟩
+  refine ⟨hVol, fun x => (hCSC x).trans heq.symm, hs.trans hLower, ?_⟩
+  change Tendsto (fun j => Y (g j)) atTop (𝓝 (Y limit))
+  rwa [heq]
 
 
 /-- The positive subcritical Bach-flat values on the original oriented
@@ -277,7 +323,7 @@ private theorem attainedYamabe_ricci_eq
 private theorem attainedYamabe_floor
     {BachFlat : SmoothRiemannianMetric I M → Prop} {a : ℝ} {q : SignedCollarMetric o}
     (hq : AttainedYamabeAt BachFlat a q) (hEuler : bourEuler q = 16 * Real.pi ^ 2)
-    {δ : ℝ} (hδ : 0 < δ) (hGap : a ≤ 8 * Real.pi ^ 2 - δ) :
+    {δ : ℝ} (hGap : a ≤ 8 * Real.pi ^ 2 - δ) :
     Real.sqrt (48 * δ) ≤ classYamabeFour o.dimension_eq q.metric := by
   have hRic := attainedYamabe_ricci_eq hq hEuler
   rw [roundYamabeConstant_sq] at hRic
@@ -315,7 +361,7 @@ private theorem attainedYamabe_subsequence
       metricScalarAt_pullback_scaleMetricCross (q (k j)).metric (Φ j) 1 zero_lt_one x
   have hFloor (j) : Real.sqrt (48 * δ) ≤ classYamabeFour o.dimension_eq (p j).metric := by
     rw [hY]
-    exact attainedYamabe_floor (hq (k j)) (hEuler _) hδ hGap
+    exact attainedYamabe_floor (hq (k j)) (hEuler _) hGap
   have hPos : 0 < Real.sqrt (48 * δ) := Real.sqrt_pos_of_pos (by positivity)
   obtain ⟨hv, hs, hf, ht⟩ := attainedYamabe_limit_of_metricConvergence
     o.dimension_eq hConv hPos hFloor hVol hScalar
@@ -386,7 +432,7 @@ theorem exists_attainedYamabe_leastRicci
   intro Istar a S Y₂
   obtain ⟨hEq, q₀, hq₀⟩ := attainedYamabe_firstValue_nonempty hX hPositive
     (hGap.trans_lt (sub_lt_self _ hδ)) hNormalize hBachConformal
-  have hBelow : a ≤ 8 * Real.pi ^ 2 - δ := hEq ▸ hGap
+  have hBelow : a ≤ 8 * Real.pi ^ 2 - δ := hEq.symm.le.trans hGap
   have hNonempty : (Y₂ '' S).Nonempty := ⟨Y₂ q₀, q₀, hq₀, rfl⟩
   have hBoundBelow : BddBelow (Y₂ '' S) := ⟨0, by
     rintro _ ⟨q, _, rfl⟩
@@ -400,12 +446,13 @@ theorem exists_attainedYamabe_leastRicci
     obtain ⟨k, hk, limit, hLim, hY⟩ := attainedYamabe_subsequence
       hCompact hδ hBelow hEuler q hq
     have hSeq : Tendsto (fun j => Y₂ (q (k j))) atTop (𝓝 b) :=
-      (hr.comp hk.tendsto_atTop).congr (fun j => he (k j)).symm
+      (hr.comp hk.tendsto_atTop).congr (fun j => (he (k j)).symm)
     exact ⟨limit, hLim, tendsto_nhds_unique (hY.pow 2) hSeq⟩
   refine ⟨hEq, ?_, ?_⟩
   · obtain ⟨r, _, hr, hrMem⟩ := exists_seq_tendsto_sInf hNonempty hBoundBelow
     obtain ⟨q, hq, hqVal⟩ := hRealize hr hrMem
-    have hLeast : IsLeast (Y₂ '' S) (Y₂ q) := hqVal.symm ▸ isLeast_csInf ⟨q, hq, hqVal⟩ hBoundBelow
+    have hLeast : IsLeast (Y₂ '' S) (Y₂ q) :=
+      ⟨⟨q, hq, rfl⟩, fun _ hw => hqVal.trans_le (csInf_le hBoundBelow hw)⟩
     refine ⟨q, hq, hLeast, ⟨⟨q, hq, rfl⟩, ?_⟩⟩
     rintro _ ⟨w, hw, rfl⟩
     have hOrder : Y₂ q ≤ Y₂ w := hLeast.2 ⟨w, hw, rfl⟩
@@ -417,7 +464,7 @@ theorem exists_attainedYamabe_leastRicci
   · obtain ⟨r, _, hr, hrMem⟩ := exists_seq_tendsto_sSup hNonempty hBoundAbove
     obtain ⟨q, hq, hqVal⟩ := hRealize hr hrMem
     have hGreatest : IsGreatest (Y₂ '' S) (Y₂ q) :=
-      hqVal.symm ▸ isGreatest_csSup ⟨q, hq, hqVal⟩ hBoundAbove
+      ⟨⟨q, hq, rfl⟩, fun _ hw => (le_csSup hBoundAbove hw).trans_eq hqVal.symm⟩
     have hSubround : classYamabeFour o.dimension_eq q.metric < roundYamabeConstant := by
       refine lt_of_le_of_ne (hRound q) fun h => ?_
       exact hPositive.ne' (hEq.trans (hq.plus_eq.symm.trans (hRoundEquality q h)))

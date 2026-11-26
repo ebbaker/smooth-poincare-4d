@@ -1,5 +1,9 @@
 # Positive scalar curvature on intermediate cuts · Progress register
 
+## FOT-E49 · 26 November 2026
+
+The two surviving native cuts in the least-three family are irreducible with first Betti number two. The scientific obstruction excludes positive-scalar domination at either of those levels. A geometric application still requires a specified new cut and degree map or measured band. No such competitor was supplied in this intake. [Cut assessment](../../../../papers/investigations-1/05_collar_deformation_and_surgery/reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md) · [Assessment](../../reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](../../research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)
+
 ## Edition 06 · Qualifying cuts after native localization · 26 November 2026
 
 In the marked terminal integral $Y_1\to Y_3$ class, a reducible native second cut in either order gives a topological $3\to2$ reduction through Route 09. The surviving least-three case has both old native second cuts irreducible with $b_1=2$. The scientific three-manifold classification excludes a nonzero-degree map from a closed oriented positive-scalar three-manifold to either cut. A degree certificate must therefore use a different actual cut, such as one on a changed order after a slide or on a genuinely different regular level.

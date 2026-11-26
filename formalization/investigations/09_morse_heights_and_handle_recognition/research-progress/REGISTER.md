@@ -1,5 +1,9 @@
 # Morse heights and handle recognition · Progress register
 
+## FOT-E49 · 26 November 2026
+
+No untreated pair with both native cuts certified irreducible, two framed integral tubes, and an actual rank-three closing was supplied in the working input. The alternate unrecognized rank-two test lacks its marked closure. The recognized examples already have the recorded descents. Retain the inverse closing, residual tubes and stabilization count when a new carrier is available. [Latest marked surgery assessment](../../../../papers/investigations-1/05_collar_deformation_and_surgery/reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md) · [Assessment](../../reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](../../research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)
+
 ## Edition 06 · Reducible native cuts and the next marked pair · 26 November 2026
 
 The scientific reduction applies to an integral pair from $Y_1=S^1\times S^2$ to the immediate $Y_3=\#_3(S^1\times S^2)$. A reducible native single-attachment cut in either order gives joint localization by framed slides. With the marked split lower zero and actual rank-three upper closing, this gives $3\to2$ on the same smooth type without births, independent of port count. The four-point banded-longitude family has minimum $n$ passages for its marked bridge over all permitted chords and disks.

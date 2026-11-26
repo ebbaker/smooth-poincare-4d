@@ -206,4 +206,13 @@ import SmoothPoincare.Variational.BourPointedTransfer
 import SmoothPoincare.Variational.BourMarkedEnd
 import SmoothPoincare.Variational.BourStartDeficit
 
+import SmoothPoincare.Variational.BourTensorFirstVariation
+import SmoothPoincare.Variational.BourStationaryInterior
+import SmoothPoincare.Variational.BourALEBoundary
+import SmoothPoincare.Variational.BourRecognizedCapChart
+import SmoothPoincare.Variational.AttainedYamabeSelection
+import SmoothPoincare.Variational.AttainedEinsteinSpectrum
+import SmoothPoincare.Variational.BourAttainedSublevel
+import SmoothPoincare.Variational.BourChristoffelTime
+
 /-! # Public imports for fixed-type descent, immersed recognition, marked cuts and Bour attainment -/

@@ -60,7 +60,7 @@ owns the physical deformation on a supplied qualifying cut.
 
 \begin{openproblem}[Trace-free first variation on the original metric]
 \label{prob:ed06-original-variation}
-\uses{prop:ed48-trace,prop:ed48-slab}
+\uses{prop:ed49-adjoint,prop:ed49-ricci-time,prop:ed48-trace,prop:ed48-slab}
 Route 12. For every smooth symmetric metric velocity $K$ on the closed
 oriented carrier, identify the physical $L^2(dV_g)$ gradient $G^p$ of
 $\mathcal F^p=2(1-p)e+pD/2$ for $0<p<1$. Differentiate the
@@ -77,7 +77,7 @@ fixed-parameter target in Problem~\ref{prop:ed05-bour-alternative}.
 
 \begin{openproblem}[Harmonic radius and uniform stationary interior estimates]
 \label{prob:ed06-stationary-interior}
-\uses{prop:ed47-mixed,prop:ed48-normal,prop:ed48-harmonic,prop:ed48-trace}
+\uses{prop:ed49-interior,prop:ed47-mixed,prop:ed48-normal,prop:ed48-harmonic,prop:ed48-trace}
 Route 13. Use the genuine constant-scalar stationary equation for each
 mixed return $q_j$, with $p_j=\alpha_j$ for a closed regularized return
 and $p_j=0$ for an exact Yamabe return. On the original and
@@ -94,7 +94,7 @@ $(2-p_j)s_j/12$ uniformly, with no division by $p_j$.
 
 \begin{openproblem}[Nonflat ALE end geometry and marked return]
 \label{prob:ed06-ale-return}
-\uses{prop:ed47-mark,prop:ed47-ends,prop:ed48-transfer,prop:ed48-cap}
+\uses{prop:ed49-end,prop:ed49-exterior,prop:ed47-mark,prop:ed47-ends,prop:ed48-transfer,prop:ed48-cap}
 Route 13. Treat the fixed-parameter original extraction and the mixed
 stationary extraction at their respective scales. Given a complete
 nonflat scalar-flat Bach-flat pointed limit with finite full curvature,
@@ -115,7 +115,7 @@ a second marked return with the specified tail hypothesis.
 
 \begin{openproblem}[Least Ricci selector at the exact attained value]
 \label{prob:ed06-least-ricci}
-\uses{thm:ed05-bour-attainment,prop:ed48-transfer}
+\uses{prop:ed49-selector,thm:ed05-bour-attainment,prop:ed48-transfer}
 Route 07. Fix one entered nonstandard smooth type with attained
 $I=a_M$ and $T+\varepsilon_*<I\le 2T-\delta$ for some fixed $\delta>0$,
 where $a_M$ is the first positive critical value and $\varepsilon_*$ is
@@ -148,7 +148,7 @@ competitor. Record the dependent and nonnegative cases that remain.
 
 \begin{openproblem}[A transverse-traceless spectral window in the Einstein case]
 \label{prob:ed06-tt-window}
-\uses{prob:ed06-least-ricci,prop:ed47-variation}
+\uses{prop:ed49-round,prob:ed06-least-ricci,prop:ed47-variation}
 Route 07. For $D=0$ the selected positive Yamabe metric is Einstein.
 At scalar $s>0$, the physical Weyl Hessian on transverse-traceless
 tensors $h$ is $\tfrac18\langle h,(-\Delta_L-s/2)(-\Delta_L-s/3)h\rangle_{L^2}$,
@@ -159,3 +159,170 @@ $(s/3,s/2)$ and realize its admissible negative variation, or give
 smooth recognition on that subclass. Endpoint eigentensors have zero
 Hessian.
 \end{openproblem}
+
+\subsection{Checked results on the physical metric and the marked exterior}
+
+\begin{proposition}[The two spatial adjoints of the connection variation]
+\label{prop:ed49-adjoint}
+\uses{prop:ed48-slab,prop:ed48-trace}
+\lean{SmoothPoincare.Bour.bourRicciDivergence_adjoint, SmoothPoincare.Bour.bourWeightedRicciKoszul_firstAdjoint, SmoothPoincare.Bour.bourWeightedRicciKoszul_secondAdjoint, SmoothPoincare.Bour.bourKoszulFlux_native, SmoothPoincare.Bour.bourClosedTensorPairing_native}
+\leanok
+At a smooth regular time on a closed physical metric path, write $K=\dot g$,
+$A=\operatorname{Ric}+(p-4)Rg/12$, and
+$C_{kij}=\tfrac12(\nabla_i K_{jk}+\nabla_j K_{ik}-\nabla_k K_{ij})$.
+Then $C$ is the lowered variation of the Levi--Civita connection.
+The physical $L^2$ pairing of $\nabla^k C_{kij}$ with $A$ is
+$-\langle C,\nabla A\rangle_{L^2}$, with the derivative in the first slot.
+Moving the remaining derivative gives a pairing with $K$, using the inverse
+slot permutations and coefficient $-1/2$ on the rough Laplacian of $A$.
+\end{proposition}
+\begin{proof}
+\leanok
+Apply covariant divergence integration by parts twice, using invariance of the
+metric pairing under simultaneous index permutation. The differentiated Koszul
+formula and the native smooth velocity identify the connection term on the path.
+\end{proof}
+
+\begin{proposition}[The time derivative of the original Ricci tensor in a fixed chart]
+\label{prop:ed49-ricci-time}
+\uses{prop:ed48-slab}
+\lean{SmoothPoincare.Bour.bourChartChristoffel_spatial_hasDerivAt, SmoothPoincare.Bour.bourChartRicci_hasDerivAt, SmoothPoincare.Bour.bourMetricRicciAt_chartBasis_hasDerivAt}
+\leanok
+On a smooth regular metric family in a fixed chart, time differentiation
+commutes with each spatial derivative of the actual Christoffel coefficients.
+The derivative of each physical Ricci component on the fixed chart basis
+is obtained by taking the two spatial derivatives of the Christoffel speed
+in their original order and differentiating both Christoffel products.
+\end{proposition}
+\begin{proof}
+\leanok
+Use joint smoothness in time and space on the chart interior to exchange
+the derivatives. Differentiate the two contracted products by the product
+rule. The chart-basis curvature identity identifies the result with the
+corresponding component of the original Ricci tensor.
+\end{proof}
+
+\begin{proposition}[Connection estimates in a supplied harmonic chart]
+\label{prop:ed49-interior}
+\uses{prop:ed48-harmonic,prop:ed48-normal}
+\lean{SmoothPoincare.bourChartConnectionDerivative_bound, SmoothPoincare.bourChartConnection_trace_eq_zero, SmoothPoincare.bourChartRoughLaplacian_eq_secondCovariantTrace}
+\leanok
+In the four-dimensional metric chart with inverse entries bounded by $A$,
+first derivatives by $L$ and second derivatives by $D$,
+each first derivative of a Christoffel coefficient is bounded by
+$96A^2 L^2+6AD$. At a harmonic point the traced coordinate-frame
+connection vanishes. The raw tensor connection Laplacian on a smooth
+compactly supported tensor reduces there to the metric trace of the
+two iterated coordinate covariant derivatives.
+\end{proposition}
+\begin{proof}
+\leanok
+Differentiate the inverse-metric identity and the Christoffel formula.
+Contract the Laplacians of the coordinate functions, then use the
+linearity of the tensor connection in its directional input.
+\end{proof}
+
+\begin{proposition}[Euler transgression on a supplied nonflat end]
+\label{prop:ed49-end}
+\uses{prop:ed48-cap,prop:ed48-transfer}
+\lean{SmoothPoincare.bourEulerBoundaryDensity_withArea_error, SmoothPoincare.bourALELevelBoundary_tendsto, SmoothPoincare.bourExhaustedEulerIdentity, SmoothPoincare.bourOneEuclideanEnd_of_boundaryLimits}
+\leanok
+Use the outward shape and the curvature matrix on the three
+complementary oriented tangent two-planes of a normalized link.
+If the shape, curvature and area ratio are within $\varepsilon\le1$
+entrywise of $\mathrm{Id},0,1$, the area-weighted boundary density
+differs from $4$ by at most $412\varepsilon$.
+With normalized error tending to zero, integrability and the degree-$m$
+round covering measure, its integral tends to $8\pi^2/m$.
+For a supplied scalar-flat compact exhaustion with the finite Euler
+formula, spherical links, $\chi=2-k$, and $0\le D<32\pi^2$, the
+nonempty set of ends has cardinality one.
+\end{proposition}
+\begin{proof}
+\leanok
+Expand the cubic determinant and bound the mixed shape--curvature contraction.
+Integrate the error on the fixed quotient link and pass all $k$ boundary
+terms through the limit. The resulting identity is
+$D=2(E_++E_-)+32\pi^2(k-1)$.
+\end{proof}
+
+\begin{proposition}[Buffered disk extension on a recognized sphere]
+\label{prop:ed49-exterior}
+\uses{prop:ed48-cap}
+\lean{SmoothPoincare.bourRecognizedCap_commonChart, SmoothPoincare.bourMarkedExterior_of_recognizedSphere}
+\leanok
+Let the capped source exterior and target double be orientedly recognized
+as standard four-spheres. Suppose their cap coordinates extend over a closed
+radius-$R$ disk, the seam has radius $0<r<R$, and the two parametrizations
+carry the same center orientation. If their composition gives the prescribed
+map on the buffered disk, an oriented global diffeomorphism agrees with it
+and with its inverse on the two open buffers and identifies the complements
+of the open radius-$r$ disks.
+\end{proposition}
+\begin{proof}
+\leanok
+Choose an exterior point for each full buffer. On the standard sphere,
+move the first point to the second by an oriented map and align the cap
+centers by a further motion fixing that exterior point. Stereographic
+projection now gives a common chart on the entire buffers. At their common
+center the transported frames have equal orientation. Apply the supported
+cap extension in this chart and pull it back to the given double.
+\end{proof}
+
+\begin{proposition}[Least Ricci energy from first-value compactness]
+\label{prop:ed49-selector}
+\uses{prop:ed48-transfer}
+\lean{SmoothPoincare.attainedYamabe_limit_of_metricConvergence, SmoothPoincare.exists_attainedYamabe_leastRicci}
+\leanok
+Supply positive subcritical attainment at $0<I\le8\pi^2-\delta$ on the
+fixed type, conformal normalization and Bach covariance, exact first-value
+compactness modulo oriented pullback, the closed Euler value and the sharp
+spherical comparison with equality implying zero chiral energy.
+Then $I=a_M$. One unit-volume exact Yamabe representative minimizes
+both $Y^2$ and $D$. Another attains the maximum $Y^2$ and its strictly
+positive squared spherical deficit bounds the deficit on the exact stratum.
+\end{proposition}
+\begin{proof}
+\leanok
+Pass each fixed smooth conformal test through smooth metric convergence and
+use the constant test for equality. Apply compactness to a minimizing
+and a maximizing sequence separately and use the exact closed Euler identity.
+\end{proof}
+
+\begin{proposition}[The round transverse-traceless window and a conditional descent]
+\label{prop:ed49-round}
+\uses{prop:ed47-variation}
+\lean{SmoothPoincare.einsteinWeylTTFactor_neg_iff, SmoothPoincare.standardRoundFour_curvatureAction_traceFree, SmoothPoincare.standardRoundFour_negLichnerowicz_eigenvalue_ge_eight, SmoothPoincare.standardRoundFour_TTMode_weylFactor_ge_one, SmoothPoincare.bourStrictTTWindowExcludesAttainment}
+\leanok
+On the unit round sphere the trace-free operator $8\mathrm{Id}-\operatorname{tr}\nabla^2$
+has eigenvalues $\lambda\ge8$ on nonzero smooth modes. The coefficient
+$(s/2-\lambda)(s/3-\lambda)/8$ at $s=12$ is at least one.
+On any actual admissible path realizing this signed Hessian on a nonzero
+tensor, a strict TT mode $s/3<\lambda<s/2$ excludes attainment.
+\end{proposition}
+\begin{proof}
+\leanok
+Compute the round curvature action. Pair the shifted rough operator with
+the eigentensor and use the covariant Green identity. Factor the signed
+coefficient and use the physical two-sided variation test at a strict sign.
+\end{proof}
+
+\begin{proposition}[Regularized Ricci margin from an attained comparator]
+\label{prop:ed49-margin}
+\uses{prop:ed47-mixed}
+\lean{SmoothPoincare.Bour.bourOriginal_attainedComparator_margin, SmoothPoincare.Bour.bourNoMarkedBubble_of_ricciMargin}
+\leanok
+Fix $0<p<1$ and a comparator of energy $I$ on the original type.
+On a supplied regularized trajectory suppose
+$F^p(g_0)\le F^p(g_*)+\epsilon<(1-p)16\pi^2$ and
+$4\epsilon\le p(4I-D_*)$. Every original smooth time has positive Yamabe
+sign, $D(t)\le(4I+D_*)/2$, and $S(t)\le S_*+24\epsilon/p$.
+Any sequence of original-type metrics with eventual $D\le d<4I$ excludes
+a positive marked return satisfying $4e_X\le\liminf D$.
+\end{proposition}
+\begin{proof}
+\leanok
+The strict pinching margin keeps the full trajectory in the positive class.
+Insert $e(t)\ge I$ in the two physical formulas for $F^p$.
+A marked positive metric on the original type has $e_X\ge I$.
+\end{proof}

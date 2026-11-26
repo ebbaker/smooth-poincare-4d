@@ -1,5 +1,7 @@
 # Fixed-type variational descent · Continuation
 
+**FOT-E49 · 26 November 2026.** Use the selected positive unit-volume representative after X and exact-stratum compactness. Derive a signed Weyl Hessian or recognition on a supplied nonround candidate. [Assessment](../../reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](../../research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)
+
 **Edition 06 · 26 November 2026.** Select the least-$D$ Yamabe minimizer using the stated exact-class compactness input. Test the polarized Weyl Hessian in the non-Einstein branch or the actual transverse-traceless spectral window in the Einstein branch. [Live register](../research-progress/REGISTER.md) · [Edition 06 plan](../../research-plan/06_PLAN.md)
 
 **Handoff, 25 November 2026.** Use the genuine single marked disk and its physical two-jet estimates. Seek one matched positive endpoint with quantified savings in both signs. For modified smoothing, establish the spatial transgression against the common terminal test. [Assessment](../../reviews/NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md) · [Continuation](../../continuation-notes/AFTER_NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md)

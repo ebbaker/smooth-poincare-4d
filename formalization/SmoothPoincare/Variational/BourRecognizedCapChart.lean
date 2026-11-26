@@ -39,8 +39,10 @@ private theorem orientedMotionAway (o : ManifoldOrientation I₄ S₄ 4)
   have hConnected : IsPreconnected c.source := by
     have hi : c.symm '' c.target = c.source := c.toOpenPartialHomeomorph.symm_image_target_eq_source
     rw [← hi]
-    exact (show IsPreconnected c.target by rw [show c.target = univ from chartTarget p];
-      exact isPreconnected_univ).image _ c.symm.continuousOn
+    have ht : IsPreconnected c.target := by
+      rw [show c.target = univ from chartTarget p]
+      exact isPreconnected_univ
+    exact ht.image _ c.contMDiffOn_invFun.continuousOn
   obtain ⟨J, _, hJ, _, _, K, hK, hInside, hFix⟩ :=
     DifferentialGeometry.Topology.exists_supported_isotopy_apply_eq_of_isPreconnected
       (E := E₄) c.source c.open_source hConnected a b
@@ -80,7 +82,7 @@ private theorem capExteriorPoint {P : Type*} [TopologicalSpace P] [ChartedSpace 
     have hi : cap.symm '' cap.target = cap.source := cap.toOpenPartialHomeomorph.symm_image_target_eq_source
     rw [← hi]
     exact (show IsCompact cap.target by rw [hFull]; exact isCompact_univ).image_of_continuousOn
-      cap.symm.continuousOn
+      cap.contMDiffOn_invFun.continuousOn
   rcases isClopen_iff.mp (⟨hComp.isClosed, cap.open_source⟩ : IsClopen cap.source) with he | hu
   · have h0 := hCap (mem_closedBall_self hR)
     simp [he] at h0
@@ -123,6 +125,43 @@ theorem bourRecognizedCap_commonChart
     rw [chartSource]
     exact fun he => hp (he ▸ hw)
 
+private theorem commonChartOnDouble
+    {P D : Type*} [TopologicalSpace P] [ChartedSpace E₄ P] [IsManifold I₄ ∞ P] [CompactSpace P]
+    [TopologicalSpace D] [ChartedSpace E₄ D] [IsManifold I₄ ∞ D]
+    (A : P ≃ₘ⟮I₄, I₄⟯ D) (K : D ≃ₘ⟮I₄, I₄⟯ S₄)
+    (oP : ManifoldOrientation I₄ P 4) (o : ManifoldOrientation I₄ D 4)
+    (oS : ManifoldOrientation I₄ S₄ 4) (hA : A.preservesOrientation oP o)
+    (hK : K.preservesOrientation o oS)
+    (s : PartialDiffeomorph I₄ I₄ E₄ P ∞) (t : PartialDiffeomorph I₄ I₄ E₄ D ∞)
+    {R : ℝ} (hR : 0 ≤ R) (hs : closedBall (0 : E₄) R ⊆ s.source)
+    (ht : closedBall (0 : E₄) R ⊆ t.source) :
+    ∃ (B : P ≃ₘ⟮I₄, I₄⟯ D) (chart : PartialDiffeomorph I₄ I₄ D E₄ ∞) (pole : D),
+      B.preservesOrientation oP o ∧ B (s 0) = t 0 ∧ pole ∉ chart.source ∧ chart.target = univ ∧
+      B '' (s '' closedBall (0 : E₄) R) ⊆ chart.source ∧ t '' closedBall (0 : E₄) R ⊆ chart.source := by
+  let t' := t.trans K.toPartialDiffeomorph
+  have ht' : closedBall (0 : E₄) R ⊆ t'.source := fun x hx => ⟨ht hx, mem_univ _⟩
+  obtain ⟨F, c, pole, hF, hc, hsrc, htgt, h₀, h₁⟩ :=
+    bourRecognizedCap_commonChart (A.trans K) oP oS (Diffeomorph.preservesOrientation_trans hA hK)
+      s t' hR hs ht'
+  let d := K.toPartialDiffeomorph.trans c
+  refine ⟨F.trans K.symm, d, K.symm pole, Diffeomorph.preservesOrientation_trans hF
+    (Diffeomorph.preservesOrientation_symm hK), ?_, ?_, ?_, ?_, ?_⟩
+  · change K.symm (F (s 0)) = t 0
+    rw [hc]
+    exact K.symm_apply_apply _
+  · intro h
+    have hh : K (K.symm pole) ∈ c.source := h.2
+    simp [K.apply_symm_apply, hsrc] at hh
+  · apply eq_univ_of_forall
+    intro x
+    exact ⟨htgt ▸ mem_univ x, mem_univ _⟩
+  · rintro _ ⟨y, hy, rfl⟩
+    refine ⟨mem_univ _, ?_⟩
+    change K (K.symm (F y)) ∈ c.source
+    simpa only [K.apply_symm_apply] using h₀ (mem_image_of_mem F hy)
+  · rintro _ ⟨x, hx, rfl⟩
+    exact ⟨mem_univ _, h₁ (mem_image_of_mem t' hx)⟩
+
 private abbrev capLinear {P Q : Type*} [TopologicalSpace P] [ChartedSpace E₄ P] [IsManifold I₄ ∞ P]
     [TopologicalSpace Q] [ChartedSpace E₄ Q] [IsManifold I₄ ∞ Q]
     (f : PartialDiffeomorph I₄ I₄ P Q ∞) (x : P) (hx : x ∈ f.source) : E₄ ≃ₗ[ℝ] E₄ :=
@@ -140,16 +179,19 @@ private theorem det_pair_positive (u : Orientation ℝ E₄ (Fin 4)) (f g : E₄
   exact (div_pos_iff.mp hpos).elim (fun ⟨hf, hg⟩ => mul_pos hf hg)
     (fun ⟨hf, hg⟩ => mul_pos_of_neg_of_neg hf hg)
 
+set_option backward.isDefEq.respectTransparency false in
 /-- After recognizing the two capped carriers, the common chart, placement
 of both full disks, center alignment, and coordinate sign all follow. Only
 the parametrizations' intrinsic orientation at their centers is tested.
 The resulting oriented map agrees with the prescribed collar in both directions. -/
 theorem bourMarkedExterior_of_recognizedSphere
-    {P : Type*} [TopologicalSpace P] [ChartedSpace E₄ P] [IsManifold I₄ ∞ P] [CompactSpace P]
-    (A : P ≃ₘ⟮I₄, I₄⟯ S₄) (oP : ManifoldOrientation I₄ P 4) (o : ManifoldOrientation I₄ S₄ 4)
-    (hA : A.preservesOrientation oP o)
-    (s : PartialDiffeomorph I₄ I₄ E₄ P ∞) (t : PartialDiffeomorph I₄ I₄ E₄ S₄ ∞)
-    (prescribed : PartialDiffeomorph I₄ I₄ P S₄ ∞)
+    {P D : Type*} [TopologicalSpace P] [ChartedSpace E₄ P] [IsManifold I₄ ∞ P] [CompactSpace P]
+    [TopologicalSpace D] [ChartedSpace E₄ D] [IsManifold I₄ ∞ D] [T2Space D] [PreconnectedSpace D]
+    (A : P ≃ₘ⟮I₄, I₄⟯ D) (K : D ≃ₘ⟮I₄, I₄⟯ S₄)
+    (oP : ManifoldOrientation I₄ P 4) (o : ManifoldOrientation I₄ D 4) (oS : ManifoldOrientation I₄ S₄ 4)
+    (hA : A.preservesOrientation oP o) (hK : K.preservesOrientation o oS)
+    (s : PartialDiffeomorph I₄ I₄ E₄ P ∞) (t : PartialDiffeomorph I₄ I₄ E₄ D ∞)
+    (prescribed : PartialDiffeomorph I₄ I₄ P D ∞)
     {r R : ℝ} (hr : 0 < r) (hBuffer : r < R)
     (hs : closedBall (0 : E₄) R ⊆ s.source) (ht : closedBall (0 : E₄) R ⊆ t.source)
     (hPr : s '' closedBall (0 : E₄) R ⊆ prescribed.source)
@@ -161,46 +203,61 @@ theorem bourMarkedExterior_of_recognizedSphere
     (hot : Orientation.map (Fin 4) ((t.isLocalDiffeomorphAt I₄ I₄ ∞
       (ht (mem_closedBall_self (hr.trans hBuffer).le))).mfderivToContinuousLinearEquiv
         (by simp)).toLinearEquiv u = o.orientation (t 0)) :
-    ∃ F : P ≃ₘ⟮I₄, I₄⟯ S₄, F.preservesOrientation oP o ∧
+    ∃ F : P ≃ₘ⟮I₄, I₄⟯ D, F.preservesOrientation oP o ∧
       (∀ x ∈ closedBall (0 : E₄) R, F (s x) = t x) ∧
       EqOn F prescribed (s '' ball (0 : E₄) R) ∧
       EqOn F.symm prescribed.symm (t '' ball (0 : E₄) R) ∧
       F '' (s '' ball (0 : E₄) r)ᶜ = (t '' ball (0 : E₄) r)ᶜ := by
-  let _ : PathConnectedSpace S₄ := isPathConnected_iff_pathConnectedSpace.1
-    (isPathConnected_sphere (by simp [← Module.finrank_eq_rank] :
-      1 < Module.rank ℝ (EuclideanSpace ℝ (Fin 5))) (0 : EuclideanSpace ℝ (Fin 5)) zero_le_one)
   have hz := mem_closedBall_self (x := (0 : E₄)) (hr.trans hBuffer).le
   obtain ⟨B, c, pole, hB, hCenter, hSource, hTarget, hCs, hCt⟩ :=
-    bourRecognizedCap_commonChart A oP o hA s t (hr.trans hBuffer).le hs ht
+    commonChartOnDouble A K oP o oS hA hK s t (hr.trans hBuffer).le hs ht
   have hsc := hCs (mem_image_of_mem B (mem_image_of_mem s hz))
   have htc := hCt (mem_image_of_mem t hz)
   let S := capLinear s 0 (hs hz)
   let T := capLinear t 0 (ht hz)
-  let L := (B.mfderivToContinuousLinearEquiv (by simp) (s 0)).toLinearEquiv
+  let L : E₄ ≃ₗ[ℝ] E₄ := (B.mfderivToContinuousLinearEquiv (by simp) (s 0)).toLinearEquiv
   let C := capLinear c (t 0) htc
   have hMaps : Orientation.map (Fin 4) ((S.trans L).trans C) u =
       Orientation.map (Fin 4) (T.trans C) u := by
-    rw [DifferentialGeometry.orientation_map_trans, DifferentialGeometry.orientation_map_trans,
-      DifferentialGeometry.orientation_map_trans, hos, hot, hB (s 0), hCenter]
-  have hsDer : fderiv ℝ (fun x : E₄ => c (B (s x))) 0 =
-      ((mfderiv I₄ I₄ c (t 0)).comp ((mfderiv I₄ I₄ B (s 0)).comp (mfderiv I₄ I₄ s 0))) := by
-    rw [← mfderiv_eq_fderiv]
-    change mfderiv I₄ I₄ (c ∘ (B ∘ s)) 0 = _
-    rw [mfderiv_comp _ (c.mdifferentiableAt (by simp) hsc)
-      (B.mdifferentiable.mdifferentiableAt.comp _ (s.mdifferentiableAt (by simp) (hs hz))),
-      mfderiv_comp _ B.mdifferentiable.mdifferentiableAt (s.mdifferentiableAt (by simp) (hs hz))]
-    simp only [Function.comp_apply, hCenter]
-  have htDer : fderiv ℝ (fun x : E₄ => c (t x)) 0 =
-      (mfderiv I₄ I₄ c (t 0)).comp (mfderiv I₄ I₄ t 0) := by
-    rw [← mfderiv_eq_fderiv]
-    exact mfderiv_comp _ (c.mdifferentiableAt (by simp) htc) (t.mdifferentiableAt (by simp) (ht hz))
-  have hDet : 0 < (fderiv ℝ (fun x : E₄ => c (B (s x))) 0).det *
-      (fderiv ℝ (fun x : E₄ => c (t x)) 0).det := by
-    rw [hsDer, htDer]
+    rw [DifferentialGeometry.orientation_map_trans (S.trans L) C u,
+      DifferentialGeometry.orientation_map_trans S L u, DifferentialGeometry.orientation_map_trans T C u]
+    congr 1
+    rw [show Orientation.map (Fin 4) S u = _ from hos,
+      show Orientation.map (Fin 4) T u = _ from hot, show Orientation.map (Fin 4) L _ = _ from hB (s 0), hCenter]
+  let f : E₄ → E₄ := fun x => c (B (s x))
+  let g : E₄ → E₄ := fun x => c (t x)
+  have hsD := s.mdifferentiableAt (by simp) (hs hz)
+  have hbD := B.contMDiff.mdifferentiableAt (by simp : (∞ : WithTop ℕ∞) ≠ 0) (x := s 0)
+  have hcsD := c.mdifferentiableAt (by simp) hsc
+  have htD := t.mdifferentiableAt (by simp) (ht hz)
+  have hctD := c.mdifferentiableAt (by simp) htc
+  have hsDer : ((S.trans L).trans C : E₄ →ₗ[ℝ] E₄) = (fderiv ℝ f 0 : E₄ →ₗ[ℝ] E₄) := by
+    apply LinearMap.ext
+    intro v
+    have hd := mfderiv_comp (x := (0 : E₄)) (g := (c : D → E₄))
+      (f := ((B : P → D) ∘ (s : E₄ → P))) hcsD (hbD.comp _ hsD)
+    rw [mfderiv_comp _ hbD hsD] at hd
+    have hh := congrArg (fun d : TangentSpace I₄ (0 : E₄) →L[ℝ] TangentSpace I₄ (f 0) => d v) hd
+    change mfderiv I₄ I₄ f 0 v = _ at hh
+    rw [mfderiv_eq_fderiv] at hh
+    change (fderiv ℝ f 0) v = mfderiv I₄ I₄ c (B (s 0))
+      (mfderiv I₄ I₄ B (s 0) (mfderiv I₄ I₄ s 0 v)) at hh
+    rw [hCenter] at hh
+    exact hh.symm
+  have htDer : (T.trans C : E₄ →ₗ[ℝ] E₄) = (fderiv ℝ g 0 : E₄ →ₗ[ℝ] E₄) := by
+    apply LinearMap.ext
+    intro v
+    have hd := mfderiv_comp (x := (0 : E₄)) hctD htD
+    have hh := DFunLike.congr_fun hd v
+    change mfderiv I₄ I₄ g 0 v = _ at hh
+    rw [mfderiv_eq_fderiv] at hh
+    exact hh.symm
+  have hDet : 0 < (fderiv ℝ f 0).det * (fderiv ℝ g 0).det := by
+    change 0 < LinearMap.det (fderiv ℝ f 0 : E₄ →ₗ[ℝ] E₄) * LinearMap.det (fderiv ℝ g 0 : E₄ →ₗ[ℝ] E₄)
+    rw [← hsDer, ← htDer]
     exact det_pair_positive u _ _ hMaps
   obtain ⟨F, hFo, hF, _, _, hf, hi, he⟩ := bourMarkedExterior_of_commonChart B oP o hB s t
-    prescribed c hr hBuffer hs ht hPr hAgree hCs hCt (fun _ _ => hTarget ▸ mem_univ _) hDet pole
-    (by rw [hSource]; simp)
+    prescribed c hr hBuffer hs ht hPr hAgree hCs hCt (fun _ _ => hTarget ▸ mem_univ _) hDet pole hSource
   exact ⟨F, hFo, hF, hf, hi, he⟩
 
 end SmoothPoincare
