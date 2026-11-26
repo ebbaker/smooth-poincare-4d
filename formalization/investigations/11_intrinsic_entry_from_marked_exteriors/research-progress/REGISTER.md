@@ -1,5 +1,9 @@
 # Intrinsic entry from marked exteriors · Live register
 
+## FOT-E46 · 26 November 2026
+
+The retained-scalar criterion tests a complete candidate already supplied on its identified smooth type. An entered positive-scalar disk now yields a positive matched exterior with full cost $e+\Delta\ge I^+(M)$. The inspected exterior, immersion and proper-window sources do not provide entry on a further smooth type. [Independent source inventory](../../reviews/ED04_E46_GEOMETRIC_READBACK.md) [Program assessment](../../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)
+
 26 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving model and reasoning effort were unavailable. Edition 04 bounded mode execution checked. [Overview](../research-overview/OVERVIEW.md) · [Plan](../research-plan/PLAN.md) · [Source receipt](handoffs/ED04_ENTRY_SETUP_INPUTS_20261126.md) · [Modal proof](handoffs/ED04_ROUND_MODE_20261126.md) · [E45 finite-energy result and source crosswalk](handoffs/ED04_E45_ENTRY_AND_SOURCE_CROSSWALK.md)
 
 | Task | State | Next evidence |

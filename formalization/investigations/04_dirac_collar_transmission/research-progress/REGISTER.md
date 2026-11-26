@@ -1,5 +1,9 @@
 # Dirac transmission and chiral curvature · Progress register
 
+## FOT-E46 · 26 November 2026
+
+The closed scalar form bounds the Yamabe quotient on an actual cap, including equality with a positive-volume retained scalar region. This step uses the scalar conformal operator. The spinorial transmission program still requires the compatible trace maps and its own closed estimates. [Program assessment](../../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)
+
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The serving model variant and reasoning effort are unavailable.
 
 This is the sole live status register for FOT-B04, FOT-E18–E24, FOT-E27 and FOT-E30–E33, with SPIN-E01 for the finite cover estimate. The parent register directs each inherited task here. [Task definitions and acceptance tests](../research-plan/PLAN.md) · [Overall overview 01](../../research-overview/01_OVERVIEW.md) · [Overall plan 01](../../research-plan/01_PLAN.md) · [Program register](../../research-progress/REGISTER.md) · [Verified baseline 01](../../research-progress/01_BASELINE.md)

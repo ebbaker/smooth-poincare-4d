@@ -110,17 +110,16 @@ private theorem nativeDensity_integrableOn_of_aestronglyMeasurable
     linarith only [hAll, hSplit, hPlus, hMinus, hSc, hRic]
 
 omit [Nonempty M] in
-/-- The native slice inherits the complete exterior from the original signed
-metric. Only measurability and the signed integral balance on the changed
-closed ball enter the signed package. Smoothness of the native metric and
-the intrinsic curvature square provide local domination. -/
-theorem exists_nativePocketSignedSlice_of_localData
+/-- Assemble the native slice from any chosen oriented frames that agree with
+the incoming basis outside the changed closed ball. -/
+theorem exists_nativePocketSignedSlice_of_localData_of_frames
     (F : PartialDiffeomorph I₄ I E₄ M ∞)
     (g : SignedCollarMetric o) (R : SmoothRiemannianMetric I M) {r : ℝ} (hr : 0 < r)
-    (hS : closedBall (0 : E₄) (3*r) ⊆ F.source) (s : Icc (0 : ℝ) 1) :
+    (hS : closedBall (0 : E₄) (3*r) ⊆ F.source) (s : Icc (0 : ℝ) 1)
+    (f : ∀ x, OrientedOrthonormalFrameAt (nativePocketPath F g.metric R hr hS s) o x)
+    (hFrames : ∀ x ∉ F '' closedBall (0 : E₄) (3*r), (f x).basis = (g.frame x).basis) :
     let A := F '' closedBall (0 : E₄) (3*r)
     let h := nativePocketPath F g.metric R hr hS s
-    let f := nativePocketPath_frame F g R hr hS s
     let W := fun sg x => hilbertSchmidtSq (signedCollarWeylBlock o h f sg x)
     let μ := riemannianVolumeMeasure I M h
     (∀ sg, AEStronglyMeasurable (W sg) (μ.restrict A)) →
@@ -129,7 +128,7 @@ theorem exists_nativePocketSignedSlice_of_localData
     ∃ q : SignedCollarMetric o, q.metric = h ∧ HEq q.frame f ∧
       (∀ x ∉ A, (g.frame x).basis = (q.frame x).basis) ∧
       ∀ sg, g.charge sg Aᶜ = q.charge sg Aᶜ := by
-  intro A h f W μ hMeas hBalance
+  intro A h W μ hMeas hBalance
   let μ₀ := riemannianVolumeMeasure I M g.metric
   let W₀ : CollarChirality → M → ℝ :=
     fun sg x => hilbertSchmidtSq (signedCollarWeylBlock o g.metric g.frame sg x)
@@ -140,7 +139,7 @@ theorem exists_nativePocketSignedSlice_of_localData
     have hOff : x ∉ F '' ball (0 : E₄) (3*r) := fun hh => hx (image_mono ball_subset_closedBall hh)
     exact nativePocketPath_outer_germ F g.metric R hr hS s hOff
   have hFrame (x : M) (hx : x ∈ Aᶜ) : (f x).basis = (g.frame x).basis :=
-    nativePocketPath_frame_outer F g R hr hS s hx
+    hFrames x hx
   have hW (sg : CollarChirality) : EqOn (W₀ sg) (W sg) Aᶜ := by
     intro x hx
     have hRm := metricRm04At_eq_of_metric_eventuallyEq h g.metric x (hGerm x hx)
@@ -192,6 +191,30 @@ theorem exists_nativePocketSignedSlice_of_localData
     (fun x hx => (hGerm x hx).mono fun y hy v w => (hy v w).symm)
     (fun x hx => (hFrame x hx).symm) sg
 
+
+omit [Nonempty M] in
+/-- The native slice inherits the complete exterior from the original signed
+metric. Only measurability and the signed integral balance on the changed
+closed ball enter the signed package. Smoothness of the native metric and
+the intrinsic curvature square provide local domination. -/
+theorem exists_nativePocketSignedSlice_of_localData
+    (F : PartialDiffeomorph I₄ I E₄ M ∞)
+    (g : SignedCollarMetric o) (R : SmoothRiemannianMetric I M) {r : ℝ} (hr : 0 < r)
+    (hS : closedBall (0 : E₄) (3*r) ⊆ F.source) (s : Icc (0 : ℝ) 1) :
+    let A := F '' closedBall (0 : E₄) (3*r)
+    let h := nativePocketPath F g.metric R hr hS s
+    let f := nativePocketPath_frame F g R hr hS s
+    let W := fun sg x => hilbertSchmidtSq (signedCollarWeylBlock o h f sg x)
+    let μ := riemannianVolumeMeasure I M h
+    (∀ sg, AEStronglyMeasurable (W sg) (μ.restrict A)) →
+    ((∫ x in A, W .plus x ∂μ) - (∫ x in A, W .minus x ∂μ) =
+      g.charge .plus A - g.charge .minus A) →
+    ∃ q : SignedCollarMetric o, q.metric = h ∧ HEq q.frame f ∧
+      (∀ x ∉ A, (g.frame x).basis = (q.frame x).basis) ∧
+      ∀ sg, g.charge sg Aᶜ = q.charge sg Aᶜ := by
+  intro A h f W μ hMeas hBalance
+  exact exists_nativePocketSignedSlice_of_localData_of_frames F g R hr hS s f
+    (fun _ hx => nativePocketPath_frame_outer F g R hr hS s hx) hMeas hBalance
 
 omit [Nonempty M] in
 /-- A single signed family realizes the native metric at every original

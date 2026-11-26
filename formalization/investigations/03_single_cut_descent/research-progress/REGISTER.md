@@ -1,5 +1,9 @@
 # Single spherical cut and descent · Progress register
 
+## FOT-E46 · 26 November 2026
+
+On a fixed positive-scalar disk one radius and Euclidean reference now serve the physical flattening, exact central product, stereographic disk cap and same-type exterior cap. The complete outgoing disk charge is zero and the complete exterior gains the original disk mass up to the flattening increment. The constructed oriented chart frames give measurable densities in both signs. At each time, the remaining Lean input is equality of the signed charge difference on the changed ball. The assessment derives that equality by relative transgression at paper level. [Original disk assembly](../../../SmoothPoincare/Variational/FinitePocketBalance.lean). [Native cylinder and both cap markings](handoffs/E46_NATIVE_POCKET_CYLINDER_20261126.md) [Program assessment](../../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)
+
 ## Edition 04 round control · FOT-E44
 
 Two native hemisphere closures at all independent available widths in $(0,\pi/2)$ have actual positive metrics, zero drift in either sign and fixed-type infimum zero. The angular cap marking, both complete restrictions and the compact scalar proof are checked. [Construction, hypotheses and proof links](handoffs/ED04_ROUND_HEMISPHERE_CONTROL_20261126.md) · [Independent cap and mass readback](../reviews/ED04_CAP_MASS_READBACK.md)

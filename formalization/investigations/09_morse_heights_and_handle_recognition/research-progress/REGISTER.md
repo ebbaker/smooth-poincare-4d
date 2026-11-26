@@ -1,5 +1,9 @@
 # Morse heights and handle recognition · Progress register
 
+## FOT-E46 · 26 November 2026
+
+The actual rank-three/rank-two trace now has a singular-homology obstruction to direct cancellation of its last reverse core. On the distinct published $L_{4,1}$ successor a smooth relative filling comparison carries both framed tubes, changes the internal level, and transports the inverse upper gluing. On its stated closure the middle count drops from three to zero. The latter proof uses published geometric recognition. [Lean reverse-core theorem](handoffs/E46_REVERSE_MIDDLE_ATTACHMENT_20261126.md) · [Two tubes, new cut and count](handoffs/E46_SQUARE_KNOT_SUCCESSOR_20261126.md) [Program assessment](../../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)
+
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The serving model and effort for preparation were unavailable. [Overall overview](../../research-overview/03_OVERVIEW.md) · [Program plan](../../research-plan/03_PLAN.md) · [Source revisions and pins](../../research-progress/03_BASELINE.md)
 
 This is the sole live status register for `SP4-FORM-HT`. The [proof plan](../research-plan/PLAN.md) specifies each target and acceptance test. The paper's [research register](../../../../papers/investigations-1/04_hypersurface_immersions/02_two_handle_recognition/research-progress/REGISTER.md) owns mathematical extraction or construction on the source.

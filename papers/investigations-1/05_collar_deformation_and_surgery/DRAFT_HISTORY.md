@@ -29,3 +29,7 @@ The parent manuscript identifies a nonlocal reducible family with unbounded sphe
 ## 26 November 2026 · Exterior recovery and core retention
 
 Recovered bands at arbitrary winding on the marked lane family and derived an asymptotically sharp joined peak for numerical core retention. The full exterior comparison and the separate full-core estimate remain open. [Assessed milestone](reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)
+
+## 26 November 2026 · Narrowed marked-surgery priorities
+
+The [revised plan](research-plan/PLAN.md) prioritizes one untreated marked exterior and gives a candidate-specific test for reopening physical comparison. The [parent register](research-progress/REGISTER.md) preserves the assessed results and both children's ownership. [Current continuation](continuation-notes/NARROWED_MARKED_SURGERY_20261126.md). This decision adds no mathematical claim.

@@ -579,3 +579,170 @@ using a cutoff equal to one on a neighborhood of the retained
 hemisphere. Yamabe sign is invariant on both resulting conformal
 classes. Compute the cap energies in the signed frames.
 \end{proof}
+
+\begin{proposition}[Ordered curvature on the actual shrinking ball]
+\label{prop:ed46-native-frame}
+\uses{prop:ed45-pocket}
+\lean{SmoothPoincare.exists_nativePocketPath_nativeCoefficient_first_bounds, SmoothPoincare.exists_nativePocketPath_nativeCoefficient_coercive, SmoothPoincare.exists_nativePocketPath_frameTensorNormSq_bounds, SmoothPoincare.exists_nativePocket_geometry_bounds}
+\leanok
+Fix a buffered four-dimensional chart with Euclidean center metric.
+One Euclidean reference near the center and constants $K,V$ work for
+every sufficiently small $r>0$ and every native interpolation time.
+On the entire changed ball the physical ordered curvature norm is at most
+$K/r$ in every oriented orthonormal frame, and its physical volume is at
+most $Vr^4$. Vanishing of the first metric jet at the center improves
+the curvature norm bound to $K$.
+\end{proposition}
+\begin{proof}
+\leanok
+Bound the inverse Gram matrix using uniform coercivity. Apply the
+coordinate curvature formula to the actual metric lift and pass from
+the coordinate components to the invariant tensor norm. Choose the
+reference used in the volume estimate first and use the same reference
+on a smaller closed buffer for the frame estimate.
+\end{proof}
+
+\begin{proposition}[The scalar cost of a finite positive flattening]
+\label{prop:ed46-native-sign}
+\uses{prop:ed46-native-frame}
+\lean{SmoothPoincare.signedCharges_add_scalarDeficit_on, SmoothPoincare.nativePocketPath_positive_of_joint_price, SmoothPoincare.classYamabeFour_lower_of_scalarFloorDeficit, SmoothPoincare.scalarSobolev_transfer, SmoothPoincare.exists_nativePocket_uniformSobolev, SmoothPoincare.exists_nativePocket_positive_slice_bounds, SmoothPoincare.exists_nativePocket_positive_geometry_bounds, SmoothPoincare.exists_nativePocket_positive_metric_slices}
+\leanok
+Suppose the finite source has scalar curvature at least $\rho>0$.
+For one Sobolev constant $S$ shared by the native flattening slices,
+their Yamabe constants satisfy
+\[
+ Y(h)\ \ge\ \min(\rho,6)/S-(\rho+\sqrt6 K)\sqrt V\,r .
+\]
+For all sufficiently small radii the actual metrics therefore have a
+uniform positive Yamabe lower bound at every time. For each signed
+realization with the matching exterior frames,
+\[
+ E_\sigma(h)\ \le\ E_\sigma(g)-E_\sigma(g;A_r)+ K^2Vr^2/4 ,
+\]
+where $A_r$ is the entire changed closed ball of chart radius $3r$.
+For any fixed positive margin below $2T$, sufficiently small radii
+yield positive slices and stay inside that strict margin when it is
+allocated to the starting energy.
+\end{proposition}
+\begin{proof}
+\leanok
+A fixed two-sided metric comparison $C$ between the source and the
+reference holds on their pointwise convex combinations. In dimension
+four the volume density in either direction is bounded by $C^2$;
+comparison of the dual norms of the differential contributes $C$ to
+the Dirichlet bound. The complete Sobolev form therefore transfers
+with factor $C^4$. Apply it to the scalar floor, subtracting the
+physical $L^2$ norm of its shortfall. Outside $A_r$ the scalar
+curvature agrees with the source. Inside it the ordered norm bounds
+$|R_h|$ by $\sqrt6 K/r$. Finally the curvature decomposition pays
+for both squared Weyl blocks with coefficient four and the squared
+scalar term with coefficient $1/6$.
+\end{proof}
+
+\begin{proposition}[One native radius for the cylinder and both caps]
+\label{prop:ed46-finite-caps}
+\uses{prop:ed46-native-sign,prop:ed45-pocket}
+\lean{SmoothPoincare.exists_nativePocketCenter_normalizedChart, SmoothPoincare.nativePocketCenter_chartTargetAndRim, SmoothPoincare.exists_nativePocketSignedSlices_of_localData, SmoothPoincare.nativePocketLogPolar_product_inner, SmoothPoincare.nativePocketCylinder_substrip_width, SmoothPoincare.nativePocket_matchedCylinderCaps_of_reference, SmoothPoincare.exists_finite_positivePocket_matchedCaps, SmoothPoincare.originalDisk_finite_positive_caps, SmoothPoincare.exists_nativePocketPath_measurableFrames, SmoothPoincare.exists_nativePocketSignedSlices_of_balance, SmoothPoincare.originalDisk_finite_positive_caps_of_balance}
+\leanok
+Fix the buffered marked disk, $\rho>0$, a scalar floor $\rho$ on
+the original metric, $\ell>0$, and $e+\eta<8\pi^2$ with $\eta>0$.
+One can choose the radius below any positive tolerance and construct
+oriented frames with measurable chiral densities on its changed ball.
+Suppose their integrated signed difference on that ball agrees with
+the original difference at every time. Then all the
+flattening slices are positive, with both signed energies below
+$e+\eta$. On the marked face one conformal exponent and one oriented
+compression give the metric $dt^2+\ell^2\gamma$ on a closed
+positive-width subslab. The two caps have positive class. The disk cap
+has zero energy, and the exterior cap has its whole retained side's
+energy $e+\Delta$. Its gain relative to the original exterior is
+$E_\sigma(g;D)+\Delta$ in either sign. Here $t$ is the signed radial
+parameter of the supplied chart; an incoming Gaussian marking identifies
+it with the original signed distance.
+\end{proposition}
+\begin{proof}
+\leanok
+Normalize the center metric by an interior change of the disk chart
+which fixes the rim. Use its native reference and a single radius for
+the scalar, volume and curvature estimates. Orthonormalize an oriented
+coordinate basis on the ball and keep the source bases on its
+complement. Combine local chiral balance with the original closed
+signature equality. On the central annulus the factor $\ell/|x|$ and
+radial map $r\exp(t/\ell)$ give the product tensor in both slots.
+Use the same exponent, compression, and reference for the stereographic
+disk cap and the original-type exterior cap. Pull back the complete
+signed measures, including the mass outside the central strips.
+\end{proof}
+
+\begin{proposition}[Scalar deficit of a complete marked cap]
+\label{prop:ed46-scalar-cap}
+\uses{prop:ed04-fixed-cap-masses}
+\lean{SmoothPoincare.neg_scalarDeficitNorm_le_classYamabeFour, SmoothPoincare.neg_scalarDeficitNorm_lt_classYamabeFour_of_attains, SmoothPoincare.signedMetric_yamabe_pos_of_retainedScalar, SmoothPoincare.selectedMatchedCap_scalarTest}
+\leanok
+For a closed four-dimensional metric put $n=\|(R)_-\|_2$. Its Yamabe
+constant satisfies $Y\ge -n$. For a matched same-type cap with the
+normalized Euler inequality $48(2T-E)\le Y^2$, the conditions
+$E<2T$ and $E+n^2/48\le2T$ imply positivity if the cap retains a
+positive-scalar region of positive volume and a negative class would
+be attained by a smooth conformal factor. Both $E$ and $n^2$ include
+the native connector and its full complement. Positive recognition
+at $E\le T$ remains inclusive.
+\end{proposition}
+\begin{proof}
+\leanok
+Apply H\"older to the negative scalar contribution of each positive
+conformal test. At an attaining factor the strictly positive retained
+integral excludes equality $Y=-n$. The Euler inequality excludes zero
+at a strict energy gap. Apply the resulting test to the quotient on
+the actual closed cap.
+\end{proof}
+
+\begin{proposition}[Calibration and near equality on the retained core]
+\label{prop:ed46-charged-core}
+\uses{prop:ed45-transport-charge}
+\lean{SmoothPoincare.exists_disjointAffineMetricRamp, SmoothPoincare.exists_chargeCalibrationDirection, SmoothPoincare.charge_increment_of_secondVariation, SmoothPoincare.exists_retainedChargeCalibration, SmoothPoincare.retainedCore_peak_decomposition, SmoothPoincare.retainedCore_finite_peak_floor, SmoothPoincare.retainedCore_nearSharp_limits}
+\leanok
+Finite disjoint supplied variation sites in a protected region $Q$
+realize an exact common signed increment within their certified total
+capacity, under the first-derivative sign, second-derivative floor
+and assembled metric-germ hypotheses. At a matched endpoint preserving
+both numerical core charges with a positive exact exterior cap, the
+joined peak $H$ satisfies
+\[
+ H\ge\max(e,I+\max_\sigma E_\sigma(g;Q)).
+\]
+If the excess over $I+\max_\sigma E_\sigma(g;Q)$ tends to zero, the
+exterior caps minimize, the endpoints approach the peak, and in a
+maximizing sign both the core excess and the charge on the complete
+$D\setminus Q$ tend to zero. The maximizing sign may change with the index.
+\end{proposition}
+\begin{proof}
+\leanok
+The positive second variation bounds the increment by a quadratic from
+below. Exact agreement off the sites and closed signature give the same
+increment in both signs. Apply the intermediate value theorem to the
+sum. For near equality, subtract $I+E_\sigma(g;Q)$ from $H$ at each
+fixed index. The difference is the sum of the peak slack, the exterior
+cap excess, the full off-core disk mass and the retained core excess.
+Each term is nonnegative, so the four limits follow from the finite bound.
+\end{proof}
+
+\begin{proposition}[The reverse core on a rank-increasing reverse attachment]
+\label{prop:ed46-reverse-core}
+\uses{prop:ed45-relative-pair}
+\lean{SmoothPoincare.reverseMiddleAttachment_injectiveH1, SmoothPoincare.reverseMiddleTube, SmoothPoincare.reverseMiddleCore_nullHomologous}
+\leanok
+Let the two actual ends $Z,U$ of a marked trace $W$ have free integral
+first homology of ranks $r+1,r$. Suppose $H_2(W,Z)=\mathbb Z$ and
+$H_1(W,U)=0$. Then $H_1(U)\to H_1(W)$ is injective. If the entire
+outgoing handle face agrees with the upper marking after exchange of
+the disk and circle factors, the reverse attaching core has zero
+class in $H_1(U)$.
+\end{proposition}
+\begin{proof}
+\leanok
+The lower pair sequence bounds the kernel rank by one and the upper
+pair sequence gives surjectivity. Rank and torsion-freeness give
+injectivity at the upper end. The marked reverse circle bounds the
+forward cocore in $W$.
+\end{proof}

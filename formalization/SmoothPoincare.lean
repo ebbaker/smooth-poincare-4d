@@ -169,5 +169,21 @@ import SmoothPoincare.Variational.TransportedDiskCaps
 import SmoothPoincare.Variational.IncomingChargeDensity
 import SmoothPoincare.Variational.TransportLimits
 import SmoothPoincare.Variational.NativePocketCaps
+import SmoothPoincare.Heights.ReverseMiddleAttachment
+import SmoothPoincare.Variational.RetainedScalarDeficit
+import SmoothPoincare.Variational.ScalarCoercivity
+import SmoothPoincare.Variational.RetainedCorePeak
+import SmoothPoincare.Variational.RetainedChargeCalibration
+import SmoothPoincare.Variational.NativePocketCenter
+import SmoothPoincare.Variational.NativePocketFrameBounds
+import SmoothPoincare.Variational.NativePocketScalarPrice
+import SmoothPoincare.Variational.NativePocketSobolev
+import SmoothPoincare.Variational.NativePocketGeometry
+import SmoothPoincare.Variational.NativePocketCylinder
+import SmoothPoincare.Variational.NativePocketSignedSlices
+import SmoothPoincare.Variational.NativePocketPositiveMetric
+import SmoothPoincare.Variational.NativePocketMeasurableFrame
+import SmoothPoincare.Variational.FinitePocketCaps
+import SmoothPoincare.Variational.FinitePocketBalance
 
 /-! # Public imports for fixed-type descent, immersed recognition and marked cuts -/

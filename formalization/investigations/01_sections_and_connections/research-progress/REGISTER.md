@@ -1,5 +1,9 @@
 # Progress register
 
+## FOT-E46 · 26 November 2026
+
+The chiral norm decomposition is applied to Levi–Civita curvature on a compact changed ball in Route 05. The two signed integrals still require the oriented chiral balance on their supplying metric. The new cap comparison makes no new section-existence assertion. [Program assessment](../../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)
+
 This is the live register for the `SP4-FORM-SEC` task family. See the
 [plan](../research-plan/PLAN.md) for scope and acceptance checks and
 the [overview](../research-overview/OVERVIEW.md) for input versions.

@@ -1,5 +1,7 @@
 # Handle and surgery research register
 
+The [26 November parent decision](../../continuation-notes/NARROWED_MARKED_SURGERY_20261126.md) governs selection of new packets. This register retains ownership of the child tasks and their assessed returns.
+
 26 November 2026, for Edward B. Baker III with OpenAI Codex. [Plan](../research-plan/PLAN.md) · [Source revisions](../../references/README.md) · [Parent assessment](../../reviews/TWO_MIXED_CUTS_AND_CHARGED_DISK_20261126.md)
 
 | Task | Assessed state | Evidence or next input |

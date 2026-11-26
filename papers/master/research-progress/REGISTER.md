@@ -2,6 +2,16 @@
 
 25 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance. Sole live register for SP4-MASTER. The [overview](../research-overview/OVERVIEW.md) identifies source owners and versions. The [plan](../research-plan/PLAN.md) sets the next mathematical choices. Status is analytical unless explicitly identified otherwise.
 
+## Route decision · 26 November 2026
+
+The [external program review](../reviews/claude/EXTERNAL_PROGRAM_REVIEW_20261126.md) and the [later 05 assessment](../../investigations-1/05_collar_deformation_and_surgery/reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md) inform the [revised master plan](../research-plan/PLAN.md). This is a planning revision. The inherited analytical evidence and stable task identities retain their recorded scope.
+
+- E remains with SP4-MASTER-B02. The target is a smooth positive class below the subcritical wall, equivalently a smooth metric with positive scalar curvature and pointwise positive Schouten \(\sigma_2\). The first bounded entry test is a marked balanced-presentation boundary, with the Mazur identity double as a standard control. [Entry requirements](../research-plan/PLAN.md#e--entry)
+- X is the proposed Bour fixed-type attainment audit. [Investigation 06](../../investigations-1/06_bour_flow_and_fixed_type_attainment/research-progress/REGISTER.md) owns its new tasks. SP4-MASTER-B01 assesses its implications. B03 and B04 retain their recorded results and can resume a legacy comparison for a named gauge, cap sign, marking or degeneration that the audit leaves uncovered. If X covers the full entered band, retire generic extraction as a proof requirement. [Attainment and fallback decision](../research-plan/PLAN.md#x--fixed-type-attainment)
+- R proceeds conditionally on smooth attainment and can run independently of X, as can E. Investigation 05 retains its marked certificates and finite cost results. A purely topological marked move can proceed independently. A new metric comparison needs an actual carrier and either a specified uncovered extraction case or an admissible variation testing rigidity. [Rigidity](../research-plan/PLAN.md#r--rigidity-of-an-attained-minimum) · [05 live register](../../investigations-1/05_collar_deformation_and_surgery/research-progress/REGISTER.md)
+
+## Master task records
+
 | ID | Status | Result or outstanding dependency |
 | --- | --- | --- |
 | SP4-MASTER-B01 | Initial edition assessed; route revised | [Initial editorial choice](../brainstorm/notes/INITIAL_PROOF_ROUTE_20261125.md) and [entry, short cuts and physical scales](../brainstorm/notes/ENTRY_AND_CONCENTRATION_20261125.md). |
@@ -15,6 +25,7 @@
 | SP4-MASTER-E04 | Lead comparison completed under whole markings | [Marked base and positive paths](../manuscript/variational_comparison.tex) and [complete physical limit](../manuscript/complete_limits.tex). Revised mechanism executed through E08/E11–E14. |
 | SP4-MASTER-E05 | Einstein subclass assessed | [Chiral eigenvalue estimate and uniform non-effective gap](../notes/E05_CLOSED_STABILITY.md). General closed minimizer remains reachable. |
 | SP4-MASTER-B05 | Additional marked diagrams recognized | Tunnel-number-two links, generalized square knots and the mixed belt-circle hypothesis enlarge the recognized presentation classes. Selection from an actual qualifying immersion remains open. [E53–E55 assessment](handoffs/E53_E55_ENDPOINT_CHARGE_20261125.md) |
+| SP4-MASTER-B06 | Scoped and unactivated | Attained-minimizer rigidity in the surviving intrinsic band. Use actual Weyl stability or a global same-type comparison. First choose one subclass and a decisive Hessian, signed identity or symmetry test. [R scope and completion](../research-plan/PLAN.md#r--rigidity-of-an-attained-minimum) |
 | SP4-MASTER-E06 | Reserved for a complete proof | Local proof checks retain their own IDs below. |
 | SP4-MASTER-E07 | Flow selection conditional; intrinsic weak estimate now available | The smooth-source Bach pairing is small for tests of bounded physical critical norm. The total Bach norm and the regularity needed for fourth-order compactness remain open. [Earlier norm test](../notes/E07_BACH_SELECTION.md) · [Current disk result](../manuscript/balanced_disk.tex) |
 | SP4-MASTER-E08 | Independent derivation accepted | [Local defect elimination and stationarity](../reviews/E08_LOCAL_REPLACEMENT_CHECK.md). |

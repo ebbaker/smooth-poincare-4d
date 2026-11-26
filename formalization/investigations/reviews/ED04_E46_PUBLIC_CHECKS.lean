@@ -201,9 +201,11 @@ example (F : PartialDiffeomorph I4 I E4 M ∞) (p : ExactFaceSphere)
     PositiveScalarCuts.markedBandEWidth g (A '' (univ ×ˢ Icc (0 : ℝ) (1 / 2)))
       (A '' (univ ×ˢ {0})) (A '' (univ ×ˢ {(1 / 2 : ℝ)})) = ENNReal.ofReal (1 / 2) := by
   intro A
-  have hL : univ ×ˢ Icc (-(1 / 4 : ℝ)) 0 ⊆ univ ×ˢ Icc (-(1 / 4 : ℝ)) (1 / 2) :=
+  have hL : (univ : Set ExactFaceSphere) ×ˢ Icc (-(1 / 4 : ℝ)) 0 ⊆
+      univ ×ˢ Icc (-(1 / 4 : ℝ)) (1 / 2) :=
     Set.prod_mono Subset.rfl (Icc_subset_Icc le_rfl (by norm_num))
-  have hR : univ ×ˢ Icc (0 : ℝ) (1 / 2) ⊆ univ ×ˢ Icc (-(1 / 4 : ℝ)) (1 / 2) :=
+  have hR : (univ : Set ExactFaceSphere) ×ˢ Icc (0 : ℝ) (1 / 2) ⊆
+      univ ×ˢ Icc (-(1 / 4 : ℝ)) (1 / 2) :=
     Set.prod_mono Subset.rfl (Icc_subset_Icc (by norm_num) le_rfl)
   constructor
   · have h := nativePocketCylinder_substrip_width F p g
@@ -369,7 +371,7 @@ end PositiveFlatteningChecks
 section SignedSliceChecks
 
 open DifferentialGeometry DifferentialGeometry.Integral.Measure
-open FirstOrderTwistor MeasureTheory Set SmoothPoincare
+open FirstOrderTwistor MeasureTheory SectionsAndConnections Set SmoothPoincare
 open scoped ContDiff Manifold
 
 local notation "E4" => EuclideanSpace ℝ (Fin 4)
@@ -422,25 +424,18 @@ local instance : BorelSpace M := ⟨rfl⟩
 example (F : PartialDiffeomorph I4 I E4 M ∞) (g : SmoothRiemannianMetric I M)
     (hBuffer : Metric.closedBall (0 : E4) 1 ⊆ F.source)
     (hZero : ∀ v w : E4, nativePocketMetricCoefficient F g v w 0 = inner ℝ v w)
-    (o : ManifoldOrientation I M 4) :
-    let r : ℝ := 1 / 8
-    let hS := (Metric.closedBall_subset_closedBall
-      (by norm_num : 3 * (1 / 8 : ℝ) ≤ 1)).trans hBuffer
+    (o : ManifoldOrientation I M 4) {r : ℝ} (hr : 0 < r) (hr₁ : r ≤ 1) (hr₂ : 3 * r ≤ 1 / 2)
+    (hS : Metric.closedBall (0 : E4) (3 * r) ⊆ F.source) (s : Icc (0 : ℝ) 1) :
     ∃ (R : SmoothRiemannianMetric I M) (V K : ℝ), 0 ≤ V ∧ 0 ≤ K ∧
-      ∀ s : Icc (0 : ℝ) 1,
-      let P := nativePocketPath F g R (by positivity : 0 < r) hS s
+      let P := nativePocketPath F g R hr hS s
       let A := F '' Metric.closedBall (0 : E4) (3 * r)
       (riemannianVolumeMeasure I M P).real A ≤ V * r ^ 4 ∧
         ∀ y ∈ A, ∀ frame : OrientedOrthonormalFrameAt P o y,
           frameTensorNormSq (metricCurvatureFrameTensor P o y frame) ≤ (K / r) ^ 2 := by
-  intro r hS
-  obtain ⟨R, U, V, K, hV, hK, _, _, _, hBounds⟩ := exists_nativePocket_geometry_bounds F g
+  obtain ⟨R, _, V, K, hV, hK, _, _, _, hBounds⟩ := exists_nativePocket_geometry_bounds F g
     (by norm_num : (0 : ℝ) < 1) hBuffer hZero o
-  refine ⟨R, V, K, hV, hK, ?_⟩
-  intro s P A
-  have h := hBounds (r := r) (by unfold r; norm_num) (by unfold r; norm_num)
-    (by unfold r; norm_num) s
-  exact ⟨h.1, fun y hy frame => (h.2 y hy frame).1⟩
+  have h := hBounds hr hr₁ (by simpa using hr₂) s
+  exact ⟨R, V, K, hV, hK, h.1, fun y hy frame => (h.2 y hy frame).1⟩
 
 end NativeGeometryChecks
 
@@ -456,7 +451,7 @@ example {f d e : ℝ → ℝ} (hFirst : ∀ a ∈ Icc (-1 : ℝ) 1, HasDerivAt f
   have hNeg : ε = -1 := hε.resolve_left (fun h => hSlope.not_ge (by simpa [h] using hStart))
   have h := charge_increment_of_secondVariation (by norm_num : (0 : ℝ) < 1)
     (by norm_num : (0 : ℝ) < 4) (fun a ha => (hDerivs a ha).1)
-    (fun a ha => (hDerivs a ha).2.1) hStart (fun a ha => (hDerivs a ha).2.2)
+    (fun a ha => (hDerivs a ha).2.1) (by simpa using hStart) (fun a ha => (hDerivs a ha).2.2)
   have hEnd := h.1 1 (by norm_num)
   refine ⟨?_, ?_⟩
   · norm_num [hNeg] at hEnd
@@ -487,3 +482,172 @@ example (g : SmoothRiemannianMetric I M) (F : PartialDiffeomorph I4 I E4 M ∞)
   exact ⟨J, G, hSource, hImage, hFixed, hGram⟩
 
 end CenterChecks
+
+section FiniteCapConstructionChecks
+
+open DifferentialGeometry DifferentialGeometry.Geometry.Curvature DifferentialGeometry.Integral.Measure
+open FirstOrderTwistor MeasureTheory SectionsAndConnections Set SmoothPoincare
+open scoped ContDiff Manifold
+
+local notation "E4" => EuclideanSpace ℝ (Fin 4)
+local notation "I4" => 𝓘(ℝ, E4)
+local instance : Fact (Module.finrank ℝ (EuclideanSpace ℝ (Fin 5)) = 4 + 1) := ⟨by simp⟩
+
+variable {H M : Type*} [TopologicalSpace H]
+  {I : ModelWithCorners ℝ E4 H} [I.Boundaryless] [TopologicalSpace M] [ChartedSpace H M]
+  [IsManifold I ∞ M] [T2Space M] [CompactSpace M] [Nonempty M] [PathConnectedSpace M]
+  {o : ManifoldOrientation I M 4}
+
+local instance : MeasurableSpace M := borel M
+local instance : BorelSpace M := ⟨rfl⟩
+
+example (g : SignedCollarMetric o) (F : PartialDiffeomorph I4 I E4 M ∞) (p : ExactFaceSphere)
+    {R B ρ η δ : ℝ} (hR : 1 < R) (hRB : R < B)
+    (hBuffer : Metric.closedBall (0 : E4) B ⊆ F.source)
+    (hρ : 0 < ρ) (hFloor : ∀ y, ρ ≤ metricScalarAt g.metric y)
+    (hη : 0 < η) (hδ : 0 < δ) (hGap : g.energy .plus + η < 2 * (4 * Real.pi ^ 2))
+    (oS : ManifoldOrientation I4 StandardFourSphere 4)
+    (hLocal : ∀ (G : PartialDiffeomorph I4 I E4 M ∞) (P : SmoothRiemannianMetric I M) {r : ℝ}
+      (hr : 0 < r) (hS : Metric.closedBall (0 : E4) (3 * r) ⊆ G.source) (s : Icc (0 : ℝ) 1),
+      let h := nativePocketPath G g.metric P hr hS s
+      let f := nativePocketPath_frame G g P hr hS s
+      let W := fun sign x => hilbertSchmidtSq (signedCollarWeylBlock o h f sign x)
+      let μ := riemannianVolumeMeasure I M h
+      let A := G '' Metric.closedBall (0 : E4) (3 * r)
+      (∀ sign, AEStronglyMeasurable (W sign) (μ.restrict A)) ∧
+      (∫ x in A, W .plus x ∂μ) - (∫ x in A, W .minus x ∂μ) =
+        g.charge .plus A - g.charge .minus A) :
+    ∃ (w : ℝ) (q : SignedCollarMetric o), 0 < w ∧ exactFaceSlab w w ⊆ (nativePocketMarking F p).source ∧
+      q.charge .plus (selectedChartDisk F) = 0 ∧ q.charge .minus (selectedChartDisk F) = 0 := by
+  obtain ⟨G, P, r, hr, hS, _, _, _, hBuild⟩ := originalDisk_finite_positive_caps g F p hR hRB hBuffer
+    (ℓ := 2) (by norm_num) hρ hFloor hη hδ hGap oS
+  obtain ⟨slice, u, φ, hφ, _, w, _, hw, hSlab, _, _, _, hLedger⟩ := hBuild (hLocal G P hr hS)
+  let flat := slice ⟨1, zero_le_one, le_rfl⟩
+  let q := (flat.conformal u).pullback φ hφ
+  exact ⟨w, q, hw, hSlab, (hLedger .plus).2.1, (hLedger .minus).2.1⟩
+
+end FiniteCapConstructionChecks
+
+section RawPositiveSliceChecks
+
+open DifferentialGeometry DifferentialGeometry.Geometry.Curvature
+open FirstOrderTwistor Set SmoothPoincare
+open scoped ContDiff Manifold
+
+local notation "E4" => EuclideanSpace ℝ (Fin 4)
+local notation "I4" => 𝓘(ℝ, E4)
+
+variable {H M : Type*} [TopologicalSpace H]
+  {I : ModelWithCorners ℝ E4 H} [I.Boundaryless] [TopologicalSpace M] [ChartedSpace H M]
+  [IsManifold I ∞ M] [T2Space M] [CompactSpace M] [Nonempty M]
+  {o : ManifoldOrientation I M 4}
+
+example (F : PartialDiffeomorph I4 I E4 M ∞) (g : SignedCollarMetric o)
+    (hBuffer : Metric.closedBall (0 : E4) 2 ⊆ F.source)
+    (hZero : ∀ v w : E4, nativePocketMetricCoefficient F g.metric v w 0 = inner ℝ v w)
+    (hFloor : ∀ x, 6 ≤ metricScalarAt g.metric x) :
+    ∃ (R : SmoothRiemannianMetric I M) (r₀ ε : ℝ), 0 < r₀ ∧ 3 * r₀ ≤ 1 ∧ 0 < ε ∧
+      ∀ {r : ℝ} (hr : 0 < r), r ≤ r₀ →
+        ∀ (hS : Metric.closedBall (0 : E4) (3 * r) ⊆ F.source) (s : Icc (0 : ℝ) 1),
+          ε ≤ classYamabeFour o.dimension_eq (nativePocketPath F g.metric R hr hS s) := by
+  obtain ⟨R, _, r₀, ε, hr₀, _, hRadius, hε, _, _, _, hSlice⟩ :=
+    exists_nativePocket_positive_metric_slices F g (by norm_num : (0 : ℝ) < 2) hBuffer hZero
+      (by norm_num : (0 : ℝ) < 6) hFloor
+  exact ⟨R, r₀, ε, hr₀, by simpa using hRadius, hε, hSlice⟩
+
+end RawPositiveSliceChecks
+
+section BalanceOnlyChecks
+
+open DifferentialGeometry DifferentialGeometry.Integral.Measure
+open FirstOrderTwistor MeasureTheory SectionsAndConnections Set SmoothPoincare
+open scoped ContDiff Manifold
+
+local notation "E4" => EuclideanSpace ℝ (Fin 4)
+local notation "I4" => 𝓘(ℝ, E4)
+
+variable {H M : Type*} [TopologicalSpace H]
+  {I : ModelWithCorners ℝ E4 H} [I.Boundaryless] [TopologicalSpace M] [ChartedSpace H M]
+  [IsManifold I ∞ M] [T2Space M] [CompactSpace M] [Nonempty M]
+  {o : ManifoldOrientation I M 4}
+
+local instance : MeasurableSpace M := borel M
+local instance : BorelSpace M := ⟨rfl⟩
+
+example (F : PartialDiffeomorph I4 I E4 M ∞) (g : SignedCollarMetric o)
+    (R : SmoothRiemannianMetric I M) {r : ℝ} (hr : 0 < r)
+    (hS : Metric.closedBall (0 : E4) (3 * r) ⊆ F.source) :
+    let A := F '' Metric.closedBall (0 : E4) (3 * r)
+    (∀ s : Icc (0 : ℝ) 1,
+      let h := nativePocketPath F g.metric R hr hS s
+      let f := nativePocketPath_measurableFrame F g R hr hS s
+      let W := fun sign x => hilbertSchmidtSq (signedCollarWeylBlock o h f sign x)
+      let μ := riemannianVolumeMeasure I M h
+      (∫ x in A, W .plus x ∂μ) - (∫ x in A, W .minus x ∂μ) =
+        g.charge .plus A - g.charge .minus A) →
+    ∃ q : Icc (0 : ℝ) 1 → SignedCollarMetric o, ∀ s,
+      (q s).metric = nativePocketPath F g.metric R hr hS s ∧
+      (q s).charge .plus Aᶜ = g.charge .plus Aᶜ ∧ (q s).charge .minus Aᶜ = g.charge .minus Aᶜ := by
+  intro A hBalance
+  obtain ⟨q, hq⟩ := exists_nativePocketSignedSlices_of_balance F g R hr hS hBalance
+  exact ⟨q, fun s => ⟨(hq s).1, ((hq s).2.2.2 .plus).symm, ((hq s).2.2.2 .minus).symm⟩⟩
+
+end BalanceOnlyChecks
+
+section BalancedCapConstructionChecks
+
+open DifferentialGeometry DifferentialGeometry.Geometry.Curvature DifferentialGeometry.Integral.Measure
+open FirstOrderTwistor MeasureTheory SectionsAndConnections Set SmoothPoincare
+open scoped ContDiff Manifold
+
+local notation "E4" => EuclideanSpace ℝ (Fin 4)
+local notation "I4" => 𝓘(ℝ, E4)
+local instance : Fact (Module.finrank ℝ (EuclideanSpace ℝ (Fin 5)) = 4 + 1) := ⟨by simp⟩
+local instance : Nonempty StandardFourSphere := ⟨transportedCapNorthPole⟩
+
+variable {H M : Type*} [TopologicalSpace H]
+  {I : ModelWithCorners ℝ E4 H} [I.Boundaryless] [TopologicalSpace M] [ChartedSpace H M]
+  [IsManifold I ∞ M] [T2Space M] [CompactSpace M] [Nonempty M] [PathConnectedSpace M]
+  {o : ManifoldOrientation I M 4}
+
+local instance : MeasurableSpace M := borel M
+local instance : BorelSpace M := ⟨rfl⟩
+
+example (g : SignedCollarMetric o) (F : PartialDiffeomorph I4 I E4 M ∞) (p : ExactFaceSphere)
+    {R B ρ η δ : ℝ} (hR : 1 < R) (hRB : R < B)
+    (hBuffer : Metric.closedBall (0 : E4) B ⊆ F.source)
+    (hρ : 0 < ρ) (hFloor : ∀ y, ρ ≤ metricScalarAt g.metric y)
+    (hη : 0 < η) (hδ : 0 < δ) (hGap : g.energy .plus + η < 2 * (4 * Real.pi ^ 2))
+    (oS : ManifoldOrientation I4 StandardFourSphere 4)
+    (hBalance : ∀ (G : PartialDiffeomorph I4 I E4 M ∞) (P : SmoothRiemannianMetric I M) {r : ℝ}
+      (hr : 0 < r) (hS : Metric.closedBall (0 : E4) (3 * r) ⊆ G.source) (s : Icc (0 : ℝ) 1),
+      let h := nativePocketPath G g.metric P hr hS s
+      let f := nativePocketPath_measurableFrame G g P hr hS s
+      let W := fun sign x => hilbertSchmidtSq (signedCollarWeylBlock o h f sign x)
+      let μ := riemannianVolumeMeasure I M h
+      let A := G '' Metric.closedBall (0 : E4) (3 * r)
+      (∫ x in A, W .plus x ∂μ) - (∫ x in A, W .minus x ∂μ) =
+        g.charge .plus A - g.charge .minus A) :
+    let D := selectedChartDisk F
+    let V := (interior D)ᶜ
+    ∃ (r d Δ : ℝ) (q capV : SignedCollarMetric o) (capD : SignedCollarMetric oS),
+      0 < r ∧ r < δ ∧ 0 < d ∧ exactFaceSlab d d ⊆ (nativePocketMarking F p).source ∧
+      0 < classYamabeFour o.dimension_eq capV.metric ∧
+      0 < classYamabeFour oS.dimension_eq capD.metric ∧
+      ∀ sign, capD.energy sign = 0 ∧ q.charge sign D = 0 ∧
+        capV.energy sign = q.charge sign V ∧
+        capV.energy sign - g.charge sign V = g.charge sign D + Δ := by
+  intro D V
+  obtain ⟨G, P, r, hr, hS, _, _, hRadius, hBuild⟩ :=
+    originalDisk_finite_positive_caps_of_balance g F p hR hRB hBuffer
+      (ℓ := 2) (by norm_num) hρ hFloor hη hδ hGap oS
+  have hComparison := hBuild (hBalance G P hr hS)
+  unfold NativePocketCapComparison at hComparison
+  obtain ⟨slice, u, φ, hφ, uDisk, d, _, hd, hSlab, _, hV, hD, hLedger⟩ := hComparison
+  let flat := slice ⟨1, zero_le_one, le_rfl⟩
+  let capV := flat.conformal u
+  let capD := (RoundEquatorialCaps.signedRound oS).conformal uDisk
+  let q := capV.pullback φ hφ
+  exact ⟨r, d, flat.energy .plus - g.energy .plus, q, capV, capD, hr, hRadius, hd, hSlab, hV, hD, hLedger⟩
+
+end BalancedCapConstructionChecks

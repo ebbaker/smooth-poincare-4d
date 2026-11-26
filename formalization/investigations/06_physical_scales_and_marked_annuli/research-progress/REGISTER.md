@@ -1,5 +1,9 @@
 # Physical scales and marked annuli · Progress register
 
+## FOT-E46 · 26 November 2026
+
+The exponential radius and angular derivative now give both slots of the actual endpoint cylinder. Its axis coordinate gives the attained intrinsic width of every contained subinterval. This is a finite source at its own cutoff scale. A sequence of such radii supplies no proper limit embedding at separated physical quantiles. [Fixed marking and width](../../03_single_cut_descent/research-progress/handoffs/E46_NATIVE_POCKET_CYLINDER_20261126.md) [Program assessment](../../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)
+
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The serving model and effort for preparation were unavailable. [Overall overview](../../research-overview/03_OVERVIEW.md) · [Program plan](../../research-plan/03_PLAN.md) · [Source revisions and pins](../../research-progress/03_BASELINE.md)
 
 This is the sole live status register for `SP4-FORM-SCALE`, `VAR-B03`, `VAR-E05`, `VAR-E07` and `VAR-E08`. The [proof plan](../research-plan/PLAN.md) specifies each target and acceptance test. The paper's [research register](../../../../papers/investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/research-progress/REGISTER.md) owns mathematical extraction or construction on the source.

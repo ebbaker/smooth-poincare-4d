@@ -32,6 +32,9 @@ BRANCHES = ('master',
             'investigations-1/05_collar_deformation_and_surgery',
             'investigations-1/05_collar_deformation_and_surgery/01_collar_deformation_and_adapted_coordinates',
             'investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery',
+            'investigations-1/06_bour_flow_and_fixed_type_attainment',
+            'investigations-1/06_bour_flow_and_fixed_type_attainment/01_regularized_flow_and_energy',
+            'investigations-1/06_bour_flow_and_fixed_type_attainment/02_marked_limits_and_attainment',
             'initial-investigations/01_generalized_isothermal_coordinates',
             'initial-investigations/02_chiral_descent_and_double_copy')
 

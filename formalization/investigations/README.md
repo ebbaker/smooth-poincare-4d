@@ -1,5 +1,7 @@
 # Formalization investigations
 
+**FOT-E46 · 26 November 2026.** The native flattening of the finite charged disk now has physical curvature and scalar estimates at one radius, an exact central cylinder and two complete cap costs. A separate marked successor comparison uses the published square-knot diagram. [Finite positive pockets and marked successors](reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)
+
 Use the [formalization setup workflow](../FORMALIZATION_SETUP_WORKFLOW.md)
 to plan and track families of Lean proofs. The [shared blueprint](../blueprint/README.md)
 records mathematical dependencies across these investigations.

@@ -1,5 +1,9 @@
 # Fixed-type variational comparison · Progress register
 
+## FOT-E46 · 26 November 2026
+
+At a fixed source, a native center-value fit gives an ordered curvature-square bound $K^2/r^2$ in every physical oriented orthonormal frame, uniformly through the flattening. If the first jet also vanishes the bound improves to $K^2$. The same Euclidean reference gives volume at most $Vr^4$. A uniform Sobolev comparison gives an $O(r)$ scalar shortfall and $O(r^2)$ signed-energy allowance. Every raw smooth metric slice has a uniform positive Yamabe lower bound at these radii. [Raw metric positivity](../../../SmoothPoincare/Variational/NativePocketPositiveMetric.lean). [Metric, frame and radius quantifiers](handoffs/E46_NATIVE_POCKET_FRAME_AND_GEOMETRY_20261126.md) [Program assessment](../../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)
+
 25 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving configuration unavailable. Sole live owner of VAR-B01/B02 and VAR-E01–E04. [Program register](../../research-progress/REGISTER.md) · [Edition 03 transfers](../../research-progress/03_BASELINE.md) · [Proof plan](../research-plan/PLAN.md)
 
 ## Edition 04 objectives

@@ -2,6 +2,8 @@
 
 26 November 2026, for Edward B. Baker III with OpenAI Codex. This register owns the joint comparison. The [deformation](../01_collar_deformation_and_adapted_coordinates/research-progress/REGISTER.md) and [surgery](../02_handle_isolation_and_marked_surgery/research-progress/REGISTER.md) registers own the scientific derivations. [Plan](../research-plan/PLAN.md) · [Revision receipt](../references/README.md#activation-revision-check-26-november-2026) · [Assessed milestone](../reviews/TWO_MIXED_CUTS_AND_CHARGED_DISK_20261126.md)
 
+The [current routing decision](#narrowed-priorities-after-the-external-review-26-november-2026) sets the conditions for future work. The preceding research milestones and their handoffs below retain their original scopes.
+
 | Task | Assessed state | Evidence or next input |
 | --- | --- | --- |
 | SP4-CDS-B01 | Completed selection | Dotted meridian with residual disk-framed tube, split and slid, plus the separate physical charged-disk sequence. [Frozen requests](handoffs/ACTIVATION_20261126.md) |
@@ -48,3 +50,15 @@ The [initial working manuscript](../manuscript/marked_collars_and_smooth_recogni
 | CDS-E02 / DEF-E03 | On a smooth cap keeping the positive scalar exterior, complete chiral energy plus one forty-eighth of the squared negative-scalar norm tests the Yamabe sign. The actual changed round-ended exterior has an explicit positive summed boundary response at its native width. | Measure a further cap's whole price on that source. Positive subcritical entry and convergence of the original markings require separate evidence. |
 
 [Assessment and independently checked derivations](../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md) · [Current continuation](../continuation-notes/AFTER_EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)
+
+### Narrowed priorities after the external review, 26 November 2026
+
+Planning revision for Edward B. Baker III with OpenAI Codex assistance. Exact serving model and effort are unavailable. Input revision `65f06eaac3ff`. The results and task identities above retain their assessed scope. [Updated plan](../research-plan/PLAN.md) · [Current evidence](../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md) · [External review F3](../../../master/reviews/claude/EXTERNAL_PROGRAM_REVIEW_20261126.md#f3-the-charged-disk-theorem-and-the-local-comparisons-are-structure-theorems) · [External review F6](../../../master/reviews/claude/EXTERNAL_PROGRAM_REVIEW_20261126.md#f6-sub-investigation-05-is-correct-where-checked-and-adds-little-leverage)
+
+| Task family | Readiness | Next admissible return |
+| --- | --- | --- |
+| SP4-CDS-B03 and the surgery child's SP4-CDS-SUR-B04 | First topological priority on activation. | Select one actual untreated framed two-attachment exterior with nonstationary port motion or a knotted opposite completion. Freeze the diagram, filling slopes and closing. Return a reducing framed move or recognizing trace with both boundary maps and their inverses, transported residual tubes and upper closing, and net middle-handle count after all stabilizations. A failed finite test returns its exact obstruction. [Owning surgery register](../02_handle_isolation_and_marked_surgery/research-progress/REGISTER.md) |
+| SP4-CDS-B03 and the deformation child's SP4-CDS-DEF-B02 / E03, with SP4-CDS-SUR-B03 / E03 for topology and marked cost | Reserved for a specified candidate whose geometry can force a whole positive same-type saving strictly larger than the minimizing excess, or whose specified variation can contradict stability of a named attained candidate. | Freeze one physical source or one attained candidate, its markings and admissibility test. Price all signed and off-strip costs, the actual widths and any protected-core requirement, or prove negative second variation in an admissible direction. Return the exact strict result or the first unproved bound. [Owning deformation register](../01_collar_deformation_and_adapted_coordinates/research-progress/REGISTER.md) |
+| SP4-CDS-E02 | Prior audits complete. New readback reserved until a qualifying return is frozen. | Audit trace, inverse reassembly and net count, or the full admissibility, threshold and cost audit on the one supplied source. |
+
+Generic charged-disk extraction and new collar-price campaigns are reserved while [Investigation 06](../../06_bour_flow_and_fixed_type_attainment/README.md) assesses Bour. Verified attainment closes those tasks on its covered class and sends the attained rigidity problem to the [master](../../../master/research-plan/PLAN.md). Fallback extraction can reopen for a specific class left uncovered by a demonstrated failure of the bridge, with an entered physical source and a mechanism for strict net gain. Producing positive subcritical entry remains a separate master task. This planning revision activates no research.

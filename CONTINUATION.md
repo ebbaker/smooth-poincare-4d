@@ -1,10 +1,12 @@
 # Continue the smooth Poincaré program
 
-Setup date: 2026-11-21; navigation updated 2026-11-25, America/New_York. Prepared for Edward Baker with OpenAI assistance; actual selected model/effort unavailable. This is a handoff snapshot; live task status belongs only to the owning registers.
+Setup date: 2026-11-21; navigation updated 2026-11-26, America/New_York. Prepared for Edward Baker with OpenAI assistance; actual selected model/effort unavailable. This is a handoff snapshot; live task status belongs only to the owning registers.
 
 | Program | Destination | Next-session entry |
 | --- | --- | --- |
 | Master program | [Master investigation](papers/master/README.md) | [Program continuation](papers/master/continuation-notes/CONTINUATION.md) |
+| Fixed-type attainment | [Bour investigation](papers/investigations-1/06_bour_flow_and_fixed_type_attainment/README.md) | [Launch the regularized-flow and marked-limit investigation](papers/investigations-1/06_bour_flow_and_fixed_type_attainment/continuation-notes/CONTINUATION.md) |
+| Marked recognition | [Collar deformation and surgery](papers/investigations-1/05_collar_deformation_and_surgery/README.md) | [Narrowed surgery and comparison prompt](papers/investigations-1/05_collar_deformation_and_surgery/continuation-notes/NARROWED_MARKED_SURGERY_20261126.md) |
 | Master parallel branches | [Branch owners](papers/master/research-progress/handoffs/PARALLEL_OWNERSHIP_20261125.md) | [Four individual launch prompts](papers/master/continuation-notes/PARALLEL_PROGRAM_20261125.md) |
 | Direct investigation | [Chiral metric evolution](papers/investigations-1/01_chiral_metric_evolution/README.md) | [Continuation and author pause boundary](papers/investigations-1/01_chiral_metric_evolution/continuation-notes/CONTINUATION.md) |
 | Direct investigation | [Bach flow](papers/investigations-1/02_bach_flow/README.md) | [Continuation prompt](papers/investigations-1/02_bach_flow/continuation-notes/CONTINUATION.md) |

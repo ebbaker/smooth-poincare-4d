@@ -208,6 +208,36 @@ theorem exists_nativePocketCenter_normalizedChart
     rw [hJ0, hChain]
     exact hMatch v w
 
+omit [IsManifold I ∞ M] in
+/-- The normalized marking has the original image and both original germs
+near every point of the collar outside the supported center change. -/
+theorem nativePocketCenter_chartTargetAndRim
+    (F : PartialDiffeomorph I₄ I E₄ M ∞) (J : E₄ ≃ₘ^∞⟮I₄,I₄⟯ E₄) (r : ℝ)
+    (hFix : ∀ x ∉ ball (0 : E₄) r, J x = x ∧ J.symm x = x) :
+    let F' := J.toPartialDiffeomorph.trans F
+    F'.target = F.target ∧ ∀ x ∈ F.source, r < ‖x‖ →
+      (F' : E₄ → M) =ᶠ[𝓝 x] F ∧ (F'.symm : M → E₄) =ᶠ[𝓝 (F x)] F.symm := by
+  intro F'
+  constructor
+  · change (J.toPartialDiffeomorph.toPartialEquiv.trans F.toPartialEquiv).target = F.target
+    rw [PartialEquiv.trans_target]
+    change F.target ∩ F.symm ⁻¹' univ = F.target
+    simp
+  · intro x hx hxNorm
+    constructor
+    · have hNear : ∀ᶠ y in 𝓝 x, r < ‖y‖ :=
+        continuous_norm.continuousAt.eventually (Ioi_mem_nhds hxNorm)
+      filter_upwards [hNear] with y hy
+      exact congrArg F (hFix y (fun hm => (mem_ball_zero_iff.mp hm).not_ge hy.le)).1
+    · have hC : ContinuousAt (F.symm : M → E₄) (F x) :=
+        F.symm.contMDiffOn.continuousOn.continuousAt (F.open_target.mem_nhds (F.map_source hx))
+      have hPoint : (F.symm : M → E₄) (F x) = x := F.toPartialEquiv.left_inv hx
+      have hNorm : r < ‖F.symm (F x)‖ := by rwa [hPoint]
+      have hNear : ∀ᶠ y in 𝓝 (F x), r < ‖F.symm y‖ :=
+        hC.norm.eventually (Ioi_mem_nhds hNorm)
+      filter_upwards [hNear] with y hy
+      exact (hFix (F.symm y) (fun hm => (mem_ball_zero_iff.mp hm).not_ge hy.le)).2
+
 end
 
 end SmoothPoincare

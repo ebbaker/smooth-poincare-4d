@@ -1,5 +1,9 @@
 # Fixed-type variational descent · Progress register
 
+## FOT-E46 · 26 November 2026
+
+Supplied disjoint physical Hessian bounds yield a calibrated affine metric ramp with an exact common signed increment. [Calibration and its geometric inputs](handoffs/E46_RETAINED_CHARGE_CALIBRATION_20261126.md). The peak above $I+q^\sigma$ equals the sum of the peak slack, same-type cap excess, actual off-core disk mass and retained-core excess at one finite index. If the peak saturates asymptotically in the larger incoming sign, all four terms vanish separately, including when the maximizing sign changes. On a matched cap, the negative scalar norm and Weyl mass are computed on the same complete pieces. The inclusive scalar test at a strict energy gap uses attainment for a hypothesized negative class. [Cap sign and same-index test](handoffs/E46_RETAINED_SCALAR_DEFICIT_20261126.md) [Program assessment](../../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)
+
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The serving model and effort for preparation were unavailable. [Overall overview](../../research-overview/03_OVERVIEW.md) · [Program plan](../../research-plan/03_PLAN.md) · [Source revisions and pins](../../research-progress/03_BASELINE.md)
 
 This is the sole live status register for `SP4-FORM-DESC` and `VAR-E06`. The [proof plan](../research-plan/PLAN.md) specifies each target and acceptance test. The paper's [research register](../../../../papers/master/01_fixed_type_variational_descent/research-progress/REGISTER.md) owns mathematical extraction or construction on the source.

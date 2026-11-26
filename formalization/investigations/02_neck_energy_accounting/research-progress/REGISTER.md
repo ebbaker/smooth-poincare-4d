@@ -1,5 +1,9 @@
 # Full neck energy accounting · Progress register
 
+## FOT-E46 · 26 November 2026
+
+The finite retained-core decomposition uses the entire disk complement at each index. A nearly sharp peak gives vanishing off-core mass in the maximizing sign. Its statement concerns the fixed marked sets on each source and supplies neither an extracted neck nor an energy identity for a bubble tree. [Program assessment](../../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)
+
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The serving model variant and reasoning effort are unavailable.
 
 This is the sole live status register for FOT-B03, FOT-E01, FOT-E09–E17 and FOT-E29. The parent register directs each inherited task here. [Task definitions and acceptance tests](../research-plan/PLAN.md) · [Overall overview 01](../../research-overview/01_OVERVIEW.md) · [Overall plan 01](../../research-plan/01_PLAN.md) · [Program register](../../research-progress/REGISTER.md) · [Verified baseline 01](../../research-progress/01_BASELINE.md)

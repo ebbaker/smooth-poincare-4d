@@ -1,5 +1,7 @@
 # Shared reference catalog
 
+The [Bour flow and fixed-type attainment source receipt](SOURCE_NOTES_BOUR_ATTAINMENT_20261126.md) records the fixed-parameter theorem, the end and compactness hypotheses, and the local revisions for investigation 06.
+
 The [collar deformation and surgery source map](../papers/investigations-1/05_collar_deformation_and_surgery/references/README.md) identifies the precise manuscript versions and the conformal, spinorial and handle-surgery passages used by its two branches.
 
 The initial program was motivated by Edward B. Baker III's three unfinished draft papers, preserved in [unfinished_notes](unfinished_notes/README.md). The [reusable bibliography](references.bib) includes all three and selected sources from the current sphere manuscript. Existing manuscripts retain their self-contained bibliographies. This setup does not rewrite their scientific text or silently convert draft references into published works.

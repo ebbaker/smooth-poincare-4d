@@ -44,8 +44,11 @@ theorem charge_increment_of_secondVariation {f d e : ℝ → ℝ} {b c : ℝ}
     apply monotoneOn_of_nonneg_slope (d := fun a => d a - c * a)
     · intro a ha
       have hQuad : HasDerivAt (fun x : ℝ => c / 2 * x ^ 2) (c * a) a := by
-        convert (hasDerivAt_pow 2 a).const_mul (c / 2) using 1
-        norm_num <;> ring
+        have h := (hasDerivAt_pow 2 a).const_mul (c / 2)
+        change HasDerivAt (fun x : ℝ => c / 2 * x ^ 2)
+          (c / 2 * ((2 : ℝ) * a ^ (2 - 1 : ℕ))) a at h
+        simpa only [show (2 - 1 : ℕ) = 1 by decide, pow_one,
+          show c / 2 * (2 * a) = c * a by ring] using h
       exact (hFirst a ha).sub hQuad
     · intro a ha
       exact sub_nonneg.mpr (hd a ha)
@@ -158,6 +161,7 @@ theorem exists_retainedChargeCalibration (g : SignedCollarMetric o)
     (hFloor : ∀ j ∈ sites, ∀ a ∈ Icc (0 : ℝ) b, c ≤ e j a) :
     let S := ⋃ j ∈ sites, U j
     let κ := fun a => ∑ j ∈ sites, ((single j a).charge .plus (U j) - g.charge .plus (U j))
+    ContinuousOn κ (Icc (0 : ℝ) b) ∧ MonotoneOn κ (Icc (0 : ℝ) b) ∧
     ∃ a ∈ Icc (0 : ℝ) b, κ a = K ∧ (a = 0 ↔ K = 0) ∧
       (K > 0 → ∀ a' ∈ Icc (0 : ℝ) b, κ a' = K → a' = a) ∧
       (∀ s ∈ Icc (0 : ℝ) a, 0 ≤ κ s ∧ κ s ≤ K ∧ ∀ sign,
@@ -205,7 +209,7 @@ theorem exists_retainedChargeCalibration (g : SignedCollarMetric o)
     intro x hx
     rcases mem_iUnion₂.mp hx with ⟨j, hj, hxj⟩
     exact hContained j hj hxj
-  refine ⟨a, ha, hValue, haZero, ?_, ?_, ?_⟩
+  refine ⟨hCont, hMono, a, ha, hValue, haZero, ?_, ?_, ?_⟩
   · intro hPositive a' ha' hValue'
     have hNonempty : sites.Nonempty := by
       by_contra! hEmpty
@@ -259,7 +263,7 @@ theorem exists_disjointAffineMetricRamp (g : SmoothRiemannianMetric I M)
     (sites : Finset ι) (U K : ι → Set M)
     (hOpen : ∀ j ∈ sites, IsOpen (U j)) (hClosed : ∀ j ∈ sites, IsClosed (K j))
     (hKU : ∀ j ∈ sites, K j ⊆ U j) (hDisjoint : (sites : Set ι).PairwiseDisjoint U)
-    (D : ∀ (j : ι) (x : M), TangentSpace I x →L[ℝ] TangentSpace I x →L[ℝ] ℝ)
+    (D : ∀ (_ : ι) (x : M), TangentSpace I x →L[ℝ] TangentSpace I x →L[ℝ] ℝ)
     (hSymm : ∀ j ∈ sites, ∀ x (u v : TangentSpace I x), D j x u v = D j x v u)
     (hNorm : ∀ j ∈ sites, ∀ x (u : TangentSpace I x), |D j x u u| ≤ g.inner x u u)
     (hSmooth : ∀ j ∈ sites, ∀ x₀ (i k : Fin (Module.finrank ℝ E₄)),
@@ -300,7 +304,7 @@ theorem exists_disjointAffineMetricRamp (g : SmoothRiemannianMetric I M)
         (fun x => L x (frameVec (I := I) x₀ i x) (frameVec (I := I) x₀ k x))
         (trivializationAt E₄ (TangentSpace I) x₀).baseSet := by
     simp only [L, sum_apply]
-    exact contMDiffOn_finsetSum _ fun j hj => hSmooth j hj x₀ i k
+    exact contMDiffOn_finsetSum fun j hj => hSmooth j hj x₀ i k
   obtain ⟨G, hGZero, hAffine, hGOff⟩ := exists_clampedAffineMetricFamily g L hLSymm hLNorm
     hLSmooth (isClosed_biUnion_finset hClosed) hZero
   refine ⟨G, hGZero, ?_, ?_⟩

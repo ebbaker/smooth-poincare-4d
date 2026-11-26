@@ -1,5 +1,9 @@
 # Positive scalar curvature on intermediate cuts · Progress register
 
+## FOT-E46 · 26 November 2026
+
+The original square-knot-first cut of the new $L_{4,1}$ control is $S^3_0(Q)$. Its split replacement has $Y_1$ after its first attachment. The native reverse-core obstruction instead applies to the separate rank-three/rank-two control. The three fixed filling cylinders in the scientific mixed metric exceed the strict joined allowance at every positive length. [Marked successor and cut](../../09_morse_heights_and_handle_recognition/research-progress/handoffs/E46_SQUARE_KNOT_SUCCESSOR_20261126.md) [Program assessment](../../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)
+
 26 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving model and effort for setup were unavailable. This is the sole live register for `SP4-FORM-PSC`. It tracks formalization. The paper's [marked surgery register](../../../../papers/investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/research-progress/REGISTER.md) owns scientific derivations and selection of a qualifying actual cut. [Plan](../research-plan/PLAN.md) · [Setup receipt](handoffs/ED04_SETUP_20261126.md)
 
 ## Edition 04 activated evidence · 26 November 2026

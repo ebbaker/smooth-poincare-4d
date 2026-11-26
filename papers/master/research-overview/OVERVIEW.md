@@ -1,8 +1,28 @@
 # Research overview — Smooth four-dimensional Poincaré conjecture
 
+## Current proof status · 26 November 2026
+
+The intrinsic program has three distinct open steps on a hypothetical nonstandard smooth homotopy four-sphere. **E** constructs a positive Yamabe class below \(2T\). **X** turns entry into smooth attainment of \(I^+(M)\) on the same oriented smooth type. **R** excludes an attained minimum in the surviving band \(T+\varepsilon_*<I^+(M)<2T\). The uniform recognition gap, marked cut accounting, immersed recognition and finiteness for exact closed classes already have manuscript proofs. The new route sets a specific attainment claim for audit. [Master plan](../research-plan/PLAN.md) · [Live master register](../research-progress/REGISTER.md) · [Claude F1–F6](../reviews/claude/EXTERNAL_PROGRAM_REVIEW_20261126.md)
+
+| Step | What would advance it | Scientific owner |
+| --- | --- | --- |
+| E · Entry | Construct an actual class and verify its sign and total chiral budget on a declared smooth type. Equivalently, construct a smooth representative with \(R>0\) and \(\sigma_2(g^{-1}A_g)>0\) everywhere. | [Master B02](../research-plan/PLAN.md#e--entry). |
+| X · Fixed-type attainment | Verify the proposed passage from Bour's regularized fourth-order flow to a smooth positive minimizer of the original Weyl energy. Keep the oriented smooth markings, cap signs, energy of both chiralities and uniform control as the regularization vanishes. A route using restarts also needs a finite descent bound. | [Investigation 06](../../investigations-1/06_bour_flow_and_fixed_type_attainment/research-progress/REGISTER.md), with [regularized flow and energy](../../investigations-1/06_bour_flow_and_fixed_type_attainment/01_regularized_flow_and_energy/research-progress/REGISTER.md) and [marked limits and attainment](../../investigations-1/06_bour_flow_and_fixed_type_attainment/02_marked_limits_and_attainment/research-progress/REGISTER.md). |
+| R · Attained-minimizer rigidity | Use Bach stationarity **and** the nonnegative Weyl Hessian forced by true minimization. A rigidity theorem or a strict admissible same-type competitor would exclude a specified attained survivor. | [Master SP4-MASTER-B06](../research-plan/PLAN.md#r--rigidity-of-an-attained-minimum). |
+
+E and R can proceed independently of X. The entry plan fixes one balanced-presentation boundary and keeps the already standard Mazur double as a control. The rigidity plan conditions on an attained minimizer and considers its signed Hessian, positive constant-\(\sigma_2\) representative and a specified symmetric standard-sphere problem. A fixed-parameter Bour flow limit is a critical metric for the regularized functional. Establishing an attained minimum for the unregularized problem requires the separate X argument. [Entry testbeds and rigidity targets](../research-plan/PLAN.md)
+
+If X covers the entered band, a charged disk, quantile shell or evacuated round restart is no longer needed to extract a minimizer on that band. If the audit leaves a named gauge, marking, positivity or energy-loss case unresolved, the [legacy descent criteria](../research-plan/PLAN.md#deciding-the-intrinsic-alternatives) can test that specific failure. A proposed strict comparison on an attained candidate belongs to R. The immersed and purely topological marked-surgery routes retain their independent conditional coverage. The latest 05 assessment includes recovered port bands and measured cap responses on the original carrier. Its constructed same-type exterior is at or above \(I^+(M)\). Extending a geometric cut certificate to a new case requires a qualifying metric on the specific marked level. [Fixed-type descent register](../01_fixed_type_variational_descent/research-progress/REGISTER.md) · [Investigation 05 register](../../investigations-1/05_collar_deformation_and_surgery/research-progress/REGISTER.md) · [Later 05 assessment](../../investigations-1/05_collar_deformation_and_surgery/reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)
+
+Prepared for Edward B. Baker III with OpenAI Codex assistance, 26 November 2026 (America/New_York). Actual serving model and reasoning effort are unavailable. The planning baseline is `65f06eaac3ff5035ab48cdc77960fe210cf0d54b`, including the Claude Fable 5.2 review of the master at `c8fb08d` and the 05 assessment subsequent to that review's scope. The source statements and working proofs retain their recorded review depth. The recognition gap and immersed recognition are candidates for human specialist review, while the Bour transfer is a proposed proof audit. Setup activates no mathematical or computational work. [External review scope](../reviews/claude/EXTERNAL_PROGRAM_REVIEW_20261126.md#1-scope-versions-and-depth)
+
+## Earlier results and their sources
+
+The following sections retain the hypotheses, examples and source generations of the working manuscript. Dates and next-step descriptions in those sections belong to the edition recorded there. The [26 November plan](../research-plan/PLAN.md) sets the current priorities and the criteria for reopening a comparison.
+
 ## Current proof status · 25 November 2026
 
-A clamped variation on the E61 disk can save at most the minimizing excess. At vanishing spectral deficit, a small-ball upper volume bound in the modified metric yields a nonflat positive-time flow with nonnegative isotropic curvature. Its negative Euler trace rules out a smooth complete initial limit in the fixed flow markings. Positive subcritical entry on every smooth type and a coupled repair of the charged disk remain open. [Assessment and source generations](../research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md)
+A clamped variation on the E61 disk can save at most the minimizing excess. At vanishing spectral deficit, a small-ball upper volume bound in the modified metric yields a nonflat positive-time flow with nonnegative isotropic curvature. Its negative Euler trace rules out a smooth complete initial limit in the fixed flow markings. The result addresses sequences in the specified modified gauge. [Assessment and source generations](../research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md)
 
 ## Current proof status after the marked enlargement
 
@@ -36,7 +56,7 @@ For intrinsic minimization, a single sufficiently wide embedded spherical annulu
 
 ## How the four investigations fit the proof
 
-The program seeks three possible ways to recognize a given homotopy four-sphere. One metric may meet a recognition theorem directly. For an immersion in the wider band \(E_+<8\pi^2\), the existing height count on a putative nonstandard sphere lets one select a Morse height with two middle handles and ask whether its attaching data determine the smooth type. Finally, any positive Yamabe class below \(8\pi^2\) gives entry to fixed-type minimization, where a geometric contradiction on one suitable sequence suffices. The [master plan](../research-plan/PLAN.md) states the quantifiers and the remaining alternatives.
+One metric may meet a recognition theorem directly. For an immersion in the wider band \(E_+<8\pi^2\), the existing height count on a putative nonstandard sphere lets one select a Morse height with two middle handles and ask whether its attaching data determine the smooth type. A positive Yamabe class below \(8\pi^2\) gives entry to fixed-type minimization. The master now tests smooth attainment through investigation 06, with the earlier specialist investigations available where their hypotheses can be realized. The [master plan](../research-plan/PLAN.md) states the quantifiers and remaining alternatives.
 
 | Research owner | What it receives | What the master can use |
 | --- | --- | --- |
@@ -70,6 +90,8 @@ Chang–Gursky–Yang's sphere theorem and equality classification. The round me
 roundness at or below $T$.
 [Normalization and closed gap, `thm:closed-gap`](../../investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/manuscript/marked_necks_and_chiral_energy.tex#L64)
 · [Sphere-theorem source record](../../../references/SOURCE_NOTES_BACH_FLOW_20261123.md)
+
+Entry is \(I^+(M)<2T\), with the infimum of the empty set taken as \(+\infty\). For \(A_g=\tfrac12(\operatorname{Ric}_g-R_g\,g/6)\), Chern–Gauss–Bonnet gives \(4\int_M\sigma_2(g^{-1}A_g)\,dV_g=16\pi^2-2E_+(g)\). On a smooth positive Yamabe class with positive Schouten integral, Chang–Gursky–Yang produce a conformal metric with \(R_g>0\) and \(\sigma_2(g^{-1}A_g)>0\) pointwise. Pointwise positivity of both quantities conversely implies entry. In this convention \(\sigma_2(g^{-1}A_g)=R_g^2/96-|\operatorname{Ric}_{0,g}|^2/8\). Thus the target is the exact inequality \(|\operatorname{Ric}_{0,g}|^2<R_g^2/12\) with \(R_g>0\). It implies \(0<2\operatorname{Ric}_g<R_g\,g\). This equivalence leaves metric construction on unrecognized types open. [Master curvature budget](../manuscript/chiral_weyl_energy_and_smooth_poincare.tex) · [Chang–Gursky–Yang, Main Theorem](https://annals.math.princeton.edu/2002/155-3/p02)
 
 Suppose a candidate nonstandard $M$ admits a positive-Yamabe class
 with $E_+<8\pi^2$. It then has a minimizing sequence of smooth

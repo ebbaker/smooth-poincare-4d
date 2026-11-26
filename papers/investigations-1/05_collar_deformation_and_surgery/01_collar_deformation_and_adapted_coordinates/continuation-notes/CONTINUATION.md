@@ -1,6 +1,6 @@
 # Continue the collar deformation investigation
 
-Use the [current joint handoff](../../continuation-notes/AFTER_EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md) for continuation. The original activation packet follows.
+Use the [current joint handoff](../../continuation-notes/NARROWED_MARKED_SURGERY_20261126.md) for continuation. The original activation packet follows.
 
 26 November 2026 · For Edward B. Baker III with OpenAI Codex assistance. [Overview](../research-overview/OVERVIEW.md) · [Plan](../research-plan/PLAN.md) · [Sole register](../research-progress/REGISTER.md) · [Input versions](../references/README.md). Small Cotton and umbilicity defects suggest candidate sections. Quantitative splice control on those sections remains open.
 

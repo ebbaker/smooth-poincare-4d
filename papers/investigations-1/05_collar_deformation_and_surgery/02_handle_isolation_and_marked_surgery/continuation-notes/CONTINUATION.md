@@ -1,6 +1,6 @@
 # Continue handle isolation and marked surgery
 
-Use the [current joint handoff](../../continuation-notes/AFTER_EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md) for continuation. The original activation packet follows.
+Use the [current joint handoff](../../continuation-notes/NARROWED_MARKED_SURGERY_20261126.md) for continuation. The original activation packet follows.
 
 26 November 2026 · For Edward B. Baker III with OpenAI Codex assistance. [First diagram](../research-overview/OVERVIEW.md) · [Application sequence](../research-plan/PLAN.md) · [Sole register](../research-progress/REGISTER.md) · [Exact inputs](../references/README.md). The control is recognized in advance. A general selection of reducing moves or usable cuts remains open.
 

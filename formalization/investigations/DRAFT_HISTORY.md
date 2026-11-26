@@ -1,5 +1,7 @@
 # Overall formalization milestones
 
+- **26 November 2026 · FOT-E46.** Derived the native curvature and positive-slice estimates, matched both complete cap costs at one radius, and located the mass outside the protected core when the peak approaches its sharp bound. Checked the reverse-core homology and applied local filling recognition to the specified square-knot successor. [Assessment](reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md) · [Verification](research-progress/handoffs/ED04_E46_VERIFICATION_20261126.md)
+
 - **26 November 2026 · FOT-E45.** Derived the finite exterior gain and protected-core loss for transport of the original charged disk, measured its endpoint density against incoming volume, and followed a relative framed pair through the closed trace. Added actual native jet, volume, cap, width, isolation and finite round-end results. [Assessment](reviews/PHYSICAL_STRIPS_AND_TRANSPORTED_DISKS_20261126.md) · [Public verification](research-progress/handoffs/ED04_E45_VERIFICATION_20261126.md)
 
 - **26 November 2026 · FOT-E44.** Activated Edition 04 and assessed the fixed round face, both positive marked caps and the finite side-mass test. The ordinary matrix, native three-to-two reduction with supplied pair and marked tubes, product-band price, and attained round-end mode now have checked Lean statements. [Assessment](reviews/FIXED_FACES_AND_NORMALIZED_PREFIXES_20261126.md) · [Public verification](research-progress/handoffs/ED04_INDEPENDENT_VERIFICATION_20261126.md)

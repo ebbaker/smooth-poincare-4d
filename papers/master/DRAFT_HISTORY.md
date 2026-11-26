@@ -51,3 +51,7 @@ The marked disk can be enlarged to divide both chiral masses, the spectral mass 
 ## 25 November 2026 · Interior variation and curvature at the charged scale
 
 A clamped variation on the E61 disk can save at most the minimizing excess. At vanishing spectral deficit, a small-ball upper volume bound in the modified metric yields a nonflat positive-time flow with nonnegative isotropic curvature. Its negative Euler trace rules out a smooth complete initial limit in the fixed flow markings. Positive subcritical entry on every smooth type and a coupled repair of the charged disk remain open. [Assessment and source generations](research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md)
+
+## 26 November 2026 · Entry, attainment and rigidity
+
+Revised the [overview](research-overview/OVERVIEW.md), [plan](research-plan/PLAN.md) and [master register](research-progress/REGISTER.md) in response to the [external review](reviews/claude/EXTERNAL_PROGRAM_REVIEW_20261126.md). Investigation 06 owns the proposed attainment proof. The master gives rigidity of an attained minimizer a distinct task alongside universal entry. [Current continuation](continuation-notes/ENTRY_ATTAINMENT_AND_RIGIDITY_20261126.md). This is a planning milestone.

@@ -1,8 +1,8 @@
 # Smooth four-dimensional Poincaré conjecture · master investigation
 
-The current edition adds the interior variation estimate and the nonflat modified Ricci-flow limit at a charged scale. [Assessment](research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md) · [Current continuation](continuation-notes/AFTER_CORE_VARIATIONS_AND_CHARGED_FLOW_20261125.md)
+The [revised research plan](research-plan/PLAN.md) assigns positive subcritical entry and rigidity of attained minimizers to the master. [Investigation 06](../investigations-1/06_bour_flow_and_fixed_type_attainment/README.md) tests fixed-type attainment using Bour's flow. The [current continuation](continuation-notes/ENTRY_ATTAINMENT_AND_RIGIDITY_20261126.md) gives the next questions. The working manuscript's latest [scientific assessment](research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md) covers the charged disk and modified Ricci-flow limit.
 
-The [current assessment](research-progress/handoffs/E63_E67_BALANCED_DISKS_20261125.md) compares the original charged disk, a connected enlargement and the exact closed classes. The [continuation](continuation-notes/AFTER_BALANCED_DISKS_AND_EXACT_TYPES_20261125.md) gives the remaining geometric tests.
+The [preceding assessment](research-progress/handoffs/E63_E67_BALANCED_DISKS_20261125.md) compares the original charged disk, a connected enlargement and the exact closed classes. The [continuation](continuation-notes/AFTER_BALANCED_DISKS_AND_EXACT_TYPES_20261125.md) gives the remaining geometric tests.
 
 The master manuscript asks whether the chiral Weyl energy on a fixed smooth homotopy four-sphere can be lowered far enough to identify its smooth type. The working edition gives a short marked-cut test and a variational comparison on the actual source. Every smooth complete physical blow-up with the stated first-order convergence is flat at minimizing energy. The paper now gives physical trace-free Ricci scale estimates, a critical harmonic-annulus cut, and direct recognition at chiral energy at most \(64\pi^2/9\) for a conformal class induced by a Euclidean hypersurface immersion. Universal entry, a general marked extraction and closed rigidity remain open.
 
@@ -10,7 +10,7 @@ There is a universal $\eta>0$ such that a smooth homotopy four-sphere is standar
 
 ## Working papers for the parallel investigations
 
-The [proof plan](research-plan/PLAN.md) has four specialist investigations. The immersion paper links the two extrinsic investigations so a constructed immersion and its height refer to the same smooth domain. Each manuscript page gives its editable source and build instructions.
+These manuscripts supply the specialist results used in the [proof plan](research-plan/PLAN.md). The immersion paper links the two extrinsic investigations so a constructed immersion and its height refer to the same smooth domain. Each manuscript page gives its editable source and build instructions.
 
 | Working paper | Argument developed in full |
 | --- | --- |
@@ -22,7 +22,7 @@ The [proof plan](research-plan/PLAN.md) has four specialist investigations. The 
 
 ## Master manuscript and research records
 
-The [collar deformation and surgery investigation](../investigations-1/05_collar_deformation_and_surgery/README.md) asks whether a topologically useful sphere can be deformed into a marked round collar at an affordable energy cost. Its [plan](../investigations-1/05_collar_deformation_and_surgery/research-plan/PLAN.md) starts with a cancelling pair, proceeds to two interacting attachments and states the selection and termination problems for arbitrary smooth types.
+The [collar deformation and surgery investigation](../investigations-1/05_collar_deformation_and_surgery/README.md) asks whether a topologically useful sphere can be deformed into a marked round collar at an affordable energy cost. Its [narrowed plan](../investigations-1/05_collar_deformation_and_surgery/research-plan/PLAN.md) seeks a new reducing move on an untreated marked exterior and reserves metric comparison for a specified candidate and a strict gain.
 
 - [Read the manuscript (PDF)](../../output/pdf/master/chiral_weyl_energy_and_smooth_poincare.pdf) · [Editable manuscript and build](manuscript/README.md)
 - [Research overview and map of the contributing investigations](research-overview/OVERVIEW.md) · [What belongs in the master proof](research-overview/OVERVIEW.md#what-belongs-in-the-master-proof)

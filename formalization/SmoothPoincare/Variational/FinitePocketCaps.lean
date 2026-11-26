@@ -97,6 +97,101 @@ theorem exists_finite_positivePocket_matchedCaps (g : SignedCollarMetric o)
 private local instance : MeasurableSpace M := borel M
 private local instance : BorelSpace M := ⟨rfl⟩
 
+/-- Complete signed caps and the product tensor in the original marking. -/
+def NativePocketCapComparison (g : SignedCollarMetric o)
+    (F F' : PartialDiffeomorph I₄ I E₄ M ∞) (p : ExactFaceSphere)
+    (Rflat : SmoothRiemannianMetric I M) {r : ℝ} (hr : 0 < r)
+    (hS : closedBall (0:E₄) (3*r) ⊆ F'.source) {ℓ : ℝ} (hℓ : 0 < ℓ)
+    (η : ℝ) (oS : ManifoldOrientation I₄ S₄ 4) : Prop :=
+    ∃ (slice : Icc (0:ℝ) 1 → SignedCollarMetric o)
+        (u : C^∞⟮I, M; ℝ⟯) (φ : M ≃ₘ⟮I,I⟯ M) (hφ : φ.preservesOrientation o o)
+        (uDisk : C^∞⟮I₄, S₄; ℝ⟯) (d : ℝ),
+        let flat := slice ⟨1,zero_le_one,le_rfl⟩
+        let capV := flat.conformal u
+        let capD := (RoundEquatorialCaps.signedRound oS).conformal uDisk
+        let q := capV.pullback φ hφ
+        let D := selectedChartDisk F
+        let V := (interior D)ᶜ
+        let A := nativePocketMarking F p
+        (∀ s, (slice s).metric = nativePocketPath F' g.metric Rflat hr hS s ∧
+          0 < classYamabeFour o.dimension_eq (slice s).metric ∧
+          ∀ sg, (slice s).energy sg < g.energy sg + η ∧ (slice s).energy sg < 2*(4*Real.pi^2)) ∧
+        0 < d ∧ exactFaceSlab d d ⊆ A.source ∧
+        (∀ x ∈ exactFaceSlab d d, ∀ v w : TangentSpace J x,
+          q.metric.inner (A x) (mfderiv J I A x v) (mfderiv J I A x w) =
+            (nativePocketCylinderMetric hℓ).inner x v w) ∧
+        0 < classYamabeFour o.dimension_eq capV.metric ∧
+        0 < classYamabeFour oS.dimension_eq capD.metric ∧
+        (∀ sg, capD.energy sg = 0 ∧ q.charge sg D = 0 ∧
+          capV.energy sg = q.charge sg V ∧
+          capV.energy sg - g.charge sg V = g.charge sg D + (flat.energy .plus - g.energy .plus))
+
+/-- The original marked comparison accepts any realization of the native
+metrics by signed slices with the actual exterior frames. -/
+theorem originalDisk_caps_of_signedRealization (g : SignedCollarMetric o)
+    (F : PartialDiffeomorph I₄ I E₄ M ∞) (p : ExactFaceSphere)
+    {R B ℓ ρ η δ : ℝ} (hR : 1 < R) (hRB : R < B) (hBuffer : closedBall (0:E₄) B ⊆ F.source)
+    (hℓ : 0 < ℓ) (hρ : 0 < ρ) (hFloor : ∀ y, ρ ≤ metricScalarAt g.metric y)
+    (hη : 0 < η) (hδ : 0 < δ) (hGap : g.energy .plus + η < 2*(4*Real.pi^2))
+    (oS : ManifoldOrientation I₄ S₄ 4) :
+    ∃ (F' : PartialDiffeomorph I₄ I E₄ M ∞) (Rflat : SmoothRiemannianMetric I M)
+      (r : ℝ) (hr : 0 < r) (hS : closedBall (0:E₄) (3*r) ⊆ F'.source),
+      selectedChartDisk F' = selectedChartDisk F ∧
+      (∀ x ∉ ball (0:E₄) (1/2), F' x = F x) ∧ r < δ ∧
+      ((∃ slice : Icc (0:ℝ) 1 → SignedCollarMetric o, ∀ s,
+        (slice s).metric = nativePocketPath F' g.metric Rflat hr hS s ∧
+        ∀ x ∉ F' '' closedBall (0:E₄) (3*r), (g.frame x).basis = ((slice s).frame x).basis) →
+        NativePocketCapComparison g F F' p Rflat hr hS hℓ η oS) := by
+  have hF := (closedBall_subset_closedBall (hR.trans hRB).le).trans hBuffer
+  obtain ⟨J₀,F',hF',hsrc,hdisk,_,hfix,_,hzero⟩ :=
+    exists_nativePocketCenter_normalizedChart g.metric F hF (by norm_num : (0:ℝ) < 1/2)
+      (by norm_num)
+  have hBuf : closedBall (0:E₄) B ⊆ F'.source := hsrc.symm ▸ hBuffer
+  obtain ⟨Rflat,r,hr,hr1,hS,hδr,hCap⟩ := exists_finite_positivePocket_matchedCaps g F' p
+    hR hRB hBuf hzero hℓ hρ hFloor hη hδ hGap oS
+  have heq : selectedChartDisk F' = selectedChartDisk F := hdisk
+  refine ⟨F',Rflat,r,hr,hS,heq,fun x hx => ?_,hδr,?_⟩
+  · rw [hF']
+    change F (J₀ x) = F x
+    rw [(hfix x hx).1]
+  rintro ⟨slice,hs⟩
+  unfold NativePocketCapComparison
+  obtain ⟨hp,u,φ,hφ,hIm,ud,ε,d,hd,_,hA,hProd,_,hyD,hyV,_,_,hc⟩ :=
+    hCap slice (fun t => (hs t).1) (fun t => (hs t).2)
+  let w := min d (1/4 : ℝ)
+  have hw : 0 < w := lt_min hd (by norm_num)
+  have hwsub := exactFaceSlab_mono (min_le_left d (1/4 : ℝ)) (min_le_left d (1/4 : ℝ))
+  have hsame (x : ExactFaceTube) (hx : -(1/2 : ℝ) < x.2) :
+      nativePocketMarking F' p x = nativePocketMarking F p x := by
+    simp only [nativePocketMarking_apply, hF']
+    change F (J₀ ((1+x.2) • (x.1 : E₄))) = F ((1+x.2) • (x.1 : E₄))
+    apply congrArg F
+    apply (hfix _ ?_).1
+    rw [mem_ball_zero_iff, norm_smul, Real.norm_of_nonneg (by linarith)]
+    rw [mem_sphere_zero_iff_norm.mp x.1.property, mul_one]
+    linarith
+  have hxHalf (x : ExactFaceTube) (hx : x ∈ exactFaceSlab w w) : -(1/2 : ℝ) < x.2 := by
+    have hmin : w ≤ 1/4 := min_le_right _ _
+    linarith [hx.2.1]
+  refine ⟨slice,u,φ,hφ,ud,w,fun t => ⟨(hs t).1,hp t⟩,hw,?_,?_,hyV,hyD,?_⟩
+  · intro x hx
+    have h := hA (hwsub hx)
+    exact nativePocketMarking_mem_source F p x (by linarith [hxHalf x hx]) (hsrc ▸ h.2)
+  · intro x hx v z
+    have hg : (nativePocketMarking F' p : ExactFaceTube → M) =ᶠ[𝓝 x] (nativePocketMarking F p) :=
+      by
+        have ho : IsOpen {z : ExactFaceTube | -(1/2 : ℝ) < z.2} :=
+          isOpen_lt continuous_const continuous_snd
+        filter_upwards [ho.mem_nhds (show x ∈ {z : ExactFaceTube | -(1/2 : ℝ) < z.2} from hxHalf x hx)] with z hz
+        exact hsame z hz
+    have hm := hProd x (hwsub hx) v z
+    rw [hg.self_of_nhds, hg.mfderiv_eq] at hm
+    exact hm
+  intro sg
+  obtain ⟨hz,hdc,hvc,hdr⟩ := hc sg
+  rw [← heq]
+  exact ⟨hz,hdc.symm.trans hz,hvc,hdr⟩
+
 /-- On the supplied disk, first normalize the chart at its center by an
 interior diffeomorphism. The radius, reference and cutoff remain common
 to every subsequent computation. Local chiral measurability and the
@@ -113,7 +208,7 @@ theorem originalDisk_finite_positive_caps (g : SignedCollarMetric o)
       (r : ℝ) (hr : 0 < r) (hS : closedBall (0:E₄) (3*r) ⊆ F'.source),
       selectedChartDisk F' = selectedChartDisk F ∧
       (∀ x ∉ ball (0:E₄) (1/2), F' x = F x) ∧ r < δ ∧
-      (∀ s : Icc (0:ℝ) 1,
+      ((∀ s : Icc (0:ℝ) 1,
         let h := nativePocketPath F' g.metric Rflat hr hS s
         let f := nativePocketPath_frame F' g Rflat hr hS s
         let W := fun sg x => hilbertSchmidtSq (signedCollarWeylBlock o h f sg x)
@@ -143,51 +238,12 @@ theorem originalDisk_finite_positive_caps (g : SignedCollarMetric o)
         0 < classYamabeFour oS.dimension_eq capD.metric ∧
         (∀ sg, capD.energy sg = 0 ∧ q.charge sg D = 0 ∧
           capV.energy sg = q.charge sg V ∧
-          capV.energy sg - g.charge sg V = g.charge sg D + (flat.energy .plus - g.energy .plus)) := by
-  have hF := (closedBall_subset_closedBall (hR.trans hRB).le).trans hBuffer
-  obtain ⟨J₀,F',hF',hsrc,hdisk,_,hfix,_,hzero⟩ :=
-    exists_nativePocketCenter_normalizedChart g.metric F hF (by norm_num : (0:ℝ) < 1/2)
-      (by norm_num)
-  have hBuf : closedBall (0:E₄) B ⊆ F'.source := hsrc.symm ▸ hBuffer
-  obtain ⟨Rflat,r,hr,hr1,hS,hδr,hCap⟩ := exists_finite_positivePocket_matchedCaps g F' p
-    hR hRB hBuf hzero hℓ hρ hFloor hη hδ hGap oS
-  have heq : selectedChartDisk F' = selectedChartDisk F := hdisk
-  refine ⟨F',Rflat,r,hr,hS,heq,fun x hx => ?_,hδr,?_⟩
-  · rw [hF']
-    change F (J₀ x) = F x
-    rw [(hfix x hx).1]
+          capV.energy sg - g.charge sg V = g.charge sg D + (flat.energy .plus - g.energy .plus))) := by
+  obtain ⟨F',Rflat,r,hr,hS,heq,hfix,hδr,hCap⟩ :=
+    originalDisk_caps_of_signedRealization g F p hR hRB hBuffer hℓ hρ hFloor hη hδ hGap oS
+  refine ⟨F',Rflat,r,hr,hS,heq,hfix,hδr,?_⟩
   intro hLocal
   obtain ⟨slice,hs⟩ := exists_nativePocketSignedSlices_of_localData F' g Rflat hr hS hLocal
-  obtain ⟨hp,u,φ,hφ,hIm,ud,ε,d,hd,_,hA,hProd,_,hyD,hyV,_,_,hc⟩ :=
-    hCap slice (fun t => (hs t).1) (fun t => (hs t).2.2.1)
-  let w := min d (1/4 : ℝ)
-  have hw : 0 < w := lt_min hd (by norm_num)
-  have hwsub := exactFaceSlab_mono (min_le_left d (1/4 : ℝ)) (min_le_left d (1/4 : ℝ))
-  have hsame (x : ExactFaceTube) (hx : -(1/2 : ℝ) < x.2) :
-      nativePocketMarking F' p x = nativePocketMarking F p x := by
-    simp only [nativePocketMarking_apply, hF']
-    change F (J₀ ((1+x.2) • (x.1 : E₄))) = F ((1+x.2) • (x.1 : E₄))
-    apply congrArg F
-    apply (hfix _ ?_).1
-    rw [mem_ball_zero_iff, norm_smul, Real.norm_of_nonneg (by linarith)]
-    rw [mem_sphere_zero_iff_norm.mp x.1.property, mul_one]
-    linarith
-  have hxHalf (x : ExactFaceTube) (hx : x ∈ exactFaceSlab w w) : -(1/2 : ℝ) < x.2 := by
-    have hmin : w ≤ 1/4 := min_le_right _ _
-    linarith [hx.2.1]
-  refine ⟨slice,u,φ,hφ,ud,w,fun t => ⟨(hs t).1,hp t⟩,hw,?_,?_,hyV,hyD,?_⟩
-  · intro x hx
-    have h := hA (hwsub hx)
-    exact nativePocketMarking_mem_source F p (by linarith [hxHalf x hx]) (hsrc ▸ h.2)
-  · intro x hx v z
-    have hg : (nativePocketMarking F' p : ExactFaceTube → M) =ᶠ[𝓝 x] (nativePocketMarking F p) :=
-      (isOpen_lt continuous_const continuous_snd |>.mem_nhds (hxHalf x hx)).mono hsame
-    have hm := hProd x (hwsub hx) v z
-    rw [hg.self_of_nhds, hg.mfderiv_eq] at hm
-    exact hm
-  intro sg
-  obtain ⟨hz,hdc,hvc,hdr⟩ := hc sg
-  rw [← heq]
-  exact ⟨hz,hdc.symm.trans hz,hvc,hdr⟩
+  exact hCap ⟨slice,fun t => ⟨(hs t).1,(hs t).2.2.1⟩⟩
 
 end SmoothPoincare
