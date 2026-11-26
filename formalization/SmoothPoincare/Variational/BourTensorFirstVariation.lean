@@ -40,6 +40,31 @@ private theorem bourClosedTensorPairing_symm (g : SmoothRiemannianMetric I M) {s
   apply integral_congr_ae
   exact Filter.Eventually.of_forall fun x => inner0S_symm g x (A x) (K x)
 
+private theorem bourClosedTensorPairing_smul (g : SmoothRiemannianMetric I M) {s : ℕ}
+    (A K : Tensor0SField (I := I) (M := M) ∞ s) (c : ℝ) :
+    bourClosedTensorPairing g (c • A) K = c * bourClosedTensorPairing g A K := by
+  unfold bourClosedTensorPairing
+  simp only [ContMDiffSection.coe_smul, Pi.smul_apply,
+    DifferentialGeometry.Tensor0SBundle.inner0S_smul_left, integral_const_mul]
+
+private theorem bourClosedTensorPairing_permute (g : SmoothRiemannianMetric I M) {s : ℕ}
+    (e : Equiv.Perm (Fin s)) (A K : Tensor0SField (I := I) (M := M) ∞ s) :
+    bourClosedTensorPairing g (Tensor0SField.domDomCongr ∞ e A) K =
+      bourClosedTensorPairing g A (Tensor0SField.domDomCongr ∞ e.symm K) := by
+  apply integral_congr_ae
+  filter_upwards [] with x
+  let basis := (smoothOrtho_isLocal g x).toBasisAt (mem_smoothOrthoFrameNeighborhood_self x)
+  have horth : ∀ i j, g.inner x (basis i) (basis j) = if i = j then 1 else 0 := by
+    intro i j
+    simpa only [basis, IsLocalFrameOn.toBasisAt_coe] using
+      smoothOrthoFrame_orthonormal_at_center g x i j
+  have h := inner0S_domDomCongr g x basis
+    (metricInverseInBasis_identity_of_orthonormal g basis horth)
+    e (A x) (Tensor0SField.domDomCongr ∞ e.symm K x)
+  rw [← Tensor0SField.domDomCongr_apply, ← Tensor0SField.domDomCongr_apply,
+    Tensor0SField.domDomCongr_trans, Equiv.symm_trans_self, Tensor0SField.domDomCongr_refl] at h
+  exact h
+
 /-- Move the divergence in the lowered connection flux onto its weight.
 The contracted slot of the flux is the first covariant slot. -/
 theorem bourRicciDivergence_adjoint (g : SmoothRiemannianMetric I M) {s : ℕ}
@@ -72,6 +97,31 @@ theorem bourRicciRough_adjoint (g : SmoothRiemannianMetric I M) {s : ℕ}
   rw [roughLap0SField, roughLap0SField, bourRicciDivergence_adjoint,
     bourRicciDivergence_adjoint, bourClosedTensorPairing_symm g
       (metricNabla0S g A) (metricNabla0S g K)]
+
+/-- Move both derivatives in a permuted covariant Hessian contraction.
+The second transfer applies the inverse permutation before taking divergence. -/
+theorem bourRicciCrossed_adjoint (g : SmoothRiemannianMetric I M) {s : ℕ}
+    (e : Equiv.Perm (Fin (s + 1))) (A K : Tensor0SField (I := I) (M := M) ∞ s) :
+    bourClosedTensorPairing g
+        (covDiv0SField g (Tensor0SField.domDomCongr ∞ e (metricNabla0S g K))) A =
+      bourClosedTensorPairing g
+        (covDiv0SField g (Tensor0SField.domDomCongr ∞ e.symm (metricNabla0S g A))) K := by
+  rw [bourRicciDivergence_adjoint, bourRicciDivergence_adjoint,
+    bourClosedTensorPairing_symm g (metricNabla0S g A) _,
+    bourClosedTensorPairing_permute]
+
+/-- The ordinary covariant weight multiplying the Ricci speed in the bulk density. -/
+def bourRicciWeight (α : ℝ) (g : SmoothRiemannianMetric I M) :
+    Tensor0SField (I := I) (M := M) ∞ 2 :=
+  metricRicci g + ((α - 4) / 12) •
+    tensor0SFieldSmulByFun ∞ (metricScalarAt g) (metricScalar_smooth g) (metricTensorField g)
+
+/-- The full coefficient of the rough-Laplacian term in the weighted Ricci variation. -/
+theorem bourWeightedRicciRough_adjoint (α : ℝ) (g : SmoothRiemannianMetric I M)
+    (K : Tensor0SField (I := I) (M := M) ∞ 2) :
+    bourClosedTensorPairing g ((-(1 / 2) : ℝ) • roughLap0SField g K) (bourRicciWeight α g) =
+      bourClosedTensorPairing g ((-(1 / 2) : ℝ) • roughLap0SField g (bourRicciWeight α g)) K := by
+  rw [bourClosedTensorPairing_smul, bourClosedTensorPairing_smul, bourRicciRough_adjoint]
 
 end
 end SmoothPoincare.Bour

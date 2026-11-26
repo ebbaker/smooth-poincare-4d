@@ -1,5 +1,7 @@
 import SmoothPoincare.Variational.BourMarkedEnd
 import SmoothPoincare.Variational.BourMarkedCore
+import DifferentialGeometry.Geometry.Operator.Hessian.Basic
+import DifferentialGeometry.Geometry.Operator.Scalar.Calculus
 
 /-!
 # Euler boundary stability for a nonflat ALE link
@@ -10,8 +12,9 @@ outward-normal-first, with the round Euclidean sphere having positive shape.
 The bounds below use the shape and curvature of the metric at unit scale.
 -/
 
-open Filter MeasureTheory Set
-open scoped BigOperators ENNReal Topology
+open DifferentialGeometry DifferentialGeometry.Geometry.Operator
+  Filter FirstOrderTwistor MeasureTheory Metric Set
+open scoped BigOperators ContDiff ENNReal Manifold Topology
 
 noncomputable section
 
@@ -71,7 +74,7 @@ private theorem abs_det_sub_one_le {shape : Matrix (Fin 3) (Fin 3) ℝ} {ε : �
       (abs_matrix_apply_le_two hε' hShape _ _) (abs_matrix_apply_le_two hε' hShape _ _) hε
   rw [← Matrix.det_one (n := Fin 3) (R := ℝ)]
   change |shape.det - unit.det| ≤ _
-  simp only [Matrix.det_apply, ← Finset.sum_sub_distrib, ← mul_sub]
+  simp only [Matrix.det_apply', ← Finset.sum_sub_distrib, ← mul_sub]
   apply (Finset.abs_sum_le_sum_abs _ _).trans
   calc
     (∑ σ : Equiv.Perm (Fin 3), |(↑↑(Equiv.Perm.sign σ) : ℝ) *
@@ -94,8 +97,8 @@ theorem bourEulerBoundaryDensity_error {shape curvature : Matrix (Fin 3) (Fin 3)
     |bourEulerBoundaryDensity shape curvature - 4| ≤ 204 * ε := by
   have hProd (i j) : |shape i j * curvature i j| ≤ 2 * ε := by
     rw [abs_mul]
-    gcongr
-    exact abs_matrix_apply_le_two hε' hShape i j
+    exact mul_le_mul (abs_matrix_apply_le_two hε' hShape i j) (hCurvature i j)
+      (abs_nonneg _) (by norm_num)
   have hRow (i) : |∑ j : Fin 3, shape i j * curvature i j| ≤ 3 * (2 * ε) := by
     apply (Finset.abs_sum_le_sum_abs _ _).trans
     simpa using (Finset.sum_le_sum fun j (_ : j ∈ (Finset.univ : Finset (Fin 3))) =>
@@ -135,5 +138,179 @@ theorem bourEulerBoundaryDensity_withArea_error
       gcongr
       exact bourEulerBoundaryDensity_error hε hε' hShape hCurvature
     _ = 412 * ε := by ring
+
+
+section Geometric
+
+variable {E H M : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E]
+  [FiniteDimensional ℝ E] [TopologicalSpace H] {I : ModelWithCorners ℝ E H}
+  [TopologicalSpace M] [ChartedSpace H M] [IsManifold I ∞ M]
+
+/-- The shape coefficients on a regular level of the radial function.
+For this interpretation the supplied oriented metric frame has outward unit
+normal in slot zero and the three tangent vectors in slots one through three. -/
+def bourLevelShapeMatrix [NeZero (Module.finrank ℝ E)]
+    (g : SmoothRiemannianMetric I M) (radius : M → ℝ) (x : M)
+    (o : ManifoldOrientation I M 4) (frame : OrientedOrthonormalFrameAt g o x) :
+    Matrix (Fin 3) (Fin 3) ℝ :=
+  let grad := gradientFun g radius x
+  fun i j => hessFun g radius x (frame.basis i.succ) (frame.basis j.succ) /
+    Real.sqrt (g.inner x grad grad)
+
+/-- Ambient curvature restricted to the three cyclic tangent wedges of the
+supplied outward-adapted frame. The underlying four-slot convention has
+positive sectional curvature on a round sphere. -/
+def bourTangentialCurvatureMatrix
+    (g : SmoothRiemannianMetric I M) (x : M)
+    (o : ManifoldOrientation I M 4) (frame : OrientedOrthonormalFrameAt g o x) :
+    Matrix (Fin 3) (Fin 3) ℝ :=
+  fun i j => metricCurvatureFrameTensor g o x frame
+    (i + 1).succ (i + 2).succ (j + 1).succ (j + 2).succ
+
+end Geometric
+
+/-- The integrated Euler error on a fixed link with finite round measure,
+using the ratio of the induced boundary area to round area. -/
+theorem bourEulerBoundaryIntegral_error {L : Type*} [MeasurableSpace L]
+    (μ : Measure L) [IsFiniteMeasure μ]
+    (shape curvature : L → Matrix (Fin 3) (Fin 3) ℝ) (J : L → ℝ) {ε : ℝ}
+    (hε : 0 ≤ ε) (hε' : ε ≤ 1)
+    (hShape : ∀ᵐ x ∂μ, ∀ i j,
+      |shape x i j - (1 : Matrix (Fin 3) (Fin 3) ℝ) i j| ≤ ε)
+    (hCurvature : ∀ᵐ x ∂μ, ∀ i j, |curvature x i j| ≤ ε)
+    (hArea : ∀ᵐ x ∂μ, |J x - 1| ≤ ε)
+    (hIntegrable : Integrable (fun x => J x * bourEulerBoundaryDensity (shape x) (curvature x)) μ) :
+    |(∫ x, J x * bourEulerBoundaryDensity (shape x) (curvature x) ∂μ) - 4 * μ.real univ| ≤
+      412 * ε * μ.real univ := by
+  have hNorm : ∀ᵐ x ∂μ, ‖J x * bourEulerBoundaryDensity (shape x) (curvature x) - 4‖ ≤ 412 * ε := by
+    filter_upwards [hShape, hCurvature, hArea] with x hS hK hJ
+    simpa only [Real.norm_eq_abs] using bourEulerBoundaryDensity_withArea_error hε hε' hS hK hJ
+  have hIntegral := norm_integral_le_of_norm_le_const hNorm
+  rw [integral_sub hIntegrable (integrable_const 4), integral_const, smul_eq_mul, mul_comm (μ.real univ) 4,
+    Real.norm_eq_abs] at hIntegral
+  exact hIntegral
+
+section Quotient
+
+open DifferentialGeometry.Geometry.Riemannian.VolumeComparison
+
+local notation "E₄" => EuclideanSpace ℝ (Fin 4)
+local notation "S₃" => sphere (0 : E₄) 1
+
+/-- The round quotient measure is identified by the actual map from the unit
+sphere and its degree. This consumes the finite-cover measure identity. -/
+theorem bourRoundLinkArea_of_cover {L : Type*} [MeasurableSpace L]
+    (μ : Measure L) [IsFiniteMeasure μ] (q : S₃ → L) (hq : Measurable q)
+    {degree : ℕ} (hDegree : 0 < degree)
+    (hCover : Measure.map q ((volume : Measure E₄).toSphere) = (degree : ℝ≥0∞) • μ) :
+    μ.real univ = 2 * Real.pi ^ 2 / degree := by
+  have hArea := congrArg (fun ν : Measure L => (ν univ).toReal) hCover
+  change ((Measure.map q ((volume : Measure E₄).toSphere)) univ).toReal =
+    (((degree : ℝ≥0∞) • μ) univ).toReal at hArea
+  rw [Measure.map_apply hq MeasurableSet.univ, preimage_univ, Measure.smul_apply,
+    smul_eq_mul, ENNReal.toReal_mul, ENNReal.toReal_natCast] at hArea
+  change ((volume : Measure E₄).toSphere).real univ = (degree : ℝ) * μ.real univ at hArea
+  rw [bourEuclideanUnitLinkArea] at hArea
+  exact (eq_div_iff (by exact_mod_cast hDegree.ne')).mpr (by linarith only [hArea])
+
+/-- The nonflat Euler boundary integral tends to (8\pi^2/|Γ|). The errors
+are uniform on the link and are supplied for the shape, the ambient curvature
+and the ratio of the induced area, after rescaling the link to unit radius. -/
+theorem bourALEBoundaryIntegral_tendsto {L : Type*} [MeasurableSpace L]
+    (μ : Measure L) [IsFiniteMeasure μ] (q : S₃ → L) (hq : Measurable q)
+    {degree : ℕ} (hDegree : 0 < degree)
+    (hCover : Measure.map q ((volume : Measure E₄).toSphere) = (degree : ℝ≥0∞) • μ)
+    (shape curvature : ℝ → L → Matrix (Fin 3) (Fin 3) ℝ) (J : ℝ → L → ℝ)
+    (error : ℝ → ℝ) (hError : Tendsto error atTop (𝓝 0))
+    (hBound : ∀ᶠ r in atTop,
+      0 ≤ error r ∧ error r ≤ 1 ∧
+      (∀ᵐ x ∂μ, ∀ i j, |shape r x i j - (1 : Matrix (Fin 3) (Fin 3) ℝ) i j| ≤ error r) ∧
+      (∀ᵐ x ∂μ, ∀ i j, |curvature r x i j| ≤ error r) ∧
+      (∀ᵐ x ∂μ, |J r x - 1| ≤ error r) ∧
+      Integrable (fun x => J r x * bourEulerBoundaryDensity (shape r x) (curvature r x)) μ) :
+    Tendsto (fun r => ∫ x, J r x * bourEulerBoundaryDensity (shape r x) (curvature r x) ∂μ)
+      atTop (𝓝 (8 * Real.pi ^ 2 / degree)) := by
+  have hArea : 4 * μ.real univ = 8 * Real.pi ^ 2 / degree := by
+    rw [bourRoundLinkArea_of_cover μ q hq hDegree hCover]
+    ring
+  rw [← hArea, tendsto_iff_dist_tendsto_zero]
+  have hLimit : Tendsto (fun r => 412 * error r * μ.real univ) atTop (𝓝 0) := by
+    simpa using (hError.const_mul 412).mul_const (μ.real univ)
+  refine squeeze_zero' (Eventually.of_forall fun _ => dist_nonneg) ?_ hLimit
+  filter_upwards [hBound] with r hr
+  rw [Real.dist_eq]
+  exact bourEulerBoundaryIntegral_error μ (shape r) (curvature r) (J r)
+    hr.1 hr.2.1 hr.2.2.1 hr.2.2.2.1 hr.2.2.2.2.1 hr.2.2.2.2.2
+
+
+/-- Use the actual metric Hessian and ambient Riemann tensor along a
+parametrized link. The geometry supplies the outward-adapted frames, the
+area ratio and the uniform normalized ALE bounds. -/
+theorem bourALELevelBoundary_tendsto {E H M L : Type*}
+    [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimensional ℝ E]
+    [NeZero (Module.finrank ℝ E)] [TopologicalSpace H] {I : ModelWithCorners ℝ E H}
+    [TopologicalSpace M] [ChartedSpace H M] [IsManifold I ∞ M] [MeasurableSpace L]
+    (μ : Measure L) [IsFiniteMeasure μ] (q : S₃ → L) (hq : Measurable q)
+    {degree : ℕ} (hDegree : 0 < degree)
+    (hCover : Measure.map q ((volume : Measure E₄).toSphere) = (degree : ℝ≥0∞) • μ)
+    (g : ℝ → SmoothRiemannianMetric I M) (radius : M → ℝ) (o : ManifoldOrientation I M 4)
+    (link : ℝ → L → M)
+    (frame : ∀ r x, OrientedOrthonormalFrameAt (g r) o (link r x))
+    (J : ℝ → L → ℝ) (error : ℝ → ℝ) (hError : Tendsto error atTop (𝓝 0)) :
+    let shape := fun r x => bourLevelShapeMatrix (g r) radius (link r x) o (frame r x)
+    let curvature := fun r x => bourTangentialCurvatureMatrix (g r) (link r x) o (frame r x)
+    (∀ᶠ r in atTop,
+      0 ≤ error r ∧ error r ≤ 1 ∧
+      (∀ᵐ x ∂μ, ∀ i j, |shape r x i j - (1 : Matrix (Fin 3) (Fin 3) ℝ) i j| ≤ error r) ∧
+      (∀ᵐ x ∂μ, ∀ i j, |curvature r x i j| ≤ error r) ∧
+      (∀ᵐ x ∂μ, |J r x - 1| ≤ error r) ∧
+      Integrable (fun x => J r x * bourEulerBoundaryDensity (shape r x) (curvature r x)) μ) →
+    Tendsto (fun r => ∫ x, J r x * bourEulerBoundaryDensity (shape r x) (curvature r x) ∂μ)
+      atTop (𝓝 (8 * Real.pi ^ 2 / degree)) := by
+  intro shape curvature hBound
+  exact bourALEBoundaryIntegral_tendsto μ q hq hDegree hCover shape curvature J error hError hBound
+
+end Quotient
+
+/-- Exhausting the compact scalar-flat Euler formulas transfers the boundary
+contributions for all finitely many end links at once. -/
+theorem bourExhaustedEulerIdentity {k : ℕ} (degree : Fin k → ℕ)
+    (plusMass minusMass ricciMass : ℝ → ℝ) (boundary : Fin k → ℝ → ℝ)
+    {ePlus eMinus d χ : ℝ}
+    (hPlus : Tendsto plusMass atTop (𝓝 ePlus)) (hMinus : Tendsto minusMass atTop (𝓝 eMinus))
+    (hRicci : Tendsto ricciMass atTop (𝓝 d))
+    (hBoundary : ∀ b, Tendsto (boundary b) atTop (𝓝 (8 * Real.pi ^ 2 / degree b)))
+    (hEuler : ∀ᶠ r in atTop,
+      plusMass r + minusMass r - ricciMass r / 2 + ∑ b, boundary b r = 8 * Real.pi ^ 2 * χ) :
+    ePlus + eMinus - d / 2 + ∑ b, 8 * Real.pi ^ 2 / degree b = 8 * Real.pi ^ 2 * χ := by
+  have hSum := tendsto_finsetSum Finset.univ (fun b _ => hBoundary b)
+  have hLimit := ((hPlus.add hMinus).sub (hRicci.div_const 2)).add hSum
+  exact tendsto_nhds_unique hLimit (tendsto_const_nhds.congr' hEuler.symm)
+
+/-- Specialize the exhaustion to spherical links and to the Euler
+characteristic supplied by the compact marked core. -/
+theorem bourOneEuclideanEnd_of_boundaryLimits {k : ℕ} (hk : 0 < k)
+    (plusMass minusMass ricciMass : ℝ → ℝ) (boundary : Fin k → ℝ → ℝ)
+    {ePlus eMinus d dMax : ℝ}
+    (hPlus : Tendsto plusMass atTop (𝓝 ePlus)) (hMinus : Tendsto minusMass atTop (𝓝 eMinus))
+    (hRicci : Tendsto ricciMass atTop (𝓝 d))
+    (hBoundary : ∀ b, Tendsto (boundary b) atTop (𝓝 (8 * Real.pi ^ 2)))
+    (hEuler : ∀ᶠ r in atTop,
+      plusMass r + minusMass r - ricciMass r / 2 + ∑ b, boundary b r =
+        8 * Real.pi ^ 2 * (2 - (k : ℝ)))
+    (hPlusNonneg : 0 ≤ ePlus) (hMinusNonneg : 0 ≤ eMinus)
+    (hD : d ≤ dMax) (hMax : dMax < 32 * Real.pi ^ 2) :
+    k = 1 ∧ ePlus + eMinus - d / 2 = 0 := by
+  have h := bourExhaustedEulerIdentity (fun _ => 1) plusMass minusMass ricciMass boundary
+    hPlus hMinus hRicci (fun b => by simpa using hBoundary b) hEuler
+  simp only [Nat.cast_one, div_one, Finset.sum_const, Finset.card_univ, Fintype.card_fin,
+    nsmul_eq_mul] at h
+  have hBalance : ePlus + eMinus - d / 2 = 8 * Real.pi ^ 2 * (2 - 2 * (k : ℝ)) := by
+    calc
+      ePlus + eMinus - d / 2 = 8 * Real.pi ^ 2 * (2 - (k : ℝ)) - (k : ℝ) * (8 * Real.pi ^ 2) := by
+        linarith only [h]
+      _ = _ := by ring
+  have hOne := bourOneEuclideanEnd hk hPlusNonneg hMinusNonneg hBalance hD hMax
+  exact ⟨hOne, by simpa [hOne] using hBalance⟩
 
 end SmoothPoincare
