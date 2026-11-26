@@ -188,3 +188,5 @@ The [source records R119–R121](../papers/investigations-1/03_first_order_twist
 [Charged disks, spectral recognition and marked boundaries](SOURCE_NOTES_MASTER_SPECTRAL_WINDOWS_20261125.md) records the comparison scales, isotropic flow blocks and APS boundary conventions used in E59–E62.
 
 [E63–E67 source record](SOURCE_NOTES_MASTER_BALANCED_DISKS_20261125.md) gives the checked passages for marked bisection, relative transgression, critical polar comparison, spin boundary conditions and exact compactness.
+
+The [E69–E71 source record](SOURCE_NOTES_MASTER_CHARGED_FLOW_20261125.md) gives the primary inputs for the boundary form, local variational test and smoothing at the charged radius.

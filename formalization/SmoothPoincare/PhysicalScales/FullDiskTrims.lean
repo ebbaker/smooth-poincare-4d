@@ -14,7 +14,8 @@ local notation "I₄" => 𝓘(ℝ, E₄)
 variable {H M : Type*} [TopologicalSpace H] {I : ModelWithCorners ℝ E₄ H}
   [TopologicalSpace M] [ChartedSpace H M]
 
-private theorem eventually_disk_buffer (F : PartialDiffeomorph I₄ I E₄ M ∞)
+/-- Every sufficiently thin full radial buffer lies inside the open marking. -/
+theorem eventually_selectedChartDisk_buffer (F : PartialDiffeomorph I₄ I E₄ M ∞)
     (h : Metric.closedBall (0 : E₄) 1 ⊆ F.source) :
     ∀ᶠ n : ℕ in atTop, Metric.closedBall (0 : E₄) (1 + 1 / ((n : ℝ) + 1)) ⊆ F.source := by
   obtain ⟨δ, hδ, hb⟩ := (isCompact_closedBall (0 : E₄) 1).exists_cthickening_subset_open
@@ -76,7 +77,7 @@ theorem eventually_fullDiskTrims_small_both_charges
       Finset.sum_nonneg fun _ _ => sq_nonneg _
   have hsum := tendsto_finsetSum idx (fun j _ => (small _ hP j).add (small _ hN j))
   simp only [add_zero, Finset.sum_const_zero] at hsum
-  exact ((idx.eventually_all).2 (fun j hj => eventually_disk_buffer _ (hDisk j hj))).and
+  exact ((idx.eventually_all).2 (fun j hj => eventually_selectedChartDisk_buffer _ (hDisk j hj))).and
     (hsum.eventually_lt_const hε)
 
 end SmoothPoincare

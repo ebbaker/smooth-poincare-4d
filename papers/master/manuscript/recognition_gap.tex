@@ -114,3 +114,55 @@ curvature energy on the images of fixed compacts. In particular
 no such window can contain a definite modified Ricci charge.
 The small-volume sets themselves need not admit this rescaling or
 these markings \cite[section on modified Ricci concentration]{Baker2026FixedDescent}.
+
+\begin{proposition}[The initial end of a modified blow-up]
+\label{prop:master-charged-flow}
+In the vanishing-deficit regime above, assume the modified metrics
+satisfy \(\operatorname{Vol}_{q_i}B(x,r)\le V r^4\) through a common
+positive radius. There are shrinking balls carrying definite
+trace-free Ricci energy and vanishing scalar and Weyl square
+integrals. At the first small full curvature radius the flows of
+the rescaled smooth approximations have a complete, noncompact
+positive-time limit with nonnegative isotropic curvature. A ball
+of fixed radius about the marked center carries definite trace-free
+Ricci energy at each sufficiently small positive time. The limit
+admits no smooth complete initial metric obtained even by locally
+uniform, strong \(W^{1,4}_{\rm loc}\) subsequential convergence in
+the fixed flow markings.
+\end{proposition}
+
+\begin{proof}
+The small-concentration smoothing theorem applies at this first
+radius \cite[Theorem 1.1]{LeeLee2026Local}. If that radius stayed
+bounded below, a uniform-time closed flow and propagation of the
+negative isotropic pair sums would identify the late source types
+as standard. At the shrinking radius the normalized Euler integral
+of a cutoff containing the charged ball is strictly negative because
+the scalar and Weyl energies vanish throughout its buffered support.
+The derivative of this integral is a boundary term controlled by
+\(|d\chi||\nabla\Ric||\Rm|\). The short flow gives a uniform global
+curvature energy and a time integral of the squared curvature
+gradient. A terminal distance cutoff has earlier gradient bounded
+by \(C(t/s)^b\), \(b<1/2\), so its Euler integral changes by at
+most \(C\sqrt t\). This gives the asserted Ricci charge at positive times.
+
+Fix the
+positive-time comparison to transport compact tests. The rescaled
+initial Ricci square measures have a local weak limit \(\mu\ne0\)
+of total mass at most \(4e+y^2/12-8T<y^2/12\). Euler transgression
+on a test fixed at time \(\tau_0>0\) identifies the time-zero trace
+of the flow's Euler form with \(-\mu/2\). Its scalar integral on
+each compact tends to zero by scalar evolution and the time-integrated
+curvature gradient bound. Nonnegative isotropic curvature bounds
+both Weyl blocks by a multiple of the scalar curvature. The same
+gradient distortion with \(2b<1\) makes the variation of each
+compact-test Dirichlet energy integrable down to zero, so the
+source Yamabe constant \(y\) passes to any smooth complete limit
+in locally uniform, strong \(W^{1,4}\) convergence in the fixed
+flow markings. Such a metric would be scalar-flat and conformally
+flat, with Ricci square measure \(\mu\). Its embedded truncations
+and the end formula above force that measure to vanish. Thus even
+subsequential convergence of this kind at the initial end is excluded.
+The cutoff transport and compactness details are in the descent paper
+\cite[section on a charged ball in the modified metric]{Baker2026FixedDescent}.
+\end{proof}

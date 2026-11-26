@@ -47,3 +47,7 @@ The draft derives the full radial defect from a physical radial Ricci comparison
 ## 25 November 2026 · balanced disks and exact closed types
 
 A forward polar Jacobian bound controls the full distributional radial defect under critical integral curvature on a selected physical window. [Proof](manuscript/critical_radial_defect.tex) · [Independent check](reviews/E64_CRITICAL_RADIAL_DEFECT.md)
+
+## 25 November 2026 · Interior variation and curvature at the charged scale
+
+At the physical intermediate scale, a full buffered band with bounded sectional curvature, bounded rescaled volume and vanishing full curvature integral supplies a proper flat comparison and compact embeddings. The Jacobian or full signed radial-defect estimate must hold at this scale. The terminal polar throat calculation tests loss of inner protection. [Assessment and versions](../../../../master/research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md)

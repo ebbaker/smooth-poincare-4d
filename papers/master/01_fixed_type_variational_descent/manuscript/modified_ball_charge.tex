@@ -1,0 +1,334 @@
+\subsection{A charged ball in the modified metric}
+\label{sec:modified-ball-charge}
+
+\begin{proposition}\label{prop:modified-ball-charge}
+In the fixed subcritical band of Section~\ref{sec:modified-ricci-concentration}, let the modified metrics have vanishing spectral deficit on nonstandard types and
+suppose additionally that
+\[
+ \operatorname{Vol}_{q_i} B_{q_i}(x,r)\le V r^4
+ \qquad(x\in M_i,\ 0<r\le r_0)
+\]
+for fixed \(r_0,V>0\). There are \(c>0\), centers \(x_i\), and
+radii \(a_i\to0\)
+for which
+\[
+ \int_{B_{q_i}(x_i,a_i)} |Z_{q_i}|^2\,dV_{q_i}\ge c.
+\]
+On the same balls the scalar and both Weyl square integrals vanish
+in the limit, and \(a_i\sqrt{\max|\Rm_{q_i}|}\to\infty\).
+\end{proposition}
+
+\begin{proof}
+Use the smooth conformal approximations in
+Theorem~\ref{thm:modified-shrinking-limits}. They preserve the
+volume ratio upper bound with fixed enlarged constants on a smaller
+interval, and distort distances by \(1+o(1)\). They have scalar
+curvature at least \(-1\), a common inhomogeneous Sobolev bound,
+and negative parts of both isotropic pair sums tending uniformly
+to zero. We first prove that for a fixed sufficiently small
+\(\epsilon>0\) and each fixed \(0<r<\min(1,r_0/2)\), at all late
+indices some radius-\(r\) ball of the smoothed metric has full
+curvature \(L^2\) norm greater than \(\epsilon\).
+
+Otherwise fix one such radius and rescale by \(r^{-2}\) on the
+contrary subsequence. The initial ball volume ratios through unit
+scale and Sobolev constants have upper bounds independent of \(r\).
+The rescaled zero-order Sobolev coefficient is at most its original
+value. Apply Lee--Lee's local smoothing theorem with center arbitrary
+and domain parameter larger than the diameter of each rescaled
+closed manifold \cite[Theorem~1.1]{LeeLee2026Local}.
+The theorem's constants are independent of that domain parameter.
+It supplies a closed flow up to a common time \(t_*>0\), which we
+take at most \(\min(1,\epsilon^2)\). In dimension four the evolving local bound of Theorem~1.1(3) is \(\Lambda_1(\epsilon+\sqrt{t})\). Curvature is bounded on each positive-time
+subinterval and
+\[
+ \sup_{x,\ 0<t\le t_*}
+ \|\Rm(t)\|_{L^2(B_t(x,1/2))}\le C\epsilon .
+\]
+Here and in choosing \(\epsilon\), the constants in this estimate
+are independent of the chosen radius.
+
+For clarity, the potential in the isotropic pair-sum evolution needs
+control down to time zero. The weighted Sobolev estimate
+\eqref{eq:smoothing-weighted-sob} follows from the initial Sobolev
+bound and scalar lower bound exactly as in its proof. Those steps
+use normalized test functions and hold at the rescaled volume
+\(r^{-4}\), with both constants bounded independently of \(r\).
+For a test supported on an evolving ball of radius \(1/2\),
+H\"older bounds the scalar potential term by
+\(C\epsilon\|f\|_4^2\). Absorption gives an ordinary local
+Sobolev inequality with uniform coefficients. Iterating a ball
+cutoff gives a uniform lower volume on every evolving ball of
+radius \(1/16\). The total rescaled volume stays at most
+\(e^{t_*}r^{-4}\), since the scalar curvature stays above \(-1\).
+
+At each time take a maximal \(1/8\)-separated net. Disjoint small
+balls bound its cardinality by \(N(r)\), uniformly in the index
+and time. Use Lipschitz cutoffs on radius-\(1/4\) balls, equal
+to one on the radius-\(1/8\) balls, and normalize by the square
+root of their squared sum. The resulting functions satisfy
+\(\sum_j\chi_j^2=1\) and \(\sum_j|d\chi_j|^2\le C(r)\).
+Apply the local Sobolev estimate and the local curvature bound to
+each \(\chi_j f\). The cross terms sum to zero, giving
+\[
+ \int |\Rm| f^2\,dV_t
+ \le C\epsilon\int |df|^2\,dV_t
+     +C(r)\int f^2\,dV_t .
+\]
+Only the zero-order coefficient depends on the covering number.
+The cutoffs enter a spatial inequality at a fixed time.
+
+For either negative isotropic pair sum \(w\) from
+Section~\ref{sec:isotropic-gap}, test its weak evolution inequality
+against \(2w\). Choose \(\epsilon\) once so the gradient term on
+the right is absorbed. Since the scalar curvature is bounded
+below, Gronwall gives
+\(\|w(t)\|_2^2\le e^{C(r)t}\|w(0)\|_2^2=o_i(1)\) at this fixed
+radius. The initial squared integral is scale invariant. At any
+interior positive time the curvature and derivative bounds, injectivity
+bound and total volume upper bound give a uniform diameter bound by packing along minimizing geodesics. Smooth compactness then gives a closed limit under
+whole-manifold diffeomorphisms. Both pair sums are nonnegative there.
+The positive-time strong maximum principle and \(b_2=0\) argument
+in Corollary~\ref{cor:isotropic-ricci-tail} recognize its smooth
+homotopy sphere as standard. This contradicts the nonstandard
+types on the subsequence.
+
+Now take a slow diagonal of fixed radii tending to zero. Transfer
+the charged balls back to \(q_i\) by the distance and curvature
+measure comparison, enlarging their radii by a factor tending to
+one if necessary. Their volumes tend to zero by the assumed upper
+bound. The modified scalar and spectral estimates imply vanishing
+scalar and Weyl squared integrals there. The full tensor
+decomposition then gives a definite trace-free Ricci integral.
+Equation~\eqref{eq:modified-peak-energy} places their radii above
+the maximum-curvature scale as claimed.
+\end{proof}
+
+Thus a sequence without shrinking balls carrying a fixed modified
+Ricci charge cannot have uniformly bounded small-ball upper volume
+ratios on any subsequence. The proposition uses neither a physical
+chiral quantile nor an embedding of a compact exhaustion into a
+charged ball.
+
+\begin{theorem}[A nonflat flow at the modified charge scale]
+\label{thm:charged-modified-flow}
+Under the same upper volume bound, the radii can be chosen as the
+first radii carrying a fixed small full curvature integral on the
+smooth modified approximations. The corresponding pointed rescaled
+Ricci flows converge on a subsequence, at positive times, to a
+complete noncompact four-dimensional flow with nonnegative isotropic
+curvature. On a ball of fixed radius about the marked center the
+trace-free Ricci energy has a fixed positive lower bound at every
+sufficiently small positive time. In particular the flow is nonflat.
+\end{theorem}
+
+\begin{proof}
+Take the small norm threshold \(\epsilon\) in the preceding proof,
+decreasing it below all the dimensional absorption thresholds below.
+For each source the maximal ball integral is continuous in the radius
+and attained in the center: distance spheres have zero volume, and
+the source is smooth and compact. Its value at zero is zero. Let
+\(a_i\) be the first radius at which its square root equals
+\(\epsilon\), and choose an attaining center \(x_i\). The preceding
+fixed-radius assertion gives \(a_i\to0\). Rescale by \(a_i^{-2}\)
+and run the same closed flows, writing \(U=|\Rm|_{\rm tens}\).
+Every initial unit ball now has curvature norm at most \(\epsilon\);
+at \(x_i\) it is exactly \(\epsilon\).
+The initial scalar curvature is at least \(-a_i^2\).
+
+We need bounds uniform in this varying scale. Write
+\(\|\Ric(t)\|_\infty\le b/t\) with \(b<1/2\), by the
+curvature estimate in Lee--Lee Theorem~1.1(1), choosing \(\epsilon\)
+and the common horizon sufficiently small. The shrinking balls
+estimate gives \(B_t(z,1/2)\subset B_0(z,1)\) on that horizon
+\cite[Lemma~3.2]{LeeLee2026Local}. Thus every evolving radius-\(1/2\)
+ball has volume at most \(e^{t}V'\), from the original upper bound
+and scalar lower bound, for a fixed \(V'\). Together with the
+radius-\(1/16\) lower bound from the preceding proof, this bounds
+the overlap of the radius-\(1/4\) cutoffs uniformly. For example,
+the disjoint small balls about net points within \(1/4\) of a
+point are all in its radius-\(1/2\) ball. The previous calculation
+therefore gives uniform constants in the form bound
+\[
+ \int U f^2\,dV_t\le C\epsilon\!
+       \left(\int |df|^2\,dV_t+\int f^2\,dV_t\right).
+\]
+The curvature tensor evolution, Kato's inequality and this bound
+with \(f=U\) absorb the cubic term in the derivative of its
+squared integral. The initial global full curvature budget then gives
+\[
+ \sup_{0\le t\le t_*}\int U^2\,dV_t+
+ \int_0^{t_*}\!\int |\nabla\Rm|^2\,dV_t\,dt\le C_0 .
+\]
+The same form bound propagates vanishing of both negative pair sums
+with a uniform Gronwall constant. With \(f=1\) it also gives
+\(\int |R|\le C\operatorname{Vol}_t\); hence at every fixed time
+the rescaled volumes tend to infinity. Curvature and injectivity
+bounds, derivative estimates and pointed smooth compactness give
+a complete limit flow on positive times. A compact smooth pointed
+limit would identify its entire connected source along the
+subsequence, contrary to the diverging volume. The propagated
+pair-sum estimates give nonnegative isotropic curvature on the limit.
+
+To locate the charge, fix a small terminal time \(\tau\).
+All initial unit-ball points lie in \(B_\tau(x_i,D)\) for a
+uniform \(D\). Indeed apply the local two-point distance estimate
+of Lee--Lee Theorem~1.1 at a chain of centers along an initial
+minimizing geodesic of length at most one. Its steps have length
+less than the fixed comparison radius \(r_1/2\); each has uniformly
+bounded length in the terminal distance. Centered versions of the
+theorem concern the same smooth flow by compact uniqueness. Take
+a terminal Lipschitz cutoff \(0\le\chi\le1\) equal to one on
+this radius-\(D\) ball, zero outside radius \(D+1\), with
+\(|d\chi|_{\tau}\le2\). The shrinking balls estimate puts its
+entire support inside \(B_0(x_i,D+2)\). This fixed multiple of
+the original \(a_i\) has vanishing unscaled modified volume.
+Both original Weyl and scalar square integrals there tend to zero.
+
+Normalize the Euler form as
+\[
+ \mathcal E=\left(|W^+|_{\rm HS}^2+|W^-|_{\rm HS}^2
+                 +R^2/24-|Z|^2/2\right)dV .
+\]
+The decomposition \(U^2=4(|W^+|^2+|W^-|^2)+2|Z|^2+R^2/6\)
+on the attaining ball now gives
+\(\int\chi\mathcal E(0)\le-\epsilon^2/4+o_i(1)\).
+In orthonormal bundles identified by the time-dependent isometries
+of the Ricci flow, the time derivative of its metric connection
+has norm at most \(C|\nabla\Ric|\): the differentiated Koszul
+formula and the derivative of the moving frame each involve one
+covariant derivative of \(\Ric\). Differentiating the Euler
+polynomial gives an exact form with primitive bounded by
+\(C|\nabla\Ric|U\) by the covariant Bianchi identity
+\cite[\S3]{ChernSimons1974Characteristic}.
+Keep the terminal cutoff fixed as a function of the source point.
+Since \(|d\chi|_s\le2(\tau/s)^b\) for \(0<s\le\tau\), integration
+by parts and the global curvature and derivative estimates give
+\[
+ \left|\int\chi\mathcal E(\tau)-\int\chi\mathcal E(0)\right|
+ \le C C_0\left(\int_0^\tau(\tau/s)^{2b}\,ds\right)^{1/2}
+ \le C'\sqrt\tau .
+\]
+One can first start at positive time and then use smooth continuity
+at zero for each fixed source. Lipschitz tests are admissible in
+the spatial integration by parts. The constants and support bound
+are uniform in the source and in \(\tau\). Take \(C'\sqrt\tau\le
+\epsilon^2/16\). The nonnegative Weyl and scalar terms in the terminal
+Euler form force a definite trace-free Ricci integral on
+\(B_\tau(x_i,D+1)\). Under complete pointed smooth convergence
+every such ball is covered by a slightly larger compact comparison
+at this fixed time. This transfers the lower bound to the limit on
+a radius-\(D+2\) ball at every sufficiently small positive time.
+The scalar curvature is nonnegative by the initial rescaled lower
+bound. An interior zero would force it to vanish on all earlier
+positive slices by the strong minimum principle. Its evolution
+would give zero Ricci tensor there, contradicting the charge
+just obtained. Thus the scalar curvature is positive on the flow.
+\end{proof}
+
+The model carries curvature after parabolic smoothing. The excluding
+Euclidean-limit theorem uses first-order smooth markings for the
+original rescalings at time zero. The distance comparison along the
+flow alone does not furnish those markings.
+
+\begin{corollary}[The initial end of the charged flow]
+\label{cor:charged-flow-initial-end}
+On the fixed manifold of the positive-time limit there is no sequence
+\(t_j\downarrow0\) along which the metrics converge locally uniformly
+and strongly in \(W^{1,4}_{\rm loc}\) to a smooth complete metric.
+In particular the limiting flow has no smooth complete time-zero
+extension. This assertion uses the markings at positive time only.
+\end{corollary}
+
+\begin{proof}
+Pass to \(e_i\to e\), \(Y_i\to y>0\) and write
+\(d=4e+y^2/12-8T<y^2/12\) for the limiting total modified
+trace-free Ricci energy. Fix a common terminal time \(\tau_0\) small
+enough for Theorem~\ref{thm:charged-modified-flow}. Write \(h(t)\)
+for its limit flow on \(X\). Smooth pointed comparison uses the same
+embeddings on closed positive-time subintervals in the flow gauge.
+Transfer a fixed compactly supported smooth function \(f\) on \(X\)
+to the sources via these embeddings, extending by zero. At \(\tau_0\)
+its size, gradient and support radius are bounded uniformly in \(i\).
+Its support lies in a fixed-radius initial ball in the rescaling by
+the shrinking balls estimate. The rescaled volume there is uniformly
+bounded at zero by the upper volume ratio and at all subsequent times
+by the scalar lower bound. The rescaled initial scalar and Weyl
+\(L^2\) norms on that ball tend to zero. For the transferred test
+\(f_i\), \(|df_i|_s\le C_f (\tau_0/s)^b\).
+
+Three estimates transport the initial data through smoothing. First,
+\(\partial_t(R\,dV)=(\Delta R+2|\Ric|^2-R^2)dV\).
+Testing against \(f_i\), the reaction terms have bounded spatial
+integral, and integration by parts in the Laplacian costs at most
+\(C_f(\tau_0/s)^b\|\nabla\Rm\|_2\). The initial scalar integral
+against the test tends to zero by Cauchy--Schwarz. Sending \(i\) to
+infinity at fixed time gives
+\[
+ \left|\int_X fR_{h(t)}\,dV_{h(t)}\right|
+       \le C_f(t+t^{1/2-b}).
+\]
+Since \(h(t)\) has nonnegative isotropic curvature, both top Weyl
+eigenvalues are bounded by \(R/6\). Trace freeness thus bounds both
+Weyl norms by a multiple of \(R\). All three curvature terms vanish
+locally in \(L^1\) as \(t\downarrow0\), using nonnegative cutoff
+tests equal to one on the compact in question.
+
+Second, the derivative of the Dirichlet energy of \(f_i\) is
+the integral of \((2\Ric-Rg)(\nabla f_i,\nabla f_i)\).
+Its absolute value is at most \(C_f s^{-2b}\) by the support-volume
+and curvature bounds. The fourth-power volume integral changes
+by at most \(C_ft\). At time zero the original rescaled Yamabe
+inequality has constant \(Y_i\), and the scalar term against
+\(f_i^2\) tends to zero. As \(2b<1\), both the quadratic energy
+and fourth-power integral at time \(t\) differ from their initial
+values by errors tending to zero as \(t\downarrow0\), uniformly
+in \(i\). This transfers the full constant \(y\) to any proposed
+locally uniform positive-definite time-zero limit.
+
+Third, the Euler transport estimate with the gradient measured at
+\(\tau_0\) bounds the change through time \(t\le\tau_0\) by
+\(C_f t^{1/2-b}\). In the positive-time embeddings the initial
+rescaled measures \(|Z_i|^2dV_i\) admit a local weak subsequential
+limit \(\mu\), by compact exhaustion and the global bound.
+It has total mass at most \(d\). In these same embeddings the
+initial Euler forms tend weakly to \(-\mu/2\), since the initial
+scalar and Weyl square integrals vanish on every compact support.
+Consequently
+\[
+  \lim_{t\downarrow0}\int_X f\,\mathcal E(h(t))
+       =-\tfrac12\int_X f\,d\mu .
+\]
+Moreover \(\mu\ne0\). The entire charged initial unit ball lies
+in the fixed terminal ball \(B_{\tau_0}(x_i,D)\). A smooth limit
+cutoff equal to one on a slightly larger closed terminal ball,
+transferred to the sources, equals one there for large \(i\).
+The initial trace-free Ricci integral there is at least
+\(\epsilon^2/2-o_i(1)\). This argument fixes the terminal
+marking before taking the time-zero trace.
+
+Now suppose a sequence of times has the asserted limit \(h_0\).
+The global curvature energy stays bounded. In fixed charts the
+all-lowered curvature identity and strong first-order convergence
+pass the curvatures to the smooth limit distributionally. The
+local \(L^1\) bounds above give \(R_{h_0}=W_{h_0}=0\).
+The transferred Yamabe test becomes
+\(y\|f\|_{4,h_0}^2\le6\|df\|_{2,h_0}^2\).
+Metric square roots identify the orthonormal bundles, with
+connection differences tending to zero in \(L^4\). The Euler
+transgression between each slice and \(h_0\) tends to zero on
+compact smooth tests by the \(L^2\) curvature bound, as in
+Theorem~\ref{thm:modified-shrinking-limits}. Thus the tested
+trace gives \(|\Ric_{h_0}|^2dV_{h_0}=\mu\).
+
+A complete such \(h_0\) has harmonic curvature, finite total
+curvature and the homogeneous Sobolev inequality. Its finitely
+many ALE ends and the end formula of
+Theorem~\ref{thm:modified-shrinking-limits} apply. Indeed every
+fixed smooth truncation of \(X\) already embeds in the original
+homotopy spheres by a positive-time marking, which is all that
+the topological part requires. The budget
+\(\int|\Ric_{h_0}|^2\le d<y^2/12\) and the radial Yamabe test on
+each end exclude two or more ends. The one-end Euler formula
+then forces zero Ricci energy, contradicting \(\mu(X)>0\).
+\end{proof}

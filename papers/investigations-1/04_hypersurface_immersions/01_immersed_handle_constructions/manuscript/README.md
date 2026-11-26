@@ -25,3 +25,5 @@ Prepared with OpenAI Codex assistance under editorial assignment SP4-MASTER-E51a
 The [short-seam section](short_seam.tex) treats the ordinary free-trace form, the signature cost of a product face and the vertical metric on the Mazur boundary with zero signature eta. The [boundary calculation](../reviews/E60_HOMOGENEOUS_ETA.md) fixes the orientation and the Dedekind-sum convention.
 
 The [eta-zero spin and filling argument](eta_zero_filling.tex) includes inclusive smooth recognition from a marked half. The free-trace sign and energy must come from the actual retained filling.
+
+The marked Mazur half has a positive-scalar extension of its eta-zero metric and a totally geodesic positive filling in a potentially different class. A Robin trace test identifies precisely the remaining sign for a prescribed filling. The homogeneous spin crossing excludes later scales, and the Cotton tensor forces positive Weyl energy on any smooth totally geodesic filling at the target. [Proof checks and reading copies](../../../../master/research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md)

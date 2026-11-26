@@ -1,6 +1,6 @@
 # Continuing the formalization program
 
-**Current milestone, 25 November 2026.** [Continue from the selected middle attachment and signed repair](AFTER_MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md). [Assessment](../reviews/MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md) · [Program plan](../research-plan/03_PLAN.md) · [Sole program register](../research-progress/REGISTER.md)
+**Current milestone, 25 November 2026.** The selected cuts now carry both end filtrations. A single marked outer disk now realizes simultaneous dyadic exterior division around the protected core. An independently positive capped endpoint must meet a quantified disk-side saving. [Assessment](../reviews/END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md) · [Public checks](../research-progress/handoffs/ED03_END_BANDS_CHECKS.lean) · [Dated continuation](AFTER_END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md)
 
 Earlier Edition 03 [chart and immersion handoff](AFTER_OPEN_EQUALITY_AND_MARKED_SHELL_20261125.md) and [activation](AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md) remain available for their frozen inputs.
 

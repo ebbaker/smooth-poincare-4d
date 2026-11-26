@@ -1,5 +1,9 @@
 # Research plan
 
+## Next variation and modified-limit tests · 25 November 2026
+
+On the original disk, measure a supported variation and the complete cost of any coupling to the exterior. At the first modified charge radius, use the time-zero Euler measure and the transported Yamabe inequality to characterize a singular initial end, or prove an independent regularity theorem implying the excluded complete initial metric. On a round restart test the specific positive same-type cap for a saving beyond its minimizing excess. [Assessment and source generations](../../research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md)
+
 ## Current disk and small-deficit tests
 
 Prioritize a connected competitor that changes a charged part of the actual core or a local repair in the original E61 marking. The exterior sign and spectral cost must be evaluated on the resulting cap. On modified Ricci concentration test a genuinely new regularity premise below the charged scale. On a round exit seek a signed saving beyond the minimizing excess. The exact family in a fixed band has a positive deficit floor. [Assessment](../../research-progress/handoffs/E63_E67_BALANCED_DISKS_20261125.md)

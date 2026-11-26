@@ -57,6 +57,31 @@ import SmoothPoincare.Heights.IsolatedMiddleAttachment
 import SmoothPoincare.Heights.SelectedHandleReduction
 import SmoothPoincare.Heights.MorseEndBounds
 
+import SmoothPoincare.Heights.EndHandleBands
+import SmoothPoincare.Heights.RegularEndMarkings
+import SmoothPoincare.Heights.MarkedEndTree
+import SmoothPoincare.Variational.ChartMeasureTransport
+import SmoothPoincare.Variational.MeasuredCollarBudget
+import SmoothPoincare.Variational.MarkedDivisionIteration
+
+import SmoothPoincare.Heights.SelectedEndHandlePresentation
+import SmoothPoincare.Heights.MarkedRegularTransport
+import SmoothPoincare.Variational.MarkedDiskSeparation
+import SmoothPoincare.Variational.BalancedPhysicalDivision
+import SmoothPoincare.Variational.BalancedCollarWall
+import SmoothPoincare.PhysicalScales.ProtectedMarkedTrims
+
+import SmoothPoincare.Heights.MarkedMorseFeet
+import SmoothPoincare.Heights.RelativeFootCollar
+import SmoothPoincare.Heights.ProtectedFootComplement
+import SmoothPoincare.Heights.NativeFootComponent
+import SmoothPoincare.Heights.FootOrientationChoice
+import SmoothPoincare.Heights.NativeHeightCollar
+import SmoothPoincare.Variational.SelectedPhysicalJetControl
+import SmoothPoincare.Variational.PositiveCoreVariation
+import SmoothPoincare.Variational.ModifiedEulerCharge
+import SmoothPoincare.Variational.ModifiedFrameDecomposition
+
 /-! # Fixed-type descent and immersed recognition
 
 Public imports for the master formalization. The Edition 03 blueprint identifies

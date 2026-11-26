@@ -1,6 +1,6 @@
 # Edition 03 · Formalizing the parallel master investigations
 
-**Current milestone, 25 November 2026.** The selected middle band, end maps, signed disk repair and physical estimates entering smoothing are recorded in the [assessment](../reviews/MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md). [Next proofs](../continuation-notes/AFTER_MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md)
+**Current milestone, 25 November 2026.** The selected cuts now carry both end filtrations. A single marked outer disk now realizes simultaneous dyadic exterior division around the protected core. An independently positive capped endpoint must meet a quantified disk-side saving. [Assessment](../reviews/END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md) · [Public checks](../research-progress/handoffs/ED03_END_BANDS_CHECKS.lean) · [Dated continuation](../continuation-notes/AFTER_END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md)
 
 25 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving configuration unavailable. [Program overview](../research-overview/03_OVERVIEW.md) · [Input revisions and verification](../research-progress/03_BASELINE.md) · [Sole program register](../research-progress/REGISTER.md)
 

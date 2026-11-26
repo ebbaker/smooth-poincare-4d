@@ -23,3 +23,7 @@ Both Dirichlet-to-Neumann operators appear in the marked short-seam test. The ho
 ## 25 November 2026 · balanced disks and exact closed types
 
 The spin Dirac operator on the eta-zero Mazur face is invertible with zero eta. The reflected strict-budget problem reduces to a positive scalar half with prescribed totally geodesic boundary class. Isometric regluings admit an inclusive spectral test at an unattained limiting budget. [Proof](manuscript/eta_zero_filling.tex) · [Independent check](reviews/E64_ETA_ZERO_FILLING.md)
+
+## 25 November 2026 · Interior variation and curvature at the charged scale
+
+The marked Mazur half has a positive-scalar extension of its eta-zero metric and a totally geodesic positive filling in a potentially different class. A Robin trace test identifies precisely the remaining sign for a prescribed filling. The homogeneous spin crossing excludes later scales, and the Cotton tensor forces positive Weyl energy on any smooth totally geodesic filling at the target. [Assessment and versions](../../../master/research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md)

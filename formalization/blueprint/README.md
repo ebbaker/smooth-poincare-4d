@@ -1,5 +1,7 @@
 # Lean Blueprint
 
+**Selected end filtrations and simultaneous division, 25 November 2026.** [Chapter](src/end_handlebands_and_division.tex) · [Assessment](../investigations/reviews/END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md) · [Public checks](../investigations/research-progress/handoffs/ED03_END_BANDS_CHECKS.lean) · [Dated continuation](../investigations/continuation-notes/AFTER_END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md)
+
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with
 OpenAI Codex assistance. The exact serving model and reasoning effort are
 unavailable.

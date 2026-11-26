@@ -1,0 +1,115 @@
+\subsection{Flat comparisons on a protected physical band}
+\label{subsec:protected-physical-window}
+
+\begin{proposition}[Compact comparison on a physical window]
+\label{prop:protected-physical-window}
+Use the complete marks of \eqref{eq:anchored-marks} and take
+\(a_i/\rho_i\to0\) and \(\rho_i/b_i\to0\). In particular
+\(\rho_i\to0\) by the physical diameter bound. Put
+\(h_i=\rho_i^{-2}g_i\) and \(\widehat d_i=d_{h_i}(x_i,\cdot)\).
+Take \(J=(1/16,2L)\) as in Proposition~\ref{prop:radial-distance-test}
+and a larger fixed interval \((a_0,b_0)\) with
+\(0<a_0<\inf J<\sup J<b_0\). On the full physical band
+\(\Omega_i=\{a_0<\widehat d_i<b_0\}\) suppose
+\[
+ \vol_{h_i}(\Omega_i)\le C,\qquad
+ \sup_{\Omega_i}|\Rm_{h_i}|\le K,\qquad
+ \int_{\Omega_i}|\Rm_{h_i}|^2\,dV_{h_i}\longrightarrow0.
+\]
+After a subsequence there is a nonempty smooth oriented flat
+four-manifold \((U,h)\) with a proper radial limit \(r:U\to J\).
+Every compact subset has a neighborhood with oriented smooth
+source embeddings, physical metric convergence in \(C^0\cap W^{1,4}\),
+and locally uniform convergence of \(\widehat d_i\) to \(r\).
+Before restriction to a connected component of \(U\), the comparison
+on a buffered closed radial strip covers the full source strip of
+strictly smaller radial range for all large \(i\).
+
+If the scales lie in the wider low-curvature block of
+Proposition~\ref{prop:radial-distance-test} and the full radial
+defect tends to zero on compact strips of \(J\) at the same
+scales, the conclusion of that proposition holds.
+\end{proposition}
+
+\begin{proof}
+Choose \(a_0<a_1<\inf J<\sup J<b_1<b_0\). Equip the compact sets
+\(X_i=\{a_1\le\widehat d_i\le b_1\}\) with the restricted ambient
+physical distances. Their diameters are at most \(2b_1\).
+For each small fixed \(s\), disjoint distance balls of radius
+\(s/2\) at an \(s\)-separated family in \(X_i\) lie in \(\Omega_i\).
+The physical Yamabe small-ball floor gives a uniform upper bound on
+the family size from \(\vol_{h_i}(\Omega_i)\le C\). Compact metric
+space convergence and the \(1\)-Lipschitz bound on \(\widehat d_i\)
+give a subsequential limit \(X\) with continuous radial function \(r\).
+The inverse image \(U=r^{-1}(J)\) has proper radial function into \(J\).
+It is nonempty by minimizing segments from \(x_i\) reaching the
+median exterior.
+
+On each smaller physical trim the sectional bound holds on uniformly
+buffered source balls. With the ball-volume floor it gives a uniform
+injectivity bound by the local geodesic-loop estimate and the
+conjugate-radius bound. Local harmonic radius then gives uniformly elliptic
+charts bounded in \(W^{1,p}\) for fixed \(p>8\)
+\cite[Theorem~4.3 and preceding discussion]{CheegerGromovTaylor1982}
+\cite[Theorem~0.3 and the local-domain remarks]{AndersonCheeger1992Harmonic}.
+In these charts the reduced Ricci equation has bounded Ricci term and
+an \(L^{p/2}\) quadratic term. Interior estimates first give
+\(W^{2,p/2}\) bounds and subsequential \(C^{1,\beta}\) convergence
+for small \(\beta>0\), and then local weak \(W^{2,q}\) bounds
+for finite \(q\). Ellipticity and first exit from a chart imply
+that suitably trimmed chart images contain a fixed ambient ball at
+their centers. On a sufficiently small trim the same estimate keeps
+short distance comparisons inside the chart. Thus a countable family
+of these limiting charts identifies the open set \(U\) in \(X\).
+The all-lowered curvature formula passes to distributions in these
+coordinates, while the physical curvature integrals tend to zero.
+The reduced Ricci equation with zero Ricci term gives smoothness by
+elliptic bootstrapping. The limits of harmonic transition maps are
+smooth and the approximating transitions converge in \(C^2\) on
+smaller overlaps by interior scalar estimates. The resulting manifold
+has the induced orientation.
+
+For clarity, the buffered whole-compact markings can be assembled
+by the finite-atlas construction of
+\cite[Theorem~3.1 and its proof]{BelegradekKapovitch2000Finiteness}.
+On a finite covering of a compact trim, use an embedding by
+cutoff-coordinate pairs \((\chi_a,\chi_a z_a)\). Form the same pairs
+in the individual source charts, with the cutoffs supported inside
+the chart buffers. In the overlaps the assembled source map is
+\(C^2\)-close to the limit embedding in the corresponding
+coordinates. Tubular projection to the limit embedding defines
+local diffeomorphisms on a neighborhood of the trim. Their local
+inverses agree where both are defined for large \(i\). Two candidate
+images for the same point approach the same point in the metric-space
+limit and therefore lie in one common buffered source chart by the
+first-exit bound. There the projection map is locally injective by
+its \(C^1\) closeness to the identity. The inverses give smooth
+oriented source embeddings and \(C^1\) metric convergence on compact
+subsets. For any omitted source points in a strictly smaller closed
+radial strip, compact metric-space convergence would yield an
+accumulation point in the limit trim. The local inverse there
+contains those points for large \(i\), proving the full coverage.
+Every connected component of \(U\) is closed in \(U\), so restricting
+to one preserves properness. With vanishing full radial defect the
+compactly supported tests of Proposition~\ref{prop:radial-distance-test}
+now apply on that component.
+\end{proof}
+
+A locally finite weak limit of the full physical radial volume
+measures on a slightly wider interval supplies the volume premise
+by testing a compact radial cutoff. The curvature and volume premises
+also hold after the selection in
+Proposition~\ref{prop:critical-radial-defect}, provided the protected
+pointwise curvature bound holds on the selected scale. In that case
+this proposition supplies the proper comparison and the original
+cut has both complete marks off the closed trim. The pointwise bound
+and the radial estimate are separate inputs.
+
+For the shifted volume test of
+Proposition~\ref{prop:radial-volume-test}, apply the volume comparison
+on the full limit strip before selecting a connected component.
+The buffered embeddings capture the two entire tested physical
+annuli. If the positive equality hypotheses of that test hold,
+its nonnegative shifted defect vanishes on the union of the tested
+limit strips. A nonempty component then gives the marked spherical
+comparison under the remaining hypotheses of that test.

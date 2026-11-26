@@ -64,3 +64,44 @@ Adding the entire signed exterior and filling cost and comparing
 inclusively with \(8T+\eta\) tests this particular positive class.
 The descent paper bounds this cost using the two chiral density
 errors on the actual cutoff widths \cite{Baker2026FixedDescent}.
+
+\paragraph{A test inside the original disk.}
+On either the original marked disk or its enlargement, choose a
+smooth trace-free self-adjoint endomorphism \(A\) compactly
+supported in the region to be changed and normalized by
+\[
+ \|A\|_\infty+\|\nabla A\|_4+\|\nabla^2A\|_2\le1
+\]
+in the physical Yamabe metric. Let \(f_i(t)=E_+(g_i(e^{tA}\cdot,\cdot))\)
+and \(d_i=e_i-I\). On the unchanged exterior both chiral increments
+vanish, so the two interior increments agree by signature.
+There is a uniform \(C\) on the late sources such that
+\[
+ |f_i'(0)|+[-f_i''(0)]_+\le C\sqrt{d_i}.
+\]
+Indeed the physical full-curvature budget and the three norms of
+\(A\) bound the first four parameter derivatives on \(|t|\le1\).
+For a uniform short interval the path remains strictly below \(2T\)
+and hence positive. Comparing the descending sign with \(I\) gives
+\(|f_i'(0)|\le d_i/t+Ct\). Comparing the average of the two signs
+with \(I\) cancels odd terms and gives
+\(-f_i''(0)\le2d_i/t^2+Ct^2\). Optimize separately and pass to
+\(t\downarrow0\) for an attained minimum. A variation localized by
+cutoffs is normalized after differentiation on its actual widths,
+including each connector and tip. This supplies a weak Bach error
+estimate and a second-variation test on every selected source.
+For instance where the Bach tensor is nonzero in the interior,
+a nonnegative bump times its raised endomorphism, normalized in
+this norm, gives a descending sign and a strictly positive saving
+for small time. On a minimizing sequence every such clamped saving
+is at most \(d_i\). In particular, let \(S_i^s\) denote the saving
+on the enlarged disk at a matched joined endpoint. Positivity on
+the whole source implies that the change in its entire exterior is
+at least \(S_i^s-d_i\) in that sign. The exterior must absorb the
+finite saving required by \eqref{eq:balanced-disk-saving}, including
+the protected-core term, up to the minimizing excess. A candidate
+coupling must pay this signed exterior change in addition to controlling
+the path ceiling.
+The product germ example in the descent paper shows why charging both
+signs and bounding incoming curvature alone cannot force a clamped
+local saving \cite[section on variations on the charged interior]{Baker2026FixedDescent}.

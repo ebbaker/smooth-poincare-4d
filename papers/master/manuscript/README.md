@@ -11,3 +11,5 @@ The companion papers carry the sharp shape and sign comparisons, the full mixed-
 Build from the repository root with `python3 tools/build_manuscripts.py master`. All papers use the common bibliography. The build resolves cross-references with latexmk and places the PDF under `output/pdf/master/`.
 
 The [large-disk estimate](balanced_disk.tex) gives a necessary core saving for a subcritical joined repair. The [fixed-band exact theorem](exact_closed_types.tex) gives finiteness of smooth types and compact attainment of the least spectral deficit.
+
+A clamped variation on the E61 disk can save at most the minimizing excess. At vanishing spectral deficit, a small-ball upper volume bound in the modified metric yields a nonflat positive-time flow with nonnegative isotropic curvature. Its negative Euler trace rules out a smooth complete initial limit in the fixed flow markings. Positive subcritical entry on every smooth type and a coupled repair of the charged disk remain open. [Assessment and source generations](../research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md)

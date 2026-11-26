@@ -1,5 +1,7 @@
 # Physical scales and marked annuli · Continuation
 
+**Current milestone, 25 November 2026.** All sufficiently thin widths give the full buffered annulus, avoid the entire closed core and carry arbitrarily little total mass for four finite measures absolutely continuous with respect to the same physical volume. Chart derivatives along a repair remain to be estimated. [Assessment](../../reviews/END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md) · [Public checks](../../research-progress/handoffs/ED03_END_BANDS_CHECKS.lean) · [Dated continuation](../../continuation-notes/AFTER_END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md)
+
 **Current handoff, 25 November 2026.** [Assessment](../../reviews/MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md) · [Continuation](../../continuation-notes/AFTER_MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md).
 
 The [Edition 03 activation handoff](../../continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md) and launch instructions below record the original packet.

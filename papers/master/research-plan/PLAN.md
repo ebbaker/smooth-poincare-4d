@@ -1,5 +1,9 @@
 # Research plan for the master manuscript
 
+## Next comparisons · 25 November 2026
+
+Prioritize a controlled change of the original charged disk and its complete exterior. On a modified sequence with vanishing deficit, seek the upper volume ratio or follow its failure. With bounded ratios, seek a regularity input forcing the smooth complete initial limit excluded by E72, or analyze the singular or incomplete initial end using its Euler measure and Yamabe test. On the exact and round alternatives, test the actual overlap disk or a finite signed decrement on the one charged exit. [Assessment and source generations](../research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md)
+
 ## Current comparison after the balanced disk and exact spectral gap
 
 Test one change of metric on the original E61 disk and width. On a larger connected core first compare the possible disk-side saving with the lower bound imposed by the fixed-type infimum. Test the physical polar moment and compact shell embeddings independently. For entry on doubles, construct the retained positive scalar half in the actual boundary conformal class. In the small-deficit case concentrate on the unresolved unmarked geometry or the single round exit. In the exact closed case work on the finite family in each fixed strict band. [Assessed inputs](../research-progress/handoffs/E63_E67_BALANCED_DISKS_20261125.md) · [Continuation](../continuation-notes/AFTER_BALANCED_DISKS_AND_EXACT_TYPES_20261125.md)

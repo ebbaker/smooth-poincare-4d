@@ -1,0 +1,241 @@
+% E68d, 26 November 2026 UTC. Drafted for Edward B. Baker III with
+% OpenAI Codex assistance. Actual serving model and effort unavailable.
+% Input descent generation d9a6557377462fd3, assessed in the E63--E67
+% receipt. Exact-band and supplied marked round alternatives only.
+
+\subsection{Chiral overlap on an exact comparison disk}
+\label{sec:exact-overlap}
+
+For the two top Weyl eigenvalues \(z_\pm\), define the conformally
+invariant measure \(d\mathcal O=\min(z_+^2,z_-^2)dV\).
+Fix a strict energy band \(e\le 2T-\delta\), an integer \(k\ge2\)
+and \(\varepsilon>0\). There is \(a>0\), depending on these three
+parameters, such that every volume-one Yamabe representative \(g\)
+in the nonstandard exact band of Theorem~\ref{thm:exact-spectral-gap}
+has an oriented embedding \(F\) of a neighborhood of the Euclidean
+closed ball \(\overline B_2\) and a scale \(r>0\) with
+\[
+ \|r^{-2}F^*g-\delta_{\mathrm{Euc}}\|_{C^k(\overline B_2)}
+       <\varepsilon,\qquad
+ \mathcal O(F(B_1))\ge a .
+\]
+For each fixed sublevel \(\Delta_{\mathrm{sp}}\le m_\delta+b\)
+with \(0\le b<6\kappa_\delta\), one can also require \(r\) to
+have a uniform positive lower bound. The disk in this assertion is
+selected by the exact comparison.
+
+To prove the assertion, consider a countersequence along which the
+suprema over such charts tend to zero. The exact compactness
+alternative used in Theorem~\ref{thm:exact-spectral-gap} gives a
+smooth closed limit or a marked smooth ALE limit with a positive
+exact same-type completion. In each case the closed limit class
+has nonzero energy in both chiralities by the closed gap and
+signature. A smooth Bach-flat four-metric has zero obstruction
+tensor. It admits local analytic conformal representatives
+\cite[Theorem~1.3(c)]{LassasLiimatainen2019ConformalHarmonic}.
+In these representatives each chiral Weyl block is analytic,
+so vanishing on an open set propagates by the analytic identity
+theorem through overlapping charts. Hence each nonzero locus is
+open dense, and their intersection contains a small normal chart
+with positive overlap capture. For the ALE branch take this chart
+away from the filled point and use the metric before completion.
+In either branch choose the normal scale with error below
+\(\varepsilon/2\) on \(\overline B_2\). Its whole fixed
+compact chart transfers to the late sources. For the ALE branch
+the source scale includes the constant factor of the pointed
+rescaling. Smooth convergence and continuity of the top
+eigenvalues give a strictly positive limiting overlap on the
+transferred disk, contrary to the countersequence. Halving the
+positive infimum of the suprema gives one suitable \(a\).
+In the strict deficit sublevel the ALE branch is excluded.
+In a closed subsequential limit the full-band supremum is at
+least \(2a\). Choose there a chart with capture strictly above
+\(a\) and a fixed positive scale. Its transfer rules out a
+sequence with no chart of scale \(r\ge i^{-1}\) and capture
+at least \(a\), giving the joint lower bounds.
+
+Writing \(D_\pm=\int(\lambda_1^\pm-\lambda_2^\pm)^2dV\) as in
+Section~\ref{sec:endpoint-charge}, trace freeness gives
+\[
+ Y^2=48e-36\mathcal O(M)-12(D_++D_-)-\Delta_{\mathrm{sp}} .
+\]
+Thus in the exact band \(Y^2\le48e-\Delta_{\mathrm{sp}}-36a\).
+In particular no sequence in that band has vanishing chiral
+overlap. The bound holds at a class attaining \(m_\delta\).
+Extremality there is through exact classes and supplies no
+unrestricted variation of the spectral deficit.
+
+\subsection{Volume and curvature at the round exit}
+\label{sec:round-joint-exit}
+
+Suppose \(g_i\) are volume-one positive Yamabe metrics on one
+nonstandard oriented smooth homotopy four-sphere with
+\(e_i\to I^+(M)\), \(e_i\le2T-\delta\), and
+\(\Delta_{\mathrm{sp}}([g_i])\to0\). Suppose the whole
+marked filled-base comparison in
+Proposition~\ref{prop:local-min} and the subsequent cap argument
+is given, including its strong first-order convergence and local
+full \(L^2\) curvature bound. The spectral transfer makes the
+filled base \((N,h)\) conformally round. Denote its finitely many
+ordinary marks by \(P\), and by \(s\) the single exterior label
+retaining both limiting chiral charges. Let \(q_i\) be the
+unit-volume modified Yamabe metric in \([g_i]\).
+
+\begin{proposition}
+\label{prop:round-joint-exit}
+In these comparisons both \(g_i\) and \(q_i\) have volume tending
+to zero on every fixed compared compact. At each fixed small
+cutting radius, the actual exterior at \(s\) carries all limiting
+volume in both gauges, both chiral integrals and the spectral
+integral. If the comparison metrics converge smoothly on
+compacts, this same exterior also carries all limiting full
+curvature in both gauges.
+\end{proposition}
+
+\begin{proof}
+On a subsequence put \(Y_i\to y\) and \(S=8\sqrt6\pi\).
+The sharp spectral bound \(\sigma_i\le4e_i/3\) and the strict
+energy band give
+\[
+ 0<48\delta\le y^2=36\lim_i\sigma_i\le48I^+(M)\le S^2-48\delta .
+\]
+On the comparison write \(\Phi_i^*g_i=u_i^2m_i\).
+Use \(\mathcal L_m=-6\Delta_m+R_m\) and \(Q_m\) for its
+quadratic form, with \(\Delta_m=\operatorname{div}_m\nabla_m\).
+Strong first-order convergence bounds \(Q_{m_i}-Q_h\)
+on each fixed compact by \(o(1)\) times the squared \(H^1\)
+norm. Indeed the scalar density is the divergence of a term
+linear in the first metric derivatives, plus a term quadratic
+in them, with smooth metric coefficients. From the Yamabe
+equation and a fixed squared cutoff one obtains
+\[
+ Q_{m_i}(\chi u_i)
+   =Y_i\int \chi^2u_i^4dV_{m_i}
+       +6\int u_i^2|d\chi|_{m_i}^2dV_{m_i} .
+\]
+Hence \(u_i\) is locally bounded in \(H^1\), and any weak
+limit \(u\ge0\) solves \(\mathcal L_hu=yu^3\) with
+\(\|u\|_{4,h}\le1\). The equation extends across \(P\).
+Testing first with squared puncture cutoffs gives finite
+energy there, since the \(L^4\) norms of their gradients are
+bounded and the \(L^4\) tails of \(u\) vanish. The points
+then have zero \(H^1\) capacity. Testing by \(u\) gives
+\(S\|u\|_4^2\le y\|u\|_4^4\), which forces \(u=0\).
+In the cutoff identity, the nonlinear term is bounded by
+\((y+o(1))\|\chi u_i\|_{4,m_i}^2\) by unit volume and
+Hölder. On small fixed coordinate balls the sharp Sobolev
+inequality has coefficient \(S-o(1)>y\), with the error made
+small by the chart radius
+\cite[Theorems 3.2 and 3.3]{LeeParker1987Yamabe}.
+The \(L^2\) cutoff terms tend to zero by local Rellich convergence.
+Absorption gives strong local \(H^1\cap L^4\) convergence
+to zero.
+
+On the actual exits, cutoffs which transition on fixed
+compared annuli now have physical squared gradient integral
+tending to zero by Hölder and conformal invariance of the
+fourth-power gradient integral. The source Yamabe inequality
+forces \(y\sqrt{\theta_j}\le y\theta_j\) for each limiting
+exit fraction \(\theta_j\). Their sum is one, so one exit has
+unit limiting volume. Fix the cap radius and buffer, and place
+the cutoff transition deeper into that raw exit than the
+innermost splice. Its entire support compares conformally on the
+unchanged part of the cap, giving a Yamabe upper limit at most
+\(y\). If this exit were a label other than \(s\), its positive
+cap would have vanishing chiral energy and hence Yamabe constant
+tending to \(S\) by Gauss--Bonnet. Thus it is \(s\).
+Take the source limit at these fixed choices before the cap
+exhaustion. Changing between fixed small cutting radii
+only adds or removes an evacuated compared annulus.
+
+For \(q_i\), put \(\beta_i=R_{q_i}-6L_{q_i}\le0\), the modified
+Yamabe value
+\cite[Lemma~2.1 and Theorem~1.7]{ChenZhu2014Conformal}.
+The chain \(Y_i\le\int R_{q_i}dV_{q_i}
+   \le\beta_i+6\sqrt{\sigma_i}\) implies
+\(\beta_i\to0\) and \(R_{q_i}-Y_i\to0\) in \(L^2(q_i)\).
+It also gives \(L_{q_i}\to y/6\) in \(L^2(q_i)\), by
+equality in the limiting unit-volume Cauchy--Schwarz inequality.
+Consequently \(L^2dV-(y^2/36)dV_{q_i}\to0\) in total variation.
+Both chiral masses vanish locally in the round comparison and
+on the other exteriors. They bound the invariant spectral
+measure, so the modified volume is also evacuated from these
+sets and concentrates at \(s\).
+
+Assume now \(m_i\to h\) smoothly on compacts. Write
+\(\Phi_i^*q_i=v_i^2m_i\).
+The ordinary factor \(u_i\) converges locally uniformly to zero
+by local Sobolev iteration in its equation, using the strong
+\(L^4\) convergence to absorb the \(L^2\) potential \(Y_i u_i^2\).
+The modified equation is
+\[
+ \mathcal L_{m_i}v_i=(6L_{m_i}+\beta_i v_i^2)v_i .
+\]
+Since \(\beta_i\le0\), \(v_i\) is a positive subsolution of
+\(-6\Delta_{m_i}v_i\le C v_i\) on buffered compacts, with a
+uniform local \(C\). Its \(L^4\) convergence to zero then gives
+local uniform convergence. At a fixed \(x_0\in N-P\), normalize
+the two factors by their values at \(x_0\). Harnack and interior
+elliptic estimates give subsequential \(C^2_{\mathrm{loc}}\)
+limits, positive and \(\mathcal L_h\)-harmonic
+\cite[Sections 6.1 and 8.5--8.8]{GilbargTrudinger2001Elliptic}.
+For this regularity the normalized factors first have local
+\(W^{2,p}\) bounds for finite \(p\), since their linear potentials
+are bounded. The top eigenvalues in smoothly moving frames
+are locally Lipschitz with bounded constants. Together with the
+\(W^{2,p}\) bounds, the equations then give interior
+\(C^{2,\alpha}\) bounds for \(0<\alpha<1\).
+
+To identify the positive limits, take a cutoff equal to one
+away from \(s\) and turning off on a fixed compared annulus in
+that exit. Its support has vanishing volume in both gauges.
+In the modified gauge, the source Yamabe inequality implies
+\[
+ \left(Y_i-\|R_{q_i}-Y_i\|_{2,q_i}
+  -Y_i\sqrt{\operatorname{Vol}_{q_i}(\operatorname{supp}\chi)}\right)
+ \|\chi\|_{4,q_i}^2
+ \le6\int|d\chi|_{q_i}^2dV_{q_i}=O(v_i(x_0)^2).
+\]
+The ordinary test replaces \(v_i(x_0)\) by \(u_i(x_0)\)
+and has zero scalar error. The positive lower coefficient
+bounds the volume after the corresponding constant rescaling
+on all the parts where the cutoff is one. After interior
+convergence and exhaustion, either limiting factor is locally
+\(L^4\) across the other marks. In flat conformal coordinates
+it extends there as a harmonic function after multiplication
+by the conformal factor of \(h\). To see removability, test
+against a smooth function times a shrinking cutoff. The
+second-derivative error has \(L^{4/3}\) norm \(O(r)\), so the
+weak Laplace equation passes through the mark. Stereographic
+projection from \(s\) now gives a positive harmonic function
+on \(\mathbb R^4\). It is constant, with its value fixed by
+normalization. Both limits therefore give the same flat
+rescaled metric on the compared punctured base. The squared
+curvature integrals on its fixed compared compacts tend to zero
+by convergence and constant-scale invariance.
+
+Finally, at a fixed small face around any \(j\ne s\), the
+entire actual exterior has \(\chi=1\), since attaching its
+standard ball cap gives a homotopy four-sphere. Its squared
+scalar and Weyl integrals vanish by the volume and chiral
+accounting above. The Euler boundary term converges to
+\(8\pi^2\): the comparison after constant rescaling is \(C^2\)
+and flat across the filled mark, and the outward normal from
+that exterior points away from the puncture, as for a filled
+disk. The boundary term is invariant under constant scaling
+and continuous under \(C^2\) convergence on the collar.
+In the convention \(8\pi^2\chi\) this is the boundary
+integral of the flat filled disk
+\cite[Section 7, (7.4)]{TianViaclovsky2005ALE}.
+Gauss--Bonnet on the entire exterior now gives
+\(\int|Z|^2dV\to0\). The same formula for the
+\(C^{2,\alpha}\) modified metric follows by \(C^2\) smooth
+approximation on each fixed source. The full curvature
+decomposition gives the asserted allocation in both gauges.
+\end{proof}
+
+The common exit and its flat round-side model control the limiting
+accounting. A strict restart comparison still requires the
+finite-source difference in \eqref{eq:signed-restart} to exceed
+the minimizing excess. The exact graft of
+Proposition~\ref{prop:graft} has equality in that difference.

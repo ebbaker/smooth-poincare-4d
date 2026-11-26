@@ -1,5 +1,13 @@
 # Overall formalization progress
 
+## Edition 03 selected end filtrations and four-measure division · 25 November 2026
+
+**FOT-E39.** The two end filtrations, starting with the empty sublevel of the ordered height and its negative, now meet the actual selected cuts. The end-body and level restrictions of a regular ambient map carry every supplied tube in both directions. The proof of smooth normalization of arbitrary tree feet with the remaining marks fixed is open.
+
+**Finite-source descent.** One family of disjoint smooth marked disks simultaneously approximates half of each of four finite singleton-null measures. On a connected source, supported smooth point motion and contractions assemble the selected finite trace into one genuine marked outer disk. Its full exterior divides all four original measures to arbitrary dyadic accuracy. On an actual nested pair the final trim protects the entire core at all sufficiently thin widths. Positive matched caps give a quantitative lower bound on the disk-side saving required of a repair. The local cutoff estimate controls its aggregate cost on the selected widths.
+
+[Assessment](../reviews/END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md) · [Public checks](handoffs/ED03_END_BANDS_CHECKS.lean) · [Dated continuation](../continuation-notes/AFTER_END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md) · [Frozen packets](handoffs/ED03_END_BANDS_PACKETS_20261125.md)
+
 This is the sole program register across editions. The shared task prefix is `SP4-FORM-FOT`. Each delegated task has one live proof owner. Natural-language results and the search for qualifying metrics and charts are recorded in the [master register](../../../papers/master/research-progress/REGISTER.md) and the [twistor register](../../../papers/investigations-1/03_first_order_twistor/research-progress/REGISTER.md).
 
 ## Edition 03 marked attachments and signed repair · 25 November 2026

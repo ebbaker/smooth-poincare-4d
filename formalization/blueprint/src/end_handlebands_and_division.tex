@@ -1,0 +1,174 @@
+\section{The marked end filtrations and four-measure division}
+\label{sec:ed03-end-bands-division}
+
+\begin{theorem}[Both ends of the selected height]
+\label{thm:ed03-end-filtrations}
+\uses{thm:ed03-selected-middle-attachment}
+\lean{SmoothPoincare.EndHandleFiltration, SmoothPoincare.exists_orderedEndHandleFiltrations, SmoothPoincare.orderedCriticalPartition, SmoothPoincare.exists_selectedEndHandlePresentation_of_inducedEnergy_le, SmoothPoincare.IsolatedZeroHandle.birthHomeomorph, SmoothPoincare.IsolatedOneHandle.attaching_radius_two_lt, SmoothPoincare.IsolatedOneHandle.attachingFeet_smooth, SmoothPoincare.IsolatedOneHandle.attachingFeet_isClosedEmbedding}
+\leanok
+At $E_+\le64\pi^2/9$ the same selected direction, ordered function $h$
+and regular cuts $a<b$ admit finite zero- and one-handle filtrations from
+the empty set up to $\{h\le a\}$ and $\{h\ge b\}$. The latter uses $-h$.
+The two lists and the original middle set partition the actual critical
+points of the height. The middle alternative retains its regular transport
+or its rounded two-handle with both adjacent transports.
+\end{theorem}
+\begin{proof}
+\leanok
+List the critical points below the cut by strictly increasing value and
+insert regular separators. At each point the local Morse trace supplies
+a birth with empty attaching face or a smooth attachment on its two
+parametrized feet. The chosen chart retains its normal form up to twice
+its recorded radius $R$, and $\sqrt{2\varepsilon+8r^2}<2R$. This
+leaves room for the entire radius-two foot graph. The disjoint-sum description at a birth is topological.
+Regular bands connect the local cuts to the separators. Apply the same
+construction to the reversed function and use regularity of the selected
+levels to separate the three point sets.
+\end{proof}
+
+\begin{proposition}[Regular markings and a normalized tree edge]
+\label{prop:ed03-end-markings}
+\uses{thm:ed03-end-filtrations,prop:ed03-end-counts}
+\lean{SmoothPoincare.regularEndMarked_of_image_eq, SmoothPoincare.RegularEndMarked.exists_tubeTransport, SmoothPoincare.exists_regularBandEndMarked, SmoothPoincare.HasRegularLevelTransport.exists_nativeMarked, SmoothPoincare.nativeOppositeLevelDiffeomorph, SmoothPoincare.exists_leafBallHomeomorph, SmoothPoincare.exists_roundLeafAdjunction, SmoothPoincare.exists_leafBallTransport}
+\leanok
+A regular ambient flow taking both the sublevel and level to their
+targets restricts to smooth diffeomorphisms of the native end body and
+its boundary. Their forward and inverse maps commute with the two
+inclusions and transport any supplied boundary parametrization.
+This applies to the actual regular comparisons on the selected ends by
+conjugating the ambient diffeomorphism through the identity change of model.
+The native level maps for $h=b$ and $-h=-b$ also agree on their
+underlying points in both directions. For two normalized product zero-handles joined along opposite standard feet
+of one product one-handle, a homeomorphism to one ball identifies the
+exposed boundary. It transports the remaining attaching and outgoing maps in
+the adjunction.
+\end{proposition}
+\begin{proof}
+\leanok
+Restrict the ambient map and its inverse using the sublevel and level
+embedding charts. In the normalized leaf use an affine axial coordinate on
+each of the three cylinders. Their maps agree on the two entire feet, and
+the inverse descends across the joins. Radial projection takes the boundary of
+the resulting convex cylinder to the round sphere. Functoriality of the
+quotient transports the other markings.
+\end{proof}
+
+\begin{theorem}[Four measures on smooth marked disks]
+\label{thm:ed03-atlas-division}
+\lean{SmoothPoincare.exists_bisecting_measured_subfamily, SmoothPoincare.exists_four_measure_ball_division, SmoothPoincare.exists_fine_atlas_disk_packing, SmoothPoincare.exists_four_measure_atlas_division, SmoothPoincare.exists_bisecting_marked_disks}
+\leanok
+On a compact Hausdorff smooth boundaryless four-manifold, let $U$ be
+open and let $\mu_1,\ldots,\mu_4$ be finite Borel measures vanishing on
+singletons. For every $\varepsilon>0$ there is a finite disjoint family
+of smooth marked closed disks in $U$ whose union $V$ satisfies
+$|\mu_j(V)-\mu_j(U)/2|<\varepsilon$ for all four measures.
+\end{theorem}
+\begin{proof}
+\leanok
+Pack the open remainder of each successive chart with disjoint closed
+balls of small mass for $\sum_j\mu_j$, losing arbitrarily little mass.
+A finite chart cover suffices. For each packed disk form its vector of
+four masses and choose its sign so the cross term with the previous
+signed sum is nonpositive. The squared final discrepancy is bounded by
+the sum of the squared lengths. The small individual masses bound that
+sum, while the uncovered set accounts for the error in replacing the
+packing mass by the mass of $U$.
+\end{proof}
+
+\begin{proposition}[A single exterior and its protected collars]
+\label{prop:ed03-one-disk-separator}
+\uses{thm:ed03-atlas-division}
+\lean{SmoothPoincare.markedDisk_seam_null, SmoothPoincare.exists_marked_four_measure_half_of_separation, SmoothPoincare.exists_finitePointRouting_into_opens, SmoothPoincare.exists_diffeomorph_contracting_finiteMarkedDisks, SmoothPoincare.exists_finite_markedDisk_separator, SmoothPoincare.exists_nestedMarkedDisk_fourMeasure_dyadic, SmoothPoincare.exists_bufferedNestedMarkedDisk_fourMeasure, SmoothPoincare.exists_balancedPhysicalExteriorDivision, SmoothPoincare.exists_balancedPhysicalSpectralExteriorDivision, SmoothPoincare.exists_eventually_balancedPhysicalExterior_below_threshold, SmoothPoincare.halfDivision_of_packing_trace, SmoothPoincare.exists_iteratedMarkedDiskDivision, SmoothPoincare.NestedBalancedDisks.eventually_trim_disjoint_core, SmoothPoincare.eventually_protectedFourMeasureTrim}
+\leanok
+On a connected source, take four finite measures absolutely
+continuous with respect to physical volume. There is a single smooth
+marked outer disk enclosing the core strictly whose full exterior
+simultaneously approximates half of every original exterior mass to
+arbitrary accuracy. With error $\tau$ at each step, after $k>0$ steps the error
+relative to the fraction $2^{-k}$ is bounded by $2\tau(1-2^{-k})$.
+For a nested pair, every sufficiently thin outer trim lies in a full
+chart annulus, avoids the entire original core, and has arbitrarily
+small total incoming mass for the four measures. Apply this on each
+physical source to its two chiral measures, a finite spectral density
+and the full curvature measure. At any fixed positive depth, if
+$e_i\to I<2T$ and the errors tend to zero, both raw exterior chiral
+charges eventually fall strictly below $T$. Here $T=4\pi^2$.
+\end{proposition}
+\begin{proof}
+\leanok
+Include the original core in the finite list. Use supported smooth
+point motions in complements of finitely many points to route their
+centers into the desired open sides of a seed sphere. Before this
+motion contract each full disk into the inverse image of its assigned
+open side, fixing every other disk. Pulling the chart back produces a
+single outer disk on the original physical source. The core seam has
+volume zero. On the packing the exterior trace is exact. Off the packing its discrepancy costs at most half of the
+uncovered mass in addition to the packed discrepancy. Iterate the
+half-mass recurrence. The inverse radial coordinate on the compact
+core has maximum strictly below one. Intersect this uniform gap with
+the open chart buffer and the four null-seam estimates.
+\end{proof}
+
+\begin{proposition}[Halfspaces in a supplied physical chart]
+\label{prop:ed03-marked-chart-division}
+\uses{thm:ed03-atlas-division}
+\lean{SmoothPoincare.fourMeasureImbalance_continuous, SmoothPoincare.fourMeasureImbalance_odd, SmoothPoincare.exists_fourMeasureBall_bisection, SmoothPoincare.markedDiskPullback_absolutelyContinuous, SmoothPoincare.exists_markedDisk_affine_bisection, SmoothPoincare.exists_markedDisk_finiteBall_division}
+\leanok
+In a supplied smooth marked disk, pullback takes its four finite
+volume-absolutely-continuous measures to Lebesgue-absolutely-continuous
+measures. Given the antipodal-zero principle for continuous odd maps
+from the four-sphere to $\mathbb R^4$, there is an affine hyperplane
+bisecting all four restricted masses exactly. The finite-ball
+approximation in the chart holds unconditionally.
+\end{proposition}
+\begin{proof}
+\leanok
+Transport the measures by the inverse chart, keeping their full
+restrictions to the marked disk. Hyperplanes for a nonzero normal have
+zero mass. Dominated convergence gives continuity of the signed
+halfspace imbalance, including at the poles of the parameter sphere.
+Opposite parameters reverse the imbalance. A pole can have zero
+imbalance only when all four masses vanish, in which case a central
+plane works.
+\end{proof}
+
+\begin{proposition}[Cost on the selected widths and the matched endpoint]
+\label{prop:ed03-measured-endpoint-wall}
+\uses{prop:ed03-one-disk-separator}
+\lean{SmoothPoincare.measuredCollarAllowance_sq_le, SmoothPoincare.measuredCollarRowBudget_of_localAllowances, SmoothPoincare.SignedCollarCandidateControls.ofCutoffCharges, SmoothPoincare.excludesStrictRepair_of_localMeasuredSelectedDiskCollars, SmoothPoincare.balancedEndpointEnergy_lower_of_localChange, SmoothPoincare.eventually_balancedEndpointEnergy_gt_wall_on_selectedTrim}
+\leanok
+On the actual candidate annuli write $b=w+\tau+d$.
+For nonnegative local data with $a\le\min(A,1)$ and
+$0\le\beta\le C_0(ab+\sqrt{db}+d)$, the squared error is at most
+$12 C_0^2[A^2(w^2+\tau^2)+d(w+\tau)+d^2]$.
+The row sum controls the finite measured width selection. For the
+balanced disk $B$ around a protected core $Q$, put $q=2^{-k}$.
+Fix a chirality $s$. Suppose the initial exterior division has upper
+error $\tau$, the matched same-type cap is positive and has signed
+energy at most the endpoint exterior charge plus $\delta$, and the
+initial and endpoint charges agree on $B\setminus W$. Then
+\[
+ E_+(h)\ \ge\ I+(1-q)E_+(g)+q\lambda_g^s(Q)
+          -\tau-\delta-\lambda_g^s(B\cap W).
+\]
+Along a sequence tending to $I>T+\varepsilon$, if
+$q(T+\varepsilon)\le\varepsilon$ and the three losses tend to zero,
+every such endpoint eventually exceeds $2T+\varepsilon$.
+\end{proposition}
+\begin{proof}
+\leanok
+Square the local allowance and apply finite Cauchy--Schwarz to its two
+mixed sums. For the endpoint, the positive cap has energy at least the
+fixed-type infimum. Split each full signed measure on $B$ and its
+complement, using the null seam and the agreement off $W$. Drop the
+nonnegative endpoint charge on $B\cap W$. The limiting lower bound
+is at least $(2-q)I>2T+\varepsilon$.
+\end{proof}
+
+The selected filtrations still require smooth normalization of actual feet,
+with the other tubes and the outgoing signed collar fixed. The one-disk
+division now supplies the outer marking and full raw complements. For a successful
+repair, the physical jet bounds, matched positive cap and simultaneous signed
+saving must hold for one path on its selected widths. Positive caps used in
+the last proposition are finite attained comparisons on the original type;
+$I$ denotes its limiting infimum.

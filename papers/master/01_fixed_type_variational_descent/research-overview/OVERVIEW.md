@@ -1,5 +1,9 @@
 # Research overview
 
+## Current geometric witnesses · 25 November 2026
+
+The original marked disk carries a quantitative first- and second-variation test. On a vanishing-deficit sequence the modified ball-volume bound locates concentrated Ricci energy and a positive-time flow with a nonzero negative Euler trace. That flow has no smooth complete initial limit in the fixed markings. The exact overlap disk and the round exit give separate comparisons on their own source metrics. [Assessment and source generations](../../research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md)
+
 ## Current marked and exact alternatives
 
 The [disk enlargement](../manuscript/balanced_exterior.tex) controls the full raw residual in four measures. Its new boundary lacks the original small-ball chart estimates. The [connector flux](../manuscript/connected_repair.tex) limits transfer of chiral excess. At vanishing deficit the [modified shrinking-limit proof](../manuscript/ricci_concentration.tex) excludes a complete marked bubble with positive Ricci charge. The [exact-class theorem](../manuscript/exact_spectral_gap.tex) separates this regime from positive exact closed classes on nonstandard types.

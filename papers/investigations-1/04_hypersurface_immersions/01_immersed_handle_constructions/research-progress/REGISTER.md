@@ -6,10 +6,14 @@
 | --- | --- | --- |
 | SP4-IMM-HDL-B01 | Assessed for quadratic marked faces | Both solid tori and their rank-four immersion germs occur in the three-patch construction. |
 | SP4-IMM-HDL-E01 | Completed for this reference family | [Relative degree and construction](../notes/E53_RETAINED_EXTERIOR.md). |
-| SP4-IMM-HDL-B02 | Eta-zero boundary and retained-half criterion assessed | Spin APS index zero on the Mazur face. Construct a positive scalar metric with unstable totally geodesic boundary in the marked class and control its half energy or spectral integral. [Proof](../manuscript/eta_zero_filling.tex) · [Independent index and threshold checks](../reviews/E64_ETA_ZERO_FILLING.md) |
+| SP4-IMM-HDL-B02 | Prescribed extension and Robin trace criterion assessed | A PSC extension of the exact eta-zero boundary metric exists. Find a positive Robin trace form on one such extension and measure the half energies after obtaining a totally geodesic filling. [Boundary proof](../manuscript/boundary_class.tex) · [Reader](../reviews/E70_BOUNDARY_CLASS.md) |
 | SP4-IMM-HDL-E02 | Completed for the specified example | [Independent cost, degree and sign check](../reviews/E53_RELATIVE_CHECK.md). |
 | SP4-IMM-HDL-B03 | Reserved | Use the assessed first local model or scoped failure to select one extension. |
 
 The 25 November [E35a setup](../../../../master/research-progress/handoffs/E35_PARALLEL_SETUP_20261125.md) registered the family. The [rotation bridge](../../../../master/notes/E32_ROTATIONAL_TRANSITION.md) and [immersion recognition theorem](../../../../master/manuscript/immersion_entry.tex#L17) remain owned by SP4-MASTER. [Parent register](../../research-progress/REGISTER.md) · [Two-handle recognition register](../../02_two_handle_recognition/research-progress/REGISTER.md)
 
 The 25 November [working manuscript](../manuscript/README.md) collects the branch results and their outstanding hypotheses. [Master editorial receipt E51](../../../../master/research-progress/handoffs/E51_COMPANION_DRAFTS_20261125.md).
+
+## 25 November 2026 · B02 assessment
+
+The marked Mazur half has a positive-scalar extension of its eta-zero metric and a totally geodesic positive filling in a potentially different class. A Robin trace test identifies precisely the remaining sign for a prescribed filling. The homogeneous spin crossing excludes later scales, and the Cotton tensor forces positive Weyl energy on any smooth totally geodesic filling at the target. [Master E69–E72 return](../../../../master/research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md)

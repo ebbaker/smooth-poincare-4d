@@ -1,0 +1,157 @@
+\section{Filling the marked boundary class}
+\label{sec:marked-boundary-class}
+
+The actual half \(W=W^-(0,3)\) in the \(n=1\) diagram has one
+handle of each index \(0,1,2\). It therefore has a smooth
+positive-scalar-curvature metric with mean-convex boundary by
+Sweeney \cite[Proposition 1.2]{Sweeney2026Contractible}.
+The boundary deformation of
+B\"ar--Hanke \cite[Definition 3.1 and Theorem 3.7]{BaerHanke2023Boundary},
+with second fundamental form zero as its target, yields a PSC
+metric with totally geodesic boundary on the same half. It fixes
+the induced boundary metric \(\gamma_0\). Its terminal Fermi
+collar is \(dt^2+(1-Ct^2)\gamma_0\), which extends evenly to a
+smooth PSC metric on the marked identity double. The induced
+class here is that of the input metric supplied by Sweeney's
+proposition. The prescribed class \([\gamma(v_*)]\) requires a
+separate extension.
+
+\begin{proposition}[Boundary trace criterion]
+\label{prop:marked-robin-trace}
+Fix a smooth metric \(\gamma\) in the boundary marking of \(W\).
+A smooth PSC metric with totally geodesic boundary in \([\gamma]\)
+exists if and only if some smooth PSC extension \(g\) of the
+exact metric \(\gamma\) satisfies
+\[
+ 6\langle f,\mathcal N_g f\rangle
+       +2\int_Y H_g f^2\,dA_\gamma>0
+ \qquad (0\ne f\in H^{1/2}(Y)).
+\]
+Here \(H_g\) is the trace of the second fundamental form for
+the outward unit normal \(\nu\). The operator
+\(\mathcal N_g f=\partial_\nu u_f|_Y\) is given by
+\((-6\Delta_g+R_g)u_f=0\), \(u_f|_Y=f\).
+\end{proposition}
+
+\begin{proof}
+PSC gives a positive Dirichlet form and hence a unique \(u_f\).
+Let \(J_g=-6\Delta_g+R_g\). The Robin form
+\[
+ Q_g^{\rm Rob}(u)=\int_W(6|du|_g^2+R_gu^2)\,dV_g
+                    +2\int_Y H_g u^2\,dA_\gamma
+\]
+splits into the trace form in the statement and the positive
+Dirichlet remainder on \(u-u_f\). If the trace form is positive
+then the lowest Robin eigenvalue is positive, by the trace
+inequality and compactness in interior and boundary \(L^2\).
+Its positive first eigenfunction \(u\) satisfies
+\(\partial_\nu u+(H_g/3)u=0\). Thus \(u^2g\) has strictly
+positive scalar curvature and zero mean curvature.
+B\"ar--Hanke's deformation with target second fundamental
+form zero preserves its induced metric. Their mean curvature
+convention is the trace divided by three, with the same sign
+as ours \cite[proof of Lemma 2.18 and Theorem 3.7]{BaerHanke2023Boundary}.
+
+Conversely, let the filling be PSC and totally geodesic.
+Normalize its boundary metric to \(\gamma\) by a positive
+conformal change on the half, obtaining \(h\). Green's formula
+and conformal covariance give
+\(Q_{b^2h}^{\rm Rob}(\phi)=Q_h^{\rm Rob}(b\phi)\) for smooth
+\(b>0\), so \(Q_h^{\rm Rob}\) is positive. In particular the
+Dirichlet realization of \(J_h\) is positive. Solve
+\(J_hw=1\) with \(w|_Y=1\). Testing the negative part and
+using Dirichlet positivity gives \(w\ge0\). An interior zero
+would give \(J_hw\le0\) there. Thus \(g=w^2h\) is smooth
+and PSC with exact boundary metric \(\gamma\) and positive
+Robin form. Testing it on \(u_f\) proves the claim.
+\end{proof}
+
+The sign in Proposition~\ref{prop:marked-robin-trace} is also
+the positivity of the relative Yamabe invariant with fixed
+boundary class. In each extension conformal class the Robin
+sign gives the relative Yamabe sign, using a minimal-boundary
+representative, the Sobolev inequality and the first eigenfunction
+test \cite[\S\S1.1 and 1.3]{AkutagawaBotvinnik2002Relative}.
+Shi--Wang--Wei \cite[Theorem 1.1 and Remark 2.1]{ShiWangWei2022FillIns}
+supply PSC extensions of the exact
+\(\gamma(v_*)\) on this \(W\) with no guarantee of nonnegative
+mean curvature. The boundary conformal Laplacian has negative
+first eigenvalue since \(R_{\gamma(v_*)}=-a^2(2+v_*^2/2)\) is
+constant. As a result the fixed-boundary Robin sign is the
+remaining existence test.
+
+\begin{proposition}[Spin obstruction in the homogeneous family]
+\label{prop:homogeneous-spin-crossing}
+The first zero crossing \(v_c\) in the marked family \(\gamma(v)\)
+satisfies \(2/11\le v_c^2\le2\). For \(0<v<v_c\) the boundary
+operator is invertible and the APS index on a product-germ
+contractible filling is zero. For every \(v\ge v_c\) the boundary
+kernel or this APS index is nonzero. Accordingly, no such
+\([\gamma(v)]\) with \(v\ge v_c\) admits a PSC totally geodesic
+filling on the smooth oriented contractible half.
+\end{proposition}
+
+\begin{proof}
+Use \(H,V,\omega,D_v\) from Section~\ref{sec:eta-zero-filling}
+on the fixed Haar \(L^2\) space of complex spinors. The symmetric
+elliptic operator \(H^2+V^2\) has finite-dimensional smooth
+eigenspaces, each preserved by \(H\) and \(V\) because they
+anticommute. Split each into their joint square eigenspaces
+\(H^2=\mu I,\ V^2=\nu I\), with \(\mu\ge0\) and
+\(\nu\ge(a/22)^2\). On such a space,
+\((H+v^{-1}V)^2=(\mu+v^{-2}\nu)I\); its sign multiplicities are
+constant for \(v>0\) by continuity. The branches of \(D_v\)
+are therefore of the form
+\[
+  \pm\sqrt{\mu+v^{-2}\nu}-av\omega/4 .
+\]
+When \(\omega=1\), every crossing belongs to a plus branch
+and is strictly downward. When \(\omega=-1\), every crossing
+belongs to a minus branch and is strictly upward. A crossing
+with \(v\le M\) requires
+\(\mu+\nu\le\max(1,M^2)(aM/4)^2\), giving finitely many
+crossings on any compact parameter interval. The constant
+spinors in the global frame have branch
+\(a(2-v^2)\omega/(4v)\), of complex multiplicity at least two.
+Hence there is a crossing at \(v=\sqrt2\), and the small-fiber
+gap in Section~\ref{sec:eta-zero-filling} bounds \(v_c\) from
+below.
+
+Extend the boundary path to smooth product-germ metrics on one
+fixed contractible \(W\). On intervals with invertible boundary
+Dirac operators the APS index is constant. At a crossing,
+isolate its finite-dimensional boundary spectral subspace
+and continuously identify the other spectral subspaces on
+the two sides. The trace map has a right inverse. The APS
+domain gains or loses the crossing subspace, so the index
+changes by the signed dimension of this subspace. The
+absolute index is therefore positive at every invertible
+parameter after the first crossing, since the initial index
+is zero and the jumps have a common sign. At the crossing
+parameters the boundary kernel is nonzero. Both necessary
+tests follow for totally geodesic PSC fillings by
+Propositions~\ref{prop:free-trace-spin}
+and~\ref{prop:totally-geodesic-half-filling}.
+\end{proof}
+
+The eta-zero scale \(v_*^2=\sqrt{159}/11-1\) is below
+\(2/11\). A separate curvature test excludes zero Weyl
+energy at this scale. In the \(\gamma(v)\)-orthonormal
+left-invariant frame, the intrinsic Schouten tensor
+\(P=\operatorname{Ric}_\gamma-(R_\gamma/4)\gamma\) satisfies
+\(P_{33}-P_{11}=P_{33}-P_{22}=a^2(1+v^2)\).
+Koszul's formula gives
+\(\langle\nabla_1 e_2,e_3\rangle=-av/2\) and
+\(\langle\nabla_2 e_1,e_3\rangle=av/2\). Thus the Cotton
+component \((\nabla_1P)_{23}-(\nabla_2P)_{13}
+=a^3v(1+v^2)\) is nonzero. For a locally conformally flat
+four-metric with totally geodesic boundary, the ambient
+Schouten tensor restricts to the intrinsic one by Gauss.
+The ambient Schouten Codazzi identity restricts to the
+intrinsic Cotton identity. This would force the boundary
+Cotton tensor to vanish, a conformally invariant condition.
+Therefore every smooth totally geodesic filling of
+\([\gamma(v_*)]\) has \(E_+(W)=E_-(W)>0\), using the
+eta-zero equality of Section~\ref{sec:eta-zero-filling}.
+The sign of the Robin form at the prescribed scale and
+the upper energy budget for recognition remain unresolved.

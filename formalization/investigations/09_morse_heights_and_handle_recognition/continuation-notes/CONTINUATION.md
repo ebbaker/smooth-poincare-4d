@@ -1,5 +1,7 @@
 # Morse heights and handle recognition · Continuation
 
+**Current milestone, 25 November 2026.** Partition the original critical points. Build both ordered zero/one-handle filtrations on the native sublevels, with smooth traces, regular comparisons and genuine attaching feet. A normalized tree-edge quotient gives a marked topological ball. Smoothly normalize the actual forest with the outgoing markings and signed collar germs before invoking recognition. [Assessment](../../reviews/END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md) · [Public checks](../../research-progress/handoffs/ED03_END_BANDS_CHECKS.lean) · [Dated continuation](../../continuation-notes/AFTER_END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md)
+
 **Current handoff, 25 November 2026.** [Assessment](../../reviews/MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md) · [Continuation](../../continuation-notes/AFTER_MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md).
 
 The [Edition 03 activation handoff](../../continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md) and launch instructions below record the original packet.

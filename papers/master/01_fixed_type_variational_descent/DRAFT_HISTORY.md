@@ -25,3 +25,7 @@ Finite spectral-scale selection gives diffuse chiral mass throughout the strict 
 ## 25 November 2026 · balanced disks and exact closed types
 
 The connected-patch transgression bounds chiral transfer across an actual shaft. Repeated division on a marked disk gives the required disk-side saving. In the small-deficit case modified Ricci concentration disappears on every fixed compact of a complete marked shrinking limit. The exact-class deficit floor rules out smooth nonround filled minimizing bases in this regime. [Working proof](manuscript/exact_spectral_gap.tex) · [Assessment](../research-progress/handoffs/E63_E67_BALANCED_DISKS_20261125.md)
+
+## 25 November 2026 · Interior variation and curvature at the charged scale
+
+The original marked disk carries a quantitative first- and second-variation test. On a vanishing-deficit sequence the modified ball-volume bound locates concentrated Ricci energy and a positive-time flow with a nonzero negative Euler trace. That flow has no smooth complete initial limit in the fixed markings. The exact overlap disk and the round exit give separate comparisons on their own source metrics. [Assessment and source generations](../research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md)

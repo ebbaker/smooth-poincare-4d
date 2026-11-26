@@ -1,5 +1,9 @@
 # Research overview — Smooth four-dimensional Poincaré conjecture
 
+## Current proof status · 25 November 2026
+
+A clamped variation on the E61 disk can save at most the minimizing excess. At vanishing spectral deficit, a small-ball upper volume bound in the modified metric yields a nonflat positive-time flow with nonnegative isotropic curvature. Its negative Euler trace rules out a smooth complete initial limit in the fixed flow markings. Positive subcritical entry on every smooth type and a coupled repair of the charged disk remain open. [Assessment and source generations](../research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md)
+
 ## Current proof status after the marked enlargement
 
 One enlarged standard disk can leave both raw chiral charges below the recognition threshold throughout the strict subcritical band. A finite sequence of enlargements forces a definite energy saving on the whole disk side of any subcritical path to a round seam. In the exact closed branch any fixed band supports only finitely many nonstandard types, with strictly positive least spectral deficit when the family is nonempty. Entry, a strict repair on the original marked geometry, and classification of the remaining exact types are open. [Assessment and source generations](../research-progress/handoffs/E63_E67_BALANCED_DISKS_20261125.md)

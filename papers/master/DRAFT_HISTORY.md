@@ -47,3 +47,7 @@ Uniform recognition now uses a conformal Weyl integral. On every subcritical min
 ## 25 November 2026 · balanced disks and exact closed types
 
 The marked disk can be enlarged to divide both chiral masses, the spectral mass and physical full curvature. A path to a round seam on a sufficiently enlarged disk must lower energy on the disk side. Only finitely many nonstandard types in a fixed strict band can carry a positive Bach-flat class, and those classes have a positive least spectral deficit if present. [Assessment](research-progress/handoffs/E63_E67_BALANCED_DISKS_20261125.md)
+
+## 25 November 2026 · Interior variation and curvature at the charged scale
+
+A clamped variation on the E61 disk can save at most the minimizing excess. At vanishing spectral deficit, a small-ball upper volume bound in the modified metric yields a nonflat positive-time flow with nonnegative isotropic curvature. Its negative Euler trace rules out a smooth complete initial limit in the fixed flow markings. Positive subcritical entry on every smooth type and a coupled repair of the charged disk remain open. [Assessment and source generations](research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md)

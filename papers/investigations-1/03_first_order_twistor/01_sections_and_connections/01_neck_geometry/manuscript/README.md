@@ -21,3 +21,5 @@ The primary passages checked for the new section are [DeTurck–Kazdan, Lemma 4.
 The [radial flux calculation](physical_ricci_flux.tex) gives the full signed distance defect on a protected physical annulus under its Ricci and inner-volume hypotheses. The [independent review](../reviews/E60_LOG_SHELLS.md) identifies the remaining marked-embedding condition.
 
 The [critical integral estimate](critical_radial_defect.tex) selects a physical window with vanishing radial defect under a forward polar Jacobian bound. Its [review](../reviews/E64_CRITICAL_RADIAL_DEFECT.md) records the remaining marking hypothesis.
+
+At the physical intermediate scale, a full buffered band with bounded sectional curvature, bounded rescaled volume and vanishing full curvature integral supplies a proper flat comparison and compact embeddings. The Jacobian or full signed radial-defect estimate must hold at this scale. The terminal polar throat calculation tests loss of inner protection. [Proof checks and reading copies](../../../../../master/research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md)

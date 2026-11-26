@@ -1,5 +1,7 @@
 # Smooth four-dimensional Poincaré conjecture · master investigation
 
+The current edition adds the interior variation estimate and the nonflat modified Ricci-flow limit at a charged scale. [Assessment](research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md) · [Current continuation](continuation-notes/AFTER_CORE_VARIATIONS_AND_CHARGED_FLOW_20261125.md)
+
 The [current assessment](research-progress/handoffs/E63_E67_BALANCED_DISKS_20261125.md) compares the original charged disk, a connected enlargement and the exact closed classes. The [continuation](continuation-notes/AFTER_BALANCED_DISKS_AND_EXACT_TYPES_20261125.md) gives the remaining geometric tests.
 
 The master manuscript asks whether the chiral Weyl energy on a fixed smooth homotopy four-sphere can be lowered far enough to identify its smooth type. The working edition gives a short marked-cut test and a variational comparison on the actual source. Every smooth complete physical blow-up with the stated first-order convergence is flat at minimizing energy. The paper now gives physical trace-free Ricci scale estimates, a critical harmonic-annulus cut, and direct recognition at chiral energy at most \(64\pi^2/9\) for a conformal class induced by a Euclidean hypersurface immersion. Universal entry, a general marked extraction and closed rigidity remain open.

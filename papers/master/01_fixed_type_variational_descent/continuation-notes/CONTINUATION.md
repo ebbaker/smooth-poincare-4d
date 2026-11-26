@@ -1,5 +1,7 @@
 # Fixed-type descent continuation
 
+[Current joined program and source receipts](../../continuation-notes/AFTER_CORE_VARIATIONS_AND_CHARGED_FLOW_20261125.md). Prioritize the original marked disk and the time-zero geometry at the first modified charge radius.
+
 For the current research launch, use the [balanced-disk and exact-type continuation](../../continuation-notes/AFTER_BALANCED_DISKS_AND_EXACT_TYPES_20261125.md). The setup request below is historical.
 
 25 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance. E35c requested GPT-6.2 Sol/ultra for setup. Independent serving telemetry is unavailable. The [overview](../research-overview/OVERVIEW.md#ownership-and-versioned-inputs) records the exact source commit and hashes of the approved proposal and frozen setup request. This dated handoff leaves all scientific work unactivated. Re-read the [live register](../research-progress/REGISTER.md) to determine current readiness.

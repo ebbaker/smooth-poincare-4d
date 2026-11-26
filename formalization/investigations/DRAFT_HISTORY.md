@@ -1,5 +1,7 @@
 # Overall formalization milestones
 
+- **25 November 2026 · Selected end filtrations and four-measure division.** Built the two native end presentations and regular markings, constructed a single smooth marked disk for simultaneous dyadic division on a connected source, and quantified the endpoint cost of protecting a nested core. [Assessment](reviews/END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md) · [Public checks](research-progress/handoffs/ED03_END_BANDS_CHECKS.lean) · [Dated continuation](continuation-notes/AFTER_END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md)
+
 - **25 November 2026 · Marked attachments and signed repair.** Constructed the selected native middle handle or regular-band comparison, the signed model seam, the marked E58 disk union, and physical estimates entering smoothing. [Assessment](reviews/MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md) · [Continuation](continuation-notes/AFTER_MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md)
 
 - **25 November 2026 · Global Gauss geometry and selected disk collars.** Proved the ordinary round indexed mean and almost-everywhere Morse heights for the oriented immersion. The intrinsic estimates retain both cap signs, individual costs, the full charged complement and the exact widths. [Assessment](reviews/GLOBAL_GEOMETRY_AND_SELECTED_COLLARS_20261125.md) · [Continuation](continuation-notes/AFTER_GLOBAL_GAUSS_AND_SELECTED_COLLARS_20261125.md)

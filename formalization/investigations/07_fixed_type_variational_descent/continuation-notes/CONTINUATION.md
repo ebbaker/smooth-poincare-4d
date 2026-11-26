@@ -1,5 +1,7 @@
 # Fixed-type variational descent · Continuation
 
+**Current milestone, 25 November 2026.** A finite disjoint smooth disk family approximately halves four measures. One smooth marked outer disk realizes the selected finite trace by moving centers and contracting disjoint guarded disks. A hemisphere cut is exact under the antipodal-zero hypothesis. Local allowances give row constant $12C_0^2$. A positive same-type cap forces the finite signed endpoint lower bound including the original core charge and all three losses. [Assessment](../../reviews/END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md) · [Public checks](../../research-progress/handoffs/ED03_END_BANDS_CHECKS.lean) · [Dated continuation](../../continuation-notes/AFTER_END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md)
+
 **Current handoff, 25 November 2026.** [Assessment](../../reviews/MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md) · [Continuation](../../continuation-notes/AFTER_MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md).
 
 The [Edition 03 activation handoff](../../continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md) and launch instructions below record the original packet.

@@ -1,0 +1,159 @@
+\section{Native handle feet and variations on the selected physical disk}
+\label{sec:ed03-native-feet-jets}
+
+\begin{theorem}[Parametrizations on the actual incoming level]
+\label{thm:ed03-native-foot-charts}
+\uses{thm:ed03-end-filtrations}
+\lean{SmoothPoincare.IsolatedOneHandle.footPartialDiffeomorph, SmoothPoincare.IsolatedOneHandle.footPartialDiffeomorph_apply_nativeAttaching, SmoothPoincare.IsolatedOneHandle.footPartialDiffeomorph_disjoint, SmoothPoincare.IsolatedOneHandle.footComponentChart_closedBall_two_subset_source, SmoothPoincare.IsolatedOneHandle.footComponentPoint_val, SmoothPoincare.IsolatedOneHandle.footComponentChart_symm_point}
+\leanok
+For each of the two feet of an actual native one-handle in either selected
+end filtration, its full unit disk extends to a smooth chart containing the
+closed radius-two ball. The two images lie on disjoint branches of the
+incoming level. Each chart restricts to the open connected component of
+its own foot center. Its inverse recovers the transverse parameter.
+\end{theorem}
+\begin{proof}
+\leanok
+In Morse coordinates the transverse coordinate is $rz$ and the signed
+axis coordinate has magnitude $\sqrt{2\varepsilon+r^2|z|^2}$. The squared
+model radius is $2\varepsilon+2r^2|z|^2$. The retained double-radius
+normal form therefore covers the graphs for $|z|\le2$. Division of the
+transverse coordinate by $r$ gives the smooth inverse. The image of the
+connected closed ball lies in the component of its center.
+\end{proof}
+
+\begin{proposition}[Relative oriented feet in a signed collar]
+\label{prop:ed03-relative-foot-collar}
+\uses{thm:ed03-native-foot-charts}
+\lean{SmoothPoincare.IsolatedOneHandle.exists_orientedNativeFootComponentChart, SmoothPoincare.protectedFootBalls_compact_and_compl_preconnected, SmoothPoincare.exists_bufferedFootSignedCollarComparison, SmoothPoincare.SupportedLevelIsotopy.signedCollarComparison_protected, SmoothPoincare.SupportedLevelIsotopy.signedCollarComparison_end}
+\leanok
+Give the closed native component an orientation. Its complete foot chart
+has an oriented representative after either the identity or the central
+reflection of the three parameters. A finite pairwise disjoint family of
+protected closed chart balls has compact union and preconnected complement.
+For a supplied oriented model foot in the same connected level, disjoint
+from these protected balls, the supported isotopy matches every foot
+parameter. On supplied full signed collar charts it gives a smooth
+comparison in both directions. On the central plateau its foot parameter
+is the chosen linear isometry; on the protected tubes and both outer
+regions it preserves every coordinate under the two markings.
+\end{proposition}
+\begin{proof}
+\leanok
+Restrict the actual chart to a connected open source and use the
+orientation dichotomy there. Reflection corrects the negative case on
+the entire marking. Apply relative ball isotopy off the union of the
+protected balls. In signed coordinates the comparison and inverse are
+$(x,t)\mapsto(J_{\rho(t)}x,t)$ and $(x,t)\mapsto(J_{\rho(t)}^{-1}x,t)$,
+conjugated by the given charts. Choose $\rho=1$ on the central plateau
+and $\rho=0$ near both outer ends.
+\end{proof}
+
+\begin{theorem}[Calibration by the actual height]
+\label{thm:ed03-native-height-collar}
+\uses{thm:ed03-end-filtrations}
+\lean{SmoothPoincare.exists_nativeSignedHeightCollar, SmoothPoincare.exists_nativeOppositeSignedCollars}
+\leanok
+On a nonempty regular level $L=h^{-1}(c)$ of a smooth height on a compact
+boundaryless source, a smooth partial diffeomorphism with source
+$L\times(-r,r)$ has target exactly $h^{-1}((c-r,c+r))$. Its zero slice is
+the native inclusion. The inverse signed coordinate at $y$ is $h(y)-c$.
+The opposite height has a collar with the same physical image; the
+identification is the identity on level points and negates the transverse
+coordinate in both directions.
+\end{theorem}
+\begin{proof}
+\leanok
+Compactness separates the selected level from the critical values.
+Use the smooth gradient-like field with unit negative height speed
+throughout a smaller closed regular band. The maps are its flow for time
+$-t$ from $x\in L$ and its return flow for time $h(y)-c$ from $y$. The
+flow law supplies the two inverse identities. Smooth factorization through
+the native level gives smoothness of the inverse projection. Conjugate
+by the native opposite-level map and $t\mapsto-t$ to obtain the second chart.
+\end{proof}
+
+\begin{proposition}[Physical cutoff jets on the balanced disk]
+\label{prop:ed03-physical-marked-jets}
+\uses{thm:ed03-atlas-division}
+\lean{SmoothPoincare.exists_balancedPhysicalSpectralExteriorDivision_of_endpointData, SmoothPoincare.exists_selectedMarkedRadialCutoff, SmoothPoincare.exists_selectedRadialCutoff_radial_deriv, SmoothPoincare.fderiv_fderiv_selectedRadialCutoff_apply, SmoothPoincare.exists_selectedMarkedMetricLift, SmoothPoincare.selectedMarkedMetricLift_chartGram, SmoothPoincare.exists_selectedRadialSpliceSecondPartialError_on_physicalTrim}
+\leanok
+Choose one outer marked disk for the two physical chiral measures, the
+tested top-eigenvalue measure in the same physical frame, and the full
+curvature measure. On a buffered width $w=1/(n+1)$ the physical metric
+has a smooth model lift agreeing with its marked pullback on a neighborhood
+of the entire closed buffer. The squared-radius step equals one in the
+inner region and zero in the outer region. Along every unit ray its
+derivative attains $-1/(2w)$ somewhere in the full trim.
+For two smooth coefficients $G,B$, write $H=B-G$. In the pullback of the
+actual incoming trim volume, the second-partial cutoff error, at path
+parameter $0\le t\le1$, has $L^2$ norm bounded by
+\[
+ t\left[\left(4C_2/w^2+C_1/w\right)\|H\|_2
+   +(2C_1/w)\left(\|\partial_m H\|_2+\|\partial_i H\|_2\right)\right].
+\]
+\end{proposition}
+\begin{proof}
+\leanok
+Transport the restricted volume by the inverse marking. Differentiate
+the smooth profile of squared radius twice. The product rule gives one
+Hessian term multiplying $H$ and the two displayed mixed terms. The
+compact buffer admits a single smooth extension of the pullback metric;
+its fixed chart Gram coefficients agree throughout an open neighborhood.
+\end{proof}
+
+\begin{theorem}[Attained signed variation on the disk side]
+\label{thm:ed03-selected-side-variation}
+\uses{prop:ed03-physical-marked-jets}
+\lean{SmoothPoincare.coreVariation_taylor_upper, SmoothPoincare.signedCoreSaving_eq_energySaving, SmoothPoincare.positiveCoreVariation_bounds, SmoothPoincare.exists_selectedDiskSideVariation}
+\leanok
+Put $U=B\cap W_n$ for the chosen outer disk and its marked trim. Test
+a two-sided metric path with energy $f(s)=E_+(g_s)$, positive endpoints
+at $\pm r$, and the same total charge on the entire complement $U^c$
+as the source, separately in each sign. Suppose $f$ is $C^4$ and its
+second and fourth derivatives are bounded in absolute value by $D$ on
+$[-r,r]$. One of these same two positive endpoints realizes, in each
+chirality, a saving on $U$ of at least
+\[
+ \max\{ |f'(0)|r-Dr^2/2,\;-f''(0)r^2/2-Dr^4/24\}.
+\]
+The saving is at most the smaller of $f(0)-I$ and the raw charge of $U$
+in that sign. For a positive source this yields
+$|f'(0)|\le (f(0)-I)/r+Dr/2$ and
+$[-f''(0)]_+\le2(f(0)-I)/r^2+Dr^2/12$.
+\end{theorem}
+\begin{proof}
+\leanok
+Use Taylor's theorem on both signed intervals and choose the endpoint of
+smaller energy. Averaging the cubic Taylor polynomials cancels both odd
+terms. Signature and equality on the full complement identify each local
+saving with the total drop. Positivity puts that attained endpoint above
+the fixed-type infimum. The coordinate width $w$ and variation step $r$
+are independent parameters.
+\end{proof}
+
+\begin{theorem}[Localized Ricci charge in the modified flow gauge]
+\label{thm:ed03-modified-euler-transport}
+\lean{SmoothPoincare.metricFrameTensorNormSq_eq_chiral_ricci_scalar, SmoothPoincare.modifiedCutoffMoments_full_eq, SmoothPoincare.modifiedEuler_timeWeight, SmoothPoincare.modifiedEuler_weightedTimeBound, SmoothPoincare.modifiedEuler_transport_of_flux, SmoothPoincare.modifiedTerminalRicci_lower_of_eulerTransport_of_measurableCharges}
+\leanok
+Let a common cutoff $0\le\chi\le1$ equal one on the initial charge set
+and vanish off $B$ at terminal time $\tau>0$. Suppose the initial full
+curvature charge is at least $\epsilon^2$. Write $m_+,m_-,m_S$ for
+the two cutoff Weyl-square moments and the cutoff scalar-square moment at
+time zero. Assume the integrability and measurability of the tested
+densities. Given the spatial Euler transgression estimate with coefficient
+$K$, a nonnegative remaining time factor of $L^2$ norm at most $L$, and
+$b<1/2$, the actual terminal metric satisfies
+\[
+ \int_B |Z_\tau|^2\,dV_\tau\ \ge \epsilon^2/2-4(m_++m_-)-m_S/6-2KL\sqrt{\tau/(1-2b)}.
+\]
+\end{theorem}
+\begin{proof}
+\leanok
+The Levi--Civita curvature symmetries and the first Bianchi identity
+give the ordered-tensor norm $4(|W^+|^2+|W^-|^2)+2|Z|^2+R^2/6$.
+Integrate with the same test on the initial slice. Cauchy--Schwarz in
+time uses the exact integral $\tau/(1-2b)$ for the squared time
+weight. At the terminal slice drop the nonnegative Weyl and scalar
+moments and bound the cutoff Ricci integral by the whole supporting set.
+\end{proof}
