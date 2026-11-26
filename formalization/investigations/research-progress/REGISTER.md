@@ -1,5 +1,13 @@
 # Overall formalization progress
 
+## Edition 03 outgoing collar comparison, protected disk cost and terminal charge · 26 November 2026
+
+**FOT-E43.** Both directions of the actual retained collar compare on one uniform signed strip with the product through the next cut. The transition fixes the zero section and has positive normal derivative there. On the connected native binary trace, compatible forward local ball maps covering its representatives determine the entire target and inverse. The explicit quartic merger model has an independent round-ball marking and a calibrated collar. Constructing the native forward maps with the prescribed overlap and framing is the remaining merger step.
+
+On a finite positive physical disk a supplied negative variation gives a strict saving in both signs. If the saving must also buy a separately positive same-type cap and an additional joined cost, the entire replacement disk charge plus that cost is at most the source excess above the infimum. A uniformly charged protected core excludes that arrangement late, including with moving exteriors. In the modified-flow alternative, positive terminal trace-free Ricci charge passes to any strictly larger limit ball of the same complete pointed comparison. A regular limiting Ricci solution with scalar nonnegativity near that time then has positive scalar curvature at a charged point in that ball. Coverage of smooth types is unchanged.
+
+[Assessment](../reviews/COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md) · [Dated continuation](../continuation-notes/AFTER_COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md) · [Input and build receipt](handoffs/ED03_COLLAR_CHARGE_INPUTS_20261126.md) · [Independent applications](../reviews/ED03_COLLAR_CHARGE_READBACK.lean)
+
 ## Edition 03 marked birth bodies, positive curved references and tested Euler transport · 25 November 2026
 
 **FOT-E42.** The first two births give ambient ball charts for the entire selected incoming sublevel. On a merging edge, each whole native foot, including an open neighborhood past its rim, meets the corresponding ball chart. The original trace maps diffeomorphically to a retained rounded body by refining the cuts in the same Morse chart and transporting back through the actual upper band. The lower and handle representatives and outgoing insertion squares are explicit. One open ambient collar agrees with the retained map and its inverse on the full inward half. A second transports the signed height to the next cut. Comparison with a separately prescribed standard marked ball still requires a common smooth germ on the interior of the outgoing collar and a covering of the model.

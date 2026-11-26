@@ -1,0 +1,220 @@
+\section{The outgoing collar, the protected disk and terminal Ricci charge}
+\label{sec:ed03-collar-charge}
+
+\begin{theorem}[Comparing the retained and calibrated collars]
+\label{thm:ed03-actual-collar-transition}
+\uses{thm:ed03-original-rounded-trace}
+\lean{SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.exists_outgoingCollarComparison, SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.exists_outgoingCollarComparison_toNextCut, SmoothPoincare.IsolatedOneHandle.outgoingCollarTransition_fixedOn_iff, SmoothPoincare.IsolatedOneHandle.outgoingCollarTransition_normalDerivative_pos}
+\leanok
+Let $A$ be the calibrated source chart, $F$ the two-sided extension of
+the retained inward map, and $P$ the target product parametrized by the
+actual boundary marking. There is a smooth coordinate change
+$J=P^{-1}F$ fixing the entire zero section. Its domain and inverse domain
+contain the same full strip of positive width. Both $J$ and $J^{-1}$
+preserve the inward and outward sides. Their tangential derivatives at the zero section are the identity and their normal derivatives there are strictly positive. At calibrated parameter $q=(x,t)$
+the source chart becomes $A(J^{-1}q)$. Its rounded height is
+$c_{\rm round}+(J^{-1}q)_2$. The actual target height is $c+t$
+and the corresponding next cut has height $h_{\rm next}+t$.
+On the inward side the retained body map and inverse give these actual
+points. A prescribed parameter set is fixed by the transition precisely
+where the two parametrized collars agree.
+\end{theorem}
+\begin{proof}
+\leanok
+Compose the partial diffeomorphisms on their open overlap and use
+compactness of the full boundary level to put a two-sided strip in both
+coordinate domains. The inward map takes strict interior to strict
+interior. The calibration and injectivity separate the opposite side.
+Apply the two inverse equations to each parameter of a framed tube.
+\end{proof}
+
+\begin{theorem}[Covering an independently prescribed ball]
+\label{thm:ed03-target-ball-cover}
+\uses{thm:ed03-marked-glue,thm:ed03-birth-survivors}
+\lean{SmoothPoincare.exists_markedPatchDiffeomorph_of_unitBallCover, SmoothPoincare.IsolatedOneHandle.connectedTrace_of_twoBirthCharts, SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.exists_markedBall_of_nativeRepCover, SmoothPoincare.markedEdgeModelFlatten_images, SmoothPoincare.markedEdgeModelCollar_coordinates, SmoothPoincare.markedEdgeRoundBallCollar_coordinates}
+\leanok
+On a binary merger the two connected incoming body images are joined by
+the handle at its two feet. Suppose four local diffeomorphisms to the
+independently specified closed four-ball agree forward on source overlaps,
+and cover the images of every lower and handle representative in the
+rounded body. They cover the entire target, glue to a diffeomorphism and
+give its inverse on every patch target. One explicit Euclidean model is
+$q(u,z)=(u^2-1)^2+|z|^2$. For $a>1$ the change
+\[
+ (u,z)\longmapsto
+ \left(\frac{u}{\sqrt{a+1}},
+      \frac{z}{\sqrt{(a+1)(a-1+u^2)}}\right)
+\]
+carries $q\le a^2$ onto the unit ball and its full level onto the unit sphere.
+Writing this map as $d_a$, a collar of the round target is
+$d_a d_{\sqrt{a^2+t}}^{-1}(v)$, for $v$ on the unit sphere and
+$|t|<w<a^2-1$. It fixes every $v$ at zero. It lies in the closed ball
+precisely for $t\le0$, with a smooth inverse recovering both parameters.
+\end{theorem}
+\begin{proof}
+\leanok
+The native lower and handle representatives exhaust the adjunction.
+The glued map is a local diffeomorphism from a compact connected body.
+The resulting covering of the simply connected ball has one sheet.
+Its inverse agrees with each patch inverse by injectivity. The explicit
+model follows by factoring the height defect into a positive function
+times the difference of the squared norm from one.
+\end{proof}
+
+\begin{proposition}[The closed split and slid controls]
+\label{prop:ed03-closed-slide-control}
+\uses{thm:ed03-marked-glue}
+\lean{SmoothPoincare.ClosedMarkedControl.splitExterior_torus, SmoothPoincare.ClosedMarkedControl.splitTorusCollar_transport, SmoothPoincare.ClosedMarkedControl.exists_splitClosingHomeomorph, SmoothPoincare.ClosedMarkedControl.slid_dualTube_and_inverse, SmoothPoincare.ClosedMarkedControl.slidClosedAssembly_representatives}
+\leanok
+In the split control the spectator in $S^3\subset\mathbb C^2$ has tube
+$(z,v)\mapsto (\sqrt{1-\epsilon^2|v|^2}\,z,\epsilon v)$,
+$0<\epsilon<1$. The explicit complementary solid torus agrees with
+this tube on both boundary parameters. Its smooth signed collar recovers $t=|y_2|^2-\epsilon^2$ and both circle parameters throughout $-\epsilon^2<t<1-\epsilon^2$. The two marked disk pieces glue to $S^1\times S^2$ by the lower and upper hemisphere maps, with an inverse on each piece. Given the slid trace comparison
+$F$, its boundary restriction and its agreement on the outgoing
+spectator chart, the upper closing map is $\gamma'=\gamma\circ\partial F$.
+The dual framed spectator and its inverse agree with those of the split
+control. The full closed adjunction comparison is a homeomorphism,
+acting by $F$ below and the identity above, with the inverse formulas
+on every representative.
+\end{proposition}
+\begin{proof}
+\leanok
+Evaluate the complementary torus chart at its two boundary circle
+parameters. For the upper dual chart, swap the two factors and apply
+the closing map. Its inverse applies the inverse closing map before
+unswapping. The two representative equations descend through the
+closed attachment because the closing square commutes.
+\end{proof}
+
+\begin{theorem}[A finite nonconformal disk variation]
+\label{thm:ed03-signed-first-variation}
+\uses{thm:ed03-positive-conformal-core,prop:ed03-curved-cap-price}
+\lean{SmoothPoincare.exists_clampedAffineMetricFamily, SmoothPoincare.exists_selectedNonconformalDiskSaving_of_weightedSquare, SmoothPoincare.protectedDisk_positiveCap_allowance_lower}
+\leanok
+Fix one finite positive source below $2T$, its disk $B$, protected core
+$Q$, and native trim $W$. A localized variation supported in the interior
+of $B$ away from $Q\cup W$ preserves the prescribed metric germs.
+Suppose its signed energy derivative at zero is $-D/2$,
+where $D=\int\chi b^2\,dV_g>0$, its tangent at a point of the indicated
+affine path is nonscalar, and a continuous sign detector is positive there
+at parameter zero. With the stated frame agreement off the support, some
+$t>0$ gives a positive nonconformal endpoint. Its saving in each
+chirality exceeds $tD/4$ and is at most $e-I$. The whole short joined path
+stays strictly below $2T$. If a same-type positive cap costs at most
+$\lambda_h^s(V)+\delta_s$, $V=(\mathrm{int}\,B)^c$, retention of disjoint
+$Q$ and $B\cap W$ on a subcritical joined endpoint forces
+\[
+ \delta_s>I+\lambda_g^s(Q)+\lambda_g^s(B\cap W)-2T .
+\]
+\end{theorem}
+\begin{proof}
+\leanok
+Clamp the real parameter to $[-1/2,1/2]$ for a symmetric direction
+with $|D_x(v,v)|\le g_x(v,v)$. Every metric is spatially smooth and
+positive definite, and the path is affine near zero. The derivative
+and continuity at zero select the finite interval. The signature identity
+and the unchanged complete exterior transfer the saving to each signed
+disk charge. For the cap bound, add the retained terms inside $B$ and
+use $I\le E_s(\mathrm{cap})$ in the cap's own positive class.
+\end{proof}
+
+\begin{proposition}[Paying a cap from the net saving]
+\label{prop:ed03-net-saving}
+\uses{thm:ed03-signed-first-variation}
+\lean{SmoothPoincare.diskCharge_add_joinedCost_le_excess_of_cap_paid_from_saving, SmoothPoincare.eventually_no_paid_cap_of_protectedDisk_charge, SmoothPoincare.eventually_no_paid_cap_of_original_charged_markedDisk, SmoothPoincare.original_markedDisk_charge_eq_and_le_excess_of_arbitrarily_small_cap_drift}
+\leanok
+On an actual finite source let $e$ be the old energy, $h$ the whole
+replacement, and $j_s\ge0$ a measured additional joined cost. If the cap
+above has allowance $\delta_s$ and $\delta_s+j_s\le e-E_s(h)$,
+then $\lambda_h^s(B)+j_s\le e-I$. Along a sequence $e_i\to I$, a
+uniformly charged retained core in even one sign, allowed to depend on $i$,
+eventually rules out this payment in both signs simultaneously. This
+applies when the original marked disk carries a fixed positive charge in
+one sign on a selected subsequence and lies inside the protected core.
+At one fixed source, suppose for every $\eta>0$ there is a single
+positive same-type cap whose energy in each sign differs by less than
+$\eta$ from the corresponding original exterior charge. Then the two
+original disk charges agree, and each is at most $e-I$.
+\end{proposition}
+\begin{proof}
+\leanok
+Use the full identity $E_s(h)=\lambda_h^s(V)+\lambda_h^s(B)$ and the
+cap bound. The replacement exterior cancels even when its charge has
+changed. Monotonicity on the protected subset and convergence of $e_i-I$
+give the sequence conclusion. At one fixed source apply the same-type cap
+floor and signature identity at each tolerance before letting it decrease to zero.
+\end{proof}
+
+\begin{theorem}[Trace-free Ricci charge in a pointed terminal ball]
+\label{thm:ed03-pointed-terminal-charge}
+\uses{thm:ed03-terminal-ball-euler}
+\lean{SmoothPoincare.tendsto_terminalBallCutoff_weylScalarCharge_of_initial_region, SmoothPoincare.eventually_ricciFlow_terminalBall_intrinsicRicciCharge, SmoothPoincare.intrinsicTraceFreeRicciSq_eq_of_partialDiffeomorph_inner, SmoothPoincare.terminalTraceFreeRicciSq_of_twoJets, SmoothPoincare.pointedTerminalBuffer_tendsto_traceFreeRicci, SmoothPoincare.pointedTerminalBuffer_traceFreeRicci_charge, SmoothPoincare.ricciFlow_terminalBall_intrinsicRicciCharge_pointedLimit}
+\leanok
+Consider a sequence of smooth modified Ricci solutions with the same fixed
+terminal time $\tau>0$, curvature norm bound $A$, integrated derivative
+budget $L^2$, and lower Ricci bound $-(b/s)g_s$, $b<1/2$. Suppose each
+initial attaining set has full curvature mass at least $\epsilon^2$ and
+lies in the radius-$R$ terminal plateau. At time zero the combined
+Weyl and scalar-square charge tends to zero on measurable regions
+containing the entire radius-$(R+1)$ terminal ball. Fix
+\[
+ 0<c<\frac{\epsilon^2}{2}-288 A L\sqrt{\frac{\tau}{1-2b}} .
+\]
+Then the terminal ball eventually carries trace-free Ricci mass at least
+$c$. Suppose these same terminal metrics and centers have complete pointed
+smooth convergence on a cofinal subsequence in the canonical pullback
+domains. For every $r>R+1>0$ the limit satisfies
+\[
+  \int_{B(p,r)} |\mathrm{Ric}^{\circ}|^2\,dV\ \ge c .
+\]
+\end{theorem}
+\begin{proof}
+\leanok
+Bound the moment of the fixed cutoff by the nonnegative initial charge on
+its entire support. Apply the terminal Euler estimate separately on each
+solution. On a compact buffer the pulled-back metric two-jets converge.
+Coercivity and the jet bounds give pointwise convergence of
+$|\mathrm{Ric}|^2-R_{\rm scal}^2/4$ and a uniform spatial bound.
+Use the Riemannian volume change of variables and dominated convergence
+on that compact set. Choose $R+1<a<r$. The lower metric bound on
+$\overline B(p,a)$ prevents a path of source length less than $R+1$ from
+exiting its image for all sufficiently large indices. Thus the comparison
+of integrals includes the entire source charge ball.
+\end{proof}
+
+\begin{proposition}[Volume escape and a positive scalar point]
+\label{prop:ed03-volume-and-scalar}
+\uses{thm:ed03-pointed-terminal-charge}
+\lean{SmoothPoincare.ricciFlow_terminal_sqrtVolume_change_le, SmoothPoincare.ricciFlow_terminal_volume_tendsto_atTop, SmoothPoincare.pointedTerminal_noncompact_of_volume_escape, SmoothPoincare.ricciFlow_terminalPointed_noncompact_of_initialVolume, SmoothPoincare.ricciFlow_exists_scalar_pos_in_charged_ball}
+\leanok
+For the same connected compact source slices, write $V_i(s)$ for their
+total volumes. The spatial curvature budget gives
+\[
+ |\sqrt{V_i(\tau)}-\sqrt{V_i(0)}|
+ \le (\sqrt 6/2)A\tau .
+\]
+If their initial volumes diverge, their smooth pointed terminal limit
+is noncompact. Further suppose the charged limit slice belongs to a
+regular limiting Ricci solution. If scalar curvature is nonnegative
+on the fixed charged open ball for all times in a neighborhood of the
+slice, at a point of that ball both scalar curvature and
+$|\mathrm{Ric}^{\circ}|^2$ are strictly positive.
+\end{proposition}
+\begin{proof}
+\leanok
+Differentiate $\sqrt{V}$ in the regular interior, use
+$|R_{\rm scal}|^2\le6|\mathrm{Rm}|^2$ and Cauchy--Schwarz, then use
+continuity at both endpoints. A compact pointed limit would globalize
+the comparison and have finite total volume equal to the limit of the
+source volumes. Positive integrated charge gives a point of positive
+trace-free Ricci square. If its scalar curvature vanished, the time
+derivative there would be zero and the spatial Laplacian nonnegative.
+The scalar evolution equation has a strictly positive Ricci term there.
+\end{proof}
+
+The target-ball theorem still requires native forward charts with the
+prescribed overlap and tube equations. The finite disk variation still
+requires its energy derivative on the selected physical metric. The
+charged terminal limit uses the supplied pointed comparison at positive
+time. A comparison at the separated quantiles in the original physical
+metric has its own distance, curvature and marking hypotheses.

@@ -52,8 +52,10 @@ private theorem collar_strictSides {L M : Type*} [TopologicalSpace L] [Topologic
       apply isOpen_lt _ continuous_const
       apply continuous_iff_continuousAt.mpr
       intro y
-      exact (hc.continuousAt (A.open_source.mem_nhds (hq y ht))).comp
+      have hslice : ContinuousAt (fun z : L => (z,t)) y :=
         (continuous_id.prodMk continuous_const).continuousAt
+      exact ContinuousAt.comp (f := fun z : L => (z,t))
+        (hc.continuousAt (A.open_source.mem_nhds (hq y ht))) hslice
     have hW : V ×ˢ Ioo (-r) t ⊆ A.source := by
       intro q h
       exact hq q.1 ⟨h.2.1, h.2.2.trans ht.2⟩
@@ -73,18 +75,18 @@ private theorem collar_strictSides {L M : Type*} [TopologicalSpace L] [Topologic
     obtain ⟨v, hv, he⟩ := intermediate_value_Icc' hyu.2.2.le hcont ⟨hyt.le, hyu'.le⟩
     exact (hu.trans_le hv.1).ne' (hzero' (y,v)
       (hq y ⟨hyu.2.1.trans_le hv.1, hv.2.trans_lt ht.2⟩) he)
-  intro q hq'
-  have ht : q.2 ∈ Ioo (-r) r := (hAs ▸ hq').2
-  refine ⟨⟨?_, hneg q hq'⟩, ⟨?_, hpos q.1 q.2 ht⟩⟩
+  intro ⟨x,t⟩ hq'
+  have ht : t ∈ Ioo (-r) r := (hAs ▸ hq').2
+  refine ⟨⟨?_, hneg (x,t) hq'⟩, ⟨?_, hpos x t ht⟩⟩
   · intro h
-    rcases lt_trichotomy q.2 0 with hn | he | hp
+    rcases lt_trichotomy t 0 with hn | rfl | hp
     · exact hn
-    · exact ((show f (A q) = a by simpa only [he] using hzero q.1).not_lt h).elim
-    · exact ((hpos q.1 q.2 ht hp).not_gt h).elim
+    · exact ((hzero x).not_lt h).elim
+    · exact ((hpos x t ht hp).not_gt h).elim
   · intro h
-    rcases lt_trichotomy q.2 0 with hn | he | hp
-    · exact ((hneg q hq' hn).not_gt h).elim
-    · exact ((show f (A q) = a by simpa only [he] using hzero q.1).not_gt h).elim
+    rcases lt_trichotomy t 0 with hn | rfl | hp
+    · exact ((hneg (x,t) hq' hn).not_gt h).elim
+    · exact ((hzero x).not_gt h).elim
     · exact hp
 
 variable {H M : Type} [TopologicalSpace H] [TopologicalSpace M] [ChartedSpace H M]
@@ -102,15 +104,15 @@ local notation "c" => f p + D.ε
 local notation "Lᵣ" => LevelSetSpace g (f p)
 local notation "L₀" => LevelSetSpace f c
 local notation "ιᵣ" => regularEndLevelInclusion g (f p)
-local notation "strip(" r ")" => ((univ : Set Lᵣ) ×ˢ Ioo (-r) r)
+local notation "strip(" r ")" => Set.prod (univ : Set Lᵣ) (Ioo (-r) r)
 
+set_option maxHeartbeats 1200000 in
 /-- Compare the actual two-sided extension of the retained map and the
 calibrated outgoing product, both based on the retained rounded level.
 The transition is the coordinate change on their exact open overlap.
 A whole signed strip lies in both coordinate domains. The inverse
 reparametrizes the retained collar by calibrated target height, while
 the original collar agrees with the retained body map on its inward half. -/
-set_option maxHeartbeats 1200000 in
 theorem RetainedRoundedTrace.exists_outgoingCollarComparison
     (w : ℝ) (hw : 0 < w) :
     letI := manifoldLevelSetChartedSpace J g (f p) C.smooth C.regular
@@ -140,20 +142,21 @@ theorem RetainedRoundedTrace.exists_outgoingCollarComparison
           ∃ (hx : g (A q) ≤ f p) (hy : f (F q) ≤ c),
             F q = (C.toUpper ⟨A q,hx⟩).val ∧
             (C.toUpper.symm ⟨F q,hy⟩).val = A q) := by
-  letI := manifoldLevelSetChartedSpace J g (f p) C.smooth C.regular
-  letI := manifoldLevelSetChartedSpace J f c hf D.upper_regular
-  letI := manifoldSublevelChartedSpace J g (f p) C.smooth C.regular
-  letI := manifoldSublevelChartedSpace J f c hf D.upper_regular
-  letI := manifoldSublevelIsManifold J g (f p) C.smooth C.regular
-  letI := D.upper_isManifold
-  letI : CompactSpace Lᵣ := isCompact_iff_compactSpace.mp
+  let _ := manifoldLevelSetChartedSpace J g (f p) C.smooth C.regular
+  let _ := manifoldLevelSetChartedSpace J f c hf D.upper_regular
+  let _ := manifoldSublevelChartedSpace J g (f p) C.smooth C.regular
+  let _ := manifoldSublevelChartedSpace J f c hf D.upper_regular
+  let _ := manifoldSublevelIsManifold J g (f p) C.smooth C.regular
+  let _ := D.upper_isManifold
+  let _ : CompactSpace Lᵣ := isCompact_iff_compactSpace.mp
     (isClosed_eq C.smooth.continuous continuous_const).isCompact
-  letI : Nonempty Lᵣ := ⟨C.outgoingLevel.symm D.outgoingAxisPoint⟩
+  let _ : Nonempty Lᵣ := ⟨C.outgoingLevel.symm D.outgoingAxisPoint⟩
   intro A B hAs hBs hA0 hB0 hAh hBh
   obtain ⟨E, hEw, hE⟩ := C.exists_twoSidedCollar_extending_toUpper w hw A (by
     rw [hAs]
     ext q
-    simp) hA0 hAh
+    change (True ∧ q.2 ∈ Ioo (-w) w) ↔ q.2 ∈ Ioo (-w) w
+    exact ⟨And.right, fun h => ⟨trivial,h⟩⟩) hA0 hAh
   let F := E.reverse.toPartialDiffeomorph
   have hFs : F.source = strip(E.radius) := E.reverse.toPartialDiffeomorph_source
   have hFA : F.source ⊆ A.source := by
@@ -163,25 +166,25 @@ theorem RetainedRoundedTrace.exists_outgoingCollarComparison
       ∃ (hx : g (A q) ≤ f p) (hy : f (F q) ≤ c),
         F q = (C.toUpper ⟨A q,hx⟩).val ∧
         (C.toUpper.symm ⟨F q,hy⟩).val = A q := by
-    have hqr : q.2 ∈ Ioo (-E.radius) E.radius := (hFs ▸ hq).2
+    rcases q with ⟨x,s⟩
+    have hqr : s ∈ Ioo (-E.radius) E.radius := (hFs ▸ hq).2
     let t : symmetricOpenInterval E.radius :=
-      ⟨-q.2, neg_lt_neg hqr.2, neg_lt.mp hqr.1⟩
+      ⟨-s, neg_lt_neg hqr.2, by linarith only [hqr.1]⟩
     have ht : 0 ≤ t.val := neg_nonneg.mpr hqn
-    have hEq : F q = E.toFun (q.1,t) := by
+    have hEq : F (x,s) = E.toFun (x,t) := by
       calc
-        F q = E.reverse.toFun (q.1,⟨q.2,hqr⟩) :=
-          E.reverse.toPartialDiffeomorph_apply (q.1,⟨q.2,hqr⟩)
-        _ = E.toFun (q.1,t) := rfl
-    obtain ⟨hx,hy,hfwd,hbwd⟩ := hE q.1 t ht
+        F (x,s) = E.reverse.toFun (x,⟨s,hqr⟩) :=
+          E.reverse.toPartialDiffeomorph_apply (x,⟨s,hqr⟩)
+        _ = E.toFun (x,t) := rfl
     rw [hEq]
-    simpa only [t, neg_neg] using Exists.intro hx (Exists.intro hy ⟨hfwd, hbwd⟩)
+    simpa only [show -t.val = s from neg_neg s] using hE x t ht
   have hF0s (x : Lᵣ) : (x,(0 : ℝ)) ∈ F.source := by
     rw [hFs]
     exact ⟨mem_univ _, neg_lt_zero.mpr E.radius_pos, E.radius_pos⟩
   have hF0 (x : Lᵣ) : F (x,0) = (C.toUpper (ιᵣ x)).val := by
-    rw [show F (x,0) = E.reverse.toFun (x,⟨0, neg_lt_zero.mpr E.radius_pos,E.radius_pos⟩)
-      from E.reverse.toPartialDiffeomorph_apply _]
-    exact E.reverse.toFun_zero x
+    let t : symmetricOpenInterval E.reverse.radius :=
+      ⟨0, neg_lt_zero.mpr E.radius_pos,E.radius_pos⟩
+    exact (E.reverse.toPartialDiffeomorph_apply (x,t)).trans (E.reverse.toFun_zero x)
   have hF0d (x : Lᵣ) : F (x,0) = (C.outgoingLevel x).val :=
     (hF0 x).trans (congrArg Subtype.val (C.outgoingLevel_inclusions.1 x)).symm
   have hFstrict (q : Lᵣ × ℝ) (hq : q ∈ F.source) (ht : q.2 < 0) : f (F q) < c := by
@@ -197,8 +200,8 @@ theorem RetainedRoundedTrace.exists_outgoingCollarComparison
     ext q
     change (q ∈ (univ : Set (Lᵣ × ℝ)) ∧ d q ∈ B.source) ↔ _
     rw [hBs]
-    simp only [mem_univ, true_and, mem_prod]
-    rfl
+    change (True ∧ True ∧ q.2 ∈ Ioo (-w) w) ↔ True ∧ q.2 ∈ Ioo (-w) w
+    exact ⟨And.right, fun h => ⟨trivial,h⟩⟩
   have hP (q : Lᵣ × ℝ) (hq : q ∈ P.source) :
       P q = B (C.outgoingLevel q.1,q.2) ∧ f (P q) = c + q.2 :=
     ⟨rfl, hBh (d q) hq.2⟩
@@ -223,11 +226,14 @@ theorem RetainedRoundedTrace.exists_outgoingCollarComparison
     refine ⟨P (x,t), hball ⟨by linarith,htb⟩, ?_⟩
     rw [(hP (x,t) hpt).2]
     exact lt_add_of_pos_right _ ht
-  have hFsign := collar_strictSides F.toOpenPartialHomeomorph hf.continuous E.radius_pos hFs
-    (fun x => (hF0d x).symm ▸ (C.outgoingLevel x).property)
-    (fun y hy => ⟨C.outgoingLevel.symm ⟨y,hy⟩, (hF0d _).trans
-      (congrArg Subtype.val (C.outgoingLevel.apply_symm_apply ⟨y,hy⟩))⟩)
-    hFstrict hFabove
+  have hFsign : ∀ q ∈ F.source, (f (F q) < c ↔ q.2 < 0) ∧ (c < f (F q) ↔ 0 < q.2) := by
+    refine collar_strictSides F.toOpenPartialHomeomorph hf.continuous E.radius_pos hFs
+      (fun x => ?_) (fun y hy => ?_) hFstrict hFabove
+    · change f (F (x,0)) = c
+      rw [hF0d]
+      exact (C.outgoingLevel x).property
+    · exact ⟨C.outgoingLevel.symm ⟨y,hy⟩, (hF0d _).trans
+        (congrArg Subtype.val (C.outgoingLevel.apply_symm_apply ⟨y,hy⟩))⟩
   let T := F.trans P.symm
   have hTs (q : Lᵣ × ℝ) : q ∈ T.source ↔ q ∈ F.source ∧ F q ∈ P.target := Iff.rfl
   have hTt (q : Lᵣ × ℝ) : q ∈ T.target ↔ q ∈ P.source ∧ P q ∈ F.target := Iff.rfl
@@ -247,20 +253,27 @@ theorem RetainedRoundedTrace.exists_outgoingCollarComparison
     have hTP : T q ∈ P.source := ((hTt _).mp (T.map_source hq)).1
     have hheight : f (F q) = c + (T q).2 := he ▸ (hP (T q) hTP).2
     have hsign := hFsign q hqF
-    rw [hheight] at hsign
-    exact ⟨he, by linarith, (add_lt_iff_neg_right c).symm.trans hsign.1,
-      (lt_add_iff_pos_right c).symm.trans hsign.2⟩
+    have hn : (T q).2 < 0 ↔ f (F q) < c := by
+      rw [hheight]
+      constructor <;> intro h <;> linarith
+    have hp : 0 < (T q).2 ↔ c < f (F q) := by
+      rw [hheight]
+      constructor <;> intro h <;> linarith
+    exact ⟨he, by linarith, hn.trans hsign.1, hp.trans hsign.2⟩
   refine ⟨r,F,P,T,hr,min_le_right ..,hFA,hPs,hP,rfl,hsub,?_,hTf,?_,hFneg⟩
   · intro x
     have ht : T (x,0) = (x,0) := by
       change P.symm (F (x,0)) = (x,0)
       rw [← hP0 x]
       exact P.left_inv (hP0s x)
-    exact ⟨ht, ht ▸ T.left_inv (hz x).1, hF0 x⟩
+    have hti : T.symm (T (x,0)) = (x,0) := T.left_inv (hz x).1
+    rw [ht] at hti
+    exact ⟨ht, hti, hF0 x⟩
   · intro q hq
     have hq' : T.symm q ∈ T.source := T.map_target hq
     obtain ⟨he, _, hneg, hpos⟩ := hTf (T.symm q) hq'
-    rw [T.right_inv hq] at he hneg hpos
+    have hright : T (T.symm q) = q := T.right_inv hq
+    rw [hright] at he hneg hpos
     exact ⟨he.symm, he ▸ (hP q ((hTt q).mp hq).1).2, hneg.symm, hpos.symm⟩
 
 local notation "L₁" => LevelSetSpace f hi
@@ -301,12 +314,12 @@ theorem RetainedRoundedTrace.exists_outgoingCollarComparison_toNextCut
         ∃ (hx : g (R q) ≤ f p) (hy : f (F (T.symm q)) ≤ c),
           F (T.symm q) = (C.toUpper ⟨R q,hx⟩).val ∧
           (C.toUpper.symm ⟨F (T.symm q),hy⟩).val = R q) := by
-  letI := manifoldLevelSetChartedSpace J g (f p) C.smooth C.regular
-  letI := manifoldLevelSetChartedSpace J f c hf D.upper_regular
-  letI := manifoldLevelSetChartedSpace J f hi hf (D.outgoingNextCut_regular hunique)
-  letI := manifoldSublevelChartedSpace J g (f p) C.smooth C.regular
-  letI := manifoldSublevelChartedSpace J f c hf D.upper_regular
-  obtain ⟨w,A,B,E,_,l,_,Q,hw,hwε,_,_,_,hAs,hBs,hEs,_,_,_,_,_,hQs,_,hA0,hB0,_,hA,hQ,hnext⟩ :=
+  let _ := manifoldLevelSetChartedSpace J g (f p) C.smooth C.regular
+  let _ := manifoldLevelSetChartedSpace J f c hf D.upper_regular
+  let _ := manifoldLevelSetChartedSpace J f hi hf (D.outgoingNextCut_regular hunique)
+  let _ := manifoldSublevelChartedSpace J g (f p) C.smooth C.regular
+  let _ := manifoldSublevelChartedSpace J f c hf D.upper_regular
+  obtain ⟨w,A,B,E,_,l,_,Q,hw,hwε,_,_,_,hAs,hBs,_,_,_,_,_,_,hQs,_,hA0,hB0,_,hA,hQ,hnext⟩ :=
     C.exists_outgoingLevelCollars_toNextCut hunique
   have hAheight (q : Lᵣ × ℝ) (hq : q ∈ A.source) : g (A q) = f p + q.2 :=
     (hA q.1 q.2 (hAs ▸ hq).2).1
@@ -344,7 +357,8 @@ theorem RetainedRoundedTrace.exists_outgoingCollarComparison_toNextCut
   · intro q hq
     obtain ⟨_, hheight, hneg, hpos⟩ := hTf q hq
     have h := htransport (T q) (T.map_source hq)
-    rw [T.left_inv hq] at h
+    have hleft : T.symm (T q) = q := T.left_inv hq
+    rw [hleft] at h
     exact ⟨h.1, hheight, hneg, hpos, h.2.2⟩
   · intro q hq
     have hq' : q.2 ∈ Ioo (-w) w := (hPs ▸ hPts hq).2
@@ -355,6 +369,90 @@ theorem RetainedRoundedTrace.exists_outgoingCollarComparison_toNextCut
   · intro q hq ht
     have hn : (T.symm q).2 ≤ 0 := le_of_not_gt (fun hp => ht.not_gt ((hTi q hq).2.2.2.mp hp))
     exact hFneg (T.symm q) (hFs (T.map_target hq)) hn
+
+omit [J.Boundaryless] [IsManifold J ∞ M] [T2Space M] [CompactSpace M] in
+/-- A marked parameter stays fixed under the reparametrization exactly
+when the two collars assign it the same ambient point. This applies on
+the entire marked subset in the common coordinate domains. -/
+theorem outgoingCollarTransition_fixedOn_iff {L : Type*} [TopologicalSpace L]
+    [ChartedSpace (MorseModel 3) L]
+    (F P : PartialDiffeomorph Kℝ J (L × ℝ) M ∞) {U : Set (L × ℝ)}
+    (hU : U ⊆ (F.trans P.symm).source ∩ P.source) :
+    EqOn (F.trans P.symm) id U ↔ EqOn F P U := by
+  constructor
+  · intro h q hq
+    have hqF : F q ∈ P.target := (hU hq).1.2
+    have he : P.symm (F q) = q := h hq
+    calc
+      F q = P (P.symm (F q)) := (P.right_inv hqF).symm
+      _ = P q := congrArg P he
+  · intro h q hq
+    change P.symm (F q) = q
+    rw [h hq]
+    exact P.left_inv (hU hq).2
+
+/-- A smooth change of collar coordinates that fixes the zero section
+and preserves its outward side fixes each tangent vector to the cut
+and has strictly positive transverse speed at every zero point. -/
+theorem outgoingCollarTransition_normalDerivative_pos {L : Type*} [TopologicalSpace L]
+    [ChartedSpace (MorseModel 3) L] [IsManifold K ∞ L]
+    (T : PartialDiffeomorph Kℝ Kℝ (L × ℝ) (L × ℝ) ∞)
+    (hsource : ∀ x : L, (x,(0 : ℝ)) ∈ T.source)
+    (hzero : ∀ x : L, T (x,0) = (x,0))
+    (hside : ∀ q ∈ T.source, 0 < q.2 → 0 < (T q).2) (x : L) :
+    let d := mfderiv Kℝ Kℝ T (x,0)
+    (∀ v : MorseModel 3, d (v,0) = (v,0)) ∧
+      0 < (d (0,1)).2 ∧ HasDerivAt (fun t : ℝ => (T (x,t)).2) (d (0,1)).2 0 := by
+  let d := mfderiv Kℝ Kℝ T (x,0)
+  have hT : MDifferentiableAt Kℝ Kℝ T (x,0) :=
+    (T.contMDiffOn_toFun.contMDiffAt (T.open_source.mem_nhds (hsource x))).mdifferentiableAt (by simp)
+  let H : L → L × ℝ := fun y => (y,0)
+  have hH : HasMFDerivAt K Kℝ H x (ContinuousLinearMap.inl ℝ (MorseModel 3) ℝ) := by
+    have hh : MDifferentiableAt K Kℝ H x :=
+      mdifferentiableAt_id.prodMk mdifferentiableAt_const
+    have he : mfderiv K Kℝ H x = ContinuousLinearMap.inl ℝ (MorseModel 3) ℝ := mfderiv_prod_left
+    exact he ▸ hh.hasMFDerivAt
+  have hL : ∀ v : MorseModel 3, d (v,0) = (v,0) := by
+    have hcomp := hT.hasMFDerivAt.comp x hH
+    have he : T ∘ H = H := funext hzero
+    rw [he] at hcomp
+    exact fun v => (congrArg (fun a : MorseModel 3 →L[ℝ] (MorseModel 3 × ℝ) => a v)
+      (hH.mfderiv.symm.trans hcomp.mfderiv)).symm
+  let V : ℝ → L × ℝ := fun t => (x,t)
+  have hV : HasMFDerivAt 𝓘(ℝ, ℝ) Kℝ V (0 : ℝ)
+      (ContinuousLinearMap.inr ℝ (MorseModel 3) ℝ) := by
+    have hv : MDifferentiableAt 𝓘(ℝ, ℝ) Kℝ V 0 :=
+      mdifferentiableAt_const.prodMk mdifferentiableAt_id
+    have he : mfderiv 𝓘(ℝ, ℝ) Kℝ V 0 = ContinuousLinearMap.inr ℝ (MorseModel 3) ℝ := mfderiv_prod_right
+    exact he ▸ hv.hasMFDerivAt
+  let k : ℝ → ℝ := fun t => (T (x,t)).2
+  have hk : HasDerivAt k (d (0,1)).2 0 := by
+    have hcomp := hT.hasMFDerivAt.comp (0 : ℝ) hV
+    have hs : HasMFDerivAt Kℝ 𝓘(ℝ, ℝ) (@Prod.snd L ℝ) (T (x,0))
+        (ContinuousLinearMap.snd ℝ (MorseModel 3) ℝ) := hasMFDerivAt_snd _
+    let dₖ : ℝ →L[ℝ] ℝ := (ContinuousLinearMap.snd ℝ (MorseModel 3) ℝ).comp
+      (d.comp (ContinuousLinearMap.inr ℝ (MorseModel 3) ℝ))
+    have hm : HasMFDerivAt 𝓘(ℝ, ℝ) 𝓘(ℝ, ℝ) k 0 dₖ := hs.comp (0 : ℝ) hcomp
+    have hf : HasFDerivAt k dₖ 0 := hm.hasFDerivAt
+    exact hf.hasDerivAt
+  have hk0 : k 0 = 0 := congrArg Prod.snd (hzero x)
+  have hVs : V ⁻¹' T.source ∈ 𝓝 (0 : ℝ) :=
+    hV.continuousAt.preimage_mem_nhds (T.open_source.mem_nhds (hsource x))
+  have hn : 0 ≤ (d (0,1)).2 := by
+    refine ge_of_tendsto hk.tendsto_slope_zero_right ?_
+    filter_upwards [mem_nhdsWithin_of_mem_nhds hVs,
+      (self_mem_nhdsWithin : Ioi (0 : ℝ) ∈ 𝓝[>] 0)] with t ht ht'
+    have ht₀ : 0 < t := ht'
+    simpa only [zero_add, hk0, sub_zero, smul_eq_mul] using
+      mul_nonneg (inv_nonneg.mpr ht₀.le) (hside (x,t) ht ht₀).le
+  have hinj : Function.Injective d :=
+    ((T.isLocalDiffeomorphAt Kℝ Kℝ ∞ (hsource x)).mfderivToContinuousLinearEquiv (by simp)).injective
+  refine ⟨hL, lt_of_le_of_ne hn ?_, hk⟩
+  intro he
+  let v := (d (0,1)).1
+  have hdv : d (0,1) = (v,0) := Prod.ext rfl he.symm
+  have hv : d (0,1) = d (v,0) := hdv.trans (hL v).symm
+  exact one_ne_zero (congrArg Prod.snd (hinj hv))
 
 end
 

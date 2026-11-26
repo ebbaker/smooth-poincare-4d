@@ -46,7 +46,8 @@ theorem exists_markedPatchDiffeomorph_of_compactCover
   · intro y hy
     apply e.injective
     change e (e.symm y) = f ((P i).symm y)
-    rw [e.apply_symm_apply, hEq i ((P i).map_target hy), (P i).right_inv hy]
+    exact (e.apply_symm_apply y).trans
+      (((hEq i ((P i).map_target hy)).trans ((P i).right_inv hy)).symm)
   · intro y
     obtain ⟨x, rfl⟩ := e.surjective y
     obtain ⟨i, hi⟩ := hCover x

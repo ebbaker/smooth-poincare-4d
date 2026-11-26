@@ -192,3 +192,7 @@ The [source records R119–R121](../papers/investigations-1/03_first_order_twist
 [E63–E67 source record](SOURCE_NOTES_MASTER_BALANCED_DISKS_20261125.md) gives the checked passages for marked bisection, relative transgression, critical polar comparison, spin boundary conditions and exact compactness.
 
 The [E69–E71 source record](SOURCE_NOTES_MASTER_CHARGED_FLOW_20261125.md) gives the primary inputs for the boundary form, local variational test and smoothing at the charged radius.
+
+## Marked mixed surgery cuts, 26 November 2026
+
+The [primary passage record](SOURCE_NOTES_COLLAR_SURGERY_20261126.md) documents positive-scalar-curvature domination and compact band comparison on the two normalized mixed cuts, the probe-framing test, and the corresponding smooth topology inputs.

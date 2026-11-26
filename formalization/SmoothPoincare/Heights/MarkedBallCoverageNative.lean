@@ -34,9 +34,12 @@ private theorem connectedSpace_closedCell (n : ℕ) : ConnectedSpace (ClosedCell
       convex_closedBall (0 : EuclideanSpace ℝ (Fin n)) (1 : ℝ)
   exact isConnected_iff_connectedSpace.mp (hConvex.isConnected ⟨0, by simp⟩)
 
+private theorem mem_birthBall_iff {x : V} : x ∈ B ↔ ‖x‖ ≤ 1 :=
+  Metric.mem_closedBall.trans (by rw [dist_zero_right])
+
 /-- The actual two chart images exhaust the incoming body. The image of
 the native handle meets each image at its specified attaching foot, so
-the entire trace is connected. No model-side data enter this argument. -/
+the entire trace is connected. -/
 theorem connectedTrace_of_twoBirthCharts
     (L R : PartialDiffeomorph 𝓘(ℝ,V) J V M ∞)
     (hL : B ⊆ L.source) (hR : B ⊆ R.source)
@@ -45,16 +48,20 @@ theorem connectedTrace_of_twoBirthCharts
     (hLeftFoot : (φ (aL, closedCellCenter 3)).val ∈ L '' B)
     (hRightFoot : (φ (aR, closedCellCenter 3)).val ∈ R '' B) :
     ConnectedSpace T := by
-  let lowerL : ClosedCell 4 → X := fun x =>
-    ⟨L x.val, hBody ▸ mem_union_left _ ⟨x.val, Metric.mem_closedBall_zero_iff.mpr x.property, rfl⟩⟩
-  let lowerR : ClosedCell 4 → X := fun x =>
-    ⟨R x.val, hBody ▸ mem_union_right _ ⟨x.val, Metric.mem_closedBall_zero_iff.mpr x.property, rfl⟩⟩
+  let lowerL : ClosedCell 4 → X := fun x => ⟨L x.val, by
+    change L x.val ∈ f ⁻¹' Iic c
+    rw [← hBody]
+    exact mem_union_left _ ⟨x.val, mem_birthBall_iff.mpr x.property, rfl⟩⟩
+  let lowerR : ClosedCell 4 → X := fun x => ⟨R x.val, by
+    change R x.val ∈ f ⁻¹' Iic c
+    rw [← hBody]
+    exact mem_union_right _ ⟨x.val, mem_birthBall_iff.mpr x.property, rfl⟩⟩
   have hLowerL : Continuous lowerL :=
     (L.contMDiffOn.continuousOn.comp_continuous continuous_subtype_val
-      (fun x => hL (Metric.mem_closedBall_zero_iff.mpr x.property))).subtype_mk _
+      (fun x => hL (mem_birthBall_iff.mpr x.property))).subtype_mk _
   have hLowerR : Continuous lowerR :=
     (R.contMDiffOn.continuousOn.comp_continuous continuous_subtype_val
-      (fun x => hR (Metric.mem_closedBall_zero_iff.mpr x.property))).subtype_mk _
+      (fun x => hR (mem_birthBall_iff.mpr x.property))).subtype_mk _
   let : ConnectedSpace (ClosedCell 1) := connectedSpace_closedCell 1
   let : ConnectedSpace (ClosedCell 3) := connectedSpace_closedCell 3
   let : ConnectedSpace (ClosedCell 4) := connectedSpace_closedCell 4
@@ -63,13 +70,13 @@ theorem connectedTrace_of_twoBirthCharts
   let A := Handle.cell φ
   have hAL : (range A ∩ range L').Nonempty := by
     obtain ⟨x, hx, hEq⟩ := hLeftFoot
-    let x' : ClosedCell 4 := ⟨x, Metric.mem_closedBall_zero_iff.mp hx⟩
+    let x' : ClosedCell 4 := ⟨x, mem_birthBall_iff.mp hx⟩
     refine ⟨L' x', ?_, mem_range_self _⟩
     refine ⟨Handle.attachingInclusion 1 3 (aL, closedCellCenter 3), ?_⟩
     exact (Handle.adjunction_coherence φ _).trans (congrArg (Handle.lower φ) (Subtype.ext hEq.symm))
   have hAR : (range A ∩ range R').Nonempty := by
     obtain ⟨x, hx, hEq⟩ := hRightFoot
-    let x' : ClosedCell 4 := ⟨x, Metric.mem_closedBall_zero_iff.mp hx⟩
+    let x' : ClosedCell 4 := ⟨x, mem_birthBall_iff.mp hx⟩
     refine ⟨R' x', ?_, mem_range_self _⟩
     refine ⟨Handle.attachingInclusion 1 3 (aR, closedCellCenter 3), ?_⟩
     exact (Handle.adjunction_coherence φ _).trans (congrArg (Handle.lower φ) (Subtype.ext hEq.symm))
@@ -86,9 +93,9 @@ theorem connectedTrace_of_twoBirthCharts
     · exact mem_union_left _ (mem_union_left _ (mem_range_self d))
     · have hx : x.val ∈ (L '' B) ∪ (R '' B) := hBody.symm ▸ x.property
       rcases hx with ⟨y, hy, he⟩ | ⟨y, hy, he⟩
-      · exact mem_union_left _ (mem_union_right _ ⟨⟨y, Metric.mem_closedBall_zero_iff.mp hy⟩,
+      · exact mem_union_left _ (mem_union_right _ ⟨⟨y, mem_birthBall_iff.mp hy⟩,
           congrArg (Handle.lower φ) (Subtype.ext he)⟩)
-      · exact mem_union_right _ ⟨⟨y, Metric.mem_closedBall_zero_iff.mp hy⟩,
+      · exact mem_union_right _ ⟨⟨y, mem_birthBall_iff.mp hy⟩,
           congrArg (Handle.lower φ) (Subtype.ext he)⟩
   exact connectedSpace_iff_univ.mpr (hCover ▸ hConnected)
 

@@ -1,0 +1,48 @@
+# Independent check of the two-width cutoff estimates
+
+26 November 2026 · Prepared for Edward B. Baker III with OpenAI Codex assistance. CDS-E01 / DEF-E03, reader 1, frozen revision 1. The request records GPT-6.2 Sol/ultra. The serving model and reasoning effort are unavailable to this reader. The checkout is `c8fb08dcf2e39ae68d4c9d9ebd6a69893ce9cce4`. All 17 original source hashes and all four note hashes in the request matched. The two estimates below were independently recomputed in the nominated charts, with smooth oriented Riemannian metrics and the real two-form Hilbert–Schmidt convention. [Frozen review request](../research-progress/handoffs/TWO_WIDTH_AND_DISK_REVIEW_20261126.md)
+
+**Assessment.** The fixed-source cost and signed second-jet coefficient check out, including the exact endpoint maximum for a nonzero trace-free second jet. The supplied-chart approximate cost checks out, including unequal widths, the term quadratic in the first normal jet and the nonlinear coefficient at fixed face amplitude. The approximate calculation controls the leading peak and permits the strict joined positivity test. No material correction is required.
+
+## Exact round umbilic face
+
+With the supplied outward normal and $K=\frac12\partial_t h_0$, the conformal normal is $e^{-u}\nu$ and the transformed second fundamental form is $e^u(K+\nu(u)h_0)$. Prescribing $u$ to give the unit round face metric and $\nu(u)=-H/3$ therefore makes the face totally geodesic in the same angular marking. Smooth extension of the value and normal derivative is available in the original tubular chart. On passing to the new signed normal exponential chart, composition with its foot-point map recovers the angle and its signed distance recovers the normal parameter. For an initial Gaussian parameter $q$, the new normal derivative of $q$ is $e^{-u|_\Sigma}>0$ at every point of the face. Compactness gives a positive range on each side that fits inside the old physical collar. Different available widths cause no matching problem because both half-cutoffs are constant and equal near the seam. The inverse angular marking of each new face comes from the same normal foot map. The two copies of the middle marking have opposite induced boundary orientations, and their composition gives the actual reassembly. Conformal restoration leaves both regional chiral measures invariant. [Exact normalization and supplied chart](../01_collar_deformation_and_adapted_coordinates/notes/EXACT_FACE_AND_BENDING.md)
+
+Set $A=\tfrac12\partial_t^2 h_0$ in the normalized chart and write $t=\epsilon_j w_j r$ on side $j$ with $\epsilon_L=-1$, $\epsilon_R=1$. Each term obtained by twice differentiating $(1-s\chi_j(r))(h_t-\gamma)$ is bounded independently of the widths because the undifferentiated, once differentiated and twice differentiated mismatches have orders $w_j^2,w_j,1$. The principal normal curvature in a metric-orthonormal frame is
+
+$$
+R_{0i0k}=-(1-sB_j)A_{ik}+O(w_j),\qquad B_j=\tfrac12(r^2\chi_j)'',
+$$
+
+with mixed block $O(w_j)$ and tangential block $I+O(w_j^2)$. The chiral blocks are the half-sum of the normal and tangential blocks plus signed mixed terms. Taking their trace-free parts gives $-\tfrac12(1-sB_j)A^\circ+O(w_j)$ for either sign. The reference volume differs by $1+O(w_j^2)$. These remainders obey the same estimates with up to two $s$ derivatives. The metric depends affinely on $s$ in the normalized chart, and its inverse, volume, connection and curvature are smooth functions of uniformly bounded jets on the fixed ellipticity interval.
+
+Since $(r^2\chi_j)'$ vanishes at both ends, $\int B_j=0$. To check the second profile integral, set $u=r^2\chi_j/2$ and expand $(u'')^2$ as the square of $r^2\chi_j''/2+2r\chi_j'+\chi_j$. Integration by parts cancels the terms involving $\int r^2(\chi_j')^2$ and $\int\chi_j^2$. Thus $\int B_j^2=\tfrac14\int r^4(\chi_j'')^2>0$. The full-side change is the strip change and satisfies
+
+$$
+\Delta_{j,\sigma}(s)=w_j s^2\frac{\|A^\circ\|_2^2}{16}
+\int_0^1r^4(\chi_j'')^2\,dr+O_{C_s^2}(w_j^2).
+$$
+
+For $A^\circ\ne0$ and sufficiently small widths, the second $s$ derivative is strictly positive and the value at $1$ is above the initial value $0$. A convex function takes its maximum at an endpoint, so the individual side and joined maxima occur at $1$. The proof of this criterion uses the derivative estimate. When the coefficient vanishes, the uniform absolute $O(w_j^2)$ remainder still applies and gives no endpoint selection. The independent uniform cost $O(w_L+w_R)$ is enough for the strict wall on a fixed positive subcritical source. [Joined positivity and cap construction](../../../master/manuscript/variational_comparison.tex)
+
+## Approximate jets in the supplied Gaussian chart
+
+For $u=h_t-\gamma$ and $v=(1-s\chi)u$, the zeroth, first and second normal derivatives on a width $w$ are bounded in the relevant angular norms by constant multiples of
+
+$$
+\alpha+w\beta+w^2M,qquad \alpha/w+\beta+wM,\qquad \alpha/w^2+\beta/w+M .
+$$
+
+Here $\alpha,\beta,M$ are the stated angular $C^2$ controls, and the constants use the fixed derivatives of $\chi$. The derivative $\partial_t$ through the profile supplies the side sign $\epsilon_j$ and the second derivative supplies $w^{-2}$ on either side. In the product connection the curvature-density linear terms have bounds from $|v|$ and $|\bar\nabla^2v|$. The other terms are bounded by $C(|v|^2+|v||\bar\nabla^2v|+|\bar\nabla v|^2)$, using smooth algebraic coefficient functions on the ellipticity interval and bounded reference curvature. With $Z=\alpha/w^{3/2}+\beta/\sqrt w+\sqrt wM$, the angular and normal derivatives through orders zero, one and two are bounded by $Cw^{3/2}Z,Cw^{1/2}Z,Cw^{-1/2}Z$, respectively, when $w\le1$. Bound $|v|$ in the mixed quadratic term by the ellipticity constants, and integrate the square using the reference strip volume $A_\gamma w$. This gives the stated $C\sqrt{A_\gamma}(Z+w^{3/2}Z^2)$ norm on each half independently. In particular the quadratic first-derivative contribution is accounted for without any comparability of widths. The signed full-side costs subtract the raw strip energies, as the metric agrees with the source outside that strip. [Approximate estimate and physical jet controls](../01_collar_deformation_and_adapted_coordinates/notes/APPROXIMATE_PHYSICAL_JETS.md) · [Weyl density convention](../../../master/manuscript/first_order_splice.tex)
+
+For the trace-free mode $q$ and $f_s=(1-s\chi)(a+bt)$, the normal curvature variation is $-f_s''q/2$. Taking the trace-free part of the chiral half-sum gives $-f_s''q/4$ in both signs. Direct differentiation gives
+
+$$
+f_s''=-s\left[aw^{-2}\chi''+\epsilon_j b w^{-1}(r\chi''+2\chi')\right].
+$$
+
+The profiles $\chi''$ and $(r\chi)''$ are linearly independent since $(A+Br)\chi$ could be affine only if it vanished identically, by its behavior near the two endpoints. The Gram form therefore gives $J_j\asymp a^2/w^3+b^2/w$, with the signed mixed term prescribed by $\epsilon_j$. With $\delta=|a|+w|b|$, the jets satisfy $|f_s|\le C\delta$, $|f_s'|\le C\delta/w$ and $|f_s''|\le C\delta/w^2$. The lower-order linear and nonlinear density terms have norm at most $C(w+\delta)\sqrt{J_j}$. Independently the **incoming** norm is at most $C\sqrt w(\delta+|b|+b^2)\le C(w+\delta)\sqrt{J_j}$. The $b^2$ term accounts for the incoming quadratic curvature even for a family with large $|b|$ on shrinking physical charts where $\delta$ remains small. Squaring and subtracting yields $s^2J_j+O((w+\delta)J_j)$ uniformly in $s$. The upper bound on the whole interval and the value at $1$ give the asserted leading peak, with the stated error even at unequal widths. This level of error control alone does not identify the maximizer of the finite-width approximate path.
+
+For fixed small $a\ne0$ and fixed $b$, use the diagonal lengths $l_i=1+a(1-s\chi)q_i$ in the limiting variable $r$. The rescaled normal block has diagonal $-l_i''/(2l_i)+(l_i')^2/(4l_i^2)$ and the tangent block has complementary diagonal $-(l_j'/2l_j)(l_k'/2l_k)$. The mixed terms vanish after multiplying curvature by $w^2$, and the density retains $\sqrt{\prod l_i}$. The chiral half-sum and mean subtraction produce the stated nonlinear $w^{-3}$ coefficient. After factoring $s^2a^2$, it has positive leading constant $\|q\|_2^2\int(\chi'')^2/16$ and the factor's first $s$ derivative is $O(|a|)$, because all coefficients are smooth functions of $a$, $sa$ and the fixed profile. This proves the monotonicity of the limiting coefficient for sufficiently small fixed $|a|$. In the pure first-jet case $a=0$ and fixed $b$, $\delta=w|b|$ gives an error tending to zero relative to the $w^{-1}$ leading coefficient. [Mode and limiting coefficients](../01_collar_deformation_and_adapted_coordinates/notes/APPROXIMATE_PHYSICAL_JETS.md#one-nonround-mode-and-its-sharp-cost)
+
+On a closed homotopy sphere the two joined totals agree, and a positive starting class gives positive capped ends if the actual joined path stays strictly below $2T=8\pi^2$. At the endpoint the marked product is stretched at zero Weyl cost before compactification, so the capped energies are the two complete-side energies. For an arbitrary spherical cut, the master's finite-cut comparison applies with the supplied cap hypotheses and actual boundary identifications. The approximate estimates concern the specific physical chart and intrinsic interpolation, with the peak and signed costs needed for those tests. [Strict joined wall and short cut](../../../master/manuscript/variational_comparison.tex) · [Finite cut and oriented reassembly](../../../master/manuscript/marked_cut.tex)

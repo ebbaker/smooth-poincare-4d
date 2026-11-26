@@ -1,0 +1,187 @@
+import SmoothPoincare
+
+/-! # FOT-E43 public declarations
+
+26 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance.
+The serving model and reasoning effort are unavailable.
+The working intake was the assessed FOT-E42 delivery over
+`95a4f50eb9ec6e0e98454170279f45a66b000211`.
+
+These 70 newly public authored declarations were indexed from the compiled
+Lean source positions. Each declaration is checked through the sole topic
+import together with its transitive axioms.
+-/
+
+/-! ## SmoothPoincare.Heights.ClosedMarkedControl -/
+#check @SmoothPoincare.ClosedMarkedControl.Circle
+#print axioms SmoothPoincare.ClosedMarkedControl.Circle
+#check @SmoothPoincare.ClosedMarkedControl.Disk
+#print axioms SmoothPoincare.ClosedMarkedControl.Disk
+#check @SmoothPoincare.ClosedMarkedControl.ThreeSphere
+#print axioms SmoothPoincare.ClosedMarkedControl.ThreeSphere
+#check @SmoothPoincare.ClosedMarkedControl.splitSpectatorTube
+#print axioms SmoothPoincare.ClosedMarkedControl.splitSpectatorTube
+#check @SmoothPoincare.ClosedMarkedControl.splitExterior
+#print axioms SmoothPoincare.ClosedMarkedControl.splitExterior
+#check @SmoothPoincare.ClosedMarkedControl.splitExteriorCoordinates
+#print axioms SmoothPoincare.ClosedMarkedControl.splitExteriorCoordinates
+#check @SmoothPoincare.ClosedMarkedControl.splitExterior_torus
+#print axioms SmoothPoincare.ClosedMarkedControl.splitExterior_torus
+#check @SmoothPoincare.ClosedMarkedControl.splitTorusCollar
+#print axioms SmoothPoincare.ClosedMarkedControl.splitTorusCollar
+#check @SmoothPoincare.ClosedMarkedControl.splitTorusCollar_domains
+#print axioms SmoothPoincare.ClosedMarkedControl.splitTorusCollar_domains
+#check @SmoothPoincare.ClosedMarkedControl.splitTorusCollar_inverse_coordinates
+#print axioms SmoothPoincare.ClosedMarkedControl.splitTorusCollar_inverse_coordinates
+#check @SmoothPoincare.ClosedMarkedControl.splitTorusCollar_transport
+#print axioms SmoothPoincare.ClosedMarkedControl.splitTorusCollar_transport
+#check @SmoothPoincare.ClosedMarkedControl.splitTorusCollar_at_zero
+#print axioms SmoothPoincare.ClosedMarkedControl.splitTorusCollar_at_zero
+#check @SmoothPoincare.ClosedMarkedControl.slid_dualTube_and_inverse
+#print axioms SmoothPoincare.ClosedMarkedControl.slid_dualTube_and_inverse
+#check @SmoothPoincare.ClosedMarkedControl.slidClosedAssembly
+#print axioms SmoothPoincare.ClosedMarkedControl.slidClosedAssembly
+#check @SmoothPoincare.ClosedMarkedControl.slidClosedAssembly_representatives
+#print axioms SmoothPoincare.ClosedMarkedControl.slidClosedAssembly_representatives
+
+/-! ## SmoothPoincare.Heights.MarkedBallCoverage -/
+#check @SmoothPoincare.exists_markedPatchDiffeomorph_of_compactCover
+#print axioms SmoothPoincare.exists_markedPatchDiffeomorph_of_compactCover
+#check @SmoothPoincare.exists_markedPatchDiffeomorph_of_unitBallCover
+#print axioms SmoothPoincare.exists_markedPatchDiffeomorph_of_unitBallCover
+
+/-! ## SmoothPoincare.Heights.MarkedBallCoverageModel -/
+#check @SmoothPoincare.markedEdgeModelHeight
+#print axioms SmoothPoincare.markedEdgeModelHeight
+#check @SmoothPoincare.markedEdgeModelFlatten
+#print axioms SmoothPoincare.markedEdgeModelFlatten
+#check @SmoothPoincare.markedEdgeModelFlatten_heightDefect
+#print axioms SmoothPoincare.markedEdgeModelFlatten_heightDefect
+#check @SmoothPoincare.markedEdgeModelFlatten_images
+#print axioms SmoothPoincare.markedEdgeModelFlatten_images
+
+/-! ## SmoothPoincare.Heights.MarkedBallCoverageModelCollar -/
+#check @SmoothPoincare.markedEdgeModelCollar
+#print axioms SmoothPoincare.markedEdgeModelCollar
+#check @SmoothPoincare.markedEdgeModelCollar_coordinates
+#print axioms SmoothPoincare.markedEdgeModelCollar_coordinates
+#check @SmoothPoincare.markedEdgeRoundBallCollar
+#print axioms SmoothPoincare.markedEdgeRoundBallCollar
+#check @SmoothPoincare.markedEdgeRoundBallCollar_coordinates
+#print axioms SmoothPoincare.markedEdgeRoundBallCollar_coordinates
+
+/-! ## SmoothPoincare.Heights.MarkedBallCoverageNative -/
+#check @SmoothPoincare.IsolatedOneHandle.connectedTrace_of_twoBirthCharts
+#print axioms SmoothPoincare.IsolatedOneHandle.connectedTrace_of_twoBirthCharts
+#check @SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.exists_markedBall_of_nativeRepCover
+#print axioms SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.exists_markedBall_of_nativeRepCover
+
+/-! ## SmoothPoincare.Heights.OutgoingCollarComparison -/
+#check @SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.exists_outgoingCollarComparison
+#print axioms SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.exists_outgoingCollarComparison
+#check @SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.exists_outgoingCollarComparison_toNextCut
+#print axioms SmoothPoincare.IsolatedOneHandle.RetainedRoundedTrace.exists_outgoingCollarComparison_toNextCut
+#check @SmoothPoincare.IsolatedOneHandle.outgoingCollarTransition_fixedOn_iff
+#print axioms SmoothPoincare.IsolatedOneHandle.outgoingCollarTransition_fixedOn_iff
+#check @SmoothPoincare.IsolatedOneHandle.outgoingCollarTransition_normalDerivative_pos
+#print axioms SmoothPoincare.IsolatedOneHandle.outgoingCollarTransition_normalDerivative_pos
+
+/-! ## SmoothPoincare.PhysicalScales.PointedTerminalBuffer -/
+#check @SmoothPoincare.pointedTerminalBuffer_tendsto_traceFreeRicci
+#print axioms SmoothPoincare.pointedTerminalBuffer_tendsto_traceFreeRicci
+#check @SmoothPoincare.pointedTerminalBuffer_traceFreeRicci_charge
+#print axioms SmoothPoincare.pointedTerminalBuffer_traceFreeRicci_charge
+
+/-! ## SmoothPoincare.PhysicalScales.TerminalMetricJets -/
+#check @SmoothPoincare.terminalTraceFreeRicciSq_of_twoJets
+#print axioms SmoothPoincare.terminalTraceFreeRicciSq_of_twoJets
+
+/-! ## SmoothPoincare.PhysicalScales.TerminalVolumeEscape -/
+#check @SmoothPoincare.pointedTerminal_noncompact_of_volume_escape
+#print axioms SmoothPoincare.pointedTerminal_noncompact_of_volume_escape
+#check @SmoothPoincare.pointedTerminal_noncompact_of_realVolume_escape
+#print axioms SmoothPoincare.pointedTerminal_noncompact_of_realVolume_escape
+
+/-! ## SmoothPoincare.Variational.ChargedCorePayment -/
+#check @SmoothPoincare.eventually_no_paid_cap_of_original_charged_markedDisk
+#print axioms SmoothPoincare.eventually_no_paid_cap_of_original_charged_markedDisk
+#check @SmoothPoincare.original_markedDisk_charge_eq_and_le_excess_of_arbitrarily_small_cap_drift
+#print axioms SmoothPoincare.original_markedDisk_charge_eq_and_le_excess_of_arbitrarily_small_cap_drift
+
+/-! ## SmoothPoincare.Variational.ChargedScalarSlice -/
+#check @SmoothPoincare.ricciFlow_scalar_pos_of_intrinsicTraceFreeRicciSq_pos
+#print axioms SmoothPoincare.ricciFlow_scalar_pos_of_intrinsicTraceFreeRicciSq_pos
+#check @SmoothPoincare.ricciFlow_exists_scalar_pos_in_charged_openSet
+#print axioms SmoothPoincare.ricciFlow_exists_scalar_pos_in_charged_openSet
+#check @SmoothPoincare.ricciFlow_exists_scalar_pos_in_charged_ball
+#print axioms SmoothPoincare.ricciFlow_exists_scalar_pos_in_charged_ball
+
+/-! ## SmoothPoincare.Variational.NonconformalDiskSaving -/
+#check @SmoothPoincare.exists_clampedAffineMetricFamily
+#print axioms SmoothPoincare.exists_clampedAffineMetricFamily
+#check @SmoothPoincare.clampedAffineMetric_not_pointwise_conformal
+#print axioms SmoothPoincare.clampedAffineMetric_not_pointwise_conformal
+#check @SmoothPoincare.exists_firstVariation_step
+#print axioms SmoothPoincare.exists_firstVariation_step
+#check @SmoothPoincare.exists_selectedDiskSaving_of_firstVariation
+#print axioms SmoothPoincare.exists_selectedDiskSaving_of_firstVariation
+#check @SmoothPoincare.diskVariation_weightedSquare_integral_pos
+#print axioms SmoothPoincare.diskVariation_weightedSquare_integral_pos
+#check @SmoothPoincare.protectedDisk_positiveCap_allowance_lower
+#print axioms SmoothPoincare.protectedDisk_positiveCap_allowance_lower
+#check @SmoothPoincare.eventually_protectedDisk_capPrice_gt
+#print axioms SmoothPoincare.eventually_protectedDisk_capPrice_gt
+#check @SmoothPoincare.matchedDisk_positiveCap_allowance_ge_disk_minus_excess
+#print axioms SmoothPoincare.matchedDisk_positiveCap_allowance_ge_disk_minus_excess
+#check @SmoothPoincare.diskCharge_add_joinedCost_le_excess_of_cap_paid_from_saving
+#print axioms SmoothPoincare.diskCharge_add_joinedCost_le_excess_of_cap_paid_from_saving
+#check @SmoothPoincare.eventually_no_paid_cap_of_protectedDisk_charge
+#print axioms SmoothPoincare.eventually_no_paid_cap_of_protectedDisk_charge
+#check @SmoothPoincare.exists_selectedNonconformalDiskSaving_of_weightedSquare
+#print axioms SmoothPoincare.exists_selectedNonconformalDiskSaving_of_weightedSquare
+
+/-! ## SmoothPoincare.Variational.TerminalChargeTransfer -/
+#check @SmoothPoincare.intrinsicTraceFreeRicciSq_eq_ricciNormSq_sub_scalarSq
+#print axioms SmoothPoincare.intrinsicTraceFreeRicciSq_eq_ricciNormSq_sub_scalarSq
+#check @SmoothPoincare.continuous_intrinsicTraceFreeRicciSq
+#print axioms SmoothPoincare.continuous_intrinsicTraceFreeRicciSq
+#check @SmoothPoincare.intrinsicTraceFreeRicciSq_nonneg_of_finrank
+#print axioms SmoothPoincare.intrinsicTraceFreeRicciSq_nonneg_of_finrank
+#check @SmoothPoincare.intrinsicTraceFreeRicciSq_nonneg_of_orientation
+#print axioms SmoothPoincare.intrinsicTraceFreeRicciSq_nonneg_of_orientation
+#check @SmoothPoincare.ofReal_integral_intrinsicTraceFreeRicciSq_eq_lintegral
+#print axioms SmoothPoincare.ofReal_integral_intrinsicTraceFreeRicciSq_eq_lintegral
+#check @SmoothPoincare.ofReal_integral_intrinsicTraceFreeRicciSq_eq_lintegral_of_compactSpace
+#print axioms SmoothPoincare.ofReal_integral_intrinsicTraceFreeRicciSq_eq_lintegral_of_compactSpace
+#check @SmoothPoincare.exists_pos_intrinsicTraceFreeRicciSq_of_setIntegral_pos
+#print axioms SmoothPoincare.exists_pos_intrinsicTraceFreeRicciSq_of_setIntegral_pos
+#check @SmoothPoincare.exists_pos_terminalCharge_margin
+#print axioms SmoothPoincare.exists_pos_terminalCharge_margin
+#check @SmoothPoincare.tendsto_terminalBallCutoff_weylScalarCharge_of_initial_region
+#print axioms SmoothPoincare.tendsto_terminalBallCutoff_weylScalarCharge_of_initial_region
+#check @SmoothPoincare.eventually_ricciFlow_terminalBall_intrinsicRicciCharge
+#print axioms SmoothPoincare.eventually_ricciFlow_terminalBall_intrinsicRicciCharge
+
+/-! ## SmoothPoincare.Variational.TerminalChargeTransferNaturality -/
+#check @SmoothPoincare.intrinsicTraceFreeRicciSq_localPullMetric
+#print axioms SmoothPoincare.intrinsicTraceFreeRicciSq_localPullMetric
+#check @SmoothPoincare.intrinsicTraceFreeRicciSq_eq_of_partialDiffeomorph_inner
+#print axioms SmoothPoincare.intrinsicTraceFreeRicciSq_eq_of_partialDiffeomorph_inner
+#check @SmoothPoincare.integral_intrinsicTraceFreeRicciSq_image
+#print axioms SmoothPoincare.integral_intrinsicTraceFreeRicciSq_image
+
+/-! ## SmoothPoincare.Variational.TerminalChargeTransferPointed -/
+#check @SmoothPoincare.terminalPointedFlowSequence
+#print axioms SmoothPoincare.terminalPointedFlowSequence
+#check @SmoothPoincare.ricciFlow_terminalBall_intrinsicRicciCharge_pointedLimit
+#print axioms SmoothPoincare.ricciFlow_terminalBall_intrinsicRicciCharge_pointedLimit
+
+/-! ## SmoothPoincare.Variational.TerminalVolumeLimit -/
+#check @SmoothPoincare.ricciFlow_terminalPointed_noncompact_of_initialVolume
+#print axioms SmoothPoincare.ricciFlow_terminalPointed_noncompact_of_initialVolume
+
+/-! ## SmoothPoincare.Variational.TerminalVolumeRetention -/
+#check @SmoothPoincare.ricciFlow_terminal_sqrtVolume_change_le
+#print axioms SmoothPoincare.ricciFlow_terminal_sqrtVolume_change_le
+#check @SmoothPoincare.ricciFlow_terminal_volume_tendsto_atTop
+#print axioms SmoothPoincare.ricciFlow_terminal_volume_tendsto_atTop

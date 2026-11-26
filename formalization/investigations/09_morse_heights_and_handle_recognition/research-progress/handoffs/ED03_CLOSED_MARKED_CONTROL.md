@@ -1,0 +1,21 @@
+# E43-H follow-up · Split and slid marked controls
+
+26 November 2026 (UTC). Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving model and reasoning effort were unavailable. The bounded E input was working HEAD `c8fb08dcf2e39ae68d4c9d9ebd6a69893ce9cce4` with Lean `4.35.0-rc3`, DifferentialGeometry `788efe97894474c032de6dfb1289d515f613d15a` and Mathlib `c55e6e786f49471c72fbddbec5415808896aec1e`. The working marked control note has SHA-256 `6166acf3965be14e0824e28c8086edf307fb2bcc32f13febc42506657acb2acb`; the joint round control note read during the packet has SHA-256 `4aff4ed4a91e2c64c32efc05455d67827e35cac83fb848bd495223c90adbf9b4`. [Actual control trace](../../../../../papers/investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/notes/MARKED_CONTROL_AND_CLUSTER.md) · [Round control and physical latitude](../../../../../papers/investigations-1/05_collar_deformation_and_surgery/notes/PERIPHERAL_TEST_AND_ROUND_CONTROL.md)
+
+## Split tube and exterior at the marked cut
+
+Use the two orthogonal real two-planes of the supplied angular $S^3$. For every $0<\varepsilon<1$, `splitSpectatorTube` implements the actual product-framed tube
+$$
+ a(z,v)=(\sqrt{1-\varepsilon^2\|v\|^2}\,z,\varepsilon v).
+$$
+For $r=\sqrt{1-\varepsilon^2}$, `splitExteriorCoordinates` gives a complete equivalence from disk–circle coordinates to the region $\|y\|\ge\varepsilon$. Its forward map is $(u,q)\mapsto(ru,\sqrt{1-r^2\|u\|^2}\,q)$, and its inverse is $(x,y)\mapsto(x/r,y/\|y\|)$. The inverse includes the locus $x=0$. The domain condition keeps $y$ nonzero. `splitExterior_torus` matches the complete unswapped pair $(z,w)$ along the shared rim, so it checks the longitudinal and meridional parameters with their prescribed framing together.
+
+`splitTorusCollar` shifts the existing smooth round seam to this actual tube. Its open parameter interval is $(-\varepsilon^2,1-\varepsilon^2)$ and its target is the region with both blocks nonzero. For every parameter $(z,w,t)$ in that interval, the inverse recovers both angular arguments and $t=\|y\|^2-\varepsilon^2$. The exterior is the $t\ge0$ side and the common torus is exactly the marked zero slice. This is a smooth angular torus chart in the supplied $S^3$ marking. The round metric test uses a separate four-dimensional physical latitude and its marked identification. [Split and slid Lean declarations](../../../../SmoothPoincare/Heights/ClosedMarkedControl.lean)
+
+## Dual spectator and closing assembly
+
+`exists_splitClosingHomeomorph` builds the split output level directly as the adjunction of two copies of $D^2\times S^1$ along the full marked edge $(z,w)\mapsto(z,w)$. It maps the exterior coordinates $(u,q)$ to $(q,\iota_-(u))$ and the inserted-face coordinates to $(q,\iota_+(u))$. The two complete hemispheres cover $S^2$ and meet only along the specified rim, which gives injectivity of the quotient map and both inverse rules. This verifies the product closing marking topologically. [Split output Lean proof](../../../../SmoothPoincare/Heights/ClosedSplitBoundary.lean)
+
+`slid_dualTube_and_inverse` uses the supplied boundary comparison $F_b$ and its full spectator equation $F_b b_{S'}=b_S$. With $\gamma'=\gamma\circ F_b$, the dual parametrization $\gamma' b_{S'}\operatorname{swap}$ agrees on every parameter with $\gamma b_S\operatorname{swap}$. The inverse on the dual image is the reverse boundary comparison followed by the stored outgoing disk–circle inverse and the full factor swap. The return proves both inverse equations on their correct domains.
+
+`slidClosedAssembly` constructs the homeomorphism between the closed adjunctions using $F\cup\mathrm{id}_Q$, and `slidClosedAssembly_representatives` verifies its forward and inverse on the whole lower and upper bodies. The hypotheses are the supplied body comparison, its boundary restriction, and the original closing marking. These calculations transport an actual marked control once those maps are given. The geometric slide, its isotopy extension, the attachment cancellations and smooth compatibility of the full closed collars are inputs from the control construction. This packet gives no such maps for an arbitrary selected edge.

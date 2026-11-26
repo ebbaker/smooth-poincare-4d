@@ -1,15 +1,15 @@
 # Handle and surgery research register
 
-26 November 2026 · For Edward B. Baker III with OpenAI Codex assistance. [Plan and completion tests](../research-plan/PLAN.md) · [Input versions](../references/README.md)
+26 November 2026, for Edward B. Baker III with OpenAI Codex. [Plan](../research-plan/PLAN.md) · [Source revisions](../../references/README.md) · [Parent assessment](../../reviews/TWO_MIXED_CUTS_AND_CHARGED_DISK_20261126.md)
 
-| Task | State | Next evidence |
+| Task | Assessed state | Evidence or next input |
 | --- | --- | --- |
-| SP4-CDS-SUR-B01 | Ready on activation | Select the dotted 1-handle and meridional 2-handle with an identified spectator, ends and candidate level. |
-| SP4-CDS-SUR-E01 | Waiting for B01 to freeze the diagram | Replay geometric cancellation with the upper gluing and all remaining tubes. |
-| SP4-CDS-SUR-B02 | Waiting for the first trace or a scoped failure | Move to two interacting attachments and compare both orders, the dual picture and the connected cluster. |
-| SP4-CDS-SUR-E02 | Reserved for one proposed move on supplied data | Identify the returned smooth trace, reductions and complement, or locate a failed marking. |
-| SP4-CDS-SUR-B03 | Ready on activation as an independent benchmark | Formulate the budget on the actual source of the charged-disk theorem, including the protected core if enlarged. |
-| SP4-CDS-SUR-E03 | Reserved for a measured physical source and returned path | Test the finite cap or replacement inequality on that index. |
-| SP4-CDS-SUR-B04 | Waiting for a resolved class or a measured obstruction | Weaken one special hypothesis, identify the first uncovered configuration and prove a repeatable selection implication where possible. |
+| SP4-CDS-SUR-B01 | Control, residual embedding and post-cancellation cut fixed | Split zero-framed tube and lower belt in $S^1\times S^2$, then the marked $S^3$ after the meridian attachment. [Trace](../notes/MARKED_CONTROL_AND_CLUSTER.md) |
+| SP4-CDS-SUR-E01 | Control and framed slide checked | Both orders and their duals, chart inverses, upper gluing, actual round metric on the spherical cut. [Readback](../../reviews/CONTROL_READER.md) |
+| SP4-CDS-SUR-B02 | Both normalized intermediate cuts and whole cluster assessed | The individual cuts have different recognizing PSC types. The complete lower cluster meets the upper body at $S^1\times S^2$. [Cut tests](../notes/POSITIVE_SCALAR_INTERMEDIATE_CUTS.md) |
+| SP4-CDS-SUR-E02 | Strict reduction and direct recognition on scoped families | The three-crossing clean bigon carries movable spectators. The peripheral element detects bare winding-one cancellation. Both orders of the published Mazur double are compared. [Peripheral test](../../notes/PERIPHERAL_TEST_AND_ROUND_CONTROL.md) · [Reverse order](../../reviews/REVERSE_ORDER_READER.md) |
+| SP4-CDS-SUR-B03 | Finite physical budget and protected-core requirement derived | Exact conformally round umbilic disk boundary forces equal signed disk masses bounded by the minimizing excess. The enlarged disk retains its full signed exterior increase. [Budget](../notes/CHARGED_DISK_BUDGET.md) |
+| SP4-CDS-SUR-E03 | Exact and compact alternatives excluded on late charged indices; measured competitor pending | A finite competitor requires subcritical joined peak and full retained cap cost below the available saving, or independent cap positivity. [Review](../../reviews/DISK_AND_COMPACTNESS_READER.md) |
+| SP4-CDS-SUR-B04 | Third tube and larger one-lower-handle class tested | A successful winding-one prefix lowers $n_2$ for arbitrary residuals. Two certified prefixes recognize the $(1,1,3,2,1)$ subclass. In a longer one-sided link the boundary alone leaves the marked trace open. [Three-handle check](../../reviews/THREE_HANDLE_READER.md) |
 
-The baseline diagram is a known control. A general geometric cancellation, a universally suitable separating collar, positive subcritical entry and closure of the uncovered cases are research targets. [Parent coverage](../../research-progress/REGISTER.md)
+Next select a protected separator, a measured band or actual link move on an untreated presentation. A different smooth type or a freely re-marked face supplies no energy bound on the minimizing source. [Continuation](../../continuation-notes/AFTER_TWO_MIXED_CUTS_20261126.md)

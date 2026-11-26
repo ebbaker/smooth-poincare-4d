@@ -1,5 +1,7 @@
 # Overall formalization milestones
 
+- **26 November 2026 · FOT-E43.** Compared both actual collars, constructed a calibrated whole-ball model, derived the finite and limiting net-saving obstruction, and transferred the modified terminal Ricci charge through the actual pointed embeddings. [Assessment](reviews/COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md) · [Continuation](continuation-notes/AFTER_COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md).
+
 - **25 November 2026 · FOT-E42.** The original marked trace now has a whole rounded comparison. Positive curved disk references are attained, with separate signed and full costs. A global Euler current transports a fixed terminal test on the actual modified flow. [Assessment](reviews/MARKED_GLUE_AND_CURVED_COST_20261125.md).
 
 - **25 November 2026 · FOT-E41.** The native block and its common signed rim strip are explicit. Every positive flat replacement on a balanced disk has a quantified mandatory price. The modified-flow calculation reaches the local spatial Euler coefficients. [Assessment](reviews/ROUNDED_EDGES_AND_REFERENCE_COST_20261125.md).

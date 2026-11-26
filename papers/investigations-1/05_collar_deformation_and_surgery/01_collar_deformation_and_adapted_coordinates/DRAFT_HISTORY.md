@@ -5,3 +5,7 @@
 The design specifies the exact conformally round, umbilic face, the two-width interpolation, and the gauge and derivative estimates that an approximate face would require. The first task replays the fixed-source calculation.
 
 Edward B. Baker III approved the investigation. OpenAI Codex assisted with setup. The [source record](references/README.md) gives input versions and available setup metadata. The [research plan](research-plan/PLAN.md), [sole live register](research-progress/REGISTER.md) and [activation note](continuation-notes/CONTINUATION.md) distinguish the proposed work from the inherited results.
+
+## 26 November 2026 · First research assessment
+
+The [fixed-cutoff calculation](notes/EXACT_FACE_AND_BENDING.md), [approximate jet estimates](notes/APPROXIMATE_PHYSICAL_JETS.md) and [compactness implication](notes/COMPACT_MARKED_COLLAR_EXCLUSION.md) price the two physical widths and track both signs. The estimates were checked independently.

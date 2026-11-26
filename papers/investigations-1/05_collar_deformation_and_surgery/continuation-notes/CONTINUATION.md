@@ -1,5 +1,7 @@
 # Continue collar deformation and marked surgery
 
+The first research session is complete. Use the [current continuation](AFTER_TWO_MIXED_CUTS_20261126.md) for the next session. The activation request below is retained at its original scope.
+
 26 November 2026 · Prepared for Edward B. Baker III with OpenAI Codex assistance. [Source versions](../references/README.md) · [Parent register](../research-progress/REGISTER.md) · [Road to SPC4](../research-plan/PLAN.md) · [Measurements](../brainstorm/notes/MARKED_COLLAR_AND_CUT_20261126.md). This handoff starts from an approved design. The exact-face calculation is a discussion input and the universal selection theorem remains open.
 
 | First decision | Recommended routing on activation | Output |

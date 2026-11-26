@@ -1,5 +1,7 @@
 # Morse heights and handle recognition · Milestones
 
+- **26 November 2026 · FOT-E43.** Compared both native collars on one signed strip. Reduced whole marked-ball recognition to compatible forward germs on the native representatives and constructed the independent quartic model with its signed collar. [Assessment](../reviews/COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md).
+
 - **25 November 2026 · FOT-E42.** Constructed two complete birth charts, the open overlaps at the actual native feet, and the full original-to-refined rounded trace with marked outgoing level. An open two-sided collar extends the retained map on every inward slice. [Assessment](../reviews/MARKED_GLUE_AND_CURVED_COST_20261125.md).
 
 - **25 November 2026 · FOT-E41.** Computed the actual component incidence and the birth body. Both native feet and the signed outgoing rims now have explicit block maps with inverses. [Assessment](../reviews/ROUNDED_EDGES_AND_REFERENCE_COST_20261125.md).

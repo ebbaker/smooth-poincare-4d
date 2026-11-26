@@ -1,5 +1,7 @@
 # Fixed-type variational descent · Milestones
 
+- **26 November 2026 · FOT-E43.** Priced the full signed disk and cap at a positive finite endpoint. On a charged protected minimizing tail, the excess excludes paying both from the net saving. Transported the terminal Ricci charge to the complete pointed limit. [Assessment](../reviews/COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md).
+
 - **25 November 2026 · FOT-E42.** Constructed positive curved matched references on the exact width and priced a separate positive cap. The physical core can have arbitrarily large full cost while both chiral measures and the four exterior tests persist. Proved the tested global Euler transgression and finite terminal-ball charge with the actual varying volumes. [Assessment](../reviews/MARKED_GLUE_AND_CURVED_COST_20261125.md).
 
 - **25 November 2026 · FOT-E41.** Realized a reference on the selected disk. Priced both signed trim costs and the complete exterior, identified the exact-matching case and advanced the spatial modified-flow transgression. [Assessment](../reviews/ROUNDED_EDGES_AND_REFERENCE_COST_20261125.md).

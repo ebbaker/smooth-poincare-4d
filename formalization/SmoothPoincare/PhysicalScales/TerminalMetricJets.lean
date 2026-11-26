@@ -1,8 +1,11 @@
 import SmoothPoincare.Variational.IntrinsicTerminalCharge
 import DifferentialGeometry.Geometry.Curvature.Bounds.MetricDerivatives
 import DifferentialGeometry.Geometry.Metric.Convergence.Curvature.RicciFromJets
-import DifferentialGeometry.Geometry.Metric.Convergence.CovariantDerivative.Continuity
-import DifferentialGeometry.Geometry.Flow.RicciFlow.Uniqueness.Forward.Data.UniformBounds
+import DifferentialGeometry.Geometry.Metric.Convergence.CovariantDerivative.Norm.Continuity
+import DifferentialGeometry.Geometry.Flow.RicciFlow.Uniqueness.Forward.Curvature.Trace
+import DifferentialGeometry.Geometry.Metric.TensorInner.Tensor0S.Algebra.TraceBound
+import DifferentialGeometry.Geometry.Metric.TensorInner.Estimates.TensorProductNorm
+import DifferentialGeometry.Geometry.Metric.Convergence.Metric.UniformEquivalence
 
 /-! # The trace-free Ricci density from the metric two-jet in a fixed buffer -/
 
@@ -108,14 +111,18 @@ theorem terminalTraceFreeRicciSq_of_twoJets
       (((conv _ (scalarSub_le_dNorm g x _ B (by norm_num) hB)).pow 2).div_const 4)
   · obtain ⟨C,hC,hcurv⟩ := exists_pos_bound_intrinsic_curvature_derivative_on_compact_of_metric_jets
       g hK 0 2 B (by norm_num) hB
-    refine ⟨n^4*C^2, ?_⟩
+    refine ⟨n ^ 4 * C ^ 2, ?_⟩
     filter_upwards [hgood] with i hi
     intro x hx
     have hRm := hcurv (h i) x hx (hi x hx).1 (hi x hx).2
     change Real.sqrt (normSq0S (h i) x 4 (metricRm04At (h i) x)) ≤ C at hRm
-    have hRsq := Real.le_sq_of_sqrt_le hRm
-    have hRic := ricciSq_le_rm04 (h i) (h i) x
-    change normSq0S (h i) x 2 (metricRicciAt (h i) x) ≤ n^4 * normSq0S (h i) x 4 (metricRm04At (h i) x) at hRic
+    have hRsq := (Real.sqrt_le_left hC.le).mp hRm
+    obtain ⟨basis,hON⟩ := exists_orthonormal_basis (h i) x
+    have hinv := metricInverseInBasis_of_orthonormal (h i) basis hON
+    have hRic := DifferentialGeometry.TensorMetric.traceNormSq_le (s := 2) (h i) x
+      ((metricRm04At (h i) x).domDomCongr rm04TraceSlots)
+    rw [normSq0S_domDomCongr (h i) x basis hinv rm04TraceSlots _, ← metricRicci_eq_trace] at hRic
+    change normSq0S (h i) x 2 (metricRicciAt (h i) x) ≤ n ^ 4 * normSq0S (h i) x 4 (metricRm04At (h i) x) at hRic
     rw [heq,metricRicci_apply]
     exact (sub_le_self _ (by positivity)).trans (hRic.trans (mul_le_mul_of_nonneg_left hRsq (by positivity)))
 

@@ -1,5 +1,7 @@
 # Lean Blueprint
 
+**The outgoing collar, the protected disk and terminal Ricci charge, 26 November 2026.** [Chapter](src/collar_comparison_and_terminal_charge.tex) · [Assessment](../investigations/reviews/COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md) · [Exact public checks](../investigations/research-progress/handoffs/ED03_COLLAR_CHARGE_CHECKS.lean) · [Continuation](../investigations/continuation-notes/AFTER_COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md)
+
 **Marked birth bodies, curved disk cost and the tested Euler current, 25 November 2026.** [Chapter](src/marked_glue_and_curved_cost.tex) · [Assessment](../investigations/reviews/MARKED_GLUE_AND_CURVED_COST_20261125.md) · [Public checks](../investigations/research-progress/handoffs/ED03_MARKED_GLUE_CHECKS.lean) · [Continuation](../investigations/continuation-notes/AFTER_MARKED_GLUE_AND_CURVED_COST_20261125.md)
 
 **Rounded edges and the cost of a flat disk reference, 25 November 2026.** [Chapter](src/rounded_edges_and_reference_cost.tex) · [Assessment](../investigations/reviews/ROUNDED_EDGES_AND_REFERENCE_COST_20261125.md) · [Public checks](../investigations/research-progress/handoffs/ED03_ROUNDED_EDGE_CHECKS.lean) · [Continuation](../investigations/continuation-notes/AFTER_ROUNDED_EDGES_AND_REFERENCE_COST_20261125.md)

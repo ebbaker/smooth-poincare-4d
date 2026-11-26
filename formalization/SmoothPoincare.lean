@@ -129,6 +129,18 @@ import SmoothPoincare.Variational.IntrinsicEulerDensity
 import SmoothPoincare.Variational.TestedEulerTransgression
 import SmoothPoincare.Variational.TestedEulerTransport
 
+import SmoothPoincare.Heights.OutgoingCollarComparison
+import SmoothPoincare.Heights.MarkedBallCoverageNative
+import SmoothPoincare.Heights.MarkedBallCoverageModelCollar
+import SmoothPoincare.Heights.ClosedMarkedControl
+import SmoothPoincare.Heights.ClosedSplitBoundary
+import SmoothPoincare.Variational.NonconformalDiskSaving
+import SmoothPoincare.Variational.ChargedCorePayment
+import SmoothPoincare.Variational.ChargedScalarSlice
+import SmoothPoincare.Variational.TerminalChargeTransferPointed
+import SmoothPoincare.PhysicalScales.TerminalVolumeEscape
+import SmoothPoincare.Variational.TerminalVolumeLimit
+
 /-! # Fixed-type descent and immersed recognition
 
 Public imports for the master formalization. The Edition 03 blueprint identifies

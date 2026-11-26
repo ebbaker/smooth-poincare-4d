@@ -1,5 +1,7 @@
 # Physical scales and marked annuli · Milestones
 
+- **26 November 2026 · FOT-E43.** Transferred the full terminal ball charge through a genuine compact buffer of the same pointed comparison. The metric, center and density are the ones on the supplying sequence. [Assessment](../reviews/COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md).
+
 - **25 November 2026 · FOT-E42.** Carried the original marked width and four exterior residuals through the protected-core construction. The modified-flow distance and charge estimates retain their own metric. [Assessment](../reviews/MARKED_GLUE_AND_CURVED_COST_20261125.md).
 
 - **25 November 2026 · FOT-E41.** A single protected width now supports the constructed physical reference, its full exterior and all four incoming trim measures. The measured replacement cost belongs to fixed-type descent. [Assessment](../reviews/ROUNDED_EDGES_AND_REFERENCE_COST_20261125.md).

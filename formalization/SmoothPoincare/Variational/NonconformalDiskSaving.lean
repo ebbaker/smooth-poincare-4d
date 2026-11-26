@@ -1,7 +1,5 @@
 import SmoothPoincare.Variational.PositiveCoreVariation
-import SmoothPoincare.Variational.CurvedCapPrice
-import SmoothPoincare.Variational.ExteriorGermCharge
-import SmoothPoincare.Variational.YamabeWall
+import SmoothPoincare.Variational.SelectedDiskReference
 import Mathlib.Analysis.Calculus.Deriv.Slope
 
 /-! # A first-order variation with the complete marked exterior fixed -/
@@ -146,9 +144,10 @@ theorem exists_firstVariation_step {f level : ℝ → ℝ} {d α r wall : ℝ}
     (hPos : 0 < level 0) (hSubcritical : f 0 < wall)
     (hα : α < d) (hr : 0 < r) :
     ∃ t ∈ Ioo 0 r, α * t < f 0 - f t ∧
-      ∀ s ∈ Icc 0 t, 0 < level s ∧ f s < wall := by
-  have hNear : ∀ᶠ s in 𝓝 (0 : ℝ), 0 < level s ∧ f s < wall :=
-    (hLevel.eventually_const_lt hPos).and (hDerivative.continuousAt.eventually_lt_const hSubcritical)
+      ∀ s ∈ Icc 0 t, 0 < level s ∧ f s < (f 0 + wall) / 2 := by
+  have hHalf : f 0 < (f 0 + wall) / 2 := by linarith only [hSubcritical]
+  have hNear : ∀ᶠ s in 𝓝 (0 : ℝ), 0 < level s ∧ f s < (f 0 + wall) / 2 :=
+    (hLevel.eventually_const_lt hPos).and (hDerivative.continuousAt.eventually_lt_const hHalf)
   obtain ⟨ε, hε, hball⟩ := Metric.eventually_nhds_iff.mp hNear
   have hUpper : ∀ᶠ s in 𝓝[>] (0 : ℝ), s < min r ε :=
     nhdsWithin_le_nhds (Iio_mem_nhds (lt_min hr hε))
@@ -193,7 +192,8 @@ theorem exists_selectedDiskSaving_of_firstVariation (m : NestedBalancedDisks I M
     let Istar := sInf (geometricPositiveEnergies o)
     ∃ t ∈ Ioo 0 r,
       (∀ s ∈ Icc 0 t, 0 < classYamabeFour o.dimension_eq (g s).metric ∧
-        ∀ sign, (g s).energy sign < WALL) ∧
+        ∀ sign, (g 0).charge sign V + (g s).charge sign B = (g s).energy sign ∧
+          (g s).energy sign < ((g 0).energy .plus + WALL) / 2) ∧
       (∀ s ∈ Icc 0 t, ∀ sign A, MeasurableSet A → A ⊆ Kᶜ →
         (g 0).charge sign A = (g s).charge sign A) ∧
       (∀ x ∈ V ∪ selectedChartDisk m.core ∪ selectedDiskTrim m.outer n, ∀ᶠ y in 𝓝 x,
@@ -223,9 +223,14 @@ theorem exists_selectedDiskSaving_of_firstVariation (m : NestedBalancedDisks I M
   refine ⟨t, ht, ?_, fun s _ => hAgree s, ?_, ?_⟩
   · intro s hs
     refine ⟨(hSign s).1 (hPath s hs).1, fun sign => ?_⟩
-    cases sign with
-    | plus => exact (hPath s hs).2
-    | minus => exact (g s).signature_zero.symm.trans_lt (hPath s hs).2
+    have hChange := signedCharge_fullMarkedExterior (g s) sign m.outer m.outer_source
+    have hSame := hAgree s sign V isOpen_interior.measurableSet.compl hV
+    have heq : (g s).energy .plus = (g s).energy sign := by
+      cases sign with
+      | plus => rfl
+      | minus => exact (g s).signature_zero
+    rw [← heq]
+    exact ⟨by linarith only [hSame, hChange], (hPath s hs).2⟩
   · intro x hx
     apply hGerm x
     intro hxK
@@ -244,13 +249,14 @@ theorem exists_selectedDiskSaving_of_firstVariation (m : NestedBalancedDisks I M
     refine ⟨hAgree t sign V isOpen_interior.measurableSet.compl hV,
       signedCoreSaving_eq_energySaving (g 0) (g t) hBm sign (hAgree t sign Bᶜ hBm.compl hB),
       hKsave, mul_pos hα ht.1, hgain, le_min (sub_le_sub_left hInf _) ?_⟩
+    change (g 0).energy .plus - (g t).energy .plus ≤ (g 0).charge sign K
     rw [← hKsave]
     exact sub_le_self _ measureReal_nonneg
 
+omit [I.Boundaryless] [Nonempty M] in
 /-- A nonnegative weighted square with a strictly positive value at a point
 has positive physical integral. In the Bach first-variation formula the
 weight is the clamping bump and the squared function is the Bach norm. -/
-omit [I.Boundaryless] [Nonempty M] in
 theorem diskVariation_weightedSquare_integral_pos (g : SmoothRiemannianMetric I M)
     (χ b : M → ℝ) (hχ : Continuous χ) (hb : Continuous b) (hχ₀ : ∀ x, 0 ≤ χ x)
     {x : M} (hx : 0 < χ x) (hbx : b x ≠ 0) :
@@ -259,7 +265,8 @@ theorem diskVariation_weightedSquare_integral_pos (g : SmoothRiemannianMetric I 
   let f := fun y => χ y * b y ^ 2
   let : μ.IsOpenPosMeasure := riemannianVolumeMeasure_isOpenPosMeasure g
   have hf : Continuous f := hχ.mul (hb.pow 2)
-  have hInt : Integrable f μ := integrable_riemannian_of_continuous g hf
+  let : IsFiniteMeasureOnCompacts μ := riemannianVolumeMeasure_isFiniteMeasureOnCompacts g
+  have hInt : Integrable f μ := hf.integrable_of_hasCompactSupport (HasCompactSupport.of_compactSpace f)
   have hs : x ∈ support f := (mul_pos hx (sq_pos_of_ne_zero hbx)).ne'
   exact (integral_pos_iff_support_of_nonneg (fun y => mul_nonneg (hχ₀ y) (sq_nonneg _)) hInt).2
     (hf.isOpen_support.measure_pos μ ⟨x, hs⟩)
@@ -360,6 +367,131 @@ theorem matchedDisk_positiveCap_allowance_ge_disk_minus_excess
     | minus => exact hI.trans_eq cap.signature_zero
   have hOutside := signedCharge_fullMarkedExterior g sign m.outer m.outer_source
   linarith only [hInf, hOutside, hExterior sign, hCapCost sign]
+
+/-- If the cap allowance and additional measured joined cost are paid
+from the realized whole-metric saving, the resulting disk charge and
+additional cost fit in the original minimizing excess. This payment
+test permits arbitrary changes in the entire closed exterior. -/
+theorem diskCharge_add_joinedCost_le_excess_of_cap_paid_from_saving
+    (g h cap : SignedCollarMetric o) (m : NestedBalancedDisks I M)
+    (hPositiveCap : 0 < classYamabeFour o.dimension_eq cap.metric)
+    (δ j : CollarChirality → ℝ) (sign : CollarChirality)
+    (hCapCost : cap.energy sign ≤ h.charge sign (interior (selectedChartDisk m.outer))ᶜ + δ sign)
+    (hPays : δ sign + j sign ≤ g.energy .plus - h.energy sign) :
+    h.charge sign (selectedChartDisk m.outer) + j sign ≤
+      g.energy .plus - sInf (geometricPositiveEnergies o) := by
+  have hInf : sInf (geometricPositiveEnergies o) ≤ cap.energy sign := by
+    have hI := csInf_le (geometricPositiveEnergies_bddBelow o)
+      (cap.energy_mem_of_positive hPositiveCap)
+    cases sign with
+    | plus => exact hI
+    | minus => exact hI.trans_eq cap.signature_zero
+  have hJoined : h.energy .plus = h.energy sign := by
+    cases sign with
+    | plus => rfl
+    | minus => exact h.signature_zero
+  have hSplit := signedCharge_fullMarkedExterior h sign m.outer m.outer_source
+  linarith only [hInf, hCapCost, hPays, hJoined, hSplit]
+
+/-- A whole-metric saving cannot fund the cap allowance and a nonnegative
+additional joined cost on a minimizing tail whose protected disk stays
+charged. The obstructing sign may vary with the index. In particular this
+excludes the payment on every strictly subcritical joined slice. -/
+theorem eventually_no_paid_cap_of_protectedDisk_charge
+    (g : ℕ → SignedCollarMetric o) (m : ℕ → NestedBalancedDisks I M)
+    (he : Tendsto (fun i => (g i).energy .plus) atTop (𝓝 (sInf (geometricPositiveEnergies o))))
+    {ρ : ℝ} (hρ : 0 < ρ)
+    (hProtected : ∀ᶠ i in atTop, ∃ sign, ρ ≤ (g i).charge sign (selectedChartDisk (m i).core)) :
+    ∀ᶠ i in atTop, ∀ (h cap : SignedCollarMetric o) (δ j : CollarChirality → ℝ),
+      0 < classYamabeFour o.dimension_eq cap.metric →
+      (∀ sign, (g i).charge sign (selectedChartDisk (m i).core) ≤
+        h.charge sign (selectedChartDisk (m i).core)) →
+      (∀ sign, 0 ≤ j sign) →
+      (∀ sign, cap.energy sign ≤ h.charge sign (interior (selectedChartDisk (m i).outer))ᶜ + δ sign) →
+      ¬ ∀ sign, δ sign + j sign ≤ (g i).energy .plus - h.energy sign := by
+  have hCut : sInf (geometricPositiveEnergies o) < sInf (geometricPositiveEnergies o) + ρ :=
+    lt_add_of_pos_right _ hρ
+  filter_upwards [hProtected, he.eventually_lt_const hCut] with i hi hLate
+  intro h cap δ j hPositive hCore hAdd hCap hPay
+  obtain ⟨sign, hCharge⟩ := hi
+  have hIncluded : selectedChartDisk (m i).core ⊆ selectedChartDisk (m i).outer := by
+    intro x hx
+    apply interior_subset
+    rw [interior_selectedChartDisk (m i).outer (m i).outer_source]
+    exact (m i).core_inside hx
+  have hDisk : h.charge sign (selectedChartDisk (m i).core) ≤
+      h.charge sign (selectedChartDisk (m i).outer) :=
+    measureReal_mono hIncluded
+  have hPaid := diskCharge_add_joinedCost_le_excess_of_cap_paid_from_saving (g i) h cap
+    (m i) hPositive δ j sign (hCap sign) (hPay sign)
+  linarith only [hLate, hCharge, hCore sign, hAdd sign, hDisk, hPaid]
+
+/-- For a local Bach-type first variation, pointwise nonzero norm on the
+positive bump forces a strict signed saving at a nonconformal endpoint.
+The derivative identity and sign detector refer to the actual affine
+family. An independent cap matched to its exterior retains its full
+allowance, even though the joined energy has decreased. -/
+theorem exists_selectedNonconformalDiskSaving_of_weightedSquare
+    (m : NestedBalancedDisks I M) (n : ℕ)
+    (g : ℝ → SignedCollarMetric o) {K : Set M} (hK : IsClosed K)
+    (hLoc : K ⊆ interior (selectedChartDisk m.outer) \
+      (selectedChartDisk m.core ∪ selectedDiskTrim m.outer n))
+    (hGerm : ∀ x ∉ K, ∀ᶠ y in 𝓝 x, ∀ t (u v : TangentSpace I y),
+      (g t).metric.inner y u v = (g 0).metric.inner y u v)
+    (hFrame : ∀ t x, x ∉ K → ((g t).frame x).basis = ((g 0).frame x).basis)
+    (level : ℝ → ℝ) (hLevel : ContinuousAt level 0)
+    (hSign : ∀ t, 0 < level t ↔ 0 < classYamabeFour o.dimension_eq (g t).metric)
+    (hPositive : 0 < classYamabeFour o.dimension_eq (g 0).metric)
+    (hSubcritical : (g 0).energy .plus < WALL)
+    (χ b : M → ℝ) (hχ : Continuous χ) (hb : Continuous b) (hχ₀ : ∀ x, 0 ≤ χ x)
+    (x : M) (hx : 0 < χ x) (hbx : b x ≠ 0)
+    (D : TangentSpace I x →L[ℝ] TangentSpace I x →L[ℝ] ℝ)
+    (hNonscalar : ¬ ∃ c : ℝ, ∀ u v, D u v = c * (g 0).metric.inner x u v)
+    (hAffine : ∀ t : ℝ, |t| ≤ 1/2 → ∀ u v,
+      (g t).metric.inner x u v = (g 0).metric.inner x u v + t * D u v)
+    (hDerivative : HasDerivAt (fun t => (g t).energy .plus)
+      (-(∫ y, χ y * b y ^ 2 ∂riemannianVolumeMeasure I M (g 0).metric) / 2) 0) :
+    let B := selectedChartDisk m.outer
+    let V := (interior B)ᶜ
+    let α := (∫ y, χ y * b y ^ 2 ∂riemannianVolumeMeasure I M (g 0).metric) / 4
+    ∃ t ∈ Ioo 0 (1/2 : ℝ),
+      (¬ ∃ c : ℝ, ∀ u v, (g t).metric.inner x u v = c * (g 0).metric.inner x u v) ∧
+      (∀ s ∈ Icc 0 t, 0 < classYamabeFour o.dimension_eq (g s).metric ∧
+        ∀ sign, (g 0).charge sign V + (g s).charge sign B = (g s).energy sign ∧
+          (g s).energy sign < ((g 0).energy .plus + WALL) / 2) ∧
+      (∀ y ∈ V ∪ selectedChartDisk m.core ∪ selectedDiskTrim m.outer n, ∀ᶠ z in 𝓝 y,
+        ∀ s (u v : TangentSpace I z), (g s).metric.inner z u v = (g 0).metric.inner z u v) ∧
+      (∀ sign, (g 0).charge sign V = (g t).charge sign V ∧
+        0 < α * t ∧ α * t < (g 0).charge sign B - (g t).charge sign B ∧
+        (g 0).charge sign B - (g t).charge sign B ≤
+          (g 0).energy .plus - sInf (geometricPositiveEnergies o)) ∧
+      ∀ (cap : SignedCollarMetric o) (δ : CollarChirality → ℝ),
+        0 < classYamabeFour o.dimension_eq cap.metric →
+        (∀ sign, cap.energy sign ≤ (g t).charge sign V + δ sign) →
+        ∀ sign, (g 0).charge sign B -
+          ((g 0).energy .plus - sInf (geometricPositiveEnergies o)) ≤ δ sign := by
+  intro B V α
+  let bInt := ∫ y, χ y * b y ^ 2 ∂riemannianVolumeMeasure I M (g 0).metric
+  have hbInt : 0 < bInt :=
+    diskVariation_weightedSquare_integral_pos (g 0).metric χ b hχ hb hχ₀ hx hbx
+  have hSlope : HasDerivAt (fun t => (g t).energy .plus) (-(bInt / 2)) 0 := by
+    simpa only [neg_div] using hDerivative
+  have hα : 0 < α := by change 0 < bInt / 4; linarith only [hbInt]
+  have hαd : α < bInt / 2 := by change bInt / 4 < bInt / 2; linarith only [hbInt]
+  obtain ⟨t, ht, hPath, _, hFixed, hGain⟩ := exists_selectedDiskSaving_of_firstVariation m n
+    g hK hLoc hGerm hFrame level hLevel hSign hPositive hSubcritical
+    hSlope hα hαd (show 0 < (1/2 : ℝ) by norm_num)
+  have hAbs : |t| ≤ (1/2 : ℝ) := by rw [abs_of_pos ht.1]; exact ht.2.le
+  refine ⟨t, ht, clampedAffineMetric_not_pointwise_conformal (g 0).metric (g t).metric
+    x ht.1.ne' D hNonscalar (hAffine t hAbs), hPath, hFixed, ?_, ?_⟩
+  · intro sign
+    obtain ⟨hExt, hDisk, _, hGain₀, hGainα, hGainUpper⟩ := hGain sign
+    refine ⟨hExt, hGain₀, ?_, ?_⟩
+    · exact hGainα.trans_eq hDisk.symm
+    · exact hDisk.trans_le (hGainUpper.trans (min_le_left _ _))
+  · intro cap δ hPositiveCap hCap
+    exact matchedDisk_positiveCap_allowance_ge_disk_minus_excess (g 0) (g t) cap m
+      hPositiveCap δ (fun sign => (hGain sign).1) hCap
 
 end SignedSaving
 
