@@ -1,0 +1,621 @@
+{
+  "E51_intake": {
+    "aliases": [
+      7,
+      "e38b2aa80925c5064d7e6addcb01da4f9cab3fd1eed84efbbf5adabe64522d7d"
+    ],
+    "blueprint": [
+      19,
+      "3cfa33e5f02c1e46e957965bf71508c78bee9d718c3d63ca2ec8f54f08e50b43"
+    ],
+    "head": "1c81a3048c8c21a4c1d1fb23db72f37168a15ca5",
+    "root_imports": 212,
+    "scientific_closures": {
+      "03_first_order_twistor/01_sections_and_connections/01_neck_geometry": {
+        "pdf_sha": "e676aef2fdc7dbf3bebb0fd6df9226f34cfc2ae193613b2e01cc86bf098becf3",
+        "tex_sha": "13412bc4e9032e67ff663c26e467d01256f69626a2aa7a05142fac3396b59b18"
+      },
+      "04_hypersurface_immersions": {
+        "pdf_sha": "dd7cead158a239c6aef0f8fb53470b71f7b209b509f2e24bf588db0926bfe6ed",
+        "tex_sha": "736128678652251ff4b7f826c76d66ebb072b51578253f5791af1a0cf51765d1"
+      },
+      "04_hypersurface_immersions/01_immersed_handle_constructions": {
+        "pdf_sha": "be162dcd5094fb92fdb632939e80c7e97021ab498fa0a42137fec8c2aeb713b0",
+        "tex_sha": "9f1bf9a87a1daafea00723e14d1149f739caae4c1887e6195016145250a81756"
+      },
+      "04_hypersurface_immersions/02_two_handle_recognition": {
+        "pdf_sha": "749114d5e275671622664374e7822d4218ad20351c91a5fb10b07638d3889901",
+        "tex_sha": "f8995353a388aab08e9487f15ad04dc20539a3f9d2e412131a0cae640eb0f8de"
+      },
+      "05_collar_deformation_and_surgery": {
+        "pdf_sha": "3ff3eabc4d3bd551dbf81005ff749f8f6fd5ab13d67a683ccf4311327b493d42",
+        "tex_sha": "2a3d0a6e99eb0b9b69fa62db58d593c356606e1fa052b27ab5f508edb57b0fd5"
+      },
+      "05_collar_deformation_and_surgery/01_collar_deformation_and_adapted_coordinates": {
+        "pdf_sha": "68db9ac5dcbe351bb32924c91fef5291f68ef100bc6cf79e0a520531e4d3615a",
+        "tex_sha": "1a90b945c6df399e140071228cf81853d8eeab7059bbb628f3c27978d3531e30"
+      },
+      "05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery": {
+        "pdf_sha": "aed40a5b006de26819ebb1578625d88c63ddc6c022cdf8c2a73dc4b96cc200ba",
+        "tex_sha": "370d5ae214ada4d77b1632cccea1cd016bda121473fb0865518d0fb23cb51ea8"
+      },
+      "06_bour_flow_and_fixed_type_attainment": {
+        "pdf_sha": "22c196c0d407dccd628c68e129fdc6e7794c3d5572c7d644f27c210f445b69a6",
+        "tex_sha": "23aceaccee4faa97fde5eb8a7a4f1d1d6aca18363a8a80da456a6d13af415aa6"
+      },
+      "master": {
+        "pdf_sha": "9a448141fba72074f54831e2c5c0b524345e56c397db8adee02de6a21b056e99",
+        "tex_sha": "e0c3d1ac448777dad8e4fba912f4fbbf5e422cd5fed878c0748f7f6397b9673d"
+      },
+      "master/01_fixed_type_variational_descent": {
+        "pdf_sha": "7eafcb782b9b197a8818e6afc63fb3a858dacb63b7037398ee47a4922e497576",
+        "tex_sha": "a256e946df656c6e7a4841f443cec378c411fe20384dc5d070d8b72994b6ed9b"
+      }
+    },
+    "time": "2026-11-26T15:45:52-05:00",
+    "topic": [
+      265,
+      "4eb865e02fe3ced7685797ad14b46e36ec83989b99b7481b99defcd95089cb1b"
+    ],
+    "union": [
+      46,
+      "d79af1afc845e3ff2e994a5aaf613a421322f1607272c439b70d8cfa8ae9c36b"
+    ]
+  },
+  "aliases": [
+    7,
+    "e38b2aa80925c5064d7e6addcb01da4f9cab3fd1eed84efbbf5adabe64522d7d"
+  ],
+  "blueprint": [
+    19,
+    "97ae5a9d4dea6f774e7837517142adbb65ede21ad49fa7d897be9e6ef651a5a4"
+  ],
+  "head": "1c81a3048c8c21a4c1d1fb23db72f37168a15ca5",
+  "lake": "Lake version 5.0.0-src+470d5ce (Lean version 4.35.0-rc3)",
+  "lean": "Lean (version 4.35.0-rc3, arm64-apple-darwin24.6.0, commit 470d5ce1400764999581fd26d5d72b00d990b0f4, Release)",
+  "packages": {
+    "Cli": {
+      "nested": [],
+      "revision": "843844fa601dd56767b1eb22b7ada5b64d5e567a"
+    },
+    "DifferentialGeometry": {
+      "nested": [
+        "mathlib",
+        "plausible",
+        "LeanSearchClient",
+        "importGraph",
+        "proofwidgets",
+        "aesop",
+        "Qq",
+        "batteries",
+        "Cli"
+      ],
+      "revision": "788efe97894474c032de6dfb1289d515f613d15a"
+    },
+    "LeanSearchClient": {
+      "nested": [],
+      "revision": "29ff470276c725ae01505d55b17148c18fc7dfd3"
+    },
+    "Qq": {
+      "nested": [],
+      "revision": "37b0ba0b26109cf9f9c541f0f9557e50cfa1a3b9"
+    },
+    "aesop": {
+      "nested": [
+        "batteries"
+      ],
+      "revision": "a90fbf7b02ff06a0deebf74088dff9e5fe02c9ea"
+    },
+    "batteries": {
+      "nested": [],
+      "revision": "3b7c8101932390d60e92a3f3d917901d5b5a773b"
+    },
+    "importGraph": {
+      "nested": [
+        "Cli"
+      ],
+      "revision": "7e81a29bda33a6b257bd37557a6aa6aebe175d96"
+    },
+    "mathlib": {
+      "nested": [
+        "plausible",
+        "LeanSearchClient",
+        "importGraph",
+        "proofwidgets",
+        "aesop",
+        "Qq",
+        "batteries",
+        "Cli"
+      ],
+      "revision": "c55e6e786f49471c72fbddbec5415808896aec1e"
+    },
+    "plausible": {
+      "nested": [],
+      "revision": "fb13df72ecefd8ddbf9291021d7f33a8673eb57b"
+    },
+    "proofwidgets": {
+      "nested": [],
+      "revision": "c643bbb3c24f8a25f9c14e3a6b1ceb13d01f3de1"
+    }
+  },
+  "planning": {
+    "papers/investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/research-progress/REGISTER.md": "961de1bfcfc032d341173d0ad93da76144ad3eb8bab3772858562c1741772ec5",
+    "papers/investigations-1/05_collar_deformation_and_surgery/continuation-notes/AFTER_REDUCIBLE_NATIVE_CUTS_20261126.md": "636c4b261d825cffcadd73ba8bc6cfa162f6e4024103d1857e551118b50d8242",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-overview/OVERVIEW.md": "bf2740aa3264b0ad7d42be17d576c02342b7e6b8c7a55409a5cc99821e0166cb",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-plan/PLAN.md": "5260275f5b7193c3eba1e0c636a712a79c77bfe91cff6f18a70eaec7da2777c1",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/REGISTER.md": "08cd617a74dc4ecce1e74f7c7c49965128620ae54af4362e9ac827e6518b7420",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/CAPPED_FACTORS_AND_FOUR_RETURNS_20261126.md": "eb30364191d85d189fe2cb50f04acabab5a42250bcc9871b094ab624b0df6769",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/REDUCIBLE_CUT_READINGS_20261126.md": "2e6904222d60665a7a9cbd73a5e788ca5e0fbf190115b7aeeb12374b947e0d05",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/ALTERNATING_CLASP_READER.md": "6b35cfc53a5939c4909cb9152cc09a111ad6e465ce07c08573a428d19d4887c6",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/BANDED_LONGITUDE_READER.md": "691b7e3c09bbcfa1a59a54e966736c8abc5567c99e3511fd6f71637038e80d18",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/FILLED_SPHERE_LOCALIZATION_READER.md": "a55a4fac01c64cbd8d14db08d252c747cf1e99dfb1380191ab3218bae1cf9748",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md": "4cd395c48835a1656002b765149ce691de6cb11ee60669e93ab0270a3f1b2e83",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/REDUCIBLE_CUT_MANUSCRIPT_READER.md": "1cded0ab3a47b7e846c4466aeeec67be409b97f6225e42a73cf1c9c990064918",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/TRACE_GROUP_CHAMBER_READER.md": "ccf485981af91b79a65dcf256331a145dde3ec99e73d716fe748c5101c171a0a",
+    "papers/investigations-1/06_bour_flow_and_fixed_type_attainment/01_regularized_flow_and_energy/notes/BOUR_AUDIT_20261126.md": "34138752da571bad8741601b03d5967300d806bc2658105a5291c8e8bc8b29e2",
+    "papers/investigations-1/06_bour_flow_and_fixed_type_attainment/01_regularized_flow_and_energy/research-progress/REGISTER.md": "3ac3573ec20fa1a3c76610705738dc05a7b7263e6e02f899810d10b1661711e8",
+    "papers/investigations-1/06_bour_flow_and_fixed_type_attainment/02_marked_limits_and_attainment/notes/CSC_ESTIMATES_20261126.md": "db5e120ef9dbbb0b387f492e8d2e1d9a3fff2c6210ff4875bd1d0a44b3451247",
+    "papers/investigations-1/06_bour_flow_and_fixed_type_attainment/02_marked_limits_and_attainment/research-progress/REGISTER.md": "16c724ec1373385c2579d740b865cf1fe36567448a7a92af0efce6bfa79e4dd8",
+    "papers/investigations-1/06_bour_flow_and_fixed_type_attainment/continuation-notes/POST_ATTAINMENT_20261126.md": "f2629d3cfdd8d436c9956a2b25ec56cce7d5cd99c3811e086b7802487662f38e",
+    "papers/investigations-1/06_bour_flow_and_fixed_type_attainment/research-overview/OVERVIEW.md": "1f04e1b8d06b721ad0b3176bbf657e6fe6779dda2a1d36f550f1c35afdb4d8ce",
+    "papers/investigations-1/06_bour_flow_and_fixed_type_attainment/research-plan/PLAN.md": "2725aa4b16edb5bde31a9d2d73cff9e465f1e703cb9d319958e07cb71c38ac31",
+    "papers/investigations-1/06_bour_flow_and_fixed_type_attainment/research-progress/REGISTER.md": "3937da8b9357de261bd1edb2719cced7779a090a9ac8a3781441affa0cdf141b",
+    "papers/investigations-1/06_bour_flow_and_fixed_type_attainment/reviews/FIXED_TYPE_ATTAINMENT_20261126.md": "cacb2e70d9cfd3ef738c8f68a6250bcef0f0bef97a2262dd2e812d3e3628ce93",
+    "papers/investigations-1/06_bour_flow_and_fixed_type_attainment/reviews/READING_FLOW_AND_LIMIT_20261126.md": "eb039705e5fcee75caa4e71cec593b58c62e45dc8f71e7234920fb73d2333bf6",
+    "papers/investigations-1/06_bour_flow_and_fixed_type_attainment/reviews/READING_MARKED_ATTAINMENT_20261126.md": "509837e171935f2df2ea95811da93d4560415f30bdd882eff57cfb5090eeda35",
+    "papers/master/continuation-notes/ENTRY_ATTAINMENT_AND_RIGIDITY_20261126.md": "9c98263f27bf0cb073d6916eb0145749618796cee44693b70d7ab3c2e4076274",
+    "papers/master/research-overview/OVERVIEW.md": "ed6fedcb592596c00d0f2c4ddff1cbd4abd0dd12a1ce95a78f210c96ce9b57df",
+    "papers/master/research-plan/PLAN.md": "28eda47ee82b737fdbaadb30bbb64aaa4661ce6641ed98cc95a6999657d3f63b",
+    "papers/master/research-progress/REGISTER.md": "63b503c8114457cfd7bf60f12121626b040f4a83570a05497b60e8bf652f1fff",
+    "papers/master/research-progress/handoffs/REDUCIBLE_NATIVE_CUT_20261126.md": "a7991cdeb143acd76bbfb5b08fc936e516a4024a0c2e3e16b6cd52af7a37bde1",
+    "references/SOURCE_NOTES_BOUR_ATTAINMENT_20261126.md": "87bef213e68694c6fbce21e97240b5db1184fa3242579b2d45e0b1592f5b90da",
+    "references/SOURCE_NOTES_COLLAR_SURGERY_20261126.md": "0175a1926af8beb6666808a72728fb8eb6b1149985a1c6f2b7828c092d77d227",
+    "references/references.bib": "2ae6a407da4b65bff02d06704de239d144518e9258443a7f88937649c1be4cc4"
+  },
+  "projects": {
+    "03_first_order_twistor/01_sections_and_connections/01_neck_geometry": {
+      "count": 7,
+      "files": {
+        "papers/investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/manuscript/anchored_physical_shell.tex": "89b599e49e0ef855b8d06270a8a21373fdc24f95db070b1bdc7c9f6f4ceabc3b",
+        "papers/investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/manuscript/closed_and_conformal_alternatives.tex": "5abc9c7713dae50932e1c390d9350716b4a55a233c121d2c72f0dc9dc1098240",
+        "papers/investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/manuscript/critical_annulus.tex": "0b798f1a6f37ad4796317d67e09cdd3eba0dace103278ab4a1ae3e229485b686",
+        "papers/investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/manuscript/critical_radial_defect.tex": "662615cf1dfa3820904c5f836193d55aa82a39e36d2d979076cbc0740e96b1b6",
+        "papers/investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/manuscript/marked_necks_and_chiral_energy.tex": "1f76102af2634bdf698d416177ff2873d910487120dc3a261808f97c4e910423",
+        "papers/investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/manuscript/physical_ricci_flux.tex": "6f75a9186a6442c961bc3da902130efd995b9927529bbeb25689774f7959fc4c",
+        "papers/investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/manuscript/physical_window.tex": "76905c520538c16aa5cd6e15046a18bea9b602b5fe7efdd1d899fc12841dcfda"
+      },
+      "main": "papers/investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/manuscript/marked_necks_and_chiral_energy.tex",
+      "pdf": "output/pdf/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/marked_necks_and_chiral_energy.pdf",
+      "pdf_sha": "e676aef2fdc7dbf3bebb0fd6df9226f34cfc2ae193613b2e01cc86bf098becf3",
+      "tex_sha": "13412bc4e9032e67ff663c26e467d01256f69626a2aa7a05142fac3396b59b18"
+    },
+    "04_hypersurface_immersions": {
+      "count": 1,
+      "files": {
+        "papers/investigations-1/04_hypersurface_immersions/manuscript/chiral_energy_of_hypersurface_immersions.tex": "13ea5742d3fa0d01ff14e77da000959db4c364c9e0b816f6ea580dd767338ac0"
+      },
+      "main": "papers/investigations-1/04_hypersurface_immersions/manuscript/chiral_energy_of_hypersurface_immersions.tex",
+      "pdf": "output/pdf/04_hypersurface_immersions/chiral_energy_of_hypersurface_immersions.pdf",
+      "pdf_sha": "dd7cead158a239c6aef0f8fb53470b71f7b209b509f2e24bf588db0926bfe6ed",
+      "tex_sha": "736128678652251ff4b7f826c76d66ebb072b51578253f5791af1a0cf51765d1"
+    },
+    "04_hypersurface_immersions/01_immersed_handle_constructions": {
+      "count": 5,
+      "files": {
+        "papers/investigations-1/04_hypersurface_immersions/01_immersed_handle_constructions/manuscript/boundary_class.tex": "6653690f64c21fae4cd8adecab623920bef2821d8302670be98a8e801e632431",
+        "papers/investigations-1/04_hypersurface_immersions/01_immersed_handle_constructions/manuscript/eta_zero_filling.tex": "9dbaa580a7d3ce899d47dce6345cde8da58308108b263d790015df8fb65e1b44",
+        "papers/investigations-1/04_hypersurface_immersions/01_immersed_handle_constructions/manuscript/marked_double_exterior.tex": "e81683ba443b8fdb8fea2f3a0b8146dfc20fd213a8d6f912cfa114bf3732aeb3",
+        "papers/investigations-1/04_hypersurface_immersions/01_immersed_handle_constructions/manuscript/marked_immersed_handle_constructions.tex": "8ae1363dbc59111b444e0148618fe1038a01964247b269f1f0aa41f09444d130",
+        "papers/investigations-1/04_hypersurface_immersions/01_immersed_handle_constructions/manuscript/short_seam.tex": "f719a9bff8f7b463b2bb292a5f87de6c520575d85020250b402f97bb1f033220"
+      },
+      "main": "papers/investigations-1/04_hypersurface_immersions/01_immersed_handle_constructions/manuscript/marked_immersed_handle_constructions.tex",
+      "pdf": "output/pdf/04_hypersurface_immersions/01_immersed_handle_constructions/marked_immersed_handle_constructions.pdf",
+      "pdf_sha": "be162dcd5094fb92fdb632939e80c7e97021ab498fa0a42137fec8c2aeb713b0",
+      "tex_sha": "9f1bf9a87a1daafea00723e14d1149f739caae4c1887e6195016145250a81756"
+    },
+    "04_hypersurface_immersions/02_two_handle_recognition": {
+      "count": 1,
+      "files": {
+        "papers/investigations-1/04_hypersurface_immersions/02_two_handle_recognition/manuscript/recognition_from_marked_morse_heights.tex": "9681e2deb71434b7e6036ce8d3db9b6a10e4f6d530406948e30bc8b74b1a15d9"
+      },
+      "main": "papers/investigations-1/04_hypersurface_immersions/02_two_handle_recognition/manuscript/recognition_from_marked_morse_heights.tex",
+      "pdf": "output/pdf/04_hypersurface_immersions/02_two_handle_recognition/recognition_from_marked_morse_heights.pdf",
+      "pdf_sha": "749114d5e275671622664374e7822d4218ad20351c91a5fb10b07638d3889901",
+      "tex_sha": "f8995353a388aab08e9487f15ad04dc20539a3f9d2e412131a0cae640eb0f8de"
+    },
+    "05_collar_deformation_and_surgery": {
+      "count": 1,
+      "files": {
+        "papers/investigations-1/05_collar_deformation_and_surgery/manuscript/marked_collars_and_smooth_recognition.tex": "6c382c8e58ec4e4d40eb106b0b10a4d085c8b162e6372c319bf76c5f0bccc279"
+      },
+      "main": "papers/investigations-1/05_collar_deformation_and_surgery/manuscript/marked_collars_and_smooth_recognition.tex",
+      "pdf": "output/pdf/05_collar_deformation_and_surgery/marked_collars_and_smooth_recognition.pdf",
+      "pdf_sha": "270d00e9e246b5050f2104a07945708735f62038940fb4e85da0f286299d1398",
+      "tex_sha": "07a8e48b5f6f88454c50b22fa2a9e884b7a1566760acdcce254ab7a49a5f3b4e"
+    },
+    "05_collar_deformation_and_surgery/01_collar_deformation_and_adapted_coordinates": {
+      "count": 2,
+      "files": {
+        "papers/investigations-1/05_collar_deformation_and_surgery/01_collar_deformation_and_adapted_coordinates/manuscript/deformation_of_marked_spherical_collars.tex": "e79d2218b3aeba443b03f44c17d331b6a004503c65564a47a4b56615f5cae489",
+        "papers/investigations-1/05_collar_deformation_and_surgery/01_collar_deformation_and_adapted_coordinates/manuscript/first_order_splice.tex": "e31283f6c8429f7f4b1c9837c5de7044bcbc6aa8ad74c3ccd2b4abb32d2c3b82"
+      },
+      "main": "papers/investigations-1/05_collar_deformation_and_surgery/01_collar_deformation_and_adapted_coordinates/manuscript/deformation_of_marked_spherical_collars.tex",
+      "pdf": "output/pdf/05_collar_deformation_and_surgery/01_collar_deformation_and_adapted_coordinates/deformation_of_marked_spherical_collars.pdf",
+      "pdf_sha": "68db9ac5dcbe351bb32924c91fef5291f68ef100bc6cf79e0a520531e4d3615a",
+      "tex_sha": "1a90b945c6df399e140071228cf81853d8eeab7059bbb628f3c27978d3531e30"
+    },
+    "05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery": {
+      "count": 1,
+      "files": {
+        "papers/investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/manuscript/recognition_from_marked_handle_cuts.tex": "556753cbb5f4d73b962f597bb9ca96f43edbe15ff14c6d5330d8ac4b408afeab"
+      },
+      "main": "papers/investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/manuscript/recognition_from_marked_handle_cuts.tex",
+      "pdf": "output/pdf/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/recognition_from_marked_handle_cuts.pdf",
+      "pdf_sha": "a8ab900d776eec43b369abadba3ec75110708af04d7ac45b975ff9a2f3c5fc92",
+      "tex_sha": "bf387a86bababe431a4c693878b0807d312ea008692ae3b67d00b49b945a4820"
+    },
+    "06_bour_flow_and_fixed_type_attainment": {
+      "count": 1,
+      "files": {
+        "papers/investigations-1/06_bour_flow_and_fixed_type_attainment/manuscript/fixed_type_attainment.tex": "719bbea527c6db649eaeee93e58e1f6b50f101772d79b406ee3ec378dca357f1"
+      },
+      "main": "papers/investigations-1/06_bour_flow_and_fixed_type_attainment/manuscript/fixed_type_attainment.tex",
+      "pdf": "output/pdf/06_bour_flow_and_fixed_type_attainment/fixed_type_attainment.pdf",
+      "pdf_sha": "22c196c0d407dccd628c68e129fdc6e7794c3d5572c7d644f27c210f445b69a6",
+      "tex_sha": "23aceaccee4faa97fde5eb8a7a4f1d1d6aca18363a8a80da456a6d13af415aa6"
+    },
+    "master": {
+      "count": 6,
+      "files": {
+        "papers/master/manuscript/attainment_on_the_original_sphere.tex": "26b828212663ea8930c6d0f85e201018f7b300193b1da5843923685a65b1e046",
+        "papers/master/manuscript/chiral_weyl_energy_and_smooth_poincare.tex": "9f4d06cd5112c83496ca2b63d9f82f807c5c98ca6ff4d930407ba74f6feeb966",
+        "papers/master/manuscript/exact_closed_types.tex": "e936abff8c6603615dc7e191bfc0cc3d79b8a47708820c01e6664827c93b19cb",
+        "papers/master/manuscript/immersion_entry.tex": "3483b15f7b7fa888060942f2fd2bd0b70682e89bd19a996928315f9519af68b4",
+        "papers/master/manuscript/marked_cut.tex": "dac42a05369a1c9e756e6011469ac825df96b3010b6ece95c4d7b9d0e4621b67",
+        "papers/master/manuscript/recognition_gap.tex": "f70bbdc1a2ad8dfd27ec66eacc8c364466b3c4eb5cc50bfb834d7338f738db03"
+      },
+      "main": "papers/master/manuscript/chiral_weyl_energy_and_smooth_poincare.tex",
+      "pdf": "output/pdf/master/chiral_weyl_energy_and_smooth_poincare.pdf",
+      "pdf_sha": "9a448141fba72074f54831e2c5c0b524345e56c397db8adee02de6a21b056e99",
+      "tex_sha": "e0c3d1ac448777dad8e4fba912f4fbbf5e422cd5fed878c0748f7f6397b9673d"
+    },
+    "master/01_fixed_type_variational_descent": {
+      "count": 21,
+      "files": {
+        "papers/master/01_fixed_type_variational_descent/manuscript/balanced_exterior.tex": "96ec25cd36bf5d319d9fb2616bdc50c8a044ffa65688a3c6daabdb5bc3059f53",
+        "papers/master/01_fixed_type_variational_descent/manuscript/collar_capacity.tex": "9b08ae7f625363b064fa9d42a17ed5152c981cc254e74f471d9293d3f11beecb",
+        "papers/master/01_fixed_type_variational_descent/manuscript/complete_limits.tex": "c0bf42fb00527d78dbc0a85acc319fb9c40e46f3a361a987f8319cc1def30bb0",
+        "papers/master/01_fixed_type_variational_descent/manuscript/connected_repair.tex": "2b8c64408c8dc45c0c050b81c70e1696738f8bc97dceaa23e499198741fb6ff7",
+        "papers/master/01_fixed_type_variational_descent/manuscript/core_variation.tex": "65c76bc676af0725cbf350a13798c6981784fb0656579a3606af4cc1b9a21fd9",
+        "papers/master/01_fixed_type_variational_descent/manuscript/cotton_variation.tex": "b4b879bde3a86347fef442c2ed303609644022f311b643cb4377316d7fab8d15",
+        "papers/master/01_fixed_type_variational_descent/manuscript/disk_collar_comparison.tex": "c1de1c225230b140f89d4cd0efee095a8f3ea433ba20067b9370cf0eda753b4c",
+        "papers/master/01_fixed_type_variational_descent/manuscript/endpoint_charge.tex": "d31fd9c9e65a420554bc19bca516dc7df81a8fa11e3edf5deeb92409c604ebad",
+        "papers/master/01_fixed_type_variational_descent/manuscript/endpoint_smoothing.tex": "7cce530242f8ce708fb7904807704a43c35d993daaca07d704739793de0db7a1",
+        "papers/master/01_fixed_type_variational_descent/manuscript/endpoint_windows.tex": "ce330b1e0e7e8fe5eba1d2aaf877138b8939b9ef2a442afbea46e149bce18f48",
+        "papers/master/01_fixed_type_variational_descent/manuscript/exact_alternatives.tex": "d997fa330be8b0fe323235a13e43a6b5cb5e19177abe669ffa76b523099a8d43",
+        "papers/master/01_fixed_type_variational_descent/manuscript/exact_spectral_gap.tex": "64d8fbf31fe397dc23bba6d6bb4db3bfbc6c964226cd8486c4f5ef40a476ff1c",
+        "papers/master/01_fixed_type_variational_descent/manuscript/fixed_type_chiral_energy_descent.tex": "c6f3b91fed56743f7e9c6125f71d69a3104b0db5982c57b629301e7ac8b2a6e3",
+        "papers/master/01_fixed_type_variational_descent/manuscript/isotropic_gap.tex": "4b797040f9e081cfcfd3e704b78287787d8a913eeda14f20cf47976f234bb095",
+        "papers/master/01_fixed_type_variational_descent/manuscript/modified_ball_charge.tex": "1dc6455d2270348ba87439e79f058c9775e00e86ab447eceb65389af66836475",
+        "papers/master/01_fixed_type_variational_descent/manuscript/physical_volume.tex": "001b2493c57953de91915c6038338503cf7537c61f5c86fc38ce27957169d1be",
+        "papers/master/01_fixed_type_variational_descent/manuscript/ricci_concentration.tex": "8cf098e31a6c4038e42eb8d81ac35a2eab9a0ee537016d008a4d2ee28b427516",
+        "papers/master/01_fixed_type_variational_descent/manuscript/ricci_scales.tex": "70039282901743d3bc4505166fee1c06ead46c267f748f443b2318e40737cd88",
+        "papers/master/01_fixed_type_variational_descent/manuscript/spectral_windows.tex": "63e4ef044561d7c19585d8a82896b4dde5b53df8af19e6809b3b30b95aed5226",
+        "papers/master/01_fixed_type_variational_descent/manuscript/subcritical_charge.tex": "efb34dc87367bbbd7f3e0c70774add9aaab4115d5410cf93b72f683c972b67eb",
+        "papers/master/01_fixed_type_variational_descent/manuscript/variational_comparison.tex": "d620f571a37762f0ac3be8578f8509c9204f480262507c832e69881302a4d9e2"
+      },
+      "main": "papers/master/01_fixed_type_variational_descent/manuscript/fixed_type_chiral_energy_descent.tex",
+      "pdf": "output/pdf/master/01_fixed_type_variational_descent/fixed_type_chiral_energy_descent.pdf",
+      "pdf_sha": "7eafcb782b9b197a8818e6afc63fb3a858dacb63b7037398ee47a4922e497576",
+      "tex_sha": "a256e946df656c6e7a4841f443cec378c411fe20384dc5d070d8b72994b6ed9b"
+    }
+  },
+  "root_imports": 239,
+  "scientific_changes_during_E51": {
+    "pdf_sha": [
+      "05_collar_deformation_and_surgery",
+      "05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery"
+    ],
+    "tex_sha": [
+      "05_collar_deformation_and_surgery",
+      "05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery"
+    ]
+  },
+  "scientific_changes_since_E50": {
+    "pdf_sha": [
+      "05_collar_deformation_and_surgery",
+      "05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery"
+    ],
+    "tex_sha": [
+      "05_collar_deformation_and_surgery",
+      "05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery"
+    ]
+  },
+  "source_modules": {
+    "SmoothPoincare.Variational.BourCoupledInterior": "f02cb61279062a29a39934f2d36ad0b475dd9da139993744029536c4b738a9a7",
+    "SmoothPoincare.Variational.BourCutoffRestriction": "87a49564766a4bb62a618442da12c3d3097f375f6761fd77e17907f49eaf5ed0",
+    "SmoothPoincare.Variational.BourEulerTransgression": "733efae19e8e695e138ae0647eb2c63a55d35caca6fe4298dfb7b2722f1adff2",
+    "SmoothPoincare.Variational.BourFirstHitWindows": "af81a9878dfdd78d2b19546c8d32677a9daef5345bfd636effa3c3cc8f377abe",
+    "SmoothPoincare.Variational.BourFlatInterior": "e4a731e8e65eb82fdf11cb0cf5a2ac6bc4699b24ce77eeeb453e54e65cde752b",
+    "SmoothPoincare.Variational.BourGradientScaling": "b01d2b480434c7c8584d6cac6917cc221ec6e23670ce8d5383ff4fa5f1e8392c",
+    "SmoothPoincare.Variational.BourHarmonicMorrey": "94113840eef3d5a1dbb533dda926c19c94f6f87f33f532f9448ac630267265fd",
+    "SmoothPoincare.Variational.BourHarmonicSystemInterior": "5aabc6f2391303f7b0860059631f31e2d2a4615a9ee9dcfdc9d9a01d1d93baef",
+    "SmoothPoincare.Variational.BourInteriorIteration": "b8d5ac058199b55d96493775d15a617c9968809630b5fe052d1f4a148aa6ed0a",
+    "SmoothPoincare.Variational.BourLpAssembly": "8e79b03444e55ee87f3633234f61e7cd5ea351425da8316be8927acc3b97d7f8",
+    "SmoothPoincare.Variational.BourMetricInteriorEstimate": "7b786d02e8b9161fd381edc97aea156c07d23a508e44bf673efecbee466f3ab2",
+    "SmoothPoincare.Variational.BourPointedCutoffs": "66874ccc347b2da572dfa6b004d797e42512ee7d561d8475899a28b59ff60e0e",
+    "SmoothPoincare.Variational.BourPointedScalar": "7aa9fc1fe295e34f2f6f2e5498525db21987921052e18245e688fb1934ecb40d",
+    "SmoothPoincare.Variational.BourPointedScalarFlat": "990c734ecfefc4dfe4fc96805ab356828b08358458fcb703faf9ba0b6add8137",
+    "SmoothPoincare.Variational.BourPointedVolume": "9ec5a2137e8a5625ff1fe4700c9ace6d9cdff2ce62dd46be7127bfa9220dd289",
+    "SmoothPoincare.Variational.BourRegularizedValueSlope": "ad29072d79d05617f509959d912c3ed1eff22e93baa4460a76a3ee30150cbacd",
+    "SmoothPoincare.Variational.BourRicciCutoffNorms": "d857978f902e7f0ab29acfe448dd146edb3d0042da62eff40b37d54b9594ead3",
+    "SmoothPoincare.Variational.BourRicciInteriorEstimate": "e5e0ab2b10581b2dbdaa707a34cfbabbd3d8750c57355f6b05241e4818de5cc0",
+    "SmoothPoincare.Variational.BourRicciW26": "017ca6b3acdf442d78e6ca550a62988f9e7641e618b4393849c13d8c082c1ea4",
+    "SmoothPoincare.Variational.BourRoundEulerShell": "6997c8388f6229e503c02e324ab7bbd2f217a4e37459f3ef1fd0561636d3009d",
+    "SmoothPoincare.Variational.BourScaleCalibration": "62e0bedf349a3de048c490fadddfed073821173bbdb0840bfed7f0ce3abde689",
+    "SmoothPoincare.Variational.BourSixthPowerInterpolation": "8fe81b8d323f79d09614fa33037701e20cdebb48dd2d6ef79958e6d3b1812cf6",
+    "SmoothPoincare.Variational.BourStationaryPullback": "b8da7d7c87dd9dbed85c404ce9668cf9f9c5b3eb9e2dd83fc929db4cd0ad5bbc",
+    "SmoothPoincare.Variational.BourStationaryReaction": "0dbfa572d3813fd520b531821bfc9a5a0f9ee5816460fb4e70b1c541293524cd",
+    "SmoothPoincare.Variational.BourStationaryTrace": "e4d6f4209686487b177a8dd29b278370910bf4f18d2b8688d90eac88746c2199",
+    "SmoothPoincare.Variational.BourStationaryW26": "bf5b2433f91aa6946381f01aa3dfa48e13af22bb0d179d1c3eb52cc36999a350",
+    "SmoothPoincare.Variational.BourTerminalMetricStatic": "904fbdf57ff6d8075c8f34ec9f2619e81988843a8bf2b4b04e8a7621790fd6c4",
+    "SmoothPoincare.Variational.BourTerminalStationarity": "ce22297b00af5937be10136f9463cb706c30dc9a21b80725ae61db40109a447f"
+  },
+  "stable": {
+    "formalization/SmoothPoincare.lean": "6273930be0a4a4fc21cfb2d6b06a01154123749dc1862c9bd8b1349dbd9bbb68",
+    "formalization/blueprint/lean_decls": "ba2c4513f2de09ac8ff82e258f17f24968dc6d22ec8ae4e89467050121447a71",
+    "formalization/blueprint/print/print.pdf": "e5f404a951bbf4d48603acbab3ff82892a4ffe7fb59fa95d6c7102824ea9c590",
+    "formalization/blueprint/src/edition_five_bour_attainment.tex": "ffee88e9594d64a417e820d56a1d86badeaf01b15d43046e542f902ba39ebd26",
+    "formalization/blueprint/src/edition_six_rigidity_and_suppliers.tex": "e22669a946eba9c3d2af077abc32c238c4b280c510c2e075db5f1a0667988ed5",
+    "formalization/blueprint/web/dep_graph_document.html": "4cb7195c14613202caca58c6112b872206c212fba0482845f03c4c3aa1bb2d2a",
+    "formalization/blueprint/web/sec-ed05.html": "fd205f1f57905f3b40bdc63bc0add4dad0cfd712bfd4c1bfa24f5a298845af3d",
+    "formalization/blueprint/web/sec-ed06.html": "b9590526b21d8cf8cc1a11b09e9ad23a697e8ed4e10382d603eebb5b52bbc6f5",
+    "formalization/investigations/research-progress/handoffs/ED05_E48_VERIFICATION_20261126.md": "d5e6af9452a241499d727591de79ad794e14e9b8f1159597cce3069aa5aeec61",
+    "formalization/investigations/reviews/E48_INDEPENDENT_PUBLIC_CHECKS.lean": "9e7d362af74f42bd2c89c5877c86e87e9480b28f1634b230f7d360417497853d",
+    "formalization/investigations/reviews/ED04_E46_PUBLIC_CHECKS.lean": "7b11ce810016b187a488bacd8d6896f7f2b3e0e193f69c803c183b6755b0bdea",
+    "formalization/investigations/reviews/ED05_E47_PUBLIC_CHECKS.lean": "96d19c04dcc02301fe747a4a4f3a7e39378b9e26c06d4ded202d819a36f8fc9c",
+    "formalization/lake-manifest.json": "839111aae86b693524cd57db5ce7f2e8edc972dad49296468eb18d6735e52239",
+    "formalization/lakefile.toml": "35562fc83d2a568ae4ae08f3e6878481f5cf1c505775acec414dc924f7bfa9db",
+    "formalization/lean-toolchain": "bc84812c94489d1e3e191baa1dc10d5eb684382d7fe9d2a5ab085e72c1c67e47"
+  },
+  "supplementary_scientific_inputs": {
+    "papers/investigations-1/05_collar_deformation_and_surgery/01_collar_deformation_and_adapted_coordinates/research-plan/PLAN.md": "f687fc91b054977db2ab9c4dc6a8a6e13a2b88bda44278a942f448c36f647d79",
+    "papers/investigations-1/05_collar_deformation_and_surgery/01_collar_deformation_and_adapted_coordinates/research-progress/REGISTER.md": "6009827deec8e922106c321b18df4155bba74920e8e8c5166cb6c8f572497bb8",
+    "papers/investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/research-plan/PLAN.md": "0403a5f84589994c5066bce09eb1796c5ae04ce593e196dd33d237807abfd4c8",
+    "papers/investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/research-progress/REGISTER.md": "961de1bfcfc032d341173d0ad93da76144ad3eb8bab3772858562c1741772ec5",
+    "papers/investigations-1/05_collar_deformation_and_surgery/continuation-notes/AFTER_DOUBLED_TANGLES_AND_INDEPENDENT_BANDS_20261126.md": "297b6ac645e5e1c838dc3f7df4cc08fd10b26701fff1f1ba74de40ebf0112348",
+    "papers/investigations-1/05_collar_deformation_and_surgery/continuation-notes/AFTER_EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md": "9b0feace2ecf485e24b54ab610c064030c895c5e0dbe49f5d28474528fb9e4a4",
+    "papers/investigations-1/05_collar_deformation_and_surgery/continuation-notes/AFTER_FOUR_POINT_RETURNS_20261126.md": "87784b9efbb66ced9ed2fa0a1cf3b39be0d216eea45f858bdca4f9d74fbf3545",
+    "papers/investigations-1/05_collar_deformation_and_surgery/continuation-notes/AFTER_GST_NATIVE_REVERSE_SLIDES_20261126.md": "0f59eef2da4da81fb70d30aa4046832248be665d3892961459d717b4667dbf86",
+    "papers/investigations-1/05_collar_deformation_and_surgery/continuation-notes/AFTER_NONLOCAL_BANDS_AND_PHYSICAL_TRANSPORT_20261126.md": "f7413056889d809b6c30099ca6a9f12e6a421e332864a88a0f073a393d63418f",
+    "papers/investigations-1/05_collar_deformation_and_surgery/continuation-notes/AFTER_PENULTIMATE_CUTS_20261126.md": "273b8ce2bad83299d45fca08268759f38aa0ed60132dea9c88e886df163a33e8",
+    "papers/investigations-1/05_collar_deformation_and_surgery/continuation-notes/AFTER_REDUCIBLE_NATIVE_CUTS_20261126.md": "636c4b261d825cffcadd73ba8bc6cfa162f6e4024103d1857e551118b50d8242",
+    "papers/investigations-1/05_collar_deformation_and_surgery/continuation-notes/AFTER_TWO_ATTACHMENTS_AND_FACE_COST_20261126.md": "5aa067d45e52640f98c869b72e61775f06fafa9bdc3f6da4524a98407cf216ef",
+    "papers/investigations-1/05_collar_deformation_and_surgery/continuation-notes/AFTER_TWO_MIXED_CUTS_20261126.md": "a01427f39f87fab8afca480f538fbd5b0d4cf5f843f6d99da59d3ffeb7d3d9ea",
+    "papers/investigations-1/05_collar_deformation_and_surgery/continuation-notes/AFTER_TWO_POINT_LOCALIZATION_20261126.md": "c9709cfd7a4e9663abef7bce4b033542a7d13218a1a6300336024076af33f798",
+    "papers/investigations-1/05_collar_deformation_and_surgery/continuation-notes/AFTER_WHITEHEAD_MIXED_RETURNS_20261126.md": "f383e26804e8e3503ad1a93aae0f05b5b7c68c1eed712e397d228bc1fe889422",
+    "papers/investigations-1/05_collar_deformation_and_surgery/continuation-notes/CONTINUATION.md": "c93bfbf45e3d4b37177ba8f0871577599626069ac3b7b27ad999f086126b4326",
+    "papers/investigations-1/05_collar_deformation_and_surgery/continuation-notes/NARROWED_MARKED_SURGERY_20261126.md": "a00a6bad7be3bc24f5c36dbf6c8e050738ceeb7a2fddf7925064eaea48ad3e45",
+    "papers/investigations-1/05_collar_deformation_and_surgery/manuscript/README.md": "310153b0e4b42a22a575bee70c27530f7d2c245c62b3e35736aa4e9a9fef0db4",
+    "papers/investigations-1/05_collar_deformation_and_surgery/notes/PERIPHERAL_TEST_AND_ROUND_CONTROL.md": "4aff4ed4a91e2c64c32efc05455d67827e35cac83fb848bd495223c90adbf9b4",
+    "papers/investigations-1/05_collar_deformation_and_surgery/notes/README.md": "3b8c0e4366e33fe3e4e1e3afdc1548d626726b830a5e1045317ce7fb132d03ea",
+    "papers/investigations-1/05_collar_deformation_and_surgery/notes/RECOVERING_CORE_SUBBALLS.md": "230dbb3a012f40b2c6c05f85f11c569dfbee45ff39c07fe715580db957563b24",
+    "papers/investigations-1/05_collar_deformation_and_surgery/notes/RETAINED_CORE_GRAFT.md": "0e17e8eb1b92d7320e13b8410ee44c61373e252e771ea31fc4b0951542c78c75",
+    "papers/investigations-1/05_collar_deformation_and_surgery/notes/RETAINING_THE_TWO_CORE_CHARGES.md": "6f437054a3a038cf9bb45da544e4f28c97ff9e682438affa75a7ee872770a64c",
+    "papers/investigations-1/05_collar_deformation_and_surgery/notes/SOURCE_WITNESSES.md": "181dbbd51434ca0baf4a8d529995cb5959b77085d976837c9ab66ab169dd509c",
+    "papers/investigations-1/05_collar_deformation_and_surgery/notes/SPACE_FORM_REFERENCE.md": "cfbd7149db0f0a6642dc67f772988d6c2b8a8e519b45461ab318782f9cc1b762",
+    "papers/investigations-1/05_collar_deformation_and_surgery/notes/TRANSPORT_ON_THE_CHARGED_DISK.md": "3afb193895a79e3b1f4ce508f66017cba887c5b3e3a9b1bb3aee36d81c22c37f",
+    "papers/investigations-1/05_collar_deformation_and_surgery/notes/VARYING_THE_CURVED_REFERENCE.md": "be0b4d06462a824822662bc03c22e1925319be79496a72e74d89dabe8d1a9aec",
+    "papers/investigations-1/05_collar_deformation_and_surgery/references/README.md": "014f381470cda1c80899794f7928861e5c662f7fd4e5db79abeec7c6299303f6",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-overview/OVERVIEW.md": "bf2740aa3264b0ad7d42be17d576c02342b7e6b8c7a55409a5cc99821e0166cb",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-plan/PLAN.md": "5260275f5b7193c3eba1e0c636a712a79c77bfe91cff6f18a70eaec7da2777c1",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/REGISTER.md": "08cd617a74dc4ecce1e74f7c7c49965128620ae54af4362e9ac827e6518b7420",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/ACTIVATION_20261126.md": "cd305d9655f69ca0a88b1e2ebf873347580887d00b2d2aeffe1de1d51f542e5a",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/CAPPED_FACTORS_AND_FOUR_RETURNS_20261126.md": "eb30364191d85d189fe2cb50f04acabab5a42250bcc9871b094ab624b0df6769",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/CONTROL_REVIEW_20261126.md": "1d6c19b95240d812fbf990d7b337c5515eefcdc9417b7088dbeaf848219279aa",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/CURVED_FILL_READBACK_20261126.md": "416ed55bc836743ffe7ede25ff386e98371229ad185a55eae3912527118cb945",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/END_CURVATURE_CHECK_20261126.md": "78c8e43c359d782831225236847b07a27562f6a45455ee86dc50cecf66c223cc",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/EXTERIOR_AND_CAP_READINGS_20261126.md": "fe569bc8058398e25758431656687e6acede0416c745167b45455121362eebae",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/EXTERIOR_RECOVERY_AND_NATIVE_CAPS_20261126.md": "87b1b69f85a4875d73db09d7e6878277c776091636edf7b118edb24aad9d5203",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/FOUR_POINT_MARKED_RETURNS_20261126.md": "7e808251d2d80c55605d921955b0fad1bca7d6c4e0eaed155307d73ee9a31d20",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/FOUR_POINT_READINGS_20261126.md": "4e128001a2f34e032d2ddff2f4a1960b012a509fcf9a11dc028826648d927797",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/GST_NATIVE_PACKET_20261126.md": "0ccaba55719ed49c9c83cc37ce1c8b241f28f93d3b1a2e79d12635f58af1c944",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/HEIGHT_ANGLE_READBACK_20261126.md": "0920ec2415a4eaba651a8b25b04ae24417358610ffb1f46a9d83da68020def23",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/INDEPENDENT_BANDS_PACKET_20261126.md": "0391e894c08ff6c95351a76bd122d9a80809b1ebc81721144f3d24d320d401f7",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/INITIAL_MANUSCRIPTS_20261126.md": "5f6bd2c6ee6aa086e28d2464ccad1114a3af8373ba667352debb676498d2573b",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/INTEGRATED_PREFIX_READBACK_20261126.md": "43071376a2b01b16bfba4d55ce8589eab887e8b6b729e1cdac25f4ad2e5091e1",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/KNOTTED_COMPLETION_ISSUE_20261126.md": "c8368156e3071e84e06e44b232e11b1a479f6abc8798b73b868b5c9002d921b2",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/KNOTTED_COMPLETION_PERIPHERAL_TEST_20261126.md": "bc99e82e6f891ee69238a0d6147805d7f62f3eb7b88acc735a9f676d915ffd99",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/LAST_HANDLE_ANY_RANK_20261126.md": "bdfa07581c289fff1010e948d2ce53dd7806017583254d21dbc35cef46367d9b",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/NATIVE_STRIP_AND_LIFT_READBACKS_20261126.md": "cde1a822759ffb79bc0e19b08e6bc4c2e05f1c942770918f84222493dabf0625",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/NONLOCAL_PAIR_AND_NATIVE_STRIP_20261126.md": "6626a8a20f1b3fcd9edc645efd21de91d4b895686c2ef540dd55a7ca7c6b63a9",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/ONE_MOUTH_MIXED_20261126.md": "d32eb25b3fd7342aca852ccffbbae7534ebd39553e49a8d8c57f8f1491fa9976",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/POSITIVE_FACE_REVIEW_20261126.md": "1bebec69d8f28b09fa50dc15dc84d49de44b697443e52d567351f1e93e56aac8",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/PREFIX_AND_INTERIOR_20261126.md": "053d4f15c64d2ea25cdb96d7b041e25b3560f07348329009134ae2c62cec6ebd",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/PREFIX_AND_INTERIOR_READERS_20261126.md": "bebc53b820ba4378267a3fd382a90aa4256dc5ddb5af7e71f9a123abe795e7e9",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/README.md": "eea19fc20eb41b1f7337c736b63f284b002ee2f19f69ffe8f11911d11a1fdfa1",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/REDUCIBLE_CUT_READINGS_20261126.md": "2e6904222d60665a7a9cbd73a5e788ca5e0fbf190115b7aeeb12374b947e0d05",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/REVERSE_ORDER_REVIEW_20261126.md": "629ce723885dec40c48f8980b0b6ddf954c0ff4f3559d7765021484e05141a0c",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/THREE_HANDLE_CHECK_20261126.md": "d1165adc9256dba1885cec31fcb6b3820315c295cf97ec77b4da3dd3795a9867",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/TRANSPORT_ON_THE_SELECTED_DISK_20261126.md": "69cba30478b86113121b4ad231439820e024da93208158b7548f304a40cde260",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/TWO_ATTACHMENTS_AND_FACE_ERROR_20261126.md": "867576b0dbb515c8ebb010fe97ef244d76e1bbb0487b4cb8b2a75c76fec74aac",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/TWO_ATTACHMENTS_INDEPENDENT_20261126.md": "1ad10687a26f2169d13fc05e12c1941a496fac9b60e7c0a2fd01267cf4710196",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/TWO_PORT_FREE_OUTLET_TEST_20261126.md": "6b0696d312a7cc98f2550a5ce37e4557a2d99c49bebd01fb04f2393d1bd791d9",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/TWO_PORT_INDEPENDENT_READINGS_20261126.md": "dbbfb082823dac50b56efc8c8233334bcff03c6b2a9ddcf66538f19e5b12ac64",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/TWO_WIDTH_AND_DISK_REVIEW_20261126.md": "974b40480d4cd7155cf89db6916e5866660f9cc4a97116a460147b3488ad6f49",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/WHITEHEAD_MIXED_READINGS_20261126.md": "a33a4acca4b1c567655e2fac0f0bb5ddc2de73ec4e1aae4550f6e7149a9f0bc4",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/WINDING_AND_CURVATURE_FOLLOWUP_20261126.md": "ac5c1ca9303d75e8a4be89c09d8338d6582d6024a133e2f5967f5cd1db8b660a",
+    "papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/ZERO_WINDING_TOWER_20261126.md": "778df28edfafc37f67547c76d80fc6e66ec359c83917cb68fc00f5ab549d7ed3",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/ALL_BANDS_QUOTIENT_READER.md": "d14275f9f56688515bb988d07782ab492bae1c1a3c32106c8b523b6ffa492c7e",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/ALTERNATING_CLASP_READER.md": "6b35cfc53a5939c4909cb9152cc09a111ad6e465ce07c08573a428d19d4887c6",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/BANDED_LONGITUDE_READER.md": "691b7e3c09bbcfa1a59a54e966736c8abc5567c99e3511fd6f71637038e80d18",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/BOUNDARY_RESPONSE_READER.md": "199c443794f8428349c2d37a2916c0e6526e679e085649014e82ec2aa452c720",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/CHARGED_TRANSPORT_READER.md": "17b0138e5c5a751862cabf980345712d39c3d7bae6dc56ba2f7a8c6b46f9bee0",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/CONNECTOR_AND_ISOLATION_READER.md": "461b95c61efc804af295c85d2c22b08b1d878699929f0cb12efa9dfe7039c555",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/CONTROL_READER.md": "bdf336c2af642b0fa7563da50f39fefef2e4ef9f8fa75f223920f66b2c4de991",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/CORE_MASSES_READER.md": "d226a05b130f008d1941af2508dcf9d94026cdede944063d47612b989fc53c46",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/CORE_SUBBALLS_READER.md": "6b819c3fc1c2f06b025120b456d400f07c2a891770924b0a49729a9a4f45f18e",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/COUPLED_STRIP_READER.md": "eab71a2e3d2f846be1407c924a8431cfcc72b1ee8673570671e7df11fbda9c46",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/CURVATURE_INTERVAL_READER.md": "f52c15bb77f8eb69b0438e76bfd91c88336d83d799f3ed126ced13b86ee8ea19",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/CURVED_FILL_READER.md": "1742dded8c0f7696ce71fd25369b22281ff5432433ad9df78f26c3b9a85e2fd4",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/CUT_TANGLE_READER.md": "c15e53e98190dd93da6de45411ee045452a62526074a388cfc1420467202dee2",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/DISJOINT_SAVING_READBACK.md": "5cf309589b4147407f4c359b2f3a0486712e675868848e3166627eec76349134",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/DISK_AND_COMPACTNESS_READER.md": "da8c617698692a342fd0c7942a44ceaf9c6e73e3270e8375c9b041469789055c",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/DOUBLED_PRODUCT_TRACE_READER.md": "4dc42093627de2ddee19c51374cbce0e23dbff65af149e57149fdc66cfd82520",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/DOUBLED_SOLID_TORUS_STANDARDNESS_READER.md": "9247f80f5a15b550f02bdf2709bb594a0dea7453e6a3aed7a333769960154322",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/DOUBLED_TANGLES_AND_INDEPENDENT_BANDS_20261126.md": "8e79415e61236c5195fc04e6a1fa4d3ddcde1e5f9e90e893a01bd38c7d7268bc",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/END_CURVATURE_READER.md": "d76f3f6be781b03cc605a96e669d38172f8dcb1ae862e24ec795fc72410db937",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md": "a2ea8af276265c9b19f93880b757755315c43f5a13e693e5b2953b18e8f21d10",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/FACE_FLUX_READER.md": "c09e38ac268afb9a9afafbeec16c4e13df203ec592da75272f4d2457204d8091",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/FILLED_SPHERE_LOCALIZATION_READER.md": "a55a4fac01c64cbd8d14db08d252c747cf1e99dfb1380191ab3218bae1cf9748",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/FIXED_COMPONENT_SLIDES_READER.md": "ac5a4506990c7681fa49291d779bd983bc6007984548497df5fb3ad822c85f9b",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/FOURTH_SLIDE_READER.md": "e957a210a45cd6e8c9882b6f291b501f5db1430241bf471deba2326d6496f820",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/FOUR_POINT_COMPRESSION_READER.md": "80e1b2ff5119ecba4c499e54b9ebdc6fb0262dc5a42c14e7f6648a0fbcf11148",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/FOUR_POINT_FIXTURE_READER.md": "6a09542ae2cc709b08c5f42f07194d7332469aa49425a9f4645c112113b697c2",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/FOUR_POINT_HOMOLOGY_READER.md": "53903033b4b6a89d92845712c255bf32822d41dfb8f20a71a6087f9635cbfee1",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/FOUR_POINT_MANUSCRIPT_READER.md": "264b0f97b26153b7ea5414fa8bc972fca6b65e6824e847f4eafba88fb142d461",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/FOUR_POINT_RETURNS_20261126.md": "87c03b0b2a0283cb279a356076450864a01ce89dfc2543bfd0f421cf843170ab",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/FOUR_POINT_TWIST_READER.md": "3f4480a6eda2413d976cc0a8611a7e2195601af1847bcbb0088cb65c64bc9364",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/FROZEN_FOURTH_BAND_READER.md": "8eb0c84dac55d46a9cc1a733aeb8b27cb14e3f4c7c6d34f79dcd465017bf3671",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/GENERATOR_CLOSURE_MANUSCRIPT_READER.md": "e454877dbaffe526960ef36cc00ebe0245811c7b9b20f32225b68fa036ebc0c7",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/GST_CARRIER_READER.md": "0a52b6973cb4b935fbcd372e785e2733d14740528c87f231ceb282f84354ae88",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/GST_INTEGRATED_READER.md": "312f318498817426a0341f1e434839f5208bc5c13ca8bfa11a2ad50c6356ee40",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/GST_NATIVE_REVERSE_SLIDES_20261126.md": "54a2185235bc365c75cdcb173299a881daac9df1fc34b689a2da6ecb4831d914",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/INDEPENDENT_BANDS_INTEGRATED_READER.md": "fb884f9e873ad8344c6b97cbd68a71fbf902d5257d611de49145efbe7d0f0f91",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/INTEGRATED_PREFIX_READER.md": "86902d08fedddbcc00445a0574c81a28a7f00db071ae56ec3195611c4bad9f25",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/INTERIOR_CAP_READER.md": "7ce07e0b28937bc38db59d869ce7a43ae0e1ebcd775e383c1470901dd9caf9be",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/KNOTTED_CLOSING_READER.md": "9f0f3ffc29db5dc09352cb34786ad6e8e6df36e3a188a83cd9b15c5bcd631c2f",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/KNOTTED_EXTERIOR_READER.md": "e391a31b370cab33612755597c70dc927a7c4635fd09665bed7f437ee37bcbf8",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/LAST_HANDLE_READER.md": "fd7a26b01bf5c838d2e628d0355a570782a2b6b70adc2e62fba4206c5bdc8253",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/LIFT_AND_SPHERE_READER.md": "726e9549724d74c456ba3b377160d8acb57c27687ce2e881217c9cd6885adbf1",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/LOCAL_FILLING_READER.md": "fdc9fa3634aa7fedefe51f30f8525b04a9bde550b7ea06384f1b369ecbd939b9",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/MAZUR_BAND_READBACK.md": "482c9f1584e7018714de37dc60aba179bd8083a1a510c25b37d488074842f442",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/MEASURED_ROUND_RESPONSE_READER.md": "b6939e1a333682410ea9d843bc5db69f51881489015f15a11ed2f010c2046720",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/MIXED_RANK_THREE_READER.md": "5d66349a9715807f54dbfb4efcb2e060fae23d8c108150756b7992936b494b0c",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/MULTIPLE_PORTS_READER.md": "f1f3c2103479cd1f477f6ce9032f1a8e07d3fd24ca9230d7b083fdd8dc1072dd",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/NATIVE_COST_MANUSCRIPT_READER.md": "499684ed9851b367888e002a8dc1b06e61067d28e40c513d320b0529e5a014a4",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/NATIVE_SPHERE_COST_READER.md": "c7eead3e65689c58e72f08fce865332646c28c4e960f1c294bcbeba7b894c453",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/NONLOCAL_BANDS_AND_PHYSICAL_TRANSPORT_20261126.md": "51b3b161e4876ab4ea4841b0c13354c638cdedd07201489421818bbb6ed6fe2b",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/ONE_MOUTH_TRIANGULATION_READER.md": "3c0092536fd3983ebdd663b911e6d1efea7992a58fc9eb367878092609f24daf",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/ONE_MOUTH_WORD_TRACE_READER.md": "44c13909f8ea1fec9dde5bffa84ab93ebfd858631213522cd3806389b57a19fa",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/ORTHOGONAL_WORD_READER.md": "f082d85c841c613865463b3bba9360747edd139208d7791192c78ee51ec60636",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/PAIRED_MANUSCRIPT_READER.md": "25dba6a66175a6a752a0d3693ccde41e473e909cb358778ea013fbd55955a8a8",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/PENULTIMATE_CUTS_AND_CURVED_FILLINGS_20261126.md": "efa91a6d9797bc22df3c8dbd766298c51667eeb33c27df1fcf24e9a7cecc619d",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/POSITIVE_FACE_READER.md": "55422b478d64a758d952750c274936b01d2f91afecfca568f2e25e1acf40b111",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/README.md": "e82994c44e95f3c6a2d2ee0af9c00e8a173e928e1ec958ecc9e2d520cb2555b0",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/RECOVERY_AND_CAP_MANUSCRIPT_READER.md": "27a39f5d37d754888de488c7b92ed8813a24a0f6c2ad0dc67818935d3ee9847c",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md": "4cd395c48835a1656002b765149ce691de6cb11ee60669e93ab0270a3f1b2e83",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/REDUCIBLE_CUT_MANUSCRIPT_READER.md": "1cded0ab3a47b7e846c4466aeeec67be409b97f6225e42a73cf1c9c990064918",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/RETAINED_GRAFT_READER.md": "9a3e580f9e3ac5c48fa98d44af0489ffb923f0345b91ca13b253ea8d3610f72c",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/RETURNED_BAND_READER.md": "446a873d6ae7e9a038b3418e8a662408b3f3ac49979c13d2e4e4c64fe8dffbdf",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/RETURNED_RANK_TWO_READER.md": "8a3ec747416b1916cc00b94bd5e7d81a4b8f9d7b3702c4e00b568fbc04b9cdf5",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/REVERSE_ORDER_READER.md": "e34caafb76c38a28be5af1d3c2d8314395e8518fb9cd048813ee618a17b3f981",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/SCALAR_DEFICIT_READER.md": "6e95c84d71be92c73757edbfd91159d7fc9b7aa22c7478158c7fa772f90bd37a",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/SPACE_FORM_READER.md": "b71df73b53e1d32eb00fd3ad2cf5d21c1829846cfded734dd7074475c0cf3ee6",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/THIRD_SLIDE_GEOMETRY_READER.md": "4e976ccc3bb70f40aed481d443800e17e987ec5d00117d51fcf6aff4199f482f",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/THREE_HANDLE_READER.md": "4a6ee753bcef865b51f53e611f7464448fb014be467f07f166cad0510030406f",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/THREE_PREFIX_READBACK.md": "4be3a35b906478da4be49ed2de6029aeebe4b03c6310c79d53b897d5893f3d9e",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/THREE_SLIDE_QUATERNION_READER.md": "eb5872d61d02e98438af3f60e5a5c08a34067a8f035b9c4292d4612043167987",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/TRACE_GROUP_CHAMBER_READER.md": "ccf485981af91b79a65dcf256331a145dde3ec99e73d716fe748c5101c171a0a",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/TRANSPORT_ISOLATION_READER.md": "6948058d330cf127930894120ea8b31307d8956d09644ff362671d1e8cb9f95a",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/TWO_ATTACHMENTS_AND_PHYSICAL_FACE_COST_20261126.md": "ea5494dc454ebb45ade30a4380dcb7ec35383c500254307ba2a184983298af79",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/TWO_ATTACHMENT_READER.md": "beb4fe695bdbe71ea7fc8dc96e9b0984691714029937a0a3556b9ad39bacc9bf",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/TWO_MIXED_CUTS_AND_CHARGED_DISK_20261126.md": "1dc699dcca2e50e15598e5c2f965e6772312d42ef1c8f5dfe4511dbe1f1f7935",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/TWO_POINT_LOCALIZATION_20261126.md": "180360a47d9f46a70da183eee5e4859b27eb58d0e024c776285f35ffd8a94f9f",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/TWO_PORT_LOCALIZATION_READER.md": "fe2aa3bcc2845bee9371556617c1e52a94ee14b60d3c71600eef1e3e5c13a74b",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/TWO_PORT_MANUSCRIPT_READER.md": "686652cd99734d3efa8785525e693e494b4b1e4b79dfd9ca5ac331d1fe5f1f7d",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/TWO_SUBTANGLE_BOUNDARIES_READER.md": "ca272f0bd84cfcf4e3ad908e1b142e676c706fb7391f8414aec3b148f143a0f7",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/TWO_WIDTH_READER.md": "defccbdaf48137926965d4be4efdc553f79944cc99e3a565ce2232c3d9c79c4a",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/WHITEHEAD_FACE_SUPPORT_READER.md": "4a547edb711acff6458b06edc494a859132f089ed0eeb1cd35289a1752295e42",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/WHITEHEAD_MANUSCRIPT_READER.md": "8b4f1298a00cd7640bb1c02b989422af62cd6a9806fee1cc1d2ca34ae0f684c0",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/WHITEHEAD_MIXED_RETURNS_20261126.md": "94508f1361df0035e960d6ced8ae47e45d90dc9d867ce822189c48edcf390911",
+    "papers/investigations-1/05_collar_deformation_and_surgery/reviews/ZERO_WINDING_TOWER_READER.md": "162876ac22d75f48a784cbdfd8a3465359cd5149312859a222fc7bb2fc606ed2",
+    "papers/investigations-1/06_bour_flow_and_fixed_type_attainment/continuation-notes/CONTINUATION.md": "a1af7addb942a3c4d8bd093bdf5d32ab48e43e16ed354920d0dc32835ff0e356",
+    "papers/investigations-1/06_bour_flow_and_fixed_type_attainment/manuscript/README.md": "26ed92491171280c754bb2efbb60112f3e432d880e62e0367070c48522edfc39",
+    "papers/investigations-1/06_bour_flow_and_fixed_type_attainment/references/README.md": "c2a02e4cb35d0aba5012f80fd309d256c0545ec8afef8dc94d657c64becfd1ed",
+    "papers/investigations-1/06_bour_flow_and_fixed_type_attainment/research-overview/OVERVIEW.md": "1f04e1b8d06b721ad0b3176bbf657e6fe6779dda2a1d36f550f1c35afdb4d8ce",
+    "papers/investigations-1/06_bour_flow_and_fixed_type_attainment/research-plan/PLAN.md": "2725aa4b16edb5bde31a9d2d73cff9e465f1e703cb9d319958e07cb71c38ac31",
+    "papers/investigations-1/06_bour_flow_and_fixed_type_attainment/research-progress/REGISTER.md": "3937da8b9357de261bd1edb2719cced7779a090a9ac8a3781441affa0cdf141b",
+    "papers/investigations-1/07_positive_subcritical_entry/continuation-notes/AFTER_DIRECT_TRANSITIONS_20261126.md": "ca5c56379ed0fca8256b22172f160566787685ed9e065bb1b7e1737413ccad19",
+    "papers/investigations-1/07_positive_subcritical_entry/continuation-notes/AFTER_FIRST_MARKED_ENTRY_20261126.md": "c6fcf2f6de0b5a4741cc1b259dc7ef0f994a4291abd4b97cdb2bb5f4e1ffb8d4",
+    "papers/investigations-1/07_positive_subcritical_entry/continuation-notes/CONTINUATION.md": "a8d9963cc98b5d82ca9581fdac192586fa925fed460fc8513392653ea69cbd1b",
+    "papers/investigations-1/07_positive_subcritical_entry/manuscript/README.md": "2b6d609eba4d7fd5d82760ea9812204ecd07eb549c486671ee0bd5b9a240c474",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/CONNECTION_BUDGET.md": "94fe5c0b22d83fd8e12594b48803dc707cbaeb422b7db992f54a938995a840dc",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/CONNECTION_CURVATURE.md": "708236af423b65ebe8bdda01a87ff263aae6705d03b64568c4d702e4c0742bee",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/CONTROLLED_THIN_PATHS.md": "56e5e49375b655b94e5a2d89a49222f2829f03296b7230bc5431f79e2eb29c21",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/DIRECT_CLOSED_SIGN.md": "5d8b3dcdaad8cc14f6a175b38efae38565811cae4bce26da49d8974e86f8b1bf",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/DIRECT_TRIAL_AND_VARIATION.md": "02ebd83c81ec1679abdc6b2ce38387811cfa5640291860e92bf003e146947f50",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/DIRECT_WIDTH_WEYL.md": "163ede13877e5275df2b03fcced997e4d9241f14177b0993ba3751a957240d74",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/EQUATOR_FORM.md": "44bec24076970466b0f9e12fb5b2884f56632de4e2061feb466ab0382a392d16",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/FUNNEL_EXTERIOR.md": "c28d0e4b1d02ac82d333ebc1105e763e21d329ee826f9240f59e27e2fcee9ae7",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/HYPERBOLIC_EXTERIOR.md": "7092ae571bbbc0bf7fa0ebbe6b9bf6229febb3c2a45faf49b9b805fe4c45f412",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/LONG_CUFF_SEAM.md": "fc5ff1b1ffdae5f3f0c6d87dc52d713d429dcfd377679b7c59514de764e2c68b",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/MARKED_CONNECTION_ASSEMBLY.md": "e27a89ae784451f6c5af146c5895fb231548ff13fc1b31352afbdbc6cc3bb1f9",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/POSITIVE_CYLINDRICAL_ASSEMBLY.md": "d4a31890b145b112bd13da4d0fa28ec9ad21bb178319f36de4d840c012af0987",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/PRESENTATION_SOURCES.md": "395cbf7750b3f9b2ebece0147c97a93239d8e78819f27aa49d687c43e318ebc3",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/README.md": "fe2be6b40eae1b91aa884a4cf51ac13dc01db9771c8a301208a8731e8addf384",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/REGULAR_HEXAGON_SEAM.md": "5e37b2a0803ed9a4b5a097fa5c7e2c84023488acef2298d8724293a6df1aa024",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/RETAINED_FLAT_WALL.md": "e7bd880db88685030f1a81698f052375b68431225fd59b676b375b3125fb87e4",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/SINGLE_RELATOR_CLOSURES.md": "cd15e49907a7acc52bb3eee5392ae5449e1eccb04b67d0c458abf3368bad66a7",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/THIN_DIRECT_SIGN.md": "66960bb0be76479e0020cbf70f672657e493eb8fb3583f4273a1dc9b44985c62",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/TWIN_DOUBLE_PAGE.md": "4adfed310152dd6da664367335efc15c3e90b66af8977f77c71d2460cfbd6efc",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/TWIN_SOURCE.md": "164042679642906e7e2019ff8ba75bde7aafb362d51d951c990acd6aa9eda5bf",
+    "papers/investigations-1/07_positive_subcritical_entry/notes/WARPED_CAP.md": "f405d92cf5af5346e75673b793518832999b4404eca04b312a2a710cefbabbff",
+    "papers/investigations-1/07_positive_subcritical_entry/references/README.md": "b47d4cfbbba961a7965e89e622c59960d1e0bc72e4ce18b59f7bab051ac7541a",
+    "papers/investigations-1/07_positive_subcritical_entry/research-overview/OVERVIEW.md": "b2c0bfad30e957489ccae4fb89ad1ba804793b83a1b0782de7e80d75dd852047",
+    "papers/investigations-1/07_positive_subcritical_entry/research-plan/PLAN.md": "7d6e70a3ab8e144171cc1db447d0fa508efee37fef7c1cff89f51218e9d8f4a8",
+    "papers/investigations-1/07_positive_subcritical_entry/research-progress/REGISTER.md": "93c168522eb95880f21d3664ef5daa1776553be2dd09089108fee4dc22b67e74",
+    "papers/investigations-1/07_positive_subcritical_entry/research-progress/handoffs/CONNECTION_CAP_ISSUE_20261126.md": "43f36f6ec9e154a803a256d87046c3ad9c52fbb93f3dfaddd970f306d551091b",
+    "papers/investigations-1/07_positive_subcritical_entry/research-progress/handoffs/DIRECT_EQUATOR_ISSUE_20261126.md": "530dcf55938309103fe9dd96cf2fa17e261e35fe88a6a895ee367519ae35f133",
+    "papers/investigations-1/07_positive_subcritical_entry/research-progress/handoffs/DIRECT_EQUATOR_RETURNS_20261126.md": "20face89fb9e3e5106554a54f9f89b7cdfdc459e1d101e5d34da5b3ffa340bc6",
+    "papers/investigations-1/07_positive_subcritical_entry/research-progress/handoffs/DIRECT_SECOND_ISSUE_20261126.md": "a6ced1a99f4f9764b82e66aae262ad88ad61a18adf037400fdfac17d6df6fc6b",
+    "papers/investigations-1/07_positive_subcritical_entry/research-progress/handoffs/FIRST_ASSEMBLY_ISSUE_20261126.md": "a2192c2660cead6aea17a296b822ac368917158dba2af014239a87d9e9027579",
+    "papers/investigations-1/07_positive_subcritical_entry/research-progress/handoffs/FIRST_ASSEMBLY_READBACK_20261126.md": "c6bb69a5258f790d96a8203f3b21dfa1fa0b9ef6edd273d748e638ebddc1abe8",
+    "papers/investigations-1/07_positive_subcritical_entry/research-progress/handoffs/FIRST_ASSEMBLY_RETURNS_20261126.md": "5ce82cba90f88c217ba98de978a415babc83566ed4407e2884fa7d5999cad2f8",
+    "papers/investigations-1/07_positive_subcritical_entry/research-progress/handoffs/FUNNEL_READBACK_20261126.md": "d794c2400c6e301e71d5f2c6c950249811c6d332d1b267915028b67d91d8b028",
+    "papers/investigations-1/07_positive_subcritical_entry/research-progress/handoffs/POSITIVE_CLOSING_READBACK_20261126.md": "5d562e6cd450657557fae8dc59f5778dd94abadfdd69b253c02511fdd742862f",
+    "papers/investigations-1/07_positive_subcritical_entry/research-progress/handoffs/README.md": "f64edd0a480cc99d8df80a7fa115adc5d6b0cd151a2e0ec35e9567a6f0942816",
+    "papers/investigations-1/07_positive_subcritical_entry/research-progress/handoffs/REGULAR_HEXAGON_ISSUE_20261126.md": "24e06343f78ae0e31b3a42f52d21b870402904743731070fa4c9bc79a2e84545",
+    "papers/investigations-1/07_positive_subcritical_entry/research-progress/handoffs/SINGLE_RELATOR_READBACK_20261126.md": "9f56e1b7cb90dfbfa55f9ba6d34faf89401029f49e32d3c7e02466ca72aec5d2",
+    "papers/investigations-1/07_positive_subcritical_entry/reviews/CONTROLLED_THIN_PATHS_READBACK.md": "e87b4f4f8d5451121073454f181c40d05b9055eab0e08cda280ff57add98415c",
+    "papers/investigations-1/07_positive_subcritical_entry/reviews/DIRECT_BANDS_READBACK.md": "55fcc615b381ec5d00389d7be85cf6a91af1f74c22cb23ff6bcb5f38560de0f9",
+    "papers/investigations-1/07_positive_subcritical_entry/reviews/DIRECT_SEAMS_READBACK.md": "019cf5c4d869255a51011dfb6a5685b36ae2153a9534e4b2d2dade817a66c044",
+    "papers/investigations-1/07_positive_subcritical_entry/reviews/DIRECT_TRANSITIONS_AND_EQUATOR_20261126.md": "0489ba3e3aa8fdd49b293ffe3e8eb89fefbd84d013ccde5c8fc18671ba268379",
+    "papers/investigations-1/07_positive_subcritical_entry/reviews/DIRECT_WALL_VARIATION_READBACK.md": "381a3fa43f758e1ab9be3be88324a19a4ec6950737b1c590ad8df437077a7b1f",
+    "papers/investigations-1/07_positive_subcritical_entry/reviews/EXTERIORS_READBACK.md": "c69ab9d5383feb2f26cd4b9b4697265f7eb789e63d858f6de92b2b80fff6eb6b",
+    "papers/investigations-1/07_positive_subcritical_entry/reviews/FIRST_MARKED_ENTRY_20261126.md": "933296fb79fde230f03817200eb6c443eb7af9f0f64962c069a17427685e0b6f",
+    "papers/investigations-1/07_positive_subcritical_entry/reviews/FUNNEL_READBACK.md": "25d51b0d71618b268a924a7e5f59432697979f8d05f546770109bc0a6c940619",
+    "papers/investigations-1/07_positive_subcritical_entry/reviews/MARKED_BUDGET_READBACK.md": "243d5a96e8c2bfad5a44478afcf1047ebac08e57feb02d860d92604094c634e3",
+    "papers/investigations-1/07_positive_subcritical_entry/reviews/POSITIVE_CLOSING_READBACK.md": "7b0012d69b2bbd85bb39a5fc6fd1893a8fb4ecd8e1036ff116e37d3a3ec72a0f",
+    "papers/investigations-1/07_positive_subcritical_entry/reviews/README.md": "54266ff8653bd3ac23decce814b072c7dcd8a2f14d0761888125b307a24a7b0b",
+    "papers/investigations-1/07_positive_subcritical_entry/reviews/SEAM_REPLAY.md": "bb2fb165d08c6f5e6305f33a666db2f706e972ec4724eb843cfa948f87661a19",
+    "papers/investigations-1/07_positive_subcritical_entry/reviews/SINGLE_RELATOR_READBACK.md": "281d2a7d076eaa597360a0a501effce6867bfe0862859617f285faf008fda20b",
+    "papers/master/continuation-notes/CONTINUATION.md": "482a83730e7009727a10bb86c2ae482f008284e79eaea203a8cb64ee190c7c7e",
+    "papers/master/manuscript/README.md": "5dabc3f69e201d6241475d0d8534c87d1f4c8ac3a023af6089ed15acbbe02314",
+    "papers/master/references/README.md": "ee29577d087d6b8909cec6b565ad72930bcddf99f2391923ddf2552b170e2d38",
+    "papers/master/research-overview/OVERVIEW.md": "ed6fedcb592596c00d0f2c4ddff1cbd4abd0dd12a1ce95a78f210c96ce9b57df",
+    "papers/master/research-plan/PLAN.md": "28eda47ee82b737fdbaadb30bbb64aaa4661ce6641ed98cc95a6999657d3f63b",
+    "papers/master/research-progress/REGISTER.md": "63b503c8114457cfd7bf60f12121626b040f4a83570a05497b60e8bf652f1fff",
+    "papers/master/research-progress/handoffs/DIRECT_ENTRY_OWNERSHIP_20261126.md": "a9464388504bac5277b9c12b7454fb4679c5092c22a5702c41a8623d4ceb8f98",
+    "papers/master/research-progress/handoffs/DOUBLED_TANGLES_AND_GST_SLIDES_20261126.md": "c1a08d7dd6a38cb1a48a0a051dbda76fcdd6ba54a32cceecfe87649919cdbc2f",
+    "papers/master/research-progress/handoffs/GST_NATIVE_RANK_TWO_OBSTRUCTION_20261126.md": "947491f06f44a15d95ab41f0614eb3808aa982a30361b62d48e1b1d69f981ec5",
+    "papers/master/research-progress/handoffs/REDUCIBLE_NATIVE_CUT_20261126.md": "a7991cdeb143acd76bbfb5b08fc936e516a4024a0c2e3e16b6cd52af7a37bde1",
+    "papers/master/research-progress/handoffs/TWO_POINT_TERMINAL_REDUCTION_20261126.md": "37c26a18188e313729d9eebaef9b25fb24b1024a432178d132e2e86d5a22442b",
+    "references/SOURCE_NOTES_BOUR_ATTAINMENT_20261126.md": "87bef213e68694c6fbce21e97240b5db1184fa3242579b2d45e0b1592f5b90da",
+    "references/SOURCE_NOTES_COLLAR_SURGERY_20261126.md": "0175a1926af8beb6666808a72728fb8eb6b1149985a1c6f2b7828c092d77d227",
+    "references/SOURCE_NOTES_DIRECT_ENTRY_20261126.md": "bd32cda696e74e25e7088b4e10720cf332a1a271d6c726c9970558b93f3e4346"
+  },
+  "time": "2026-11-26T16:15:53-05:00",
+  "toolchain_checked": {
+    "nested_matching": 19,
+    "root_clean_and_matching": 10
+  },
+  "topic": [
+    292,
+    "d0be4d495b8baef11d379fc29bde268433282222290b47c97ab5f49a63c1b579"
+  ],
+  "union": [
+    46,
+    "e749bdcbe87526b5134ede4e3b2c39f80c2653ac07ee793751c12af288a06d74"
+  ]
+}

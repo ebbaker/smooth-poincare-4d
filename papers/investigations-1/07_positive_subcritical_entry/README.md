@@ -1,13 +1,13 @@
 # Positive subcritical entry on a smooth homotopy four-sphere
 
-Can one construct a positive Yamabe class with common chiral Weyl energy below $8\pi^2$ on a specified oriented smooth homotopy four-sphere? Start with the closed four-dimensional boundary of a marked five-dimensional handlebody from a balanced presentation of the trivial group. Choose a boundary beyond the recognized controls, then price a non-product cap, its transition regions and the full retained exterior in the same metric. The setup sources supply the boundary family and an obstruction on the reflected Mazur control. Selection of the first untreated marked example is open.
+The marked minus Miller–Schupp sphere has a positive closed cylindrical assembly whose adapters exceed budget. A negative retained equatorial class now excludes every short-cuff completion preserving its umbilic seam. The regular and long-cuff equators pass, while compressing controlled transitions between their native ends makes the closed sign negative and the chiral costs diverge. Entry on the finite-width trials remains open. [Direct assessment](reviews/DIRECT_TRANSITIONS_AND_EQUATOR_20261126.md)
 
 | Start here | What it supplies |
 | --- | --- |
 | [Research overview](research-overview/OVERVIEW.md) | Normalization, seam obstructions, competing constructions and their hypotheses. |
 | [Research plan](research-plan/PLAN.md) | The first selection, the assembly and its independent check, with a Gluck transfer in reserve. |
 | [Progress register](research-progress/REGISTER.md) | Sole live status for `SP4-PSE` decisions and checks. |
-| [Continuation](continuation-notes/CONTINUATION.md) | Inputs and pasteable launch prompt. |
+| [Continuation](continuation-notes/AFTER_DIRECT_TRANSITIONS_20261126.md) | Inputs and pasteable launch prompt. |
 | [References](references/README.md) · [Setup history](DRAFT_HISTORY.md) | Scientific sources, versions and ownership. |
 
 A return to [master B02](../../master/research-plan/PLAN.md#e--entry) specifies the closed smooth type, strict energy and sign, and the presentations covered. The [attainment investigation](../06_bour_flow_and_fixed_type_attainment/README.md) begins with entry already supplied. [04](../04_hypersurface_immersions/README.md) owns immersed constructions and [05](../05_collar_deformation_and_surgery/README.md) owns marked surgery and prices on a supplied physical collar.

@@ -1,5 +1,13 @@
 # Handle isolation and marked surgery · draft history
 
+## 26 November 2026 · Product doubles and the third reverse slide
+
+Established three marked cancellations for product doubles of free three-string tangles with a designated boundary-parallel strand. A constructed example has two irreducible individual cuts and an explicit rank-two return. On the GST alternative, every first unstabilized belt cancellation requires at least four slides. The index-three third-slide core escapes all original single-arc neighborhoods. [Proof, scope and readings](../reviews/DOUBLED_TANGLES_AND_INDEPENDENT_BANDS_20261126.md)
+
+## 26 November 2026 · Native co-cores on the GST links
+
+Derived the obstruction through the first switch of moving component and for all slides in one fixed regular neighborhood of the joined original cores. On orthogonal spheres the partner dual has sharp minimum four, and the square-knot dual has a quadratic lower bound. [Assessed result](../reviews/GST_NATIVE_REVERSE_SLIDES_20261126.md)
+
 ## 26 November 2026 · Investigation established
 
 The design starts from a cancelling meridian with a residual tube, then treats two attaching circles meeting the same belt sphere, both surgery orders and a possible connected cluster. A three-crossing case gives the first concrete test of extending the known cancellation.

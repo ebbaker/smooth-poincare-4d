@@ -1,6 +1,6 @@
 # From a marked boundary to a closed entry certificate
 
-26 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Exact serving model and reasoning effort were unavailable. The setup baseline is `46b5bbb4d340`. The [overview](../research-overview/OVERVIEW.md) fixes the smooth oriented category, curvature convention and thresholds. The [register](../research-progress/REGISTER.md) alone owns live status. These tasks are scoped for a later activation.
+26 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Exact serving model and reasoning effort were unavailable. The setup baseline is `46b5bbb4d340`. The [overview](../research-overview/OVERVIEW.md) fixes the smooth oriented category, curvature convention and thresholds. The [register](../research-progress/REGISTER.md) alone owns live status. The table preserves the original task definitions. B02 continues with the regular-hexagon exterior, whose equator has positive Yamabe sign. At the finite switching width \(1/16\), bound the two complete energies and the full closed conformal form on the harmonic marking. If a changed transition is needed, control the tangential conformal mismatch or its physical width. [Current assessment](../reviews/DIRECT_TRANSITIONS_AND_EQUATOR_20261126.md) · [Continuation](../continuation-notes/AFTER_DIRECT_TRANSITIONS_20261126.md)
 
 | Task and routing | Input and reason for routing | Deliverable, stopping test and next decision |
 | --- | --- | --- |

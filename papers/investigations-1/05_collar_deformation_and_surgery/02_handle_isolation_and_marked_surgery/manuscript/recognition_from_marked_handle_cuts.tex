@@ -1,3 +1,5 @@
+% Product doubled tangles and independent reverse bands, intake SHA-256 5344431a4d50354c, 26 November 2026.
+% GST marked reverse slides, intake 1c81a3048c8c, 26 November 2026.
 % Reducible native cuts and alternating returns, intake 9c80575988ad, 26 November 2026.
 % One-mouth and Whitehead-pattern exteriors, intake 226b8f404b6e, 26 November 2026.
 % Four-point marked returns, working intake 4d73fdde6804, 26 November 2026.
@@ -66,7 +68,10 @@ unstabilized reduction. More generally, a reducible native second cut
 for an integral rank-one pair with rank-three free outlet forces joint
 localization by framed slides and a strict terminal cancellation. At a
 fixed four-point minimum the least puncture count of the only bridged
-return can be any positive integer. An independent finite comparison on a subcritical
+return can be any positive integer. For the GST square-knot links of index at least three,
+any sequence of reverse slides keeping one component fixed, through the first
+switch of moving component, leaves both cores unable to cross an upper belt once.
+An independent finite comparison on a subcritical
 minimizing sequence shows that an exactly conformally round, umbilic
 face of a parametrized disk forces equal chiral disk masses bounded by
 the minimizing excess. We derive the required full-side savings for
@@ -2316,6 +2321,564 @@ has a lift between these consecutive stationary copies, so the native
 seam realizes an absolute minimum of four. After the Whitehead disk
 push, the actual two-point successor has the unfilled lower ribbon disk
 and absolute minimum zero, with the same terminal closing as above.
+
+\subsection{Reverse slides on the square-knot surgery links}\label{sec:gst-reverse}
+Let \(L_{n,1}=Q\cup V_n\) be the zero-framed link of
+Gompf--Scharlemann--Thompson (GST), Figure~1, with \(n\ge3\).
+Here \(Q\) is the square knot and \(V_n\) is the connected sum of
+\(T_{n,n+1}\) and its mirror. Its outlet is \(Z=Y_2\).
+The two dotted handles of Figure~9 left specify the actual reverse
+upper body \(H\) and hence a closing \(\gamma:Z\to\partial H\).
+The trace reversal in Figure~9 right marks the two ordinary meridians.
+Figures~10--13 change the bracketed surgery description of the ambient
+three-sphere, carrying both ordinary knots with their framings. Sliding
+an ordinary tube over a bracketed surgery longitude is a framed isotopy
+in the filled three-sphere. The two ordinary tubes never slide over
+one another in this identification
+\cite[\S7, Figures 9--13 and equation following Question 2]{GompfScharlemannThompson2010}.
+Thus the following words in the dotted belt basis are the individual
+reverse attaching circles, up to basing and orientation:
+\[
+ r=yxy(xyx)^{-1},\qquad s=x^{n+1}y^{-n}.
+\]
+In the single reverse handle corresponding to \(V_n\), the group
+is the trefoil group by \cite[Lemma 7.1]{Scharlemann2012PropertyTwoRSlope}:
+moving \(V_n\) in the square-knot filled level preserves its own
+co-core under the framed filling comparison. Killing \(r\) gives this
+group, with central quotient \(C_2*C_3\); killing \(s\) gives the
+torus-knot group with central quotient \(C_{n+1}*C_n\). Indeed, the
+common power in the two-generator torus-knot presentation is central
+and the quotient free product has trivial center. The abelianizations
+of the two central quotients have orders six and \(n(n+1)\).
+Thus \(r\) labels the dual of \(V_n\), and \(s\) the dual of \(Q\).
+Their exponent rows \((-1,1)\), \((n+1,-n)\) form an integral basis.
+
+\begin{theorem}\label{thm:gst-fixed-slides}
+On this marked reverse trace, allow isotopies, changes of the upper
+belt system, and any finite sequence of framed slides of one middle
+handle over the other with the same component stationary. Neither
+attaching circle can meet an upper belt sphere transversely once.
+The exclusion persists through the first slide that switches the moving
+component. In particular an unstabilized route to a first geometric
+cancellation needs at least three middle-handle slides and a switch
+of moving component.
+\end{theorem}
+
+\begin{proof}
+Pull the words back through any intervening change of the upper basis.
+Crossing one belt exactly once gives a primitive element of \(F(x,y)\):
+cyclically start at the single corresponding letter and absorb the
+word in the other generator into that basis element. A slide moving
+\(b\) over \(a\) multiplies \(b\) by a conjugate of \(a^{\pm1}\), up to
+conjugation and choice of orientation. Consequently in every quotient
+killing \(a\), the class of the moving word remains conjugate to
+\(b^{\pm1}\), while its abelianization lies in
+\(\pm[b]+\mathbb Z[a]\). We show that no primitive word satisfies
+these two requirements in either order.
+
+For stationary \(r\), map to the free product
+\(\langle d,e\mid d^2=e^3=1\rangle\) by \(x=de,\ y=ed\).
+Both \(xyx\) and \(yxy\) equal \(d\). Put \(v=y^{-1}\), so that
+\(v=de^{-1}\). The cyclically reduced image of \(s\) has, among its
+successive \(e\)-syllables, \(n+1\) positive signs followed by \(n\)
+negative signs. After orientation is chosen so the exponent sum is one,
+a candidate has vector \((1+k,-k)\) for some integer \(k\).
+In rank two the primitive conjugacy class at each primitive vector
+is its Christoffel word \cite[\S3, Corollary 3.3(b)]{KasselReutenauer2007}.
+Up to inversion this is a positive cyclic word in \(x,v\) with the
+two multiplicities differing by one. It alternates except for a
+single doubled letter when both multiplicities are positive, as seen
+from \(x(xv)^k\) for \(k\ge0\), or by exchanging \(x,v\) and inverting
+when \(k<0\). The axis cases have one letter. Replacing each letter
+by \(de\) or \(de^{-1}\) gives free-product normal form without
+cancellation. A candidate of the required syllable length has runs of
+at most two equal signs. A cyclic permutation or inversion cannot
+produce the runs in the image of \(s\).
+
+For stationary \(s\), map to
+\(\langle x,y\mid x^{n+1}=1,\ y^n=1\rangle=C_{n+1}*C_n\).
+The cyclically reduced image of \(r\) has six syllables, including
+both \(y\) and \(y^{-1}\). Orient a candidate to have vector
+\((-1+(n+1)j,1-nj)\). At \(j=0\) the primitive class has two
+syllables. For \(j\ne0\), invert if necessary to obtain
+\((a,-b)\) with \(1<a/b<2\). The Christoffel representative has
+\(b\) successive \(y^{-1}\)'s separated cyclically by blocks of one
+or two \(x\)'s: the block lengths are consecutive increments of
+\(\lfloor ia/b\rfloor\). Each block survives in \(C_{n+1}\);
+every syllable in \(C_n\) has the same sign. Since \(n\ge3\),
+the two signs in \(r\) are distinct there. Cyclically reduced
+free-product words of length at least two are conjugate precisely
+up to cyclic permutation. This excludes the moving class in this order
+as well. Taking zero slides in both orders covers each original core.
+
+Finally write the initially stationary and moving words as \(a,b\).
+Just before the first switch the pair projects to \(1,\bar b\) up to
+conjugacy and inversion in the quotient killing \(a\). Sliding \(a\)
+once over the current second word leaves \emph{both} projected classes
+conjugate to \(\bar b^{\pm1}\); their abelianizations both lie in
+\(\pm[b]+\mathbb Z[a]\). The same exclusion applies at that step.
+\end{proof}
+
+For \(n=3\), slide the thin minus-one component over a zero-framed
+push-off of the other along the short addition band between their
+facing strands in the central corridor of Figure~9 left. Its row is \((3,-2)\).
+The chosen \(y\)-belt has at least two crossings. The initial braid
+word already has three occurrences of each belt letter despite its
+two unit exponent sums. Theorem~\ref{thm:gst-fixed-slides} covers
+every winding of the band and every extending upper re-marking.
+
+\begin{proposition}\label{prop:gst-carrier}
+Join the two original reverse core circles by any single embedded arc
+whose interior is disjoint from both, and take a regular neighborhood
+\(N\) of this graph in \(Y_2\). Framed slides supported in this same
+\(N\), in any order and with arbitrarily many switches, cannot create
+a core crossing an upper belt once.
+\end{proposition}
+
+\begin{proof}
+The image of \(\pi_1N\) in \(F(x,y)\) is, up to conjugacy,
+\(\langle r,u s u^{-1}\rangle\) for some \(u\in F(x,y)\).
+We show that this subgroup contains no primitive element of the
+ambient group. Use the axes of \(r\) and \(usu^{-1}\) in the labeled
+Cayley tree. Along an orientation of the second axis the labels are
+in \(\{x,y^{-1}\}\), or in \(\{x^{-1},y\}\) on reversing direction.
+On the cyclic word \(r\) every run from either of these two sets has
+length at most two. Consequently the axes either are disjoint or meet
+in a segment of at most two edges, shorter than either translation
+length.
+
+In the disjoint case take both period cycles and the shortest
+connecting segment; in the intersecting case glue the period cycles
+on the maximal common segment (a single vertex is allowed).
+These are labeled immersed graphs in the two-petal rose: at the ends
+of a common segment any additional fold would extend the intersection,
+and at the ends of the shortest bridge its direction is off the axis.
+Elsewhere local injectivity follows along the two cycles and bridge.
+Basing on the first axis and taking the inherited path to the second
+gives exactly the two indicated generators up to simultaneous
+conjugacy, since the endpoint translations on the two lines are
+\(r\) and \(usu^{-1}\). The graph has rank two and its two cycles,
+with this connecting path, generate.
+
+Any cyclically reduced loop using the part of the first cycle off the
+common segment must traverse all of that remaining arc, whose interior
+has degree two. In the disjoint case it traverses a full first cycle.
+Every block of four successive letters of cyclic \(yxyx^{-1}y^{-1}x^{-1}\)
+contains both signs of at least one generator, as does its reverse
+inverse. Immersion preserves this block in the cyclically reduced
+ambient word. A primitive rank-two word has consistent sign on
+each generator, by the Christoffel classification. A loop avoiding
+the remaining arc instead represents a conjugate of a power of \(s\).
+The word \(s\) is nonprimitive by Theorem~\ref{thm:gst-fixed-slides};
+any higher power has divisible abelianization. Thus no endpoint core
+carried by \(N\) can have the necessary primitivity. A change of
+upper marking carries the entire neighborhood and the subgroup
+together.
+\end{proof}
+
+\paragraph{Geometric cost on the original co-cores.}
+Write \(d_Q,d_V\) for the respective surgery cores in \(Z\). They
+represent the original meridian basis of \(H_1(Z)\) up to signs. For
+nonseparating embedded spheres algebraically orthogonal to the indicated
+core, the minimum number of transverse intersections is at least
+\(2n(n-1)\) for \(d_Q\) and exactly four for \(d_V\). Undoing the
+indicated surgery leaves the zero surgery on the other component, a closed
+surface bundle of genus \(n(n-1)\) or two, respectively. The first genus
+is twice the genus of the \((n,n+1)\) torus knot.
+To see the lower bound, join adjacent opposite-sign intersections by
+oriented tubes along the core. For \(m\) intersections the result is
+a connected genus-\(m/2\) surface in the common exterior, homologous
+to the sphere in \(Z\). For either filling of this one-torus exterior
+its second homology injects into that of the closed filling. The image
+is the kernel of intersection with the filling core, by excision and
+the orientation sequence. In the other filling the core is
+null-homologous by zero linking. The primitive sphere class therefore
+gives a fiber generator up to sign. Norm minimization of the closed
+fiber gives \(m/2\ge g\) \cite[Theorem 3]{Thurston1986ManifoldNorm}.
+
+For the upper bound four, use the closed square-knot fiber with the
+surgery curve \(c\) and its surface framing
+\cite[Proposition 5.2 and Corollaries 5.4, 6.4]{GompfScharlemannThompson2010}.
+Its monodromy image and \(c\) can be made disjoint, nonparallel
+and nonseparating in genus two; their complement is connected.
+Compress a middle fiber along these curves towards opposite ends of
+the cut-open bundle. The four parallel boundary longitudes of the
+remaining four-holed sphere, carried down the half-product annuli,
+cap by four disjoint meridian disks of the surgery filling. Each hits
+its core once. Reversing either compression preserves the homology
+class, and the middle fiber in the common exterior represents a
+nonzero class in both fillings. The resulting sphere is nonseparating.
+Moving \(V_n\) to the fiber was a framed isotopy in the \(Q\)-filled
+level. Transport across the second surgery carries its own co-core
+\(d_V\), so the sphere pulls back to the original mark. The minimum
+for the other core has only a lower bound here.
+
+Throughout, an original outgoing face \(o_i\) has reverse chart
+\(\gamma o_i\tau\) with inverse \(\tau^{-1}o_i^{-1}\gamma^{-1}\),
+where \(\tau\) exchanges the disk and circle factors in the tube
+coordinates. A trace map inducing \(P\) on the outlet transports the
+closing to \(\gamma P^{-1}\) with inverse \(P\gamma^{-1}\). The
+tested slides preserve the two middle and two upper handles and add
+no handles. The closed trace is a homotopy sphere by simple
+connectivity and its Euler characteristic two. The square-knot
+component gives smooth recognition by
+\cite[Theorem 1.1]{MeierZupan2022SquareKnots}. GST's separate
+stabilized diagram uses one temporary cancelling Hopf pair
+\cite[\S10]{GompfScharlemannThompson2010}. The theorem above concerns
+a first cancellation in the original rank-two slide problem.
+
+\subsection{A product double with two irreducible individual cuts}\label{sec:double-three}
+For a proper arc \(a\) in \(B^3\) that is boundary-parallel put
+\(V=B^3\setminus\operatorname{int}\nu a\), a solid torus (with its
+corners rounded). Let \(b,c\) be two further proper disjoint arcs with
+endpoints on the outer boundary portion. Suppose drilling all three
+gives a genus-three handlebody \(H\). Write \(D(W)=\partial(W\times I)\).
+Doubling the strands gives the forward attaching link in \(S^3\)
+with product framings, and the reverse upper body is \(H\times I\).
+The first attachment is the zero-framed unknot \(A=\partial(a\times I)\)
+by itself at its lower level. There is no assumption that a sphere in
+the simultaneous link diagram separates \(A\) from the other strands.
+
+\begin{proposition}\label{prop:doubled-free-three}
+Every such product double with its product closing admits a sequence
+of framed slides of the two reverse middle handles and upper basis
+moves followed by three reverse \(1/2\) cancellations, with no births.
+This includes examples in which both original individual cuts are
+irreducible.
+\end{proposition}
+\begin{proof}
+Displace \(H\) slightly into the interior of \(V\) using its product collar; the collar identifies all marked attaching annuli. A collar of \(\partial V\) together with the two strand neighborhoods
+forms a compression body \(C\), giving a genus-three Heegaard splitting
+\(V=H\cup C\), with all of \(\partial V=\partial_- C\). The two
+compression disks \(D_b,D_c\) cut \(C\) to \(T^2\times I\).
+Waldhausen's handlebody theorem says that every unstabilized
+splitting of a handlebody is boundary-parallel, with the prescribed
+boundary partition \cite[\S1 and \S4(3)]{Waldhausen1968Heegaard}.
+Thus this splitting is twice stabilized from genus one. Pull the two
+standard disjoint stabilizing disk pairs back to the given \(H,C\).
+Their \(C\)-disks form another complete system cutting to \(T^2\times I\).
+Both systems are minimal for cutting to a boundary-irreducible
+manifold: restoring one handle gives a compressible positive boundary.
+Bonahon's disk-slide theorem connects these systems by finitely many
+slides and isotopies \cite[Appendix B, Proposition B.1]{Bonahon1983Cobordism}.
+The same theorem on \(H\) takes any specified complete disk system
+to one containing the two dual disks, extended by a meridian on the
+solid-torus summand. These are reversible upper basis changes.
+All surfaces, arcs and paired transverse intersections can be smoothed
+in their three-dimensional product charts before thickening.
+
+The co-core disk of a strand in the forward double is the transverse
+disk \(D_i\) at the middle of its 3-dimensional handle. Its reverse
+tube has attaching chart \(\partial D_i\times I_s\times I_t\) and
+framing from these two intervals. Each compression disk slide
+thickens to an embedded band with this framing. The two resulting
+circles intersect the respective doubled \(H\)-meridian disks just
+once and miss the other belts. Attach the first, cancel, and retain
+the second product tube on the boundary of the resulting genus-two
+body times \(I_t\); this is the induced \(Y_2\) closing. The second
+cancellation returns \(D(V)\) as the genuine \(Y_1\) level. The later
+reverse tube of \(A\) is throughout the strand meridian on the lateral
+annulus of \(\partial V\) with its product framing. Trimming a bridge
+disk for \(a\) gives a meridian disk of \(V\) whose doubled belt
+meets this circle once. This is the third cancellation. The product
+models on both sides identify the filled \(V\times I_t\) throughout.
+Under any boundary comparison \(P\) a tube \(t_j\) is carried to
+\(Pt_j\) at its own level and a closing \(\gamma\) to
+\(\gamma P^{-1}\), with inverse \(P\gamma^{-1}\). Thus the forward
+counts successively have \(n_1=0,\ n_2=n_3=3,2,1,0\). No
+stabilization is performed on the input diagram.
+\end{proof}
+
+Here is a concrete example for the final assertion. On a
+\((s,t)\)-coordinate torus cut four small spots
+\(\alpha_\pm=(1/3,1/4),(1/3,0)\) and
+\(\beta_\pm=(2/3,3/4),(2/3,0)\). Glue like-letter plus and minus
+boundaries in opposite orientations, matching the feet of the paths
+below and those of the downward vertical meridian arcs between each
+pair. These two meridians and \(s=0\) specify \(H\): their duals are
+the two spot seams \(\alpha,\beta\) and \(t=7/8\). The three
+meridians cut the surface to a six-holed sphere. Attach complementary
+disks at the two seams to obtain the solid torus \(V\). Between the
+two plus spots take the arc with horizontal ends and middle at \(s=1/2\)
+descending through \(t=0\); twist it twice near \(t=1/8\) and once
+near \(t=7/8\) in the increasing-\(s\) direction on each descending
+crossing. The opposite joining arc runs between the minus spots at
+\(t=0\) in decreasing \(s\). Both are embedded. Use clockwise
+plus-spot circuits \(x,y\), and \(z\) for an increasing-\(s\)
+crossing of \(s=0\). The laps of the first arc read \(YzX,YzX,z\);
+the second reads \(Z=z^{-1}\).
+
+Slide the \(\alpha\)-disk over the \(\beta\)-disk on the plus side
+along the first arc, then the \(\beta\)-disk over this new disk
+using the minus-side arc, through the original \(\alpha\)-seam.
+With the connector in the first band's pair of pants the disk
+boundaries are
+\[
+ w=(YzX)^2z,\qquad r_1=x w y w^{-1},\qquad r_2=r_1 Z y z .
+\]
+For the second slide the two incident cuff orientations read
+\(r_1^{-1},Y\), giving the displayed \(r_2\) after inversion and
+cyclic rotation. Use the two new disk handles' transverse strands as
+\(b,c\), extended to the outer boundary in the compressed product.
+The unused annulus near \(t=1/2\) is a longitude of \(V\) (one hit on
+its remaining meridian); use it as the lateral annulus of \(a\).
+The native two-strand exteriors are \(H[r_1]\) and \(H[r_2]\);
+restoring both removed handles gives \(V\), and the full exterior
+is \(H\). In each cyclically reduced word the successive pairs
+\(\mathtt{xY,XY,Xz,Zy,zy,zX}\) give a spanning Whitehead cycle
+\(x,y,X,Z,Y,z,x\). A connected Whitehead graph without a cut
+vertex excludes membership in a proper free factor
+\cite[Proposition 6.4]{Krishna2023Vertex}. Every essential disk of
+\(H\) disjoint from either curve would put it in such a factor.
+Apply the handle addition lemma to \emph{all} of \(\partial H\):
+it is compressible, its complement of the curve is incompressible,
+and its compression along the curve is connected of genus two.
+Each filled exterior is irreducible with entire boundary
+incompressible \cite[Lemma 2.1.1]{CGLS1987DehnSurgery}. Doubling each
+across that boundary gives an irreducible native cut.
+
+Undo the second band. The recovered \(\beta\) has row \((0,1,0)\)
+and meets the doubled \(y\)-meridian disk once in the middle collar.
+Its framed attachment and cancellation give the rank-two body
+\(H[\beta]\times I_t\). On its boundary the first inverse disk slide
+across the \(\beta\)-disk spot identifies the residual \(r_1\) tube
+with the original \(\alpha\) tube. Filling this tube gives
+\(H[\beta][\alpha]=V\), with the lateral \(a\)-tube at the following
+level. The actual rank-two closing is the face identification with
+\(\partial(H[\beta]\times I_t)\), reversed face by face for its
+inverse. The remaining two cancellations are those in the proof.
+The two bands here come from construction. The proposition gives
+existence on this entire product class independently of knowing those
+bands; selecting an explicit band on an unrelated terminal diagram
+still requires its marked attaching data.
+
+\subsection{Independent bands and the third reverse slide}\label{sec:gst-three}
+Continue on the marked reverse trace of Section~\ref{sec:gst-reverse}.
+Write \(X=x^{-1},Y=y^{-1}\), \(r=yxyXYX\), \(s=x^{n+1}Y^n\).
+A signed slide on the based words replaces \(U\) by
+\(U g V^\epsilon g^{-1}\), up to conjugacy. Here \(g\) records the
+path from a contact on the moving strand to the framed parallel of
+the stationary strand. The diagram and both native framings are those
+of \cite[\S\S2,7, Figures 9--13]{GompfScharlemannThompson2010}.
+
+\paragraph{A third slide whose resulting core leaves every original one-arc neighborhood.}
+Take \(n=3\). Choose disjoint-interior joining arcs between the same
+two original contacts, the first trivial in the chosen basings and the
+second differing by \(z=xyx\). Relative general position of curves in
+the three-manifold gives embedded arcs avoiding both core interiors.
+In the regular neighborhood of the cores and these two arcs use three
+successive bands, giving
+\[
+ (r,s)\longmapsto(r,p)\longmapsto(q,p)\longmapsto(q,h),
+ \qquad p=sr,\quad q=r z p z^{-1},\quad h=pq^{-1}.
+\]
+Retain a short interval at each original contact. Take each successive
+spine in its indicated relative path class, perturb it off the current
+strands and attach a thin rectangle to the moving interval and the
+current stationary framed pushoff. Interpolating the end directions
+along the interval realizes each prescribed sign. This describes
+embedded framed slides for all such thin-band choices. The rows in
+the fixed upper basis are successively
+\[
+ ((-1,1),(3,-2)),\quad ((2,-1),(3,-2)),\quad ((2,-1),(1,-1)).
+\]
+The cyclic word for \(h\) is
+\(\mathtt{xxxxYYxyxyxYXyyXXXXYXY}\), which has thirteen \(x\)-letters
+and nine \(y\)-letters counted with either sign. Thus its signed
+intersection \(-1\) against the original \(y\)-belt still requires
+at least nine geometric intersections. Both final Whitehead graphs
+are complete (the cyclic word for \(q\) is
+\(\mathtt{yxyxxxxYYxyXYXXYX}\)).
+In the quotient \(x=de,\ y=ed\) of Section~\ref{sec:gst-reverse},
+\(r=1,\ z=d\), and \(s\) maps to the hyperbolic element
+\(v=(de)^4(de^{-1})^3\). The image of \(h\) is \([v,d]\ne1\):
+an involution commuting with \(v\) would fix its axis pointwise and
+edge stabilizers are trivial. Every original single-arc neighborhood
+has image conjugate to \(\langle r,k s k^{-1}\rangle\).
+An element of that subgroup with row \(\pm[r]\) has exponent zero
+in the second generator, since \([r],[s]\) are independent. Its
+quotient image is trivial. Hence no representative of the resulting core's free homotopy
+class is contained in any such neighborhood.
+
+\begin{theorem}\label{thm:gst-three}
+For each \(n\ge3\), a first reverse belt cancellation on the original
+\(L_{n,1}\) by unstabilized middle-handle slides needs at least four
+slides. This holds for all band paths and choices of complete upper
+belt system.
+\end{theorem}
+\begin{proof}
+A one-hit curve is primitive. Rank-two primitivity determines its
+conjugacy class from its signed primitive row
+\cite[\S3, Corollary 3.3(b)]{KasselReutenauer2007}.
+Theorem~\ref{thm:gst-fixed-slides} leaves only the case of a switch at
+the second slide followed by a third. Call the first moving row \(a\)
+and the stationary row \(b\). Kill the original stationary word.
+Just before the third slide both surviving words are conjugates of
+the first mover or its inverse. After that slide the moved word is a
+product of two such conjugates; its row up to sign is \(b\) or
+\(2a+j b\), \(j\in\{-3,-1,1,3\}\). Indeed the rows at the switch
+are \(p=a+\alpha b,\ q=b+\beta p\), and the third row is
+\(p+\gamma q\) or \(q+\gamma p\), for signs \(\alpha,\beta,\gamma\).
+
+For \(n=3\) use unit quaternions. Any product of two elements of real
+part \(c\) has real part at least \(2c^2-1\), by Cauchy--Schwarz on
+their imaginary parts. To kill \(s\), put \(x=(1-i)/\sqrt2\) and
+\(y=(2+i+\sqrt{11}j)/4\), so \(x^4=y^3=-1\). To kill \(r\), put
+\(P=i,\ Q=(5+6i+\sqrt{39}j)/10,\ x=Q^{-1}P,\ y=P^{-1}Q^2\).
+Here \(P^2=Q^3=-1\) gives \(xyx=yxy\). The following table gives
+the threshold and the largest primitive real part among the five rows.
+\[
+\begin{array}{c|c|c|c}
+\text{first mover}&c&2c^2-1&\max\operatorname{Re}(\text{primitive})\\ \hline
+r&41\sqrt2/64&657/1024&79/256\\
+s&64893/78125&2318687273/6103515625&220741/781250
+\end{array}
+\]
+For reproducibility, choose the sign \((u,-v)\) with \(u,v>0\)
+and evaluate the Christoffel word
+\(\prod_{i=0}^{v-1}x^{\lfloor(i+1)u/v\rfloor-\lfloor iu/v\rfloor}Y\).
+The pairs \((u,v)\) in the two rows are respectively
+\((10,7),(4,3),(2,1),(6,5),(14,11)\) and
+\((5,3),(1,1),(7,5),(9,7),(11,9)\).
+Both maxima are strictly below the indicated thresholds.
+
+For \(n\ge4\) use the unit-edge tree of the relevant free product.
+A cyclic syllable word of length \(L>1\) translates its axis by
+\(L\). For two conjugates of equal length, disjoint axes contribute
+a full period from each and twice the bridge. With compatible
+translations on their common segment the product retains both
+period arcs and has length \(2L\). For opposing translations on an
+overlap of \(D<L\) edges, take a fundamental path consisting of the
+two translated periods based at an end of the overlap. Its cyclic
+junction backtracks by exactly \(D\), leaving arcs of \(L-D\) from
+each period and total length \(2L-2D\). For \(D\ge L\) the product
+fixes a point, since one translation undoes the other on a common
+length-\(L\) segment. These descriptions include a one-vertex
+intersection by taking \(D=0\). Turns strictly inside each surviving
+arc retain their original factor labels.
+
+If \(s\) moves first, kill \(r\) by \(x=de,y=ed\) in \(C_2*C_3\). The period length of \(s\)
+is \(L=4n+2\) and its cyclic list of \(C_3\) turns is \(+^{n+1}-^n\).
+For target row \(\pm[r]\) the signed factors have opposite signs.
+Two positively aligned distinct axes can agree on at most \(2n+2\)
+edges: at different phases an agreeing block contains at most \(n\)
+identical turns, and a sign change fixes the phase. At equal phase
+trivial edge stabilizers identify the translates on the entire line.
+Thus cancellation either gives the identity or leaves length at least
+\(4n\), whereas the primitive row has length four.
+For \(2[s]+j[r]\) the primitive length is \(2L-4j\): each positive
+\(x\) or \(Y\) contributes two syllables, with opposite \(C_3\) signs.
+The Christoffel counts differ by two, with at least five copies of
+the less frequent letter, so all sign runs have length at most two.
+For \(j<0\) a full period survives. For \(j>0\) the necessary overlap
+has length \(2j\); the remaining \(L-2j\ge12\) edges from one period
+contain five consecutive interior \(C_3\) turns. Every five-turn
+block of the original period, in either orientation, contains a
+triple. This excludes all four rows.
+
+If \(r\) moves first, kill \(s\) in \(C_{n+1}*C_n\) with generators
+\(x,y\). The period \(yxyXYX\) has length six. The primitive
+lengths for \([s]\) and \(2[r]+j[s]\) are \(2n\) and \(2|nj-2|\).
+Indeed the Christoffel spelling, up to sign, alternates single \(Y\)
+with \(x\) or \(x^2\), all surviving in the vertex groups. A target
+of length at least twelve retains a full period arc. Among its five
+interior turns three come from one factor and include opposite signs,
+incompatible with the primitive spelling or its inverse. Here the
+order of \(x\) is at least five, distinguishing \(x^{-1}\) from
+\(x,x^2\). Shorter targets can only be \(+[s]\) or \(2[r]+[s]\)
+after orientation. Each has a positive \(r\) factor. In the first
+case opposed translations compare cyclic copies of the same
+positively oriented period: the two nontrivial type-preserving shifts
+match at most one consecutive turn. In the second, compare the period
+and its inverse: the three type-preserving alignments match at most
+two consecutive turns (maxima \(2,0,2\)). Thus distinct opposed axes
+overlap by at most two or three edges respectively. The positive
+period contributes an arc of at least three edges, with two adjacent
+interior turns. Its only allowed turns \(x,Y\) are three positions
+apart. Coincident axes with opposing translations cancel. This
+excludes all shorter targets and proves the assertion.
+\end{proof}
+
+At \(n=3\) a further exact necessary test eliminates 224 of the
+256 four-slide histories of signs and moving labels. Each history
+allows arbitrary geometric band paths. Expand the fourth moved word
+as a product of signed conjugates of the originals. In a representation
+killing one of them let \(N\) factors survive, with common real part
+\(c\). The round distance on the unit quaternions gives
+\((\operatorname{sign}c)^N\operatorname{Re}(w)\ge
+ \cos(N\arccos|c|)\) when \(N\arccos|c|\le\pi\).
+Use exact equality for \(N=0,1\). In addition to the two
+representations above, retain the first \(x\) and use
+\(y=(D+Mi+\sqrt{3D^2-M^2}\,j)/(2D)\) for
+\((M,D)=(-1,16),(-13,8)\). Finally use the second \(P,Q\)
+construction with \(Q=(10-17i+\sqrt{11}j)/20\).
+Testing the primitive row eliminates \(146,52,16,6,4\) new histories
+in order. The surviving slopes up to sign are \((1,0),(5,-4),
+(6,-5),(7,-4)\), with multiplicities \(4,20,6,2\). Realizability
+by a primitive knot or a one-hit tube remains open for these histories.
+
+\paragraph{Every fourth band after the exhibited three bands.}
+Now keep the actual \((q,h)\) above fixed. A fourth slide has moving
+row up to sign \((1,0)\) or \((3,-2)\). In the representation
+\(x=(3+4i)/5,\ y=(3+4j)/5\), set \(A=\operatorname{Re}(q)\),
+\(B=\operatorname{Re}(h)\). Direct multiplication gives
+\[
+ A=595825212387/762939453125,\qquad
+ B=2311596220746681/2384185791015625 .
+\]
+In either direction, with any band and either sign, a product of
+these two conjugacy classes has real part \(C\) satisfying
+\((C-AB)^2\le(1-A^2)(1-B^2)\). The primitive targets \(x\)
+and \(xYx^2Y\) have real parts \(3/5\) and \(-2253/3125\).
+In fact the entire interval lies above \(3/5\). Its lower endpoint
+\(AB-\sqrt{(1-A^2)(1-B^2)}\) increases in both arguments on
+\((0,1)^2\). Take \(a=39/50<A,\ b=969/1000<B\); then
+\(ab-3/5=7791/50000>0\) and
+\[
+ (ab-3/5)^2-(1-a^2)(1-b^2)=377/1000000>0 .
+\]
+The stationary
+core already fails by Theorem~\ref{thm:gst-three}. Thus every fourth
+band after this \emph{geometric prefix} fails in every complete belt
+system. The same signed histories with other first bands remain
+subject to the general 32-history test above.
+
+\paragraph{The orthogonal sphere at a fixed free homotopy class.}
+Fix \emph{any} nonseparating sphere orthogonal to \(s\). Among
+embedded knots freely homotopic to \(s\), the least number of
+intersections with this sphere is \(2n(n-1)\), hence twelve at \(n=3\). Cutting the sphere gives a cyclic vertex free factor
+whose primitive generator is conjugate up to sign to \(u=x(xY)^n\),
+by its homology and rank-two primitive uniqueness. Take \(t=xY\).
+Then \(x=ut^{-n}\), \(y=t^{-1}ut^{-n}\). A complementary stable
+letter differs, after rebasing, by \(u^a t^{\pm1}u^b\): the
+stabilizer of \([u]\) in \(\mathrm{GL}_2(\mathbb Z)\) lifts by these
+maps, and the kernel in \(\mathrm{Aut}(F_2)\) is inner. Conjugations
+fixing \(u\) are by powers of \(u\). These changes preserve the least
+cyclic count of stable letters in both directions. Cyclic reduction gives
+\[
+ s=(ut^{-n})^{n-1}ut\,u^{-1}(t^{n+1}u^{-1})^{n-2}t .
+\]
+There are \(n(n-1)\) letters of each sign. For the other core, use
+\(u=xY,t=x\) to obtain \(r=u^{-1}t^2u^{-1}t^{-1}ut^{-1}\), giving
+four. Each normal form is realized by disjoint crossing arcs at
+distinct points of the sphere and paths between them in its connected
+cut exterior, made disjoint rel endpoints by general position.
+This proves sharpness under free homotopy. For the native \(s\) the
+isotopy or an embedded realizing sphere remains to be found.
+
+In the three explicit slides the upper basis and both reverse
+incoming charts \(\gamma o_i\tau\) start in the fixed \(Y_2\).
+The stationary framed tube is carried at each slide and the moving
+tube is its indicated framed sum. The relative slide comparison
+restricts to the identity on this incoming boundary. If its composite
+on the outgoing \(S^3\) is \(P\), the outgoing cap identification
+\(\eta\) becomes \(\eta P^{-1}\), with inverse \(P\eta^{-1}\).
+Turning the trace back uses the dual slide of
+\cite[Lemma 2.1]{GompfScharlemannThompson2010}. The original upper
+closing and its inverse survive in this marking. The forward counts
+stay \((0,2,2)\) with zero births and zero cancellations. The
+free-homotopy representatives constructed above are used only in the
+sphere comparison.
 
 \section{Metric criteria on the given levels}\label{sec:bands}
 These criteria give PSC domination for the actual slice

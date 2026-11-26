@@ -115,6 +115,21 @@ example (g : SmoothRiemannianMetric I M) (R : ℝ) (hR : ∀ x, metricScalarAt g
   rw [hR x]
   ring
 
+-- On an arbitrary metric the same parameter comparison retains both the
+-- scalar Hessian and the signed scalar Laplacian, with opposite signs.
+example (g : SmoothRiemannianMetric I M) (x : M) (u v : TangentSpace I x) :
+    let R := metricScalarAt g x
+    let H := metricNabla0S g (duSec (metricScalarAt g) (metricScalar_smooth g)) x
+    let L := ΔG g ⟨_, metricScalar_smooth g⟩ x
+    bourCovariantGradient (1 / 2) g x (vec2 u v) - bourCovariantGradient 0 g x (vec2 u v) =
+      (1 / 24 : ℝ) * (H (vec2 u v) - L * g.inner x u v -
+        R * (metricRicciAt g x (vec2 u v) - (R / 4) * g.inner x u v)) := by
+  dsimp only
+  rw [bourCovariantGradient_apply_commuted (1 / 2) g x u v,
+    bourCovariantGradient_apply_commuted 0 g x u v]
+  unfold bourBulkDensity
+  ring
+
 end CurvatureAdjoints
 
 section ClosedVariation
@@ -209,6 +224,36 @@ example (q : ℝ → SignedCollarMetric o) (p c : ℝ) {D : RealTimeInterval}
     (∫ t in (0 : ℝ)..1, gradientSq (q t).metric (bourCovariantGradient p (q t).metric)) =
       (bourEnergy p (q 0) - bourEnergy p (q 1)) / 2 :=
   originalGradient_regularSlab q p c hg (by norm_num) hTime hEuler hFlow
+
+-- The component PDE at the interior parameter p = 1/2 supplies the
+-- velocity required by the original slab theorem, including both scalar derivatives.
+example (q : ℝ → SignedCollarMetric o) (c : ℝ) {D : RealTimeInterval}
+    (hg : MetricFamilySmoothOn (I := I) D (fun s => (q s).metric))
+    (hTime : Icc (0 : ℝ) 1 ⊆ D.regular)
+    (hEuler : ∀ s ∈ D.regular, bourEuler (q s) = c)
+    (hEquation : ∀ t ∈ Ioo (0 : ℝ) 1, ∀ (x : M) (u v : TangentSpace I x),
+      let g := (q t).metric
+      let R := metricScalarAt g x
+      let H := metricNabla0S g (duSec (metricScalarAt g) (metricScalar_smooth g)) x
+      let L := ΔG g ⟨_, metricScalar_smooth g⟩ x
+      (deriv (fun s => metricTensorField (q s).metric x) t) (vec2 u v) =
+        roughLap0SField g (metricRicci g) x (vec2 u v) -
+          (5 / 12) * H (vec2 u v) + 2 * hamiltonCurvatureRicciAt g x (vec2 u v) -
+          (7 / 12) * R * metricRicciAt g x (vec2 u v) -
+          (1 / 12) * L * g.inner x u v - bourBulkDensity (1 / 2) g x * g.inner x u v) :
+    (riemannianVolumeMeasure I M (q 1).metric).real univ =
+      (riemannianVolumeMeasure I M (q 0).metric).real univ ∧
+    (∫ t in (0 : ℝ)..1, gradientSq (q t).metric (bourCovariantGradient (1 / 2) (q t).metric)) =
+      (bourEnergy (1 / 2) (q 0) - bourEnergy (1 / 2) (q 1)) / 2 := by
+  have hFlow (t : ℝ) (ht : t ∈ Ioo (0 : ℝ) 1) (x : M) :
+      deriv (fun s => metricTensorField (q s).metric x) t =
+        (-2 : ℝ) • bourCovariantGradient (1 / 2) (q t).metric x := by
+    apply (bourOriginalVelocity_eq_negTwoGradient_iff_components (1 / 2) (q t).metric x _).2
+    intro u v
+    rw [hEquation t ht x u v]
+    ring
+  have hSlab := originalGradient_regularSlab q (1 / 2) c hg (by norm_num) hTime hEuler hFlow
+  exact ⟨hSlab.1, hSlab.2.2⟩
 
 -- At p = 1/2 the pointwise trace has coefficient -1/8 against the physical
 -- signed scalar Laplacian. The only supplied Euler data are local in the
@@ -490,6 +535,8 @@ end Extraction
 #print axioms bourCrossedRicci_eq_ricciSquare_sub_curvature
 #print axioms bourRicciWeight_doubleDivergence
 #print axioms bourCovariantGradient_apply_csc
+#print axioms bourCovariantGradient_apply_commuted
+#print axioms bourOriginalVelocity_eq_negTwoGradient_iff_components
 #print axioms BourHarmonicChart.exists_buffered
 #print axioms BourHarmonicChart.transport_to_original
 #print axioms BourHarmonicChart.exists_model_metric

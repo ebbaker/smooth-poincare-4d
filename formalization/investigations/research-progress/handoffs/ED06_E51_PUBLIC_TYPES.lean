@@ -1,0 +1,332 @@
+/- Edition 06 E51. Prepared for Edward B. Baker III, 26 November 2026.
+    Replay newly public names from the integration and the physical curvature-square regularity theorem. -/
+import SmoothPoincare
+set_option pp.universes false
+#check @SmoothPoincare.Bour.BourFlatHessianEstimate
+#print axioms SmoothPoincare.Bour.BourFlatHessianEstimate
+#check @SmoothPoincare.Bour.BourFlatHessianEstimate.congr_simp
+#print axioms SmoothPoincare.Bour.BourFlatHessianEstimate.congr_simp
+#check @SmoothPoincare.Bour.BourTerminalComparison
+#print axioms SmoothPoincare.Bour.BourTerminalComparison
+#check @SmoothPoincare.Bour.bourChartRiemann_abs_le_orderedCurvature
+#print axioms SmoothPoincare.Bour.bourChartRiemann_abs_le_orderedCurvature
+#check @SmoothPoincare.Bour.bourCovariantGradient_scaleMetric
+#print axioms SmoothPoincare.Bour.bourCovariantGradient_scaleMetric
+#check @SmoothPoincare.Bour.bourCovariantGradient_trace_eq_scalarLaplacian
+#print axioms SmoothPoincare.Bour.bourCovariantGradient_trace_eq_scalarLaplacian
+#check @SmoothPoincare.Bour.bourCovariantGradient_trace_zero_at_zero
+#print axioms SmoothPoincare.Bour.bourCovariantGradient_trace_zero_at_zero
+#check @SmoothPoincare.Bour.bourCurvatureSq_contMDiffOn
+#print axioms SmoothPoincare.Bour.bourCurvatureSq_contMDiffOn
+#check @SmoothPoincare.Bour.bourCutoffInnerBall_direction_lpNorm_le
+#print axioms SmoothPoincare.Bour.bourCutoffInnerBall_direction_lpNorm_le
+#check @SmoothPoincare.Bour.bourCutoffInnerBall_fderiv_lpNorm_le_sum
+#print axioms SmoothPoincare.Bour.bourCutoffInnerBall_fderiv_lpNorm_le_sum
+#check @SmoothPoincare.Bour.bourCutoffInnerBall_hessian_eqOn
+#print axioms SmoothPoincare.Bour.bourCutoffInnerBall_hessian_eqOn
+#check @SmoothPoincare.Bour.bourCutoffInnerBall_hessian_lpNorm_le
+#print axioms SmoothPoincare.Bour.bourCutoffInnerBall_hessian_lpNorm_le
+#check @SmoothPoincare.Bour.bourFlatCoefficientPush
+#print axioms SmoothPoincare.Bour.bourFlatCoefficientPush
+#check @SmoothPoincare.Bour.bourFlatCoefficientPush.congr_simp
+#print axioms SmoothPoincare.Bour.bourFlatCoefficientPush.congr_simp
+#check @SmoothPoincare.Bour.bourFlatHessianEstimate_metricFrozen
+#print axioms SmoothPoincare.Bour.bourFlatHessianEstimate_metricFrozen
+#check @SmoothPoincare.Bour.bourFlatHessianEstimate_perturb
+#print axioms SmoothPoincare.Bour.bourFlatHessianEstimate_perturb
+#check @SmoothPoincare.Bour.bourFlatHessianEstimate_perturb_entries
+#print axioms SmoothPoincare.Bour.bourFlatHessianEstimate_perturb_entries
+#check @SmoothPoincare.Bour.bourFlatHessianEstimate_push
+#print axioms SmoothPoincare.Bour.bourFlatHessianEstimate_push
+#check @SmoothPoincare.Bour.bourFlatOperator
+#print axioms SmoothPoincare.Bour.bourFlatOperator
+#check @SmoothPoincare.Bour.bourFlatOperator.congr_simp
+#print axioms SmoothPoincare.Bour.bourFlatOperator.congr_simp
+#check @SmoothPoincare.Bour.bourFlatOperator_comp_right
+#print axioms SmoothPoincare.Bour.bourFlatOperator_comp_right
+#check @SmoothPoincare.Bour.bourFlatOperator_eq_partialDeriv
+#print axioms SmoothPoincare.Bour.bourFlatOperator_eq_partialDeriv
+#check @SmoothPoincare.Bour.bourFlatOperator_sub_eLpNorm_le
+#print axioms SmoothPoincare.Bour.bourFlatOperator_sub_eLpNorm_le
+#check @SmoothPoincare.Bour.bourFlatOperator_sub_le
+#print axioms SmoothPoincare.Bour.bourFlatOperator_sub_le
+#check @SmoothPoincare.Bour.bourHamiltonCurvatureRicci_abs_le
+#print axioms SmoothPoincare.Bour.bourHamiltonCurvatureRicci_abs_le
+#check @SmoothPoincare.Bour.bourHamiltonCurvatureRicci_trace
+#print axioms SmoothPoincare.Bour.bourHamiltonCurvatureRicci_trace
+#check @SmoothPoincare.Bour.bourHarmonic_cutoff_energy
+#print axioms SmoothPoincare.Bour.bourHarmonic_cutoff_energy
+#check @SmoothPoincare.Bour.bourLpNorm_hessianPerturb_entries
+#print axioms SmoothPoincare.Bour.bourLpNorm_hessianPerturb_entries
+#check @SmoothPoincare.Bour.bourLpNorm_le_indicator_add_sum
+#print axioms SmoothPoincare.Bour.bourLpNorm_le_indicator_add_sum
+#check @SmoothPoincare.Bour.bourLpNorm_le_of_eLpNorm_le
+#print axioms SmoothPoincare.Bour.bourLpNorm_le_of_eLpNorm_le
+#check @SmoothPoincare.Bour.bourLpNorm_sum_le_indicator_add_sum
+#print axioms SmoothPoincare.Bour.bourLpNorm_sum_le_indicator_add_sum
+#check @SmoothPoincare.Bour.bourMemLp_of_indicator_add_sum
+#print axioms SmoothPoincare.Bour.bourMemLp_of_indicator_add_sum
+#check @SmoothPoincare.Bour.bourMetricRicci_apply_abs_le
+#print axioms SmoothPoincare.Bour.bourMetricRicci_apply_abs_le
+#check @SmoothPoincare.Bour.bourMetricScalar_abs_le_orderedCurvature
+#print axioms SmoothPoincare.Bour.bourMetricScalar_abs_le_orderedCurvature
+#check @SmoothPoincare.Bour.bourModelStationaryReaction_bounds
+#print axioms SmoothPoincare.Bour.bourModelStationaryReaction_bounds
+#check @SmoothPoincare.Bour.bourOriginal_curvature_firstHits
+#print axioms SmoothPoincare.Bour.bourOriginal_curvature_firstHits
+#check @SmoothPoincare.Bour.bourParabolicGradientDissipation_eq
+#print axioms SmoothPoincare.Bour.bourParabolicGradientDissipation_eq
+#check @SmoothPoincare.Bour.bourParabolicVelocity_hasDerivAt
+#print axioms SmoothPoincare.Bour.bourParabolicVelocity_hasDerivAt
+#check @SmoothPoincare.Bour.bourPointedStationary_scalarFlat
+#print axioms SmoothPoincare.Bour.bourPointedStationary_scalarFlat
+#check @SmoothPoincare.Bour.bourPointedVolume_eq_top_of_unit_ball_lower
+#print axioms SmoothPoincare.Bour.bourPointedVolume_eq_top_of_unit_ball_lower
+#check @SmoothPoincare.Bour.bourPointed_harmonic_L2_zero
+#print axioms SmoothPoincare.Bour.bourPointed_harmonic_L2_zero
+#check @SmoothPoincare.Bour.bourRegular_backwardWindow
+#print axioms SmoothPoincare.Bour.bourRegular_backwardWindow
+#check @SmoothPoincare.Bour.bourRegularizedPositiveValues.congr_simp
+#print axioms SmoothPoincare.Bour.bourRegularizedPositiveValues.congr_simp
+#check @SmoothPoincare.Bour.bourRegularizedValue_hasRightDerivative
+#print axioms SmoothPoincare.Bour.bourRegularizedValue_hasRightDerivative
+#check @SmoothPoincare.Bour.bourRegularized_secant_antitone
+#print axioms SmoothPoincare.Bour.bourRegularized_secant_antitone
+#check @SmoothPoincare.Bour.bourRegularized_value_rightSlope_of_oneReturn
+#print axioms SmoothPoincare.Bour.bourRegularized_value_rightSlope_of_oneReturn
+#check @SmoothPoincare.Bour.bourRm04_apply_abs_le
+#print axioms SmoothPoincare.Bour.bourRm04_apply_abs_le
+#check @SmoothPoincare.Bour.bourRoughRicci_trace
+#print axioms SmoothPoincare.Bour.bourRoughRicci_trace
+#check @SmoothPoincare.Bour.bourScalarFlat_stationary_zeroParameter
+#print axioms SmoothPoincare.Bour.bourScalarFlat_stationary_zeroParameter
+#check @SmoothPoincare.Bour.bourStationaryReactionBound
+#print axioms SmoothPoincare.Bour.bourStationaryReactionBound
+#check @SmoothPoincare.Bour.bourStationary_roughTraceFreeRicci_abs_le
+#print axioms SmoothPoincare.Bour.bourStationary_roughTraceFreeRicci_abs_le
+#check @SmoothPoincare.Bour.bourStationary_roughTraceFreeRicci_scale_abs_le
+#print axioms SmoothPoincare.Bour.bourStationary_roughTraceFreeRicci_scale_abs_le
+#check @SmoothPoincare.Bour.bourStationary_scalarCoefficient_scale_bound
+#print axioms SmoothPoincare.Bour.bourStationary_scalarCoefficient_scale_bound
+#check @SmoothPoincare.Bour.bourStationary_scalarLaplacian_eq_zero
+#print axioms SmoothPoincare.Bour.bourStationary_scalarLaplacian_eq_zero
+#check @SmoothPoincare.Bour.bourStationary_scalar_constant
+#print axioms SmoothPoincare.Bour.bourStationary_scalar_constant
+#check @SmoothPoincare.Bour.bourStationary_scalar_harmonicAt
+#print axioms SmoothPoincare.Bour.bourStationary_scalar_harmonicAt
+#check @SmoothPoincare.Bour.bourTraceFreeRicci_apply_abs_le
+#print axioms SmoothPoincare.Bour.bourTraceFreeRicci_apply_abs_le
+#check @SmoothPoincare.Bour.bourUniformStationaryHarmonicTraceFreeRicci_bounds
+#print axioms SmoothPoincare.Bour.bourUniformStationaryHarmonicTraceFreeRicci_bounds
+#check @SmoothPoincare.Bour.originalGradient_firstHit_nativeWindows
+#print axioms SmoothPoincare.Bour.originalGradient_firstHit_nativeWindows
+#check @SmoothPoincare.Bour.originalGradient_firstHit_spacetimeWindows
+#print axioms SmoothPoincare.Bour.originalGradient_firstHit_spacetimeWindows
+#check @SmoothPoincare.Bour.originalGradient_stationary_of_terminalComparison
+#print axioms SmoothPoincare.Bour.originalGradient_stationary_of_terminalComparison
+#check @SmoothPoincare.Bour.sixthPowerDirectional_cutoff_bound
+#print axioms SmoothPoincare.Bour.sixthPowerDirectional_cutoff_bound
+#check @SmoothPoincare.Bour.sixthPowerDirectional_cutoff_eLpNorm
+#print axioms SmoothPoincare.Bour.sixthPowerDirectional_cutoff_eLpNorm
+#check @SmoothPoincare.Bour.sixthPowerDirectional_cutoff_ibp
+#print axioms SmoothPoincare.Bour.sixthPowerDirectional_cutoff_ibp
+#check @SmoothPoincare.Bour.sixthPowerDirectional_cutoff_lpNorm
+#print axioms SmoothPoincare.Bour.sixthPowerDirectional_cutoff_lpNorm
+#check @SmoothPoincare.Bour.sixthPowerDirectional_eLpNorm_on_ball
+#print axioms SmoothPoincare.Bour.sixthPowerDirectional_eLpNorm_on_ball
+#check @SmoothPoincare.Bour.sixthPowerDirectional_second_abs_le
+#print axioms SmoothPoincare.Bour.sixthPowerDirectional_second_abs_le
+#check @SmoothPoincare.Bour.terminalGradient_zero_of_measuredComparisons
+#print axioms SmoothPoincare.Bour.terminalGradient_zero_of_measuredComparisons
+#check @SmoothPoincare.Bour.terminalGradient_zero_of_pullbackComparisons
+#print axioms SmoothPoincare.Bour.terminalGradient_zero_of_pullbackComparisons
+#check @SmoothPoincare.Bour.terminalImageVolume_lower
+#print axioms SmoothPoincare.Bour.terminalImageVolume_lower
+#check @SmoothPoincare.Bour.terminalMetric_eq_final_of_nativeSpeed
+#print axioms SmoothPoincare.Bour.terminalMetric_eq_final_of_nativeSpeed
+#check @SmoothPoincare.BourC1ThirdBound
+#print axioms SmoothPoincare.BourC1ThirdBound
+#check @SmoothPoincare.bourBallCutoff_hessian_eval_bound
+#print axioms SmoothPoincare.bourBallCutoff_hessian_eval_bound
+#check @SmoothPoincare.bourBoundaryComplementaryWedges
+#print axioms SmoothPoincare.bourBoundaryComplementaryWedges
+#check @SmoothPoincare.bourBoundaryMixedConnection_eq_neg
+#print axioms SmoothPoincare.bourBoundaryMixedConnection_eq_neg
+#check @SmoothPoincare.bourBoundaryPathTangentialCurvature
+#print axioms SmoothPoincare.bourBoundaryPathTangentialCurvature
+#check @SmoothPoincare.bourBoundaryPathTangentialCurvature_of_connectionForms
+#print axioms SmoothPoincare.bourBoundaryPathTangentialCurvature_of_connectionForms
+#check @SmoothPoincare.bourBoundaryPath_pfaffianCoefficient
+#print axioms SmoothPoincare.bourBoundaryPath_pfaffianCoefficient
+#check @SmoothPoincare.bourChartChristoffel_abs_le
+#print axioms SmoothPoincare.bourChartChristoffel_abs_le
+#check @SmoothPoincare.bourChartContractedChristoffelDerivative_bound
+#print axioms SmoothPoincare.bourChartContractedChristoffelDerivative_bound
+#check @SmoothPoincare.bourChartContractedChristoffelDerivative_eq
+#print axioms SmoothPoincare.bourChartContractedChristoffelDerivative_eq
+#check @SmoothPoincare.bourChartContractedChristoffelDerivative_eq_of_laplacian
+#print axioms SmoothPoincare.bourChartContractedChristoffelDerivative_eq_of_laplacian
+#check @SmoothPoincare.bourChartCoordinate.congr_simp
+#print axioms SmoothPoincare.bourChartCoordinate.congr_simp
+#check @SmoothPoincare.bourChartDerivativeActionTwo_cancel
+#print axioms SmoothPoincare.bourChartDerivativeActionTwo_cancel
+#check @SmoothPoincare.bourChartRoughTwo_eq_harmonicFirstTrace
+#print axioms SmoothPoincare.bourChartRoughTwo_eq_harmonicFirstTrace
+#check @SmoothPoincare.bourChartRoughTwo_eq_orderedTrace
+#print axioms SmoothPoincare.bourChartRoughTwo_eq_orderedTrace
+#check @SmoothPoincare.bourChartTensorComponent
+#print axioms SmoothPoincare.bourChartTensorComponent
+#check @SmoothPoincare.bourChartTensorComponent_contDiffAt
+#print axioms SmoothPoincare.bourChartTensorComponent_contDiffAt
+#check @SmoothPoincare.bourChartTensorComponent_model
+#print axioms SmoothPoincare.bourChartTensorComponent_model
+#check @SmoothPoincare.bourChartTensorComponent_nabla
+#print axioms SmoothPoincare.bourChartTensorComponent_nabla
+#check @SmoothPoincare.bourChartTwo_flatOperator_bound
+#print axioms SmoothPoincare.bourChartTwo_flatOperator_bound
+#check @SmoothPoincare.bourChartTwo_nabla
+#print axioms SmoothPoincare.bourChartTwo_nabla
+#check @SmoothPoincare.bourChartTwo_principal_bound
+#print axioms SmoothPoincare.bourChartTwo_principal_bound
+#check @SmoothPoincare.bourChartTwo_principal_eq
+#print axioms SmoothPoincare.bourChartTwo_principal_eq
+#check @SmoothPoincare.bourConnectionFormCurvature_affine
+#print axioms SmoothPoincare.bourConnectionFormCurvature_affine
+#check @SmoothPoincare.bourCoupledInterior_absorb
+#print axioms SmoothPoincare.bourCoupledInterior_absorb
+#check @SmoothPoincare.bourCoupledInterior_absorptionLength
+#print axioms SmoothPoincare.bourCoupledInterior_absorptionLength
+#check @SmoothPoincare.bourCutoffOperator_abs_bound
+#print axioms SmoothPoincare.bourCutoffOperator_abs_bound
+#check @SmoothPoincare.bourCutoffProduct_hessian_support
+#print axioms SmoothPoincare.bourCutoffProduct_hessian_support
+#check @SmoothPoincare.bourCutoffSystemDiagonal
+#print axioms SmoothPoincare.bourCutoffSystemDiagonal
+#check @SmoothPoincare.bourCutoffSystemDiagonal.congr_simp
+#print axioms SmoothPoincare.bourCutoffSystemDiagonal.congr_simp
+#check @SmoothPoincare.bourCutoffSystemGradient
+#print axioms SmoothPoincare.bourCutoffSystemGradient
+#check @SmoothPoincare.bourCutoffSystemGradient.congr_simp
+#print axioms SmoothPoincare.bourCutoffSystemGradient.congr_simp
+#check @SmoothPoincare.bourCutoffSystem_real_norm_bounds
+#print axioms SmoothPoincare.bourCutoffSystem_real_norm_bounds
+#check @SmoothPoincare.bourCutoffSystem_sixthInterior
+#print axioms SmoothPoincare.bourCutoffSystem_sixthInterior
+#check @SmoothPoincare.bourEulerBulk_setIntegral_eq_scalarFlat
+#print axioms SmoothPoincare.bourEulerBulk_setIntegral_eq_scalarFlat
+#check @SmoothPoincare.bourFiniteCover_eLpNorm
+#print axioms SmoothPoincare.bourFiniteCover_eLpNorm
+#check @SmoothPoincare.bourFiniteCover_hessianLp
+#print axioms SmoothPoincare.bourFiniteCover_hessianLp
+#check @SmoothPoincare.bourFrameEulerTransgression_boundary
+#print axioms SmoothPoincare.bourFrameEulerTransgression_boundary
+#check @SmoothPoincare.bourFrameEulerTransgression_boundary_integral
+#print axioms SmoothPoincare.bourFrameEulerTransgression_boundary_integral
+#check @SmoothPoincare.bourHarmonicMorrey_of_W26
+#print axioms SmoothPoincare.bourHarmonicMorrey_of_W26
+#check @SmoothPoincare.bourHarmonicMorrey_of_W26_volume
+#print axioms SmoothPoincare.bourHarmonicMorrey_of_W26_volume
+#check @SmoothPoincare.bourHessian_product
+#print axioms SmoothPoincare.bourHessian_product
+#check @SmoothPoincare.bourImmersionNormalDefect_eq_neg_shape
+#print axioms SmoothPoincare.bourImmersionNormalDefect_eq_neg_shape
+#check @SmoothPoincare.bourInterior_absorbFirstDerivative
+#print axioms SmoothPoincare.bourInterior_absorbFirstDerivative
+#check @SmoothPoincare.bourInterior_dyadicAbsorption
+#print axioms SmoothPoincare.bourInterior_dyadicAbsorption
+#check @SmoothPoincare.bourIntrinsicCurvatureSq_of_partialDiffeomorph_inner
+#print axioms SmoothPoincare.bourIntrinsicCurvatureSq_of_partialDiffeomorph_inner
+#check @SmoothPoincare.bourIterCov_of_partialDiffeomorph_inner
+#print axioms SmoothPoincare.bourIterCov_of_partialDiffeomorph_inner
+#check @SmoothPoincare.bourMetricInverse_entry_controls
+#print axioms SmoothPoincare.bourMetricInverse_entry_controls
+#check @SmoothPoincare.bourMixedStationary_uniformHarmonicC1Third
+#print axioms SmoothPoincare.bourMixedStationary_uniformHarmonicC1Third
+#check @SmoothPoincare.bourMixedStationary_uniformHarmonicW26
+#print axioms SmoothPoincare.bourMixedStationary_uniformHarmonicW26
+#check @SmoothPoincare.bourModelGram_fderiv_bound_of_pullback
+#print axioms SmoothPoincare.bourModelGram_fderiv_bound_of_pullback
+#check @SmoothPoincare.bourModelHarmonicTwo_flatOperator_bound
+#print axioms SmoothPoincare.bourModelHarmonicTwo_flatOperator_bound
+#check @SmoothPoincare.bourNorm_directional_bound
+#print axioms SmoothPoincare.bourNorm_directional_bound
+#check @SmoothPoincare.bourRicciTensor_of_partialDiffeomorph_inner
+#print axioms SmoothPoincare.bourRicciTensor_of_partialDiffeomorph_inner
+#check @SmoothPoincare.bourRm04_of_partialDiffeomorph_inner
+#print axioms SmoothPoincare.bourRm04_of_partialDiffeomorph_inner
+#check @SmoothPoincare.bourRoughLap_of_partialDiffeomorph_inner
+#print axioms SmoothPoincare.bourRoughLap_of_partialDiffeomorph_inner
+#check @SmoothPoincare.bourRoughRicci_of_partialDiffeomorph_inner
+#print axioms SmoothPoincare.bourRoughRicci_of_partialDiffeomorph_inner
+#check @SmoothPoincare.bourRoughTraceFreeRicci_of_partialDiffeomorph_inner
+#print axioms SmoothPoincare.bourRoughTraceFreeRicci_of_partialDiffeomorph_inner
+#check @SmoothPoincare.bourRoundComplementaryWedges
+#print axioms SmoothPoincare.bourRoundComplementaryWedges
+#check @SmoothPoincare.bourRoundEulerBoundary
+#print axioms SmoothPoincare.bourRoundEulerBoundary
+#check @SmoothPoincare.bourRoundEulerBoundary_decreasing
+#print axioms SmoothPoincare.bourRoundEulerBoundary_decreasing
+#check @SmoothPoincare.bourRoundEulerBoundary_increasing
+#print axioms SmoothPoincare.bourRoundEulerBoundary_increasing
+#check @SmoothPoincare.bourRoundEulerBulk
+#print axioms SmoothPoincare.bourRoundEulerBulk
+#check @SmoothPoincare.bourRoundEulerBulk_eq
+#print axioms SmoothPoincare.bourRoundEulerBulk_eq
+#check @SmoothPoincare.bourRoundEulerPrimitive
+#print axioms SmoothPoincare.bourRoundEulerPrimitive
+#check @SmoothPoincare.bourRoundEulerShell_total
+#print axioms SmoothPoincare.bourRoundEulerShell_total
+#check @SmoothPoincare.bourRoundFrameCurvature
+#print axioms SmoothPoincare.bourRoundFrameCurvature
+#check @SmoothPoincare.bourRoundFramePfaffian
+#print axioms SmoothPoincare.bourRoundFramePfaffian
+#check @SmoothPoincare.bourRoundPolarArea
+#print axioms SmoothPoincare.bourRoundPolarArea
+#check @SmoothPoincare.bourShapeWedge
+#print axioms SmoothPoincare.bourShapeWedge
+#check @SmoothPoincare.bourShapeWedge_cyclic_contraction
+#print axioms SmoothPoincare.bourShapeWedge_cyclic_contraction
+#check @SmoothPoincare.bourSmoothPointedBallCutoff
+#print axioms SmoothPoincare.bourSmoothPointedBallCutoff
+#check @SmoothPoincare.bourSmoothPointedBallCutoff_of_compact
+#print axioms SmoothPoincare.bourSmoothPointedBallCutoff_of_compact
+#check @SmoothPoincare.bourSquaredCutoff_hessian
+#print axioms SmoothPoincare.bourSquaredCutoff_hessian
+#check @SmoothPoincare.bourSquaredCutoff_hessian_error
+#print axioms SmoothPoincare.bourSquaredCutoff_hessian_error
+#check @SmoothPoincare.bourSquaredCutoff_operator_error
+#print axioms SmoothPoincare.bourSquaredCutoff_operator_error
+#check @SmoothPoincare.bourStationaryRoughTraceFreeRicci_of_partialDiffeomorph_inner
+#print axioms SmoothPoincare.bourStationaryRoughTraceFreeRicci_of_partialDiffeomorph_inner
+#check @SmoothPoincare.bourStationary_harmonic_W26
+#print axioms SmoothPoincare.bourStationary_harmonic_W26
+#check @SmoothPoincare.bourStationary_roughRicci_eq
+#print axioms SmoothPoincare.bourStationary_roughRicci_eq
+#check @SmoothPoincare.bourStationary_roughTraceFreeRicci_eq
+#print axioms SmoothPoincare.bourStationary_roughTraceFreeRicci_eq
+#check @SmoothPoincare.bourStationary_scalarCoefficient_scale
+#print axioms SmoothPoincare.bourStationary_scalarCoefficient_scale
+#check @SmoothPoincare.bourTraceFreeRicciField
+#print axioms SmoothPoincare.bourTraceFreeRicciField
+#check @SmoothPoincare.bourTraceFreeRicciField_apply
+#print axioms SmoothPoincare.bourTraceFreeRicciField_apply
+#check @SmoothPoincare.bourTraceFreeRicciField_scale
+#print axioms SmoothPoincare.bourTraceFreeRicciField_scale
+#check @SmoothPoincare.bourUniformHarmonicMetricHessian_bound
+#print axioms SmoothPoincare.bourUniformHarmonicMetricHessian_bound
+#check @SmoothPoincare.bourUniformHarmonicMetricW2_bound
+#print axioms SmoothPoincare.bourUniformHarmonicMetricW2_bound
+#check @SmoothPoincare.bourUniformHarmonicMetricW2_of_flatLaplacian
+#print axioms SmoothPoincare.bourUniformHarmonicMetricW2_of_flatLaplacian
+#check @SmoothPoincare.bourUniformHarmonicPullbackSystemW26_of_flatLaplacian
+#print axioms SmoothPoincare.bourUniformHarmonicPullbackSystemW26_of_flatLaplacian
+#check @SmoothPoincare.bourUniformHarmonicSystemW26
+#print axioms SmoothPoincare.bourUniformHarmonicSystemW26
+#check @SmoothPoincare.bourUniformHarmonicSystemW26_of_flatLaplacian
+#print axioms SmoothPoincare.bourUniformHarmonicSystemW26_of_flatLaplacian
+#check @SmoothPoincare.bourUniformHarmonicTraceFreeRicci_principal_bound
+#print axioms SmoothPoincare.bourUniformHarmonicTraceFreeRicci_principal_bound
+#check @SmoothPoincare.bourW26Norm
+#print axioms SmoothPoincare.bourW26Norm
+#check @SmoothPoincare.bourW26Norm_volume_eq
+#print axioms SmoothPoincare.bourW26Norm_volume_eq

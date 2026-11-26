@@ -1,5 +1,13 @@
 # Collar deformation and surgery · draft history
 
+## 26 November 2026 · Product doubles and the third reverse slide
+
+Established three marked cancellations for product doubles of free three-string tangles with a designated boundary-parallel strand. A constructed example has two irreducible individual cuts and an explicit rank-two return. On the GST alternative, every first unstabilized belt cancellation requires at least four slides. The index-three third-slide core escapes all original single-arc neighborhoods. [Proof, scope and readings](reviews/DOUBLED_TANGLES_AND_INDEPENDENT_BANDS_20261126.md)
+
+## 26 November 2026 · Native co-cores on the GST links
+
+Derived the obstruction through the first switch of moving component and for all slides in one fixed regular neighborhood of the joined original cores. On orthogonal spheres the partner dual has sharp minimum four, and the square-knot dual has a quadratic lower bound. [Assessed result](reviews/GST_NATIVE_REVERSE_SLIDES_20261126.md)
+
 ## 26 November 2026 · Research priorities
 
 Adopted the upper co-core, band and belt test on one untreated irreducible-cut pair. A genuine unresolved rank-two closing is the alternative. The deformation child supplies estimates on a qualifying physical candidate. [Current plan](research-plan/PLAN.md) · [Adopted proposal](brainstorm/notes/AFTER_REDUCIBLE_CUTS_RESEARCH_PRIORITIES_20261126.md)

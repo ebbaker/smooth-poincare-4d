@@ -130,9 +130,7 @@ identifies the resulting contracted curvature action as the sum of
 the pinned signed Riemann–Ricci contraction and covariant Ricci
 square. These pointwise identities are available on a general slice.
 The pinned consolidated Ricci-flow commutator uses a different
-carrier, `SolutionOn`, while the remaining comparison here requires
-matching the crossed permutations of the computed Bour gradient to
-the pointwise identities.
+carrier, `SolutionOn`, and the comparison below works directly on a single smooth metric slice.
 [Pinned differentiated Bianchi](https://github.com/qinz1yang/differential-geometry/blob/788efe97894474c032de6dfb1289d515f613d15a/DifferentialGeometry/Geometry/Connection/LeviCivita/Curvature/DifferentiatedContractedBianchi.lean#L93) ·
 [Pinned Ricci identity](https://github.com/qinz1yang/differential-geometry/blob/788efe97894474c032de6dfb1289d515f613d15a/DifferentialGeometry/Geometry/Connection/LeviCivita/Curvature/Identities.lean#L1638) ·
 [Pinned curvature contraction](https://github.com/qinz1yang/differential-geometry/blob/788efe97894474c032de6dfb1289d515f613d15a/DifferentialGeometry/Geometry/Curvature/Riemann/Contractions.lean#L640)
@@ -140,3 +138,71 @@ the pointwise identities.
 The targeted Bianchi build completed 10,312 jobs without diagnostics.
 Both divergence signatures replayed, and all three public declaration
 axiom checks returned only `propext`, `Classical.choice` and `Quot.sound`.
+
+## Curvature-commuted gradient on the original metric
+
+With \(S=\nabla^2 A\) and \(b_i\) an orthonormal basis at the point, the
+two crossed terms of the actual Koszul adjoint evaluated on \((u,v)\)
+are \(\sum_i S(b_i,v,b_i,u)\) and \(\sum_i S(b_i,v,u,b_i)\).
+The uncommuted term is
+\(\sum_i S(v,b_i,b_i,u)=(\nabla\operatorname{div}_g A)(v,u)\).
+The two crossed terms agree by symmetry in the final two slots.
+For the Ricci summand, commuting the first two derivatives adds the
+covariant Ricci square and subtracts the Riemann–Ricci action
+\(\mathscr R_g(Q)=\operatorname{hamiltonCurvatureRicciAt}(g)\).
+The scalar summand has second covariant derivative
+\(\nabla^2(Rg)=\nabla^2R\otimes g\), as checked using the tensor product
+rule and \(\nabla g=0\). Its crossed trace is the scalar Hessian and
+its rough trace is \((\Delta_g R)g\).
+[Crossed commutator](../../../SmoothPoincare/Variational/BourCrossedRicci.lean) ·
+[Slot and scalar-product identities](../../../SmoothPoincare/Variational/BourGradientComparison.lean)
+
+The Ricci square from the commutator cancels the moving inverse-metric
+term in \(Z\). Combining the remaining pieces gives the original
+covariant gradient at any smooth slice,
+\[
+G_\alpha
+=-\tfrac12\Delta_g Q+\tfrac{\alpha+2}{12}\nabla^2R
+-\mathscr R_g(Q)-\tfrac{\alpha-4}{12}RQ
+-\tfrac{\alpha-1}{12}(\Delta_g R)g+\tfrac12 B_\alpha g .
+\]
+Here \(\Delta_g\) on covariant tensors is the trace of the ordered
+second derivative and on functions is the traced Hessian. The
+curvature action uses the pinned convention
+\[
+\mathscr R_g(Q)(u,v)=\sum_{i,j}Q(b_i,b_j)\,
+g\!\left(\operatorname{Rm}(b_i,u)v,b_j\right),
+\]
+where \(\operatorname{Rm}(X,Y)Z\) is the curvature operator of the
+Levi–Civita connection. Constant scalar curvature removes the Hessian
+and scalar Laplacian. In four dimensions, set \(E=Q-(R/4)g\) on a
+constant-scalar slice. Using \(\mathscr R_g(g)=Q\) and the Weyl
+decomposition in Bour's conventions gives the coefficient
+\((2-\alpha)R/12\) on \(E\) in Bour's Proposition 4.4, as well as
+\(\tfrac14|E|_g^2g\). The kernel comparison is stated in the
+ordinary Ricci and full curvature contractions above.
+[Checked arbitrary-scalar and constant-scalar formulas](../../../SmoothPoincare/Variational/BourGradientComparison.lean) ·
+[Bour v1, §3 and Proposition 4.4](https://arxiv.org/html/1012.0342v1)
+
+The tensor equivalence
+`bourOriginalVelocity_eq_negTwoGradient_iff_components` identifies the
+negative twice-gradient condition with the geometric component equation
+on all tangent pairs. For the actual velocity of a regular path,
+this supplies the pointwise equation in the original slab theorem.
+[Checked component equivalence](../../../SmoothPoincare/Variational/BourGradientComparison.lean) ·
+[Original regular slab](../../../SmoothPoincare/Variational/BourOriginalGradient.lean) ·
+[Bour v1, §1.2](https://arxiv.org/html/1012.0342v1#S1.SS2)
+
+Bour's \(\Delta_B=-\Delta_g\) puts the differentiated curvature term
+\(\delta\tilde\delta\operatorname{Rm}=-\delta DQ\) in the order
+\(\Delta_gQ-\tfrac12\nabla^2R\) up to algebraic curvature terms.
+His additional differential term in dimension four contributes
+\((1-\alpha)(-\Delta_gR\,g+\nabla^2R)/6\). Together these match
+the checked coefficients of the rough Ricci Laplacian, the
+scalar Hessian and the scalar Laplacian in the component velocity.
+[Bour v1, §§3 and 9.2, Propositions 9.2–9.3](https://arxiv.org/html/1012.0342v1)
+
+The final comparison build completed 10,455 jobs without diagnostics.
+The arbitrary-scalar formula, constant-scalar formula, and component
+velocity equivalence replayed. Seven public axiom checks returned only
+`propext`, `Classical.choice` and `Quot.sound`.

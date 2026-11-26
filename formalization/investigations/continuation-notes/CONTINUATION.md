@@ -1,5 +1,7 @@
 # Continuing the formalization program
 
+**FOT-E51 · 26 November 2026.** One common harmonic realization now bounds the metric and trace-free Ricci in $W^{2,6}$ at both stationary scales, given Peters and the flat scalar estimate. On a fixed positive-parameter stationary pointed limit, finite scalar-square energy and the physical volume and completeness hypotheses force scalar flatness. [Current handoff](AFTER_E51_COUPLED_INTERIOR_AND_POINTED_SCALAR_20261126.md)
+
 **FOT-E50 · 26 November 2026.** Derived the original covariant gradient, its conformal trace and terminal dissipation. Verified the physical harmonic chart transport and end-link integral estimate, and carried one post-attainment Ricci margin through both extractions. [Current handoff](AFTER_E50_ORIGINAL_GRADIENT_AND_SECOND_EXTRACTION_20261126.md)
 
 **Current Edition 06 · FOT-E49 · 26 November 2026.** [Assessment](../reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](../research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](../continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)

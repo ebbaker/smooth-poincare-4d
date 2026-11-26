@@ -1,0 +1,130 @@
+# E51 · Independent regularity, terminal and Euler readback
+
+26 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. The issued bounded E reader setting was GPT-6.2 Sol/ultra. Separate serving model and effort were unavailable. The intake checkout was 1c81a3048c8c21a4c1d1fb23db72f37168a15ca5, with working changes. SHA-256 prefixes at readback were 38b6433c2bd2 for the packet, d84fe5a6f29f for E50 verification, and 719bbea527c6 for the scientific attainment manuscript. The calculation concerns smooth Riemannian metrics in four dimensions, using the fixed oriented marked comparisons where applicable. Write \(\Delta=\operatorname{tr}_g\nabla^2\) with nonpositive integrated sign and \(E=\mathrm{Ric}-Rg/4\) with its ordinary two-tensor norm. [E51 packet](../research-progress/handoffs/ED06_E51_PACKETS_20261126.md) · [E50 verification](../research-progress/handoffs/ED06_E50_VERIFICATION_20261126.md) · [Scientific attainment](../../../papers/investigations-1/06_bour_flow_and_fixed_type_attainment/manuscript/fixed_type_attainment.tex)
+
+## Metric principal estimate and flat input
+
+On the realized harmonic chart the metric entries solve
+
+\[
+  a^{ab}\partial_{ab} g_{ij}=-2\mathrm{Ric}_{ij}+Q_{ij}(g,\partial g),
+  \qquad a=(g^{ab}),
+\]
+
+where \(Q\) is quadratic in the first metric derivatives with coefficients bounded by the metric and inverse. A uniform ordered curvature bound \(K\) gives \(|\mathrm{Ric}(v,w)|\le4K|v|_g|w|_g\) by orthonormal trace. When a bound is given in curvature-operator Hilbert–Schmidt norm, multiply it by two to use the ordered norm. Uniform ellipticity and the physically transported \(C^1\) metric bounds control \(g_{ij}\), \(\partial g_{ij}\), the forcing and the modulus of continuity of \(a\). These comparisons are on the same chart interior. [Peters, Theorem 4.3](https://www.numdam.org/item/CM_1987__62_1_3_0.pdf#page=10) · [DeTurck–Kazdan, Lemma 4.1 and (4.3)](https://www.numdam.org/item/10.24033/asens.1405.pdf#page=7) · [E50 physical harmonic charts](../../SmoothPoincare/Variational/BourTransportedInterior.lean)
+
+To check the scale and constants, let \(A=a(z)\) on a Euclidean ball, with least eigenvalue \(\lambda>0\). Put \(x=z+A^{1/2}y\). Then \(A:D_x^2w=\Delta_y(w(z+A^{1/2}y))\). Both \(L^b\) norms acquire the same determinant factor and \(|D_x^2 w|_{\rm HS}\le\lambda^{-1}|D_y^2w|_{\rm HS}\). The flat \(L^b\) Hessian estimate for compactly supported \(w\) therefore freezes with \(C_0=C_{4,b}/\lambda\). If the inverse-metric oscillation is measured in Frobenius norm, the coefficient error is at most \(\|A-a\|_{\rm F}|D^2w|_{\rm HS}\). Using a maximum-entry modulus instead costs a factor of four in dimension four.
+
+For a cutoff \(\eta\) supported in \(B_\rho(z)\), equal to one on \(B_{\rho/2}(z)\), set \(w=\eta g_{ij}\) and extend by zero. The frozen forcing is
+
+\[
+ A:D^2w=\eta\,a:D^2g_{ij}
+    +2a(\nabla\eta,\nabla g_{ij})+g_{ij}a:D^2\eta
+    +(A-a):D^2w .
+\]
+
+Choose \(\rho\) so that \(C_0\sup_{B_\rho}\|A-a\|_{\rm F}\le 1/2\) and the larger ball is inside the realized chart. The final term is absorbed with a factor two. In the remaining terms the uniform \(C^0\) and \(C^1\) bounds enter with cutoff scales \(\rho^{-2}\) and \(\rho^{-1}\), respectively. A finite cover of a fixed strictly smaller ball uses a number of patches depending only on the prescribed radii. The flat Hessian estimate at an exponent \(b>4\) and the uniform lower bound for the realized harmonic radius have different roles. The classical flat estimate uses \(L^b\) boundedness of the order-zero second derivatives of the Newtonian potential for \(1<b<\infty\). The \(b=2\) energy identity alone does not give the needed gain to a positive Hölder exponent for the first derivatives in four dimensions. [Gilbarg–Trudinger, Corollary 9.10 and Theorem 9.11](https://doi.org/10.1007/978-3-642-61798-0_9) · [DeTurck–Kazdan, Corollary 1.4](https://www.numdam.org/item/10.24033/asens.1405.pdf)
+
+## The contracted connection derivative in the Ricci equation
+
+Use \(R(\partial_a,\partial_i)\partial_b=R^c{}_{bai}\partial_c\) and the positive round sectional curvature convention. The coordinate curvature identity gives
+
+\[
+ g^{ab}\partial_a\Gamma^c_{bi}
+ =g^{ab}R^c{}_{bai}
+   +g^{ab}\partial_i\Gamma^c_{ab}
+   -g^{ab}\Gamma^c_{a\ell}\Gamma^\ell_{bi}
+   +\Gamma^c_{i\ell}g^{ab}\Gamma^\ell_{ab}.
+\]
+
+Here \(g^{ab}R^c{}_{bai}=-\mathrm{Ric}_i{}^c\), also calibrated on the round metric. Harmonicity on an open ball makes the final term zero and turns the second into \(-(\partial_i g^{ab})\Gamma^c_{ab}\). Harmonicity at an isolated point would control the undifferentiated trace alone. Thus it is the **contracted** \(\partial\Gamma\) that is bounded pointwise by physical curvature and first metric jets. Bounding each individual \(\partial\Gamma\) from these same data would require more.
+
+For a two-tensor \(E\), recall that \((\nabla_b E)_{ij}=\partial_b E_{ij}-\Gamma^c_{bi}E_{cj}-\Gamma^c_{bj}E_{ic}\). In \(\Delta E\), the input-slot trace \(-g^{ab}\Gamma^c_{ab}\partial_cE_{ij}\) vanishes in harmonic gauge. The two remaining first-order terms are \(-2g^{ab}\Gamma^c_{ai}\partial_b E_{cj}\) and \(-2g^{ab}\Gamma^c_{aj}\partial_b E_{ic}\). The only second metric derivatives outside the diagonal principal term are \(-g^{ab}\partial_a\Gamma^c_{bi}E_{cj}\) and its other tensor-slot counterpart. The preceding identity controls those terms before any separate metric \(W^{2,b}\) bound. Products of two Christoffel symbols are controlled by the first jets.
+
+For a stationary metric of scalar \(s\), Bour's equation in this signed convention is
+
+\[
+ 0=-\tfrac12\Delta E-W^\circ(E)
+      +E^2-\tfrac14|E|^2g+\tfrac{2-p}{12}sE .
+\]
+
+In \(h_j=a_jg_j\) the constant scalar is \(s_j=R(g_j)/a_j\), with \(0\le(2-p_j)s_j/12\le C/6\) for \(p_j\in[0,1]\), \(a_j\ge1\), and \(0\le R(g_j)\le C\). At divergent scale it tends to zero. Uniform physical curvature and ellipticity bound the remaining algebraic terms and the coordinate entries of \(E\). The system has the same diagonal principal coefficient \(a^{ab}\) as the metric equation. [Bour, Proposition 4.4](https://arxiv.org/html/1012.0342v1#S4) · [Scientific attainment, “The limit of critical metrics”](../../../papers/investigations-1/06_bour_flow_and_fixed_type_attainment/manuscript/fixed_type_attainment.tex)
+
+In the checked full-Ricci form of the CSC forcing, ordered curvature ceiling \(K\) and scalar ceiling \(C\) give the envelope \(256K^2+(8/3)CK+C^2/6\) on physical unit directions. The Hamilton curvature–Ricci contraction costs \(2\cdot16\cdot4K^2=128K^2\), the scalar–Ricci term costs \((4/6)C\cdot4K\), and the metric term uses \(|\mathrm{Ric}|^2/2\le128K^2\) and \(|p-4|R^2/24\le C^2/6\). The rough tensor equation on an extended harmonic model is transported on the open set of exact local metric equality. The CSC assumption on the source suffices. In the unrestricted positive-scale estimate the normalized curvature ceiling also bounds the normalized scalar by \(16K\) by tracing twice. This supplies a common reaction envelope even when \(a<1\). [Physical reaction](../../SmoothPoincare/Variational/BourStationaryReaction.lean) · [Stationary pullback](../../SmoothPoincare/Variational/BourStationaryPullback.lean)
+
+The cutoff of this system introduces both its bounded first-order terms and \(2a(\nabla\eta,\nabla E)\). A uniform \(L^\infty\) bound for \(E\) does not directly bound those derivatives. For smooth \(f\) and \(s<t\), a coordinate translation by \(h<t-s\) stays in the larger ball, and the one-dimensional Taylor formula gives
+
+\[
+\|\partial_k f\|_{b;B_s}\le 2h^{-1}\|f\|_{b;B_t}
+                   +\tfrac h2\|\partial_{kk}f\|_{b;B_t}.
+\]
+
+Using an intermediate ball for the cutoff, then choosing \(h\) a small fixed multiple of the gap, bounds the coefficient of the larger Hessian norm by a chosen \(\theta<1/4\). Iterating on a dyadic sequence of intermediate radii absorbs it. The \((t-s)^{-2}\) terms grow by four per step, and \(\theta<1/4\) makes their weighted sum finite. The final larger Hessian norm is finite for each smooth metric on a compact ball inside the chart, so its multiplying factor tends to zero without presupposing a uniform estimate. Classical \(b>4\) Morrey and Schauder estimates then begin the alternating bootstrap. [E49 interior interpolation](../13_bour_marked_limits_and_attainment/notes/E49_HARMONIC_INTERIOR.md) · [E50 harmonic regularity](../13_bour_marked_limits_and_attainment/notes/E50_INTERIOR.md)
+
+For the squared-cutoff route, let \(b=6\) and choose a nonnegative compactly supported smooth \(\eta\). In one fixed direction \(v\), put \(Y=\|\eta \partial_v f\|_b\), \(Z=\|\eta^2\partial_{vv} f\|_b\), and \(U=\|f\|_{b;\operatorname{supp}\eta}\). Integrating \(\partial_v f\cdot\eta^b(\partial_v f)^{b-1}\) by parts gives
+
+\[
+ Y^b\le b\|\partial_v\eta\|_\infty U\,Y^{b-1}+(b-1)U Y^{b-2}Z .
+\]
+
+The derivative of the cutoff term supplies \(|\eta\partial_v f|^{b-1}\), and the other term factors as \(|\eta\partial_v f|^{b-2}|\eta^2\partial_{vv} f|\). Hölder uses exponents \(b,b/(b-2),b\) for the latter. For \(Y>0\), divide by \(Y^{b-2}\), solve the quadratic bound, and use Young's inequality to obtain
+\(Y\le (b\|\partial_v\eta\|_\infty+(b-1)/(4\varepsilon))U+\varepsilon Z\).
+The zero case follows directly. The weighted estimate uses the same localization as the squared-cutoff jet identities, including at zeros of \(\eta\). This is a classical scalar interpolation argument on a common Euclidean ball. Its connection to the full tensor \(L^b\) estimate also needs the flat estimate and the geometric bounds on the whole outer ball.
+
+The inner-ball Morrey transfer applies the pinned scalar estimate to a cutoff equal to one on \(B(2r)\) and supported in \(\overline B(9r/4)\), strictly inside the supplied \(B(5r/2)\). The three terms of the \(W^{2,6}\) bound carry the same scale factor for a change of Haar normalization, raised to power \(1/6\). The derivative Hölder exponent is \(1-4/6=1/3\). Applying the scalar estimate to derivatives in an orthonormal model basis gives the full Fréchet derivative Hölder bound by finite-dimensional operator-norm comparison. On \(B(2r)\) these are the actual derivatives of both pulled-back metric entries and trace-free Ricci entries. This starts the regularity argument at \(C^{1,1/3}\) for both tensors. [Inner-ball Morrey estimate](../../SmoothPoincare/Variational/BourHarmonicMorrey.lean)
+
+## First hits and terminal stationarity
+
+On a compact source let \(Q(t)\) be the maximum ordered curvature norm. Smoothness of the regular metric path makes \(Q\) continuous. Fix an interior time \(t_0\) and unbounded increasing levels \(L_i>Q(t_0)\). A later point above each level gives a compact interval on which to find the earliest crossing \(t_i\). Continuity and the starting inequality give \(Q(t_i)=L_i\) and \(Q(t)\le L_i\) on \([t_0,t_i]\). A maximum point of \(Q(t_i)\) supplies a basepoint of normalized curvature one for \(L_i g(t_i)\). The sequence is cofinal since \(Q\) is bounded on every compact prefix. For fixed \(A>0\), the backward endpoints \(a_i=t_i-A/L_i^2\) are eventually in the same regular interval. To show their cofinality, compare a fixed threshold time with a strictly later interior time and use the resulting positive time gap.
+
+On \([-A,0]\), \(h_i(s)=L_i g(t_i+s/L_i^2)\), so \(\partial_s h_i=L_i^{-1}\partial_t g\). In four dimensions the squared norm of the rescaled half-negative velocity has factor \(L_i^{-4}\) relative to the original pointwise norm, the physical volume has factor \(L_i^2\), and rescaled time has factor \(L_i^2\). The integral is invariant. Both endpoint energies tend to the same finite terminal infimum, so the integral of that squared velocity tends to zero by the exact half-drop identity.
+
+For a limit over a fixed compact spatial comparison through the final time, continuity in time and convergence of the actual pulled-back velocity and slice measure allow restriction to a spatial neighborhood and a smaller time interval. Any nonzero limiting velocity gives a strictly positive lower bound on a product neighborhood with positive spacetime measure, contradicting vanishing dissipation. At \(s=0\) use a one-sided time interval and continuity. An uncontrolled time-dependent comparison would add the metric Lie derivative in the time differentiation, so a fixed marking over the slab or a vanishing gauge term is necessary. This argument depends on the obtained spacetime comparison. Curvature first hits and total dissipation alone supply no convergence of the metrics or their velocities. [Scientific attainment, first extraction](../../../papers/investigations-1/06_bour_flow_and_fixed_type_attainment/manuscript/fixed_type_attainment.tex) · [Bour, proof of Theorem 1.11](https://arxiv.org/html/1012.0342v1#S8) · [E50 dissipation](../../SmoothPoincare/Variational/BourTerminalDissipation.lean)
+
+At fixed \(p>0\), stationarity on the first limit gives \(p\Delta R=0\). Testing the equation on the complete limit by \(\eta_r^2 R\), with \(\eta_r=1\) on a ball of radius \(r\) and \(|\nabla\eta_r|\le 2/r\), bounds the interior \(\int|\nabla R|^2\) by \(16r^{-2}\int R^2\). The inherited finite scalar energy makes \(R\) constant on a connected limit. Infinite volume then forces zero. The second extraction instead starts from constant scalar curvatures with a uniform upper bound and makes them tend uniformly to zero by rescaling.
+
+On that same first limit the CSC form loses all terms involving the parameter when \(R=0\). In the project's Hamilton convention, the residual equation in actual tangent fibers is
+
+\[
+  \Delta\mathrm{Ric}+2\mathcal R(\mathrm{Ric})
+    =\tfrac12|\mathrm{Ric}|^2g .
+\]
+
+The physical gradient at \(p=0\) vanishes by the same calculation. The result retains the fixed metric and requires pointwise stationary positive-parameter data and the hypotheses of the pointed scalar-flat step in the assembled application. [Pointed scalar flatness and zero-parameter equation](../../SmoothPoincare/Variational/BourPointedScalarFlat.lean)
+
+## Orientation of finite Euler transgression
+
+At the outward boundary use \(e_0=\nu\) first and \(\nabla e_j=\omega_{ij}e_i\). If \(\sigma_a=\sum_b S_{ab}\theta^b\) for \(S(V)=\nabla_V\nu\), then the ambient-minus-split connection has \(A_{0a}=-\sigma_a\) and \(A_{a0}=\sigma_a\). Along \(\omega_t=\omega_{\rm split}+tA\), its tangential curvature is
+
+\[
+ (\Omega_t)_{bc}=(\Omega_M)_{bc}+(1-t^2)\sigma_b\wedge\sigma_c .
+\]
+
+The covariant derivative of \(A\) in this expression contributes to the mixed blocks. The four-dimensional Pfaffian in oriented order is \(P(\Omega)=\Omega_{01}\wedge\Omega_{23}-\Omega_{02}\wedge\Omega_{13}+\Omega_{03}\wedge\Omega_{12}\). The boundary restriction of its transgression integrand is
+\(-\sum_{\mathrm{cyc}}\sigma_a\wedge(\Omega_t)_{bc}\). In \(8\pi^2\chi\) units the Euler density is \(2P\) and the finite-domain correction enters with the negative transgression sign. This gives \(2\sum S_{ab}C_{ab}+6(1-t^2)\det S\) along the path, with \(C\) the ambient curvature on the oriented complementary tangent wedges. Integrating contributes \(4\det S+2\sum S_{ab}C_{ab}\). The Euclidean sphere gives \(8\pi^2\) and an inward face of a Euclidean annulus gives its negative. Reversing the normal changes the sign of both terms, while a tangent frame change conjugates the curvature and shape matrices in the paired calculation.
+
+The finite formula needs the Euler class of the same entire compact truncation. A product collar metric with outward unit normal gives the split reference along the boundary. Its double has Euler characteristic \(2\chi(K_r)\) because the closed three-dimensional boundary has Euler characteristic zero. The closed Euler integral on the doubled product-collar metric is twice that of one half. The local connection-form calculation supplies the difference of representatives after identifying the oriented metric bundles. Identifying the finite Euler number then requires a global relative Euler evaluation or the corresponding doubling and closed integration step. For the ALE application one oriented comparison must cover the connected truncation and all end buffers together before computing \(\chi(K_r)\) and the boundary correction. [Cibotaru–Moroianu, (1.1), §3 and Example 3.4](https://www.imar.ro/~sergium/fisiere/pfa.pdf#page=12) · [Tian–Viaclovsky, (7.2)](https://arxiv.org/pdf/math/0310302v3#page=51) · [E50 boundary jets](../../SmoothPoincare/Variational/BourMarkedBoundaryJets.lean)
+
+The round polar shell gives a finite normalization test with two distinct outward faces. At radii \(a=\pi/3\) and \(b=2\pi/3\), the unit round bulk is \(11\pi^2\). The increasing-radius outward face at \(b\) and decreasing-radius outward face at \(a\) each contribute \(-11\pi^2/2\). In detail, the increasing face gives \(12\pi^2\cos r-4\pi^2\cos^3r\), the decreasing face reverses this sign, and the derivative of the opposite primitive is \(12\pi^2\sin^3r\). This calibrates the finite signed expression from supplied round frame and area data. The Euler-class evaluation for an arbitrary compact domain remains a global step. [Round polar shell](../../SmoothPoincare/Variational/BourRoundEulerShell.lean)
+
+## Scientific specimens at intake
+
+Scientific 05 now specifies the actual framed GST pair and its native solid-torus duals. The single reverse fillings in the stated family are irreducible closed surface bundles, and the proof tests exact native intersections. For the stated role its joint outlet is \(Y_2\), and the closed type is recognized by the generalized square-knot result. The separate terminal rank-three hypothesis requires the two irreducible native cuts in a genuine \(Y_1\to Y_3\) triple and the original upper closing. The named source audit did not find such an untreated triple. [Native GST test](../../../papers/investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/notes/SQUARE_KNOT_NATIVE_TEST_20261126.md) · [Terminal pair source audit](../../../papers/investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/notes/TERMINAL_PAIR_SOURCE_AUDIT_20261126.md)
+
+Scientific 07 specifies a marked Miller–Schupp boundary with two actual embedded, framed surgery tubes. The inverse-facing connection cap fails the strict chiral energy bound, and the Euclidean-background change of the first germ still leaves a retained product region of excessive energy. The later funnel metric puts the full exterior and both positive-facing caps at zero Weyl cost away from the two transition bands and makes scalar curvature nonnegative there. At each finite funnel tip the change \(v=\arcsin(\operatorname{sech}r)\) has \(v'=-\operatorname{sech}r\) on the tail and produces the smooth product round collapse in the original framing. For the assembled competitor, a supported nonnegative potential on a positive retained region gives a positive \(H^1\) coercivity constant by the first eigenvalue and the continuous critical \(H^1\to L^4\) embedding on the compact manifold. The negative scalar \(L^2\) norm on both bands must be smaller than the resulting quotient constant on that same competitor. Its two separate total signed band costs must also stay below \(8\pi^2\). Bounds giving both conclusions on one competitor remain due. The Gluck twin source gives the common framed exterior and signed gluing with a separate invariant-class obstruction. Its smooth data require a priced physical metric and transition to give entry. Scientific 06 still starts from a supplied strictly entered class. [Marked assembly](../../../papers/investigations-1/07_positive_subcritical_entry/notes/MARKED_CONNECTION_ASSEMBLY.md) · [Funnel exterior](../../../papers/investigations-1/07_positive_subcritical_entry/notes/FUNNEL_EXTERIOR.md) · [Twin source](../../../papers/investigations-1/07_positive_subcritical_entry/notes/TWIN_SOURCE.md) · [Attainment scope](../../../papers/investigations-1/06_bour_flow_and_fixed_type_attainment/README.md)
+
+## Right slope after a supplied whole return
+
+Write \(J(p)=\inf_{Y>0}F_p\) on the fixed carrier and \(I=\inf_{Y>0}e\). On this one metric set \(J(0)=2I\), and for \(0<s\le t\le1\) affinity gives \(F_s=(1-s/t)F_0+(s/t)F_t\). Taking lower bounds on each summand gives \((J(s)-2I)/s\ge(J(t)-2I)/t\). An attained exact comparator \(g_*\) gives the upper bound \(D_*/2-2I\) for each secant. On actual positive global minimizers \(q_n\) at parameters \(p_n\in(0,1)\), the inequality \(e(q_n)\ge I\) gives the lower bound \(D(q_n)/2-2I\) for those secants. If \(D(q_n)\to D_*\), choose one index close to the common bound, then use secant monotonicity for all smaller positive parameters. This intermediate argument uses \(D\)-convergence and strict positivity of each selected parameter. In the geometric application these are regularized minimizers along a single whole return as \(p_n\downarrow0\), with the limit Bach-flat and in the exact Yamabe stratum. The prior least-Ricci theorem then supplies \(D\)-convergence. The resulting derivative on the right is \(D_*/2-2I=-(Y_{\rm rd}^2-Y(g_*)^2)/24\), strictly negative under the strict spherical deficit. The slope uses the actual whole return as geometric input. [E50 exact selection and energy limit](../../SmoothPoincare/Variational/BourSecondExtraction.lean) · [E51 value slope](../../SmoothPoincare/Variational/BourRegularizedValueSlope.lean)
+
+## Scope of the exported interfaces
+
+- The physical metric estimate uses a scalar flat \(L^6\) Laplacian estimate on compactly supported smooth tests in Euclidean Haar measure. The Ricci principal identity requires harmonicity in a neighborhood and retains the first derivatives of actual tensor entries. Compactly supported sixth-power interpolation and finite absorption control the weighted Hessian and all first derivatives. The finite covering and the fixed model basis comparison then give full \(W^{2,6}\) control on \(B(5r/2)\). The stationary result uses one constant and one realization \(G\) per marked ball for both the metric and trace-free Ricci bounds. The mixed theorem chooses chart and estimate constants before the metric, scalar, functional parameter, scale or center. It requires the physical harmonic-radius supplier. Its original-metric ball has radius \(r/(L\sqrt a)\), which becomes \(r/(2L)\) at scale four. This step leaves the scalar Euclidean estimate and harmonic-radius supply as explicit premises. Higher regularity and compact-domain comparisons remain separate. [Metric estimate](../../SmoothPoincare/Variational/BourMetricInteriorEstimate.lean) · [Ricci principal estimate](../../SmoothPoincare/Variational/BourRicciInteriorEstimate.lean) · [Sixth-power interpolation](../../SmoothPoincare/Variational/BourSixthPowerInterpolation.lean) · [Finite system](../../SmoothPoincare/Variational/BourRicciW26.lean) · [Stationary interior bounds](../../SmoothPoincare/Variational/BourStationaryW26.lean)
+- The gradient scaling rule is the equality \(G_p(cg)=c^{-1}G_p(g)\) as a covariant field. Thus the first-hit integral uses the gradient of each actual rescaled metric. The final stationarity theorem takes a fixed pullback comparison, including local convergence of the squared physical gradient and a lower comparison of quadratic forms that yields the needed local volume bound. Its conclusion includes both endpoints of the closed window. A separate time-independence result uses uniform local smallness of the actual speed, an upper quadratic-form bound and pointwise metric convergence on fixed markings. The pointed scalar-flat corollary constructs the cutoff family from compact physical closed balls and infinite volume from a positive unit-ball lower bound. Its finite scalar energy and positive-parameter stationary solution are inputs. [Gradient scaling](../../SmoothPoincare/Variational/BourGradientScaling.lean) · [Native first hits](../../SmoothPoincare/Variational/BourFirstHitWindows.lean) · [Terminal comparison](../../SmoothPoincare/Variational/BourTerminalStationarity.lean) · [Time independence](../../SmoothPoincare/Variational/BourTerminalMetricStatic.lean) · [Pointed scalar flatness](../../SmoothPoincare/Variational/BourPointedScalarFlat.lean)
+- The boundary formula starts from the outward-frame ambient-minus-split connection entries, curvature antisymmetries and the path data. The bulk calculation applies on an actual restricted measure and tracks both signed charges and the half-Ricci term. The compact-domain Euler-class evaluation on the whole truncation is a separate topological and global integration premise. [Euler transgression and bulk](../../SmoothPoincare/Variational/BourEulerTransgression.lean)
+
+## Public replay
+
+From `formalization/`, `lake env lean investigations/reviews/E51_INDEPENDENT_PUBLIC_CHECKS.lean` exited successfully on Lean 4.35.0-rc3. The fixture imports only `SmoothPoincare`. It discharged 27 theorem applications and emitted 65 axiom reports. Every report lists exactly `propext`, `Classical.choice` and `Quot.sound`. Application examples include the common stationary estimate at scales one and four, the mixed harmonic-radius comparison at \(p=0\), the \(1/3\)-Hölder derivative class for both metric and trace-free Ricci entries on \(B(2)\), and the native scale-four dissipation identity. The replay also checks static pointed limits, the zero-parameter Ricci equation on the scalar-flat pointed metric, the two outward faces of the round polar shell, and the derivative \(-d/24\) of the regularized value after one whole return. [Independent public fixture](E51_INDEPENDENT_PUBLIC_CHECKS.lean)
+
+SHA-256 at replay was `6273930be0a4a4fc21cfb2d6b06a01154123749dc1862c9bd8b1349dbd9bbb68` for the public index, `8f87512ea968e23964ab1a2a72731267e590feed2021896738397ea39ceedeb4` for the fixture, and `ccb3b2f005626b82ae4fa6b7a66302369d6876da26af6b20b763885a2fb2c427` for the report transcript.

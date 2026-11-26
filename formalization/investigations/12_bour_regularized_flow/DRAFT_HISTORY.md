@@ -1,5 +1,7 @@
 # Bour's regularized flow · Milestones
 
+- **26 November 2026 · FOT-E51.** True first hits on the original flow control every fixed rescaled backward window, with normalized ordered curvature one at the endpoint. [Assessment](../reviews/ED06_E51_HARMONIC_ESTIMATES_AND_TERMINAL_LIMITS.md)
+
 - **26 November 2026 · FOT-E50.** The original covariant gradient and its normalization are checked on the actual smooth metric family. [Assessment](../reviews/ED06_E50_PHYSICAL_VARIATION_AND_EXTRACTIONS.md)
 
 **26 November 2026 · FOT-E49.** The lowered Levi–Civita variation at the native velocity and its two physical spatial adjoints are kernel checked. Use the fixed-chart Ricci calculation and identify its covariant contractions to complete the tensor gradient and the original-velocity comparison. After X, an attained comparator in a strict regularized sublevel yields a uniform physical Ricci margin; use it at both marked extractions. The pre-attainment start-deficit test retains its own recovery premise. [Disposition](../reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md)

@@ -1,5 +1,13 @@
 # Master manuscript milestones
 
+## 26 November 2026 · Direct transition obstruction on one marked boundary
+
+B02 received the short-cuff seam exclusion, the positive regular-hexagon seam, and a simultaneous closed-sign and chiral-energy obstruction to controlled thin paths on the same Miller–Schupp marking. Finite-width entry stays open. [07 direct assessment](../investigations-1/07_positive_subcritical_entry/reviews/DIRECT_TRANSITIONS_AND_EQUATOR_20261126.md)
+
+## 26 November 2026 · First marked entry return
+
+B02 received the positive cylindrical assembly and the two direct transition costs on the marked Miller–Schupp sphere. The cylindrical class exceeds threshold and strict entry remains open. [07 assessment](../investigations-1/07_positive_subcritical_entry/reviews/FIRST_MARKED_ENTRY_20261126.md) · [B02 register](research-progress/REGISTER.md)
+
 ## 26 November 2026 · Research priorities
 
 Positive-entry construction has moved to 07. The master now includes the obstruction on a reflected contractible seam and the terminal descent from either reducible native cut. The active plans identify the reverse test in 05 and the folded-height pilot in 04. [Assignment and input versions](research-progress/handoffs/DIRECT_ENTRY_OWNERSHIP_20261126.md) · [Current plan](research-plan/PLAN.md)

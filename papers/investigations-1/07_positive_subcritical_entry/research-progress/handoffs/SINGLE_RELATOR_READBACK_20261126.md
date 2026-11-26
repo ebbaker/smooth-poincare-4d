@@ -1,0 +1,3 @@
+# E03d · two individual closings
+
+26 November 2026 for Edward B. Baker III with OpenAI Codex, selected lead Astra/ultra, bounded Sol/ultra reader. Actual serving configuration unavailable. [Register](../REGISTER.md). Independently check notes/SINGLE_RELATOR_CLOSURES.md, revision 1 blob `51f66f28665d`, against the marked formula and smooth funnel exterior. Check recovery of the untouched tube, possible boundary contributions, Hodge orientation and positivity per sign on each band. Output reviews/SINGLE_RELATOR_READBACK.md only. Stop after checking both native closures; return any failure to B02.

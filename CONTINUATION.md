@@ -6,7 +6,7 @@ Setup date: 2026-11-21; navigation updated 2026-11-26, America/New_York. Prepare
 | --- | --- | --- |
 | Master program | [Master investigation](papers/master/README.md) | [Program continuation](papers/master/continuation-notes/CONTINUATION.md) |
 | Intrinsic entry | [Positive subcritical entry](papers/investigations-1/07_positive_subcritical_entry/README.md) | [Select the first marked boundary](papers/investigations-1/07_positive_subcritical_entry/continuation-notes/CONTINUATION.md) |
-| Formalization | [Edition 06 proof plan](formalization/investigations/research-plan/06_PLAN.md) | [Continue after E50](formalization/investigations/continuation-notes/AFTER_E50_ORIGINAL_GRADIENT_AND_SECOND_EXTRACTION_20261126.md) |
+| Formalization | [Edition 06 proof plan](formalization/investigations/research-plan/06_PLAN.md) | [Continue after E51](formalization/investigations/continuation-notes/AFTER_E51_COUPLED_INTERIOR_AND_POINTED_SCALAR_20261126.md) |
 | Fixed-type attainment | [Bour investigation](papers/investigations-1/06_bour_flow_and_fixed_type_attainment/README.md) | [Attainment audit and post-attainment tests](papers/investigations-1/06_bour_flow_and_fixed_type_attainment/continuation-notes/CONTINUATION.md) |
 | Marked recognition | [Collar deformation and surgery](papers/investigations-1/05_collar_deformation_and_surgery/README.md) | [Current surgery continuation](papers/investigations-1/05_collar_deformation_and_surgery/continuation-notes/CONTINUATION.md) |
 | Master parallel branches | [Branch owners](papers/master/research-progress/handoffs/PARALLEL_OWNERSHIP_20261125.md) | [Four individual launch prompts](papers/master/continuation-notes/PARALLEL_PROGRAM_20261125.md) |

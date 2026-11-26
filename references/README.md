@@ -206,3 +206,5 @@ The [primary passage record](SOURCE_NOTES_COLLAR_SURGERY_20261126.md) documents 
 The [two-attachment and face-error passages](SOURCE_NOTES_COLLAR_SURGERY_20261126.md#two-attachments-and-a-finite-curved-comparison) record the primary single-knot and low-tunnel classification, the two square-knot slides, the saddle exterior, the local filling recognition and the chiral boundary normalization.
 
 The [nonlocal band and boundary-response passages](SOURCE_NOTES_COLLAR_SURGERY_20261126.md#nonlocal-bands-and-a-physical-boundary-response) identify the published local slide, the rank-increasing knot test, the marked PSC fittings and the conformal-Laplacian input to the finite-width sign test.
+
+The [sources for the native GST reverse slides](SOURCE_NOTES_COLLAR_SURGERY_20261126.md#native-reverse-slides-on-the-gst-links) identify the actual co-cores, the rank-two primitive-word theorem and the surface-bundle input to the sphere intersection bounds.

@@ -2,7 +2,7 @@
 
 ## Upper band and belt
 
-Under SUR-B04 seek the actual terminal pair with two irreducible native cuts, original framed tubes, split lower zero and its true immediate $Y_3$ closing. Select one reverse band and belt from the native co-cores and upper system. Trace every tube and closing in both directions through a single geometric cancellation, or delimit the obstruction. An actual unresolved $S^3$ link with carried $Y_2$ closing is the alternative. Use the [current parent prompt and routing](../../continuation-notes/CONTINUATION.md) with the [child plan](../research-plan/PLAN.md) and [sole register](../research-progress/REGISTER.md).
+Use the [current continuation](../../continuation-notes/AFTER_DOUBLED_TANGLES_AND_INDEPENDENT_BANDS_20261126.md). The [assessment](../../reviews/DOUBLED_TANGLES_AND_INDEPENDENT_BANDS_20261126.md) gives the explicit rank-two return on the product double and the marked GST fourth-slide tests.
 
 ## Historical launch
 

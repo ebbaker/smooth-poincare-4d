@@ -1,4 +1,6 @@
-# Continue positive subcritical entry
+# Original activation prompt for positive subcritical entry
+
+Use the [finite-width continuation](AFTER_DIRECT_TRANSITIONS_20261126.md) for current research. The [first assembly](AFTER_FIRST_MARKED_ENTRY_20261126.md) and launch instructions below preserve the earlier selections.
 
 26 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Exact serving model and reasoning effort were unavailable. The setup baseline is `46b5bbb4d340`. The first selection remains open. The initial authorization was for setup. On a later research launch, read the [overview](../research-overview/OVERVIEW.md), [plan](../research-plan/PLAN.md), [sole register](../research-progress/REGISTER.md), [source receipt](../references/README.md) and [ownership handoff](../../../master/research-progress/handoffs/DIRECT_ENTRY_OWNERSHIP_20261126.md). The [master entry proposition](../../../master/manuscript/chiral_weyl_energy_and_smooth_poincare.tex), [Claude's direct-entry proposals](../../../master/brainstorm/notes/claude/ENTRY_DIRECT_APPROACHES_20261126.md), [priority assessment](../../../master/reviews/DIRECT_ENTRY_AND_REDUCIBLE_CUT_PRIORITIES_20261126.md), [actual Mazur face](../../04_hypersurface_immersions/01_immersed_handle_constructions/manuscript/boundary_class.tex) and [all-sheet calculation](../../../master/notes/E15_SHEET_ANGLES.md) distinguish available inputs from missing geometry.
 

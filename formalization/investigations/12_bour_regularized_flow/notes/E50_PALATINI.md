@@ -14,86 +14,30 @@ The fixed-type attainment manuscript inspected at execution had SHA-256
 [Bour v1, §3](https://arxiv.org/html/1012.0342v1#S3) ·
 [Working manuscript](../../../../papers/investigations-1/06_bour_flow_and_fixed_type_attainment/manuscript/fixed_type_attainment.tex)
 
-Let (g_s) be a smooth real Riemannian family on a smooth
-boundaryless manifold. Fix a regular time (t) and write (g=g_t) and
-(K=partial_t g_t). The construction applies in any positive finite
-dimension and needs neither orientation nor compactness. Choose one
-extended chart and its fixed basis fields (b_i). Throughout the chart
-source put (C^j{}_{ik}=partial_tGamma^j{}_{ik}). The native lowered
-Koszul flux (L=	exttt{bourKoszulFlux},g,K) satisfies
-[
-L_{aik}
- = sum_j g_{ja}C^j{}_{ik}
- = 	frac12(
-abla_i K_{ka}+
-abla_k K_{ia}-
-abla_a K_{ik}).
-]
-The first equality is a fixed-chart equality at every point in the
-source. Its proof takes the time derivative of the Levi–Civita
-difference on the fixed basis fields. The output expansion of that
-difference differentiates a finite sum with fixed tangent vectors.
-The second equality is the E49 variation of Levi–Civita applied to the
-native speed. [Lean statements](../../../SmoothPoincare/Variational/BourPalatiniVariation.lean) ·
-[Pinned Levi–Civita variation](https://github.com/qinz1yang/differential-geometry/blob/788efe97894474c032de6dfb1289d515f613d15a/DifferentialGeometry/Geometry/Connection/LeviCivita/Variation/MetricDerivative.lean)
+Let \(g_s\) be a smooth Riemannian family on a smooth boundaryless manifold. Fix a regular time \(t\), and put \(g=g_t\) and \(K=\partial_t g_t\). The local calculation works in every positive finite dimension. Choose one extended chart and its fixed basis fields \(b_i\). On the entire chart source put \(C^j{}_{ik}=\partial_t\Gamma^j{}_{ik}\). The lowered Koszul flux satisfies
+\[
+ L_{aik}=\sum_j g_{ja} C^j{}_{ik}
+ =\tfrac12(\nabla_iK_{ka}+\nabla_kK_{ia}-\nabla_aK_{ik}).
+\]
+The first equality follows by differentiating the connection difference in these fixed fields. The output expansion is a finite sum in a fixed tangent basis. The second equality applies the Levi–Civita variation to the native speed. [Lean statements](../../../SmoothPoincare/Variational/BourPalatiniVariation.lean) · [Pinned Levi–Civita variation](https://github.com/qinz1yang/differential-geometry/blob/788efe97894474c032de6dfb1289d515f613d15a/DifferentialGeometry/Geometry/Connection/LeviCivita/Variation/MetricDerivative.lean)
 
-The mixed time-space derivatives are those of the same chart and
-original path. In the notation of this formalization, the component
-(operatorname{Ric}(b_i,b_k)) differentiates to
-[
-sum_j(
-abla_j C)^j{}_{ik}
--
-sum_j(
-abla_k C)^j{}_{ij},qquad
-(
-abla_d C)^j{}_{ik}
-=partial_d C^j{}_{ik}
-+sum_migl(Gamma^j{}_{dm}C^m{}_{ik}
--Gamma^m{}_{di}C^j{}_{mk}
--Gamma^m{}_{dk}C^j{}_{im}igr).
-]
-The two lower-slot symmetries of (Gamma) and (C) cancel the
-extra terms with (Gamma^m{}_{jk}C^j{}_{im}) and match the four
-differentiated Christoffel products summand by summand. This gives
-`bourMetricRicciAt_chartPalatini_hasDerivAt`.
+In the same chart the time derivative of \(\operatorname{Ric}(b_i,b_k)\) is
+\[
+ \sum_j(\nabla_j C)^j{}_{ik}-\sum_j(\nabla_k C)^j{}_{ij},
+ \qquad
+ (\nabla_d C)^j{}_{ik}=\partial_d C^j{}_{ik}
+ +\sum_m\bigl(\Gamma^j{}_{dm}C^m{}_{ik}
+ -\Gamma^m{}_{di}C^j{}_{mk}-\Gamma^m{}_{dk}C^j{}_{im}\bigr).
+\]
+The lower-slot symmetries of \(\Gamma\) and \(C\) cancel the extra terms containing \(\Gamma^m{}_{jk}C^j{}_{im}\). The four remaining Christoffel products are exactly those in the differentiated chart Ricci formula. This proves the fixed-chart Palatini identity.
 
-The spatial product rule applies to the germ of the lowering identity.
-Metric compatibility gives
-(partial_d g_{ja}=Gamma^m{}_{dj}g_{ma}+Gamma^m{}_{da}g_{jm}).
-The second metric term cancels the connection correction in the
-lowered output slot. The first becomes the upper-index correction
-after interchanging the finite sums. Thus
-[
-(
-abla_d L)_{aik}
-=sum_j g_{ja}(
-abla_d C)^j{}_{ik}.
-]
-`bourNablaKoszulFlux_chart_eq_gram_mul` proves this equality. Contract the
-first two slots with the inverse Gram matrix to get the first term in
-the Ricci derivative. For the second term, use the covariant derivative
-of the one-form (	au_i=sum_{a,j}g^{aj}L_{aij}), written
-`bourKoszulTraceForm g K`. Metric compatibility commutes the trace
-past the derivative, so the same inverse Gram contraction gives
-(sum_j(
-abla_k C)^j{}_{ij}).
-[Chart tensor derivative](https://github.com/qinz1yang/differential-geometry/blob/788efe97894474c032de6dfb1289d515f613d15a/DifferentialGeometry/Geometry/Connection/ChartBridge/TensorDerivative.lean) ·
-[Metric trace derivative](https://github.com/qinz1yang/differential-geometry/blob/788efe97894474c032de6dfb1289d515f613d15a/DifferentialGeometry/Geometry/Connection/MetricTrace/CovariantDerivative.lean)
+Differentiate the lowering identity on the full chart germ. Metric compatibility gives \(\partial_d g_{ja}=\Gamma^m{}_{dj}g_{ma}+\Gamma^m{}_{da}g_{jm}\), summing over \(m\). The second term cancels the connection correction in the lowered output slot. Interchanging the finite sums puts the first in the upper-index correction. Hence
+\[
+ (\nabla_d L)_{aik}=\sum_j g_{ja}(\nabla_d C)^j{}_{ik}.
+\]
+Contract the first two slots with the inverse Gram matrix. For the second Palatini term set \(\tau_i=\sum_{a,j}g^{aj}L_{aij}\). Metric compatibility commutes the trace with the derivative and gives \(\nabla_k\tau_i=\sum_j(\nabla_k C)^j{}_{ij}\). [Chart tensor derivative](https://github.com/qinz1yang/differential-geometry/blob/788efe97894474c032de6dfb1289d515f613d15a/DifferentialGeometry/Geometry/Connection/ChartBridge/TensorDerivative.lean) · [Metric trace derivative](https://github.com/qinz1yang/differential-geometry/blob/788efe97894474c032de6dfb1289d515f613d15a/DifferentialGeometry/Geometry/Connection/MetricTrace/CovariantDerivative.lean)
 
-`bourMetricRicciAt_chartKoszul_hasDerivAt` therefore identifies the
-physical derivative with (operatorname{div}_g L-(
-abla	au)^	op) in
-every fixed chart containing the evaluation point. The transpose
-evaluates (
-abla	au) in slots ((k,i)), where slot (k) is the
-derivative. `bourMetricRicciAt_hasDerivAt` passes through the finite
-dimensional coordinate equivalence to prove the tensor-valued derivative
-with value `bourRicciVelocity g K`. The trace theorem established in the
-same edition gives (	au=	frac12 doperatorname{tr}_gK), so the
-subtracted term is half the scalar Hessian. The result supplies the
-Ricci derivative to the quadratic density calculation on the same
-regular family. [Trace theorem](../../../SmoothPoincare/Variational/BourKoszulTrace.lean)
+The chart theorem identifies the physical derivative with \(\operatorname{div}_g L-(\nabla\tau)^\top\) at every source point. The transposition puts the derivative in slot \(k\) and the covector in slot \(i\). Passing through the finite-dimensional component equivalence gives the tensor-valued derivative. Finally \(\tau=\tfrac12 d\operatorname{tr}_g K\), so the subtracted term is half the Hessian of the trace. This is the Ricci velocity used in the quadratic density calculation on the same physical path. [Trace theorem](../../../SmoothPoincare/Variational/BourKoszulTrace.lean)
 
 ## Comparison with Bour's expanded gradient
 
@@ -167,7 +111,7 @@ On the transverse trace-free subspace this is
 trace-free subspace also retains the longitudinal terms in \(r_\xi\)
 and \(s_\xi\). [Bour v1, §2](https://arxiv.org/html/1012.0342v1#S2)
 
-This comparison is an index derivation. The pinned
+The [assembled commuted formula](../../../SmoothPoincare/Variational/BourGradientComparison.lean) checks the curvature and scalar coefficients on a general slice. The transverse symbol above is an index derivation. The pinned
 `levi_civita_nabla_contracted_bianchi` supplies the derivative of the
 Ricci divergence for an arbitrary Levi–Civita metric in a basis, and
 `tensor0S_ricciIdentity_of_leviCivita` supplies the slotwise commutator

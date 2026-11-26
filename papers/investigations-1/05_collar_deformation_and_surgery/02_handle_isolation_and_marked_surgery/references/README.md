@@ -13,3 +13,7 @@
 The [surgery register](../research-progress/REGISTER.md) owns new diagram and reduction checks. The [parent reference map](../../references/README.md) gives the available setup metadata and the exact working files used.
 
 [Reducible native surgery and the chamber test](../../../../../references/SOURCE_NOTES_COLLAR_SURGERY_20261126.md#reducible-native-surgery-and-the-chamber-test) records the Scharlemann exceptions and correction, sphere isotopy, free-product and relation-module passages used for the 26 November localization result.
+
+The [GST reverse-slide source record](../../../../../references/SOURCE_NOTES_COLLAR_SURGERY_20261126.md#native-reverse-slides-on-the-gst-links) gives the diagram, the rank-two primitive conjugacy classes and the mapping-torus fiber used on the original co-cores.
+
+The [product double and independent bands](../../../../../references/SOURCE_NOTES_COLLAR_SURGERY_20261126.md#doubled-three-string-tangles-and-independent-gst-bands) use the two whole-boundary handle additions, the handlebody splitting theorem and disk-system slides on the actual solid torus.

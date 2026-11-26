@@ -120,7 +120,8 @@ private theorem bourEnergy_eq_integral_fullDensity (q : SignedCollarMetric o) (�
   rw [bourEnergy_eq_integral_bulk, bourEuler, integral_add hE hB, integral_const_mul]
 
 omit [CompactSpace M] in
-private theorem bourCurvatureSq_contMDiffOn (g : ℝ → SmoothRiemannianMetric I M)
+/-- The ordered four-slot curvature square is jointly smooth on the original regular family. -/
+theorem bourCurvatureSq_contMDiffOn (g : ℝ → SmoothRiemannianMetric I M)
     {D : RealTimeInterval} (hG : MetricFamilySmoothOn (I := I) D g) :
     ContMDiffOn (𝓘(ℝ, ℝ).prod I) 𝓘(ℝ, ℝ) ∞
       (fun p : ℝ × M => intrinsicCurvatureSq (g p.1) p.2) (D.regular ×ˢ (univ : Set M)) := by

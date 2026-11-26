@@ -1,5 +1,7 @@
 # Draft history
 
+- **26 November 2026 · FOT-E51.** The same pulled-back stationary metric and trace-free Ricci field now satisfy quantified $W^{2,6}$ estimates on $B(5r/2)$ at scale one and at curvature scale. [Assessment](../reviews/ED06_E51_HARMONIC_ESTIMATES_AND_TERMINAL_LIMITS.md)
+
 - **26 November 2026 · FOT-E50.** A single Peters input gives buffered harmonic partial diffeomorphisms in both normalized gauges. [Assessment](../reviews/ED06_E50_PHYSICAL_VARIATION_AND_EXTRACTIONS.md)
 
 **26 November 2026 · FOT-E49.** On a recognized capped exterior and normal-ball double, the disk map and its inverse now realize the prescribed open collar from oriented parametrizations. The proof constructs a common chart for both full buffered images. A nonflat link gives the normalized boundary limit from its physical shape, curvature and area estimates. Finite transgression, actual ALE suppliers, the positive cap, removal and one coherent core embedding are still needed. The mixed harmonic-radius and coupled interior bootstrap is derived analytically. Lean proves the differentiated connection bound and harmonic rough-Laplacian cancellation on a supplied chart. [Disposition](../reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md)

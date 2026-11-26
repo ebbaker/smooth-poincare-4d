@@ -20,4 +20,6 @@ Issue future frozen requests and record their returns here with a task ID, input
 
 [E69–E72 · Core variations and the nonflat modified flow](E69_E72_CHARGED_FLOW_20261125.md)
 
+[Product doubles with two irreducible cuts and independent GST slides](DOUBLED_TANGLES_AND_GST_SLIDES_20261126.md) records the marked rank-two return and the four-slide lower bound.
+
 [Strict terminal descent from either reducible native individual cut](REDUCIBLE_NATIVE_CUT_20261126.md) gives the new Investigation 05 selection criterion.

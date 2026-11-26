@@ -8,6 +8,10 @@ On a smooth closed oriented homotopy four-sphere, a rounded individual 2-handle 
 
 At a rank-one inlet with immediate rank-three free outlet, a reducible native single-attachment surgery yields a finite sequence of moving-over-stationary slides to a common ball. The split initial zero cancels with a terminal upper handle, leaving the actual local two-component trace and its induced closing. The explicit alternating families instead admit the Figure 5 reduction all the way to zero. [Theorem and limits](../../reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md)
 
+## Doubled-tangle reduction and native GST bands
+
+A product double of a free three-string tangle with a designated boundary-parallel strand admits three successive cancellations without births. An explicit example gives the marked rank-two successor while both original individual cuts are irreducible. On the GST alternative, at least four unstabilized slides are required at every index $n\ge3$. At index three, a core produced by three framed slides has no representative inside any original one-arc neighborhood, and every fourth band after those particular slides still fails. [Current assessment](../../reviews/DOUBLED_TANGLES_AND_INDEPENDENT_BANDS_20261126.md)
+
 ## Upper co-cores on the next untreated trace
 
 Use the actual reverse attaching tubes in $Y_3$ and the belts of the supplied upper handlebody. Fix a terminal pair with both native cuts irreducible and with the lower split zero accounted for. Homological primitivity and a cyclic word with one belt letter leave a geometric question on the framed band. A single transverse belt crossing permits reverse cancellation. The reduced two-component trace inherits its own closing in both directions. A rank-two link already supplied with that data is a second starting point. [Parent test](../../research-plan/PLAN.md#the-next-terminal-pair) · [Adopted proposal](../../brainstorm/notes/AFTER_REDUCIBLE_CUTS_RESEARCH_PRIORITIES_20261126.md)

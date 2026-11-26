@@ -2,6 +2,8 @@
 
 26 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. The selected lead setting was GPT-6.2 Astra/ultra, with bounded GPT-6.2 Sol/ultra assignments and independent readings. Exact serving telemetry is unavailable. This is the program decision FOT-B11. The source and import receipt identifies the working generations at issue. [Proof plan](../research-plan/06_PLAN.md) · [Baseline](../research-progress/06_BASELINE.md) · [Source and import receipt](../research-progress/handoffs/ED06_SETUP_INPUTS_20261126.md)
 
+**Current execution after FOT-E51.** The physical metric and trace-free Ricci estimate at exponent six now uses one realized ball and covers both scales. The fixed positive-parameter pointed scalar vanishes under the properness, noncollapse and finite-energy assumptions. On the inner ball the metric and trace-free Ricci first derivatives are uniformly Hölder continuous with exponent \(1/3\). The remaining analytic suppliers, same-type marked return, independent entry and attained rigidity tests are tracked in the [E51 assessment](../reviews/ED06_E51_HARMONIC_ESTIMATES_AND_TERMINAL_LIMITS.md) and [current handoff](../continuation-notes/AFTER_E51_COUPLED_INTERIOR_AND_POINTED_SCALAR_20261126.md).
+
 ## What would prove smooth recognition?
 
 Fix a closed, connected, oriented smooth homotopy four-sphere \(M\), with smooth Riemannian metrics. Write \(E_\pm=\int_M|W^\pm|^2_{\mathrm{HS}}\,dV\) in the real two-form operator convention. On this closed manifold signature zero gives \(E_+=E_-=e\). Put \(I=I^+(M)=\inf_{Y([g])>0}e(g)\) when the admissible set is inhabited, and \(D(g)=\int_M|\mathrm{Ric}_0|^2\,dV\) in the ordinary two-tensor norm.

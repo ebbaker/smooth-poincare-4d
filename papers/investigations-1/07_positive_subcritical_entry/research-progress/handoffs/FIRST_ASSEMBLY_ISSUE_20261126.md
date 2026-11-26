@@ -1,0 +1,12 @@
+# First assembly · frozen bounded requests, revision 1
+
+26 November 2026, for Edward B. Baker III, OpenAI Codex. Lead selection GPT-6.2 Astra/ultra preserved, independently attested serving settings unavailable. Each E dispatch explicitly requests GPT-6.2 Sol/ultra. [Sole register](../REGISTER.md). Working HEAD at intake 1c81a3048c8c. Working blobs for the master entry proposition, product cap, Claude note, assessed priorities, 07 plan and register respectively: 066e60479548, 6a5d73af897a, 4e4f040fb185, fb39149f95a7, b60ba5e94acc, 13753076855f. All domains smooth, compact oriented Riemannian unless stated; chiral Hilbert–Schmidt norm on real two-forms.
+
+Lead B01 selects an explicit balanced-presentation test beyond the controls if possible; B02 compares the first retained exterior/cap giving a decisive test. The lead owns selection, physical assembly, shared files and B03. These fixed readings may be run in parallel. Each worker owns only the indicated file. Return checked passages, arithmetic, missing premises and exact scope. Stop at the fixed question. Changes of mechanism go to the lead.
+
+| Packet | Fixed E question and completion | File in this branch |
+| --- | --- | --- |
+| E01 | Recompute prescribed-seam covariance, Mazur reflection and standalone Robin scope using sources in 07. Check also the sign of the seam operator on a product circle times a unit round sphere. | reviews/SEAM_REPLAY.md |
+| B01 source reading | Check explicit balanced presentations in the Miller–Schupp family and Akbulut–Kirby family against published smooth recognition. Identify one specified noncontrol candidate if available; give words, triviality, framing if stated, and the exact limit of known coverage. At most two families; distinguish absence of a theorem from exoticity. | notes/PRESENTATION_SOURCES.md |
+| B03 source reading | Read Kuhrman v1 Corollary 2.9 and its proof, Theorems 3,4, for the roll-spun pretzel. Recover both sides, twin, actual normal parametrization, exterior, gluing and inverse, and which symmetry is obstructed. Check whether any physical germ is present. | notes/TWIN_SOURCE.md |
+| B02 fixed cap calculation | For the product-cap signed boundary germ in the master, compute the cap lower bounds separately for arbitrary warped round fibers over a metric disk, arbitrary conformal multiples, including all symmetric transitions with the same end data. Test invariance and constants. | notes/WARPED_CAP.md |

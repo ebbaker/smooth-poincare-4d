@@ -28,7 +28,7 @@ $\lambda\int u^2\,dV_g$ for every smooth test $u$. Record the marked
 smooth identification for this construction. An isometric
 double comparison requires the actual boundary isometry and estimates
 on the same physical half metric as in Problem~\ref{ed04:entry}.
-Coverage of additional smooth types is the separate target
+On the marked Miller--Schupp boundary, the regular and long-cuff full-width trials still need a positive closed sign and the two signed costs. Coverage of additional smooth types is the separate target
 in Theorem~\ref{thm:ed05-coverage}.
 \end{openproblem}
 
@@ -53,48 +53,52 @@ native second cuts are irreducible, have first Betti number two and
 admit no nonzero-degree map from a closed oriented positive-scalar
 three-manifold. Seek a marked slide, new order or level for one such
 input, or recognize one actual localized rank-two closing. Route 10
-owns the physical deformation on a supplied qualifying cut.
+owns the physical deformation on a supplied qualifying cut. The product-doubled tangle class now has a scientific recognition with three cancellations and no births, including a control with both cuts irreducible. On the native GST outlet, up to three slides do not yield a first unstabilized cancellation in the assessed family.
 \end{openproblem}
 
 \subsection{Physical suppliers for fixed-type attainment}
 
-\begin{openproblem}[Trace-free first variation on the original metric]
+\begin{proposition}[First variation on the original metric]
 \label{prob:ed06-original-variation}
-\uses{prop:ed50-gradient,prop:ed48-trace}
-Route 12. For every smooth symmetric metric velocity $K$ on the closed
-oriented carrier, identify the physical $L^2(dV_g)$ gradient $G^p$ of
-$\mathcal F^p=2(1-p)e+pD/2$ for $0<p<1$. Differentiate the
-Levi--Civita connection, Ricci tensor and inverse-metric contractions
-and perform both spatial integrations by parts on the closed metric.
-Identify the trace-free fourth-order terms in Bour's conventions and
-recover $\operatorname{tr}_gG^p=-(p/4)\Delta R$ with
-$\Delta=\operatorname{div}\nabla$. Supply the common representing
-tensor for both the trajectory velocity $K=-2G^p$ and the scale
-direction $K=g$ in Proposition~\ref{prop:ed48-slab}. The maximal
-solution and its terminal-time extraction belong to the original
-fixed-parameter target in Problem~\ref{prop:ed05-bour-alternative}.
-\end{openproblem}
+\uses{prop:ed50-gradient,prop:ed50-commuted}
+\lean{SmoothPoincare.Bour.originalGradient_pairing, SmoothPoincare.Bour.bourCovariantGradient_apply_commuted, SmoothPoincare.Bour.bourOriginalVelocity_eq_negTwoGradient_iff_components, SmoothPoincare.Bour.originalGradient_regularSlab}
+\leanok
+On a smooth closed oriented four-dimensional regular metric family with
+constant Euler integral, the derivative of $\mathcal F^p$ pairs the
+symmetric tensor $G^p$ of Proposition~\ref{prop:ed50-commuted} with
+the actual metric velocity. Its explicit component evolution on every tangent
+pair is equivalent to the physical equation $K=-2G^p$. A regular
+solution of the negative twice-gradient equation uses this same tensor
+for dissipation and volume preservation. Local conformal Euler constancy
+also gives $\operatorname{tr}G^p=-p\Delta R/4$.
+\end{proposition}
+\begin{proof}
+\leanok
+Apply the two adjoints to the physical Ricci velocity, include both
+inverse-metric and volume derivatives, then commute the crossed Ricci
+derivatives. Test on the actual scale, conformal and solution paths.
+\end{proof}
 
 \begin{openproblem}[Harmonic radius and uniform stationary interior estimates]
 \label{prob:ed06-stationary-interior}
-\uses{prop:ed50-chart,prop:ed47-mixed,prop:ed48-trace}
+\uses{prop:ed51-morrey,prop:ed47-mixed,prop:ed48-trace}
 Route 13. Use the genuine constant-scalar stationary equation for each
 mixed return $q_j$, with $p_j=\alpha_j$ for a closed regularized return
 and $p_j=0$ for an exact Yamabe return. On the original and
 curvature-normalized scales $h_j=a_jq_j$, $a_j\ge1$, start with a common
 ordered four-slot curvature bound and the measured volume and injectivity
-estimates. Construct a common interior harmonic radius with controlled
+estimates. Supply the whole-space scalar $L^6$ Laplacian estimate in the pinned library and construct a common interior harmonic radius with controlled
 $C^{1,\gamma}$ coefficients. Use the scalar diagonal Ricci principal
 part in these coordinates and the $\tfrac12\nabla^*\nabla$ principal
 part of the trace-free Ricci equation to obtain coupled interior
 $W^{2,b}$ estimates for $b>4$ and then estimates of every fixed order
-on smaller balls. Control $s_j=R(q_j)/a_j$ and the coefficient
+on smaller balls. The coupled physical estimate at exponent six is Proposition~\ref{prop:ed51-coupled}. Control $s_j=R(q_j)/a_j$ and the coefficient
 $(2-p_j)s_j/12$ uniformly, with no division by $p_j$.
 \end{openproblem}
 
 \begin{openproblem}[Nonflat ALE end geometry and marked return]
 \label{prob:ed06-ale-return}
-\uses{prop:ed50-link,prop:ed49-exterior,prop:ed47-mark,prop:ed47-ends,prop:ed48-transfer,prop:ed48-cap}
+\uses{prop:ed51-pfaffian,prop:ed49-exterior,prop:ed47-mark,prop:ed47-ends,prop:ed48-transfer,prop:ed48-cap}
 Route 13. Treat the fixed-parameter original extraction and the mixed
 stationary extraction at their respective scales. Given a complete
 nonflat scalar-flat Bach-flat pointed limit with finite full curvature,
@@ -128,7 +132,7 @@ $D=4I-(Y_{\rm rd}^2-Y^2)/12$, where $Y_{\rm rd}$ is the spherical
 Yamabe constant. Select the minimum of $Y^2$ and hence of $D$.
 Strict spherical comparison at the maximum of $Y^2$ bounds the deficit
 away from zero on this exact stratum. Relate that bound to near-minimizing
-starts only under a separate recovery hypothesis.
+starts only under a separate recovery hypothesis. The post-attainment value derivative is computed in Proposition~\ref{prop:ed51-slope}.
 \end{openproblem}
 
 \begin{openproblem}[Polarized Weyl Hessian for a non-Einstein minimizer]
@@ -397,7 +401,9 @@ ordered curvature ceiling, the first jets and ellipticity.
 \leanok
 Apply the physical noncollapse and injectivity estimates before choosing the
 Peters chart. Two length comparisons and first exit give the nested balls.
-Extend the pullback on the compact inner ball and use Laplacian naturality. Pull Ricci back on the same ball and insert the curvature and first-jet bounds in the harmonic metric equation.
+Extend the pullback on the compact inner ball and use Laplacian naturality.
+Pull Ricci back on the same ball and insert the curvature and first-jet
+bounds in the harmonic metric equation.
 \end{proof}
 
 \begin{proposition}[Measured finite Euler correction on an end link]
@@ -468,4 +474,234 @@ holds on the corresponding fixed backward parabolic windows.
 The energy is antitone and the chiral--Ricci formula bounds it below by zero.
 Take the difference of the two cofinal energy limits and apply the exact
 rescaling identity to each window.
+\end{proof}
+
+
+\begin{proposition}[Curvature-commuted gradient on a general slice]
+\label{prop:ed50-commuted}
+\uses{prop:ed50-gradient}
+\lean{SmoothPoincare.Bour.bourRicciWeight_divergence, SmoothPoincare.Bour.bourRicciWeight_doubleDivergence, SmoothPoincare.Bour.bourCrossedRicci_eq_ricciSquare_sub_curvature, SmoothPoincare.Bour.bourRicciFluxAdjoint_apply_commuted, SmoothPoincare.Bour.bourCovariantGradient_apply_commuted, SmoothPoincare.Bour.bourCovariantGradient_apply_csc}
+\leanok
+For $b=(p-4)/12$, $B=(|\mathrm{Ric}|^2+bR^2)/2$ and
+$\Delta=\operatorname{tr}\nabla^2$, the same physical tensor satisfies
+\[
+\begin{aligned}
+G^p={}&-\tfrac12\Delta\mathrm{Ric}-\mathrm{Rm}^{\circ}(\mathrm{Ric})
+       +\tfrac{p+2}{12}\nabla^2R\\
+     &-\tfrac{p-1}{12}(\Delta R)g-bR\,\mathrm{Ric}+\tfrac12Bg .
+\end{aligned}
+\]
+For constant scalar curvature the two scalar derivative terms vanish.
+\end{proposition}
+\begin{proof}
+\leanok
+The contracted Bianchi identity gives
+$\operatorname{div}(\mathrm{Ric}+bRg)=(p+2)dR/12$.
+In an orthonormal basis the crossed curvature action is
+$\mathrm{Ric}^2-\mathrm{Rm}^{\circ}(\mathrm{Ric})$.
+Its first term cancels the moving-inverse correction. Use metric
+compatibility to differentiate $Rg$ twice and trace its Hessian.
+\end{proof}
+
+\subsection{Harmonic interiors and terminal spacetime limits}
+
+\begin{proposition}[Metric estimate on the physical pullback]
+\label{prop:ed51-metric}
+\uses{prop:ed50-chart}
+\lean{SmoothPoincare.Bour.bourFlatHessianEstimate_metricFrozen, SmoothPoincare.bourUniformHarmonicMetricW2_of_flatLaplacian}
+\leanok
+Assume the scalar whole-space Laplacian estimate
+$\|D^2v\|_{L^6}\le C_\Delta\|\Delta v\|_{L^6}$ for compactly supported smooth
+$v$ and the model Haar measure. On the realized harmonic ball of
+Proposition~\ref{prop:ed50-chart}, the metric entries have a common
+$W^{2,6}$ bound on $B(0,5r/2)$. The constant precedes the choice of
+metric, base point and realization. The statement applies to $a=1$
+and $a=Q$ under the corresponding normalized ordered curvature ceiling.
+\end{proposition}
+\begin{proof}
+\leanok
+Conjugate the frozen inverse Gram operator to the Laplacian and cancel the constant
+Haar Jacobian. Bound its inverse transformation by the metric upper form.
+Use ellipticity and the first metric jets to choose a common freezing radius.
+Absorb the oscillation term, differentiate a compact cutoff, and take a fixed finite cover.
+\end{proof}
+
+\begin{proposition}[Principal forcing for the trace-free Ricci tensor]
+\label{prop:ed51-principal}
+\uses{prop:ed50-chart,prop:ed50-commuted}
+\lean{SmoothPoincare.bourStationary_roughTraceFreeRicci_eq, SmoothPoincare.bourChartContractedChristoffelDerivative_eq_of_laplacian, SmoothPoincare.bourChartTwo_principal_bound}
+\leanok
+On a constant-scalar stationary four-metric the rough trace of $Z=\mathrm{Ric}_0$
+is algebraic in curvature. In harmonic coordinates on an open neighborhood,
+the contracted connection derivative in the ordered Hessian of $Z$ is
+controlled by raised curvature, inverse metric first derivatives, and
+Christoffel symbols. The scalar principal forcing for each entry of $Z$
+is bounded by a zeroth-order constant plus a multiple of the sum of its
+first coordinate derivatives in absolute value. For $h=ag$ the scalar
+coefficient is $(2-p)R(g)/(12a)$.
+\end{proposition}
+\begin{proof}
+\leanok
+Differentiate $h^{ab}\Gamma^k_{ab}=0$, and use the coordinate curvature
+identity to switch the two derivative slots. Expand both covariant
+derivatives on a two-tensor and insert the resulting identity in each
+lower slot. Constant rescaling preserves the covariant tensor $Z$.
+\end{proof}
+
+\begin{proposition}[Interior absorption at exponent six]
+\label{prop:ed51-cutoff}
+\uses{prop:ed51-metric,prop:ed51-principal}
+\lean{SmoothPoincare.Bour.sixthPowerDirectional_cutoff_lpNorm, SmoothPoincare.bourCutoffSystem_real_norm_bounds, SmoothPoincare.bourCutoffSystem_sixthInterior}
+\leanok
+On a single freezing patch suppose the stationary coordinate equations satisfy
+$|Pu_j|\le F_0+F_1\sum_{i,k}|\partial_i u_k|$. A compact cutoff $\eta$ gives
+bounds on $\|D^2(\eta^2u_j)\|_6$ and $\sum_{i,j}\|\eta\partial_i u_j\|_6$.
+Their constants depend on the frozen estimate, coefficient and cutoff
+bounds, patch volume and $\sup |u_j|$. The coupled system in four dimensions
+has sixteen ordered tensor entries and sixty-four first derivatives.
+\end{proposition}
+\begin{proof}
+\leanok
+Integrate the sixth power of the weighted directional derivative by parts.
+Young's inequality leaves an arbitrarily small multiple of the matching
+$\eta^2\partial_i^2u_j$ norm. The squared-cutoff product rule bounds
+these diagonal Hessians by the localized Hessians and weighted first
+derivatives. Sum all directions and choose the interpolation length so
+the total coefficient is at most one half.
+\end{proof}
+
+\begin{proposition}[First hits and stationarity through the final slice]
+\label{prop:ed51-terminal}
+\uses{prop:ed50-terminal,prop:ed50-commuted}
+\lean{SmoothPoincare.Bour.originalGradient_firstHit_nativeWindows, SmoothPoincare.Bour.bourParabolicVelocity_hasDerivAt, SmoothPoincare.Bour.originalGradient_stationary_of_terminalComparison}
+\leanok
+Fix one parameter and a regular original flow with unbounded ordered curvature
+after a regular anchor. There are cofinal first hits $(t_n,x_n)$ for any
+diverging levels $Q_n$ above the anchor maximum. Each fixed normalized
+backward window eventually has curvature at most one everywhere, value
+one at the final base point, and vanishing integrated native gradient square.
+Under time-independent compact comparison maps, a metric lower comparison,
+and uniform gradient-norm comparison with a continuous limiting field, the
+limiting gradient vanishes through the final slice. This transfer works
+on an exhausted pointed carrier as well as a whole closed limit.
+\end{proposition}
+\begin{proof}
+\leanok
+Minimize the time projection on each compact spacetime crossing set.
+The rescaled gradient has weight minus one. A point of positive limiting
+gradient norm gives a compact spatial patch of positive measure and a
+time interval with uniformly positive dissipation on its actual image.
+Continuity also detects positivity at the right endpoint.
+\end{proof}
+
+\begin{proposition}[Outward connection forms on a finite end link]
+\label{prop:ed51-pfaffian}
+\uses{prop:ed50-link,prop:ed49-end}
+\lean{SmoothPoincare.bourBoundaryPathTangentialCurvature_of_connectionForms, SmoothPoincare.bourImmersionNormalDefect_eq_neg_shape, SmoothPoincare.bourFrameEulerTransgression_boundary_integral, SmoothPoincare.bourEulerBulk_setIntegral_eq_scalarFlat, SmoothPoincare.bourRoundEulerShell_total}
+\leanok
+In an outward-adapted oriented boundary frame let $S$ be the shape
+matrix and $C$ the ambient tangential curvature on complementary
+wedges. The affine connection from the split to the ambient connection
+gives the integrated Pfaffian coefficient $2\langle S,C\rangle+4\det S$.
+The scalar-flat bulk on a finite truncation is
+$E_+(K)+E_-(K)-D(K)/2$ with the physical restricted volume.
+For the supplied round polar shell $0<a<b<\pi$, its two outward
+boundary integrals and its bulk sum to zero.
+\end{proposition}
+\begin{proof}
+\leanok
+Metric compatibility fixes the signs of the two mixed blocks. The curvature
+along the path has tangential component $C+(1-t^2)S\wedge S$ in the
+complementary-wedge convention. Alternate, contract with $S$, and integrate.
+Integrate the scalar-flat density on the same core.
+\end{proof}
+
+\begin{proposition}[Right slope of the positive-class value]
+\label{prop:ed51-slope}
+\uses{prop:ed50-second}
+\lean{SmoothPoincare.Bour.bourRegularized_secant_antitone, SmoothPoincare.Bour.bourRegularizedValue_hasRightDerivative}
+\leanok
+After the fixed-parameter extractions, assume one sequence of actual global
+regularized minima with a whole positive unit-volume Yamabe and Bach
+limit and convergence of the physical chiral and ordinary Ricci integrals.
+For one exact least-$D$ comparator and $J(p)=\inf_g(2(1-p)e(g)+pD(g)/2)$
+on the positive metrics, $J(0)=2I$ and $J'_+(0)=D_*/2-2I$.
+\end{proposition}
+\begin{proof}
+\leanok
+Since $e(g)\ge I$, the positive right secant of each affine functional
+at height $2I$ decreases with the parameter. Its infimum has the same
+monotonicity. Test the upper bound on the single least-$D$ metric and
+the lower bound along the returned sequence, where $D$ converges to $D_*$.
+\end{proof}
+
+\begin{proposition}[Coupled estimates on both stationary scales]
+\label{prop:ed51-coupled}
+\uses{prop:ed50-chart,prop:ed51-cutoff,prop:ed51-principal}
+\lean{SmoothPoincare.bourStationaryRoughTraceFreeRicci_of_partialDiffeomorph_inner, SmoothPoincare.Bour.bourUniformStationaryHarmonicTraceFreeRicci_bounds, SmoothPoincare.bourStationary_harmonic_W26, SmoothPoincare.bourMixedStationary_uniformHarmonicW26}
+\leanok
+For a common positive Yamabe floor, scalar ceiling and normalized ordered
+curvature bound, assume the Peters chart input and the scalar Euclidean
+$L^6$ Laplacian estimate. One choice of radius, chart controls and finite bound
+works for all stationary constant-scalar metrics with $0\le p\le1$ at both
+$a=1$ and the curvature scale $a=Q\ge1$. On the same physical realization,
+the sum of the $W^{2,6}$ norms of a metric component and the corresponding
+covariant trace-free Ricci component is bounded on $B(0,5r/2)$.
+The closed coordinate ball of radius $r$ captures the original metric
+ball of radius $r/(L\sqrt a)$.
+\end{proposition}
+\begin{proof}
+\leanok
+Transport the ordered curvature and rough trace through the local isometry on
+$B(0,3r)$. Bound the stationary reaction on the original carrier in an
+orthonormal frame. The squared cutoff and a common oscillation radius give
+uniform bounds on each smaller patch. A fixed finite cover and reconstruction
+of the full first derivative give all three norms. Metric entries of any two
+extensions and their jets agree on the common open physical ball.
+\end{proof}
+
+\begin{proposition}[The fixed-parameter pointed scalar vanishes]
+\label{prop:ed51-scalar}
+\uses{prop:ed51-terminal,prop:ed50-commuted,prop:ed48-normal}
+\lean{SmoothPoincare.Bour.terminalMetric_eq_final_of_nativeSpeed, SmoothPoincare.Bour.bourCovariantGradient_trace_eq_scalarLaplacian, SmoothPoincare.bourSmoothPointedBallCutoff, SmoothPoincare.Bour.bourHarmonic_cutoff_energy, SmoothPoincare.Bour.bourPointedStationary_scalarFlat, SmoothPoincare.Bour.bourScalarFlat_stationary_zeroParameter}
+\leanok
+On the fixed-parameter terminal window, convergence of the metric values
+on the same time-independent maps, an upper metric comparison and uniformly
+vanishing native speed give a time-independent limit. A connected noncompact
+boundaryless stationary four-metric with $p>0$, compact closed physical balls,
+a positive unit-ball volume floor and finite $\int R^2\,dV$ has $R=0$.
+At $R=0$ the same metric satisfies $G^0=0$ and
+$\Delta\mathrm{Ric}+2\,\mathrm{Rm}^{\circ}(\mathrm{Ric})
+=|\mathrm{Ric}|^2g/2$. On a connected closed stationary limit with
+$p>0$ the scalar is constant.
+\end{proposition}
+\begin{proof}
+\leanok
+Compare two times by evaluating the actual velocity on the two transported
+tangent vectors. Trace the curvature-commuted gradient to get
+$-p\Delta R/4$. On the pointed carrier test harmonicity against $\eta^2 R$.
+The compactly supported flux bounds $\int\eta^2|\nabla R|^2$ by
+$4\sup|\nabla\eta|^2\int R^2$. Smooth distance cutoffs at increasing
+radii and Fatou give $\nabla R=0$. Disjoint unit balls force infinite
+volume, so the square-integrable constant vanishes.
+\end{proof}
+
+
+\begin{proposition}[Interior control of the first derivatives]
+\label{prop:ed51-morrey}
+\uses{prop:ed51-coupled}
+\lean{SmoothPoincare.bourW26Norm_volume_eq, SmoothPoincare.bourHarmonicMorrey_of_W26, SmoothPoincare.bourMixedStationary_uniformHarmonicC1Third}
+\leanok
+In the four-dimensional Euclidean model, on $B(0,2r)$ each metric entry
+and each covariant trace-free Ricci entry of the same physical realization
+has uniformly bounded value and first derivative. Both first derivatives
+are uniformly H\"older continuous with exponent $1/3$. The point, metric,
+scale and regularization parameter are selected after the common bound.
+\end{proposition}
+\begin{proof}
+\leanok
+Normalize the additive Haar measure and localize the $W^{2,6}$ bound on
+$B(0,5r/2)$ using a smooth cutoff equal to one on the smaller ball.
+Apply the Euclidean Morrey inequalities to the entry and its first
+derivative, with $1-4/6=1/3$.
 \end{proof}

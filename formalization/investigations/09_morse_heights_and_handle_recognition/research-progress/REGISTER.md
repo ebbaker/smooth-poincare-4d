@@ -1,5 +1,9 @@
 # Morse heights and handle recognition · Progress register
 
+## FOT-E51 · 26 November 2026
+
+Scientific 05 now recognizes the doubled free-tangle product class, with a coordinate control having both native cuts irreducible and three geometric cancellations without births. On the GST outlets of index at least three every first unstabilized cancellation needs at least four slides. At index three thirty-two of 256 fourth-slide histories survive the stated quotient filters. An untreated marked successor and a geometric fourth-slide cancellation remain open. [Updated scientific assessment](../../../../papers/investigations-1/05_collar_deformation_and_surgery/reviews/DOUBLED_TANGLES_AND_INDEPENDENT_BANDS_20261126.md) · [Assessment](../../reviews/ED06_E51_HARMONIC_ESTIMATES_AND_TERMINAL_LIMITS.md) · [Public verification](../../research-progress/handoffs/ED06_E51_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E51_COUPLED_INTERIOR_AND_POINTED_SCALAR_20261126.md)
+
 ## FOT-E50 · 26 November 2026
 
 The revised scientific 05 input calls for the reverse band and belt on an untreated terminal pair with both native cuts irreducible, or an actual unrecognized rank-two closure. Its recognized controls and reducible-cut theorem supply no such new carrier. Retain the integral tubes, reverse closing and stabilization count when one is supplied. [Surgery selection](../../../../papers/investigations-1/05_collar_deformation_and_surgery/research-plan/PLAN.md) · [Assessment](../../reviews/ED06_E50_PHYSICAL_VARIATION_AND_EXTRACTIONS.md) · [Verification](../../research-progress/handoffs/ED06_E50_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E50_ORIGINAL_GRADIENT_AND_SECOND_EXTRACTION_20261126.md)

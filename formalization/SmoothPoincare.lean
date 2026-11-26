@@ -227,4 +227,32 @@ import SmoothPoincare.Variational.BourCrossedRicci
 import SmoothPoincare.Variational.BourTerminalDissipation
 import SmoothPoincare.Variational.BourGradientComparison
 
+import SmoothPoincare.Variational.BourFirstHitWindows
+import SmoothPoincare.Variational.BourEulerTransgression
+import SmoothPoincare.Variational.BourTerminalStationarity
+import SmoothPoincare.Variational.BourRegularizedValueSlope
+import SmoothPoincare.Variational.BourFlatInterior
+import SmoothPoincare.Variational.BourInteriorIteration
+import SmoothPoincare.Variational.BourGradientScaling
+import SmoothPoincare.Variational.BourMetricInteriorEstimate
+import SmoothPoincare.Variational.BourLpAssembly
+import SmoothPoincare.Variational.BourCoupledInterior
+import SmoothPoincare.Variational.BourSixthPowerInterpolation
+import SmoothPoincare.Variational.BourRicciInteriorEstimate
+import SmoothPoincare.Variational.BourRicciCutoffNorms
+import SmoothPoincare.Variational.BourRicciW26
+import SmoothPoincare.Variational.BourHarmonicSystemInterior
+import SmoothPoincare.Variational.BourCutoffRestriction
+import SmoothPoincare.Variational.BourStationaryPullback
+import SmoothPoincare.Variational.BourStationaryReaction
+import SmoothPoincare.Variational.BourStationaryW26
+import SmoothPoincare.Variational.BourTerminalMetricStatic
+import SmoothPoincare.Variational.BourStationaryTrace
+import SmoothPoincare.Variational.BourPointedVolume
+import SmoothPoincare.Variational.BourPointedCutoffs
+import SmoothPoincare.Variational.BourPointedScalar
+import SmoothPoincare.Variational.BourPointedScalarFlat
+import SmoothPoincare.Variational.BourRoundEulerShell
+import SmoothPoincare.Variational.BourHarmonicMorrey
+
 /-! # Public imports for fixed-type descent, immersed recognition, marked cuts and Bour attainment -/

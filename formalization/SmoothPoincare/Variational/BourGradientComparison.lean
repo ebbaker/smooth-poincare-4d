@@ -122,61 +122,7 @@ private theorem scalarDifferential_eq_zero (g : SmoothRiemannianMetric I M)
   rw [show metricScalarAt g = fun _ => R from funext hR]
   simp [mvfderiv, mfderiv_const]
 
-private theorem bourMetricNablaWeight_eq_ricci_of_csc (α : ℝ) (g : SmoothRiemannianMetric I M)
-    (R : ℝ) (hR : ∀ y, metricScalarAt g y = R) :
-    metricNabla0S g (bourRicciWeight α g) = metricNabla0S g (metricRicci g) := by
-  rw [bourRicciWeight, metricNabla0S_add, metricNabla0S_smul]
-  suffices h : metricNabla0S g (tensor0SFieldSmulByFun ∞ (metricScalarAt g)
-      (metricScalar_smooth g) (metricTensorField g)) = 0 by
-    rw [h, smul_zero, add_zero]
-  ext x w
-  have hw : w = Fin.cons (w 0) (vec2 (w 1) (w 2)) := by
-    funext i
-    fin_cases i <;> rfl
-  rw [hw, bourMetricNabla_scalarMetric, ← duSec_apply (metricScalarAt g) (metricScalar_smooth g),
-    scalarDifferential_eq_zero g R hR]
-  simp
-
-private theorem bourMetricRicciDivergence_eq_zero_of_csc (g : SmoothRiemannianMetric I M)
-    (R : ℝ) (hR : ∀ y, metricScalarAt g y = R) :
-    covDiv0SField g (metricRicci g) = 0 := by
-  have h := bourRicciWeight_divergence 4 g
-  have hW : bourRicciWeight 4 g = metricRicci g := by
-    simp [bourRicciWeight]
-  rw [hW, scalarDifferential_eq_zero g R hR, smul_zero] at h
-  exact h
-
 variable [BoundarylessManifold I M]
-
-/-- On a constant-scalar slice the actual crossed Koszul adjoint equals
-the Ricci square minus the Riemann–Ricci action and half the rough trace. -/
-theorem bourRicciFluxAdjoint_apply_csc (α : ℝ) (g : SmoothRiemannianMetric I M)
-    (R : ℝ) (hR : ∀ y, metricScalarAt g y = R) (x : M)
-    (u v : TangentSpace I x) :
-    bourRicciFluxAdjoint g (bourRicciWeight α g) x (vec2 u v) =
-      bourRicciSquare g x (vec2 v u) - hamiltonCurvatureRicciAt g x (vec2 v u) -
-        (1 / 2 : ℝ) * roughLap0SField g (metricRicci g) x (vec2 u v) := by
-  classical
-  obtain ⟨b, hb⟩ := exists_orthonormal_basis (I := I) g x
-  change Module.Basis (Fin (Module.finrank ℝ E)) ℝ (TangentSpace I x) at b
-  rw [bourRicciFluxAdjoint_apply_orthonormal g _ b hb]
-  rw [bourMetricNablaWeight_eq_ricci_of_csc α g R hR]
-  let S := metricNabla0S g (metricNabla0S g (metricRicci g)) x
-  have hs (i : Fin (Module.finrank ℝ E)) :
-      S (vec4 (b i) v u (b i)) = S (vec4 (b i) v (b i) u) :=
-    metricNabla2Ric_last_two_symm g x (b i) v u (b i)
-  have hN := bourNablaDivergence_apply_orthonormal g (metricRicci g) b hb v u
-  rw [bourMetricRicciDivergence_eq_zero_of_csc g R hR, metricNabla0S_zero'] at hN
-  have hzero : (∑ i, S (vec4 v (b i) (b i) u)) = 0 := by simpa [S] using hN.symm
-  have hC := bourCrossedRicci_eq_ricciSquare_sub_curvature g b hb v u
-  dsimp only at hC
-  rw [Finset.sum_sub_distrib, hzero, sub_zero] at hC
-  change (1 / 2 : ℝ) * ((∑ i, S (vec4 (b i) v (b i) u)) +
-    (∑ i, S (vec4 (b i) v u (b i))) - ∑ i, S (vec4 (b i) (b i) u v)) = _
-  simp_rw [hs]
-  rw [hC]
-  rw [roughLap0SField, covDiv3_apply_orthonormal g _ b hb]
-  ring
 
 omit [BoundarylessManifold I M] in
 private theorem roughLap_metricRicci_symm (g : SmoothRiemannianMetric I M) (x : M)
@@ -189,58 +135,6 @@ private theorem roughLap_metricRicci_symm (g : SmoothRiemannianMetric I M) (x : 
   rw [roughLap0SField, covDiv3_apply_orthonormal g _ b hb,
     covDiv3_apply_orthonormal g _ b hb]
   exact Finset.sum_congr rfl fun i _ => metricNabla2Ric_last_two_symm g x (b i) (b i) u v
-
-omit [BoundarylessManifold I M] in
-private theorem bourRicciTraceAdjoint_apply_csc [I.Boundaryless]
-    (α : ℝ) (g : SmoothRiemannianMetric I M) (R : ℝ) (hR : ∀ y, metricScalarAt g y = R)
-    (x : M) (u v : TangentSpace I x) :
-    bourRicciTraceAdjoint g (bourRicciWeight α g) x (vec2 u v) = 0 := by
-  simp only [bourRicciTraceAdjoint, tensor0SField_smulByFun_apply,
-    Tensor0SSpace.smul_apply, smul_eq_mul]
-  change covDiv0SField g (covDiv0SField g (bourRicciWeight α g)) x Fin.elim0 *
-    (metricTensorField g x (vec2 u v)) = 0
-  rw [bourRicciWeight_doubleDivergence, ← laplacian_levi_eq g (metricScalar_smooth g) x,
-    show metricScalarAt g = fun _ => R from funext hR, laplacian_const, mul_zero, zero_mul]
-
-omit [BoundarylessManifold I M] in
-private theorem bourBulkMetricCorrection_apply_csc
-    (α : ℝ) (g : SmoothRiemannianMetric I M) (R : ℝ) (hR : ∀ y, metricScalarAt g y = R)
-    (x : M) (u v : TangentSpace I x) :
-    bourBulkMetricCorrection α g x (vec2 u v) =
-      -bourRicciSquare g x (vec2 u v) -
-        (α - 4) / 12 * R * metricRicciAt g x (vec2 u v) +
-        (1 / 2 : ℝ) * bourBulkDensity α g x * g.inner x u v := by
-  change ((-bourRicciSquare g x -
-    ((α - 4) / 12) • (metricScalarAt g x • metricRicci g x) +
-    (1 / 2 : ℝ) • (bourBulkDensity α g x • metricTensorField g x)) :
-      Tensor0SSpace 2 I x) (vec2 u v) = _
-  rw [show -bourRicciSquare g x = (-1 : ℝ) • bourRicciSquare g x by simp]
-  simp [hR, metricRicci_apply, metricTensorField_apply, vec2, mul_assoc]
-
-/-- On a constant-scalar slice the computed gradient equals the
-curvature-commuted formula, displaying the symmetrization of the free
-slots of the Riemann–Ricci term. -/
-theorem bourCovariantGradient_apply_csc_symmetrized [I.Boundaryless]
-    (α : ℝ) (g : SmoothRiemannianMetric I M) (R : ℝ) (hR : ∀ y, metricScalarAt g y = R)
-    (x : M) (u v : TangentSpace I x) :
-    bourCovariantGradient α g x (vec2 u v) =
-      -(1 / 2 : ℝ) * roughLap0SField g (metricRicci g) x (vec2 u v) -
-        (hamiltonCurvatureRicciAt g x (vec2 u v) +
-          hamiltonCurvatureRicciAt g x (vec2 v u)) / 2 -
-        (α - 4) / 12 * R * metricRicciAt g x (vec2 u v) +
-        (1 / 2 : ℝ) * bourBulkDensity α g x * g.inner x u v := by
-  have hslots (a b : TangentSpace I x) :
-      (fun i => vec2 (I := I) a b ((Equiv.swap (0 : Fin 2) 1) i)) = vec2 b a := by
-    funext i
-    fin_cases i <;> rfl
-  simp only [bourCovariantGradient, bourSymmetricPart, ContMDiffSection.coe_smul, Pi.smul_apply,
-    ContMDiffSection.coe_sub, Pi.sub_apply, ContMDiffSection.coe_add, Pi.add_apply,
-    Tensor0SSpace.sub_apply, Tensor0SSpace.add_apply, Tensor0SSpace.smul_apply, smul_eq_mul,
-    Tensor0SField.domDomCongr_apply, Tensor0SSpace.domDomCongr_apply, hslots]
-  simp only [bourRicciFluxAdjoint_apply_csc α g R hR,
-    bourRicciTraceAdjoint_apply_csc α g R hR, bourBulkMetricCorrection_apply_csc α g R hR,
-    roughLap_metricRicci_symm g x v u, metricRicciAt_symm g x v u, g.symm x v u]
-  ring
 
 omit [BoundarylessManifold I M] in
 private theorem curvatureRicci_symm (g : SmoothRiemannianMetric I M) (x : M)
@@ -277,21 +171,6 @@ private theorem curvatureRicci_symm (g : SmoothRiemannianMetric I M) (x : M)
   rw [← hin (b i) v u (b j), ← hout v (b i) (b j) u]
   rw [show Q (vec2 (b j) (b i)) = Q (vec2 (b i) (b j)) from
     metricRicciSymm g b B hB j i]
-
-/-- The full computed gradient in curvature-commuted form on a
-constant-scalar slice. The quadratic Ricci endomorphism cancels against
-the term from the two moving inverse metrics. -/
-theorem bourCovariantGradient_apply_csc [I.Boundaryless]
-    (α : ℝ) (g : SmoothRiemannianMetric I M) (R : ℝ) (hR : ∀ y, metricScalarAt g y = R)
-    (x : M) (u v : TangentSpace I x) :
-    bourCovariantGradient α g x (vec2 u v) =
-      -(1 / 2 : ℝ) * roughLap0SField g (metricRicci g) x (vec2 u v) -
-        hamiltonCurvatureRicciAt g x (vec2 u v) -
-        (α - 4) / 12 * R * metricRicciAt g x (vec2 u v) +
-        (1 / 2 : ℝ) * bourBulkDensity α g x * g.inner x u v := by
-  rw [bourCovariantGradient_apply_csc_symmetrized α g R hR,
-    curvatureRicci_symm g x v u]
-  ring
 
 omit [BoundarylessManifold I M] in
 /-- A second differentiation of a scalar times the parallel metric gives
@@ -350,7 +229,7 @@ private theorem weighted_secondDerivative (g : SmoothRiemannianMetric I M)
     Tensor0SSpace.smul_apply, smul_eq_mul, bourMetricNabla2_scalarMetric]
   ring
 
-omit [BoundarylessManifold I M] in
+omit [BoundarylessManifold I M] [FiniteDimensional ℝ E] [T2Space M] in
 private theorem bilinear_trace_of_orthonormal
     (g : SmoothRiemannianMetric I M) {x : M} (T : Tensor0SSpace 2 I x)
     (b : Module.Basis (Fin (Module.finrank ℝ E)) ℝ (TangentSpace I x))
@@ -514,6 +393,68 @@ theorem bourCovariantGradient_apply_commuted [I.Boundaryless]
     hbulk, roughLap_metricRicci_symm g x v u, scalarHessian_symm g x v u,
     curvatureRicci_symm g x v u, metricRicciAt_symm g x v u, g.symm x v u]
   ring
+
+omit [BoundarylessManifold I M] in
+private theorem scalarLaplacian_eq_zero_of_csc [I.Boundaryless]
+    (g : SmoothRiemannianMetric I M) (R : ℝ) (hR : ∀ y, metricScalarAt g y = R) (x : M) :
+    ΔG g ⟨metricScalarAt g, metricScalar_smooth g⟩ x = 0 := by
+  rw [← laplacian_levi_eq g (metricScalar_smooth g) x]
+  change laplacian (LeviCivita g) g (metricScalarAt g) x = _
+  rw [show metricScalarAt g = fun _ => R from funext hR, laplacian_const]
+
+/-- On a constant-scalar slice the actual crossed Koszul adjoint equals
+the Ricci square minus the Riemann–Ricci action and half the rough trace. -/
+theorem bourRicciFluxAdjoint_apply_csc [I.Boundaryless]
+    (α : ℝ) (g : SmoothRiemannianMetric I M)
+    (R : ℝ) (hR : ∀ y, metricScalarAt g y = R) (x : M)
+    (u v : TangentSpace I x) :
+    bourRicciFluxAdjoint g (bourRicciWeight α g) x (vec2 u v) =
+      bourRicciSquare g x (vec2 v u) - hamiltonCurvatureRicciAt g x (vec2 v u) -
+        (1 / 2 : ℝ) * roughLap0SField g (metricRicci g) x (vec2 u v) := by
+  rw [bourRicciFluxAdjoint_apply_commuted, scalarDifferential_eq_zero g R hR,
+    metricNabla0S_zero', scalarLaplacian_eq_zero_of_csc g R hR x]
+  simp
+
+/-- On a constant-scalar slice the Hessian and scalar Laplacian vanish
+and the covariant Ricci square cancels in the computed gradient. -/
+theorem bourCovariantGradient_apply_csc [I.Boundaryless]
+    (α : ℝ) (g : SmoothRiemannianMetric I M) (R : ℝ) (hR : ∀ y, metricScalarAt g y = R)
+    (x : M) (u v : TangentSpace I x) :
+    bourCovariantGradient α g x (vec2 u v) =
+      -(1 / 2 : ℝ) * roughLap0SField g (metricRicci g) x (vec2 u v) -
+        hamiltonCurvatureRicciAt g x (vec2 u v) -
+        (α - 4) / 12 * R * metricRicciAt g x (vec2 u v) +
+        (1 / 2 : ℝ) * bourBulkDensity α g x * g.inner x u v := by
+  rw [bourCovariantGradient_apply_commuted, scalarDifferential_eq_zero g R hR,
+    metricNabla0S_zero', scalarLaplacian_eq_zero_of_csc g R hR x, hR x]
+  simp
+
+/-- Equality of a covariant speed with minus twice the physical gradient
+is equivalent to its explicit geometric evolution on all tangent pairs. -/
+theorem bourOriginalVelocity_eq_negTwoGradient_iff_components [I.Boundaryless]
+    (α : ℝ) (g : SmoothRiemannianMetric I M) (x : M) (K : Tensor0SSpace 2 I x) :
+    let H := metricNabla0S g (duSec (metricScalarAt g) (metricScalar_smooth g)) x
+    let D := ΔG g ⟨metricScalarAt g, metricScalar_smooth g⟩ x
+    let R := metricScalarAt g x
+    K = (-2 : ℝ) • bourCovariantGradient α g x ↔
+      ∀ u v : TangentSpace I x, K (vec2 u v) =
+        roughLap0SField g (metricRicci g) x (vec2 u v) -
+          (α + 2) / 6 * H (vec2 u v) +
+          2 * hamiltonCurvatureRicciAt g x (vec2 u v) +
+          (α - 4) / 6 * R * metricRicciAt g x (vec2 u v) +
+          (α - 1) / 6 * D * g.inner x u v -
+          bourBulkDensity α g x * g.inner x u v := by
+  dsimp only
+  constructor
+  · intro h u v
+    rw [h, Tensor0SSpace.smul_apply, smul_eq_mul, bourCovariantGradient_apply_commuted]
+    ring
+  · intro h
+    apply tensor0SSpace_ext
+    intro w
+    have hw : w = vec2 (w 0) (w 1) := by funext i; fin_cases i <;> rfl
+    rw [hw, h, Tensor0SSpace.smul_apply, smul_eq_mul, bourCovariantGradient_apply_commuted]
+    ring
 
 end
 end SmoothPoincare.Bour

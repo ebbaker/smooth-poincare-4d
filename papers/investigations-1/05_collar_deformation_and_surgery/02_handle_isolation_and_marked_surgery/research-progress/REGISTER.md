@@ -1,6 +1,6 @@
 # Handle and surgery research register
 
-The [current handoff](../../continuation-notes/AFTER_TWO_POINT_LOCALIZATION_20261126.md) identifies the next untreated cut. This register retains ownership of the child tasks and their assessed returns.
+The [current handoff](../../continuation-notes/AFTER_DOUBLED_TANGLES_AND_INDEPENDENT_BANDS_20261126.md) records the doubled-tangle reduction and the remaining native GST tests.
 
 26 November 2026, for Edward B. Baker III with OpenAI Codex. [Plan](../research-plan/PLAN.md) · [Source revisions](../../references/README.md) · [Parent assessment](../../reviews/TWO_MIXED_CUTS_AND_CHARGED_DISK_20261126.md)
 
@@ -12,7 +12,7 @@ The [current handoff](../../continuation-notes/AFTER_TWO_POINT_LOCALIZATION_2026
 | SP4-CDS-SUR-E02 | Strict reduction and direct recognition on scoped families | The three-crossing clean bigon carries movable spectators. The peripheral element detects bare winding-one cancellation. Both orders of the published Mazur double are compared. [Peripheral test](../../notes/PERIPHERAL_TEST_AND_ROUND_CONTROL.md) · [Reverse order](../../reviews/REVERSE_ORDER_READER.md) |
 | SP4-CDS-SUR-B03 | Finite physical budget and protected-core requirement derived | Exact conformally round umbilic disk boundary forces equal signed disk masses bounded by the minimizing excess. The enlarged disk retains its full signed exterior increase. [Budget](../notes/CHARGED_DISK_BUDGET.md) |
 | SP4-CDS-SUR-E03 | Exact and compact alternatives excluded on late charged indices; measured competitor pending | A finite competitor requires subcritical joined peak and full retained cap cost below the available saving, or independent cap positivity. [Review](../../reviews/DISK_AND_COMPACTNESS_READER.md) |
-| SP4-CDS-SUR-B04 | Reducible native-cut localization assessed, untreated terminal input sought | Select the actual upper co-cores, band and belt on a terminal pair with two irreducible native cuts, or an unresolved rank-two link with its carried closing. A single geometric intersection, full framed transport and the induced closing determine the return. [Current test](../research-plan/PLAN.md#next-reverse-test) · [Previous results](../../reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md) |
+| SP4-CDS-SUR-B04 | Product-double class reduced and native three-slide obstruction checked | Both whole boundaries and all three product cancellations on the constructed control are explicit. On GST the third core can leave every original single-arc neighborhood while every triple of slides still fails to cancel. [Evidence and exact fourth-slide filters](../../reviews/DOUBLED_TANGLES_AND_INDEPENDENT_BANDS_20261126.md) |
 
 ### Penultimate and successive cuts, 26 November
 
@@ -90,3 +90,8 @@ The [optional direct Figure 5 colour calculation](../notes/ONE_MOUTH_FOX.md) (SU
 | SUR-E02ao–ar / CDS-B03 | Actual alternating shallow, banded-longitude and Whitehead specimens. Three obstructed returns, an unbounded exact first bridge cost on the banded family at minimum four, and a different minimum-four witness from face incompressibility for a trivial unfilled word. The actual Figure 5 successor cancels three times. |
 
 [Assessment](../../reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md) · [Independent reading record](../../research-progress/handoffs/REDUCIBLE_CUT_READINGS_20261126.md) · [Next cut](../../continuation-notes/AFTER_REDUCIBLE_NATIVE_CUTS_20261126.md)
+
+
+### The marked GST rank-two closing, 26 November 2026
+
+SUR-E02at audited the terminal diagrams and doubled tangles. SUR-E02au–av checked the Figure 9 co-cores and the sphere intersection costs. Under SUR-B04 the two stationary quotients and the joined-core neighborhood argument cover all indices at least three. SUR-E02aw independently checked the single-slide obstruction by two further methods. [Packet and readings](../../research-progress/handoffs/GST_NATIVE_PACKET_20261126.md) · [Surgery manuscript](../manuscript/recognition_from_marked_handle_cuts.tex)

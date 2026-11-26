@@ -1,5 +1,9 @@
 # Fixed-type variational descent · Progress register
 
+## FOT-E51 · 26 November 2026
+
+One exact least-$D$ comparator still sets the margin at each of the two fixed-parameter extractions. After one whole least-$D$ return of global regularized minimizers the positive-class value has right derivative $D_*/2-2I$ at zero, including at intervening parameters of unknown attainment. An admissible metric variation on a supplied nonround minimizer remains necessary for rigidity. [Slope theorem](../notes/E51_VALUE_SLOPE.md) · [Assessment](../../reviews/ED06_E51_HARMONIC_ESTIMATES_AND_TERMINAL_LIMITS.md) · [Public verification](../../research-progress/handoffs/ED06_E51_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E51_COUPLED_INTERIOR_AND_POINTED_SCALAR_20261126.md)
+
 ## FOT-E50 · 26 November 2026
 
 One exact least-$D$ unit-volume Yamabe representative serves all sufficiently small positive parameters after scientific X and exact first-value compactness. The post-attainment theorem constructs near-$J_p$ starts and retains the strict wall and the same ordinary Ricci ceiling. An actual sequence of global regularized minima with a positive smooth Yamabe and Bach limit returns to the least-$D$ stratum with $e-I=o(p)$. The intake supplies no specific nonround minimizer and signed direction for either rigidity test. [Derivation](../notes/E50_SECOND_EXTRACTION.md) · [Assessment](../../reviews/ED06_E50_PHYSICAL_VARIATION_AND_EXTRACTIONS.md) · [Verification](../../research-progress/handoffs/ED06_E50_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E50_ORIGINAL_GRADIENT_AND_SECOND_EXTRACTION_20261126.md)

@@ -24,3 +24,12 @@ The actual homothety \(g_s=e^{s-1}g\) is a smooth path with fixed Euler integral
 Its only dynamical equation is the velocity equation for this computed tensor. Existence, terminal smooth compactness and comparison maps for that solution are further analytic questions. [Physical conformal test families](../../../SmoothPoincare/Variational/BourScalePathRegularity.lean) · [Bour, §§1.2, 3, 8](https://arxiv.org/html/1012.0342v1)
 
 The physical contracted Bianchi identity gives \(\operatorname{div}A=(p+2)\,dR/12\) and \(\operatorname{div}\operatorname{div}A=(p+2)\Delta R/12\). The native crossed Ricci commutator contracts to \(\mathrm{Ric}\circ\mathrm{Ric}-\mathrm{Rm}^{\circ}(\mathrm{Ric})\), with the two skew signs in the curvature slots accounted for. [Weighted Bianchi](../../../SmoothPoincare/Variational/BourGradientBianchi.lean) · [Native crossed contraction](../../../SmoothPoincare/Variational/BourCrossedRicci.lean)
+
+
+In the same conventions this gives, on every smooth slice,
+\[
+G^p=-\tfrac12\Delta\mathrm{Ric}-\mathrm{Rm}^{\circ}(\mathrm{Ric})
+ +\tfrac{p+2}{12}\nabla^2R-\tfrac{p-1}{12}(\Delta R)g
+ -bR\,\mathrm{Ric}+\tfrac12Bg .
+\]
+The \(\mathrm{Ric}^2\) commutator and inverse-metric terms cancel before taking a trace-free part. The Hessian coefficient is \(1/2+b\), whereas the coefficient of \((\Delta R)g\) combines the traced adjoint and the rough Laplacian of \(bRg\). The negative twice-gradient equation retains both on an arbitrary regular slice. At constant scalar curvature its parameter-dependent part is \(G^p-G^0=-pR\,\mathrm{Ric}_0/12\) in four dimensions. [Curvature-commuted physical tensor](../../../SmoothPoincare/Variational/BourGradientComparison.lean)

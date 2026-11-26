@@ -1,0 +1,3 @@
+# E03e · prescribed positive closing, revision 1
+
+26 November 2026 for Edward B. Baker III with OpenAI Codex. Lead Astra/ultra, bounded independent reader Sol/ultra, actual hosting configuration unavailable. [Register](../REGISTER.md). Independently check notes/POSITIVE_CYLINDRICAL_ASSEMBLY.md, blob `47ef2ddcbaf6`. Examine Gromov–Lawson Theorem A proof, pp. 429–430 and Lemmas 2–3 for relative scope, circle and product framing, actual conformity to both given germs, smooth material-band identification, scalar sign, Gauss–Bonnet and both signed adapter estimates. Stop at a rigorous confirmation or a precise gap. Output reviews/POSITIVE_CLOSING_READBACK.md only.

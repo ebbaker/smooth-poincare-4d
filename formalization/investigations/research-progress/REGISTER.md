@@ -1,8 +1,12 @@
 # Overall formalization progress
 
+## Edition 06 · FOT-E51 · 26 November 2026
+
+One common harmonic realization now bounds the metric and trace-free Ricci in $W^{2,6}$ at both stationary scales, given Peters and the flat scalar estimate. On a fixed positive-parameter stationary pointed limit, finite scalar-square energy and the physical volume and completeness hypotheses force scalar flatness. The same post-X comparator gives the right slope of the regularized value after one whole return. Seven original blueprint obligations remain open. On the inner ball the metric and trace-free Ricci first derivatives are uniformly Hölder continuous with exponent \(1/3\). [Assessment](../reviews/ED06_E51_HARMONIC_ESTIMATES_AND_TERMINAL_LIMITS.md) · [Public verification](../research-progress/handoffs/ED06_E51_VERIFICATION_20261126.md) · [Continuation](../continuation-notes/AFTER_E51_COUPLED_INTERIOR_AND_POINTED_SCALAR_20261126.md)
+
 ## Edition 06 · FOT-E50 · 26 November 2026
 
-Derived the original covariant gradient, its conformal trace and terminal dissipation. Verified the physical harmonic chart transport and end-link integral estimate, and carried one post-attainment Ricci margin through both extractions. Quantitative harmonic radius and elliptic regularity, compact-domain Euler transgression and positive marked return retain their own hypotheses. Universal entry and nonround rigidity remain open. [Assessment](../reviews/ED06_E50_PHYSICAL_VARIATION_AND_EXTRACTIONS.md) · [Verification](../research-progress/handoffs/ED06_E50_VERIFICATION_20261126.md) · [Continuation](../continuation-notes/AFTER_E50_ORIGINAL_GRADIENT_AND_SECOND_EXTRACTION_20261126.md)
+Derived the original covariant gradient in divergence and curvature-commuted form on general slices, its conformal trace and terminal dissipation. Verified the physical harmonic chart transport and end-link integral estimate, and carried one post-attainment Ricci margin through both extractions. Quantitative harmonic radius and elliptic regularity, compact-domain Euler transgression and positive marked return retain their own hypotheses. The original first-variation problem is now checked. Seven of the eight original Edition 06 problems remain open, and the parent retains the separate universal coverage obligation. [Assessment](../reviews/ED06_E50_PHYSICAL_VARIATION_AND_EXTRACTIONS.md) · [Verification](../research-progress/handoffs/ED06_E50_VERIFICATION_20261126.md) · [Continuation](../continuation-notes/AFTER_E50_ORIGINAL_GRADIENT_AND_SECOND_EXTRACTION_20261126.md)
 
 ## Edition 06 · FOT-E49 · 26 November 2026
 

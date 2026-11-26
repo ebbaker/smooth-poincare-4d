@@ -2,7 +2,7 @@
 
 Either reducible native individual cut of an integral rank-one pair with immediate rank-three free outlet gives joint localization. The terminal split lower zero then cancels even for an unknown local two-component trace. At a four-point minimum a specified return can require arbitrarily many core passages. [Assessment](reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md) · [Reducible-cut handoff](continuation-notes/AFTER_REDUCIBLE_NATIVE_CUTS_20261126.md)
 
-On the next launch select an actual terminal pair with both native cuts irreducible, read the framed reverse surgery duals and test one upper band and belt. An unresolved marked rank-two closing is the alternative. The [current continuation](continuation-notes/CONTINUATION.md) gives the complete test and the conditions for opening a physical comparison. Earlier port examples below calibrate framed transport.
+The [current assessment](reviews/DOUBLED_TANGLES_AND_INDEPENDENT_BANDS_20261126.md) gives the doubled-tangle reduction, the marked rank-two return, and the obstruction to native GST cancellation through three slides. The [continuation](continuation-notes/CONTINUATION.md) lists the fourth-slide and native sphere tests.
 
 On a new four-point exterior the lower return fails on every chord, and the upper bridge needs two stationary-core passages. Its successive two-point and local cuts give three terminal cancellations. [Assessment](reviews/WHITEHEAD_MIXED_RETURNS_20261126.md) · [Whitehead continuation](continuation-notes/AFTER_WHITEHEAD_MIXED_RETURNS_20261126.md)
 

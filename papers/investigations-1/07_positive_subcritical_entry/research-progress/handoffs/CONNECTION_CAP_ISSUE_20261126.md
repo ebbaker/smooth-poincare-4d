@@ -1,0 +1,7 @@
+# Curvature of a connection cap · fixed derivations, revision 1
+
+26 November 2026, for Edward B. Baker III with OpenAI Codex. B02 lead decision: allow a genuinely curved SO(3) connection over the entire framed surgery disk, round fibers of variable scale and arbitrary positive conformal multiplier. Use q after normalizing the fiber radius and the inverse-facing hyperbolic boundary data of the [first issue](FIRST_ASSEMBLY_ISSUE_20261126.md). No hypothesis on symmetry or energy on the rest of the closed four-manifold. Inputs and settings as in that issue. [Owner](../REGISTER.md).
+
+E02a, bounded Sol/ultra independent curvature derivation. Use horizontal 1,2, vertical 3,4, at p in the fiber, write the curvature vector b in so(3)=R³. Check the diagonals needed for a chiral lower bound using K(q), b×p, b·p. Check the coefficient of the horizontal/vertical cross-curvature, with sign immaterial if tracked across the two signs. Derivatives may contribute to other entries. Give a proof or exact flaw. Output notes/CONNECTION_CURVATURE.md only.
+
+E02b, bounded Sol/ultra independent inequality derivation. Assuming the first chiral diagonal is (K+1−|b×p|² ±3b·p)/3, derive from trace-free and fiber averaging the sharp usable bound in terms of K and |b|². Test completing a square against 4K, constants, orientation and transition hypotheses. Output notes/CONNECTION_BUDGET.md only. Failure of the first diagonal or matching feeds B02. E03 is issued separately after the full work is frozen.

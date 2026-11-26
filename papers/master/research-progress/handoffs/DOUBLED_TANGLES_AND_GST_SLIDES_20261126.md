@@ -1,0 +1,9 @@
+# Investigation 05 return on product doubles and the GST slide distance
+
+26 November 2026 · Prepared for Edward B. Baker III with OpenAI Codex assistance, selected Astra/ultra lead and bounded Sol/ultra derivations and nonauthor readers. Independent serving telemetry unavailable. Starting checkout 1c81a3048c8c. [Investigation assessment and evidence](../../../investigations-1/05_collar_deformation_and_surgery/reviews/DOUBLED_TANGLES_AND_INDEPENDENT_BANDS_20261126.md) · [Surgery manuscript](../../../investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/manuscript/recognition_from_marked_handle_cuts.tex)
+
+The product double of a free three-string tangle with a designated boundary-parallel strand and its product closing admits three geometric reverse cancellations with no births. A concrete example has both original individual cuts irreducible and returns the marked rank-two trace on the first cancellation. The compression-body proof applies to the class regardless of whether the original diagram includes inverse slide instructions. The two-cut condition alone gives no reduction for a terminal trace outside that class.
+
+On the actual GST $L_{n,1}$ outlet, a first unstabilized reverse belt cancellation needs at least four slides for every $n\ge3$. For $n=3$, a third-slide core leaves every original single-arc neighborhood. Every possible fourth band on that particular pair still fails. Over all first bands 224 of the 256 signed fourth-slide histories are excluded by five exact quaternion tests. Native sharpness of twelve on the original square-knot dual remains open. The closed GST sphere already satisfies the square-knot recognition theorem.
+
+This return supplies a marked recognition class and a scoped obstruction for the presentation-selection branch. It supplies neither a positive subcritical entry metric nor a change to fixed-type attainment.

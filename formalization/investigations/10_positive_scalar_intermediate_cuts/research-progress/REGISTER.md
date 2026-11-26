@@ -1,5 +1,9 @@
 # Positive scalar curvature on intermediate cuts · Progress register
 
+## FOT-E51 · 26 November 2026
+
+The new doubled-tangle recognition uses the designated boundary-parallel strand and product closing. Its two irreducible cuts are compatible with this geometric cancellation. The scientific record supplies no physical signed saving beyond the minimizing excess on an untreated type. [Updated scientific control](../../../../papers/investigations-1/05_collar_deformation_and_surgery/reviews/DOUBLED_TANGLES_AND_INDEPENDENT_BANDS_20261126.md) · [Assessment](../../reviews/ED06_E51_HARMONIC_ESTIMATES_AND_TERMINAL_LIMITS.md) · [Public verification](../../research-progress/handoffs/ED06_E51_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E51_COUPLED_INTERIOR_AND_POINTED_SCALAR_20261126.md)
+
 ## FOT-E50 · 26 November 2026
 
 The irreducible native levels with $b_1=2$ fail the positive-scalar domination test on those levels. Neither a new qualifying intermediate cut nor physical signed data beating the excess was supplied. The prescribed seam, retained core and complete-side bounds remain necessary for any proposed metric comparison. [Current 05 plan](../../../../papers/investigations-1/05_collar_deformation_and_surgery/research-plan/PLAN.md) · [Assessment](../../reviews/ED06_E50_PHYSICAL_VARIATION_AND_EXTRACTIONS.md) · [Verification](../../research-progress/handoffs/ED06_E50_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E50_ORIGINAL_GRADIENT_AND_SECOND_EXTRACTION_20261126.md)

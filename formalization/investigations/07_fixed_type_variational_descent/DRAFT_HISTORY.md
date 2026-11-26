@@ -1,5 +1,7 @@
 # Fixed-type variational descent · Milestones
 
+- **26 November 2026 · FOT-E51.** One exact least-$D$ comparator still sets the margin at each of the two fixed-parameter extractions. [Assessment](../reviews/ED06_E51_HARMONIC_ESTIMATES_AND_TERMINAL_LIMITS.md)
+
 - **26 November 2026 · FOT-E50.** One exact least-$D$ unit-volume Yamabe representative serves all sufficiently small positive parameters after scientific X and exact first-value compactness. [Assessment](../reviews/ED06_E50_PHYSICAL_VARIATION_AND_EXTRACTIONS.md)
 
 **26 November 2026 · FOT-E49.** Given scientific X, exact first-value smooth compactness and the geometric comparison suppliers, Lean selects a unit-volume positive minimizer of least ordinary Ricci energy and a separate maximum of the squared Yamabe constant. On the named unit round metric the Green estimate excludes the strict TT window. The sharp round TT calculation is in the reading note. An admissible Hessian on a surviving nonround metric and universal rigidity remain open. [Disposition](../reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md)
