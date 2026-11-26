@@ -1,5 +1,7 @@
 # Morse heights and handle recognition · Milestones
 
+- **25 November 2026 · FOT-E40.** Both marked feet of a merging edge now admit one ambient height-preserving normalization on disjoint component strips, fixing a signed outgoing neighborhood. Normalize the rounded four-dimensional rim using that map. Transport the remaining attachments and the native outgoing map. [Assessment](../reviews/NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md) · [Continuation](../continuation-notes/AFTER_NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md)
+
 - **25 November 2026 · The actual ends of the selected regular or two-handle band.** Partition the original critical points. Build both ordered zero/one-handle filtrations on the native sublevels, with smooth traces, regular comparisons and genuine attaching feet. A normalized tree-edge quotient gives a marked topological ball. Smoothly normalize the actual forest with the outgoing markings and signed collar germs before invoking recognition. [Assessment](../reviews/END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md)
 
 - **25 November 2026.** The selected height gives a regular middle band or the native smooth two-handle at its actual critical point. The model seam has a checked recognition map. [Program assessment](../reviews/MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md)

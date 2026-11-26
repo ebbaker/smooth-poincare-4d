@@ -1,5 +1,7 @@
 # Continuing the formalization program
 
+**Current handoff, 25 November 2026.** [Resume from the signed native outgoing collar and physical jet bounds](AFTER_NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md). [Assessment](../reviews/NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md) · [Program register](../research-progress/REGISTER.md)
+
 **Current milestone, 25 November 2026.** The selected cuts now carry both end filtrations. A single marked outer disk now realizes simultaneous dyadic exterior division around the protected core. An independently positive capped endpoint must meet a quantified disk-side saving. [Assessment](../reviews/END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md) · [Public checks](../research-progress/handoffs/ED03_END_BANDS_CHECKS.lean) · [Dated continuation](AFTER_END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md)
 
 Earlier Edition 03 [chart and immersion handoff](AFTER_OPEN_EQUALITY_AND_MARKED_SHELL_20261125.md) and [activation](AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md) remain available for their frozen inputs.

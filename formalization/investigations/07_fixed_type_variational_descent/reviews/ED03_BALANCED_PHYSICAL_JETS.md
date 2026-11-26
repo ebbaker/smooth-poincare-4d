@@ -57,3 +57,17 @@ The replay constructs one physical half-disk and chooses a single width index at
 | `PositiveCoreVariation.lean` | `c3bfd70d18450513` |
 
 The bundled Lean input has SHA-256 `9c733b5d69ee05dfb44db509444e30a9bfeab32bc56c82d18f1446c2608d57eb`. Its log has SHA-256 `5671b7ecc0cad4ab3f85e20e1b02930cc9706088bba8c6cee17a6a1beac58199`.
+
+## Quadratic first jets at the selected width
+
+For the affine splice with parameter \(t\) set \(\theta=t\chi_w\), \(H_i=(1-\theta)\partial_iG+\theta\partial_iB\), and \(E_i=(\partial_i\chi_w)(B-G)\). The actual scalar first jet is \(H_i+tE_i\). For the source metric volume restricted to the entire trim and pushed to the model by the marked inverse, \(\|E_i\|_4\le(C/w)\|B-G\|_4\). The native-model theorem identifies the affine splice of the actual two ambient metrics with its pulled-back model splice on a common buffered open neighborhood. The marking, metric lifts and cutoff are chosen before the path parameter. Hölder with \(1/4+1/4=1/2\) bounds each product on that same measure. Multiplication by a supplied coefficient \(k\) with \(|k|\le K\) bounds the difference between the actual and frozen products by
+
+\[
+K\left[t\big(\|H_1\|_4d_2+d_1\|H_2\|_4\big)+t^2d_1d_2\right],\qquad d_i\ge\|E_i\|_4.
+\]
+
+Both mixed terms enter. The exponents are critical for first derivatives and their products under Euclidean dilations in dimension four. Comparing that dilation law with the physical volume in a varying chart requires quantitative control of its density. Controlling the metric mismatch divided by the width requires more than small incoming mass. [Quadratic jet estimates](../../../SmoothPoincare/Variational/SelectedQuadraticJets.lean) · [Transported trim volume](../../../SmoothPoincare/Variational/SelectedPhysicalJetControl.lean)
+
+Comparison with the weighted endpoint products adds the exact frozen term \(-\theta(1-\theta)(B'_1-G'_1)(B'_2-G'_2)\). This can survive even where \(D\chi_w=0\). For the full first-jet curvature remainder one must also identify and estimate the changes of the metric and inverse-Gram coefficients of all contractions. To reach the signed energy cost one must then compare both moving Weyl densities. [Actual two-metric first-jet estimate and its input bounds](../../../SmoothPoincare/Variational/SpliceRemainderL2.lean) · [Moving chiral density](../../../SmoothPoincare/Variational/SpliceDensity.lean)
+
+The independent public-leaf replay used the actual ambient splice of two supplied metrics and its model on the same buffered open chart. At \(t=1/2\) both mixed terms retain coefficient \(1/2\) and the correction product retains \(1/4\), in the transported volume of the unspliced source. The algebraic check with first derivatives \(0,1,0,1\) gives a frozen endpoint error of \(-1/4\). Lean exited zero on seven public type and axiom pairs and these two exact applications, with axiom union `propext`, `Classical.choice` and `Quot.sound`. The source SHA-256 is `fa463f14b3d10068fd64122ded21d6cef8c035ce1e661bf6a93dcfbc6b28d2fa`, the separate replay input is `8782422565bff5eaa740d3a7f05b15441c9337ed8c5e508b90eadbc1cca6dfa2`, and its log is `e3ee225038d209ede0b8968b623252f8c59adb3a1c74a6435860b9e754fd0a23`.

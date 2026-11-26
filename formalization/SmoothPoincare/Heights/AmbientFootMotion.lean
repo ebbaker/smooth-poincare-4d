@@ -59,10 +59,12 @@ theorem exists_ambientSignedCollarDiffeomorph (A : SupportedLevelIsotopy I C)
     constructor
     · rw [(hF 0 (χ p)).1]
       change (if χ p ∈ χ.target then χ (D (χ.symm (χ p))) else χ p) = _
-      rw [ite_eq_left (χ.map_source hp), χ.left_inv hp]
+      rw [ite_eq_left (χ.map_source hp)]
+      exact congrArg (fun q => χ (D q)) (χ.symm_apply_apply hp)
     · rw [(hF 0 (χ p)).2]
       change (if χ p ∈ χ.target then χ (D.symm (χ.symm (χ p))) else χ p) = _
-      rw [ite_eq_left (χ.map_source hp), χ.left_inv hp]
+      rw [ite_eq_left (χ.map_source hp)]
+      exact congrArg (fun q => χ (D.symm q)) (χ.symm_apply_apply hp)
   refine ⟨F 0, hmark, ?_, hK, hKχ, hFfix 0, ?_⟩
   · intro y hy
     let p := χ.symm y
@@ -74,9 +76,14 @@ theorem exists_ambientSignedCollarDiffeomorph (A : SupportedLevelIsotopy I C)
     by_cases hy : y ∈ χ.target
     · let p := χ.symm y
       have hp : p ∈ χ.source := χ.map_target hy
-      have hDp : D p ∈ χ.source := by rwa [hχ] at hp ⊢
-      have hDip : D.symm p ∈ χ.source := by rwa [hχ] at hp ⊢
-      rw [← χ.right_inv hy, (hmark p hp).1, (hmark p hp).2,
+      have hDp : D p ∈ χ.source := by
+        rw [hχ] at hp ⊢
+        exact hp
+      have hDip : D.symm p ∈ χ.source := by
+        rw [hχ] at hp ⊢
+        exact hp
+      have hyEq : χ p = y := χ.right_inv hy
+      rw [← hyEq, (hmark p hp).1, (hmark p hp).2,
         hheight p hp, hheight (D p) hDp, hheight (D.symm p) hDip]
       exact ⟨rfl, rfl⟩
     · obtain ⟨hF', hFi⟩ := hFfix 0 y (fun hm => hy (hKχ hm))

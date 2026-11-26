@@ -1,5 +1,13 @@
 # Overall formalization progress
 
+## Edition 03 native feet, signed height collars and physical disk jets · 25 November 2026
+
+**FOT-E40.** Both native one-handle feet extend beyond their closed disks and restrict to their actual connected components. A component orientation determines their signed parametrization up to one explicit reflection. The regular outgoing level has a smooth collar on the complete open height band. The opposite height sees exactly the same image with reverse normal coordinate. For an edge joining distinct incoming components, one ambient diffeomorphism normalizes both furnished foot markings, fixes all protected residual tubes and fixes a full outgoing neighborhood in both directions. The global marked reduction still requires a smooth rounded-rim gluing with all remaining attachments.
+
+On the single four-measure balanced disk, the physical metric lifts over the entire buffer and the first and second derivatives of its cutoff have explicit width costs. A clamped positive two-sided variation realizes a common signed saving at one of its two attained endpoints, bounded by its finite excess and accessible disk charge. The modified Euler transport test now uses the actual frame decomposition and a proved time-weight estimate. A qualifying positive cap and the spatial flow transgression remain geometric inputs.
+
+[Assessment](../reviews/NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md) · [Exact public checks](handoffs/ED03_NATIVE_FEET_AND_PHYSICAL_JETS_CHECKS.lean) · [Dated continuation](../continuation-notes/AFTER_NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md) · [Frozen packets](handoffs/ED03_NATIVE_FEET_AND_PHYSICAL_JETS_PACKETS_20261125.md)
+
 ## Edition 03 selected end filtrations and four-measure division · 25 November 2026
 
 **FOT-E39.** The two end filtrations, starting with the empty sublevel of the ordered height and its negative, now meet the actual selected cuts. The end-body and level restrictions of a regular ambient map carry every supplied tube in both directions. The proof of smooth normalization of arbitrary tree feet with the remaining marks fixed is open.

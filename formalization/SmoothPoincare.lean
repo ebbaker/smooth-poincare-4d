@@ -77,7 +77,13 @@ import SmoothPoincare.Heights.ProtectedFootComplement
 import SmoothPoincare.Heights.NativeFootComponent
 import SmoothPoincare.Heights.FootOrientationChoice
 import SmoothPoincare.Heights.NativeHeightCollar
+import SmoothPoincare.Heights.OutgoingHandleCollar
+import SmoothPoincare.Heights.AmbientFootMotion
+import SmoothPoincare.Heights.NativeAmbientFoot
+import SmoothPoincare.Heights.TwoFootHeightCollar
+import SmoothPoincare.Heights.MarkedTreeEdgeFeet
 import SmoothPoincare.Variational.SelectedPhysicalJetControl
+import SmoothPoincare.Variational.SelectedQuadraticJets
 import SmoothPoincare.Variational.PositiveCoreVariation
 import SmoothPoincare.Variational.ModifiedEulerCharge
 import SmoothPoincare.Variational.ModifiedFrameDecomposition

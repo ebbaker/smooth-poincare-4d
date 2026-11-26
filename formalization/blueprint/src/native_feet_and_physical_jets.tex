@@ -52,7 +52,7 @@ and $\rho=0$ near both outer ends.
 \begin{theorem}[Calibration by the actual height]
 \label{thm:ed03-native-height-collar}
 \uses{thm:ed03-end-filtrations}
-\lean{SmoothPoincare.exists_nativeSignedHeightCollar, SmoothPoincare.exists_nativeOppositeSignedCollars}
+\lean{SmoothPoincare.exists_nativeSignedHeightCollar, SmoothPoincare.exists_nativeOppositeSignedCollars, SmoothPoincare.IsolatedOneHandle.outgoingAxisPoint, SmoothPoincare.IsolatedOneHandle.exists_outgoingSignedHeightCollar, SmoothPoincare.IsolatedOneHandle.exists_outgoingMarkedComparison}
 \leanok
 On a nonempty regular level $L=h^{-1}(c)$ of a smooth height on a compact
 boundaryless source, a smooth partial diffeomorphism with source
@@ -71,6 +71,63 @@ $-t$ from $x\in L$ and its return flow for time $h(y)-c$ from $y$. The
 flow law supplies the two inverse identities. Smooth factorization through
 the native level gives smoothness of the inverse projection. Conjugate
 by the native opposite-level map and $t\mapsto-t$ to obtain the second chart.
+At the actual outgoing cut of a one-handle, the positive Morse-axis point
+with positive coordinate of norm $\sqrt{2\varepsilon}$ supplies a native
+level point. An isolating band gives the marked regular flow on to its upper cut.
+\end{proof}
+
+\begin{theorem}[Ambient motion of one native foot]
+\label{thm:ed03-ambient-native-foot}
+\uses{prop:ed03-relative-foot-collar,thm:ed03-native-height-collar}
+\lean{SmoothPoincare.SupportedLevelIsotopy.exists_ambientSignedCollarDiffeomorph, SmoothPoincare.IsolatedOneHandle.exists_footComponentHeightCollar, SmoothPoincare.IsolatedOneHandle.exists_ambientNativeFootNormalization}
+\leanok
+Fix either foot of the selected one-handle. Supply an orientation of its
+compact level component, a model foot there and a finite disjoint system of
+protected feet that both moving charts avoid. There is a diffeomorphism
+of the original four-manifold preserving the height everywhere. On the
+central third of a signed collar it carries every native foot parameter to
+the corresponding model parameter with the orientation-selected identity
+or reflection. Its inverse has the reverse equation. Both maps fix the
+full signed tubes over the protected feet and are the identity off a compact
+subset of the same component collar.
+\end{theorem}
+\begin{proof}
+\leanok
+Restrict the actual height chart to the open connected foot component.
+Use the oriented relative ball isotopy and lift it by a smooth even
+cutoff in the signed height coordinate. Its support is contained in the
+image of the product of a compact level support with a strictly interior
+closed time interval. Extending by the identity gives the ambient map.
+The construction identifies the incoming markings for one foot. A
+smooth map of the rounded four-dimensional merger still has to identify
+the outgoing rim and all residual attachments simultaneously.
+\end{proof}
+
+\begin{theorem}[Simultaneous normalization on a merging edge]
+\label{thm:ed03-marked-edge-feet}
+\uses{thm:ed03-ambient-native-foot,thm:ed03-native-height-collar}
+\lean{SmoothPoincare.IsolatedOneHandle.exists_twoFootHeightCollars, SmoothPoincare.IsolatedOneHandle.exists_markedTreeEdgeFootNormalization, SmoothPoincare.IsolatedOneHandle.exists_fixedOutgoingSignedHeightCollar}
+\leanok
+Suppose the two native feet of the selected one-handle lie on distinct
+incoming level components, with oriented model markings and the finite
+protected residual systems from the preceding theorem on each component.
+One ambient diffeomorphism normalizes both feet in the same signed
+height strip, with the two recorded parities. Its inverse matches the
+two model feet back to the actual feet. Both directions fix the
+parametrized residual tubes over the protected sections. They also fix
+every point at or above the critical height, including both sides of a
+sufficiently thin collar of the actual outgoing level.
+\end{theorem}
+\begin{proof}
+\leanok
+Restrict one full regular-height chart to both open components. The inverse
+in the full band recovers the component of each point, so the two strip
+images are disjoint. Choose the strip radius at most $\varepsilon/2$.
+The two compactly supported ambient motions consequently agree with the
+identity on one another's supports. Their composite has the prescribed
+forward and inverse markings and its support is strictly below $h(p)$.
+Around $h(p)+\varepsilon$, restrict the outgoing collar to a radius at most
+$\varepsilon/2$ to retain both signed outgoing coordinates.
 \end{proof}
 
 \begin{proposition}[Physical cutoff jets on the balanced disk]
@@ -100,6 +157,33 @@ the smooth profile of squared radius twice. The product rule gives one
 Hessian term multiplying $H$ and the two displayed mixed terms. The
 compact buffer admits a single smooth extension of the pullback metric;
 its fixed chart Gram coefficients agree throughout an open neighborhood.
+\end{proof}
+
+\begin{proposition}[Quadratic first derivatives on the same physical trim]
+\label{prop:ed03-selected-quadratic-jets}
+\uses{prop:ed03-physical-marked-jets}
+\lean{SmoothPoincare.selectedSpliceCoefficient_partial, SmoothPoincare.exists_selectedChartGramFirstPartialError_on_physicalTrim, SmoothPoincare.exists_selectedChartGramQuadraticFirstJet_on_physicalTrim, SmoothPoincare.frozenFirstJet_mul_sub_weighted, SmoothPoincare.exists_selectedPhysicalSplice_native_model}
+\leanok
+For Gram coefficients of the smooth splice on the same marked model and
+width, let $H_j$ be the interpolated first partial derivative with the
+cutoff held fixed, and let $d_j=(C/w)\|B_j-G_j\|_4$. The differentiated
+cutoff contributes at most $t d_j$ in $L^4$. For any measurable coefficient
+with absolute value at most $K$, its contribution to the product error
+relative to $H_1H_2$ is bounded in $L^2$ by
+\[
+ K\big[t(\|H_1\|_4 d_2+d_1\|H_2\|_4)+t^2d_1d_2\big].
+\]
+All norms use the pulled-back incoming trim volume. Comparison with the
+weighted endpoint products additionally includes the exact term
+$-s(1-s)(B'_1-G'_1)(B'_2-G'_2)$, where $s=t\chi$.
+\end{proposition}
+\begin{proof}
+\leanok
+Apply the first-derivative product rule to each actual spliced Gram
+coefficient. Expand the product of its two first derivatives and apply
+H\"older with exponents four and four. Subtracting the weighted endpoint
+products gives the last algebraic identity. The bounds on changing
+inverse metrics, chiral projections and volume factors remain separate.
 \end{proof}
 
 \begin{theorem}[Attained signed variation on the disk side]

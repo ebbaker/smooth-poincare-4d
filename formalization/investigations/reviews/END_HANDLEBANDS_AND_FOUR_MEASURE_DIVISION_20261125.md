@@ -89,3 +89,7 @@ Lean `4.35.0-rc3` at `470d5ce1400764999581fd26d5d72b00d990b0f4`, Lake `5.0.0-src
 | Cli | `843844fa601dd56767b1eb22b7ada5b64d5e567a` |
 
 Public import `599503f08b6a6756bbd3a923`, toolchain selector `bc84812c94489d1e3e191baa`, Lake package definition `35562fc83d2a568ae4ae08f3`.
+
+## Public acceptance on the resumed checkout
+
+The interrupted end-band and single-disk integration was completed at FOT-E40. Through the public root the E39 suite replayed all 56 axiom reports and both exact applications, including the single native quarter-exterior disk. The recovered physical spectral bridge identifies the endpoint data with the supplying metric and its frame. The resumed intake and final source hashes, public build and both blueprint checks are recorded in the [FOT-E40 assessment](NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md).

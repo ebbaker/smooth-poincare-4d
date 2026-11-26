@@ -1,5 +1,7 @@
 # Lean Blueprint
 
+**Native feet and physical disk jets, 25 November 2026.** [Chapter](src/native_feet_and_physical_jets.tex) · [Assessment](../investigations/reviews/NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md) · [Public checks](../investigations/research-progress/handoffs/ED03_NATIVE_FEET_AND_PHYSICAL_JETS_CHECKS.lean)
+
 **Selected end filtrations and simultaneous division, 25 November 2026.** [Chapter](src/end_handlebands_and_division.tex) · [Assessment](../investigations/reviews/END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md) · [Public checks](../investigations/research-progress/handoffs/ED03_END_BANDS_CHECKS.lean) · [Dated continuation](../investigations/continuation-notes/AFTER_END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md)
 
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with

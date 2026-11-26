@@ -1,5 +1,7 @@
 # Physical scales and marked annuli · Milestones
 
+- **25 November 2026 · FOT-E40.** Follow the two-jet calculation at the same physical width. Compare the actual reference metric with the incoming marked lift in the protected physical window. [Assessment](../reviews/NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md) · [Continuation](../continuation-notes/AFTER_NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md)
+
 - **25 November 2026 · Protected outer trim on the actual nested disk.** All sufficiently thin widths give the full buffered annulus, avoid the entire closed core and carry arbitrarily little total mass for four finite measures absolutely continuous with respect to the same physical volume. Chart derivatives along a repair remain to be estimated. [Assessment](../reviews/END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md)
 
 - **25 November 2026.** Marked disks with a two-sided guard now carry the comparison and physical measures on their respective metrics. [Program assessment](../reviews/MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md)
