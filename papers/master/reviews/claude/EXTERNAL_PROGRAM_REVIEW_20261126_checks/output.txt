@@ -1,0 +1,114 @@
+# Check run for EXTERNAL_PROGRAM_REVIEW_20261126
+# date (UTC): 2026-11-26T17:36:26Z
+# python 3.13.18 | numpy 2.5.3 | scipy 1.18.1 | sympy 1.14.0
+
+===== check_01_hypersurface_weyl.py =====
+[ok] (a) eigenvalues of W^+ and W^- equal (s_j - sbar)/2 max err 2.84e-14
+[ok] (b) |W^pm|^2_HS = (1/12) sum (s_j-s_k)^2 max err 1.71e-12
+[ok] (b) |W|^2_tens = 4(|W^+|^2+|W^-|^2), W maps Lambda^pm to itself max err 7.28e-12, off-block 5.44e-15
+[ok] (c) |W^pm|^2 >= (8/3) det A on signature (2,2) [400k samples] min ratio 2.667040 vs 8/3 = 2.666667
+[ok] (c) minimiser is (-a,-a,a,a) min 2.6666666667 at |k| ~ [1. 1. 1. 1.]
+[ok] (d) |W^pm|^2 + (8/9)(-det A)_+ <= |A0|^4/6 [600k samples] min relative slack 4.004e-07
+[ok] (d) equality at k = [1, 1, -1, -1] lhs 2.666667 rhs 2.666667
+[ok] (d) equality at k = [-1, 3, 3, 3] lhs 24.000000 rhs 24.000000
+[ok] (d) coefficient 8/9 is optimal (8/9 + 1e-3 is violated) max violation 1.875e-04
+[ok] (e) det A <= |A0|^4/16 on signature (2,2) max ratio 0.062472 vs 0.062500
+[ok] (e) -det A <= 3|A0|^4/16 on odd signature max ratio 0.187293 vs 0.187500
+[ok] shape threshold sqrt(16 w + 16 w/3) = 16 sqrt2 pi/3 23.695376
+[ok] energy threshold (8/3) w = 64 pi^2/9 
+[ok] mean middle count below 8 pi^2: (2/w)(3/8) 8 pi^2 = 9/4 
+
+check_01: 14 passed, 0 failed
+(exit status 0)
+
+===== check_02_normalizations.py =====
+[ok] (a) round S^4: W = 0, R = 12, |Rm|^2_tens = 24 R = 12.000000000000, |Rm|^2 = 24.0000000000
+[ok] (b) FS: one block vanishes, the other is R^2/24 with R = 24 R = 24.0000000000, |W|^2 = (1.479e-31, 2.400e+01), Ric0^2 = 1.58e-29
+[ok] (b) FS: nonzero block has eigenvalues (R/6, -R/12, -R/12) => R - 6 lambda_max = 0 eigenvalues [-2. -2.  4.]
+[ok] (b) FS: volume pi^2/2 and int |W|^2_HS = 12 pi^2 (tau = 1) vol = 4.9348022005, E = 118.43525281, 12 pi^2 = 118.43525281
+[ok] (c) E_+ = E_- on the closed sphere (signature zero) E_+ = 21.861280338, E_- = 21.861280338
+[ok] (c) Chern-Gauss-Bonnet: E_+ + E_- - D/2 + int R^2/24 = 16 pi^2 lhs = 157.913670417, 16 pi^2 = 157.913670417
+[ok] (c) int |Rm|^2_tens = 4(E_+ + E_-) + 2D + int R^2/6 924.10033918 vs 924.10033918
+[ok] (c) 4 int sigma_2 = 16 pi^2 - (E_+ + E_-) 114.19110974 vs 114.19110974
+      (this test metric has E_+ = 21.8613 = 0.5538 T)
+[ok] (d) sigma_2(A) = R^2/96 - |Ric_0|^2/8 
+[ok] (d) P - 8T = D + (36 l^2 - Y^2)/12 with P = 4e + 3 l^2 
+[ok] (d) round Yamabe constant 12 * vol(S^4)^(1/2) = 8 sqrt6 pi 
+[ok] (d) D = 0 at e = T gives Y = 8 sqrt3 pi and int|Rm|^2 = 64 pi^2 
+[ok] (d) Bour's hypothesis F^alpha <= (1-alpha) 8 pi^2 chi  <=>  F_Ric0 <= (1-alpha) F_R / 12 
+
+check_02: 13 passed, 0 failed
+(exit status 0)
+
+===== check_03_exact_face_cost.py =====
+[ok] profile identity  int_0^1 B^2 dr = (1/4) int_0^1 r^4 chi''^2 dr 2.456429848347 vs 2.456429848347
+[ok] int_0^1 B dr = 0 3.11e-14
+[ok] pointwise: |W^pm|^2 = (1/4)(1 - sB)^2 |A0|^2 + O(w) error/(eps^2/2) = 2.380e-01, 2.363e-02, 2.362e-03 at w = 1e-2, 1e-3, 1e-4
+[ok] pointwise: W^+ has eigenvalues -(1/2) A0 = (eps/2)(-1, 0, 1) at the face [-0.15  0.    0.15]
+      c = 2.18195918  (eps = 0.3, int r^4 chi''^2 = 9.825719)
+      w = 0.2    s = 0.5  Wp2: Delta = 1.13515103e-01   Delta/(w s^2 c) = 1.040488
+      w = 0.2    s = 0.5  Wm2: Delta = 1.13515103e-01   Delta/(w s^2 c) = 1.040488
+      w = 0.2    s = 1.0  Wp2: Delta = 4.47439184e-01   Delta/(w s^2 c) = 1.025315
+      w = 0.2    s = 1.0  Wm2: Delta = 4.47439184e-01   Delta/(w s^2 c) = 1.025315
+      w = 0.1    s = 0.5  Wp2: Delta = 5.51049052e-02   Delta/(w s^2 c) = 1.010191
+      w = 0.1    s = 0.5  Wm2: Delta = 5.51049052e-02   Delta/(w s^2 c) = 1.010191
+      w = 0.1    s = 1.0  Wp2: Delta = 2.19583357e-01   Delta/(w s^2 c) = 1.006359
+      w = 0.1    s = 1.0  Wm2: Delta = 2.19583357e-01   Delta/(w s^2 c) = 1.006359
+      w = 0.05   s = 0.5  Wp2: Delta = 2.73440989e-02   Delta/(w s^2 c) = 1.002552
+      w = 0.05   s = 0.5  Wm2: Delta = 2.73440989e-02   Delta/(w s^2 c) = 1.002552
+      w = 0.05   s = 1.0  Wp2: Delta = 1.09271593e-01   Delta/(w s^2 c) = 1.001592
+      w = 0.05   s = 1.0  Wm2: Delta = 1.09271593e-01   Delta/(w s^2 c) = 1.001592
+      w = 0.025  s = 0.5  Wp2: Delta = 1.36459497e-02   Delta/(w s^2 c) = 1.000638
+      w = 0.025  s = 0.5  Wm2: Delta = 1.36459497e-02   Delta/(w s^2 c) = 1.000638
+      w = 0.025  s = 1.0  Wp2: Delta = 5.45706901e-02   Delta/(w s^2 c) = 1.000398
+      w = 0.025  s = 1.0  Wm2: Delta = 5.45706901e-02   Delta/(w s^2 c) = 1.000398
+[ok] Delta(s)/(w s^2 c) -> 1 as w -> 0, both chiralities max |ratio - 1|: w=0.2: 0.0405, w=0.1: 0.0102, w=0.05: 0.0026, w=0.025: 0.0006
+[ok] remainder is at least O(w^2): halving w at least halves the relative deviation ratio of deviations 3.998 (4 would mean an O(w^3) remainder in this example)
+[ok] the two chiral increments of a half-strip coincide (signature defect depends only on the faces) max relative difference 3.16e-10
+[ok] Delta is convex in s and maximal at s = 1 (w = 0.05) min second difference 2.183e-03
+
+check_03: 8 passed, 0 failed
+(exit status 0)
+
+===== check_04_algebra_and_thresholds.py =====
+[ok] (a) 3/2 <= |W|^2/lmax^2 <= 6 on trace-free 3x3 observed range [1.50000, 5.99996]
+[ok] (a) extremal spectra (2,-1,-1) and (1,1,-2) 
+[ok] (b) d/dt (a1 + a2) >= a1^2 + a2^2 + 2 a3 (a1 + a2) under Hamilton's block ODE min slack -1.954e-14
+[ok] (c) |eta(S^3/Q_8)| = 3/4, |eta| = 1/2 for each cyclic Z_4, eta(RP^3) = 0 0.750000, 0.500000, 0.000000
+[ok] (c) 12 pi^2 * 3/4 = 9 pi^2 exceeds the band ceiling 8 pi^2 88.8264 > 78.9568
+[ok] (d) cylinder extension energy 6(l+1) and sqrt(1 + l(l+2)) = l+1 
+[ok] (e) sqrt(rho/12) d < pi/2  <=>  rho d^2 < 3 pi^2 
+[ok] (e) arctan(H sqrt(12/rho)/3) = arctan(2H/sqrt(3 rho)) and 2 sqrt(rho/12) d = sqrt(rho/3) d 
+[ok] (f) (2 - 2^-k)(T + eps*) - 2T = 2 eps* - 2^-k (T + eps*)  (>= eps* under the stated choice of k) 
+[ok] (g) e = Y^2/24 with Y^2 = 48(8 pi^2 - e)  =>  e = 16 pi^2/3 = (4/3) T e = 16*pi**2/3
+
+check_04: 10 passed, 0 failed
+(exit status 0)
+
+===== check_05_flow_and_fillings.py =====
+[ok] (a) cylinder: |W^+|^2 = |W^-|^2 = |Ric_0(h)|^2/4 and R_4 = R_h max error 3.4e-13 over 200 left-invariant metrics
+[ok] (a) cylinder: spec W^pm = spec(-Ric_0(h)/2) max error 7.1e-15
+[ok] (a) round cylinder is conformally flat with R = 6 
+[ok] (b) clamped cubic x(1-x)^2 has int f''^2 = 4 value 4
+[ok] (b) every clamped perturbation is orthogonal to it and raises the integral 
+[ok] (c) S = sqrt(det G) G^{-1} satisfies s_i s_j = K_ij 
+[ok] (c) cap boundary coefficient -6 alpha = 2 (tr S - H) for alpha = (H - tr S)/3 
+[ok] (c) (1 - b) - (1 - b^2)/2 = (1 - b)^2/2 >= 0 
+[ok] (d) F^alpha = F_W + (alpha/24) F_R - 8 alpha pi^2 chi 
+[ok] (d) (1-alpha) 8 pi^2 chi - F^alpha = (1-alpha) F_R/24 - F_Ric0/2 
+[ok] (d) Yamabe gauge: Phi = 2e - alpha (16 pi^2 - Y^2/24) 
+[ok] (d) hypothesis of Bour 1.11 on the Yamabe metric <=> alpha <= 48 (8 pi^2 - e)/Y^2 
+[ok] (d) at Y = 8 sqrt6 pi the threshold is 1 - e/(8 pi^2) 
+[ok] (d) Bour's constant: 24/36 = 2/3 for Y_B = Y/6 
+[ok] (d) 20000 random classes in the band: hypothesis, Gursky bound and E_+ <= e/(1-alpha) 
+[ok] (e) neck (1+m/r^2)^2 g_Euc is scalar-flat and conformally flat max |R| 5.6e-16, max |W|^2 2.3e-33
+[ok] (e) int |Ric_0|^2 = 32 pi^2 on the two-ended neck ratio 1.000000000
+[ok] (e) F^alpha drop per two-ended neck = 16 alpha pi^2 
+[ok] (e) number of restarts <= 1/(2 alpha) 
+[ok] (f) product of surfaces: |W^pm|^2 = (K1+K2)^2/6 = R^2/24 
+[ok] (f) H^2(-1) x S^2(1) is conformally flat and scalar-flat; S^2 x S^2 has E_+ = E_- = 32 pi^2/3 
+[ok] (f) min over the cap area of (int (K+1))^2/A is 8 pi (1 + cosh rho) >= 16 pi 
+[ok] (f) two-sided Weyl cost of a product handle >= 64 pi^2/3 > 16 pi^2 21.3333 pi^2 against a gain of 16 pi^2
+
+check_05: 23 passed, 0 failed
+(exit status 0)
