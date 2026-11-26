@@ -416,6 +416,17 @@ theorem nativePocketPath_inner (F : PartialDiffeomorph I₄ I E₄ M ∞)
   rw [convexComb_inner]
   rfl
 
+/-- At each point the coefficient is a convex weight for every radius and
+time. The same weight works on every pair of tangent vectors. -/
+theorem nativePocketPath_convex_at (F : PartialDiffeomorph I₄ I E₄ M ∞)
+    (g R : SmoothRiemannianMetric I M) {r : ℝ} (hr : 0 < r)
+    (hS : Metric.closedBall (0 : E₄) (3 * r) ⊆ F.source) (s : Icc (0 : ℝ) 1) (x : M) :
+    ∃ a ∈ Icc (0 : ℝ) 1, ∀ v w : TangentSpace I x,
+      (nativePocketPath F g R hr hS s).inner x v w = a * R.inner x v w + (1-a) * g.inner x v w := by
+  have h := nativePocketPush_mem_Icc F r x
+  refine ⟨s * nativePocketPush F r x, ⟨mul_nonneg s.2.1 h.1, ?_⟩, nativePocketPath_inner F g R hr hS s x⟩
+  exact (mul_le_mul_of_nonneg_right s.2.2 h.1).trans (by simpa using h.2)
+
 /-- Exact agreement with the source near the entire complement of the
 chosen open pocket. The strictly smaller cutoff support also fixes its rim. -/
 theorem nativePocketPath_outer_germ (F : PartialDiffeomorph I₄ I E₄ M ∞)

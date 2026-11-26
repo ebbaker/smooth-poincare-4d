@@ -53,7 +53,9 @@ theorem capFactorScalar_eq_dirichletForm (hd : Module.finrank ℝ E = 4)
   exact Filter.Eventually.of_forall fun x => by ring
 
 omit [I.Boundaryless] [Nonempty M] in
-private theorem lpNorm_four_sq_eq_capFactorVolume (g : SmoothRiemannianMetric I M)
+/-- The squared physical (L^4) norm is the denominator of the smooth
+four-dimensional conformal quotient. -/
+theorem lpNorm_four_sq_eq_capFactorVolume (g : SmoothRiemannianMetric I M)
     (f : C^∞⟮I, M; ℝ⟯) :
     lpNorm f 4 (riemannianVolumeMeasure I M g) ^ 2 = Real.sqrt (capFactorVolume g f) := by
   have hf : AEStronglyMeasurable f (riemannianVolumeMeasure I M g) :=
