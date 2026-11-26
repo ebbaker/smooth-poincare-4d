@@ -33,3 +33,7 @@ Recovered bands at arbitrary winding on the marked lane family and derived an as
 ## 26 November 2026 · Narrowed marked-surgery priorities
 
 The [revised plan](research-plan/PLAN.md) prioritizes one untreated marked exterior and gives a candidate-specific test for reopening physical comparison. The [parent register](research-progress/REGISTER.md) preserves the assessed results and both children's ownership. [Current continuation](continuation-notes/NARROWED_MARKED_SURGERY_20261126.md). This decision adds no mathematical claim.
+
+## 26 November 2026 · Two-point localization and a knotted completion
+
+Proved localization on the twice-intersecting meridional cut, identified the successful longitude and established a strict terminal three-to-two reduction for an arbitrary returned local pair. The selected nonlocal exterior with knotted opposite completion gives three cancellations. [Assessment and independent checks](reviews/TWO_POINT_LOCALIZATION_20261126.md)

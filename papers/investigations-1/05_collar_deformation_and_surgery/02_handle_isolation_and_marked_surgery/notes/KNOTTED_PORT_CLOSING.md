@@ -39,7 +39,7 @@ Write $\widetilde F,\widetilde\delta$ for the extended trace and final outlet ma
  \gamma_{\rm sp}=\gamma\widetilde\delta^{-1},\qquad
  \gamma_{\rm sp}^{-1}=\widetilde\delta\gamma^{-1}.
 \]
-The glued comparison $\widehat F$ uses $\widetilde F$ and the identity on the actual upper body, with inverse $\widetilde F^{-1}$ and the same upper identity. Both maps use matching product collars. In particular, for each original outgoing handle face $o_i:D^2\times S^1\to\partial_+W_0$ visible at the immediate outlet, with $\tau(z,v)=(v,z)$ the factor switch, the original reverse tube and its inverse on the image are represented by
+The glued comparison $\widehat F$ uses $\widetilde F$ and the identity on the actual upper body, with inverse $\widetilde F^{-1}$ and the same upper identity. Both maps use matching product collars. For an immediate terminal closing, where $\widetilde\delta=\delta$, each original outgoing handle face $o_i:D^2\times S^1\to\partial_+W_0$ visible there gives a reverse tube. With $\tau(z,v)=(v,z)$ the factor switch, this tube and its inverse on the image are represented by
 \[
  \gamma o_i\tau=\gamma_{\rm sp}(\delta o_i)\tau,\qquad
  \tau^{-1}o_i^{-1}\gamma^{-1}=

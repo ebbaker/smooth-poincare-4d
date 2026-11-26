@@ -1,0 +1,119 @@
+\section{Attainment on the original smooth type}\label{sec:attainment}
+
+\begin{theorem}[Fixed-type attainment, \cite{Baker2026BourAttainment}]
+\label{thm:attainment}
+If \(I=I^+(M)<2T\), there is a smooth positive Bach-flat class on
+the oriented \(M\) with \(E_+=E_-=I\). On a nonstandard entered
+type, \(I=a_M\), the least energy of a positive Bach-flat class in
+the strict subcritical band.
+\end{theorem}
+
+\begin{proof}[Argument of the companion theorem]
+Fix the smooth type first. Choose \(0<\alpha_j\downarrow0\) and
+volume-one positive Yamabe metrics on \(M\) with initial excess
+\(\epsilon_j=e_{j,0}-I\in[0,\alpha_j^2]\). For fixed \(j\) suppress
+the subscript. Bour's functional in our norms is
+\[
+ {\cal F}^\alpha=2(1-\alpha)e+\tfrac{\alpha}{2}D
+                =2e+\tfrac{\alpha}{24}\int R^2\,dV-16\alpha\pi^2 .
+\]
+The initial value is at most \(2e_0\) by \eqref{eq:budgets}. For late
+\(j\), \(e_0/(1-\alpha)\le2T-\eta_0\) for some fixed \(\eta_0>0\).
+In particular Bour's pinching hypothesis is strict. Along its negative gradient flow monotonicity gives
+\(e(t)\le e_0/(1-\alpha)\) at every smooth time on the original flow.
+By \eqref{eq:zero-wall} and \eqref{eq:budgets}, each slice is in a
+positive class with \(Y\ge\sqrt{48\eta_0}\), and hence \(e(t)\ge I\).
+On the physical flow metric one therefore has
+\begin{equation}\label{eq:original-flow}
+ D(t)\le D_0+\frac{4(1-\alpha)}{\alpha}(e_0-e(t))
+       \le 4I+\frac{4\epsilon_j}{\alpha_j}
+       \le 4I+4\alpha_j<32\pi^2 .
+\end{equation}
+The last inequality has a fixed positive margin for late \(j\).
+Here \(D_0\le4e_0\) was used in the starting Yamabe gauge. The second
+formula for \({\cal F}^\alpha\) also gives
+\(\int R(t)^2\,dV_{g(t)}\le Y_0^2+48\epsilon_j/\alpha_j\), where
+\(Y_0\) is the initial Yamabe constant.
+
+\emph{The two outcomes at fixed \(\alpha\).}
+Bour's Theorem~1.11 gives a closed \({\cal F}^\alpha\)-critical
+subsequential limit or a complete noncompact nonflat scalar-flat
+Bach-flat limit at a curvature maximum
+\cite[Theorems 1.4, 1.9 and 1.11]{Bour2010FourthOrderCurvatureFlows}.
+The companion justifies the short-time uniqueness and bounded-slab
+smoothing used in this strict case \cite{BahuaudHelliwell2015Uniqueness,Baker2026BourAttainment}.
+The closed endpoint stays on \(M\) and has constant scalar curvature
+by the trace of the regularized equation. It can have nonzero Bach tensor.
+
+For a pointed limit \(X\), compactly supported tests and compact
+exhaustion pass the Yamabe lower bound, each chiral upper bound and
+\eqref{eq:original-flow} to the limit. The homogeneous Sobolev estimate
+and finite curvature give finitely many asymptotically locally Euclidean
+ends with differentiated decay
+\cite{TianViaclovsky2005ALE,TianViaclovsky2008Volume,AcheViaclovsky2011Obstruction}.
+On a connected neighborhood of the \emph{whole} truncated core, including
+the buffers of every end, take one oriented comparison embedding into the
+same source slice. Its disjoint ends can all be straightened to round
+quotient products on the still closed source with arbitrarily small
+chiral cost. The spherical-link obstruction at \(E_+<9\pi^2\) forces
+each quotient group to be trivial \cite[A quotient obstruction on the
+closed source]{Baker2026MarkedNecks}. If there are \(k\) ends, capping
+the core gives a homotopy sphere by the marked-cut topology, so
+\(\chi(X)=2-k\). Scalar-flat Gauss--Bonnet with its Euclidean boundary
+terms gives
+\[
+ D_X=2\big(E_+(X)+E_-(X)\big)+32\pi^2(k-1).
+\]
+The strict bound in \eqref{eq:original-flow} forces \(k=1\).
+
+Conformal compactification and removal of its point give a smooth
+positive Bach-flat homotopy sphere \(N\). In particular its chiral
+energies agree and \(D_X=4e(N)\). The closed critical gap and
+nonflatness imply \(e(N)>T\)
+\cite[Strict recognition and the closed critical gap]{Baker2026MarkedNecks}.
+The smooth type still has to be identified. Remove a small normal ball
+in the smooth compactifying chart and embed its complement with both
+collar buffers into one original slice. In each sign the upper limit of the whole raw
+exterior energy is at most \(2T-\eta_0-e(N)+o(1)<T\).
+Choose the buffer length first, then the ball radius, then the comparison
+index. The buffered cap estimate gives a positive cap on that actual
+exterior of energy below \(T\). Recognition makes this cap a standard
+sphere. Disk-neighborhood extension identifies the original exterior
+with the deleted normal ball, matching the inverse core map on their
+common collar \cite[Theorem C]{Palais1960Extending}. Gluing the two
+maps gives an oriented diffeomorphism \(M\cong N\), with smooth
+inverse in the same marking. In particular \(I\le e(N)\) and exhaustion
+gives \(e(N)\le e_0/(1-\alpha)\).
+Keeping the initial Yamabe term in \eqref{eq:original-flow} gives
+\(4(e(N)-I)+(Y_{\rm rd}^2-Y_0^2)/12\le4\epsilon_j/\alpha_j\).
+Thus pointed outcomes along infinitely many original flows require
+their initial Yamabe constants to approach the round value.
+
+\emph{The limit as \(\alpha_j\to0\).}
+Retain the volume-one physical representative of a closed regularized
+endpoint. For a compactified pointed endpoint take its volume-one
+Yamabe representative on the identified \(M\) and recompute
+\(D\le4e\) there. The resulting closed metrics \(q_j\) have
+\(I\le e(q_j)\le e_{j,0}/(1-\alpha_j)\), uniformly positive Yamabe
+constants, bounded constant scalar curvatures and a common strict
+Ricci-energy bound below \(32\pi^2\). In the constant-scalar Euler
+equation the leading term is \(\tfrac12\nabla^*\nabla Z\), and the
+parameter \(p_j=\alpha_j\) or \(0\) enters only in a bounded zeroth-order
+coefficient. On curvature-normalized balls the Yamabe inequality gives
+noncollapse. In harmonic charts the Ricci equation for the metric and
+the elliptic equation for \(Z\) give uniform interior derivative bounds
+\cite[The limit of critical metrics]{Baker2026BourAttainment}. These are
+stationary estimates uniform in \(j\).
+
+Bounded curvature now gives a closed smooth Bach-flat limit on \(M\)
+with energy \(I\). At unbounded curvature a rescaling about a maximum
+gives another complete nonflat scalar-flat Bach-flat limit. The same
+marked compactification argument applies to this sequence of \(q_j\).
+Its positive class on \(M\) satisfies
+\(I\le e(N)\le\liminf_j e(q_j)=I\). In this last case the ordered
+exterior loss vanishes in both signs. At a fixed positive parameter its
+upper bound is \(e_0/(1-\alpha)-I\). This proves attainment in both
+cases. On a nonstandard type the minimum lies above \(T\). Every positive
+exact class is admissible for \(I\), and the attaining class is itself
+exact, proving \(a_M=I\).
+\end{proof}

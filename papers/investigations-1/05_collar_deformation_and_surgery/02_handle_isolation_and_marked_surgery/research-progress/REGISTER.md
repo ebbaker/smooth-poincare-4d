@@ -1,6 +1,6 @@
 # Handle and surgery research register
 
-The [26 November parent decision](../../continuation-notes/NARROWED_MARKED_SURGERY_20261126.md) governs selection of new packets. This register retains ownership of the child tasks and their assessed returns.
+The [current handoff](../../continuation-notes/AFTER_TWO_POINT_LOCALIZATION_20261126.md) identifies the next untreated cut. This register retains ownership of the child tasks and their assessed returns.
 
 26 November 2026, for Edward B. Baker III with OpenAI Codex. [Plan](../research-plan/PLAN.md) · [Source revisions](../../references/README.md) · [Parent assessment](../../reviews/TWO_MIXED_CUTS_AND_CHARGED_DISK_20261126.md)
 
@@ -51,3 +51,12 @@ The [initial working manuscript](../manuscript/recognition_from_marked_handle_cu
 | SUR-B03 / E03 | Retaining the two original amounts on a fixed core can reach the necessary peak to within the minimizing excess and arbitrary error. A whole physically fixed core requires the additional native annulus estimate. | The complete capped exterior remains above or at the infimum; a different physical repair must supply the positive comparison. |
 
 [Recovered band](../notes/CUT_TANGLE_RECOVERY.md) · [Several turns](../notes/PORTS_THROUGH_SEVERAL_TURNS.md) · [Mixed section](../notes/FURTHER_MARKED_SECTION.md) · [Joint assessment](../../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)
+
+### Disks forced by an integral two-point cut, 26 November 2026
+
+| Task | Result | Scope |
+| --- | --- | --- |
+| SUR-B04 / E02r–u | The one-period exterior with knotted opposite completion \(V_4=T_{4,5}\#\overline{T}_{4,5}\) gives a disk with minimum one stationary-core intersection. One subtraction slide restores the joint \(L_{4,1}\) diagram. Its smooth relative filling carries both original tube markings and arbitrary successors. | Terminal after one split zero, \(n_2=n_3:3\to2\to1\to0\), zero stabilizations. The independent GST slide option temporarily adds a 1/2 pair. [Diagram reading](../../reviews/KNOTTED_EXTERIOR_READER.md) · [Closing reading](../../reviews/KNOTTED_CLOSING_READER.md) |
+| SUR-B04 / E02v,w | At any supplied two-point sphere as in the theorem, the true filled outlet is the cut exterior with its two tori joined by a product. Freeness forces compression and rank jump selects a longitude. Both ports compress exactly when the capped stationary knot is unknotted. | The slides localize every integral \(Y_1\to Y_3\) pair of this class. After a single split zero and immediate rank-three upper closing, one upper cancellation is available even for an unknown local closure. An interior localization alone gives count change zero. [Proof reading](../../reviews/TWO_PORT_LOCALIZATION_READER.md) · [Terminal corollary](../../reviews/TWO_PORT_MANUSCRIPT_READER.md) |
+
+[Next selection](../../continuation-notes/AFTER_TWO_POINT_LOCALIZATION_20261126.md)

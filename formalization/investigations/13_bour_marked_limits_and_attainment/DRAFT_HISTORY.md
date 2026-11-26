@@ -1,0 +1,3 @@
+# Draft history
+
+**26 November 2026 · Edition 05 setup.** Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving model and effort were unavailable. Scoped the geometric returns and the uniform stationary limit from F2, the revised master and the scientific 06/02 working returns. Route 12 owns the original-flow outcomes. Route 07 owns the positive fixed-type infimum. Recorded the first conditional pullback-attainment packet and the proposed whole-core, closed and pointed interfaces. Proof execution awaits activation. [Input versions](research-overview/OVERVIEW.md#inputs-and-pins) · [Sole live register](research-progress/REGISTER.md)

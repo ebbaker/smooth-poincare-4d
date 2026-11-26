@@ -8,4 +8,6 @@ It proves cancellation at the penultimate level, recognition along successive ze
 
 The [parent manuscript](../../manuscript/README.md) gives the route from these results to the selection problem for an arbitrary smooth homotopy four-sphere.
 
-The current draft recovers a reducing slide from a marked peripheral annulus across multiple ports and computes a lower bound for the complete exterior of the original mixed rank-three section. [Current assessment](../../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)
+The current draft recovers a reducing slide from a marked peripheral annulus across multiple ports and computes a lower bound for the complete exterior of the original mixed rank-three section. [Physical core and exterior assessment](../../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)
+
+The two-point theorem forces a marked bridge disk on every pair in its stated free-boundary class. The terminal one-sided presentation reduces from three middle handles to two, and the selected knotted completion reduces to zero. [Two-point assessment](../../reviews/TWO_POINT_LOCALIZATION_20261126.md)

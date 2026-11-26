@@ -4,7 +4,11 @@
 
 Let $M$ be a closed, connected, oriented smooth four-manifold homotopy equivalent to $S^4$. Metrics and embeddings are smooth and Riemannian. A finite Morse presentation supplies framed attaching maps and identifications of regular levels. A relative handle move must reassemble the same $M$. A metric cut must identify the capped smooth type using the original boundary marking. The two methods can be combined when a marked identification and geometric estimates put the handle level and the metric on the same physical source.
 
-## One untreated marked exterior
+## What the two-point case decides
+
+The integral rank jump from \(Y_1\) to \(Y_3\) forces a longitude bridge disk when a supplied nonseparating sphere avoids one tube and meets the other twice. On the stated terminal assembly this excludes a least-three presentation. The knotted opposite completion supplies a worked case in which all three handles cancel. The next selection must reach an exterior or a residual local closure still outside this result. [Assessed theorem and limitations](../reviews/TWO_POINT_LOCALIZATION_20261126.md)
+
+## Exterior at the original selection
 
 The assessed product-port family recovers a reducing band from paired strands and a stationary marked longitude. Its disjoint monotone lanes work at arbitrary winding in the specified representatives, and the opposite return has a verified unknotted completion. This gives a relative two-attachment move and net cancellations in the stated terminal cases. The mixed rank-three example also has a measured PSC band on its original penultimate level. Its constructed filling already lies above the strict energy wall in both signs. [Latest assessment](../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)
 

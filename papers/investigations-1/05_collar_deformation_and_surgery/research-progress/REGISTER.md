@@ -2,7 +2,7 @@
 
 26 November 2026, for Edward B. Baker III with OpenAI Codex. This register owns the joint comparison. The [deformation](../01_collar_deformation_and_adapted_coordinates/research-progress/REGISTER.md) and [surgery](../02_handle_isolation_and_marked_surgery/research-progress/REGISTER.md) registers own the scientific derivations. [Plan](../research-plan/PLAN.md) · [Revision receipt](../references/README.md#activation-revision-check-26-november-2026) · [Assessed milestone](../reviews/TWO_MIXED_CUTS_AND_CHARGED_DISK_20261126.md)
 
-The [current routing decision](#narrowed-priorities-after-the-external-review-26-november-2026) sets the conditions for future work. The preceding research milestones and their handoffs below retain their original scopes.
+The [two-point milestone](#two-point-localization-26-november-2026) sets the next topological selection. The [narrowed plan](../research-plan/PLAN.md) governs candidate-specific metric comparisons. The preceding research milestones and their handoffs below retain their original scopes.
 
 | Task | Assessed state | Evidence or next input |
 | --- | --- | --- |
@@ -62,3 +62,13 @@ Planning revision for Edward B. Baker III with OpenAI Codex assistance. Exact se
 | SP4-CDS-E02 | Prior audits complete. New readback reserved until a qualifying return is frozen. | Audit trace, inverse reassembly and net count, or the full admissibility, threshold and cost audit on the one supplied source. |
 
 Generic charged-disk extraction and new collar-price campaigns are reserved while [Investigation 06](../../06_bour_flow_and_fixed_type_attainment/README.md) assesses Bour. Verified attainment closes those tasks on its covered class and sends the attained rigidity problem to the [master](../../../master/research-plan/PLAN.md). Fallback extraction can reopen for a specific class left uncovered by a demonstrated failure of the bridge, with an entered physical source and a mechanism for strict net gain. Producing positive subcritical entry remains a separate master task. This planning revision activates no research.
+
+### Two-point localization, 26 November 2026
+
+| Task family | Assessed return | Next mathematical input |
+| --- | --- | --- |
+| CDS-B03 / SUR-B04 | A supplied nonseparating two-point sphere on an integral \(Y_1\to Y_3\) pair forces a localizing bridge disk. The terminal closure after a single split zero admits a strict \(3\to2\) reduction on its actual smooth type. The selected knotted completion reaches \(3\to0\). [Assessment](../reviews/TWO_POINT_LOCALIZATION_20261126.md) | A least-three diagram of this terminal form requires at least four intersections on each transverse nonseparating sphere avoiding one tube. Select a marked return system beyond the treated four-port lanes or a recognizing successor for a residual local pair. |
+| CDS-E02 / SUR-E02r–w | Independent reads checked the diagram, both directions of the closing, product cut and peripheral slope, exact port dichotomy, and general initial-handle cancellation. [Reader record](handoffs/TWO_PORT_INDEPENDENT_READINGS_20261126.md) | Audit the actual markings and count of the next fixed return. |
+| CDS-B03 / DEF-B02 | No physical comparison was opened for this topological source. | Any analytic packet needs a candidate giving recognition, strict same-type saving or an admissible instability on its supplying metric. [Deformation owner](../01_collar_deformation_and_adapted_coordinates/research-progress/REGISTER.md) |
+
+[Current handoff](../continuation-notes/AFTER_TWO_POINT_LOCALIZATION_20261126.md) · [Return to the master](../../../master/research-progress/handoffs/TWO_POINT_TERMINAL_REDUCTION_20261126.md)

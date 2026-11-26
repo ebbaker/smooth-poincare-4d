@@ -1,114 +1,29 @@
-\subsection{The exact closed cases in a fixed band}
-\label{sec:exact-band}
+\section{Finiteness in a fixed band}\label{sec:exact-band}
 
-\begin{theorem}\label{thm:exact-band-spectral}
-Fix \(\delta>0\). Only finitely many oriented nonstandard smooth
-homotopy four-sphere types admit a positive Bach-flat class with
-\(e\le2T-\delta\). If this family is nonempty, its least spectral
-deficit \(36\int L^2dV-Y^2\) is attained and strictly positive.
-There is also a number \(b_\delta>0\) such that an exact class in
-this family with \(e-I^+(M)<b_\delta\) attains \(I^+(M)\).
-\end{theorem}
-\begin{proof}
-Choose the volume-one ordinary Yamabe metric in each exact class.
-These representatives remain Bach-flat, and on a nonstandard type
-their energies exceed \(T\). Take subsequences with \(e_i\to e\),
-\(Y_i\to y>0\) and \(\ell_i^2=\int L_i^2dV\to s\).
-The marked-neck paper's exact compactness alternative gives either
-a smooth closed limit under oriented diffeomorphisms, or a complete
-nonflat rescaling with a smooth one-point conformal compactification
-\(X\). The same-type descent theorem there identifies \(X\) with
-each late source by oriented diffeomorphisms and gives a positive
-Bach-flat class on \(X\) with
-\(Y_X\ge y\) and \(e_X\le e-\kappa_\delta\) for a uniform
-\(\kappa_\delta>0\) \cite[exact compactness lemma and same-type
-descent theorem]{Baker2026MarkedNecks}. Thus a sequence of mutually
-distinct types is impossible.
-
-In the closed alternative the spectral deficit converges to that
-of the limit. In the second alternative both chiral and spectral
-masses converge on each fixed compact truncation of the rescaling.
-On its actual source complement the inequality
-\(|W^+|^2_{\rm HS}\le6L^2\) bounds the missing chiral charge. Exhaust
-after taking the source limit. The smooth compactifying point has
-zero mass for both conformal measures, so
-\[
- 6(s-\ell_X^2)\ge e-e_X\ge\kappa_\delta,\qquad
- 36\ell_X^2-Y_X^2\le36s-y^2-6\kappa_\delta .
-\]
-The compactified class is another member of the same fixed band.
-A sequence approaching the least spectral deficit must therefore
-take the closed alternative. At its limit Chen--Zhu's strict and
-equality classifications give a strictly positive deficit on the
-nonstandard smooth type \cite[Theorems 1.4 and 1.6]{ChenZhu2014Conformal}.
-
-For each of the finitely many types, its least positive subcritical
-exact critical value \(a_M\) is attained and isolated among exact
-values by the first-critical-value theorem in the marked-neck paper
-\cite{Baker2026MarkedNecks}. If \(a_M>I^+(M)\), take a margin below
-their difference. If \(a_M=I^+(M)\), take its isolation margin.
-A smaller positive minimum over the finite list gives \(b_\delta\).
-Thus in a sequence of pairwise distinct nonstandard types represented
-by exact positive classes with \(e<2T\), the energies must tend to \(2T\).
-\end{proof}
-
-\begin{corollary}[Attainment and finiteness on entered types]
-\label{cor:entered-type-attainment}
-If a smooth oriented homotopy four-sphere \(M\) has a positive Yamabe
-class with \(e<2T\), a smooth positive Bach-flat class on \(M\)
-realizes \(I^+(M)\). For every \(\delta>0\) there are only finitely
-many oriented nonstandard types with \(I^+(M)\le2T-\delta\).
+\begin{corollary}[Finiteness for the infimum]\label{cor:entered-type-attainment}
+For each \(\delta>0\), only finitely many oriented nonstandard smooth
+homotopy four-sphere types have \(I^+(M)\le 2T-\delta\).
 \end{corollary}
 \begin{proof}
-The attainment theorem of \cite{Baker2026BourAttainment} starts
-Bour's regularized flows at unit-volume Yamabe metrics of excess at
-most \(\alpha^2\). On every smooth slice of the original flow its
-full trace-free Ricci integral is at most \(4I^+(M)+4\alpha\).
-This bound excludes multiple ends in each marked nonflat model.
-A one-ended compactification recovers the original smooth type.
-The remaining closed critical metrics have uniform elliptic estimates
-in curvature-normalized coordinates as \(\alpha\) tends to zero.
-Together the closed and pointed alternatives give the attained class.
-If \(I^+(M)\le2T-\delta\), the definition of infimum supplies strict
-positive entry even when equality holds in this bound. The attaining
-class belongs to the fixed band in Theorem~\ref{thm:exact-band-spectral}.
+Even at equality this infimum supplies an entering class, since
+\(\delta>0\). Apply Theorem~\ref{thm:attainment} to take a positive
+Bach-flat class on the same type at the infimum itself. Its total
+Weyl integral is uniformly bounded. In our Schouten normalization,
+\[
+       \int_M\sigma_2(g^{-1}A)\,dV=(2T-e)/2\ge\delta/2 .
+\]
+These are the hypotheses of the finiteness theorem of Chang, Qing and
+Yang \cite[Theorem B]{ChangQingYang2006Gap}. Their Schouten tensor in
+the statement is \(2A\), so their lower bound is \(2\delta\).
+Each unoriented smooth type has at most two oriented types.
 \end{proof}
 
-In particular an arbitrary minimizing sequence with spectral deficit
-tending to zero cannot approach a smooth nonround filled base on
-the same type in the marked whole-base alternative. Indeed on each
-fixed compact the spectral mass is lower semicontinuous in the
-common density frames, since the squared larger top eigenvalue of
-the two trace-free Weyl blocks is convex. The first-order convergence
-and curvature bound give weak \(L^2\) convergence there. Exhaustion
-and the Yamabe test on the finitely punctured base give
-\(\Delta_{\rm base}\le\liminf\Delta_i\).
-At zero limiting deficit the positive base is standard by
-Chen--Zhu. A base with positive chiral energy would have the original
-nonstandard smooth type by the filled-base theorem. Thus in this
-marked alternative the base is conformally round and one exit retains
-all of both chiral energies. If the inserted and discarded two-sign energies vanish and a
-long matched buffer preserves the limiting Yamabe lower bound,
-the capped exterior again has deficit tending to zero.
-Such evacuated restarts have no established termination bound
-\cite[sections on whole marked limits and the exact band]{Baker2026FixedDescent}.
-
-On the exact family there is also a disk in a smoothly controlled
-conformal chart where both chiralities carry a definite common
-mass. More precisely, the integral of the smaller of the two squared
-top Weyl eigenvalues on this disk has a positive lower bound once
-the strict band and the desired normalized chart accuracy and finite
-derivative order are fixed. Both blocks are nontrivial on the
-closed or compactified nonstandard exact limit by signature and
-positive chiral energy. Analytic conformal representatives make
-their nonzero sets open and dense. A small chart in their intersection
-persists under smooth convergence on a compact part of either limit;
-a sequence with supremal such disk mass tending to zero is therefore
-impossible. The disk uses the exact compactness marking. For a
-vanishing-deficit sequence with a smoothly marked round filled base,
-the ordinary and modified unit volumes leave through the same exit.
-Normalized at one core point, the two conformal factors give the same
-flat Green metric on the punctured comparison. Gauss--Bonnet on
-each entire other exterior then clears the trace-free Ricci energy
-there in both gauges, as well as the Weyl and scalar energies
-\cite[section following the exact spectral gap]{Baker2026FixedDescent}.
+There is a further distinction within this finite family. On its positive
+Bach-flat classes with \(e\le2T-\delta\), the spectral deficit
+\(36\int L^2\,dV-Y^2\) has a strictly positive attained minimum whenever
+the family is nonempty. The least exact value on each type is isolated
+among exact values. These refinements use the compactness or strict
+energy drop of the marked-neck theorem
+\cite[First fixed-type critical value]{Baker2026MarkedNecks}
+\cite[The spectral deficit of exact critical classes]{Baker2026FixedDescent}.
+Neither finiteness nor isolation excludes an individual nonstandard type.

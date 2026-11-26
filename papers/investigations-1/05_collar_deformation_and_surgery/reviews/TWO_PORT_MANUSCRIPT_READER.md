@@ -11,6 +11,12 @@ and `95690367a9312efb49ad0aff955caf98dc648b7b9c44ab1000dee81f27c29ba3` for the
 [parent TeX](../manuscript/marked_collars_and_smooth_recognition.tex).
 [Issued reading](../research-progress/handoffs/TWO_PORT_INDEPENDENT_READINGS_20261126.md)
 
+The subsequent readback reproduced surgery SHA-256
+`6baa758fd9d27ab8d0556c5d3187f2725820c9e3075bb81b5e03b0a13299856a` and parent
+SHA-256 `db02d8e106356cc47d9bef3253cca1cfd068cbfb410331ef0fa49047863262ef`.
+The final parent wording checked below is
+SHA-256 `e3e4376936d180835e37c00b931b14707ef91ce384c7ace82295d4bb799bf29e`.
+
 The supplied cut forces localization of the marked pair. The terminal
 presentation with initial split attachment admits a net decrease from
 three to two middle handles for every returned local pair. Recognition of
@@ -44,7 +50,8 @@ $X$ is connected, van Kampen describes this as a single HNN gluing. If
 both boundary maps on $\pi_1$ are monic, normal form embeds
 $\mathbb Z^2$ in $\pi_1(Y_3)=F_3$, which has only cyclic abelian subgroups.
 The Loop Theorem gives a proper compression at a failing torus. These
-steps permit reducible $X$. [Stallings, *On the Loop Theorem*](https://doi.org/10.2307/1970146)
+steps permit reducible $X$. [Higman–Neumann–Neumann, Theorem I](https://doi.org/10.1112/jlms/s1-24.4.247) ·
+[Stallings, *On the Loop Theorem*](https://doi.org/10.2307/1970146)
 
 The zero surgery slopes also follow directly from the end ranks. The
 signed cut intersections make both original cores null-homologous, so
@@ -68,7 +75,7 @@ section to the actual arc. This produces a bridge disk in the $Q$-filled
 slab disjoint from the other arc. The original attaching framing is
 carried by the resulting isotopy. A longitude word test on a triangulated
 input uses Dehn's lemma in one direction and the bridge disk in the other.
-[Aschenbrenner–Friedl–Wilton, §4](https://msp.org/gtm/2015/19-1/gtm-v19-n1-p08-s.pdf)
+[Aschenbrenner–Friedl–Wilton, Theorem 4.1](https://msp.org/gtm/2015/19-1/gtm-v19-n1-p08-s.pdf)
 
 Puncture the bridge disk at its transverse intersections with the
 $Q$ filling core. The deleted meridian disks have boundary the actual
@@ -150,9 +157,9 @@ identification of $\partial D_L$ with the boundary of the model upper
 piece plus the $A$ dual, and $C$ is its product cancellation map to
 $H_2$, the surviving closing is $\partial C\,d$ with inverse
 $d^{-1}(\partial C)^{-1}$. This gives $(n_2,n_3)=(3,3)\to(2,2)$ for
-every returned local pair, with zero births. The corollary's compressed
-description can make this induced rank-two closing and the upper
-identity/inverse convention explicit. [Palais, Theorem B and Corollary
+every returned local pair, with zero births. The revised corollary
+spells out the induced rank-two closing and the inverse convention.
+[Palais, Theorem B and Corollary
 1](https://doi.org/10.1090/S0002-9939-1960-0117741-0) ·
 [Laudenbach–Poénaru, proof of Theorem A](https://www.numdam.org/item/10.24033/bsmf.1741.pdf#page=7) ·
 [Milnor, Theorem 5.4](https://webhomes.maths.ed.ac.uk/~v1ranick/surgery/hcobord.pdf#page=53)
@@ -230,6 +237,13 @@ $Y_2$-surgery link. In three-handle presentations outside the hypotheses,
 selection of a split first attachment or a qualifying sphere is still
 open. The parent selection discussion also retains its uncovered mixed
 class.
+
+The revised surgery TeX includes both follow-up deductions and the map
+on the surviving closing. The final parent version specifies that the
+four-point bound concerns a transverse nonseparating sphere missing one
+tube and intersecting the other core. It also gives the direct slab ball
+and initial-attachment cancellation for the disjoint sphere. The final
+two-port proof and parent summary have the same scope.
 
 The two-port argument uses smooth marked topology throughout. The
 parent's analytic alternative still requires a physical identification

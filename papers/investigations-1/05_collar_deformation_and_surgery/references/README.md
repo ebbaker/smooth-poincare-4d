@@ -54,3 +54,7 @@ For the nonlocal family and the charged-disk transport the 17-file and transitiv
 ## Exterior recovery and protected charge, 26 November
 
 The [assessment](../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md) reproduces the prior three reading-copy receipts, the 17-file baseline and 21-file transitive union. The fixed primary passages on the framed Figure 5 pair, the single-knot theorem, PSC extension and Yamabe minimizers are linked in the [canonical source record](../../../../references/SOURCE_NOTES_COLLAR_SURGERY_20261126.md#exterior-recovery-and-protected-charge).
+
+## Two-point localization
+
+The [source record](../../../../references/SOURCE_NOTES_COLLAR_SURGERY_20261126.md#a-forced-bridge-disk-at-a-two-point-cut) identifies the groups, disks and marked local recognition results used on the knotted opposite completion. The [assessment](../reviews/TWO_POINT_LOCALIZATION_20261126.md) records the frozen scientific inputs and the two rebuilt reading copies.

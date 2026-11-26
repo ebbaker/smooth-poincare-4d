@@ -10,5 +10,6 @@ This Edition 05 route owns `BAT-*`. Its target is a smooth positive Bach-flat mi
 | [Proof plan](research-plan/PLAN.md) | Proposed modules, declarations and acceptance checks |
 | [Live register](research-progress/REGISTER.md) | Sole status record for `BAT-*` |
 | [Continuation](continuation-notes/CONTINUATION.md) | First bounded packet and activation text |
+| [Draft history](DRAFT_HISTORY.md) | Dated milestones |
 
 [Route 12 · Original regularized flow](../12_bour_regularized_flow/README.md) owns the strictly pinched original trajectories, budget and fixed-parameter dichotomy. [Route 07 · Fixed-type variational descent](../07_fixed_type_variational_descent/README.md) owns the positive fixed-type infimum and its variational tests. [Scientific branch 06/02](../../../papers/investigations-1/06_bour_flow_and_fixed_type_attainment/02_marked_limits_and_attainment/README.md) owns the corresponding analytical and geometric derivations. The [revised master plan](../../../papers/master/research-plan/PLAN.md) owns universal entry and attained-minimizer rigidity. This setup leaves proof execution awaiting activation.

@@ -1,8 +1,12 @@
 # Marked surgery and the conditions for further collar work
 
-26 November 2026 · Prepared for Edward B. Baker III with OpenAI Codex assistance. Exact serving model and reasoning effort for this planning revision are unavailable. The input repository revision was `65f06eaac3ff`. This setup snapshot activates no research. The [parent register](../research-progress/REGISTER.md) owns live readiness. [Overview](../research-overview/OVERVIEW.md) · [Source versions](../references/README.md) · [Latest assessment](../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)
+26 November 2026 · Prepared for Edward B. Baker III with OpenAI Codex assistance. Exact serving model and reasoning effort for this planning revision are unavailable. The input repository revision was `65f06eaac3ff`. This setup snapshot activates no research. The [parent register](../research-progress/REGISTER.md) owns live readiness. [Overview](../research-overview/OVERVIEW.md) · [Source versions](../references/README.md) · [Input assessment](../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)
 
-## First research priority on activation
+## After the two-point theorem
+
+For an integral rank-one to rank-three free-boundary pair, a sphere missing one tube and meeting the other core twice now suffices for localization. With a single split zero below and an immediate rank-three upper closing, it gives a strict reduction even for an unrecognized local pair. Seek a usable return system on a marked four-point cut outside the known winding lanes, or exhibit a previously unidentified twice-punctured nonseparating sphere on another actual exterior. The first residual problem after a general terminal reduction is recognition of the resulting local two-component closure. [Assessed theorem](../reviews/TWO_POINT_LOCALIZATION_20261126.md) · [Active handoff](../continuation-notes/AFTER_TWO_POINT_LOCALIZATION_20261126.md)
+
+## Original selection
 
 Under SP4-CDS-B03, select one actual marked framed two-attachment exterior with nonstationary port motion at a transverse cut or a knotted opposite completion. The surgery child owns the selection and proof under SP4-CDS-SUR-B04. Start from a diagram with the original closing, whose simplifying band has yet to be supplied and whose case falls outside the stationary paired-lane argument. Freeze that one diagram, its actual transverse surface and filling slopes, inherited orientations and framings, and a list of all successor tubes. The known winding family is the baseline. [Cut tangle](../02_handle_isolation_and_marked_surgery/notes/CUT_TANGLE_RECOVERY.md) · [Several turns](../02_handle_isolation_and_marked_surgery/notes/PORTS_THROUGH_SEVERAL_TURNS.md) · [Surgery register](../02_handle_isolation_and_marked_surgery/research-progress/REGISTER.md)
 

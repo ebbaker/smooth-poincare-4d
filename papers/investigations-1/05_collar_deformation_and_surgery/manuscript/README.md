@@ -8,4 +8,6 @@ The manuscript treats strict cancellation at arbitrary upper rank, a nonlocal tw
 
 The two companion drafts give the proofs for [collar deformation](../01_collar_deformation_and_adapted_coordinates/manuscript/README.md) and [marked handle cuts](../02_handle_isolation_and_marked_surgery/manuscript/README.md).
 
-The current manuscript derives the finite exterior band, the mixed penultimate comparison and the sharp numerical-charge peak. It also separates endpoint subball recovery from all-time preservation of the full original core. [Current assessment](../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)
+The current manuscript derives the finite exterior band, the mixed penultimate comparison and the sharp numerical-charge peak. It also separates endpoint subball recovery from all-time preservation of the full original core. [Physical core and exterior assessment](../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)
+
+The two-point theorem forces a marked bridge disk on every pair in its stated free-boundary class. The terminal one-sided presentation reduces from three middle handles to two, and the selected knotted completion reduces to zero. [Two-point assessment](../reviews/TWO_POINT_LOCALIZATION_20261126.md)

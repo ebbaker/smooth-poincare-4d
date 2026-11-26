@@ -1,144 +1,55 @@
-\section{Recognition from an immersed height}\label{sec:immersion}
-
-Every smooth homotopy four-sphere admits a smooth immersion
-\(F:M\to\mathbb R^5\). Indeed it is stably parallelizable, the
-rank-five stabilization is already stable over a four-complex, and
-\(TM\oplus\mathbb R\cong M\times\mathbb R^5\) supplies the bundle
-monomorphism for the immersion theorem
-\cite[Theorem 3.1]{KervaireMilnor1963Groups}\cite[\S6]{Hirsch1959Immersions}.
-For one such immersion write \(g=F^*g_{\rm Euc}\), let \(A\) be
-its shape operator, and put \(\omega=|S^4|=8\pi^2/3\). All integrals
-and multiplicities are taken on the smooth domain.
+\section{Independent recognition by heights and marked handles}\label{sec:immersion}
 
 \begin{theorem}[Immersed recognition and height selection]\label{thm:immersed-entry}
-If the induced conformal class has \(E_+\le64\pi^2/9\), then
-\(M\) is diffeomorphic to \(S^4\), with no Yamabe sign hypothesis.
-On a hypothetical nonstandard type, if \(E_+(g)<8\pi^2\), a set
-of more than three quarters of the unit directions yields Morse
-heights with exactly two index-two critical points.
+Let \(F:M\to\mathbb R^5\) be a smooth hypersurface immersion and take
+\(g=F^*g_{\rm Euc}\). If \(e(g)\le64\pi^2/9\), then \(M\) is
+standard. On a nonstandard type, \(e(g)<2T\) forces more than three
+quarters of directions to have Morse heights with exactly two middle
+points. The induced class may have any Yamabe sign.
 \end{theorem}
-
 \begin{proof}
-First consider any Morse function on \(M\), allowing coincident
-critical values. If needed, separate the values by disjoint small
-scalar perturbations constant near the critical points, then order
-its handles by index. These operations give an auxiliary presentation.
-The lower 0- and 1-handles form a connected handlebody, since
-higher handles cannot join components. Its spanning tree absorbs
-all but one of the 0-handles into a single ball. Apply the same
-operation at the upper end and transport every framed attaching tube
-under the resulting boundary maps. The number \(m_2\) of middle
-handles is unchanged, and Euler characteristic gives \(m_1+m_3=m_2\)
-for the remaining odd handles. If \(m_2=0\), two disks give the
-standard sphere by extension of their boundary gluing
-\cite[p.~553]{Hatcher1983Smale}. If \(m_2=1\), turn the picture over
-if necessary. A single knot in \(S^3\) has surgery \(S^1\times S^2\),
-the boundary of the upper 1-handlebody. Homology forces framing zero
-and Property R makes the knot the unknot
-\cite[Corollary 8.3]{Gabai1987FoliationsIII}. Its trace is
-\(S^2\times D^2\), whose gluing to \(S^1\times D^3\) is standard
-for every boundary map \cite[Theorem A]{LaudenbachPoenaru1972Handlebodies}.
-Thus every Morse function on a nonstandard candidate has \(m_2\ge2\).
-
-Let \(U\) be the open locus of signature \((2,2)\) of \(A\). For
-almost every \(u\in S^4\), the critical points of the height
-\(\langle F,u\rangle\) have normals \(u\) or \(-u\) and Hessian
-\(\pm A\) in the induced metric. Applying the Gauss-map area formula
-on \(U\) gives the indexed height identity
-\cite{ChernLashof1957Curvature,OntiVlachos2017Hypersurfaces}
-\begin{equation}\label{eq:middle-mass}
- \int_{S^4}m_2(u)\,du=2\int_U\det A\,dV_g .
-\end{equation}
-In a principal frame let \(s_j=k_1k_l+k_mk_n\) denote the three
-pair sums. Gauss' equation gives both chiral Weyl blocks eigenvalues
-\((s_j-\bar s)/2\), so their squared norm is
-\(\sum_{j<k}(s_j-s_k)^2/12\). On \(U\) the positive pair sum is at
-least \(2\sqrt{\det A}\) and the other two are at most
-\(-2\sqrt{\det A}\). Hence
-\begin{equation}\label{eq:middle-weyl}
- |W^\pm|^2_{\rm HS}\ge\tfrac83\det A\quad\text{on }U .
-\end{equation}
-Equality requires curvatures \((-a,-a,a,a)\). If equality held on
-an open subset of \(U\), Codazzi within each rank-two eigenspace
-would force its eigenvalue to have zero derivative in that space.
-Hence \(a\) is constant there. Mixed Codazzi then puts
-\((\nabla_X A)Y=(\nabla_Y A)X\) in both eigenspaces for opposite
-eigenvectors \(X,Y\). It vanishes, and metric compatibility makes both
-distributions parallel. Mixed sectional curvature would vanish,
-contradicting its Gauss value \(-a^2\). The integral inequality is
-therefore strict whenever \(U\) is nonempty. On a nonstandard type,
-\eqref{eq:middle-mass} gives \(\int_U\det A\ge\omega\) and hence
-\(E_+>(8/3)\omega=64\pi^2/9\). If \(E_+<8\pi^2\), the same
-identities give mean count \(<9/4\). An integer count everywhere
-at least two on the regular directions is then two on more than
-three quarters of them. Conformal invariance gives the assertion for
-the whole induced class.
+Let \(m_2(u)\) count the index-two points of the Morse height
+\(\langle F,u\rangle\), let \(A_F\) be the shape operator, and let \(U\)
+be its signature-\((2,2)\) locus. The Gauss-map area formula gives
+\(\int_{S^4}m_2(u)\,du=2\int_U\det A_F\,dV\). On a nonstandard type
+every Morse height has at least two middle points, by the one-middle-handle
+recognition lemma and Property R \cite{Gabai1987FoliationsIII,Baker2026ImmersionEnergy}.
+On \(U\), the Gauss equation gives
+\(|W^+|_{\rm HS}^2\ge(8/3)\det A_F\). Equality on an open set would
+give principal curvatures \((-a,-a,a,a)\) and, by Codazzi, parallel
+eigenplanes, contrary to the mixed sectional curvature \(-a^2\).
+Thus \(e>(8/3)|S^4|=64\pi^2/9\) on a nonstandard type. If instead
+\(e<2T\), the average count is \(<9/4\). More than three quarters of
+the directions then have exactly two middle points on that type
+\cite[Heights and smooth recognition]{Baker2026ImmersionEnergy}.
 \end{proof}
+Every smooth homotopy four-sphere embeds in \(\mathbb R^5\) by the
+contractible five-manifold and doubling argument
+\cite[Theorem 3]{Kervaire1969HomologySpheres}\cite{KervaireMilnor1963Groups}.
+A construction meeting the energy bound on every smooth type remains open.
 
-\begin{proposition}[Exterior height test]\label{prop:exterior-heights}
-Let \(M=P\cup Q\) along a smooth common boundary, with an immersion
-on \(P\) smooth up to that boundary. Suppose that for almost every
-\(u\) the height on \(P\) admits a smooth Morse extension to this
-\(M\) with at most \(k(u)\) middle critical points in the interior of
-\(Q\), for measurable \(k\). If \(D=\int_{S^4}(2-k(u))_+\,du>0\)
-and \(E_+(P)\le 4D/3\), then \(M\) is standard.
-\end{proposition}
-\begin{proof}
-The boundary normal image and its antipode have zero spherical area.
-Almost every extended height on a nonstandard type would therefore
-have at least \((2-k(u))_+\) middle points in the interior of \(P\).
-The restricted area formula and the strict comparison on its nonempty
-middle locus give \(E_+(P)>(8/3)D/2\).
-\end{proof}
-
-\begin{proposition}[Marked surgery tests]\label{prop:two-middle-tests}
-Carry the attaching tubes of one selected two-middle-point height
-through the two tree reductions above. If the odd handles lie at
-one end, smooth recognition follows when the other end's two-component
-link has an unknot component, has tunnel number at most two,
-or contains a generalized square knot \(T_{p,q}\#T_{-p,q}\)
-for coprime \(p,q\ge2\), possibly after framed slides. If there is one odd handle at each end, recognition
-follows when some framed slide and order of the two middle handles
-gives intermediate surgery boundary \(S^3\) or \(\#_2(S^1\times S^2)\).
-It also follows if the second attaching circle on the intermediate
-boundary is isotopic there to the first belt circle.
-The intermediate cut belongs to the transported trace. Its identification
-with a regular level of the original height would require a separate marking.
-\end{proposition}
-\begin{proof}
-A slide inducing \(s:X'\to X\) on a trace transports the outgoing
-boundary gluing \(\varphi\) to \(\varphi\circ\partial s\). At the
-one-sided end surgery yields \(\#_2(S^1\times S^2)\), so the cited
-unknot and tunnel-number-one conditions reduce the trace to the zero-framed unlink
-\cite[Propositions 3.1--3.2]{GompfScharlemannThompson2010}. Its
-opposite 1-handlebody absorbs the final marking by the extension
-theorem \cite[Theorem A]{LaudenbachPoenaru1972Handlebodies}.
-For tunnel number two a
-split zero-framed unknot and its cancelling 3-handle give the
-stabilization in Meier--Schirmer--Zupan's slide theorem
-\cite[Corollary 1.3(2)]{MeierSchirmerZupan2016Trisections}. The
-generalized square-knot case is the closed-manifold recognition
-theorem of Meier and Zupan \cite[Theorem 1.1]{MeierZupan2022SquareKnots}.
-For the mixed case apply the marked intermediate-boundary result of the
-companion paper \cite{Baker2026MarkedHeights} to these transported tubes.
-For an \(S^3\) cut, dual Property R identifies both halves as disks.
-For the other cut, each half is
-\((S^1\times D^3)\mathbin{\natural}(S^2\times D^2)\).
-Surgery on the standard core sphere in one half gives \(S^1\times S^3\);
-the inverse framed surgery is on a generator circle and yields \(S^4\).
-The companion proves these identifications with the actual outer marking
-and both circle framings. For the belt-circle isotopy, the second
-handle is attached along a meridian of the first. Its framing is forced
-by the outgoing \(S^1\times S^2\); the companion's belt-circle theorem
-identifies the result with the double of a one-1-handle, one-2-handle
-contractible manifold \(V\). The handles of \(V\times[0,1]\) cancel
-in dimension five, so its boundary is standard.
-\end{proof}
-
-The immersion comparison paper derives the trace-free shape and
-Yamabe sign tests for the same global immersion
-\cite{Baker2026ImmersionEnergy}. The handle-construction paper computes
-what a prescribed germ contributes to the exterior test
-\cite{Baker2026ImmersedHandles}. To apply either recognition proposition
-one still needs a qualifying exterior or a selected height satisfying
-the indicated condition on its actual attaching data.
+For a selected two-middle-handle height, recognition depends on its
+actual framed attaching maps \cite{Baker2026MarkedHeights}. A separate
+topological test begins with two integral attachments from
+\(Y_1\) to \(Y_3\), where \(Y_r=\#_r(S^1\times S^2)\). Suppose a
+marked nonseparating sphere misses one tube and meets the other core
+transversely in two points of opposite sign. The marked surgery paper obtains a
+compressing port after the stationary filling. Its disk determines
+framed slides which place the pair in a ball. For a terminal trace
+starting with one split zero-framed attachment on \(D^4\) and ending in
+a specified rank-three upper handlebody, this
+reduces the middle count from three to two. For the specified
+Gompf--Scharlemann--Thompson link \(L_{4,1}\), the remaining
+generalized-square-knot trace is standard and the count drops from three to zero
+\cite{Baker2026HandleCuts,GompfScharlemannThompson2010,MeierZupan2022SquareKnots}.
+Both results use the transported residual tubes, the actual upper closing
+and its inverse. In a least-three presentation of this terminal form,
+a transverse nonseparating sphere missing one tube must therefore
+meet the other at least four times. Zero intersections would localize
+the pair directly, and the intersection count is even. The general
+reduction leaves a two-component link with surgery \(Y_2\). Identifying
+every such closure with \(S^4\) is the smooth-type question underlying
+the two-component generalized Property~R problem. Selecting a suitable
+marked level on all remaining diagrams is open. A scalar-curvature certificate for a level
+requires a metric on that very level. A minimizing metric from
+Theorem~\ref{thm:attainment} supplies no such alignment by itself.

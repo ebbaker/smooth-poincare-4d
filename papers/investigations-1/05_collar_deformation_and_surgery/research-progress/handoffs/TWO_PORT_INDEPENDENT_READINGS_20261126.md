@@ -12,3 +12,14 @@ Item 1 follow-up revision of the peripheral note: 15f63bca22cbf96c03702a591e2401
 4. CDS-E02, independent integrated reader. Read the new two-point theorem, terminal corollary and example in the surgery TeX 35cda08ac24f37803b48376589ec97c2a8c618145d70241b4f8691503f312925 and the parent synthesis at 95690367a9312efb49ad0aff955caf98dc648b7b9c44ab1000dee81f27c29ba3. Reconstruct all three conclusions, including the initial-handle cancellation for unrecognized local pairs, relative gluing and inverse, and any circular source assumptions. Identify the first untreated class and ensure the metric gate stays intact. Write only reviews/TWO_PORT_MANUSCRIPT_READER.md. Each reading ends at its fixed mathematical question or the first precise correction.
 
 Item 4 revised READBACK, parent db02d8e106356cc47d9bef3253cca1cfd068cbfb410331ef0fa49047863262ef and surgery 6baa758fd9d27ab8d0556c5d3187f2725820c9e3075bb81b5e03b0a13299856a. Recheck the unknot converse, surviving closing after the general cancellation, and even intersection obstruction on a least-three terminal presentation. Item 3's independent proof also tests the converse.
+
+## Completed readbacks
+
+| Reading | Final SHA-256 |
+| --- | --- |
+| [Exterior and exact one-puncture disk](../../reviews/KNOTTED_EXTERIOR_READER.md) | `e391a31b370cab33612755597c70dc927a7c4635fd09665bed7f437ee37bcbf8` |
+| [Closing and general terminal cancellation](../../reviews/KNOTTED_CLOSING_READER.md) | `9f0f3ffc29db5dc09352cb34786ad6e8e6df36e3a188a83cd9b15c5bcd631c2f` |
+| [Localization and port dichotomy](../../reviews/TWO_PORT_LOCALIZATION_READER.md) | `fe2aa3bcc2845bee9371556617c1e52a94ee14b60d3c71600eef1e3e5c13a74b` |
+| [Integrated manuscript and residual closing](../../reviews/TWO_PORT_MANUSCRIPT_READER.md) | `686652cd99734d3efa8785525e693e494b4b1e4b79dfd9ca5ac331d1fe5f1f7d` |
+
+Item 2 prompted a final domain clarification in the closing note. Its displayed immediate dual uses the terminal \(\widetilde\delta=\delta\) and later attachments require the actual extended outlet. The note is now `007316c55f8b133b2ac02b54517a022340509349248e6d0dcb69352608ccc5bd`. Item 4 checked the final parent `e3e4376936d180835e37c00b931b14707ef91ce384c7ace82295d4bb799bf29e` and surgery `6baa758fd9d27ab8d0556c5d3187f2725820c9e3075bb81b5e03b0a13299856a`. The final parent specifies the quantifiers of the four-intersection consequence. [Assessed return and build receipts](../../reviews/TWO_POINT_LOCALIZATION_20261126.md)

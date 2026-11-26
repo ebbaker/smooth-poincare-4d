@@ -51,3 +51,51 @@ The dependency search covered the public Lean source tree and the pinned Differe
 | Both critical-metric branches | The constant-scalar Ricci equation in both physical gauges, parameter-uniform harmonic-coordinate estimates and the elliptic bootstrap, then the appropriate closed or rescaled pointed extraction. |
 | Pointed return | Carry one complete truncated core in its actual oriented markings, derive ALE structure and the end count, construct the smooth compactification and positive class, and return it to the original carrier with two-sided comparison maps and the complete energy inequality. |
 | Attainment versus coverage | Identify a positive same-type class with energy exactly the infimum before addressing classification or an admissible negative direction. Universal entry still needs its own witness on types outside existing direct recognition. |
+
+The installed imports for `DifferentialGeometry.CheegerGromovCompactness.HasInjRadiusAt.le_intr` and `compactLimit_global_pullback_metric_convergence` were separately elaborated and axiom-checked. Their transcript SHA-256 is `64ad487f9595e615eed1b47db6dc90c77bdce88d790f983f9a754e28289359f9` and the axiom union is the same. The latter result turns supplied canonical compact-limit data into eventual whole smooth comparison diffeomorphisms on connected source carriers and preserves smooth metric convergence. A use on the original oriented type still requires the orientation check. The bounded-geometry and Hamilton compactness interfaces were located and read at source level. The immediate installed build lacked their precompiled modules.
+
+## Later scientific observation
+
+The 13:38:56 EST observation captured concurrent scientific edits over the same intake Git tree. The ten rows give the transitive working TeX generation and the local PDF present at that time. The generation hashes sorted `path<SPACE>file-SHA256<LF>` records, following literal uncommented TeX includes. The PDF column records the local bytes at the observation. Several manuscripts were being edited and their PDF generation could lag. The 06 draft and reading copy were checked together as described below. [Manuscript registry](../../../../tools/build_manuscripts.py) · [Generation procedure](ED04_ACTIVATION_AUDIT.py)
+
+| Manuscript | TeX files | Working TeX generation SHA-256 | Local PDF SHA-256 |
+| --- | ---: | --- | --- |
+| Master | 11 | `297b938c12c5f2c25027075c6eb7ac8516a844e59da46713d3e43cec4fa79692` | `b4fe88efe122f1524ac452a27bc2ed35b8c926872dafcccbab1bb7c971defe5e` |
+| Fixed-type descent | 21 | `bff4a9c25d4b915ea8d85245606a4a7629d83acb0f3bc21dd01c79fd0ed891ae` | `65e84af3b58c92141312e73fdf995a36c69c7efafc762677e3091f1762213a26` |
+| Physical neck | 7 | `ff3c7010100cf731bc3f007ae82ac1861ed39ec10d36b7117294e3910da9ff43` | `5c273dd27b0e779c11be21c76e58bc20dcebfae020ee62cb67bc3605939160f1` |
+| Immersed construction | 5 | `9f1bf9a87a1daafea00723e14d1149f739caae4c1887e6195016145250a81756` | `be162dcd5094fb92fdb632939e80c7e97021ab498fa0a42137fec8c2aeb713b0` |
+| Immersion parent | 1 | `25ab843f0439c7b64b88fea3f782ec4ae52e3ab65c51897a6933d944ec377225` | `5b333c1399f51169067b9b95040daa188ea033e9e0ad4bfca14606bd3139027d` |
+| Height recognition | 1 | `f8995353a388aab08e9487f15ad04dc20539a3f9d2e412131a0cae640eb0f8de` | `749114d5e275671622664374e7822d4218ad20351c91a5fb10b07638d3889901` |
+| Marked collars and smooth recognition | 1 | `04335315549d454860674001faf387898e5931e2da6213b252f45ac3d7dba73f` | `708e2229c6c05f2545d76925b95e0eb6f9ea8bc75a620b11440fd92ab3f1bf2a` |
+| Deformation of marked spherical collars | 2 | `3b6e4e5d634cae61ea8af9de744e97e83979a20f9c6f8a139f387c12e209d594` | `4da1743ebe12588b9ea045f9bdb64765ae3425216f3bbafd042ac52ea9cbaed2` |
+| Recognition from marked handle cuts | 1 | `e2ad22fbb1c0da596ec12159baf58d65a4a0134bb8527ed60b5bba4ca50e79f8` | `0a128cbbb6042f52ed286b27b9f7031c3e60d0f9368fabe1398ad4cf02ab464e` |
+| Fixed-type attainment | 1 | `23aceaccee4faa97fde5eb8a7a4f1d1d6aca18363a8a80da456a6d13af415aa6` | `e44dd506d09c7d37c01aefef75d68f9bba813f87fbb17beee9f3c177f06f821c` |
+
+The 06 raw source and bibliography for the final checked rebuild have hashes `719bbea527c6db649eaeee93e58e1f6b50f101772d79b406ee3ec378dca357f1` and `3036e2f4c2755a12484d8917fb1ea7d98f95cdd6efe2a59de843750c01c3a45b`. A clean project-builder PDF and the updated canonical reading copy have byte-identical extracted page text with SHA-256 `598c3b7f483c8a62367bac7fd5b13a8c01d30ae1e8184ffcf70d9ccc38a857f5`. This comparison initially detected the earlier reading copy lagging the current text. The updated copy passes Ghostscript interpretation. The subsequent HEAD `4d73fdde6804ce93fc2a3e4cef403e16eb941dab` records coordinated scientific and planning changes. The observation above identifies the working inputs actually checked.
+
+| Selected source or reading | Working file SHA-256 |
+| --- | --- |
+| [Bour source passages](../../../../references/SOURCE_NOTES_BOUR_ATTAINMENT_20261126.md) | `f803dadc58ee27baddb7d216974147a181752264a0890bd0b85c24b5dd202a30` |
+| [Bour fixed-parameter source audit](../../../../papers/investigations-1/06_bour_flow_and_fixed_type_attainment/01_regularized_flow_and_energy/notes/BOUR_AUDIT_20261126.md) | `34138752da571bad8741601b03d5967300d806bc2658105a5291c8e8bc8b29e2` |
+| [Original flow estimates](../../../../papers/investigations-1/06_bour_flow_and_fixed_type_attainment/01_regularized_flow_and_energy/notes/ORIGINAL_FLOW_20261126.md) | `51f5a14278dcd7cac67953726375a43f8aec6189b4b60c2145fa3ae3b7e587c7` |
+| [Marked-core return](../../../../papers/investigations-1/06_bour_flow_and_fixed_type_attainment/02_marked_limits_and_attainment/notes/MARKED_CORE_20261126.md) | `f3899cded68baa98a33b5dc5bf340dc7b0c9c50ed7222c64f923063cc91cf76f` |
+| [Constant-scalar critical estimates](../../../../papers/investigations-1/06_bour_flow_and_fixed_type_attainment/02_marked_limits_and_attainment/notes/CSC_ESTIMATES_20261126.md) | `db5e120ef9dbbb0b387f492e8d2e1d9a3fff2c6210ff4875bd1d0a44b3451247` |
+| [Analytic independent reading](../../../../papers/investigations-1/06_bour_flow_and_fixed_type_attainment/reviews/READING_FLOW_AND_LIMIT_20261126.md) | `eb039705e5fcee75caa4e71cec593b58c62e45dc8f71e7234920fb73d2333bf6` |
+| [Marked independent reading](../../../../papers/investigations-1/06_bour_flow_and_fixed_type_attainment/reviews/READING_MARKED_ATTAINMENT_20261126.md) | `509837e171935f2df2ea95811da93d4560415f30bdd882eff57cfb5090eeda35` |
+| [Working 06 assessment](../../../../papers/investigations-1/06_bour_flow_and_fixed_type_attainment/reviews/FIXED_TYPE_ATTAINMENT_20261126.md) | `f2127673f925ba77cc02e7d7ece9b3bac11fdf37270d6ee3d0354b171a71a2e2` |
+| [Updated master plan](../../../../papers/master/research-plan/PLAN.md) | `dfaa10caf2997157ddd5d7a2cea4e17aa5cd4f1941ef6f80440e97b5de8c88ac` |
+| [Claude program review](../../../../papers/master/reviews/claude/EXTERNAL_PROGRAM_REVIEW_20261126.md) | `27ad468cb494e051ca45b019295d10ea6a8d351ad54a1fea9dbcbc62cff850dd` |
+| [Surgery source record](../../../../references/SOURCE_NOTES_COLLAR_SURGERY_20261126.md) | `2300299434d8f71f671f325605591a2cf83d36ed9260dd716664d44e17279bec` |
+| [Compressed port slope](../../../../papers/investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/notes/COMPRESSED_PORT_SLOPE.md) | `27b35bdba6dbf8816d07ed8a45061b279448d7662ddb26c20a9df8bfbee9da84` |
+| [Knotted port closing](../../../../papers/investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/notes/KNOTTED_PORT_CLOSING.md) | `007316c55f8b133b2ac02b54517a022340509349248e6d0dcb69352608ccc5bd` |
+
+## Final setup Blueprint
+
+`make -C formalization/blueprint all` passed the default 11,191-job Lake build and rendered both formats. Ghostscript interpreted the PDF with `-dPDFSTOPONERROR`. The independent audit found all 207 source labels in HTML and as actual PDF named destinations. The chapter and all ten planning titles appear on their expected printed pages. The dependency graph represents all 15 stated Edition 05 dependency paths, with 12 direct edges after transitive reduction. Its ten open nodes and their HTML headings carry open status. The chapter introduces no Lean declaration link. All 701 inherited label/declaration occurrences were identical, all 700 distinct compiled anchors resolved, and the 309 referenced source pages matched a total of 60,601 exact lines. [Edition 05 chapter](../../../blueprint/src/edition_five_bour_attainment.tex)
+
+| Final rendered source or artifact | SHA-256 |
+| --- | --- |
+| Edition 05 TeX | `6e544693aa514d527741215c17a8fb4917537fa0c08eafad07e8a7888fd87262` |
+| 53-page Blueprint PDF | `7597f51a3f626fe7230a11ddc750c1fafc151b7478cc9d5dd9049df3fbb1b763` |
+| Edition 05 HTML | `bc6bd9511686639ef0e3c979b22d8cfe10502609032ba66b152e22cbfbe20347` |
+| Dependency graph HTML | `1ccc3ad7bd8fefc2ae06f75723b7331009376e09f385ebd4af6f9fb5ff79f453` |

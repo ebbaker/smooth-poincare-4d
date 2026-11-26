@@ -6,7 +6,6 @@ retained buffers permit a Yamabe estimate for the two capped classes.
 We measure the energy of each entire side in the original metric,
 including the part on which the metric is subsequently changed.
 
-\subsection{Marked topology and the energy inequality}
 
 \begin{proposition}[Finite cut criterion]\label{prop:cut-energy}
 Let \(g\) be a smooth metric on a closed oriented homotopy four-sphere \(M\). Cut \(M\) along a finite collection of pairwise disjoint smoothly
@@ -31,7 +30,7 @@ standard. In particular, if \(M\) is nonstandard, the unique piece
 \begin{proof}
 Each middle sphere separates, since otherwise a loop could cross it
 once, contrary to \(H_1(M;\mathbb Z)=0\). A cut in a current piece
-splits it in two: separation holds in the full manifold, and the
+splits it in two. Separation holds in the full manifold, and the
 connected two-sided collar provides exactly two adjacent components.
 The incidence graph of the pieces and cuts is therefore a tree.
 Van Kampen and Mayer--Vietoris along its edges, and along the cap
@@ -73,185 +72,17 @@ competitor for \(I^+(M)\), so
 \eqref{eq:cut-discarded}.
 \end{proof}
 
-The same finite cut proof works with \(T\) replaced throughout
-Proposition~\ref{prop:cut-energy} by \(T+\varepsilon_*\), using
-Theorem~\ref{thm:recognition-gap} on each positive cap.
-In particular the explicit inclusive total \(2T=8\pi^2\) always
-suffices once every cap is positive. The scalar-flat wall for a
-joined path on the original type still requires a strict subcritical
-bound, as in \eqref{eq:zero-wall}.
+The same proof applies with the inclusive per-piece threshold
+\(T+\varepsilon_*\) of Theorem~\ref{thm:recognition-gap}.
+For one cut in the explicit band, \eqref{eq:cut-discarded} bounds
+the smaller raw side by \(e-I^+(M)+\max_j\gamma_j\).
+A minimizing sequence therefore cannot have a definite charge on
+both complete sides of a positive cut whose surcharge tends to zero.
 
-
-For one cut there is a useful direct case. If both capped classes
-are positive and both raw energies differ from \(E/2\) by at most
-\(a\), then \(E/2+a+\max_j\gamma_j\le T\) recognizes both caps and
-hence \(M\). For more uneven divisions, the minimizing inequality
-\eqref{eq:cut-discarded} brings even a small discarded mass into play.
-
-\begin{corollary}[One-cut nonsplitting]\label{thm:cut}
-On a fixed nonstandard type let positive classes have energies
-\(e_i\to I^+(M)<2T\). Suppose a marked sphere has full raw sides
-\(P_{i,\pm}\) with positive smooth caps of energies at most
-\(E_+(g_i;P_{i,\pm})+\gamma_{i,\pm}\). If
-\(e_i+\gamma_{i,+}+\gamma_{i,-}\le2T\) at index \(i\), then
-\begin{equation}\label{eq:cut-min-bound}
- \min_{\sigma=\pm} E_+(g_i;P_{i,\sigma})
- \le e_i-I^+(M)+\max_{\sigma=\pm}\gamma_{i,\sigma}.
-\end{equation}
-\end{corollary}
-\begin{proof}
-In \eqref{eq:cut-discarded} the energy of the discarded side is
-bounded by the minimizing excess plus the surcharge on the surviving
-side. This proves the inequality, even when the survivor varies with \(i\).
-\end{proof}
-
-A short first-order comparison in Proposition~\ref{prop:short-cut}
-constructs positive caps by keeping the joined metric strictly below
-\(2T\) along a path on \(M\). The inclusive bound above applies once
-the capped classes are known to be positive. For a long buffered product
-collar the neck paper gives the individual cap estimates directly,
-including the localization loss for unequal buffer lengths
-\cite{Baker2026MarkedNecks}.
-
-\subsection{Positive entry from the retained exterior}
-
-There is a separate test when a metric has been constructed on a punctured
-smooth type and the Yamabe sign of a closed extension is unknown.
-Let \(P\) be the compact complement in \(M\) of the interiors of finitely
-many disjoint parametrized standard four-balls. Suppose \(h\) is a
-smooth metric on \(P\) equal to \(dt^2+\gamma\) on the marked boundary
-collars, with \(\gamma\) the unit round three-sphere metric. Write
-\(Q_h(v)=\int_P(6|dv|^2+R_hv^2)\,dV_h\).
-
-\begin{proposition}[Round boundary form]\label{prop:round-boundary-form}
-There is a smooth closed extension class on \(M\) of energy
-\(E_+(h;P)\). It has positive Yamabe constant exactly when every
-nonzero \(v\in H^1(P)\), with boundary traces \(f_j\), satisfies
-\[
- Q_h(v)+6\sum_j\langle f_j,\sqrt{1-\Delta_\gamma}\,f_j\rangle>0 ,
-\]
-where \(-\Delta_\gamma\) is nonnegative and the pairing is between
-\(H^{1/2}\) and \(H^{-1/2}\), using \(dV_\gamma\). A sufficient condition is positivity of the lowest
-eigenvalue of \(-6\Delta_h+R_h\) with
-\(\partial_\nu v+v=0\) on each boundary, where \(\nu\) points out of \(P\).
-For nonempty boundary this sufficient condition holds whenever
-\(R_h\ge0\): vanishing of the Robin form would force a constant function
-with zero trace on the connected exterior. Under either sign test,
-\(E_+(h;P)\le4\pi^2\) recognizes \(M\), while
-\(E_+(h;P)<8\pi^2\) supplies positive subcritical entry.
-\end{proposition}
-
-\begin{proof}
-Attach unit half-cylinders pointing out from \(P\). Compactify them
-in the given markings using a conformal factor equal to one near
-\(P\) and to \(e^{-t}\) for large \(t\). In the coordinate
-\(r=e^{-t}\) the compactified metric is exactly flat near each added
-point. The caps have zero Weyl curvature. On the cylinder the scalar
-curvature is six. A spherical harmonic of degree \(l\) has eigenvalue
-\(l(l+2)\) for \(-\Delta_\gamma\); this follows by restricting a
-homogeneous harmonic polynomial in four variables to the unit sphere.
-The least cylinder energy extending its boundary coefficient \(f_l\) is
-\[
- 6\inf_{w(0)=f_l}\int_0^\infty
-       (|w'|^2+(l+1)^2|w|^2)\,dt
-   =6(l+1)|f_l|^2 ,
-\]
-by completing the square; the minimizer is \(f_l e^{-(l+1)t}\).
-Orthogonal summation gives the stated boundary form on \(H^{1/2}\)
-traces. To justify the energy spaces, let \(X\) denote the exterior
-with cylinders, \(f\) the compactifying factor and \(\widehat g=f^2g_X\).
-On compactly supported tests the map \(v\mapsto u=fv\) preserves the
-Yamabe forms by conformal covariance \cite[\S2]{LeeParker1987Yamabe}.
-Adding \(C\|v\|_{2,\widehat g}^2\) adds
-\(C\int_X f^2u^2\,dV_{g_X}\) to the cylinder-side form.
-For \(C\) sufficiently large the resulting norms are equivalent to the
-respective \(H^1\) norms: on \(P\) the factor is one and the scalar is
-bounded, and on the cylinders the scalar is six.
-Compactly supported tests are dense on \(X\), and tests avoiding the
-finitely many added points are dense on the smooth closed metric by
-zero point capacity. Thus the correspondence holds on the completions.
-
-Consequently the full quadratic form is the displayed expression
-plus a nonnegative sum of zero-trace energies, strictly positive for
-each nonzero zero-trace remainder. A nonpositive boundary-form test
-extends by its minimizing cap functions to a nonpositive closed test.
-On the smooth closed metric the first eigenvalue is attained, so
-strict positivity on all nonzero tests is equivalent to positive
-Yamabe sign. Finally the eigenvalues \(l+1\) of the boundary operator
-are at least one, giving the Robin test by its Rayleigh quotient.
-\end{proof}
-
-For a direct recognition test let \(L_h\) be the largest eigenvalue
-of either Weyl block on this exterior. If for every nonzero \(v\in H^1(P)\)
-\begin{equation}\label{eq:modified-boundary}
- Q_h(v)-6\int_P L_h v^2\,dV_h
-      +6\sum_j\langle f_j,\sqrt{1-\Delta_\gamma}\,f_j\rangle>0,
-\end{equation}
-then \(M\) is standard. Indeed \(L\) has conformal weight minus two
-and vanishes on each cap. The preceding extension argument therefore
-tests the closed form with potential \(R-6L\) exactly. Its positive
-first eigenvalue and bounded potential give coercivity in \(H^1\),
-so its modified Yamabe quotient has a positive infimum by Sobolev
-embedding. Chen and Zhu's classification and simple connectivity give
-the conclusion \cite[Theorem 1.7]{ChenZhu2014Conformal}.
-This test uses only the marked exterior. The descent paper gives explicit
-round-ended cylinders satisfying it with unbounded exterior Weyl energy
-\cite{Baker2026FixedDescent}.
-
-\paragraph{Transfer to an isometric regluing.}
-Let \(W\) be a compact oriented smooth contractible four-manifold with
-connected boundary \((Y,\gamma)\). Give \(W\) one smooth metric with a
-product germ on this actual face. The reflected identity double and
-every double glued by an orientation-preserving \(\gamma\)-isometry
-are smooth homotopy spheres. If the identity double has positive
-Yamabe sign, the free-boundary scalar form on \(W\) is strictly
-positive on every nonzero test, by even reflection. Restriction and
-addition then give positive sign on every indicated double. Each has
-the same chiral energy, namely the sum of the two half energies in
-the orientation of \(W\). They also share \(\int L^2dV\), since
-orientation reversal interchanges the Weyl blocks. Thus one reflected
-metric satisfying the spectral recognition test of
-Theorem~\ref{thm:recognition-gap} recognizes all these marked
-regluings, including a boundary map that need not extend over \(W\).
-A reflected energy below \(2T\) instead gives entry on every such
-double. The construction paper derives the free-trace test for a
-finite strip and the signature cost at its actual face
-\cite[section on short seams]{Baker2026ImmersedHandles}.
-
-
-The product requirement can be obtained by approximation on the
-given half. Suppose a smooth metric \(h\) on \(W\) has positive scalar
-curvature, totally geodesic boundary, and induced boundary metric in
-the prescribed class \([\gamma]\) in the actual marking. Write
-\(B_h=E_+(h;W)+E_-(h;W)\) and \(G_h=\int_W L_h^2dV_h\).
-Conformally match \(\gamma\) with zero normal derivative of the
-multiplier. In normal coordinates the tangential metric then differs
-from its boundary value by \(O(t^2)\). Cutting off this difference
-on a layer of width \(b\to0\) gives an exact product with uniformly
-bounded curvature and vanishing change in both curvature integrals.
-The free scalar form was coercive by positive scalar curvature and
-zero mean curvature. The conformal boundary change preserves its
-sign, and the layer changes it by \(o(1)\) in the \(H^1\) form norm.
-Each compatible isometric double consequently has positive classes
-with \(e\to B_h\) and \(P\to4B_h+6G_h\)
-\cite[section on the eta-zero filling]{Baker2026ImmersedHandles}.
-Either \(B_h\le T+\varepsilon_*\) or \(4B_h+6G_h\le8T+\eta\)
-recognizes every one of these fixed smooth types, including equality
-with the approximating classes approaching from above.
-
-For the indicated Mazur half there are smooth positive-scalar-curvature
-extensions \(g\) of the exact eta-zero boundary metric. The extra
-condition needed on some such extension can be tested entirely on
-boundary traces. Let \(\mathcal N_g\) be the outward normal derivative
-of the \((-6\Delta_g+R_g)\)-harmonic Dirichlet extension and \(H_g\)
-the outward mean curvature in the trace convention. A positive
-totally geodesic filling in the prescribed class exists exactly when,
-for some extension, \(6\mathcal N_g+2H_g\) has positive quadratic
-form on all nonzero traces. The positive first Robin eigenfunction
-gives a conformal metric with minimal boundary; boundary deformation
-then makes it totally geodesic with the same induced metric.
-In the converse direction one fixes the target boundary metric by a
-conformal multiplier and solves a positive Dirichlet problem to restore
-positive scalar curvature. The sign for one actual extension and the
-half-energy budget on the resulting metric remain to be established
-\cite[section on filling the marked boundary class]{Baker2026ImmersedHandles}.
+The one-ended argument below uses this topology on a single source
+with buffers in one embedding. For a long round-product collar the
+buffered cut theorem supplies positivity of both smooth caps and
+bounds each splice cost \cite[One buffered cut]{Baker2026MarkedNecks}.
+A short first-order collar can alternatively be tested by a path on
+the uncut source with strict peak \(<2T\)
+\cite[Short spherical cuts and local minimization]{Baker2026FixedDescent}.

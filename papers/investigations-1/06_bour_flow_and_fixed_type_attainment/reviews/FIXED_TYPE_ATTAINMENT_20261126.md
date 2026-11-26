@@ -50,7 +50,13 @@ Input checkout 4da586548b445ccfe9145c6a5671c0f7ecd433f3. Recomputed Git blobs ag
 | Manuscript as first issued to readers | 60b0b09152cff7dc |
 | Revised manuscript read by both readers | 67fa6a8da4b6bb8a |
 | Manuscript with final exponent, citation and upper-limit wording | 719bbea527c6db64 |
-| Master corollary source | c0a711c557f41c0d |
+| Original master corollary as read by both independent readers | c0a711c557f41c0d |
+| Final analytical readback | eb039705e5fcee75 |
+| Final marked readback | 509837e171935f2d |
+
+During integration the master was independently reorganized. The lead compared its [new attainment section](../../../master/manuscript/attainment_on_the_original_sphere.tex) (SHA-256 prefix 2c0b4c1a44f6e07e) and [fixed-band corollary](../../../master/manuscript/exact_closed_types.tex) (45f5ab82c594b39f) with the reviewed 06 theorem. The latter now cites Chang–Qing–Yang Theorem B directly. With positive Bach-flat attainment, bounded total Weyl curvature and \(e\le 2T-\delta\), their Schouten normalization gives \(\int\sigma_2\ge2\delta\), including equality at the upper endpoint of the band. The theorem yields finiteness of diffeomorphism types with at most two choices of orientation per type. [Chang–Qing–Yang, Theorem B and (1.8), (1.10)](https://web.math.princeton.edu/~chang/042606head.pdf)
+
+The public build command rebuilt both the companion and the master. Both PDFs contain the theorem and resolve their citations and cross-references in the rendered text. The scope check resolved 573 local file links in 64 Markdown inputs. These checks establish reproducibility of the reading copies. The mathematical checks are in the two reports above.
 
 ## Remaining geometry
 

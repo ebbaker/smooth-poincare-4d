@@ -29,3 +29,7 @@ The two-ended cover distinguishes a family with sharp sphere intersection \(2n\)
 ## 26 November 2026 · Exterior recovery and core retention
 
 Recovered the first radial slide from a peripheral annulus in the given marked exterior. Measured the mixed rank-three penultimate band and priced both complete sides. [Assessed milestone](../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)
+
+## 26 November 2026 · Two-point localization and a knotted completion
+
+Proved localization on the twice-intersecting meridional cut, identified the successful longitude and established a strict terminal three-to-two reduction for an arbitrary returned local pair. The selected nonlocal exterior with knotted opposite completion gives three cancellations. [Assessment and independent checks](../reviews/TWO_POINT_LOCALIZATION_20261126.md)

@@ -55,8 +55,8 @@ Indeed the closed Euler integrand is \(|W^+|_{\rm HS}^2+|W^-|_{\rm HS}^2-\tfrac1
 
 For \(0\le \chi\le1\) let \(a=\int\chi^4dV_{g_i}\) and \(D(\chi)=\int|d\chi|^2dV_{g_i}\). If the support of the transition has volume at most \(t\), if \(\chi=1\) on a region of volume \(m\), and if its nonzero set has volume at most \(s\), the source Yamabe test gives
 \begin{equation}\label{eq:yamabe-test}
- \sqrt a-a\le 6D(\chi)/Y_i+t/4,qquad
- Y_0(1-\sqrt{s})\sqrt m\le 6D(\chi),qquad
+ \sqrt a-a\le 6D(\chi)/Y_i+t/4,\qquad
+ Y_0(1-\sqrt{s})\sqrt m\le 6D(\chi),\qquad
  D(\chi)\le \|d\chi\|_{4,g_i}^{2}\sqrt{t}.
 \end{equation}
 Here the first estimate uses \(\chi^2(1-\chi^2)\le1/4\). The second uses \(\int\chi^2\le\sqrt{s}\sqrt a\). The gradient fourth power is conformally invariant. For use below one also has the source small-ball lower bound \(\operatorname{Vol}_{g_i}B_{g_i}(x,r)\ge c r^4\) for \(r\le1\), with \(c>0\) independent of \(x,i\). A cutoff on \(B(x,r)\) equal to one on \(B(x,r/2)\) yields \(Y_0 V(r/2)^{1/2}\le(24+S) r^{-2}V(r)\). Iterate the resulting inequality for \(V(r)/r^4\) and use the Euclidean small-radius limit at the smooth center.
@@ -64,8 +64,8 @@ Here the first estimate uses \(\chi^2(1-\chi^2)\le1/4\). The second uses \(\int\
 \begin{definition}[Whole marked comparison]\label{def:marking}
 Let \(N\) be a smooth closed connected oriented homotopy four-sphere with smooth metric \(h\) and a finite set \(P\) of ordinary smooth points. On neighborhoods of an exhaustion by simultaneous compact truncations of \(N-P\), one oriented embedding \(\Phi_i\) per source index is used with its restrictions. A slow diagonal of such embeddings is permitted. On each fixed compact write
 \begin{equation}\label{eq:weak-marking}
- k_i=\Phi_i^*g_i=u_i^2 m_i,qquad u_i>0,qquad
- m_i\longrightarrow h\text{ in }C^0_{\rm loc}\cap W^{1,4}_{\rm loc},qquad
+ k_i=\Phi_i^*g_i=u_i^2 m_i,\qquad u_i>0,\qquad
+ m_i\longrightarrow h\text{ in }C^0_{\rm loc}\cap W^{1,4}_{\rm loc},\qquad
  \sup_i\|R_{m_i}\|_{L^2(K,m_i)}<\infty .
 \end{equation}
 In the last condition one can instead use the full comparison curvature. Coefficient convergence uses fixed smooth coordinates. A smooth conformal comparison has \(C^\infty_{\rm loc}\) convergence of \(m_i\), and a smooth physical comparison has \(m_i=k_i\to h\) in \(C^\infty_{\rm loc}\). A positive physical-volume witness is a fixed compact \(K\subset N-P\) with \(\limsup_i\operatorname{Vol}_{g_i}(\Phi_i K)>0\). Conclusions from this witness use a witnessing subsequence.
@@ -300,7 +300,7 @@ Here \(p_*\) is the mark whose exterior carries unit physical volume. The limit 
 \begin{proof}
 By Proposition~\ref{prop:factor}, \(u_i\to0\) smoothly on interior compacts. The ratio \(w_i=u_i/c_i\) solves
 \[
- -6\Delta_{m_i}w_i+(R_{m_i}-Y_i u_i^2)w_i=0,qquad w_i(x_0)=1.
+ -6\Delta_{m_i}w_i+(R_{m_i}-Y_i u_i^2)w_i=0,\qquad w_i(x_0)=1.
 \]
 On a connected precompact set joining a comparison compact to \(x_0\) the coefficients are uniformly elliptic and smoothly bounded. The interior Harnack inequality for positive solutions with bounded zeroth-order coefficients and elliptic estimates give smooth subsequential convergence on compact subsets to \(w>0\), \(L_hw=0\) \cite[Theorem 8.20]{GilbargTrudinger2001Elliptic}.
 
@@ -410,7 +410,7 @@ The normal-normal Hessian cancels, so offset constants in \(f\) do not enter. Ea
 
 For two faces take the forward normal on both, so \(J=F_+-F_-\). Normalize each physical radius by a constant length rescaling and use the resulting induced metric and measure. On a normalized unit sphere put \(x=1+f_\nu\), \(m=V^{-1}\int_\Sigma x\,dS\), \(\xi=x-m\), \(V=\operatorname{Vol}\Sigma\), and \(P_3(x)=x^3-3x+2\). Then
 \[
- F_\Sigma=-\tfrac12\big(VP_3(m)+\mathcal A_\Sigma\big)+\mathcal R_\Sigma,qquad
+ F_\Sigma=-\tfrac12\big(VP_3(m)+\mathcal A_\Sigma\big)+\mathcal R_\Sigma,\qquad
  \mathcal A_\Sigma=\int_\Sigma(3m\xi^2+\xi^3+(m+\xi)|v|^2+2\xi\Delta_\Sigma f).
 \]
 The remainder has bound \(C(\|N_g(\nu,\cdot)\|_{3/2}A+\|II-\gamma_\Sigma\|_3 A^2)\) with \(A=\|\,|f_\nu|+|v|\,\|_3\) and \(\gamma_\Sigma\) the induced normalized metric. This follows by subtracting \(II=\gamma_\Sigma\), \(H=3\), \(N_g=0\) from the face formula. In particular, with \(J_-=[-J]_+\),

@@ -10,6 +10,8 @@ The [external program review](../reviews/claude/EXTERNAL_PROGRAM_REVIEW_20261126
 - X has an independently model-read working proof on the entire strictly entered band. Each nonstandard entered type carries a positive Bach-flat class of energy \(I^+(M)=a_M\). The master imports this implication and deduces finiteness at \(I^+(M)\le2T-\delta\). The physical-shell and disk comparisons remain available for specified rigidity tests. [06 assessment](../../investigations-1/06_bour_flow_and_fixed_type_attainment/reviews/FIXED_TYPE_ATTAINMENT_20261126.md) · [Master corollary](../manuscript/exact_closed_types.tex)
 - R now tests the attained minimum on an entered type. E continues independently. Investigation 05 retains its marked certificates and finite cost results. A purely topological marked move can proceed independently. A new metric comparison needs an actual carrier and either a specified uncovered extraction case or an admissible variation testing rigidity. [Rigidity](../research-plan/PLAN.md#r--rigidity-of-an-attained-minimum) · [05 live register](../../investigations-1/05_collar_deformation_and_surgery/research-progress/REGISTER.md)
 
+The B01 editorial revision centers the master on E, X and R. B05 imports the two-point terminal reduction in its specified class. The specialist papers now carry the full physical-limit, disk, splice and annulus proofs. [Master manuscript and proof locations](../manuscript/README.md) · [Assessed surgery scope](../../investigations-1/05_collar_deformation_and_surgery/reviews/TWO_POINT_LOCALIZATION_20261126.md)
+
 ## Master task records
 
 | ID | Status | Result or outstanding dependency |
