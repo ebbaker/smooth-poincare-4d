@@ -5,3 +5,7 @@
 ## 25 November 2026 · First working manuscript
 
 Relates the Gauss map, chiral energy and middle-index heights on one immersion. Derives the endpoint and tests the Yamabe sign. [Manuscript and build](manuscript/README.md) · [Assessed editorial return](../../master/research-progress/handoffs/E51_COMPANION_DRAFTS_20261125.md).
+
+## 26 November 2026 · Induced energy and marked heights
+
+The working paper now includes the framed-height recognition cases cited by the shorter master, the qualitative Euclidean embedding argument and the comparison with two-convex and low-entropy recognition. The inclusive \(64\pi^2/9\) bound is on an actual induced metric. [Revised manuscript](manuscript/README.md)

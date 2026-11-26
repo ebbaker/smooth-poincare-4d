@@ -9,3 +9,5 @@ It measures both isolated connectors along the actual charged-disk deformation, 
 The [parent manuscript](../../manuscript/README.md) gives the route from these results to the selection problem for an arbitrary smooth homotopy four-sphere.
 
 The current draft computes cap Dirichlet and outward boundary response estimates at the same physical index as both chiral costs and prices the entire negative scalar integral of a candidate cap. [Current assessment](../../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)
+
+The [first-order straightening lemma](first_order_splice.tex) now appears in full before the matching and native-width estimates. It bounds both chiral costs on the supplied collar. [Location of the other supporting arguments](../../../../master/manuscript/README.md#where-the-supporting-proofs-now-appear)

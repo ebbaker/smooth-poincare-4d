@@ -1,6 +1,6 @@
 \section{Edition 05: entry, fixed-type attainment and rigidity}
 \label{sec:ed05}
-These are proposed formalization targets. Fix a closed connected oriented
+The open problems describe the geometric targets. The checked propositions below give their current formal prerequisites. Fix a closed connected oriented
 smooth homotopy four-sphere $M$. Put $T=4\pi^2$,
 $e=E_+=E_-$ on closed metrics, and $I=I^+(M)$.
 The equality of the two closed integrals does not identify their restrictions
@@ -17,7 +17,7 @@ closed representative. Record which smooth types the construction covers.
 
 \begin{openproblem}[Budget on the original regularized trajectory]
 \label{prop:ed05-bour-energy}
-\uses{lem:ed03-positive-sequence}
+\uses{lem:ed03-positive-sequence,prop:ed47-budget,prop:ed47-motion}
 Given entry, choose $0<\alpha_j<1$ decreasing to zero and unit-volume
 positive Yamabe metrics with $0\le e_{j,0}-I\le\alpha_j^2$. Write
 $D=\int|\operatorname{Ric}_0|^2$ and $S=\int R^2$. Along the original
@@ -42,6 +42,7 @@ the short-time gauge and derivative estimates at fixed parameter.
 
 \begin{openproblem}[Smooth identification of a pointed limit]
 \label{prop:ed05-bour-pointed}
+\uses{prop:ed47-mark,prop:ed47-ends}
 Take a smooth pointed limit of rescaled original metrics with the uniform
 positive Yamabe, subcritical chiral and strict Ricci bounds of the preceding
 budget, finite full curvature, and $R=B=0$ on the complete nonflat limit.
@@ -55,7 +56,7 @@ agreeing on the actual cap collar. Prove $I\le e_X\le\liminf_i e_i$.
 
 \begin{openproblem}[Uniform estimates for the mixed critical sequence]
 \label{prop:ed05-bour-stationary}
-\uses{prop:ed05-bour-alternative,prop:ed05-bour-pointed}
+\uses{prop:ed05-bour-alternative,prop:ed05-bour-pointed,prop:ed47-balls,prop:ed47-mixed}
 Return one unit-volume constant-scalar metric $q_j$ on $M$ at each late
 index. Its parameter is $p_j=\alpha_j$ for a closed regularized return
 and $p_j=0$ for an exact pointed return in Yamabe gauge.
@@ -68,7 +69,7 @@ as $p_j\to0$, also on curvature-normalized balls in the unbounded branch.
 
 \begin{openproblem}[Closed return at bounded curvature]
 \label{prop:ed05-bour-closed}
-\uses{prop:ed05-bour-stationary}
+\uses{prop:ed05-bour-stationary,prop:ed47-return}
 If the unscaled curvature of the selected critical sequence is bounded
 on a subsequence, obtain smooth convergence with whole oriented
 comparison diffeomorphisms. Pass the positive Yamabe floor, the
@@ -97,6 +98,7 @@ positive-time smoothing, compactness and smooth type hypotheses.
 
 \begin{openproblem}[Rigidity of an attained minimizer]
 \label{prop:ed05-rigidity}
+\uses{prop:ed47-variation}
 Assume a smooth positive class attains $I$ in the band above the
 recognition gap and below $2T$. For a specified candidate prove smooth
 recognition of $M$ or produce a strictly lower positive competitor on
@@ -113,3 +115,196 @@ argument covering the minimizing class returned on that same type.
 For a handle argument preserve the actual markings and establish
 exhaustiveness of its allowed presentations and successors.
 \end{openproblem}
+
+\subsection{Checked results for the original and returned metrics}
+
+\begin{proposition}[Yamabe starts at prescribed excess]
+\label{prop:ed47-start}
+\lean{SmoothPoincare.BourYamabeNormalization, SmoothPoincare.exists_bourYamabeStarts}
+\leanok
+Given one measured positive entry below $8\pi^2$ and a conformal Yamabe
+normalization preserving the measured energy, every positive sequence
+$\alpha_j$ admits unit-volume positive Yamabe starts on this carrier.
+Their excess lies in $[0,\alpha_j^2]$, their scalar-square integral is
+$Y_{j,0}^2$, and they satisfy a common strict chiral margin.
+\end{proposition}
+\begin{proof}
+\leanok
+Use the entry to inhabit the positive energy set. Select a member below the
+smaller of $I+\alpha_j^2$ and the midpoint between the entry energy and
+$8\pi^2$. Normalize the selected metric in its own class.
+\end{proof}
+
+\begin{proposition}[Physical budget at every original time]
+\label{prop:ed47-budget}
+\uses{prop:ed47-start}
+\lean{SmoothPoincare.Bour.bourChargeOn_full_eq, SmoothPoincare.Bour.bourEuler_eq_charges, SmoothPoincare.Bour.bourEnergy_eq_chiral_scalar, SmoothPoincare.Bour.bourEnergy_conformal_minimum, SmoothPoincare.Bour.bourRicci_eq_integral, SmoothPoincare.Bour.bourFullCurvature_eq_euler_add_ricci, SmoothPoincare.Bour.bourOriginalFlow_budget, SmoothPoincare.Bour.eventually_bourOriginalFlow_budget}
+\leanok
+Supply the closed Euler value $16\pi^2$, the signed metric measurements,
+the unit-volume Yamabe representatives, the round initial upper bound,
+a continuous sign detector and the original functional sublevel.
+Put $\delta=8\pi^2-I>0$ and $\epsilon_j=e_{j,0}-I\le\alpha_j^2$.
+When $0<\alpha_j<1$ tends to zero, one cutoff in $j$ gives, at every
+original time,
+\[
+ Y_t\ge\sqrt{24\delta},\qquad I\le E_\pm(g_t)\le8\pi^2-\delta/2,
+ \qquad S_t\le Y_{j,0}^2+48\alpha_j .
+\]
+The physical two-tensor norm satisfies
+\[
+ D_t\le4I+4\epsilon_j/\alpha_j+(Y_{j,0}^2-384\pi^2)/12
+ \le32\pi^2-2\delta.
+\]
+The curvature-operator integral is $16\pi^2+D_t$.
+Both total chiral energies converge uniformly over the original time domains to $I$.
+\end{proposition}
+\begin{proof}
+\leanok
+Integrate the local four-slot curvature decomposition before using closed
+signature. The forms $2(1-\alpha)e+\alpha D/2$ and
+$2e+\alpha S/24-16\alpha\pi^2$ agree. A strictly positive pinching
+margin bounds the Yamabe square away from zero. Connectedness propagates
+the initial sign. Every slice is now admissible in the same infimum, which
+gives the displayed inequalities by functional decrease.
+\end{proof}
+
+\begin{proposition}[Dissipation and the squared parabolic time scale]
+\label{prop:ed47-motion}
+\lean{SmoothPoincare.Bour.original_gradient_sublevel, SmoothPoincare.Bour.metricVelocity_scale_time, SmoothPoincare.Bour.gradientSq_scale, SmoothPoincare.Bour.parabolic_dissipation_eq, SmoothPoincare.Bour.bourEnergy_scale, SmoothPoincare.Bour.volume_constant_of_scale_variation}
+\leanok
+For a supplied geometric first variation and actual velocity $-2G$ on
+a regular slab, $\int_a^b\|G\|_2^2=(F_a-F_b)/2$ and $F_b\le F_a$.
+Under $c g(t_0+s/c^2)$ the covariant velocity has weight $c^{-1}$ and
+the spatial gradient integral has weight $c^{-2}$. The time-integrated
+dissipation on corresponding slabs agrees. The closed energy is
+constant under scaling at fixed Euler value. Volume is constant given
+the regular volume variation, its velocity trace and scale-direction
+first variation.
+\end{proposition}
+\begin{proof}
+\leanok
+Insert the metric derivative in the physical tensor pairing and integrate
+the derivative of $F$. Four-volume scales by $c^2$. The time substitution
+cancels the remaining power. The derivative of the functional in the
+scaling direction vanishes, giving zero integrated velocity trace.
+\end{proof}
+
+\begin{proposition}[One comparison of the full truncation]
+\label{prop:ed47-mark}
+\lean{SmoothPoincare.bourWholeCoreComparison, SmoothPoincare.bourComparison_orientationAt, SmoothPoincare.bourPointedTraceFreeRicci_real_le_liminf, SmoothPoincare.bourPointedSignedWeyl_le_liminf, SmoothPoincare.bourGlueMarkedInverse}
+\leanok
+Given pointed exhaustion maps with the specified orientation, a compact
+truncation containing the core and all buffers is eventually covered by
+one open comparison and its inverse. Canonical two-jet metric convergence,
+actual constant rescalings of compact sources and an eventual Ricci ceiling
+give $D_X\le\liminf D_i$ in the original physical norm. Each Weyl sign
+has its separate comparison under the signed frame and density hypotheses.
+Two supplied partial diffeomorphisms on the core and its exterior, with
+the prescribed agreement, image overlap, coverage and orientation at a
+core point, glue to an oriented diffeomorphism with both inverse germs.
+\end{proposition}
+\begin{proof}
+\leanok
+Restrict the single late comparison. Exhaust the limit with compact sets
+before bounding the full lower limit. The Ricci density has scale weight
+$-2$ and the four-volume has weight $2$. Glue the two compact neighborhoods,
+globalize using source and image coverage, and restrict the inverse.
+\end{proof}
+
+\begin{proposition}[End count and both capped exterior inequalities]
+\label{prop:ed47-ends}
+\lean{SmoothPoincare.bourOneEuclideanEnd, SmoothPoincare.bourSignedEndEnergy, SmoothPoincare.bourCappedExterior_both_lt}
+\leanok
+After triviality of all end groups and the spherical boundary Euler
+identity have been supplied, $k\ge1$ and $D_X<32\pi^2$ imply $k=1$.
+Equal signed totals on the compactified carrier then give $D_X=4e_X$.
+For a specified cap the two signed exterior tests give strict capped
+energies below $T$ under their cut, ball-mass and splice margins.
+\end{proposition}
+\begin{proof}
+\leanok
+The boundary identity is $D_X=2(E_++E_-)+32\pi^2(k-1)$. Nonnegative
+signed charges exclude $k\ge2$. Subtract the signed interior masses and
+add the measured splice on each complete exterior.
+\end{proof}
+
+\begin{proposition}[Uniform physical ball volumes for the CSC sequence]
+\label{prop:ed47-balls}
+\lean{SmoothPoincare.bourYamabe_smooth_test_scale, SmoothPoincare.bourBallVolume_lower_of_cutoff, SmoothPoincare.bourBallVolume_lower_of_yamabe_scale, SmoothPoincare.bourTraceFreeRicci_scale, SmoothPoincare.bourVolume_scale}
+\leanok
+On the connected closed four-manifold let $Y\ge y>0$, with constant
+scalar $0\le R\le C$. For every $a\ge1$, center $x$ and $0<r\le1$,
+\[
+ \operatorname{Vol}_{a g} B_{a g}(x,r)\ge
+ \left(\frac{y}{4(6L^2+C)}\right)^2 r^4,
+\]
+where $L$ is the fixed smooth cutoff slope. The constant works on the
+original and curvature-normalized metrics at every index.
+\end{proposition}
+\begin{proof}
+\leanok
+Use the conformal-class inequality on nonnegative smooth tests. In the
+scaled metric smooth a Lipschitz cutoff, bound its gradient by $L/r$,
+then iterate the ball-volume inequality from the small-radius lower bound.
+\end{proof}
+
+\begin{proposition}[Initial Yamabe saturation in a second pointed return]
+\label{prop:ed47-mixed}
+\uses{prop:ed47-budget,prop:ed47-mark,prop:ed47-ends}
+\lean{SmoothPoincare.bourFirstPointed_excess_and_deficit, SmoothPoincare.Bour.fixedReturn_budget, SmoothPoincare.Bour.mixedReturn_energy_and_parameter, SmoothPoincare.Bour.mixedReturn_pointed_saturation}
+\leanok
+Suppose the closed first returns give convergence of their physical
+energies, and the pointed first returns give the marked Weyl and Ricci
+comparisons and the scalar bound in their new Yamabe gauge. Positivity,
+the closed Euler evaluations and original budgets supply $p_j\to0$ and
+$E_\pm(q_j)\to I$. On a second marked pointed subsequence, let the
+positive returned metric have $e_X\le\liminf E_+(q_j)$ and
+$4e_X\le\liminf D(q_j)$. Then $e_X=I$ and, on that subsequence,
+$Y_{j,0}^2\to384\pi^2$.
+\end{proposition}
+\begin{proof}
+\leanok
+Write $b_j=384\pi^2-Y_{j,0}^2$. A first pointed return gives
+$b_j\le48\alpha_j$. A closed one gives
+$b_j\le48\alpha_j+12(4I-D(q_j))$. The oriented positive return gives
+$I\le e_X$. Use $4I\le\liminf D(q_j)$ to control the closed terms
+even when the two first alternatives alternate.
+\end{proof}
+
+\begin{proposition}[Positive return on the original smooth carrier]
+\label{prop:ed47-return}
+\lean{SmoothPoincare.SignedCollarMetric.pullbackCross, SmoothPoincare.SignedCollarMetric.energy_tendsto_of_metricCPConvergence, SmoothPoincare.bourAttainsOfSignedPullback, SmoothPoincare.bourBachFlat_of_criticalLimit, SmoothPoincare.bourClosedReturn, SmoothPoincare.bourRoundReturn}
+\leanok
+A supplied oriented diffeomorphism pulls a positive measured metric of
+energy at most the source infimum back to an attaining metric in both
+chiralities. Bach-flat transport uses the specified covariant operator
+and naturality input. On a supplied closed mixed return the energy,
+conformal test and covariant Euler limits give the same conclusion. On
+a fixed carrier, the two-jet energy comparison uses compatible frames,
+weighted measurability and domination. The actual round pullback has both
+energies zero.
+\end{proposition}
+\begin{proof}
+\leanok
+Transport the signed geometric witness and use membership in the positive
+energy set for the opposite inequality. On the closed limit pass each
+conformal test separately and take the limit of the supplied Euler identity.
+\end{proof}
+
+\begin{proposition}[Second variation at an attained geometric metric]
+\label{prop:ed47-variation}
+\uses{prop:ed47-return}
+\lean{SmoothPoincare.bourAttainedVariation, SmoothPoincare.bourNegativeSecondVariationExcludesAttainment, SmoothPoincare.bourRoundAttainedVariation}
+\leanok
+Along a two-sided, jointly smooth positive metric variation with twice
+continuously differentiable measured Weyl energy, an attaining metric
+has zero first and nonnegative second derivative. Negative second
+derivative in a supplied direction produces arbitrarily close positive
+competitors of strictly lower energy. The signed round pullback satisfies
+the necessary variation conditions.
+\end{proposition}
+\begin{proof}
+\leanok
+Positive-class membership gives a local minimum along the path.
+Apply the second-derivative test to the real energy function.
+\end{proof}

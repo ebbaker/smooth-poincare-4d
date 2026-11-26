@@ -29,3 +29,7 @@ The connected-patch transgression bounds chiral transfer across an actual shaft.
 ## 25 November 2026 · Interior variation and curvature at the charged scale
 
 The original marked disk carries a quantitative first- and second-variation test. On a vanishing-deficit sequence the modified ball-volume bound locates concentrated Ricci energy and a positive-time flow with a nonzero negative Euler trace. That flow has no smooth complete initial limit in the fixed markings. The exact overlap disk and the round exit give separate comparisons on their own source metrics. [Assessment and source generations](../research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md)
+
+## 26 November 2026 · Physical minimizing sequences and closed variations
+
+The descent paper now contains the master's physical-volume, complete-limit, Ricci-scale and local-replacement proofs. Its positive exterior section proves the product-circle cap obstruction, and its closed section places the signed variation at the smooth minimum supplied after entry by investigation 06. [Editable paper and proof locations](manuscript/README.md)

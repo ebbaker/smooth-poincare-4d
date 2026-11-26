@@ -1,3 +1,4 @@
+% Four-point marked returns, working intake 4d73fdde6804, 26 November 2026.
 % Two-point localization and the knotted opposite completion, intake 4da586548b44, 26 November 2026.
 % 26 November 2026. Exterior recovery and native caps, intake 8471728a1549.
 % 26 November 2026. Exterior recovery and native caps, intake 8471728a1549.
@@ -1443,6 +1444,321 @@ one cancelling Hopf pair, changes the local diagram and removes the
 pair \cite[\S10]{GompfScharlemannThompson2010}. Its temporary middle
 count is four. The smooth local comparison requires no assertion of
 unstabilized unlinking slides for that diagram.
+
+\subsection{Four points with two through arcs}\label{sec:four-port}
+Write \(Y_r=\#_r(S^1\times S^2)\). Fix a transverse sphere disjoint
+from the stationary tube \(Q\) in an integral pair \(Q,K\) from
+\(Y_1\) to \(Y_3\). Suppose its four points are identified by label
+on the two cut faces. The lower return joins \(1,2\), the upper return
+joins \(3,4\), and the through strands join \(3_-\) to \(1_+\)
+and \(4_-\) to \(2_+\). Orient the moving knot in the direction of
+the first through strand. Its four crossings have cyclic signs
+\(+,+,-,-\). Fill \(Q\) at its given slope and drill the four moving
+arcs in the slab. Call the resulting manifold \(X\). On each face
+adjoin the lateral annulus of its return to the four-holed sphere.
+The resulting subsurface \(U_\pm\subset\partial X\) is a torus with
+two holes. Each remaining hole faces a through wall.
+
+\begin{theorem}[Compression in the drilled slab]\label{thm:mixed-four}
+At least one \(U_\pm\) has a proper compressing disk in \(X\) with
+essential nonperipheral boundary.
+\end{theorem}
+\begin{proof}
+In the integral moving filling the four moving meridians are
+parallel longitudes. In a meridian disk of the filling choose
+disjoint chords cutting off the two intervals belonging to the two
+returns. The intervening sectors are two ears and a quadrilateral.
+Take their products with the longitude circle in these coordinates.
+The two chord annuli complete the four-holed sphere to a connected
+oriented closed genus-two surface \(F\). Cutting the joint outlet
+at \(F\) yields a connected manifold \(Z\). Each ear extends a return
+wall by a collar. The middle solid torus attaches to \(X\) along
+\emph{both} through walls. The two copies \(F_\pm\) of the cut
+surface consist of \(U_\pm\) with an annulus between its through holes,
+up to these collars. These are the actual attachments in the cut
+outlet, including their meridional identifications.
+
+The through meridian maps to an element of infinite order already
+in the closed outlet. Indeed the maximal increase of \(b_1\) by two
+makes both components null-homologous and kills neither independent
+meridian in first homology (the integral framing and linking matrix
+vanishes). Thus the through cyclic groups inject in \(G=\pi_1X\).
+The middle torus gives an HNN extension of \(G\) identifying the two
+through cyclic groups, since either attaching annulus maps
+isomorphically to the solid-torus group. Suppose
+\(\pi_1 U_\pm\to G\) is injective for one sign. Choose the paths to
+the two annuli in this very \(U_\pm\), and cross the middle torus along
+its adjoining chord annulus. With these choices the HNN decomposition
+of \(\pi_1 F_\pm\) has the same stable letter and the same two cyclic
+edge groups as the one for \(\pi_1Z\). A reduced surface word stays
+reduced, since membership in either full edge group is reflected by
+the vertex injection. Hence \(\pi_1 F_\pm\to\pi_1 Z\) is injective.
+If both signs injected, gluing back \(F\) would embed its closed
+genus-two group in \(\pi_1Y_3=F_3\) by the HNN normal form
+\cite{HigmanNeumannNeumann1949,Britton1963Word}. A subgroup of a free group is
+free by the covering graph description. A closed orientable
+genus-two surface group is not free, as its aspherical surface has
+nonzero second homology. Apply the Loop Theorem to the failing
+subsurface in \(\partial X\) \cite{Stallings1960Loop}. Both peripheral
+boundary classes map to through meridians of infinite order.
+\end{proof}
+
+\paragraph{What the cyclic cover detects.}
+Use the primitive character from the inlet, extended by zero on
+link meridians. The cyclic cover of the inlet is \(S^2\times\mathbb R\).
+The complement of all lifted knots has first homology
+\(\Lambda^2\) on their meridians, with \(\Lambda=\mathbb Z[t,t^{-1}]\).
+Indeed excision with ordinary, compact singular chains gives the
+free meridian module. The class of a horizontal sphere has zero
+algebraic intersection with each compact lifted knot. Filling imposes
+the two equivariant framing and linking columns. The primitive
+character of the free outlet group can be put on one generator of
+a free basis. The cyclic covering graph then gives \(\Lambda^2\) in
+degree one. Tensoring the surgery presentation with \(\mathbb Q(t)\)
+forces every matrix entry to vanish in \(\Lambda\).
+
+Cap the two returns separately to \(J_-,J_+\) and the through pair
+to \(C\), using disjoint short chords in the capping balls. The
+moving lift consists, from left to right, of the capped upper return,
+the central through part and the lower return, joined at the seams.
+The coefficients of its equivariant linking with a stationary lift
+give separately
+\[
+ \operatorname{lk}(Q,J_+)=\operatorname{lk}(Q,C)
+   =\operatorname{lk}(Q,J_-)=0.
+\]
+The distance-two coefficient for linking with its own translate
+gives \(\operatorname{lk}(J_+,J_-)=0\). The distance-one coefficient
+gives the \emph{sum} of the two oriented linkings with \(C\).
+To see the coefficients, break each moving cycle at the two seams
+and add oppositely oriented copies of its capping chord. For different
+lifts the two chord disks used at a common seam are disjoint. Pieces
+in distinct capped slabs contribute zero. This argument uses the
+whole free outlet and retains the placement of both returns.
+
+For a specified face chord \(b\) on either side, close it by a
+section of the corresponding return wall. All wall windings add
+integer multiples of the return meridian, of infinite order in
+\(H_1(X)\). At most one winding therefore gives zero. The simple
+boundary for that winding bounds a proper disk precisely when its
+word in \(\pi_1 X\) is trivial, by Dehn's lemma
+\cite{Papakyriakopoulos1957Dehn}. Both word tests passing for
+disjoint boundary curves gives disjoint disks by innermost-circle
+replacement. With a triangulated marked input these are finite
+tests \cite{AschenbrennerFriedlWilton2015Decision}. A disk for
+one return allows a framed slide for each stationary-core puncture
+and a push across that chord. The same sphere now meets the successor
+at two points. Theorem~\ref{thm:two-port} applies there. For a
+terminal split lower attachment Corollary~\ref{cor:two-port-count}
+already gives a strict decrease. The boundary of the disk supplied
+by Theorem~\ref{thm:mixed-four} still has to pass the marked test.
+
+\paragraph{A four-point exterior and its actual successor.}
+In an interior ball of the slab retain the joint zero-framed link
+\(L_{4,1}=Q\cup V_4\) of \cite[Figure~1 and \S7]{GompfScharlemannThompson2010}.
+Open two disjoint mouth intervals of \(V_4\) and carry the ends of
+one to the upper \(12\) disk and of the other to the lower \(34\) disk
+on untied product fingers. The two resulting through strands
+have the pairing above. Use two zero parallels of the square knot
+\(Q\) at distinct azimuths of its framed tube. Remove one gap in
+each and carry the ends to the lower \(12\) and upper \(34\) disks,
+respectively. The four access boxes are disjoint, leave the stationary
+sheets outwards, and use identical short chord germs across the seam.
+Take the zero framing on the resulting moving knot. This defines the
+exterior by its tangle and framings.
+
+The radial annulus at each stationary azimuth, extended by the
+rectangle between its two access fingers, runs from its return
+and short face chord to the stationary longitude. The distinct
+azimuths and boxes make the two annuli disjoint from each other
+and from the through strands. Cap them with distinct meridian
+disks in the stationary filling. Each resulting disk meets the
+filling core once. A disk with no punctures for either return would
+span its capped square-knot parallel before filling. This proves
+sharpness for the two specified disk boundaries. Slitting first the
+lower annulus gives a framed subtraction slide. Push the lower
+return across its chord to restore the upper \(12\) mouth of
+\(V_4\). The two remaining intersections belong to the upper
+\(34\) return and to the lower \(34\) return whose completion is
+now the actual \(V_4\). The second annulus restores that last mouth.
+Both slides preserve the zero coefficients by the framed slide
+formula and vanishing linking. The joint local link is again
+\(L_{4,1}\), proving the required outlet \(Y_1\#Y_2=Y_3\).
+
+For the original moving lift the nonsplit stationary partners in
+the compactified cover have indices \(\{-1,0,1\}\): the two end
+pieces are square-knot parallel pairs and the middle is the actual
+joint link. Extra local summands on the moving component preserve
+nonsplitting by the decomposing-sphere argument of
+Section~\ref{sec:generator}. All other stationary lifts are separated
+by slab spheres. After the lower slide the support is \(\{-1,0\}\),
+and after the second it is \(\{0\}\). For any nonseparating sphere
+missing \(Q\), its lifts cut the cover into successive slabs.
+A fixed moving lift must visit the slabs of all its nonsplit partners:
+a separating lift sphere otherwise splits the two components in
+the end compactification. A closed itinerary visiting indices at
+distance \(d\) crosses at least \(2d\) times. Hence the three successive
+minimum intersection numbers are exactly \(4,2,0\), achieved at the
+given sphere. In the earlier winding-two example the support missed
+its middle index. An index translation or reversal cannot identify
+these marked exteriors.
+
+\paragraph{An obstruction for specified chords on this same outlet.}
+On the common four-holed face let \(d\) enclose holes \(1,3\),
+crossing each short chord once. Replace both designated chords on
+both faces by their images under the same \(k\)-fold Dehn twist about
+\(d\), keeping the tangle, tubes and face gluing fixed. The chords
+stay disjoint and matched. Close the two through strands using their
+\emph{original} cap arcs to \(C=V_4\). Linking with \(C\) gives a
+homomorphism \(h:H_1(X)\to\mathbb Z\), since the stationary filling
+slope has zero linking with \(C\). It vanishes on each return meridian.
+The loop \(d\) encloses one through hole on either face, so
+\(\lvert h(d)\rvert=1\). The old disk gave value zero on its
+closed boundary. Twisting the chord adds \(\pm k[d]\) in relative
+homology. Every closed candidate for either new return chord thus
+has \(\lvert h\rvert=\lvert k\rvert\), independently of its wall
+winding. For \(k\ne0\) neither prescribed chord bounds a bridge.
+This gives a free-outlet example where subsurface compression
+cannot select the prescribed returns. If the face arcs are allowed
+to vary, the original disks on this exterior remain available.
+
+\begin{theorem}[Recovering a return chord from the face]
+\label{thm:four-face}
+In the mixed four-point pairing, suppose a return admits a bridge
+after stationary filling with its face chord free to vary. There
+is exactly one isotopy class of essential nonperipheral simple
+circles on that four-holed face which bound disks in \(X\).
+It separates the ends of this return from the through ends, and
+determines its bridge chord up to turns at the endpoints. On
+triangulated marked input, existence of such a bridge, and of a
+pair whose face chords are matched and disjoint, are decidable.
+\end{theorem}
+\begin{proof}
+Write \(F_0\) for the selected four-holed face. A regular neighborhood
+of the bridge disk with its return and a small face patch is a ball
+containing one boundary-parallel arc. Drilling that arc cuts off a
+solid torus \(T_0\) from \(X\) along a disk with boundary \(s\) in
+\(F_0\). The two sides of \(s\) in \(F_0\) are pairs of pants. Van
+Kampen gives \(\pi_1X=\pi_1T_0*\pi_1X'\) along this disk. Capping
+\(s\) in each pair of pants leaves an annulus. Its core on the return
+side generates \(\pi_1T_0\), while on the other side the core is a
+through meridian of infinite order in \(\pi_1X'\).
+
+Any essential face circle different from \(s\), up to isotopy and
+excluding peripheral curves, crosses \(s\) in minimal position.
+Each intervening arc on a pair of pants returns to \(s\) and cuts
+off exactly one hole: otherwise a bigon could be removed. Based on
+the capping disk it gives one of the two oriented generators of the
+corresponding annulus group. The resulting cyclic word alternates
+between nontrivial elements of the two free factors. Thus the
+circle cannot bound a disk. The return-side pants determine the arc
+joining its two holes up to endpoint turns, which can be absorbed
+in the section of its return wall. This proves uniqueness without
+irreducibility.
+
+Here is how to find the candidate without a supplied bridge. The
+boundary of \(X\) is connected. Prime decomposition retains its
+marked boundary on one summand. Disk-bounding for simple curves
+there is unchanged by the closed summands, by free-product
+injectivity and Dehn's lemma. On the irreducible boundary-bearing
+summand put a boundary pattern on the four cuffs and a graph cutting
+the complementary boundary into disks. The only pattern region that
+can contain the boundary of an essential clean disk is \(F_0\).
+Its cuffs have infinite-order meridians, so its essential
+nonperipheral circles are essential in the entire boundary.
+Matveev's algorithm gives an essential clean disk or verifies its
+absence \cite[Theorems 4.1.12--4.1.13]{Matveev2007Algorithmic}.
+If no disk is found, no bridge exists. Otherwise try its separator.
+A different partition of the holes rules out the return by uniqueness.
+For the correct partition choose the arc in the return-side pants,
+test its unique homologically allowed wall winding if one exists,
+and use the word test above. A positive test gives a bridge.
+If any bridge existed at all, the preceding free-product argument
+ensures it was tested by this procedure. One can recover an actual
+disk by enumerating embedded piecewise-linear disks with the
+specified null boundary in subdivisions, followed by smoothing.
+
+When both faces pass, the two separators must agree up to isotopy
+under the supplied seam to give a disjoint matched chord pair.
+Indeed disjoint arcs joining \(12\) and \(34\) determine a common
+separating slope. Conversely a common separator puts the arcs in
+opposite pairs of pants. Use boundary collars and the wall sections
+to fit their marked end germs, then remove interior disk intersections
+by innermost-circle replacement. If individual face arcs were
+prescribed initially, the same test compares their separators
+with the recovered classes.
+\end{proof}
+
+There is also a test before stationary filling. If an essential
+nonperipheral face circle bounds a disk in the original drilled slab,
+compress the original sphere using two parallel copies of this disk.
+Each of the two face disks contains precisely two punctures, because
+the circle is essential on a four-holed sphere. The two resulting
+spheres are disjoint from the stationary tube, meet the moving
+core twice each, and, with induced orientations, sum to the original
+nonzero sphere class in the inlet. At least one is nonseparating.
+Theorem~\ref{thm:two-port} therefore localizes the original pair.
+In a fixture with minimum four, every compressing disk on the face
+after stationary filling must meet the filling core.
+
+The abelian tests for freely chosen chords can always be passed
+simultaneously. Before stationary filling the slab exterior has
+meridian basis \(\mu_Q,\mu_-,\mu_+,\mu_t\): the oriented sphere
+relation equates the two through meridians. Capping with the two
+trivial arcs on each face gives the same meridian basis for the
+four-component link \(Q,J_-,J_+,C\). The stationary relation is
+zero by the cover calculation. With a zero-longitude section the
+two return classes in this basis are therefore \(b_\pm\mu_t\), where
+\(b_\pm=\operatorname{lk}(J_\pm,C)\) and \(b_-+b_+=0\).
+A common twist about a circle enclosing \(1,3\) as above changes
+one through coefficient by one per turn. The other changes by its
+negative: recapping gives the same meridian coordinates and the
+distance-one cover relation still holds. Choose the power which
+sets both to zero, and absorb each own-meridian term in its wall
+section. Null-homology alone still allows a geometric obstruction.
+
+\paragraph{Null-homologous boundaries which cannot give the disks.}
+Return to the explicit fixture and its original separator \(s\)
+between the pairs \(12,34\). With the cross-pair circle \(d\) used
+above, choose \(i(s,d)=2\) and put \(s_1=T_d(s)\), where \(T_d\)
+is a Dehn twist. Replace the original two chords on both faces by
+their images under \(T_{s_1}^k\). The twist fixes the holes
+individually and \(s_1\) has the partition \(12\mid34\). Each
+chord has both ends on the same side of \(s_1\); its oriented
+intersection with \(s_1\) is zero. The absolute cycle difference
+between the old and new arcs therefore vanishes in the face's
+first homology. Keeping the original wall sections makes both
+complete return words zero in \(H_1(X)\).
+
+Their new separator is \(s'=T_{s_1}^k(s)\). The geometric twist
+formula gives \(i(s,s_1)=4\) and \(i(s,s')=16\lvert k\rvert\)
+\cite[Proposition 3.2]{FarbMargalit2012Primer}. On either face
+the original bridge identifies \(s\) as the unique disk-bounding
+face slope by Theorem~\ref{thm:four-face}. Thus for \(k\ne0\)
+neither new prescribed chord bounds a bridge, at any wall winding.
+Both original disks and the actual free ends persist throughout the
+change of marking. This exhibits the nonabelian obstruction on the
+specified exterior itself.
+
+Throughout the two slides the stationary-first cut is the actual
+\(Y_1\# S^3_0(Q)\). The slides change no handle count. Write \(P\)
+for the composite outlet identification, including the relative local
+trace identification when it is used. At each successor carry the
+entire tube as \(Pt\) with inverse \(t^{-1}P^{-1}\) on its image,
+and extend over its handle. The final closing is
+\(\gamma\widehat P^{-1}\), inverse \(\widehat P\gamma^{-1}\).
+For an immediate closing the old reverse markings satisfy
+\((\gamma P^{-1})(Po_i)\tau=\gamma o_i\tau\).
+The recognized local trace allows the split replacement with
+intermediate cut \(Y_2\). With initial split \(A\) and a terminal
+rank-three upper body the cancellations give \(3\to2\to1\to0\)
+with no births, using the newly exposed duals. At rank one the actual
+closing extends after re-marking by the upper-body theorem
+\cite{LaudenbachPoenaru1972Handlebodies}, giving the standard final cap. The first decrease
+alone needs only localization. The separate stabilized diagram
+comparison for this local link temporarily raises the middle count
+to four, removes that same Hopf pair, and returns to three before
+the cancellations \cite[\S10]{GompfScharlemannThompson2010}.
 
 \section{Metric criteria on the given levels}\label{sec:bands}
 These criteria give PSC domination for the actual slice

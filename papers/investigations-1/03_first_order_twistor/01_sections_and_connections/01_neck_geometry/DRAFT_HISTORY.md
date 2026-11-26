@@ -51,3 +51,7 @@ A forward polar Jacobian bound controls the full distributional radial defect un
 ## 25 November 2026 · Interior variation and curvature at the charged scale
 
 At the physical intermediate scale, a full buffered band with bounded sectional curvature, bounded rescaled volume and vanishing full curvature integral supplies a proper flat comparison and compact embeddings. The Jacobian or full signed radial-defect estimate must hold at this scale. The terminal polar throat calculation tests loss of inner protection. [Assessment and versions](../../../../master/research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md)
+
+## 26 November 2026 · Critical annuli and their smooth caps
+
+Integrated the master's fixed-distortion harmonic-annulus argument with the proof of the anchored, complete-side cap criterion. The first-order control and both marked sets are read in the supplied physical chart. The separate spherical-link and buffered-cap results supply inputs to investigation 06. [Critical annulus](manuscript/critical_annulus.tex) · [Anchored chart](manuscript/anchored_physical_shell.tex)

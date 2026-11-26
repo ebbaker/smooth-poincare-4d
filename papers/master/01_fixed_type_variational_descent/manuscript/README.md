@@ -1,6 +1,8 @@
 # Fixed-type descent for chiral Weyl energy on homotopy four-spheres
 
-Working paper by Edward B. Baker III, 25 November 2026. [LaTeX manuscript](fixed_type_chiral_energy_descent.tex) · [Branch overview](../research-overview/OVERVIEW.md) · [Master manuscript](../../manuscript/README.md)
+Working paper by Edward B. Baker III, revised 26 November 2026. [LaTeX manuscript](fixed_type_chiral_energy_descent.tex) · [Branch overview](../research-overview/OVERVIEW.md) · [Master manuscript](../../manuscript/README.md)
+
+The current edition includes the complete proofs of [local replacement on the original source](variational_comparison.tex), [physical-volume selection](physical_volume.tex), [complete minimizing blow-ups](complete_limits.tex) and [physical Ricci scales](ricci_scales.tex). They describe arbitrary minimizing sequences under their stated hypotheses. The [Bour companion](../../../investigations-1/06_bour_flow_and_fixed_type_attainment/manuscript/README.md) obtains an attained class on an entered type by choosing stationary outputs. The signed second variation here applies to that minimum.
 
 The [uniform spectral gap](isotropic_gap.tex) uses a common Ricci-flow time and propagation of the isotropic curvature defect. The [full subcritical disk theorem](spectral_windows.tex) locates physical charge on both sides of one marked sphere. The [capacity and cost estimates](collar_capacity.tex) apply to prescribed smooth charts. The [closed variation](cotton_variation.tex) gives a separate test at an attained class.
 

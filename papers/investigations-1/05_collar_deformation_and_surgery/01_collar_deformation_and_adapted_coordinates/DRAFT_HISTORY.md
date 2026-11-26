@@ -29,3 +29,7 @@ The manuscript now measures both isolated connectors along the actual charged-di
 ## 26 November 2026 · Exterior recovery and core retention
 
 Derived a complete scalar-cost test, finite Dirichlet and outward-response estimates, and the actual angular response on the round capped exterior of the core-retaining construction. [Assessed milestone](../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)
+
+## 26 November 2026 · First-order straightening on the given collar
+
+Imported the curvature calculation for a first-order splice from the 25 November master, ahead of the prescribed matching and finite-width estimates. It prices the cut in both chiralities in its given chart. [Straightening lemma](manuscript/first_order_splice.tex)

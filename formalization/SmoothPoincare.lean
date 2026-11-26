@@ -186,4 +186,14 @@ import SmoothPoincare.Variational.NativePocketMeasurableFrame
 import SmoothPoincare.Variational.FinitePocketCaps
 import SmoothPoincare.Variational.FinitePocketBalance
 
-/-! # Public imports for fixed-type descent, immersed recognition and marked cuts -/
+import SmoothPoincare.Variational.BourYamabeStarts
+import SmoothPoincare.Variational.BourTrajectoryBudget
+import SmoothPoincare.Variational.BourFlowDissipation
+import SmoothPoincare.Variational.BourMarkedCore
+import SmoothPoincare.Variational.BourStationary
+import SmoothPoincare.Variational.BourFixedTypeReturn
+import SmoothPoincare.Variational.BourFlowBranches
+import SmoothPoincare.Variational.BourReturnedBudgets
+import SmoothPoincare.Variational.BourAttainedVariation
+
+/-! # Public imports for fixed-type descent, immersed recognition, marked cuts and Bour attainment -/

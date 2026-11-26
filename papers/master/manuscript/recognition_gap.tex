@@ -32,57 +32,32 @@ Indeed each trace-free three-dimensional block satisfies
 \(\tfrac32\lambda_{\max}^2\le |W^\pm|^2_{\rm HS}
 \le6\lambda_{\max}^2\), with its own largest eigenvalue.
 
-If positive classes on possibly varying nonstandard types had
-\(P_i\to8T\), both defects would tend to zero and
-\(\limsup e_i\le16T/9<2T\). By \eqref{eq:budgets} pass to
-\(Y_i\to y>0\). Take the volume-one modified Yamabe representatives
-\(q_i\) with \(R_{q_i}-6L_{q_i}=c_i\le0\)
-\cite[Lemma 2.1 and Theorem 1.7]{ChenZhu2014Conformal}. The constant
-test gives \(Y_i\le c_i+6\int L_{q_i}dV_{q_i}\le c_i+6\ell_i\).
-Thus \(c_i\to0\) and \(L_{q_i}\to y/6\), \(R_{q_i}\to y\) in
-\(L^2(q_i)\). Gauss--Bonnet on the two representatives gives
+Suppose that positive classes on possibly varying nonstandard types
+satisfy \(P_i\to8T\). Then both defects tend to zero,
+\(\limsup e_i\le16T/9<2T\), and after passage to a subsequence
+\(Y_i\to y>0\) by \eqref{eq:budgets}. In the volume-one modified
+Yamabe representatives \(q_i\), one has
 \[
- \int|\Ric_{0,q_i}|^2dV_{q_i}
- =D_i+\big(\textstyle\int R_{q_i}^2dV_{q_i}-Y_i^2\big)/12\to0 .
+ R_{q_i}-6L_{q_i}=c_i\le0,\qquad
+ Y_i\le c_i+6\int L_{q_i}\,dV_{q_i}\le c_i+6\ell_i
+ \quad\cite[Lemma 2.1 and Theorem 1.7]{ChenZhu2014Conformal}.
 \]
-The full squared curvature satisfies
-\( |\Rm|_{\rm tens}^2\le48L^2+2|\Ric_0|^2+R^2/6\).
-Consequently its norm has vanishing \(L^2\) excess above any
-fixed \(K>\sqrt{3/2}\,y\). Smooth volume-one conformal
-approximations can preserve these bounds and make
-\(\|R-6L\|_\infty=o(1)\), since the modified conformal factors
-are \(C^{2,\alpha}\). The ordinary Yamabe inequality absorbs the
-scalar error and gives a uniform inhomogeneous Sobolev inequality.
+It follows that \(c_i\to0\), \(L_{q_i}\to y/6\) and \(R_{q_i}\to y\)
+in \(L^2(q_i)\). Gauss--Bonnet then gives
+\(\int|\Ric_{0,q_i}|^2\,dV_{q_i}\to0\).
 
-The short-time smoothing lemma of the descent paper applies to
-these initial metrics. It gives a common time interval with bounded
-curvature on positive-time subintervals. On it the Einstein defect
-\(\Ric-\lambda(t)g\) stays small in \(L^2\), where
-\(\lambda'=2\lambda^2\) and \(\lambda(0)=y/4\).
-The estimate uses a bounded function \(\phi(t)\) above the initial
-cutoff \(K\), with \(v=(|\Rm|-\phi)_+\) uniformly small in \(L^2\).
-The same bound transports the isotropic curvature inequality.
-In the evolving chiral curvature blocks
-\(A_\pm=W^\pm+R\,\mathrm{Id}/12\), let \(u_\pm\) be the negative
-part of the sum of the two lowest eigenvalues. Initially both
-are \(o(1)\) uniformly. The block evolution gives
-\((\partial_t-\Delta)u_\pm\le C|\Rm|u_\pm\) in the weak sense. Testing on
-a minimizing two-plane, the off-diagonal block contributes a
-nonnegative square and the indefinite reaction term is bounded
-by the largest eigenvalue times this pair sum.
-Testing with \(u_\pm\), the integral of \(v u_\pm^2\) is absorbed
-by the common Sobolev inequality and the gradient term.
-Thus \(\sup_t\|u_\pm(t)\|_2\to0\)
-\cite[sections on critical smoothing and the isotropic curvature gap]{Baker2026FixedDescent}.
-
-At a fixed interior positive time, curvature and derivative bounds,
-ball noncollapse, bounded volume and diameter yield a smooth closed
-limit under diffeomorphisms. The limit is positive Einstein, and
-its two nonnegative pair sums give \(R\ge6L\) there. A closed
-positive Einstein metric realizes its class Yamabe constant
-\cite{Obata1962Sphere,AkutagawaEndoSeshadri2019Gap}. Thus
-\(36\int L^2dV\le\int R^2dV=Y^2\), which contradicts the strict
-inequality on its nonstandard smooth type. This proves an open
+The smoothing argument in the descent paper applies in this gauge.
+The preceding bounds give small \(L^2\) curvature excess above a
+fixed cutoff and a uniform Sobolev inequality on smooth approximations.
+Ricci flow carries the small Einstein defect and the negative parts of
+both isotropic curvature inequalities to a common positive time.
+There the compactness estimates give a smooth closed positive Einstein
+limit with \(R\ge6L\), diffeomorphic to the late source manifolds
+\cite[Smoothing from a small curvature excess and Recognition with a
+spectral term]{Baker2026FixedDescent}. In the Einstein scale
+\(\int R^2\,dV=Y^2\) \cite{Obata1962Sphere,AkutagawaEndoSeshadri2019Gap}.
+Thus \(36\int L^2\,dV\le Y^2\), contradicting the strict spectral
+inequality on the nonstandard limit type. This proves an open
 universal class margin above \(8T\). Choosing a smaller margin
 gives the stated inclusive infimum test. Finally \(P\le8e\)
 allows \(\varepsilon_*=\eta/8\).
