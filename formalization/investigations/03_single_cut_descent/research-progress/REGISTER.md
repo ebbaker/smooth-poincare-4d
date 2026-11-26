@@ -2,7 +2,7 @@
 
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The serving model variant and reasoning effort are unavailable.
 
-This is the sole live status register for Route 03, including inherited FOT-E25, E26 and E28. [Task definitions and acceptance tests](../research-plan/PLAN.md) · [Current program plan](../../research-plan/02_PLAN.md) · [Program register](../../research-progress/REGISTER.md) · [Evidence at issue](../../research-progress/02_BASELINE.md)
+This is the sole live status register for Route 03, including inherited FOT-E25, E26 and E28. [Task definitions and acceptance tests](../research-plan/PLAN.md) · [Version 02 program plan](../../research-plan/02_PLAN.md) · [Program register](../../research-progress/REGISTER.md) · [Evidence at issue](../../research-progress/02_BASELINE.md)
 
 ## Edition 04 objectives
 

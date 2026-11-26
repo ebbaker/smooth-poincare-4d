@@ -12,6 +12,14 @@
 | SP4-CDS-SUR-E03 | Exact and compact alternatives excluded on late charged indices; measured competitor pending | A finite competitor requires subcritical joined peak and full retained cap cost below the available saving, or independent cap positivity. [Review](../../reviews/DISK_AND_COMPACTNESS_READER.md) |
 | SP4-CDS-SUR-B04 | Third tube and larger one-lower-handle class tested | A successful winding-one prefix lowers $n_2$ for arbitrary residuals. Two certified prefixes recognize the $(1,1,3,2,1)$ subclass. In a longer one-sided link the boundary alone leaves the marked trace open. [Three-handle check](../../reviews/THREE_HANDLE_READER.md) |
 
+### Penultimate and successive cuts, 26 November
+
+| Task | Assessed continuation | Evidence |
+| --- | --- | --- |
+| SUR-B02 / E02c | Global PSC Mazur control with degree-one stable meridian-first slice, exact physical width, both means and positive Weyl cost per length. Its long-component-first cut fails PSC domination. | [Metric and inverse gluing](../notes/MIXED_WITNESS.md) · [Readback](../../reviews/MAZUR_BAND_READBACK.md) |
+| SUR-B04 / E02d,f,g | Either end can reduce a three-middle diagram. A simply connected PSC-dominated penultimate prefix reduces any upper rank. With one lower handle, the full zero-winding chain recognizes by a single inverse circle surgery. The last pure prefix alone standardizes the upper side. | [Three-handle maps](../notes/THREE_PREFIX.md) · [All-rank knot check](../../reviews/LAST_HANDLE_READER.md) · [Assembly](../../reviews/ZERO_WINDING_TOWER_READER.md) |
+| SUR-B03 / E03 | A positive convex replacement in the physical disk marking is excluded at late charged indices. A disjoint core saving leaves the exterior cap cost untouched. A measured common-support path or an independently positive exterior with all costs is still needed. | [Curved fill](../../reviews/CURVED_FILL_READER.md) · [Peak and source](../../reviews/DISJOINT_SAVING_READBACK.md) |
+
 Next select a protected separator, a measured band or actual link move on an untreated presentation. A different smooth type or a freely re-marked face supplies no energy bound on the minimizing source. [Continuation](../../continuation-notes/AFTER_TWO_MIXED_CUTS_20261126.md)
 
 The [initial working manuscript](../manuscript/recognition_from_marked_handle_cuts.tex) develops these assessed results and ends with the open selection problems. [Reading copy and sources](../manuscript/README.md)

@@ -13,3 +13,7 @@ The [fixed-cutoff calculation](notes/EXACT_FACE_AND_BENDING.md), [approximate je
 ## 26 November 2026 · Initial working manuscript
 
 The deformation manuscript derives the fixed smooth cutoff, its peak at a nonzero trace-free second jet, and the estimates and compactness conditions for approximately matched collars. It identifies the physical estimates still missing on the charged source. [Manuscript and reading copy](manuscript/README.md)
+
+## 26 November 2026 · Curved replacement at a physical boundary
+
+Added the convex Euclidean cap, its boundary form and transverse-height obstruction, together with the finite limit on an independent interior preparation. [Manuscript](manuscript/README.md) · [Independent filling review](../reviews/CURVED_FILL_READER.md)

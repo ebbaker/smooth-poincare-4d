@@ -13,3 +13,7 @@ The [marked control](notes/MARKED_CONTROL_AND_CLUSTER.md), [mixed and three-hand
 ## 26 November 2026 · Initial working manuscript
 
 The surgery manuscript develops the marked trace and the two orders, the positive scalar curvature tests, the first three-to-two reduction and the fixed-type charged-disk budget. Its final section identifies the residual diagrams and the missing entry and geometric inputs. [Manuscript and reading copy](manuscript/README.md)
+
+## 26 November 2026 · Upper cancellation and successive cuts
+
+Added the all-rank penultimate reduction, the zero-winding chain and the actual global PSC metric on the meridian-first Mazur level. [Manuscript](manuscript/README.md) · [Independent upper cancellation](../reviews/LAST_HANDLE_READER.md)

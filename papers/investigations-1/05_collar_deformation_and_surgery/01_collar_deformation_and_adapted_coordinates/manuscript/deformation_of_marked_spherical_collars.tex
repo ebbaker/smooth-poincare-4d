@@ -1,3 +1,5 @@
+% Continuation of 26 November 2026 at e2968b2898b5. Current proofs and primary
+% passages are recorded in the prefix and curved-filling assessment in parent reviews.
 % Prepared for Edward B. Baker III with OpenAI Codex assistance.
 % Editorial execution, 26 November 2026. Actual serving model and effort
 % unavailable. Research lead selection GPT-6.2 Astra/ultra with bounded
@@ -45,7 +47,8 @@ costs on both sides. On a hypothetical nonstandard homotopy sphere
 with positive-class infimum below \(8\pi^2\), these comparisons
 exclude an exact face at each sufficiently late charged disk and
 exclude vanishing defect on a precompact subsequence of the marked
-collars.
+collars. A strictly convex Euclidean filling also treats certain nonumbilic
+faces through their actual first jets and a positive exterior quadratic form.
 \end{abstract}
 
 \section{Physical collars and chiral costs}
@@ -819,6 +822,165 @@ enlarged disk retains at least that core energy in its
 respective sign and the exterior cap consumes at least \(I\).
 These are distinct finite-source conditions on a matched
 comparison.
+
+\paragraph{An interior change on a disjoint support.}
+Let a compactly supported interior preparation on the original disk
+follow a positive path of nonincreasing total energy from \(e_i\) to
+\(e_i-S\). Signature gives the same saving on either chirality
+and \(0\le S\le d_i\). Let a specified seam path have raw joined peak
+\(H_C\) and meet the support of the preparation in no point,
+including the transitions at the native widths. Locality gives the
+peak after performing them in this order as
+\(\max(e_i,H_C-S)\). The complete capped exterior is exactly the
+one produced by the seam path. If the combined peak is below \(2T\)
+and \(c^\sigma\) is the raw disk-side mass of the seam support, the
+whole disk-side saving at the matched endpoint is at most
+\(d_i+c^\sigma\). This cannot pay the balanced lower bound above
+when \(c^\sigma\to0\) at sufficiently large fixed depth. For
+simultaneous disjoint deformations, suppress each support in turn.
+At the first isolated crossing of \(2T\) the other isolated energy
+is at least \(I\) by continuity from the positive prefix. The
+combined peak is then at least \(2T-d_i\). If neither isolated
+path crosses, the same disk-saving obstruction applies. Hence a
+matched, strictly subcritical simultaneous path on that balanced
+family would have to enter \([2T-d_i,2T)\). All these estimates
+use the actual complete support of each change.
+
+\section{A curved Euclidean filling on the original disk}\label{sec:convex}
+
+The replacement of a parametrized disk can use a curved boundary of a
+flat four-ball. The angular metric and its trace-free normal derivative
+determine whether a strictly convex Euclidean ball supplies the required
+first jet. The scalar curvature of the retained exterior enters a
+separate test for positivity.
+
+\begin{theorem}\label{thm:convex}
+Let \(g\) be a smooth metric on the oriented smooth homotopy sphere
+\(M\), let \(D\) be a smoothly parametrized closed disk, and put
+\(V=M\setminus\operatorname{int}D\).
+On its actual boundary \((\Sigma,h)\) write \(K\) for the shape
+endomorphism with normal pointing from \(D\) into \(V\), and
+\(H=\tr K\). Define
+\[
+ G=\tfrac12 R_h\operatorname{Id}-\Ric_h^\sharp,\qquad
+ S=(\det G)^{1/2}G^{-1}\quad\text{when }G>0 .
+\]
+Suppose \(G>0\), \((\nabla_X S)Y=(\nabla_Y S)X\), and
+\(S^\circ=K^\circ\). Then
+\(E_+(g;D)=E_-(g;D)\). If, in addition, \(R_g>0\) on \(V\)
+and \(H\le\tr S\), then
+\[
+ I^+(M)\le E_\sigma(g;V),\qquad
+ E_\sigma(g;D)\le E_\sigma(g;M)-I^+(M)
+ \quad(\sigma=+,-).
+\]
+\end{theorem}
+\begin{proof}
+In an orthonormal eigenbasis, the eigenvalue of \(G\) at the first
+axis is the sectional curvature of the complementary plane, and
+cyclically. The eigenvalues of \(S\) thus have pairwise products
+equal to those sectional curvatures. In dimension three these relations
+give the whole Gauss equation since the curvature operator is diagonal
+in the corresponding planes. Codazzi and simple connectivity give
+a Euclidean immersion \(F\) with metric \(h\) and shape \(S\)
+in our outward convention \cite[Theorem 1.3]{LiSimonZhaoHu2015}.
+Its unit normal map is a covering of the unit three-sphere and hence
+a diffeomorphism. Each height in a unit direction has precisely two
+critical points and its unique maximum has that outward normal, by
+positivity of \(S\). Each supporting plane of the convex hull
+therefore contacts a single image point, and each image point has
+a unique preimage by this maximum test. The hull has nonempty
+interior and boundary \(F(\Sigma)\). Radial projection from an
+interior point identifies its smooth strictly convex domain with a
+standard ball (interpolate radially from a small concentric ball
+and use polar coordinates only away from the center).
+
+Let \(b\) be its flat metric. Choose smooth \(u>0\) on the ball
+with \(u=1\) at the boundary and
+\(\partial_{\nu_b}u=\alpha=(H-\tr S)/3\) in the outward normal.
+For example prescribe these jets to \(\log u\) in a collar, then
+extend by a cutoff. The cap \(u^2b\) has shape \(S+\alpha
+\operatorname{Id}=K\) there. Glue by \(F\) on the marked face,
+using its inverse in the other direction. The angular discrepancy
+between this ball and the original disk chart extends over a
+standard ball by the sphere diffeomorphism theorem
+\cite{Hatcher1983Smale}. This identifies the assembly with the
+original smooth \(M\).
+
+Use signed Gaussian distance \(t\) in each metric, increasing into
+\(V\), with the same boundary parameter. At zero both tangential
+families have value \(h\) and derivative \(2h(K\cdot,\cdot)\).
+The original physical metric supplies a smooth extension of the
+exterior family to negative \(t\). In a cap strip of width \(w\)
+interpolate to that extension with a fixed smooth cutoff, equal
+to the extension near zero and to the cap near \(-w\). The difference
+of the two families is \(O_g(t^2)\), its first derivative is
+\(O_g(|t|)\), and its second derivative is bounded at this fixed
+source and fill. The same Taylor bounds hold for tangential derivatives
+as needed. The \(w^{-1}\) and \(w^{-2}\) cutoff terms therefore give
+bounded curvature. Take \(w\) inside both the original inward
+Gaussian radius and the cap radius. The exterior is unchanged on its
+entire native side, and the cap outside this connector is conformally
+flat. For the resulting smooth metric \(p_w\) on \(M\),
+\[
+ E_\sigma(p_w;M)=E_\sigma(g;V)+O_{g,b,u}(w).
+\]
+Signature on \(p_w\) and on \(g\) gives the claimed disk mass equality
+on sending \(w\downarrow0\).
+
+For the sign assertion consider the limiting joined quadratic form.
+Integration by parts on the cap, using
+\(R_{u^2b}=-6u^{-3}\Delta_b u\), gives for a common trace \(f\)
+\[
+ Q(f)=\int_V(6|df|_g^2+R_g f^2)\,dV_g+
+ 6\int_D |d(uf)|_b^2\,dV_b+
+ 2\int_\Sigma(\tr S-H)f^2\,dA_h .
+\]
+Under the assumed signs this form controls the \(H^1\) norm on
+the fixed joined space. Indeed the exterior term controls the
+exterior norm and hence its boundary trace. On the ball the gradient
+of \(uf\) and its boundary trace control its full \(H^1\) norm by
+Poincar\'e's inequality with boundary term. Multiplication by the
+fixed positive smooth \(u\) is an isomorphism there. The metrics
+\(p_w\) converge uniformly to the piecewise metric. Their scalar
+potentials differ from its a.e. scalar potential only on a strip
+of volume \(O(w)\) and remain uniformly bounded there. H\"older's
+inequality and the fixed compact four-dimensional Sobolev inequality
+give a form error \(o(1)\|f\|_{H^1}^2\), including the change of
+metric density and inverse. All sufficiently small positive widths
+therefore give positive classes. Taking their infimum proves the result.
+\end{proof}
+
+This argument also works when the displayed boundary form is coercive
+by direct measurement. It proves positivity at the new endpoint.
+The joined peak of a continuous deformation replacing the entire disk
+has not been estimated. The ball is replaced in full, so a requirement
+to preserve an interior core demands a different comparison. At a
+sufficiently late original charged index the conclusions exclude the
+joint boundary hypotheses in the positive Yamabe representative.
+The shape tests require the actual induced metric and second fundamental
+form at that index.
+
+\paragraph{An induced height slice.}
+Let \(z\) be a regular height of a Euclidean hypersurface immersion
+in \(\mathbb R^5\). Suppose the slice in the height hyperplane
+is an embedded three-sphere of positive definite outward shape, and use its own flat
+interior as the candidate ball. Along the level the immersed unit
+conormal of the four-manifold has the form \(a v+b n\), where
+\(v\) is the constant height vector, \(n\) the outer Euclidean
+normal of the slice in that hyperplane, \(a^2+b^2=1\) and
+\(|a|=|\nabla z|>0\). Differentiation against any slice tangent
+gives \(K=bS\) for the induced four-metric. Hence \(H<\tr S\), but
+\[
+ |K^\circ-S^\circ|=(1-b)|S^\circ|
+ \ge \tfrac12 |\nabla z|^2 |S^\circ|.
+\]
+Exact matching throughout this convex slice forces \(S^\circ=0\).
+Codazzi then makes \(S\) a positive constant multiple of the identity,
+so the slice is round. A transverse immersed height therefore gives a
+specific first-jet obstruction on its own nonround convex sections.
+An intrinsic deformation or a different comparison gauge would
+require new boundary measurements.
 
 \section{Outstanding challenges}
 

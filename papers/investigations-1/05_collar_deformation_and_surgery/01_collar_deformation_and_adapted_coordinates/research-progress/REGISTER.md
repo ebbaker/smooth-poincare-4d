@@ -10,6 +10,13 @@
 | SP4-CDS-DEF-B02 | Small defect tested under marked smooth compactness | A nondegenerate limiting bicollar with vanishing face defect yields an affordable two-sided path. Its angular change extends over the replaced disk. [Proof](../notes/COMPACT_MARKED_COLLAR_EXCLUSION.md) |
 | SP4-CDS-DEF-E03 | Model and conditional family assessed; physical witness pending | On an actual selected sequence test quantitative footprint, scale, distortion and width-dependent jets or identify the gauge degeneration. The disk theorem supplies no such bounds. [Finite-source review](../../reviews/DISK_AND_COMPACTNESS_READER.md) |
 
+### Curved fillings and interior variations, 26 November
+
+| Task | Assessed continuation | Evidence or dependency |
+| --- | --- | --- |
+| DEF-B02 / E03 | Intrinsic Gauss reconstruction and Codazzi identify the positive Euclidean shape. Matching its trace-free part allows one-sided smoothing while retaining the whole exterior. Favorable mean difference certifies positivity there. A transverse nonround convex height fails the required match to its own flat cap in the induced metric. | [Checked filling and angle](../../reviews/CURVED_FILL_READER.md) · [Manuscript](../manuscript/deformation_of_marked_spherical_collars.tex) |
+| DEF-E03 / SUR-E03 interface | An independently positive interior preparation saves at most the minimizing excess. For disjoint changes an obstruction persists on the balanced family, and a simultaneous strictly subcritical exception requires a near-wall peak. Physical curvature and raw shell charge give no measured boundary fit or joint path. | [Native variations](../notes/INTERIOR_VARIATION.md) · [Checked peak hypotheses](../../reviews/DISJOINT_SAVING_READBACK.md) · [Source audit](../../notes/SOURCE_WITNESSES.md) |
+
 The leading positive cost is for the fixed profile; the charged disk would require a strict positive comparison on its own smooth type. An alternative on a marked intermediate handle level is the [intrinsic slice and band test](../../02_handle_isolation_and_marked_surgery/notes/POSITIVE_SCALAR_INTERMEDIATE_CUTS.md).
 
 The [initial working manuscript](../manuscript/deformation_of_marked_spherical_collars.tex) develops these assessed results and ends with the open selection problems. [Reading copy and sources](../manuscript/README.md)

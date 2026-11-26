@@ -1,5 +1,19 @@
 # Overall formalization progress
 
+## Edition 04 · Marked intermediate cuts and positive entry · 26 November 2026
+
+**FOT-B08, setup adopted.** The [Edition 04 overview](../research-overview/04_OVERVIEW.md), [execution plan](../research-plan/04_PLAN.md) and [baseline](04_BASELINE.md) supersede the Edition 03 opening queue. E43 is the last accepted mathematical return. The new blueprint targets are open. Edition 04 proof execution awaits activation. [Dated handoff](../continuation-notes/EDITION_04_MARKED_CUTS_20261126.md) · [Planning assessment](../reviews/RESEARCH_PLAN_AFTER_COLLAR_AND_SURGERY_20261126.md)
+
+| Owner | Disposition at setup |
+| --- | --- |
+| FOT-E35 · parent | Retains recognition of a finite positive class at the inclusive threshold and the independent paper gap for a possibly unattained infimum. Route 11 supplies positive classes and budgets on identified types. |
+| FOT-E37 · parent | Retains the universal coverage audit. Freeze a least-middle-count presentation on each hypothetical nonstandard type. A strict net reduction, direct diffeomorphism, or positive entry plus a finite same-type contradiction would close that type. One-sided links, nonrecognizing mixed prefixes, larger handle clusters, and entered types with uncontrolled charged faces remain. |
+| Fixed face and descent | [05](../05_variational_comparison/research-progress/REGISTER.md) constructs the path on two physical widths, [03](../03_single_cut_descent/research-progress/REGISTER.md) constructs marked positive caps, and [07](../07_fixed_type_variational_descent/research-progress/REGISTER.md) consumes their finite costs and fixed-type limits. |
+| Actual boundary and closed smooth realization | New [10](../10_positive_scalar_intermediate_cuts/research-progress/REGISTER.md) owns PSC, comparison fillings and intermediate boundary classification. [09](../09_morse_heights_and_handle_recognition/research-progress/REGISTER.md) owns actual framed slides, marked smooth transport, strict reduction and closure. |
+| Before-entry and physical suppliers | New [11](../11_intrinsic_entry_from_marked_exteriors/research-progress/REGISTER.md) owns marked-exterior positive-class entry. [08](../08_hypersurface_immersion_bounds/research-progress/REGISTER.md) retains global induced entry. [06](../06_physical_scales_and_marked_annuli/research-progress/REGISTER.md) retains actual physical scales and same-mark geometry. |
+
+The opening finite packets and their proposed Lean outputs live in the route registers. Routes 01, 02 and 04 retain their existing proof families. The new edition recognizes no additional smooth type at setup. [Route index](../README.md#proof-investigations)
+
 ## Edition 03 outgoing collar comparison, protected disk cost and terminal charge · 26 November 2026
 
 **FOT-E43.** Both directions of the actual retained collar compare on one uniform signed strip with the product through the next cut. The transition fixes the zero section and has positive normal derivative there. On the connected native binary trace, compatible forward local ball maps covering its representatives determine the entire target and inverse. The explicit quartic merger model has an independent round-ball marking and a calibrated collar. The split control also has a checked full outgoing S¹×S² homeomorphism, and the slid control retains the closing map on both bodies. Constructing the native forward maps with the prescribed overlap and framing is the remaining general merger step.

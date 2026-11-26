@@ -1,5 +1,7 @@
 # Overall formalization milestones
 
+- **26 November 2026 · Edition 04 setup (FOT-B08).** Issued the marked-cut and positive-entry plan after reviewing the master and Investigation 05. Routes 10 and 11 own intermediate three-manifold recognition and intrinsic entry from marked exteriors. The first milestones connect a fixed exact face to both actual caps and a recognized mixed prefix to its original closed trace. [Edition 04](research-plan/04_PLAN.md) · [Baseline](research-progress/04_BASELINE.md) · [Continuation](continuation-notes/EDITION_04_MARKED_CUTS_20261126.md)
+
 - **26 November 2026 · FOT-E43.** Compared both actual collars, constructed a calibrated whole-ball model, derived the finite and limiting net-saving obstruction, and transferred the modified terminal Ricci charge through the actual pointed embeddings. [Assessment](reviews/COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md) · [Continuation](continuation-notes/AFTER_COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md).
 
 - **25 November 2026 · FOT-E42.** The original marked trace now has a whole rounded comparison. Positive curved disk references are attained, with separate signed and full costs. A global Euler current transports a fixed terminal test on the actual modified flow. [Assessment](reviews/MARKED_GLUE_AND_CURVED_COST_20261125.md).

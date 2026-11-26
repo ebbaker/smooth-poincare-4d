@@ -13,6 +13,8 @@ This is the sole live status register for `SP4-FORM-DESC` and `VAR-E06`. The [pr
 | SP4-FORM-DESC-E10a | Planned, awaiting activation | Apply the positive caps on fixed marked types to the two complete raw sides. Prove the signed mass identities and infimum inequalities, with recognition and reassembly at an actual positive width. |
 | SP4-FORM-DESC-E10b | Planned, awaiting activation | Take the fixed-source width comparison before applying the minimizing-tail test to the original selected charged disks. Formulate the finite marked-family extraction under its supplied charge and full-curvature bounds. |
 
+## Earlier tasks
+
 | Task | Current state | Next evidence |
 | --- | --- | --- |
 | SP4-FORM-DESC-E09 | A local nonconformal negative derivative gives strict finite savings. Charging both a positive cap and additional joined cost to the net saving forces the replacement disk charge plus that cost below the finite excess. At one fixed source arbitrarily small signed cap drift forces equal disk charges, each at most the excess. The terminal Euler estimate also reaches positive Ricci charge in a pointed limit. | Produce a coupled repair affordable on the selected physical disk, or supply the modified small-ball estimates and a common limiting flow. [Assessment](../../reviews/COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md) |

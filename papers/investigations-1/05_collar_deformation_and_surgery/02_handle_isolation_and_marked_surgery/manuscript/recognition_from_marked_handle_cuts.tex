@@ -1,3 +1,5 @@
+% Continuation of 26 November 2026 at e2968b2898b5. Current proofs and primary
+% passages are recorded in the prefix and curved-filling assessment in parent reviews.
 % Prepared for Edward B. Baker III with OpenAI Codex assistance, 26 November 2026.
 % Consolidates the checked-in surgery notes, peripheral and round control,
 % and independent reviews at ece209c. Scientific input freeze c8fb08dc.
@@ -45,7 +47,9 @@ quantitative scalar curvature criteria for the actual marked cuts and
 a cancellation of a certified winding-one attachment relative to any
 finite number of movable framed tubes. For three middle handles a
 second certified prefix recognizes the resulting two-component
-surgery trace. An independent finite comparison on a subcritical
+surgery trace. A PSC-dominated penultimate level with simply connected
+lower sublevel permits an upper cancellation at any rank. Successive
+winding-zero cuts give a separate recognizing family. An independent finite comparison on a subcritical
 minimizing sequence shows that an exactly conformally round, umbilic
 face of a parametrized disk forces equal chiral disk masses bounded by
 the minimizing excess. We derive the required full-side savings for
@@ -677,6 +681,168 @@ a ball with disk framing, carrying the other tubes. A net
 2/3 cancellation in the longer presentation additionally
 requires the upper attaching data.
 
+\subsection{Cancelling from the upper end}\label{sec:last}
+Write \(Y_r=\#_r(S^1\times S^2)\), with \(Y_0=S^3\).
+A single framed surgery between consecutive members in increasing
+rank determines the knot as well as the boundary.
+
+\begin{lemma}\label{lem:last-knot}
+If integral surgery on a knot \(K\subset Y_r\) gives \(Y_{r+1}\),
+then \(K\) is a zero-framed unknot in a ball in \(Y_r\).
+\end{lemma}
+\begin{proof}
+The surgery trace group \(G\) is the quotient of the free group
+\(F_r\) by the normal closure \(N\) of the knot word. Read backwards
+it is the quotient of \(F_{r+1}\) by one dual relator.
+Its abelianization therefore has rank at least \(r\) and is a
+quotient of \(\mathbb Z^r\). Thus \(G_{\rm ab}=\mathbb Z^r\),
+\(N\subset[F_r,F_r]\), and the dual relator has primitive
+abelianization. The usual two-dimensional presentation complex of the
+dual group presentation has injective cellular boundary in degree two.
+Attaching cells of dimensions at least three gives a classifying
+space for \(G\), so \(H_2(G;\mathbb Z)=0\).
+Hopf's formula now gives \(N=[F_r,N]\)
+\cite{BrownEllis1988Hopf}. This puts \(N\) in every lower central term
+of \(F_r\), whose intersection is trivial. To see the latter, send
+each free generator \(x_j\) to \(1+X_j\) in integral noncommuting
+formal series. A commutator of weights \(p,q\) has degree at least
+\(p+q\) after subtracting its constant term. In a nonempty reduced
+syllable word \(x_{j_1}^{a_1}\cdots x_{j_k}^{a_k}\), adjacent indices
+are distinct, and the coefficient of \(X_{j_1}\cdots X_{j_k}\) is
+\(a_1\cdots a_k\ne0\). The knot is consequently null-homotopic.
+The preferred longitude is zero in the homology of its exterior.
+The rank increase under integral filling forces the slope to be
+this longitude.
+
+Remove all \(S^1\times S^2\) connected-sum factors of the knot
+exterior, preserving the peripheral torus. The meridional and
+longitudinal fillings of the residual exterior are \(Y_s\) and
+\(Y_{s+1}\) by uniqueness of prime decomposition \cite[Theorem 1]{Milnor1962Prime}. The knot remains
+null-homotopic by projection to its free factor. Ni's Theorem~1.1
+then makes it an unknot: its residual exterior has no product
+summand while its zero filling does \cite{Ni2023Null}.
+A spanning disk survives restoration of the removed summands. Indeed
+shrink and move their finitely many attaching balls off the disk
+by an isotopy fixing the knot, then pull the disk back. Its disk
+framing is precisely the longitude.
+\end{proof}
+
+\begin{theorem}[The penultimate level]\label{thm:last}
+Suppose that in a finite reduced presentation of the homotopy sphere
+\(M\), the sublevel \(W\) through all but the last middle handle is
+simply connected, and its boundary is PSC-dominated. If the upper
+body has rank \(q\ge1\), the last middle handle cancels with an
+upper 3-handle after a change of marking extending over that body.
+This decreases the middle count by one on the same smooth type.
+\end{theorem}
+\begin{proof}
+If there are \(p\) lower and \(m=p+q\) middle handles, the
+0/1/2 spine of \(W\) gives \(H_2(W)=\mathbb Z^{q-1}\).
+Its intersection pairing vanishes by pushing cycles into the
+interior and using their intersections in \(M\), where \(H_2(M)=0\).
+The pair sequence identifies \(H_2(\partial W)\) with \(H_2(W)\)
+and \(H_1(\partial W)\) with \(\mathbb Z^{q-1}\). The PSC decomposition
+and compression proof of Lemma~\ref{lem:zero} applies to this
+simply connected filling. Its \(q-1\) product summands give the
+compressing basis, and the residual spherical homology sum bounds
+a smooth contractible four-manifold. Thus \(\partial W=Y_{q-1}\)
+up to diffeomorphism. The last framed surgery takes it to the
+actual boundary \(Y_q\) of the upper body. Lemma~\ref{lem:last-knot}
+identifies the knot as a split zero-framed unknot. The outgoing
+surgery core meets a transverse factor sphere of the new summand
+in one point. The outgoing boundary marking identifying this
+summand with a chosen factor of the upper model extends over the
+rank-\(q\) 1-handlebody by Laudenbach--Po\'enaru. Use the product
+cobordism of Milnor's cancellation read from this upper end
+\cite{LaudenbachPoenaru1972Handlebodies,Milnor1965HCobordism}.
+In detail, let \(\delta:\partial W\to\partial(Q\cup c^*)\)
+be the actual gluing to the upper body and dual last handle, and
+\(\Xi:Q\cup c^*\to\HB{q-1}\) the cancellation map. The new
+gluing is \(\partial\Xi\circ\delta\), with inverse
+\(\delta^{-1}\circ(\partial\Xi)^{-1}\). The lower sublevel and all
+its attachments are retained. No auxiliary handle enters the count.
+\end{proof}
+
+For one lower 1-handle, any penultimate sublevel containing the
+normalized winding-one component is simply connected. With three
+middle handles ordered \(a,b,c\), the test on \(Y_{ab}\) therefore
+returns the mixed pair \(a,b\), even when \(Y_a\) fails. In contrast,
+a successful test of \(Y_a\) cancels at the lower end and returns a
+one-sided link. If \(L:Y_a\to S^3\) is its marking, the link is
+the pair of parametrized tubes \(L b,L c\) on the surviving
+exterior. One can test the two outcomes separately. For example,
+in the split meridian control choose disjoint zero-framed unknots
+\(b,c\) in the untouched patch, then slide \(c\) over \(b\)
+along a fixed framed band. Both residuals are transported by the
+lower cancellation. Undoing that very slide on the returned pair
+gives the zero-framed unlink. The slide comparison \(F\) from
+the slid trace to the split trace changes the gluing to
+\(\gamma\partial F\) with inverse \((\partial F)^{-1}\gamma^{-1}\).
+For an example with a failed first cut, add a split cancelling
+2/3 pair to the Mazur double of Figure~37 at \(n=1\)
+\cite{Isoshima2025MazurDoubles,AkbulutKirby1979Mazur}. The long
+first component cuts off the Mazur piece, with nonspherical boundary
+\(\Sigma(2,5,7)\) up to orientation. The next level is the original
+\(S^1\times S^2\). It certifies the upper cancellation \(3\to2\),
+and the alternate meridian-first cut recognizes the mixed successor.
+For a one-sided presentation simple connectivity of \(W\) is automatic.
+A PSC-dominated penultimate cut reduces its one-sided middle count by
+one without identifying the trace of the surviving link.
+
+\subsection{Successive zero-winding cuts}\label{sec:zero-sequence}
+Consider one lower 1-handle, \(m\ge2\) middle handles and \(m-1\)
+upper 3-handles. Put the normalized winding-one attachment last.
+Suppose that after each of the preceding \(m-1\) winding-zero
+attachments the actual prefix is PSC-dominated. Then \(M\cong S^4\).
+Indeed, replace the dot by a zero only to compute boundary surgeries.
+In the full linking matrix the dot and winding-one component form
+the invertible block \(\left(\begin{smallmatrix}0&1\\1&d\end{smallmatrix}\right)\).
+The full matrix has rank two from its outgoing boundary, and the
+remaining components link the dot algebraically zero. The Schur
+complement is thus the entire remaining linking block and vanishes.
+At the \(j\)-th pure prefix Lemma~\ref{lem:zero}, using the auxiliary
+ordinary trace, identifies the boundary as \(Y_{j+1}\).
+
+In the original lower handlebody apply Lemma~\ref{lem:last-knot}
+at each step from \(Y_j\) to \(Y_{j+1}\). Move the ball containing
+the unknot to a boundary patch by an ambient isotopy. Extend it
+through a collar, carrying every future framed tube by the same
+isotopy and its inverse. The lower piece is consequently
+\(\HB{1}\natural\,\natural_{m-1}(S^2\times D^2)\).
+The upper piece read with its single reversed middle handle goes
+from \(Y_{m-1}\) to \(Y_m\), and is
+\(\HB{m-1}\natural(S^2\times D^2)\) by the same lemma.
+
+Do interior product-framed surgery on the sphere in this last
+\(S^2\times D^2\). The new upper piece is \(\HB{m}\), with the
+original outer boundary marking. Every boundary discrepancy extends
+over it. The resulting closure may be evaluated in split coordinates:
+doubling \(S^1\times D^3\) gives \(S^1\times S^3\), and each
+\(S^2\times D^2\) closed with \(D^3\times S^1\) gives \(S^4\).
+The boundary connected sums give their ordinary connected sum.
+The inverse surgery is on a framed circle in \(S^1\times S^3\).
+Its complement has the original fundamental group by general position,
+and inverse surgery kills the normal closure of that circle. Since
+\(M\) is simply connected, it represents a generator. A homotopy
+to the product generator, up to orientation, gives an isotopy by
+parametric general position for circles in dimension four. Either
+normal framing gives \(S^4\): the twist of \(S^1\times S^2\)
+from a loop of rotations extends over the complementary
+\(S^1\times D^3\). This recovers the actual closed type, as in the
+two-middle argument \cite{Baker2026MarkedHeights}.
+
+A single PSC certificate at the last pure prefix determines the
+upper split unknot. Earlier cuts still need evidence to identify
+the lower piece by this argument. Already for three middle handles
+the two-zero prefix has rank three. Its last dual knot is null
+homologous upstairs and cannot meet an upper belt sphere once.
+The successive-prefix argument uses interior sphere surgery here.
+In a one-sided \(m\)-component presentation a wholly certified
+chain likewise gives split zero-framed attachments successively
+from \(Y_0\) through \(Y_m\), and the upper handlebody extension
+recognizes the closure. These implications leave selection of an
+ordering with the required geometric certificates open.
+
 \section{Metric criteria on the given levels}\label{sec:bands}
 These criteria give PSC domination for the actual slice
 or prefix in Theorems~\ref{thm:mixed} and~\ref{thm:three}.
@@ -792,6 +958,49 @@ An application to a cap on the original metric needs an
 embedded comparison carrying the exterior collars and the
 actual gluing, as well as the separate chiral estimates
 below \cite{Baker2026CollarDeformation,Baker2026CollarProgram}.
+
+\paragraph{A band on the actual meridian-first Mazur cut.}
+In the normalized double of Figure~37 at \(n=1\), the meridian-first
+level is \(Y_2\). Read the long attachment through the surgery on
+the small meridian with its full original framing. On either side
+the piece is \(\HB{1}\natural(S^2\times D^2)\), by the split
+meridian and the proof of Proposition~3.2 of
+\cite{GompfScharlemannThompson2010} on the dual side. Give the
+summands product PSC metrics with product collars (a torpedo
+three-disk for \(S^1\times D^3\), a nonnegatively curved disk
+for \(S^2\times D^2\)). Attach their boundary connecting
+1-handle by the positive trace theorem
+\cite[Definition 4.3 and Theorem 1.2]{Walsh2008Metrics}.
+Pull both end metrics to the same \(Y_2\) by the original gluing.
+They are joined by a smooth PSC path \(h_s\), constant near its
+ends, by path connectedness and openness in the smooth metric space
+\cite[Theorem 1.1]{BamlerKleiner2019Contractibility}.
+In \(dx^2+h_{x/D}\) the scalar error relative to \(R_{h_{x/D}}\)
+is uniformly \(O(D^{-2})\). Fix sufficiently large \(D\), then insert
+a separate constant product of length \(L\) at the lower end
+with boundary metric \(h=h_0\). Reparametrize the original bicollar
+to preserve its central marked slice. The return uses the inverse
+normal change and the inverse upper boundary map.
+
+The product has native width \(L\), scalar floor
+\(\rho=\min R_h>0\), and both outward mean curvatures zero. Its
+central totally geodesic slice is stable and has projection degree
+one. Taking \(L=\pi\sqrt{3/\rho}\) attains the scalar-width
+threshold. In each sign the cylinder adds exactly
+\[
+ \frac{L}{4}\int_{Y_2}|\Ric_h-\tfrac13R_hh|^2\,dV_h .
+\]
+Indeed the trace-free tangential curvature block is minus the
+trace-free Ricci endomorphism under the three-dimensional Hodge
+identification, and each chiral block receives one half. The
+integral is positive since a positive Einstein three-metric is a
+spherical space form. Each complete side adds half this amount,
+in addition to its fixed piece and the fixed transition on the upper
+side. Thus large \(L\) exceeds the chiral wall. The long-component-first
+level in the reordered trace is \(\Sigma(2,5,7)\) up to orientation
+and fails PSC domination. The constructed metric supplies the
+meridian-first band on the known double. It gives no corresponding
+width on an immersion-selected or minimizing source.
 
 \section{Spherical cuts on a physical source}\label{sec:budget}
 For a subset \(A\subset M\) and chirality \(\sigma\in\{+,-\}\)

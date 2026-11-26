@@ -1,5 +1,5 @@
 # Current overall research plan
 
-[Edition 03 · Formalizing the parallel master investigations](03_PLAN.md) sets the proof order and geometric acceptance tests. It opens the physical shell, fixed-type descent, immersion and Morse-height investigations. [Opening proofs](03_PLAN.md#opening-proofs) · [Dated progress baseline](../research-progress/03_BASELINE.md) · [Current task owners](../research-progress/REGISTER.md) · [Astra continuation](../continuation-notes/AFTER_PARALLEL_ROUTE_SETUP_20261125.md)
+[Edition 04 · From a marked cut to a proof on the original smooth type](04_PLAN.md) specifies the first fixed-face cap and mixed-prefix recognition milestones, the before-entry construction, and the tests for extending either result to another smooth type. [Baseline 04](../research-progress/04_BASELINE.md) · [Task owners](../research-progress/REGISTER.md) · [Dated continuation](../continuation-notes/EDITION_04_MARKED_CUTS_20261126.md)
 
-[Edition 02](02_PLAN.md) contains the original variational proof packets and [Edition 01](01_PLAN.md) the component-accounting and spinor plans. Each numbered edition preserves its scope at issue.
+[Edition 03](03_PLAN.md) introduced the physical, fixed-type, immersion and height investigations. [Edition 02](02_PLAN.md) contains the original variational proof packets and [Edition 01](01_PLAN.md) the component-accounting and spinor plans. Each numbered edition preserves its scope at issue.

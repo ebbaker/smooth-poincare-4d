@@ -4,6 +4,20 @@
 
 This is the sole live status register for `SP4-FORM-HT`. The [proof plan](../research-plan/PLAN.md) specifies each target and acceptance test. The paper's [research register](../../../../papers/investigations-1/04_hypersurface_immersions/02_two_handle_recognition/research-progress/REGISTER.md) owns mathematical extraction or construction on the source.
 
+## Edition 04 setup · 26 November 2026
+
+These assignments await activation. [Route plan](../research-plan/PLAN.md#edition-04--native-maps-and-smooth-recognition-of-the-marked-trace) · [Program plan](../../research-plan/04_PLAN.md) · [Baseline](../../research-progress/04_BASELINE.md)
+
+| Task | State at setup | First evidence required |
+| --- | --- | --- |
+| SP4-FORM-HT-B03 | Ready on activation | Freeze the native edge and marked control, with signs, prescribed model, protected tubes and selected closing map. |
+| SP4-FORM-HT-E10a | Dependent on B03 | Construct actual relative maps on one native birth–block overlap. A whole merger requires a compatible cover and retention of every remaining framed tube. |
+| SP4-FORM-HT-E10b | Dependent on B03 and the supplied trace geometry | Realize smooth rounded absorption and smooth closed reassembly on the split and slid controls, including the actual inverse germs. |
+| SP4-FORM-HT-E11a | Dependent on the supplied marked three-middle presentation and a cancellation certificate | Reduce three to two on the same type, returning both transported framed attachments and the actual two-sided upper gluing. |
+| SP4-FORM-HT-E11b | Dependent on E11a and a certificate for the transported second prefix or a known one-sided case | Use the applicable boundary result from [Route 10](../../10_positive_scalar_intermediate_cuts/research-progress/REGISTER.md) on the actual prefix. Identify the original closed smooth type through the marked assembly. |
+
+## Edition 03 evidence
+
 | Task | Current state | Next evidence |
 | --- | --- | --- |
 | SP4-FORM-HT-E09 | Constructed the actual two-sided collar transition including inverse, normal derivative and framed parameters. Forward patches covering native representatives suffice for the entire separately marked ball. The explicit model has its own signed round-ball collar. In the supplied closed controls the split outgoing quotient is S¹×S² with both inverse formulas and the slid dual tube and upper closing map transport exactly. | Map the actual birth and handle overlaps to the independent ball with their prescribed germs, then transport its residual attachments to the next edge. [Assessment](../../reviews/COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md) |

@@ -1,3 +1,5 @@
+% Continuation of 26 November 2026 at e2968b2898b5. Current proofs and primary
+% passages are recorded in the prefix and curved-filling assessment in parent reviews.
 % Drafted for Edward B. Baker III with OpenAI Codex assistance, 26 November 2026.
 % Author-selected lead GPT-6.2 Astra/ultra; independent serving metadata unavailable.
 % Scientific inputs: ece209cc09aa31629a8b496ae9d01957e71c70ac, including both
@@ -38,7 +40,8 @@ either chirality. On a hypothetical nonstandard sphere the side which
 carries its smooth type must therefore carry at least its fixed-type
 infimum. This excludes such a face on each sufficiently late charged
 disk selected by the master manuscript. We use these results to specify
-a reduction by middle-handle count and the geometric selection still
+a penultimate-cut criterion for a net cancellation at any upper rank,
+a curved disk-filling test, and the geometric selection still
 required to carry it out on arbitrary smooth homotopy four-spheres.
 \end{abstract}
 
@@ -242,6 +245,61 @@ this case and extension over the upper handlebody then recognize \(M\)
 The first cancellation permits arbitrarily many moving residual tubes.
 The second conclusion uses the specific two-component successor.
 
+
+\subsection{A reduction at the last middle handle}
+Let \(Y_r=\#_r(S^1\times S^2)\), with \(Y_0=S^3\). Suppose the
+upper body has rank \(q\ge1\) and the sublevel \(W\) through all but
+the last middle handle is simply connected. If its actual boundary is
+dominated with nonzero degree by a closed oriented PSC three-manifold,
+then the presentation on \(M\) admits a net 2/3 cancellation.
+The number of earlier attachments may be arbitrary
+\cite{Baker2026HandleCuts}.
+
+Here is why the boundary suffices. The intersection form of \(W\)
+vanishes in the homotopy sphere, and its \(H_2\) has rank \(q-1\).
+The factor spheres in the PSC boundary decomposition give an
+integral basis. Compressing them in an auxiliary filling leaves
+a smooth contractible manifold bounding the remaining spherical
+homology sum, so that sum is trivial
+\cite[Proposition 4.2]{ChodoshMaximoMukherjee2024Complete}.
+Thus the actual final attachment goes from \(Y_{q-1}\) to \(Y_q\).
+Its trace group has free presentations from both ends. The upper
+one has a single relator with primitive abelianization and gives
+zero second group homology. Applied at the lower end, Hopf's
+formula and residual nilpotence of the free group force the attaching
+knot to be null-homotopic. After removing common product summands
+of its exterior, Ni's zero-surgery theorem puts the knot on a
+zero-framed unknot in a ball \cite{Ni2023Null,Baker2026HandleCuts}.
+The dual core then meets one upper belt sphere once, after a change
+of boundary marking extending over that upper handlebody. The inverse
+cancellation restores the original gluing and all earlier tubes.
+
+In the normalized one-lower, three-middle presentation \((a,b,c)\),
+with \(a\) of winding one, the sublevel through \(a,b\) is simply
+connected. A certificate there returns the \emph{mixed} successor
+\((a,b)\) even if the Mazur-type first cut fails. A certificate after
+\(a\) removes the only lower 1-handle and returns the \emph{one-sided} link of the transported
+\(b,c\). The stabilized Mazur double realizes the former alternative
+with its long-knot first cut nonspherical. In the unstabilized double
+a closed PSC metric constructed on the actual meridian-first cut has
+a degree-one stable slice and an arbitrarily prescribed product
+length. Its full Weyl price grows linearly with length
+\cite{Baker2026HandleCuts}. These examples start with the specified
+marked presentation.
+
+There is also a route which does not use a winding-one first cut.
+With one lower 1-handle, normalize the row to \((1,0,\ldots,0)\), put all
+\(m-1\) zero-winding components first, and the winding-one component last. If each successive pure prefix is PSC-dominated, the boundary
+chain goes from \(Y_1\) through \(Y_m\). Each step is a split
+zero-framed attachment by the same single-knot result. The last
+dual attachment from \(Y_{m-1}\) to \(Y_m\) is split as well.
+Interior surgery on its sphere gives an upper \(m\)-handlebody.
+The identified lower piece closes with it to \(S^1\times S^3\);
+the inverse surgery circle generates the fundamental group
+and either framing recovers \(S^4\) \cite{Baker2026HandleCuts}.
+This recognizes the whole chain. A single penultimate certificate
+with a simply connected lower sublevel already gives strict descent
+on a least-count presentation.
 
 \section{The cost of making a spherical cut}\label{sec:cost}
 
@@ -534,6 +592,33 @@ pay it. The estimate gives the saving required of an actual path.
 Constructing such a path remains a variational problem
 \cite{Baker2026ChiralMaster,Baker2026FixedDescent,Baker2026HandleCuts}.
 
+\paragraph{A curved filling and the source of positivity.}
+A second comparison uses the actual exterior of the charged disk
+without stretching a joined neck. In the positive Yamabe metric let
+\(h,K,H\) be the boundary metric, outward disk shape and its trace.
+With \(G=R_h\mathrm{Id}/2-\Ric_h^\sharp>0\), set
+\(S=\sqrt{\det G}\,G^{-1}\). If \(S\) is Codazzi, it is realized
+by a convex Euclidean ball with that boundary metric. If also
+\(S^\circ=K^\circ\), a cap conformal factor matches the two full
+first jets. Smoothing on the cap side at fixed source then costs
+\(O_i(w)\) in each sign and preserves the entire exterior.
+When \(H\le\mathrm{tr}\,S\) the joined endpoint form is positive
+by the exterior scalar curvature, flat Dirichlet form and nonnegative
+boundary contribution. Thus \(m_i^+=m_i^-\le d_i\)
+\cite{Baker2026CollarDeformation}. This excludes these simultaneous
+boundary measurements on every sufficiently late original charged
+disk, without assuming compactness of its marked collars. A natural
+candidate from an immersed height illustrates the difficulty:
+on a transverse nonround section of positive definite outward shape
+the flat section's trace-free shape differs from the induced
+four-dimensional one wherever it is nonzero.
+An independently positive deformation supported in the disk interior
+can save at most \(d_i\). If its support is disjoint from the complete
+seam change, the capped exterior has exactly the same energy as for
+the seam change alone \cite{Baker2026CollarDeformation}.
+The selected minimizing sequence still lacks a measured fit or a
+saving that pays the complete exterior cost.
+
 \section{Selection, termination and outstanding challenges}
 
 Choose a presentation with the least middle count \(n\) on a
@@ -568,8 +653,9 @@ The first uncovered mixed class has none of these certificates in
 the tested descriptions. In the one-sided class with two components,
 or after the three-to-two reduction above, the residual two-component
 link can fail to have any identified recognizing component or trace.
-A connected cluster with more lower one-handles needs a new relative
-move. The unknot and band arguments do not select one on an arbitrary
+With several lower 1-handles the penultimate test still applies
+when its sublevel is simply connected. In the other cases a different
+certified ordering or relative move is needed. The unknot and band arguments do not select one on an arbitrary
 diagram. A positive outcome for one particular presentation would
 advance exactly the class on which that outcome can be repeated.
 

@@ -13,3 +13,7 @@ The [joint assessment](reviews/TWO_MIXED_CUTS_AND_CHARGED_DISK_20261126.md) reco
 ## 26 November 2026 · Initial working manuscript
 
 The parent manuscript connects the mixed-handle recognition tests to the route by least middle count. For a positive subcritical source it derives the capped-side infimum and raw chiral mass bounds from the fixed-face construction and the actual spherical reassembly. [Manuscript and reading copy](manuscript/README.md)
+
+## 26 November 2026 · Penultimate cuts and curved fillings
+
+The [assessment](reviews/PENULTIMATE_CUTS_AND_CURVED_FILLINGS_20261126.md) extends strict handle descent to a simply connected penultimate sublevel at any upper rank and identifies a class recognized along successive zero-winding cuts. A physical Mazur band, a convex cap test and a disjoint-support obstruction distinguish the available smooth and metric witnesses.

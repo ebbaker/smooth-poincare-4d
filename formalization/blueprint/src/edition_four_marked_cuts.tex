@@ -1,0 +1,103 @@
+\section{Edition 04: geometric inputs for smooth recognition}
+\label{sec:ed04}
+The following are proposed formalization targets and a coverage question.
+The smooth category, the markings, and the quantifiers are part of each
+target. Write $T=4\pi^2$. For an oriented metric, $E_\sigma(g;U)$
+is the integral of the squared Hilbert--Schmidt norm of the signed Weyl
+block over $U$. Write $I^+(X)$ for the infimum of $E_+$ over the
+positive Yamabe classes on the indicated smooth type.
+
+\begin{openproblem}[Round product at a fixed physical face]
+\label{ed04:exact-face}
+On a closed oriented smooth homotopy four-sphere in a positive class
+of energy $e<2T$, fix one smoothly marked separating three-sphere with
+conformally round induced metric and umbilic second fundamental form.
+Formalize its conformal Gaussian normalization and cutoff on two
+independently chosen positive subwidths $w_L,w_R$. For each tolerance,
+construct a smooth path fixed on the outer germs with product endpoint,
+peak joined energy below $2T$, and signed drift on each complete side
+smaller in absolute value than the tolerance. All choices are made on
+this fixed source.
+\end{openproblem}
+
+\begin{openproblem}[Positivity on the two actual caps]
+\label{ed04:caps}
+\uses{ed04:exact-face,lem:master-wall,prop:ed03-inclusive-caps}
+From the joined path, insert a round product cylinder of arbitrary
+finite length. Transplant each compactly supported test to the joined
+metric, retain a uniform positive Yamabe bound, and pass through the
+added center on each cap by density. Identify each capped smooth type
+in its prescribed angular marking and recover the original oriented
+manifold by its actual boundary map. Each cap energy in either sign is
+the corresponding endpoint side energy.
+\end{openproblem}
+
+\begin{openproblem}[Limiting raw masses on fixed capped types]
+\label{ed04:side-masses}
+\uses{ed04:caps,prop:ed03-inclusive-caps}
+Under the exact-face hypotheses, prove that on each original side the
+two chiral masses agree at a value $m_j$ and $I^+(\widehat P_j)\le m_j$.
+For a nonstandard source precisely one capped side has its smooth type
+and the other has raw mass at most $e-I^+(M)$. First construct actual
+positive caps for each tolerance on this fixed source, then take the
+infimum on each fixed capped type. For a parametrized disk the exterior
+cap carries the original smooth type. Its excess bound is the disk
+specialization recorded in Proposition~\ref{prop:ed03-net-saving}.
+\end{openproblem}
+
+\begin{openproblem}[Recognition of the intermediate three-manifold]
+\label{ed04:prefix}
+For a closed smooth homotopy sphere in a reduced mixed presentation
+with one lower, two middle and one upper handle of indices one, two and
+three respectively, realize the winding row $(1,0)$ by marked slides.
+For the winding-one first boundary, a map of nonzero degree from a closed
+oriented three-manifold of positive scalar curvature implies that the
+boundary is diffeomorphic to $S^3$. For the winding-zero first boundary,
+the corresponding conclusion is the connected sum of two copies of
+$S^1\times S^2$. In the latter case the smooth filling and its
+compressions are required to exclude residual homology-sphere summands.
+In either case, use the original framed trace and top attachment to
+identify the closed four-manifold.
+\end{openproblem}
+
+\begin{openproblem}[Reduction followed by a transported second test]
+\label{ed04:successor}
+For a reduced presentation with handle counts $(1,1,3,2,1)$ in index
+order and normalized winding row $(1,0,0)$, a positive-scalar-curvature
+domination certificate on the first winding-one boundary gives a
+presentation on the same closed smooth type with no lower one-handle
+and two middle handles. Carry both surviving attaching maps and the
+upper identification through the reduction. Domination on the second
+actual prefix then recognizes the closed type. For counts $(1,2,3,1,1)$
+use the reversed presentation with its own cuts and markings.
+\end{openproblem}
+
+\begin{openproblem}[Positive entry on a marked double]
+\label{ed04:entry}
+Fix a smooth compact oriented contractible half $W$, a boundary metric
+$\gamma$ in its marking and an orientation-preserving $\gamma$-isometry
+$f$. Seek a positive-scalar-curvature extension of the exact tensor
+$\gamma$ with strictly positive Robin trace form on every nonzero
+$H^{1/2}$ trace. The sign criterion supplies a totally geodesic positive
+filling in the marked conformal class. For an actual such filling $h$,
+write $B_h=E_+(h;W)+E_-(h;W)$. Construct positive metrics on the fixed
+double $W\cup_f(-W)$ with both chiral energies tending to $B_h$.
+Writing $\Lambda$ for the greater of the two top Weyl eigenvalues and
+$G_h=\int_W\Lambda_h^2\,dV_h$, the closed spectral quantity
+$4E_++3\int\Lambda^2\,dV$ should tend to $4B_h+6G_h$.
+If $B_h<2T$, one finite member enters the subcritical band. A witness
+on a candidate $M$ requires its marked smooth identification with this
+double and the budget of the resulting filling.
+\end{openproblem}
+
+\begin{openproblem}[Selection on every untreated smooth type]
+\label{ed04:coverage}
+For each hypothetical nonstandard smooth homotopy four-sphere, take a
+finite handle presentation minimizing the number of middle handles.
+Produce a marked strict net reduction of this minimum, direct smooth
+recognition, or positive entry together with a finite positive
+competitor of energy strictly below $I^+(M)$ on this very type.
+The alternative used may depend on $M$. A single entry metric, an
+excluded shape of a charged disk, and a boundary test on a known
+presentation each address only part of this selection problem.
+\end{openproblem}

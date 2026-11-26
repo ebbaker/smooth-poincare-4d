@@ -1,6 +1,8 @@
 # Continuing the formalization program
 
-**Current milestone, 26 November 2026 · FOT-E43.** Construct the compatible native maps to the prescribed ball, seek a disk repair that meets the finite cost bound, or supply the smoothing data that give a charged pointed limit. [Assessment](../reviews/COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md) · [Dated continuation](../continuation-notes/AFTER_COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md) · [Sole program register](../research-progress/REGISTER.md)
+**Edition 04 · 26 November 2026.** Resume from the [marked cuts and positive entry handoff](EDITION_04_MARKED_CUTS_20261126.md). It specifies the first geometric Lean targets, independent topology packet and survival test on each smooth type. [Edition 04 plan](../research-plan/04_PLAN.md) · [Current baseline](../research-progress/04_BASELINE.md)
+
+**Edition 03 proof milestone, 26 November 2026 · FOT-E43.** Construct the compatible native maps to the prescribed ball, seek a disk repair that meets the finite cost bound, or supply the smoothing data that give a charged pointed limit. [Assessment](../reviews/COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md) · [Dated continuation](../continuation-notes/AFTER_COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md) · [Sole program register](../research-progress/REGISTER.md)
 
 **Earlier handoff, 25 November 2026.** [Resume from the signed native outgoing collar and physical jet bounds](AFTER_NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md). [Assessment](../reviews/NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md) · [Program register](../research-progress/REGISTER.md)
 
@@ -16,7 +18,7 @@ Version 02 follows the master manuscript on a positive-class minimizing sequence
 
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The exact serving model and effort are unavailable. [Plan](../research-plan/01_PLAN.md) · [Baseline](../research-progress/01_BASELINE.md) · [Live register](../research-progress/REGISTER.md)
 
-The table and prompt below are the launch record. For current work use the [Route 02 handoff](../02_neck_energy_accounting/continuation-notes/AFTER_FINITE_ACCOUNTING_20261125.md) and [shared decisions](../research-progress/REGISTER.md#25-november-2026--shared-decisions-for-the-route-02-activation).
+The table and prompt below preserve the first launch. Its assessed return is in the [Route 02 handoff](../02_neck_energy_accounting/continuation-notes/AFTER_FINITE_ACCOUNTING_20261125.md) and [shared decisions](../research-progress/REGISTER.md#25-november-2026--shared-decisions-for-the-route-02-activation).
 
 | Ready at setup | Scope | Deliverable |
 | --- | --- | --- |

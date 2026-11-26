@@ -11,6 +11,8 @@
 | SP4-FORM-VAR-E04e | Planned, awaiting activation | Construct one fixed-source exact-face path in its actual signed chart, with independently allowed widths, outer metric germs and the uniform-in-path complete-side cost. |
 | SP4-FORM-VAR-E04f | Planned, awaiting activation | Bound the two prescribed physical widths by the measured Gaussian jets under ellipticity. Apply the bound to an actual sequence only with independently supplied chart and smallness data. |
 
+## Earlier tasks
+
 | ID | Current state | Evidence or next prerequisite |
 | --- | --- | --- |
 | SP4-FORM-VAR-E04d | Moving oriented orthonormal frame verified | Apply the tensor-slot identification on the actual chart and ellipticity window of the physical splice. [Frame and projection](handoffs/ED03_MOVING_CHIRAL_FRAME.md) |
