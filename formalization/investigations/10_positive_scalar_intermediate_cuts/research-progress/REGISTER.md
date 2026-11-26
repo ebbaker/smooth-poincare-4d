@@ -4,6 +4,8 @@
 
 ## Edition 04 activated evidence · 26 November 2026
 
+The subsequent scientific rank-three test uses the unmodified mixed penultimate cut. Its zero-mean PSC band is physically measured, but the fixed fillings already exceed the joined budget in either sign at every positive length. It is a separate standard-source obstruction from the checked rank-two scalar-width calculation. [Rank-three source](../../../../papers/investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/notes/FURTHER_MARKED_SECTION.md)
+
 | Task | Checked result | Open dependency |
 | --- | --- | --- |
 | SP4-FORM-PSC-B01 | A pinned integral degree API checks transport through the inverse actual prefix homeomorphism. The integral cokernel, exact pair-sequence maps and basis matching are explicit algebraic hypotheses. | Supply the geometric realizations of these maps and the smooth oriented boundary classification on the selected cuts. [Integral inputs](handoffs/ED04_INTEGRAL_PREFIX_INPUTS_20261126.md) · [Route 09 marked transport](../../09_morse_heights_and_handle_recognition/research-progress/handoffs/ED04_TRANSPORTED_PREFIX_TRACE_20261126.md) |

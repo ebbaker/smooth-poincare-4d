@@ -25,3 +25,7 @@ The parent manuscript now includes a two-attachment move across two failed indiv
 ## 26 November 2026 · Nonlocal bands and physical charge transport
 
 The parent manuscript identifies a nonlocal reducible family with unbounded sphere intersection, including its compatible mixed closures. At a single entered index it constructs an exact marked round face arbitrarily close to the initial joined energy and determines where every unit of the disk charge goes. The exterior increment and the retained-core peak requirement delimit the variational application. [Assessment and independent readings](reviews/NONLOCAL_BANDS_AND_PHYSICAL_TRANSPORT_20261126.md)
+
+## 26 November 2026 · Exterior recovery and core retention
+
+Recovered bands at arbitrary winding on the marked lane family and derived an asymptotically sharp joined peak for numerical core retention. The full exterior comparison and the separate full-core estimate remain open. [Assessed milestone](reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)

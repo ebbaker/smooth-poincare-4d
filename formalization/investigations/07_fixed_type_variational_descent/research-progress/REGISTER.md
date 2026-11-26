@@ -4,6 +4,9 @@
 
 This is the sole live status register for `SP4-FORM-DESC` and `VAR-E06`. The [proof plan](../research-plan/PLAN.md) specifies each target and acceptance test. The paper's [research register](../../../../papers/master/01_fixed_type_variational_descent/research-progress/REGISTER.md) owns mathematical extraction or construction on the source.
 
+
+A subsequent finite-source construction retains both numerical core charges throughout when its headroom test passes. The two cap energies are $e+\Delta-\beta$ and $K_*+\beta$, with $K_*=\max_\sigma q^\sigma$. A paid decrease still requires the signed value of $\Delta-\beta$. Holding the original metric near a given whole core has its own annulus criterion. These are scientific extensions of the checked E45 loss inequality. [Compared cases](../../reviews/PHYSICAL_STRIPS_AND_TRANSPORTED_DISKS_20261126.md#scientific-developments-during-final-verification)
+
 ## Edition 04 objectives
 
 26 November 2026, America/New_York. [Edition 04 plan](../../research-plan/04_PLAN.md) · [Route acceptance tests](../research-plan/PLAN.md#edition-04-objectives)
@@ -12,6 +15,8 @@ This is the sole live status register for `SP4-FORM-DESC` and `VAR-E06`. The [pr
 | --- | --- | --- |
 | SP4-FORM-DESC-E10a | Verified from independently supplied positive caps on fixed marked types, both signed errors and actual replacement data. | Both signed masses agree and bound the corresponding infima. The actual finite recognition test fixes the same marked survivor for both chiralities and bounds the smaller mass by the excess. Native cap realization remains with Routes 03 and 05. [Proof return](handoffs/ED04_FIXED_SOURCE_SIDE_MASSES_20261126.md) |
 | SP4-FORM-DESC-E10b | The already selected charged original disk excludes arbitrarily small signed cap drift eventually on the minimizing sequence. | Produce the finite marked comparison family and the common physical windows with the full-curvature bounds. The late comparison uses the fixed-source statement before taking the limit of the excess. [Proof return](handoffs/ED04_FIXED_SOURCE_SIDE_MASSES_20261126.md) |
+
+**E45 transported comparison at a fixed index.** The positive caps have zero error against the outgoing disk and exterior. Against the incoming metric the entire exterior gains the original disk charge plus the flattening increment. If the gain is confined to a shrinking marked exterior strip and the incoming charge exceeds the signed slack, every upper bound for the outgoing Weyl-square density in incoming volume diverges. For a positive same-type cap, the permitted core loss, joined excess allowance and complete cap surcharge together bound the protected incoming charge minus the fixed-type excess. The transported cap stays on the original oriented type and spends the incoming disk charge on the exterior. [Cap ledger](../../03_single_cut_descent/research-progress/handoffs/E45_TRANSPORTED_DISK_CAPS_20261126.md) · [Finite loss, density and sequence assessment](../../reviews/PHYSICAL_STRIPS_AND_TRANSPORTED_DISKS_20261126.md)
 
 ## Earlier tasks
 

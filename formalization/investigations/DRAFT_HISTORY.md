@@ -1,5 +1,7 @@
 # Overall formalization milestones
 
+- **26 November 2026 · FOT-E45.** Derived the finite exterior gain and protected-core loss for transport of the original charged disk, measured its endpoint density against incoming volume, and followed a relative framed pair through the closed trace. Added actual native jet, volume, cap, width, isolation and finite round-end results. [Assessment](reviews/PHYSICAL_STRIPS_AND_TRANSPORTED_DISKS_20261126.md) · [Public verification](research-progress/handoffs/ED04_E45_VERIFICATION_20261126.md)
+
 - **26 November 2026 · FOT-E44.** Activated Edition 04 and assessed the fixed round face, both positive marked caps and the finite side-mass test. The ordinary matrix, native three-to-two reduction with supplied pair and marked tubes, product-band price, and attained round-end mode now have checked Lean statements. [Assessment](reviews/FIXED_FACES_AND_NORMALIZED_PREFIXES_20261126.md) · [Public verification](research-progress/handoffs/ED04_INDEPENDENT_VERIFICATION_20261126.md)
 
 - **26 November 2026 · Edition 04 setup (FOT-B08).** Issued the marked-cut and positive-entry plan after reviewing the master and Investigation 05. Routes 10 and 11 own intermediate three-manifold recognition and intrinsic entry from marked exteriors. The first milestones connect a fixed exact face to both actual caps and a recognized mixed prefix to its original closed trace. [Edition 04](research-plan/04_PLAN.md) · [Baseline](research-progress/04_BASELINE.md) · [Continuation](continuation-notes/EDITION_04_MARKED_CUTS_20261126.md)

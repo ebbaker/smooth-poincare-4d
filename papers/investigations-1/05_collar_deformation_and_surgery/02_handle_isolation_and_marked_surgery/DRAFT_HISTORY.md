@@ -25,3 +25,7 @@ The surgery manuscript derives the two-relator and peripheral constraints, const
 ## 26 November 2026 · A band through the free generator
 
 The two-ended cover distinguishes a family with sharp sphere intersection \(2n\). A specified pair of framed slides reduces each terminal member, and the relative statement recognizes the compatible one-lower closure. The returned rank-two penultimate section has a measured PSC band with an explicit lower bound on its chiral cost. [Independent topology reading](../reviews/GENERATOR_CLOSURE_MANUSCRIPT_READER.md) · [Measured band](notes/RANK_TWO_PRODUCT_BAND.md)
+
+## 26 November 2026 · Exterior recovery and core retention
+
+Recovered the first radial slide from a peripheral annulus in the given marked exterior. Measured the mixed rank-three penultimate band and priced both complete sides. [Assessed milestone](../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)

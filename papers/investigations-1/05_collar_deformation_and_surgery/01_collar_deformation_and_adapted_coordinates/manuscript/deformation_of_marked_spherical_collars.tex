@@ -1,3 +1,4 @@
+% 26 November 2026. Exterior recovery and native caps, intake 8471728a1549.
 % 26 November 2026, boundary response, curved interval and measured isolation.
 % Input 2575660c6240; derivations and independent readings in the parent assessment.
 % Two attachments and finite face error, 26 November 2026, input 5ddaabd76595.
@@ -1305,6 +1306,129 @@ raw disk imbalance minus \(j^+(w)-j^-(w)\). All terms refer to one finite index.
 The E61 selection supplies positive charge and a smooth bicollar.
 The cap, the quantitative physical radii and the response at one
 affordable width remain to be supplied there.
+
+\subsection{A scalar curvature test before solving the boundary problems}
+For a smooth metric on the closed oriented homotopy sphere let \(E\)
+be its common chiral Weyl energy and \(n=\|(R)_-\|_{L^2}\).
+The Yamabe quotient gives \(Y\ge -n\) by H\"older. In a volume-one
+Yamabe minimizer, Gauss--Bonnet gives
+\(Y^2=48(2T-E)+12\int|\Ric_0|^2\) \cite{LeeParker1987Yamabe}.
+If \(E<2T\), put \(y=\sqrt{48(2T-E)}\). When \(n<y\) this forces
+\(Y\ge y\). The same holds at \(n=y\) when the tested metric has a
+positive scalar region. Indeed a nonpositive class then has \(Y=-n\),
+and equality in the quotient on its positive smooth minimizer would
+force \(\int R_+ f^2=0\). In particular on an entered type,
+\[
+ I^+(M)=\inf_{g\ {\rm smooth}}\bigl(E(g)+\|(R_g)_-\|_2^2/48\bigr)
+ \qquad (I^+(M)<2T).
+\]
+Every nonpositive class pays at least \(2T\) in this functional.
+The positive Yamabe representatives of a minimizing sequence
+approach \(I^+(M)\) with zero penalty.
+
+Keep the complete original positive Yamabe exterior \(V\), and let
+\(C\) be the marked smooth cap including the native connector.
+For its strip \(A\) and off-strip part \(O\) one must use
+\[
+ E=e_i-m_i^\sigma+E_\sigma(A)+E_\sigma(O),\qquad
+ n^2=\int_A(R_- )^2+\int_O(R_-)^2 .
+\]
+A purported cap with \(E<I\) on an entered type necessarily has
+\(n^2>48(2T-E)\). A candidate at the inclusive threshold \(E\le T\)
+with \(n\le y\) meets the positive recognition criterion. Both
+statements concern the very same smooth assembled metric.
+
+When the test passes, extend zero-trace functions on \(C\) by zero
+and apply \(Q_M(f)\ge y\|f\|_4^2\). This gives
+\(\lambda_1^D(C)\ge y/\sqrt{\operatorname{Vol}(C)}\).
+For arbitrary common trace glue the two zero-energy harmonic
+extensions. Since \(Q_C(f)\ge-n\|f\|_{4,M}^2\), Green's formula
+with the two outward normals gives the form inequality
+\[
+ 6(N_V+N_C)\succeq \frac{y}{y+n}\,6N_V\succeq\tfrac12\,6N_V .
+\]
+For an actual available outward Gaussian length \(a\), let \(j_a\)
+be the minimum ratio of slice to face area density there. Dropping
+tangential gradients and minimizing each one-dimensional form
+with free far endpoint bounds \(6N_V\) below by
+\(j_a\sqrt{6R_g}\tanh(a\sqrt{R_g/6})\) times the identity in
+face \(L^2\). The normal-line minimizer is the ratio
+\(\cosh((a-t)\sqrt{R_g/6})/\cosh(a\sqrt{R_g/6})\).
+Use the connector width for \(a\) if it also fits the exterior.
+An outward subwidth leaves the inward integrals at their original
+width. On the unchanged E61 cap \(n=0\) and \(E=e_i\).
+
+\paragraph{A finite interior variation on that cap.}
+On a patch away from the seam, let
+\(g_t=g(e^{tA}\,\cdot,\cdot)\) with trace-free self-adjoint \(A\)
+supported in the patch and
+\(\|A\|_\infty+\|\nabla A\|_4+\|\nabla^2 A\|_2\le1\).
+In the convention of \cite{BahuaudGuentherIsenbergMazzeo2025Bach}
+the common chiral first derivative is
+\(-\tfrac12\int\langle B,gA\rangle\).
+If it equals \(-p<0\) and \(F_2\ge p\) bounds the absolute second
+derivative on \([0,1]\), the interval \([0,p/F_2]\) has peak \(e_i\)
+and its endpoint saves between \(p^2/(2F_2)\) and \(e_i-I\).
+The localized curvature variation estimate gives
+\(F_2=C(1+\|{\rm Rm}\|_{2,U})^2\) on the permitted patch \(U\)
+\cite{Baker2026FixedDescent}. All of the change is off the untouched
+strip. A positive cap with \(E=I\) attains the infimum; inclusive
+recognition instead uses \(E\le T\).
+With \(b=\exp(s)\), \(r=\sup_{|t|\le s}\|R_{g_t}-R_g\|_2\), and
+\(y_*=\sqrt{48(2T-H)}\) on a joined interval of peak \(H<2T\)
+containing zero, the two closed forms satisfy
+\[
+ [b(1+r/y_*)]^{-1}Q_0\le Q_t\le(b+r/R_g)Q_0
+ \qquad (|t|\le s\text{ in the interval}).
+\]
+Indeed volume is fixed, the kinetic terms compare by \(b\), and
+the scalar difference costs at most \(r\|f\|_4^2\). Absorb this
+using the respective closed Yamabe bounds. Zero extension gives
+the same factors for all Dirichlet eigenvalues of the cap.
+Minimizing at fixed common trace gives both bounds on its summed
+outward response with the complete exterior. E61 supplies no positive
+lower bound on \(p\) in a permitted patch.
+\paragraph{Response of the actual round cap after core charge retention.}
+For the construction in the parent manuscript
+\cite{Baker2026CollarProgram}, take the target sphere of radius
+\(b=5r/2\) in the flat prepared annulus \(2r<\rho<3r\).
+Set the cylinder radius to \(b\) and take
+\(\Omega=\omega(\rho/r)\), equal to \(b/\rho\) near \(b\) and
+one outside the annulus. Choose the common native width \(w>0\)
+with \(\rho=b e^{t/b}\) in the exact plateau for \(|t|\le w\)
+and inside the original Gaussian buffers. Both signed strip
+costs vanish. For the entire changed exterior \(X\) and its
+conformally Euclidean ball cap \(C\), the complete energy is
+\(E_c=e+\Delta-\beta\); the opposite complete disk has
+\(q+\beta\) in both signs. All this charge lies off the exact strip.
+
+With \(U_0=\sup\omega\), Dirichlet conformal covariance bounds
+\(\lambda_1^D(C)\ge 6\lambda_1(-\Delta^D_{B_1})/(U_0 b)^2\).
+The cap-harmonic extension of a degree-\(j\) spherical harmonic
+\(\varphi_j\) is \(\Omega^{-1}(\rho/b)^j\varphi_j\). Its outward
+normal derivative is \((j+1)\varphi_j/b\), recovering the scaled
+round operator from \cite{Baker2026ChiralMaster}.
+If the joined peak is strictly subcritical, the exterior cap has
+positive Yamabe constant at least \(y_c=\sqrt{48(2T-E_c)}\).
+The entire retained negative scalar charge, pulled forward by the
+marking, obeys \(n_X^2\le N^2+C_i r^4\), where
+\[
+ N^2=72\pi^2\int_{5/2}^3 s^3
+    \left(\frac{(\omega''+3\omega'/s)_+}{\omega}\right)^2ds .
+\]
+Indeed the Euclidean annulus contributes this exact integral
+by \(R=-6\Omega^{-3}\Delta\Omega\); the remaining physical
+transition has bounded scalar and volume \(O_i(r^4)\) and the
+unchanged region has positive scalar curvature. Zero extension into the positive capped manifold also gives
+\(\lambda_1^D(X)\ge y_c/\sqrt{\operatorname{Vol}(X)}\).
+Applying the first form comparison with the roles of the pieces exchanged gives
+\[
+ 6(N_X+N_C)\succeq
+ \frac{y_c}{y_c+\sqrt{N^2+C_i r^4}}\,
+ \frac{6}{b}\sqrt{1-\Delta_\gamma}.
+\]
+This is an all-trace test for this finite positive capped
+exterior. Its full energy still satisfies \(E_c\ge I\).
 
 \section{Testing a coupled path on the original marking}\label{sec:isolate}
 Let \(g\) be the incoming positive source and \(h_t\) a proposed

@@ -4,7 +4,7 @@
 with OpenAI Codex assistance. The exact serving model and reasoning effort
 are unavailable.
 
-The [Edition 04 overview](investigations/research-overview/04_OVERVIEW.md) follows a single smooth type from its marked handle presentation or positive geometric entry to recognition or a strict contradiction. [Edition 04 plan](investigations/research-plan/04_PLAN.md) · [Proof owners](investigations/README.md#proof-investigations) · [Baseline and pins](investigations/research-progress/04_BASELINE.md) · [Latest checked Lean milestone](investigations/reviews/FIXED_FACES_AND_NORMALIZED_PREFIXES_20261126.md)
+The [Edition 04 overview](investigations/research-overview/04_OVERVIEW.md) follows a single smooth type from its marked handle presentation or positive geometric entry to recognition or a strict contradiction. [Edition 04 plan](investigations/research-plan/04_PLAN.md) · [Proof owners](investigations/README.md#proof-investigations) · [Baseline and pins](investigations/research-progress/04_BASELINE.md) · [Latest checked Lean milestone](investigations/reviews/PHYSICAL_STRIPS_AND_TRANSPORTED_DISKS_20261126.md)
 
 The Lake package has three public imports.
 

@@ -50,3 +50,7 @@ The 17 named baseline hashes and the transitive 21-file TeX union matched again 
 ## Continuation after two attachments and physical face costs
 
 For the nonlocal family and the charged-disk transport the 17-file and transitive 21-file digests above were reproduced again. The preceding working manuscripts at intake HEAD 5ddaabd76595 matched the bytes subsequently recorded in 19c187ad8dbe. The [independent reading assignments](../research-progress/handoffs/NATIVE_STRIP_AND_LIFT_READBACKS_20261126.md) pin each new derivation and the integrated readings by exact revision. The [source passage record](../../../../references/SOURCE_NOTES_COLLAR_SURGERY_20261126.md#nonlocal-bands-and-a-physical-boundary-response) identifies the Figure 5 and single-knot inputs, the nonseparating-sphere theorem, the PSC bands and the conformal boundary operator. [Source and reading-copy receipt](../reviews/NONLOCAL_BANDS_AND_PHYSICAL_TRANSPORT_20261126.md)
+
+## Exterior recovery and protected charge, 26 November
+
+The [assessment](../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md) reproduces the prior three reading-copy receipts, the 17-file baseline and 21-file transitive union. The fixed primary passages on the framed Figure 5 pair, the single-knot theorem, PSC extension and Yamabe minimizers are linked in the [canonical source record](../../../../references/SOURCE_NOTES_COLLAR_SURGERY_20261126.md#exterior-recovery-and-protected-charge).

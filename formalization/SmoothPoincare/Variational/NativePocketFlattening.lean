@@ -178,6 +178,160 @@ theorem exists_nativePocketCoefficientTaylor {U : Set E₄} (hU : IsOpen U)
     simpa only [hD₀, sub_zero, Real.norm_eq_abs, mul_assoc, ← pow_two] using hh
 
 
+/-- The native affine coefficient relative to the fixed flat reference. -/
+def nativePocketAffineCoefficient (s r : ℝ) (D : E₄ → ℝ) (x : E₄) : ℝ :=
+  (1 - s * nativePocketCutoff r x) * D x
+
+private theorem norm_product_hessian_le {U : Set E₄} (hU : IsOpen U)
+    {b D : E₄ → ℝ} (hb : ContDiffOn ℝ ∞ b U) (hD : ContDiffOn ℝ ∞ D U)
+    {x : E₄} (hx : x ∈ U) :
+    ‖fderiv ℝ (fderiv ℝ (fun y => b y * D y)) x‖ ≤
+      |b x| * ‖fderiv ℝ (fderiv ℝ D) x‖ +
+        2 * ‖fderiv ℝ b x‖ * ‖fderiv ℝ D x‖ +
+        |D x| * ‖fderiv ℝ (fderiv ℝ b) x‖ := by
+  have hBd {y : E₄} (hy : y ∈ U) : DifferentiableAt ℝ b y :=
+    (hb.contDiffAt (hU.mem_nhds hy)).differentiableAt (by simp)
+  have hDd {y : E₄} (hy : y ∈ U) : DifferentiableAt ℝ D y :=
+    (hD.contDiffAt (hU.mem_nhds hy)).differentiableAt (by simp)
+  have hBd' := ((hb.fderiv_of_isOpen hU (m := ∞) (by simp)).contDiffAt
+    (hU.mem_nhds hx)).differentiableAt (by simp)
+  have hDd' := ((hD.fderiv_of_isOpen hU (m := ∞) (by simp)).contDiffAt
+    (hU.mem_nhds hx)).differentiableAt (by simp)
+  have hEq : fderiv ℝ (fun y => b y * D y) =ᶠ[𝓝 x]
+      (fun y => b y • fderiv ℝ D y + D y • fderiv ℝ b y) := by
+    filter_upwards [hU.mem_nhds hx] with y hy using fderiv_fun_mul (hBd hy) (hDd hy)
+  have hP : DifferentiableAt ℝ (fun y => b y • fderiv ℝ D y) x := (hBd hx).smul hDd'
+  have hQ : DifferentiableAt ℝ (fun y => D y • fderiv ℝ b y) x := (hDd hx).smul hBd'
+  apply ContinuousLinearMap.opNorm_le_bound _ (by positivity)
+  intro v
+  apply ContinuousLinearMap.opNorm_le_bound _ (by positivity)
+  intro w
+  rw [Real.norm_eq_abs, hEq.fderiv_eq, fderiv_fun_add hP hQ,
+    fderiv_fun_smul (hBd hx) hDd', fderiv_fun_smul (hDd hx) hBd']
+  simp only [add_apply, smul_apply, ContinuousLinearMap.smulRight_apply, smul_eq_mul]
+  let p := b x * fderiv ℝ (fderiv ℝ D) x v w
+  let q := fderiv ℝ b x v * fderiv ℝ D x w
+  let r := D x * fderiv ℝ (fderiv ℝ b) x v w
+  let u := fderiv ℝ D x v * fderiv ℝ b x w
+  change |(p + q) + (r + u)| ≤ _
+  have hh (L : E₄ →L[ℝ] E₄ →L[ℝ] ℝ) :
+      |L v w| ≤ ‖L‖ * ‖v‖ * ‖w‖ := by
+    rw [← Real.norm_eq_abs]
+    exact (ContinuousLinearMap.le_opNorm _ _).trans
+      (mul_le_mul_of_nonneg_right (ContinuousLinearMap.le_opNorm L v) (norm_nonneg _))
+  have he (L : E₄ →L[ℝ] ℝ) (a : E₄) : |L a| ≤ ‖L‖ * ‖a‖ := by
+    rw [← Real.norm_eq_abs]
+    exact ContinuousLinearMap.le_opNorm L a
+  have hp : |p| ≤ |b x| * (‖fderiv ℝ (fderiv ℝ D) x‖ * ‖v‖ * ‖w‖) := by
+    unfold p
+    rw [abs_mul]
+    exact mul_le_mul_of_nonneg_left (hh _) (abs_nonneg _)
+  have hq : |q| ≤ (‖fderiv ℝ b x‖ * ‖v‖) * (‖fderiv ℝ D x‖ * ‖w‖) := by
+    unfold q
+    rw [abs_mul]
+    exact mul_le_mul (he _ _) (he _ _) (abs_nonneg _) (by positivity)
+  have hr : |r| ≤ |D x| * (‖fderiv ℝ (fderiv ℝ b) x‖ * ‖v‖ * ‖w‖) := by
+    unfold r
+    rw [abs_mul]
+    exact mul_le_mul_of_nonneg_left (hh _) (abs_nonneg _)
+  have hu : |u| ≤ (‖fderiv ℝ D x‖ * ‖v‖) * (‖fderiv ℝ b x‖ * ‖w‖) := by
+    unfold u
+    rw [abs_mul]
+    exact mul_le_mul (he _ _) (he _ _) (abs_nonneg _) (by positivity)
+  calc
+    _ ≤ (|p| + |q|) + (|r| + |u|) := (abs_add_le (p + q) (r + u)).trans
+      (add_le_add (abs_add_le p q) (abs_add_le r u))
+    _ ≤ _ := (add_le_add (add_le_add hp hq) (add_le_add hr hu)).trans_eq (by ring)
+
+private theorem nativePocketWeight_jet_bounds
+    {s r C₁ C₂ : ℝ} {x : E₄} (hs : s ∈ Icc 0 1)
+    (h₁ : ‖fderiv ℝ (nativePocketCutoff r) x‖ ≤ C₁ / r)
+    (h₂ : ‖fderiv ℝ (fderiv ℝ (nativePocketCutoff r)) x‖ ≤ C₂ / r ^ 2) :
+    let b := fun y => 1-s*nativePocketCutoff r y
+    |b x| ≤ 1 ∧ ‖fderiv ℝ b x‖ ≤ C₁ / r ∧ ‖fderiv ℝ (fderiv ℝ b) x‖ ≤ C₂ / r ^ 2 := by
+  intro b
+  let χ := nativePocketCutoff r
+  have hh := contDiff_nativePocketCutoff r
+  have hh₁ : ContDiff ℝ ∞ (fderiv ℝ χ) := hh.fderiv_right (m := ∞) (by simp)
+  have hEq (y : E₄) : fderiv ℝ b y = (-s) • fderiv ℝ χ y := by
+    change fderiv ℝ (fun y => 1 - s * χ y) y = _
+    rw [fderiv_const_sub]
+    have heq : fderiv ℝ (fun t => s * χ t) y = s • fderiv ℝ χ y :=
+      fderiv_const_smul (hh.differentiable (by simp) y) s
+    rw [heq, neg_smul]
+  have hEq₂ : fderiv ℝ (fderiv ℝ b) x = (-s) • fderiv ℝ (fderiv ℝ χ) x := by
+    rw [funext hEq]
+    exact fderiv_const_smul (hh₁.differentiable (by simp) x) (-s)
+  have hnonneg : 0 ≤ s * χ x := mul_nonneg hs.1 (nativePocketCutoff_mem_Icc r x).1
+  have hle : s * χ x ≤ 1 := (mul_le_of_le_one_left (nativePocketCutoff_mem_Icc r x).1 hs.2).trans
+    (nativePocketCutoff_mem_Icc r x).2
+  refine ⟨?_, ?_, ?_⟩
+  · change |1-s*χ x| ≤ _
+    rw [abs_of_nonneg (sub_nonneg.mpr hle)]
+    exact sub_le_self _ hnonneg
+  · rw [hEq, norm_smul, Real.norm_eq_abs, abs_neg, abs_of_nonneg hs.1]
+    exact (mul_le_of_le_one_left (norm_nonneg _) hs.2).trans h₁
+  · rw [hEq₂]
+    exact (ContinuousLinearMap.opNorm_smul_le (-s) (fderiv ℝ (fderiv ℝ χ) x)).trans (by
+      rw [Real.norm_eq_abs, abs_neg, abs_of_nonneg hs.1]
+      exact (mul_le_of_le_one_left (norm_nonneg (fderiv ℝ (fderiv ℝ χ) x)) hs.2).trans h₂)
+
+/-- A fixed native coefficient gives an inverse-radius Hessian bound after
+zeroth matching, and a uniform Hessian bound after first-jet matching. -/
+theorem exists_nativePocketAffineCoefficient_hessian_bounds
+    {U : Set E₄} (hU : IsOpen U) {R₀ : ℝ} (hR₀ : 0 ≤ R₀)
+    (hB : Metric.closedBall (0 : E₄) R₀ ⊆ U)
+    {D : E₄ → ℝ} (hD : ContDiffOn ℝ ∞ D U) (hD₀ : D 0 = 0) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ s ∈ Icc (0 : ℝ) 1, ∀ {r : ℝ}, 0 < r → r ≤ 1 → 3 * r ≤ R₀ →
+      ∀ x ∈ Metric.closedBall (0 : E₄) (3 * r),
+        let N := nativePocketAffineCoefficient s r D
+        ‖fderiv ℝ (fderiv ℝ N) x‖ ≤ C / r ∧
+          (fderiv ℝ D 0 = 0 → ‖fderiv ℝ (fderiv ℝ N) x‖ ≤ C) := by
+  obtain ⟨C, hC, hTaylor⟩ := exists_nativePocketCoefficientTaylor hU hR₀ hB hD hD₀
+  obtain ⟨L₁, L₂, hL₁, hL₂, hCut⟩ := exists_nativePocketCutoff_deriv_bounds
+  let K := C * (1 + 6 * L₁ + 9 * L₂)
+  have hK : 0 ≤ K := by dsimp [K]; positivity
+  refine ⟨K, hK, fun s hs => ?_⟩
+  intro r hr hr₁ hR x hx N
+  let b := fun y => 1 - s * nativePocketCutoff r y
+  have hxB : x ∈ Metric.closedBall (0 : E₄) R₀ := Metric.closedBall_subset_closedBall hR hx
+  have hnorm : ‖x‖ ≤ 3 * r := by simpa only [Metric.mem_closedBall, dist_zero_right] using hx
+  have hb : ContDiff ℝ ∞ b := contDiff_const.sub (contDiff_const.mul (contDiff_nativePocketCutoff _))
+  obtain ⟨hb₀, hb₁, hb₂⟩ := nativePocketWeight_jet_bounds hs (hCut hr x hnorm).1 (hCut hr x hnorm).2
+  obtain ⟨hval, hFirst, hSecond, hExact⟩ := hTaylor x hxB
+  have h := norm_product_hessian_le hU hb.contDiffOn hD (hB hxB)
+  have hCore : |b x| * ‖fderiv ℝ (fderiv ℝ D) x‖ ≤ C :=
+    (mul_le_of_le_one_left (norm_nonneg (fderiv ℝ (fderiv ℝ D) x)) hb₀).trans hSecond
+  have hMixed (G : ℝ) (hG : ‖fderiv ℝ D x‖ ≤ G) :
+      2 * ‖fderiv ℝ b x‖ * ‖fderiv ℝ D x‖ ≤ 2 * (L₁/r) * G :=
+    mul_le_mul (mul_le_mul_of_nonneg_left hb₁ (by norm_num)) hG (norm_nonneg _) (by positivity)
+  have hCut₀ (B : ℝ) (hB' : |D x| ≤ B) :
+      |D x| * ‖fderiv ℝ (fderiv ℝ b) x‖ ≤ B * (L₂ / r^2) :=
+    mul_le_mul hB' hb₂ (norm_nonneg (fderiv ℝ (fderiv ℝ b) x)) ((abs_nonneg _).trans hB')
+  refine ⟨?_, ?_⟩
+  · have hV := hval.trans (mul_le_mul_of_nonneg_left hnorm hC)
+    calc
+      ‖fderiv ℝ (fderiv ℝ N) x‖ ≤ C + 2 * (L₁/r) * C + (C*(3*r)) * (L₂/r^2) :=
+        h.trans (add_le_add (add_le_add hCore (hMixed C hFirst)) (hCut₀ _ hV))
+      _ ≤ K / r := by
+        apply (le_div_iff₀ hr).mpr
+        have hm := mul_le_mul_of_nonneg_left hr₁ hC
+        field_simp [hr.ne']
+        nlinarith only [hm, hC, hL₁, hL₂, mul_nonneg hC hL₁, mul_nonneg hC hL₂]
+  · intro hn
+    obtain ⟨hh₀, hh₁⟩ := hExact hn
+    have hV := hh₀.trans (mul_le_mul_of_nonneg_left
+      (pow_le_pow_left₀ (norm_nonneg _) hnorm 2) hC)
+    have hG := hh₁.trans (mul_le_mul_of_nonneg_left hnorm hC)
+    calc
+      ‖fderiv ℝ (fderiv ℝ N) x‖ ≤ C + 2 * (L₁/r) * (C*(3*r)) + (C*(3*r)^2) * (L₂/r^2) :=
+        h.trans (add_le_add (add_le_add hCore (hMixed _ hG)) (hCut₀ _ hV))
+      _ = K := by
+        dsimp [K]
+        field_simp [hr.ne']
+        ring
+
+
 variable {H M : Type*} [TopologicalSpace H] {I : ModelWithCorners ℝ E₄ H}
   [TopologicalSpace M] [ChartedSpace H M] [IsManifold I ∞ M] [T2Space M]
 
@@ -290,6 +444,63 @@ theorem nativePocketPath_at_zero (F : PartialDiffeomorph I₄ I E₄ M ∞)
   intro y v w
   rw [nativePocketPath_inner]
   simp
+
+/-- A specific scalar coefficient of an actual metric in the original disk
+marking, evaluated on two fixed coordinate vectors. -/
+def nativePocketMetricCoefficient (F : PartialDiffeomorph I₄ I E₄ M ∞)
+    (g : SmoothRiemannianMetric I M) (v w x : E₄) : ℝ :=
+  pullbackMetricCoefficients g (F : E₄ → M) x v w
+
+omit [T2Space M] in
+theorem contDiffOn_nativePocketMetricCoefficient (F : PartialDiffeomorph I₄ I E₄ M ∞)
+    (g : SmoothRiemannianMetric I M) (v w : E₄) :
+    ContDiffOn ℝ ∞ (nativePocketMetricCoefficient F g v w) F.source :=
+  ((contDiffOn_pullback_metric_coefficients g F.open_source F.contMDiffOn_toFun).clm_apply
+    contDiffOn_const).clm_apply contDiffOn_const
+
+/-- The formula and its differential jets refer to the same physical
+metric, including at the rim of the chosen region. -/
+theorem nativePocketPath_nativeCoefficient_germ
+    (F : PartialDiffeomorph I₄ I E₄ M ∞) (g R : SmoothRiemannianMetric I M)
+    {r : ℝ} (hr : 0 < r) (hS : Metric.closedBall (0 : E₄) (3 * r) ⊆ F.source)
+    (s : Icc (0 : ℝ) 1) (v w : E₄) {x : E₄} (hx : x ∈ F.source) :
+    let D := fun y => nativePocketMetricCoefficient F g v w y - nativePocketMetricCoefficient F R v w y
+    (fun y => nativePocketMetricCoefficient F (nativePocketPath F g R hr hS s) v w y -
+      nativePocketMetricCoefficient F R v w y) =ᶠ[𝓝 x] nativePocketAffineCoefficient s r D := by
+  intro D
+  filter_upwards [F.open_source.mem_nhds hx] with y hy
+  simp only [nativePocketAffineCoefficient, D, nativePocketMetricCoefficient, pullbackMetricCoefficients_apply]
+  rw [nativePocketPath_inner, nativePocketPush_chart F r hy]
+  ring
+
+/-- The actual native coefficient has the inverse-radius second-jet estimate
+under the zeroth match. A first-jet match in this very chart gives the
+uniform estimate. -/
+theorem exists_nativePocketPath_nativeCoefficient_hessian_bounds
+    (F : PartialDiffeomorph I₄ I E₄ M ∞) (g R : SmoothRiemannianMetric I M)
+    (v w : E₄) {R₀ : ℝ} (hR₀ : 0 ≤ R₀)
+    (hBuffer : Metric.closedBall (0 : E₄) R₀ ⊆ F.source)
+    (hZero : nativePocketMetricCoefficient F g v w 0 = nativePocketMetricCoefficient F R v w 0) :
+    let D := fun y => nativePocketMetricCoefficient F g v w y - nativePocketMetricCoefficient F R v w y
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ (s : Icc (0 : ℝ) 1) {r : ℝ} (hr : 0 < r),
+      r ≤ 1 → ∀ (hBound : 3 * r ≤ R₀) (x : E₄), x ∈ Metric.closedBall (0 : E₄) (3 * r) →
+        let hS := (Metric.closedBall_subset_closedBall hBound).trans hBuffer
+        let X := fun y => nativePocketMetricCoefficient F (nativePocketPath F g R hr hS s) v w y -
+          nativePocketMetricCoefficient F R v w y
+        ‖fderiv ℝ (fderiv ℝ X) x‖ ≤ C / r ∧
+          (fderiv ℝ D 0 = 0 → ‖fderiv ℝ (fderiv ℝ X) x‖ ≤ C) := by
+  intro D
+  have hD : ContDiffOn ℝ ∞ D F.source :=
+    (contDiffOn_nativePocketMetricCoefficient F g v w).sub (contDiffOn_nativePocketMetricCoefficient F R v w)
+  obtain ⟨C,hC,hRate⟩ :=
+    exists_nativePocketAffineCoefficient_hessian_bounds F.open_source hR₀ hBuffer hD (sub_eq_zero.mpr hZero)
+  refine ⟨C,hC,?_⟩
+  intro s r hr hr₁ hBound x hx hS X
+  have hGerm : X =ᶠ[𝓝 x] nativePocketAffineCoefficient s r D :=
+    nativePocketPath_nativeCoefficient_germ F g R hr hS s v w (hS hx)
+  rw [hGerm.fderiv.fderiv_eq]
+  exact hRate s s.2 hr hr₁ hBound x hx
+
 
 variable [SigmaCompactSpace M]
 
@@ -454,6 +665,7 @@ theorem nativePocketPath_signed_change (F : PartialDiffeomorph I₄ I E₄ M ∞
   rw [g.charge_univ, h.charge_univ] at hChg
   linarith only [hChg]
 
+omit [I.Boundaryless] in
 /-- Uniform native curvature and volume estimates give a signed drift and
 the strict joined bound at this same finite metric. -/
 theorem nativePocketPath_signed_peak_of_curvature (F : PartialDiffeomorph I₄ I E₄ M ∞)

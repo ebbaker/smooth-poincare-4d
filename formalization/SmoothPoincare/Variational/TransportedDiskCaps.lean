@@ -9,6 +9,7 @@ import DifferentialGeometry.Topology.Manifold.StereographicChart
 
 noncomputable section
 open DifferentialGeometry DifferentialGeometry.Geometry Filter FirstOrderTwistor Manifold MeasureTheory Set
+open DifferentialGeometry.Geometry.Curvature
 open scoped ContDiff Manifold Topology InnerProductSpace Pointwise
 
 namespace SmoothPoincare
@@ -118,7 +119,8 @@ theorem transportedCapPocketChart_image_cap (b : ℝ) (hb : 0 < b) :
   change (fun p => (b / 2) • transportedCapStereographic p) '' standardFourSphereCap = _
   rw [← image_image, transportedCapStereographic_image_cap]
   change (b / 2) • Metric.closedBall (0 : E₄) 2 = _
-  rw [_root_.smul_closedBall _ _ (by norm_num : (0 : ℝ) ≤ 2), smul_zero, abs_of_pos (by positivity : 0 < b / 2)]
+  rw [_root_.smul_closedBall _ _ (by norm_num : (0 : ℝ) ≤ 2), smul_zero, Real.norm_eq_abs,
+    abs_of_pos (by positivity : 0 < b / 2)]
   ring_nf
 
 variable {H M : Type*} [TopologicalSpace H] {I : ModelWithCorners ℝ E₄ H}
@@ -181,23 +183,28 @@ def transportedDiskCore (F : PartialDiffeomorph I₄ I E₄ M ∞)
     · change φ x ∈ F.target
       rw [← heq]
       exact F.map_source' hyF
-    ·
-      change F.symm (φ x) ∈ (transportedCapPocketChart b hb).target
+    · change F.symm (φ x) ∈ (transportedCapPocketChart b hb).target
       rw [transportedCapPocketChart_target]
       trivial
   coreImage := by
     have hPocketIn : Metric.closedBall (0 : E₄) b ⊆ F.source :=
       (Metric.closedBall_subset_closedBall hb1).trans hF
     have hInverse : F.symm '' (F '' Metric.closedBall 0 b) = Metric.closedBall 0 b := by
-      rw [image_image, ← image_id (Metric.closedBall (0 : E₄) b)]
-      exact image_congr (fun x hx => F.left_inv' (hPocketIn hx))
+      rw [image_image]
+      calc
+        _ = id '' Metric.closedBall (0 : E₄) b :=
+          image_congr (fun x hx => F.left_inv' (hPocketIn hx))
+        _ = _ := image_id _
     have hBallInverse : (transportedCapPocketChart b hb).symm '' Metric.closedBall 0 b =
         standardFourSphereCap := by
       rw [← transportedCapPocketChart_image_cap b hb]
-      rw [image_image, ← image_id standardFourSphereCap]
-      refine image_congr (fun p hp => (transportedCapPocketChart b hb).left_inv' ?_)
-      rw [transportedCapPocketChart_source]
-      exact transportedCapStereographic_cap_in_source hp
+      rw [image_image]
+      calc
+        _ = id '' standardFourSphereCap := by
+          refine image_congr (fun p hp => (transportedCapPocketChart b hb).left_inv' ?_)
+          rw [transportedCapPocketChart_source]
+          exact transportedCapStereographic_cap_in_source hp
+        _ = _ := image_id _
     have hFull : (fun x => (transportedCapPocketChart b hb).symm (F.symm (φ x))) ''
         selectedChartDisk F = standardFourSphereCap := by
       calc
@@ -211,6 +218,7 @@ def transportedDiskCore (F : PartialDiffeomorph I₄ I E₄ M ∞)
     change id '' standardFourSphereCap = (interior (RoundEquatorialCaps.flip '' standardFourSphereCap))ᶜ at hSphere
     simpa only [image_id] using hSphere
 
+omit [IsManifold I ∞ M] in
 /-- The original disk maps into the actual attached pocket. Its disk-side
 cap coordinates are the exact inverse of that pocket's marking. -/
 theorem transportedCaps_marking_inverse
@@ -240,6 +248,49 @@ theorem transportedCaps_marking_inverse
     exact hDisk.2
   exact ⟨hSource, hInv ▸ exterior.marking.right_inv' hTarget, hInv⟩
 
+omit [IsManifold I ∞ M] in
+/-- The image of the actual source face is the equator. The two cap
+markings have identical pointwise angular values on that face. -/
+theorem transportedDiskCaps_equatorial_agreement
+    (F : PartialDiffeomorph I₄ I E₄ M ∞)
+    (hF : Metric.closedBall (0 : E₄) 1 ⊆ F.source)
+    (φ : M ≃ₘ⟮I, I⟯ M) {b : ℝ} (hb : 0 < b) (hb1 : b ≤ 1)
+    (hImage : φ '' selectedChartDisk F = F '' Metric.closedBall 0 b)
+    {x : M} (hx : x ∈ selectedChartDisk F \ interior (selectedChartDisk F)) :
+    let disk := transportedDiskCore F hF φ hb hb1 hImage
+    RoundEquatorialCaps.height (disk.core x) = 0 ∧ disk.marking (disk.core x) = disk.core x := by
+  intro disk
+  let A := disk.core.toOpenPartialHomeomorph
+  let D := selectedChartDisk F
+  have hD : D ⊆ A.source := disk.rawInCore
+  have hSphere := RoundEquatorialCaps.southClosure.coreImage
+  change id '' standardFourSphereCap = (interior (RoundEquatorialCaps.flip '' standardFourSphereCap))ᶜ at hSphere
+  have hImg : A '' D = standardFourSphereCap := by
+    have h := disk.coreImage
+    change A '' D = (interior (RoundEquatorialCaps.flip '' standardFourSphereCap))ᶜ at h
+    rwa [← hSphere, image_id] at h
+  have hTarget : standardFourSphereCap ⊆ A.target := by
+    rw [← hImg]
+    rintro _ ⟨p, hp, rfl⟩
+    exact A.map_source (hD hp)
+  have hIsImage : A.IsImage D standardFourSphereCap := by
+    apply OpenPartialHomeomorph.IsImage.of_image_eq
+    rwa [inter_eq_self_of_subset_right hD, inter_eq_self_of_subset_right hTarget]
+  have hI := hIsImage.interior.image_eq
+  rw [inter_eq_self_of_subset_right (interior_subset.trans hD),
+    inter_eq_self_of_subset_right (interior_subset.trans hTarget)] at hI
+  have hInside : A x ∈ standardFourSphereCap := hImg ▸ mem_image_of_mem A hx.1
+  have hOutside : A x ∉ interior standardFourSphereCap := by
+    intro ha
+    obtain ⟨y, hy, he⟩ := hI.symm ▸ ha
+    have hxy : y = x :=
+      A.injOn (hD (interior_subset hy)) (hD hx.1) he
+    exact hx.2 (hxy ▸ hy)
+  rw [RoundEquatorialCaps.interior_south] at hOutside
+  have hZ : RoundEquatorialCaps.height (disk.core x) = 0 :=
+    le_antisymm hInside (le_of_not_gt hOutside)
+  exact ⟨hZ, RoundEquatorialCaps.flip_fixes_equator _ hZ⟩
+
 /-- Extend the actual conformal metric germ of the transported disk, through
 its boundary into the cap carrier. The free outer portion is exactly round
 off the supplied patch. -/
@@ -260,13 +311,13 @@ theorem exists_transportedDiskConformalCap_of_germ
       let A := (transportedDiskCore F hF φ hb hb1 hImage).core
       ∀ x ∈ selectedChartDisk F, ∀ᶠ y in 𝓝 x, ∀ v w : TangentSpace I y,
         q.inner y v w =
-          (conformalMetric standardRoundFourMetric uDisk).inner (A y)
+          (DifferentialGeometry.conformalMetric standardRoundFourMetric uDisk).inner (A y)
             (mfderiv I I₄ A y v) (mfderiv I I₄ A y w) := by
   let disk := transportedDiskCore F hF φ hb hb1 hImage
   let A := disk.core
   obtain ⟨χ, hχ, _, hχW, _, hχ1⟩ :=
     DifferentialGeometry.Topology.exists_contMDiff_cutoff_of_isCompact (I := I₄)
-      (isCompact_of_isClosed standardFourSphereCap_isClosed) hW hCapW
+      standardFourSphereCap_isClosed.isCompact hW hCapW
   let u : S₄ → ℝ := fun p => χ p * uLocal p
   have huSupp : tsupport u ⊆ tsupport χ := tsupport_mul_subset_left
   have hSmooth : ContMDiff I₄ 𝓘(ℝ, ℝ) ∞ u := by
@@ -277,7 +328,8 @@ theorem exists_transportedDiskConformalCap_of_germ
   refine ⟨uDisk, ?_, ?_⟩
   · intro p hp
     exact image_eq_zero_of_notMem_tsupport (fun h => hp (hχW (huSupp h)))
-  · intro x hx
+  · dsimp only
+    intro x hx
     have hCore := disk.rawInCore hx
     have hIm : disk.core x ∈ disk.core '' disk.raw := mem_image_of_mem disk.core hx
     rw [disk.coreImage] at hIm
@@ -290,7 +342,7 @@ theorem exists_transportedDiskConformalCap_of_germ
       (A.contMDiffOn_toFun.contMDiffAt (A.open_source.mem_nhds hCore)).continuousAt
     filter_upwards [hContinuous.tendsto.eventually hAt, hConformal x hx] with y hy hh
     intro v w
-    rw [conformalMetric_inner, hh v w]
+    rw [DifferentialGeometry.conformalMetric_inner, hh v w]
     have hf : uDisk (A y) = uLocal (A y) := by
       change χ (A y) * uLocal (A y) = uLocal (A y)
       rw [show χ (A y) = 1 from hy, one_mul]
@@ -299,9 +351,10 @@ theorem exists_transportedDiskConformalCap_of_germ
 variable [I.Boundaryless] [CompactSpace M] [Nonempty M] [PathConnectedSpace M]
   {o : ManifoldOrientation I M 4}
 
+omit [Nonempty M] [PathConnectedSpace M] in
 /-- The exterior cap is the actual closed flattened conformal metric on the
 original type. The forward comparison is the orientation-preserving transport
- and its inverse is valid on the complete retained region. -/
+and its inverse is valid on the complete retained region. -/
 theorem transportedExterior_metric_relative (flat : SignedCollarMetric o)
     (F : PartialDiffeomorph I₄ I E₄ M ∞)
     (hF : Metric.closedBall (0 : E₄) 1 ⊆ F.source)
@@ -352,10 +405,10 @@ theorem transportedDiskCaps_zeroDrift (g flat : SignedCollarMetric o)
   let : PathConnectedSpace S₄ :=
     isPathConnected_iff_pathConnectedSpace.1 (isPathConnected_sphere hSphereRank (0 : V₅) zero_le_one)
   have hCapE : 0 < classYamabeFour o.dimension_eq capExterior.metric := by
-    change 0 < classYamabeFour o.dimension_eq (conformalMetric flat.metric u)
+    change 0 < classYamabeFour o.dimension_eq (DifferentialGeometry.conformalMetric flat.metric u)
     rwa [classYamabeFour_conformalCore]
   have hCapD : 0 < classYamabeFour oS.dimension_eq capDisk.metric := by
-    change 0 < classYamabeFour oS.dimension_eq (conformalMetric standardRoundFourMetric uDisk)
+    change 0 < classYamabeFour oS.dimension_eq (DifferentialGeometry.conformalMetric standardRoundFourMetric uDisk)
     rw [classYamabeFour_conformalCore]
     exact standardRoundFour_yamabe_pos
   have hEnd := (chargedDisk_flatPocket_transport g flat F hF φ hφ u hFlat hPositive).2.2
@@ -383,11 +436,56 @@ theorem transportedDiskCaps_zeroDrift (g flat : SignedCollarMetric o)
       change capExterior.energy sign = source.charge sign (interior (selectedChartDisk F))ᶜ
       change source.charge sign (selectedChartDisk F) = 0 at hD
       linarith only [hS, hTot, hSig, hD]
-    exact ⟨(hDiskZero sign).trans hD.symm, he, he ▸ hV⟩
+    refine ⟨(hDiskZero sign).trans hD.symm, he, ?_⟩
+    rw [he]
+    exact hV
   refine ⟨?_, ?_, hCapD, hCapE, hLedger⟩
   · intro ε hε
     exact ⟨capDisk, hCapD, fun sign => by rw [(hLedger sign).1, sub_self, abs_zero]; exact hε⟩
   · intro ε hε
     exact ⟨capExterior, hCapE, fun sign => by rw [(hLedger sign).2.1, sub_self, abs_zero]; exact hε⟩
+
+/-- The local conformal comparison on the actual pocket supplies a particular
+smooth installed disk cap. Its retained metric germ and the exact signed
+cap errors refer to the same conformal function. -/
+theorem exists_transportedDiskCaps_with_matchingGerm (g flat : SignedCollarMetric o)
+    (F : PartialDiffeomorph I₄ I E₄ M ∞)
+    (hF : Metric.closedBall (0 : E₄) 1 ⊆ F.source)
+    (φ : M ≃ₘ⟮I, I⟯ M) (hφ : φ.preservesOrientation o o)
+    {b : ℝ} (hb : 0 < b) (hb1 : b ≤ 1)
+    (hImage : φ '' selectedChartDisk F = F '' Metric.closedBall 0 b)
+    (u : C^∞⟮I, M; ℝ⟯) (oS : ManifoldOrientation I₄ S₄ 4)
+    (hFlat : ∀ x ∈ φ '' selectedChartDisk F, metricRm04At flat.metric x = 0)
+    (hPositive : 0 < classYamabeFour o.dimension_eq flat.metric)
+    {W : Set S₄} (hW : IsOpen W) (hCapW : standardFourSphereCap ⊆ W)
+    (uLocal : S₄ → ℝ) (hU : ContMDiffOn I₄ 𝓘(ℝ, ℝ) ∞ uLocal W)
+    (hConformal :
+      let A := (transportedDiskCore F hF φ hb hb1 hImage).core
+      let q := ((flat.conformal u).pullback φ hφ).metric
+      ∀ x ∈ selectedChartDisk F, ∀ᶠ y in 𝓝 x, ∀ v w : TangentSpace I y,
+        q.inner y v w = Real.exp (2 * uLocal (A y)) *
+          standardRoundFourMetric.inner (A y) (mfderiv I I₄ A y v) (mfderiv I I₄ A y w)) :
+    let disk := transportedDiskCore F hF φ hb hb1 hImage
+    let exterior := transportedExteriorCore F hF φ hb hb1 hImage
+    let outgoing := (flat.conformal u).pullback φ hφ
+    ∃ uDisk : C^∞⟮I₄, S₄; ℝ⟯,
+      let capDisk := (RoundEquatorialCaps.signedRound oS).conformal uDisk
+      EqOn uDisk 0 Wᶜ ∧
+      (∀ x ∈ disk.raw, ∀ᶠ y in 𝓝 x, ∀ v w : TangentSpace I y,
+        outgoing.metric.inner y v w =
+          capDisk.metric.inner (disk.core y)
+            (mfderiv I I₄ disk.core y v) (mfderiv I I₄ disk.core y w)) ∧
+      disk.HasPositiveCaps outgoing oS ∧ exterior.HasPositiveCaps outgoing o ∧
+      0 < classYamabeFour oS.dimension_eq capDisk.metric ∧
+      0 < classYamabeFour o.dimension_eq (flat.conformal u).metric ∧
+      (∀ sign, capDisk.energy sign = outgoing.charge sign disk.raw ∧
+        (flat.conformal u).energy sign = outgoing.charge sign exterior.raw) := by
+  intro disk exterior outgoing
+  obtain ⟨uDisk, hUZero, hGerm⟩ := exists_transportedDiskConformalCap_of_germ
+    F hF φ hb hb1 hImage outgoing.metric hW hCapW uLocal hU hConformal
+  obtain ⟨hDisk, hExt, hDiskPos, hExtPos, hCost⟩ :=
+    transportedDiskCaps_zeroDrift g flat F hF φ hφ hb hb1 hImage u uDisk oS hFlat hPositive
+  exact ⟨uDisk, hUZero, hGerm, hDisk, hExt, hDiskPos, hExtPos,
+    fun sign => ⟨(hCost sign).1, (hCost sign).2.1⟩⟩
 
 end SmoothPoincare

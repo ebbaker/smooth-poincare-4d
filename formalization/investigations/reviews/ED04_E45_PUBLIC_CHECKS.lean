@@ -347,8 +347,8 @@ end TerminalPairChecks
 section TransportedDiskChecks
 
 open DifferentialGeometry DifferentialGeometry.Geometry.Curvature DifferentialGeometry.Integral.Measure
-open FirstOrderTwistor SectionsAndConnections Manifold MeasureTheory Set SmoothPoincare
-open scoped ContDiff Manifold
+open Filter FirstOrderTwistor SectionsAndConnections Manifold MeasureTheory Set SmoothPoincare
+open scoped ContDiff Manifold Topology
 
 local notation "E4" => EuclideanSpace ℝ (Fin 4)
 local notation "I4" => 𝓘(ℝ, E4)
@@ -388,7 +388,150 @@ example (g q : SignedCollarMetric o) (F : PartialDiffeomorph I4 I E4 M ∞)
   have hPrice := transportedDisk_outerStrip_price g q F hF sign hA hAV hOutside hZero hSlack hDensity
   exact (add_pos_of_pos_of_nonneg (sub_pos.mpr hGap) (measureReal_nonneg (μ := g.chiralMeasure sign))).trans_le hPrice
 
+example (g q : SignedCollarMetric o) (F : PartialDiffeomorph I4 I E4 M ∞)
+    (hF : Metric.closedBall (0 : E4) 1 ⊆ F.source) {A : Set M}
+    (hA : MeasurableSet A) (hAV : A ⊆ (interior (selectedChartDisk F))ᶜ)
+    (hOutside : q.charge .minus ((interior (selectedChartDisk F))ᶜ \ A) =
+      g.charge .minus ((interior (selectedChartDisk F))ᶜ \ A))
+    (hZero : q.charge .minus (selectedChartDisk F) = 0) {η D : ℝ}
+    (hSlack : g.energy .plus - η ≤ q.energy .plus)
+    (hDensity : ∀ x ∈ A, riemannianVolumeDensity g.metric q.metric x *
+      hilbertSchmidtSq (signedCollarWeylBlock o q.metric q.frame .minus x) ≤ D)
+    (hVol : 0 < (riemannianVolumeMeasure I M g.metric).real A) :
+    (g.charge .minus (selectedChartDisk F) - η + g.charge .minus A) /
+      (riemannianVolumeMeasure I M g.metric).real A ≤ D :=
+  transportedDisk_fixedGauge_floor g q F hF .minus hA hAV hOutside hZero hSlack hDensity hVol
+
+example (g q cap : SignedCollarMetric o) (F : PartialDiffeomorph I4 I E4 M ∞)
+    (hF : Metric.closedBall (0 : E4) 1 ⊆ F.source) (sign : CollarChirality)
+    {K : Set M} (hK : K ⊆ selectedChartDisk F) {η : ℝ}
+    (hp : 0 < classYamabeFour o.dimension_eq cap.metric) (hPeak : q.energy .plus ≤ g.energy .plus + η)
+    (hCap : cap.energy sign ≤ q.charge sign (interior (selectedChartDisk F))ᶜ)
+    (hRetained : g.charge sign K = q.charge sign K) :
+    g.charge sign K ≤ (g.energy .plus - sInf (geometricPositiveEnergies o)) + η := by
+  have h := transportedDisk_protectedCore_loss g q cap F hF sign hK (j := 0) (δ := 0) hp hPeak
+    (by simpa using hCap) (by simpa using hRetained.le)
+  linarith only [h]
+
+example (g : SignedCollarMetric o) (F : PartialDiffeomorph I4 I E4 M ∞)
+    (hF : Metric.closedBall (0 : E4) 1 ⊆ F.source)
+    (q : ℕ → SignedCollarMetric o) (A : ℕ → Set M) {η D : ℝ}
+    (hm : η < g.charge .minus (selectedChartDisk F))
+    (hA : ∀ n, MeasurableSet (A n)) (hAV : ∀ n, A n ⊆ (interior (selectedChartDisk F))ᶜ)
+    (hOutside : ∀ n, (q n).charge .minus ((interior (selectedChartDisk F))ᶜ \ A n) =
+      g.charge .minus ((interior (selectedChartDisk F))ᶜ \ A n))
+    (hZero : ∀ n, (q n).charge .minus (selectedChartDisk F) = 0)
+    (hSlack : ∀ n, g.energy .plus - η ≤ (q n).energy .plus)
+    (hVol : ∀ n, 0 < (riemannianVolumeMeasure I M g.metric).real (A n))
+    (hSmall : Tendsto (fun n => (riemannianVolumeMeasure I M g.metric).real (A n)) atTop (𝓝 0)) :
+    ¬ (∀ n, ∀ x ∈ A n, riemannianVolumeDensity g.metric (q n).metric x *
+      hilbertSchmidtSq (signedCollarWeylBlock o (q n).metric (q n).frame .minus x) ≤ D) := by
+  intro hBound
+  exact not_tendsto_const_atTop D (atTop : Filter ℕ)
+    (transportedDisk_density_tendsto_top g F hF .minus q A (fun _ => D) hm hA hAV
+      hOutside hZero hSlack hBound hVol hSmall)
+
+example (g q cap : ℕ → SignedCollarMetric o) (F : ℕ → PartialDiffeomorph I4 I E4 M ∞)
+    (K : ℕ → Set M) (hF : ∀ n, Metric.closedBall (0 : E4) 1 ⊆ (F n).source)
+    (hK : ∀ n, K n ⊆ selectedChartDisk (F n))
+    (hp : ∀ n, 0 < classYamabeFour o.dimension_eq (cap n).metric)
+    (hPeak : ∀ n, (q n).energy .plus ≤ (g n).energy .plus)
+    (hCap : ∀ n, (cap n).energy .plus ≤ (q n).charge .plus (interior (selectedChartDisk (F n)))ᶜ)
+    (hRetain : ∀ n, (g n).charge .plus (K n) = (q n).charge .plus (K n))
+    {mass : ℝ} (hMass : Tendsto (fun n => (g n).charge .plus (K n)) atTop (𝓝 mass))
+    (hEnergy : Tendsto (fun n => (g n).energy .plus) atTop (𝓝 (sInf (geometricPositiveEnergies o)))) :
+    mass ≤ 0 := by
+  refine protectedCore_limit_le_paid g q cap F .plus K (fun _ => 0) (fun _ => 0) (fun _ => 0)
+    hF hK hp ?_ ?_ ?_ hMass hEnergy ?_
+  · simpa only [add_zero] using hPeak
+  · simpa only [add_zero] using hCap
+  · simpa only [sub_zero] using fun n => (hRetain n).le
+  · simpa only [add_zero] using (tendsto_const_nhds : Tendsto (fun _ : ℕ => (0 : ℝ)) atTop (𝓝 0))
+
+local instance : Nonempty StandardFourSphere :=
+  ((NormedSpace.sphere_nonempty (x := (0 : EuclideanSpace ℝ (Fin 5))) (r := 1)).mpr
+    zero_le_one).to_subtype
+
+example (g flat : SignedCollarMetric o) (F : PartialDiffeomorph I4 I E4 M ∞)
+    (hF : Metric.closedBall (0 : E4) 1 ⊆ F.source) (φ : M ≃ₘ⟮I, I⟯ M)
+    (hφ : φ.preservesOrientation o o) {b : ℝ} (hb : 0 < b) (hb1 : b ≤ 1)
+    (hImage : φ '' selectedChartDisk F = F '' Metric.closedBall 0 b)
+    (u : C^∞⟮I, M; ℝ⟯) (uDisk : C^∞⟮𝓡 4, StandardFourSphere; ℝ⟯)
+    (oS : ManifoldOrientation (𝓡 4) StandardFourSphere 4)
+    (hFlat : ∀ x ∈ φ '' selectedChartDisk F, metricRm04At flat.metric x = 0)
+    (hPositive : 0 < classYamabeFour o.dimension_eq flat.metric) :
+    let exterior := transportedExteriorCore F hF φ hb hb1 hImage
+    let disk := transportedDiskCore F hF φ hb hb1 hImage
+    let q := (flat.conformal u).pullback φ hφ
+    let capExterior := flat.conformal u
+    let capDisk := (RoundEquatorialCaps.signedRound oS).conformal uDisk
+    0 < classYamabeFour oS.dimension_eq capDisk.metric ∧
+      0 < classYamabeFour o.dimension_eq capExterior.metric ∧
+      (∀ sign, capDisk.energy sign = q.charge sign disk.raw ∧
+        capExterior.energy sign = q.charge sign exterior.raw) := by
+  have h := transportedDiskCaps_zeroDrift g flat F hF φ hφ hb hb1 hImage u uDisk oS hFlat hPositive
+  refine ⟨h.2.2.1, h.2.2.2.1, fun sign => ?_⟩
+  exact ⟨(h.2.2.2.2 sign).1, (h.2.2.2.2 sign).2.1⟩
+
+example (g flat : SignedCollarMetric o) (F : PartialDiffeomorph I4 I E4 M ∞)
+    (hF : Metric.closedBall (0 : E4) 1 ⊆ F.source) (φ : M ≃ₘ⟮I, I⟯ M)
+    (hφ : φ.preservesOrientation o o) {b : ℝ} (hb : 0 < b) (hb1 : b ≤ 1)
+    (hImage : φ '' selectedChartDisk F = F '' Metric.closedBall 0 b)
+    (u : C^∞⟮I, M; ℝ⟯) (oS : ManifoldOrientation (𝓡 4) StandardFourSphere 4)
+    (hFlat : ∀ x ∈ φ '' selectedChartDisk F, metricRm04At flat.metric x = 0)
+    (hPositive : 0 < classYamabeFour o.dimension_eq flat.metric)
+    {W : Set StandardFourSphere} (hW : IsOpen W) (hCapW : standardFourSphereCap ⊆ W)
+    (uLocal : StandardFourSphere → ℝ) (hU : ContMDiffOn (𝓡 4) 𝓘(ℝ, ℝ) ∞ uLocal W)
+    (hConformal :
+      let A := (transportedDiskCore F hF φ hb hb1 hImage).core
+      let q := ((flat.conformal u).pullback φ hφ).metric
+      ∀ x ∈ selectedChartDisk F, ∀ᶠ y in 𝓝 x, ∀ v w : TangentSpace I y,
+        q.inner y v w = Real.exp (2 * uLocal (A y)) *
+          standardRoundFourMetric.inner (A y) (mfderiv I (𝓡 4) A y v) (mfderiv I (𝓡 4) A y w)) :
+    let disk := transportedDiskCore F hF φ hb hb1 hImage
+    let exterior := transportedExteriorCore F hF φ hb hb1 hImage
+    let q := (flat.conformal u).pullback φ hφ
+    ∃ k : C^∞⟮𝓡 4, StandardFourSphere; ℝ⟯,
+      let c := (RoundEquatorialCaps.signedRound oS).conformal k
+      EqOn k 0 Wᶜ ∧
+      (∀ x ∈ disk.raw, ∀ᶠ y in 𝓝 x, ∀ v w : TangentSpace I y,
+        q.metric.inner y v w = c.metric.inner (disk.core y)
+          (mfderiv I (𝓡 4) disk.core y v) (mfderiv I (𝓡 4) disk.core y w)) ∧
+      (∀ sign, c.energy sign = q.charge sign disk.raw ∧
+        (flat.conformal u).energy sign = q.charge sign exterior.raw) := by
+  obtain ⟨k, hSupport, hGerm, _, _, _, _, hCharges⟩ :=
+    exists_transportedDiskCaps_with_matchingGerm g flat F hF φ hφ hb hb1 hImage u oS
+      hFlat hPositive hW hCapW uLocal hU hConformal
+  exact ⟨k, hSupport, hGerm, hCharges⟩
+
 end TransportedDiskChecks
+
+section DiskCompressionChecks
+
+open DifferentialGeometry Manifold Metric Set SmoothPoincare
+open scoped ContDiff Manifold
+
+local notation "E4" => EuclideanSpace ℝ (Fin 4)
+local notation "I4" => 𝓘(ℝ, E4)
+
+variable {H M : Type*} [TopologicalSpace H] [TopologicalSpace M] [ChartedSpace H M]
+  [T2Space M] {I : ModelWithCorners ℝ E4 H}
+
+example [IsManifold I ∞ M] [PreconnectedSpace M] (o : ManifoldOrientation I M 4)
+    (F : PartialDiffeomorph I4 I E4 M ∞) {R B b radius : ℝ}
+    (hR : 1 < R) (hRB : R < B) (hBuffer : closedBall (0 : E4) B ⊆ F.source)
+    (hb : 0 < b) (hb₁ : b < 1) (hRadius : 0 < radius) :
+    ∃ (J : M ≃ₘ^∞⟮I, I⟯ M) (δ : ℝ), J.preservesOrientation o o ∧ 0 < δ ∧
+      J '' selectedChartDisk F = F '' closedBall (0 : E4) b ∧
+      J '' (interior (selectedChartDisk F))ᶜ = (F '' ball (0 : E4) b)ᶜ ∧
+      ∀ t, |t| < δ → ∀ y ∈ sphere (0 : E4) 1,
+        J (F ((1 + t) • y)) = F ((b * Real.exp (t / radius)) • y) ∧
+        J.symm (F ((b * Real.exp (t / radius)) • y)) = F ((1 + t) • y) := by
+  obtain ⟨J, δ, hOriented, hδ, hDisk, hExterior, hNormal, _⟩ :=
+    exists_nativeGaussianDiskCompression_preservesOrientation o F hR hRB hBuffer hb hb₁ hRadius
+  exact ⟨J, δ, hOriented, hδ, hDisk, hExterior, hNormal⟩
+
+end DiskCompressionChecks
 
 section NativePocketChecks
 
@@ -415,4 +558,72 @@ example (F : PartialDiffeomorph I4 I E4 M ∞) (g R : SmoothRiemannianMetric I M
     simpa only [Metric.mem_ball, dist_self] using (by positivity : (0 : ℝ) < 2 * r)
   exact (nativePocketPath_endpoint_flat F g R hr hS hMatch).2 0 hCentre
 
+example (F : PartialDiffeomorph I4 I E4 M ∞) (g R : SmoothRiemannianMetric I M)
+    (v w : E4) {R₀ : ℝ} (hR₀ : 0 ≤ R₀)
+    (hBuffer : Metric.closedBall (0 : E4) R₀ ⊆ F.source)
+    (hZero : nativePocketMetricCoefficient F g v w 0 = nativePocketMetricCoefficient F R v w 0)
+    (hFirst : fderiv ℝ (fun y =>
+      nativePocketMetricCoefficient F g v w y - nativePocketMetricCoefficient F R v w y) 0 = 0) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ (s : Icc (0 : ℝ) 1) {r : ℝ} (hr : 0 < r),
+      r ≤ 1 → ∀ (hBound : 3 * r ≤ R₀) (x : E4), x ∈ Metric.closedBall (0 : E4) (3 * r) →
+        let hS := (Metric.closedBall_subset_closedBall hBound).trans hBuffer
+        let X := fun y => nativePocketMetricCoefficient F (nativePocketPath F g R hr hS s) v w y -
+          nativePocketMetricCoefficient F R v w y
+        ‖fderiv ℝ (fderiv ℝ X) x‖ ≤ C / r ∧ ‖fderiv ℝ (fderiv ℝ X) x‖ ≤ C := by
+  obtain ⟨C, hC, hBounds⟩ := exists_nativePocketPath_nativeCoefficient_hessian_bounds F g R v w hR₀ hBuffer hZero
+  refine ⟨C, hC, fun s r hr hr₁ hBound x hx => ?_⟩
+  have h := hBounds s hr hr₁ hBound x hx
+  exact ⟨h.1, h.2 hFirst⟩
+
 end NativePocketChecks
+
+section NativePocketCapChecks
+
+open DifferentialGeometry FirstOrderTwistor Manifold Set SmoothPoincare
+open scoped ContDiff Manifold RealInnerProductSpace Topology
+
+local notation "E4" => EuclideanSpace ℝ (Fin 4)
+local notation "I4" => 𝓘(ℝ, E4)
+
+example (v w : E4) :
+    let P := (transportedCapPocketChart 1 (by norm_num)).symm
+    standardRoundFourMetric.inner (P 0) (mfderiv I4 I4 P 0 v) (mfderiv I4 I4 P 0 w) =
+      4 * ⟪v, w⟫ := by
+  have h := transportedCapPocketChart_metric_inner 1 (by norm_num) 0 v w
+  norm_num [smul_zero] at h
+  exact h
+
+variable {H M : Type*} [TopologicalSpace H] {I : ModelWithCorners ℝ E4 H} [I.Boundaryless]
+  [TopologicalSpace M] [ChartedSpace H M] [IsManifold I ∞ M] [T2Space M] [CompactSpace M]
+  [Nonempty M] [PathConnectedSpace M] {o : ManifoldOrientation I M 4}
+
+example (g : SignedCollarMetric o) (F : PartialDiffeomorph I4 I E4 M ∞)
+    {R B r b ℓ : ℝ} (hR : 1 < R) (hRB : R < B) (hBuffer : Metric.closedBall (0 : E4) B ⊆ F.source)
+    (hr : 0 < r) (h3r : 3 * r ≤ B) (hb : 0 < b) (hb₁ : b < 1) (hb₂ : b < 2 * r) (hℓ : 0 < ℓ)
+    (oS : ManifoldOrientation I4 StandardFourSphere 4) :
+    let hF := (Metric.closedBall_subset_closedBall (hR.trans hRB).le).trans hBuffer
+    let hS := (Metric.closedBall_subset_closedBall h3r).trans hBuffer
+    ∃ Rflat : SmoothRiemannianMetric I M, ∀ (flat : SignedCollarMetric o),
+      flat.metric = nativePocketPath F g.metric Rflat hr hS ⟨1, zero_le_one, le_rfl⟩ →
+      0 < classYamabeFour o.dimension_eq flat.metric → ∀ u : C^∞⟮I, M; ℝ⟯,
+      ∃ (φ : M ≃ₘ⟮I, I⟯ M) (hφ : φ.preservesOrientation o o)
+        (hImage : φ '' selectedChartDisk F = F '' Metric.closedBall (0 : E4) b)
+        (uDisk : C^∞⟮I4, StandardFourSphere; ℝ⟯),
+        let disk := transportedDiskCore F hF φ hb hb₁.le hImage
+        let exterior := transportedExteriorCore F hF φ hb hb₁.le hImage
+        let capD := (RoundEquatorialCaps.signedRound oS).conformal uDisk
+        let capV := flat.conformal u
+        let q := capV.pullback φ hφ
+        (∀ x ∈ disk.raw, ∀ᶠ y in 𝓝 x, ∀ v w : TangentSpace I y,
+          q.metric.inner y v w = capD.metric.inner (disk.core y)
+            (mfderiv I I4 disk.core y v) (mfderiv I I4 disk.core y w)) ∧
+        (∀ sign, q.charge sign disk.raw = 0 ∧
+          capV.energy sign - g.charge sign exterior.raw =
+            g.charge sign disk.raw + (flat.energy .plus - g.energy .plus)) := by
+  obtain ⟨Rflat, hCaps⟩ := exists_nativePocket_matchedCaps g F hR hRB hBuffer hr h3r hb hb₁ hb₂ hℓ oS
+  refine ⟨Rflat, fun flat hEndpoint hPositive u => ?_⟩
+  obtain ⟨φ, hφ, hImage, uDisk, _, _, _, _, _, hDisk, _, hCharges⟩ := hCaps flat hEndpoint hPositive u
+  exact ⟨φ, hφ, hImage, uDisk, hDisk, fun sign =>
+    ⟨(hCharges sign).2.1.symm.trans (hCharges sign).1, (hCharges sign).2.2.2⟩⟩
+
+end NativePocketCapChecks

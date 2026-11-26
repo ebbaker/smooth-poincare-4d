@@ -39,3 +39,12 @@ The [initial working manuscript](../manuscript/deformation_of_marked_spherical_c
 | DEF-B02 / E03e,g | For the matched fixed-index transport, each isolated strip has a finite signed estimate uniform in path time, with positive endpoint \(w^{-3}\) coefficient for both cutoff profiles. The original outer strip receives the complete evacuated charge. A face-fixing angular loop away from the core can also cause both crossings with constant joined energy. A separate closed PSC example has an explicitly evaluated fixed width and full side integrals. [Charged-source isolation](../notes/ISOLATING_THE_TRANSPORTED_METRIC.md) · [Closed example](../notes/COUPLED_PRODUCT_STRIP.md) | Measure the complete exterior and protected charge of any proposed descent. Large isolated costs alone leave the same-type energy undetermined. |
 
 [Joint assessment](../../reviews/NONLOCAL_BANDS_AND_PHYSICAL_TRANSPORT_20261126.md) · [Current continuation](../../continuation-notes/AFTER_NONLOCAL_BANDS_AND_PHYSICAL_TRANSPORT_20261126.md)
+
+### Native cap spectra and complete scalar costs, 26 November
+
+| Task | Assessed result | Next test |
+| --- | --- | --- |
+| DEF-B02 / E03h,i | A normalized supported Bach variation has a finite descending interval when the local pairing is nonzero. Relative form bounds control all cap Dirichlet eigenvalues and the summed outward response on that interval. For an arbitrary smooth cap with the unchanged positive exterior, the full negative scalar integral gives an independent inclusive sign test and a quantitative all-trace estimate. | On an entered disk, evaluate both full Weyl costs and the entire negative scalar cost of a curved replacement. E61 does not measure a descending Bach pairing or supply the cap. |
+| DEF-E03j / CDS-E02m | On the physically constructed charge-retaining endpoint the radial cap response is exactly the degree-plus-one angular operator divided by the product radius. Both native central strips have zero chiral cost. The entire exterior and disk charges lie off the strip. | Seek a different cap at a qualifying complete price. Changing the trace response alone leaves that comparison open. |
+
+[Finite forms](../notes/SCALAR_DEFICIT_AND_CAP_RESPONSE.md) · [Actual round response](../notes/RESPONSE_ON_THE_RETAINED_ENDPOINT.md) · [Assessment](../../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)

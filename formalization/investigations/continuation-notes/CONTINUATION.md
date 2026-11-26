@@ -1,6 +1,8 @@
 # Continuing the formalization program
 
-**Current Edition 04 proof milestone, FOT-E44 · 26 November 2026.** Continue on the finite charged disk or the actual residual two-component link through its upper marking. The [current handoff](AFTER_FIXED_FACES_AND_NORMALIZED_PREFIXES_20261126.md) gives the pasteable prompt, quantified requirements and alternate entry routes. [Assessment](../reviews/FIXED_FACES_AND_NORMALIZED_PREFIXES_20261126.md) · [Public verification](../research-progress/handoffs/ED04_INDEPENDENT_VERIFICATION_20261126.md)
+**Current Edition 04 proof milestone, FOT-E45 · 26 November 2026.** Start on the original charged disk after its exterior gain has been accounted for, or on a residual framed pair outside the treated generator family. [Current handoff and pasteable prompt](AFTER_PHYSICAL_STRIPS_AND_TRANSPORTED_DISKS_20261126.md) · [Assessment](../reviews/PHYSICAL_STRIPS_AND_TRANSPORTED_DISKS_20261126.md) · [Verification](../research-progress/handoffs/ED04_E45_VERIFICATION_20261126.md)
+
+**Earlier Edition 04 proof milestone, FOT-E44 · 26 November 2026.** Continue on the finite charged disk or the actual residual two-component link through its upper marking. The [current handoff](AFTER_FIXED_FACES_AND_NORMALIZED_PREFIXES_20261126.md) gives the pasteable prompt, quantified requirements and alternate entry routes. [Assessment](../reviews/FIXED_FACES_AND_NORMALIZED_PREFIXES_20261126.md) · [Public verification](../research-progress/handoffs/ED04_INDEPENDENT_VERIFICATION_20261126.md)
 
 **Edition 04 opening brief · 26 November 2026.** The program was activated from the [marked cuts and positive entry handoff](EDITION_04_MARKED_CUTS_20261126.md). It specifies the first geometric Lean targets, independent topology packet and survival test on each smooth type. [Edition 04 plan](../research-plan/04_PLAN.md) · [Current baseline](../research-progress/04_BASELINE.md)
 

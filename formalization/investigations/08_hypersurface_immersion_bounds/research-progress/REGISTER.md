@@ -2,7 +2,7 @@
 
 ## Edition 04 source selection · FOT-E45 · 26 November 2026
 
-The selected E45 source check found the charged near-round ellipsoid on the standard type and a finite two-sign cap saving with its own exact physical face. The E61 selected disk comes from its distinct positive Yamabe sequence. It has no supplied global immersion identifying its boundary or controlled induced metric. IMM-B02/E02 still needs the full induced energy on one actual marked immersion of a further type, and E03 needs the attaching data of a direction on that same immersion. [Source and dependency crosswalk](../../11_intrinsic_entry_from_marked_exteriors/research-progress/handoffs/ED04_E45_ENTRY_AND_SOURCE_CROSSWALK.md)
+The selected E45 source check found the charged near-round ellipsoid on the standard type and a finite two-sign cap saving with its own exact physical face. The E61 selected disk comes from its distinct positive Yamabe sequence. Its supported intrinsic transport preserves the signed closed totals of the flattened source. A global immersion identifying the E61 boundary and giving a controlled induced metric remains open. IMM-B02/E02 needs the full induced energy on one actual marked immersion of a further type, and E03 needs the attaching data of a direction on that same immersion. [Source and dependency crosswalk](../../11_intrinsic_entry_from_marked_exteriors/research-progress/handoffs/ED04_E45_ENTRY_AND_SOURCE_CROSSWALK.md)
 
 ## Edition 04 induced entry · FOT-E44 · 26 November 2026
 

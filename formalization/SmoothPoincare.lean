@@ -167,5 +167,7 @@ import SmoothPoincare.Variational.NativePocketFlattening
 import SmoothPoincare.Variational.TransportedChargedDisk
 import SmoothPoincare.Variational.TransportedDiskCaps
 import SmoothPoincare.Variational.IncomingChargeDensity
+import SmoothPoincare.Variational.TransportLimits
+import SmoothPoincare.Variational.NativePocketCaps
 
 /-! # Public imports for fixed-type descent, immersed recognition and marked cuts -/

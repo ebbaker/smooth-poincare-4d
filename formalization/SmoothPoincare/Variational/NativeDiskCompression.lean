@@ -1,5 +1,6 @@
 import SmoothPoincare.Variational.BalancedMarkedExterior
 import DifferentialGeometry.Topology.Manifold.EmbeddedBallContraction
+import DifferentialGeometry.Topology.Manifold.OrientationDiffeomorphTransport
 import DifferentialGeometry.Topology.Diffeomorph.SphereGerm
 import DifferentialGeometry.Topology.Attachment.Homeomorph
 import DifferentialGeometry.Topology.Attachment.Union
@@ -289,16 +290,68 @@ theorem exists_nativeGaussianDiskCompression
     change C (Q 1 x) = x ∧ (Q 1).symm (C.symm x) = x
     simp only [(hQout x hx).1,(hCout x hx).1,(hCout x hx).2,(hQout x hx).2,and_self]
 
+/-- On a preconnected smooth source the Gaussian compression preserves the
+supplied orientation. A smaller support buffer leaves a fixed open
+neighborhood in the original chart, where the differential is the identity. -/
+theorem exists_nativeGaussianDiskCompression_preservesOrientation
+    [IsManifold I ∞ M] [PreconnectedSpace M]
+    (o : DifferentialGeometry.ManifoldOrientation I M 4)
+    (F : PartialDiffeomorph I₄ I E₄ M ∞) {R B b ℓ : ℝ} (hR : 1 < R) (hRB : R < B)
+    (hBuffer : closedBall (0 : E₄) B ⊆ F.source) (hb : 0 < b) (hb₁ : b < 1)
+    (hℓ : 0 < ℓ) :
+    ∃ (J : M ≃ₘ^∞⟮I,I⟯ M) (δ : ℝ), J.preservesOrientation o o ∧ 0 < δ ∧
+      J '' selectedChartDisk F = F '' closedBall (0 : E₄) b ∧
+      J '' (interior (selectedChartDisk F))ᶜ = (F '' ball (0 : E₄) b)ᶜ ∧
+      (∀ t, |t| < δ → ∀ y ∈ sphere (0 : E₄) 1,
+        J (F ((1 + t) • y)) = F ((b * Real.exp (t / ℓ)) • y) ∧
+        J.symm (F ((b * Real.exp (t / ℓ)) • y)) = F ((1 + t) • y)) ∧
+      ∀ x ∉ F '' ball (0 : E₄) B, J x = x ∧ J.symm x = x := by
+  let B' := (R + B) / 2
+  have hRB' : R < B' := by dsimp [B']; linarith
+  have hB'B : B' < B := by dsimp [B']; linarith
+  have hBuffer' := (closedBall_subset_closedBall hB'B.le (x := (0 : E₄))).trans hBuffer
+  obtain ⟨J,δ,hδ,hD,hV,hcollar,hfix⟩ := exists_nativeGaussianDiskCompression
+    F hR hRB' hBuffer' hb hb₁ hℓ
+  refine ⟨J,δ,?_,hδ,hD,hV,hcollar,?_⟩
+  · let z : E₄ := B • EuclideanSpace.single 0 1
+    have hB : 0 ≤ B := by linarith
+    have hz : ‖z‖ = B := by
+      simp [z, norm_smul, Real.norm_of_nonneg hB, PiLp.norm_single]
+    have hzsrc := hBuffer (mem_closedBall_zero_iff.mpr hz.le)
+    have hfar : F z ∉ F '' closedBall (0 : E₄) B' := by
+      rintro ⟨x,hx,he⟩
+      have he' := F.injOn (hBuffer' hx) hzsrc he
+      exact hB'B.not_ge (hz ▸ mem_closedBall_zero_iff.mp (he' ▸ hx))
+    have hclosed : IsClosed (F '' closedBall (0 : E₄) B') :=
+      ((isCompact_closedBall (0 : E₄) B').image_of_continuousOn
+        (F.contMDiffOn.continuousOn.mono hBuffer')).isClosed
+    have hevent : (J : M → M) =ᶠ[𝓝 (F z)] id := by
+      filter_upwards [hclosed.isOpen_compl.mem_nhds hfar] with x hx
+      exact (hfix x (fun h => hx (image_mono ball_subset_closedBall h))).1
+    apply J.preservesOrientation_of_eq_at o o (F z)
+    have heq : (J.mfderivToContinuousLinearEquiv (by simp) (F z)).toLinearEquiv =
+        LinearEquiv.refl ℝ (TangentSpace I (F z)) := by
+      ext v
+      change mfderiv I I (⇑J) (F z) v = v
+      rw [hevent.mfderiv_eq, mfderiv_id]
+      rfl
+    rw [heq, hevent.eq_of_nhds]
+    exact congrArg (fun q => q (o.orientation (F z)))
+      (Orientation.map_refl (ι := Fin 4) (R := ℝ) (M := TangentSpace I (F z)))
+  · intro x hx
+    exact hfix x (fun h => hx (image_mono (ball_subset_ball hB'B.le) h))
+
 /-- The original unit-sphere marking as a map into the complete native
 exterior, including the face. -/
 def nativeDiskCapFace (F : PartialDiffeomorph I₄ I E₄ M ∞)
     (h₁ : closedBall (0 : E₄) 1 ⊆ F.source) :
-    CellBoundary 4 → (interior (selectedChartDisk F))ᶜ := fun y =>
+    CellBoundary 4 → ↥((interior (selectedChartDisk F))ᶜ) := fun y =>
   ⟨F y, by
     rw [interior_selectedChartDisk F h₁]
     rintro ⟨x,hx,he⟩
-    have he' := F.injOn (h₁ (ball_subset_closedBall hx)) (h₁ (sphere_subset_closedBall y.2)) he
-    exact (not_lt_of_ge (mem_sphere_zero_iff_norm.mp y.2).ge)
+    have hy : (y : E₄) ∈ sphere 0 1 := mem_sphere_zero_iff_norm.mpr y.2
+    have he' := F.injOn (h₁ (ball_subset_closedBall hx)) (h₁ (sphere_subset_closedBall hy)) he
+    exact (not_lt_of_ge y.2.ge)
       (mem_ball_zero_iff.mp (he' ▸ hx))⟩
 
 /-- The closed exterior-cap adjunction using the original unit-sphere marking.
@@ -310,7 +363,7 @@ theorem exists_nativeDiskExteriorCapClosure
     (hExterior : J '' (interior (selectedChartDisk F))ᶜ = (F '' ball (0 : E₄) b)ᶜ)
     (hFace : ∀ y ∈ sphere (0 : E₄) 1, J (F y) = F (b • y)) :
     ∃ G : CellAdjunctionSpace 4 (nativeDiskCapFace F h₁) ≃ₜ M,
-      (∀ x : (interior (selectedChartDisk F))ᶜ,
+      (∀ x : ↥((interior (selectedChartDisk F))ᶜ),
         G (adjunctionLower (nativeDiskCapFace F h₁) x) = J x ∧
         G.symm (J x) = adjunctionLower (nativeDiskCapFace F h₁) x) ∧
       ∀ x : ClosedCell 4,
@@ -327,11 +380,10 @@ theorem exists_nativeDiskExteriorCapClosure
   have hf (x : V₀) : (f x : M) = J x := rfl
   have hc₁ (x : ClosedCell 4) : b • (x : E₄) ∈ F.source := by
     apply h₁
-    have hx := mem_closedBall_zero_iff.mp x.2
     rw [mem_closedBall_zero_iff, norm_smul, Real.norm_of_nonneg hb.le]
-    exact (mul_le_of_le_one_right hb.le hx).trans hb₁
+    exact (mul_le_of_le_one_right hb.le x.2).trans hb₁
   have hφ (y : CellBoundary 4) : (φ y : M) = c (cellBoundaryInclusion 4 y) :=
-    hFace y y.2
+    hFace y (mem_sphere_zero_iff_norm.mpr y.2)
   have hc : Function.Injective c := by
     intro x y he
     have he' := F.injOn (hc₁ x) (hc₁ y) he
@@ -341,13 +393,12 @@ theorem exists_nativeDiskExteriorCapClosure
     exact (hrecover x).symm.trans ((congrArg (b⁻¹ • ·) he').trans (hrecover y))
   have hcont : Continuous c := by
     exact F.contMDiffOn.continuousOn.comp_continuous
-      (continuous_const.smul continuous_subtype_val) hc₁
+      (show Continuous (fun x : ClosedCell 4 => b • (x : E₄)) by fun_prop) hc₁
   have hboundary (d : ClosedCell 4) (hd : c d ∈ V) : d ∈ range (cellBoundaryInclusion 4) := by
-    have hle := mem_closedBall_zero_iff.mp d.2
     have hnot : ¬ ‖(d : E₄)‖ < 1 := fun hlt => hd ⟨b • (d : E₄), by
       rw [mem_ball_zero_iff, norm_smul, Real.norm_of_nonneg hb.le]
       simpa only [mul_one] using (mul_lt_mul_of_pos_left hlt hb), rfl⟩
-    exact ⟨⟨d,mem_sphere_zero_iff_norm.mpr (le_antisymm hle (le_of_not_gt hnot))⟩,
+    exact ⟨⟨d,le_antisymm d.2 (le_of_not_gt hnot)⟩,
       Subtype.ext rfl⟩
   have hclosed : IsClosed V := (F.toOpenPartialHomeomorph.isOpen_image_of_subset_source
     isOpen_ball (ball_subset_closedBall.trans ((closedBall_subset_closedBall hb₁).trans h₁))).isClosed_compl
@@ -361,7 +412,7 @@ theorem exists_nativeDiskExteriorCapClosure
       have hcell : b⁻¹ • x ∈ closedBall (0 : E₄) 1 := by
         rw [mem_closedBall_zero_iff, norm_smul, Real.norm_of_nonneg (inv_nonneg.mpr hb.le), ← div_eq_inv_mul]
         exact (div_le_iff₀ hb).mpr (by simpa only [one_mul] using (mem_ball_zero_iff.mp hx).le)
-      refine Or.inr ⟨⟨b⁻¹ • x,hcell⟩,?_⟩
+      refine Or.inr ⟨⟨b⁻¹ • x,mem_closedBall_zero_iff.mp hcell⟩,?_⟩
       change F (b • (b⁻¹ • x)) = F x
       rw [smul_smul, mul_inv_cancel₀ hb.ne', one_smul]
   let A := adjunctionHomeomorph (cellBoundaryInclusion 4) φ₀ (cellBoundaryInclusion 4) φ

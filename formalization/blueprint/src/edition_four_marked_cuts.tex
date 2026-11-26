@@ -483,3 +483,99 @@ The square of the profile has integrable derivative and hence a limit.
 Its integrability forces that limit to be zero. Apply the completed square
 identity and the admissible exponential on the resulting domain.
 \end{proof}
+
+\begin{proposition}[Flattening and compressing the original marked disk]
+\label{prop:ed45-pocket}
+\uses{prop:ed45-volume}
+\lean{SmoothPoincare.exists_nativePocketReference, SmoothPoincare.nativePocketPath_endpoint_flat, SmoothPoincare.exists_nativePocketPath_nativeCoefficient_hessian_bounds, SmoothPoincare.exists_nativePocket_volume_bound, SmoothPoincare.nativePocketPath_signed_peak_of_curvature, SmoothPoincare.exists_nativeDiskCompressionFlow, SmoothPoincare.exists_nativeGaussianDiskCompression_preservesOrientation, SmoothPoincare.exists_nativeDiskExteriorCapClosure}
+\leanok
+On one buffered chart of the original smooth carrier, a smooth cutoff
+gives a path flat at its endpoint inside radius $2r$ and unchanged
+outside radius $3r$. Its physical volume on the changed region is
+at most $Vr^4$. For a coefficient matching at the center, the Hessian
+of its difference from the reference is bounded by $C/r$, and by $C$
+when the first jet matches there as well. Given squared curvature bound $D$ in the supplying
+frames and frame agreement off that region, the signed increment has
+absolute value at most $DVr^4$. A compactly supported ambient compression
+sends the marked unit disk onto the prescribed inner disk of radius
+$0<b<1$. On a common signed germ the forward radius is $b\exp(t/\ell)$
+in the original angular marking, and the inverse recovers $1+t$.
+\end{proposition}
+\begin{proof}
+\leanok
+Use the smooth Euclidean cutoff and an extended reference metric on the
+chart. Compare the convex metric with a fixed volume majorant and apply
+the paired curvature price only on the changed ball. The contracting
+flow carries every concentric closed ball, open ball and sphere with
+its parameters. Extend the change of radial variable across a buffered
+neighborhood of the original unit sphere and compose with the contraction.
+\end{proof}
+
+\begin{proposition}[Where the signed charge goes on the original disk]
+\label{prop:ed45-transport-charge}
+\uses{prop:ed45-pocket,prop:ed04-fixed-cap-masses}
+\lean{SmoothPoincare.SignedCollarMetric.charge_pullback, SmoothPoincare.chargedDisk_flatPocket_transport, SmoothPoincare.transportedDisk_path_peak, SmoothPoincare.transportedDisk_protectedCore_loss, SmoothPoincare.transportedDisk_fixedGauge_floor, SmoothPoincare.transportedDisk_density_tendsto_top, SmoothPoincare.protectedCore_limit_le_paid}
+\leanok
+Let $e=E_+(g)$, $I=I^+(M)$, and fix $D_0$, its complete exterior $V_0$
+and a protected $K\subset D_0$ at one positive source index. Suppose
+the oriented endpoint map sends $D_0$ into a positive flattened metric's
+flat pocket. Write $\Delta$ for its signed total increment.
+For the conformally changed pullback $q$ the closed total is $e+\Delta$,
+the outgoing charge on $K$ and on $D_0$ vanishes, and
+\[
+ E_\sigma(q;V_0)-E_\sigma(g;V_0)=E_\sigma(g;D_0)+\Delta .
+\]
+The strict common peak and sign transfer from the given flattening
+slices. If the gain is supported in an exterior strip $A$ of positive
+incoming volume and $\Delta\ge-\eta$, any upper bound for the endpoint
+density $|W^\sigma(q)|^2\,dV_q/dV_g$ there is at least
+$(E_\sigma(g;D_0)-\eta+E_\sigma(g;A))/\operatorname{vol}_g(A)$.
+
+More generally, suppose $E_+(q)\le e+\eta$, the complete positive
+exterior cap on $M$ costs at most $E_\sigma(q;V_0)+j$, and the charge
+on $K$ falls by at most $\delta$. Then
+$E_\sigma(g;K)\le e-I+\delta+\eta+j$. At this one charged source the
+density ceilings tend to infinity on shrinking incoming volumes if
+$E_\sigma(g;D_0)>\eta$. Along a fixed-type minimizing sequence, if the
+incoming core charges and the full sums $\delta+\eta+j$ converge, the
+limiting core charge is at most the limiting sum.
+\end{proposition}
+\begin{proof}
+\leanok
+Pull back the oriented frame and integrate over the image of each
+marked set. Conformal invariance and flatness give zero on the whole
+disk in either sign. Subtract the complete exterior identities before
+taking any limit. Change volume density inside the strip integral.
+For the protected-core bound test the actual cap against $I$ and use
+monotonicity on $K\subset D_0$.
+\end{proof}
+
+\begin{proposition}[The two cap carriers after transport]
+\label{prop:ed45-transport-caps}
+\uses{prop:ed45-pocket,prop:ed45-transport-charge,prop:ed45-cap-transplant}
+\lean{SmoothPoincare.exists_nativePocket_matchedCaps, SmoothPoincare.transportedCapStereographic_metric_inner, SmoothPoincare.transportedCapPocketChart_metric_inner, SmoothPoincare.euclideanPocket_localCapConformalGerm, SmoothPoincare.transportedCaps_marking_inverse, SmoothPoincare.transportedDiskCaps_equatorial_agreement, SmoothPoincare.transportedExterior_metric_relative, SmoothPoincare.exists_transportedDiskCaps_with_matchingGerm, SmoothPoincare.transportedDiskCaps_zeroDrift}
+\leanok
+The exterior marking uses the actual compressed pocket on $M$ and the
+disk marking uses the closed southern hemisphere with its scaled
+stereographic coordinate. Both markings have inverses on the entire
+retained sets. For a positive signed metric realizing the native Euclidean flattening
+endpoint, choose $b<2r$. The inverse stereographic metric has coefficient
+$16/(4+|z|^2)^2$. Including the scale $2/b$ produces the smooth
+logarithmic factor for the actual pocket. Its extension gives a conformally
+round positive closed cap agreeing on every retained metric germ. The exterior cap
+is the positive conformally adjusted flattened metric on $M$.
+At this finite endpoint the signed cap costs equal their respective
+outgoing side masses, $0$ and $e+\Delta\ge I$.
+\end{proposition}
+\begin{proof}
+\leanok
+The pole-normalized stereographic image of the hemisphere is the closed
+ball of radius two. Scale this ball to the compressed pocket and use
+the inverse ambient map on the exterior. Differentiate the stereographic inverse as an ambient inversion followed
+by a translation, and take the Gram form of its two tangent images. In the
+pocket its factor is $4b^2/(b^2+|x|^2)^2$. Subtract half its logarithm
+from the exposed physical conformal exponent. Extend this smooth factor
+using a cutoff equal to one on a neighborhood of the retained
+hemisphere. Yamabe sign is invariant on both resulting conformal
+classes. Compute the cap energies in the signed frames.
+\end{proof}

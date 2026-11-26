@@ -1,3 +1,4 @@
+% 26 November 2026. Marked exteriors and protected charges, intake 8471728a1549.
 % 26 November 2026, generator bands and physical boundary response.
 % Intake 7e36f4398acf, companions 2575660c6240 and 62b372832a0a.
 % Two attachments and finite face error, 26 November 2026, input 5ddaabd76595.
@@ -49,6 +50,10 @@ On an actual selected disk we can produce a round face with joined
 peak arbitrarily close to the incoming energy by transporting its
 full charge into the exterior. We quantify the protected mass lost
 in this construction and the additional estimates needed for descent.
+A band can be read directly from a stationary longitude on a marked
+cut tangle. For the variational comparison, the lower bound for a
+matched peak with prescribed numerical core charges is asymptotically
+attainable. The complete exterior cost remains decisive.
 \end{abstract}
 
 \section{The problem on the original smooth manifold}
@@ -400,6 +405,33 @@ plus \(L\int_{Y_2}|\mathrm{Ric}_h^\circ|^2/8\). At the certified
 width-only threshold the band alone exceeds \(8\pi^2\) in each
 sign. The handle certificate therefore has a measured curvature
 price in the very metric that supplies it.
+
+\paragraph{Recovering the first band from the exterior.}
+In the product-port representative cut the inlet through both rails
+of one turn. The returning strand runs along the stationary
+zero-framed longitude except for a short gap. Joining the rails in
+each transverse disk fills the gap by a rectangle. Together with
+the radial annulus it gives an embedded annulus from the completed
+return to the stationary filling slope. Slitting it along a short
+radial band produces a disk spanning the slid return and the port
+chord. The opposite return completes to the Figure~5 unknot of
+\cite{GompfScharlemannThompson2010}, giving the second slide.
+For the marked monotone lanes the transverse intervals on successive
+turns project disjointly. This recovers the first band also when
+there are \(2n\) labeled ports. Other free-ending pairs with such
+an annulus and a local unknotted opposite completion admit a finite
+relative slide reduction by the single-knot theorem. The surgery
+companion supplies the trace maps, inverse closing and counts.
+
+On the mixed order with one lower 1-handle and the two nonlocal
+attachments, the actual rank-three outlet admits a measured PSC
+band before a specified last tube. Its lower group is \(\mathbb Z\)
+and the reverse last knot is null-homologous, so a direct upper
+cancellation at that cut is unavailable. The three retained product
+filling regions alone cost more than \(8\pi^2\) in each sign for
+every positive band length in the constructed metrics
+\cite{Baker2026HandleCuts}. This supplies a topology test on the
+specified order and prices its complete exterior.
 
 \section{The cost of making a spherical cut}\label{sec:cost}
 
@@ -891,9 +923,177 @@ at every path time and the complete-side ledger
 pullbacks supported off the core and face can force these isolated
 crossings while preserving the joined energy and both side masses.
 This identifies what an inexpensive joined path alone can achieve
-on the original minimizing type. A strict exterior saving, or a
-matched deformation retaining the prescribed core with its
-necessary peak increase, remains open.
+on the original minimizing type. A strict exterior saving, or affordable preservation of the full physical metric near the prescribed core, remains open.
+
+\paragraph{An independently positive exterior cap.}
+For a new smooth cap keeping the original positive scalar exterior
+let \(E\) be the complete same-type energy, and let
+\(n^2=\int_C (R_-)^2\) include the connector and every off-strip
+region. When \(E<2T\) and \(E+n^2/48\le2T\), the glued metric is
+in a positive class. Indeed the Yamabe constant is at least \(-n\);
+in its Yamabe representative its square is at least \(48(2T-E)\).
+Equality on a negative minimizer would force the positive scalar
+term of the retained exterior to vanish. The deformation companion
+derives the positive cap Dirichlet bound and a sum of outward responses
+at least half the original exterior response on every boundary
+trace \cite{Baker2026CollarDeformation}. A cap with \(E\le T\)
+passing this test recognizes the type, including equality. A physical
+candidate still needs both integrals at its actual width.
+
+\subsection{How much of the original core survives a matched cut?}
+Start at one smooth positive Yamabe index with \(e_i<2T\) on
+the oriented homotopy sphere. Use the original parametrized disk or its marked enlargement \(D\), its complete
+exterior \(V\), with its positive outward Gaussian buffer in the original face coordinates,
+and a compact subdisk \(Q\Subset\operatorname{int}D\).
+Write \(q^\sigma=E_\sigma(g;Q)\), \(q=\max_\sigma q^\sigma\),
+\(e=E_\pm(g;M)\), and \(I=I^+(M)\).
+Three requirements have different costs: preserving the metric near
+all of \(Q\) at every time, recovering its metric on a large part of its
+original charge at the endpoint, and retaining its two total charges.
+
+\begin{proposition}\label{prop:core-charge-peak}
+For every \(\eta>0\) a smooth path on this marked source ends at a
+round product face and has
+\[
+ E_\sigma(g_t;Q)\ge q^\sigma\quad(0\le t\le1),\qquad
+ e+q\le H\le e+q+\eta .
+\]
+Its endpoint complete disk and exterior energies are \(q+\beta\)
+and \(e+\Delta-\beta\) respectively, with \(\beta\ge0\) and
+\(|\Delta|+\beta<\eta\). If \(e+q+\eta<2T\), both caps are positive.
+Among subcritical matched paths retaining these two numerical lower
+bounds every peak satisfies \(H\ge\max(e,I+q)\).
+\end{proposition}
+
+\begin{proof}
+Use a tiny oriented normal chart inside \(Q\). On a rescaled unit
+ball put \(h=\psi(x)(x^1)^2\,dx^2\otimes dx^2\), with \(\psi=1\)
+near zero and compact interior support. At the Euclidean center the
+linearized curvature has only the \(12\) sectional component \(A\ne0\)
+up to symmetries, giving the diagonal Weyl entry \(A/3\) on each
+chiral vector \((dx^{12}\pm dx^{34})/\sqrt2\), where
+\(dx^{jk}=dx^j\wedge dx^k\).
+For the local energy at \(u+s h\) its second derivative at
+\((u,s)=(\delta,0)\) is twice the integral of the squared linearized
+chiral Weyl tensor and is positive. Continuity in the metric two-jet
+gives a fixed positive lower bound on both second derivatives for
+\(|s|\le s_0\) in a \(C^2\) neighborhood of flat space.
+Choose finitely many disjoint sufficiently small normal balls
+inside a still smaller central region. Their rescaled metrics lie in
+this neighborhood. Compact support and closed signature equate the
+two signed increments on each ball. Choose the sign of the mode
+on each ball so the common initial derivative is nonnegative.
+Its increment increases from zero to at least a fixed
+\(c s_0^2/2>0\) independently of ball radius. With sufficiently
+many sites the intermediate value theorem gives a common stopping
+parameter at total increment exactly \(q\). At every preceding time
+the charge on \(Q\) equals its original charge plus this increment.
+
+In the original disk chart choose a normal-coordinate annulus of
+scale \(r\) surrounding the sites, still inside \(Q\).
+Interpolate to Euclidean on a middle annulus, with transition on
+both sides. Its metric mismatch and first two derivatives in
+physical coordinates are \(O_i(r^2),O_i(r),O_i(1)\), so its Weyl
+cost is \(O_i(r^4)\) at every time. Choose \(r\) first, then fit all
+the sites inside it. This preparation and the subsequent radial
+conformal change leave those sites fixed. Map the original face to
+a sphere in the flat annulus as in Section~\ref{sec:disk-transport},
+now extending the increasing radial map by the identity on the
+central sites. They retain at least \(q\) in either sign throughout.
+For target radius \(b\) and cylinder radius \(\ell\) use
+\(\rho=b e^{t/\ell}\) near the marked face. Choose the two native
+subwidths within both available Gaussian buffers and so that their
+images lie inside the flat cylindrical plateau. The transported
+face then has the original angle and normal arclength. The signed charge on each full
+side equals the prepared metric's measure on its image under the
+radial map, by pullback invariance.
+
+Let \(\Delta\) denote the uncharged closed change from the annular
+preparation, and \(\beta\) its uncharged mass inside the new sphere.
+Both are \(O_i(r^4)\), with \(\beta\) common to the two signs because
+that inner piece compactifies by a conformally flat ball to \(S^4\).
+The additional site charge \(q\) cancels from the complete exterior
+price. The radial cap identifications and inverses are as in
+Section~\ref{sec:disk-transport}. The strict wall gives positive
+caps by stretching; the positive same-type exterior costs at least
+\(I\). For any such path retaining the original core amounts,
+nonnegativity on the rest of the disk then gives \(H\ge I+q\).
+\end{proof}
+
+On a minimizing sequence with uniform headroom \(I+q_i\le2T-\delta\),
+the achievable excess above this necessary peak tends to zero.
+For the original E61 core one may select the initial tensor-curvature
+ceiling \(\zeta\) with \(\zeta/4<2T-I\) before applying the disk
+theorem. An already selected core keeps its actual charge. At one
+index, \(I+q<2T\le e+q\) remains a gap between the two tests.
+The calibrated path may create new Weyl curvature on a small part
+of \(Q\). Its complete exterior cap costs at least \(I\) whenever the joined peak is strictly subcritical.
+
+\begin{proposition}\label{prop:core-subballs}
+Let \(\nu(Q)=\int_Q|{\rm Rm}|^2_{\rm tens}\,dV_g\).
+For \(0<\theta<1/4\) and \(\epsilon>0\), a matched path has
+\[
+ H\le e+C\theta^{-4}\nu(Q)+\epsilon .
+\]
+At its endpoint the metric equals \(g\) on a finite union
+\(P\subset Q\) with \(E_\sigma(g;P)\ge(1-\theta)^4q^\sigma-\epsilon\)
+in both signs. The constant \(C\) is dimensional for a fixed profile.
+\end{proposition}
+\begin{proof}
+At each point of the interior use arbitrarily small oriented normal
+balls. On the rescaled ball their metric \(u\)
+satisfies \(\|u-\delta\|_{C^2}\le C r^2(|{\rm Rm}(p)|+a)\) for
+arbitrary \(a>0\) and all sufficiently small radii at that point.
+Take a cutoff equal to one through radius \(1-\theta\) and zero
+near the boundary. The cost in either sign of every
+\(\delta+t\chi(u-\delta)\) is at most
+\(C\theta^{-4}r^4(|{\rm Rm}(p)|+a)^2\), by the curvature formula
+and scale invariance. Shrink the radius so the curvature norm
+oscillates by at most \(a\) and the two incoming densities by an
+arbitrary absolute tolerance. The displayed bound is then at most
+\(C\theta^{-4}\int_{B_r}(|{\rm Rm}|^2+a^2)\), and each inner
+ball carries at least \((1-\theta)^4\) of its outer ball's signed
+mass up to the density tolerance times volume. Vitali selection
+and finite truncation cover all but arbitrarily little of both
+masses. Slightly shrink the selected balls to give disjoint buffers.
+
+Use the evacuated matched disk of Section~\ref{sec:disk-transport}.
+It has a single conformally Euclidean chart on the retained disk.
+An interior isotopy sends the finite set of buffered parametrized
+balls to disjoint round affine balls in this chart. Indeed shrink
+each parametrization about its center, interpolate to its affine
+jet there, then deform the oriented derivative to a similarity.
+Extend the resulting disjoint isotopies by a compactly supported
+velocity field. Pull back the base metric and correct its conformal
+factor in the buffers to make it Euclidean in the original normal
+coordinates. No Weyl energy is incurred in these steps.
+Installing the preceding finite interpolations gives precisely \(g\)
+on all inner balls at the endpoint. Sum their disjoint costs and
+choose the finite truncation, density tolerances, \(a\), and the
+initial evacuation error to satisfy the displayed bounds. The
+exterior cap remains the previously flattened source at \(e+\Delta\).
+A strict peak below \(2T\) certifies both caps. The path can empty
+the core temporarily.
+\end{proof}
+
+\paragraph{Fixing the whole physical core at every time.}
+There is a separate finite test. In the buffered disk chart prepare
+a Euclidean annulus outside all of \(Q\) by affine cutoff of its
+actual metric. Take the ensuing conformal factor equal to one near \(Q\). Let \(A\) contain the complete two transitions and
+\(J_\sigma(s)=E_\sigma(g_s;A)\). Conformally turn the middle plateau
+into a round product. Extend the face transport radially by the
+identity on a neighborhood of \(Q\). This gives the joined peak
+\(H_{\rm rel}=e+\max_s[J_\sigma(s)-J_\sigma(0)]\), the same in
+both signs. If \(P_b\) is the disk inside the target radius and
+\(L^\sigma\) the signed change on the entire outer transition, the
+same-type cap has energy \(e-E_\sigma(g;P_b)+L^\sigma\).
+The disk cap has the common charge of the inner prepared piece,
+including the full unchanged core. These are exact finite tests on
+a smooth indexed source. For a small normal ball about a charged
+point the preparation costs \(O_i(r^4)\) and fixes a positively
+charged subball at every time. For the entire prescribed \(Q\)
+the bound \(H_{\rm rel}<2T\) still requires an actual annular
+estimate.
 
 \section{Selection, termination and outstanding challenges}
 
@@ -944,7 +1144,11 @@ cost. One target is a nonconformal repair that accounts for the protected
 core and gives a positive exterior cap with energy strictly below \(I\)
 at one finite index, contradicting~\eqref{eq:finite}. Another is a
 different spherical cut with enough raw mass on
-each side to violate the finite cap inequality. Relating a disk to
+each side to violate the finite cap inequality. The original late face and the
+round faces obtained after changing the metric have different complete
+exterior costs. Passing from finite replacements to a limiting face
+requires smooth compactness in the physical marking; shrinking sites
+and narrow transported strips give no such estimate. Relating a disk to
 a handle level requires an identification and metric estimates on
 the same source.
 

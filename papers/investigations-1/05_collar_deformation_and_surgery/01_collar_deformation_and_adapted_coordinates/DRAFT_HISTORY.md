@@ -25,3 +25,7 @@ The deformation manuscript derives a two-sign cost at native width, the relative
 ## 26 November 2026 · A fixed-source coupling and a finite cap sign
 
 The manuscript now measures both isolated connectors along the actual charged-disk transport. It derives their finite native-width error, gives a core-preserving angular control, tests finite cap positivity by its boundary response, and evaluates two separate curved and coupled examples. [Assessment](../reviews/NONLOCAL_BANDS_AND_PHYSICAL_TRANSPORT_20261126.md) · [Charged-path readback](../reviews/TRANSPORT_ISOLATION_READER.md)
+
+## 26 November 2026 · Exterior recovery and core retention
+
+Derived a complete scalar-cost test, finite Dirichlet and outward-response estimates, and the actual angular response on the round capped exterior of the core-retaining construction. [Assessed milestone](../reviews/EXTERIOR_RECOVERY_AND_CORE_RETENTION_20261126.md)

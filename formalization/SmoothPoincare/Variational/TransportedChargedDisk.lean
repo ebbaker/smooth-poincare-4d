@@ -199,7 +199,7 @@ theorem transportedDisk_outerStrip_price (g q : SignedCollarMetric o)
   have h := signedCharge_le_density_mul_volume q sg hA hDensity
   linarith only [split q,split g,hv q,hv g,hOutside,hZero,hSlack,h]
 
-omit [PathConnectedSpace N] in
+omit [Nonempty N] [PathConnectedSpace N] in
 /-- Price the new signed density in the incoming volume gauge on a compact
 physical strip. The volume-ratio bound is measured on this same strip. -/
 theorem transportedDisk_incomingGauge_price (g q : SignedCollarMetric o)

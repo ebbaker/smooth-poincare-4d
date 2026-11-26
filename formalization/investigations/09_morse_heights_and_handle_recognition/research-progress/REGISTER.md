@@ -6,6 +6,8 @@ This is the sole live status register for `SP4-FORM-HT`. The [proof plan](../res
 
 ## FOT-E45 · Relative framed pair · 26 November 2026
 
+A subsequent paper calculation recovers the one-period generator slide from a peripheral annulus in the cut tangle. The formal relative-pair theorem consumes the actual framed motion. On a new pair the existence and framing of the annulus remain geometric inputs. [Recovered annulus and closed trace](../../../../papers/investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/notes/CUT_TANGLE_RECOVERY.md)
+
 | Checked result | Supplying geometry for a closed application |
 | --- | --- |
 | A supplied framed ambient isotopy on the actual anchor-first cut extends across the buffered smooth collar and the second handle adjunction, preserving the anchor and every handle coordinate. The exact comparison and inverse agree with the smooth maps on a whole supplied open signed handle overlap. | Realize the full framed isotopy for the specified band and cover the independently rounded traces by compatible charts. The generator-band control supplies its two motions and the change of anchor at scientific source level. |
