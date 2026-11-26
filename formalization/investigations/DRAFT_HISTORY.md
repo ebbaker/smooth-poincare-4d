@@ -1,5 +1,7 @@
 # Overall formalization milestones
 
+- **25 November 2026 · FOT-E41.** The native block and its common signed rim strip are explicit. Every positive flat replacement on a balanced disk has a quantified mandatory price. The modified-flow calculation reaches the local spatial Euler coefficients. [Assessment](reviews/ROUNDED_EDGES_AND_REFERENCE_COST_20261125.md).
+
 - **25 November 2026 · FOT-E40.** The selected native foot components and outgoing signed-height collars now carry explicit marks. The single balanced disk admits physical chart lifts and differentiated cutoff estimates. The finite variational and modified-gauge conclusions have separate supplying data. [Assessment](reviews/NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md) · [Continuation](continuation-notes/AFTER_NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md)
 
 - **25 November 2026 · Selected end filtrations and four-measure division.** Built the two native end presentations and regular markings, constructed a single smooth marked disk for simultaneous dyadic division on a connected source, and quantified the endpoint cost of protecting a nested core. [Assessment](reviews/END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md) · [Public checks](research-progress/handoffs/ED03_END_BANDS_CHECKS.lean) · [Dated continuation](continuation-notes/AFTER_END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md)

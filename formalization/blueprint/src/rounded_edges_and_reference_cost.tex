@@ -1,0 +1,178 @@
+\section{Rounded edges and the cost of a flat disk reference}
+\label{sec:ed03-rounded-edges}
+
+\begin{theorem}[Birth bodies and edge incidence]
+\label{thm:ed03-birth-edge-incidence}
+\uses{thm:ed03-native-foot-charts}
+\lean{SmoothPoincare.IsolatedZeroHandle.birthBodyChart_component, SmoothPoincare.IsolatedZeroHandle.exists_transportedBirthBody, SmoothPoincare.IsolatedOneHandle.traceComponentMap_fibers, SmoothPoincare.IsolatedOneHandle.levelFeet_disjoint_of_bodyFoot_ne, SmoothPoincare.IsolatedOneHandle.not_simplyConnected_of_same_bodyFoot, SmoothPoincare.IsolatedMiddleAttachment.traceComponentMap_bijective}
+\leanok
+At a selected birth at $p$, the radius-one closed four-ball in its rescaled
+Morse chart is the whole sublevel component of $p$ at $f(p)+\varepsilon$.
+The chart extends across its boundary and the ball and its marked sphere
+transport together across the following regular band.
+For a selected one-handle, the map on body components induced by the lower
+insertion and the trace diffeomorphism is onto. Its only identifications are
+the component labels of the two native feet. Distinct feet in the same body
+preclude a simply connected outgoing body. The corresponding component map
+for a selected two-handle is bijective.
+\end{theorem}
+\begin{proof}
+\leanok
+The birth chart has height $f(p)+\varepsilon |x|^2$. Its closed unit ball
+is connected, compact and open relative to the selected sublevel. To compute
+the component map, collapse the component labels of the attaching region
+in the adjunction. The handle is connected. For a loop edge the joined-feet
+obstruction applies to the actual trace. For an index-two attachment the circle
+of normal-disk centers is connected, so it carries a single incoming label.
+\end{proof}
+
+\begin{theorem}[Rounded comparison at both native rims]
+\label{thm:ed03-rounded-native-rims}
+\uses{thm:ed03-birth-edge-incidence,thm:ed03-marked-edge-feet,thm:ed03-native-height-collar}
+\lean{SmoothPoincare.IsolatedOneHandle.edgeBlockChart_nativeFoot, SmoothPoincare.IsolatedOneHandle.edgeBlockChart_afterFootNormalization, SmoothPoincare.IsolatedOneHandle.edgeBlockChart_signedOutgoing, SmoothPoincare.IsolatedOneHandle.roundedRimToOutgoing_signed_inverse, SmoothPoincare.IsolatedOneHandle.exists_roundedOutgoingCollar_nearNativeRims, SmoothPoincare.IsolatedOneHandle.exists_outgoingSignedBandTransport, SmoothPoincare.IsolatedOneHandle.exists_roundedRimTransport_toNextCut}
+\leanok
+The four-dimensional block chart restricts to both entire native attaching
+disks with their parameters. Supplied foot normalizations retain their
+individual parities. For a rounding on the Morse core with radius exceeding
+$\sqrt{2\varepsilon+2r^2}$, its radial comparison $T$ has a smooth inverse
+near both full rims. If $\Phi$ is the actual outgoing product chart obtained
+in the construction, there are an open set $U$ containing both rim images and
+$0<w\le\varepsilon/2$ on which the rounded collar satisfies
+\[
+ \Psi=T^{-1}\circ\Phi,\qquad
+ \Psi^{-1}=\Phi^{-1}\circ T,\qquad
+ f_{\rm rounded}(\Psi(z,t))=f(p)+t
+ \quad(z\in U,\ |t|<w).
+\]
+Let $B_1$ be the collar at the next regular cut, $d$ the regular level
+comparison, and $H$ the band comparison based on this same $\Phi$. On
+a common positive substrip the maps satisfy
+\[
+ H(T(\Psi(z,t)))=B_1(dz,t),\qquad
+ T^{-1}(H^{-1}(B_1(dz,t)))=\Psi(z,t).
+\]
+These equations retain every tube parameter supplied in the outgoing level,
+and on the rim strip they retain the original label and both normal directions.
+\end{theorem}
+\begin{proof}
+\leanok
+At fixed axial square $s$, add $2\varepsilon+s-\operatorname{smoothCap}
+(\varepsilon,r,\delta,s)$ to the squared transverse radius. Subtraction
+recovers the starting point on the inverse domain. Both native rims lie
+in the common open core. Compactness of $S^0\times S^2$ gives a uniform
+two-sided interval for the pullback of the outgoing chart. At the next cut
+conjugate the level transport times the identity by the two signed collars.
+\end{proof}
+A global edge contraction still needs the two incoming body markings, the
+remaining tubes and compatible maps on their open overlaps with the rounded
+block. A product extension chosen from two collars may shear tangentially
+relative to another extension that agrees on the zero section.
+
+\begin{theorem}[Realized reference on a selected width]
+\label{thm:ed03-realized-disk-reference}
+\uses{prop:ed03-physical-marked-jets,prop:ed03-selected-quadratic-jets}
+\lean{SmoothPoincare.exists_selectedEuclideanReferenceSplice, SmoothPoincare.exists_selectedEuclideanSecondPartialError_on_physicalTrim, SmoothPoincare.selectedEuclideanSplice_flat_near_innerDisk, SmoothPoincare.eventually_balancedFlatReference, SmoothPoincare.selectedReference_endpoint_saving}
+\leanok
+Let $Q\subset\operatorname{int} B$ be the nested marked disks on one physical
+source, and $W_n$ its selected trim. For every positive tolerance all sufficiently
+large $n$ give a single width for which the four original trim masses have
+sum below tolerance and $Q\cap W_n$ is empty. On that width one can splice
+a smooth positive definite Euclidean reference in the original coordinates.
+The time-one metric is flat on $B\setminus W_n$, including $Q$. All exterior
+metric germs on $(B\cup W_n)^c$ agree throughout the path.
+\end{theorem}
+\begin{proof}
+\leanok
+Extend the reference from the buffered chart by a smooth cutoff. Convexity of
+positive definite forms gives the path. The cutoff is constant on the inner
+and outer open regions. The physical jet estimate uses the original measure
+and the same width. The unit seam can cross the transition. A smaller closed disk
+has an open flat neighborhood at positive $n$.
+\end{proof}
+
+\begin{theorem}[Signed price of a positive flat replacement]
+\label{thm:ed03-mandatory-flat-cost}
+\uses{thm:ed03-realized-disk-reference}
+\lean{SmoothPoincare.balancedFlatReference_cost, SmoothPoincare.balancedFlatReference_trim_cost, SmoothPoincare.eventually_balancedFlatReference_cost, SmoothPoincare.eventually_balancedFlatReference_trim_charge_pos, SmoothPoincare.selectedReference_charge_eq_of_germ}
+\leanok
+Put $q=2^{-k}$, $I=\inf E_+$ over positive Yamabe classes on the fixed
+oriented smooth type, $e=E_+(g)$ and $R=(B\cup W)^c$.
+If the marked exterior division at depth $k$ has error $\epsilon$ and $h$
+is an attained Yamabe-positive metric flat on $B\setminus W$, then for
+each $s\in\{+,-\}$,
+\[
+ \lambda_h^s(W)+\lambda_h^s(R)-\lambda_g^s(R)
+ > I-q\bigl(e-\lambda_g^s(Q)\bigr)-\epsilon .
+\]
+Matching exterior germs and frames put the full lower bound on $W$.
+When $e_i\to I$ and $\epsilon_i\to0$, for every $\eta>0$ the left side
+exceeds $(1-q)I-\eta$ for both signs at all sufficiently late indices,
+for every such positive endpoint. If $I>0$ and $k>0$, an endpoint preserving
+the full exterior charge must eventually have strictly positive trim charge
+in each sign.
+\end{theorem}
+\begin{proof}
+\leanok
+The flat portion contributes zero, so the two new charges sum to
+$E_s(h)\ge I$. Signature zero gives this inequality in both chiralities.
+The full incoming exterior controls $\lambda_g^s(R)$ by the marked division.
+Subtract and pass to the stated eventual inequality, keeping the finite core
+charge nonnegative. This argument requires no minimizing metric at $I$.
+\end{proof}
+
+\begin{proposition}[Exact saving on a matched flat trim]
+\label{prop:ed03-native-matched-flat}
+\uses{thm:ed03-realized-disk-reference,thm:ed03-mandatory-flat-cost}
+\lean{SmoothPoincare.exists_nativeConstantMetric_at, SmoothPoincare.exists_selectedMatchedFlatDisk, SmoothPoincare.selectedMatchedFlatDisk_trim_charge, SmoothPoincare.selectedMatchedFlatDisk_exact_saving, SmoothPoincare.selectedSplice_exterior_chiralMeasure_restrict_eq}
+\leanok
+Suppose the incoming metric in the given marking agrees with a constant
+positive Gram matrix $L^*L$ on an open neighborhood of the complete closed
+trim. The path to that flat reference has zero trim curvature at every time
+and matches the original unit seam. Its endpoint is flat on the whole disk.
+For an attained positive endpoint $h$ with the stated exterior frame agreement,
+\[
+ E_s(h)=\lambda_g^s((\operatorname{int}B)^c),\qquad
+ E_+(g)-E_+(h)=\lambda_g^s(B)\le e-I\qquad(s=+,-).
+\]
+Equality of restricted measures for independent exterior frames is also
+proved when their orthogonal action on two-forms is supplied with Hodge
+projection and curvature-conjugacy identities.
+\end{proposition}
+\begin{proof}
+\leanok
+Pull back the Euclidean metric by a constant linear isomorphism to define the
+reference tensor in the native parameters. The interpolation is constant on the
+transition. Flatness of the endpoint and equality on the complete exterior
+give the two charge identities. Membership of the positive endpoint in the
+fixed-type energy set gives the upper bound on its saving.
+\end{proof}
+
+\begin{proposition}[Euler flux on the supplying flow]
+\label{prop:ed03-spatial-euler-flux}
+\uses{thm:ed03-modified-euler-transport}
+\lean{SmoothPoincare.metricFrameEulerPfaffian_eq_chargeDensity, SmoothPoincare.metricFrameEulerCovariantDerivative_bianchi, SmoothPoincare.frameEulerPfaffian_hasDerivAt_of_bianchi, SmoothPoincare.ricciFlow_frameEulerTransgression_norm, SmoothPoincare.eulerCurvatureCoefficient_hasDerivAt_skewJet, SmoothPoincare.ricciFlowEulerPfaffian_fixedBase_hasDerivAt, SmoothPoincare.eulerSpatialFlux_integral_bound, SmoothPoincare.modifiedEuler_transport_of_spatialFlux}
+\leanok
+In an oriented orthonormal frame the normalized scalar Euler density is
+twice the Pfaffian coefficient in the frame convention used here. The
+transgression coefficients obey $|T|\le144|\mathrm{Rm}|\,|\nabla\mathrm{Ric}|$
+in the proved frame norm. On an actual smooth Ricci solution the coefficient
+variation is computed with the four base vectors fixed and endomorphism-frame
+velocities $\mathrm{Ric}^{\sharp}e_a$ at the tested time. Suppose a smooth slice current $X$ realizes
+$m'(s)=\int\chi\operatorname{div}_{g(s)}X_s\,dV_s$ in the open time interval.
+With the corresponding current bound, slice curvature norm at most $A$,
+integrated squared derivative norm at most $L^2$, and fixed smooth cutoff
+$|d\chi|_s\le\delta(\tau/s)^b$, one has
+\[
+ |m(\tau)-m(0)|\le144\,\delta A L\sqrt{\tau/(1-2b)}
+ \qquad (b<1/2,\ \tau>0)
+\]
+under the stated endpoint continuity and flux measurability.
+\end{proposition}
+\begin{proof}
+\leanok
+Apply the differential Bianchi identity to the frame product rule and the
+Ricci equation to the orthogonal connection variation. Spatial integration
+by parts and Cauchy--Schwarz on each supplying slice, followed by weighted
+Cauchy--Schwarz in time, give the estimate. The current, the two endpoint
+moments and every slice volume belong to the same evolution.
+\end{proof}

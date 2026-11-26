@@ -1,5 +1,13 @@
 # Overall formalization progress
 
+## Edition 03 rounded edge, matched disk and spatial Euler variation · 25 November 2026
+
+**FOT-E41.** The actual trace identifies precisely the native foot components. A birth component is a marked smooth ball through its next regular band. The block chart, inverse and pulled-back outgoing collar match both complete native rims on a common signed width. A whole marked merger still requires compatible incoming body charts, residual tubes and the actual rounded adjunction.
+
+**Fixed-type descent.** A reference metric is realized on the same four-measure disk. The finite lower bound on the new trim charge plus exterior drift retains the incoming core term in each chirality. Along the positive fixed-type minimizing sequence its lower limit is at least $(1-2^{-k})I$. A constant Gram collar matched on the whole transition permits an exact finite saving at a positive endpoint. The spatial Euler calculation separates the curvature variation on the modified solution from the global tested current identity.
+
+[Assessment](../reviews/ROUNDED_EDGES_AND_REFERENCE_COST_20261125.md) · [Exact public checks](handoffs/ED03_ROUNDED_EDGE_CHECKS.lean) · [Dated continuation](../continuation-notes/AFTER_ROUNDED_EDGES_AND_REFERENCE_COST_20261125.md)
+
 ## Edition 03 native feet, signed height collars and physical disk jets · 25 November 2026
 
 **FOT-E40.** Both native one-handle feet extend beyond their closed disks and restrict to their actual connected components. A component orientation determines their signed parametrization up to one explicit reflection. The regular outgoing level has a smooth collar on the complete open height band. The opposite height sees exactly the same image with reverse normal coordinate. For an edge joining distinct incoming components, one ambient diffeomorphism normalizes both furnished foot markings, fixes all protected residual tubes and fixes a full outgoing neighborhood in both directions. The global marked reduction still requires a smooth rounded-rim gluing with all remaining attachments.

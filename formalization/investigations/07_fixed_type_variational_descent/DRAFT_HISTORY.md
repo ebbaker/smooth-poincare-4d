@@ -1,5 +1,7 @@
 # Fixed-type variational descent · Milestones
 
+- **25 November 2026 · FOT-E41.** Realized a reference on the selected disk. Priced both signed trim costs and the complete exterior, identified the exact-matching case and advanced the spatial modified-flow transgression. [Assessment](../reviews/ROUNDED_EDGES_AND_REFERENCE_COST_20261125.md).
+
 - **25 November 2026 · FOT-E40.** Use the genuine single marked disk and its physical two-jet estimates. Seek one matched positive endpoint with quantified savings in both signs. For modified smoothing, establish the spatial transgression against the common terminal test. [Assessment](../reviews/NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md) · [Continuation](../continuation-notes/AFTER_NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md)
 
 - **25 November 2026 · Simultaneous mass division and the positive endpoint.** A finite disjoint smooth disk family approximately halves four measures. One smooth marked outer disk realizes the selected finite trace by moving centers and contracting disjoint guarded disks. A hemisphere cut is exact under the antipodal-zero hypothesis. Local allowances give row constant $12C_0^2$. A positive same-type cap forces the finite signed endpoint lower bound including the original core charge and all three losses. [Assessment](../reviews/END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md)

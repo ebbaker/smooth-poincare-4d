@@ -1,5 +1,7 @@
 # Physical scales and marked annuli · Milestones
 
+- **25 November 2026 · FOT-E41.** A single protected width now supports the constructed physical reference, its full exterior and all four incoming trim measures. The measured replacement cost belongs to fixed-type descent. [Assessment](../reviews/ROUNDED_EDGES_AND_REFERENCE_COST_20261125.md).
+
 - **25 November 2026 · FOT-E40.** Follow the two-jet calculation at the same physical width. Compare the actual reference metric with the incoming marked lift in the protected physical window. [Assessment](../reviews/NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md) · [Continuation](../continuation-notes/AFTER_NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md)
 
 - **25 November 2026 · Protected outer trim on the actual nested disk.** All sufficiently thin widths give the full buffered annulus, avoid the entire closed core and carry arbitrarily little total mass for four finite measures absolutely continuous with respect to the same physical volume. Chart derivatives along a repair remain to be estimated. [Assessment](../reviews/END_HANDLEBANDS_AND_FOUR_MEASURE_DIVISION_20261125.md)

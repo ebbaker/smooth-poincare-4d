@@ -88,6 +88,18 @@ import SmoothPoincare.Variational.PositiveCoreVariation
 import SmoothPoincare.Variational.ModifiedEulerCharge
 import SmoothPoincare.Variational.ModifiedFrameDecomposition
 
+import SmoothPoincare.Heights.NativeBirthBody
+import SmoothPoincare.Heights.NativeEdgeIncidence
+import SmoothPoincare.Heights.RoundedEdgeBlock
+import SmoothPoincare.Heights.RoundedOutgoingCollar
+import SmoothPoincare.Heights.OutgoingEdgeTransport
+import SmoothPoincare.Variational.SelectedDiskReference
+import SmoothPoincare.Variational.ExteriorGermCharge
+import SmoothPoincare.Variational.MatchedFlatDisk
+import SmoothPoincare.Variational.SpatialEulerVariation
+import SmoothPoincare.Variational.SelectedReferenceCost
+import SmoothPoincare.Variational.SpatialEulerFlux
+
 /-! # Fixed-type descent and immersed recognition
 
 Public imports for the master formalization. The Edition 03 blueprint identifies

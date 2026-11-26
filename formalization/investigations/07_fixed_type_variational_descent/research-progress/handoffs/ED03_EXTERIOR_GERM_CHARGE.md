@@ -1,0 +1,34 @@
+# DESC-E07d · Physical charge on retained metric germs
+
+26 November 2026 UTC (25 November 2026, America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving model and effort are unavailable. Bounded execution over `a7bb158d6af806d2573a7702386622ed4c0bb1f1` with the concurrent selected-reference proof. [Route register](../REGISTER.md) · [Input and toolchain audit](../../../research-progress/handoffs/ED03_ROUNDED_EDGE_INPUTS_20261125.md)
+
+| Supplying input | SHA-256 prefix |
+| --- | --- |
+| [Signed physical metrics](../../../../SmoothPoincare/Variational/SignedCollarRepair.lean) | `d8b63804f565d2e954734a51` |
+| [Selected reference and matched-basis germ result](../../../../SmoothPoincare/Variational/SelectedDiskReference.lean) | `ca8aed8a306fda7f61be4952` |
+| [Pinned positive change and abstract Hodge naturality](../../../../FirstOrderTwistor/SelfDualFrameChange.lean) | `926fb6e5413f78391673ee93` |
+| [Hilbert–Schmidt invariance](../../../../FirstOrderTwistor/ChiralTransport.lean) | `403623084bebf2b932eea766` |
+
+## Both chiralities on the same exterior
+
+The two models use smooth Riemannian metrics on the same compact Hausdorff smooth boundaryless source with the same specified orientation. If the metrics agree on a neighborhood at each point of a measurable subset $A$, their lowered Levi–Civita tensors agree there by the pinned DifferentialGeometry metric-locality theorem. The selected-reference matched-basis theorem supplies equality of the two physical charges when their frames have the same bases on $A$. Both compared measures use the physical volume of their own metric. An open set of metric agreement supplies the germ premise at every point of every measurable subset.
+
+The new negative wedge inclusion uses the differences of the same complementary pairs and has the same normalization as the positive inclusion. The two orthogonal projections add to the identity. Consequently the same lifted orthogonal map preserving the positive projection preserves the negative projection. Compression and trace subtraction are compatible with orthogonal conjugacy for both signs. The Hilbert–Schmidt squared densities are unchanged by these conjugacies. [Lean source](../../../../SmoothPoincare/Variational/ExteriorGermCharge.lean)
+
+For the metric on the output side, temporarily use the source bases on the exterior and its own supplied bases off the exterior. Equality of the metrics at each exterior point guarantees orthonormality of these choices for the output metric. The orientation is inherited from the supplied source frames. Under the lifted certificate the reframed output has the same density as the original output at every point, so the original integrability and signature equality carry to the reframing. Applying the existing matched-basis germ theorem to each measurable subset gives equality of both restricted chiral measures, and hence equality of the finite charges on the entire retained exterior. [Matched-basis theorem](../../../../SmoothPoincare/Variational/SelectedDiskReference.lean) · [Reframing and measure equality](../../../../SmoothPoincare/Variational/ExteriorGermCharge.lean)
+
+The selected splice application uses the complete retained region $(B\cup W)^c$ at any path parameter. The exterior metric germs come from the same marked reference path. With the lifted certificate, its exterior charge increment vanishes for both signs, so a positive actual capped endpoint in a signed cost comparison pays the required charge on the trim. Positivity of that endpoint is a separate input to the cost comparison. The measure equality itself uses no Yamabe positivity premise. [Reference path](../../../../SmoothPoincare/Variational/SelectedDiskReference.lean) · [Signed cost](../../../../SmoothPoincare/Variational/SelectedReferenceCost.lean)
+
+## Scope of the frame change
+
+The change matrix between the actual oriented orthonormal tangent bases of one metric is orthogonal with determinant one. The pinned frame-change results supply an abstract Hodge-star intertwining theorem and a matrix theorem after an orthogonal six-dimensional change is identified in the ordered wedge basis, shown to commute with the positive projection, and shown to transport the curvature matrices by conjugation. The current pointwise `LiftedChiralFrameChange` premise retains those last coordinate identifications. To remove it for arbitrary frame choices requires the ordered wedge lift of the actual tangent matrix, including its Hodge projection and four-slot curvature laws. The chosen matching bases are available without this bridge, with the output density integrability and signature identity retained as inputs when defining a `SignedCollarMetric` directly in those bases.
+
+## Exclusion at a positive infimum
+
+On the same fixed-type near-minimizing sequence, assume $I=\inf E_+>0$, fixed dyadic depth $k>0$, and balanced-division error tending to zero. Take half of $(1-2^{-k})I$ as the tolerance in the eventual signed cost bound. Eventually every actual Yamabe-positive endpoint that is flat on $B_i\setminus W_i$ has strictly positive charge on $W_i$ in each sign whose complete exterior $R_i=(B_i\cup W_i)^c$ has unchanged charge. In particular a proposed flat endpoint with zero trim charge even in one matched sign is excluded on those late sources. The bound permits positive endpoints that pay the required trim charge. [Signed cost and `eventually_balancedFlatReference_trim_charge_pos`](../../../../SmoothPoincare/Variational/SelectedReferenceCost.lean)
+
+## Checks
+
+`lake build SmoothPoincare.Variational.ExteriorGermCharge` passed without warnings in 9,828 jobs. The source SHA-256 is `4f740caae26377bae86321236a34a4fc9847ce7426b9bc255eea7017ff9cab85`. A leaf-import replay checked the exact types and axioms of the negative compression, both-sign density equality, tangent-frame change, restricted measure equality and selected-splice application. Their axioms are `propext`, `Classical.choice` and `Quot.sound`. The replay applied the restricted equality to every measurable subset of an open metric-agreement set for either sign, with the lift hypothesis stated. From `formalization/` rerun it with `lake env lean /tmp/sp4-e41-exterior-germ-replay.lean` in the current workspace. The output SHA-256 is `30fbff17ffa68e87b9f9ead460c1323770530d310d20ae98bc5ae1924f50d11e`.
+
+`lake build SmoothPoincare.Variational.SelectedReferenceCost` passed without warnings in 9,877 jobs. The source changed from `986fccc147299a6aa58c379035ecdb98370ad60d28add1e258b3c0b9adaf341e` to `8b78bbc82e62df337e2ca15c3964f9fb137a6102781151acd7126668b907c4b2` for the eventual exclusion. The exact type and axiom replay of `eventually_balancedFlatReference_trim_charge_pos` passed with `propext`, `Classical.choice` and `Quot.sound`. Its output SHA-256 is `0a4b0f120253c5e4d73755da03de14c3a5f2ef2fb7f110955a1efd28279416db`.
