@@ -186,6 +186,9 @@ open SmoothPoincare SmoothPoincare.RoundEquatorialCaps
 open scoped ContDiff Manifold SmoothPoincare
 
 local notation "PolarModel" => (ModelWithCorners.prod (𝓘(ℝ, ℝ)) (𝓡 3))
+local instance : Nonempty StandardFourSphere :=
+  ((NormedSpace.sphere_nonempty (x := (0 : EuclideanSpace ℝ (Fin 5))) (r := 1)).mpr
+    zero_le_one).to_subtype
 
 example (o : ManifoldOrientation (𝓡 4) StandardFourSphere 4)
     (a b : HeightRadius) (s : ℝ) (A : Set StandardFourSphere) :

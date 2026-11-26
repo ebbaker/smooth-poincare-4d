@@ -40,8 +40,8 @@ caps at each tolerance. With signature-zero caps alone the equality
 still follows. The proof introduces a separate source index only in
 `eventually_no_smallDriftCaps_of_chargedOriginalDisk`. At a late index
 it assumes arbitrarily small exterior drift there and derives the
-contradiction against the finite excess. No cross-index uniformity of
-collar widths or constants is required. [Fixed-source mass declarations](../../../SmoothPoincare/Variational/FixedSourceMarkedCaps.lean)
+contradiction against the finite excess. The chosen widths and
+constants can depend on the fixed source index. [Fixed-source mass declarations](../../../SmoothPoincare/Variational/FixedSourceMarkedCaps.lean)
 
 ## Markings, recognition and full cost
 
@@ -123,3 +123,12 @@ identity. The reported axioms on those main statements are
 | `RoundEquatorialCaps.lean` | `9f45252ec4103158123ac9d554b0728b29972ce7ac8e3a541e1c671b6bd075c3` |
 | `RoundHemisphereMarkings.lean` | `7df2baf48968afc8be50ce14cf030bba390cc20f5b8a6db863cfaf5640c596fa` |
 | `RoundLatitudeProduct.lean` | `86760efd69e05dc79436549c7b0be89895a7f01a7041dafd4b94cea41207278a` |
+| `PositiveScalarYamabeFour.lean` | `9990e24d9bfa3c91c8968796b8ce26967e62fad8d725e9de83df59dacb023437` |
+| `RoundMarkedFaceControl.lean` | `571a8201fe64d31aed1ec4695c6472f754c62b8c33e33f6b3372a35a09c12d4c` |
+
+The independent round-control replay elaborated
+`standardRoundFour_yamabe_pos`, `marked_product_endpoint` and
+`fixedSource_at_physical_widths`, and obtained both genuine positive
+caps at the unequal widths $w_L=\pi/4,w_R=\pi/6$. All three statements
+use only the same three axioms. The round branch uses the explicit
+global conformal family to meet every tolerance at those very widths.

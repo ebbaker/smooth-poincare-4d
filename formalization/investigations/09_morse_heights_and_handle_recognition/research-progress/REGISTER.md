@@ -4,6 +4,16 @@
 
 This is the sole live status register for `SP4-FORM-HT`. The [proof plan](../research-plan/PLAN.md) specifies each target and acceptance test. The paper's [research register](../../../../papers/investigations-1/04_hypersurface_immersions/02_two_handle_recognition/research-progress/REGISTER.md) owns mathematical extraction or construction on the source.
 
+## FOT-E45 · Relative framed pair · 26 November 2026
+
+| Checked result | Supplying geometry for a closed application |
+| --- | --- |
+| A supplied framed ambient isotopy on the actual anchor-first cut extends across the buffered smooth collar and the second handle adjunction, preserving the anchor and every handle coordinate. The exact comparison and inverse agree with the smooth maps on a whole supplied open signed handle overlap. | Realize the full framed isotopy for the specified band and cover the independently rounded traces by compatible charts. The generator-band control supplies its two motions and the change of anchor at scientific source level. |
+| The nonterminal comparison extends over all later framed attachments with their original indices. The full closing map and its inverse return the same upper body and both dual tube parametrizations. | Supply the actual outgoing boundary comparison of each trace stage when advancing to later attachments or closing. |
+| Two actual native terminal (2/3) cancellations on separated strips give exact net decreases of two in both counts and preserve the original levels and closed lower bodies between the strips. | Obtain both geometric cancelling pairs from the matched terminal upper body, with the second pair on the first modified height. |
+
+[Relative pair proof handoff](handoffs/ED04_RELATIVE_PAIR_REPLACEMENT_20261126.md)
+
 ## Edition 04 setup · 26 November 2026
 
 These assignments await activation. [Route plan](../research-plan/PLAN.md#edition-04--native-maps-and-smooth-recognition-of-the-marked-trace) · [Program plan](../../research-plan/04_PLAN.md) · [Baseline](../../research-progress/04_BASELINE.md)

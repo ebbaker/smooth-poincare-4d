@@ -1,3 +1,5 @@
+% 26 November 2026, boundary response, curved interval and measured isolation.
+% Input 2575660c6240; derivations and independent readings in the parent assessment.
 % Two attachments and finite face error, 26 November 2026, input 5ddaabd76595.
 % Continuation of 26 November 2026 at e2968b2898b5. Current proofs and primary
 % passages are recorded in the prefix and curved-filling assessment in parent reviews.
@@ -354,7 +356,7 @@ For exact face jets with bounded \(M_j\), the squared bound gives
 preliminary metric adjustment outside the conformal class or
 added connector must be included in the joined and side budgets.
 
-\section{Sharp powers for a fixed tangential mode}
+\section{Sharp powers for a fixed tangential mode}\label{sec:fixed-mode}
 
 Identify the marked round \(S^3\) with \(SU(2)\), and let
 \((\omega^1,\omega^2,\omega^3)\) be a unit round left-invariant
@@ -1179,6 +1181,131 @@ metrics on the standard sphere. The selected minimizing disk has
 its own marking; no supplied calculation identifies its shape or
 its boundary coercivity with this one.
 
+\paragraph{An interval of nonmatching curvatures.}
+Keep one of these charged ellipsoids and the same actual height.
+Set \(\lambda_*=C^4/(A^4z_0^2)\) in the notation of its semiaxes,
+and \(U_\lambda=\sqrt{u^2+\lambda}\), where \(u,u,v\) are the
+outward curvatures of its planar slice. Replacing the hyperbolic
+parameter by \(\sqrt\lambda\) in the rotational embedding keeps
+the induced metric exactly \(h=ds^2+r(s)^2g_{S^2}\):
+the axial derivative is \(rU_\lambda/(1+\lambda r^2)\) and
+\(1-r'^2=r^2u^2\). The reference curvatures are
+\(U_\lambda,U_\lambda,(uv+\lambda)/U_\lambda\).
+The physical shape is \((u/U_*)\mathrm{diag}(u,u,v)\), with
+\(U_*=U_{\lambda_*}\). The discrepancy after mean normalization
+therefore satisfies
+\[
+ \|D_\lambda\|_2^2
+ =\frac23\int_{\Sigma}u^2(v-u)^2
+           (U_*^{-1}-U_\lambda^{-1})^2\,dA_h.
+\]
+It is positive whenever \(\lambda\ne\lambda_*\). On a compact
+interval \(J\) around \(\lambda_*\) it has
+\(\|D_\lambda\|_2\le L_D|\lambda-\lambda_*|\), where
+\(L_D^2=\frac16\int u^2(v-u)^2/(u^2+\min J)^3\,dA_h\).
+All mean-normalized charts have a common inward radius after
+restricting \(J\). The strict reference boundary-form margin and
+the bounded trace-matched scalar form error give positive endpoints
+on a common interval \(0<w\le W\).
+
+Let \(m=\min_\sigma E_\sigma(g;D)>0\), \(P=\|(x\chi)''\|_2\).
+Take a common bound \(b\) for the density remainders of
+Proposition~\ref{prop:finite-curved} times \(\sqrt{\mathrm{area}(h)}\).
+Fix \(w\le W\) with \(b\sqrt w\le\sqrt m/4\), and then take
+\(0<|\lambda-\lambda_*|\le\sqrt{mw}/(2PL_D)\).
+Both connector energies are at most \(m/4\) at this width.
+Each is positive since the physical end of the connector retains
+a neighborhood of a point with nonzero Weyl curvature in both signs.
+The entire exterior is unchanged, so each net saving from the
+original disk is at least \(3m/4\). At this same fixed width
+the positive scalar minimum and the strict joined gap of the
+affine path at \(\lambda_*\) persist on a smaller interval by
+smooth dependence on the parameter. This gives an actual charged
+face with nonzero first-jet error, positive endpoint and finite
+surplus. Replacing its disk consumes the core.
+
+\subsection{Testing the sign on the selected physical face}
+\label{sec:response}
+At a fixed index let \(V\) be the whole exterior in its positive
+Yamabe representative \(g_i\), with scalar curvature \(Y_i>0\).
+Let \(C_w\) be the actual smooth replacement cap, including its
+finite connector in the disk. Both induce the physical metric
+\(h\) on their common face. On a piece \(X\) with positive first
+Dirichlet eigenvalue define \(N_X\varphi=\partial_{\nu_X}u\),
+where \((-6\Delta+R)u=0\), \(u|_\Sigma=\varphi\), and the unit
+normal points outward from \(X\). The exterior always has a
+positive Dirichlet form. If the cap does too, the closed Yamabe
+sign is exactly the sign of
+\[
+ \mu_w=\min_{\|\varphi\|_{L^2(h)}=1}
+              6\langle\varphi,(N_V+N_{C_w})\varphi\rangle .
+\]
+Indeed Green's identity decomposes the full form into this boundary
+form and the positive zero-trace forms on both harmonic remainders.
+For the solution \(U_X\) of boundary value one, Dirichlet positivity
+and the maximum principle give \(U_X>0\). Substitution of \(f=U_X z\)
+gives the exact expression \(6\int U_X^2|dz|^2+
+\int_\Sigma\beta_X\varphi^2\), where \(\beta_X=6N_X1\).
+The gradient and the trace together control the \(H^1\) norm.
+Compactness of the trace into \(L^2\) gives the displayed minimum.
+In particular \(\mu_w\ge\inf_\Sigma(\beta_V+\beta_{C_w})\).
+A negative first cap Dirichlet eigenvalue already gives a negative
+closed test by zero extension. For a zero eigenvalue, pair its
+positive eigenfunction with a test of trace one. Its strictly
+negative outward derivative then gives a negative test after
+adding a small positive multiple of the latter function.
+
+The exterior contributes a measured positive amount even with a
+moderately adverse cap. On a physical outward collar of width
+\(a>0\) use inward-to-\(V\) distance \(s\) and set
+\(M_H=\sup|\partial_s\log dA_{h_s}|\) (logarithmic area derivative).
+The function \(1-\alpha s(a-s)\), with
+\[
+ \alpha=\frac{Y_i}{12+6aM_H+Y_i a^2/4},
+\]
+is a supersolution for \(-6\Delta+Y_i\), and bounds \(U_V\)
+at both ends since \(U_V\le1\). Its outward derivative at the
+common face gives \(\beta_V\ge6\alpha a\).
+For a reference \(b\) rescaled by \(u^2\) with \(u=1\) there
+and outward logarithmic derivative \((H-H_b)/3\), the boundary
+operator acquires \(2(H_b-H)\) in \(6N\) by conformal covariance
+\cite[\S2]{LeeParker1987Yamabe}. If \(b=\Omega^2b_{\mathrm E}\),
+the weighted flat energy must still include
+\(-6\partial_{\nu_b}\log\Omega\) at the face.
+Using the actual \(N_{C_w}\) includes the entire finite connector.
+
+For a cap conformally flat off its inward connector, any comparison at energy
+\(E_w=e_i-m_i^\sigma+c_\sigma(w)<I\) must have negative Yamabe
+sign. For its volume-one Yamabe representative, Gauss--Bonnet
+and signature give \(Y([g_w])^2\ge48(2T-E_w)\).
+It follows that \(Y([g_w])\le-\sqrt{48(2T-E_w)}\).
+If the cap Dirichlet form is positive, its negative boundary
+response must exceed the positive exterior contribution in some
+trace direction. At a positive capped endpoint the cost bound
+instead quantifies the mismatch itself. Suppose all \(0<w\le W\)
+are certified positive with a uniform density remainder
+\(b_\sigma/\sqrt{\mathrm{area}(h)}\). For \(M_\sigma=m_i^\sigma-d_i>0\),
+\[
+  \frac P2\|D\|_2\ge
+       \sqrt{M_\sigma w_\sigma}-b_\sigma w_\sigma,\qquad
+  w_\sigma=\min\{W,M_\sigma/(4b_\sigma^2)\}.
+\]
+Use \(w_\sigma=W\) if \(b_\sigma=0\). This maximizes the bound
+from \(c_\sigma\ge M_\sigma\) and the one-sided upper estimate
+over the available widths. Take the stronger of the two sign bounds.
+For a conformally flat off-strip cap, set \(x=P\|D\|_2/2\).
+The two-sided estimates also give
+\(x^2/w-2xb_\sigma\le c_\sigma\le
+x^2/w+2xb_\sigma+b_\sigma^2w\). Subtraction in both orders and
+closed signature, followed by \(w\downarrow0\) on the same source,
+give \(|m_i^+-m_i^-|\le2x(b_++b_-)\). A cap with off-strip
+charge \(j^\sigma(w)\) uses \(m_i^\sigma-d_i-j^\sigma(w)\) in
+the positive-width allowance. Its signed strip difference is the
+raw disk imbalance minus \(j^+(w)-j^-(w)\). All terms refer to one finite index.
+The E61 selection supplies positive charge and a smooth bicollar.
+The cap, the quantitative physical radii and the response at one
+affordable width remain to be supplied there.
+
 \section{Testing a coupled path on the original marking}\label{sec:isolate}
 Let \(g\) be the incoming positive source and \(h_t\) a proposed
 matched path on that same sphere with \(h_0=g\) and full joined peak
@@ -1226,6 +1353,219 @@ connector. For example a native cutoff derivative of order
 \(w^{-2}\) multiplies the full tensor \(h_t-g\) in its curvature.
 The isolation test requires measured metrics on the whole path.
 
+
+\subsection{The two isolated costs on a single charged source}
+\label{sec:measured-isolation}
+The isolated paths can cross the energy threshold with very small joined energy.
+Use the round left-invariant coframe of Section~\ref{sec:fixed-mode}, normalized by
+\([e_j,e_k]=2e_i\) cyclically, and \(q_i=(1,-1,0)_i\).
+On the standard sphere minus its poles put
+\[
+ g[f]=\phi(x)^2\left(dx^2+\sum_i(1+q_if)(\omega^i)^2\right).
+\]
+Here \(\Theta\) is the integral, normalized to run from zero to one,
+of \(\exp[-1/(r(1-r))]\) on \((0,1)\), extended constantly beyond
+the ends. Take \(-\partial_z\log\phi=\Theta(z-3)\tanh(z-3)\)
+for \(z=|x|\), with \(\phi(0)=1\). This gives an exact product on
+\([-3,3]\), smooth round polar caps and a positive scalar
+background by \(R=6\phi^{-3}(\phi-\phi'')\).
+Set \(B(x)=1-\Theta(2|x|-1)\) and prescribe the core profiles
+\[
+ F_0=10^{-6}B(4(x+2))+\tfrac12\,10^{-6}B(4(x-2)).
+\]
+Their supports lie strictly on opposite sides of the marked
+equator \(x=0\). With \(w=10^{-8}\), \(a=w^{3/2}=10^{-12}\), take
+the physical metric \(g=g[F_0+aB]\) and
+\(h_s=g[F_0+(1-s)aB]\). The marked incoming widths are one on
+each side. On the actual disk-side strip \(A=[-w,0]\times S^3\)
+use \(r=(x+w)/w\), \(\eta(r)=\Theta(3r-1)\), for the isolation
+cutoff \(\chi\), extended constantly. The two isolated
+coefficients on \(A\) are \(a(1-s+s\eta)\) and \(a(1-s\eta)\);
+the joined and original coefficients there are \(a(1-s)\) and
+\(a\). Thus one strip of width \(w\) is used in all four
+integrals, and its changing part has width \(w/3\).
+
+For an exact quadrature on any subinterval, put
+\(\ell_i=1+q_if\), \(d=1-f^2\),
+\(\mu_i=2\ell_i/\sqrt d\), \(k_i=\ell_i'/(2\ell_i)\).
+In the orthonormal frame with orientation \((dx,\omega^1,\omega^2,\omega^3)\),
+write the normal, tangential and mixed curvature entries for cyclic
+\((i,j,k)\) as
+\[
+\begin{aligned}
+ r_i&=(\mu_i^2-(\mu_j-\mu_k)^2)/2,\qquad N_i=-k_i'-k_i^2,\\
+ T_i&=(r_j+r_k-r_i)/2-k_jk_k,\\
+ M_i&=\mu_i k_i-(\mu_i+\mu_j-\mu_k)k_j/2
+                   -(\mu_i-\mu_j+\mu_k)k_k/2.
+\end{aligned}
+\]
+Here \(r_i\) are the slice Ricci eigenvalues. Gauss and normal
+curvature give \(T_i,N_i\); Codazzi in the bracket frame gives
+\(M_i\). On the perturbed region \(\phi=1\), and the signed
+integrand is \(2\pi^2\sqrt d\sum_i(W_i^\sigma)^2\), where
+\[
+ W_i^\sigma=\tfrac12\left(N_i+T_i-\tfrac13\sum_m(N_m+T_m)\right)
+                 +\sigma M_i,\qquad \sigma=\pm1 .
+\]
+All other regions are conformally flat. For clarity write
+\(C_L,C_R\) for the integrals over the two complete cores,
+\(L_\sigma(u),U_\sigma(u)\) for the bridge integrals of \(uB\)
+on \([-1,-w]\) and \([0,1]\), and \(S_\sigma[G]\) for the
+integral on \(A\) with coefficient \(aG(r)\). The cores have
+equal signed charges by reflection, each strictly positive by
+the unequal slice Ricci eigenvalues on its plateau. At each time
+put \(u=(1-s)a\). The following are the two complete sides,
+including the raw exterior of the strip:
+\[
+\begin{array}{c|ll}
+ &D&V\\ \hline
+g&C_L+L_\sigma(a)+S_\sigma[1]&C_R+U_\sigma(a)\\
+h_s&C_L+L_\sigma(u)+S_\sigma[1-s]&C_R+U_\sigma(u)\\
+p_s&C_L+L_\sigma(u)+S_\sigma[1-s+s\eta]&C_R+U_\sigma(a)\\
+q_s&C_L+L_\sigma(a)+S_\sigma[1-s\eta]&C_R+U_\sigma(u).
+\end{array}
+\]
+At the joined endpoint both marked halves have an exact product
+face and close with PSC Weyl-free caps. The core charges remain.
+
+The quadrature yields useful strict finite bounds. For
+\(|f|\le1/2\), substitution gives
+\[
+ |d^{1/4}W_i^\sigma+q_if''/4|
+ \le 2|ff''|+2(f')^2+9|f|+16|f'|.
+\]
+For example \(N_i+q_if''/2\) is bounded by
+\(|ff''|+(f')^2\), and the mixed term is bounded by \(16|f'|\).
+The integral defining \(\Theta\) gives
+\(\|\Theta'\|_\infty<8,\ \|\Theta''\|_\infty<128\).
+On each core the weighted Weyl entries are less than \(0.004\)
+in absolute value, and throughout the joined bridge they are
+less than \(10^{-9}\). The two core lengths are \(1/2\) each,
+and the bridge length is two. Consequently the \emph{whole}
+joined peak satisfies \(H<\pi^2/1000\).
+On the isolated strip the same estimate, multiplied by
+\(\sqrt w\), leaves componentwise error less than \(10^{-5}\)
+from \(\mp s q_i\eta''/4\). Since
+\(\int_0^1(1/2-r)\Theta''\,dr=1\), Cauchy--Schwarz gives
+\(\int(\Theta'')^2\ge12\) and \(\int(\eta'')^2\ge324\).
+At \(s=1\) each signed strip energy therefore exceeds
+\(2\pi^2(\sqrt{648}/4-\sqrt3\,10^{-5})^2>72\pi^2\).
+The raw strip costs less than \(H\) and the matched strip costs
+zero, giving \(J(1)>143\pi^2\).
+
+Throughout the three paths the actual scalar curvature on the
+perturbed region equals
+\[
+ 6-\frac{2f^2}{d}+\frac{2ff''}{d}
+                   +\frac{(3+f^2)(f')^2}{2d^2}.
+\]
+On the isolated strip \(|ff''|\le1152w\); elsewhere the fixed
+core and bridge derivative bounds give the same strict
+positivity. Both isolated paths thus cross the energy
+\(2T=8\pi^2\) in positive classes. The scale separation arises
+from the second derivative of the cutoff in the thin strip.
+This measures an overlapping path on a standard sphere with \(I=0\).
+
+\subsection{Isolation on the actual transported disk}\label{sec:transported-isolation}
+For a general fixed E61 source use the transport of the buffered
+disk constructed in~\cite{Baker2026CollarProgram}. Its joined peak
+is at most \(e_i+\eta<2T\) and at its round-product endpoint
+the whole disk is conformally flat. Its exterior receives exactly
+\(m_i^\sigma+\delta\) of each sign, with \(|\delta|\le\eta\).
+This spends the original protected core. Fix a level \(t_0<0\)
+in the original inward Gaussian chart, where the transported
+endpoint can be prescribed as \(dt^2+k\) with \(k\) a fixed
+round metric. Compose its angular map on this inner plateau with
+a fixed sphere diffeomorphism if necessary so that \(k\) is
+nonproportional to the incoming slice at some point. Its derivative
+at a fixed point can be a nonconformal linear map, realized by
+the compactly supported flow of a linear vector field times a
+bump. Undo this angular change before the marked round face.
+
+Let \(I_w=[t_0,t_0+w]\times\Sigma\) be the varying part of the
+isolation collar, and put \(x=(t-t_0)/w\), \(u=\chi(x)\) or
+\(1-\chi(x)\), with a fixed smooth clamped step from zero to one.
+The metrics on the strip are \(g+u(h_s-g)\) for the actual joined
+path \(h_s\). A finite estimate valid at \emph{every} \(s\) comes
+from freezing the two full four-metrics at \((t_0,y)\).
+Write the frozen combination in lapse and shift form with
+tangential block \(Q(x)\) and positive lapse \(N(x)\), its
+Schur-complement square root. At each \(y,s\) choose a frame
+orthonormal for the incoming slice that diagonalizes the other
+slice, with eigenvalues \(\lambda_i\). Define
+\[
+\begin{aligned}
+ Q_i&=1+u(\lambda_i-1),&
+ \partial_\rho&=N^{-1}\partial_x,&
+ l_i&=\tfrac12\partial_\rho\log Q_i,\\
+ A_i&=-\partial_\rho l_i-l_i^2-l_jl_k
+     &&& ((i,j,k)\ \text{cyclic}).
+\end{aligned}
+\]
+The leading squared norm on the strip is
+\[
+ {\cal C}_u(s)=\frac14\int_\Sigma\int_0^1
+ N\sqrt{\det Q}\sum_i(A_i-\overline A)^2\,dx\,dA_{h_{t_0}},
+ \qquad \overline A=\tfrac13\sum_i A_i .
+\]
+To verify it, dilate all four coordinates by \(w\) about the base
+point and divide the pulled-back metric by \(w^2\). In the dilated
+coordinates the two-jets of the interpolant differ by \(O_i(w)\)
+from those of the frozen metric. This is uniform over the compact
+marked slice and time interval: smooth source and path have bounded
+three-jets, the fixed cutoff has bounded derivatives, and the convex
+combinations have a common positive ellipticity bound.
+The spatially constant shift of the frozen metric is removed
+by an \(x\)-dependent translation in the three linear coordinates.
+In distance \(\rho\) its slices are flat with diagonal shape \(l_i\).
+Normal curvature is \(-\partial_\rho l_i-l_i^2\), the complementary
+sectional curvature is \(-l_jl_k\), and Codazzi gives zero mixed
+curvature. Chiral projection now gives the displayed formula in
+both signs. Undoing the dilation and using the triangle inequality
+for density-weighted curvature on the compact coordinate cover gives
+\[
+ \left|w^{3/2}\sqrt{E_\sigma(g+u(h_s-g);I_w)}
+                   -\sqrt{{\cal C}_u(s)}\right|\le C_i w .
+\]
+The constant depends on this whole physical path and its chart
+guards. The remaining parts of the complete sides are exact:
+for an increasing cutoff the isolated metric equals \(g\)
+below \(I_w\) and \(h_s\) above it, including the rest of the
+disk \emph{and the entire exterior}. The decreasing cutoff exchanges
+those metrics. Add the respective two raw regional integrals to
+the measured strip term, in each sign. For the transport stages
+each joined integral is the prepared measure of the corresponding
+image region. This accounts also for any fixed gap between the
+isolation strip and the original face.
+
+At the endpoint both coefficients are strictly positive. If all
+\(A_i\) agree along a profile, then
+\[
+ \partial_\rho(l_i-l_j)+(l_i+l_j-l_k)(l_i-l_j)=0 .
+\]
+Clamping starts with zero \(l_i-l_j\); thus they all vanish along
+the profile and the two tangential end metrics are proportional.
+The chosen nonproportionality persists on an open set of \(y\),
+giving \({\cal C}_u(1)>0\) in both profile directions. Choose a
+single positive \(w\) within the plateau with \(C_iw\) at most
+half the smaller coefficient's square root and
+\(\min_u{\cal C}_u(1)/(4w^3)>2T\).
+Both isolated paths then cross \(2T\), while the joined peak
+can approach the incoming \(e_i\) as closely as prescribed.
+
+The coefficient has a second application at the original gauge.
+Support a tangential diffeomorphism isotopy strictly inside an
+inward collar, away from the face and protected core. Make it a
+fixed angular shear on the isolation plateau at midtime, then
+reverse it. Pulling back \(g_i\) leaves the entire joined energy
+and both complete-side masses constant, preserves the core
+pointwise and returns to \(g_i\). At midtime both endpoint
+slice metrics in the coefficient are nonproportional somewhere,
+so the same finite-width lower bound can force both isolated
+energies past any prescribed finite value. This loop supplies no
+matched face on its own. It shows why an isolated energy crossing
+on a fixed marking leaves the size of a genuine exterior saving
+undetermined.
 
 \section{Outstanding challenges}
 

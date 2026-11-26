@@ -21,3 +21,7 @@ Added the all-rank penultimate reduction, the zero-winding chain and the actual 
 ## 26 November 2026 · Marked pairs and the returned round band
 
 The surgery manuscript derives the two-relator and peripheral constraints, constructs a square-knot pair with two failed prefixes, measures the returned two-end band, and gives relative and terminal two-attachment tests. All three-to-two successors, inverse identifications and temporary handles are accounted for. [Independent manuscript reading](../reviews/PAIRED_MANUSCRIPT_READER.md)
+
+## 26 November 2026 · A band through the free generator
+
+The two-ended cover distinguishes a family with sharp sphere intersection \(2n\). A specified pair of framed slides reduces each terminal member, and the relative statement recognizes the compatible one-lower closure. The returned rank-two penultimate section has a measured PSC band with an explicit lower bound on its chiral cost. [Independent topology reading](../reviews/GENERATOR_CLOSURE_MANUSCRIPT_READER.md) · [Measured band](notes/RANK_TWO_PRODUCT_BAND.md)

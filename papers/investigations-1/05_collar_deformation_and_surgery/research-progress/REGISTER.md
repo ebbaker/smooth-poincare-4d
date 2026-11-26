@@ -29,3 +29,12 @@ The [initial working manuscript](../manuscript/marked_collars_and_smooth_recogni
 | CDS-B03 / DEF-B02 | Nonround induced height has a positive hyperbolic cap, measured whole path and genuine two-sign saving. On the original positive minimizing disk a finite-width mismatch has a signed price and a coupled path has two testable isolated collar costs. [Manuscript readback](../reviews/PAIRED_MANUSCRIPT_READER.md) | Select a positive affordable physical reference or coupled deformation on the original disk. Positive subcritical entry and smooth marked compactness still have separate premises. |
 
 [Continuation after the pair and face tests](../continuation-notes/AFTER_TWO_ATTACHMENTS_AND_FACE_COST_20261126.md)
+
+### Nonlocal bands and transport on the original charged disk, 26 November
+
+| Task | Checked result | Remaining problem |
+| --- | --- | --- |
+| CDS-B03 / SUR-B04 | The marked free-boundary family has minimum sphere intersection \(2n\) for every \(n\ge1\). Two framed slides reduce the pair with zero stabilizations. In a one-lower closed presentation the corresponding relative block recognizes every compatible last attachment. [Handle calculation](../02_handle_isolation_and_marked_surgery/notes/LIFTED_LINKS_AND_SPHERES.md) | Recover a reducing move from a further actual link exterior whose simplifying band has not been prescribed. |
+| CDS-B03 / E02i–j | On a fixed smooth positive subcritical source one can match the original disk face with two positive caps and joined peak \(H\le e_i+\eta<2T\). The full disk mass moves to the exterior with error at most \(\eta\); the core empties. A matched positive exterior with a retained core requires \(H\ge I+\max_\sigma q_i^\sigma\). Both isolated collars can cross the wall even on this physical path. [Transport](../notes/TRANSPORT_ON_THE_CHARGED_DISK.md) · [Independent two-side reading](../reviews/TRANSPORT_ISOLATION_READER.md) | Obtain a positive comparison with a strictly smaller complete same-type energy, or a useful core-retaining path at an affordable peak. Universal entry and compactness in the original marking remain independent requirements. |
+
+[Assessed return and input receipts](../reviews/NONLOCAL_BANDS_AND_PHYSICAL_TRANSPORT_20261126.md) · [Current continuation](../continuation-notes/AFTER_NONLOCAL_BANDS_AND_PHYSICAL_TRANSPORT_20261126.md)

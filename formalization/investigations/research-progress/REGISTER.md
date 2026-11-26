@@ -1,8 +1,14 @@
 # Overall formalization progress
 
-## Edition 04 · Marked intermediate cuts and positive entry · 26 November 2026
+## Edition 04 · Fixed faces and normalized handle prefixes · 26 November 2026
 
-**FOT-B08, setup adopted.** The [Edition 04 overview](../research-overview/04_OVERVIEW.md), [execution plan](../research-plan/04_PLAN.md) and [baseline](04_BASELINE.md) supersede the Edition 03 opening queue. E43 is the last accepted mathematical return. The new blueprint targets are open. Edition 04 proof execution awaits activation. [Dated handoff](../continuation-notes/EDITION_04_MARKED_CUTS_20261126.md) · [Planning assessment](../reviews/RESEARCH_PLAN_AFTER_COLLAR_AND_SURGERY_20261126.md)
+**FOT-E44, assessed.** An actual round equator on two independent physical widths realizes the complete path, strict joined peak, positive marked caps and finite raw mass test. On a general normalized face, the checked metric construction reaches the product germ. General signed energy and positivity require quantitative strip bounds and marked test transplants. The fixed-type side infima are taken on each source before the sequence exclusion. [Assessment](../reviews/FIXED_FACES_AND_NORMALIZED_PREFIXES_20261126.md) · [Next investigation](../continuation-notes/AFTER_FIXED_FACES_AND_NORMALIZED_PREFIXES_20261126.md)
+
+The full integral cokernel forces the winding-zero block to vanish. The two orders use different fillings. A supplied native cancelling pair gives a strict three-to-two count with two transported framed tubes and the actual upper map. The product-band price includes the complete transition, and the realized meridian-first Mazur cut differs from the long-component cut. The transported one-sided link with no witnessed relative move and the original charged disk with no admissible net saving remain the two nearest untreated cases. FOT-E35 and E37 remain open in their universal scope. The round inclusion gives an actual induced control, and the round-end mode is attained on its classical domain. Routes 01, 02 and 04 retain their previous milestone and scope. [Independent checks](handoffs/ED04_INDEPENDENT_VERIFICATION_20261126.md) · [Activation baseline replay](handoffs/ED04_ACTIVATION_INPUTS_20261126.md)
+
+## Edition 04 setup · Marked intermediate cuts and positive entry · 26 November 2026
+
+**FOT-B08, setup adopted.** The [Edition 04 overview](../research-overview/04_OVERVIEW.md), [execution plan](../research-plan/04_PLAN.md) and [baseline](04_BASELINE.md) supersede the Edition 03 opening queue. At setup E43 was the last accepted mathematical return. The seven program targets were recorded as open. [Dated handoff](../continuation-notes/EDITION_04_MARKED_CUTS_20261126.md) · [Planning assessment](../reviews/RESEARCH_PLAN_AFTER_COLLAR_AND_SURGERY_20261126.md)
 
 | Owner | Disposition at setup |
 | --- | --- |

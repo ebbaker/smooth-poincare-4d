@@ -1,6 +1,8 @@
 # Continuing the formalization program
 
-**Edition 04 · 26 November 2026.** Resume from the [marked cuts and positive entry handoff](EDITION_04_MARKED_CUTS_20261126.md). It specifies the first geometric Lean targets, independent topology packet and survival test on each smooth type. [Edition 04 plan](../research-plan/04_PLAN.md) · [Current baseline](../research-progress/04_BASELINE.md)
+**Current Edition 04 proof milestone, FOT-E44 · 26 November 2026.** Continue on the finite charged disk or the actual residual two-component link through its upper marking. The [current handoff](AFTER_FIXED_FACES_AND_NORMALIZED_PREFIXES_20261126.md) gives the pasteable prompt, quantified requirements and alternate entry routes. [Assessment](../reviews/FIXED_FACES_AND_NORMALIZED_PREFIXES_20261126.md) · [Public verification](../research-progress/handoffs/ED04_INDEPENDENT_VERIFICATION_20261126.md)
+
+**Edition 04 opening brief · 26 November 2026.** The program was activated from the [marked cuts and positive entry handoff](EDITION_04_MARKED_CUTS_20261126.md). It specifies the first geometric Lean targets, independent topology packet and survival test on each smooth type. [Edition 04 plan](../research-plan/04_PLAN.md) · [Current baseline](../research-progress/04_BASELINE.md)
 
 **Edition 03 proof milestone, 26 November 2026 · FOT-E43.** Construct the compatible native maps to the prescribed ball, seek a disk repair that meets the finite cost bound, or supply the smoothing data that give a charged pointed limit. [Assessment](../reviews/COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md) · [Dated continuation](../continuation-notes/AFTER_COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md) · [Sole program register](../research-progress/REGISTER.md)
 

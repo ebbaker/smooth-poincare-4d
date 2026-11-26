@@ -1,5 +1,9 @@
 # Single spherical cut and descent · Progress register
 
+## Edition 04 round control · FOT-E44
+
+Two native hemisphere closures at all independent available widths in $(0,\pi/2)$ have actual positive metrics, zero drift in either sign and fixed-type infimum zero. The angular cap marking, both complete restrictions and the compact scalar proof are checked. [Construction, hypotheses and proof links](handoffs/ED04_ROUND_HEMISPHERE_CONTROL_20261126.md) · [Independent cap and mass readback](../reviews/ED04_CAP_MASS_READBACK.md)
+
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The serving model variant and reasoning effort are unavailable.
 
 This is the sole live status register for Route 03, including inherited FOT-E25, E26 and E28. [Task definitions and acceptance tests](../research-plan/PLAN.md) · [Version 02 program plan](../../research-plan/02_PLAN.md) · [Program register](../../research-progress/REGISTER.md) · [Evidence at issue](../../research-progress/02_BASELINE.md)
@@ -10,7 +14,7 @@ This is the sole live status register for Route 03, including inherited FOT-E25,
 
 | Task | Current state | Next proof or premise |
 | --- | --- | --- |
-| SP4-FORM-CUT-E04a | Smooth stretch and cutoff derivation recorded. Lean constructs genuine smooth log-tests from marked nonnegative transplants with both scalar and volume errors. | Implement the smooth metric stretch, radial center chart, capacity estimates and change of domain on the same native marked metrics. The uniform Yamabe floor uses the strict joined wall. [Proof return](handoffs/ED04_MARKED_CAP_TEST_FACTORS_20261126.md) |
+| SP4-FORM-CUT-E04a | Lean now transports the complete scalar numerator and volume of a cut-supported nonnegative factor through a supplied marked open isometry, including the positive conformal background factor and genuine smooth zero extension. The unit round control has a verified positive Yamabe class. | Implement the native stretched metrics, radial center chart and capacity cutoff estimates. The uniform Yamabe floor uses the strict joined wall. [E45 marked transport](handoffs/E45_MARKED_CORE_TEST_TRANSPLANT_20261126.md) · [Stretch and log-test construction](handoffs/ED04_MARKED_CAP_TEST_FACTORS_20261126.md) |
 | SP4-FORM-CUT-E04b | The fixed marked core data are retained at every tolerance. Finite recognition reassembles the opposite cap with both full side images. | Realize both signed open patches and the capped homotopy-sphere topology from a native cut. With independently supplied cap signs the finite test on the actual energy sum is inclusive. [Fixed-source reassembly](../../07_fixed_type_variational_descent/research-progress/handoffs/ED04_FIXED_SOURCE_SIDE_MASSES_20261126.md) |
 
 ## Version 02 tasks

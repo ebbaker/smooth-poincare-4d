@@ -6,7 +6,7 @@ records mathematical dependencies across these investigations.
 
 ## Overall research program
 
-Edition 04 asks which marked construction can recognize each hypothetical nonstandard smooth type or contradict its minimality. The first targets are a positive cap on a fixed exact face and a PSC certificate on an actual handle prefix. Two new owners treat intermediate three-manifolds and positive entry from a marked exterior. [Current overview](research-overview/04_OVERVIEW.md) · [Proof plan](research-plan/04_PLAN.md) · [Live program register](research-progress/REGISTER.md) · [Continuation](continuation-notes/CONTINUATION.md) · [Milestones](DRAFT_HISTORY.md)
+Edition 04 asks which marked construction can recognize each hypothetical nonstandard smooth type or contradict its minimality. The [first assessed milestone](reviews/FIXED_FACES_AND_NORMALIZED_PREFIXES_20261126.md) constructs both positive caps on the round control and tests the geometry and algebra of actual handle prefixes. Two new owners treat intermediate three-manifolds and positive entry from a marked exterior. [Current overview](research-overview/04_OVERVIEW.md) · [Proof plan](research-plan/04_PLAN.md) · [Live program register](research-progress/REGISTER.md) · [Continuation](continuation-notes/CONTINUATION.md) · [Milestones](DRAFT_HISTORY.md)
 
 | Edition | Research overview | Research plan | Progress at issue |
 | --- | --- | --- | --- |

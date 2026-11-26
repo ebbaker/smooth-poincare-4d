@@ -21,3 +21,7 @@ Added the convex Euclidean cap, its boundary form and transverse-height obstruct
 ## 26 November 2026 · Finite face error and overlapping changes
 
 The deformation manuscript derives a two-sign cost at native width, the relative boundary flux, the hyperbolic fit for a nonround induced height, and the isolated-connector test for a coupled path. [Independent manuscript reading](../reviews/PAIRED_MANUSCRIPT_READER.md)
+
+## 26 November 2026 · A fixed-source coupling and a finite cap sign
+
+The manuscript now measures both isolated connectors along the actual charged-disk transport. It derives their finite native-width error, gives a core-preserving angular control, tests finite cap positivity by its boundary response, and evaluates two separate curved and coupled examples. [Assessment](../reviews/NONLOCAL_BANDS_AND_PHYSICAL_TRANSPORT_20261126.md) · [Charged-path readback](../reviews/TRANSPORT_ISOLATION_READER.md)

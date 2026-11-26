@@ -1,3 +1,5 @@
+% 26 November 2026, generator bands and physical boundary response.
+% Intake 7e36f4398acf, companions 2575660c6240 and 62b372832a0a.
 % Two attachments and finite face error, 26 November 2026, input 5ddaabd76595.
 % Continuation of 26 November 2026 at e2968b2898b5. Current proofs and primary
 % passages are recorded in the prefix and curved-filling assessment in parent reviews.
@@ -40,10 +42,13 @@ side has positive-class energy infimum at most its original mass, in
 either chirality. On a hypothetical nonstandard sphere the side which
 carries its smooth type must therefore carry at least its fixed-type
 infimum. This excludes such a face on each sufficiently late charged
-disk selected by the master manuscript. We use these results to specify
-a penultimate-cut criterion for a net cancellation at any upper rank,
-a curved disk-filling test, and the geometric selection still
-required to carry it out on arbitrary smooth homotopy four-spheres.
+disk selected by the master manuscript. A family of nonlocal
+two-attachment blocks has no dominated single-attachment level in
+either order, yet admits a marked reduction without stabilization.
+On an actual selected disk we can produce a round face with joined
+peak arbitrarily close to the incoming energy by transporting its
+full charge into the exterior. We quantify the protected mass lost
+in this construction and the additional estimates needed for descent.
 \end{abstract}
 
 \section{The problem on the original smooth manifold}
@@ -353,6 +358,49 @@ in its untouched ball to \(S^3\). Its two failed single cuts are now
 crossed jointly, giving \(3\to2\to0\) on this marked closure.
 
 
+\paragraph{A nonlocal block with two failed original levels.}
+The ball condition can be removed in a specific infinite family
+\cite{Baker2026HandleCuts}. Start at the actual \(Y_1\) obtained
+by attaching a zero-framed unknot to a four-ball. Take the local
+Figure~5 pair \((U,Q)\), with \(Q\) the square knot, and slide \(U\)
+over \(Q\) by a band going \(n\ge1\) times through the free
+generator. For the chosen bands, a lift of the moving knot in
+\(S^2\times\R\), compactified at its two ends, is nonsplit with
+exactly the stationary lifts of indices \(0,n\). A link in a ball
+could have at most one such index. Every nonseparating sphere
+missing \(Q\) meets the moving knot at least \(2n\) times, with
+equality on a horizontal sphere. In fact its closed lift must
+visit both indicated regions when the cyclic cover is cut into
+copies of the complement of the sphere.
+
+Either first attachment has a simply connected lower trace in this
+one-sided closure. Domination would make its boundary \(Y_2\),
+forcing the first component to be a local unknot in \(Y_1\) by
+the single-knot theorem. Each lifts to a square knot. Nevertheless
+the inverse band and the Figure~5 slide give two split zero-framed
+attachments relative to \(Y_1\). Their two upper cancellations take
+the middle count from three to one, and the original single pair
+cancels. No stabilization enters. If the same two marked attachments
+appear first in a one-lower, three-middle presentation, the relative
+map carries the entire last tube to its split successor. The
+reverse last attachment and the inverse circle surgery then identify
+the homotopy sphere for any such last tube with actual outlet \(Y_2\)
+and its gluing to the rank-two upper handlebody
+\cite{Baker2026HandleCuts}. Thus a pair can be recognized even when
+the minimum number of crossings with a sphere avoiding the other
+component is arbitrarily large.
+
+In the one-sided closure the returned \(U\)-first cut has boundary
+\(Y_2\) and complete pieces \(\natural_2(S^2\times D^2)\) and
+\(\natural_2(S^1\times D^3)\). A PSC section metric \(h\) with two
+explicit round necks extends to a closed PSC metric with a product
+band there. Its mean traces vanish, its two widths are \(L/2\),
+and each whole side pays its fixed filling and transition costs
+plus \(L\int_{Y_2}|\mathrm{Ric}_h^\circ|^2/8\). At the certified
+width-only threshold the band alone exceeds \(8\pi^2\) in each
+sign. The handle certificate therefore has a measured curvature
+price in the very metric that supplies it.
+
 \section{The cost of making a spherical cut}\label{sec:cost}
 
 Let \(W^\pm\) be the two real Weyl operators on self-dual and
@@ -641,7 +689,7 @@ fixed large enough that \((2-2^{-k})I-2T>0\). The right side of
 \eqref{eq:saving} then has a positive lower limit in both signs.
 A change confined to a disk-side strip of vanishing raw mass cannot
 pay it. The estimate gives the saving required of an actual path.
-Constructing such a path remains a variational problem
+Constructing such a path with the protected core retained remains a variational problem
 \cite{Baker2026ChiralMaster,Baker2026FixedDescent,Baker2026HandleCuts}.
 
 \paragraph{A curved filling and the source of positivity.}
@@ -722,6 +770,130 @@ enlarged disk insert the full mass with its protected term
 peak can approach \(2T\), in which case the second lower bound
 need not remain positive.
 
+
+\paragraph{What one physical width can decide.}
+On the selected disk let \(C_w\) include the actual connector and
+let \(V\) be its full unchanged exterior. With positive cap
+Dirichlet form, the sign of the capped class is the sign of the
+least eigenvalue \(\mu_w\) of \(6(N_{C_w}+N_V)\), the sum of the
+outward Dirichlet-to-Neumann maps for \(-6\Delta+R\) on the
+physical face. This follows by minimizing the two quadratic
+forms at fixed trace. The positive Yamabe exterior contributes a
+strict positive lower bound from an outward collar.
+Whenever a finite trial has energy \(E_w<I\), Gauss--Bonnet on
+the volume-one Yamabe representative forces
+\(Y([g_w])\le-\sqrt{48(2T-E_w)}\). If its cap has positive
+Dirichlet form, a sufficiently adverse boundary response is then
+necessary. For a cap retaining the protected core, all charge
+off its connector must also be subtracted from the allowance.
+For the balanced enlargement this leaves at most
+\((1-2^{-k})(e_i-q_i^\sigma)-r_i^\sigma-d_i\)
+for the rest of the cap to give strict descent
+\cite{Baker2026CollarDeformation}.
+
+There are two finite tests on specified metrics. At one charged
+ellipsoid height a whole interval of hyperbolic references induces
+the physical \(h\) with nonzero trace-free mismatch. At one common
+positive width both connector costs are at most a quarter of the
+smaller incoming signed disk mass and the joined path stays below
+\(2T\). The full disk is replaced. In a separate smooth product
+collar on \(S^4\), a path removing a small anisotropy preserves
+positive core charge on both sides. Its whole joined peak is less
+than \(\pi^2/1000\), whereas on the native disk-side width
+\(10^{-8}\) each isolated endpoint connector costs more than
+\(72\pi^2\) in each sign. Both isolated paths still have positive
+scalar curvature. Thus the cost of separately turning off either
+part of a deformation cannot in general be bounded by its small
+joined peak. Both constructions are on the standard smooth type.
+At a charged E61 index these tests leave the fit and the response
+of a cap retaining its complete original exterior undetermined.
+
+\subsection{A subcritical path on the selected disk itself}\label{sec:disk-transport}
+At each fixed index there is a different way to obtain a matched
+face. It determines where the original charges go.
+
+\begin{proposition}\label{prop:disk-transport}
+Let \(g\) be a smooth positive-class metric on the oriented homotopy
+sphere \(M\), \(e=E_\pm(g;M)<2T\), and \(D\) a smoothly parametrized,
+buffered disk. Fix an outer Gaussian buffer \(A^+\) of positive
+width, and \(0<\eta<2T-e\). There is a smooth metric path on \(M\)
+from \(g\), fixed beyond \(D\cup A^+\), of joined peak at most
+\(e+\eta\). It ends at an exactly round product on positive native
+subwidths of the original marked collar. Its disk has zero charge
+in each sign. For some \(|\delta|\le\eta\), the two complete
+exterior increments are \(m^\sigma+\delta\), entirely in \(A^+\),
+where \(m^\sigma=E_\sigma(g;D)\). Both matched caps are positive.
+\end{proposition}
+\begin{proof}
+Choose coordinates on the buffered ball agreeing with its marked
+angular coordinates and signed Gaussian \(t\) near the face.
+Near the center linearly normalize \(g(0)\) to the identity, using
+an oriented change supported away from the face. Flatten the metric
+in a tiny ball of radius \(\epsilon\), with a cutoff ending at
+\(2\epsilon\). The original coefficients differ from the constant
+ones by \(O_g(\epsilon)\) there. Along the affine cutoff path the
+first derivatives are bounded and the second derivatives are
+\(O_g(1/\epsilon)\). The changed volume is \(O_g(\epsilon^4)\),
+so the change of each total energy is bounded by \(C_g\epsilon^2\)
+uniformly along the path. This estimate also holds using a normal
+center chart, where it improves to \(O_g(\epsilon^4)\).
+Take \(\epsilon\) at this index to meet \(\eta\).
+
+In the flat ball a smooth positive conformal factor equal to
+\(\ell/R\) on an interior annulus gives the cylinder
+\(\ell^2(dR^2/R^2+\gamma)\) there. Extend it constantly near the
+center and by one beyond the ball. Conformal interpolation leaves
+both energy measures unchanged. A radial diffeomorphism sends
+the entire \(D\) inside the flat ball, with
+\(R=R_0\exp(t/\ell)\) on the chosen smaller native collar.
+Take \(R_0\) sufficiently small. Interpolate its strictly
+increasing radial function to a linear one near the center and
+to the identity before the end of \(A^+\). The identity and this
+radial map are joined by increasing interpolation. Its inverse uses
+the inverse radial function and the inverse of each prescribed
+angular map. Pull back the prepared metric along this isotopy.
+This fixes the source, puts \(dt^2+\ell^2\gamma\) on the named
+subwidths and preserves the closed energy throughout transport.
+
+At every isotopy time \(s\) the complete disk charge is the prepared
+measure of \(\Phi_s(D)\), and its complement has exactly the remainder
+of \(e+\delta\). At the endpoint the disk is conformally flat and
+all \(e+\delta\) lies in its exterior. The same conformally flat
+disk closes the exterior in a positive class by the strict joined
+wall. The disk side closes with a conformally round cap in the
+given angular coordinates to a positive sphere of zero energy.
+All changes outside \(D\) take place in \(A^+\).
+\end{proof}
+
+Apply this to the original E61 disk in \(g_i\) and to each
+balanced enlargement on its own source. The positive exterior cap
+has energy \(e_i+\delta\ge I\), hence \(\delta\ge-d_i\).
+If \(q_i^\sigma\) is the original charge in a protected core of
+the enlarged disk, this construction loses all \(q_i^\sigma\).
+More generally \emph{every} matched path with joined peak at
+most \(e_i+\eta\) and positive exterior cap of energy equal to its
+complete exterior leaves at most \(d_i+\eta\) of either sign in
+the entire disk. Thus for a fixed core its charge loss is at least
+\(q_i^\sigma-d_i-\eta\). A path preserving that core needs peak
+at least \(I+\max_\sigma q_i^\sigma\).
+
+On the actual transported disk the cutoffs separating the two
+metric changes can be measured as well. On a fixed inward plateau
+choose round angular data differing anisotropically from the
+incoming metric there and return to the identity marking at the
+face. At isolation width \(w\), each endpoint connector has
+energy \(w^{-3}(c+O_i(w))\) with a strictly positive leading
+coefficient for each cutoff, the same in both chiralities for that
+cutoff. Both therefore cross the joined threshold for a sufficiently
+small positive native width. The companion derives the coefficients
+at every path time and the complete-side ledger
+\cite{Baker2026CollarDeformation}. Even a loop of angular
+pullbacks supported off the core and face can force these isolated
+crossings while preserving the joined energy and both side masses.
+This identifies what an inexpensive joined path alone can achieve
+on the original minimizing type. A strict exterior saving, or a
+matched deformation retaining the prescribed core with its
+necessary peak increase, remains open.
 
 \section{Selection, termination and outstanding challenges}
 

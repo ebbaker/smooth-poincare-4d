@@ -1,5 +1,13 @@
 # Hypersurface immersion bounds · Progress register
 
+## Edition 04 source selection · FOT-E45 · 26 November 2026
+
+The selected E45 source check found the charged near-round ellipsoid on the standard type and a finite two-sign cap saving with its own exact physical face. The E61 selected disk comes from its distinct positive Yamabe sequence. It has no supplied global immersion identifying its boundary or controlled induced metric. IMM-B02/E02 still needs the full induced energy on one actual marked immersion of a further type, and E03 needs the attaching data of a direction on that same immersion. [Source and dependency crosswalk](../../11_intrinsic_entry_from_marked_exteriors/research-progress/handoffs/ED04_E45_ENTRY_AND_SOURCE_CROSSWALK.md)
+
+## Edition 04 induced entry · FOT-E44 · 26 November 2026
+
+The native inclusion of the unit four-sphere into Euclidean five-space is a checked global isometric hypersurface for the same round source used in the fixed-face test. Its two Weyl measures are zero, the compact scalar lower bound gives a positive ordinary class, and the marked hemisphere construction realizes both caps. The round metric qualifies at the inclusive recognition threshold and below the strict joined wall. These are computations of the original induced metric. The interpolating conformal metrics use intrinsic Yamabe positivity. IMM-B02/E02 still requires an actual whole immersion on a further smooth type and its complete induced energy. No such witness was identified in the current immersion and collar drafts. [Round source and geometrical marking](../../../SmoothPoincare/Variational/RoundHemisphereMarkings.lean) · [Fixed-source control](../../03_single_cut_descent/research-progress/handoffs/ED04_ROUND_HEMISPHERE_CONTROL_20261126.md)
+
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The serving model and effort for preparation were unavailable. [Overall overview](../../research-overview/03_OVERVIEW.md) · [Program plan](../../research-plan/03_PLAN.md) · [Source revisions and pins](../../research-progress/03_BASELINE.md)
 
 This is the sole live status register for `SP4-FORM-IMM` and `FOT-E36`. The [proof plan](../research-plan/PLAN.md) specifies each target and acceptance test. The paper's [research register](../../../../papers/investigations-1/04_hypersurface_immersions/01_immersed_handle_constructions/research-progress/REGISTER.md) owns mathematical extraction or construction on the source.

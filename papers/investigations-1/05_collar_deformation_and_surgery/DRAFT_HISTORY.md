@@ -21,3 +21,7 @@ The [assessment](reviews/PENULTIMATE_CUTS_AND_CURVED_FILLINGS_20261126.md) exten
 ## 26 November 2026 · Two attachments and physical face costs
 
 The parent manuscript now includes a two-attachment move across two failed individual cuts, a measured band on the returned section, a hyperbolic height comparison, and finite-width and overlapping-path tests on the physical minimizing disk. [Checked milestone](reviews/TWO_ATTACHMENTS_AND_PHYSICAL_FACE_COST_20261126.md)
+
+## 26 November 2026 · Nonlocal bands and physical charge transport
+
+The parent manuscript identifies a nonlocal reducible family with unbounded sphere intersection, including its compatible mixed closures. At a single entered index it constructs an exact marked round face arbitrarily close to the initial joined energy and determines where every unit of the disk charge goes. The exterior increment and the retained-core peak requirement delimit the variational application. [Assessment and independent readings](reviews/NONLOCAL_BANDS_AND_PHYSICAL_TRANSPORT_20261126.md)

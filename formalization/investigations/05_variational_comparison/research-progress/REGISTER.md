@@ -8,8 +8,8 @@
 
 | Task | Current state | Next proof or premise |
 | --- | --- | --- |
-| SP4-FORM-VAR-E04e | Metric construction checked on a supplied marked normalized bicollar | The exponent and original-chart tangential face jets, actual smooth metric slices, exact product endpoint and both outer germs are constructed. Complete signed side identities and the strict joined bound use the actual strip estimates, matched frames and null-seam inputs. Construct the normalized Gaussian tube and geometric strip estimates. [Proof](handoffs/ED04_EXACT_FACE_PHYSICAL_INTERPOLATION_20261126.md) |
-| SP4-FORM-VAR-E04f | Scalar normal jet formulas and cutoff bounds checked | Complete the angular and mixed estimates in the actual normalized chart and transfer to both chiral energy densities under the measured ellipticity. Sequence applications need the physical chart and smallness data at each source. [Proof boundaries](handoffs/ED04_EXACT_FACE_PHYSICAL_INTERPOLATION_20261126.md) |
+| SP4-FORM-VAR-E04e | Metric construction and fixed-source full chart two-jet bounds checked | The actual path has the exact product endpoint and both incoming outer germs. On a supplied normalized chart with the exact coefficient face jets, the complete coefficient Hessian is bounded uniformly at both independent widths. Complete signed side identities and the strict joined bound still need the chart curvature and integrated strip costs, matched frames and null seam. [Path](handoffs/ED04_EXACT_FACE_PHYSICAL_INTERPOLATION_20261126.md) · [Full jets](handoffs/ED04_EXACT_FACE_PHYSICAL_JETS_20261126.md) |
+| SP4-FORM-VAR-E04f | Signed normal, angular and mixed coefficient formulas checked | The two cutoff derivative scales and the exact-face Taylor powers give uniform bounds for the full coordinate two-jet. The approximate-face covariant estimates and their curvature and density transfer retain the measured ellipticity and smallness hypotheses on the actual chosen sequence. [Jet proof and premises](handoffs/ED04_EXACT_FACE_PHYSICAL_JETS_20261126.md) |
 
 ## Earlier tasks
 

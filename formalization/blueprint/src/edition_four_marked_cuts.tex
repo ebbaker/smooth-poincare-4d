@@ -294,3 +294,192 @@ invariance preserves the positive round class and both vanishing
 Weyl measures. The cap comparison therefore has zero drift at every
 positive tolerance on this fixed source.
 \end{proof}
+
+\subsection{Physical strip estimates and the returned two-handle block}
+\label{sec:ed04-disk-pair}
+
+\begin{proposition}[Uniform two-jets on each native angular patch]
+\label{prop:ed45-jets}
+\uses{prop:ed04-physical-face}
+\lean{SmoothPoincare.exactFaceCoordinateSplice_angular_mixed, SmoothPoincare.exactFaceCoordinateSplice_plateau_germs, SmoothPoincare.exactFaceNativePath_sub_reference_germ, SmoothPoincare.exists_exactFaceNativePath_twoJetBound, SmoothPoincare.exists_exactFaceNativePath_fullCoefficientBound}
+\leanok
+In a fixed marked angular chart with a compact buffered patch, suppose a
+coefficient of the conformally normalized source agrees with its reference
+on the open face and its normal derivative agrees along the compact patch.
+The actual normalized path coefficient minus the reference, its differential,
+and its full Hessian have bounds $Cw_j^2$, $C(1+L_1)w_j$ and
+$C(1+2L_1+L_2)$ on the respective halves. The constants are independent
+of both positive subwidths and time. The full coefficient has uniformly
+bounded two-jets on these patches as well.
+\end{proposition}
+\begin{proof}
+\leanok
+The face identity kills the tangential differential. Compactness bounds the
+second differential on the full buffered normal intervals. Integrating
+once and twice gives the required orders for the first and zeroth jets.
+Differentiate the cutoff product in arbitrary ordered pairs of directions.
+The normal factors of $1/w_j$ and $1/w_j^2$ multiply the corresponding
+vanishing jets. Equality on a neighborhood transfers these differentials
+to the marked pullback. Add back the fixed smooth reference.
+\end{proof}
+
+\begin{proposition}[Physical volume, seam and paired curvature price]
+\label{prop:ed45-volume}
+\uses{prop:ed04-physical-face}
+\lean{SmoothPoincare.exactFacePhysicalPath_inner_le_majorant, SmoothPoincare.exists_exactFacePhysical_stripVolume, SmoothPoincare.exists_exactFacePhysical_stripCharge, SmoothPoincare.pairedChiralBlocks_le_frameTensor, SmoothPoincare.exists_exactFace_exposed_paired_price}
+\leanok
+On a supplied normalized marked spherical bicollar there is a fixed
+reference and $V\ge0$ such that every full angular strip $[a,b]$ in the
+available slab has physical volume at most $V(b-a)$ for every time and
+subwidth pair. The seam has zero charge in each sign. For the conformally
+exposed path one can choose a fixed reference and $V$ so that a bound $D$
+on the squared ordered curvature norm of the normalized metric on that
+strip gives $E_+(U)+E_-(U)\le DV(b-a)$.
+\end{proposition}
+\begin{proof}
+\leanok
+Dominate the convex splice and its conformal exposure by a single smooth
+metric. Compactness bounds its volume density relative to the marked
+product. The reference volume of a full strip is its native width times
+the unit round angular area. A zero-width interval gives a null seam.
+In the complementary wedge basis the sum of the two squared compression
+entries is $((a+d)^2+(b+c)^2)/2$ for the four ordered input slots.
+The two traces can only decrease the squared norms. Integrate on the
+normalized path and use conformal invariance of both signed measures.
+\end{proof}
+
+\begin{proposition}[A finite mismatch test at the admissible width]
+\label{prop:ed45-width-mismatch}
+\uses{prop:ed04-fixed-cap-masses}
+\lean{SmoothPoincare.connectorLeadingField_energy, SmoothPoincare.guardedConnector_price, SmoothPoincare.originalDisk_mismatch_at_width, SmoothPoincare.optimalConnectorWidth_spec, SmoothPoincare.originalDisk_positiveMismatch_of_interval}
+\leanok
+Let $j$ bound the complete cap costs outside the connector in sign $\sigma$,
+and put $m=E_\sigma(g;D)-(e-I^+(M))-j$. On the density-weighted product
+strip, a leading field $-p(t/w)d(x)/(2w)$ has squared norm
+$\|p\|_2^2\|d\|_2^2/(4w)$. Write $A=\|p\|_2\|d\|_2/2$. If the regular
+part has norm at most $b\sqrt w$, the connector norm is at most
+$A/\sqrt w+b\sqrt w$. Every actual positive same-type cap whose total
+budget includes the original complete exterior then forces
+$A\ge\sqrt m\sqrt w-bw$ when $m>0$. If the estimates and caps exist
+throughout $(0,W]$, the maximum occurs at $w=\min(W,m/(4b^2))$ for
+$b>0$, and at $W$ for $b=0$. This maximum is strictly positive.
+\end{proposition}
+\begin{proof}
+\leanok
+Use the area measure of the marked section and substitute $t=wu$ in its
+normal factor. The triangle inequality and its reverse bound the square
+root of the full measured charge. For the fixed positive cap, bound its
+total from below by $I^+(M)$ and use the raw exterior identity. Then
+maximize the quadratic in $\sqrt w$ on the certified physical interval.
+The calculation also applies when $j$ includes a retained charged core.
+\end{proof}
+
+\begin{proposition}[Exact test transplantation on a marked core]
+\label{prop:ed45-cap-transplant}
+\uses{prop:ed04-positive-class}
+\lean{SmoothPoincare.capFactorScalar_conformal, SmoothPoincare.exists_markedCoreTestTransplant, SmoothPoincare.hasJoinedCapTests_of_markedCoreTransplants}
+\leanok
+Given an actual smooth marked partial isometry, a smooth nonnegative cap
+test supported compactly inside the common core pulls back and extends by
+zero to the joined manifold. It preserves its scalar numerator and fourth
+power integral. For the cap-positivity test this construction consumes
+approximations by such supported factors on each cap in its own marking.
+\end{proposition}
+\begin{proof}
+\leanok
+The compact support has a buffer inside the target. On its inverse image
+the two metrics have the same scalar curvature, Laplacian and volume
+under the partial isometry. Outside the support the two integrands
+vanish. Conformal transport and positive regularization give the smooth
+logarithmic tests with the supplied approximation errors.
+\end{proof}
+
+\begin{proposition}[The first isolated wall or a finite endpoint cost]
+\label{prop:ed45-isolation}
+\uses{prop:ed04-fixed-cap-masses}
+\lean{SmoothPoincare.signedCoupledIsolation_of_nativeCutoff, SmoothPoincare.SignedCoupledIsolation.cap_disk_signature, SmoothPoincare.SignedCoupledIsolation.endpoint_energy_leavingProtectedCore, SmoothPoincare.SignedCoupledIsolation.firstWall_or_endpointCost, SmoothPoincare.SignedCoupledIsolation.excludesCheapIsolatedConnectors}
+\leanok
+On the original disk let $A$ be the full inward isolation strip. Fix
+the joined path $h$, two isolated paths $p,q$, a positive same-type
+endpoint cap, and the required continuous Yamabe sign detectors and wall
+at $2T$. If the joined peak is $H$ and $d=e-I^+(M)$, the first index
+in time at which the larger isolated energy hits $2T$ has signed
+interaction at least $2T-d-H$. Before that time both isolated classes
+are positive. If neither hits, both stay positive and subcritical on
+the entire path, and the endpoint interior connector must pay the
+fixed-source residual after inclusion of the whole cap and joined
+endpoint energies.
+\end{proposition}
+\begin{proof}
+\leanok
+The physical cutoff has a constant germ on each trim complement. Partition
+each actual signed measure into unchanged core, inward strip and complete
+exterior. The interaction is exactly the sum of the two isolated strip
+charges minus the old and joined strip charges. Locate the first wall by
+continuity of the maximum. On the preceding strict interval, positivity
+and the same-type infimum bound each isolated total. At the endpoint the
+marked disk identity retains the whole cap disk, including the protected core.
+\end{proof}
+
+\begin{proposition}[A relative pair move and terminal count on the original closure]
+\label{prop:ed45-relative-pair}
+\uses{prop:ed04-native-prefix}
+\lean{SmoothPoincare.RelativePairReplacement.pairMoveAlongActualCut_openSeam, SmoothPoincare.RelativePairReplacement.pairMoveTrace_representatives, SmoothPoincare.RelativePairReplacement.pairMoveContinuation_representatives, SmoothPoincare.RelativePairReplacement.pairMoveClosed_dualTube, SmoothPoincare.RelativePairReplacement.exists_terminalPairReduction}
+\leanok
+Given the framed tube motion on the actual anchor-first cut, a cutoff
+isotopy constant near the ends gives a smooth transition in both directions
+on the supplied signed overlap. The trace homeomorphism transports all
+later attaching parameters, the upper identification and the inverse
+dual tubes. For two terminal native index-two/three cancelling pairs
+in separated strips, with the second certificate on the heights returned
+by the first reduction, both index counts decrease by precisely two.
+Intermediate levels between the strips are unchanged as marked subsets.
+\end{proposition}
+\begin{proof}
+\leanok
+Follow representatives through the two successive adjunctions, keeping
+the identity on the moving handle parameters. Compose the original upper
+map with the inverse boundary transport in the required direction.
+Perform the two Morse cancellations on the same source, remove the four
+specified points and count each indexed set. A relative motion preceding
+later handles gives a comparison of traces before any such cancellation.
+\end{proof}
+
+\begin{proposition}[Attained physical width and the returned rank-two band]
+\label{prop:ed45-returned-width}
+\uses{prop:ed04-product-price}
+\lean{SmoothPoincare.PositiveScalarCuts.markedBandEWidth_and_attainment, SmoothPoincare.PositiveScalarCuts.markedBandEWidth_split_cylinder, SmoothPoincare.PositiveScalarCuts.rankTwoProductBand_scalarFloor, SmoothPoincare.PositiveScalarCuts.rankTwoProductBand_energy_gt_wall_of_width}
+\leanok
+A nonempty marked band with orthogonal unit normal coordinate has
+intrinsic width $b-a$ in the closed band and an attaining normal path.
+On the specified returned rank-two product, the certified $0<\rho\le1$,
+neck radius $0<a\le1/\cosh 2$ and $J\ge16\pi/(3a)$ imply
+$LJ/4>8\pi^2$ at every length with $\rho L^2\ge3\pi^2$.
+Thus that scalar-width criterion and strict energy budget cannot hold
+on this particular product, even before paying its transitions.
+\end{proposition}
+\begin{proof}
+\leanok
+Pull an admissible path back through the actual inverse marking. Its
+normal displacement bounds its length from below, and the marked normal
+segment attains equality. At a qualifying length insert
+$L\ge\pi\sqrt3$ into the measured neck lower bound, and use
+$\cosh 2>2\sqrt3$. The shorter two-mean test keeps its independent
+fixed side and transition costs.
+\end{proof}
+
+\begin{proposition}[Decay follows from the mode energy]
+\label{prop:ed45-round-decay}
+\uses{prop:ed04-round-mode}
+\lean{SmoothPoincare.IntrinsicEntry.roundCylinderMode_tendsto_zero_of_finiteEnergy, SmoothPoincare.IntrinsicEntry.roundCylinderModeAdmissible_iff_finiteEnergy, SmoothPoincare.IntrinsicEntry.roundCylinderMode_finiteEnergy_inf_eq}
+\leanok
+For a classical profile with prescribed trace and finite round half-cylinder
+mode energy, decay at infinity follows from the finite-energy assumptions.
+The infimum on this domain is attained and equals $6(l+1)f^2$.
+\end{proposition}
+\begin{proof}
+\leanok
+The square of the profile has integrable derivative and hence a limit.
+Its integrability forces that limit to be zero. Apply the completed square
+identity and the admissible exponential on the resulting domain.
+\end{proof}

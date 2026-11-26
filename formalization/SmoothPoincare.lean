@@ -153,4 +153,19 @@ import SmoothPoincare.PhysicalScales.PositiveProductBand
 import SmoothPoincare.Variational.ExactFacePhysicalInterpolation
 import SmoothPoincare.Variational.RoundMarkedFaceControl
 
+import SmoothPoincare.Heights.RelativePairReplacement
+import SmoothPoincare.IntrinsicEntry.FiniteEnergyRoundEnd
+import SmoothPoincare.PhysicalScales.MarkedProductWidth
+import SmoothPoincare.Variational.ExactFacePhysicalJets
+import SmoothPoincare.Variational.FiniteWidthMismatch
+import SmoothPoincare.Variational.IsolatedCoupledRepair
+import SmoothPoincare.Variational.MarkedCoreTestTransplant
+import SmoothPoincare.Variational.MeasuredConnectorProfile
+import SmoothPoincare.Variational.PairedStripCurvature
+import SmoothPoincare.Variational.NativeDiskCompression
+import SmoothPoincare.Variational.NativePocketFlattening
+import SmoothPoincare.Variational.TransportedChargedDisk
+import SmoothPoincare.Variational.TransportedDiskCaps
+import SmoothPoincare.Variational.IncomingChargeDensity
+
 /-! # Public imports for fixed-type descent, immersed recognition and marked cuts -/

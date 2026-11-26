@@ -30,3 +30,12 @@ The [initial working manuscript](../manuscript/deformation_of_marked_spherical_c
 | DEF-E03 / SUR-E03 | Isolating each complete side of an arbitrary coupled matched path on its native strip gives an endpoint concentration or a first-crossing bound on the actual two-connector interaction. [Derivation](../notes/ISOLATING_A_COUPLED_PATH.md) · [Independent check](../../reviews/CONNECTOR_AND_ISOLATION_READER.md) | Test the whole joined path and both isolated energies, keeping the protected core in the enlarged-disk mass formula. |
 
 [Joint assessment](../../reviews/TWO_ATTACHMENTS_AND_PHYSICAL_FACE_COST_20261126.md)
+
+### Finite cap signs and isolated costs on the charged source, 26 November
+
+| Task | Checked result | Next physical test |
+| --- | --- | --- |
+| DEF-B02 / E03f, CDS-E02i | The marked exterior and the cap with its finite connector give an exact boundary test for the closed Yamabe sign. Over a certified interval of positive widths, each incoming charge bounds the trace-free mismatch from below. On the separate induced ellipsoid an interval of nonzero mismatches has positive endpoints and a connector cost below one quarter of the smaller disk charge. [Boundary response](../notes/PHYSICAL_BOUNDARY_RESPONSE.md) · [Curved references](../../notes/VARYING_THE_CURVED_REFERENCE.md) | Evaluate the cap spectrum, native mismatch and every off-strip term together for a retaining comparator on the E61 metric. |
+| DEF-B02 / E03e,g | For the matched fixed-index transport, each isolated strip has a finite signed estimate uniform in path time, with positive endpoint \(w^{-3}\) coefficient for both cutoff profiles. The original outer strip receives the complete evacuated charge. A face-fixing angular loop away from the core can also cause both crossings with constant joined energy. A separate closed PSC example has an explicitly evaluated fixed width and full side integrals. [Charged-source isolation](../notes/ISOLATING_THE_TRANSPORTED_METRIC.md) · [Closed example](../notes/COUPLED_PRODUCT_STRIP.md) | Measure the complete exterior and protected charge of any proposed descent. Large isolated costs alone leave the same-type energy undetermined. |
+
+[Joint assessment](../../reviews/NONLOCAL_BANDS_AND_PHYSICAL_TRANSPORT_20261126.md) · [Current continuation](../../continuation-notes/AFTER_NONLOCAL_BANDS_AND_PHYSICAL_TRANSPORT_20261126.md)
