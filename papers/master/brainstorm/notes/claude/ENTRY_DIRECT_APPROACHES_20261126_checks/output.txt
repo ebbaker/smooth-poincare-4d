@@ -1,0 +1,60 @@
+# Check run for ENTRY_DIRECT_APPROACHES_20261126
+# date (UTC): 2026-11-26T19:54:48Z
+# python 3.13.18 | numpy 2.5.3 | scipy 1.18.1 | sympy 1.14.0
+
+===== check_01_gamma2_and_seams.py =====
+[ok] (a) sigma_2(A) = R^2/96 - |Ric_0|^2/8 max err 3.1e-15
+[ok] (b) sigma_1(A) g - A = -G/2 max err 2.1e-15
+[ok] (c) in the cone, 0 < Ric < R/2 sampled Ric/R in (0.0035, 0.4950)
+[ok] (c) sharp: Ric_0 ~ diag(3,-1,-1,-1) reaches R/2 on the boundary top eigenvalue 0.500000000000
+[ok] (c) sharp: Ric_0 ~ diag(-3,1,1,1) reaches 0 on the boundary bottom eigenvalue -5.6e-17
+[ok] (d) dt^2 + a^2 dx^2 + b^2 dy^2 + c^2 dz^2: 0 = -2G_tt + 2 sigma_2(kappa) residual 0
+[ok] (d) dt^2 + f^2 g_S3: 6/f^2 = -2G_tt + 2 sigma_2(kappa) residual 0
+[ok] (e) 2 sigma_2(kappa) = (2/3) H^2 - |A0|^2 on a three-dimensional hypersurface max err 3.6e-15
+[ok] (f) sum_{i<j} (k_i-k_j)^2 = 3 |A0|^2 max err 7.1e-15
+[ok] (f) sup of |k1 k2 k3| / |A0|^3 on signs (+,-,-) is sqrt6/9 sampled max 0.272164, optimiser 0.272165527, sqrt6/9 = 0.272165527
+[ok] (f) the maximiser is proportional to (1,-2,-2) |k| ratios [1. 2. 2.]
+[ok] (f) value at (1,-2,-2) 
+[ok] (g) S^2 x S^2 tube: integral of |K| over the (+,-,-) part of the fold image = 2 pi^2 values [19.7392088 19.7392088 19.7392088], 2 pi^2 = 19.7392088022
+[ok] (h) 2 pi^2 / (sqrt6/9) = 3 sqrt6 pi^2 = 72.526484
+[ok] (i) heights of the folded map: critical points on the fold with the predicted indices indices [0, 2, 2, 4] for a random direction u
+[ok] (i) no critical points away from the fold (sampled) 0 near-critical samples
+
+check_01: 16 ok, 0 failed
+(exit status 0)
+
+===== check_02_hypersurface_classes.py =====
+[ok] (a) |W^+|^2 = |W^-|^2 = quartic in the principal curvatures max err 1.6e-14
+[ok] (b) flat cores of dimension 0, 1, 3, 4 give Weyl-flat tubes values [0.       0.       8.892868 0.       0.      ]
+[ok] (b) a two-dimensional core gives |W^pm|^2 = 1/(6 eps^4) 
+[ok] (c) sigma_1 > 0, sigma_2 > 0 imply every sum of three principal curvatures > 0 77722 samples in the cone, 6580 of signature (2,2)
+[ok] (c) (-1,-1,4,4) lies in the cone with signature (2,2) sigma_1 = 6, sigma_2 = 1
+[ok] (d) E_pm of the S^2-tube equals (8 pi^2/3)/(t^2(1-t^2)) t=0.100: 2658.479300; t=0.300: 321.354641; t=0.500: 140.367707; t=0.707: 105.275780; t=0.900: 171.013288
+[ok] (d) the minimum over t is 32 pi^2/3 at t^2 = 1/2 t^2 = 0.50000000, E = 105.27578028, 32 pi^2/3 = 105.27578028
+[ok] (d) two-sided minimum 64 pi^2/3 exceeds the entry budget 16 pi^2 210.5516 > 157.9137
+[ok] (d) the normal factor rescaled by 1/(rho + eps cos al)^2 has curvature (rho^2 - eps^2)/eps^2 K = -1 + rho**2/epsilon**2
+[ok] (d) thin limit (2 pi/3) Area/eps^2 ratio at t = 0.01: 1.000100
+[ok] (e) pancake rim: delta^2 |W^pm|^2 -> |A0_S|^2/4 ratios at delta=1e-4: 0.99996, 0.99984, 1.00030, 1.00027, 0.99980
+[ok] (f) hyperbolic core: V = delta/K 
+[ok] (f) hyperbolic core: int (f'')^2/f - 2 K delta + K^2 V = 0 
+
+check_02: 13 ok, 0 failed
+(exit status 0)
+
+===== check_03_gluck_flux.py =====
+[ok] (a) the frame is orthonormal 
+[ok] (a) at s = 0: K(e0,e1) = -1, K(e2,e3) = +1, all other entries 0 diag = [-1, 0, 0, 1, 0, 0]
+[ok] (b) s constant: W^+ = W^- = 0 and R = 0 
+[ok] (c) constant flux: |W^pm|^2 do not depend on R |W^+|^2 = c**2*(c*sin(phi)**2 - 3*cos(phi))**2/6;  |W^-|^2 = c**2*(c*sin(phi)**2 + 3*cos(phi))**2/6
+[ok] (c) |W^pm|^2 = (3/2) c^2 cos(phi)^2 + O(c^3) 
+[ok] (c) R = -(c^2/2) sin(phi)^2 R = -c**2*sin(phi)**2/2
+[ok] (d) E_pm over the disk with cosh R_1 - 1 = 1/c is 4 pi^2 c (1 + O(c)) E_+/E_- over 4 pi^2 c: c=0.3: 1.01600/1.01600; c=0.1: 1.00178/1.00178; c=0.03: 1.00016/1.00016; c=0.01: 1.00002/1.00002; c=0.003: 1.00000/1.00000
+[ok] (e) with the cut-off profile E_pm / c stays bounded and E_pm -> 0 
+     R1=3: c=1.91e-01, E_+=8.709e+00, E_-=8.709e+00, E/c=45.65/45.65
+     R1=5: c=2.23e-02, E_+=9.968e-01, E_-=9.968e-01, E/c=44.68/44.68
+     R1=7: c=2.96e-03, E_+=1.321e-01, E_-=1.321e-01, E/c=44.58/44.58
+     R1=9: c=4.00e-04, E_+=1.782e-02, E_-=1.782e-02, E/c=44.57/44.57
+[ok] (e) E_+ (cosh R_1 - 1) settles to a constant values [78.97 72.98 72.29 72.19];  4 pi^2 = 39.48
+
+check_03: 9 ok, 0 failed
+(exit status 0)
