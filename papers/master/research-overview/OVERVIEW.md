@@ -1,5 +1,9 @@
 # Research overview — Smooth four-dimensional Poincaré conjecture
 
+## Current proof status after the marked enlargement
+
+One enlarged standard disk can leave both raw chiral charges below the recognition threshold throughout the strict subcritical band. A finite sequence of enlargements forces a definite energy saving on the whole disk side of any subcritical path to a round seam. In the exact closed branch any fixed band supports only finitely many nonstandard types, with strictly positive least spectral deficit when the family is nonempty. Entry, a strict repair on the original marked geometry, and classification of the remaining exact types are open. [Assessment and source generations](../research-progress/handoffs/E63_E67_BALANCED_DISKS_20261125.md)
+
 25 November 2026. Prepared for Edward B. Baker III with OpenAI Codex
 assistance. Actual serving model and reasoning effort are unavailable.
 The parallel organization began with the 33-page master edition committed at 2689540e6dae1656b7f5ad4be52504db044995f2 and the [accepted parallel proposal](../brainstorm/notes/PARALLEL_INVESTIGATION_PROPOSAL_20261125.md). Earlier editions and their source hashes remain in the provenance sections below.

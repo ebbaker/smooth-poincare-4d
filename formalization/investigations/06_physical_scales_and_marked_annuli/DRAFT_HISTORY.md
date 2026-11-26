@@ -1,5 +1,7 @@
 # Physical scales and marked annuli · Milestones
 
+- **25 November 2026.** Marked disks with a two-sided guard now carry the comparison and physical measures on their respective metrics. [Program assessment](../reviews/MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md)
+
 - **25 November 2026.** The physical radial approximation on a supplied wide chart gives an anchor and curvature control on the buffered band. [Integrated assessment](../reviews/GLOBAL_GEOMETRY_AND_SELECTED_COLLARS_20261125.md)
 
 - **25 November 2026 · Chart and immersion proofs.** Derived radial separation and whole-set placement from quantitative data on one supplied wide chart. [Assessment](../research-progress/handoffs/ED03_CHART_GEOMETRY_20261125.md)

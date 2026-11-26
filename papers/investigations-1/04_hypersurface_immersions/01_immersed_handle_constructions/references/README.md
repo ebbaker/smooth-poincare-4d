@@ -12,3 +12,5 @@
 The setup uses these selected passages and repository results. It proposes a new model and leaves proof of the marked construction for its B/E tasks. [Reference workflow](../../../../../REFERENCE_WORKFLOW.md)
 
 The [E59–E62 primary source record](../../../../../references/SOURCE_NOTES_MASTER_SPECTRAL_WINDOWS_20261125.md) identifies the APS signature and lens formulas, the Seifert spectral series and the marked cork presentation.
+
+[E63–E67 source record](../../../../../references/SOURCE_NOTES_MASTER_BALANCED_DISKS_20261125.md) gives the checked passages for marked bisection, relative transgression, critical polar comparison, spin boundary conditions and exact compactness.

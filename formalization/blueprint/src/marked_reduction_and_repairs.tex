@@ -1,0 +1,244 @@
+\section{The selected middle band and signed disk repairs}
+\label{sec:ed03-marked-reduction}
+
+\begin{theorem}[The ordered height and its middle attachment]
+\label{thm:ed03-selected-middle-attachment}
+\uses{thm:ed03-morse-threshold}
+\lean{SmoothPoincare.exists_orderedMorsePresentation, SmoothPoincare.OrderedMorsePresentation.exists_middleIndexCuts, SmoothPoincare.exists_orderedMiddleBand_of_inducedEnergy_le, SmoothPoincare.MiddleIndexCuts.regular_transport, SmoothPoincare.exists_isolatedMiddleAttachment, SmoothPoincare.exists_selectedHandleReduction_of_inducedEnergy_le}
+\leanok
+For a compact oriented isometric hypersurface as in
+Theorem~\ref{thm:ed03-morse-threshold}, suppose $E_+\le 64\pi^2/9$.
+There is a direction $u$ and a smooth auxiliary Morse function $h$
+on the same domain, with the critical points and indices of the
+height in direction $u$. Its values at critical points are distinct
+and strictly ordered between index classes. There are regular cuts
+$a<b$ such that the critical points in the closed band are exactly
+the original height's index-two points. If that set is empty, an
+ambient diffeomorphism carries the lower sublevel and level to
+their upper counterparts. Otherwise it is a singleton $\{p\}$.
+A smooth attachment of $D^2\times D^2$ along its parametrized
+$S^1\times D^2$ face identifies the local upper sublevel at
+$h(p)+\varepsilon$. Regular ambient diffeomorphisms transport both
+levels and sublevels between the two local cuts and the outer cuts.
+\end{theorem}
+\begin{proof}
+\leanok
+Enclose the compact range in one open Morse strip. Change the
+normed model by a continuous linear equivalence, transport the
+Hessian inertia at every critical point, rearrange by index, and
+separate the remaining ties. The resulting finite critical-value
+sets admit strict separators on either side of index two. In the
+single-point case shrink a Morse chart inside the band, leaving room
+for both regular cuts and its attaching tube. The smooth adjunction
+identifies the lower sublevel and handle by their native inclusions
+and fixes the deep lower part. Apply the regular flow on either side.
+\end{proof}
+
+\begin{proposition}[End counts and marked reassembly]
+\label{prop:ed03-end-counts}
+\uses{thm:ed03-selected-middle-attachment}
+\lean{SmoothPoincare.oddBalance_of_morse_on_homotopySphere, SmoothPoincare.morseCriticalCount_congr, SmoothPoincare.alternating_morseCriticalCounts_eq_two, SmoothPoincare.morseCriticalCount_reducedOddCases, SmoothPoincare.morseCriticalCount_neg, SmoothPoincare.morseCriticalCount_zero_le_one_add_one_of_homologyZero, SmoothPoincare.morseCriticalCount_four_le_three_add_one_of_dual_homologyZero, SmoothPoincare.transportedMiddleTraceHomeomorph, SmoothPoincare.transportedMorsePresentationHomeomorph, SmoothPoincare.transportedOutgoingDiffeomorph}
+\leanok
+On a compact smooth four-manifold homotopy equivalent to the unit
+four-sphere, let $n_j$ count the actual critical points of index $j$
+of a Morse function. Rearrangement preserves those counts even when
+critical values coincide. Then
+$(n_1-n_0+1)+(n_3-n_4+1)=n_2$ as an integer identity. With
+$n_0\le n_1+1$ and $n_4\le n_3+1$, both summands vanish in the
+zero case. In the one case exactly one is one. The two inequalities
+follow from degree-one boundary maps on the actual critical generators
+of $h$ and $-h$ whose cokernels compute singular $H_0(M;\mathbb Q)$.
+
+For supplied end-body homeomorphisms and compatible boundary maps,
+changing the lower marking carries every framed tube by the inverse
+boundary change. The trace homeomorphism fixes each handle coordinate.
+It combines with the actual upper-body change to give a homeomorphism
+of the closed adjunctions. Smooth end markings give a smooth boundary
+gluing.
+\end{proposition}
+\begin{proof}
+\leanok
+The rational Euler characteristic is two by homotopy invariance.
+Group its finite Morse sum by the five possible indices. Function
+reversal complements every index. Rank-nullity and the rank-one
+zeroth homology then give the bounds from the supplied boundary maps. For the
+gluing, descend the maps on the two pieces through the attaching
+relations, and descend their inverses through the new relations.
+A trace change $s$ transports its outgoing gluing to
+$(\partial\beta)^{-1}q^{-1}\eta\,\partial s$.
+\end{proof}
+
+\begin{proposition}[The standard product seam]
+\label{prop:ed03-smooth-product-seam}
+\lean{SmoothPoincare.StandardSurgeryModel.pieces_agree_on_face, SmoothPoincare.StandardSurgeryModel.leftRegion_union_rightRegion, SmoothPoincare.StandardSurgeryModel.leftRegion_inter_rightRegion, SmoothPoincare.StandardSurgeryModel.seamChart, SmoothPoincare.StandardSurgeryModel.seamChart_at_zero, SmoothPoincare.StandardSurgeryModel.seamChart_sides, SmoothPoincare.diffeomorphOfSmoothMarkedSeam, SmoothPoincare.diffeomorphToS4OfSmoothMarkedSeam}
+\leanok
+In $S^4\subset\mathbb R^2\oplus\mathbb R^3$, the two product pieces
+$D^2\times S^2$ and $S^1\times D^3$ meet along $S^1\times S^2$.
+In signed coordinate $t=|x|^2-1/2$ a smooth chart across their common
+face is
+\[
+ (u,v,t)\longmapsto (\sqrt{1/2+t}\,u,\sqrt{1/2-t}\,v).
+\]
+A supplied homeomorphism to this model is a diffeomorphism if it
+and its inverse are smooth on the two strict interiors and it agrees
+on a full signed source collar with this chart composed with a smooth
+boundary diffeomorphism times the identity in $t$. An orthogonal
+identification of the two ambient models gives the unit sphere in
+$\mathbb R^5$ as the target.
+\end{proposition}
+\begin{proof}
+\leanok
+Normalize each nonzero block to recover its unit direction. The
+inverse signed parameter and the normalized blocks are smooth on the
+overlap. These formulas give the inverse on the entire marked strip.
+Together with the two interiors it covers the source and target.
+\end{proof}
+
+\begin{proposition}[A fixed family of comparison disks]
+\label{prop:ed03-comparison-disks}
+\uses{prop:ed03-same-width}
+\lean{SmoothPoincare.exists_selectedChartDisk_of_compact_subset, SmoothPoincare.eventually_exists_selectedComparisonDisks, SmoothPoincare.eventually_exists_markedBandCharge, SmoothPoincare.selectedDiskTrim_eq_full_image, SmoothPoincare.eventually_fullDiskTrims_small_both_charges}
+\leanok
+Fix the E58 spectral, Euler and same-set transport data for the physical
+metrics $g_i$ and modified probabilities $\mu_i$. If $e_i\to I<5T/4$,
+choose the omitted-probability tolerance first. Suppose a finite family of
+fixed radii, with late smooth open comparison-ball charts, satisfies the
+strict separation, omitted-probability and curvature margins. The comparison
+metric measures the ball radii, while $g_i$ measures full curvature on the
+outer balls. On late sources there are disjoint smooth closed disk markings
+with these ceilings, and both physical chiral energies are strictly below
+$T$ on the whole complement of their union.
+
+For any one finite marked family with integrable chiral densities, all
+sufficiently thin common trims are full radial annuli. The sum of their
+two physical chiral charges is arbitrarily small.
+\end{proposition}
+\begin{proof}
+\leanok
+The preimage of each compact inner ball lies inside an open model
+ball. Enclose it in a strictly smaller concentric ball and dilate to
+unit radius. This preserves the outer comparison and retains a buffer.
+Apply the E58 estimate to that chosen disk union. A compact unit disk
+has a closed buffer in the open chart. Its boundary sphere has zero
+physical volume, so both trim charges vanish by continuity from above.
+Take the finite intersection of the resulting eventual width conditions.
+\end{proof}
+
+\begin{proposition}[The full exterior of a balanced marked disk]
+\label{prop:ed03-balanced-disk}
+\lean{SmoothPoincare.interior_selectedChartDisk, SmoothPoincare.signedCharge_fullMarkedExterior, SmoothPoincare.eventually_balancedMarkedExterior_below_threshold, SmoothPoincare.balancedMarkedDisk_saving_gt, SmoothPoincare.exists_dyadicDepth_for_recognitionGap, SmoothPoincare.eventually_balancedMarkedDisk_saving_gt_gap}
+\leanok
+Let $Q_i\subset\operatorname{int}B_i$ be actual marked disks.
+Suppose the exterior of $B_i$ carries $q=2^{-k}$ times the charge
+of the exterior of $Q_i$, to error $\tau_i\to0$ in both physical
+chiralities. If $k\ge1$ and $e_i\to I<2T$, the full closed exterior
+of $B_i$ has both charges strictly below $T$ eventually.
+At one finite source $g$, suppose a joined endpoint $h$ has energy
+below $2T$, and a positive cap on the original smooth type has
+energy at most $E_s(h;M\setminus\operatorname{int}B)+\delta$ in
+each sign $s$. Then
+\[
+ E_s(g;B)-E_s(h;B)>(1-q)e+qE_s(g;Q)+I^+(M)-2T-\tau-\delta .
+\]
+For a given $\varepsilon_*>0$ choose one $k$ with
+$q(T+\varepsilon_*)\le\varepsilon_*$. On a fixed type with
+$I^+(M)>T+\varepsilon_*$, if $e_i\to I^+(M)$, the endpoint and cap
+conditions hold eventually and $\tau_i+\delta_i\to0$, both required
+disk-side savings eventually exceed $\varepsilon_*$.
+\end{proposition}
+\begin{proof}
+\leanok
+The marked sphere has zero mass for each physical chiral measure,
+so the charge on the closed exterior is the full energy minus the
+closed-disk charge. Since $q\le1/2$, the raw residual is bounded
+by $e_i/2+\tau_i$. At the finite endpoint, the actual positive cap
+has energy at least the same-type infimum. Subtract this bound and
+the measured division error from the two exact disk decompositions.
+The limiting lower bound $(2-q)I^+(M)-2T$ strictly exceeds the gap
+for the chosen depth, independently of the smooth type.
+\end{proof}
+
+\begin{proposition}[Signed gain of a marked repair]
+\label{prop:ed03-signed-repair}
+\uses{prop:ed03-cap-tests,prop:ed03-comparison-disks}
+\lean{SmoothPoincare.normSq_sub_le_signedJoinedCollarCost, SmoothPoincare.SignedCollarAssembly.Estimates.ofWeightedDensities, SmoothPoincare.SignedCollarAssembly.joinedEnergy_le, SmoothPoincare.SignedCollarAssembly.outputEnergy_le, SmoothPoincare.SignedCollarCapTestPath.outputYamabeFloor_of_ceiling_lt, SmoothPoincare.excludesStrictSelectedDiskSignedCollarRepair_of_capTests}
+\leanok
+Fix disjoint marked patches, single-patch and simultaneous metrics on the
+original type, and both complete complement comparisons. On the selected
+width of disk $B_j$, write $S$ for raw annular charge, $H$ for the squared
+norm of the leading cutoff-weighted endpoint density, and $\beta$ for
+its measured error. For either chirality put
+\[
+ U_j=\max\{0,(\sqrt H+\beta)^2-S\},\qquad
+ V_j=(\sqrt{H_{\rm out}}+\beta_{\rm out})^2-S_{\rm out}.
+\]
+With the affine-in-parameter error bound and signature equality on the
+single-patch metrics, the joined energy is at most
+$C=e+\sum_j\min_{\pm}U_j^{\pm}$. The capped energy is at most $e-G$,
+where $G=\sum_j\max_{\pm}(\lambda^{\pm}(B_j)-V_j^{\pm})$.
+Suppose $C<2T$. On a connected test family starting at a positive
+source, with a continuous Yamabe sign detector, the Euler-square
+inequality, energy bounded by the joined path, and scalar and volume
+test transplants to the capped output, the latter has Yamabe constant
+at least $\sqrt{48(2T-C)}>0$. Hence $G\le e-I^+(M)$.
+\end{proposition}
+\begin{proof}
+\leanok
+The triangle inequality bounds the joined density by interpolation
+between the two endpoint bounds. A single patch has the same total
+increment in each sign. Equality on its complete complement localizes
+this identity, permitting a sign choice separately on each patch.
+The continuous sign level cannot cross zero below the wall. Pass
+the resulting uniform lower bound through the transplanted Yamabe
+quotients and compare that finite output with the same-type infimum.
+\end{proof}
+
+\begin{proposition}[A measured choice of exact collar widths]
+\label{prop:ed03-measured-choices}
+\uses{prop:ed03-signed-repair}
+\lean{SmoothPoincare.exists_measuredCollarChoice, SmoothPoincare.signedCollarCosts_le_measuredScore, SmoothPoincare.excludesStrictRepair_of_measuredCollarChoice, SmoothPoincare.excludesStrictRepair_of_measuredSelectedDiskCollarChoice}
+\leanok
+Suppose each protected core $C_j$ has $N_j>0$ available marked
+charts and widths with row budget $D_j\ge\sum_k(w_{jk}^2+\beta_{jk}^2)$.
+Choose a minimizer in each row. Suppose the choices admit the
+simultaneous marked assembly and cap tests of
+Proposition~\ref{prop:ed03-signed-repair}. On the chosen annuli
+assume the measured weighted densities and allowances satisfy the
+local curvature and error bounds for both signs. Set
+$\Gamma=2\sum_j D_j/N_j$. A positive source obeying
+$e+\Gamma<2T$ must then satisfy
+\[
+ \sum_j\max_{s=\pm}\lambda^s(C_j)\le \Gamma+e-I^+(M).
+\]
+\end{proposition}
+\begin{proof}
+\leanok
+At least one score in each finite row is at most its average.
+On the full annulus and its exterior half, the surcharge is bounded
+by $2\sqrt{S}\,\beta+\beta^2\le S+2\beta^2\le2(w^2+\beta^2)$.
+Protected charge is retained on each chosen disk. Summing on the
+same family gives the joined ceiling and the output comparison.
+\end{proof}
+
+\begin{proposition}[Physical defects at the isotropic-gap entry]
+\label{prop:ed03-isotropic-entry}
+\lean{SmoothPoincare.orderedEndpointSpectrum_hilbertSchmidt_bounds, SmoothPoincare.endpointPhysicalIsotropicGapBounds, SmoothPoincare.IsotropicGapBounds.quantity_sandwich, SmoothPoincare.isotropicGap_smoothingEntry, SmoothPoincare.endpointPhysicalIsotropicGap_smoothingEntry}
+\leanok
+For each volume-one positive Yamabe metric with the endpoint Euler,
+signature, ordered eigendata and strict spectral inequality, let $e$
+be its common chiral energy, $Y$
+its class Yamabe constant, $D$ its integrated Ricci defect, and
+$\sigma$ the integrated square of the larger top Weyl eigenvalue of
+the two signs. Set $P=4e+3\sigma$ and $T=4\pi^2$. Then
+$9e/2\le P\le8e$. Along a sequence of these data, even on varying
+smooth types, $P\to8T$ implies $D\to0$,
+$36\sigma-Y^2\to0$, and eventually $e<2T-T/9$.
+\end{proposition}
+\begin{proof}
+\leanok
+The ordered trace-free spectra bound the top eigenvalue square on
+each sign. Integrate and apply signature. The physical scalar-square
+and Euler identities give $P-8T=D+(36\sigma-Y^2)/12$, with both
+terms nonnegative. Squeezing them separately gives the two limits.
+The lower bound for $P$ supplies the uniform energy margin.
+\end{proof}

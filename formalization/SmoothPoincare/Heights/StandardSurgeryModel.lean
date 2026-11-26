@@ -352,7 +352,6 @@ private theorem contMDiffOn_seamPoint :
       WithLp.toLp 2 (Real.sqrt (1 / 2 + p.val.2) • p.val.1.1.val,
         Real.sqrt (1 / 2 - p.val.2) • p.val.1.2.val) := by
     funext p
-    change (seamPoint p.val).val = _
     have hp : p.val ∈ seamSource := p.property
     rw [seamPoint, dite_eq_left hp]
     rfl

@@ -88,3 +88,5 @@ The imported axiom reports for these declarations, the cover and
 intersection equalities, the two up-to-boundary smoothness proofs, and
 `pieces_agree_on_face` contained only `propext`, `Classical.choice`
 and `Quot.sound`.
+
+The closing integration removed the single redundant proof-local tactic. The clean generation begins `456524a5b3921aad`. Its targeted Lake build and independent forward, inverse, zero-slice and axiom replays passed. [Closing independent replay](../../reviews/ED03_SURGERY_AND_MARKINGS.md)

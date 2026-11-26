@@ -1,6 +1,6 @@
 # Morse heights and handle recognition · Continuation
 
-**Latest handoff, 25 November 2026.** [Global Gauss geometry and selected disk collars](../../continuation-notes/AFTER_GLOBAL_GAUSS_AND_SELECTED_COLLARS_20261125.md).
+**Current handoff, 25 November 2026.** [Assessment](../../reviews/MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md) · [Continuation](../../continuation-notes/AFTER_MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md).
 
 The [Edition 03 activation handoff](../../continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md) and launch instructions below record the original packet.
 

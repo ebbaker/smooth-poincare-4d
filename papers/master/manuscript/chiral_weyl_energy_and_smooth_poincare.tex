@@ -34,7 +34,10 @@ positive Einstein limit with nonnegative isotropic curvature.
 Throughout the band of infima below \(8\pi^2\), we find a comparison
 scale where the original Weyl measures have positive absolutely continuous
 mass. One parametrized disk then has a fixed positive mass of the same
-chirality on each side along a subsequence.
+chirality on each side along a subsequence. Enlarging this disk can
+leave arbitrarily small raw exterior mass. A subcritical path to a
+round seam on such a disk must then lower a definite amount of
+energy on the disk side.
 Removing marked standard balls gives a positive competitor if the source
 energy plus the aggregate collar cost stays subcritical. An anchored
 physical annulus between separated chiral quantiles gives a cut incompatible
@@ -46,7 +49,10 @@ recognition criterion. Independently, a hypersurface immersion in
 \(\mathbb R^5\) with induced energy at most \(64\pi^2/9\) recognizes its
 domain. In the wider immersed band below \(8\pi^2\), we give recognition
 tests for the framed surgery diagrams of selected Morse heights.
-Constructing qualifying data on every smooth homotopy four-sphere remains open.
+In each fixed strict band only finitely many nonstandard smooth types
+can support a positive Bach-flat class. Their least spectral deficit,
+when this family is nonempty, is attained and positive. Constructing
+qualifying data on every smooth homotopy four-sphere remains open.
 \end{abstract}
 \section{Introduction}
 Isothermal coordinates provide a simple model for using geometry to
@@ -498,9 +504,12 @@ local chiral convergence under the hypotheses of
 Theorem~\ref{thm:local-min}. Round comparisons confined to other
 regions or other scales can still leave a charged exterior.
 
+\input{balanced_disk}
 \input{complete_limits}
 \input{ricci_scales}
 \input{critical_annulus}
+
+\input{exact_closed_types}
 
 \section{Outstanding geometric questions}\label{sec:open}
 
@@ -522,7 +531,10 @@ Corollary~\ref{cor:vol-reduction} permits a diffuse alternative
 if a family on the same sequence carries enough repairable chiral
 mass. Theorem~\ref{thm:band-disk-residual} supplies such a charged
 disk throughout the strict band. The missing estimate is the cost of
-repair in its actual smooth marking. For Proposition~\ref{prop:exterior-replacement} the source energy plus collar surcharge must stay below \(8\pi^2\), and the removed chiral mass must exceed the surcharge plus the minimizing excess. The remaining chiral energy can stay in the retained exterior.
+repair in its actual smooth marking. For a larger disk whose exterior
+has been divided repeatedly, Proposition~\ref{prop:balanced-disk-saving}
+requires a definite saving on the whole disk side before subcritical
+round capping can succeed. For Proposition~\ref{prop:exterior-replacement} the source energy plus collar surcharge must stay below \(8\pi^2\), and the removed chiral mass must exceed the surcharge plus the minimizing excess. The remaining chiral energy can stay in the retained exterior.
 
 Corollary~\ref{cor:energy-radius} locates a second scale in the
 concentrating case. At a shrinking half-energy radius the rescaled
@@ -554,10 +566,11 @@ proof strategies, drafting derivations, checking arguments and editing
 text. OpenAI models assisted in preparing this manuscript. Responsibility
 for its mathematical claims rests with the author.
 
-The 25 November 2026 revision was prepared for Edward B. Baker III
-with OpenAI Codex assistance from the manuscripts at
-\texttt{b5ce9f481a76}. The accompanying research assessment records
-the E59--E62 derivations, independent readers and source generations.
+This revision was prepared for Edward B. Baker III with OpenAI Codex
+assistance on 25 November 2026. It starts from the E59--E62 working
+sources over \texttt{bfdf0660e4f7}. The E63--E67 research assessment
+records the manuscript generations, independent readers and evidence
+for the results used here.
 
 \bibliographystyle{unsrturl}
 \bibliography{references}

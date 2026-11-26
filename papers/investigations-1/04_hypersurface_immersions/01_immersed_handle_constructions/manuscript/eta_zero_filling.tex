@@ -1,0 +1,297 @@
+\section{The spin boundary test at the eta-zero face}
+\label{sec:eta-zero-filling}
+
+For a smooth oriented spin four-manifold \(W\) with marked
+product boundary \((Y,\gamma)\), first restore the marked round
+puncture caps and include the cylinder up to its midpoint.
+Let \(h\) be this compact metric. The earlier round-end
+minimization and even extension identify the ordinary sign
+of the reflected identity double with positivity of
+\[
+ Q_h(u)=\int_W(6|du|_h^2+R_hu^2)\,dV_h,
+ \qquad u\in H^1(W)\setminus\{0\}.
+\]
+In particular the minimization has free trace at the seam.
+
+\begin{proposition}[A necessary spin boundary condition]
+\label{prop:free-trace-spin}
+If \(Q_h>0\) on every nonzero test, the boundary spin Dirac
+operator of \(\gamma\) is invertible and the chiral spin
+APS index on \((W,h)\) is zero. With outward-normal-first
+boundary orientation this gives
+\[
+ 4\eta_{\rm spin}(Y,\gamma)+\eta_{\rm sig}(Y,\gamma)
+  =-\sigma(W).
+\]
+The two eta values are unreduced. On a contractible filling
+with signature eta zero the spin eta must therefore vanish.
+\end{proposition}
+
+\begin{proof}
+Take the positive first Neumann eigenfunction of
+\(-6\Delta_h+R_h\). Its positive eigenvalue \(\lambda_1\)
+gives \(R_{u^2h}=\lambda_1u^{-2}>0\), and \(\partial_\nu u=0\)
+preserves the vanishing second fundamental form. The induced
+boundary metric is \(u_Y^2\gamma\).
+For a harmonic chiral spinor with nonpositive APS boundary
+trace, the boundary term in the integrated Lichnerowicz identity
+is nonpositive because the boundary is minimal. The bulk
+term \(\int(|\nabla\psi|^2+R|\psi|^2/4)\) is positive for a
+nonzero spinor. Thus both chiral kernels vanish with either
+choice at the zero spectral space. Normal Clifford multiplication
+interchanges the spectral signs and yields the adjoint boundary
+condition. Both cokernels vanish as well. The index change on
+adding the zero boundary eigenspace equals its dimension,
+so that dimension is zero. The argument uses the intrinsic
+adapted boundary operator even at the nonproduct conformal
+metric.
+The boundary identity and adjoint domains are given in
+\cite[(13), (16)--(17), Theorem~6]{HijaziMontielZhang2001Boundary}
+and \cite[Examples 4.21 and 5.12, Corollary 6.2]{BaerBallmann2016Guide}.
+
+In dimension three the conformal law
+\(D_{e^{2f}\gamma}(e^{-f}\phi)=e^{-2f}D_\gamma\phi\)
+keeps the boundary Dirac kernel zero throughout this conformal
+path. The adapted negative spectral projections then vary
+continuously, giving a continuous family of Fredholm problems.
+For instance the sign operators vary continuously on fixed
+trace Sobolev spaces by elliptic functional calculus with the
+common spectral gap, and the trace right inverse locally
+identifies the moving domains. The product metric and the
+PSC metric therefore have the same APS index. For the original
+product metric the two APS formulas give
+\[
+ \operatorname{ind}_{\mathrm{APS}}D^+
+ =-\frac{\sigma(W)+\eta_{\rm sig}}8
+    -\frac{\eta_{\rm spin}+\dim\ker D_\gamma}{2},
+\]
+since \(\widehat A_4=-p_1/24\) and \(L_4=p_1/3\).
+\cite[Theorems (4.2) and (4.14)]{APS1975SpectralI}
+\end{proof}
+
+We evaluate the condition for the actual marked Mazur face of
+Section~\ref{sec:short-marked-seam}. Write
+\(\gamma(v)=(e^1)^2+(e^2)^2+v^2(e^3)^2\) in its fixed Milnor
+coframe. The global framing gives the unique spin structure of
+the integral homology sphere. Let \(X_i\) be its dual fields,
+\(C_i\) the corresponding constant Clifford matrices in the
+rescaled orthonormal frame, and \(\omega=C_1C_2C_3=\pm1\).
+The signs in the next norm estimate hold in either oriented
+Clifford convention. In the global framing
+\[
+ D_v=H+v^{-1}V-\frac{av}{4}\omega,\qquad
+ H=C_1X_1+C_2X_2,\qquad V=C_3X_3+\frac a2\omega .
+\]
+Indeed the spin connection for cyclic brackets
+\((a/v,a/v,-av)\) contributes
+\((a/(2v)-av/4)\omega\). Their horizontal commutators give
+\(HV+VH=0\). The period \(22\pi/a\) of \(X_3\) means that its
+frequencies in this spin frame are in \(i(a/11)\mathbb Z\).
+Consequently \(\|V\psi\|_2\ge(a/22)\|\psi\|_2\).
+The anticommutator identity, integrating in Haar volume, now
+gives
+\[
+ \operatorname{dist}(0,\operatorname{spec}D_v)
+  \ge\frac{a}{22v}-\frac{av}{4}>0
+ \qquad(0<v^2<2/11).
+\]
+In particular, there is no zero crossing between a sufficiently
+collapsed fiber and \(v_*^2=\sqrt{159}/11-1\).
+
+To determine the index on this interval, normalize the base
+area to \(\pi\) by a common metric factor \(35a^2/11\).
+The fiber radius is \(r=\sqrt{385}\,v\) and its connection
+satisfies \(d\theta=-2\ell\,dA_{\rm base}\) with
+\(\ell=-1/70\). This is the fixed constant-curvature base
+and connection normalization for the small-fiber spin
+computation. In its notation the cone orders are \((2,5,7)\),
+the local actions have weights \((1,1,2)\), the canonical
+degree is \(11/70\), and the flat spin parameter is
+\(\rho=\{-11/2\}=1/2\).
+The spin isotropy data are \((0,4,2)\), from multiplying
+the local action weights by \(-6\) modulo the cone orders.
+Substitution in the flat adiabatic formula yields the three
+Dedekind--Rademacher terms \(0,1/5,-1/7\) and the three
+fractional terms \(1/4,9/10,3/14\). Thus in the contact
+orientation, and with the spin APS convention of
+Proposition~\ref{prop:free-trace-spin},
+\[
+ \lim_{v\downarrow0}\eta_{\rm spin}(\gamma(v))
+ =-\ell/4+\ell/6+3/2-2(1/5-1/7)-(1/4+9/10+3/14)
+ =19/840 .
+\]
+The Levi--Civita and the adiabatic values have the same limit
+by the small-fiber metric correction.
+For the operator comparison and sum conventions, see
+\cite[\S1.2, (1.34)--(1.36), Remark~1.13]{Nicolaescu2000Seifert}
+and \cite[\S1]{Nicolaescu2001Lattice}.
+
+The small-fiber signature eta is \(-19/210\).
+The combined APS term \(4\eta_{\rm spin}+\eta_{\rm sig}\)
+is constant on the gap interval. This follows by applying
+the combined formula along a path of product-germ metrics
+on one fixed capped filling, since the invertible boundary
+operators give a constant spin APS index. Its limiting value
+is zero. Hence the earlier exact signature calculation gives
+\[
+ \eta_{\rm spin}(\gamma(v))=
+     \frac{38-121(2v^2+v^4)}{1680}
+ \qquad(0<v^2<2/11).
+\]
+Both eta values and the spin APS index therefore vanish at the
+eta-zero face. The ordinary transverse potential is still
+\(-a^2(2+v_*^2/2)<0\), so the retained-half trace estimate
+remains necessary.
+
+\begin{proposition}[Equivalent strict-budget filling test]
+\label{prop:totally-geodesic-half-filling}
+Fix a marked compact half \(W\), a smooth boundary metric
+\(\gamma\), and a strict budget \(C>0\). A positive Yamabe
+reflected double with exact product germ \(\gamma\) and both
+closed chiral energies below \(C\) exists if and only if
+\(W\) admits a smooth positive-scalar-curvature metric \(g\)
+with totally geodesic boundary conformal to \(\gamma\) in the
+given marking and
+\[
+ E_+(g;W)+E_-(g;W)<C.
+\]
+The double may use marked conformally flat round puncture caps
+and an arbitrarily short positive inserted product cylinder.
+\end{proposition}
+
+\begin{proof}
+For necessity use the Neumann conformal eigenfunction on the
+capped half, including any half-cylinder. Reflection swaps
+chiralities, so the closed energy of either sign is precisely
+the half sum. Conformal change preserves it.
+
+For sufficiency write \(g|_Y=b^2\gamma\), extend \(b>0\)
+with zero normal derivative, and use \(h=b^{-2}g\).
+Its Fermi collar is \(dt^2+h_t\) with \(h_0=\gamma\) and
+\(\partial_t h_0=0\). In the smooth double defined by this
+collar the even extension of \(h_t\) is \(C^2\), and the
+corresponding \(C^2\) even conformal change via \(b^2\)
+has positive scalar curvature. The even \(h\) therefore
+has a coercive ordinary quadratic form.
+Let \(\chi\) be smooth, zero near \(0\), one on \([1,\infty)\)
+and valued in \([0,1]\). On each half replace \(h_t\) by
+\[
+ h_t^\delta=\gamma+\chi(t/\delta)(h_t-\gamma).
+\]
+The double is now smooth and exact product at its seam.
+Taylor expansion at zero gives \(O(\delta)\) convergence in
+\(C^1\) and uniformly bounded \(C^2\) norms. Uniform scalar
+density bounds and the \(O(\delta)\) volume of the changed
+region bound the scalar form difference by
+\(O(\delta^{1/2})\|u\|_{H^1}^2\) by H\"older and Sobolev.
+The gradient term is \(o(1)\|u\|_{H^1}^2\) by \(C^0\)
+closeness. Thus the ordinary
+sign stays positive. Uniform curvature on the modified
+collar gives a chiral energy change \(O(\delta)\).
+
+Disjoint small interior balls can be flattened with the same
+estimates in normal coordinates. In a fixed smooth ball
+marking, normal first jets can be arranged by a chart
+diffeomorphism supported in its interior neighborhood.
+A radial reparametrization in that chart can carry a larger
+prescribed puncture and its margin into the flat ball by a
+homothety there. A smooth conformal factor matching the inverse
+Euclidean radius on the surrounding annulus then makes the
+unit round product and keeps the cap conformally flat in the
+actual marking. These changes preserve the strict tests for
+small enough initial flattening balls. After the seam is
+flattened, the positive free-trace form persists for sufficiently
+short insertions by Proposition~\ref{prop:short-seam-trace}
+and its reflected test. The added Weyl energy is precisely
+the length times the measured chiral density integral.
+\end{proof}
+
+For \(v=v_*\), Proposition~\ref{prop:totally-geodesic-half-filling}
+reduces the remaining construction to a positive scalar
+metric with totally geodesic boundary in the indicated
+conformal class and half budget below \(8\pi^2\). This
+criterion supplies the collar once such a metric is given.
+The spin and signature boundary tests give no obstruction
+at this specific face. The equality \(E_+=E_-\) holds on
+this half by signature APS on the approximating product
+metrics and convergence of the energies, so the strict
+half budget is equivalently \(E_+(g;W)<4\pi^2\).
+
+Any such positive-scalar filling of the Mazur face would
+have a strictly unstable minimal boundary in the reflected
+double. If \(\mu\) is the lowest boundary conformal-Laplacian
+eigenvalue, then \(\mu<0\) by
+Example~\ref{ex:mazur-spectral-seam}. At zero second fundamental
+form, \(2\operatorname{Ric}(\nu,\nu)=R_g-R_{g|_Y}\).
+Testing the Jacobi form on a unit \(\mu\) eigenfunction
+\(\phi\) gives the upper bound
+\[
+ \lambda_1(-\Delta_Y-\operatorname{Ric}(\nu,\nu))
+ \le \tfrac12(\mu-\min_Y R_g)-3\int_Y|d\phi|^2<0.
+\]
+Thus stable minimal constructions cannot meet this filling test.
+
+\begin{corollary}[Inclusive recognition for marked isometric gluings]
+\label{cor:inclusive-isometric-filling}
+Let \(W\) be smooth, compact, oriented and contractible, with
+marked boundary \(Y\). Suppose \(h\) is a smooth positive
+scalar curvature metric on \(W\) with totally geodesic boundary
+conformal to a prescribed \(\gamma\) in that marking. Set
+\[
+ B_h=E_+(h;W)+E_-(h;W),\qquad G_h=\int_W\Lambda_h^2\,dV_h,
+\]
+using the larger of the two largest signed Weyl eigenvalues
+for \(\Lambda\). For every orientation-preserving
+\(\gamma\)-isometry \(f:Y\to Y\), the fixed closed smooth
+homotopy sphere \(M_f=W\cup_f(-W)\) has positive Yamabe
+classes for which \(E_\pm\to B_h\) and
+\(P=4E_++3\int_{M_f}\Lambda^2dV\to 4B_h+6G_h\).
+In particular, with \(T=4\pi^2\) and the universal
+constants of the inclusive recognition theorem, either
+\[
+ 4B_h+6G_h\le8T+\eta\qquad\text{or}\qquad
+ B_h\le T+\varepsilon_*
+\]
+implies \(M_f\cong_{\rm diff} S^4\).
+\cite[section on the uniform isotropic spectral gap]{Baker2026FixedDescent}
+\end{corollary}
+
+\begin{proof}
+Use the conformal correction and seam flattening of
+Proposition~\ref{prop:totally-geodesic-half-filling}.
+For small widths the reflected form is coercive. Even
+extension gives positive free-trace sign on its single
+product half. The signed Weyl eigenvalues
+have conformal weight \(-2\), so \(\Lambda^2dV\) and
+each chiral density are conformally invariant. The curvature
+is bounded uniformly on the changed collars of vanishing
+volume. Both half chiral energies and the half \(\Lambda^2\)
+integral therefore converge to those of \(h\).
+
+Glue the two product halves using the given isometry
+\(f\). Restriction and addition of the two positive
+free-trace forms proves positive ordinary sign on the
+actual glued class. One may also choose an inserted collar
+whose length tends to zero and meets the reflected
+free-trace bound for each width. Its two halves are
+relabeled by \(f\) as in the short-seam test, and the
+sum of the two ordinary forms remains positive.
+Collared reparametrization identifies every such joined
+manifold with the same \(M_f\), using \(f\) on the
+marked faces and fixing the interiors away from the seam.
+Contractibility of the halves and the homology sphere
+boundary give the homotopy sphere condition.
+
+Reversal of the second half's orientation exchanges the
+chiralities and preserves \(\Lambda\). Each inserted
+strip contribution tends to zero with its length.
+If marked round punctures are used, perform the interior
+ball flattenings at shrinking scales and cap in their
+markings as above. Both changes also have vanishing cost.
+Thus each closed chirality tends to \(B_h\) and the
+closed \(\Lambda^2\) integral tends to \(2G_h\).
+The infima of the positive classes on this fixed smooth
+type obey the stated upper bounds, so equality in either
+threshold is sufficient.
+\end{proof}
+

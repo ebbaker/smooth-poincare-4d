@@ -1,0 +1,74 @@
+# E64b · Spin index and the eta-zero Mazur face
+
+26 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance. Independent bounded E reader for MASTER-E64b v1 with Sol/ultra requested and actual serving model and reasoning effort unavailable. Inputs are the construction TeX generation `93a6cf742e2df331` ([short seam](../manuscript/short_seam.tex), directly inspected file SHA-256 prefix `f719a9bff8f7b463`), the [E60 eta review](E60_HOMOGENEOUS_ETA.md) (`35b47050d01170eb`), and the [E62 assessment](../../../../master/research-progress/handoffs/E59_E62_SPECTRAL_WINDOWS_20261125.md) (`e2101647a907e16b`).
+
+For the actual eta-zero face on \(Y=\Sigma(2,5,7)\), the Levi-Civita spin Dirac operator is invertible and its eta invariant vanishes. The ordinary chiral APS index of any smooth spin signature-zero product filling of this face is zero. This includes the actual capped Mazur half, whose unique spin structure restricts to the unique one on \(Y\). A positive ordinary free-trace form would imply this vanishing. The index therefore passes a necessary test for positivity. The fixed-half positive form and the full closed Weyl budget remain geometric conditions.
+
+## Spin modes in the actual metric
+
+Use the contact orientation and \(\gamma_{a,v}=(e^1)^2+(e^2)^2+v^2(e^3)^2\), \(a>0\), on the E60 quotient. Let \(X_i\) be dual to the unscaled coframe. The cyclic bracket constants in the scaled frame are \((a/v,a/v,-av)\). The left frame is global and lifts to the spin frame because \(H^1(Y;\mathbb Z/2)=0\). For computation choose skew Clifford matrices \(c_i=i\sigma_i\) using the Pauli matrices, so \(c_1c_2c_3=+1\). Koszul's formula gives the scalar spin term \((2a/v-av)/4\). With \(H=c_1X_1+c_2X_2\) and \(V=c_3X_3+a/2\), the ordinary operator in this convention is
+\[
+ D_v^{(+)}=H+v^{-1}V-av/4,\qquad HV+VH=0.
+\]
+In fact \([X_3,X_1]=aX_2\), \([X_3,X_2]=-aX_1\) and \(c_3c_1=-c_2\), \(c_3c_2=c_1\), so the anticommutator with \(c_3X_3\) is \(-aH\). The generic period of \(X_3\) is \(22\pi/a\), making its scalar frequencies \(a n/11\), \(n\in\mathbb Z\). Shorter exceptional periods impose regularity constraints on their modes and do not change this lattice. Thus \(|V|\ge a/22\) and, since \((H+V/v)^2=H^2+V^2/v^2\),
+\[
+ \operatorname{dist}(0,\operatorname{spec}D_v^{(+)})
+ \ \ge\ \frac{a}{22v}-\frac{av}{4}>0\quad\text{if}\quad v^2<2/11 .
+\]
+At \(v_*^2=\sqrt{159}/11-1\) this is about \(0.02320a\). It controls the actual metric and the entire path from any smaller \(v>0\). The constant spinors have eigenvalue \(a/(2v)-av/4\). More generally let \(w_n=a(11/2-n)/11\). The horizontal operator pairs upper-component frequency \(n\) with lower-component frequency \(n-11\). Each nonzero horizontal singular value \(\sigma\) of this pair gives ordinary eigenvalues \(-av/4\pm\sqrt{\sigma^2+w_n^2/v^2}\). The horizontal kernels give the unpaired eigenvalues \(-av/4\pm w_n/v\) with their corresponding chiral multiplicities.
+
+## Direct evaluation of the spin eta and APS index
+
+Let \(\mathcal L\) be the orbifold line from E60, of degree \(-1/70\) and local weights \((1,1,2)\). In the upper-component mode \(n\), functions transform as sections of \(\mathcal L^{-n}\). The operator \(X_1+iX_2\) is their horizontal \(\bar\partial\), up to a nonzero constant. Its output has frequency \(n-11\) because \([X_3,X_1+iX_2]=-ia(X_1+iX_2)\). It corresponds to the same bundle with a \((0,1)\) factor. For \(H+V/v\), nonzero horizontal pairs have opposite signed eigenvalues of equal magnitude. Its eta series for large real \(s\) is therefore
+\[
+ (11v/a)^s\sum_{n\in\mathbb Z}\operatorname{sgn}(11/2-n)
+  \chi(\mathcal L^{-n})\,|11/2-n|^{-s},
+ \qquad
+ \chi(\mathcal L^{-n})=1+n/70-\sum_i\{-n\beta_i/\alpha_i\} .
+\]
+The last expression uses the desingularized line degree and genus zero. Pair \(n=5-j\) and \(n=6+j\) for \(j\ge0\). The linear term gives \(-2\zeta(-1,1/2)/70=-1/840\) at \(s=0\). The periodic contribution at a cone of order \(\alpha\) and weight \(\beta\) is
+\[
+ \sum_{j=0}^{\alpha-1}
+  \left(\{-(6+j)\beta/\alpha\}-\{-(5-j)\beta/\alpha\}\right)
+  \left(\frac12-\frac{j+1/2}{\alpha}\right).
+\]
+The three contributions are \(-1/4,4/5,-4/7\), so the eta of the adiabatic operator in the chosen Clifford convention is \(-19/840\). [Mrowka–Ozsváth–Yu, §2, degree and Riemann–Roch](https://intlpress.com/site/pub/files/_fulltext/journals/cag/1997/0005/0004/CAG-1997-0005-0004-a003.pdf) · [Nicolaescu, §1.2, the horizontal–vertical splitting and Proposition 1.10](https://intlpress.com/site/pub/files/_fulltext/journals/cag/2000/0008/0005/CAG-2000-0008-0005-a003.pdf)
+
+For the product APS boundary operator on \(S^+\), the boundary Clifford matrices are \(c(\nu)c(e_i)\) for the outward unit normal \(\nu\). Their oriented product on \(S^+\) is \(-1\), so the APS Dirac convention reverses the sign of the above eta. The APS adiabatic limit of the ordinary Levi-Civita spin Dirac eta is therefore \(+19/840\). Here the comparison is the small-fiber version of Nicolaescu's Remark 1.13 and (1.35), using the flat determinant connection and removing the vanishing local transgression from the Levi-Civita eta. Its horizontal split connection gives \(H+V/v\) up to the Clifford sign. The normalized base area in that calculation may be arranged by a fixed homothety, which leaves eta unchanged. The argument uses fibers of arbitrarily small positive length on this same quotient and requires no spectral flow comparison to the unscaled \(v=1\) metric. [APS I, (4.1)–(4.2)](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/aps001.pdf) · [Nicolaescu, Remark 1.13 and (1.35)–(1.36), pp. 1056–1058](https://intlpress.com/site/pub/files/_fulltext/journals/cag/2000/0008/0005/CAG-2000-0008-0005-a003.pdf)
+
+For an interpolation cylinder with invertible boundary operators throughout, the ordinary APS Dirac index is zero by homotopy to the constant cylinder. The signature is zero. The four-dimensional densities are \(\widehat A_4=-p_1/24\) and \(L_4=p_1/3\). Applying both APS formulas shows that \(4\eta_D(v)+\eta_{\mathrm{sig}}(v)\) is constant on \(0<v\le v_*\). Its limit is \(4(19/840)-19/210=0\), by E60. Hence \(\eta_D(v_*)=0\). With the proved vanishing of the kernel, the product-boundary spin index is
+\[
+ \operatorname{ind}D^+_{\mathrm{APS}}(P)
+ =-\tfrac18\big(\operatorname{sign}(P)+\eta_{\mathrm{sig}}(Y)\big)
+   -\tfrac12\big(\eta_D(Y)+\dim\ker D_Y\big)=0
+\]
+for \(\operatorname{sign}(P)=0\) and the eta-zero boundary metric in either orientation. This calculation concerns the canonical untwisted spin operator. [APS I, Theorems (4.2) and (4.14)](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/aps001.pdf)
+
+## Which positivity test survives
+
+For a compact capped half with an exact product seam boundary, positivity of the ordinary free-trace form gives a positive lowest Neumann eigenfunction \(u\) of \(-6\Delta+R\). The metric \(u^2 h\) has \(R_{u^2h}=\lambda u^{-2}>0\) and minimal boundary because \(\partial_\nu u=0\). For the punctured description this refers to the cap conformal class obtained by the established round-end form equivalence. The positive representative may change the induced face metric to \(u|_Y^2\gamma_{a,v_*}\) and need only be minimal at the boundary. The boundary Dirac kernel stays zero along the conformal path by conformal covariance. With the APS projections taken for the evolving boundary metrics, the index is constant by elliptic Fredholm homotopy. The spinorial Reilly identity with minimal boundary kills harmonic spinors with negative spectral trace when \(R>0\). On the adjoint chirality the complementary condition is the same negative trace condition for its boundary operator, since the intrinsic signs are opposite and the boundary kernel is zero. This gives the necessary zero index for the positive representative without placing it in exact product gauge. Pointwise positive scalar curvature on an exact product with this face is impossible because the face has negative scalar curvature. However on a short strip the explicit smooth rescaling \(u(t)=\cos(kt)\), for \(k>\sqrt{-R_{\gamma_{a,v_*}}/6}\) and \(|kt|<\pi/2\), gives positive scalar curvature with the prescribed induced face metric and zero mean curvature at \(t=0\). It yields a local example only. [Hijazi–Montiel–Zhang, (16) and APS boundary conditions](https://arxiv.org/pdf/math/0012262) · [APS I, remarks following Theorem (4.2)](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/aps001.pdf)
+
+Stability is a stronger condition than minimality. If the face were two-sided stable minimal in a positive-scalar representative, the Jacobi inequality and Gauss equation would give \(\int_Y(2|d\varphi|^2+R_Y\varphi^2)\ge\int_Y(R_4+|A|^2)\varphi^2\) for all tests. On this compact face, strict ambient positivity would make its intrinsic conformal Laplacian \(-8\Delta_Y+R_Y\) positive. This contradicts the intrinsic scalar-curvature obstruction in [E56](../notes/E56_MARKED_EXTERIOR.md#the-actual-mazur-double). Thus a positive representative with a minimal face would have an unstable face.
+
+Independently, the ordinary transverse potential is \(-a^2(2+v_*^2/2)\). The first interval Dirichlet sine times a constant on \(Y\) extends by zero and forces failure of strict positivity if
+\[
+ aL\ge \pi\sqrt{6/(2+v_*^2/2)}\simeq 5.34452 .
+\]
+The modified potential is \(-3a^2(1+v_*^2/2)\), with threshold about \(4.28877\). The strip Weyl charge alone reaches the \(8\pi^2\) ceiling only at \(aL\simeq13.81116\), from E60's exact charge. All three tests persist for the conformal class of an actual conformally product strip via the exact product representative. Below the ordinary length threshold the fixed-half trace form still determines the sign. At zero strip length the free-trace half condition is decisive for the reflected double. The vanishing signature and spin eta values supply no bound on the sum of a half's Weyl energies and no positivity estimate on its trace form. [Exact short-seam criterion](../manuscript/short_seam.tex) · [E60 energy and orientation calculations](E60_HOMOGENEOUS_ETA.md)
+
+The parallel E63 filling equivalence also checks. A positive-scalar filling with totally geodesic boundary in the prescribed face conformal class can recover that face metric by a conformal extension with zero normal derivative. The restored metric doubles evenly as a \(C^2\) metric whose ordinary form is coercive by conformal covariance. In a Fermi collar, \(h_t-h_0=O(t^2)\), so E63's product cutoff has small \(C^1\) change and uniformly bounded \(C^2\) norms. In particular, scalar densities change by bounded terms supported on volume \(O(\delta)\). The fixed Sobolev estimate bounds their error on a test \(u\) by \(C\delta^{1/2}\|u\|_{H^1}^2\), while uniform convergence controls the gradient part. Weyl energies change by \(O(\delta)\) on the same collar. The normal-coordinate interior puncture changes admit the same estimates, and the supported coordinate adjustments keep the specified markings. Conversely, the positive Neumann factor preserves the zero second fundamental form and the exact half Weyl sum of the reflected representative. Thus the two formulations preserve any strict budget and the smooth marked half. The existence of a half satisfying that budget is still open. [E63 filling equivalence](../notes/E63_ETA_ZERO_FILLING.md#an-equivalent-filling-test-without-an-exact-product-premise)
+
+## E66r1 · Inclusive spectral budget on each fixed double
+
+26 November 2026. Independent bounded E check of the E63 smoothing and spectral budget, with actual serving model and reasoning effort unavailable. The assessed SHA-256 prefixes are `b2126e58a8d1d88e` for E63 and `4b797040f9e081cf` for the [spectral recognition theorem](../../../../master/01_fixed_type_variational_descent/manuscript/isotropic_gap.tex).
+
+Let \(g\) be a smooth PSC metric on the actual marked half \(W\), totally geodesic at the boundary with \(g|_Y=b^2\gamma\) in the marked coordinates. Let \(L=\max_\pm\lambda_{\max}(W^\pm)\), \(T=4\pi^2\), and let \(0<\eta<\kappa\) be fixed within E62's universal exclusion gap \(\kappa\). For every \(\gamma\)-isometry \(f\) whose compatible smooth double \(M_f\) is a homotopy sphere, the bound
+\[
+ H_W=4\big(E_+(g;W)+E_-(g;W)\big)+6\int_W L_g^2\,dV_g
+ \le 8T+\eta
+\]
+implies that \(M_f\) is standard. On the contractible Mazur half the homotopy-sphere premise follows from van Kampen and Mayer–Vietoris for each such gluing.
+
+Extend \(b\) positively with zero normal derivative and put \(h=b^{-2}g\). This restores \(\gamma\) in the prescribed marking and keeps the face totally geodesic. Its ordinary free form is coercive on all of \(H^1(W)\) by conformal covariance with zero boundary term and strict positivity of \(R_g\). For the Fermi cutoff \(h_t^\delta=\gamma+\chi(t/\delta)(h_t-\gamma)\), the second normal derivative terms containing \(\chi'\) and \(\chi''\) are uniformly bounded since \(\partial_t h_t=O(t)\) and \(h_t-\gamma=O(t^2)\). Their bounds permit an order-one difference from the old second derivatives on the changed collar. The \(C^1\) convergence and uniformly bounded scalar density on a collar of volume \(O(\delta)\) give the free-form stability estimate above. Exact product now gives a smooth metric on the fixed \(M_f\). Restricting a closed test to the two halves and adding their coercive free forms proves positive Yamabe sign for this gluing.
+
+For bounded self-adjoint Weyl blocks, \(|\lambda_{\max}(A)-\lambda_{\max}(B)|\le\|A-B\|_{\rm op}\) by the Rayleigh formula, and maximizing over the two chiralities preserves the Lipschitz bound. Squaring is Lipschitz on bounded ranges. The uniform \(C^2\) bound thus bounds the density \(L^2dV\) uniformly on the changed collar and the density stays equal off it. The integral difference is \(O(\delta)\), as for either chiral energy. Four-dimensional conformal invariance identifies the corresponding integrals of \(h\) and \(g\). The two halves double the full Weyl sum and the orientation-insensitive spectral integral. The closed signature is zero, so \(e\) equals half the full doubled Weyl sum. Therefore the smooth positive approximants satisfy \(\mathcal P=4e+3\int_{M_f}L^2dV\to H_W\). An optional positive strip can shrink with \(\delta\), using the free-trace estimate and adding only its length times the fixed densities. Taking the infimum on the same \(M_f\) proves the inclusive recognition statement even if every approximant's \(\mathcal P\) exceeds \(H_W\). The theorem uses \(\eta<\kappa\), since the stated nonstandard lower bound at \(8T+\kappa\) alone permits equality there. [E63 smoothing](../notes/E63_ETA_ZERO_FILLING.md#an-equivalent-filling-test-without-an-exact-product-premise) · [E62 theorem and infimum argument](../../../../master/01_fixed_type_variational_descent/manuscript/isotropic_gap.tex)

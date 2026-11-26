@@ -1,5 +1,7 @@
 # Fixed-type variational descent · Milestones
 
+- **25 November 2026.** Both raw complement charges, exact-width signed repair costs, and the varying-type isotropic-gap entry are checked. [Program assessment](../reviews/MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md)
+
 - **25 November 2026.** The endpoint allowance retains the selected disk widths. Finite E58 estimates bound both physical chiral charges on the same complement. [Integrated assessment](../reviews/GLOBAL_GEOMETRY_AND_SELECTED_COLLARS_20261125.md)
 
 - **25 November 2026 · Intrinsic endpoint.** Checked the physical two-chirality deficit and the finite allowance obstruction for a full measured disk/collar family under the positive-repair hypothesis. [Assessment](../research-progress/handoffs/ED03_CHART_GEOMETRY_20261125.md)

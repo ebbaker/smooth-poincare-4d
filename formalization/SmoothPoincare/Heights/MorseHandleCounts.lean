@@ -74,7 +74,8 @@ theorem alternating_morseCriticalCounts_eq_two (e : M ≃ₕ S₄) {f : M → �
   calc
     (n 0 : ℤ) - n 1 + n 2 - n 3 + n 4 =
         ∑ j ∈ Finset.range 5, (n j : ℤ) * (-1 : ℤ) ^ j := by
-      norm_num [Finset.sum_range_succ] <;> ring
+      norm_num [Finset.sum_range_succ]
+      ring
     _ = ∑ j ∈ Finset.range 5,
         ∑ p ∈ C.filter (fun p => morseIndex I f p = j), (-1 : ℤ) ^ morseIndex I f p := by
       apply Finset.sum_congr rfl

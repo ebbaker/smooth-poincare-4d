@@ -9,3 +9,5 @@ The [spectral recognition theorem](recognition_gap.tex) applies to the infimum o
 The companion papers carry the sharp shape and sign comparisons, the full mixed-surgery proof, the long-buffer cap estimates, the proof of critical shell regularity, and diffuse mass selection. The [physical-volume and joint-selection source](physical_volume.tex) is typeset in the fixed-type descent paper. Its comparison gauge, physical measures and repeatedly cited source path remain available. [Editorial proof and label crosswalk](../research-progress/handoffs/E51_COMPANION_DRAFTS_20261125.md)
 
 Build from the repository root with `python3 tools/build_manuscripts.py master`. All papers use the common bibliography. The build resolves cross-references with latexmk and places the PDF under `output/pdf/master/`.
+
+The [large-disk estimate](balanced_disk.tex) gives a necessary core saving for a subcritical joined repair. The [fixed-band exact theorem](exact_closed_types.tex) gives finiteness of smooth types and compact attainment of the least spectral deficit.

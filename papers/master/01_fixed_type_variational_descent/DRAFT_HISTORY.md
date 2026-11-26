@@ -21,3 +21,7 @@ The modified Yamabe representatives admit common-time Ricci smoothing. The close
 ## 25 November 2026 · charged disks and conformal recognition
 
 Finite spectral-scale selection gives diffuse chiral mass throughout the strict band. The draft also derives the signed patch cost, the critical spectral recognition test and the reduced Ricci-flow variation. Prepared for Edward B. Baker III with OpenAI Codex assistance. [Inputs, independent checks and outputs](../research-progress/handoffs/E59_E62_SPECTRAL_WINDOWS_20261125.md)
+
+## 25 November 2026 · balanced disks and exact closed types
+
+The connected-patch transgression bounds chiral transfer across an actual shaft. Repeated division on a marked disk gives the required disk-side saving. In the small-deficit case modified Ricci concentration disappears on every fixed compact of a complete marked shrinking limit. The exact-class deficit floor rules out smooth nonround filled minimizing bases in this regime. [Working proof](manuscript/exact_spectral_gap.tex) · [Assessment](../research-progress/handoffs/E63_E67_BALANCED_DISKS_20261125.md)

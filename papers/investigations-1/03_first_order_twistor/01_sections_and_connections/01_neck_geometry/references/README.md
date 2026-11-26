@@ -15,3 +15,5 @@ The [second collar source record](../../../../../../references/SOURCE_NOTES_SECO
 The [third collar source record](../../../../../../references/SOURCE_NOTES_THIRD_COLLAR_20261125.md) gives the exact primary passages behind the new derivations and checks.
 
 The [E59–E62 primary source record](../../../../../../references/SOURCE_NOTES_MASTER_SPECTRAL_WINDOWS_20261125.md) identifies the distributional distance comparison used on protected physical annuli.
+
+[E63–E67 source record](../../../../../../references/SOURCE_NOTES_MASTER_BALANCED_DISKS_20261125.md) gives the checked passages for marked bisection, relative transgression, critical polar comparison, spin boundary conditions and exact compactness.

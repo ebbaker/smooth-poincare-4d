@@ -1,0 +1,161 @@
+\section{The modified Ricci concentration regime}\label{sec:modified-ricci-concentration}
+
+Suppose \(g_i\) are unit-volume positive Yamabe metrics on possibly
+varying nonstandard smooth homotopy four-spheres \(M_i\), with
+\(e_i=E_+(g_i)=E_-(g_i)\le2T-\delta\) for fixed \(\delta>0\).
+Use \(\sigma_i=\int L_{g_i}^2dV_{g_i}\) as in
+Section~\ref{sec:isotropic-gap}. Consider the residual regime
+\(36\sigma_i-Y_i^2\to0\) and the actual modified Yamabe metrics
+\(q_i\) of volume one in these classes. The following statement
+identifies which shrinking comparisons can carry Ricci energy.
+
+\begin{theorem}[Modified shrinking limits]\label{thm:modified-shrinking-limits}
+Let \(a_i\to0\). If \(a_i^{-2}q_i\) converge locally uniformly and
+strongly in \(W^{1,4}\) to a complete connected smooth Riemannian
+four-manifold under oriented smooth embeddings of neighborhoods
+of a compact exhaustion, then the limit is Euclidean. The full
+curvature integrals on the images of fixed compacts tend to zero.
+
+The same conclusion holds for the complete pointed harmonic
+limit obtained if the curvature of \(a_i^{-2}q_i\) is uniformly
+bounded on each fixed-radius ball at the chosen centers, with
+bounds depending on the radius. In particular, for
+\(K_i=\max_{M_i}|\Rm_{q_i}|_{\rm tens}\), one has \(K_i\to\infty\)
+and for each fixed \(A>0\),
+\begin{equation}\label{eq:modified-peak-energy}
+ \sup_{x\in M_i}\int_{B_{q_i}(x,A/\sqrt{K_i})}
+              |\Rm_{q_i}|_{\rm tens}^2dV_{q_i}\longrightarrow0.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Pass to a subsequence with \(e_i\to e\) and \(Y_i\to y>0\), using
+the strict band for the positive lower bound. As in the proof of
+Theorem~\ref{thm:isotropic-gap}, \(R_{q_i}=6L_{q_i}+c_i\),
+\(c_i\to0\), \(L_{q_i}\to y/6\), and \(R_{q_i}\to y\) in
+the auxiliary \(L^2\) norms for the last two statements. Since
+\(|W^\pm|_{\rm HS}^2\le6L^2\), the Weyl and scalar squared
+integrals tend to zero on sets of vanishing \(q_i\)-volume.
+Gauss--Bonnet gives
+\begin{equation}\label{eq:modified-total-ricci}
+ \int |Z_{q_i}|^2dV_{q_i}\longrightarrow4e+y^2/12-8T.
+\end{equation}
+There is also an inhomogeneous Sobolev inequality with uniform
+constant, by the ordinary Yamabe inequality and the scalar
+\(L^2\) estimate. These facts persist on smooth volume-one
+conformal approximations of \(q_i\), chosen separately at each
+index. We may require relative distance errors and pointwise
+errors in curvature norms tending to zero, and \(o(1)\) total
+variation error for the squared curvature measures.
+
+For a supplied marked comparison \((X,h)\), the unrescaled
+volume of a fixed compact image is \(O(a_i^4)\). Hence both
+rescaled Weyl blocks and the scalar curvature tend to zero
+in local \(L^2\). The all-lowered curvature formula passes
+distributionally under the stated first-order convergence,
+since its quadratic first derivatives converge strongly in
+\(L^2\). The full curvature is uniformly bounded in \(L^2\) by
+\eqref{eq:modified-total-ricci} and the other curvature budgets.
+Consequently \(R_h=W_h=0\), and by exhaustion
+\(d_X:=\int_X|\Ric_h|^2dV_h\le4e+y^2/12-8T\).
+The ordinary Yamabe inequality passes to compactly supported
+tests on \(X\), since the compact scalar term tends to zero by
+H\"older. Thus \(y\|f\|_4^2\le6\|df\|_2^2\). This excludes
+compactness and gives \(\operatorname{Vol}_h B_s(x)\ge bs^4\)
+at all radii by the dyadic cutoff estimate.
+
+The exact scalar-flat conformally flat metric has harmonic
+curvature and finite \(\int|\Rm|_{\rm tens}^2=2d_X\). With the finite homogeneous Sobolev constant already proved,
+the harmonic-curvature case of Tian--Viaclovsky gives finitely many
+ends, each asymptotically locally Euclidean (ALE) of every order
+less than two \cite[Theorem~5.1]{TianViaclovsky2008Volume}.
+
+Let \(k\) be the number of ends, \(m_j\) their link-group orders,
+and \(m=\max_j m_j\). A whole compact truncation embeds in an
+actual source. Its first and second rational homology vanish by
+Mayer--Vietoris since the end links are rational homology spheres.
+The relative fundamental class and Poincar\'e--Lefschetz duality
+give third Betti number \(k-1\), hence \(\chi(X)=2-k\).
+The ALE Gauss--Bonnet identity in the scalar-flat conformally
+flat case now gives the exact cost
+\begin{equation}\label{eq:modified-ale-cost}
+ d_X=4T\left(k-2+\sum_{j=1}^k m_j^{-1}\right)
+ \quad\cite[Section~7, (7.4)]{TianViaclovsky2005ALE}.
+\end{equation}
+The homogeneous Yamabe inequality on each end gives
+\(y\le S/\sqrt{m_j}\), where \(S=8\sqrt6\pi\). Cut the Euclidean
+radial sharp test to an annulus and dilate its support out the
+end at fixed cutoffs. On the quotient the gradient
+integral is divided by \(m_j\) and the squared \(L^4\) norm by
+\(\sqrt{m_j}\). Remove the cutoffs after the metric limit. The
+Ricci upper budget and \eqref{eq:modified-ale-cost} now give
+\[
+ \delta+T\left(k-2+\sum_j m_j^{-1}\right)\le 2T/m.
+\]
+For \(k\ge2\) the left side is strictly larger than \(2T/m\).
+Thus \(k=1\). The nonnegativity of \(d_X\) in
+\eqref{eq:modified-ale-cost} forces the single end group to be
+trivial and \(d_X=0\). The metric is flat with asymptotic volume
+ratio one, and Bishop--Gromov rigidity makes it Euclidean.
+
+To get compact energy convergence, put the two Levi-Civita
+connections on the same oriented Euclidean bundle using metric
+square roots. Their difference \(\Theta_i\) tends to zero in
+\(L^4\). The affine path of connections has curvature forms
+\(\Omega_{i,t}=(1-t)\Omega+t\Omega_i-t(1-t)\Theta_i\wedge\Theta_i\)
+uniformly bounded in \(L^2\). Differentiating the Pfaffian along
+the path and using covariant Bianchi gives the difference of
+Euler forms as the derivative of a transgression involving
+\(2\int_0^1\operatorname{Pf}(\Theta_i,\Omega_{i,t})dt\), with
+the common Euler normalization. Its \(L^{4/3}\) norm tends to
+zero. Thus the Euler densities converge against compact smooth
+cutoffs. Since the limit is flat and the scalar and Weyl
+terms vanish in \(L^1\), the Euler identity with coefficient
+\(-1/2\) on \(|Z|^2\) gives vanishing trace-free Ricci integrals
+on fixed compacts. The full curvature then also tends to zero
+in \(L^2\) there.
+
+For the bounded-curvature extraction, the original Sobolev
+estimate rescales with a zero-order coefficient \(O(a_i^2)\).
+It gives uniform lower volumes on fixed small balls by cutoff
+iteration. Together with curvature bounds on enlarged balls
+this gives local injectivity and harmonic-radius estimates
+\cite[Theorem~4.7]{CheegerGromovTaylor1982}%
+\cite[Theorem~0.3]{AndersonCheeger1992Harmonic}.
+The harmonic coordinate Ricci equation and the curvature bound
+give local \(W^{2,p}\) bounds for finite \(p>4\), by first gaining
+bounded first derivatives from a large-exponent harmonic-radius
+bound. A diagonal extraction on buffered windows gives a
+complete marked limit in \(C^{1,\beta}\) and weak \(W^{2,p}\),
+with the images covering each fixed smaller source ball
+\cite[Theorem~3.1 and proof]{BelegradekKapovitch2000Finiteness}.
+The scalar and Weyl limits vanish by the previous distributional
+argument. For this limit with bounded curvature the weak
+curvature identities give \(\Delta_h\Ric_h=\Rm_h*\Ric_h\).
+Local tensor elliptic regularity and the harmonic metric equation
+bootstrap to smoothness in the same charts
+\cite[Lemma~5.1 and local form of Theorem~2.2(ii)]{AvalosCogoRoyoAbrego2026Bach}.
+The resulting smooth exhaustion embeddings retain the first-order
+convergence. The preceding limit and energy conclusions apply.
+
+If \(K_i\) were bounded on a subsequence, the fixed-cutoff
+Ricci tail would vanish and the tail-only isotropic recognition
+argument of Section~\ref{sec:isotropic-gap} would identify the
+standard type. Thus \(K_i\to\infty\). At scale \(K_i^{-1/2}\)
+the full rescaled curvature is uniformly bounded globally.
+Any sequence of centers violating \eqref{eq:modified-peak-energy}
+would have a buffered harmonic limit with vanishing curvature
+integral on the indicated window, a contradiction. The same
+statement holds for the unsmoothed \(q_i\) by the relative
+distance and squared-curvature measure bounds above.
+\end{proof}
+
+If a sequence of balls of radii \(r_i\to0\) carries a fixed
+positive modified trace-free Ricci charge, then
+\(r_i\sqrt{K_i}\to\infty\) by \eqref{eq:modified-peak-energy}.
+Along that sequence the rescaled full curvature must be unbounded
+on some fixed enlargement, since uniform bounds on every such
+enlargement would give the second extraction in
+Theorem~\ref{thm:modified-shrinking-limits}. This is a restriction
+on actual charged balls. The loss of uniform integrability alone
+gives no such marked ball or bounded-curvature enlargement.

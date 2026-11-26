@@ -1,5 +1,9 @@
 # Research plan
 
+## Current disk and small-deficit tests
+
+Prioritize a connected competitor that changes a charged part of the actual core or a local repair in the original E61 marking. The exterior sign and spectral cost must be evaluated on the resulting cap. On modified Ricci concentration test a genuinely new regularity premise below the charged scale. On a round exit seek a signed saving beyond the minimizing excess. The exact family in a fixed band has a positive deficit floor. [Assessment](../../research-progress/handoffs/E63_E67_BALANCED_DISKS_20261125.md)
+
 25 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance. E35c requested GPT-6.2 Sol/ultra for setup. Independent serving telemetry is unavailable. The [overview](../research-overview/OVERVIEW.md) fixes the inputs, notation and scope. The [register](../research-progress/REGISTER.md) governs live readiness. Each E packet uses one frozen request and a disjoint output under this branch.
 
 ## Current comparison

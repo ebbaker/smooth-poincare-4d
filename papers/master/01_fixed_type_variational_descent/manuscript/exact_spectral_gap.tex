@@ -1,0 +1,124 @@
+\section{The spectral deficit of exact critical classes}
+\label{sec:exact-spectral-gap}
+
+Put \(\sigma([g])=\int L_g^2dV_g\) and
+\(\Delta_{\mathrm{sp}}([g])=36\sigma([g])-Y([g])^2\), using the
+larger of the two top chiral Weyl eigenvalues as in
+Section~\ref{sec:isotropic-gap}. For fixed \(\delta>0\) consider
+the smooth positive Yamabe classes with exactly vanishing Bach
+tensor on nonstandard oriented smooth homotopy four-spheres
+and with \(e=E_+\le 2T-\delta\). Take
+\(\kappa_\delta>0\) from the marked same-type ALE descent theorem
+\cite[Same-type descent and Exact compactness]{Baker2026MarkedNecks}.
+
+\begin{theorem}[Exact classes in a fixed band]\label{thm:exact-spectral-gap}
+The indicated classes occur on finitely many oriented smooth
+types. If the family is nonempty, \(\Delta_{\mathrm{sp}}\) has
+an attained, strictly positive minimum \(m_\delta\) on it.
+For any fixed \(0\le b<6\kappa_\delta\), the associated volume-one
+Yamabe metrics with \(\Delta_{\mathrm{sp}}\le m_\delta+b\) are
+sequentially compact modulo oriented diffeomorphisms. The same
+attainment and compactness statements hold on each represented
+type with its own spectral minimum. There is also a universal
+\(\gamma_\delta>0\) such that any class in the band with
+\(e-I^+(M)<\gamma_\delta\) attains \(I^+(M)\).
+\end{theorem}
+
+\begin{proof}
+Choose the volume-one ordinary Yamabe minimizers of the source
+classes. Bach-flatness, \(E_+\), and \(\sigma\) are conformally
+invariant. The closed gap and Gauss--Bonnet give
+\(T<e_i\le2T-\delta\) and \(Y_i\ge\sqrt{48\delta}\). Passing
+to a subsequence write \(e_i\to e\), \(Y_i\to y\), and
+\(\sigma_i\to s\). The exact compactness theorem allows the
+source manifolds \(M_i\) to vary
+\cite[Exact compactness]{Baker2026MarkedNecks}.
+In its closed alternative the whole oriented diffeomorphisms
+identify all late sources of the subsequence with the limit.
+The limit has unit volume and scalar curvature \(y\), and has
+class Yamabe constant \(y\) by passage of the Yamabe inequality
+and the constant test. Smooth convergence of the Weyl blocks
+gives convergence of \(\sigma\), so the limit retains \(e\) and
+\(\Delta_{\mathrm{sp}}\).
+
+In the ALE alternative the same-type theorem supplies a smooth
+one-point conformal completion \((\widehat X,\bar h)\), positive
+and exactly Bach-flat, with \(Y([\bar h])\ge y\) and
+\(T<e_X=E_+(\bar h)\le e-\kappa_\delta\). It identifies the
+completion with each late source of the subsequence by oriented
+diffeomorphisms. This identification uses the whole marked core,
+the buffer in its smooth puncture chart, and the cap of the actual
+exterior with positive Yamabe constant and energy below \(T\)
+\cite[Finite ordinary punctures and Same-type descent]{Baker2026MarkedNecks}.
+
+At each fixed compact truncation of \(X\), smooth convergence
+passes both \(E_+\) and \(\sigma\) to the limit on the truncation.
+The conformal factor of the completion preserves their measures,
+and its smooth added point has measure zero. On the entire
+complement of that truncation in the actual source, integrate
+\(|W^+|_{\rm HS}^2\le6L^2\) and subtract the compared core
+integrals from the respective totals. Send the source index to
+infinity first and then exhaust \(X\). This gives
+\(e-e_X\le6(s-\sigma([\bar h]))\). Consequently
+\begin{equation}\label{eq:exact-spectral-drop}
+ \Delta_{\mathrm{sp}}([\bar h])
+ \le \lim_i\Delta_{\mathrm{sp}}([g_i])-6(e-e_X)
+ \le \lim_i\Delta_{\mathrm{sp}}([g_i])-6\kappa_\delta.
+\end{equation}
+
+An infinite list of pairwise distinct oriented types would give
+a sequence with one class per type. Both branches contradict
+this through the whole-source diffeomorphisms. A minimizing
+sequence for \(\Delta_{\mathrm{sp}}\) in the band must take the
+closed branch, since the completion in the ALE branch belongs
+to the same family and \eqref{eq:exact-spectral-drop} gives a
+strict decrease. The same reasoning excludes that branch for
+\(\Delta_{\mathrm{sp}}\le m_\delta+b\) with \(b<6\kappa_\delta\).
+This also works on one represented type because the completion
+preserves that type. At an attaining positive class, Chen--Zhu's
+strict and equality classifications give
+\(\Delta_{\mathrm{sp}}>0\) on a nonstandard type
+\cite[Theorems~1.4 and 1.6]{ChenZhu2014Conformal}.
+
+For the near-infimum assertion let \(a_M\) be the first exact
+positive chiral value below \(2T\) on a represented type.
+The first-value theorem gives its attainment and an
+\(\epsilon_M>0\) excluding distinct exact values in
+\([a_M,a_M+\epsilon_M)\)
+\cite[First fixed-type critical value]{Baker2026MarkedNecks}.
+If \(a_M>I^+(M)\), take half their difference as the typewise
+threshold. No exact class meets this condition on that type.
+If \(a_M=I^+(M)\), take \(\epsilon_M/2\). A class within that
+distance has \(e=I^+(M)\). The minimum of the finitely many
+typewise thresholds is positive. When the family is empty
+the assertions are vacuous.
+\end{proof}
+
+Under the whole smooth filled-base hypotheses of the descent
+comparison, a minimizing sequence on a nonstandard type with
+\(\Delta_{\mathrm{sp}}\to0\) can only have a conformally round
+filled base. Indeed, strong local convergence of the chiral
+matrix densities in Proposition~\ref{prop:local-min} gives
+convergence of the top-eigenvalue maximum density. The largest
+eigenvalue is Lipschitz in a self-adjoint matrix with its
+Hilbert--Schmidt norm. The same compact exhaustion and Yamabe
+test transfer give \(\sigma_N\le s\) and \(Y_N\ge y\), so
+\(\Delta_{\mathrm{sp}}(N)\le0\). Chen--Zhu recognizes the filled
+base. A positive-energy filled base under the stated puncture
+markings would have the original smooth type by the marked
+minimizing comparison. Thus the filled base is round and the
+entire limiting charge lies on one actual exterior of the
+marked cuts.
+
+For a round restart on that exterior, suppose the changed
+regions have vanishing discarded and inserted Weyl energy in
+both signs, with the kept part conformally unchanged. The bound
+\(L^2\le\tfrac23(|W^+|_{\rm HS}^2+|W^-|_{\rm HS}^2)\) gives
+\(\sigma([c_i])=\sigma_i+o(1)\) for the resulting capped classes.
+If the marked Yamabe comparison gives \(\liminf Y([c_i])\ge y\),
+then \(\Delta_{\mathrm{sp}}([c_i])\to0\) by Chen--Zhu on the same
+nonstandard type. This sequence cannot contain exact Bach-flat
+classes at arbitrarily late indices within a fixed strict band,
+by Theorem~\ref{thm:exact-spectral-gap}. General round restarts
+still require their signed gain test. The exact threshold alone
+does not select a stationary class from a minimizing sequence.

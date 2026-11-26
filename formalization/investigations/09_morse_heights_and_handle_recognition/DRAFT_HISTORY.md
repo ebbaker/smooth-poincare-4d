@@ -1,5 +1,7 @@
 # Morse heights and handle recognition · Milestones
 
+- **25 November 2026.** The selected height gives a regular middle band or the native smooth two-handle at its actual critical point. The model seam has a checked recognition map. [Program assessment](../reviews/MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md)
+
 - **25 November 2026.** The ordinary round mean counts actual middle points, and Sard yields Morse directions for the constructed normal. [Integrated assessment](../reviews/GLOBAL_GEOMETRY_AND_SELECTED_COLLARS_20261125.md)
 
 - **25 November 2026 · Chart and immersion proofs.** Identified the actual nondegenerate index-two heights and proved the indexed mean under measured Gauss-sheet inputs. [Assessment](../research-progress/handoffs/ED03_CHART_GEOMETRY_20261125.md)

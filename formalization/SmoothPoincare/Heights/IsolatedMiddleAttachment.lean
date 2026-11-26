@@ -1,5 +1,4 @@
 import DifferentialGeometry.Topology.Morse.Attachment.SublevelTransport
-import DifferentialGeometry.Topology.Morse.HandleEmbedding
 import DifferentialGeometry.Topology.Morse.SmoothMorseChart
 
 /-! # The native two-handle at an isolated index-two point -/
@@ -7,18 +6,20 @@ import DifferentialGeometry.Topology.Morse.SmoothMorseChart
 open DifferentialGeometry.Topology DifferentialGeometry.Topology.Morse
 open DifferentialGeometry.Topology.Morse.CellAttachment
 open DifferentialGeometry.Topology.Morse.ManifoldCellAttachment
-open DifferentialGeometry.Geometry.Boundary
 open scoped ContDiff Manifold
 
 namespace SmoothPoincare
 
 variable {H M : Type} [TopologicalSpace H] [TopologicalSpace M] [ChartedSpace H M]
   {I : ModelWithCorners ℝ (MorseModel 4) H} [I.Boundaryless] [IsManifold I ∞ M]
-  [T2Space M] {f : M → ℝ}
+  {f : M → ℝ}
 
 local notation "I₄" => morseModelWithCornersHalfSpace 3
 local notation "I₂" => modelWithCornersEuclideanHalfSpace 2
-local notation "le₂₄" => (by decide : 2 ≤ 4)
+
+private theorem two_le_four : (2 : ℕ) ≤ 4 := by decide
+
+local notation "le₂₄" => two_le_four
 
 local instance : Fact (Module.finrank ℝ (EuclideanSpace ℝ (Fin 2)) = (2 - 1) + 1) :=
   ⟨by simp⟩
@@ -39,11 +40,6 @@ structure IsolatedMiddleAttachment (fSmooth : ContMDiff I 𝓘(ℝ, ℝ) ∞ f)
   upper_inside : f p + ε < hi
   lower_regular : ∀ x : M, f x = f p - ε → ¬ IsCriticalPointAt I f x
   upper_regular : ∀ x : M, f x = f p + ε → ¬ IsCriticalPointAt I f x
-  attachingTube_isSmoothEmbedding :
-    letI := Handle.attachingRegionChartedSpace 2 2
-    letI := manifoldLevelSetChartedSpace I f (f p - ε) fSmooth lower_regular
-    Manifold.IsSmoothEmbedding ((𝓡 1).prod I₂) 𝓘(ℝ, MorseModel 3) ∞
-      (cocoreAttachingEmbedding le₂₄ (f p) ε r chart ε_pos attaching_radius)
   η : ℝ
   η_pos : 0 < η
   traceCharts : ChartedSpace (MorseHalfSpace 3)
@@ -68,7 +64,7 @@ structure IsolatedMiddleAttachment (fSmooth : ContMDiff I 𝓘(ℝ, ℝ) ∞ f)
   handle_smooth :
     letI := traceCharts
     letI := Handle.standardHandleChartedSpace 2 2
-    ContMDiff (I₂.prod I₂) I₄ ∞
+    ContMDiff (ModelWithCorners.prod I₂ I₂) I₄ ∞
       (Handle.cell (morseAttachingEmbedding le₂₄ (f p) ε r chart ε_pos attaching_radius))
   fixes_deep_lower : ∀ x : M, f x ≤ f p - ε - η → ∀ hx : f x ≤ f p - ε,
     (traceDiffeomorph (Handle.lower
@@ -89,7 +85,7 @@ theorem IsolatedMiddleAttachment.attachingTube_smooth
   contMDiff_cocoreAttachingEmbedding le₂₄ (f p) D.ε D.r D.chart D.ε_pos D.attaching_radius
     (D.attaching_radius.trans_lt D.chart_radius_lt) hf D.lower_regular
 
-theorem IsolatedMiddleAttachment.attachingTube_isClosedEmbedding
+theorem IsolatedMiddleAttachment.attachingTube_isClosedEmbedding [T2Space M]
     {hf : ContMDiff I 𝓘(ℝ, ℝ) ∞ f} {p : M} {lo hi : ℝ}
     (D : IsolatedMiddleAttachment hf p lo hi) :
     Topology.IsClosedEmbedding
@@ -99,7 +95,7 @@ theorem IsolatedMiddleAttachment.attachingTube_isClosedEmbedding
 
 /-- An isolated nondegenerate index-two critical point in a fixed band of a compact
     smooth four-manifold gives a genuine native smooth two-handle attachment. -/
-theorem exists_isolatedMiddleAttachment [CompactSpace M]
+theorem exists_isolatedMiddleAttachment [T2Space M] [CompactSpace M]
     (hf : ContMDiff I 𝓘(ℝ, ℝ) ∞ f) (p : M) {lo hi : ℝ}
     (hlo : lo < f p) (hhi : f p < hi)
     (hunique : ∀ x : M, f x ∈ Set.Icc lo hi → x = p ∨ ¬ IsCriticalPointAt I f x)
@@ -150,11 +146,6 @@ theorem exists_isolatedMiddleAttachment [CompactSpace M]
   have ε_lt_R : ε < R := by
     have hεr : 2 * ε + 2 * r ^ 2 ≤ R ^ 2 := (Real.sqrt_le_iff.mp hr.2).2
     linarith [sq_nonneg r]
-  -- The tube uses the same chart map. Use the original radius to apply the
-  -- smooth embedding theorem with its strictly interior parameter range.
-  have tubeEmbedding := isSmoothEmbedding_cocoreAttachingEmbedding (m := 3) (k := 2)
-    le₂₄ (f p) ε r oldChart ε_pos hr.1.ne' (hr.2.trans_lt R_lt_old)
-    (hr.2.trans_lt R_lt_smooth) hf hl
   exact ⟨{
     chart := chart
     chart_point := hp
@@ -168,7 +159,6 @@ theorem exists_isolatedMiddleAttachment [CompactSpace M]
     upper_inside := by linarith
     lower_regular := hl
     upper_regular := hu
-    attachingTube_isSmoothEmbedding := tubeEmbedding
     η := η
     η_pos := η_pos
     traceCharts := charts

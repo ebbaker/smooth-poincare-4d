@@ -1,6 +1,6 @@
 # Continuing the formalization program
 
-**Current milestone, 25 November 2026.** Use the [global Gauss geometry and selected collars handoff](AFTER_GLOBAL_GAUSS_AND_SELECTED_COLLARS_20261125.md) and its pasteable prompt. [Integrated assessment](../reviews/GLOBAL_GEOMETRY_AND_SELECTED_COLLARS_20261125.md) · [Program plan](../research-plan/03_PLAN.md) · [Sole program register](../research-progress/REGISTER.md)
+**Current milestone, 25 November 2026.** [Continue from the selected middle attachment and signed repair](AFTER_MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md). [Assessment](../reviews/MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md) · [Program plan](../research-plan/03_PLAN.md) · [Sole program register](../research-progress/REGISTER.md)
 
 Earlier Edition 03 [chart and immersion handoff](AFTER_OPEN_EQUALITY_AND_MARKED_SHELL_20261125.md) and [activation](AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md) remain available for their frozen inputs.
 

@@ -24,3 +24,5 @@ The [smoothing derivation and primary passages](../01_fixed_type_variational_des
 [Canonical gap source record](../../../references/SOURCE_NOTES_MASTER_RECOGNITION_GAP_20261125.md).
 
 [Charged-disk and marked-boundary sources](../../../references/SOURCE_NOTES_MASTER_SPECTRAL_WINDOWS_20261125.md) identifies the primary inputs to the spectral recognition, Ricci flux and eta calculations.
+
+[E63–E67 source record](../../../references/SOURCE_NOTES_MASTER_BALANCED_DISKS_20261125.md) gives the checked passages for marked bisection, relative transgression, critical polar comparison, spin boundary conditions and exact compactness.

@@ -4,14 +4,14 @@
 
 | Task | State | Next dependency or expected return |
 | --- | --- | --- |
-| SP4-MASTER-DESC-B01 | Selected collar and capacity assessed | [Actual disk and thin bicollar](../manuscript/spectral_windows.tex), [weighted allowance](../manuscript/collar_capacity.tex). Find an admissible repair on its measured widths. |
-| SP4-MASTER-DESC-E01 | Fixed marked-buffer estimates assessed | [Derivation](../notes/E59_CHARGED_DISKS.md) and [signed-patch audit](../reviews/E60_DISK_TESTS.md). A comparison with smaller loss than the protected charge is still required. |
-| SP4-MASTER-DESC-B02 | Full strict-band charge assessed | [Two independent scale and measure checks](../reviews/E61_SPECTRAL_WINDOWS.md). Both residuals vanish to tolerance if the spectral deficit tends to zero. A fixed positive charge of one sign always suffices to select a disk. |
+| SP4-MASTER-DESC-B01 | Connected repair and disk-side budget assessed | Measure the chosen cutoff on the original disk, or lower energy on a positive-charge part of an enlarged core by the required amount. [New boundary](../manuscript/balanced_exterior.tex) · [Connector](../manuscript/connected_repair.tex) |
+| SP4-MASTER-DESC-E01 | Marked connector flux checked | An actual thin shaft can be flattened at a fixed source. Bounded critical connector norms limit transfer of chiral imbalance. [Derivation](../notes/E63_CONNECTED_REPAIR.md) · [Independent check](../reviews/E64_REPAIR_AND_RICCI.md) |
+| SP4-MASTER-DESC-B02 | Both raw chiralities controlled on one connected enlargement | Keep the small comparison disk for its local gauge. Iterated global bisection controls both chiral masses, physical full curvature and the conformal spectral measure. [Proof and costs](../manuscript/balanced_exterior.tex) |
 | SP4-MASTER-DESC-E02 | Full-band scale extraction assessed | [Masked spectral scale and finite-radius transfer](../manuscript/spectral_windows.tex). |
-| SP4-MASTER-DESC-B03 | Spectral recognition and the closed Hessian assessed | [Curvature transport](../manuscript/isotropic_gap.tex) and [reduced Ricci variation](../manuscript/cotton_variation.tex). Test the signed contraction at an attained survivor. |
+| SP4-MASTER-DESC-B03 | Exact classes and modified Ricci concentration assessed | Exact classes in the fixed band have a positive spectral-deficit floor on nonstandard types. Every complete marked shrinking modified limit at vanishing deficit is Euclidean. [Exact spectral test](../manuscript/exact_spectral_gap.tex) · [Ricci concentration](../manuscript/ricci_concentration.tex) |
 | SP4-MASTER-DESC-E03 | Closed Ricci variation assessed | [Independent Hessian checks](../reviews/E60_CLOSED_HESSIAN.md). General stability remains open. |
-| SP4-MASTER-DESC-B04 | Restart restricted at the selected scale | A locally conformally flat comparison meeting the strong local theorem must lose the protected core outside every fixed compared compact. A different-scale evacuated restart still requires strict gain. |
-| SP4-MASTER-DESC-E04 | Reserved | B04 must select one restart geometry and one signed estimate or terminating quantity. |
+| SP4-MASTER-DESC-B04 | Filled-base and single-exit small-deficit test assessed | The nonround filled base is excluded at small deficit under the whole-base hypotheses. The evacuated exit can retain the spectral deficit if its cap also retains the Yamabe lower bound. [Independent transfer](../reviews/E67_SPECTRAL_TRANSFER.md) |
+| SP4-MASTER-DESC-E04 | Round restart compared in the spectral regime | Find an actual signed improvement or a terminating quantity on the energy-bearing exterior. [Exact and filled alternatives](../manuscript/exact_spectral_gap.tex) |
 | SP4-MASTER-DESC-B05 | Spectral infimum criterion assessed | [Master proof](../../manuscript/recognition_gap.tex). Positive class entry on arbitrary types remains open. |
 | SP4-MASTER-DESC-E05 | Endpoint chain assessed | [Spectral check](../../reviews/E54_SPECTRAL_ENDPOINT.md) and [measure check](../../reviews/E55_ENDPOINT_DISK_AUDIT.md). |
 

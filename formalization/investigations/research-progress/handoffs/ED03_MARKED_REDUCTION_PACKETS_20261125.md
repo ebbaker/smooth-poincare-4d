@@ -17,3 +17,19 @@
 | DESC-R04 | Independent reader 2. Check the finite disk sandwich, fixed-tolerance quantifiers, clipped radial charts, patchwise chirality choice, positivity and full complement against current scientific sources. Own Route 07 selected-disk review. |
 
 A candidate can return a checked intermediate theorem and an identified geometric input. Public acceptance requires the exact type, dependency axioms, both blueprint builds and a fresh source comparison. The source, review and verification generations are recorded in the closing assessment.
+
+## Follow-through at the same interfaces
+
+Each later proof used a separate module. The original two readers retained disjoint review files. The earlier packet names also denote the frozen source generations in their receipts.
+
+| Work | Freeze and independent check |
+| --- | --- |
+| HT-E04e/f and integration | Lead's ordered function and exact model transport. Worker 1 constructed the unique native attachment in the supplied band. The lead joined both regular complements to the actual selected point. Reader 1 checked these three sources against the native Morse hypotheses. |
+| HT-E04g/j | Worker 2 derived the Euler balance on a smooth homotopy sphere, then the actual dual indices and the rational degree-zero rank implication. Reader 1 replayed the complementary indices and inspected the supplied cokernel hypotheses. |
+| HT-E04h | Worker 4 checked both directions on the signed collar and identified the unit sphere in five Euclidean coordinates. Reader 1 checked the canonical target and the round identity. A proof-local unused tactic in E04d was removed and the final clean generation was independently replayed. |
+| DESC-E02i and SCALE-E02c | Worker 2 put the two physical E58 residuals on the already selected union. The lead proved full two-sided trim buffers and summed smallness of both raw charges. Reader 2 verified the finite-source and limiting quantifiers. |
+| DESC-E03b | Worker 3 coupled the signed gain with tests on the joined path and an explicit positive Yamabe floor on the actual output. Reader 2 checked both signs and the absence of any positivity transfer from a different metric. |
+| DESC-E04a | Worker 3 integrated the physical E62 gap identity, its energy sandwich and the varying-source limits. Reader 2 checked the Ricci normalization and an example with vanishing deficits and energy above the endpoint. |
+| DESC-E03c | Worker 3 optimized measured costs on the actual finite choice of annuli per core. Reader 2 checked minimizer feasibility, selected charts and widths, both signs, protected charge, and the strict finite comparison. |
+| DESC-E02j | After the concurrent scientific draft added its balanced exterior, worker 2 tested the actual marked finite and limiting comparisons. Reader 2 checked the scope of the division hypothesis and the admissibility used at the endpoint. |
+| FOT-E38 | The lead integrated the proofs, exact public examples, blueprint and registers. Worker 4 independently inventoried the complete topic sources, blueprint declarations and rendered destinations. The closing assessment contains the tested generations and outcomes. |

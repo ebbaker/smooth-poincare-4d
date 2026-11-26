@@ -1,0 +1,135 @@
+\subsection{Critical Ricci control with a polar Jacobian bound}
+\label{subsec:critical-radial-defect}
+
+On the pre-cut polar coordinates from the physical center \(x_i\),
+write \(t=d_{g_i}(x_i,\cdot)\), \(l=\log t\), and
+\(p_i(l,\vartheta)=t^{-3}J_i(t,\vartheta)\), where \(J_i\) is
+the polar volume Jacobian. Let \(\Theta_{i,l}\) be the unit
+directions whose cut time is strictly beyond \(e^l\), and
+extend \(p_i\) by zero after each cut. The following condition
+uses the same directions at two radii:
+\[
+ Q_i(s,l)=\int_{\Theta_{i,l}}
+         \frac{p_i(l,\vartheta)^2}{p_i(s,\vartheta)}
+         \,d\vartheta,\qquad s<l .
+\]
+
+\begin{proposition}[A critical radial comparison]
+\label{prop:critical-radial-defect}
+Use the physical sequence and complete marks of
+\eqref{eq:anchored-marks}. Suppose there are intervals
+\([A_i,B_i]\subset[\log a_i,\log b_i]\) of lengths
+\(T_i=B_i-A_i\to\infty\) and fixed \(C<\infty\) and
+\(0\le\gamma<1\) such that
+\begin{equation}\label{eq:critical-polar-jacobian}
+ Q_i(s,l)\le C e^{2\gamma(l-s)}
+ \qquad(A_i\le s<l\le B_i).
+\end{equation}
+There are scales \(a_i\ll\rho_i\ll b_i\) on which the
+physical full curvature integral and total variation of
+\(4dV_{h_i}-\Delta_{h_i}(d_{h_i}(x_i,\cdot)^2/2)\)
+vanish on every fixed compact strip of positive radii,
+with \(h_i=\rho_i^{-2}g_i\).
+If the proper flat comparison with compact first-order
+embeddings of Proposition~\ref{prop:radial-distance-test}
+is supplied at these scales, its round cut has the two
+complete marks on opposite sides and off the closed trim.
+In the minimizing band this yields the contradiction of
+that proposition.
+\end{proposition}
+
+\begin{proof}
+On a surviving ray set
+\(w=t\Delta_g t-3\) and
+\(f=t^2(\Ric_g(\partial_t,\partial_t))_-\).
+Riccati and the trace inequality for the three-dimensional
+shape operator give \((\log p)'=w\) and
+\(w'+w+w^2/3\le f\) in log radius. The critical volume
+identity on the pre-cut region is
+\[
+ f^2p\,dl\,d\vartheta=(\Ric_g(\partial_t,\partial_t))_-^2dV_g .
+\]
+Integrate \(w'+w\le f\) backwards from \(l\), then
+integrate the result over all start times in \([s,l]\). This gives
+\[
+ w(l)_+\le
+ \frac{\log^+(p(l)/p(s))}{e^{l-s}-1}
+ +\int_s^l\frac{e^{u-s}-1}{e^{l-s}-1}f(u)\,du .
+\]
+All radii in this inequality are before the given ray's cut.
+Put \(P(l)=\int p(l)\) and \(G(l)=\int w(l)_+p(l)\), with
+angular integration on surviving directions, and
+\(F(u)=\int f(u)^2p(u)\). Jensen on the final angular
+measure \(p(l)d\vartheta/P(l)\) and Cauchy--Schwarz with the
+earlier weight \(p(u)\) give
+\[
+ G(l)\le
+ \frac{P(l)\log(1+Q(s,l)/P(l))}{e^{l-s}-1}
+ +\int_s^l
+   \frac{e^{u-s}-1}{e^{l-s}-1}\sqrt{F(u)Q(u,l)}\,du .
+\]
+The first term is taken to be zero if \(P(l)=0\).
+By Fatou as \(s\uparrow l\), \eqref{eq:critical-polar-jacobian}
+also gives \(P(l)\le C\). For \(l-s\ge1\) the first term is
+bounded by \(C'(1+l-s)e^{-(l-s)}\), and the kernel multiplying
+\(\sqrt{F(u)}\) is bounded by \(C'e^{-(1-\gamma)(l-u)}\).
+
+Restore the index and take \(s=A_i\). On the middle half
+\(J_i\) of the log interval, integrate this estimate. Since
+\(\int_{A_i}^{B_i}F_i\) is bounded by a constant times the
+physical full curvature budget, Fubini and Cauchy--Schwarz
+give \(\int_{J_i}G_i=O(1+\sqrt{T_i})\).
+The normalized coarea function \(P_i\) has distributional
+derivative \(\int w p_i\,d\vartheta\,dl-d\kappa_i\), where
+\(\kappa_i\ge0\) records the downward jumps of the polar
+density at cut times. This follows by differentiating
+along each ray, with zero extension after cut, and then
+integrating in angle. Thus its positive variation is
+at most \(\int G_i\), and its total variation on \(J_i\)
+is at most \(C+2\int_{J_i}G_i\), since \(0\le P_i\le C\).
+
+Divide \(J_i\) into \(\lfloor T_i^{3/4}\rfloor\) equal
+open subintervals. On one, the sum of the full curvature
+integral, \(\int G_i\), and the variation of \(P_i\)
+is \(O(T_i^{-1/4})\). Let \(\rho_i\) be the exponential
+of its midpoint. Its width in log radius tends to
+infinity, and the middle-half buffers separate the
+scale from both quantiles. Bounded diameter gives
+\(\rho_i\to0\). Put \(l_i=\log\rho_i\).
+
+For each fixed \(0<a<b\), the physical rescaled volume
+profile \(V_i(t)\) on \([a,b]\), up to an additive
+constant, is \(\tfrac14 P_i(l_i)t^4+o(1)\), uniformly.
+Indeed \(V_i'(t)=t^3 P_i(l_i+\log t)\) almost everywhere
+and one can take a one-sided representative of \(P_i\).
+The singular part of the distance Laplacian is nonpositive
+\cite[Corollaries~2.11--2.12]{MantegazzaMascellaniUraltsev2014DistanceHessian}.
+Thus the negative mass of the full rescaled defect
+on \((a,b)\) is just
+\(\int_{\log a}^{\log b}e^{4u}G_i(l_i+u)\,du=o(1)\).
+The finite estimate of Lemma~\ref{lem:physical-flux}
+gives the total variation claim on each inner trim.
+The comparison tests for Proposition~\ref{prop:radial-distance-test}
+lie in such trims and have bounded supremum norms.
+Consequently their transport tests tend to zero, including
+when the comparison images omit physical volume. That
+proposition gives the marked cut and cap comparison.
+\end{proof}
+
+The centered and protected Ricci hypotheses of
+Proposition~\ref{prop:physical-ricci-flux} imply
+\eqref{eq:critical-polar-jacobian} with \(\gamma=0\):
+polar Riccati bounds the forward ratio on surviving rays,
+and in the protected case the measured transition bounds
+the shifted area ratio. The weighted condition can
+also hold in the presence of pointwise Ricci spikes.
+At the critical exponent the usual polar multiplier
+\(\psi^3 J\), for \(\psi=(\Delta_g t-3/t)_+\),
+has no coercive \(\psi^4J\) term. Its curvature term
+therefore lacks the estimate used in supercritical
+comparison \cite[Theorem~2.1]{DaiWeiZhang2018Local}.
+Condition~\eqref{eq:critical-polar-jacobian} instead
+controls the cost of transporting the critical integral
+from an earlier radius. It and the compact comparison
+embeddings remain additional to the physical ball lower
+bound and full curvature budget.

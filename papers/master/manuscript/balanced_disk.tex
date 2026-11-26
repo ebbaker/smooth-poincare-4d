@@ -1,0 +1,66 @@
+\begin{proposition}[A necessary disk-side saving]\label{prop:balanced-disk-saving}
+Let \(I=I^+(M)<2T\) on a nonstandard smooth homotopy four-sphere.
+On the minimizing subsequence in Theorem~\ref{thm:band-disk-residual},
+the original charged disk and its marked bicollar can be preserved in
+the interior of a larger parametrized standard disk \(B_i\).
+For any fixed \(k\ge1\) its exterior \(V_i\) satisfies, in both signs,
+\[
+ E_s(g_i;V_i)=2^{-k}\bigl(e_i-E_s(g_i;Q_i)\bigr)+o(1),
+\]
+where \(Q_i\) is the outer disk enclosing the original bicollar.
+The same division holds for the spectral measure \(L_i^2dV\)
+and for the original full curvature measure.
+If a joined path from \(g_i\) stays strictly below \(2T\) and ends at
+\(h_i\) with an exactly matched round product germ in the final
+boundary marking, up to a conformal factor, then
+\begin{equation}\label{eq:balanced-disk-saving}
+ E_s(g_i;B_i)-E_s(h_i;B_i)>(1-2^{-k})e_i+2^{-k}E_s(g_i;Q_i)+I-2T-o(1).
+\end{equation}
+One universal finite \(k\) makes the limiting lower bound larger than
+\(\varepsilon_*\) for every surviving type.
+\end{proposition}
+\begin{proof}
+At a fixed source enclose all but an arbitrarily small error of the
+four exterior measures in a single auxiliary standard disk. Use
+finitely many small disjoint coordinate balls and thin tubes along
+a tree of embedded arcs in the connected exterior. Removing tree
+leaves identifies its rounded neighborhood with a smooth ball.
+In its ball chart an affine hyperplane bisects all four restricted
+measures by the ham-sandwich theorem \cite{StoneTukey1942Sandwich}.
+Choose a smooth inner approximation of one convex half, then attach
+it by one thin tube to a slight enlargement of \(Q_i\). The arc and
+all smooth faces are null for the measures. Thus its parametrized
+boundary connected sum leaves half the former exterior to tolerance.
+Iterate at fixed \(k\), taking the errors to zero along the sources.
+The new boundary admits a bicollar of arbitrarily small raw measure.
+Its marking need not satisfy the first-order splice estimates.
+
+At the endpoint stretch into the actual disk side and cap the
+retained round end. The cap is conformally flat, and compactly
+supported tests on the stretched end inherit a positive Yamabe
+bound from the strict joined energy ceiling, as in
+Proposition~\ref{prop:exterior-replacement}. The disk parametrization
+identifies the capped exterior with \(M\). Hence
+\(E_s(h_i;V_i)\ge I\), while \(E_s(h_i;M)<2T\).
+Subtract and use the original mass of the whole disk side to obtain
+\eqref{eq:balanced-disk-saving}. In particular, at \(k=1\) and
+\(I=4T/3\), the protected core has a fixed positive charge in the
+sign selected by Theorem~\ref{thm:band-disk-residual}. Its contribution
+forces a strictly positive disk-side saving even at this equality.
+Choose
+\(2^{-k}(T+\varepsilon_*)\le\varepsilon_*\) and use
+\(I>T+\varepsilon_*\). A change confined to a final collar of
+vanishing raw curvature can save only \(o(1)\) there. For this
+\(k\) every such path to the matched seam reaches \(2T\) for all
+large indices.
+\end{proof}
+
+Already at \(k=1\) the retained raw exterior lies below \(T\) in
+both signs throughout the strict band. For an independently positive
+cap one may instead use \(p=2(dE_++dE_-)+3L^2dV\), where \(dE_\pm\)
+are the two chiral measures. Its raw exterior mass is
+\(\tfrac12(P([g_i])-p(Q_i))+o(1)\).
+Adding the entire signed exterior and filling cost and comparing
+inclusively with \(8T+\eta\) tests this particular positive class.
+The descent paper bounds this cost using the two chiral density
+errors on the actual cutoff widths \cite{Baker2026FixedDescent}.

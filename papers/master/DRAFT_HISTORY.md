@@ -43,3 +43,7 @@ The uniform recognition gap replaces the unattained endpoint. The two-sign selec
 ## 25 November 2026 · charged disks and conformal recognition
 
 Uniform recognition now uses a conformal Weyl integral. On every subcritical minimizing sequence the master locates one marked sphere with positive source charge on each side. Prepared for Edward B. Baker III with OpenAI Codex assistance. [Inputs, independent checks and outputs](research-progress/handoffs/E59_E62_SPECTRAL_WINDOWS_20261125.md)
+
+## 25 November 2026 · balanced disks and exact closed types
+
+The marked disk can be enlarged to divide both chiral masses, the spectral mass and physical full curvature. A path to a round seam on a sufficiently enlarged disk must lower energy on the disk side. Only finitely many nonstandard types in a fixed strict band can carry a positive Bach-flat class, and those classes have a positive least spectral deficit if present. [Assessment](research-progress/handoffs/E63_E67_BALANCED_DISKS_20261125.md)

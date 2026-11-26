@@ -1,6 +1,6 @@
 # Edition 03 · Formalizing the parallel master investigations
 
-**Current milestone, 25 November 2026.** [Global Gauss geometry and the selected disk widths](../reviews/GLOBAL_GEOMETRY_AND_SELECTED_COLLARS_20261125.md) · [Next proof packets](../continuation-notes/AFTER_GLOBAL_GAUSS_AND_SELECTED_COLLARS_20261125.md).
+**Current milestone, 25 November 2026.** The selected middle band, end maps, signed disk repair and physical estimates entering smoothing are recorded in the [assessment](../reviews/MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md). [Next proofs](../continuation-notes/AFTER_MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md)
 
 25 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving configuration unavailable. [Program overview](../research-overview/03_OVERVIEW.md) · [Input revisions and verification](../research-progress/03_BASELINE.md) · [Sole program register](../research-progress/REGISTER.md)
 

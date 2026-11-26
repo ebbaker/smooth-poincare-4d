@@ -17,3 +17,5 @@ $$
 $$
 
 `morseCriticalCount_reducedOddCases` takes the end-tree inequalities $n_0\le n_1+1$ and $n_4\le n_3+1$ as inputs. Under these inequalities both summands are nonnegative. When $n_2=0$ they are both zero, and when $n_2=1$ their ordered pair is either $(0,1)$ or $(1,0)$. Existence of the geometric end-tree reductions and transport of the actual boundary and attaching maps require separate arguments. `morseCriticalCount_congr` transfers the counts to an original function whenever an auxiliary function preserves the actual critical points and their indices.
+
+The frozen [Morse count module](../../../../SmoothPoincare/Heights/MorseHandleCounts.lean) has SHA-256 `e8b710f193d4d3b71157c7ce61b3f4d32ae1c7c7366c731d860b2540a6098fed`. `lake build SmoothPoincare.Heights.MorseHandleCounts` passed against the pinned native `ClosedEulerCharacteristic`, `SphereEuler`, `CriticalFinite` and `Strip.Defs` modules. Each of its five public declarations reports `propext`, `Classical.choice` and `Quot.sound` under `#print axioms`.

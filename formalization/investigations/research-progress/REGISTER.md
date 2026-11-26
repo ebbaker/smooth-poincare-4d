@@ -2,6 +2,14 @@
 
 This is the sole program register across editions. The shared task prefix is `SP4-FORM-FOT`. Each delegated task has one live proof owner. Natural-language results and the search for qualifying metrics and charts are recorded in the [master register](../../../papers/master/research-progress/REGISTER.md) and the [twistor register](../../../papers/investigations-1/03_first_order_twistor/research-progress/REGISTER.md).
 
+## Edition 03 marked attachments and signed repair · 25 November 2026
+
+**FOT-E38.** The inclusive immersion threshold now gives a smooth regular-band comparison or the native two-handle at the actual selected critical point, with both adjacent regular transports. The smooth recognition comparison reaches the usual unit four-sphere when the true end maps and their signed collar agreement are supplied. The end-handlebody identifications remain open.
+
+**Intrinsic descent.** At a fixed tolerance, suitable comparison windows yield marked closed disks and both physical residuals below $T$ for $I<5T/4$. The separate balanced-marked-disk proof reaches $I<2T$ given dyadic exterior division on the actual nested charts. The finite positive-cap test then forces a definite disk-side saving. A strict signed repair is excluded by comparing its attained positive output with the infimum on the same type. The E62 physical identity supplies the estimates before E57 smoothing. A smooth positive repair, uniform smoothing interval, qualifying physical exterior or recognized new smooth type remains open.
+
+[Assessment](../reviews/MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md) · [Continuation](../continuation-notes/AFTER_MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md) · [Frozen packets](handoffs/ED03_MARKED_REDUCTION_PACKETS_20261125.md) · [Public checks](handoffs/ED03_MARKED_REDUCTION_CHECKS.lean)
+
 ## Edition 03 global Gauss geometry and selected disk collars · 25 November 2026
 
 **FOT-E37.** The oriented immersion now supplies its own smooth Gauss normal, ordered pointwise frames, open middle locus, measured sheets, ordinary round area and conull Morse heights. The exact normalized mean counts middle points of the same immersion in both antipodal fibers. Continuity of the induced Weyl density makes the inclusive low-count theorem unconditional on this geometric witness. Under the topological floor, energy below $8\pi^2$ gives ordinary round probability above $3/4$ for exactly two middle points. The smooth zero/one-middle-handle recognition still needs a marked reduction with its actual boundary maps.

@@ -1,5 +1,9 @@
 # Research overview
 
+## Current marked and exact alternatives
+
+The [disk enlargement](../manuscript/balanced_exterior.tex) controls the full raw residual in four measures. Its new boundary lacks the original small-ball chart estimates. The [connector flux](../manuscript/connected_repair.tex) limits transfer of chiral excess. At vanishing deficit the [modified shrinking-limit proof](../manuscript/ricci_concentration.tex) excludes a complete marked bubble with positive Ricci charge. The [exact-class theorem](../manuscript/exact_spectral_gap.tex) separates this regime from positive exact closed classes on nonstandard types.
+
 25 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance. E35c requested GPT-6.2 Sol/ultra for setup. Independent serving telemetry is unavailable. This overview identifies inherited results and planned comparisons.
 
 ## Uniform recognition and charged disks

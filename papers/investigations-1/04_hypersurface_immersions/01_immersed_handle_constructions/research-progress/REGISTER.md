@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | SP4-IMM-HDL-B01 | Assessed for quadratic marked faces | Both solid tori and their rank-four immersion germs occur in the three-patch construction. |
 | SP4-IMM-HDL-E01 | Completed for this reference family | [Relative degree and construction](../notes/E53_RETAINED_EXTERIOR.md). |
-| SP4-IMM-HDL-B02 | Short marked seams and signature cost assessed | [Exact trace criterion and altered boundary metric](../manuscript/short_seam.tex), [APS sign check](../reviews/E60_HOMOGENEOUS_ETA.md). Find the retained half geometry and total costs in these markings or on another presentation. |
+| SP4-IMM-HDL-B02 | Eta-zero boundary and retained-half criterion assessed | Spin APS index zero on the Mazur face. Construct a positive scalar metric with unstable totally geodesic boundary in the marked class and control its half energy or spectral integral. [Proof](../manuscript/eta_zero_filling.tex) · [Independent index and threshold checks](../reviews/E64_ETA_ZERO_FILLING.md) |
 | SP4-IMM-HDL-E02 | Completed for the specified example | [Independent cost, degree and sign check](../reviews/E53_RELATIVE_CHECK.md). |
 | SP4-IMM-HDL-B03 | Reserved | Use the assessed first local model or scoped failure to select one extension. |
 

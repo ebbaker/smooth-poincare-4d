@@ -1,6 +1,6 @@
 # Fixed-type variational descent · Continuation
 
-**Current handoff, 25 November 2026.** [Selected disk widths and finite E58 residuals](../../continuation-notes/AFTER_GLOBAL_GAUSS_AND_SELECTED_COLLARS_20261125.md).
+**Current handoff, 25 November 2026.** [Assessment](../../reviews/MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md) · [Continuation](../../continuation-notes/AFTER_MARKED_REDUCTION_AND_SIGNED_REPAIRS_20261125.md).
 
 The [Edition 03 activation handoff](../../continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md) and launch instructions below record the original packet.
 

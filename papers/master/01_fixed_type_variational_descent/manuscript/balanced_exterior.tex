@@ -1,0 +1,177 @@
+\subsection{Retaining the marked core inside a larger disk}
+\label{sec:balanced-exterior}
+
+\begin{proposition}\label{prop:balanced-exterior}
+Let \(Q\) be a parametrized closed four-ball in a connected closed
+oriented four-manifold, and let \(m_1,\dots,m_4\) be finite measures
+absolutely continuous with respect to smooth volume. Given \(t>0\),
+a parametrized standard disk \(B\) containing \(Q\) in its interior
+satisfies
+\[
+ \left|m_j(M\setminus B)-\tfrac12m_j(M\setminus Q)\right|<t
+ \qquad (1\le j\le4).
+\]
+A smooth bicollar of its boundary disjoint from \(Q\) can have
+total incoming measure below \(t\) for the sum of the four measures.
+\end{proposition}
+
+\begin{proof}
+The interior of the exterior of \(Q\) is connected, since paths
+can be diverted along the connected boundary of a slightly larger
+collared ball. Small coordinate balls there form a Vitali cover.
+Select finitely many pairwise disjoint closed balls missing arbitrarily
+little exterior mass for the sum of the measures. One may shrink
+finitely many open balls slightly since the smooth faces are null.
+Join them by a finite tree of smoothly embedded arcs with distinct
+transverse endpoints. The complement of the ball interiors is
+connected by the same path argument, and general position makes the
+arc interiors disjoint. A thin regular neighborhood, rounded at the
+feet, is a smooth standard ball \(K\) inside the exterior. Attaching
+a tube between two distinct ball components is their boundary
+connected sum. Removing leaves of the tree gives a parametrization.
+Rounding can retain slightly smaller concentric balls.
+
+Pull the four measures on \(K\) to the closed Euclidean unit ball
+and extend them by zero. For \((n,c)\in S^4\subset\mathbb R^4\times
+\mathbb R\), integrate \(\operatorname{sign}(n\cdot x+c)\) against
+each measure. All affine hyperplanes are null and the signs are
+constant near the two poles, so this map to \(\mathbb R^4\) is
+continuous and odd. It has a zero by Borsuk--Ulam: a zero-free
+normalization would induce a map of real projective spaces from
+dimension four to three pulling back the degree-one mod-two generator
+to the generator, contrary to their fourth powers. For a nonzero
+restricted measure the zero is away from the poles. The resulting
+hyperplane bisects all four masses in the chart
+\cite{StoneTukey1942Sandwich}. If all masses vanish, any open
+half-ball serves. One convex cap with nonempty interior can be
+exhausted in measure by smooth closed standard balls inside it:
+shrink toward an interior point and approximate the positive radial
+function smoothly from below. Choose one such ball \(K'\).
+
+Enlarge \(Q\) slightly in a smooth exterior collar missing \(K'\),
+at arbitrarily small added mass. Join the enlargement to \(K'\) by
+one embedded arc and round the attaching feet away from \(Q\).
+At the fixed source, its tube and the roundings change all four
+masses by as little as prescribed, since the arc and faces are null.
+This boundary connected sum gives \(B\) and preserves the entire
+marking on \(Q\). Shrink a smooth collar of the new boundary using
+absolute continuity.
+\end{proof}
+
+Use the outer disk of Corollary~\ref{cor:thin-raw-collar} for \(Q_i\),
+with its original inner disk and bicollar. Take the two chiral
+measures \(\lambda_i^\pm\), the conformal spectral measure
+\(\sigma_i=L_i^2dV\), and the full physical measure
+\(\nu_i=|\Rm_{g_i}|_{\rm tens}^2dV_{g_i}\). Since \(\nu_i(Q_i)<\zeta\),
+its individual chiral masses are below \(\zeta/4\).
+Write \(V_i=M\setminus\operatorname{int} B_i\) and
+\(p_i=2(\lambda_i^++\lambda_i^-)+3\sigma_i\).
+On the closed source \(p_i(M)=\mathcal P_i\) by signature.
+For any prescribed \(t_i>0\),
+\[
+ \left|\lambda_i^s(V_i)-\frac{e_i-\lambda_i^s(Q_i)}2\right|<t_i,
+ \qquad
+ \left|p_i(V_i)-\frac{\mathcal P_i-p_i(Q_i)}2\right|<7t_i .
+\]
+With a small fixed \(\zeta\) and \(t_i\to0\), both complete sides
+carry a fixed positive amount of each chirality. For \(e_i\to I<2T\)
+the raw exterior falls below \(T\) in both signs. Also
+\(\mathcal P_i\le8e_i\), so \(p_i(V_i)<8T\) with a fixed margin.
+The larger disk can extend beyond the original comparison balls.
+Its new collar has its own marking, width and coordinate estimates.
+
+For a positive capped exterior \((\widehat V_i,\widehat g_i)\) use
+the disk parametrization to identify it smoothly with \(M\). Define
+\(c_i^s=E_s(\widehat g_i)-\lambda_i^s(V_i)\) and
+\(c_i^p=\mathcal P([\widehat g_i])-p_i(V_i)\), including every
+change on the retained region and the entire filling. Either of
+the following inclusive tests then gives smooth recognition:
+\[
+ c_i^s+\tfrac12(e_i-\lambda_i^s(Q_i))+t_i\le T+\varepsilon_*,
+ \qquad
+ c_i^p+\tfrac12(\mathcal P_i-p_i(Q_i))+7t_i\le8T+\eta .
+\]
+When positivity is obtained by the joined path and cylindrical
+compactification, its energy ceiling is strictly below \(2T\)
+and its comparison includes the matched ends. Separate verification
+of the capped ordinary Yamabe sign also suffices.
+
+\paragraph{Spectral cost on the retained marking.}
+Use the common density frames of the first-order splice and put
+\(L(F)=\max_s\lambda_{\max}(F_s)\). For a unit vector \(u\),
+\(\|uu^{\mathsf T}-\mathrm{Id}/3\|_{\rm HS}=\sqrt{2/3}\).
+Thus the variational formula for the largest eigenvalue gives
+\[
+ |L(F')-L(F)|\le\sqrt{2/3}\max_s\|F'_s-F_s\|_{\rm HS}.
+\]
+Suppose on the actual exterior band \(U\) that the repaired
+densities satisfy \(\|F'_s-\theta F_s\|_{2,U}\le b_s\) with
+the chosen cutoff \(0\le\theta\le1\). The vector
+\((\sqrt2 F_+,\sqrt2 F_-,\sqrt3 L(F))\) has squared norm equal
+to the density of \(p\). Positive homogeneity and the preceding
+inequality bound its \(L^2\) error relative to the cutoff vector by
+\(2\sqrt{b_+^2+b_-^2}\). Thus the signed increment on this band
+is at most
+\[
+ \left(\sqrt{\int_U\theta^2\,dp}
+             +2\sqrt{b_+^2+b_-^2}\right)^2-p(U).
+\]
+Sum over disjoint actual bands and add the costs of all other
+changed regions and the new cap. An exactly conformally flat added
+region has zero spectral cost. The first-order bounds at the
+selected widths and the capped scalar form require separate control.
+
+\begin{corollary}[Energy that must be removed before a large disk can be capped]
+\label{cor:dyadic-repair}
+For every fixed integer \(k\ge1\), the marked enlargement can be
+repeated \(k\) times with nested disks. The final exterior satisfies
+\(m(V_i)=2^{-k}m(M\setminus Q_i)+o(1)\) for all four original
+measures. Suppose a smooth joined path from \(g_i\) ends at \(h_i\)
+with a parametrized round product seam on this final boundary, up to
+a smooth conformal multiplier. If its whole chiral energy stays
+strictly below \(2T\), then for each chirality
+\[
+ E_s(g_i;B_i)-E_s(h_i;B_i)
+   >(1-2^{-k})e_i+2^{-k}\lambda_i^s(Q_i)+I-2T-o(1).
+\]
+For \(k=1\) the limiting lower bound is positive in both signs when
+\(I>4T/3\). At \(I=4T/3\) the sign selected on the original marked
+core still has a fixed positive lower bound from
+\(\lambda_i^s(Q_i)\).
+One universal finite \(k\) gives a bound above \(\varepsilon_*\)
+in the limit on every surviving nonstandard type.
+\end{corollary}
+\begin{proof}
+Use tolerance \(t_i\to0\) at each of the fixed number of steps.
+The new root is the preceding disk. Its old collar can also be
+protected by taking an outer parallel disk with \(o(1)\) additional
+raw mass. The errors satisfy the recursion \(d_j\le d_{j-1}/2+O(t_i)\).
+Only the initial root uses the comparison curvature ceiling.
+
+At the joined endpoint, stretching the actual round cylinder into
+the disk and compactifying the retained end gives a positive metric
+on the original smooth type as in Theorem~\ref{thm:simultaneous}.
+Indeed the path and stretching stay in the positive component,
+since stretching adds zero Weyl energy. The strict energy bound
+for this source gives a positive lower Yamabe bound independent of
+stretch length. Compactly supported tests on the infinite end
+inherit it. The conformally flat cap adds zero chiral mass.
+Consequently \(E_s(h_i;V_i)\ge I\), so \(E_s(h_i;B_i)<2T-I\).
+More generally, if a supplied positive same-type cap has energy at
+most \(E_s(h_i;V_i)+d_i\), and the actual division has absolute
+error at most \(\tau_i\), the finite lower bound on the saving is
+\((1-2^{-k})e_i+2^{-k}\lambda_i^s(Q_i)+I-2T-\tau_i-d_i\),
+with strict inequality from the endpoint ceiling. On the matched
+round cap \(d_i=0\). This gives the asserted estimate.
+Take \(2^{-k}(T+\varepsilon_*)\le\varepsilon_*\) and use
+\(I>T+\varepsilon_*\) from spectral recognition. Then
+\((2-2^{-k})I-2T>\varepsilon_*\).
+
+In particular a path supported up to conformal changes on a final
+collar of raw full curvature \(o(1)\) can lower the original disk
+energy by only \(o(1)\). Every such path to the stipulated round
+seam must reach the \(2T\) wall at some parameter for all large
+indices. The assertion concerns the enlarged disk with the specified
+charges. Other widths can remove positive disk-side mass, and the
+original small disk retains its independent repair question.
+\end{proof}

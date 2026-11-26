@@ -43,15 +43,19 @@ import SmoothPoincare.Heights.OrientedHeightSelection
 
 import SmoothPoincare.PhysicalScales.SelectedComparisonDisks
 import SmoothPoincare.PhysicalScales.FullDiskTrims
+import SmoothPoincare.Variational.BalancedMarkedExterior
 import SmoothPoincare.Variational.MarkedBandCharge
 import SmoothPoincare.Variational.SignedCollarRepair
 import SmoothPoincare.Variational.SignedCollarCapTests
+import SmoothPoincare.Variational.MeasuredCollarChoice
+import SmoothPoincare.Variational.IsotropicGapEntry
 import SmoothPoincare.Heights.MarkedHandleGluing
 import SmoothPoincare.Heights.StandardSurgeryModel
+import SmoothPoincare.Heights.SmoothMarkedSeam
 import SmoothPoincare.Heights.OrderedMorseHeight
 import SmoothPoincare.Heights.IsolatedMiddleAttachment
 import SmoothPoincare.Heights.SelectedHandleReduction
-import SmoothPoincare.Heights.MorseHandleCounts
+import SmoothPoincare.Heights.MorseEndBounds
 
 /-! # Fixed-type descent and immersed recognition
 

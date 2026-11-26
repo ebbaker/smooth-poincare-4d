@@ -19,3 +19,7 @@ The reflected double has a one-half free-trace test. A long conformally product 
 ## 25 November 2026 · charged disks and conformal recognition
 
 Both Dirichlet-to-Neumann operators appear in the marked short-seam test. The homogeneous Mazur cross-section has a signature cost at every length. Rescaling its fiber gives an explicit metric where that cost vanishes. Prepared for Edward B. Baker III with OpenAI Codex assistance. [Inputs, independent checks and outputs](../../../master/research-progress/handoffs/E59_E62_SPECTRAL_WINDOWS_20261125.md)
+
+## 25 November 2026 · balanced disks and exact closed types
+
+The spin Dirac operator on the eta-zero Mazur face is invertible with zero eta. The reflected strict-budget problem reduces to a positive scalar half with prescribed totally geodesic boundary class. Isometric regluings admit an inclusive spectral test at an unattained limiting budget. [Proof](manuscript/eta_zero_filling.tex) · [Independent check](reviews/E64_ETA_ZERO_FILLING.md)

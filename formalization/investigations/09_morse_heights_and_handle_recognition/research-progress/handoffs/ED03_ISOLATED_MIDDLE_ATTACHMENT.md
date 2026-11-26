@@ -43,16 +43,41 @@ smoothness and topological closed embedding of the full
 $S^1\times D^2$ parametrization in the actual lower regular level. Its
 inclusion into the lower sublevel is the attaching map in the trace.
 
+The separate native `isSmoothEmbedding_cocoreAttachingEmbedding`
+requires a strict bound within the chart radius and an analytic
+atlas at `ω`. Applying it with the original larger chart supplies the
+strict bound. The attaching tube's point formula uses the chart map
+alone, and the radius enters its proof of level membership. The checked
+smooth packet uses the native `ContMDiff` and `IsClosedEmbedding`
+results. A future proof of the immersion component in `∞` could compare
+the same tube with the zero slice of the native `exists_cocore_collar`.
+
 This is one isolated stage on the original source. Comparing the two
 new cuts with the original outer cuts requires the regular bands between
 them. Composing across the ends requires the outgoing boundary maps and
-compatible collars. The packet supplies no orientation sign, global end
-reduction, or smooth recognition theorem.
+compatible collars. The orientation sign, global end reduction, and
+smooth recognition remain separate proof steps.
 
 ## Inputs
 
 Issued source base `b5ce9f481a7604a411b9e1bde5383b2bc122fb5c`.
-Checkout during execution `bfdf0660e4f7d574cf507333af8e5e6781fa7915`
-with working sources. The manifest prefix was `839111aae86b6935`,
+Initial checkout `bfdf0660e4f7d574cf507333af8e5e6781fa7915` and final
+checkout `4bec4df82e8b949935dd5a43f12f52cd3d018acb` with working
+sources. The manifest prefix was `839111aae86b6935`,
 with Mathlib `c55e6e786f49471c72fbddbec5415808896aec1e` and
 DifferentialGeometry `788efe97894474c032de6dfb1289d515f613d15a`.
+
+The native source SHA-256 prefixes were `569910e67ffd155e` for
+`SmoothMorseChart.lean`, `f5d2a98f6042c05b` for
+`Attachment/SublevelTransport.lean`, and `ca1f344271ccdd41` for
+the audit of `HandleEmbedding.lean`.
+
+## Verification
+
+`lake build +SmoothPoincare.Heights.IsolatedMiddleAttachment` passed
+with Lean `4.35.0-rc3` and Lake `5.0.0-src+470d5ce`. A separate import
+checked the existence theorem, the strict bounds, the trace map, both
+smooth inclusions and both deep-lower equations. The axiom checks for
+the existence theorem and the two attaching-tube declarations reported
+only `propext`, `Classical.choice` and `Quot.sound`. The verified Lean
+module SHA-256 begins `d6953eba13193db8`.

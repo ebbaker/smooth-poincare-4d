@@ -1,0 +1,144 @@
+\subsection{A first-order restriction on a connected repair}
+\label{sec:connected-repair}
+
+A connector between two charged disks could permit their opposite
+chiral imbalances to cancel in one clamped comparison. Its role can
+be tested on the source by a connection flux. Here a clamped
+metric agrees with the original metric near and outside the
+boundary of the changed region.
+
+\begin{proposition}[Chiral transfer through a marked tube]
+\label{prop:chiral-tube-transfer}
+Let \(g,h\) be smooth metrics on the oriented homotopy four-sphere,
+and let \(h\) be clamped on a connected patch \(D\) made of two lobes
+\(P_1,P_2\) with a shaft \(V=(0,L)\times B_\rho^3\) between them, in
+actual smooth coordinates. The shaft's lateral wall lies in
+\(\partial D\) and the two transverse end faces meet the lobes.
+Write \(\lambda^\pm\) for the original chiral measures of \(g\),
+\(A=\nabla^h-\nabla^g\), and \(F_g,F_h\) for the two curvature
+forms on \(TM\). Component norms on \(V\) use the product coordinate
+frame and measure. Then the common closed chiral gain satisfies
+\begin{equation}\label{eq:chiral-tube-transfer}
+\begin{split}
+ E_\pm(g)-E_\pm(h)\le {}&
+ \sum_{j=1}^2\min_\pm\lambda^\pm(P_j)
+     +(\lambda^++\lambda^-)(V) \\
+ &+C(\rho/L)^{3/4}
+  \left[\|A\|_{4,V}(\|F_g\|_{2,V}+\|F_h\|_{2,V})
+                      +\|A\|_{4,V}^3\right].
+\end{split}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Use the matrix trace on the real tangent bundle. The signed chiral
+density is
+\(\Theta_g=-\tfrac12\operatorname{tr}(F_g\wedge F_g)\).
+In an oriented orthonormal frame its coefficient relative to
+\(dV_g\) is the trace of \(\mathcal R_g^{*}\circ *\circ\mathcal R_g\) on
+two-forms. The squared norms of the two off-diagonal blocks of
+\(\mathcal R_g\) agree and cancel. The scalar parts of the
+diagonal blocks cancel too, leaving
+\(|W_g^+|_{\rm HS}^2-|W_g^-|_{\rm HS}^2\).
+For the interpolation of connections \(\nabla_t=\nabla^g+tA\),
+the Bianchi identity gives
+\(\partial_t\operatorname{tr}(F_t\wedge F_t)
+ =2d\operatorname{tr}(A\wedge F_t)\).
+Integrating and using the quadratic curvature formula yields
+\[
+ \Theta_h-\Theta_g=dQ,\qquad
+ Q=-\tfrac12\operatorname{tr}\bigl(
+     A\wedge(F_h+F_g)-\tfrac13 A\wedge A\wedge A\bigr).
+\]
+The relative transgression is on the common bundle, even though
+the two metrics differ. See also the transgression calculation of
+Chern and Simons \cite[Proposition~3.2]{ChernSimons1974Characteristic}.
+
+For \(S_t=\{t\}\times B_\rho^3\), Stokes gives opposite increments
+of the signed chiral measure on the two sides, given with their
+boundary signs by \(\int_{S_t}Q\). The other boundary contributions
+vanish by clamping. Integrate the absolute slice flux in \(t\).
+H\"older applied to
+\(|A|(|F_h|+|F_g|)+|A|^3\) on \(V\)
+gives a factor \(|V|^{1/4}\). Dividing by \(L\) bounds the flux on
+some slice by the last line of \eqref{eq:chiral-tube-transfer}.
+If the two lobes' weaker signs match, estimate the common gain in
+that sign on both sides of this slice, dropping nonnegative new
+energies. If the weaker signs differ, change signs on one side
+using its signed increment, which costs at most the absolute
+slice flux. The original two shaft portions together cost at most
+\((\lambda^++\lambda^-)(V)\). This proves the estimate.
+\end{proof}
+
+At a fixed source, two disjoint marked disks can be joined by
+an embedded arc through their connected exterior. Choose standard
+attaching three-balls in collars of the disks, take a product
+normal tube, and round its feet relative to the marked cores.
+The resulting boundary connected sum is a standard smooth ball.
+The rounded extensions and the shaft's original curvature
+integrals can be made arbitrarily small at that index. In
+particular, if the disk of Corollary~\ref{cor:thin-raw-collar}
+has nonzero chiral imbalance, the exterior has the opposite
+imbalance. To find a second marked disk with almost as much
+opposite imbalance, take finitely many disjoint small balls in
+the open region of opposite density and enclose them using a
+tree of such tubes. The original signed mass lost or added on
+the tubes and roundings can be made arbitrarily small. The
+second marking has its own metric and derivative costs.
+
+The shaft can itself be flattened at small joined cost.
+On any fixed smooth source use physical normal coordinates
+along the arc with an orthonormal normal frame. The axis metric
+in these coordinates is the product Euclidean metric, so
+\(v=g-\Eucl\) satisfies \(\|v\|_\infty\le C_i\rho\) and
+\(\|Dv\|_\infty+\|D^2v\|_\infty\le C_i\) on the shaft.
+With a cutoff \(\chi\) equal to one on a smaller shaft and zero
+near all faces, take \(|D^j\chi|\le C\rho^{-j}\) for \(j=1,2\).
+On the path \(\Eucl+(1-s\chi)v\) the principal second-derivative
+terms in the all-lowered curvature cancel after subtracting
+\((1-s\chi)\Rm_{\rm low}(g)\). The remaining terms cost at
+most \(C_i s/\rho\) pointwise. The change in projection of the
+raw curvature has smaller order. The chiral density error on
+the shaft thus has norm at most \(C_i s\sqrt{L\rho}\).
+Using the raw chiral shaft energy \(O_i(L\rho^3)\) in the cross
+term, the whole joined path has energy at most \(e_i+C_iL\rho\).
+For small \(\rho\) this is below \(2T\), so
+Lemma~\ref{lem:wall} preserves positivity. The connection difference
+on this path is \(O_i(1)\) and its curvature form is \(O_i(1/\rho)\)
+pointwise in the chart. Its slice flux is therefore \(O_i(\rho^2)\).
+The constants here can depend on the source and arc. This gives a
+flat interior shaft with the tips and cores unchanged.
+In particular it does not produce a round collar on the
+boundary of the joined disk.
+
+A supplied connected chart permits a signed comparison using the
+same clamped cutoff on the whole patch. For a source metric
+\(p=\Eucl+v\) in that chart and a fixed small uniform bound on \(v\),
+let \(\chi\) be one on the protected cores and compactly supported
+in a region \(U\) of the chart. On \(U\) use the allowance
+\[
+ \begin{aligned}
+ B=C\big(&\|\chi |v|\,|\Rm_{p,\rm low}|\|_2
+       +\|\chi |Dv|^2\|_2+\||D\chi|\,|Dv|\|_2\\
+       &+\||D^2\chi|\,|v|\|_2+\||D\chi|^2 |v|^2\|_2\big).
+ \end{aligned}
+\]
+The principal curvature cancellation, with the derivatives of
+\(\chi\) retained, bounds the \(L^2\) chiral density error by \(sB\)
+along the path. Restore the common smooth conformal multiplier
+if the chart used one. With
+\(S^\pm=\lambda^\pm(U)\) and
+\(H^\pm=\int_U(1-\chi)^2\,d\lambda^\pm\), this gives a joined
+upper bound \(e+\max\{0,(\sqrt{H^\pm}+B)^2-S^\pm\}\) and an
+endpoint upper bound \(e-S^\pm+(\sqrt{H^\pm}+B)^2\).
+The joined bound follows by convexity of the Hilbert norm of the
+leading path plus \(sB\). If the endpoint bound is below \(I\)
+in either sign, the joined bound is \(e<2T\), and the path
+yields a strict positive same-type comparison.
+The cutoff terms include the shaft, both rounded tips and all
+changed strips in the same chart. The incoming curvature
+estimate of Corollary~\ref{cor:thin-raw-collar} gives neither
+these width-dependent terms nor the candidate connection norms
+in \eqref{eq:chiral-tube-transfer}. In particular a thin shaft
+with bounded critical norms and small raw energy cannot transmit
+a fixed gain from the opposite excesses of the two lobes.

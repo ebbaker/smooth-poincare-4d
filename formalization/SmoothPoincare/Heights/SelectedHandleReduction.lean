@@ -1,10 +1,11 @@
 import SmoothPoincare.Heights.OrderedMorseHeight
 import SmoothPoincare.Heights.IsolatedMiddleAttachment
+import SmoothPoincare.Heights.MorseHandleCounts
 
 /-! # The smooth zero- or one-attachment band of the selected immersed height -/
 
 open FirstOrderTwistor DifferentialGeometry DifferentialGeometry.Topology DifferentialGeometry.Topology.Morse Set
-open scoped ContDiff Manifold
+open scoped ContDiff ContinuousMap Manifold
 
 namespace SmoothPoincare
 
@@ -79,5 +80,17 @@ theorem exists_selectedHandleReduction_of_inducedEnergy_le
       have he := (hset x).1 ⟨hc, hpos.1.le.trans (hlt.le.trans hx.1), hx.2⟩
       subst x
       exact (not_lt_of_ge hx.1) hlt
+
+/-- The critical counts of the original Morse function obey the sphere Euler
+balance even when it has coincident critical values. -/
+theorem oddBalance_of_morse_on_homotopySphere
+    (e : M ≃ₕ GaussDirection) {f : M → ℝ} (hs : ContMDiff I 𝓘(ℝ, ℝ) ∞ f)
+    (hm : ∀ x, IsCriticalPointAt I f x → IsNondegenerateCriticalPointAt I f x) :
+    let n := morseCriticalCount I f
+    ((n 1 : ℤ) - n 0 + 1) + ((n 3 : ℤ) - n 4 + 1) = n 2 := by
+  obtain ⟨h, P⟩ := exists_orderedMorsePresentation hs hm
+  have hbal := morseCriticalCount_oddBalance e P.smooth P.morse P.distinct
+  dsimp only at hbal ⊢
+  simpa only [morseCriticalCount_congr P.critical P.index_eq] using hbal
 
 end SmoothPoincare

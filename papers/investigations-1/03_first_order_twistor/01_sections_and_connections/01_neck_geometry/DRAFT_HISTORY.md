@@ -43,3 +43,7 @@ Equality of two adjacent normalized source shell volumes on a proper flat radial
 ## 25 November 2026 · charged disks and conformal recognition
 
 The draft derives the full radial defect from a physical radial Ricci comparison, including a protected annulus with measured inner volume. Proper flat comparison embeddings remain necessary. Prepared for Edward B. Baker III with OpenAI Codex assistance. [Inputs, independent checks and outputs](../../../../master/research-progress/handoffs/E59_E62_SPECTRAL_WINDOWS_20261125.md)
+
+## 25 November 2026 · balanced disks and exact closed types
+
+A forward polar Jacobian bound controls the full distributional radial defect under critical integral curvature on a selected physical window. [Proof](manuscript/critical_radial_defect.tex) · [Independent check](reviews/E64_CRITICAL_RADIAL_DEFECT.md)

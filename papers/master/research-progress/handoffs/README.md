@@ -15,3 +15,5 @@ Issue future frozen requests and record their returns here with a task ID, input
 [Uniform recognition and physical charge above the endpoint](E56_E58_RECOGNITION_GAP_20261125.md) records the next assessed working generation.
 
 [Charged disks throughout the subcritical band and a spectral recognition gap](E59_E62_SPECTRAL_WINDOWS_20261125.md) records E59–E62, the boundary-metric calculation and the surviving smooth cases.
+
+[Balanced disks, eta-zero fillings and the exact spectral gap](E63_E67_BALANCED_DISKS_20261125.md) records E63–E67.
