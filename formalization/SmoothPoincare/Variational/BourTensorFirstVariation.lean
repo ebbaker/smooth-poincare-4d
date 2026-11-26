@@ -1,5 +1,7 @@
 import SmoothPoincare.Variational.BourSlabVariation
 import DifferentialGeometry.Analysis.Elliptic.ConnectionLaplacian.IntegrationByParts.WeightedDivergence
+import DifferentialGeometry.Geometry.Connection.LeviCivita.Variation.MetricDerivative
+import DifferentialGeometry.Geometry.Metric.Family.TimeDerivative
 import DifferentialGeometry.Geometry.Metric.TensorInner.FiberMetric.Tensor0SMetricCongr
 import DifferentialGeometry.Tensor.RSTensor.Coordinates.Field
 
@@ -34,12 +36,14 @@ def bourClosedTensorPairing (g : SmoothRiemannianMetric I M) {s : ℕ}
     (A K : Tensor0SField (I := I) (M := M) ∞ s) : ℝ :=
   ∫ x, inner0S g x s (A x) (K x) ∂riemannianVolumeMeasure I M g
 
+omit [NeZero (Module.finrank ℝ E)] [I.Boundaryless] [BoundarylessManifold I M] in
 private theorem bourClosedTensorPairing_symm (g : SmoothRiemannianMetric I M) {s : ℕ}
     (A K : Tensor0SField (I := I) (M := M) ∞ s) :
     bourClosedTensorPairing g A K = bourClosedTensorPairing g K A := by
   apply integral_congr_ae
   exact Filter.Eventually.of_forall fun x => inner0S_symm g x (A x) (K x)
 
+omit [NeZero (Module.finrank ℝ E)] [I.Boundaryless] [BoundarylessManifold I M] in
 private theorem bourClosedTensorPairing_smul (g : SmoothRiemannianMetric I M) {s : ℕ}
     (A K : Tensor0SField (I := I) (M := M) ∞ s) (c : ℝ) :
     bourClosedTensorPairing g (c • A) K = c * bourClosedTensorPairing g A K := by
@@ -47,6 +51,7 @@ private theorem bourClosedTensorPairing_smul (g : SmoothRiemannianMetric I M) {s
   simp only [ContMDiffSection.coe_smul, Pi.smul_apply,
     DifferentialGeometry.Tensor0SBundle.inner0S_smul_left, integral_const_mul]
 
+omit [I.Boundaryless] [BoundarylessManifold I M] in
 private theorem bourClosedTensorPairing_permute (g : SmoothRiemannianMetric I M) {s : ℕ}
     (e : Equiv.Perm (Fin s)) (A K : Tensor0SField (I := I) (M := M) ∞ s) :
     bourClosedTensorPairing g (Tensor0SField.domDomCongr ∞ e A) K =
@@ -65,6 +70,7 @@ private theorem bourClosedTensorPairing_permute (g : SmoothRiemannianMetric I M)
     Tensor0SField.domDomCongr_trans, Equiv.symm_trans_self, Tensor0SField.domDomCongr_refl] at h
   exact h
 
+omit [BoundarylessManifold I M] in
 /-- Move the divergence in the lowered connection flux onto its weight.
 The contracted slot of the flux is the first covariant slot. -/
 theorem bourRicciDivergence_adjoint (g : SmoothRiemannianMetric I M) {s : ℕ}
@@ -87,9 +93,7 @@ theorem bourRicciDivergence_adjoint (g : SmoothRiemannianMetric I M) {s : ℕ}
     map_zero, TensorRSSpace.zero_apply, hZero, integral_zero, sub_zero,
     show ∀ x : M, one x = 1 from fun _ => rfl, one_mul] using h
 
-/-- Both adjoints for the $
-abla^k
-abla_k$ term, before its Ricci coefficient. -/
+/-- Both adjoints for the ∇^k∇_k term, before its Ricci coefficient. -/
 theorem bourRicciRough_adjoint (g : SmoothRiemannianMetric I M) {s : ℕ}
     (A K : Tensor0SField (I := I) (M := M) ∞ s) :
     bourClosedTensorPairing g (roughLap0SField g K) A =
@@ -122,6 +126,51 @@ theorem bourWeightedRicciRough_adjoint (α : ℝ) (g : SmoothRiemannianMetric I 
     bourClosedTensorPairing g ((-(1 / 2) : ℝ) • roughLap0SField g K) (bourRicciWeight α g) =
       bourClosedTensorPairing g ((-(1 / 2) : ℝ) • roughLap0SField g (bourRicciWeight α g)) K := by
   rw [bourClosedTensorPairing_smul, bourClosedTensorPairing_smul, bourRicciRough_adjoint]
+
+private def bourKoszulFirstSlots : Equiv.Perm (Fin 3) :=
+  (Equiv.swap (0 : Fin 3) 1).trans (Equiv.swap (0 : Fin 3) 2)
+
+/-- Connection variation with the output lowered in the first slot.
+Its value on (z,v,w) is g(z, δ∇_v w). -/
+def bourKoszulFlux (g : SmoothRiemannianMetric I M)
+    (K : Tensor0SField (I := I) (M := M) ∞ 2) : Tensor0SField (I := I) (M := M) ∞ 3 :=
+  (1 / 2 : ℝ) • (Tensor0SField.domDomCongr ∞ bourKoszulFirstSlots (metricNabla0S g K) +
+    Tensor0SField.domDomCongr ∞ (Equiv.swap (0 : Fin 3) 2) (metricNabla0S g K) -
+    metricNabla0S g K)
+
+omit [NeZero (Module.finrank ℝ E)] [I.Boundaryless] [CompactSpace M] in
+/-- The Koszul flux evaluated at the native velocity of a regular metric path. -/
+theorem bourKoszulFlux_eq_original (g : ℝ → SmoothRiemannianMetric I M)
+    {D : RealTimeInterval} (hG : MetricFamilySmoothOn (I := I) D g)
+    {t : ℝ} (ht : t ∈ D.regular) (K : Tensor0SField (I := I) (M := M) ∞ 2)
+    (hK : ∀ x, K x = deriv (fun s => metricTensorField (g s) x) t)
+    (x : M) (v w z : TangentSpace I x) :
+    bourKoszulFlux (g t) K x (Fin.cons z (vec2 v w)) =
+      (g t).inner x (leviCivitaVariation g t x w v) z := by
+  have hderiv (x : M) (v w : TangentSpace I x) :
+      HasDerivAt (fun s => (g s).inner x v w) (K x (vec2 v w)) t := by
+    have hD := (tensor0SEvalCLM (I := I) (vec2 v w)).hasFDerivAt.comp_hasDerivAt t
+      (bourMetric_hasDerivAt_regular g hG ht x)
+    simpa only [← hK x, tensor0SEvalCLM_apply, metricTensorField_apply] using hD
+  have h := leviCivita_variation_koszul_of_metricFamilySmoothOn hG
+    (D.regular_isOpen.mem_nhds ht) K hderiv x v w z
+  have hFirst :
+      (fun i => (Fin.cons z (vec2 v w)) (bourKoszulFirstSlots i)) =
+        Fin.cons v (vec2 w z) := by
+    funext i
+    fin_cases i <;> rfl
+  have hSecond :
+      (fun i => (Fin.cons z (vec2 v w)) ((Equiv.swap (0 : Fin 3) 2) i)) =
+        Fin.cons w (vec2 v z) := by
+    funext i
+    fin_cases i <;> rfl
+  change bourKoszulFlux (g t) K x (Fin.cons z (vec2 v w)) = _
+  simp only [bourKoszulFlux, ContMDiffSection.coe_smul, ContMDiffSection.coe_add,
+    ContMDiffSection.coe_sub, Pi.smul_apply, Pi.add_apply, Pi.sub_apply,
+    Tensor0SSpace.smul_apply, Tensor0SSpace.add_apply, Tensor0SSpace.sub_apply,
+    Tensor0SField.domDomCongr_apply, Tensor0SSpace.domDomCongr_apply,
+    hFirst, hSecond, metricNabla0S_apply, metricCov, smul_eq_mul]
+  linarith
 
 end
 end SmoothPoincare.Bour

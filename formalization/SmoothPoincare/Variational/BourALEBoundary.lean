@@ -285,7 +285,9 @@ theorem bourExhaustedEulerIdentity {k : ℕ} (degree : Fin k → ℕ)
     ePlus + eMinus - d / 2 + ∑ b, 8 * Real.pi ^ 2 / degree b = 8 * Real.pi ^ 2 * χ := by
   have hSum := tendsto_finsetSum Finset.univ (fun b _ => hBoundary b)
   have hLimit := ((hPlus.add hMinus).sub (hRicci.div_const 2)).add hSum
-  exact tendsto_nhds_unique hLimit (tendsto_const_nhds.congr' hEuler.symm)
+  have hConstant := tendsto_const_nhds (x := 8 * Real.pi ^ 2 * χ)
+    (f := (atTop : Filter ℝ))
+  exact tendsto_nhds_unique hLimit (hConstant.congr' (hEuler.mono fun _ h => h.symm))
 
 /-- Specialize the exhaustion to spherical links and to the Euler
 characteristic supplied by the compact marked core. -/
