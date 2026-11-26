@@ -11,3 +11,5 @@
 | SP4-CDS-DEF-E03 | Model and conditional family assessed; physical witness pending | On an actual selected sequence test quantitative footprint, scale, distortion and width-dependent jets or identify the gauge degeneration. The disk theorem supplies no such bounds. [Finite-source review](../../reviews/DISK_AND_COMPACTNESS_READER.md) |
 
 The leading positive cost is for the fixed profile; the charged disk would require a strict positive comparison on its own smooth type. An alternative on a marked intermediate handle level is the [intrinsic slice and band test](../../02_handle_isolation_and_marked_surgery/notes/POSITIVE_SCALAR_INTERMEDIATE_CUTS.md).
+
+The [initial working manuscript](../manuscript/deformation_of_marked_spherical_collars.tex) develops these assessed results and ends with the open selection problems. [Reading copy and sources](../manuscript/README.md)

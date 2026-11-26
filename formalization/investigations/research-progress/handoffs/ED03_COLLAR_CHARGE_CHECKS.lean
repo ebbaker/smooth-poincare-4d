@@ -7,7 +7,7 @@ The serving model and reasoning effort are unavailable.
 The working intake was the assessed FOT-E42 delivery over
 `95a4f50eb9ec6e0e98454170279f45a66b000211`.
 
-These 70 newly public authored declarations were indexed from the compiled
+These 73 newly public authored declarations were indexed from the compiled
 Lean source positions. Each declaration is checked through the sole topic
 import together with its transitive axioms.
 -/
@@ -43,6 +43,14 @@ import together with its transitive axioms.
 #print axioms SmoothPoincare.ClosedMarkedControl.slidClosedAssembly
 #check @SmoothPoincare.ClosedMarkedControl.slidClosedAssembly_representatives
 #print axioms SmoothPoincare.ClosedMarkedControl.slidClosedAssembly_representatives
+
+/-! ## SmoothPoincare.Heights.ClosedSplitBoundary -/
+#check @SmoothPoincare.ClosedMarkedControl.splitClosingRim
+#print axioms SmoothPoincare.ClosedMarkedControl.splitClosingRim
+#check @SmoothPoincare.ClosedMarkedControl.SplitOutgoing
+#print axioms SmoothPoincare.ClosedMarkedControl.SplitOutgoing
+#check @SmoothPoincare.ClosedMarkedControl.exists_splitClosingHomeomorph
+#print axioms SmoothPoincare.ClosedMarkedControl.exists_splitClosingHomeomorph
 
 /-! ## SmoothPoincare.Heights.MarkedBallCoverage -/
 #check @SmoothPoincare.exists_markedPatchDiffeomorph_of_compactCover

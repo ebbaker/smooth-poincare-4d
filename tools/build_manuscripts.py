@@ -41,6 +41,15 @@ MANUSCRIPTS = {
     '04_hypersurface_immersions/02_two_handle_recognition': (
         'investigations-1', 'recognition_from_marked_morse_heights.tex'
     ),
+    '05_collar_deformation_and_surgery': (
+        'investigations-1', 'marked_collars_and_smooth_recognition.tex'
+    ),
+    '05_collar_deformation_and_surgery/01_collar_deformation_and_adapted_coordinates': (
+        'investigations-1', 'deformation_of_marked_spherical_collars.tex'
+    ),
+    '05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery': (
+        'investigations-1', 'recognition_from_marked_handle_cuts.tex'
+    ),
     '01_generalized_isothermal_coordinates': ('initial-investigations', 'generalized_isothermal_wave_metrics.tex'),
     '02_chiral_descent_and_double_copy': ('initial-investigations', 'chiral_connection_descent_and_double_copy.tex'),
 }

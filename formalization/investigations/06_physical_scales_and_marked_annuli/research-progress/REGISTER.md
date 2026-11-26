@@ -4,9 +4,22 @@
 
 This is the sole live status register for `SP4-FORM-SCALE`, `VAR-B03`, `VAR-E05`, `VAR-E07` and `VAR-E08`. The [proof plan](../research-plan/PLAN.md) specifies each target and acceptance test. The paper's [research register](../../../../papers/investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/research-progress/REGISTER.md) owns mathematical extraction or construction on the source.
 
+## Edition 04 setup · 26 November 2026
+
+These assignments await activation. [Route plan](../research-plan/PLAN.md#edition-04--the-physical-comparison-window-and-an-actual-marked-band) · [Program plan](../../research-plan/04_PLAN.md) · [Baseline](../../research-progress/04_BASELINE.md)
+
+| Task | State at setup | First evidence required |
+| --- | --- | --- |
+| SP4-FORM-SCALE-B04 | Ready on activation | Freeze one original physical quantile scale with a full buffer, pointwise and integrated curvature control, and the full polar defect on that same scale. |
+| SP4-FORM-SCALE-E07 | Dependent on B04 | Prove the proper oriented comparison with full coverage on each strictly smaller strip and place both complete charged sets outside the trim. |
+| SP4-FORM-SCALE-E08 | Dependent on an actual marked prefix and a physical band | Supply intrinsic width, scalar lower bound and any outward mean bounds for [Route 10](../../10_positive_scalar_intermediate_cuts/research-progress/REGISTER.md) on the same marked source metric. |
+| SP4-FORM-SCALE-E06, carried | Fixed-time transfer checked in E43 | Supply the actual first-radius and smoothing inputs and the common positive-time solution and markings for the modified alternative. |
+
+## Edition 03 evidence
+
 | Task | Current state | Next evidence |
 | --- | --- | --- |
-| SP4-FORM-SCALE-E06 | On the canonical pointed maps at a fixed positive time, two metric jets and the volume comparison give convergence of the actual trace-free Ricci integral on compact images. The buffer covers the complete smaller charged source ball. | Construct the comparison maps from the modified sequence, or obtain a proper two-sided comparison on the original physical quantile annulus. [Assessment](../../reviews/COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md) |
+| SP4-FORM-SCALE-E06 | On the canonical pointed maps at a fixed positive time, two metric jets and the volume comparison give convergence of the actual trace-free Ricci integral on compact images. The buffer covers the complete smaller charged source ball. Divergent initial volumes and the fixed-time curvature budget force this terminal limit noncompact. | Construct the comparison maps from the modified sequence, or obtain a proper two-sided comparison on the original physical quantile annulus. [Assessment](../../reviews/COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md) |
 | SP4-FORM-SCALE-E05 | The original marked buffer and all four complete residuals enter the curved comparison. A perturbation supported inside the protected core leaves both complete exteriors fixed, including their boundaries. | Compare actual full curvature on the chosen sets of the physical metric and its replacement. Supply a proper marked flat window at separated quantiles when pursuing the physical alternative. [Assessment](../../reviews/MARKED_GLUE_AND_CURVED_COST_20261125.md) |
 | SP4-FORM-SCALE-E03c | The same protected width supplies the four small raw measures and a realized reference to the fixed-type owner | The positive replacement has a separate trim price in each chirality. No separated physical comparison chart has been constructed. [Assessment](../../reviews/ROUNDED_EDGES_AND_REFERENCE_COST_20261125.md) |
 | SP4-FORM-SCALE-E04 | The selected buffered physical metric lifts with its actual Gram coefficients on a neighborhood of the complete trim. The pulled measure is the incoming physical volume. | Route 07 owns the differentiated estimates. Supply the reference metric and an affordable mismatch on the same widths. [Assessment](../../reviews/NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md) |

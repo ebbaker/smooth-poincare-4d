@@ -4,6 +4,17 @@
 
 Edition 03 keeps VAR-B01/B02 and VAR-E01–E04 here. The other original packets have been transferred with their IDs to the [physical-scale plan](../../06_physical_scales_and_marked_annuli/research-plan/PLAN.md) and the [fixed-type descent plan](../../07_fixed_type_variational_descent/research-plan/PLAN.md).
 
+## Edition 04 objectives
+
+26 November 2026, America/New_York. [Edition 04 overview](../../research-overview/04_OVERVIEW.md) · [Edition 04 plan](../../research-plan/04_PLAN.md) · [Route 03 cap construction](../../03_single_cut_descent/research-plan/PLAN.md#edition-04-objectives)
+
+| Task | Source and proposed output | Acceptance |
+| --- | --- | --- |
+| SP4-FORM-VAR-E04e | Fixed-source conformally round, umbilic face in a proposed `SmoothPoincare/Variational/ExactFaceDeformation.lean`. Sources `thm:exact` and the parent manuscript's cut-cost section. Proposed blueprint `ed04:exact-face`. | Start with an actual oriented embedded, cooriented three-sphere, its signed collar and inverse, and conformally round angular marking. Prescribe the conformal factor and $\nu u=-H/3$ in the stated normal convention. In the normalized Gaussian chart use independent physical widths $w_L,w_R$ and common central cutoff germs. Construct the positive-definite metric path on the joined source with exact incoming outer germs and a round product endpoint. Bound the absolute complete-side signed changes by $C_{g,j}w_j$ uniformly in the path parameter. On a positive subcritical source this gives a strict joined ceiling at sufficiently small positive widths, chosen at that source. |
+| SP4-FORM-VAR-E04f | Approximate physical Gaussian comparison in a proposed `SmoothPoincare/Variational/TwoWidthCollarCost.lean`. Source `thm:approx`. Proposed blueprint `ed04:exact-face`. | With supplied ellipticity and actual available widths, use the face mismatch $\alpha$, first normal mismatch $\beta$ and side second-jet bounds $M_j$. Bound each chiral curvature norm by the stated $C\sqrt{\operatorname{vol}_\gamma(S^3)}(Z_j+w_j^{3/2}Z_j^2)$, where $Z_j=\alpha/w_j^{3/2}+\beta/\sqrt{w_j}+\sqrt{w_j}M_j$. Keep both complete sides and the joined peak. The constants need no control of the width ratio. A sequence application needs its own marked charts, clearance, ellipticity and smallness estimates. |
+
+The first acceptance test uses the fixed-source cost bound. The sharp signed coefficient and its conditional peak at the endpoint require the separate second-jet expansion. Existing radial splice estimates supply cutoff and density tools on their own charts. [Deformation manuscript](../../../../papers/investigations-1/05_collar_deformation_and_surgery/01_collar_deformation_and_adapted_coordinates/manuscript/deformation_of_marked_spherical_collars.tex) · [Parent manuscript](../../../../papers/investigations-1/05_collar_deformation_and_surgery/manuscript/marked_collars_and_smooth_recognition.tex) · [Master splice](../../../../papers/master/manuscript/first_order_splice.tex)
+
 ## First bounded proof
 
 **SP4-FORM-VAR-E01.** Use `SmoothPoincare/Variational/Replacement.lean` with public target `SmoothPoincare.repairedMass_le_excess_sum`. The following is its proposition, expressed for any admissible set so the finite proof can also be used on the geometric set. `e ∈ A` witnesses entry. `c j ∈ A` refers to the individual repaired metric on the same smooth type. [Manuscript `prop:replacement`](../../../../papers/master/manuscript/chiral_weyl_energy_and_smooth_poincare.tex) · Blueprint `prop:master-replacement`.

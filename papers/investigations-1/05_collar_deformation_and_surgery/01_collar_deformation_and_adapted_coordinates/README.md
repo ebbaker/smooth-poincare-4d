@@ -1,5 +1,7 @@
 # Collar deformation and adapted coordinates
 
+[Working manuscript and reading copy](manuscript/README.md)
+
 Given an embedded, marked $S^3$ in an oriented Riemannian four-manifold, how much chiral Weyl energy does it cost to replace the middle of its collar by a round cylinder? The first calculation matches an exactly conformally round, umbilic sphere. The next one prices deviations in the induced metric and its first normal derivative at the available widths.
 
 The [overview](research-overview/OVERVIEW.md) defines the deformation and the proposed cut-selection functional. The [plan](research-plan/PLAN.md) distinguishes moving the section inside a fixed metric, changing coordinates, and genuinely deforming the metric. [Register](research-progress/REGISTER.md) · [Current handoff](../continuation-notes/AFTER_TWO_MIXED_CUTS_20261126.md) · [Sources](references/README.md)

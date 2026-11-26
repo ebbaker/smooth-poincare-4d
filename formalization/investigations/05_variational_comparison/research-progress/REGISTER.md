@@ -2,6 +2,15 @@
 
 25 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving configuration unavailable. Sole live owner of VAR-B01/B02 and VAR-E01–E04. [Program register](../../research-progress/REGISTER.md) · [Edition 03 transfers](../../research-progress/03_BASELINE.md) · [Proof plan](../research-plan/PLAN.md)
 
+## Edition 04 objectives
+
+26 November 2026, America/New_York. [Edition 04 plan](../../research-plan/04_PLAN.md) · [Route acceptance tests](../research-plan/PLAN.md#edition-04-objectives)
+
+| Task | Current state | Next proof or premise |
+| --- | --- | --- |
+| SP4-FORM-VAR-E04e | Planned, awaiting activation | Construct one fixed-source exact-face path in its actual signed chart, with independently allowed widths, outer metric germs and the uniform-in-path complete-side cost. |
+| SP4-FORM-VAR-E04f | Planned, awaiting activation | Bound the two prescribed physical widths by the measured Gaussian jets under ellipticity. Apply the bound to an actual sequence only with independently supplied chart and smallness data. |
+
 | ID | Current state | Evidence or next prerequisite |
 | --- | --- | --- |
 | SP4-FORM-VAR-E04d | Moving oriented orthonormal frame verified | Apply the tensor-slot identification on the actual chart and ellipticity window of the physical splice. [Frame and projection](handoffs/ED03_MOVING_CHIRAL_FRAME.md) |

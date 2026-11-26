@@ -66,3 +66,30 @@ An intervening commit advanced the checkout to `c8fb08dcf2e39ae68d4c9d9ebd6a6989
 The collar-deformation and surgery investigation activated work on a supplied geometric control and on the original charged disk. Its budget derivation gives a finite positive capped-exterior comparison in both chiralities. At a fixed subcritical source with a compatible conformally round, umbilic face, shrinking the two native widths forces equality of the two initial disk charges and bounds each by the finite minimizing excess. The derivation starts from the selected disk and the assumed face, and the proposed positive-face review still asks for geometric inputs on the actual intermediate cut. These notes supply conditional comparisons and no additional marked source embedding for FOT-E43. [Activated tasks](../../../../papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/ACTIVATION_20261126.md) · [Charged disk calculation](../../../../papers/investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/notes/CHARGED_DISK_BUDGET.md) · [Positive-face review request](../../../../papers/investigations-1/05_collar_deformation_and_surgery/research-progress/handoffs/POSITIVE_FACE_REVIEW_20261126.md)
 
 The master overview and plan acquired paragraphs linking that investigation and specifying its relationship to the handle-reduction and physical-disk tests. These two files account for the change in the scientific planning group. The shared bibliography gained five entries for the sister investigation. The original bibliography entries, transitive TeX, and existing reading PDFs matched the corresponding intake bytes or entries. [Master overview](../../../../papers/master/research-overview/OVERVIEW.md) · [Master plan](../../../../papers/master/research-plan/PLAN.md) · [Collar and surgery sources](../../../../papers/investigations-1/05_collar_deformation_and_surgery/references/README.md)
+
+## Final public verification
+
+The second intervening commit `ece209cc09aa31629a8b496ae9d01957e71c70ac` contains the verified Lean topic and blueprint TeX generations. Reading the Git tree and working files separately gave the same digests for those groups and the public import. The program and three owning route registers received later working-tree edits. Both inventories reproduced the six source and PDF pairs, the master scientific delivery and source receipts, all ten actual package revisions, and all nineteen nested revisions. All seventeen source pins in the accompanying collar and surgery intake reproduced their recorded bytes.
+
+| Final group | Files | Working SHA-256 | Git-tree SHA-256 when different |
+| --- | ---: | --- | --- |
+| Lean topic sources | 177 | `cf1131d16f1c9289017c7c7aff7ce7ea5cdfae4dc7e3c71a67efb473c267a14c` | Same |
+| Blueprint TeX sources | 16 | `127e2ec9ce2796279111748ba4748ab4acc6cfbefed43a31ae56528a40bb72f4` | Same |
+| Formalization plans and owning registers | 36 | `213978b938e9e5d7e007b6ae3abf374b6d99dc37e83738ea36fbbc472aa67d57` | `806842e6465b32f50d04448c7c73aeceabee6fe20254879680f87a069ebd5f6a` |
+| Public topic import | 1 | `70ce2f5b27398d80f3ee4160c00f2aae46b83aed9668d5a8679ead01da6a9a61` | Same |
+| Scientific plans and registers | 18 | `33ccac6e64e4ebae6b5882ede09fecf8fc9e38e03c0f664af127aab273b456fd` | Same |
+| Shared bibliography | 1 | `fcbbd1adabf6148da69d3fd639232c73fc316641e479111c57333bc351c9255f` | Same |
+
+The default Lake build and the independent replay passed with 10,796 jobs. All 1,066 authored topic declarations in 175 contributing modules checked through `import SmoothPoincare`, and all 561 distinct blueprint names checked through their three owning imports. The axiom union is `propext`, `Classical.choice` and `Quot.sound`. The new fixture contains 73 type checks and 73 axiom queries across 18 modules. [Public checks](ED03_COLLAR_CHARGE_CHECKS.lean)
+
+The complete printed types and axiom reports for the 993 earlier topic declarations and 527 earlier blueprint declarations matched their intake records byte for byte. A second check used Lean's kernel expression hashes, ordered universe parameters and transitive axiom sets. All 1,164 distinct earlier constants matched among the 1,237 checked at the final generation.
+
+| Final fixtures | Files | Type checks | Axiom reports | Applications |
+| --- | ---: | ---: | ---: | ---: |
+| Edition 03 public checks | 9 | 579 | 577 | 31 |
+| Independent readers through the topic import | 10 | 297 | 370 | 98 |
+| Earlier Route 02–04 fixtures through their own imports | 9 | 666 | 669 | 39 |
+
+The current FOT-E43 independent reader passed 21 type checks, 31 axiom reports and 10 applications. All fixture processes passed. The two inherited unused-tactic warnings came from the balanced physical fixture. Repository hygiene and `git diff --check` passed. [Independent FOT-E43 applications](../../reviews/ED03_COLLAR_CHARGE_READBACK.lean)
+
+The 43-page PDF and the HTML resolved 161 label destinations, including all eight in the new chapter. Both the text and the dependency graph linked all 562 declaration occurrences on their correct labels and exact compiled source lines. The audit verified 541 internal HTML label links and matched 48,018 full source-line anchors across 260 Lean pages. The PDF SHA-256 is `0a5b570497facea7a9bb159ba9b6b10c9ee1f19000620af752fd7bdcdc6fbfa1`. [Blueprint chapter](../../../blueprint/src/collar_comparison_and_terminal_charge.tex)

@@ -6,6 +6,17 @@
 
 The [dated proof return](../research-progress/handoffs/INTEGRATION_20261125.md) and [next proof packet](../continuation-notes/AFTER_MARKED_DESCENT_20261125.md) update this launch plan.
 
+## Edition 04 objectives
+
+26 November 2026, America/New_York. The setup takes the actual marked path from Route 05 and continues the short-cut packet. [Edition 04 overview](../../research-overview/04_OVERVIEW.md) · [Edition 04 plan](../../research-plan/04_PLAN.md) · [Route 05 exact face](../../05_variational_comparison/research-plan/PLAN.md#edition-04-objectives)
+
+| Task | Source and proposed output | Acceptance |
+| --- | --- | --- |
+| SP4-FORM-CUT-E04a | For one fixed source, construct the stretch, smooth compactifications and actual `HasJoinedCapTests` in a proposed `SmoothPoincare/Variational/MarkedRoundCapTests.lean`. Sources `prop:cap`, `lem:cap` and `prop:short-cut`. Proposed blueprint `ed04:caps`. | Start positive with an actual endpoint round product germ and common strict joined ceiling $H<2T$. Keep both marked sides and their inverse charts. Adding finite product length preserves both signed energies. For each smooth log-conformal test on each cap, construct a sequence at sufficient stretch lengths, with convergence of the scalar numerator and volume. Verify the capacity cutoff and zero chiral energy of the round fill. Feed the existing Yamabe floor and marked-side interfaces. |
+| SP4-FORM-CUT-E04b | Complete the marked reassembly for the same cut in a proposed `SmoothPoincare/Variational/MarkedRoundCapReassembly.lean`. Source `prop:cap` and the surgery paper's spherical-cut section. Proposed blueprint `ed04:caps`. | Fix the capped smooth types and the original angular identification before varying widths. Supply both open signed collar comparisons, inverse maps, complete core images and orientation compatibility. For a parametrized disk identify the capped exterior on the original type. For a general separating sphere verify the homotopy-sphere cap and recognition inputs to the inclusive two-cap comparison. A strict joined ceiling gives positivity along the stretched path. The inclusive sum bound applies to the two actual positive capped metrics. |
+
+[Parent manuscript](../../../../papers/investigations-1/05_collar_deformation_and_surgery/manuscript/marked_collars_and_smooth_recognition.tex) · [Deformation manuscript](../../../../papers/investigations-1/05_collar_deformation_and_surgery/01_collar_deformation_and_adapted_coordinates/manuscript/deformation_of_marked_spherical_collars.tex) · [Surgery manuscript](../../../../papers/investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/manuscript/recognition_from_marked_handle_cuts.tex) · [Master short cut](../../../../papers/master/manuscript/variational_comparison.tex)
+
 ## The short marked cut
 
 Version 02 extends this route from a supplied ALE core to a marked sphere whose two full sides can both be tested. The public import for the proposed files is `SmoothPoincare`. The proposed declaration names below identify intended outputs. Their status is in the [route register](../research-progress/REGISTER.md). [Program plan](../../research-plan/02_PLAN.md) · [Master blueprint](../../../blueprint/src/master_variational.tex)

@@ -187,7 +187,8 @@ end Collar
 
 section Controls
 
-open DifferentialGeometry.Topology.Handle SmoothPoincare.ClosedMarkedControl
+open DifferentialGeometry.Topology.Handle DifferentialGeometry.Topology.Manifold
+  SmoothPoincare.ClosedMarkedControl SmoothPoincare.StandardSurgeryModel
 
 local notation "ControlCircle" => ClosedMarkedControl.Circle
 local notation "ControlDisk" => ClosedMarkedControl.Disk
@@ -200,6 +201,8 @@ local notation "ControlDisk" => ClosedMarkedControl.Disk
 #print axioms slid_dualTube_and_inverse
 #check @slidClosedAssembly_representatives
 #print axioms slidClosedAssembly_representatives
+#check @exists_splitClosingHomeomorph
+#print axioms exists_splitClosingHomeomorph
 
 /-- The split spectator's entire marked torus has the paired exterior
 coordinates, including their precise inverse at the fixed control radius. -/
@@ -220,6 +223,12 @@ theorem split_spectator_recovers_the_two_torus_parameters (q₀ z w : ControlCir
   exact ⟨hY, by rw [← hEq, E.symm_apply_apply]⟩
 
 #print axioms split_spectator_recovers_the_two_torus_parameters
+
+local instance : Fact (Module.finrank ℝ (Block 1) = 1 + 1) := ⟨by simp⟩
+local instance : Fact (Module.finrank ℝ (Ambient 1 1) = (1 + 1 + 1) + 1) := ⟨by
+  rw [(WithLp.prodContinuousLinearEquiv 2 ℝ (Block 1) (Block 1)).toLinearEquiv.finrank_eq,
+    Module.finrank_prod]
+  simp only [finrank_euclideanSpace_fin]⟩
 
 /-- The actual torus collar retains the zero section and the complete
 angular and signed parameters throughout its positive-width domain. -/

@@ -13,3 +13,5 @@
 | SP4-CDS-SUR-B04 | Third tube and larger one-lower-handle class tested | A successful winding-one prefix lowers $n_2$ for arbitrary residuals. Two certified prefixes recognize the $(1,1,3,2,1)$ subclass. In a longer one-sided link the boundary alone leaves the marked trace open. [Three-handle check](../../reviews/THREE_HANDLE_READER.md) |
 
 Next select a protected separator, a measured band or actual link move on an untreated presentation. A different smooth type or a freely re-marked face supplies no energy bound on the minimizing source. [Continuation](../../continuation-notes/AFTER_TWO_MIXED_CUTS_20261126.md)
+
+The [initial working manuscript](../manuscript/recognition_from_marked_handle_cuts.tex) develops these assessed results and ends with the open selection problems. [Reading copy and sources](../manuscript/README.md)

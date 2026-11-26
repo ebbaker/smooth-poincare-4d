@@ -4,6 +4,17 @@
 
 This is the sole live status register for `SP4-FORM-IMM` and `FOT-E36`. The [proof plan](../research-plan/PLAN.md) specifies each target and acceptance test. The paper's [research register](../../../../papers/investigations-1/04_hypersurface_immersions/01_immersed_handle_constructions/research-progress/REGISTER.md) owns mathematical extraction or construction on the source.
 
+## Edition 04 setup · 26 November 2026
+
+These assignments await activation. [Route plan](../research-plan/PLAN.md#edition-04--energy-of-a-whole-immersion-and-the-selected-height) · [Program plan](../../research-plan/04_PLAN.md) · [Baseline](../../research-progress/04_BASELINE.md)
+
+| Task | State at setup | First evidence required |
+| --- | --- | --- |
+| SP4-FORM-IMM-B02/E02, carried | Ready for a geometry decision. The complete energy theorem depends on its result. | Supply a single marked immersion with complete induced energy and compare it to the inclusive direct threshold and the distinct strict count threshold. |
+| SP4-FORM-IMM-E03 | Dependent on the whole source bound and same-direction marked data | Couple the checked count selection to the diagram of that exact height. Route 09 receives the marking and owns any smooth identification of the closed type. |
+
+## Edition 03 evidence
+
 | Task | Current state | Next evidence |
 | --- | --- | --- |
 | SP4-FORM-IMM-E01r | Positive chiral density is continuous in arbitrary pointwise principal frames | A basis-invariant polynomial in the actual chart shape crosses eigenvalue multiplicities and flips of normal. Compactness gives integrability. [Proof](handoffs/ED03_CHIRAL_ENERGY_CONTINUITY.md) |

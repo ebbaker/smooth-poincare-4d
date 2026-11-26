@@ -1,5 +1,7 @@
 # Collar deformation and surgery on homotopy four-spheres
 
+Read the [parent manuscript](manuscript/README.md) for the route to smooth recognition. The companions develop the [collar estimates](01_collar_deformation_and_adapted_coordinates/manuscript/README.md) and the [marked surgery argument](02_handle_isolation_and_marked_surgery/manuscript/README.md).
+
 Can one isolate the part of a handle presentation that prevents cancellation, deform a collar around it at a controlled curvature cost, and identify the smooth manifold after cutting and capping? This investigation starts with a framed 2-handle interacting with a 1-handle. Its second test uses the charged disk located by the master on a fixed smooth type.
 
 | Investigation | First problem | What the other branch receives |

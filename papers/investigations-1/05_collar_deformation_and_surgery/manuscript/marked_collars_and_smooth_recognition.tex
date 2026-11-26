@@ -1,0 +1,608 @@
+% Drafted for Edward B. Baker III with OpenAI Codex assistance, 26 November 2026.
+% Author-selected lead GPT-6.2 Astra/ultra; independent serving metadata unavailable.
+% Scientific inputs: ece209cc09aa31629a8b496ae9d01957e71c70ac, including both
+% child note sets, the parent assessment, and the 17 pins in ../references/README.md.
+% Internal master and companion citations denote working manuscripts.
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}[proposition]{Theorem}
+\newtheorem{corollary}[proposition]{Corollary}
+\DeclareMathOperator{\Ric}{Ric}
+\newcommand{\Sph}{\mathbb S}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\HS}{\mathrm{HS}}
+\title{Marked collars, handle reduction and\\smooth four-sphere recognition}
+\author{Edward B. Baker III}
+\date{Working draft, 26 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A regular level of a handle decomposition records how to reassemble a
+smooth four-manifold. A sphere selected by curvature records what a metric
+comparison could save. We ask when one embedded hypersurface carries
+both kinds of information. For a mixed presentation with two middle
+handles, positive scalar curvature on either of two specified intermediate
+three-manifolds recognizes the closed homotopy sphere. The two orders
+have different recognizing boundaries. For a positive four-dimensional
+conformal class of subcritical chiral Weyl energy, a conformally round,
+umbilic three-sphere gives a complementary conclusion. Each capped
+side has positive-class energy infimum at most its original mass, in
+either chirality. On a hypothetical nonstandard sphere the side which
+carries its smooth type must therefore carry at least its fixed-type
+infimum. This excludes such a face on each sufficiently late charged
+disk selected by the master manuscript. We use these results to specify
+a reduction by middle-handle count and the geometric selection still
+required to carry it out on arbitrary smooth homotopy four-spheres.
+\end{abstract}
+
+\section{The problem on the original smooth manifold}
+
+Let \(M\) be a closed, connected, oriented smooth manifold homotopy
+equivalent to \(\Sph^4\). The target is a diffeomorphism \(M\cong\Sph^4\).
+Every small coordinate disk has a smoothly embedded three-sphere as
+its boundary. Its exterior can retain the entire unknown smooth type.
+A cut useful for recognition must either isolate a
+specified handle interaction, or discard enough curvature to improve a
+metric on an identified smooth type.
+
+There are accordingly two ways to use a cut. In the smooth argument,
+carry out a relative handle move and attach the original remaining
+handles through the induced boundary map. Count the middle handles
+after the whole move. In the metric argument, choose a metric on the
+given manifold, alter it through a specified path, cap the separated
+pieces, and identify the smooth type of the piece on which the curvature
+comparison is used. The first argument can work at a nonspherical
+level. The round cap in the second requires a spherical level with
+control in its actual marking. The two arguments can also be used
+independently.
+
+The deformation paper~\cite{Baker2026CollarDeformation} starts from an
+embedded sphere and estimates the cost of producing a round product.
+The surgery paper~\cite{Baker2026HandleCuts} starts from a marked
+handle presentation and identifies the levels at which a recognition
+theorem can apply. Here we develop the implication between their
+conclusions and the master program~\cite{Baker2026ChiralMaster}. Two
+distinct existence questions recur: which level can be selected, and
+which metrics or estimates exist there?
+
+\subsection{What is marked}
+
+A spherical comparison uses an embedding
+\[
+ \Phi:\Sph^3\times(-w_L,w_R)\longrightarrow M
+\]
+and the inverse on its image. Its middle sphere separates \(M\) into
+two complete regions \(P_L,P_R\). A normal coordinate points from left
+to right. If the cut copies are parametrized by \(a_L,a_R\), the
+angular identification from left to right is \(a_Ra_L^{-1}\). The
+reverse identification is \(a_La_R^{-1}\). The two outward normals
+have opposite signs. A change of coordinates, including one used to
+make the face round, must be composed with these maps on their actual
+domains. In a handle diagram the data also include each embedding
+\(S^1\times D^2\to\partial X\) for an unspent two-handle and the
+attaching map of the upper body. An isotopy transports the solid tori,
+and hence their framings. A bound measured in a new diagram has metric
+content only after identifying the metric there.
+
+\section{Two tests of an intermediate handle level}\label{sec:handles}
+
+Cancel the lower and upper trees at the extrema of a Morse
+presentation by the marked end reductions of~\cite{Baker2026MarkedHeights}.
+Write \(\ell,r\) for the remaining numbers of one- and three-handles,
+and \(n\) for the number of two-handles. There is one minimum and one
+maximum, so \(\chi(M)=2\) gives \(\ell+r=n\). For \(n=0\) the two end
+balls are joined by a boundary diffeomorphism that extends over a ball.
+For \(n=1\), after reversal the presentation is a knot trace in a
+four-ball with outgoing boundary \(S^1\times S^2\). First homology fixes
+the framing at zero, and Gabai's Property R makes the knot an unknot.
+The diffeomorphism of the upper boundary extends over the upper
+one-handlebody. Thus these two counts already recognize \(M\)
+\cite{Gabai1987FoliationsIII,LaudenbachPoenaru1972Handlebodies,Baker2026MarkedHeights}.
+
+\paragraph{The first cancellation.}
+Let a framed two-handle meet a one-handle belt sphere once transversely.
+Smooth adjacent-handle cancellation gives a diffeomorphism on the
+trace, with an outgoing change of boundary coordinates
+\cite{Milnor1965HCobordism}. In the split control add a zero-framed
+unknot as a residual tube. The canceling component first gives a ball
+and carries the residual unknot into its boundary. The residual
+component first gives \(\#_2(S^1\times S^2)\) as the intermediate
+boundary. Sliding the residual component over a framed parallel of
+the first changes its geometric position and its framing together.
+In the specified slid control both components pass geometrically once
+through the belt, so either first attachment gives a spherical cut.
+If \(F\) is the resulting new-to-old trace diffeomorphism and
+\(\psi:\partial X_{\rm old}\to\partial Q\) is the original
+identification with the upper body, use \(\psi\circ\partial F\) to
+close the new trace. Then \(F\cup\mathrm{id}_Q\) identifies the
+closed manifolds. This also determines the inverse transport for the
+reversed presentation. The two orders in this control are established
+by the framed embeddings~\cite{Baker2026HandleCuts}.
+
+There is a metric realization of the first spherical cut in this
+particular control. Use the two actual ball parametrizations to
+identify the sides with hemispheres, extending each discrepancy in
+the equatorial map over its ball and using a collar before gluing
+\cite{Hatcher1983Smale,Palais1960Extending}. In the pulled-back round
+metric the collar reads \(dq^2+\cos^2 q\,\gamma\), with \(\gamma\)
+the unit round three-metric. Multiplication by
+\(\exp(2s\beta(q)\log\sec q)\), with \(\beta=1\) near zero and zero
+near both outer faces, gives a product near the equator at \(s=1\)
+in arclength \(dt=\sec q\,dq\). Every metric in the path has zero
+Weyl tensor. Both entire sides and their joined peak therefore have
+zero energy in both signs. The same diffeomorphism that carries the
+framed tubes carries this metric. For a general diagram the metric is
+a separate input.
+
+\subsection{Two middle handles and a common belt}
+
+Now let \((\ell,n,r)=(1,2,1)\). The two winding numbers generate
+\(\Z\), since the one-handle generator must die. Genuine framed
+slides and sign choices implement the Euclidean algorithm, giving
+a row \((1,0)\). Denote by \(Y_a\) the boundary after the winding-one
+component is attached first and by \(Y_b\) the boundary after the
+winding-zero component is attached first. Call \(Y\) \emph{dominated}
+here if a closed oriented three-manifold admitting positive scalar
+curvature maps to \(Y\) with nonzero degree.
+
+\begin{proposition}[The two orders, \cite{Baker2026HandleCuts}]
+The following tests apply to the specified intermediate boundaries:
+\[
+  Y_a\text{ dominated}\ \Longleftrightarrow\ Y_a\cong S^3,
+  \qquad
+  Y_b\text{ dominated}\ \Longleftrightarrow\
+       Y_b\cong\#_2(S^1\times S^2).
+\]
+Either test recognizes the original \(M\).
+\end{proposition}
+\begin{proof}
+The first lower body has a single one/two pair with unit cellular
+differential. Its attaching circle kills the generator of its
+fundamental group, so the body is contractible. Its boundary is an
+integral homology sphere. Chodosh, Maximo and Mukherjee show that a
+dominated integral homology sphere is \(S^3\) or a connected sum of
+signed Poincar\'e spheres. Every nonempty such sum is excluded as the
+boundary of a smooth compact contractible four-manifold
+\cite[Corollary 2.3 and Proposition 4.2]{ChodoshMaximoMukherjee2024Complete}.
+
+For the other order, use the ordinary boundary surgery diagram obtained
+by giving the dotted unknot framing zero. In the order consisting of
+that unknot followed by the winding-one and winding-zero components,
+the full linking matrix is
+\[
+ \begin{pmatrix}0&1&0\\1&u&v\\0&v&c\end{pmatrix}.
+\]
+Full surgery has boundary \(S^1\times S^2\) from the upper body.
+The matrix therefore has zero determinant, so \(c=0\). The two components defining \(Y_b\)
+now have zero linking matrix. Their ordinary two-handle trace \(V\)
+is simply connected. Its pairing vanishes and \(H_2(V)=\Z^2\).
+The exact sequence of the pair and duality give an isomorphism
+\(H_2(Y_b)\to H_2(V)\), and \(H_1(Y_b)=\Z^2\). Under domination, the
+three-manifold decomposition~\cite[Proposition 2.2]{ChodoshMaximoMukherjee2024Complete}
+therefore has two \(S^1\times S^2\) summands. The spherical factors
+have trivial first homology. Attach three-handles on the two cross
+sections. They kill a basis of \(H_2(V)\) with no kernel, and preserve
+simple connectivity. The remaining boundary is a smooth integral
+homology sphere bounding a contractible manifold. Its spherical
+summands and their connected sum admit positive scalar curvature
+\cite[Theorem A]{GromovLawson1980Surgery}. The same homology-sphere
+classification and signed-sum obstruction remove the remaining
+factors. Conversely \(S^3\) and \(S^1\times S^2\) have positive
+round and product metrics, respectively, and connected sum gives a
+positive scalar curvature metric on \(\#_2(S^1\times S^2)\).
+
+The trace \(V\) served to identify its boundary. Recognition of \(M\)
+uses the mixed theorem of~\cite{Baker2026MarkedHeights} on the original
+two pieces with their upper gluing. It applies to either of the two
+displayed boundary types.
+\end{proof}
+
+This has a four-dimensional geometric test even when the cut is
+nonspherical. For a compact physical product band about the chosen
+level let \(d\) be the intrinsic distance between the band ends and
+\(\rho=\min R_g>0\). If the level admitted no positive scalar
+curvature metric, R\"ade's strict width theorem applied to
+\((\rho/12)g\) in dimension four would give
+\(\sqrt{\rho/12}\,d<\pi/2\). Thus \(\rho d^2\ge3\pi^2\) certifies the
+corresponding recognition, including equality
+\cite[Corollary 2.25]{Raede2022Bands}. The companion paper derives
+tests using both end mean curvatures, the lapse of a measured slice,
+or stability of a separator of nonzero projection degree
+\cite{Baker2026HandleCuts}. If neither intermediate cut is accessible,
+enclosing the whole lower cluster in this presentation ends at
+\(S^1\times S^2\), since that is the boundary of the actual upper
+one-handlebody. A spherical cap comparison there requires a different
+cut.
+
+\paragraph{The next count.}
+With one lower one-handle and three middle handles, a dominated
+winding-one first cut again gives \(S^3\). In the dual description the
+one-component surgery to \(S^1\times S^2\) identifies the unknot by
+Property R. The original attaching circle is its surgery core, up to
+a change of the one-handlebody marking that extends. It cancels,
+carrying both remaining framed tubes. This strictly lowers \(n\)
+from three to two on the same smooth manifold. The returned diagram is
+a two-component framed link in \(S^3\). Its actual upper body has two
+one-handles when read in reverse, so full surgery has boundary
+\(\#_2(S^1\times S^2)\). Its free rank-two first homology forces the
+entire two-by-two linking matrix to vanish. If the next one-component
+surgery cut is also dominated, the zero-pairing comparison just used,
+in rank one, gives \(S^1\times S^2\). Property R identifies that link
+component as an unknot. The two-component unlink-slide theorem in
+this case and extension over the upper handlebody then recognize \(M\)
+\cite[Proposition 3.2]{GompfScharlemannThompson2010}%
+\cite{LaudenbachPoenaru1972Handlebodies,Baker2026HandleCuts}.
+The first cancellation permits arbitrarily many moving residual tubes.
+The second conclusion uses the specific two-component successor.
+
+
+\section{The cost of making a spherical cut}\label{sec:cost}
+
+Let \(W^\pm\) be the two real Weyl operators on self-dual and
+anti-self-dual two-forms in the chosen orientation. Use the curvature
+convention in which the unit sphere has identity curvature operator.
+For \(\sigma\in\{+,-\}\) write
+\[
+ E_\sigma(g;U)=\int_U |W^\sigma_g|_{\HS}^2\,dV_g,\qquad
+ T=4\pi^2,\qquad I^+(M)=\inf_{Y([g])>0}E_+(g;M).
+\]
+Here \(Y([g])\) is the Yamabe constant of the conformal class, and the
+empty infimum is \(+\infty\). Both measures are conformally invariant:
+the operator weight under \(e^{2u}g\) is \(e^{-2u}\) and the volume
+weight is \(e^{4u}\). Signature gives \(E_+-E_-=12\pi^2\tau(M)=0\)
+on the closed manifold~\cite{Hirzebruch1971Signature}. We write \(e\)
+for that common total and \(m_j^\sigma=E_\sigma(g;P_j)\) separately
+on each side. A reversal of the ambient orientation exchanges the two
+chiralities. Reversing just the chosen normal interchanges the sides.
+
+\paragraph{The face and its two widths.}
+Suppose the induced metric on a smooth embedded \(S^3\) is conformal
+to the round metric via a specified angular map, and its second
+fundamental form \(K\) is pure trace. With \(H=\operatorname{tr}K\)
+and \(K=\tfrac12\mathcal L_\nu h\) in normal coordinates, the law
+\(\widehat K=e^u(K+\nu(u)h)\) prescribes just two jets of \(u\).
+Take \(u\) on the sphere to make its metric round and prescribe
+\(\nu(u)=-H/3\), then extend these jets in a physical collar.
+In Gaussian coordinates of \(\widehat g=e^{2u}g\) we have
+\(\widehat g=dt^2+h_t,\ h_0=\gamma,\ h'_0=0\).
+The inverse chart gives the normal foot and signed distance. Choose
+each \(w_j\) inside the available region on its own side.
+
+Let \(0\le\chi_j\le1\) be a fixed smooth cutoff, one near \(r=0\) and zero
+near \(r=1\). On side \(j\) use \(r=|t|/w_j\) and interpolate by
+\[
+ h_{t,s}=\gamma+(1-s\chi_j(r))(h_t-\gamma),\qquad 0\le s\le1.
+\]
+The two formulas agree as germs across the middle. They are convex
+combinations of positive tensors and recover the incoming tensor near
+each outer face. Restoring the original conformal factor gives a
+path from the original metric. A localized conformal adjustment
+gives an exact product germ at the endpoint. For \(h_t-\gamma=O(t^2)\)
+with its differentiated Taylor bounds, the two normal derivatives
+falling on the cutoff cost \(O(1)\), so every half-strip has energy
+\(O_g(w_j)\) uniformly in \(s\).
+
+The companion calculation gives the signed leading term. Write
+\(A=h''_0/2\) and let \(A^\circ\) denote its trace-free part. The
+trace-free normal curvature block to leading order is
+\(-(1-sB_j)A^\circ\), where \(B_j=(r^2\chi_j)''/2\). The tangential
+block is round and the mixed block is \(O(w_j)\). Projection onto
+either Weyl block contributes a factor of \(1/2\) in the leading
+operator. Since \(\int_0^1 B_j\,dr=0\), the linear term integrates away.
+The resulting full-side increment is
+\begin{equation}\label{eq:jet}
+ \Delta_j^\sigma(s)
+ = w_j s^2\,\frac{\|A^\circ\|_{L^2(\gamma)}^2}{16}
+       \int_0^1 r^4|\chi_j''|^2\,dr + O_{C^2_s,g}(w_j^2).
+\end{equation}
+The remainder controls two derivatives in \(s\). When
+\(A^\circ\not\equiv0\) the increments are strictly convex and the
+positive endpoint increment is the maximum for sufficiently small
+widths. If this jet vanishes, the expansion still bounds the
+surcharge. Thus even at an exact face the specified cutoff generally
+\emph{costs} energy. The available saving in a cap comparison comes
+from the discarded side. The full computation, including the profile
+identity and the approximate case, is in~\cite{Baker2026CollarDeformation}.
+
+For an approximately matched face take the actual Gaussian chart with
+uniform ellipticity relative to \(dt^2+\gamma\). Let
+\(\alpha=\|h_0-\gamma\|_{C^2_\gamma}\),
+\(\beta=\|h'_0\|_{C^2_\gamma}\) and
+\(M_j=\sup\|h''_t\|_{C^2_\gamma}\) on the respective strip.
+For \(w_j\le1\) the two normal differentiations produce terms of orders
+\(\alpha/w_j^2,\ \beta/w_j,\ M_j\). Taking the square root of the strip
+volume explains the powers in
+\[
+ Z_j=\frac{\alpha}{w_j^{3/2}}+\frac{\beta}{\sqrt{w_j}}+\sqrt{w_j}M_j .
+\]
+The chiral curvature \(L^2\) norm of each deformed strip is bounded by
+\(C\sqrt{\operatorname{vol}_\gamma(S^3)}
+ (Z_j+w_j^{3/2}Z_j^2)\). The quadratic term accounts for products of
+first derivatives~\cite{Baker2026CollarDeformation}. Shrinking a width
+with a fixed nonzero face mismatch can make the estimate worse.
+Small raw curvature mass on the strip gives no bound on these marked
+jets. A collar selected by another method, for example the physical
+annular comparison in~\cite{Baker2026MarkedLimits,Baker2026ChiralMaster},
+can be used if its actual metric, markings and estimates supply the
+required bounds.
+
+\subsection{From a joined path to a metric on a capped side}
+
+Let \(g_s\) be a smooth path from \(g\) on the joined manifold to a
+metric with a round product germ in the specified cut. Define
+\[
+ H_*=\max_{0\le s\le1}E_+(g_s;M),\qquad
+ \Delta_j^\sigma(s)=E_\sigma(g_s;P_j)-m_j^\sigma .
+\]
+They satisfy \(E_\sigma(g_s;M)=e+\sum_j\Delta_j^\sigma(s)\).
+The maximum is taken on the uncut manifold, including both connectors.
+
+\begin{proposition}[Positivity and smooth reassembly]\label{prop:cap}
+Assume \(Y([g])>0\) and \(H_*<2T\). The two capped sides are smooth
+homotopy four-spheres with positive classes of energies
+\(m_j^\sigma+\Delta_j^\sigma(1)\) in sign \(\sigma\). Their marked
+connected sum is the original \(M\). If the two positive cap energies
+have sum at most \(2T\), at most one capped side can be nonstandard.
+If such a side exists it is oriented-diffeomorphic to \(M\).
+\end{proposition}
+\begin{proof}
+On a scalar-flat Yamabe representative, Gauss--Bonnet and signature
+give \(E_+=2T+\tfrac14\int|\Ric|^2\,dV\). The first conformal
+Laplacian eigenvalue is continuous along a smooth metric path and
+its sign equals the Yamabe sign. The strict peak rules out a zero
+eigenvalue and therefore keeps all classes positive.
+On their unit-volume Yamabe representatives Gauss--Bonnet gives
+\(Y([g_s])^2\ge48(2T-H_*)\)
+\cite{LeeParker1987Yamabe,Baker2026ChiralMaster}. Adding any finite
+length to the round cylinder is a path on the joined manifold at
+constant energy. Every compactly supported Yamabe test on a half with
+an infinite cylindrical end extends by zero to a sufficiently long
+joined manifold and obeys the same positive lower bound. Multiplying
+the end metric by \(e^{-2t}\) for large outward arclength \(t\) gives
+the radial ball metric in \(r=e^{-t}\). Tests away from the added
+center are dense in \(H^1\) in dimension four. This proves positivity
+on each smooth cap. Conformal changes preserve both densities and
+the added cylindrical and radial portions have zero Weyl curvature.
+
+The middle sphere separates by \(H_1(M)=0\). Van Kampen and
+Mayer--Vietoris give trivial fundamental group and zero second
+homology on each cap. Duality and the homological Whitehead theorem
+then identify each as a homotopy sphere. The finite recognition
+criterion \(Y>0,\ E_+\le T\) identifies any such cap with the
+standard sphere, including at equality
+\cite[Theorems A and B]{ChangGurskyYang2003}%
+\cite{Baker2026ChiralMaster}. If the sum is at most \(2T\), at most
+one can exceed \(T\). In a standard capped piece its particular cap
+ball can be moved to a coordinate ball by Palais's disk theorem.
+Its complement is a standard ball. The discrepancy between the
+actual boundary identification and a cap parametrization extends
+over a standard ball by the \(S^3\) diffeomorphism theorem, using a
+collar isotopy and a linear orthogonal map near the center
+\cite{Palais1960Extending,Hatcher1983Smale}. Removing the actual caps
+and applying the original identification thus gives \(M\) on the
+remaining side. This proof also works with the inclusive sum bound
+when positivity of both capped metrics is supplied independently.
+\end{proof}
+
+There is a useful finite test when neither side is known to be a
+disk. Suppose a hypothetical nonstandard \(M\) has initial energy
+\(e\) in a positive class and the two positive cap energies are at
+most \(m_j^\sigma+\gamma_j^\sigma\), with
+\(\gamma_j^\sigma\ge0\) in a fixed sign. If their actual sum is at
+most \(2T\), denote the unique nonstandard side by \(s\). Reassembly
+and the infimum on \(M\) give
+\[
+ I^+(M)\le E_\sigma(\widehat g_s)\le m_s^\sigma+\gamma_s^\sigma,
+ \qquad
+ \min_j m_j^\sigma\le e-I^+(M)+\max_j\gamma_j^\sigma .
+\]
+Thus a cut can test minimization without deciding in advance which
+side would survive. One must price the cap on each possible survivor.
+The inclusive test of the actual cap sum applies after their Yamabe
+signs are known.
+
+\begin{theorem}[What an exact face forces on each side]\label{thm:mass}
+Let \(g\) be a positive Yamabe class representative on \(M\) with
+\(e<2T\), and suppose a separating embedded \(S^3\) is conformally
+round and umbilic. Let \(\widehat P_j\) be the two sides capped in
+their actual markings. Then
+\[
+ m_j^+=m_j^-=:m_j,\qquad I^+(\widehat P_j)\le m_j\quad(j=L,R).
+\]
+If \(M\) is nonstandard, precisely one capped side has that smooth
+type. On the other side \(m_j\le e-I^+(M)\).
+\end{theorem}
+\begin{proof}
+Fix the smooth source and let the two available subwidths tend to
+zero there. If the angular map used to normalize the face differs
+from a prescribed cap marking, their transition extends over that
+ball as in Proposition~\ref{prop:cap}. This fixes the capped smooth
+types throughout the comparison. The cutoff has joined peak at most
+\(e+C_g(w_L+w_R)<2T\) for all sufficiently small widths. On the
+fixed capped type Proposition~\ref{prop:cap} produces genuine positive
+metrics of energy \(m_j^\sigma+O_g(w_j)\). The two chiral integrals
+on each closed cap coincide by signature. Taking the limit gives
+the mass identity and taking the infimum gives the claimed upper
+bound. The two raw masses sum to \(e<2T\), so one is strictly less
+than \(T\). At some positive widths that cap is already recognized.
+If \(M\) is nonstandard, the other cap is diffeomorphic to \(M\)
+by the actual reassembly. Its raw mass is at least \(I^+(M)\), which
+gives the last inequality.
+\end{proof}
+This is a statement about infima on specified smooth types. No
+minimizer on either closure is required. The cap energies at positive
+width generally differ from the limiting raw masses.
+
+\section{The charged disk as a benchmark}\label{sec:benchmark}
+
+Suppose \(M\) is nonstandard and \(I=I^+(M)<2T\). Start with any
+minimizing sequence of smooth unit-volume positive Yamabe metrics
+on this fixed smooth type. Write \(e_i=E_\pm(g_i;M)\to I\) and
+\(d_i=e_i-I\ge0\). The charged-disk theorem in the master manuscript
+supplies, on a further subsequence, smoothly parametrized standard
+disks \(D_i\) with a common selected sign \(\sigma_0\) and fixed
+\(a,b>0\) such that
+\[
+ E_{\sigma_0}(g_i;D_i)\ge a,\qquad
+ E_{\sigma_0}(g_i;M\setminus\operatorname{int}D_i)\ge b .
+\]
+These are masses in the original metric on the two whole regions,
+including their collar halves~\cite{Baker2026ChiralMaster}.
+The theorem gives a disk and a marking. It leaves its jets to be
+measured on the supplying source.
+
+Put \(V_i=M\setminus\operatorname{int}D_i\) and
+\(m_i^\sigma=E_\sigma(g_i;D_i)\). If a subcritical joined path gives
+a round product in this disk marking, the capped exterior is on the
+original smooth type: the angular transition between the new cap
+and the original parametrized disk extends across a ball. Thus
+\begin{equation}\label{eq:finite}
+ I\ \le\ E_\sigma(\widehat g_{V,i};M)
+     = e_i-m_i^\sigma+\Delta_{V,i}^\sigma(1).
+\end{equation}
+Here \(\Delta_{V,i}^\sigma(1)\) includes every metric change on the
+retained exterior. The complementary change contributes to the
+joined peak. A general replacement with a curved cap must also
+charge that cap's entire energy. A single strictly positive-width
+construction with net saving \(m_i^\sigma-\Delta_{V,i}^\sigma(1)>d_i\)
+would violate~\eqref{eq:finite} and exclude the hypothesized type.
+Equality is consistent with attainment of \(I\). Independently, an
+attained positive energy at most \(T\) recognizes the type, and the
+master proves recognition for the inclusive infimum bound
+\(I\le T+\varepsilon_*\) with a universal, non-effective
+\(\varepsilon_*>0\)~\cite{Baker2026ChiralMaster}.
+
+For an exact conformally round umbilic boundary, apply
+Theorem~\ref{thm:mass} to the cut and identify its capped exterior
+with \(M\). This gives
+\(m_i^+=m_i^-\le d_i\) at this fixed finite index with \(e_i<2T\).
+Since \(m_i^{\sigma_0}\ge a\) and \(d_i\to0\), every sufficiently
+late selected disk fails the exact-face hypothesis. Widths are taken
+to zero at each individual index before making this conclusion. There
+is also a conditional approximate exclusion. Suppose the physically
+marked bicollars, in smooth conformal gauges on a fixed slab, are
+smoothly precompact with nondegenerate limits. If the integral of
+\(|\operatorname{Cotton}(h_i)|+|K_i^\circ|^3\) on the central
+spheres tends to zero, the limit is conformally round and umbilic.
+The limit chart and subwidths with bounded ratio of \(C^2\) metric
+error to squared width then produce \(o(1)\) complete-side and joined
+costs, with clearance for any separately protected regions. Equation
+\eqref{eq:finite} gives a contradiction at a finite late index.
+Thus the defect has positive lower limit on any such precompact
+charged subsequence~\cite{Baker2026CollarDeformation}. Disk selection
+alone gives neither compactness nor a numerical defect bound.
+
+\paragraph{Why changing only a thin strip can be insufficient.}
+Keep the outer disk \(Q_i\) enclosing the original bicollar inside
+a larger parametrized disk \(B_i\), and put \(q_i^\sigma=E_\sigma(g_i;Q_i)\).
+The master's simultaneous measure division at fixed depth \(k\ge1\)
+gives raw mass
+\[
+ b_i^\sigma=E_\sigma(g_i;B_i)
+  =(1-2^{-k})e_i+2^{-k}q_i^\sigma-r_i^\sigma,\qquad r_i^\sigma\to0 .
+\]
+This follows by halving the remaining exterior mass at each step
+up to a chosen tolerance, with all \(k\) errors included in
+\(r_i^\sigma\). For a matched endpoint \(h_i\) with joined peak
+\(H_i<2T\), set \(S_i^\sigma=b_i^\sigma-E_\sigma(h_i;B_i)\).
+The new capped exterior still has energy at least \(I\) in each
+sign. Hence
+\begin{align}
+ S_i^\sigma &\ge b_i^\sigma+I-H_i>b_i^\sigma+I-2T,\label{eq:saving}\\
+ \Delta_{V_i^B}^\sigma&\ge b_i^\sigma-d_i,\qquad
+ \Delta_{V_i^B}^\sigma\ge S_i^\sigma-d_i,\qquad
+ V_i^B=M\setminus\operatorname{int}B_i . \nonumber
+\end{align}
+Indeed \(E_\sigma(h_i;B_i)\le H_i-I\), and subtracting the two
+endpoint side identities gives
+\(\Delta_{V_i^B}^\sigma=S_i^\sigma+E_\sigma(h_i;M)-e_i\),
+where the positive joined endpoint has energy at least \(I\).
+If \(Q_i\) is fixed up to conformal change, then
+\(H_i\ge I+\max_\sigma q_i^\sigma\).
+Since \(I>T+\varepsilon_*\) on the hypothetical type, \(k\) can be
+fixed large enough that \((2-2^{-k})I-2T>0\). The right side of
+\eqref{eq:saving} then has a positive lower limit in both signs.
+A change confined to a disk-side strip of vanishing raw mass cannot
+pay it. The estimate gives the saving required of an actual path.
+Constructing such a path remains a variational problem
+\cite{Baker2026ChiralMaster,Baker2026FixedDescent,Baker2026HandleCuts}.
+
+\section{Selection, termination and outstanding challenges}
+
+Choose a presentation with the least middle count \(n\) on a
+hypothetical nonstandard \(M\). The count exists among finite Morse
+presentations, and Section~\ref{sec:handles} gives \(n\ge2\). A sufficient
+selection theorem would give at least one of the following conclusions
+for every such remaining type and presentation.
+\begin{enumerate}
+\item A relative smooth move yields a presentation of \(M\) with
+strictly smaller \(n\), counted after all temporary stabilizations,
+or identifies the actual closed manifold with a recognized one.
+\item A geometric test recognizes \(M\) directly. Examples are a
+dominated recognizing prefix in Section~\ref{sec:handles} and an
+actual positive class of energy at most \(T\).
+\item The type has positive subcritical entry, and a physical repair
+of the supplied regions at one finite index gives a positive
+competitor on this \(M\) of energy strictly below \(I^+(M)\).
+\end{enumerate}
+The first outcome contradicts minimality or identifies the type.
+The second identifies it independently of the count. The third
+contradicts the definition of the infimum. This conditional implication
+explains why a net cancellation or a single strict comparison would
+suffice. A proof of the selection hypothesis would be a further
+theorem.
+
+\paragraph{The first unresolved handle presentations.}
+For a winding-one knot with three geometric belt crossings, a
+suitable embedded bigon permits a cancellation with movable residual
+tubes. If that disk is missing, one can seek a different framed slide,
+the dual belt-circle isotopy, or domination on the opposite cut.
+The first uncovered mixed class has none of these certificates in
+the tested descriptions. In the one-sided class with two components,
+or after the three-to-two reduction above, the residual two-component
+link can fail to have any identified recognizing component or trace.
+A connected cluster with more lower one-handles needs a new relative
+move. The unknot and band arguments do not select one on an arbitrary
+diagram. A positive outcome for one particular presentation would
+advance exactly the class on which that outcome can be repeated.
+
+\paragraph{The first unresolved metric comparison.}
+On a late charged disk an exact round umbilic face would already
+contradict minimization. A quantitative replacement must therefore
+control the actual nonzero defect or the degeneration of its marked
+chart, or modify a larger region while paying the full two-sided
+cost. One target is a nonconformal repair that accounts for the protected
+core and gives a positive exterior cap with energy strictly below \(I\)
+at one finite index, contradicting~\eqref{eq:finite}. Another is a
+different spherical cut with enough raw mass on
+each side to violate the finite cap inequality. Relating a disk to
+a handle level requires an identification and metric estimates on
+the same source.
+
+\paragraph{Entry on an arbitrary smooth type.}
+Every \(M\) supplies a finite handle presentation. Universal selection
+of a reducing move is open. For an independent geometric entry, a
+Euclidean hypersurface immersion of induced \(E_+<8\pi^2\) on a
+nonstandard type would give more than three quarters of directions
+with exactly two middle handles. One recognized marked height would
+then suffice~\cite{Baker2026ImmersionEnergy,Baker2026MarkedHeights}.
+Finding such an immersion on every remaining type, finding a recognized
+height even when it exists, and producing an intrinsic positive
+class of energy below \(2T\) when following the charged-disk route are
+distinct outstanding problems. The induction and the metric comparison
+give precise conclusions once one of their geometric inputs is found.
+
+\begingroup
+\raggedright
+\bibliographystyle{unsrturl}
+\bibliography{references}
+\endgroup
+\end{document}
+

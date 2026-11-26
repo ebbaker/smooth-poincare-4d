@@ -4,9 +4,18 @@
 
 This is the sole live status register for `SP4-FORM-DESC` and `VAR-E06`. The [proof plan](../research-plan/PLAN.md) specifies each target and acceptance test. The paper's [research register](../../../../papers/master/01_fixed_type_variational_descent/research-progress/REGISTER.md) owns mathematical extraction or construction on the source.
 
+## Edition 04 objectives
+
+26 November 2026, America/New_York. [Edition 04 plan](../../research-plan/04_PLAN.md) · [Route acceptance tests](../research-plan/PLAN.md#edition-04-objectives)
+
+| Task | Current state | Next proof or premise |
+| --- | --- | --- |
+| SP4-FORM-DESC-E10a | Planned, awaiting activation | Apply the positive caps on fixed marked types to the two complete raw sides. Prove the signed mass identities and infimum inequalities, with recognition and reassembly at an actual positive width. |
+| SP4-FORM-DESC-E10b | Planned, awaiting activation | Take the fixed-source width comparison before applying the minimizing-tail test to the original selected charged disks. Formulate the finite marked-family extraction under its supplied charge and full-curvature bounds. |
+
 | Task | Current state | Next evidence |
 | --- | --- | --- |
-| SP4-FORM-DESC-E09 | A local nonconformal negative derivative gives strict finite savings. Charging both a positive cap and additional joined cost to the net saving forces the replacement disk charge plus that cost below the finite excess. The terminal Euler estimate also reaches positive Ricci charge in a pointed limit. | Produce a coupled repair affordable on the selected physical disk, or supply the modified small-ball estimates and a common limiting flow. [Assessment](../../reviews/COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md) |
+| SP4-FORM-DESC-E09 | A local nonconformal negative derivative gives strict finite savings. Charging both a positive cap and additional joined cost to the net saving forces the replacement disk charge plus that cost below the finite excess. At one fixed source arbitrarily small signed cap drift forces equal disk charges, each at most the excess. The terminal Euler estimate also reaches positive Ricci charge in a pointed limit. | Produce a coupled repair affordable on the selected physical disk, or supply the modified small-ball estimates and a common limiting flow. [Assessment](../../reviews/COLLAR_COMPARISON_AND_TERMINAL_CHARGE_20261126.md) |
 | SP4-FORM-DESC-E08 | A positive curved conformal reference on any selected buffered disk, actual signed and spectral invariance, preservation of all four complete exterior divisions and an unbounded full core cost, the separate positive-cap price, and the intrinsic terminal-ball Euler and Ricci charge on a supplied modified solution. | Obtain a strictly useful nonconformal repair or cap on a late positive source, or transfer the terminal charge on an actual pointed or physical comparison. [Assessment](../../reviews/MARKED_GLUE_AND_CURVED_COST_20261125.md) |
 | SP4-FORM-DESC-E07a–f | Realized physical reference, finite signed flattening price, sufficiently late cost, matched flat trim, exterior measures and spatial Euler flux | Produce a cheap nonflat reference at a positive matched endpoint on the selected widths, or construct the invariant smooth Euler current and its tested derivative on the modified flow. [Assessment](../../reviews/ROUNDED_EDGES_AND_REFERENCE_COST_20261125.md) · [Independent applications](../reviews/ED03_REFERENCE_AND_FLUX_READBACK.lean) |
 | SP4-FORM-DESC-E06a–e | Exact selected-width physical jets, finite clamped variations, and modified Ricci charge | Construct the reference and moving chiral density estimates on the single selected disk, with the full exterior cost at a positive cap. The modified-gauge bound takes the common-cutoff spatial transgression. [Assessment](../../reviews/NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md) |

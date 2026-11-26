@@ -4,6 +4,15 @@
 
 This is the sole live status register for Route 03, including inherited FOT-E25, E26 and E28. [Task definitions and acceptance tests](../research-plan/PLAN.md) · [Current program plan](../../research-plan/02_PLAN.md) · [Program register](../../research-progress/REGISTER.md) · [Evidence at issue](../../research-progress/02_BASELINE.md)
 
+## Edition 04 objectives
+
+26 November 2026, America/New_York. [Edition 04 plan](../../research-plan/04_PLAN.md) · [Route acceptance tests](../research-plan/PLAN.md#edition-04-objectives)
+
+| Task | Current state | Next proof or premise |
+| --- | --- | --- |
+| SP4-FORM-CUT-E04a | Planned, awaiting activation | On the same positive subcritical path from Route 05, construct actual round stretching, compactification and the scalar and volume test transplants for each cap. |
+| SP4-FORM-CUT-E04b | Planned, awaiting activation | Construct the two marked capped pieces and actual smooth reassembly, including inverse collar maps, cap attachments and original oriented type. Apply the inclusive recognition interface when its premises hold. |
+
 ## Version 02 tasks
 
 | Task | Current state | Next proof or premise |

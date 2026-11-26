@@ -9,3 +9,7 @@ Edward B. Baker III approved the investigation. OpenAI Codex assisted with setup
 ## 26 November 2026 · First research assessment
 
 The [joint assessment](reviews/TWO_MIXED_CUTS_AND_CHARGED_DISK_20261126.md) records the two normalized mixed cut types, the three-middle-handle comparison, the exact physical charged-disk exclusion and the conditions still missing for general selection.
+
+## 26 November 2026 · Initial working manuscript
+
+The parent manuscript connects the mixed-handle recognition tests to the route by least middle count. For a positive subcritical source it derives the capped-side infimum and raw chiral mass bounds from the fixed-face construction and the actual spherical reassembly. [Manuscript and reading copy](manuscript/README.md)

@@ -2,6 +2,16 @@
 
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The serving model and effort for preparation were unavailable. [Overall overview](../../research-overview/03_OVERVIEW.md) · [Program plan](../../research-plan/03_PLAN.md) · [Source revisions and pins](../../research-progress/03_BASELINE.md)
 
+## Edition 04 · Energy of a whole immersion and the selected height
+
+26 November 2026 (America/New_York). Plans and assignments at setup. [Edition 04 overview](../../research-overview/04_OVERVIEW.md) · [Program plan](../../research-plan/04_PLAN.md) · [Baseline and pins](../../research-progress/04_BASELINE.md)
+
+| Task | Supplying geometry and proposed result | Acceptance on activation |
+| --- | --- | --- |
+| IMM-B02, carried | Freeze one actual smooth immersion of the chosen closed oriented homotopy four-sphere into $\mathbb R^5$, or a marked immersed assembly with rank-four maps and compatible jets at both faces. [Immersed handle construction](../../../../papers/investigations-1/04_hypersurface_immersions/01_immersed_handle_constructions/manuscript/marked_immersed_handle_constructions.tex) | Identify the induced metric and the exact core, collars, and retained exterior. Local handle models with conditional faces leave the whole immersion premise open. |
+| IMM-E02, carried | Account for the induced chiral energy on the whole supplying immersion. Use the actual global Gauss data and signed norm conventions with [Route 09](../../09_morse_heights_and_handle_recognition/research-plan/PLAN.md). [Master `thm:immersed-entry`](../../../../papers/master/manuscript/immersion_entry.tex) | Report separately the paper's inclusive direct recognition bound $E_+\le64\pi^2/9$ and the strict $E_+<8\pi^2$ count bound. State the status of the smooth zero/one-middle floor used in the direct recognition implication and in the probability estimate on a hypothetical nonstandard type. Those immersion tests require no Yamabe sign. Any use for intrinsic entry requires a positive class on the same type. |
+| IMM-E03 | Proposed `SmoothPoincare/Immersions/MarkedHeightEnergy.lean`, `exists_markedHeight_of_inducedEnergy`. Use the checked global energy or height bound to select a regular direction carrying the proposed marking when the same-direction data are supplied. [Public count and selection](../../../SmoothPoincare/Heights/OrientedHeightSelection.lean) | Keep the geometry on that very height, including any comparison to an auxiliary ordering. On a hypothetical nonstandard type the strict bound gives probability above $3/4$ for exactly two middle points under the topological floor. A favorable actual mixed or one-sided diagram is additional evidence. Route 09 owns the smooth marked reassembly. |
+
 ## First bounded proof
 
 FOT-E36 begins with `SmoothPoincare.middleSignatureWeylBound` in `SmoothPoincare/Immersions/PrincipalCurvatures.lean`. The spectrum is $(-a,-b,c,d)$ with all four parameters positive. The factor $1/12$ is for the norm of a single Weyl endomorphism.

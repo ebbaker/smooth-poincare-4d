@@ -11,3 +11,5 @@
 | SP4-CDS-E02 | Completed case and threshold audit | [Winding-one cut](../reviews/POSITIVE_FACE_READER.md), [reverse order](../reviews/REVERSE_ORDER_READER.md), [boundary curvature](../reviews/END_CURVATURE_READER.md), [third tube](../reviews/THREE_HANDLE_READER.md) and [disk quantifiers](../reviews/DISK_AND_COMPACTNESS_READER.md). |
 
 The [coverage assessment](../reviews/TWO_MIXED_CUTS_AND_CHARGED_DISK_20261126.md#first-uncovered-inputs) and [continuation](../continuation-notes/AFTER_TWO_MIXED_CUTS_20261126.md) locate the missing witness in each class. Positive subcritical entry for arbitrary smooth types remains open. No new global SPC4 conclusion follows. [Dated history](../DRAFT_HISTORY.md)
+
+The [initial working manuscript](../manuscript/marked_collars_and_smooth_recognition.tex) develops these assessed results and ends with the open selection problems. [Reading copy and sources](../manuscript/README.md)

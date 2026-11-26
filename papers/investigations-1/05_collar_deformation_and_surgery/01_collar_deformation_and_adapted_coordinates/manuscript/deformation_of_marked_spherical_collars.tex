@@ -1,0 +1,848 @@
+% Prepared for Edward B. Baker III with OpenAI Codex assistance.
+% Editorial execution, 26 November 2026. Actual serving model and effort
+% unavailable. Research lead selection GPT-6.2 Astra/ultra with bounded
+% GPT-6.2 Sol/ultra helper dispatches. Inputs at ece209cc09aa31629a8b496ae9d01957e71c70ac:
+% EXACT_FACE_AND_BENDING.md dca779667aecc2fdf9b1565cbe8611462fb93c1b468f49a897eb3d642078b2dc
+% APPROXIMATE_PHYSICAL_JETS.md f66c890a70717ad948356b9a268409765680abd7e7c2bf6e428bfda9ce53eab7
+% COMPACT_MARKED_COLLAR_EXCLUSION.md ed02a13d0e724c5ea31fa6387c378c6a1ecf4ae25e78ae3250f1ed1594529422
+% Scope: supplied-chart estimates and conditional applications to marked disks.
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\DeclareMathOperator{\Cot}{Cot}
+\DeclareMathOperator{\Ric}{Ric}
+\DeclareMathOperator{\Rm}{Rm}
+\DeclareMathOperator{\tr}{tr}
+\newcommand{\HS}{\mathrm{HS}}
+\newcommand{\rd}{\gamma}
+\title{Deformation of marked spherical collars}
+\author{Edward B. Baker III}
+\date{Working manuscript, 26 November 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+A smooth conformally round umbilic three-sphere in a Riemannian
+four-manifold admits a marked deformation to a round product on two
+independently chosen short strips. In the normalized Gaussian chart
+the signed cost of a fixed cutoff has a positive quadratic leading
+term in each complete side and each chirality when the trace-free
+second normal jet is nonzero. We estimate approximate face jets on
+a supplied chart and obtain sharp inverse-width powers for this
+interpolation on one nonround mode. For smoothly precompact marked
+conformal pullbacks with positive definite limits, vanishing face
+defect gives a subsequence with uniformly vanishing deformation
+costs on both sides. On a hypothetical nonstandard homotopy sphere
+with positive-class infimum below \(8\pi^2\), these comparisons
+exclude an exact face at each sufficiently late charged disk and
+exclude vanishing defect on a precompact subsequence of the marked
+collars.
+\end{abstract}
+
+\section{Physical collars and chiral costs}
+
+All manifolds, metrics, charts and embeddings are smooth. Metrics
+are Riemannian and the ambient dimension is four. On an oriented
+source \(M\), let \(W^\sigma_g\) be the Weyl curvature operator on
+the real bundle \(\Lambda^\sigma\) of two-forms, for
+\(\sigma\in\{+,-\}\). Use the curvature convention for which the unit
+sphere has the identity curvature operator. Set
+\[
+ E_\sigma(g;U)=\int_U |W^\sigma_g|_{\HS}^2\,dV_g .
+\]
+The four-index tensor norm satisfies
+\(\lvert W\rvert_{\mathrm{tens}}^2
+ =4(\lvert W^+\rvert_{\HS}^2+\lvert W^-\rvert_{\HS}^2)\).
+In dimension four \(g\mapsto e^{2u}g\) fixes the Hodge star on
+two-forms and scales the Weyl operator by \(e^{-2u}\) and volume
+by \(e^{4u}\). Both chiral measures are preserved on every physical
+subset. On a closed homotopy four-sphere the joined energies agree
+by signature. Regional energies are measured separately in the
+ambient orientation \cite{Hirzebruch1971Signature,Baker2026ChiralMaster}.
+
+Take a compact source with a separating embedded cooriented
+three-sphere \(\Sigma\), its specified angular marking
+\(a:S^3\to\Sigma\) and a physical bicollar \(\Phi\) extending \(a\).
+Write \(P_L,P_R\) for the two complete closed sides and let \(\nu\)
+point from \(P_L\) to \(P_R\). At the cut their outward normals
+are \(\nu\) and \(-\nu\), respectively. A path \(g_s\) starting
+at \(g\) gives signed changes
+\[
+ \Delta_{j,\sigma}(s)=E_\sigma(g_s;P_j)-E_\sigma(g;P_j),
+ \qquad j=L,R .
+\]
+The joined change is their sum. For a cutoff supported in one
+strip on each side, the signed changes are exactly the differences
+of deformed and original strip energies. The physical marking and
+its inverse determine where these strips and the capped pieces
+attach. A change in marking must be carried through residual
+attaching tubes and the gluing maps, as in the companion analysis
+of marked handle cuts \cite{Baker2026HandleCuts,Baker2026CollarProgram}.
+
+\section{Exact first-order matching}\label{sec:exact}
+
+Let \(\rd\) be the unit round metric on the marked \(S^3\). On
+\(\Sigma\) write \(h=g|_{T\Sigma}\),
+\(K(X,Y)=g(\nabla_X\nu,Y)\), and \(H=\tr_h K\).
+Suppose \(a^*h=e^{-2v}\rd\) for some smooth \(v\) in the given
+marking and \(K=Hh/3\). In an original signed \(g\)-Gaussian chart
+\(\Psi(x,q)=\exp^g_{a(x)}(q\nu)\), choose
+\[
+ u(\Psi(x,q))=\rho(q)\bigl(v(x)-qH(a(x))/3\bigr),
+\]
+where \(\rho\) is one near zero and supported inside a fixed compact
+subchart. Extend \(u\) by zero. For \(\widehat g=e^{2u}g\) the
+conformal connection formula gives
+\[
+ \widehat\nu=e^{-u}\nu,\qquad
+ \widehat K=e^u\bigl(K+\nu(u)h\bigr).
+\]
+In fact the tangent part of \(\widehat\nabla_X(e^{-u}\nu)\) is
+\(e^{-u}(\nabla_X\nu+\nu(u)X)\) for tangent \(X\). The chosen value
+of \(u\) gives the round induced metric, and its independently chosen
+normal derivative makes the face totally geodesic. The average mean
+curvature convention in \cite[\S6.1, Proposition 6.1 and Remark 6.5]{CurryGover2015Introduction}
+corresponds to \(H/3\) here.
+
+Take the signed normal exponential chart for \(\widehat g\),
+\[
+ F(x,t)=\exp^{\widehat g}_{a(x)}(t\widehat\nu),\qquad
+ F^{-1}(p)=\bigl(a^{-1}(\pi_{\widehat g}(p)),t_{\widehat g}(p)\bigr),
+\]
+where \(\pi_{\widehat g}\) is the normal foot and \(t_{\widehat g}\)
+is signed distance on the tube. In the original Gaussian chart,
+\(q(F(x,t))=e^{-v(x)}t+O(t^2)\) uniformly on the compact face.
+For any other signed collar parameter \(q\) the leading factor is
+\(dq(\widehat\nu)>0\) there. Thus both normalized widths can be
+chosen within the physical collar, separately on each side.
+In the overlap the transition maps are \(\Phi^{-1}F\) and
+\(F^{-1}\Phi\). At a normalized height \(t\) the marking is
+\(F(\,\cdot\,,t)\), with inverse the first component of \(F^{-1}\).
+The supplied outer-face markings are retained. The two copies
+\(a_L,a_R\) of \(a\) give the reassembly \(a_Ra_L^{-1}\)
+and its inverse \(a_La_R^{-1}\), reversing the boundary
+orientations.
+
+Write \(F^*\widehat g=dt^2+h_t\), so \(h_0=\rd\) and
+\(\partial_t h_0=0\). Fix smooth profiles \(0\le\chi_j\le1\)
+on \([0,1]\), one near zero and zero near one. Write \(t=\epsilon_j w_j r\)
+on each half, where \(\epsilon_L=-1\), \(\epsilon_R=1\),
+\(0\le r\le1\), and \(0<w_j\le1\). Set
+\begin{equation}
+ D_t=h_t-\rd,\qquad h_{t,s}=\rd+(1-s\chi_j(r))D_t,
+ \qquad 0\le s\le1 .
+ \label{eq:exact-path}
+\end{equation}
+Both profiles are constant and agree near the middle, so the
+interpolation is smooth there. Convexity gives positivity. Near
+each outer face the interpolant equals the normalized source.
+Let \(N_s\) be the pushforward, extended by \(\widehat g\). The
+physical path \(g_s=e^{-2u}N_s\) starts at \(g\), agrees with it
+off the two strips and ends in a product germ up to conformal
+scale. The path \(e^{2s\zeta u}g_s\), where \(\zeta=1\) near the
+middle and is supported inside the terminal product germ, exposes
+an exact product at its physical endpoint. The chiral costs of
+the two paths agree on each full side.
+
+\begin{theorem}[Exact-face cost and peak]\label{thm:exact}
+For the fixed source, both complete sides and both signs satisfy
+\(\sup_s|\Delta_{j,\sigma}(s)|\le C_j w_j\).
+Let \(A=\tfrac12\partial_t^2h_t|_{t=0}\) and take its trace-free
+part \(A^\circ\) in \(\rd\). Then
+\begin{equation}
+ \Delta_{j,\sigma}(s)=w_j s^2 c_j+O_{C_s^2}(w_j^2),\qquad
+ c_j=\frac{\|A^\circ\|_{L^2(\rd)}^2}{16}
+       \int_0^1 r^4(\chi_j''(r))^2\,dr .
+ \label{eq:exact-coefficient}
+\end{equation}
+The remainder is uniform through two \(s\)-derivatives. If
+\(A^\circ\not\equiv0\), then \(c_j>0\) on both sides. For
+sufficiently small independent widths each side and each joined
+energy peaks at \(s=1\), the latter with value
+\(E_\sigma(g;M)+w_Lc_L+w_Rc_R+O(w_L^2+w_R^2)\).
+\end{theorem}
+
+\begin{proof}
+Taylor expansion gives
+\(\|(\nabla^\rd)^k\partial_t^p D_t\|\le C|t|^{2-p}\) for
+\(p+k\le2\). Write \(b=1-s\chi_j(r)\). Its derivatives are
+\(b'=-s\epsilon_j\chi_j'/w_j\) and \(b''=-s\chi_j''/w_j^2\).
+The first and second normal derivatives of \(bD_t\) are
+\(bD_t'+b'D_t\) and \(bD_t''+2b'D_t'+b''D_t\).
+Angular derivatives commute with \(b\). These bounds, together
+with the fixed ellipticity interval, give uniformly bounded
+curvature and density. The energy in either strip, throughout the
+path and at the source, is \(O(w_j)\).
+
+For the coefficient use \(D_t=t^2A+O(t^3)\) with differentiated
+Taylor bounds. At \(t=\epsilon_jw_jr\) this gives
+\[
+ \tfrac12\partial_t^2h_{t,s}=(1-sB_j(r))A+O(w_j),
+ \qquad B_j=\tfrac12(r^2\chi_j)''.
+\]
+For the metric \(dt^2+h_{t,s}\) the normal curvature block is
+\(-\partial_t K+Kh^{-1}K\) with \(K=\partial_t h_{t,s}/2\).
+Since \(K=O(w_j)\), its leading term is \(-(1-sB_j)A\).
+Codazzi gives a mixed block \(O(w_j)\). Gauss gives a tangential
+block equal to the round identity plus \(O(w_j^2)\), using
+\(h_{t,s}=\rd+O(w_j^2)\) through two angular derivatives and
+\(K=O(w_j)\). Passage to metric-orthonormal angular frames
+uses \(I+O(w_j^2)\). For \(\alpha_i=dt\wedge e^i\) in such
+a frame, \((\alpha_i+\sigma*\alpha_i)/\sqrt2\) gives the
+chiral basis. Its curvature block is the half-sum of the
+normal and tangential blocks plus signed mixed terms. Taking
+its trace-free part gives
+\[
+ W^\sigma=-\tfrac12(1-sB_j)A^\circ+O(w_j),\qquad
+ dV_{N_s}=(1+O(w_j^2))\,|dt|\,dA_\rd .
+\]
+The two-jet is affine in \(s\), and all operations forming these
+blocks and densities are smooth on the fixed ellipticity interval.
+Thus the errors have the same estimates through the first two
+\(s\)-derivatives.
+
+Abbreviate \(\chi=\chi_j\), \(B=B_j\). Since
+\((r^2\chi)'=0\) at both ends, \(\int_0^1B\,dr=0\).
+In the square of \(B=r^2\chi''/2+2r\chi'+\chi\), the cross
+terms satisfy
+\[
+ \begin{aligned}
+ \int_0^1 2r^3\chi'\chi''\,dr&=-3\int_0^1r^2(\chi')^2\,dr,\\
+ \int_0^1 r^2\chi\chi''\,dr
+     &=\int_0^1\chi^2\,dr-\int_0^1r^2(\chi')^2\,dr,\\
+ \int_0^1 4r\chi\chi'\,dr&=-2\int_0^1\chi^2\,dr .
+ \end{aligned}
+\]
+All boundary terms vanish by the cutoff conditions and the
+powers of \(r\). Hence \(\int B^2=\frac14\int r^4(\chi'')^2\),
+which is positive since \(B=1\) near zero. The difference of
+the leading squared Weyl norms integrates to
+\[
+ \tfrac14w_j\|A^\circ\|_2^2
+       \int_0^1\bigl((1-sB_j)^2-1\bigr)\,dr .
+\]
+The linear term vanishes and the quadratic term gives
+\eqref{eq:exact-coefficient}. If \(c_j>0\), then
+\(\partial_s^2\Delta_{j,\sigma}=2w_jc_j+O(w_j^2)>0\)
+and \(\Delta_{j,\sigma}(1)>\Delta_{j,\sigma}(0)=0\).
+Convexity proves the endpoint maximum for each side and the sum.
+\end{proof}
+
+If the jet is written as \(J^\circ=(\partial_t^2h_t|_{0})^\circ\),
+the factor \(1/16\) in \eqref{eq:exact-coefficient} becomes \(1/64\).
+The reverse path from the product has signed change
+\(\Delta_{j,\sigma}(1-s)-\Delta_{j,\sigma}(1)\), with leading
+term \(w_jc_j((1-s)^2-1)\). Reversing the normal exchanges the
+side labels, widths and profiles. Reversing the ambient orientation
+exchanges the chiralities. For \(A^\circ=0\), the \(O(w_j^2)\)
+bound holds without selection of a maximizer. The constants here
+are for a fixed source, normalized chart and profiles.
+
+\section{Approximate jets in a supplied Gaussian chart}
+
+Now take an actual marked physical chart with metric
+\(dt^2+h_t\) on two strips of independent widths \(0<w_j\le1\).
+Use reference \(\bar p=dt^2+\rd\), \(u_t=h_t-\rd\), and
+\(p_s=\bar p+(1-s\chi_j(r))u_t\). Assume
+\(\lambda\rd\le h_t\le\Lambda\rd\) on both strips. The angular
+norm \(\|\cdot\|_{C^2_\rd}\) sums supremum norms for the value
+and first two angular derivatives. Put
+\[
+ \begin{gathered}
+ \alpha=\|u_0\|_{C^2_\rd},\qquad
+ \beta=\|\partial_tu_0\|_{C^2_\rd},\qquad
+ M_j=\sup_{t\ \mathrm{on\ side}\ j}\|\partial_t^2h_t\|_{C^2_\rd},\\
+ Z_j=\frac{\alpha}{w_j^{3/2}}+\frac{\beta}{\sqrt{w_j}}+\sqrt{w_j}M_j,
+ \qquad A_\rd=2\pi^2 .
+ \end{gathered}
+\]
+The path is a smooth intrinsic deformation that agrees with the
+source near both outer faces and ends in an exact product germ.
+
+\begin{theorem}[Two physical widths]\label{thm:approx}
+On each half-strip \(U_j\), for both signs and all \(0\le s\le1\),
+\begin{equation}
+ E_\sigma(p_s;U_j)^{1/2}
+ \le C\sqrt{A_\rd}\bigl(Z_j+w_j^{3/2}Z_j^2\bigr).
+ \label{eq:approx}
+\end{equation}
+The constant depends on dimension, reference curvature, the bounds
+\(\min(1,\lambda)\), \(\max(1,\Lambda)\), and the fixed cutoff
+derivative bounds. It is independent of the ratio of widths.
+If \(C_j^{\rm app}\) is the square of the right side, the signed
+increment lies in
+\([-E_\sigma(g;U_j),\,C_j^{\rm app}-E_\sigma(g;U_j)]\).
+The joined peak is at most \(E_\sigma(g;M)+C_L^{\rm app}+C_R^{\rm app}\).
+\end{theorem}
+
+\begin{proof}
+Write \(w=w_j\), \(v=(1-s\chi_j)u_t\),
+\(L_k=\|\chi_j^{(k)}\|_\infty\),
+\(P=\alpha+w\beta+w^2 M_j/2\), and \(Q=\beta+w M_j\).
+The latter two bound \(u_t,\partial_tu_t\) in the angular norm.
+For \(D=\nabla^\rd\) the derivatives through total order two are
+\[
+ \begin{aligned}
+ D^k v&=(1-s\chi_j)D^ku_t &&(0\le k\le2),\\
+ \partial_t D^k v&=(1-s\chi_j)\partial_tD^ku_t
+       -s\epsilon_j\chi_j'D^ku_t/w &&(0\le k\le1),\\
+ \partial_t^2 v&=(1-s\chi_j)\partial_t^2u_t
+       -2s\epsilon_j\chi_j'\partial_tu_t/w-s\chi_j''u_t/w^2 .
+ \end{aligned}
+\]
+Thus the zero-, one-, and two-normal bounds are \(P\),
+\(Q+sL_1P/w\), and \(M_j+2sL_1Q/w+sL_2P/w^2\) in the
+indicated angular norms. The full product jets through order two
+are bounded, by order, by \(Cw^{3/2}Z_j\), \(Cw^{1/2}Z_j\),
+and \(Cw^{-1/2}Z_j\).
+
+In oriented \(\bar p\)-orthonormal frames identify the metric
+orthonormal frames via the positive inverse square root.
+Let \(F_\sigma(v)\) be the chiral Weyl matrix for \(\bar p+v\)
+in that frame multiplied by \((dV_{\bar p+v}/dV_{\bar p})^{1/2}\).
+Its squared \(L^2(dV_{\bar p})\) norm gives the energy. This is
+the density convention of the first-order splice in
+\cite{Baker2026ChiralMaster}. In the product connection
+\(\overline\nabla\), the connection difference is a contraction
+of \((\bar p+v)^{-1}\overline\nabla v\). One derivative and the
+square of this difference give curvature terms linear in
+\(\overline\nabla^2v\) and quadratic in \(\overline\nabla v\).
+The projection and density are smooth functions of the metric.
+Since \(\bar p\) is conformally flat, the linearization and remainder
+obey
+\[
+ \begin{aligned}
+ |\mathcal L_\sigma v|&\le
+     C(|\overline{\Rm}|\,|v|+|\overline\nabla^2v|),\\
+ |F_\sigma(v)-\mathcal L_\sigma v|&\le
+     C\bigl(|\overline{\Rm}|\,|v|^2+
+            |v|\,|\overline\nabla^2v|+|\overline\nabla v|^2\bigr).
+ \end{aligned}
+\]
+The terms with \(\overline{\Rm}\) come from zeroth-order
+coefficient changes. The quadratic first-jet contribution includes
+the square of \(sL_1P/w\) and its cross terms. Using ellipticity
+to bound \(|v|\) in the mixed quadratic term yields the pointwise
+estimate \(C(w^{-1/2}Z_j+w Z_j^2)\). The reference volume
+\(A_\rd w\) gives \eqref{eq:approx}. The full-side changes
+subtract the raw strip energies since the metric is fixed
+off the two strips.
+\end{proof}
+
+Uniform ellipticity and \(Z_L,Z_R\to0\) imply vanishing allowances.
+For shrinking widths it is enough to have, for
+\(w_{\min}=\min(w_L,w_R)\),
+\[
+ \alpha=o(w_{\min}^{3/2}),\qquad \beta=o(w_{\min}^{1/2}),\qquad
+ \sqrt{w_j}M_j\longrightarrow0\quad(j=L,R).
+\]
+For exact face jets with bounded \(M_j\), the squared bound gives
+\(O(w_j)\). The hypotheses are on physical Taylor data, and any
+preliminary metric adjustment outside the conformal class or
+added connector must be included in the joined and side budgets.
+
+\section{Sharp powers for a fixed tangential mode}
+
+Identify the marked round \(S^3\) with \(SU(2)\), and let
+\((\omega^1,\omega^2,\omega^3)\) be a unit round left-invariant
+coframe, with cyclic brackets \([e_j,e_k]=2e_i\) for the dual
+frame. Use the fixed tensor
+\[
+ Q=\omega^1\otimes\omega^1-\omega^2\otimes\omega^2,\qquad
+ h_t=\rd+(a+bt)Q .
+\]
+Choose amplitudes to make the metric uniformly positive on the
+given chart. The tensor has eigenvalues \(q_i=(1,-1,0)_i\), is
+trace-free and satisfies \(\|Q\|_2^2=4\pi^2\). To check the
+nonroundness, for \(h=\rd+fQ\) with constant \(f\) put
+\(l_i=1+fq_i\) and \(\mu_i=2l_i/\sqrt{l_1l_2l_3}\).
+In the orthonormal frame \(E_i=l_i^{-1/2}e_i\), the cyclic
+bracket coefficients are \(\mu_i\). The Koszul formula gives
+\(2\langle\nabla_{E_i}E_j,E_k\rangle=\mu_k-\mu_i+\mu_j\)
+for a cyclic triple. Substitution into the curvature formula
+gives the Ricci eigenvalues
+\(\tfrac12(\mu_i^2-(\mu_j-\mu_k)^2)=2+4f q_i+O(f^2)\)
+for \(\{i,j,k\}=\{1,2,3\}\). They differ for sufficiently
+small nonzero \(f\).
+
+On the strip of width \(w=w_j\), the interpolant has tangential
+coefficient \(f_s=(1-s\chi_j(r))(a+bt)\). Its linearized
+two-normal curvature is \(-f_s''Q/2\), with primes here taken
+in \(t\). The tangential and mixed blocks carry no two-normal
+linear terms. The trace-free chiral half-sum used in
+Theorem~\ref{thm:exact} therefore gives
+\(-f_s''Q/4\) as the principal term of \(F_\sigma(f_s Q)\)
+in either sign. The density normalization leaves this linear
+term unchanged. Differentiation at the native width gives
+\[
+ f_s''=-s\left[
+  \frac{a}{w^2}\chi_j''(r)
+  +\frac{\epsilon_j b}{w}\bigl(r\chi_j''(r)+2\chi_j'(r)\bigr)
+ \right].
+\]
+Define
+\begin{equation}
+ J_j(a,b)=\frac{\|Q\|_2^2}{16}\int_0^1
+ \left[
+  \frac{a}{w_j^{3/2}}\chi_j''
+  +\frac{\epsilon_j b}{\sqrt{w_j}}\bigl(r\chi_j''+2\chi_j'\bigr)
+ \right]^2\,dr .
+ \label{eq:gram}
+\end{equation}
+The profiles \(\chi_j''\) and \((r\chi_j)''\) have a positive
+definite Gram matrix. Otherwise \(((A+Br)\chi_j)''=0\) for
+a nonzero \((A,B)\). The affine function \((A+Br)\chi_j\)
+vanishes near one and equals \(A+Br\) near zero, a contradiction.
+Consequently \(J_j\) is comparable to \(a^2/w_j^3+b^2/w_j\),
+with constants for the fixed profile and \(Q\). The mixed term
+carries the factor \(\epsilon_j ab\). Its profile coefficient
+is positive since
+\(\int_0^1\chi_j''(r\chi_j''+2\chi_j')\,dr
+=\int_0^1r(\chi_j'')^2\,dr\), the boundary term
+\([(\chi_j')^2]_0^1\) vanishing.
+
+\begin{proposition}[Signed cost of the mode]\label{prop:mode}
+For \(\delta_j=|a|+w_j|b|\) sufficiently small, the complete
+side changes in either sign satisfy
+\begin{equation}
+ \Delta_{j,\sigma}(s)=s^2 J_j(a,b)
+             +O\bigl((w_j+\delta_j)J_j(a,b)\bigr) ,
+ \label{eq:mode-sign}
+\end{equation}
+uniformly in \(s\) and the ratio of widths. The leading joined
+peak increment is \(J_L+J_R\), with additive error bounded by
+the sum of the two errors in \eqref{eq:mode-sign}.
+For \(a=0\) and fixed \(b\), uniformly for \(0\le s\le1\),
+\[
+ \lim_{w_j\to0} w_j\Delta_{j,\sigma}(s)=
+ \frac{s^2 b^2\|Q\|_2^2}{16}
+ \int_0^1 (r\chi_j''+2\chi_j')^2\,dr .
+\]
+\end{proposition}
+
+\begin{proof}
+The fixed angular tensor and the density expansion in the proof
+of Theorem~\ref{thm:approx} bound the error after removal of
+\(-f_s''Q/4\) pointwise by
+\[
+ \begin{aligned}
+ C\bigl(|f_s|+|f_s'|+|f_s|\,|f_s''|+|f_s'|^2\bigr)
+ &\le C(w_j+\delta_j)\delta_j/w_j^2 .
+ \end{aligned}
+\]
+Indeed the three jets in \(t\) are bounded in order by
+\(C\delta_j,C\delta_j/w_j,C\delta_j/w_j^2\).
+The mixed and tangential linear terms use at most one normal
+derivative. The squared reference norm of the principal part is
+\(s^2J_j\), and the error norm is bounded by
+\(C(w_j+\delta_j)\sqrt{J_j}\). For the incoming metric, its
+coefficient \(a+bt\) has second normal derivative zero.
+The same expansion bounds its energy on the strip by
+\[
+ Cw_j(\delta_j+|b|+b^2)^2
+ \le C(w_j+\delta_j)^2J_j .
+\]
+The \(b^2\) term controls the quadratic first jet also for large
+\(|b|\) on shrinking charts with \(\delta_j\) small. Squaring the
+outgoing density norm and subtracting the incoming energy proves
+\eqref{eq:mode-sign}. The uniform bound and the value at \(s=1\)
+give the leading peak, and the pure first-jet limit follows by
+substituting \(a=0\) and \(\delta_j=w_j|b|\).
+\end{proof}
+
+For fixed small \(a\ne0\) and fixed \(b\), an exact
+\(w_j^{-3}\) coefficient retains the quadratic normal-curvature
+terms. For a given profile \(\chi_j\), put
+\[
+ \begin{aligned}
+ l_i(r)&=1+a(1-s\chi_j(r))q_i, & k_i&=\frac{l_i'}{2l_i},\\
+ N_i&=-\frac{l_i''}{2l_i}+\frac{(l_i')^2}{4l_i^2}, &
+ T_i&=-k_m k_n \quad(\{i,m,n\}=\{1,2,3\}),
+ \end{aligned}
+\]
+now with primes in \(r\).
+Before taking the limit the same diagonal lengths have the
+extra term \((1-s\chi_j)\epsilon_j b w_j r q_i\), which
+converges to zero through two \(r\)-derivatives uniformly in \(s\).
+For a tangential diagonal length \(\widetilde l_i(t)\), the
+normal block in a metric orthonormal frame has diagonal
+\(-\widetilde l_{i,tt}/(2\widetilde l_i)
+ +(\widetilde l_{i,t})^2/(4\widetilde l_i^2)\).
+The tangential block has the intrinsic sphere curvature and
+the Gauss term
+\(-(\widetilde l_{m,t}/(2\widetilde l_m))
+  (\widetilde l_{n,t}/(2\widetilde l_n))\).
+After multiplying by \(w_j^2\), these converge to \(N_i\) and
+\(T_i\), respectively. Intrinsic curvature is bounded, and the
+mixed curvature is \(O(w_j^{-1})\) by Codazzi, so neither
+contributes to the rescaled limit. The chiral diagonal
+entries converge to \((N_i+T_i)/2\), before subtracting their
+mean. With the volume factor this gives
+\begin{equation}
+ \begin{aligned}
+ w_j^3\Delta_{j,\sigma}(s)&\longrightarrow\Lambda_j(s,a),\\
+ \Lambda_j(s,a)
+ &=\frac{A_\rd}{4}\int_0^1\sqrt{l_1l_2l_3}
+   \sum_{i=1}^3
+   \left(N_i+T_i-\frac13\sum_{m=1}^3(N_m+T_m)\right)^2\,dr.
+ \end{aligned}
+ \label{eq:fixed-a}
+\end{equation}
+The incoming energies vanish at the indicated rescaling.
+Convergence is uniform in \(s\) and identical in the two signs.
+If the same profile is used in both strips, the functions
+\(\Lambda_j\) agree. The sign \(\epsilon_j\) in a first
+normal derivative cancels in these quadratic terms.
+
+The formulas for \(l_i'\) and \(l_i''\) exhibit a factor \(sa\)
+in each leading curvature entry. At \(a=0\) after division by that
+factor, the trace-free part of \(N_i+T_i\) has entries
+\(\chi_j''q_i/2\). Thus
+\(\Lambda_j(s,a)=s^2a^2 G_j(s,a)\), where \(G_j\) is smooth
+through \(s=0,a=0\) and
+\[
+ G_j(s,a)=\frac{\|Q\|_2^2}{16}\int_0^1(\chi_j'')^2\,dr+O(|a|),
+ \qquad \partial_s G_j=O(|a|).
+\]
+The constant term is positive. For sufficiently small nonzero
+\(a\), differentiation shows that \(\Lambda_j(s,a)\)
+increases for \(s>0\). The leading joined peak for independently
+shrinking widths is therefore
+\[
+ w_L^{-3}\Lambda_L(1,a)+w_R^{-3}\Lambda_R(1,a)
+      +o(w_L^{-3}+w_R^{-3}) .
+\]
+In particular the powers \(w^{-3}\) and \(w^{-1}\) both occur
+for the specified interpolation. These are sharpness tests on
+a single nonround tensor mode in a supplied chart. They do
+not establish lower bounds for other deformations or charts.
+
+\section{Small face defect in a compact family}
+
+On a smooth cooriented three-sphere with first and second
+fundamental forms \(h,K\), define
+\[
+ \mathcal D_g(\Sigma)=
+ \int_\Sigma\bigl(|\Cot(h)|_h+|K^\circ|_h^3\bigr)\,dA_h .
+\]
+Here \(\Cot\) is the three-covariant intrinsic Cotton tensor.
+In dimension three it is conformally invariant and vanishes
+precisely for locally conformally flat metrics. Its norm has
+weight \(-3\). The norm of \(K^\circ\) has weight \(-1\) under
+ambient conformal change, while \(dA_h\) has weight \(3\).
+Thus both integrals are conformally invariant
+\cite[\S4.1 and \S6.1]{CurryGover2015Introduction}.
+
+\begin{theorem}[Smooth marked precompactness]\label{thm:compact}
+Let \(\Phi_i:S^3\times[-1,1]\to M_i\) be smooth embedded
+bicollars of specified cooriented separating spheres \(\Sigma_i\),
+with physical metrics \(g_i\) and fixed markings of their complete
+sides. Suppose positive conformal multiples of \(\Phi_i^*g_i\)
+are precompact in the smooth topology of this common closed slab,
+with positive definite limits. If \(\mathcal D_{g_i}(\Sigma_i)\to0\),
+a subsequence admits marked paths to round product germs up to
+conformal scale, with \(o(1)\) absolute signed changes in both
+chiralities on both complete sides, uniformly along the paths.
+If an application requires separate protected regions to remain
+fixed, the strips must fit inside the permitted region with the
+width bounds in the proof.
+\end{theorem}
+
+\begin{proof}
+Pass to \(p_i=e^{2u_i}\Phi_i^*g_i\to p_\infty\) smoothly.
+The two nonnegative face integrands converge on the compact
+sphere. Vanishing of their limiting integrals gives an umbilic
+face and \(\Cot(h_\infty)=0\). By conformal development the
+smooth compact simply connected locally conformally flat
+sphere is conformally round \cite{Kuiper1949}. Its developing
+map is a local diffeomorphism whose image is open and closed
+in \(S^3\). Compactness makes it a covering, which is a
+diffeomorphism since \(S^3\) is simply connected. Write the
+round representative as \(\eta=e^{2v_0}h_\infty=\vartheta^*\rd\)
+on the original sphere, choosing \(\vartheta\) orientation
+preserving by a round reflection if necessary.
+
+Use the normalization of Section~\ref{sec:exact} for the limit, with face
+value \(v_0\) and normal derivative \(-H_\infty/3\) of a
+fixed function \(v\). Its signed Gaussian chart \(F\) on a
+smaller closed slab fixes the original angular coordinate at
+the center. Put \(b=dt^2+\eta\) and
+\(m_\infty=F^*(e^{2v}p_\infty)=dt^2+h_t\) there. The limiting
+face has \(h_0=\eta\) and \(\partial_t h_0=0\). The actual
+\(m_i=F^*(e^{2v}p_i)\) need not be Gaussian for this same
+\(F\). With the full product covariant norm let
+\(\delta_i=\|m_i-m_\infty\|_{C^2(b)}\). Choose subwidths
+\(w_{i,L}=(\delta_i+i^{-1})^{1/3}\) and \(w_{i,R}=w_{i,L}/2\)
+for late \(i\). More generally two available widths tending
+to zero suffice if \(\delta_i/w_{i,j}^2\) stays bounded.
+The displayed choice satisfies this condition and fits inside
+the smaller slab for late indices. A fixed positive clearance
+in the permitted region suffices if there are extra protected sets.
+
+On each side use the interpolation of the full four-tensor
+\[
+ m_{i,s}=b+(1-s\chi_j(|t|/w_{i,j}))(m_i-b).
+\]
+The first three orders of the limiting mismatch have
+bounds \(O(w^2),O(w),O(1)\) for width \(w=w_{i,j}\).
+For \(m_i-m_\infty\) the corresponding cutoff jet bounds
+are \(C\delta_i\), \(C(1+w^{-1})\delta_i\) and
+\(C(1+w^{-1}+w^{-2})\delta_i\). This gives bounded jets
+through order two for all normal, mixed and tangential
+components. The path has uniform ellipticity by convexity.
+Thus both strip energies, including their incoming values,
+are \(O(w_{i,j})\) in either sign, uniformly along the path.
+
+Push forward by \(\Phi_i F\) with inverse \(F^{-1}\Phi_i^{-1}\)
+on its image and restore the inverse conformal multiplier.
+This returns the source metric near both outer faces, with zero
+gauge charge. If needed, an endpoint conformal change supported
+in a smaller product germ exposes its product representative.
+For \(\alpha_i(x)=\Phi_i(x,0)\) the round cap coordinate
+\(z=\vartheta(x)\) marks the actual face by
+\(z\mapsto\alpha_i(\vartheta^{-1}(z))\), with inverse
+\(\vartheta\alpha_i^{-1}\). This records the angular change in
+both directions.
+\end{proof}
+
+For a parametrized disk \(A_i:B^4\to D_i\) the transition from
+the cap boundary to the disk coordinates is
+\((A_i|_{S^3})^{-1}\alpha_i\vartheta^{-1}\), with inverse
+\(\vartheta\alpha_i^{-1}(A_i|_{S^3})\).
+Every sphere diffeomorphism is isotopic to an orthogonal map of
+its orientation sign \cite[p.~553]{Hatcher1983Smale}.
+Given an isotopy \(G_s\) from that linear boundary map to the
+transition, extend by \((r,z)\mapsto(r,G_{\rho(r)}(z))\)
+with \(\rho=0\) near zero and \(\rho=1\) near one.
+The inverse uses \(G_{\rho(r)}^{-1}\). Near the center the
+extension is linear. Choosing the cap orientation so the
+boundary gluing reverses the induced orientations gives smooth
+oriented reassembly relative to the retained exterior away
+from the joining collar. A trace application must instead
+transport all its marked attachments under the angular change
+\cite{Baker2026HandleCuts}.
+
+\section{The joined threshold and charged disks}
+
+Let \(M\) be a closed oriented smooth homotopy four-sphere.
+Write \(T=4\pi^2\) and
+\[
+ I=I^+(M)=\inf\{E_+(h;M):Y([h])>0\}.
+\]
+The empty infimum is \(+\infty\). For the positive metrics
+considered below the infimum is finite, and either chirality gives
+the same closed energy by signature. We use the master's positive
+recognition criterion \(E_+\le T\) and its charged-disk selection
+on a positive subcritical minimizing sequence
+\cite[Recognition and charged-disk theorems]{Baker2026ChiralMaster}.
+
+\begin{lemma}[Strict joined bound and positive caps]\label{lem:cap}
+Suppose \(Y([g])>0\) and a smooth joined metric path from \(g\)
+has peak \(H_0=\sup_s E_+(g_s;M)<2T\). Suppose its endpoint
+\(h\) has a marked round product germ up to smooth positive
+conformal factor at a separating sphere. Then either complete
+side can be capped by a smooth marked ball, with positive Yamabe
+class and exactly its endpoint side energy in each chirality.
+\end{lemma}
+
+\begin{proof}
+If the first conformal-Laplacian eigenvalue becomes zero, its
+positive eigenfunction gives a scalar-flat metric \(q\) in that
+class. In the present normalization, Gauss--Bonnet and signature
+give \(E_+(q)=8\pi^2+\frac14\int_M|\Ric_q|^2\,dV_q\).
+The first eigenvalue is continuous along the metric path and its
+sign is the Yamabe sign. Consequently the path stays positive.
+Gauss--Bonnet on a positive volume-one Yamabe representative
+also gives \(Y\ge\sqrt{48(2T-H_0)}\) along the path
+\cite[\S2]{LeeParker1987Yamabe}
+\cite[A short marked cut]{Baker2026ChiralMaster}.
+
+Expose the product near the cut by a supported conformal change
+at no cost. In a smaller exact product replace the normal
+length element \(dt\) by \((1+L\varphi(t))\,dt\), with \(L\ge0\)
+and a nonnegative interior bump \(\varphi\) of integral one.
+Arclength identifies the changed region with a longer product.
+The metrics on the joined source are joined to \(h\) by the same
+stretching path and the added length has zero chiral energy.
+The positive bound on \(Y\) therefore holds uniformly in \(L\).
+Every compactly supported test on a retained side with a
+half-infinite product end extends to a sufficiently stretched
+joined metric with the same Yamabe quotient. In outward product
+arclength \(\ell\) a positive conformal scale equal to \(e^{-\ell}\)
+for large \(\ell\) compactifies the end in the angular marking
+using \(r=e^{-\ell}\), with inverse \(\ell=-\log r\) away from
+the center. The cap is flat near the added point and conformally
+flat throughout. Choose the scale to be one near the joining
+sphere. Smooth tests avoiding the point are dense in \(H^1\), since
+a radial cutoff of a fixed smooth test has squared gradient
+cost \(O(r^2)\) near the added point. Conformal covariance gives
+the same strictly positive lower bound for the capped Yamabe
+class. There is zero cap energy in either sign.
+\end{proof}
+
+Fix a smooth positive source \(g_i\) with joined energy
+\(e_i<2T\), and let \(d_i=e_i-I\). Let \(D_i\) be an
+actual parametrized standard closed disk with
+\(V_i=M\setminus\operatorname{int}D_i\). For either sign set
+\(m_i^\sigma=E_\sigma(g_i;D_i)\) and
+\(v_i^\sigma=E_\sigma(g_i;V_i)\), so \(m_i^\sigma+v_i^\sigma=e_i\).
+For a path as in Lemma~\ref{lem:cap} at its boundary, write
+\(\Delta_{V,i}^\sigma=E_\sigma(h_i;V_i)-v_i^\sigma\) for its
+signed complete-exterior endpoint change. Its exterior cap,
+identified with \(M\) by the disk parametrization and the
+sphere transition extension, is an actual positive metric on
+the same oriented smooth type. Consequently
+\begin{equation}
+ \begin{aligned}
+ E_\sigma(\widehat g_{V,i};M)
+   &=e_i-m_i^\sigma+\Delta_{V,i}^\sigma\ge I,\\
+ m_i^\sigma&\le d_i+\Delta_{V,i}^\sigma,\qquad
+ \Delta_{V,i}^+-\Delta_{V,i}^-=m_i^+-m_i^- .
+ \end{aligned}
+ \label{eq:disk-budget}
+\end{equation}
+The last identity uses equality of the two closed capped energies.
+If \(G_i^\sigma\) is an upper allowance on the signed exterior
+change, then \(m_i^\sigma>d_i+G_i^\sigma\) contradicts existence
+of the path at that finite index. If
+\(e_i-m_i^\sigma+G_i^\sigma\le T\), the capped metric gives
+direct recognition. In these comparisons the peak consumes both
+strips and any connectors, and the capped exterior consumes its
+entire changed side \cite[Exterior replacement and marked cuts]{Baker2026ChiralMaster}.
+
+\begin{corollary}[A fixed exact face on a physical disk]\label{cor:fixed}
+For a fixed positive source as above, suppose the disk boundary
+is conformally round in some smooth angular marking and umbilic,
+and admits arbitrarily narrow strips on both sides in the permitted
+physical bicollar. Then \(m_i^+=m_i^-\le d_i\).
+\end{corollary}
+
+\begin{proof}
+Theorem~\ref{thm:exact} gives joined peak at most
+\(e_i+C_i(w_D+w_V)\) and \(|\Delta_{V,i}^\sigma|\le C_iw_V\)
+with a fixed constant for this metric and chart. At this \(i\)
+choose both positive widths narrow enough to stay strictly below
+\(2T\). Perform the cap construction for each sufficiently small
+choice, then send the widths to zero while holding \(g_i,D_i\),
+the conformal normalization, the chart and \(C_i\) fixed.
+Both inequalities and the identity in \eqref{eq:disk-budget}
+give the conclusion. A conformally round marking different
+from the disk's original boundary coordinates is admissible by
+the sphere-extension argument following Theorem~\ref{thm:compact}.
+\end{proof}
+
+The order of quantifiers is material. For a hypothetical
+nonstandard \(M\) with \(I<2T\), the master supplies a fixed
+sign \(\sigma_*\), a subsequence of unit-volume positive Yamabe
+representatives \(g_i\) of a minimizing sequence with \(e_i\to I\),
+original physical marked disks
+\(D_i\), and constants \(a,b>0\) with
+\[
+ m_i^{\sigma_*}\ge a,\qquad v_i^{\sigma_*}\ge b
+\]
+on that subsequence \cite[A charged disk throughout the subcritical
+band]{Baker2026ChiralMaster}. For every sufficiently late charged
+index \(d_i<a\) and \(e_i<2T\). Corollary~\ref{cor:fixed} then
+rules out a round umbilic face at each of those actual disks.
+The constants \(C_i\) need not be uniform. The budget compares
+positive metrics at positive widths at each fixed index before
+using the limiting bound.
+
+\begin{corollary}[Defect on precompact charged collars]\label{cor:charged}
+On any subsequence of those original marked charged collars having
+the precompactness hypothesis of Theorem~\ref{thm:compact},
+the face defects have strictly positive lower limit, provided the
+required subwidths fit in the permitted regions.
+\end{corollary}
+
+\begin{proof}
+If the lower limit were zero, pass to a further subsequence with
+defect tending to zero and apply Theorem~\ref{thm:compact}. Along
+the resulting paths the joined peaks are at most \(e_i+o(1)<2T\)
+for every sufficiently late index. Their marked capped exteriors
+are positive, and in the selected sign their energies on \(M\)
+are \(e_i-m_i^{\sigma_*}+o(1)\le e_i-a+o(1)\). At a sufficiently
+late finite index this is strictly below \(I\), contradicting
+\eqref{eq:disk-budget}. The argument gives no numerical lower
+bound on the defect without further information on the family.
+\end{proof}
+
+\subsection{A separate test on an enlarged disk}
+
+The master also constructs, for each fixed bisection count
+\(k\ge1\), an enlarged parametrized disk \(B_i\) protecting an
+outer disk \(Q_i\) that contains the original marked bicollar.
+Write \(q_i^\sigma=E_\sigma(g_i;Q_i)\),
+\(v_i^{B,\sigma}=E_\sigma(g_i;M\setminus\operatorname{int}B_i)\),
+and \(b_i^\sigma=e_i-v_i^{B,\sigma}\). Its four-measure
+selection gives, for fixed \(k\),
+\[
+ v_i^{B,\sigma}=2^{-k}(e_i-q_i^\sigma)+r_i^\sigma,
+ \qquad r_i^\sigma\longrightarrow0
+\]
+in both signs \cite[A necessary disk-side saving]{Baker2026ChiralMaster}.
+This is a statement about the raw measures and the actual enlarged
+marking. If a proposed path ends in a round product germ there
+and has strict joined peak \(H_i<2T\), the exterior cap still
+has energy at least \(I\). The signed exterior increment is
+therefore at least \(b_i^\sigma-d_i\), and the saving
+\(S_i^\sigma=b_i^\sigma-E_\sigma(h_i;B_i)\) on the entire
+disk satisfies
+\[
+ S_i^\sigma\ge b_i^\sigma+I-H_i>b_i^\sigma+I-2T .
+\]
+For \(k=1\) and \(I=4T/3\), the last bound has lower limit at
+least \(a/2\) in sign \(\sigma_*\), using \(q_i^{\sigma_*}\ge a\).
+More generally the limiting lower bound in either sign is at
+least \((2-2^{-k})I-2T\). If the master's non-effective gap on
+the given nonstandard type is \(I>T+\varepsilon_*\), a fixed
+\(k\) with \(2^{-k}(T+\varepsilon_*)\le\varepsilon_*\) gives a
+limiting lower bound greater than \(\varepsilon_*\)
+\cite[Uniform recognition by the Weyl spectrum]{Baker2026ChiralMaster}.
+
+A change confined to the final disk-side seam saves at most
+the incoming chiral mass of that seam. Thus a sequence of
+seams with vanishing raw disk-side mass cannot furnish the
+required savings in the positive lower bound regimes just
+listed. If the whole \(Q_i\) is preserved up to conformal
+scale, then \(H_i\ge I+\max_\sigma q_i^\sigma\), since the
+enlarged disk retains at least that core energy in its
+respective sign and the exterior cap consumes at least \(I\).
+These are distinct finite-source conditions on a matched
+comparison.
+
+\section{Outstanding challenges}
+
+The signed second-jet coefficient and the mode estimates price a
+particular intrinsic interpolation. They leave open optimization of
+the path, the cutoff and the physical coordinates. In particular,
+a small integrated face defect by itself leaves available widths,
+ellipticity and normal jet bounds undetermined. The compact result
+uses a positive definite smooth limit across an actual common marked
+slab. Establishing an applicable compactness or jet estimate on the
+selected physical collars requires control of their scale, chart
+distortion, protected regions and normal geometry.
+
+The marked handle criteria concern specified cuts with their full
+gluing data \cite{Baker2026HandleCuts}. Using their geometry in
+the charged comparison requires a common physical realization or a
+controlled connecting region on the same metric. Likewise a repair
+of an enlarged charged disk requires a decrease of energy on the
+whole disk sufficient for the finite inequalities above. The
+arguments give conditional exclusions on entered positive subcritical
+types. Producing such entry or a recognizing metric on an arbitrary
+smooth homotopy four-sphere is an additional global problem
+\cite{Baker2026CollarProgram,Baker2026ChiralMaster}.
+
+\bibliographystyle{unsrturl}
+\bibliography{references}
+\end{document}
