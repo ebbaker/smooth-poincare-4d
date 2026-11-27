@@ -208,3 +208,5 @@ The [two-attachment and face-error passages](SOURCE_NOTES_COLLAR_SURGERY_2026112
 The [nonlocal band and boundary-response passages](SOURCE_NOTES_COLLAR_SURGERY_20261126.md#nonlocal-bands-and-a-physical-boundary-response) identify the published local slide, the rank-increasing knot test, the marked PSC fittings and the conformal-Laplacian input to the finite-width sign test.
 
 The [sources for the native GST reverse slides](SOURCE_NOTES_COLLAR_SURGERY_20261126.md#native-reverse-slides-on-the-gst-links) identify the actual co-cores, the rank-two primitive-word theorem and the surface-bundle input to the sphere intersection bounds.
+
+The [27 November master passage record](../papers/master/references/README.md#passages-checked-on-27-november-2026) gives the sharp trace inequality on the conformally marked ball and the localized scalar-curvature deformation on each framed surgery tube.

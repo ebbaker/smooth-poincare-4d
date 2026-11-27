@@ -1,0 +1,39 @@
+# Degree on a marked band and rigidity at a free cut
+
+27 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex. Parent checkout `72068ce`. The original manuscript and parent E reading are pinned in the [independent request](../research-progress/handoffs/E02_REQUEST_20261127.md). The lead's serving model and effort were unavailable. The [bounded independent reading](../research-progress/handoffs/E02_MARKED_RETURN_20261127.md) recomputes the four implications below. All manifolds and closed metrics are smooth, oriented and Riemannian unless the matched limit is specified.
+
+## Finding a positive source with the correct degree
+
+Fix a reduced mixed presentation with one lower and one upper 1-handle when read from their respective ends, two middle handles, normalized winding row \((1,0)\), framed attaching maps, and the actual upper closing. Let \(Z\) be its winding-one-first cut \(Z_a\), or its alternate-order cut \(Z_b\). The companion theorem requires a nonzero-degree map from a closed oriented PSC three-manifold to this \(Z\). It concludes \(Z_a\cong S^3\) or \(Z_b\cong\#_2(S^1\times S^2)\) in the respective cases, and \(M\cong S^4\) in either case. [05, theorem on the two normalized mixed cuts](../../05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/manuscript/recognition_from_marked_handle_cuts.tex)
+
+Suppose \(p:B\to Z\) is a continuous map from a compact band, of degree one on its incoming face as oriented toward the outgoing end. A closed oriented hypersurface \(S=\bigsqcup S_j\) homologous to that face in \(H_3(B;\mathbb Z)\) satisfies \(\sum_j\deg(p|_{S_j})=1\), by functoriality of the fundamental class. A connected such surface gives degree one. If it is disconnected, a sign certificate for every component suffices, as does a sign certificate for a specified component with nonzero degree. In particular, an unrelated small positive sphere need not represent the class of the incoming face.
+
+For a product marking \(B=Z\times[a,b]\) in a fixed entering conformal class, write the metric in slice coordinates as
+\[
+ g=N^2dt^2+h_t(dx+X\,dt,dx+X\,dt),\qquad
+ 2NB=\partial_t h_t-\mathcal L_Xh_t .
+\]
+In the second equation \(B\) denotes the second fundamental form with increasing normal. Put \(A_t=(\partial_t h_t-\mathcal L_Xh_t)^\circ\), with trace removed using \(h_t\). For a smooth isometric embedding of one entering gauge, SEAM supplies \(C(g,F)>0\) uniformly over all cuts, with \(Y(\Sigma,[h])\ge C(g,F)-\|B^\circ\|_3^2\). The induced Yamabe constant and integrated cubic bending are conformal invariants, so the collar may be measured in a different smooth representative of this same class. Then
+\[
+ \frac{1}{8(b-a)}\int_a^b\!\!\int_Z N^{-3}|A_t|^3_{h_t}\,d\mu_{h_t}\,dt
+   < C(g,F)^{3/2}
+\]
+implies that some **actual native slice** has \(Y>0\) and degree one. The left side averages \(\int |B^\circ|^3\), and in four-dimensional volume its integrand has weight \(N^{-4}\). Reparametrization changes the averaging measure; the height and its lapse are part of a particular certificate. The selected slice and its cubic bending are geometric. An upper bound on \(\partial_t h_t\) in shifting coordinates alone misses the Lie derivative. [Uniform bending proof](../02_seams_and_marked_cuts/notes/E05_UNIFORM_BENDING.md) · [independent check](../research-progress/handoffs/E02_MARKED_RETURN_20261127.md)
+
+There is a second test when only the intrinsic end distance and scalar curvature of a product band are controlled. If \(R\ge\rho>0\) there and its intrinsic width \(d\) satisfies \(\rho d^2\ge3\pi^2\), the native \(Z\) admits PSC. Indeed rescaling the band metric by \(\rho/12\) gives scalar curvature at least twelve. A closed connected oriented non-PSC \(Z^3\) would have rescaled product-band width strictly less than \(\pi/2\). Equality therefore suffices in the displayed width test. The scalar lower bound and distance must concern the same band. [Räde, Corollary 2.25](https://arxiv.org/pdf/2104.10120v4#page=6)
+
+## A calibration and a topological obstruction
+
+On the standard unit round sphere in \(\mathbb R^5\), \(p=\min(R-2\mathrm{Ric}(\nu,\nu))=6\), \(K=\max_L|\mathrm{tr}_L\mathrm{II}|=3\), and the cut has Euclidean codimension \(m=2\). Brendle's constant is \(b_2=3(4\pi/3)^{1/3}\), hence \(C=b_2^2/2\). The \(Z_a\) in Isoshima's \(n=1\) double is the nonsimply connected Mazur homology sphere \(\Sigma(2,5,7)\) up to orientation. Its contractible filling and the PSC-domination obstruction imply \(Y(Z_a,[h])\le0\) for every \(h\). For **every** smoothly embedded copy in the pulled-back round class, including its arbitrary smooth conformal representatives,
+\[
+                         \int_{Z_a}|B^\circ|^3\,d\mu\ \ge\ 9\sqrt2\,\pi .
+\]
+No parametrization of this embedding or equality assertion is needed. The opposite order is PSC-dominated in this standard-sphere control. Different entering classes retain their own positive constant. [Isoshima and the marked two orders](../../05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/notes/MIXED_WITNESS.md) · [Brendle, Theorem 1](https://arxiv.org/pdf/1907.09446) · [Chodosh–Maximo–Mukherjee, Corollary 2.3 and Proposition 4.2](https://arxiv.org/pdf/2407.05574)
+
+The upper regular level \(Y_1=S^1\times S^2\) is readily available on a reduced mixed diagram. A nonzero-degree map \(Y_1\to Z_b\) is impossible since pullback on rational \(H^1\) would inject a rank-two space into a rank-one space. A degree-one map \(Y_1\to Z_a\) is already equivalent to \(Z_a\cong S^3\). The target fundamental group is a quotient of \(\mathbb Z\) under a degree-one map (lift to the covering of the image subgroup), and has trivial abelianization. A simply connected closed three-manifold is \(S^3\), and conversely collapsing the complement of an oriented ball gives degree one. A proposed retraction of the elementary trace onto its native incoming face in particular induces this degree-one map from its outgoing level. A projection on a genuine marked product subband avoids any extension of a projection across the second handle. [Independent tracing of both normal incidences](../research-progress/handoffs/E02_MARKED_RETURN_20261127.md)
+
+## The free-cut conclusion at an attained minimum
+
+Write \(T=4\pi^2\) and \(e=E_+(M)=E_-(M)\) in Hilbert–Schmidt operator norms. Suppose the original smooth positive class attains \(I^+(M)\), \(e<2T\), and there is an umbilic round-conformal \(S^3\) cut with **both** matched hemisphere-capped classes strictly positive. The two oriented closed summands are homotopy spheres. Each matched metric is \(C^{1,1}\), and its exact chiral mass is the side's half-sum \(e_i\). Smooth capped energies tend to this value with positive sign. Strict \(e_1+e_2<2T\) places at least one smooth capped summand below the CGY recognition threshold \(T\).
+
+Removing that standard summand leaves a capped competitor on the original smooth type. Minimality implies \(e\le e_j=e-e_i\) by taking the smooth limit, hence \(e_i=0\). This gives a nonempty open set with \(W=0\) for the **original** metric. Positivity of its Yamabe sign is open under smooth variations. Since signature fixes \(E_+-E_-\), it is a critical point of the full Weyl functional and is Bach-flat. Lassas–Liimatainen's unique continuation makes \(W=0\) on the connected closed manifold. Its developing map is a covering of \(S^4\), so the original class is conformally round and \(e=0\). A hypothetical nonstandard smooth minimizer cannot have such a free cut. Neither global attainment nor the existence of the cut or its positive capped signs is a consequence of this comparison. [Capped forms and smoothing](../02_seams_and_marked_cuts/notes/E04_ROBIN_DESCENT.md) · [CGY, Theorem A](https://www.numdam.org/item/10.1007/s10240-003-0017-z.pdf) · [Lassas–Liimatainen, Theorem 3.8](https://arxiv.org/pdf/1912.08030#page=27)

@@ -1,5 +1,9 @@
 # Master manuscript milestones
 
+## 27 November 2026 · Marked signs, the Euler end count and a cap criterion
+
+The master records the degree-one Mazur control, four sign tests on 07's fixed-germ fillings, and an original-positive, double-negative interval above budget. The manuscript now includes the independent Euler end proof and a sufficient signed mean-curvature bound constructing both positive caps at an attained minimum. The calibrated signature proof uses both collar faces. [Versioned research receipt](research-progress/handoffs/MARKED_TESTS_AND_ATTAINMENT_20261127.md) · [Readings and conditional scope](reviews/MASTER_SCIENTIFIC_INTEGRATION_20261127.md) · [Continuation](continuation-notes/AFTER_MARKED_TESTS_20261127.md)
+
 ## 27 November 2026 · Entry and recognition after the cut-geometry draft
 
 Edward B. Baker III approved an in-place revision of the master planning records, prepared with OpenAI Codex assistance. The overview now states the two open assertions, entry and recognition. The plan puts recognition from either actual normalized mixed cut, the double-sign tests on the marked 07 trial, and specialist review of the 06 working attainment proof first. It incorporates the 05 product-double return and identifies the 08 proof readings and boundary-sign check still due at 4655e38d181c. The master reading copy was rebuilt from the existing TeX and checked for the Hopf doubling, symmetric critical classes and logical reduction. [Master PDF](../../output/pdf/master/chiral_weyl_energy_and_smooth_poincare.pdf) · [Decision and input versions](brainstorm/notes/MASTER_PRIORITIES_AFTER_CUT_GEOMETRY_20261127.md) · [Overview](research-overview/OVERVIEW.md) · [Plan](research-plan/PLAN.md) · [Progress register](research-progress/REGISTER.md) · [Continuation](continuation-notes/CONTINUATION.md#current-master-prompt)

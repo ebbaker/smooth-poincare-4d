@@ -1,5 +1,7 @@
 # The actual marked prism fiber and the cost of moving its puncture
 
+**Subsequent result.** The [retained-order-two group and smooth transfer](ORDER_SEVENTEEN_FRAMINGS.md) recognize the even-framed filling as standard. The physical estimates in this note still apply to the stated metric families.
+
 27 November 2026, for Edward B. Baker III, OpenAI-assisted lead. Actual lead model/effort unavailable. Baseline bc2c1bbccc1d244a9d456ffe2fcaf64e368290b0. This is a smooth Riemannian four-dimensional construction on a specified punctured mapping torus. The initial unit round metric is three-dimensional. The exterior energies use the mean of the squared Hilbert–Schmidt Weyl blocks. The analytic inputs are the [finite-length formula](E26_LENGTH_TEST.md), its [replay](../reviews/E27_LENGTH_REPLAY.md), and the [positive radial bending construction](E05_TWISTED_EXTERIORS.md). Independent readings cover [marking](../reviews/E28_PRISM_REPLAY.md), [magnetic cost](../reviews/E29_MOVING_PUNCTURE.md), and [electric cost](../reviews/E31_ELECTRIC_CAPACITY.md).
 
 ## A meridian in the actual double-action space form

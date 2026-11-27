@@ -1,10 +1,10 @@
 # Chiral Weyl energy and the smooth four-dimensional Poincaré conjecture
 
-Edward B. Baker III, working manuscript, 26 November 2026. [Reading copy (PDF)](../../../output/pdf/master/chiral_weyl_energy_and_smooth_poincare.pdf) · [Editable LaTeX](chiral_weyl_energy_and_smooth_poincare.tex)
+Edward B. Baker III, working manuscript, 27 November 2026. [Reading copy (PDF)](../../../output/pdf/master/chiral_weyl_energy_and_smooth_poincare.pdf) · [Editable LaTeX](chiral_weyl_energy_and_smooth_poincare.tex)
 
 The master reduces smooth Poincaré to universal positive subcritical entry and smooth recognition of every entered type. The variational route uses 06's working fixed-type attainment theorem and the lower recognition gap to reduce the second assertion to rigidity of an attained minimum. A geometric recognition argument could establish the same assertion directly. The reflective-seam estimates and circle-surgery calibrations in the editable master constrain the current entry trial. [Logical reduction](claude/logical_form.tex) · [Doubling argument](claude/umbilic_doubling.tex)
 
-The 27 November master plan pairs 08's draft geometry of umbilic hypersurfaces with 05's recognition theorem for either marked cut, and specifies the Hopf-double sign tests for 07. Investigation 08 records its independent proof reading and boundary-sign calibration in its own register. The first table below describes the 26 November manuscript. [Current plan](../research-plan/PLAN.md) · [08 manuscript and proof status](../../investigations-1/08_cut_geometry_and_chirality/manuscript/README.md) · [Latest 05 product-double return](../research-progress/handoffs/DOUBLED_TANGLES_AND_GST_SLIDES_20261126.md)
+The 27 November master plan pairs 08's draft geometry of umbilic hypersurfaces with 05's recognition theorem for either marked cut, and specifies the Hopf-double sign tests for 07. Investigation 08 records its independent proof reading and boundary-sign calibration in its own register. The current manuscript includes the original-positive/negative-double example, the separate Euler end proof, and the attained-cut trace criterion. [Updated mathematical results](../research-progress/handoffs/MARKED_TESTS_AND_ATTAINMENT_20261127.md). [Current plan](../research-plan/PLAN.md) · [08 manuscript and proof status](../../investigations-1/08_cut_geometry_and_chirality/manuscript/README.md) · [Latest 05 product-double return](../research-progress/handoffs/DOUBLED_TANGLES_AND_GST_SLIDES_20261126.md)
 
 | Part of the master | Where to read the argument |
 | --- | --- |

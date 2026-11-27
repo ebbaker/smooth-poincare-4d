@@ -1,0 +1,29 @@
+# A mean-curvature test for positive caps at an attained minimum
+
+27 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance, master B06. Selected scientific lead GPT-6.2 Astra/ultra, bounded independent readings routed to GPT-6.2 Sol/ultra. Independent serving telemetry unavailable. Inputs at 72068cef1973d are the master marked-cut proposition, 08 §8 (blob 91ca2d3f2dbb), its SEAM Robin and smoothing calculation, and the sharp ball trace theorem. All manifolds and metrics before gluing are smooth, oriented and Riemannian. [Finite marked-cut criterion](../manuscript/marked_cut.tex) · [Whole-side Robin form](../../investigations-1/08_cut_geometry_and_chirality/02_seams_and_marked_cuts/notes/E04_ROBIN_DESCENT.md) · [Independent readback](../reviews/EULER_AND_CAP_READBACK_20261127.md)
+
+**Proposition.** Let a closed homotopy four-sphere carry a positive subcritical class that attains \(I^+(M)\). Suppose it has a separating totally umbilic three-sphere \(\Sigma\) with round conformal structure. In one smooth representative \(g\) with \(R_g>0\), let \(h\) be the induced boundary metric and \(H\) the trace mean curvature in either fixed normal convention. If
+\[
+ \max\{\|\max(H,0)\|_{L^3(h)},\,\|\max(-H,0)\|_{L^3(h)}\}
+ \ \le\ 3(2\pi^2)^{1/3},
+\]
+then \(M\) is standard. The two norms use the same metric. The hypothesis is scale invariant and demands only one qualifying representative. The round conformal structure alone supplies no estimate on these norms.
+
+**Marked caps.** Work on one closed side \(V\) with its own outward \(H_V\). Identify the boundary of the Euclidean unit ball with \((\Sigma,[h])\) by an actual conformal parametrization compatible with the original cut, using the opposite boundary orientation. Write \(h=w^2g_{S^3}\) in this chart. Choose a positive smooth extension \(w\) to the ball, prescribing its first normal derivative by
+\[
+ 3\partial_\nu\log w=-w H_V-3.
+\]
+Extend \(\log w\) from its boundary value and derivative using a collar cutoff. The conformally flat cap \(C=(B^4,w^2g_{\mathrm{eucl}})\) then has \(H_C=-H_V\). Umbilicity gives opposite full outward second fundamental forms. Boundary normal coordinates give a \(C^{1,1}\), piecewise smooth join on the actual capped side. Its weak scalar form has no surface curvature measure. In particular its two chiral energies equal the respective raw integrals on \(V\).
+
+For a trace-matched pair \((v,u)\) on \(V,C\), denote its common trace by \(f\). The cap Robin numerator is
+\[
+ Q_C^{\rm Rob}(u)=6\int_{B^4}|\nabla(wu)|^2+6\int_{S^3}(wf)^2
+ \ \ge\ 6(2\pi^2)^{1/3}\|f\|_{L^3(h)}^2 .
+\]
+Here the normal convention uses \(+2H_C\) in the Robin boundary term. The inequality is the sharp ball trace inequality in boundary dimension three and holds for every \(H^1\) extension. The boundary \(L^3\) norm transforms exactly since \(dA_h=w^3dA_{S^3}\). The side Robin form contributes the ordinary side bulk and \(+2\int_\Sigma H_V f^2\). Adding these two forms cancels the two Robin terms against each other in the joined numerator. Hölder's inequality bounds the negative part of the side contribution below by \(-2\|(H_V)_-\|_3\|f\|_3^2\). At the displayed threshold the resulting closed numerator is positive for every nonzero pair. Indeed nonzero restriction to \(V\) has positive bulk since \(R_g>0\). If that restriction vanishes, the transformed cap function has zero trace, so its positive Dirichlet energy suffices. The compact joined elliptic form attains its lowest \(L^2\) eigenvalue. This proves strict spectral positivity even at equality in the norm test. [Ngô–Nguyen–Phan, Theorem 1.1 and (3.6)](https://viasm.edu.vn/Cms_Data/Contents/viasm/Media/Tienanpham18/Preprint_1837.pdf#page=15)
+
+Smooth the join in its normal collar. First-derivative matching gives convergence in \(C^1\cap W^{2,p}\) for each finite \(p\), hence convergence of scalar curvature and both Weyl blocks in \(L^2\). The scalar-form difference tends to zero as a form on bounded \(H^1\) sets by the four-dimensional Sobolev inequality. The strictly positive closed forms thus persist, and the smoothed signed costs approach the respective raw costs. This procedure can be performed on the two marked capped sides separately.
+
+**Attainment.** Signature on each smooth capped homotopy sphere gives equality of its two signs. Passing to the cap limits yields equality on each raw side. Since \(e<2T\), at least one side costs strictly less than \(T\), so its sufficiently close positive caps are standard by recognition. Removing the marked cap ball and using the boundary identification gives a diffeomorphism of the other capped side with \(M\). If \(M\) were nonstandard, the positive capped metrics there would have energy at least \(I^+(M)=e\), also in the limit. The discarded side has zero energy in both signs, hence contains a Weyl-flat open set. The smooth attained class is Bach-flat by first variation. Unique continuation then gives \(W=0\) everywhere, and the simply connected closed locally conformally flat manifold is conformally round. This contradicts nonstandardness. [Marked reassembly](../manuscript/marked_cut.tex) · [Lassas–Liimatainen, Theorem 3.8](https://arxiv.org/pdf/1912.08030#page=27)
+
+For the unit round sphere a latitude at polar distance \(a\) has round boundary radius \(\sin a\) and \(|H|=3|\cot a|\). The larger norm is \(3(2\pi^2)^{1/3}|\cos a|\). More generally if the entering pinched representative itself induces a round metric of radius \(r\), the Gauss identity gives \(6/r^2=R-2\mathrm{Ric}(\nu,\nu)+2H^2/3\), hence \(|H|<3/r\). This is a concrete sufficient subclass. On a remaining exact nonstandard candidate one still has to find the marked cut and control its physical mean curvature. [Exact selection and curvature tests](ATTAINED_EQUALITY_TEST_20261127.md)

@@ -13,7 +13,7 @@
 \DeclareMathOperator{\Rm}{Rm}
 \title{Chiral Weyl energy and the smooth\\four-dimensional Poincar\'e conjecture}
 \author{Edward B. Baker III}
-\date{Working manuscript, 26 November 2026}
+\date{Working manuscript, 27 November 2026}
 
 \begin{document}
 \maketitle
@@ -171,6 +171,44 @@ four-sphere, remains open.
 
 \input{claude/umbilic_doubling}
 
+\paragraph{A negative double with positive original class.}
+On the marked minus Miller--Schupp filling, let \(V\) be the complement
+of the three retained half-Hopf funnels after both circle surgeries.
+Keep the complete exterior, the two framed parametrizations and the
+positive-facing hyperbolic cap germs fixed. With the three cuffs of
+length \(2\operatorname{arcosh}5\), there are smooth metrics on this
+same filling for which \(Y(M)>0\), \(Y(\mathcal D V)<0\) and
+\(e>2T\). Indeed the positive cylindrical construction and the
+finite compressed negative trial give opposite closed signs
+\cite{Baker2026ThreeFunnelComparison}. For a single choice of the two
+positive fillings one can make all three doubled signs positive as well.
+In each \(H^2\times S^2\) tube the mixed Hessian equation for a
+\(V\)-static potential splits it into functions on the two factors.
+The two pure equations with opposite Ricci curvatures force the potential
+and its constant multiplier to vanish. Local scalar deformation
+\cite[Theorem 1.2]{CorvinoEichmairMiao2013Deformation} then gives positive
+scalar curvature around each surgery circle and nonnegative scalar
+curvature elsewhere. The framed cylindrical bend and hyperbolic disk
+adapter fit there. On each Hopf half the axial compactification factor
+can be constant near the entire filling and superharmonic on both ends,
+with zero equatorial normal derivative. Each adapter already spends
+at least \((16\pi^2/3)\cosh1\) per sign
+\cite{Baker2026ThreeFunnelComparison}.
+
+Return to the two complete endpoint metrics. Interpolate their metrics inside the two
+bands. At the first zero of the closed conformal Laplacian its positive
+ground state \(u\) restricts to a strictly negative Neumann test on
+\(V\): each removed funnel has nonnegative scalar curvature, positive
+on an open set, and the cuffs are totally geodesic. The doubled sign
+is therefore already negative on the positive side of the crossing.
+There \(Y(M)\) tends to zero by testing \(u\), and the retained
+loxodromic patch supplies a fixed positive margin above \(2T\)
+in a sufficiently short interval by the fixed-exterior Ricci estimate.
+These signs and costs belong to the same metrics. The specific convex
+switch of width \(1/16\) on the regular and long cuffs still requires
+a separate estimate.
+
+
 \section{Recognition at the lower threshold}\label{sec:recognition}
 
 \begin{proposition}[Recognition]\label{prop:recognition}
@@ -248,6 +286,51 @@ standard sphere is already zero.
 
 \input{claude/symmetric_critical_classes}
 
+\begin{proposition}[A trace bound for an umbilic spherical cut]
+\label{prop:trace-cap}
+Suppose a smooth positive subcritical class on \(M\) attains \(I^+(M)\).
+Let it contain a two-sided umbilic \(S^3\) with round conformal
+structure. In one representative with \(R>0\), let \(h\) be its induced
+metric and \(H\) its trace mean curvature for either normal. If
+\[
+ \max\{\|\max(H,0)\|_{L^3(h)},\|\max(-H,0)\|_{L^3(h)}\}
+ \le 3(2\pi^2)^{1/3},
+\]
+then \(M\) is standard.
+\end{proposition}
+
+\begin{proof}
+On each marked side \(V\), parametrize the cap by the Euclidean unit
+ball with boundary metric \(h=w^2g_{S^3}\). Extend \(w>0\) smoothly,
+prescribing \(3\partial_\nu\log w=-wH_V-3\) on the ball boundary,
+where \(H_V\) is outward for \(V\). The cap \(w^2g_{\mathrm{eucl}}\)
+has outward trace \(-H_V\). Umbilicity matches the full first jet.
+For a matching trace \(f\), the cap Robin form is at least
+\(6(2\pi^2)^{1/3}\|f\|_{L^3(h)}^2\) by conformal covariance and the
+sharp ball trace inequality \cite[Theorem 1.1]{NgoNguyenPhan2020Trace}.
+This absorbs the negative part of \(2\int H_V f^2\,dA_h\) in the
+side Robin form. The sum is the closed numerator. Every nonzero
+restriction to \(V\) has positive bulk since \(R>0\), while a
+nonzero cap function with zero trace has strictly positive transformed
+Dirichlet energy. Compactness gives a positive first eigenvalue,
+including equality in the norm bound.
+
+The matched metric is \(C^{1,1}\) and the cap is Weyl-flat.
+Smoothing in a collar in \(C^1\cap W^{2,p}\), \(p>2\), preserves the
+strict sign and gives convergence in each chiral energy to its raw
+side integral. On each capped homotopy sphere the two signs agree,
+hence they agree on each raw side in the limit. Some side costs
+strictly less than \(T\). Proposition~\ref{prop:cut-energy}
+identifies its sufficiently close positive caps as standard and the
+other capped side with \(M\). On a nonstandard type minimality would
+bound the second side's limiting energy below by \(I^+(M)=e\).
+The discarded open side would thus be Weyl-flat. The attained
+smooth metric is Bach-flat, so unique continuation makes the
+entire metric Weyl-flat \cite[Theorem 3.8]{LassasLiimatainen2019ConformalHarmonic}.
+Proposition~\ref{prop:recognition} gives the conclusion.
+\end{proof}
+
+
 The constant sequence \(g_i=g_*\) explains the limit of the disk
 comparisons. A marked disk can carry definite Weyl energy on both sides
 at every index of that sequence. If a positive replacement on the same
@@ -292,8 +375,11 @@ Section~\ref{sec:rigidity} and Proposition~\ref{prop:logical-form}
 were added on 26 November 2026. Claude Fable 5.2 drafted them for the
 author, at reasoning effort max as its session was configured, from its
 brainstorm note on the repository at \texttt{de2125d}. Scripts filed
-with that note test their formulas. They have had no independent
-reading.
+with that note test their formulas. The 27 November revision uses the
+marked two-band sign comparison, the Euclidean-end Euler calculation and
+Proposition~\ref{prop:trace-cap}, with independent bounded model readings
+on the working generation \texttt{72068ce}. The trace test requires a
+specified cut on the attained class.
 
 \bibliographystyle{unsrturl}
 \bibliography{references}

@@ -28,3 +28,9 @@ The [smoothing derivation and primary passages](../01_fixed_type_variational_des
 [Charged-disk and marked-boundary sources](../../../references/SOURCE_NOTES_MASTER_SPECTRAL_WINDOWS_20261125.md) identifies the primary inputs to the spectral recognition, Ricci flux and eta calculations.
 
 [E63–E67 source record](../../../references/SOURCE_NOTES_MASTER_BALANCED_DISKS_20261125.md) gives the checked passages for marked bisection, relative transgression, critical polar comparison, spin boundary conditions and exact compactness.
+
+## Passages checked on 27 November 2026
+
+Ngô, Nguyen and Phan, *Higher order Sobolev trace inequalities on balls revisited*, JFA 278 (2020), 108414. Theorem 1.1 and the authors' proof of (3.6) give the ball inequality for any smooth extension. In boundary dimension three, with ordinary surface area, the coefficient of the squared boundary \(L^3\) norm is \((2\pi^2)^{1/3}\). Used for the conformally marked cap and the inclusive trace bound. [Primary passage, November 2018 author version](https://viasm.edu.vn/Cms_Data/Contents/viasm/Media/Tienanpham18/Preprint_1837.pdf#page=15) · [Published article](https://doi.org/10.1016/j.jfa.2019.108414) · [Derivation](../notes/ROUND_CUT_TRACE_TEST_20261127.md)
+
+Corvino, Eichmair and Miao, *Deformation of scalar curvature and volume*, Math. Ann. 357 (2013), 551–584. Theorem 1.2 allows a small, smooth, compactly supported scalar-curvature increment on a bounded smooth non-\(V\)-static domain, with unchanged volume and smooth, compactly supported metric modification. The adjoint and support hypotheses, including higher regularity in §3.7, were inspected in arXiv:1211.6168. The product calculation checks them on the actual framed tubes. The subsequent local bend uses Gromov–Lawson as in 07. [Primary passage](https://arxiv.org/pdf/1211.6168#page=2) · [Published article](https://doi.org/10.1007/s00208-013-0903-8) · [Paired fillings](../notes/THREE_FUNNEL_CROSSING_20261127.md)

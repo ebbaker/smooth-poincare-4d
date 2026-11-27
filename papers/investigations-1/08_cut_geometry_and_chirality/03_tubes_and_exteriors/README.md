@@ -20,4 +20,4 @@
 
 Continuation note added 27 November 2026 by the same session, for handoff to an Astra/ultra lead with Sol 6.2/ultra helpers.
 
-The continued research identifies the underlying lens-space core and both ordinary orbit fillings in the [marked prism proof](notes/MARKED_LENS_CORE.md). The [signed slice obstruction](reviews/E55_RESOLUTION_REPLAY.md) quantifies which smooth replacements of the short-axis orbifold cap can still qualify. The dated continuation incorporates both results.
+On the order-seventeen prism the [even-framed closing](notes/ORDER_SEVENTEEN_FRAMINGS.md) is now recognized as standard \(S^4\). The odd Gluck twin remains open. The [independent four-dimensional replay](reviews/E79_EVEN_TRANSFER_REPLAY.md) tracks the section framing throughout. The [signed slice obstruction](reviews/E55_RESOLUTION_REPLAY.md) and [SEAM's cheaper collar](../02_seams_and_marked_cuts/notes/B06_SHORT_TERMINAL_COLLARS.md) specify the next physical test for the projective-plane disk.
