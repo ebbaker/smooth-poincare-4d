@@ -1,3 +1,16 @@
+import FirstOrderTwistor.SignedCollarDefect
+import SmoothPoincare.Heights.MarkedSeparatorDegree
+import SmoothPoincare.Heights.MarkedNativeRecognition
+import SmoothPoincare.IntrinsicEntry.ThreeCuffNeumann
+import SmoothPoincare.IntrinsicEntry.FixedBandCurvature
+import SmoothPoincare.IntrinsicEntry.MatchedBallMetric
+import SmoothPoincare.IntrinsicEntry.MatchedBallRobin
+import SmoothPoincare.IntrinsicEntry.WeightedBallRobin
+import SmoothPoincare.IntrinsicEntry.RoundLatitudeRobin
+import SmoothPoincare.Variational.MarkedCapSmoothing
+import SmoothPoincare.Variational.AttainedRoundCut
+import SmoothPoincare.Variational.BourClosedCapEuler
+import SmoothPoincare.Variational.RecognitionFromAttainment
 import SmoothPoincare.Variational.Basic
 import SmoothPoincare.Variational.AttainedRecognition
 import SmoothPoincare.Variational.EndpointCollarCost
@@ -254,5 +267,21 @@ import SmoothPoincare.Variational.BourPointedScalar
 import SmoothPoincare.Variational.BourPointedScalarFlat
 import SmoothPoincare.Variational.BourRoundEulerShell
 import SmoothPoincare.Variational.BourHarmonicMorrey
+
+-- Edition 07 geometric instances and the fixed-width cost obstruction.
+import SmoothPoincare.Heights.HMPRelativeClosing
+import SmoothPoincare.Heights.HMPFramedShrink
+import SmoothPoincare.IntrinsicEntry.HarmonicSeamCorridor
+import SmoothPoincare.IntrinsicEntry.HarmonicDiskPropagation
+import SmoothPoincare.IntrinsicEntry.HarmonicStretchHarnack
+import SmoothPoincare.IntrinsicEntry.FixedWidthHarmonicTest
+import SmoothPoincare.IntrinsicEntry.FixedBandCostEnclosure
+import SmoothPoincare.IntrinsicEntry.PauseStripRational
+import SmoothPoincare.IntrinsicEntry.PauseStripCost
+import SmoothPoincare.IntrinsicEntry.PauseStripCover
+import SmoothPoincare.IntrinsicEntry.PauseStripTrial
+import SmoothPoincare.Variational.BourBufferedTruncation
+import SmoothPoincare.Variational.BourVariablePolarCap
+import SmoothPoincare.Variational.RoundCutGeometricCap
 
 /-! # Public imports for fixed-type descent, immersed recognition, marked cuts and Bour attainment -/

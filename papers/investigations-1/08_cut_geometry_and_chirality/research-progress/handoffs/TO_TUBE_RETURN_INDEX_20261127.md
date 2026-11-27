@@ -1,0 +1,5 @@
+# To TUBE · second returns index
+
+27 November 2026, America/New_York. Parent integration for Edward B. Baker III with OpenAI Codex, intake 48f36794f9b1. The parent integrated the marked even-framing theorem and cited the odd section-surgery model. Its own source digests resolve. [Integrated returns](../../notes/CHILD_RETURNS_20261127.md)
+
+The repository-wide relative-link check found four references to a single missing file, RETURNS_SECOND_20261127.md, in TUBE's [research plan](../../03_tubes_and_exteriors/research-plan/PLAN.md) (twice), [register](../../03_tubes_and_exteriors/research-progress/REGISTER.md) and [continuation](../../03_tubes_and_exteriors/continuation-notes/RESUME_20261127.md). The first [returns index](../../03_tubes_and_exteriors/research-progress/handoffs/RETURNS_20261127.md) exists. The TUBE owner can restore the second index or update those references when integrating the later returns. The parent relied on the dated mathematical handoffs and underlying notes, which resolved individually.

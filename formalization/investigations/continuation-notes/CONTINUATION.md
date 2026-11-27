@@ -1,12 +1,16 @@
 # Continuing the formalization program
 
-**FOT-E51 · 26 November 2026.** One common harmonic realization now bounds the metric and trace-free Ricci in $W^{2,6}$ at both stationary scales, given Peters and the flat scalar estimate. On a fixed positive-parameter stationary pointed limit, finite scalar-square energy and the physical volume and completeness hypotheses force scalar flatness. [Current handoff](AFTER_E51_COUPLED_INTERIOR_AND_POINTED_SCALAR_20261126.md)
+**Current Edition 07 · FOT-E53, 27 November 2026.** The stated long-cuff switch fails both strict energy tests. Continue with the marked HMP geometry, a changed entry trial, attained cut or nonflat buffered supplier on the indicated carrier. [Dated handoff](AFTER_E53_GEOMETRIC_INSTANCES_20261127.md) · [Assessment](../reviews/ED07_E53_GEOMETRIC_INSTANCES_AND_FIXED_WIDTH.md) · [Owner register](../research-progress/REGISTER.md)
 
-**FOT-E50 · 26 November 2026.** Derived the original covariant gradient, its conformal trace and terminal dissipation. Verified the physical harmonic chart transport and end-link integral estimate, and carried one post-attainment Ricci margin through both extractions. [Current handoff](AFTER_E50_ORIGINAL_GRADIENT_AND_SECOND_EXTRACTION_20261126.md)
+**Current Edition 07 · FOT-E52, 27 November 2026.** Continue from the HMP marked gluing, the symmetric width-1/16 test, physical round-cut smoothing and the closed-cap exhaustion. [Dated handoff and pasteable prompt](AFTER_E52_MARKED_CUTS_AND_CLOSED_CAPS_20261127.md) · [Assessment](../reviews/ED07_E52_MARKED_CUTS_AND_CLOSED_CAPS.md) · [Owner register](../research-progress/REGISTER.md)
 
-**Current Edition 06 · FOT-E49 · 26 November 2026.** [Assessment](../reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](../research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](../continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)
+**FOT-E51 · 26 November 2026.** One common harmonic realization now bounds the metric and trace-free Ricci in $W^{2,6}$ at both stationary scales, given Peters and the flat scalar estimate. On a fixed positive-parameter stationary pointed limit, finite scalar-square energy and the physical volume and completeness hypotheses force scalar flatness. [E51 handoff](AFTER_E51_COUPLED_INTERIOR_AND_POINTED_SCALAR_20261126.md)
 
-**Current Edition 06 · 26 November 2026.** [Dated handoff and pasteable continuation](EDITION_06_RIGIDITY_AND_GEOMETRIC_INPUTS_20261126.md) · [Proof plan](../research-plan/06_PLAN.md) · [Baseline](../research-progress/06_BASELINE.md) · [Owner register](../research-progress/REGISTER.md)
+**FOT-E50 · 26 November 2026.** Derived the original covariant gradient, its conformal trace and terminal dissipation. Verified the physical harmonic chart transport and end-link integral estimate, and carried one post-attainment Ricci margin through both extractions. [E50 handoff](AFTER_E50_ORIGINAL_GRADIENT_AND_SECOND_EXTRACTION_20261126.md)
+
+**Edition 06 · FOT-E49 · 26 November 2026.** [Assessment](../reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](../research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](../continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)
+
+**Edition 06 · 26 November 2026.** [Dated handoff and pasteable continuation](EDITION_06_RIGIDITY_AND_GEOMETRIC_INPUTS_20261126.md) · [Proof plan](../research-plan/06_PLAN.md) · [Baseline](../research-progress/06_BASELINE.md) · [Owner register](../research-progress/REGISTER.md)
 
 **Last checked Edition 05 milestone, FOT-E48 · 26 November 2026.** [Assessment](../reviews/ED05_E48_STATIONARY_BALLS_AND_VARIATION.md) · [Public verification](../research-progress/handoffs/ED05_E48_VERIFICATION_20261126.md) · [E48 handoff](AFTER_STATIONARY_BALLS_AND_VARIATION_20261126.md)
 

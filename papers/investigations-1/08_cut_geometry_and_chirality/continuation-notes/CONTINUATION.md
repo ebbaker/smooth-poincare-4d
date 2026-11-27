@@ -1,5 +1,9 @@
 # Continuation — cut geometry and chirality
 
+**Current parent continuation, 27 November.** The author activated the parent alongside the five separate child sessions. The parent completed E02 and B01, then advanced the first local-band test on the author's continuation. Read the [current follow-up](AFTER_E08_20261127.md), [B01 decision](AFTER_B01_20261127.md) and [live register](../research-progress/REGISTER.md). The launch note below preserves the original dated instructions and their stopping conditions.
+
+## Original launch note
+
 26 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum. Setup baseline `4655e38`; first written 26 November 2026 at `841d606`, revised when the children were set up, and again on 27 November 2026 when the child continuation notes were written. This is a dated snapshot; the [parent register](../research-progress/REGISTER.md) and the five child registers are authoritative.
 
 ## Status boundary

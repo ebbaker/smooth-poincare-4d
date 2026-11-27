@@ -1,5 +1,13 @@
 # Single spherical cut and descent · Progress register
 
+## Edition 07 · Both capped sides of a physical equator · 27 November 2026
+
+**CUT-ED07-E01 · FOT-E53.** The actual stereographic hemispheres glue to the original smooth round four-sphere. The smooth global scalar form splits over the two physical sides and dominates six times the squared H¹ norm. The two smooth caps realize the E52 smoothing supplier with zero chiral cost and the identity oriented reassembly. For other cuts the uniform joined form and signed curvature controls must be proved on their own positive representative. [Geometric derivation](../notes/E53_ROUND_GEOMETRIC_CAP.md) · [Assessment](../../reviews/ED07_E53_GEOMETRIC_INSTANCES_AND_FIXED_WIDTH.md) · [Verification](../../research-progress/handoffs/ED07_E53_VERIFICATION_20261127.md)
+
+## Edition 07 · Marked cap smoothing · 27 November 2026
+
+**CUT-ED07-E01 · E52 formal return.** The normal cutoff has bounded second derivative from a matched first jet. Given the global smoothing on the specified carrier with complete unchanged pieces, shrinking bounded-density strips and form-error comparisons, both physical chiral energies converge to their raw costs and positivity persists. The chartwise global smoothing realization and its marked comparison are the outstanding suppliers. [Proof scope](../notes/E52_MATCHED_CAP_SMOOTHING.md) [Program assessment](../../reviews/ED07_E52_MARKED_CUTS_AND_CLOSED_CAPS.md) · [Public verification](../../research-progress/handoffs/ED07_E52_VERIFICATION_20261127.md)
+
 ## Edition 05 setup · 26 November 2026
 
 Keep the finite marked cut, cap and same-type reassembly interfaces active for an identified candidate. On the actual source, test a complete recognition bound, a same-type positive competitor with a strictly qualifying saving at the specified index, or a stability variation on a specified attained candidate. Use the strict joined peak when invoking the scalar-flat wall and the inclusive total for independently positive caps. Route 07 owns the finite descent ledger. Route 13 checks the Bour marked-limit and attainment argument, with further legacy extraction reserved for a named uncovered class and a concrete missing comparison. [Edition 05 plan](../../research-plan/05_PLAN.md) · [Route 07](../../07_fixed_type_variational_descent/research-progress/REGISTER.md) · [Route 13](../../13_bour_marked_limits_and_attainment/research-progress/REGISTER.md)

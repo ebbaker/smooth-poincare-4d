@@ -1,5 +1,9 @@
 # Positive scalar curvature on intermediate cuts · Progress register
 
+## Edition 07 · Integral degree on the native band · 27 November 2026
+
+**SP4-FORM-PSC-ED07-E01 · E52 formal return.** The finite relation in integral singular homology pushes forward under the actual map. Component degrees sum to one on a connected oriented target. A PSC metric must lie on a component of nonzero degree. The selected-component and all-components implications, a single component, and mixed signs are checked. The geometric input is the supplied band with its class relation, incoming degree and positive component on the actual native target. [Degree proof](../notes/E52_DEGREE.md) [Program assessment](../../reviews/ED07_E52_MARKED_CUTS_AND_CLOSED_CAPS.md) · [Public verification](../../research-progress/handoffs/ED07_E52_VERIFICATION_20261127.md)
+
 ## FOT-E51 · 26 November 2026
 
 The new doubled-tangle recognition uses the designated boundary-parallel strand and product closing. Its two irreducible cuts are compatible with this geometric cancellation. The scientific record supplies no physical signed saving beyond the minimizing excess on an untreated type. [Updated scientific control](../../../../papers/investigations-1/05_collar_deformation_and_surgery/reviews/DOUBLED_TANGLES_AND_INDEPENDENT_BANDS_20261126.md) · [Assessment](../../reviews/ED06_E51_HARMONIC_ESTIMATES_AND_TERMINAL_LIMITS.md) · [Public verification](../../research-progress/handoffs/ED06_E51_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E51_COUPLED_INTERIOR_AND_POINTED_SCALAR_20261126.md)

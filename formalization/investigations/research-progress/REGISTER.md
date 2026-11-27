@@ -1,5 +1,27 @@
 # Overall formalization progress
 
+## Edition 07 · FOT-E53 · 27 November 2026
+
+| Parent task | Checked progress and scientific scope |
+| --- | --- |
+| FOT-E37.E · Universal positive subcritical entry | Open. On 07's exact long-cuff minus Miller–Schupp trial at width 1/16 the retained floor 133 gives each complete closed signed cost greater than $17689\pi^2/1250$. The original first eigenvalue is undetermined. A different geometry is required for entry through this marking. |
+| FOT-E37.S · Recognition of every entered type | Open. The disk-framed meridian, its integral winding and inverse parametrizations have geometric realizations on a protected chart and the standard returned lower boundary. A supported isotopy realizes the shrunk framing on any supplied full tube with a radius-two margin. Applying this to the full HMP Figure 3 keeps its relative smooth cancellations and upper gluing as geometric inputs. The round equator supplies both smooth positive caps, complete signed costs and same-type reassembly on a known attained carrier. |
+| Fixed-type attainment X | On one complete flat Euclidean core both sides of the seam have buffer, the normalized shell has zero curvature and volume at most $\pi^2/2$, and the capped type has Euler characteristic two. The nonflat extraction needs the simultaneous buffered marking, physical shell rates, topology and same-type exterior return. |
+
+FOT-B12 continues under the issued Edition 07 plan. [Assessment](../reviews/ED07_E53_GEOMETRIC_INSTANCES_AND_FIXED_WIDTH.md) · [Verification and axiom audit](handoffs/ED07_E53_VERIFICATION_20261127.md) · [Dated continuation](../continuation-notes/AFTER_E53_GEOMETRIC_INSTANCES_20261127.md)
+
+## Edition 07 · FOT-E52 · 27 November 2026
+
+**FOT-E52, assessed.** On an actual continuous map to an oriented native cut, the pushed separator class gives an integral degree sum of one. A PSC witness comes from a nonzero-degree component. The two marked handle orders retain their original gluing and inverse. The master now supplies one HMP cross-gluing with a degree-one PSC product slice. Its actual diagram and terminal relative comparisons remain formal inputs. [Assessment and specimen comparison](../reviews/ED07_E52_MARKED_CUTS_AND_CLOSED_CAPS.md) · [Public build, axiom and independent replays](handoffs/ED07_E52_VERIFICATION_20261127.md) · [Next proof targets](../continuation-notes/AFTER_E52_MARKED_CUTS_AND_CLOSED_CAPS_20261127.md)
+
+| Parent task | Current evidence | Open obligation |
+| --- | --- | --- |
+| FOT-E37.E · Universal positive subcritical entry | On one three-cuff test domain, a nonnegative free-core first value implies a positive original closed first value. The symmetric 1/16 trial needs both the original positive sign and full one-band chiral cost below 4π². The zero-energy round pullback enters on a recognized type. | Construct a positive metric of common signed cost below 8π² on every oriented smooth homotopy sphere. No new entering smooth type is certified at E52. |
+| FOT-E37.S · Recognition of every entered type | Native recognition and attained-cut recognition are checked implications with different geometric premises. Both cap signs survive the inclusive trace test; the weighted pinched criterion also works with its boundary spectral supplier. Same-type minimality forces zero on the discarded open side. | Derive recognition on every entered type. Case-specific marking, existence of a cut, the realized positive smoothing and original-type return retain their named dependencies. |
+| Fixed-type attainment X | On a supplied whole capped-core exhaustion the warped cap contributes 16π² and the scalar-flat Euler identity forces one end under a strict 32π² Ricci ceiling. | Obtain the physical exhaustions, their topology and the complete positive marked return on the extracted flow. The closed branch and E51 higher elliptic suppliers keep their previous status. |
+
+**FOT-B12.** Edition 07 remains the adopted plan. The E52 owner results and the E51 starting generation are recorded separately. [Issued plan](../research-plan/07_PLAN.md) · [Baseline](07_BASELINE.md) · [Working intake](handoffs/ED07_E52_WORKING_INPUTS.json)
+
 ## Edition 06 · FOT-E51 · 26 November 2026
 
 One common harmonic realization now bounds the metric and trace-free Ricci in $W^{2,6}$ at both stationary scales, given Peters and the flat scalar estimate. On a fixed positive-parameter stationary pointed limit, finite scalar-square energy and the physical volume and completeness hypotheses force scalar flatness. The same post-X comparator gives the right slope of the regularized value after one whole return. Seven original blueprint obligations remain open. On the inner ball the metric and trace-free Ricci first derivatives are uniformly Hölder continuous with exponent \(1/3\). [Assessment](../reviews/ED06_E51_HARMONIC_ESTIMATES_AND_TERMINAL_LIMITS.md) · [Public verification](../research-progress/handoffs/ED06_E51_VERIFICATION_20261126.md) · [Continuation](../continuation-notes/AFTER_E51_COUPLED_INTERIOR_AND_POINTED_SCALAR_20261126.md)

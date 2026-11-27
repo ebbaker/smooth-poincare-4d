@@ -1,5 +1,13 @@
 # Fixed-type variational descent · Progress register
 
+## Edition 07 · Physical equatorial control for attained recognition · 27 November 2026
+
+**SP4-FORM-VAR-ED07-E01 · FOT-E53.** Route 03 supplies both complete smooth positive caps and the marked reassembly for the physical round equator. Both chirality costs there vanish. E52 same-type minimality on a general attained positive minimizer still requires the marked cut, the controlled joins and both positive capped types. The master’s least-D test concerns the smooth attained locus. [Geometric derivation](../../03_single_cut_descent/notes/E53_ROUND_GEOMETRIC_CAP.md) · [Assessment](../../reviews/ED07_E53_GEOMETRIC_INSTANCES_AND_FIXED_WIDTH.md) · [Verification](../../research-progress/handoffs/ED07_E53_VERIFICATION_20261127.md)
+
+## Edition 07 · Attained cut rigidity · 27 November 2026
+
+**SP4-FORM-VAR-ED07-E01 · E52 formal return.** Marked reassembly on the same oriented type, eventual positive caps, and exact minimality force both raw charges on an open side to vanish. The trace-bound theorem applies on the original positive representative. Bach-flat first variation, unique continuation, low-energy cap recognition and the marked geometric comparisons occur as inputs. Existence of a qualifying cut on every remaining minimum is open. [Return](../notes/E52_ATTAINED_ROUND_CUT.md) [Program assessment](../../reviews/ED07_E52_MARKED_CUTS_AND_CLOSED_CAPS.md) · [Public verification](../../research-progress/handoffs/ED07_E52_VERIFICATION_20261127.md)
+
 ## FOT-E51 · 26 November 2026
 
 One exact least-$D$ comparator still sets the margin at each of the two fixed-parameter extractions. After one whole least-$D$ return of global regularized minimizers the positive-class value has right derivative $D_*/2-2I$ at zero, including at intervening parameters of unknown attainment. An admissible metric variation on a supplied nonround minimizer remains necessary for rigidity. [Slope theorem](../notes/E51_VALUE_SLOPE.md) · [Assessment](../../reviews/ED06_E51_HARMONIC_ESTIMATES_AND_TERMINAL_LIMITS.md) · [Public verification](../../research-progress/handoffs/ED06_E51_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E51_COUPLED_INTERIOR_AND_POINTED_SCALAR_20261126.md)

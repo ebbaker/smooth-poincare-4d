@@ -1,6 +1,19 @@
 # Research plan — cut geometry and chirality
 
-26 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum. Setup baseline `4655e38`; first written 26 November 2026 at `841d606` and revised when the child plans were created. The [overview](../research-overview/OVERVIEW.md) fixes the category, conventions and the route. The [register](../research-progress/REGISTER.md) alone owns live status. Nothing here is activated.
+## Current parent plan · 27 November 2026
+
+Updated for Edward B. Baker III with OpenAI Codex at the post-B01 continuation, checkout 48f36794f9b1. E02 corrected the working paper and B01 selected recognition using either native order of a reduced mixed presentation. The next independent local estimate was assigned E08 because the original E03 belonged to the chirality family. [Decision](../brainstorm/notes/B01_MARKED_RECOGNITION_20261127.md) · [operational continuation](../continuation-notes/AFTER_E08_20261127.md)
+
+| Work | Mathematical output or next dependency |
+| --- | --- |
+| E02 independent replay | Signed boundary formula, hypotheses for seams and caps, sweepout quantifiers and the stronger rigidity conclusion on a smooth positive minimizer. [Assessment](../reviews/PARENT_ASSESSMENT_20261127.md) |
+| B01 choice | A physical embedding or nonzero-degree map must survive the two marked attachments and upper closing on the actual diagram. The [derivation](../notes/MARKED_BAND_AND_MINIMIZER_20261127.md) gives a fixed-class bending threshold and a round Mazur calibration. |
+| E08 local calculation | Completed the finite-chart estimate, the physical cubic shear calculation and its calibration on the split \(K\)-first cut. The factual reading checks the nearest supplied unresolved physical geometry against both native marks. [Bounded specification](../research-progress/handoffs/E08_NATIVE_BAND_REQUEST_20261127.md) · [input disposition](../research-progress/handoffs/E08_MARKED_INPUT_RETURN_20261127.md) |
+| New physical application | On an untreated reduced mixed diagram, supply the normalized pair and upper closing, plus an actual collar with measured local fields or an explicit positive source with its map. A qualifying input reopens the application. A different class of presentations or a global existence claim requires a new conceptual decision. |
+
+## Original assignments at launch
+
+26 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum. Setup baseline `4655e38`; first written 26 November 2026 at `841d606` and revised when the child plans were created. The [overview](../research-overview/OVERVIEW.md) fixes the category, conventions and the route. The [register](../research-progress/REGISTER.md) alone owns live status. The original task table below records the 26 November launch plan.
 
 **Routing.** B tasks are conceptual and go to the lead; E tasks have fixed inputs, method and completion test and go to bounded helpers, as in the [model workflow](../../../../GPT_RESEARCH_MODEL_WORKFLOW.md). In a Claude session Fable leads and takes B tasks and Opus takes E packets, in the roles that workflow gives Astra and Sol; a GPT lead uses Astra/ultra and Sol 6.2/ultra. The lead selected by the author takes precedence.
 

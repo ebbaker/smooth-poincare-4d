@@ -1,6 +1,12 @@
 # Single spherical cut and descent · Sustained continuation
 
-**Latest handoff, 25 November 2026.** [Global Gauss geometry and selected disk collars](../../continuation-notes/AFTER_GLOBAL_GAUSS_AND_SELECTED_COLLARS_20261125.md).
+**27 November 2026 · FOT-E53.** The actual stereographic hemispheres glue to the original smooth round four-sphere. The smooth global scalar form splits over the two physical sides and dominates six times the squared H¹ norm. The two smooth caps realize the E52 smoothing supplier with zero chiral cost and the identity oriented reassembly. For other cuts the uniform joined form and signed curvature controls must be proved on their own positive representative. [Current continuation](../../continuation-notes/AFTER_E53_GEOMETRIC_INSTANCES_20261127.md) · [Owner register](../research-progress/REGISTER.md)
+
+**After FOT-E52 · 27 November 2026.** Build the global first-jet smoothing on a specified marked join, including its scalar form-error and volume estimates. [Current register](../research-progress/REGISTER.md) · [Program handoff](../../continuation-notes/AFTER_E52_MARKED_CUTS_AND_CLOSED_CAPS_20261127.md)
+
+**Edition 07 at issue · 27 November 2026.** When activated, take Route 11’s first-jet-matched coercive caps on one actual spherical cut. Establish positive smooth approximants, both signed raw-cost limits and the marked reassembly before returning to Route 07. [Route plan](../research-plan/PLAN.md#edition-07--smoothing-and-reassembly-of-matched-caps) · [Program handoff](../../continuation-notes/EDITION_07_ENTRY_AND_MARKED_RECOGNITION_20261127.md)
+
+**Handoff, 25 November 2026.** [Global Gauss geometry and selected disk collars](../../continuation-notes/AFTER_GLOBAL_GAUSS_AND_SELECTED_COLLARS_20261125.md).
 
 The [Edition 03 activation handoff](../../continuation-notes/AFTER_PHYSICAL_QUANTILES_AND_INDUCED_CURVATURE_20261125.md) and launch instructions below record the original packet.
 
@@ -8,7 +14,7 @@ The [Edition 03 activation handoff](../../continuation-notes/AFTER_PHYSICAL_QUAN
 
 [Route overview](../research-overview/OVERVIEW.md) · [Proof plan and opening Lean type](../research-plan/PLAN.md#opening-proof) · [Live route register](../research-progress/REGISTER.md) · [Program ownership](../../research-progress/REGISTER.md#route-ownership) · [Input and toolchain baseline](../../research-progress/01_BASELINE.md)
 
-## Current continuation
+## Version 02 continuation
 
 For Version 02 start with CUT-E02. Use both full raw masses, instantiate the retained cap on the original type and test the exchanged labels. Then isolate the curvature projection estimate in the fixed chart for CUT-E03. Coordinate with Route 05 on the scalar-flat wall for CUT-E04. [Short marked cut packets](../research-plan/PLAN.md#the-short-marked-cut) · [Route register](../research-progress/REGISTER.md) · [Current program baseline](../../research-progress/02_BASELINE.md)
 

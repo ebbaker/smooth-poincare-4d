@@ -1,12 +1,18 @@
 # Formalization investigations
 
+**27 November 2026 · Edition 07, FOT-E53.** The exact long-cuff width-1/16 trial exceeds both signed energy budgets. The marked meridian, two positive round caps and one buffered Euclidean truncation have geometric realizations. [Assessment](reviews/ED07_E53_GEOMETRIC_INSTANCES_AND_FIXED_WIDTH.md) · [Public verification](research-progress/handoffs/ED07_E53_VERIFICATION_20261127.md)
+
+**27 November 2026 · Edition 07 proof milestone E52.** The current public proof and geometric dependencies are recorded in the [E52 assessment](reviews/ED07_E52_MARKED_CUTS_AND_CLOSED_CAPS.md) and [verification](research-progress/handoffs/ED07_E52_VERIFICATION_20261127.md).
+
+**Edition 07 at issue · 27 November 2026.** Begin with the degree of a marked separator. The entry comparison on the three-cuff filling and the missing analytic inputs to Bour attainment can proceed independently. The baseline starts at FOT-E51. [Research overview](research-overview/07_OVERVIEW.md) · [Proof plan](research-plan/07_PLAN.md) · [Progress at issue](research-progress/07_BASELINE.md) · [Continuation](continuation-notes/EDITION_07_ENTRY_AND_MARKED_RECOGNITION_20261127.md)
+
 **Edition 06 · FOT-E51 · 26 November 2026.** One common harmonic realization now bounds the metric and trace-free Ricci in $W^{2,6}$ at both stationary scales, given Peters and the flat scalar estimate. On a fixed positive-parameter stationary pointed limit, finite scalar-square energy and the physical volume and completeness hypotheses force scalar flatness. [Assessment](reviews/ED06_E51_HARMONIC_ESTIMATES_AND_TERMINAL_LIMITS.md) · [Public verification](research-progress/handoffs/ED06_E51_VERIFICATION_20261126.md) · [Continuation](continuation-notes/AFTER_E51_COUPLED_INTERIOR_AND_POINTED_SCALAR_20261126.md)
 
 **Edition 06 · FOT-E50 · 26 November 2026.** Derived the curvature-commuted gradient along the original metric family, its conformal trace and terminal dissipation. Verified the physical harmonic chart transport and end-link integral estimate, and carried one post-attainment Ricci margin through both extractions. [Assessment](reviews/ED06_E50_PHYSICAL_VARIATION_AND_EXTRACTIONS.md) · [Verification](research-progress/handoffs/ED06_E50_VERIFICATION_20261126.md) · [Continuation](continuation-notes/AFTER_E50_ORIGINAL_GRADIENT_AND_SECOND_EXTRACTION_20261126.md)
 
 **Edition 06 · FOT-E49 · 26 November 2026.** [Assessment](reviews/ED06_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR.md) · [Public verification](research-progress/handoffs/ED06_E49_VERIFICATION_20261126.md) · [Continuation](continuation-notes/AFTER_E49_PHYSICAL_ADJOINT_AND_MARKED_EXTERIOR_20261126.md)
 
-**Edition 06 · 26 November 2026.** Select the attained metric of least trace-free Ricci energy, construct entry on a further marked boundary, and discharge the physical hypotheses of the Bour argument. [Overview](research-overview/06_OVERVIEW.md) · [Proof plan](research-plan/06_PLAN.md) · [Baseline](research-progress/06_BASELINE.md) · [Current continuation](continuation-notes/EDITION_06_RIGIDITY_AND_GEOMETRIC_INPUTS_20261126.md)
+**Edition 06 · 26 November 2026.** Select the attained metric of least trace-free Ricci energy, construct entry on a further marked boundary, and discharge the physical hypotheses of the Bour argument. [Overview](research-overview/06_OVERVIEW.md) · [Proof plan](research-plan/06_PLAN.md) · [Baseline](research-progress/06_BASELINE.md) · [Edition 06 continuation](continuation-notes/EDITION_06_RIGIDITY_AND_GEOMETRIC_INPUTS_20261126.md)
 
 **FOT-E48 · 26 November 2026.** [Assessment](reviews/ED05_E48_STATIONARY_BALLS_AND_VARIATION.md) · [Public verification](research-progress/handoffs/ED05_E48_VERIFICATION_20261126.md) · [E48 handoff](continuation-notes/AFTER_STATIONARY_BALLS_AND_VARIATION_20261126.md)
 
@@ -20,10 +26,11 @@ records mathematical dependencies across these investigations.
 
 ## Overall research program
 
-Routes 12 and 13 own the original fourth-order flows and the return of their limits to the same oriented smooth manifold. Marked surgery can proceed on a supplied exterior. A collar comparison needs a named candidate for recognition, strict descent beyond the minimizing excess, or instability. The latest checked Lean milestone is [FOT-E48](reviews/ED05_E48_STATIONARY_BALLS_AND_VARIATION.md). [Live program register](research-progress/REGISTER.md) · [Milestones](DRAFT_HISTORY.md)
+The master distinguishes universal entry from recognition of every entered type. Routes 10 and 09 handle the positive source and actual native closing, Route 11 the same-metric sign test, and Routes 12 and 13 the original flow and smooth marked return. Routes 02, 03 and 07 supply signed accounting, cap comparison and attained rigidity. The latest checked Lean milestone is [FOT-E51](reviews/ED06_E51_HARMONIC_ESTIMATES_AND_TERMINAL_LIMITS.md). [Live program register](research-progress/REGISTER.md) · [Milestones](DRAFT_HISTORY.md)
 
 | Edition | Research overview | Research plan | Progress at issue |
 | --- | --- | --- | --- |
+| 07 · 27 November 2026 | [Overview 07](research-overview/07_OVERVIEW.md) | [Plan 07](research-plan/07_PLAN.md) | [Baseline 07](research-progress/07_BASELINE.md) |
 | 06 · 26 November 2026 | [Overview 06](research-overview/06_OVERVIEW.md) | [Plan 06](research-plan/06_PLAN.md) | [Baseline 06](research-progress/06_BASELINE.md) |
 | 05 · 26 November 2026 | [Overview 05](research-overview/05_OVERVIEW.md) | [Plan 05](research-plan/05_PLAN.md) | [Baseline 05](research-progress/05_BASELINE.md) |
 | 04 · 26 November 2026 | [Overview 04](research-overview/04_OVERVIEW.md) | [Plan 04](research-plan/04_PLAN.md) | [Baseline 04](research-progress/04_BASELINE.md) |

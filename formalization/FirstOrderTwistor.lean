@@ -1,3 +1,4 @@
+import FirstOrderTwistor.SignedCollarDefect
 import FirstOrderTwistor.ALEEndCount
 import FirstOrderTwistor.Accounting
 import FirstOrderTwistor.AnnularBounds

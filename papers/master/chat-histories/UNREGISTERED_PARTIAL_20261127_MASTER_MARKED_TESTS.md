@@ -19,3 +19,31 @@ I’ll check the master and source registers first, including Claude’s current
 The Mazur double gives a concrete degree-one map to its winding-zero cut. On the Miller–Schupp trial, the two Hopf halves and the doubled three-funnel complement all have negative sign at a specified narrow width. I’m checking how those signs compare with the original closed sign as the fillings vary. The prescribed width \(1/16\) still needs a separate estimate.
 
 The same marked Miller–Schupp filling can have positive original Yamabe sign and negative three-funnel double sign. On the interval where I can prove that combination, the energy stays strictly above \(8\pi^2\). The attainment audit also gives a separate closed Gauss–Bonnet proof of the one-end count, and the cap calculation gives a sufficient mean-curvature bound for recognition at an attained minimum.
+
+## Subsequent turn, unregistered visible text
+
+The same exact thread ID has no discoverable transcript in the current checkout. The app reader also failed to return metadata for it. Native title, source timestamps and turn ID remain unverified. The following public excerpts precede the final reply.
+
+**User**
+
+Resume master B02 and B05 from the sole register and the marked-tests receipt. On 07's unchanged long-cuff width-\(1/16\) convex trial use a verified enclosure of the actual harmonic marking to decide the common-complement Neumann sign. If negative, test the original closed sign and both costs on those same bands. Keep localized descent for positive equality. For recognition, produce the map on a remaining actual mixed pair or the marked conformally round umbilic cut satisfying the physical trace test at an attained minimum. Carry the framings and both collar directions. For X use the separate Euler proof and source-audited fixed and mixed extractions; E51's charts, scalar estimates, and spacetime convergence retain their exact hypotheses. Recheck the 08 owner register and signed comparison before reuse, and keep edits to 08 with Claude. Keep entry and recognition separate, B03/B04 for their specified obstructions, and E06 for the complete theorem. Use the selected Astra/ultra lead and bounded Sol/ultra independent checks.
+
+**Assistant commentary**
+
+I’ll check the marked trial and the latest 08 handoff, then work on the two missing inputs in parallel: a certified estimate in the actual harmonic coordinates, and a degree map or qualifying spherical cut on a remaining presentation.
+
+The two fixed bands are isometric after reversing longitude and exchanging the relators, so their signed costs agree. I also found a stronger recognition result: the pinched entering metric pays both cap boundary terms on any conformally round umbilic three-sphere. I’m checking a local symmetry condition that produces such a sphere, and tracing a remaining mixed handle pair through its upper closing.
+
+The marked Hayden–Mark–Piccirillo cross-gluing now has a checked degree-\(+1\) witness on its actual meridian-first cut. The independent reading followed the surviving framed tube through both cancellations and recovered the upper closing and its inverse. On the fixed-width metric, the enclosure proves a lower bound on shear, but the remaining terms in the Rayleigh numerator still prevent assigning a Neumann sign.
+
+## High-level summary and continuation request, unregistered excerpt
+
+The exact source remains unavailable. The following excerpts precede the reply.
+
+**User**
+
+Can you explain the state of the research at a high level, summarizing outstanding questions, and provide a continuation note?
+
+**Assistant commentary**
+
+I’ll check the current master register and the latest 05–08 handoffs, then write a continuation note that distinguishes what the project has proved from what still blocks the conjecture.

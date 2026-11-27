@@ -1,3 +1,3 @@
 # Reviews
 
-Scoped assessments with reviewer and premise provenance. None yet. The first is the independent reading requested by SP4-CUT-E02.
+The [parent assessment](PARENT_ASSESSMENT_20261127.md) records the disposition of the independently replayed manuscript and of the five child deliveries. [Original independent replay](../research-progress/handoffs/E02_INDEPENDENT_RETURN_20261127.md) · [local collar estimate reading](../research-progress/handoffs/E08_INDEPENDENT_RETURN_20261127.md)

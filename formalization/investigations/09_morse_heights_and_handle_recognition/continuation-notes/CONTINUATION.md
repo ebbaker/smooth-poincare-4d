@@ -1,5 +1,13 @@
 # Morse heights and handle recognition · Continuation
 
+**27 November 2026 · FOT-E53.** The standard lower product has the complete thick strand, the meridian, its spanning disk, all inverse parameters and integral winding zero. On a supplied actual residual tube with its radius-two chart margin, the ambient isotopy shrinks all normal disk parameters to 1/8 of their original size, with a smooth inverse and fixed exterior. Protected relative transport carries both retained belts through the three upper factors and both orderings. Identifying the Figure 3 diagram and the relative cancellation maps with their smooth traces is the remaining geometric supplier. [Current continuation](../../continuation-notes/AFTER_E53_GEOMETRIC_INSTANCES_20261127.md) · [Owner register](../research-progress/REGISTER.md)
+
+**After FOT-E52 · 27 November 2026.** Instantiate the HMP disk-framed meridian, transported residual tube and factorized upper closing on the specified Figure 3 diagram. [Current register](../research-progress/REGISTER.md) · [Program handoff](../../continuation-notes/AFTER_E52_MARKED_CUTS_AND_CLOSED_CAPS_20261127.md)
+
+**Edition 07 at issue · 27 November 2026.** On activation resume [SP4-FORM-HEIGHT-ED07-E01](../research-plan/PLAN.md#edition-07--smooth-recognition-from-an-actual-native-cut) and freeze the actual native order and Route 10 classification before composing the closing maps. [Sole register](../research-progress/REGISTER.md)
+
+> Read AGENTS.md, the repository formalization workflow, the Edition 07 program plan, this route's proof plan and sole register. Use the author's selected lead and a bounded Sol 6.2/ultra proof packet once the exact marked inputs are fixed. Start with the two orders on the Mazur fixture. Preserve the full framed tubes, the actual upper closing and its inverse. If a required geometric comparison is missing, return its exact type. Build and check the resulting public declaration and axioms in the pinned project.
+
 **Edition 06 · 26 November 2026.** Use the assessed reducible-cut localization on an actual marked integral pair. For the next uncovered case choose two irreducible native cuts or a returned two-component $Y_2$ link with its actual upper closing. [Live register](../research-progress/REGISTER.md) · [Edition 06 plan](../../research-plan/06_PLAN.md)
 
 **Handoff, 25 November 2026.** Normalize the first actual tree-edge rim using the two componentwise buffered foot charts, the oriented parameter choices and the signed regular-height collar. Transport the remaining attachments and the native outgoing map. [Assessment](../../reviews/NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md) · [Continuation](../../continuation-notes/AFTER_NATIVE_FEET_AND_PHYSICAL_JETS_20261125.md)

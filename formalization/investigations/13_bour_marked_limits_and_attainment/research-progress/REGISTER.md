@@ -1,5 +1,13 @@
 # Bour marked limits and attainment · Progress register
 
+## Edition 07 · One entire buffered truncation and its polar metric · 27 November 2026
+
+**SP4-FORM-BML-ED07-E01 · FOT-E53.** The Euclidean pointed control now has an explicitly marked smooth capped carrier with Euler characteristic two, a flat shell across both buffers and a round pole. In polar coordinates the radial metric and positive arclength derivative are computed on the physical chart. General variable profiles have Euler contribution $16\pi^2$ with the physical frame/volume and endpoint conditions. Nonflat normalized cutoffs need differentiated ALE jets, volume and connected buffered topology on the same source. [Geometric derivation](../notes/E53_BUFFERED_TRUNCATION.md) · [Assessment](../../reviews/ED07_E53_GEOMETRIC_INSTANCES_AND_FIXED_WIDTH.md) · [Verification](../../research-progress/handoffs/ED07_E53_VERIFICATION_20261127.md)
+
+## Edition 07 · Closed-cap Euler identity · 27 November 2026
+
+**SP4-FORM-BML-ED07-E01 · E52 formal return.** A smooth Euclidean-outlet cap contributes 16π². The complete one-core exhaustion gives the scalar-flat Ricci identity and one end under the strict ceiling. Actual polar realization, normalized cutoff bounds, transport of every retained integral, capped topology and closed Gauss–Bonnet are inputs. The whole-core embedding and positive marked exterior return to the same type remain open on the extracted flow. E51 stationary estimates and the original closed alternative keep their prior scope. [Euler return](../notes/E52_CLOSED_CAP.md) [Program assessment](../../reviews/ED07_E52_MARKED_CUTS_AND_CLOSED_CAPS.md) · [Public verification](../../research-progress/handoffs/ED07_E52_VERIFICATION_20261127.md)
+
 ## FOT-E51 · 26 November 2026
 
 The same pulled-back stationary metric and trace-free Ricci field now satisfy quantified $W^{2,6}$ estimates on $B(5r/2)$ at scale one and at curvature scale. The two analytic inputs are the uniform Peters chart and the whole-space scalar estimate. The outward connection path gives the finite boundary Pfaffian, with a two-boundary round shell test. Relative Euler evaluation on the actual truncation, signed same-type marked return and higher stationary compactness remain open. On the inner ball the metric and trace-free Ricci first derivatives are uniformly Hölder continuous with exponent \(1/3\). [Coupled estimate](../notes/E51_COUPLED.md) · [Outward forms and finite shell](../notes/E51_EULER.md) · [Assessment](../../reviews/ED06_E51_HARMONIC_ESTIMATES_AND_TERMINAL_LIMITS.md) · [Public verification](../../research-progress/handoffs/ED06_E51_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E51_COUPLED_INTERIOR_AND_POINTED_SCALAR_20261126.md)

@@ -210,3 +210,5 @@ The [nonlocal band and boundary-response passages](SOURCE_NOTES_COLLAR_SURGERY_2
 The [sources for the native GST reverse slides](SOURCE_NOTES_COLLAR_SURGERY_20261126.md#native-reverse-slides-on-the-gst-links) identify the actual co-cores, the rank-two primitive-word theorem and the surface-bundle input to the sphere intersection bounds.
 
 The [27 November master passage record](../papers/master/references/README.md#passages-checked-on-27-november-2026) gives the sharp trace inequality on the conformally marked ball and the localized scalar-curvature deformation on each framed surgery tube.
+
+The [cut geometry and chirality passage record](../papers/investigations-1/08_cut_geometry_and_chirality/references/README.md) identifies the boundary signature, cut bending, marked filling, min-max and Bach-flat continuation inputs to the 27 November parent revision.

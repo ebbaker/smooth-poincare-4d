@@ -1,5 +1,13 @@
 # Master manuscript milestones
 
+## 27 November 2026 · Fixed-width cost and a winding-one cork cut
+
+On the unchanged long-cuff bands the master proves \(c>169\pi^2/25\) by a four-section contrast in the native coordinates and the complete single-relator closing. It gives the native winding-one cut of the Akbulut–Yasui twisted double, carries both framed tubes and the inverse upper map, and adds the Cotton-patch recognition criterion at attainment. All 460 regional patches and the true cuff-length edges validate the physical marking and its first derivatives. The remaining sign test requires an upper enclosure for the four-dimensional Rayleigh numerator. [Native first jets](notes/NATIVE_MARKED_JET_CERTIFICATE_20261127.md) [Receipt](research-progress/handoffs/NATIVE_COST_AND_TWISTED_DOUBLE_20261127.md) · [Master PDF](../../output/pdf/master/chiral_weyl_energy_and_smooth_poincare.pdf)
+
+## 27 November 2026 · A marked cross-gluing and automatic positive caps
+
+The master recognizes the specified Hayden–Mark–Piccirillo cross-gluing through its native winding-zero cut. A conformally round umbilic sphere at an attained positive subcritical minimum suffices for recognition. A local rotational axis produces such a sphere and satisfies the physical trace bound. The unchanged long-cuff bands have identical costs, verified native marking bounds and a common first-jet curvature formula; their common Neumann sign remains open. [Receipt and independent readings](research-progress/handoffs/FIXED_WIDTH_AND_MARKED_CLOSING_20261127.md) · [Master PDF](../../output/pdf/master/chiral_weyl_energy_and_smooth_poincare.pdf)
+
 ## 27 November 2026 · Marked signs, the Euler end count and a cap criterion
 
 The master records the degree-one Mazur control, four sign tests on 07's fixed-germ fillings, and an original-positive, double-negative interval above budget. The manuscript now includes the independent Euler end proof and a sufficient signed mean-curvature bound constructing both positive caps at an attained minimum. The calibrated signature proof uses both collar faces. [Versioned research receipt](research-progress/handoffs/MARKED_TESTS_AND_ATTAINMENT_20261127.md) · [Readings and conditional scope](reviews/MASTER_SCIENTIFIC_INTEGRATION_20261127.md) · [Continuation](continuation-notes/AFTER_MARKED_TESTS_20261127.md)

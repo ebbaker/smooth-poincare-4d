@@ -1,0 +1,479 @@
+\section{Edition 07 entry and marked recognition}
+\label{sec:ed07}
+
+On a closed connected oriented smooth homotopy four-sphere let
+$E_\pm=\int |W^\pm|_{\rm HS}^2\,dV$ use the Hilbert--Schmidt square on real two-forms. Signature zero gives $e=E_+=E_-$ on the whole sphere. Put
+$T=4\pi^2$. Entry requires a metric with $Y([g])>0$ and $e(g)<2T$.
+The propositions below record the E52 implications and E53 geometric results, including the
+geometric inputs needed to apply each to the manuscript.
+
+\subsection{The marked separator and its closing}
+
+\begin{proposition}[Degree of a separator in a marked band]
+\label{prop:ed07-separator-degree}
+\lean{SmoothPoincare.markedSeparator_degree_sum, SmoothPoincare.markedSeparator_connected_degree_one, SmoothPoincare.markedSeparator_pscDominates_of_nonzero, SmoothPoincare.markedSeparator_pscDominates}
+\leanok
+Let $p:B\to Z$ be continuous, with $Z$ a connected closed oriented
+native three-manifold. Orient the incoming face toward the outgoing
+face, and suppose $p$ has degree one there. If the included integral
+fundamental classes of finitely many oriented separator components
+sum to the included incoming class in $H_3(B;\mathbb Z)$, then
+$\sum_j\deg(p|_{S_j})=1$. If a nonzero-degree component carries a
+smooth positive-scalar-curvature metric, it dominates this $Z$.
+Such a component exists when every component carries such a metric.
+\end{proposition}
+\begin{proof}
+\leanok
+Apply $p_*$ to the sum. Functoriality identifies each term with
+$(p\circ i_j)_*[S_j]$. The fundamental class of $Z$ identifies
+$H_3(Z;\mathbb Z)$ with $\mathbb Z$. Comparing coefficients gives the
+sum and hence a nonzero coefficient. The degrees $2,-1$ show why an
+individual degree-one component is unnecessary.
+\end{proof}
+
+\begin{proposition}[Recognition after native classification and relative closing]
+\label{prop:ed07-native-recognition}
+\uses{prop:ed07-separator-degree}
+\lean{SmoothPoincare.standard_of_pscDominated_markedNativeCut, SmoothPoincare.nativeResidualOnModel_marked, SmoothPoincare.MarkedMixedNativePresentation.reverseTube_marked, SmoothPoincare.MillerSchuppEquator.no_ambient_comparison_to_native_cut, SmoothPoincare.HMP.Closing.marked, SmoothPoincare.HMP.ProductSlice.degree_one}
+\leanok
+In a marked normalized mixed presentation, choose a handle order.
+Supply PSC domination of its actual cut, the classification of that cut
+as $S^3$ or $\#_2(S^1\times S^2)$ in the respective orders, and the
+relative surgery or cancellation comparison to the terminal one-pair
+assembly with its smooth signed collar. Then the original carrier
+is diffeomorphic to $S^4$. Both theorems supplying the classification
+and the relative comparison occur as premises.
+\end{proposition}
+\begin{proof}
+\leanok
+Transport the pending tube, including its framing and inverse, to the
+classified cut. The order switch carries the upper gluing $q$ to
+$qF^{-1}$ with inverse $Fq^{-1}$. The two smooth interiors and the
+open signed seam give smoothness in both directions on the original
+assembly. For the Miller--Schupp equator, affine actions on
+$\mathbb Q$ detect noncommuting generators of both complementary
+presentations. Given the computed fundamental groups, neither side
+can map homeomorphically onto a cyclic native complementary side.
+\end{proof}
+
+The meridian-first Mazur control supplies a PSC source in its known
+marking. The master also gives a degree-one projection on the returned
+disk-framed meridian of one Hayden--Mark--Piccirillo cross-gluing.
+Applying the Lean statement to this specimen still requires the
+diagram's actual solid tori, exterior maps and cancelling collars.
+
+\subsection{Three cuffs and the two chiral measures}
+
+\begin{proposition}[Three-cuff sign on a common closed Rayleigh domain]
+\label{prop:ed07-three-cuff-sign}
+\lean{SmoothPoincare.IntrinsicEntry.funnelWaist_trace_bound, SmoothPoincare.IntrinsicEntry.closedPositive_of_threeCuff_neumannFirst_nonneg, SmoothPoincare.IntrinsicEntry.ThreeCuffBandCosts.strictCost_iff_of_exchange}
+\leanok
+Assume the closed ground state, its restrictions and its three
+matching nonzero traces come from the same filling. Suppose the
+closed form decomposes over the core $V$ and all three funnels,
+each with response at least $(12/\pi)\|f_j\|^2_{L^2}$.
+A nonnegative Neumann form on $V$ makes the original first eigenvalue
+strictly positive, including when the first Neumann value is zero.
+\end{proposition}
+\begin{proof}
+\leanok
+In the radial variable $\tau=\arctan(\sinh r)$ the zero endpoint is
+at $\pi/2$. Cauchy--Schwarz gives the radial cost $2/\pi$ at the
+waist. Sum the three response inequalities on the restrictions of
+the normalized minimizer. Its strictly positive trace contribution
+adds to its nonnegative core numerator.
+\end{proof}
+
+On the exact long-cuff symmetric switches, measured band exchange and
+the two single-relator signature balances reduce the strict budget to
+$c<4\pi^2$ in one complete band. The pause-strip obstruction below
+excludes this particular metric. Its original first eigenvalue is a
+separate open measurement. At a positive equality on another trial,
+localized descent requires an admissible competitor of smaller cost.
+
+\begin{proposition}[First jets of the two endpoints of a fixed switch]
+\label{prop:ed52-fixed-band-curvature}
+\lean{SmoothPoincare.IntrinsicEntry.fixedBandChartGram_fderiv, SmoothPoincare.IntrinsicEntry.fixedBandCurvature_eq_firstJets, SmoothPoincare.IntrinsicEntry.fixedBandPullbackProductChartLowered, SmoothPoincare.IntrinsicEntry.fixedBandSignedDensities_eq_firstJets}
+\leanok
+For the smooth convex interpolation $g=(1-a)A+aB$ on a marked band,
+the lowered curvature in one physical chart is computable from the
+curvatures and first jets of $A,B$, and the prescribed two-jet of $a$.
+In an oriented orthonormal frame this gives both signed Weyl densities.
+\end{proposition}
+\begin{proof}
+\leanok
+Write the lowered curvature as a linear contraction of metric second
+derivatives plus its first-jet term. Subtract the weighted endpoint
+curvatures. The product rule leaves $\partial^2a\,(B-A)$ and the
+two terms pairing $\partial a$ with $\partial(B-A)$. The remaining
+Christoffel contributions use the actual inverse Gram matrices.
+For the marked product endpoints, the two factor metrics give the
+endpoint curvature by their signed Gram products.
+\end{proof}
+
+\begin{proposition}[Signed energy from both faces of an oriented collar]
+\label{prop:ed07-signed-collar}
+\lean{FirstOrderTwistor.signedCollar_defect_of_signature, FirstOrderTwistor.signedCollar_twoFace_bound, FirstOrderTwistor.signedCut_exactDeficit, FirstOrderTwistor.signedCut_equality, FirstOrderTwistor.reversedFubiniStudy_shell_limit}
+\leanok
+Use the product APS signature formula, the relative Pontryagin
+evaluation, and the conversion to chiral energy on the same piece.
+Set $A=12\pi^2\eta+\mathcal T$ with the outward orientation.
+On a zero-signature collar $E_+-E_-=A_1-A_0$ in increasing normals.
+Common-reference errors $b_0,b_1$ bound the absolute imbalance by
+$b_0+b_1$. On a measurable cut $V$ with two finite chiral measures of
+equal total mass $e$ and $D=E_+(V)-E_-(V)$, one has
+$e-|D|=E_-(V)+E_+(V^c)$ for $D\ge0$, with the chiralities exchanged
+for $D\le0$.
+\end{proposition}
+\begin{proof}
+\leanok
+The relative term is $4\pi^2(\int p_1(g)-\int p_1(g_0))$.
+Subtract both increasing-normal face contributions and use the
+triangle inequality. Additivity on $V$ and $V^c$ proves each deficit.
+At equality both indicated masses vanish. For the reversed
+Fubini--Study shells with outer radius $\pi/4$ and inner radius
+tending to zero the signed difference tends to $-3\pi^2$.
+\end{proof}
+
+\subsection{The matched ball and attained rigidity}
+
+\begin{proposition}[Positive Robin caps at the inclusive round trace bound]
+\label{prop:ed07-robin-cap}
+\lean{SmoothPoincare.IntrinsicEntry.matchedConformallyFlatBall_boundaryJet, SmoothPoincare.IntrinsicEntry.matchedConformallyFlatBall_angular_firstJet, SmoothPoincare.IntrinsicEntry.matchedBallRobinJet, SmoothPoincare.IntrinsicEntry.matchedBall_robinPositive_of_traceBound, SmoothPoincare.IntrinsicEntry.matchedBall_twoSidedPositive_of_traceBound}
+\leanok
+In the chosen positive-scalar representative, write the marked umbilic
+boundary metric as $h=e^{2\ell}\gamma$ using its actual conformal
+parametrization. Given smooth $\ell,H$, there is a smooth conformally
+Euclidean ball with the required boundary metric and opposite
+outward angular first jet. On each matched test domain assume the
+sharp ball trace inequality, conformal Robin identity, zero-trace
+Dirichlet estimate and compact ground-state attainment.
+The physical bound $\|(H_i)_-\|_{L^3(h)}\le3(2\pi^2)^{1/3}$ for each
+outward sign makes both first eigenvalues strictly positive.
+\end{proposition}
+\begin{proof}
+\leanok
+In a radial collar prescribe $u=\ell+(r-1)(-e^\ell H-3)/3$ and cut
+$u$ to zero near the center. The metric is $e^{2u}g_{\rm Eucl}$.
+Differentiate on angular vectors $ra,rb$ and divide by twice the boundary
+lapse, $2e^\ell$, to recover the opposite umbilic second form.
+The cap trace inequality cancels the largest negative side Robin term
+by H\"older. Even at equality, nonzero restriction to the side has
+strictly positive bulk. A cap-supported test has zero trace and
+positive Dirichlet energy. Apply this to the minimizing test.
+\end{proof}
+
+\begin{proposition}[The two outward signs on a round latitude]
+\label{prop:ed52-latitude}
+\uses{prop:ed07-robin-cap}
+\lean{SmoothPoincare.IntrinsicEntry.roundLatitude_scalarBulk_eq, SmoothPoincare.IntrinsicEntry.roundLatitudeMatchedCap_angular_firstJet, SmoothPoincare.IntrinsicEntry.roundLatitude_polarTrace_test, SmoothPoincare.IntrinsicEntry.roundLatitude_robinPositive_of_polarData}
+\leanok
+On the unit round four-sphere the latitude at polar distance
+$0<a<\pi$ has angular metric $\sin^2(a)\gamma$ and outward means
+$\pm3\cot(a)$. In the unit polar angular measure the larger negative-part
+norm equals $3(2\pi^2)^{1/3}|\cos a|$, strictly below the threshold.
+In the Riemannian surface-measure version supply its unit area
+$2\pi^2$, or the identification with the polar measure.
+\end{proposition}
+\begin{proof}
+\leanok
+Differentiate the induced angular form, then restrict the constructed
+cap with opposite angular derivative. The round scalar potential is
+$12$ times the physical squared mass. The induced volume changes by
+$\sin^3(a)$, which cancels the cubed reciprocal sine in the trace norm.
+\end{proof}
+
+\begin{proposition}[Weighted cap test in a pinched representative]
+\label{prop:ed52-weighted-robin}
+\uses{prop:ed07-robin-cap}
+\lean{SmoothPoincare.IntrinsicEntry.traceFree_normalComponent_sq_le, SmoothPoincare.IntrinsicEntry.firstHalfLaplacian_ge_one_of_raulot, SmoothPoincare.IntrinsicEntry.weightedMatchedBall_robinPositive_of_pinched_umbilic_cut}
+\leanok
+On the marked conformally round cut in a pinched representative, assume
+the physical Gauss data, conformal covariance and the boundary spectral
+comparison of Raulot on the hyperbolic ball, together with the
+realization and ground-state inputs for the matched forms. Each capped
+side has positive first eigenvalue. This version requires no measured
+$L^3$ bound on the outward mean curvature.
+\end{proposition}
+\begin{proof}
+\leanok
+Set $V=\sqrt{R_h/6}$. The order-two Rayleigh quotient in $V^2h$ has
+lower bound $3/4$. The positive branch of the order-one comparison
+then has lower bound one. Transport the boundary form back to $h$.
+The Gauss identity gives $3V>|H|$, so the cap bound
+$6\int V f^2$ pays the outward term on either side. The zero-trace
+case uses the same Dirichlet estimate as the inclusive trace test.
+\end{proof}
+
+\begin{proposition}[Same-type minimality on the marked round cut]
+\label{prop:ed07-attained-cut}
+\uses{prop:ed07-robin-cap,prop:ed52-weighted-robin,prop:ed04-fixed-cap-masses,prop:cut-marked-reassembly}
+\lean{SmoothPoincare.markedCap_energyLimit_of_firstJet, SmoothPoincare.attainedRoundCut_discarded_zero, SmoothPoincare.standard_of_attained_roundCut_traceBound, SmoothPoincare.standard_of_attained_roundCut_weighted}
+\leanok
+On a positive attained class of energy $e<2T$, supply the two marked
+smooth cap approximations. Their unchanged complements, shrinking
+physical bands, uniform signed density bounds and scalar form-error
+bounds must hold on those same metrics. Supply the positive cap
+test of the preceding proposition, the Sobolev and coercivity
+comparisons, the marked reassembly after subthreshold recognition,
+and the Bach-flat first variation, continuation and conformally flat
+recognition suppliers. Then one discarded open side has zero raw
+energy in both signs and the original oriented smooth type is standard.
+\end{proposition}
+\begin{proof}
+\leanok
+Uniform density bounds times vanishing band volumes give convergence
+to the full raw cost for each sign. Form stability gives positive
+smooth approximants. One side costs less than $T$. Recognize a cap
+on that side and reassemble with the marked inverse on the other.
+Pullback produces positive competitors on $M$, so their limiting cost
+is at least $I^+(M)=e$. Additivity forces zero on the discarded side.
+Continuity then gives pointwise vanishing on its nonempty interior.
+The stated continuation and recognition results finish the implication.
+\end{proof}
+
+\subsection{Euler caps on the whole truncation}
+
+\begin{proposition}[Euler identity on a closed capped ALE core]
+\label{prop:ed07-closed-cap-euler}
+\uses{prop:ed47-ends}
+\lean{SmoothPoincare.bourClosedCapEuler_integral, SmoothPoincare.bourClosedCaps_ricci_identity, SmoothPoincare.bour_closedCaps_force_oneEnd, SmoothPoincare.bourClosedCaps_signedBounds}
+\leanok
+On an oriented scalar-flat limit with finite curvature charges,
+supply one exhausting family of whole cores. At each stage identify
+all unchanged integrals, normalized shell volume and curvature bounds
+with positive decay, and every warped cap in its Euclidean polar
+marking. Assume the common compact carrier has Euler characteristic
+two and satisfies closed Gauss--Bonnet with these metrics. Then
+\[
+ \int_X |\operatorname{Ric}_0|^2
+ =2\bigl(E_+(X)+E_-(X)\bigr)+32\pi^2(k-1).
+\]
+If $k\ge1$ and the Ricci integral is strictly below $32\pi^2$,
+then $k=1$.
+\end{proposition}
+\begin{proof}
+\leanok
+Angular integration of the warped metric's Euler density gives the derivative
+\[
+  -12\pi^2 f''(1-f'^2)
+  = \frac{d}{ds}\left[-12\pi^2\bigl(f'-f'^3/3\bigr)\right].
+\]
+The two endpoint slopes $+1,-1$ give
+$16\pi^2$ per cap. Sum these contributions on the same closed carrier,
+use the shell bounds, and exhaust the original integrable densities.
+Nonnegative chiral charges and the strict Ricci ceiling give the end count.
+\end{proof}
+
+Construction of this family from an actual pointed Bour limit still
+requires the embedded truncated core with all end buffers, trivial
+links, cutoff estimates and capped topology. The positive marked
+return to the original smooth type also remains a separate step.
+
+\subsection{Geometric instances and the fixed-width enclosure}
+
+\begin{proposition}[The framed meridian and the retained handle]
+\label{prop:ed53-hmp}
+\uses{prop:ed07-native-recognition}
+\lean{SmoothPoincare.HMP.diskFramedMeridian_parallel, SmoothPoincare.HMP.chartMeridianDisk_inter_strand, SmoothPoincare.HMP.chartMeridian_core_windingZero, SmoothPoincare.HMP.standardLowerMeridian_windingZero, SmoothPoincare.HMP.retainedTubeShrink_contMDiff, SmoothPoincare.HMP.retainedTubeShrink_one_inverse, SmoothPoincare.HMP.retainedTubeShrink_fixed, SmoothPoincare.HMP.retainedTubeMeridian_disjoint_shrunk, SmoothPoincare.HMP.retainedTubeMeridian_inverses, SmoothPoincare.HMP.protectedMeridian_transport, SmoothPoincare.HMP.Closing.marked_retainedBelts}
+\leanok
+In a protected smooth chart straightening the chosen strand of the
+Hayden--Mark--Piccirillo diagram, the framed meridian is the boundary
+of a transverse disk. Its core has zero integral winding. A lower
+cancellation preserving that chart carries the whole meridian with its
+framing and inverse. The returned three-factor closing carries both
+parametrized belt faces through either handle order.
+\end{proposition}
+\begin{proof}
+\leanok
+The explicit chart gives a core and parallel spanning disks, each meeting
+the retained axis once. Radial clearance separates their boundary tube
+from the retained thick strand. Applying the chart directly in the given
+residual framed tube supplies its two inverse parameters and disjointness
+from the entire radius-$1/8$ retained sub-tube. The comparison with
+the original attachment uses a smooth isotopy of its ambient boundary,
+with jointly smooth inverse and support in the expanded radius-two tube.
+The chart must contain that closed tube. Extension across the disk kills the
+degree-one homology class of its boundary in the ambient level.
+Following the lower trace, the pre-final boundary comparison and the
+upper cancellation gives the two outgoing belt identities and their inverses.
+The Figure~3 comparisons on the actual surviving handles are geometric inputs.
+\end{proof}
+
+\begin{proposition}[A transverse lower bound on the marked harmonic map]
+\label{prop:ed53-corridor}
+\lean{SmoothPoincare.IntrinsicEntry.pauseBarrier_lap, SmoothPoincare.IntrinsicEntry.pauseTransverseBarrier_le, SmoothPoincare.IntrinsicEntry.pauseTransverseDerivative_ge, SmoothPoincare.IntrinsicEntry.pauseMetric_lower}
+\leanok
+In the source corridor $|x|\le1/4$, $y\ge0$, $x^2+y^2\le16$,
+let the smooth marked height $u$ be nonnegative, zero on the bottom
+and at least one on the outer cuff. Suppose $\Delta u=Eu$ and
+$0\le E\le59$. Then $\partial_yu(x,0)\ge 10\cos(2\pi x)/\sinh40$.
+Together with the longitudinal estimate and reflection symmetry, this
+gives a positive lower bound $m$ for both metric eigenvalues at the pause.
+\end{proposition}
+\begin{proof}
+\leanok
+Compare with $v=\cos(2\pi x)\sinh(10y)/\sinh40$.
+Its Laplacian is $(100-4\pi^2)v$. A positive maximum of $v-u$ would
+have positive Laplacian in the interior. Take the one-sided derivative
+at their common zero trace. The scientific application uses the actual
+outer target cuff normal and a reflected disk of radius $1/2$.
+\end{proof}
+
+\begin{proposition}[Lower stretch on overlapping disks]
+\label{prop:ed53-stretch}
+\uses{prop:ed53-corridor}
+\lean{SmoothPoincare.IntrinsicEntry.harmonicDiskBarrier_lap, SmoothPoincare.IntrinsicEntry.harmonicDisk_chain, SmoothPoincare.IntrinsicEntry.harmonicStretch_harnackStep, SmoothPoincare.IntrinsicEntry.markedChain_smallStretch_floor}
+\leanok
+On each marked radius-$1/8$ disk take the two square stretches $H,L$
+of the harmonic map, $T=1-L/H$ and $F=\log(59/H)$. Assume the
+physical bounds $\Delta T\le236T$, $T\ge0$, $-236\le\Delta F\le0$,
+and $F\ge0$, with a matching disk harmonic extension for $F$.
+An inner distortion floor $t$ on a concentric radius-$1/32$ disk
+propagates by $7/144$ per step of length $1/16$, and the logarithmic
+bound propagates by $F_{j+1}\le3F_j+1$.
+\end{proposition}
+\begin{proof}
+\leanok
+On an annulus with outer radius $R=1/8$ and inner radius $s$, compare
+$T$ with $ts^2(r^{-2}-R^{-2})$. The disk of radius $3R/4$ includes
+the next inner disk. For $F$, use the harmonic extension of its
+boundary and the quadratic $59(R^2-r^2)$. The Poisson kernel on the
+half disk is at most three times its central value. Finally
+$(\sqrt H-\sqrt L)^2\ge HT^2/4$.
+\end{proof}
+
+The two literal unit-circle letters and a displacement of length at most
+$9/128$ reach every planar point of both marked bands in at most 52
+steps. The scientific realization of these disk estimates gives an
+explicit lower metric bound $q_*>0$ on the full footprint.
+
+\begin{proposition}[Both integrated costs and the radial sign test]
+\label{prop:ed53-full-band}
+\uses{prop:ed52-fixed-band-curvature,prop:ed53-stretch,prop:ed07-three-cuff-sign}
+\lean{SmoothPoincare.IntrinsicEntry.fullBand_signedCost_le, SmoothPoincare.IntrinsicEntry.closedNegative_of_longCuffRadialMargin, SmoothPoincare.IntrinsicEntry.fixedWidthPoleInverseError_gt_three_elevenths}
+\leanok
+Set $\Lambda=10^{10}/\min(q_*,1/4)$. Given the actual orthonormal
+curvature component ceiling $10^{33}\Lambda^3$ from the first-jet
+calculation and whole-band physical volume at most $10^{19}$,
+both signed integrals are at most $10^{88}\Lambda^6$. A radial
+test paying the original three-funnel response gives strict closed
+negativity when its two band numerators beat that response.
+\end{proposition}
+\begin{proof}
+\leanok
+The full ordered square sums over 256 components. Each signed
+Hilbert--Schmidt square is at most a quarter of that sum. Integrate
+using the original metric's volume. The radial comparison uses
+$144L<661$ for $L=2\operatorname{arcosh}5$.
+This upper estimate controls the whole metric. The lower estimate below decides its cost test.
+\end{proof}
+
+\begin{proposition}[Fixed-width obstruction from a pause strip]
+\label{prop:ed53-pause-strip}
+\uses{prop:ed52-fixed-band-curvature,prop:ed07-three-cuff-sign}
+\lean{SmoothPoincare.IntrinsicEntry.pauseStripCellFloor_gt_133, SmoothPoincare.IntrinsicEntry.pauseStripExp_bounds, SmoothPoincare.IntrinsicEntry.pauseStripContrastFloor_gt_133, SmoothPoincare.IntrinsicEntry.pauseStripPhysicalOdds_derivs, SmoothPoincare.IntrinsicEntry.pauseStripLogGauge_inner, SmoothPoincare.IntrinsicEntry.pauseStripPhysicalContrast_sq_le, SmoothPoincare.IntrinsicEntry.pauseStrip_original_signed_costs_gt}
+\leanok
+Let $x=16s-1$ on the physical strip $3/20\le x\le1/5$ of the
+long-cuff width-$1/16$ convex trial. Include both end twentieths of
+each timed letter and the whole marked two-sphere. Suppose its physical
+jet estimate for the four-section contrast, reference volume, conformal
+metric comparison, full-band balances and exchange hold. Then both
+complete signed costs on each band exceed $17689\pi^2/2500$ and both
+original closed costs exceed $17689\pi^2/1250>8\pi^2$.
+\end{proposition}
+\begin{proof}
+\leanok
+For the normalized representative $A+tB$, set $t=\exp(-1/x+1/(1-x))$.
+A smooth log factor, continued through the outer end, recovers $A+tB$ on this strip.
+The source computes $|D|\ge 3t''/25-9-11t'-53(t')^2/100$ in the
+adapted physical frame with derivatives in $s$. Forty rational cells
+cover the full interval, including both endpoints. Positive Taylor
+coefficients and a geometric remainder enclose the exponential on each
+cell. The separate derivative bounds give $|D|>133$. The four
+sectional diagonals give $D^2\le4(|W^+|^2+|W^-|^2)$. The strip has
+volume greater than $8\pi^2(32/25)/3200$. Integrating and using
+equality of the two complete band charges supplies the factor $1/8$
+in the one-band estimate. Conformal invariance and restoration of the
+two Weyl-flat caps and three funnels give the original costs. The
+physical identification and jet estimates on the harmonic marking
+are supplied by the scientific derivation.
+\end{proof}
+
+\begin{proposition}[A global positive form on both marked equatorial caps]
+\label{prop:ed53-geometric-cap}
+\uses{prop:ed07-robin-cap,prop:ed07-attained-cut}
+\lean{SmoothPoincare.roundEquatorCapChart_round_inner, SmoothPoincare.roundEquatorJoinedForm_eq_sideSum, SmoothPoincare.roundEquatorJoinedForm_coercive, SmoothPoincare.roundEquator_orientedReassembly, SmoothPoincare.roundEquator_exact_cap}
+\leanok
+On the round equator in the actual unit four-sphere, both smooth
+caps give the round metric on the original carrier. The joined form
+splits over its two closed sides and dominates six times the squared
+$H^1$ norm on smooth global tests. Both full Weyl costs are zero.
+\end{proposition}
+\begin{proof}
+\leanok
+The two stereographic ball charts extend beyond the boundary, have
+metric factor $4/(1+|z|^2)^2$, and agree in the equatorial marking.
+The seam has zero physical volume. Integration of
+$6|df|^2+12 f^2$ gives the split form and its lower bound. Constant
+smooth sequences realize the two marked caps with empty smoothing strip.
+\end{proof}
+
+\begin{proposition}[A buffered Euclidean core and a variable polar cap]
+\label{prop:ed53-buffered}
+\uses{prop:ed07-closed-cap-euler}
+\lean{SmoothPoincare.bourBufferedSphere_markedDisk, SmoothPoincare.bourBufferedSphere_normalizedShell, SmoothPoincare.bourBufferedSphere_polar_inner, SmoothPoincare.bourBufferedRadialLength_image, SmoothPoincare.bourBufferedRadialLength_localInverse, SmoothPoincare.bourBufferedAngularRadius_roundTail, SmoothPoincare.bourNormalizedShell_curvature_of_chartJets, SmoothPoincare.bourVariableCapEuler_roundPole}
+\leanok
+Two scaled stereographic marks on $S^4$ give a capped Euclidean
+ball with two-sided buffer and Euler characteristic two. A conformal
+metric on this carrier is flat through the buffer and round near
+the opposite pole. For a variable positive radial warping, the
+physical polar volume and curvature formulas, entrance slope $+1$
+and smooth terminal slope $-1$ give cap Euler contribution $16\pi^2$.
+\end{proposition}
+\begin{proof}
+\leanok
+The two ball maps and their inverses agree at the seam. A radial blend
+makes the Euclidean metric exact on the core and both buffers. On
+a normalized nonflat shell, bounded metric and inverse, with first
+and second chart jets $O(\varepsilon)$, give an ordered curvature
+square $O(\varepsilon^2)$. The variable-cap integral uses the same
+primitive as the closed-cap formula. The actual radial metric is
+$\lambda^2d\rho^2+(\rho\lambda)^2\sigma$. Its arclength covers $(0,L)$
+with smooth local inverse, and $L-s=2\arctan(r/\rho)$ on the round tail.
+The physical polar pushforward and warped curvature frame on the smooth
+transition remain inputs to its Euler integral. The actual nonflat extracted truncation still needs its common
+buffered comparison, cutoff estimates and capped topology.
+\end{proof}
+
+\subsection{Universal obligations}
+
+\begin{openproblem}[Universal positive subcritical entry]
+\label{prob:ed07-universal-entry}
+Construct an entering metric on every closed connected oriented smooth
+homotopy four-sphere. The sign and cost tests above apply to individual
+metrics. No construction covers all such types.
+\end{openproblem}
+
+\begin{openproblem}[Recognition of every entered smooth type]
+\label{prob:ed07-entered-recognition}
+Derive an oriented diffeomorphism to $S^4$ on every type admitting an
+entering class. The native and attained recognition results both require
+geometric data beyond entry.
+\end{openproblem}
+
+\begin{proposition}[Logical equivalence on oriented homotopy spheres]
+\label{prop:ed52-logical}
+\lean{SmoothPoincare.OrientedHomotopyFourSphere.Entered, SmoothPoincare.UniversalPositiveSubcriticalEntry, SmoothPoincare.EnteredTypeRecognition, SmoothPoincare.orientedSmoothPoincare_iff_entry_and_recognition}
+\leanok
+Fix the target orientation. Universal oriented smooth recognition is
+equivalent to the conjunction of universal entry and recognition of
+each entered type.
+\end{proposition}
+\begin{proof}
+\leanok
+Pull back the actual unit round metric across each oriented
+diffeomorphism. Its Yamabe class is positive and its Weyl energy is zero.
+In the other direction, use universal entry on the specified carrier
+and apply the second universal statement there.
+\end{proof}

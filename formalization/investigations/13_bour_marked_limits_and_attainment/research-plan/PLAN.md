@@ -4,6 +4,26 @@
 
 The proposed statements use the supplied orientation, smooth Riemannian metrics and physical measures. The author-selected lead handles B decisions. The routing defaults are GPT-6.2 Astra/ultra for B and GPT-6.2 Sol/ultra for bounded E once activated. The declaration names and [Edition 05 blueprint](../../../blueprint/src/edition_five_bour_attainment.tex) anchors below are proposed. Paths are relative to `formalization/`.
 
+## Edition 07 · Euler count by closed caps
+
+27 November 2026. **SP4-FORM-BML-ED07-E01** is a bounded E packet for the master’s closed-cap calculation. Proposed declaration `SmoothPoincare.bour_closedCaps_force_oneEnd` in `SmoothPoincare/Variational/BourClosedCapEuler.lean` targets blueprint `prop:ed07-closed-cap-euler`. [Edition 07 plan](../../research-plan/07_PLAN.md) · [Master attainment proof](../../../../papers/master/manuscript/attainment_on_the_original_sphere.tex) · [Independent Euler proof](../../../../papers/master/reviews/EULER_AND_CAP_READBACK_20261127.md)
+
+For the intrinsic calculation, take a smooth oriented complete connected noncompact scalar-flat four-manifold with finite full curvature integral and $k\ge1$ ends. Take trivial link groups, Euclidean coordinates satisfying $\partial^j(g-g_{\mathrm{eucl}})=O(r^{-\tau-j})$ for $0\le j\le2$ and $\tau>0$, and Euler characteristic two for the core capped along its spherical boundaries as inputs. Use a fixed-relative-width cutoff to the Euclidean metric on each outgoing annulus. In the radius-one scaling show that the shell integrals in each chirality, the scalar-square term and the ordinary Ricci-square term are $O(r^{-2\tau})$. Use finite full curvature to remove the omitted tail.
+
+Use supplied smooth warped ball caps at the flat outlets, with $f(s)=r+s$ near entry and $f(s)=L-s$ near the pole. Use closed Gauss–Bonnet on each complete cap joined to its flat ball to get exactly $16\pi^2$ per cap. With real two-form Hilbert–Schmidt chiral energies and ordinary Ricci square $D_X$, apply the closed formula on the one capped core and take the exhaustion limit:
+
+$$16\pi^2=E_+(X)+E_-(X)-D_X/2+16\pi^2 k,$$
+
+$$D_X=2\big(E_+(X)+E_-(X)\big)+32\pi^2(k-1).$$
+
+Check that $D_X<32\pi^2$ forces one end. Retain the cap’s increasing initial radial derivative and state the closed Euler, topology, cutoff and integral inputs explicitly. If an input is unavailable, return the first missing input and the conditional conclusion. The E51 boundary Pfaffian remains available for the relative boundary route.
+
+In the attainment application, use one oriented comparison of the whole compact core with every end buffer into the same closed source. This comparison supports the quotient-link exclusion on the original source, the capped core topology with Euler characteristic two, and the marked return to the original smooth type. Retain smooth removal, positive compactification, the positive actual capped exterior with $E_\pm<T$ and a relative ball map with both inverse germs. Take the source liminf on a fixed complete buffered truncation separately in each sign before exhaustion.
+
+The mixed stationary proof keeps the physical volume-one constant-scalar regularized returns and takes exact compactified returns in their Yamabe gauge. E51 gives coupled $W^{2,6}$ and $C^{1,1/3}$ at both scales on a common actual chart given quantitative Peters and the whole-space scalar Calderón–Zygmund input. Supply those inputs, all-order interior estimates with bounded coefficient $(2-p)R/(12a)$ and the actual smooth closed or pointed comparisons for $a=1$ or the curvature scale. Keep both mixed outcomes unless the separate start-deficit recovery condition applies. [E51 scope](../../reviews/ED06_E51_HARMONIC_ESTIMATES_AND_TERMINAL_LIMITS.md) · [Route 12](../../12_bour_regularized_flow/research-plan/PLAN.md)
+
+## Earlier packets and dependencies
+
 | Packet | Fixed output or decision | Proposed declaration, module and anchor | Acceptance boundary |
 | --- | --- | --- | --- |
 | BAT-E01 | On one entered closed carrier pull an actual positive metric back by a supplied oriented diffeomorphism. Prove the actual pulled-back witness attains the infimum when the input total energy is at most the infimum. | `SmoothPoincare.bourAttainsOfSignedPullback` in `SmoothPoincare/Bour/Attainment.lean`. Supporting leaf of `thm:ed05-bour-attainment` and the conclusion of `thm:main`. | Check the signs and equality at the infimum with the real measure package. Bach-flatness of this metric follows from a separately supplied pullback implication in the first packet. |

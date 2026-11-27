@@ -1,5 +1,11 @@
 # Positive scalar curvature on actual cuts · Continuation
 
+**After FOT-E52 · 27 November 2026.** Use an actual embedded separator class relation on the HMP product collar or another identified native level, with its physical PSC source. [Current register](../research-progress/REGISTER.md) · [Program handoff](../../continuation-notes/AFTER_E52_MARKED_CUTS_AND_CLOSED_CAPS_20261127.md)
+
+**Edition 07 at issue · 27 November 2026.** On activation start [SP4-FORM-PSC-ED07-E01](../research-plan/PLAN.md#edition-07--degree-on-the-marked-separator) from the supplied integral class equality. Use the degree and PSC certificate on the same component when preparing Route 09's boundary inputs. [Sole register](../research-progress/REGISTER.md)
+
+> Read AGENTS.md, the repository formalization workflow, the Edition 07 program plan, this route's proof plan and sole register. Use the author's selected lead and a bounded Sol 6.2/ultra packet to prove the pinned integral degree sum and the same-component PSC implication. Check the connected and disconnected cases and the missing premises on the two marked controls. Record the public type and axioms in the pinned project. Leave the measured physical band with scientific 08 and pass a same-target boundary classification to Route 09 when its exact inputs are available.
+
 **Edition 06 · 26 November 2026.** Select a new actual cut before testing PSC domination on the surviving terminal class. For a metric comparison keep the native band data, both complete signed prices and the protected core. [Live register](../research-progress/REGISTER.md) · [Edition 06 plan](../../research-plan/06_PLAN.md)
 
 ## Edition 04 activation prompt

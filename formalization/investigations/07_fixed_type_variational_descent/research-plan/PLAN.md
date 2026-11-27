@@ -2,6 +2,16 @@
 
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The serving model and effort for preparation were unavailable. [Overall overview](../../research-overview/03_OVERVIEW.md) · [Program plan](../../research-plan/03_PLAN.md) · [Source revisions and pins](../../research-progress/03_BASELINE.md)
 
+## Edition 07 · Rigidity from a marked umbilic cut
+
+27 November 2026. **SP4-FORM-VAR-ED07-E01** is a bounded E packet. Proposed declaration `SmoothPoincare.standard_of_attained_roundCut_traceBound` in `SmoothPoincare/Variational/AttainedRoundCut.lean` targets blueprint `prop:ed07-attained-cut` and the master's `prop:trace-cap`. [Edition 07 plan](../../research-plan/07_PLAN.md) · [Master trace-cut proof](../../../../papers/master/notes/ROUND_CUT_TRACE_TEST_20261127.md)
+
+Fix an oriented smooth homotopy four-sphere and a smooth positive class attaining $I^+(M)<2T$, where $T=4\pi^2$ and $e=E_+=E_-$ in the curvature-operator Hilbert–Schmidt convention. Assume an actual two-sided round-conformal umbilic $S^3$ and one smooth representative with $R>0$. With $h$ the induced metric and $H_i$ outward trace mean curvature from side $i$, assume $\|(H_i)_-\|_{L^3(h)}\le3(2\pi^2)^{1/3}$ for both sides, including equality. Use the Robin form from [Route 11](../../11_intrinsic_entry_from_marked_exteriors/research-plan/PLAN.md#edition-07--same-metric-sign-and-round-cap-trace) and the smooth positive approximants, their limits in both signs and the oriented reassembly from [Route 03](../../03_single_cut_descent/research-plan/PLAN.md#edition-07--smoothing-and-reassembly-of-matched-caps).
+
+Use additivity $e=e_1+e_2$ with $e_i=E_+(V_i)=E_-(V_i)$. Recognize the lower-cost side by an actual positive approximation with energy $<T$. The other capped side has type $M$, so taking its positive approximants to the raw cost gives $I^+(M)\le e_j$. Attainment forces the discarded open side to have $W=0$. Use the Bach equation from positive-class minimality and Bach-flat unique continuation on connected $M$ to finish smooth recognition. Check the exact continuation and recognition inputs and the no-loss limit on the marked original type. If one supplier is missing, return the smallest remaining premise. Choosing a qualifying cut at a general minimum is a separate geometric question.
+
+Retain the Edition 06 exact least-$D$ selector after X and first-value compactness, the non-Einstein polarized Hessian, and the Einstein strict TT test at $s/3<\lambda(-\Delta_L)<s/2$. The mixed Hessian entry is available on paper. A forcing sign or actual mode remains open, and the two spectral endpoints give zero second variation. [Edition 06 plan](../../research-plan/06_PLAN.md) · [Current paper rigidity tests](../../../../papers/master/notes/ATTAINED_EQUALITY_TEST_20261127.md)
+
 ## Edition 04 objectives
 
 26 November 2026, America/New_York. [Edition 04 overview](../../research-overview/04_OVERVIEW.md) · [Edition 04 plan](../../research-plan/04_PLAN.md) · [Route 05 deformation](../../05_variational_comparison/research-plan/PLAN.md#edition-04-objectives) · [Route 03 caps](../../03_single_cut_descent/research-plan/PLAN.md#edition-04-objectives)

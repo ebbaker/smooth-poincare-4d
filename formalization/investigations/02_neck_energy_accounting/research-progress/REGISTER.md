@@ -1,12 +1,16 @@
 # Full neck energy accounting · Progress register
 
+## Edition 07 · Signed collar and exact cut deficit · 27 November 2026
+
+**FOT-NECK-ED07-E01 · E52 formal return.** The two oriented APS faces give the signed imbalance. The two complete measures give the exact deficit in either sign and its equality case. Application to a new collar requires its physical face defects and the three normalized Chern–Weil, product APS and relative transgression identities. [Calculation](../notes/E52_SIGNED_COLLAR.md) [Program assessment](../../reviews/ED07_E52_MARKED_CUTS_AND_CLOSED_CAPS.md) · [Public verification](../../research-progress/handoffs/ED07_E52_VERIFICATION_20261127.md)
+
 ## FOT-E46 · 26 November 2026
 
 The finite retained-core decomposition uses the entire disk complement at each index. A nearly sharp peak gives vanishing off-core mass in the maximizing sign. Its statement concerns the fixed marked sets on each source and supplies neither an extracted neck nor an energy identity for a bubble tree. [Program assessment](../../reviews/FINITE_POSITIVE_POCKETS_AND_MARKED_SUCCESSORS_20261126.md)
 
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The serving model variant and reasoning effort are unavailable.
 
-This is the sole live status register for FOT-B03, FOT-E01, FOT-E09–E17 and FOT-E29. The parent register directs each inherited task here. [Task definitions and acceptance tests](../research-plan/PLAN.md) · [Overall overview 01](../../research-overview/01_OVERVIEW.md) · [Overall plan 01](../../research-plan/01_PLAN.md) · [Program register](../../research-progress/REGISTER.md) · [Verified baseline 01](../../research-progress/01_BASELINE.md)
+This is the sole live status register for FOT-B03, FOT-E01, FOT-E09–E17, FOT-E29 and FOT-NECK-ED07-E01. The parent register directs each inherited task here. [Task definitions and acceptance tests](../research-plan/PLAN.md) · [Overall overview 01](../../research-overview/01_OVERVIEW.md) · [Overall plan 01](../../research-plan/01_PLAN.md) · [Program register](../../research-progress/REGISTER.md) · [Verified baseline 01](../../research-progress/01_BASELINE.md)
 
 ## Version 01 tasks
 

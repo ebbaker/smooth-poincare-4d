@@ -1,22 +1,35 @@
-# Cut geometry and chirality — progress register
+# Cut geometry and chirality · parent progress register
 
-26 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum. Setup baseline `4655e38`. Sole live owner of the parent task family `SP4-CUT`, which since the split of 26 November 2026 consists of SP4-CUT-E02 and SP4-CUT-B01. The ten tasks assigned to the children moved to the five child registers under new identifiers; the [crosswalk](CROSSWALK_20261126.md) records each. This register links the child registers and does not copy their rows. Nothing is activated. [Plan](../research-plan/PLAN.md) · [Overview](../research-overview/OVERVIEW.md) · [Continuation](../continuation-notes/CONTINUATION.md)
+27 November 2026, America/New_York. For Edward B. Baker III with OpenAI Codex. This is the sole live register for the parent family SP4-CUT. The 26 November setup and the identifiers transferred to the five children are preserved in the [crosswalk](CROSSWALK_20261126.md) and [draft history](../DRAFT_HISTORY.md). The E02 input was the draft at checkout 72068cef1973. The continuation after B01 used the working checkout at 48f36794f9b1. Selected lead routing was Astra/ultra, with bounded gpt-6.2-sol/ultra readers. Lead serving details were unavailable. [Overview](../research-overview/OVERVIEW.md) · [plan](../research-plan/PLAN.md) · [assessment](../reviews/PARENT_ASSESSMENT_20261127.md)
 
-| Task | Current state | Evidence or exact dependency |
+| Parent task | Status | Evidence and scope |
 | --- | --- | --- |
-| SP4-CUT-E02 | Ready, unactivated | Inputs fixed: Sections 2 to 5, 7 and 8 of the [manuscript](../manuscript/cuts_of_subcritical_conformal_classes.tex) as first drafted at `841d606`. |
-| SP4-CUT-B01 | Dependent | Needs the returns of SP4-CUT-LED-E01 and SP4-CUT-E02 and at least one of SP4-CUT-GEO-B01, SP4-CUT-TUBE-B01, SP4-CUT-SEAM-B01. |
+| SP4-CUT-E02 | Independently replayed and integrated | Every numbered claim in §§2–5, 7 and 8 of the initial manuscript received a disposition. The lead corrected signs and orientation, the atlas hypotheses, the uniform sweepout quantifier, and the smooth-limit argument at a free cut. Section 6 had a separate cap and topology check. [Frozen request](handoffs/E02_REQUEST_20261127.md) · [independent return](handoffs/E02_INDEPENDENT_RETURN_20261127.md) · [marked test](handoffs/E02_MARKED_RETURN_20261127.md) · [tube reconciliation](handoffs/E02_TUBE_RETURN_20261127.md) · [primary sources](handoffs/E02_SOURCE_RETURN_20261127.md) |
+| SP4-CUT-B01 | Decision recorded and assessed | Prioritize a positive source of nonzero degree to an actual native cut in either order of a reduced mixed presentation. The bending inequality and the round Mazur obstruction are established. A smooth attained minimizer with a free cut and both capped signs positive is conformally round. Existence on an untreated smooth type remains open. [Decision and revisit conditions](../brainstorm/notes/B01_MARKED_RECOGNITION_20261127.md) · [proof](../notes/MARKED_BAND_AND_MINIMIZER_20261127.md) |
+| SP4-CUT-E08 | Analytical estimate and control completed and independently checked. Untreated application awaits a marked input. | The physical chart coefficient is \(S_D(m/M)/\max(1/8,L/q_0)\). A measured \(L^{3/2}\) potential deficit and the cubic bending select a positive native slice. The genuinely bent split control has an exact cost. The measured minus Miller–Schupp equator cannot be either native cut. [Request](handoffs/E08_NATIVE_BAND_REQUEST_20261127.md) · [proof](../notes/E08_FINITE_ATLAS_BAND_20261127.md) · [independent calculation](handoffs/E08_INDEPENDENT_RETURN_20261127.md) · [exact integration](../notes/E08_SPLIT_BENDING_20261127.md) · [marked-input disposition](handoffs/E08_MARKED_INPUT_RETURN_20261127.md) · [continuation](../continuation-notes/AFTER_E08_20261127.md) |
 
-| Child register | Family | Ready on activation | Dependent or reserved |
-| --- | --- | --- | --- |
-| [Chirality ledger](../01_chirality_ledger/research-progress/REGISTER.md) | `SP4-CUT-LED` | LED-E01, LED-E02, LED-B01 | LED-E03, LED-E04, LED-B02 |
-| [Seams and marked cuts](../02_seams_and_marked_cuts/research-progress/REGISTER.md) | `SP4-CUT-SEAM` | SEAM-E01, SEAM-B01, SEAM-B02, SEAM-E03 | SEAM-E02, SEAM-B03 |
-| [Tubes and exteriors](../03_tubes_and_exteriors/research-progress/REGISTER.md) | `SP4-CUT-TUBE` | TUBE-B01, TUBE-E01, TUBE-E02, TUBE-B02 | TUBE-E03, TUBE-B03 |
-| [Slide filters](../04_slide_filters/research-progress/REGISTER.md) | `SP4-CUT-SLIDE` | SLIDE-E02 | SLIDE-B01, SLIDE-E01, SLIDE-B02 |
-| [Cuts from geometry](../05_cuts_from_geometry/research-progress/REGISTER.md) | `SP4-CUT-GEO` | GEO-B01, GEO-E02, GEO-E03, GEO-B02 | GEO-E01, GEO-B03 |
+## Child deliveries incorporated
 
-**Imported material, not a task.** The manuscript's statements carry the status they had in the session that wrote them: proofs written out and not read independently; the cap functional verified symbolically; the table of cap costs floating point; the sign of the ledger's boundary term untested (SP4-CUT-LED-E01). The working theorems of 05, 06 and the master are used as stated.
+Each row identifies the working handoff used by the parent. The [input inventory](../notes/CHILD_RETURNS_20261127.md) records its SHA-256 prefix and the evidence behind the updated [manuscript](../manuscript/cuts_of_subcritical_conformal_classes.tex), [overview](../research-overview/OVERVIEW.md) and [bibliography](../references/README.md).
 
-**Request issued.** [To the lead of 05](handoffs/SLIDE_B01_REQUEST_TO_05_20261126.md), on the redirection of the slide enumeration; not answered.
+| Child return | Parent disposition |
+| --- | --- |
+| [LED · outward orientation and equality](../01_chirality_ledger/research-progress/handoffs/TO_PARENT_SECTION_3_AND_LANE_20261127.md) | §3, collar handoffs to 03/06, APS aliases and LeBrun 1980. |
+| [SEAM · short-axis outcome](../02_seams_and_marked_cuts/research-progress/handoffs/TO_PARENT_AND_TUBE_SHORT_AXIS_OUTCOME_20261127.md) | §6, latest positive side budget and failure of changing only the certified core. |
+| [SEAM · positive doubles and descent](../02_seams_and_marked_cuts/research-progress/handoffs/TO_PARENT_SEAM_RESULTS_20261127.md) | §§4, 5, 8, fixed-gauge bending, free rank and positive capped signs. |
+| [TUBE · caps and exteriors](../03_tubes_and_exteriors/research-progress/handoffs/TO_PARENT_CAP_AND_EXTERIOR_20261127.md) | §§5–6, regular signed jets, rational trefoil certificate, zero-energy exterior, positive-energy limitation. |
+| [TUBE · even prism recognition](../03_tubes_and_exteriors/research-progress/handoffs/TO_PARENT_ORDER_SEVENTEEN_RECOGNITION_20261127.md) | §6, equivariant reverse surgery gives standard even filling, odd target remains open. |
+| [TUBE · prism cores and projective caps](../03_tubes_and_exteriors/research-progress/handoffs/TO_PARENT_PRISM_CORE_AND_QUATERNIONIC_CAP_20261127.md) | §6, retained orbifold knot and restricted conic and annular obstructions. The later return supersedes its initial even-framing status. |
+| [TUBE · external source hypotheses](../03_tubes_and_exteriors/research-progress/handoffs/TO_PARENT_SOURCE_UPDATES_20261127.md) | §6 and shared bibliography, cylinder and pinching theorems, boundary maps, fibre sign and puncture marking. |
+| [SLIDE · native GST cuts and doubled disks](../04_slide_filters/research-progress/handoffs/TO_PARENT_SLIDE_FILTERS_REST_20261127.md) | §4, both native labels, finite prefix tests, actual doubled disks, strict two-convexity and additional Gursky–Viaclovsky source. |
+| [GEO · negative Berger germ](../05_cuts_from_geometry/research-progress/handoffs/TO_PARENT_BERGER_COMPLETION_20261127.md) | §§3 and 7, signed obstruction on every closed homotopy sphere, individual caps and angular-meridian test. |
+| [GEO · geometric cuts](../05_cuts_from_geometry/research-progress/handoffs/TO_PARENT_GEOMETRIC_CUTS_20261127.md) | §7, smooth near-round first-width sweepout and limits of the orbit method. Sharp and Zhou passages entered in references. |
+| [GEO · corrections to the draft](../05_cuts_from_geometry/research-progress/handoffs/TO_PARENT_SECTION_7_CORRECTIONS_20261127.md) | §§4, 6–7, strict two-convexity, Hessian equality, uniform regular-level bound, two-sided and one-sided variations. |
 
-**Returns owed to other registers once tasks complete.** To master B02 and 07: the selection rules for seams and tubes (after SP4-CUT-SEAM-E01). To 03 and 06: the collar statement with its verified hypotheses (after SP4-CUT-LED-E02). To 05: the corollary at the winding-one cut (after SP4-CUT-SEAM-E01).
+## Cross-investigation handoffs
+
+- [03 · signed collars](handoffs/TO_03_SIGNED_COLLARS_20261127.md) and [06 · buffered limits and free cuts](handoffs/TO_06_BUFFER_AND_MINIMIZER_20261127.md) give the end hypotheses, signed limit order and the precise capped-minimizer conclusion.
+- [05 · native degree](handoffs/TO_05_MARKED_DEGREE_20261127.md), [07 · signs and cap budgets](handoffs/TO_07_ENTRY_SELECTION_20261127.md) and [master · recognition and entry](handoffs/TO_MASTER_RECOGNITION_AND_ENTRY_20261127.md) contain the marked selection rules. The prior [slide redirection request](handoffs/SLIDE_B01_REQUEST_TO_05_20261126.md) awaits 05's decision.
+- The authors of the five child registers own their task statuses. [LED](../01_chirality_ledger/research-progress/REGISTER.md) · [SEAM](../02_seams_and_marked_cuts/research-progress/REGISTER.md) · [TUBE](../03_tubes_and_exteriors/research-progress/REGISTER.md) · [SLIDE](../04_slide_filters/research-progress/REGISTER.md) · [GEO](../05_cuts_from_geometry/research-progress/REGISTER.md)
+
+The [manuscript build and parent links](../reviews/PARENT_ASSESSMENT_20261127.md) were verified. A missing second returns index was flagged to the [TUBE owner](handoffs/TO_TUBE_RETURN_INDEX_20261127.md). The current public transcript is available only as an [unregistered partial record](../chat-histories/UNREGISTERED_PARTIAL_20261127_PARENT.md).

@@ -6,6 +6,14 @@
 
 The [dated proof return](../research-progress/handoffs/INTEGRATION_20261125.md) and [next proof packet](../continuation-notes/AFTER_MARKED_DESCENT_20261125.md) update this launch plan.
 
+## Edition 07 · Smoothing and reassembly of matched caps
+
+27 November 2026. **CUT-ED07-E01** is a bounded E packet for one supplied spherical cut. Proposed declaration `SmoothPoincare.markedCap_energyLimit_of_firstJet` in `SmoothPoincare/Variational/MarkedCapSmoothing.lean` supports blueprint `prop:ed07-attained-cut`. Use the master’s `prop:trace-cap` and `prop:cut-energy`. [Edition 07 plan](../../research-plan/07_PLAN.md) · [Trace-cut proof](../../../../papers/master/notes/ROUND_CUT_TRACE_TEST_20261127.md) · [Finite cut criterion](../../../../papers/master/manuscript/marked_cut.tex)
+
+Fix the two complete sides of an actual two-sided umbilic $S^3$ in an oriented smooth homotopy four-sphere, a round-conformal parametrization $h=w^2g_{S^3}$ and the actual oriented cap markings. Use the two conformally flat balls from [Route 11](../../11_intrinsic_entry_from_marked_exteriors/research-plan/PLAN.md#edition-07--same-metric-sign-and-round-cap-trace), matched in their first jets and with coercive closed forms from its Robin proof. Construct smooth approximating metrics on these same capped homotopy spheres by smoothing in shrinking common normal collars. Prove $C^1\cap W^{2,2}$ convergence, preservation of coercivity for late approximants, and convergence of each signed energy on its complete capped carrier to the corresponding raw side integral. The signature identity on the capped carriers then gives equality of the two raw signs on each side.
+
+Supply the oriented reassembly with both inverse collar germs when the recognized standard summand is removed. Test an actual positive cap with energy $<T$ on the lower-cost side under $e<2T$, holding the source and markings fixed as the smoothing width tends to zero. If the cap comparison or a required gluing germ is unavailable, record that premise before handing off to [Route 07](../../07_fixed_type_variational_descent/research-plan/PLAN.md#edition-07--rigidity-from-a-marked-umbilic-cut).
+
 ## Edition 04 objectives
 
 26 November 2026, America/New_York. The setup takes the actual marked path from Route 05 and continues the short-cut packet. [Edition 04 overview](../../research-overview/04_OVERVIEW.md) · [Edition 04 plan](../../research-plan/04_PLAN.md) · [Route 05 exact face](../../05_variational_comparison/research-plan/PLAN.md#edition-04-objectives)

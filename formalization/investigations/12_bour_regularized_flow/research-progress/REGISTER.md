@@ -1,5 +1,9 @@
 # Bour's regularized flow · Progress register
 
+## Edition 07 · Original-flow supplier · 27 November 2026
+
+**BRF-B02 and BRF-E05 · Continued open obligations.** The original covariant gradient on regular slabs and the supplied-comparison terminal conclusions retain their E50 and E51 status. The geometric supplier continues with genuine fixed-positive-parameter maximal-flow regularity and whole closed or pointed spacetime extraction through the final slice, with the same original metric budgets and oriented maps. Deliver both outcomes to Route 13. [Route plan](../research-plan/PLAN.md#edition-07--original-flow-extraction) · [Edition 07 plan](../../research-plan/07_PLAN.md)
+
 ## FOT-E51 · 26 November 2026
 
 True first hits on the original flow control every fixed rescaled backward window, with normalized ordered curvature one at the endpoint. Native gradient scaling, compact comparison and the physical velocity give a stationary and time-independent limit under the stated map and convergence hypotheses. At fixed $p>0$ the local trace and physical cutoff test yield constant scalar in the closed branch and zero scalar in the noncompact noncollapsed finite-energy branch. [First hits](../notes/E51_FIRST_HITS.md) · [Comparison](../notes/E51_TERMINAL.md) · [Pointed scalar](../notes/E51_POINTED_SCALAR.md) · [Assessment](../../reviews/ED06_E51_HARMONIC_ESTIMATES_AND_TERMINAL_LIMITS.md) · [Public verification](../../research-progress/handoffs/ED06_E51_VERIFICATION_20261126.md) · [Continuation](../../continuation-notes/AFTER_E51_COUPLED_INTERIOR_AND_POINTED_SCALAR_20261126.md)

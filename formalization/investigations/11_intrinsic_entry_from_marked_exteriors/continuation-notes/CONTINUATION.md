@@ -1,5 +1,11 @@
 # Intrinsic entry from marked exteriors · Continuation
 
+**27 November 2026 · FOT-E53.** For the original long-cuff harmonic marking and both prescribed switches, the pause strip forces each complete chiral band cost above $17689\pi^2/2500$ and each closed signed cost above $17689\pi^2/1250$ using the full certified floor 133. Thus entry fails for this metric at any closed sign. The 40-cell certificate, Hilbert–Schmidt normalization and strip-to-closed implication have formal checks. Physical chart/jet identification still uses the scientific derivation. The independent original Rayleigh test retains all three funnel responses. The full-footprint stretch and integrated upper estimates give a finite upper bound on both complete costs. [Current continuation](../../continuation-notes/AFTER_E53_GEOMETRIC_INSTANCES_20261127.md) · [Owner register](../research-progress/REGISTER.md)
+
+**After FOT-E52 · 27 November 2026.** On the fixed width-1/16 switch certify the original sign or the complete signed cost using the harmonic map; on the cut route, realize the matched Sobolev traces of the cap and side. [Current register](../research-progress/REGISTER.md) · [Program handoff](../../continuation-notes/AFTER_E52_MARKED_CUTS_AND_CLOSED_CAPS_20261127.md)
+
+**Edition 07 at issue · 27 November 2026.** On activation, pin the original fixed convex width-$1/16$ regular or long-cuff metric before using the three-cuff sign comparison on it. The comparison from a supplied nonnegative Neumann sign and the sharp round-cap trace test on supplied data are independent proof packets. The original closed sign and both complete energies are required for an entry claim. Route 03 takes any positive matched cap sign for smooth construction and reassembly. [Edition 07 packets](../research-plan/PLAN.md#edition-07--same-metric-sign-and-round-cap-trace) · [Live register](../research-progress/REGISTER.md)
+
 **Edition 06 · 26 November 2026.** Choose a marked balanced-presentation boundary beyond the standard controls. Check the global sign and both complete chiral energies of one proposed non-product filling. [Live register](../research-progress/REGISTER.md) · [Edition 06 plan](../../research-plan/06_PLAN.md)
 
 ## Edition 04 setup handoff

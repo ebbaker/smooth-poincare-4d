@@ -35,8 +35,12 @@ reflection-invariant hypersurface shows that a circle surgery in a
 Fuchsian conformally flat exterior, with its tube over a hemisphere,
 costs at least \(16\pi^2/3\) in each sign unless a conformal class on
 \(S^2\times S^2\) contradicts a conjecture of Kobayashi.
-We also state independent recognition tests for
-immersed heights and marked handle diagrams.
+For the prescribed long-cuff Miller--Schupp metric of switching width
+\(1/16\), each closed chiral energy exceeds \(338\pi^2/25\), independently
+of the Yamabe sign. At an attained positive subcritical minimum, an
+umbilic three-sphere with vanishing intrinsic Cotton tensor on one
+open patch suffices for recognition. A local rotational axis supplies
+such a cut. We also give recognition tests for marked handle diagrams.
 \end{abstract}
 
 \section{The problem on a fixed smooth sphere}
@@ -171,6 +175,143 @@ four-sphere, remains open.
 
 \input{claude/umbilic_doubling}
 
+\paragraph{Exchange of the two direct bands.}
+For the two timed relators in the marked convex trial
+\cite{Baker2026ThreeFunnelComparison}, planar reflection
+\(P(x,y)=(-x,y)\) carries the first path at \(t\) to the second at
+\(5/7-t\). On letters this is \(x\mapsto y^{-1}, y\mapsto x^{-1}\);
+reversing time sends interval \(j\) to \(4-j\bmod 7\).
+The equal-cuff harmonic marking intertwines the two planar and target
+reflections by uniqueness \cite[\S2]{Wolf1989Harmonic}.
+Combine it with the exterior sphere rotation
+\((\phi,\theta)\mapsto(\pi-\phi,10\pi/7-\theta)\). In the tube frame
+the map is \((u,v,w)\mapsto(-u,v,-w)\), and the normal radius is
+unchanged. It exchanges the full bands, disk caps and funnel germs.
+Signature on the separate closings then gives
+\(c_1=c_2=c\) and \(e=2c\). The original ground state and the
+three-cuff Neumann ground state are even under the exchange.
+The threshold for one band is \(4\pi^2\); the original positive
+sign at equality would allow disjoint interior Bach descent.
+
+On these long-cuff bands the planar distance of every projected point
+from a boundary circle is at least \(\rho=87/128\). A Euclidean
+disk of this radius meets at most one real seam. Its harmonic image
+lifts into at most two reflected hyperbolic hexagons. In the
+hyperboloid model choose three unit planar vectors \(e_i\) at angles
+\(2\pi i/3\). The seam normals are \((\sqrt3,2e_i)\);
+the vertices are \((3/\sqrt2,(e_j+5e_i)/\sqrt6)\), \(j\ne i\).
+Hyperbolic distance from the seam foot \((2,\sqrt3 e_i)\) has
+\(\cosh d\le9/\sqrt2\) at all vertices and hence on both hexagons.
+Put \(b=d^2\) composed with the harmonic map and
+\(E=\operatorname{tr}_{\rm flat}q_L\). In the flat disk
+\(\Delta b\ge2E\) and \(\Delta E\ge0\) by the harmonic Bochner identity
+\cite[\S3]{EellsSampson1964Harmonic}. The circular mean of \(b\) has
+derivative at least \(tE(0)\) on a disk of radius \(t\) centered at
+the evaluation point. Thus \(E\le2\operatorname{arcosh}^2(9/\sqrt2)/
+\rho^2<28\).
+For the full signed costs the all-lowered curvature in a coordinate
+chart is linear in second metric derivatives plus a quadratic
+Christoffel term. Expanding \(g=(1-a)A+aB\), the pure second
+derivatives of \(A,B\) can be eliminated using their known product
+curvatures. The remaining terms use only \(q_L,\partial q_L\) and
+the prescribed metric and cutoff jets.
+
+\begin{proposition}[Energy at the prescribed long-cuff width]
+\label{prop:long-cuff-cost}
+For the marked minus Miller--Schupp metric with cuff length
+\(L=2\operatorname{arcosh}5\) and both convex switches of width
+\(1/16\), the complete cost of each band in each chirality satisfies
+\(c>169\pi^2/25\). Thus \(e=2c>338\pi^2/25>8\pi^2\).
+\end{proposition}
+\begin{proof}
+Put \(r=1+s\), \(x=16s-1\). Keep \(3/20\le x\le1/5\) and the first
+and last twentieth of each timed letter, retaining the entire framed
+two-sphere. On this subset use the conformal metric
+\(\bar g=A+tF^*g_0\), where
+\[
+ A=ds^2+\sinh^2r\,d\theta^2+g_{S^2},\qquad
+ t=\exp(-1/x+1/(1-x)).
+\]
+Here \(F\) is the prescribed outer tube map with its harmonic marking
+and \(g_0\) is the hyperbolic--spherical product. The disk estimate
+above and its differentiated Bochner bound give
+\(\|dh_L\|<\sqrt{28}\), \(\|\nabla dh_L\|<360\) on the footprints.
+The slow letter ends then give \(\|dF\|_A<.85\) and
+\(\|\nabla dF\|_A<3\) on the subset
+\cite{Baker2026LongCuffWidth}.
+
+Take a \(\bar g\)-orthonormal slice normal \(n\) and tangential
+eigenvectors \(m,l,k\) of \(B=F^*g_0\) relative to \(\bar g\), in
+the order largest, smallest, remaining. In the sectional combination
+\(D=K_{nm}-K_{nl}-K_{km}+K_{kl}\), the \(t''\) coefficient is
+\(-|ds|^2_{\bar g}(B_{mm}-B_{ll})/2\); its magnitude exceeds \(.12\).
+Indeed the \(A\)-unit longitude has \(B>.39\), and the sphere
+two-plane has \(B<.13 A\). The change to \(\bar g\) costs a factor
+at most \((1+.025(.85)^2)^3\) in this comparison. Primes now denote
+\(s\)-derivatives. Estimating the remaining curvature terms in normal
+coordinates for \(A\) and the target gives, on the entire subset,
+\[
+ |D|\ge .12t''-9-11t'-.53(t')^2>130 .
+\]
+The component estimates and a rational enclosure on fifty intervals
+of length \(1/1000\) in \(x\) are given in
+\cite{Baker2026LongCuffWidth}.
+
+The Schouten terms cancel in \(D\). Complementary Weyl sectional
+curvatures agree, so Cauchy--Schwarz on four diagonal chiral entries
+gives \(D^2\le4(|W^+|_{\rm HS}^2+|W^-|_{\rm HS}^2)\).
+The \(\bar g\)-volume is at least the \(A\)-volume, which exceeds
+\(8\pi^2(1.28)/3200\) on this subset. Each chiral measure is
+conformally invariant. The two integrals on the \emph{complete} band
+are equal by its separate signature-zero closing. Thus each is at
+least half the combined integral on the subset, giving
+\(c>130^2\pi^2(1.28)/3200=169\pi^2/25\).
+\end{proof}
+
+\paragraph{A certified enclosure of the marked metric.}
+In the original planar coordinate \(z\) on the pants, write the
+harmonic pullback as
+\[
+ q_L=(e^u+|\Phi_p|^2e^{-u})|dz|^2+2\operatorname{Re}(\Phi_p\,dz^2),
+ \qquad \Delta u=2(e^u-|\Phi_p|^2e^{-u}).
+\]
+Here \(\Phi_p=p_1P_+^2+p_2P_-^2\), where \(P_\pm\) are the
+holomorphic gradients of the two harmonic potentials with equal or
+opposite hole values in the normalization of
+\cite{Baker2026NativeMarking}. Reflection gives Euclidean outward
+flux \(-1/2\) at the outer cuff and \(8\) at the holes.
+The two parameters of the actual marking lie in a rectangle of
+radii \((2\cdot10^{-5},5\cdot10^{-5})\) about the center
+\((-0.001141493625,-0.119851720819)\) printed here to twelve decimal
+places. The exact dyadic center and the explicit smooth comparisons
+\(v_p\) throughout that rectangle are specified in
+\cite{Baker2026NativeMarking}.
+
+For the error bound, set \(F_p(s)=2(e^s-|\Phi_p|^2e^{-s})\).
+Outward-rounded calculations on 460 closed patches cover the
+quarter-pants, and reflections cover the rest. On each patch the
+absolute scalar residual plus two-thirds of the cuff-flux tolerance,
+divided by \(F'_p(v_p)\), is less than \(1/8000\). The flux error is
+below \(2\cdot10^{-9}\). Maximum-principle comparison gives
+\(\|u_p-v_p\|_\infty<0.000126\), where \(u_p\) is the true scalar
+solution at those same parameters. The two true cuff-length errors
+relative to \(L\), after a fixed nonsingular linear change of
+coordinates, have opposite signs on the corresponding opposite faces.
+Degree gives an interior root. Uniqueness of the labeled
+right-angled hexagon and the doubled harmonic marking identify it
+with the physical parameter \cite{Baker2026NativeMarking}.
+
+On a planar disk of radius \(1/8\) about any projected point of
+either band, the disk energy bound above gives \(F'_p(u_p)<42\)
+at the actual parameter. The disk Poisson and Green formulas then
+give \(|\nabla(u_p-v_p)|<0.002163\) at its center. Replacing \(u_p\)
+by \(v_p\) in \(q_L\) changes only the isotropic coefficient
+\(e^u+|\Phi_p|^2e^{-u}\); over both complete projected bands its
+error is less than \(0.001765\), and the Euclidean norm of its
+gradient error is less than \(0.125\). These estimates enclose the
+native input to the four-dimensional Rayleigh form. Its original
+closed sign still requires a bound on the integrated numerator.
+
 \paragraph{A negative double with positive original class.}
 On the marked minus Miller--Schupp filling, let \(V\) be the complement
 of the three retained half-Hopf funnels after both circle surgeries.
@@ -204,9 +345,11 @@ is therefore already negative on the positive side of the crossing.
 There \(Y(M)\) tends to zero by testing \(u\), and the retained
 loxodromic patch supplies a fixed positive margin above \(2T\)
 in a sufficiently short interval by the fixed-exterior Ricci estimate.
-These signs and costs belong to the same metrics. The specific convex
-switch of width \(1/16\) on the regular and long cuffs still requires
-a separate estimate.
+These signs and costs belong to those interpolated metrics.
+Proposition~\ref{prop:long-cuff-cost} excludes entry for the prescribed
+long-cuff metric at width \(1/16\). Its original closed sign and common
+three-cuff Neumann sign remain open. The regular-cuff metric at that
+width requires its own energy estimate.
 
 
 \section{Recognition at the lower threshold}\label{sec:recognition}
@@ -286,34 +429,53 @@ standard sphere is already zero.
 
 \input{claude/symmetric_critical_classes}
 
-\begin{proposition}[A trace bound for an umbilic spherical cut]
+\begin{proposition}[An umbilic sphere at an attained minimum]
 \label{prop:trace-cap}
-Suppose a smooth positive subcritical class on \(M\) attains \(I^+(M)\).
-Let it contain a two-sided umbilic \(S^3\) with round conformal
-structure. In one representative with \(R>0\), let \(h\) be its induced
-metric and \(H\) its trace mean curvature for either normal. If
-\[
- \max\{\|\max(H,0)\|_{L^3(h)},\|\max(-H,0)\|_{L^3(h)}\}
- \le 3(2\pi^2)^{1/3},
-\]
-then \(M\) is standard.
+If a smooth positive subcritical class attaining \(I^+(M)\) contains
+an embedded umbilic \(S^3\) with its round conformal structure, the
+class is conformally round and \(M\) is standard.
 \end{proposition}
 
 \begin{proof}
-On each marked side \(V\), parametrize the cap by the Euclidean unit
-ball with boundary metric \(h=w^2g_{S^3}\). Extend \(w>0\) smoothly,
-prescribing \(3\partial_\nu\log w=-wH_V-3\) on the ball boundary,
-where \(H_V\) is outward for \(V\). The cap \(w^2g_{\mathrm{eucl}}\)
-has outward trace \(-H_V\). Umbilicity matches the full first jet.
-For a matching trace \(f\), the cap Robin form is at least
-\(6(2\pi^2)^{1/3}\|f\|_{L^3(h)}^2\) by conformal covariance and the
-sharp ball trace inequality \cite[Theorem 1.1]{NgoNguyenPhan2020Trace}.
-This absorbs the negative part of \(2\int H_V f^2\,dA_h\) in the
-side Robin form. The sum is the closed numerator. Every nonzero
-restriction to \(V\) has positive bulk since \(R>0\), while a
-nonzero cap function with zero trace has strictly positive transformed
-Dirichlet energy. Compactness gives a positive first eigenvalue,
-including equality in the norm bound.
+Choose the pinched representative of Proposition~\ref{prop:entry}.
+For either outward unit normal, \(S_\nu=R-2\Ric(\nu,\nu)>0\):
+indeed \(|Z(\nu,\nu)|\le\sqrt{3}|Z|/2<R/4\).
+On the common boundary put \(V=(R_h/6)^{1/2}\).
+The umbilic Gauss identity gives \(R_h=S_\nu+2H^2/3\), hence
+\(3V>|H|\) on both marked faces.
+
+Use the hyperbolic four-ball with this round conformal infinity and let
+\(P_1^h\) denote its conformal half-Laplacian. For
+\(\widehat h=V^2h\) the Rayleigh quotient of
+\(P_2^{\widehat h}=-\Delta_{\widehat h}+R_{\widehat h}/8\)
+has numerator \(\int(|\nabla z|^2+R_hz^2/8)\,dA_h\) and denominator
+\(\int V^2z^2\,dA_h\), with \(z=V^{1/2}\varphi\).
+Its first eigenvalue is at least \(3/4\).
+Raulot's inequality in boundary dimension three
+\cite[Theorem 3.1]{Raulot2019ScalarFlat} gives
+\(\lambda_1(P_1^{\widehat h})^2\ge(4/3)\lambda_1(P_2^{\widehat h})\).
+The half-Laplacian is positive by covariance from the unit ball,
+where it is the harmonic Dirichlet-to-Neumann operator plus one.
+Using its own conformal weight \(f=V\varphi\) now gives
+\[
+  \langle f,P_1^h f\rangle_h\ \ge\ \int V f^2\,dA_h .
+\]
+
+On each side \(U\), parametrize the cap boundary by an actual
+orientation-reversing conformal identification with \(h=w^2g_{S^3}\).
+Extend \(w>0\) over the ball with \(3\partial_\nu\log w=-wH_U-3\)
+for the cap outward unit Euclidean normal. The cap metric has outward
+trace \(-H_U\), so the full first jets match in the signed collar.
+For common boundary value \(f\), its Robin form is at least
+\(6\langle f,P_1^h f\rangle_h\), by harmonic extension of \(wf\)
+in the Euclidean ball. The side Robin contribution \(2\int H_Uf^2\)
+and the cap form therefore have positive sum for nonzero trace.
+Each side bulk is positive since \(R>0\), and a nonzero cap function
+with zero trace has positive transformed Dirichlet integral.
+Compactness gives a positive closed first eigenvalue.
+The elementary alternative
+\(\|(H_U)_-\|_3\le3(2\pi^2)^{1/3}\) in one positive representative
+uses the sharp ball trace constant \cite[Theorem 1.1]{NgoNguyenPhan2020Trace}.
 
 The matched metric is \(C^{1,1}\) and the cap is Weyl-flat.
 Smoothing in a collar in \(C^1\cap W^{2,p}\), \(p>2\), preserves the
@@ -327,9 +489,102 @@ bound the second side's limiting energy below by \(I^+(M)=e\).
 The discarded open side would thus be Weyl-flat. The attained
 smooth metric is Bach-flat, so unique continuation makes the
 entire metric Weyl-flat \cite[Theorem 3.8]{LassasLiimatainen2019ConformalHarmonic}.
-Proposition~\ref{prop:recognition} gives the conclusion.
+This excludes a nonstandard \(M\). On the standard type the round class
+has zero energy, so the attained class itself is Weyl-flat. Its developing
+map identifies it conformally with the round sphere \cite{Kuiper1949}.
 \end{proof}
 
+\begin{corollary}[Cotton curvature on one patch]
+\label{cor:cotton-open-patch}
+Suppose a smooth attained positive subcritical class on \(M\) contains
+a connected embedded totally umbilic \(\Sigma\cong S^3\). If the
+intrinsic Cotton tensor vanishes on a nonempty relatively open subset
+of \(\Sigma\), then the class is conformally round.
+\end{corollary}
+\begin{proof}
+The attained class is Bach-flat. Near each point choose an analytic
+ambient metric in the conformal class
+\cite[Theorem 3.7(c)]{LassasLiimatainen2019ConformalHarmonic}.
+Write \(B(X,Y)=\langle\nabla_X\nu,Y\rangle=\beta h(X,Y)\) in this
+gauge. Contracted Codazzi gives
+\(d_\Sigma\beta(X)=-\Ric(\nu,X)/2\).
+An intrinsic geodesic, with velocity \(v\), solves the ambient system
+\[
+ \dot x=v,\quad \nabla_v v=-\beta|v|^2\nu,\quad
+ \nabla_v\nu=\beta v,\quad \dot\beta=-\Ric(\nu,v)/2 .
+\]
+The analytic dependence of this ODE on its initial tangent vector
+makes the intrinsic exponential an analytic local parametrization of
+the given smooth cut. Its induced metric and Cotton tensor are analytic
+there. Vanishing of the Cotton tensor is conformally invariant in
+dimension three, so propagation through connected overlapping patches
+gives local conformal flatness on all of \(\Sigma\). The developing
+map of the compact simply connected cut is a covering of the round
+\(S^3\), hence a conformal diffeomorphism.
+Proposition~\ref{prop:trace-cap} now applies.
+\end{proof}
+Existence of the globally umbilic embedded sphere is a separate
+hypothesis on the attained metric. In fact a \(C^3\)-open,
+\(C^\infty\)-dense set of smooth metrics on a closed oriented
+four-manifold admits no immersed totally umbilic hypersurface patch.
+To see this, put \(\Phi_j=\operatorname{tr}((W^+)^j)
+-\operatorname{tr}((W^-)^j)\) for \(j=2,3\).
+Along an umbilic patch, Codazzi and its trace cancel the mixed
+Schouten terms in curvature. Thus \(W_{\nu abc}=0\) in an adapted
+frame. The two chiral Weyl blocks agree in the paired bases from
+\(\nu^\flat\wedge e^a\) and their Hodge images, so both \(\Phi_j\)
+vanish there.
+
+In the ten-dimensional Weyl fiber the common zeros with simple shared
+spectrum have codimension two: the quadratic and cubic traces have
+independent gradients on a traceless symmetric matrix with three
+distinct eigenvalues. The nonzero repeated-spectrum pairs have one
+eigenvalue parameter and one unoriented eigenline in each block, hence
+codimension five. The zero pair has codimension ten. Metric two-jets
+surject onto algebraic Weyl curvature by the normal-coordinate metric
+expansion. Jet transversality to these three smooth strata makes the
+last two empty and the first at most two-dimensional on the carrier
+\cite[Theorem (1.5)]{Boardman1967Singularities}. Such a locus cannot
+contain an immersed three-dimensional patch. Transversality to zero
+of the pair \((\Phi_2,\Phi_3)\) is open in \(C^3\) on the compact
+carrier. Density therefore also holds relative to the open set of
+positive subcritical metrics. This perturbation argument requires the
+full metric space; selection at an exact Bach-flat minimum remains
+open.
+
+\begin{corollary}[Local rotational axis]
+Suppose an attained positive subcritical class admits a conformal
+\(SO(3)\) action on an invariant neighborhood of a fixed arc, with
+standard rotation of its three normal directions. The class is round.
+\end{corollary}
+\begin{proof}
+Average the metric locally in its conformal class. In normal polar
+coordinates about the fixed arc it has the form
+\(dr^2+a(x,r)^2dx^2+b(x,r)^2g_{S^2}\), with \(a=1+O(r^2)\)
+and \(b/r=1+O(r^2)\) smooth in \((x,r^2)\). In the conformal
+product, a geodesic of \((dr^2+a^2dx^2)/b^2\) times \(S^2\) is
+totally geodesic. Rescale \((x,r)=\epsilon(u,v)\) and use the
+geodesic with horizontal tangent at \((0,1)\). On \(v\ge1/2\)
+its two branches are smooth perturbations of the hyperbolic unit
+semicircle. To continue each to the axis write \(a,b\) for the rescaled
+coefficients (so \(b=v+O(\epsilon^2v^3)\)).
+For the length density \(L=b^{-1}(1+a^2u'^2)^{1/2}\) and
+\(p=\partial_{u'}L\) one has
+\[
+ u'=\frac{pb}{a\sqrt{a^2-p^2b^2}},\qquad p'=\partial_u L .
+\]
+At \(\epsilon=0\) the momenta are \(\pm1\).
+For \(0\le v\le1/2\) both right sides are \(v\) times smooth
+functions of \((u,v^2,p)\) near these branches, since
+\(b_u=O(v^3)\). The regular equations in \(v^2\)
+extend by continuous dependence to distinct endpoints at \(v=0\).
+Rotating gives a smooth embedded sphere, with pole graphs
+\(u=u(|y|^2)\). Umbilicity extends across its poles. In meridian
+arclength the induced metric is \(dt^2+d(t)^2g_{S^2}\);
+integrating \(d\theta/\sin\theta=dt/d(t)\) identifies its round
+conformal structure, smoothly through the two simple poles.
+Proposition~\ref{prop:trace-cap} applies.
+\end{proof}
 
 The constant sequence \(g_i=g_*\) explains the limit of the disk
 comparisons. A marked disk can carry definite Weyl energy on both sides
@@ -379,7 +634,22 @@ with that note test their formulas. The 27 November revision uses the
 marked two-band sign comparison, the Euclidean-end Euler calculation and
 Proposition~\ref{prop:trace-cap}, with independent bounded model readings
 on the working generation \texttt{72068ce}. The trace test requires a
-specified cut on the attained class.
+specified cut on the attained class. The later revision at
+\texttt{48f3679} supplies its weighted cap inequality, selects a
+marked sphere near a local rotational axis and compares the two
+unchanged direct bands. The local construction and marked handle
+comparison received independent model readings. Further work on the
+same checkout gave Proposition~\ref{prop:long-cuff-cost},
+Corollary~\ref{cor:cotton-open-patch} and the marked winding-one
+cut of the Akbulut--Yasui twisted double. The selected OpenAI lead
+was GPT-6.2 Astra with ultra effort, with bounded GPT-6.2 Sol/ultra
+readings. Independent serving telemetry was unavailable. The
+fixed-width arithmetic and both geometric comparisons were
+independently checked within the project. The later all-pants
+calculation on this working checkout certifies the native marking,
+including its first jets over both projected bands. Its sources,
+exact coefficients, patch covering and checked anchor values are
+recorded in \cite{Baker2026NativeMarking}.
 
 \bibliographystyle{unsrturl}
 \bibliography{references}

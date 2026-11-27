@@ -1,0 +1,455 @@
+/- E53 public types and kernel axioms. Prepared for Edward B. Baker III, 27 November 2026. -/
+import SmoothPoincare
+set_option pp.universes false
+#check @DifferentialGeometry.CheegerGromovCompactness.curvDerivNorm.congr_simp
+#print axioms DifferentialGeometry.CheegerGromovCompactness.curvDerivNorm.congr_simp
+#check @SmoothPoincare.BourVariableCapPolar
+#print axioms SmoothPoincare.BourVariableCapPolar
+#check @SmoothPoincare.BourVariableCapPolar.casesOn
+#print axioms SmoothPoincare.BourVariableCapPolar.casesOn
+#check @SmoothPoincare.BourVariableCapPolar.ctorIdx
+#print axioms SmoothPoincare.BourVariableCapPolar.ctorIdx
+#check @SmoothPoincare.BourVariableCapPolar.curvature
+#print axioms SmoothPoincare.BourVariableCapPolar.curvature
+#check @SmoothPoincare.BourVariableCapPolar.measurable_radius
+#print axioms SmoothPoincare.BourVariableCapPolar.measurable_radius
+#check @SmoothPoincare.BourVariableCapPolar.mk
+#print axioms SmoothPoincare.BourVariableCapPolar.mk
+#check @SmoothPoincare.BourVariableCapPolar.mk.inj
+#print axioms SmoothPoincare.BourVariableCapPolar.mk.inj
+#check @SmoothPoincare.BourVariableCapPolar.mk.injEq
+#print axioms SmoothPoincare.BourVariableCapPolar.mk.injEq
+#check @SmoothPoincare.BourVariableCapPolar.mk.noConfusion
+#print axioms SmoothPoincare.BourVariableCapPolar.mk.noConfusion
+#check @SmoothPoincare.BourVariableCapPolar.mk.sizeOf_spec
+#print axioms SmoothPoincare.BourVariableCapPolar.mk.sizeOf_spec
+#check @SmoothPoincare.BourVariableCapPolar.noConfusion
+#print axioms SmoothPoincare.BourVariableCapPolar.noConfusion
+#check @SmoothPoincare.BourVariableCapPolar.noConfusionType
+#print axioms SmoothPoincare.BourVariableCapPolar.noConfusionType
+#check @SmoothPoincare.BourVariableCapPolar.polar_volume
+#print axioms SmoothPoincare.BourVariableCapPolar.polar_volume
+#check @SmoothPoincare.BourVariableCapPolar.radius
+#print axioms SmoothPoincare.BourVariableCapPolar.radius
+#check @SmoothPoincare.BourVariableCapPolar.rec
+#print axioms SmoothPoincare.BourVariableCapPolar.rec
+#check @SmoothPoincare.BourVariableCapPolar.recOn
+#print axioms SmoothPoincare.BourVariableCapPolar.recOn
+#check @SmoothPoincare.HMP.Closing.marked_retainedBelts
+#print axioms SmoothPoincare.HMP.Closing.marked_retainedBelts
+#check @SmoothPoincare.HMP.boxInRetainedTube
+#print axioms SmoothPoincare.HMP.boxInRetainedTube
+#check @SmoothPoincare.HMP.boxInRetainedTube_apply
+#print axioms SmoothPoincare.HMP.boxInRetainedTube_apply
+#check @SmoothPoincare.HMP.boxInRetainedTube_source
+#print axioms SmoothPoincare.HMP.boxInRetainedTube_source
+#check @SmoothPoincare.HMP.chartMeridian
+#print axioms SmoothPoincare.HMP.chartMeridian
+#check @SmoothPoincare.HMP.chartMeridianDisk
+#print axioms SmoothPoincare.HMP.chartMeridianDisk
+#check @SmoothPoincare.HMP.chartMeridianDisk_inter_strand
+#print axioms SmoothPoincare.HMP.chartMeridianDisk_inter_strand
+#check @SmoothPoincare.HMP.chartMeridian_closedTube
+#print axioms SmoothPoincare.HMP.chartMeridian_closedTube
+#check @SmoothPoincare.HMP.chartMeridian_core_eq_diskBoundary
+#print axioms SmoothPoincare.HMP.chartMeridian_core_eq_diskBoundary
+#check @SmoothPoincare.HMP.chartMeridian_core_windingZero
+#print axioms SmoothPoincare.HMP.chartMeridian_core_windingZero
+#check @SmoothPoincare.HMP.diskFramedMeridian
+#print axioms SmoothPoincare.HMP.diskFramedMeridian
+#check @SmoothPoincare.HMP.diskFramedMeridian_bounds
+#print axioms SmoothPoincare.HMP.diskFramedMeridian_bounds
+#check @SmoothPoincare.HMP.diskFramedMeridian_disjoint_strandTube
+#print axioms SmoothPoincare.HMP.diskFramedMeridian_disjoint_strandTube
+#check @SmoothPoincare.HMP.diskFramedMeridian_parallel
+#print axioms SmoothPoincare.HMP.diskFramedMeridian_parallel
+#check @SmoothPoincare.HMP.framedDiskShrink
+#print axioms SmoothPoincare.HMP.framedDiskShrink
+#check @SmoothPoincare.HMP.framedDiskShrink_contMDiff
+#print axioms SmoothPoincare.HMP.framedDiskShrink_contMDiff
+#check @SmoothPoincare.HMP.framedDiskShrink_one
+#print axioms SmoothPoincare.HMP.framedDiskShrink_one
+#check @SmoothPoincare.HMP.framedDiskShrink_outer
+#print axioms SmoothPoincare.HMP.framedDiskShrink_outer
+#check @SmoothPoincare.HMP.framedDiskShrink_unshrink
+#print axioms SmoothPoincare.HMP.framedDiskShrink_unshrink
+#check @SmoothPoincare.HMP.framedDiskShrink_zero
+#print axioms SmoothPoincare.HMP.framedDiskShrink_zero
+#check @SmoothPoincare.HMP.framedDiskUnshrink
+#print axioms SmoothPoincare.HMP.framedDiskUnshrink
+#check @SmoothPoincare.HMP.framedDiskUnshrink_contMDiff
+#print axioms SmoothPoincare.HMP.framedDiskUnshrink_contMDiff
+#check @SmoothPoincare.HMP.framedDiskUnshrink_one
+#print axioms SmoothPoincare.HMP.framedDiskUnshrink_one
+#check @SmoothPoincare.HMP.framedDiskUnshrink_outer
+#print axioms SmoothPoincare.HMP.framedDiskUnshrink_outer
+#check @SmoothPoincare.HMP.framedDiskUnshrink_shrink
+#print axioms SmoothPoincare.HMP.framedDiskUnshrink_shrink
+#check @SmoothPoincare.HMP.framedShrinkFactor
+#print axioms SmoothPoincare.HMP.framedShrinkFactor
+#check @SmoothPoincare.HMP.framedShrinkFactor_bounds
+#print axioms SmoothPoincare.HMP.framedShrinkFactor_bounds
+#check @SmoothPoincare.HMP.framedTubeExtension
+#print axioms SmoothPoincare.HMP.framedTubeExtension
+#check @SmoothPoincare.HMP.framedTubeExtension_apply
+#print axioms SmoothPoincare.HMP.framedTubeExtension_apply
+#check @SmoothPoincare.HMP.framedTubeExtension_fixed
+#print axioms SmoothPoincare.HMP.framedTubeExtension_fixed
+#check @SmoothPoincare.HMP.meridianDisk
+#print axioms SmoothPoincare.HMP.meridianDisk
+#check @SmoothPoincare.HMP.meridianDisk_in_protectedBox
+#print axioms SmoothPoincare.HMP.meridianDisk_in_protectedBox
+#check @SmoothPoincare.HMP.meridianDisk_inter_axis
+#print axioms SmoothPoincare.HMP.meridianDisk_inter_axis
+#check @SmoothPoincare.HMP.protectedMeridianBox
+#print axioms SmoothPoincare.HMP.protectedMeridianBox
+#check @SmoothPoincare.HMP.protectedMeridian_transport
+#print axioms SmoothPoincare.HMP.protectedMeridian_transport
+#check @SmoothPoincare.HMP.retainedTubeMeridian
+#print axioms SmoothPoincare.HMP.retainedTubeMeridian
+#check @SmoothPoincare.HMP.retainedTubeMeridianChart
+#print axioms SmoothPoincare.HMP.retainedTubeMeridianChart
+#check @SmoothPoincare.HMP.retainedTubeMeridianChart_axis
+#print axioms SmoothPoincare.HMP.retainedTubeMeridianChart_axis
+#check @SmoothPoincare.HMP.retainedTubeMeridianChart_box
+#print axioms SmoothPoincare.HMP.retainedTubeMeridianChart_box
+#check @SmoothPoincare.HMP.retainedTubeMeridian_core_windingZero
+#print axioms SmoothPoincare.HMP.retainedTubeMeridian_core_windingZero
+#check @SmoothPoincare.HMP.retainedTubeMeridian_disjoint_shrunk
+#print axioms SmoothPoincare.HMP.retainedTubeMeridian_disjoint_shrunk
+#check @SmoothPoincare.HMP.retainedTubeMeridian_inverses
+#print axioms SmoothPoincare.HMP.retainedTubeMeridian_inverses
+#check @SmoothPoincare.HMP.retainedTubeShrink
+#print axioms SmoothPoincare.HMP.retainedTubeShrink
+#check @SmoothPoincare.HMP.retainedTubeShrink_contMDiff
+#print axioms SmoothPoincare.HMP.retainedTubeShrink_contMDiff
+#check @SmoothPoincare.HMP.retainedTubeShrink_fixed
+#print axioms SmoothPoincare.HMP.retainedTubeShrink_fixed
+#check @SmoothPoincare.HMP.retainedTubeShrink_one
+#print axioms SmoothPoincare.HMP.retainedTubeShrink_one
+#check @SmoothPoincare.HMP.retainedTubeShrink_one_inverse
+#print axioms SmoothPoincare.HMP.retainedTubeShrink_one_inverse
+#check @SmoothPoincare.HMP.retainedTubeShrink_symm_contMDiff
+#print axioms SmoothPoincare.HMP.retainedTubeShrink_symm_contMDiff
+#check @SmoothPoincare.HMP.retainedTubeShrink_zero
+#print axioms SmoothPoincare.HMP.retainedTubeShrink_zero
+#check @SmoothPoincare.HMP.standardLowerChart
+#print axioms SmoothPoincare.HMP.standardLowerChart
+#check @SmoothPoincare.HMP.standardLowerChart_axis
+#print axioms SmoothPoincare.HMP.standardLowerChart_axis
+#check @SmoothPoincare.HMP.standardLowerChart_source
+#print axioms SmoothPoincare.HMP.standardLowerChart_source
+#check @SmoothPoincare.HMP.standardLowerMeridian
+#print axioms SmoothPoincare.HMP.standardLowerMeridian
+#check @SmoothPoincare.HMP.standardLowerMeridianCore
+#print axioms SmoothPoincare.HMP.standardLowerMeridianCore
+#check @SmoothPoincare.HMP.standardLowerMeridianCore_marked
+#print axioms SmoothPoincare.HMP.standardLowerMeridianCore_marked
+#check @SmoothPoincare.HMP.standardLowerMeridian_closedTube
+#print axioms SmoothPoincare.HMP.standardLowerMeridian_closedTube
+#check @SmoothPoincare.HMP.standardLowerMeridian_disjoint_retainedTube
+#print axioms SmoothPoincare.HMP.standardLowerMeridian_disjoint_retainedTube
+#check @SmoothPoincare.HMP.standardLowerMeridian_windingZero
+#print axioms SmoothPoincare.HMP.standardLowerMeridian_windingZero
+#check @SmoothPoincare.HMP.standardRetainedStrand
+#print axioms SmoothPoincare.HMP.standardRetainedStrand
+#check @SmoothPoincare.HMP.standardRetainedStrand_embedding
+#print axioms SmoothPoincare.HMP.standardRetainedStrand_embedding
+#check @SmoothPoincare.HMP.standardRetainedStrand_smooth
+#print axioms SmoothPoincare.HMP.standardRetainedStrand_smooth
+#check @SmoothPoincare.HMP.standardRetainedTube
+#print axioms SmoothPoincare.HMP.standardRetainedTube
+#check @SmoothPoincare.HMP.standardRetainedTube_core
+#print axioms SmoothPoincare.HMP.standardRetainedTube_core
+#check @SmoothPoincare.HMP.standardRetainedTube_source
+#print axioms SmoothPoincare.HMP.standardRetainedTube_source
+#check @SmoothPoincare.IntrinsicEntry.closedNegative_of_longCuffRadialMargin
+#print axioms SmoothPoincare.IntrinsicEntry.closedNegative_of_longCuffRadialMargin
+#check @SmoothPoincare.IntrinsicEntry.closedNegative_of_longCuffRadialZeroTrace
+#print axioms SmoothPoincare.IntrinsicEntry.closedNegative_of_longCuffRadialZeroTrace
+#check @SmoothPoincare.IntrinsicEntry.fixedBand_frameSq_le
+#print axioms SmoothPoincare.IntrinsicEntry.fixedBand_frameSq_le
+#check @SmoothPoincare.IntrinsicEntry.fixedWidthPoleInverseError_example
+#print axioms SmoothPoincare.IntrinsicEntry.fixedWidthPoleInverseError_example
+#check @SmoothPoincare.IntrinsicEntry.fixedWidthPoleInverseError_gt_exact_margin
+#print axioms SmoothPoincare.IntrinsicEntry.fixedWidthPoleInverseError_gt_exact_margin
+#check @SmoothPoincare.IntrinsicEntry.fixedWidthPoleInverseError_gt_tenth
+#print axioms SmoothPoincare.IntrinsicEntry.fixedWidthPoleInverseError_gt_tenth
+#check @SmoothPoincare.IntrinsicEntry.fixedWidthPoleInverseError_gt_tenth_exact
+#print axioms SmoothPoincare.IntrinsicEntry.fixedWidthPoleInverseError_gt_tenth_exact
+#check @SmoothPoincare.IntrinsicEntry.fixedWidthPoleInverseError_gt_three_elevenths
+#print axioms SmoothPoincare.IntrinsicEntry.fixedWidthPoleInverseError_gt_three_elevenths
+#check @SmoothPoincare.IntrinsicEntry.fixedWidthRelativeInverseError
+#print axioms SmoothPoincare.IntrinsicEntry.fixedWidthRelativeInverseError
+#check @SmoothPoincare.IntrinsicEntry.fixedWidthRelativeInverseError_eq_abs
+#print axioms SmoothPoincare.IntrinsicEntry.fixedWidthRelativeInverseError_eq_abs
+#check @SmoothPoincare.IntrinsicEntry.fixedWidthRelativeInverseError_le_iff
+#print axioms SmoothPoincare.IntrinsicEntry.fixedWidthRelativeInverseError_le_iff
+#check @SmoothPoincare.IntrinsicEntry.fullBand_signedCost_le
+#print axioms SmoothPoincare.IntrinsicEntry.fullBand_signedCost_le
+#check @SmoothPoincare.IntrinsicEntry.harmonicDiskBarrier
+#print axioms SmoothPoincare.IntrinsicEntry.harmonicDiskBarrier
+#check @SmoothPoincare.IntrinsicEntry.harmonicDiskBarrier_lap
+#print axioms SmoothPoincare.IntrinsicEntry.harmonicDiskBarrier_lap
+#check @SmoothPoincare.IntrinsicEntry.harmonicDiskBarrier_le
+#print axioms SmoothPoincare.IntrinsicEntry.harmonicDiskBarrier_le
+#check @SmoothPoincare.IntrinsicEntry.harmonicDisk_chain
+#print axioms SmoothPoincare.IntrinsicEntry.harmonicDisk_chain
+#check @SmoothPoincare.IntrinsicEntry.harmonicDisk_propagate
+#print axioms SmoothPoincare.IntrinsicEntry.harmonicDisk_propagate
+#check @SmoothPoincare.IntrinsicEntry.harmonicStretch_chain_bound
+#print axioms SmoothPoincare.IntrinsicEntry.harmonicStretch_chain_bound
+#check @SmoothPoincare.IntrinsicEntry.harmonicStretch_diskBarrier
+#print axioms SmoothPoincare.IntrinsicEntry.harmonicStretch_diskBarrier
+#check @SmoothPoincare.IntrinsicEntry.harmonicStretch_harmonicHalfDisk_le
+#print axioms SmoothPoincare.IntrinsicEntry.harmonicStretch_harmonicHalfDisk_le
+#check @SmoothPoincare.IntrinsicEntry.harmonicStretch_harnackStep
+#print axioms SmoothPoincare.IntrinsicEntry.harmonicStretch_harnackStep
+#check @SmoothPoincare.IntrinsicEntry.harmonicStretch_log_nonneg
+#print axioms SmoothPoincare.IntrinsicEntry.harmonicStretch_log_nonneg
+#check @SmoothPoincare.IntrinsicEntry.harmonicStretch_lower_of_log_bound
+#print axioms SmoothPoincare.IntrinsicEntry.harmonicStretch_lower_of_log_bound
+#check @SmoothPoincare.IntrinsicEntry.harmonicStretch_poissonKernel_le_three
+#print axioms SmoothPoincare.IntrinsicEntry.harmonicStretch_poissonKernel_le_three
+#check @SmoothPoincare.IntrinsicEntry.longCuffLength
+#print axioms SmoothPoincare.IntrinsicEntry.longCuffLength
+#check @SmoothPoincare.IntrinsicEntry.longCuffRadialResponse_lt_661
+#print axioms SmoothPoincare.IntrinsicEntry.longCuffRadialResponse_lt_661
+#check @SmoothPoincare.IntrinsicEntry.markedChain_smallStretch_floor
+#print axioms SmoothPoincare.IntrinsicEntry.markedChain_smallStretch_floor
+#check @SmoothPoincare.IntrinsicEntry.outerPoleLeading_chiralDensities
+#print axioms SmoothPoincare.IntrinsicEntry.outerPoleLeading_chiralDensities
+#check @SmoothPoincare.IntrinsicEntry.outerPoleScaledSectional
+#print axioms SmoothPoincare.IntrinsicEntry.outerPoleScaledSectional
+#check @SmoothPoincare.IntrinsicEntry.outerPoleSectional_normalize
+#print axioms SmoothPoincare.IntrinsicEntry.outerPoleSectional_normalize
+#check @SmoothPoincare.IntrinsicEntry.outerPoleSectional_scaled_limit
+#print axioms SmoothPoincare.IntrinsicEntry.outerPoleSectional_scaled_limit
+#check @SmoothPoincare.IntrinsicEntry.pauseBarrier_lap
+#print axioms SmoothPoincare.IntrinsicEntry.pauseBarrier_lap
+#check @SmoothPoincare.IntrinsicEntry.pauseCorridor
+#print axioms SmoothPoincare.IntrinsicEntry.pauseCorridor
+#check @SmoothPoincare.IntrinsicEntry.pauseLap
+#print axioms SmoothPoincare.IntrinsicEntry.pauseLap
+#check @SmoothPoincare.IntrinsicEntry.pauseMetric_lower
+#print axioms SmoothPoincare.IntrinsicEntry.pauseMetric_lower
+#check @SmoothPoincare.IntrinsicEntry.pauseMetric_near_lower
+#print axioms SmoothPoincare.IntrinsicEntry.pauseMetric_near_lower
+#check @SmoothPoincare.IntrinsicEntry.pauseStripArgument
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripArgument
+#check @SmoothPoincare.IntrinsicEntry.pauseStripBracket
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripBracket
+#check @SmoothPoincare.IntrinsicEntry.pauseStripCellFloor
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripCellFloor
+#check @SmoothPoincare.IntrinsicEntry.pauseStripCellFloor_gt_133
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripCellFloor_gt_133
+#check @SmoothPoincare.IntrinsicEntry.pauseStripCellLeft
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripCellLeft
+#check @SmoothPoincare.IntrinsicEntry.pauseStripCellOdds_enclose
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripCellOdds_enclose
+#check @SmoothPoincare.IntrinsicEntry.pauseStripCellRight
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripCellRight
+#check @SmoothPoincare.IntrinsicEntry.pauseStripCell_admissible
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripCell_admissible
+#check @SmoothPoincare.IntrinsicEntry.pauseStripCell_cover
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripCell_cover
+#check @SmoothPoincare.IntrinsicEntry.pauseStripCell_iUnion
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripCell_iUnion
+#check @SmoothPoincare.IntrinsicEntry.pauseStripClosed_cost_gt_and_excludesEntry
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripClosed_cost_gt_and_excludesEntry
+#check @SmoothPoincare.IntrinsicEntry.pauseStripCompleteBand_cost_gt
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripCompleteBand_cost_gt
+#check @SmoothPoincare.IntrinsicEntry.pauseStripContrastFloor
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripContrastFloor
+#check @SmoothPoincare.IntrinsicEntry.pauseStripContrastFloor_gt_133
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripContrastFloor_gt_133
+#check @SmoothPoincare.IntrinsicEntry.pauseStripContrast_abs_ge
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripContrast_abs_ge
+#check @SmoothPoincare.IntrinsicEntry.pauseStripExpPartial
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripExpPartial
+#check @SmoothPoincare.IntrinsicEntry.pauseStripExpTail
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripExpTail
+#check @SmoothPoincare.IntrinsicEntry.pauseStripExp_bounds
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripExp_bounds
+#check @SmoothPoincare.IntrinsicEntry.pauseStripGaugeDenom
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripGaugeDenom
+#check @SmoothPoincare.IntrinsicEntry.pauseStripGaugeDenom_pos
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripGaugeDenom_pos
+#check @SmoothPoincare.IntrinsicEntry.pauseStripLogGauge
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripLogGauge
+#check @SmoothPoincare.IntrinsicEntry.pauseStripLogGauge_inner
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripLogGauge_inner
+#check @SmoothPoincare.IntrinsicEntry.pauseStripLogGauge_smooth
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripLogGauge_smooth
+#check @SmoothPoincare.IntrinsicEntry.pauseStripOddsLower
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripOddsLower
+#check @SmoothPoincare.IntrinsicEntry.pauseStripOddsUpper
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripOddsUpper
+#check @SmoothPoincare.IntrinsicEntry.pauseStripOdds_enclose
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripOdds_enclose
+#check @SmoothPoincare.IntrinsicEntry.pauseStripPhysicalContrast_sq_le
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripPhysicalContrast_sq_le
+#check @SmoothPoincare.IntrinsicEntry.pauseStripPhysicalOdds
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripPhysicalOdds
+#check @SmoothPoincare.IntrinsicEntry.pauseStripPhysicalOdds_derivs
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripPhysicalOdds_derivs
+#check @SmoothPoincare.IntrinsicEntry.pauseStripPhysicalOdds_hasDerivAt
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripPhysicalOdds_hasDerivAt
+#check @SmoothPoincare.IntrinsicEntry.pauseStripPhysicalSlope_hasDerivAt
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripPhysicalSlope_hasDerivAt
+#check @SmoothPoincare.IntrinsicEntry.pauseStripPhysicalVolume_gt
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripPhysicalVolume_gt
+#check @SmoothPoincare.IntrinsicEntry.pauseStripPolynomial_cell_enclosure
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripPolynomial_cell_enclosure
+#check @SmoothPoincare.IntrinsicEntry.pauseStripRealArgument
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripRealArgument
+#check @SmoothPoincare.IntrinsicEntry.pauseStripRealOdds
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripRealOdds
+#check @SmoothPoincare.IntrinsicEntry.pauseStripRealSecond
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripRealSecond
+#check @SmoothPoincare.IntrinsicEntry.pauseStripRealSlope
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripRealSlope
+#check @SmoothPoincare.IntrinsicEntry.pauseStripReferenceVolume
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripReferenceVolume
+#check @SmoothPoincare.IntrinsicEntry.pauseStripReferenceVolume_eq
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripReferenceVolume_eq
+#check @SmoothPoincare.IntrinsicEntry.pauseStripSecondLower
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripSecondLower
+#check @SmoothPoincare.IntrinsicEntry.pauseStripSectionalContrast
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripSectionalContrast
+#check @SmoothPoincare.IntrinsicEntry.pauseStripSectionalContrast_eq_chiral_diagonals
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripSectionalContrast_eq_chiral_diagonals
+#check @SmoothPoincare.IntrinsicEntry.pauseStripSectionalContrast_sq_le_chiral
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripSectionalContrast_sq_le_chiral
+#check @SmoothPoincare.IntrinsicEntry.pauseStripSlopeUpper
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStripSlopeUpper
+#check @SmoothPoincare.IntrinsicEntry.pauseStrip_accelerationMargin
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStrip_accelerationMargin
+#check @SmoothPoincare.IntrinsicEntry.pauseStrip_frozenSectionBudget
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStrip_frozenSectionBudget
+#check @SmoothPoincare.IntrinsicEntry.pauseStrip_innerGermVolume_gt
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStrip_innerGermVolume_gt
+#check @SmoothPoincare.IntrinsicEntry.pauseStrip_longCuffTrial_excluded
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStrip_longCuffTrial_excluded
+#check @SmoothPoincare.IntrinsicEntry.pauseStrip_original_signed_costs_gt
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStrip_original_signed_costs_gt
+#check @SmoothPoincare.IntrinsicEntry.pauseStrip_sinh_lower
+#print axioms SmoothPoincare.IntrinsicEntry.pauseStrip_sinh_lower
+#check @SmoothPoincare.IntrinsicEntry.pauseTransverseBarrier
+#print axioms SmoothPoincare.IntrinsicEntry.pauseTransverseBarrier
+#check @SmoothPoincare.IntrinsicEntry.pauseTransverseBarrier_le
+#print axioms SmoothPoincare.IntrinsicEntry.pauseTransverseBarrier_le
+#check @SmoothPoincare.IntrinsicEntry.pauseTransverseDerivative_ge
+#print axioms SmoothPoincare.IntrinsicEntry.pauseTransverseDerivative_ge
+#check @SmoothPoincare.IntrinsicEntry.planarClosedDisk
+#print axioms SmoothPoincare.IntrinsicEntry.planarClosedDisk
+#check @SmoothPoincare.IntrinsicEntry.planarClosedDisk_overlap
+#print axioms SmoothPoincare.IntrinsicEntry.planarClosedDisk_overlap
+#check @SmoothPoincare.IntrinsicEntry.planarRadiusSq
+#print axioms SmoothPoincare.IntrinsicEntry.planarRadiusSq
+#check @SmoothPoincare.IntrinsicEntry.planarSmallStretch_floor
+#print axioms SmoothPoincare.IntrinsicEntry.planarSmallStretch_floor
+#check @SmoothPoincare.bourBufferedAngularRadius_arclength_deriv
+#print axioms SmoothPoincare.bourBufferedAngularRadius_arclength_deriv
+#check @SmoothPoincare.bourBufferedAngularRadius_native_deriv
+#print axioms SmoothPoincare.bourBufferedAngularRadius_native_deriv
+#check @SmoothPoincare.bourBufferedAngularRadius_roundTail
+#print axioms SmoothPoincare.bourBufferedAngularRadius_roundTail
+#check @SmoothPoincare.bourBufferedCapLength
+#print axioms SmoothPoincare.bourBufferedCapLength
+#check @SmoothPoincare.bourBufferedRadialLength
+#print axioms SmoothPoincare.bourBufferedRadialLength
+#check @SmoothPoincare.bourBufferedRadialLength_hasDerivAt
+#print axioms SmoothPoincare.bourBufferedRadialLength_hasDerivAt
+#check @SmoothPoincare.bourBufferedRadialLength_image
+#print axioms SmoothPoincare.bourBufferedRadialLength_image
+#check @SmoothPoincare.bourBufferedRadialLength_localInverse
+#print axioms SmoothPoincare.bourBufferedRadialLength_localInverse
+#check @SmoothPoincare.bourBufferedRadialLength_roundTail
+#print axioms SmoothPoincare.bourBufferedRadialLength_roundTail
+#check @SmoothPoincare.bourBufferedRadialLength_strictMono
+#print axioms SmoothPoincare.bourBufferedRadialLength_strictMono
+#check @SmoothPoincare.bourBufferedRadialSpeed
+#print axioms SmoothPoincare.bourBufferedRadialSpeed
+#check @SmoothPoincare.bourBufferedRadialSpeed_eq_rpow
+#print axioms SmoothPoincare.bourBufferedRadialSpeed_eq_rpow
+#check @SmoothPoincare.bourBufferedRadialSpeed_pos
+#print axioms SmoothPoincare.bourBufferedRadialSpeed_pos
+#check @SmoothPoincare.bourBufferedSphereCapChart
+#print axioms SmoothPoincare.bourBufferedSphereCapChart
+#check @SmoothPoincare.bourBufferedSphereChart
+#print axioms SmoothPoincare.bourBufferedSphereChart
+#check @SmoothPoincare.bourBufferedSphereMetric
+#print axioms SmoothPoincare.bourBufferedSphereMetric
+#check @SmoothPoincare.bourBufferedSphereMetric_inner
+#print axioms SmoothPoincare.bourBufferedSphereMetric_inner
+#check @SmoothPoincare.bourBufferedSphereMetric_near_pole
+#print axioms SmoothPoincare.bourBufferedSphereMetric_near_pole
+#check @SmoothPoincare.bourBufferedSphereMetric_radial_inner
+#print axioms SmoothPoincare.bourBufferedSphereMetric_radial_inner
+#check @SmoothPoincare.bourBufferedSphereOrientation
+#print axioms SmoothPoincare.bourBufferedSphereOrientation
+#check @SmoothPoincare.bourBufferedSpherePolarChart
+#print axioms SmoothPoincare.bourBufferedSpherePolarChart
+#check @SmoothPoincare.bourBufferedSpherePolarChart_source
+#print axioms SmoothPoincare.bourBufferedSpherePolarChart_source
+#check @SmoothPoincare.bourBufferedSphere_flat
+#print axioms SmoothPoincare.bourBufferedSphere_flat
+#check @SmoothPoincare.bourBufferedSphere_markedDisk
+#print axioms SmoothPoincare.bourBufferedSphere_markedDisk
+#check @SmoothPoincare.bourBufferedSphere_normalizedShell
+#print axioms SmoothPoincare.bourBufferedSphere_normalizedShell
+#check @SmoothPoincare.bourBufferedSphere_polar_inner
+#print axioms SmoothPoincare.bourBufferedSphere_polar_inner
+#check @SmoothPoincare.bourBufferedSphere_puncturedCap
+#print axioms SmoothPoincare.bourBufferedSphere_puncturedCap
+#check @SmoothPoincare.bourBufferedSphere_volume
+#print axioms SmoothPoincare.bourBufferedSphere_volume
+#check @SmoothPoincare.bourNormalizedShell_curvature_of_chartJets
+#print axioms SmoothPoincare.bourNormalizedShell_curvature_of_chartJets
+#check @SmoothPoincare.bourRoundPole_deriv
+#print axioms SmoothPoincare.bourRoundPole_deriv
+#check @SmoothPoincare.bourStereographicPole_distance_deriv
+#print axioms SmoothPoincare.bourStereographicPole_distance_deriv
+#check @SmoothPoincare.bourStereographicPole_warp_eq_sin
+#print axioms SmoothPoincare.bourStereographicPole_warp_eq_sin
+#check @SmoothPoincare.bourVariableCapEuler_integral
+#print axioms SmoothPoincare.bourVariableCapEuler_integral
+#check @SmoothPoincare.bourVariableCapEuler_roundPole
+#print axioms SmoothPoincare.bourVariableCapEuler_roundPole
+#check @SmoothPoincare.roundEquatorCapChart
+#print axioms SmoothPoincare.roundEquatorCapChart
+#check @SmoothPoincare.roundEquatorCapChart_image_closedBall
+#print axioms SmoothPoincare.roundEquatorCapChart_image_closedBall
+#check @SmoothPoincare.roundEquatorCapChart_inverse
+#print axioms SmoothPoincare.roundEquatorCapChart_inverse
+#check @SmoothPoincare.roundEquatorCapChart_round_inner
+#print axioms SmoothPoincare.roundEquatorCapChart_round_inner
+#check @SmoothPoincare.roundEquatorCapChart_same_boundary
+#print axioms SmoothPoincare.roundEquatorCapChart_same_boundary
+#check @SmoothPoincare.roundEquatorCapChart_source
+#print axioms SmoothPoincare.roundEquatorCapChart_source
+#check @SmoothPoincare.roundEquatorCapChart_tracks_marking
+#print axioms SmoothPoincare.roundEquatorCapChart_tracks_marking
+#check @SmoothPoincare.roundEquatorCapSmoothing
+#print axioms SmoothPoincare.roundEquatorCapSmoothing
+#check @SmoothPoincare.roundEquatorH1Sq
+#print axioms SmoothPoincare.roundEquatorH1Sq
+#check @SmoothPoincare.roundEquatorJoinedForm
+#print axioms SmoothPoincare.roundEquatorJoinedForm
+#check @SmoothPoincare.roundEquatorJoinedForm_coercive
+#print axioms SmoothPoincare.roundEquatorJoinedForm_coercive
+#check @SmoothPoincare.roundEquatorJoinedForm_eq_capFactorScalar
+#print axioms SmoothPoincare.roundEquatorJoinedForm_eq_capFactorScalar
+#check @SmoothPoincare.roundEquatorJoinedForm_eq_sideSum
+#print axioms SmoothPoincare.roundEquatorJoinedForm_eq_sideSum
+#check @SmoothPoincare.roundEquatorMarkedGeometry
+#print axioms SmoothPoincare.roundEquatorMarkedGeometry
+#check @SmoothPoincare.roundEquator_charge_zero
+#print axioms SmoothPoincare.roundEquator_charge_zero
+#check @SmoothPoincare.roundEquator_exact_cap
+#print axioms SmoothPoincare.roundEquator_exact_cap
+#check @SmoothPoincare.roundEquator_orientedReassembly
+#print axioms SmoothPoincare.roundEquator_orientedReassembly
+#check @SmoothPoincare.roundEquator_rawCover_and_nullOverlap
+#print axioms SmoothPoincare.roundEquator_rawCover_and_nullOverlap

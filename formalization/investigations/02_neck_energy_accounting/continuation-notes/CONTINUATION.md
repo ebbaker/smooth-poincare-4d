@@ -1,10 +1,14 @@
 # Full neck energy accounting · Sustained continuation
 
+**After FOT-E52 · 27 November 2026.** Apply the two-face signed estimate to a measured collar with both marked defect windows. [Current register](../research-progress/REGISTER.md) · [Program handoff](../../continuation-notes/AFTER_E52_MARKED_CUTS_AND_CLOSED_CAPS_20261127.md)
+
 25 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. The model settings below apply to the requested future session. The drafting model variant and effort are unavailable.
 
 [Route overview](../research-overview/OVERVIEW.md) · [Proof plan and opening Lean type](../research-plan/PLAN.md#opening-proof) · [Live route register](../research-progress/REGISTER.md) · [Program ownership](../../research-progress/REGISTER.md#route-ownership) · [Input and toolchain baseline](../../research-progress/01_BASELINE.md)
 
 ## Current continuation
+
+On Edition 07 activation, freeze the APS signature input and choose one original collar with both face markings before assigning FOT-NECK-ED07-E01. Check the two-face orientation, exact deficit and symmetry under exchange of chiralities. If the second end is undercontrolled, record the missing estimate on that face. [Edition 07 packet](../research-plan/PLAN.md#edition-07--signed-energy-on-an-actual-collar) · [Live status](../research-progress/REGISTER.md)
 
 The opening proof and the covered-remainder theorem are verified. Use the [dated handoff and next geometric proof](AFTER_FINITE_ACCOUNTING_20261125.md). The launch prompt below is preserved as issued.
 

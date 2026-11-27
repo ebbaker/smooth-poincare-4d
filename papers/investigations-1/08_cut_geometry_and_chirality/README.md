@@ -9,8 +9,8 @@ This is a parent investigation. It holds the shared foundations and five child b
 | [Research overview](research-overview/OVERVIEW.md) | Objects, conventions, what is proved, what is inherited, and the route to the conjecture with its alternatives. |
 | [Research plan](research-plan/PLAN.md) | The bounded B and E tasks, their routing and stop rules. |
 | [Progress register](research-progress/REGISTER.md) | Sole live status for the parent tasks of `SP4-CUT`; links the five child registers. [Crosswalk](research-progress/CROSSWALK_20261126.md). |
-| [Manuscript](manuscript/README.md) | Initial draft, *Cuts of subcritical conformal classes on homotopy four-spheres*. |
-| [Continuation](continuation-notes/CONTINUATION.md) | Status boundary, routing table, the parent prompts, and links to the continuation note of each child. |
+| [Manuscript](manuscript/README.md) | Revised working paper, *Cuts of subcritical conformal classes on homotopy four-spheres*. |
+| [Current continuation](continuation-notes/AFTER_E08_20261127.md) | The physical native cut and remaining inputs after the finite-atlas calculation. The [original note](continuation-notes/CONTINUATION.md) retains the separate child prompts. |
 | [References](references/README.md) · [Setup history](DRAFT_HISTORY.md) | Sources with inspection levels, versions and ownership. |
 
 | Child | Question | Documents and family |
@@ -23,7 +23,9 @@ This is a parent investigation. It holds the shared foundations and five child b
 
 Ownership. This branch owns the ledger, the positivity and atlas statements for cuts, the cap functional and the sweepout criterion. It does not own entry trials ([07](../07_positive_subcritical_entry/README.md) and master B02 do), attainment ([06](../06_bour_flow_and_fixed_type_attainment/README.md)), the marked-surgery theorems or the slide enumeration ([05](../05_collar_deformation_and_surgery/README.md)), or the immersed constructions ([04](../04_hypersurface_immersions/README.md)). Results that bear on those branches are returned to their registers by handoff, not written into their files.
 
-Setup created no scientific activity. The manuscript draft was requested by the author at setup and imports results from the note above with their original status: proofs written out, none read independently, numerics floating point.
+The [independent manuscript replay](research-progress/handoffs/E02_INDEPENDENT_RETURN_20261127.md), [child integrations](notes/CHILD_RETURNS_20261127.md) and [assessment](reviews/PARENT_ASSESSMENT_20261127.md) were completed on 27 November. The [parent decision](brainstorm/notes/B01_MARKED_RECOGNITION_20261127.md) prioritizes a positive source of nonzero degree on a native mixed handle cut. The ensuing calculation makes its sufficient bending test measurable using only finite local data from the marked collar. The general existence of that input and of an entering class on every smooth type remain open.
+
+**Setup provenance.**
 
 26 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum, in a Cowork session. Setup baseline `841d606`.
 

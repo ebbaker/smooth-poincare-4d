@@ -558,7 +558,54 @@ proves \eqref{eq:bending}. Bending and the induced Yamabe constant
 are conformal invariants. The displayed certificate is obtained in the
 chosen gauge and embedding.
 
-There is a direct way to keep the mark in this test. On a native collar
+The ambient embedding can be eliminated on a specified physical band.
+The following constant depends only on measurements in its charts.
+
+\begin{proposition}[A finite-atlas criterion on a native band]\label{prop:atlas-band}
+Let \(h_t\) be the metrics on the three-dimensional slices of a smooth
+oriented product band \(Z\times[a,b]\). In finitely many coordinate
+charts let \(mI\le h_t\le MI\) on the supports of a quadratic partition
+\(\sum_j\chi_j^2=1\), and suppose
+\(\sum_j |d\chi_j|_{h_t}^2\le L\). Take a Euclidean Dirichlet constant
+\(S_D>0\) such that \(\int|Dv|^2\ge S_D\|v\|_6^2\) on each chart.
+In the physical metric put \(Q_t=R-2\Ric(\nu,\nu)+2H^2/3\). For \(q_0>0\) set
+\[
+ C_{\rm loc}=\frac{S_D\,m/M}{\max\{1/8,L/q_0\}},\qquad
+ d_t=\|(q_0-Q_t)_+\|_{L^{3/2}(h_t)},\qquad
+ b_t=\int_Z|B_t^\circ|^3\,d\mu_{h_t}.
+\]
+Then \(Y(Z,[h_t])\ge C_{\rm loc}-d_t-b_t^{2/3}\).
+In particular, for any probability measure \(\mu\) on the height interval,
+\begin{equation}\label{eq:atlas-band}
+ \int b_t\,d\mu(t) <
+ \int (C_{\rm loc}-d_t)_+^{3/2}\,d\mu(t)
+\end{equation}
+implies that some slice has positive Yamabe type. In a native product
+marking that slice projects with degree one onto the original cut.
+\end{proposition}
+\begin{proof}
+For the eigenvalues of \(h_t\), ordered increasingly, the gradient density
+has least eigenvalue \(\sqrt{\lambda_1\lambda_2/\lambda_3}\ge m/\sqrt M\).
+The squared \(L^6\) norm acquires a factor of at most \(\sqrt M\).
+The Dirichlet inequality in each chart therefore has constant at least
+\(S_D m/M\). Apply it to \(\chi_j u\) and sum. The triangle inequality
+applied to \(u^2=\sum_j(\chi_j u)^2\) in \(L^3\), and
+\(\sum_j\chi_jd\chi_j=0\), give
+\[
+ (S_D m/M)\|u\|_6^2
+ \le \int_Z \bigl(|du|_{h_t}^2+Lu^2\bigr)\,d\mu_{h_t}.
+\]
+Compare with \(8|du|^2+q_0u^2\), then pay the two errors by
+H\"older in the Gauss identity \(R_{h_t}=Q_t-|B^\circ_t|^2\).
+A slice of nonpositive Yamabe sign thus satisfies
+\(b_t\ge (C_{\rm loc}-d_t)_+^{3/2}\). Integrating proves the claim.
+\end{proof}
+
+If \(C_{\rm loc}-d_t\ge c>0\), the proportion of positive slices is
+at least \(1-c^{-3/2}\int b_t\,d\mu\). The native orientation is
+increasing-normal first. Relabeling the heights preserves the test
+when the measure is transported with the label. For uniform height
+measure the calculation is explicit. On a native collar
 \(Z\times[a,b]\) let \(h_t\) be the slice metric, \(N>0\) the lapse and
 \(X\) the tangential shift, so the unit normal is
 \(N^{-1}(\partial_t-X)\). If
@@ -568,8 +615,11 @@ There is a direct way to keep the mark in this test. On a native collar
                 \,d\mu_{h_t}\,dt < C(g,F)^{3/2},
 \end{equation}
 some slice has positive Yamabe type and its projection has degree one.
-Indeed \(2NB=\partial_t h_t-\mathcal L_Xh_t\); averaging and
-\eqref{eq:bending} give the assertion. More generally a closed oriented
+Here \(2NB=\partial_t h_t-\mathcal L_Xh_t\).
+The left side equals \(\int b_t\,dt/(b-a)\), so one may also use the
+right side of \eqref{eq:atlas-band} from the finite atlas.
+When integrating instead against the four-volume of this band the
+lapse factor is \(N^{-4}\), since \(dV_g=N\,dt\,d\mu_{h_t}\). More generally a closed oriented
 separator homologous in a band to its incoming face maps with total
 degree one under any map to \(Z\) restricting to degree one on that face.
 At least one component has nonzero degree. Its positive sign must be
@@ -581,7 +631,40 @@ scalar curvature. This follows by scaling the four-dimensional band to
 scalar curvature at least twelve and using the strict width bound
 \(\pi/2\) for a nonpositive-type target.
 
-For example, on the round unit sphere \(p=6\), \(K=3\), \(m=2\), and
+On the split \(K\)-first diagram of \cite{Baker2026HandleCuts},
+the physical latitude metric is \(dq^2+\cos^2 q\,\gamma\),
+\(|q|\le\pi/6\), with \(\gamma\) unit round on \(S^3\).
+Here \(Q_q=6\sec^2q\) and \(b_q=0\). Two stereographic charts
+give \(C_{\rm loc}\ge81/(800\pi^2)\).
+There are genuinely bent examples on the same marked diagram. Put
+\(z=y_1\) on \(S^3\), let \(\phi_q\) be the time-\(\theta(q)\) flow of
+\(z\nabla_\gamma z\), and take
+\(h_q=\cos^2 q\,\phi_q^*\gamma\) with physical lapse one and shift zero.
+Use a nonconstant \(\theta\) vanishing near both end faces, with
+\(|\theta|\le(\log2)/2\). Since
+\(\mathcal L_{z\nabla z}\gamma=2\,dz\otimes dz-2z^2\gamma\),
+\[
+ |B^\circ|=\sqrt{2/3}\,|\theta'|(1-z^2)\circ\phi_q,\qquad
+ Q_q=6\sec^2 q+|B^\circ|^2 .
+\]
+The two stereographic charts on the unperturbed latitudes have
+\(m=3/25,\ M=4,\ L=4\pi^2/3\). The flow changes the metric by a
+factor between \(1/2\) and \(2\), so \(m=3/50,\ M=8,\ L=8\pi^2/3\)
+work for the bent slices. Taking \(q_0=6,\ S_D=3/4\) gives
+\(C_{\rm loc}=81/(6400\pi^2)\). From
+\(\int_{S^3}(1-z^2)^3\,d\mu_\gamma=35\pi^2/32\) one gets the exact cost
+\[
+ b_q=\frac{35\pi^2}{32}(2/3)^{3/2}\cos^3 q\,|\theta'(q)|^3.
+\]
+A nonzero bump with sufficiently small amplitude thus satisfies
+\eqref{eq:atlas-band} with strict margin on the original marked band.
+This fits the original smooth closing, and small multiples of a fixed
+bump retain a closed entering class by \(C^2\) convergence to round.
+A change of angular coordinates on the round metric would also change
+the shift and would give \(B^\circ=0\)
+\cite[finite-atlas estimate and split calibrations]{Baker2026MarkedCutCalculations}.
+
+On the round unit sphere \(p=6\), \(K=3\), \(m=2\), and
 \(C^{3/2}=9\sqrt2\,\pi\). For every embedded copy of the winding-one
 Mazur boundary \(\Sigma(2,5,7)\) in Isoshima's \(n=1\) double,
 \(\int|B^\circ|^3\ge9\sqrt2\,\pi\) in the pulled-back round class.
@@ -592,8 +675,14 @@ the marked double and its two orders are identified in
 meridian-first cut is \(\#_2(S^1\times S^2)\). In the same round class
 an embedded positive source maps to that target with degree one by the
 separate construction in \cite{Baker2026ChiralMaster}.
-Existence of a suitable collar or separator for an untreated presentation
-is a separate geometric question.
+On the retained equator in the regular and long-cuff minus
+Miller--Schupp examples, both complementary groups are \(BS(2,3)\).
+Its first Betti number two rules out identification with the winding-one
+cut, and each complement of the actual winding-zero cut in a normalized
+mixed presentation has group \(\mathbb Z\). Thus this embedded equator
+cannot be identified with either of these native cuts. A distinct degree
+map or a physical witness on an untreated presentation remains to be
+supplied \cite{Baker2026ChiralMaster}.
 
 For the native Gompf--Scharlemann--Thompson links
 \(L_{n,1}=Q\cup V_n\), \(n\ge3\), neither single zero-surgery cut can
@@ -1181,6 +1270,26 @@ The smooth minimizer is therefore Bach-flat on all of \(M\).
 Unique continuation \cite[Theorem 3.8]{LassasLiimatainen2019ConformalHarmonic}
 gives \(W=0\) everywhere. Conformal development identifies \((M,[g])\) with the round conformal sphere.
 \end{proof}
+
+There is a sufficient cut measurement for the two signs used in
+Proposition~\ref{prop:free}. If one smooth representative has \(R>0\)
+and the same free cut satisfies
+\[
+ \max\bigl\{\|H_+\|_{L^3(h)},\|H_-\|_{L^3(h)}\bigr\}
+ \le 3(2\pi^2)^{1/3},
+\]
+where \(H_\pm\) are the positive and negative parts of the trace in one
+normal convention, both matched conformally flat caps have strictly
+positive sign. The ball trace inequality
+\cite[Theorem 1.1]{NgoNguyenPhan2020Trace}
+bounds the cap Robin form below by \(6(2\pi^2)^{1/3}\|f\|_3^2\)
+for the common boundary value \(f\). This pays the adverse side term
+\(2\int H_{\rm out} f^2\) on either side. At equality the positive side
+bulk controls any nonzero restriction there, and a cap function with
+zero trace has positive Dirichlet energy. The compact form attains its
+first eigenvalue. The marked cap construction and conformal transformation
+of its outward normal derivative are given in \cite{Baker2026ChiralMaster}.
+Thus at attainment the same measurable hypothesis implies conformal roundness.
 
 More generally, let a spherical cut have two first-jet-matched ball
 fillings with costs \(c_i=(E_+(\mathrm{cap}_i)+E_-(\mathrm{cap}_i))/2\),
