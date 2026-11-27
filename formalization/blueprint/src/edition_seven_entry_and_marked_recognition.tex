@@ -4,8 +4,8 @@
 On a closed connected oriented smooth homotopy four-sphere let
 $E_\pm=\int |W^\pm|_{\rm HS}^2\,dV$ use the Hilbert--Schmidt square on real two-forms. Signature zero gives $e=E_+=E_-$ on the whole sphere. Put
 $T=4\pi^2$. Entry requires a metric with $Y([g])>0$ and $e(g)<2T$.
-The propositions below record the E52 implications and E53 geometric results, including the
-geometric inputs needed to apply each to the manuscript.
+The propositions below record the E52 implications and the E53 and E54 geometric
+results with their physical hypotheses.
 
 \subsection{The marked separator and its closing}
 
@@ -441,9 +441,47 @@ square $O(\varepsilon^2)$. The variable-cap integral uses the same
 primitive as the closed-cap formula. The actual radial metric is
 $\lambda^2d\rho^2+(\rho\lambda)^2\sigma$. Its arclength covers $(0,L)$
 with smooth local inverse, and $L-s=2\arctan(r/\rho)$ on the round tail.
-The physical polar pushforward and warped curvature frame on the smooth
-transition remain inputs to its Euler integral. The actual nonflat extracted truncation still needs its common
+The measured-cap proposition below supplies the physical polar pushforward
+and warped curvature frame on this smooth transition. The actual nonflat extracted truncation still needs its common
 buffered comparison, cutoff estimates and capped topology.
+\end{proof}
+
+\subsection{The returned attachment, the wider switch and the measured cap}
+
+\begin{proposition}[Relative trace of the returned framed tube]
+\label{prop:ed54-relative-trace}
+\uses{prop:ed53-hmp}
+\lean{SmoothPoincare.HMP.retainedTube_enlarged_support, SmoothPoincare.HMP.retainedTraceTrack_tube_germ, SmoothPoincare.HMP.retainedTraceTrack_meridian_germ, SmoothPoincare.HMP.originalTraceMeridian_annulus, SmoothPoincare.HMP.normalizedRetainedPairTraceHomeomorph}
+\leanok
+An open clearance neighborhood of the complete marked unit solid torus contains a uniform enlargement. In the normalized radius-two chart, the supported shrink extends across the product collar with stationary inlet and outlet germs. Its inverse takes the complete new meridian into the strict old annulus $1<|w|<2$. The trace comparison transports both attaching tubes, with its inverse on the quotient.
+\end{proposition}
+\begin{proof}
+\leanok
+Use compactness for the enlargement. Run the radial isotopy with time constant near both ends, use its endpoint inverse to select the old meridian, and extend by the identity in the transported handle coordinates. Applying the same rim rounding in those coordinates gives the smooth comparison for that choice. The realization of both relative cancellations and their collar restrictions on the full Figure~3 diagram remains a separate input.
+\end{proof}
+
+\begin{proposition}[Widening the marked switch to one fifteenth]
+\label{prop:ed54-widened-switch}
+\uses{prop:ed53-pause-strip}
+\lean{SmoothPoincare.IntrinsicEntry.widenedPauseStripWeight_end_germs, SmoothPoincare.IntrinsicEntry.widenedPauseStripOdds_derivs, SmoothPoincare.IntrinsicEntry.widenedPauseStripContrastFloor_gt_114, SmoothPoincare.IntrinsicEntry.widenedPauseStrip_signed_costs_gt}
+\leanok
+On the same long-cuff marked bands use $x=1+15(s-1/8)$ and the smooth weight $H(x)$. Given the physical four-section contrast estimate, reference measure, conformal comparison and complete band balances of this trial, each closed signed cost exceeds $34656\pi^2/3125>8\pi^2$.
+\end{proposition}
+\begin{proof}
+\leanok
+The tested section has $641/600\leq 1+s\leq643/600$. Its physical radial width is $1/300$. Forty rational cells give $|D|>114$ with physical derivatives $15\,d/dx$ and $225\,d^2/dx^2$. Integrate the four-diagonal Weyl bound on both end twentieths of every timed letter and the whole framed sphere. Full-band balance and exchange give the same lower bound in either closed chirality. The original harmonic marking and the physical tensor estimates are supplied by the scientific calculation on this radius range. Neither width has a certified closed Rayleigh sign.
+\end{proof}
+
+\begin{proposition}[Euler integral through the physical cap transition]
+\label{prop:ed54-measured-cap}
+\uses{prop:ed53-buffered}
+\lean{SmoothPoincare.bourBufferedCapWarp_at_native, SmoothPoincare.bourBufferedSphere_exists_radialFrame, SmoothPoincare.bourBufferedSphere_arclength_volume, SmoothPoincare.bourBufferedCapCurvature_frame, SmoothPoincare.bourBufferedSphere_capEuler, SmoothPoincare.bourBufferedSphere_closedEuler}
+\leanok
+Fix $0<r<b$. On the smooth capped Euclidean core of radius $r$ with buffer to $b$, the Euler integral over the complete external cap is $16\pi^2$. The entire closed metric has the same integral.
+\end{proposition}
+\begin{proof}
+\leanok
+For the actual stereographic conformal speed $\lambda(\rho)$ the marked arclength satisfies $ds=\lambda\,d\rho$ and $f(s)=\rho\lambda(\rho)$. The measured pushforward is $2\pi^2 f^3\,ds$. In an oriented orthonormal frame with radial first axis the two curvatures are $-f''/f$ and $(1-(f')^2)/f^2$. The Pfaffian times the radial volume is $-12\pi^2 f''(1-(f')^2)\,ds$. The entrance and pole slopes are $+1$ and $-1$ and the core is flat. Application to a nonflat flow limit requires its own connected buffered truncation, topology and signed estimates.
 \end{proof}
 
 \subsection{Universal obligations}

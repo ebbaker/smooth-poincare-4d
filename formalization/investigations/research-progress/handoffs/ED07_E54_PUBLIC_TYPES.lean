@@ -1,0 +1,141 @@
+/- E54 public types and kernel axioms, 27 November 2026. -/
+import SmoothPoincare
+set_option pp.universes false
+#check @SmoothPoincare.HMP.RetainedPairTrace
+#print axioms SmoothPoincare.HMP.RetainedPairTrace
+#check @SmoothPoincare.HMP.normalizedRetainedPairTraceHomeomorph
+#print axioms SmoothPoincare.HMP.normalizedRetainedPairTraceHomeomorph
+#check @SmoothPoincare.HMP.originalRetainedPairTubes
+#print axioms SmoothPoincare.HMP.originalRetainedPairTubes
+#check @SmoothPoincare.HMP.originalTraceMeridian
+#print axioms SmoothPoincare.HMP.originalTraceMeridian
+#check @SmoothPoincare.HMP.originalTraceMeridianChart
+#print axioms SmoothPoincare.HMP.originalTraceMeridianChart
+#check @SmoothPoincare.HMP.originalTraceMeridianChart_axis
+#print axioms SmoothPoincare.HMP.originalTraceMeridianChart_axis
+#check @SmoothPoincare.HMP.originalTraceMeridian_annulus
+#print axioms SmoothPoincare.HMP.originalTraceMeridian_annulus
+#check @SmoothPoincare.HMP.originalTraceMeridian_disjoint
+#print axioms SmoothPoincare.HMP.originalTraceMeridian_disjoint
+#check @SmoothPoincare.HMP.originalTraceMeridian_disk
+#print axioms SmoothPoincare.HMP.originalTraceMeridian_disk
+#check @SmoothPoincare.HMP.originalTraceMeridian_transport
+#print axioms SmoothPoincare.HMP.originalTraceMeridian_transport
+#check @SmoothPoincare.HMP.retainedPairTraceHomeomorph
+#print axioms SmoothPoincare.HMP.retainedPairTraceHomeomorph
+#check @SmoothPoincare.HMP.retainedPairTrace_representatives
+#print axioms SmoothPoincare.HMP.retainedPairTrace_representatives
+#check @SmoothPoincare.HMP.retainedPairTubes_transport
+#print axioms SmoothPoincare.HMP.retainedPairTubes_transport
+#check @SmoothPoincare.HMP.retainedTraceTrack
+#print axioms SmoothPoincare.HMP.retainedTraceTrack
+#check @SmoothPoincare.HMP.retainedTraceTrack_faces
+#print axioms SmoothPoincare.HMP.retainedTraceTrack_faces
+#check @SmoothPoincare.HMP.retainedTraceTrack_fixed
+#print axioms SmoothPoincare.HMP.retainedTraceTrack_fixed
+#check @SmoothPoincare.HMP.retainedTraceTrack_meridian_germ
+#print axioms SmoothPoincare.HMP.retainedTraceTrack_meridian_germ
+#check @SmoothPoincare.HMP.retainedTraceTrack_tube_germ
+#print axioms SmoothPoincare.HMP.retainedTraceTrack_tube_germ
+#check @SmoothPoincare.HMP.retainedTubeShrink.congr_simp
+#print axioms SmoothPoincare.HMP.retainedTubeShrink.congr_simp
+#check @SmoothPoincare.HMP.retainedTube_enlarged_support
+#print axioms SmoothPoincare.HMP.retainedTube_enlarged_support
+#check @SmoothPoincare.HMP.shrunkRetainedPairTubes
+#print axioms SmoothPoincare.HMP.shrunkRetainedPairTubes
+#check @SmoothPoincare.HMP.shrunkTraceTube
+#print axioms SmoothPoincare.HMP.shrunkTraceTube
+#check @SmoothPoincare.HMP.shrunkTraceTube_apply
+#print axioms SmoothPoincare.HMP.shrunkTraceTube_apply
+#check @SmoothPoincare.HMP.traceTubeParam
+#print axioms SmoothPoincare.HMP.traceTubeParam
+#check @SmoothPoincare.HMP.traceTubeParam_norm
+#print axioms SmoothPoincare.HMP.traceTubeParam_norm
+#check @SmoothPoincare.IntrinsicEntry.widenedPauseStripContrastFloor
+#print axioms SmoothPoincare.IntrinsicEntry.widenedPauseStripContrastFloor
+#check @SmoothPoincare.IntrinsicEntry.widenedPauseStripContrastFloor_gt_114
+#print axioms SmoothPoincare.IntrinsicEntry.widenedPauseStripContrastFloor_gt_114
+#check @SmoothPoincare.IntrinsicEntry.widenedPauseStripCoordinate
+#print axioms SmoothPoincare.IntrinsicEntry.widenedPauseStripCoordinate
+#check @SmoothPoincare.IntrinsicEntry.widenedPauseStripCoordinate_jacobian
+#print axioms SmoothPoincare.IntrinsicEntry.widenedPauseStripCoordinate_jacobian
+#check @SmoothPoincare.IntrinsicEntry.widenedPauseStripCoordinate_mem_iff
+#print axioms SmoothPoincare.IntrinsicEntry.widenedPauseStripCoordinate_mem_iff
+#check @SmoothPoincare.IntrinsicEntry.widenedPauseStripOdds
+#print axioms SmoothPoincare.IntrinsicEntry.widenedPauseStripOdds
+#check @SmoothPoincare.IntrinsicEntry.widenedPauseStripOdds_derivs
+#print axioms SmoothPoincare.IntrinsicEntry.widenedPauseStripOdds_derivs
+#check @SmoothPoincare.IntrinsicEntry.widenedPauseStripReferenceVolume
+#print axioms SmoothPoincare.IntrinsicEntry.widenedPauseStripReferenceVolume
+#check @SmoothPoincare.IntrinsicEntry.widenedPauseStripReferenceVolume_eq
+#print axioms SmoothPoincare.IntrinsicEntry.widenedPauseStripReferenceVolume_eq
+#check @SmoothPoincare.IntrinsicEntry.widenedPauseStripSecond
+#print axioms SmoothPoincare.IntrinsicEntry.widenedPauseStripSecond
+#check @SmoothPoincare.IntrinsicEntry.widenedPauseStripSlope
+#print axioms SmoothPoincare.IntrinsicEntry.widenedPauseStripSlope
+#check @SmoothPoincare.IntrinsicEntry.widenedPauseStripWeight
+#print axioms SmoothPoincare.IntrinsicEntry.widenedPauseStripWeight
+#check @SmoothPoincare.IntrinsicEntry.widenedPauseStripWeight_end_germs
+#print axioms SmoothPoincare.IntrinsicEntry.widenedPauseStripWeight_end_germs
+#check @SmoothPoincare.IntrinsicEntry.widenedPauseStripWeight_odds
+#print axioms SmoothPoincare.IntrinsicEntry.widenedPauseStripWeight_odds
+#check @SmoothPoincare.IntrinsicEntry.widenedPauseStripWeight_smooth
+#print axioms SmoothPoincare.IntrinsicEntry.widenedPauseStripWeight_smooth
+#check @SmoothPoincare.IntrinsicEntry.widenedPauseStrip_innerGermVolume_gt
+#print axioms SmoothPoincare.IntrinsicEntry.widenedPauseStrip_innerGermVolume_gt
+#check @SmoothPoincare.IntrinsicEntry.widenedPauseStrip_signed_costs_gt
+#print axioms SmoothPoincare.IntrinsicEntry.widenedPauseStrip_signed_costs_gt
+#check @SmoothPoincare.IntrinsicEntry.widenedPauseStrip_sinh_lower
+#print axioms SmoothPoincare.IntrinsicEntry.widenedPauseStrip_sinh_lower
+#check @SmoothPoincare.bourBufferedCapCurvature_frame
+#print axioms SmoothPoincare.bourBufferedCapCurvature_frame
+#check @SmoothPoincare.bourBufferedCapCurvature_native
+#print axioms SmoothPoincare.bourBufferedCapCurvature_native
+#check @SmoothPoincare.bourBufferedCapWarp
+#print axioms SmoothPoincare.bourBufferedCapWarp
+#check @SmoothPoincare.bourBufferedCapWarp_at_native
+#print axioms SmoothPoincare.bourBufferedCapWarp_at_native
+#check @SmoothPoincare.bourBufferedCapWarp_contDiff
+#print axioms SmoothPoincare.bourBufferedCapWarp_contDiff
+#check @SmoothPoincare.bourBufferedCapWarp_entrance
+#print axioms SmoothPoincare.bourBufferedCapWarp_entrance
+#check @SmoothPoincare.bourBufferedCapWarp_pole
+#print axioms SmoothPoincare.bourBufferedCapWarp_pole
+#check @SmoothPoincare.bourBufferedCapWarp_pos
+#print axioms SmoothPoincare.bourBufferedCapWarp_pos
+#check @SmoothPoincare.bourBufferedCapWarp_radialEuler
+#print axioms SmoothPoincare.bourBufferedCapWarp_radialEuler
+#check @SmoothPoincare.bourBufferedSphereArclength
+#print axioms SmoothPoincare.bourBufferedSphereArclength
+#check @SmoothPoincare.bourBufferedSphereArclength_chart
+#print axioms SmoothPoincare.bourBufferedSphereArclength_chart
+#check @SmoothPoincare.bourBufferedSphereArclength_measurable
+#print axioms SmoothPoincare.bourBufferedSphereArclength_measurable
+#check @SmoothPoincare.bourBufferedSphereChart.congr_simp
+#print axioms SmoothPoincare.bourBufferedSphereChart.congr_simp
+#check @SmoothPoincare.bourBufferedSphereMetric.congr_simp
+#print axioms SmoothPoincare.bourBufferedSphereMetric.congr_simp
+#check @SmoothPoincare.bourBufferedSphereRadius
+#print axioms SmoothPoincare.bourBufferedSphereRadius
+#check @SmoothPoincare.bourBufferedSphereRadius.congr_simp
+#print axioms SmoothPoincare.bourBufferedSphereRadius.congr_simp
+#check @SmoothPoincare.bourBufferedSphereRadius_chart
+#print axioms SmoothPoincare.bourBufferedSphereRadius_chart
+#check @SmoothPoincare.bourBufferedSphereRadius_measurable
+#print axioms SmoothPoincare.bourBufferedSphereRadius_measurable
+#check @SmoothPoincare.bourBufferedSphere_arclength_volume
+#print axioms SmoothPoincare.bourBufferedSphere_arclength_volume
+#check @SmoothPoincare.bourBufferedSphere_capEuler
+#print axioms SmoothPoincare.bourBufferedSphere_capEuler
+#check @SmoothPoincare.bourBufferedSphere_cap_ae
+#print axioms SmoothPoincare.bourBufferedSphere_cap_ae
+#check @SmoothPoincare.bourBufferedSphere_chart_volume
+#print axioms SmoothPoincare.bourBufferedSphere_chart_volume
+#check @SmoothPoincare.bourBufferedSphere_closedEuler
+#print axioms SmoothPoincare.bourBufferedSphere_closedEuler
+#check @SmoothPoincare.bourBufferedSphere_exists_radialFrame
+#print axioms SmoothPoincare.bourBufferedSphere_exists_radialFrame
+#check @SmoothPoincare.bourBufferedSphere_native_volume
+#print axioms SmoothPoincare.bourBufferedSphere_native_volume
+#check @SmoothPoincare.bourBufferedSphere_radialProjection
+#print axioms SmoothPoincare.bourBufferedSphere_radialProjection

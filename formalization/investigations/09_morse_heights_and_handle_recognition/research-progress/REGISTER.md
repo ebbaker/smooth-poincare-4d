@@ -1,5 +1,9 @@
 # Morse heights and handle recognition · Progress register
 
+## Edition 07 · Returned HMP attachment · 27 November 2026
+
+**SP4-FORM-HEIGHT-ED07-E01 · FOT-E54.** The supported shrink gives smooth forward and inverse product collar maps, both complete attaching marks and the handle adjunction. Its inverse puts the old disk-framed meridian entirely in the old annulus $1<|w|<2$. The smooth comparison uses the same rounding in transported coordinates. The remaining Figure 3 supplier is the realized relative lower and upper cancellation with its rounded boundary restrictions, including the product map on the $D$ filling. [Proof](../notes/E54_RELATIVE_TRACE.md) · [Assessment](../../reviews/ED07_E54_RELATIVE_TRACE_WIDENED_SWITCH_AND_CAP.md) · [Verification](../../research-progress/handoffs/ED07_E54_VERIFICATION_20261127.md)
+
 ## Edition 07 · Explicit framed meridian on the returned lower boundary · 27 November 2026
 
 **SP4-FORM-HEIGHT-ED07-E01 · FOT-E53.** The standard lower product has the complete thick strand, the meridian, its spanning disk, all inverse parameters and integral winding zero. On a supplied actual residual tube with its radius-two chart margin, the ambient isotopy shrinks all normal disk parameters to 1/8 of their original size, with a smooth inverse and fixed exterior. Protected relative transport carries both retained belts through the three upper factors and both orderings. Identifying the Figure 3 diagram and the relative cancellation maps with their smooth traces is the remaining geometric supplier. [Geometric derivation](../notes/E53_HMP_RELATIVE.md) · [Assessment](../../reviews/ED07_E53_GEOMETRIC_INSTANCES_AND_FIXED_WIDTH.md) · [Verification](../../research-progress/handoffs/ED07_E53_VERIFICATION_20261127.md)

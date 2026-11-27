@@ -1,5 +1,7 @@
 # Lean Blueprint
 
+**Edition 07 · FOT-E54 · 27 November 2026.** The wider native switch exceeds the entry budget. The returned HMP tube admits a relative trace comparison and the capped Euclidean core has a directly computed Euler integral. [Assessment](../investigations/reviews/ED07_E54_RELATIVE_TRACE_WIDENED_SWITCH_AND_CAP.md) · [Verification](../investigations/research-progress/handoffs/ED07_E54_VERIFICATION_20261127.md)
+
 **27 November 2026 · Edition 07, FOT-E53.** The exact long-cuff width-1/16 trial exceeds both signed energy budgets. The marked meridian, two positive round caps and one buffered Euclidean truncation have geometric realizations. [Assessment](../investigations/reviews/ED07_E53_GEOMETRIC_INSTANCES_AND_FIXED_WIDTH.md) · [Public verification](../investigations/research-progress/handoffs/ED07_E53_VERIFICATION_20261127.md)
 
 **27 November 2026 · Edition 07 proof milestone E52.** The current public proof and geometric dependencies are recorded in the [E52 assessment](../investigations/reviews/ED07_E52_MARKED_CUTS_AND_CLOSED_CAPS.md) and [verification](../investigations/research-progress/handoffs/ED07_E52_VERIFICATION_20261127.md).

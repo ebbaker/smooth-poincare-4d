@@ -284,4 +284,13 @@ import SmoothPoincare.Variational.BourBufferedTruncation
 import SmoothPoincare.Variational.BourVariablePolarCap
 import SmoothPoincare.Variational.RoundCutGeometricCap
 
+-- Edition 07 widened switch and buffered cap.
+import SmoothPoincare.Heights.HMPRelativeTrace
+import SmoothPoincare.IntrinsicEntry.WidenedPauseStrip
+import SmoothPoincare.Variational.BourBufferedCapWarp
+import SmoothPoincare.Variational.BourBufferedCapFrame
+import SmoothPoincare.Variational.BourMeasuredBufferedCap
+import SmoothPoincare.Variational.BourBufferedCapCurvature
+import SmoothPoincare.Variational.BourBufferedCapEuler
+
 /-! # Public imports for fixed-type descent, immersed recognition, marked cuts and Bour attainment -/

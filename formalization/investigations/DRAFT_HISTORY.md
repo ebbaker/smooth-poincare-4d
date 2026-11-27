@@ -1,5 +1,7 @@
 # Overall formalization milestones
 
+- **27 November 2026 · FOT-E54.** The wider native switch exceeds the entry budget. The returned HMP tube admits a relative trace comparison and the capped Euclidean core has a directly computed Euler integral. [Assessment](reviews/ED07_E54_RELATIVE_TRACE_WIDENED_SWITCH_AND_CAP.md) · [Verification](research-progress/handoffs/ED07_E54_VERIFICATION_20261127.md)
+
 - **27 November 2026 · FOT-E53.** The pause-strip lower bound excludes the original long-cuff trial, with both complete closed signed costs above $17689\pi^2/1250$. Integrated the HMP meridian chart, physical round cap form and marked whole-core model. [Assessment](reviews/ED07_E53_GEOMETRIC_INSTANCES_AND_FIXED_WIDTH.md) · [Verification](research-progress/handoffs/ED07_E53_VERIFICATION_20261127.md)
 
 - **27 November 2026 · FOT-E52.** Verified integral separator degree, the marked closing, same-domain three-cuff sign, inclusive and weighted Robin cap comparisons, attained minimality and the closed-cap Euler identity. E and S remain separate open obligations. [Assessment](reviews/ED07_E52_MARKED_CUTS_AND_CLOSED_CAPS.md) · [Verification](research-progress/handoffs/ED07_E52_VERIFICATION_20261127.md)

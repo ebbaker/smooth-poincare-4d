@@ -1,5 +1,9 @@
 # Intrinsic entry from marked exteriors · Live register
 
+## Edition 07 · The widened native switch · 27 November 2026
+
+**SP4-FORM-ENTRY-ED07-E01 · FOT-E54.** On the unchanged marked ends the width-$1/15$ replacement has each closed chiral cost above $(34656/3125)\pi^2$ in the formal comparison, with the physical jet and complete signed ledger supplied by the owner derivation. The independent 64-cell calculation gives $(36504/3125)\pi^2$. Both this metric and the original width-$1/16$ metric exceed budget. The closed scalar sign remains unresolved on each. [Proof](../notes/E54_WIDENED_SWITCH.md) · [Assessment](../../reviews/ED07_E54_RELATIVE_TRACE_WIDENED_SWITCH_AND_CAP.md) · [Verification](../../research-progress/handoffs/ED07_E54_VERIFICATION_20261127.md)
+
 ## Edition 07 · The actual width-1/16 trial exceeds budget · 27 November 2026
 
 **SP4-FORM-ENTRY-ED07-E01 · FOT-E53.** For the original long-cuff harmonic marking and both prescribed switches, the pause strip forces each complete chiral band cost above $17689\pi^2/2500$ and each closed signed cost above $17689\pi^2/1250$ when the full certified floor 133 is retained. Thus entry fails for this metric at any closed sign. The 40-cell certificate, Hilbert–Schmidt normalization and strip-to-closed implication have formal checks. Physical chart/jet identification still uses the scientific derivation. The independent original Rayleigh test retains all three funnel responses. The full-footprint stretch and integrated upper estimates give a finite upper bound on both complete costs. [Geometric derivation](../notes/E53_FIXED_WIDTH.md) · [Assessment](../../reviews/ED07_E53_GEOMETRIC_INSTANCES_AND_FIXED_WIDTH.md) · [Verification](../../research-progress/handoffs/ED07_E53_VERIFICATION_20261127.md)

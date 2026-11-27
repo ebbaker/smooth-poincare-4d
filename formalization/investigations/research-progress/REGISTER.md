@@ -1,5 +1,15 @@
 # Overall formalization progress
 
+## Edition 07 · FOT-E54 · 27 November 2026
+
+| Parent task | Checked result and remaining supplier |
+| --- | --- |
+| FOT-E37.E · Universal positive subcritical entry | Open. The wider $1/15$ switch on the original long-cuff marking also exceeds the $8\pi^2$ budget in each closed chirality. The closed Rayleigh signs on the two excluded metrics remain separate open spectral questions. |
+| FOT-E37.S · Recognition of every entered type | Open. The HMP relative shrink transports the complete attachment and meridian through both collar directions and the handle adjunction. The upper $D^*$ comparison and the actual cancellation restrictions on the marked diagram remain. |
+| Fixed-type attainment X | For the specified Euclidean core the measured cap and the entire capped sphere both have Euler integral $16\pi^2$. Nonflat X still requires a source embedding of the connected core and all end buffers, shell estimates, topology and the marked positive exterior return. |
+
+[Assessment](../reviews/ED07_E54_RELATIVE_TRACE_WIDENED_SWITCH_AND_CAP.md) · [Public types and axiom checks](handoffs/ED07_E54_VERIFICATION_20261127.md) · [Continuation](../continuation-notes/AFTER_E54_RELATIVE_TRACE_AND_PHYSICAL_CAP_20261127.md)
+
 ## Edition 07 · FOT-E53 · 27 November 2026
 
 | Parent task | Checked progress and scientific scope |

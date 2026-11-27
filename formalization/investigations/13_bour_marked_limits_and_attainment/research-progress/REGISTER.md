@@ -1,5 +1,9 @@
 # Bour marked limits and attainment · Progress register
 
+## Edition 07 · Measured cap on the complete Euclidean core · 27 November 2026
+
+**SP4-FORM-BML-ED07-E01 · FOT-E54.** For every $0<r<b$ the actual metric has radial density $2\pi^2f^3\,ds$, a smooth angular radius and the full warped curvature tensor in an oriented radial-first frame. The Euler integral equals $16\pi^2$ on the external cap and on the same closed sphere. On a nonflat flow extraction the marked core, all buffers, cutoff and topology require their own common source. [Proof](../notes/E54_PHYSICAL_EULER.md) · [Assessment](../../reviews/ED07_E54_RELATIVE_TRACE_WIDENED_SWITCH_AND_CAP.md) · [Verification](../../research-progress/handoffs/ED07_E54_VERIFICATION_20261127.md)
+
 ## Edition 07 · One entire buffered truncation and its polar metric · 27 November 2026
 
 **SP4-FORM-BML-ED07-E01 · FOT-E53.** The Euclidean pointed control now has an explicitly marked smooth capped carrier with Euler characteristic two, a flat shell across both buffers and a round pole. In polar coordinates the radial metric and positive arclength derivative are computed on the physical chart. General variable profiles have Euler contribution $16\pi^2$ with the physical frame/volume and endpoint conditions. Nonflat normalized cutoffs need differentiated ALE jets, volume and connected buffered topology on the same source. [Geometric derivation](../notes/E53_BUFFERED_TRUNCATION.md) · [Assessment](../../reviews/ED07_E53_GEOMETRIC_INSTANCES_AND_FIXED_WIDTH.md) · [Verification](../../research-progress/handoffs/ED07_E53_VERIFICATION_20261127.md)

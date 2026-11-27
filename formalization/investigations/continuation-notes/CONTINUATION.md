@@ -1,8 +1,10 @@
 # Continuing the formalization program
 
-**Current Edition 07 · FOT-E53, 27 November 2026.** The stated long-cuff switch fails both strict energy tests. Continue with the marked HMP geometry, a changed entry trial, attained cut or nonflat buffered supplier on the indicated carrier. [Dated handoff](AFTER_E53_GEOMETRIC_INSTANCES_20261127.md) · [Assessment](../reviews/ED07_E53_GEOMETRIC_INSTANCES_AND_FIXED_WIDTH.md) · [Owner register](../research-progress/REGISTER.md)
+**Current Edition 07 · FOT-E54, 27 November 2026.** Continue on the upper $D^*$ cancellation, a curvature-reducing entry candidate, or the actual nonflat marked extraction. [Dated handoff](AFTER_E54_RELATIVE_TRACE_AND_PHYSICAL_CAP_20261127.md) · [Assessment](../reviews/ED07_E54_RELATIVE_TRACE_WIDENED_SWITCH_AND_CAP.md) · [Sole register](../research-progress/REGISTER.md)
 
-**Current Edition 07 · FOT-E52, 27 November 2026.** Continue from the HMP marked gluing, the symmetric width-1/16 test, physical round-cut smoothing and the closed-cap exhaustion. [Dated handoff and pasteable prompt](AFTER_E52_MARKED_CUTS_AND_CLOSED_CAPS_20261127.md) · [Assessment](../reviews/ED07_E52_MARKED_CUTS_AND_CLOSED_CAPS.md) · [Owner register](../research-progress/REGISTER.md)
+**Edition 07 · FOT-E53, 27 November 2026.** The stated long-cuff switch fails both strict energy tests. Continue with the marked HMP geometry, a changed entry trial, attained cut or nonflat buffered supplier on the indicated carrier. [Dated handoff](AFTER_E53_GEOMETRIC_INSTANCES_20261127.md) · [Assessment](../reviews/ED07_E53_GEOMETRIC_INSTANCES_AND_FIXED_WIDTH.md) · [Owner register](../research-progress/REGISTER.md)
+
+**Edition 07 · FOT-E52, 27 November 2026.** Continue from the HMP marked gluing, the symmetric width-1/16 test, physical round-cut smoothing and the closed-cap exhaustion. [Dated handoff and pasteable prompt](AFTER_E52_MARKED_CUTS_AND_CLOSED_CAPS_20261127.md) · [Assessment](../reviews/ED07_E52_MARKED_CUTS_AND_CLOSED_CAPS.md) · [Owner register](../research-progress/REGISTER.md)
 
 **FOT-E51 · 26 November 2026.** One common harmonic realization now bounds the metric and trace-free Ricci in $W^{2,6}$ at both stationary scales, given Peters and the flat scalar estimate. On a fixed positive-parameter stationary pointed limit, finite scalar-square energy and the physical volume and completeness hypotheses force scalar flatness. [E51 handoff](AFTER_E51_COUPLED_INTERIOR_AND_POINTED_SCALAR_20261126.md)
 
