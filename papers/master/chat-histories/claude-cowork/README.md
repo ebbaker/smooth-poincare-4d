@@ -94,7 +94,20 @@ therefore one read short, and
      [Where the first-order and marked-cut tools can work in the broader program](../../brainstorm/notes/claude/USES_OF_THE_FIRST_ORDER_AND_MARKED_CUT_TOOLS_20261126.md),
      with its
      [checks](../../brainstorm/notes/claude/USES_OF_THE_FIRST_ORDER_AND_MARKED_CUT_TOOLS_20261126_checks/README.md)
-     (three scripts, 39 checks). Nothing was committed.
+     (three scripts, 39 checks). In a fourth turn Edward asked for a new
+     sub-investigation for the recommended direction, set up by the
+     repository's setup workflow as a parent with child folders. The session
+     created
+     [investigation 08, cut geometry and chirality](../../../investigations-1/08_cut_geometry_and_chirality/README.md),
+     with its overview, plan, register, continuation prompts, five
+     high-level child READMEs and an initial
+     [manuscript](../../../investigations-1/08_cut_geometry_and_chirality/manuscript/README.md),
+     appended ten bibliography entries with a
+     [source record](../../../../references/claude/SOURCE_NOTES_CUT_GEOMETRY_20261126.md),
+     and added one line to the collection index, one registry line to the
+     manuscript build tool and a section on Claude model routing to the
+     setup workflow. The session did not commit; Edward committed the
+     earlier turns' work himself before the fourth turn.
    - *Session.* A Claude Cowork cloud session in project Smooth Poincare
      Conjecture 4d with Claude Fable 5.2 (`claude-fable-5-2`, reasoning effort
      max per the session's configuration), started 26 November 2026 at 16:18

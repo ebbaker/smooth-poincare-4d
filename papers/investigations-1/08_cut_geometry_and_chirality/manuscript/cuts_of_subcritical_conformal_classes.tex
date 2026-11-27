@@ -1,0 +1,934 @@
+% Cuts of subcritical conformal classes on homotopy four-spheres.
+% Initial draft prepared for Edward B. Baker III by Claude (Anthropic, model
+% claude-fable-5-2, Cowork session, reasoning effort max as configured),
+% 26 November 2026 (America/New_York), at repository state 841d606, from
+% papers/master/brainstorm/notes/claude/USES_OF_THE_FIRST_ORDER_AND_MARKED_CUT_TOOLS_20261126.md
+% and its checks. Requested by the author when this investigation was set up.
+% No independent reading. Results quoted from other manuscripts of the
+% program are working theorems of those manuscripts and are used as stated.
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\Ric}{Ric}
+\DeclareMathOperator{\Rm}{Rm}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\curl}{curl}
+\DeclareMathOperator{\Hess}{Hess}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cT}{\mathcal T}
+\title{Cuts of subcritical conformal classes\\on homotopy four-spheres}
+\author{Edward B. Baker III}
+\date{Working manuscript, 26 November 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+A positive conformal class on a smooth homotopy four-sphere whose chiral
+Weyl energy is below \(8\pi^2\) has a representative with positive scalar
+curvature and positive second elementary function of the Schouten tensor.
+We study the closed hypersurfaces of such a class. The difference of the
+two chiral energies of either side of a hypersurface equals
+\(12\pi^2\) times the eta invariant of its conformal structure plus the
+integral over it of the trace-free second fundamental form paired with the
+magnetic part of the Weyl tensor. Every umbilic hypersurface carries a
+metric of positive scalar curvature, and its eta invariant is less than
+\(2/3\) in absolute value. Combined with a doubling inequality these facts
+determine which levels of a handle presentation can be reflection seams:
+apart from three-spheres, a seam is an \(S^1\times S^2\) with one side of
+energy at least \(16\pi^2/3\), and a tube with an umbilic boundary has a
+sphere or a projective plane as its core. For circle-symmetric closings
+of one tube we give the energy as a one-dimensional functional and show
+that they produce only the standard sphere. A Morse function whose level
+sets have scalar curvature bounded below has no critical point of index
+two, which recognizes the sphere; a presentation of the trivial group
+shows that the diffeomorphism types of the levels cannot replace this
+condition. We end with the statements that would have to be proved for
+these results to settle the smooth four-dimensional Poincar\'e conjecture
+along the lines of the companion papers.
+\end{abstract}
+
+\section{Introduction}
+
+Let \(M\) be a closed, connected, oriented smooth manifold homotopy
+equivalent to \(S^4\). Freedman's theorem identifies its homeomorphism
+type \cite{Freedman1982}. We ask for a diffeomorphism. In Riemannian
+dimension four the Hodge star splits real two-forms into two rank-three
+bundles, and the Weyl curvature acts on them by trace-free symmetric
+endomorphisms \(W^\pm\) \cite{AHS1978}. For a measurable set \(U\) and a
+metric \(g\) put
+\[
+ E_\pm(g;U)=\int_U|W^\pm_g|_{\rm HS}^2\,dV_g,\qquad
+ e(g)=E_+(g;M)=E_-(g;M),\qquad T=4\pi^2 .
+\]
+The closed energies agree because their difference is \(12\pi^2\tau(M)=0\).
+Each chiral measure is conformally invariant. On a region with boundary
+the two integrals differ, and that difference is the first subject of
+this paper.
+
+The program of the companion papers \cite{Baker2026ChiralMaster} rests on
+three facts. A class of positive Yamabe type with \(e<T\) lives on the
+standard sphere, by the theorem of Chang, Gursky and Yang
+\cite{ChangGurskyYang2003}. A positive class with \(e<2T\) has a
+representative with \(R>0\) and \(\sigma_2>0\) for the Schouten tensor
+\cite{ChangGurskyYang2002PositiveRicci}; we call such a class
+\emph{entering} and such a representative an \emph{entering gauge}. On a
+smooth type that carries an entering class the infimum of \(e\) over
+positive classes is attained by a smooth Bach-flat class, according to a
+working theorem \cite{Baker2026BourAttainment}. The conjecture then
+reduces to two statements \cite{Baker2026ChiralMaster}: every smooth
+homotopy four-sphere carries an entering class, and
+
+\medskip
+\noindent\textup{(S)}\quad
+\emph{a smooth homotopy four-sphere with a metric satisfying \(R>0\) and
+\(|Z|^2<R^2/12\) is diffeomorphic to \(S^4\).}
+\medskip
+
+\noindent
+Here \(Z\) is the trace-free Ricci tensor. Neither statement is known.
+
+The constructions tried so far for the first statement assemble a class
+from pieces along hypersurfaces, and the arguments proposed for the second
+look for a hypersurface along which the manifold can be recognized. Both
+uses go back to the collars of \cite{Baker2026CollarProgram} and to the
+marked handle cuts of \cite{Baker2026HandleCuts}. This paper studies the
+hypersurface itself. We call a closed connected embedded hypersurface a
+\emph{cut}. In a homotopy sphere a cut \(\Sigma\) is two-sided and
+separates, \(M=V\cup_\Sigma V'\). The conformal class induces on
+\(\Sigma\) a conformal metric \([h]\) and a trace-free second fundamental
+form \(B^\circ\); the cut is \emph{umbilic} when \(B^\circ=0\).
+Our results are the following.
+
+\emph{The ledger} (Section~\ref{sec:ledger}). For a compact oriented
+\(V\) with boundary \(\Sigma\),
+\[
+ E_+(V)-E_-(V)=12\pi^2\bigl(\tau(V)+\eta(\Sigma,[h])\bigr)
+ +\oint_\Sigma\langle B^\circ,\curl B^\circ\rangle\,d\sigma ,
+\]
+and the last integrand is, up to sign, the pairing of \(B^\circ\) with the
+magnetic part of \(W\). Hence \(e\ge12\pi^2|\eta(\Sigma,[h])|\) for an
+umbilic cut of a homotopy sphere, a bound on the full energy of a collar
+by one chiral energy and data on its two ends, and an exact value for
+classes that are half conformally flat on each side of an umbilic cut.
+
+\emph{Positivity} (Section~\ref{sec:positivity}). In an entering gauge
+every hypersurface satisfies \(R_\Sigma=P+\tfrac23H^2-|B^\circ|^2\) with
+\(P>0\). An umbilic cut therefore has positive scalar curvature. This
+restricts its topology, turns the recognition theorem of
+\cite{Baker2026HandleCuts} into a statement about entering classes, and
+excludes conformal reflections whose fixed set carries no metric of
+positive scalar curvature.
+
+\emph{Seams and tubes} (Sections~\ref{sec:seams} and~\ref{sec:tube}).
+The doubling inequality of \cite{Baker2026ChiralMaster} and a homology
+count give the list of levels \(\#_kS^1\times S^2\) that can be umbilic
+with positive doubles in an entering class: \(k\le1\). The case \(k=1\)
+is the closing of one tube. For circle-symmetric tubes we compute the
+energy and observe that the resulting manifolds are standard.
+
+\emph{Sweepouts} (Section~\ref{sec:sweepouts}). The scalar curvature of
+the level sets of a Morse function is bounded below near a critical point
+exactly when a condition on the Hessian holds, and the condition fails
+at every critical point of index two. A homotopy four-sphere is standard
+if and only if it has a Morse function whose levels have scalar curvature
+bounded below. The levels of a suitable Morse function on the homotopy
+sphere of any balanced presentation of the trivial group are connected
+sums of \(S^1\times S^2\), so the topology of the levels carries no such
+information.
+
+\emph{Free cuts} (Section~\ref{sec:free}). An umbilic three-sphere with
+round conformal structure splits the energy of an entering class over a
+connected sum, and at an attained minimum on a nonstandard type one of
+its sides is conformally flat.
+
+Section~\ref{sec:open} states what remains. The floating-point
+computations that accompany Section~\ref{sec:tube} are supporting
+evidence only and are identified as such. This is a working manuscript;
+its proofs have not been read independently.
+
+\section{Setting}\label{sec:setting}
+
+\subsection{Curvature}
+The curvature operator of the unit sphere is the identity. For a metric
+\(g\) in dimension four let \(Z=\Ric-\tfrac R4g\) and let
+\(A=\tfrac12(\Ric-\tfrac R6g)\) be the Schouten tensor, so that
+\[
+ \sigma_2(A)=\tfrac12\bigl((\tr A)^2-|A|^2\bigr)
+ =\tfrac1{96}R^2-\tfrac18|Z|^2 .
+\]
+On a closed oriented four-manifold
+\begin{equation}\label{eq:cgb}
+ 8\pi^2\chi=E_++E_-+4\int\sigma_2(A)\,dV,\qquad
+ 12\pi^2\tau=E_+-E_- .
+\end{equation}
+The first Pontryagin form of the Levi-Civita connection is
+\(p_1=(4\pi^2)^{-1}(|W^+|^2-|W^-|^2)\,dV\).
+
+\begin{lemma}[Entering gauge]\label{lem:gauge}
+Let \([g]\) be a class of positive Yamabe type on a homotopy four-sphere
+with \(e<2T\). Then \([g]\) contains a metric with \(R>0\) and
+\(|Z|^2<R^2/12\). For such a metric and every unit vector \(\nu\),
+\[
+ 0<\Ric(\nu,\nu)<\tfrac R2 .
+\]
+\end{lemma}
+\begin{proof}
+By \eqref{eq:cgb} with \(\chi=2\), \(\int\sigma_2(A)=4\pi^2-\tfrac e2>0\).
+The theorem of Chang, Gursky and Yang
+\cite{ChangGurskyYang2002PositiveRicci} gives a conformal metric with
+\(\sigma_2(A)>0\) and \(R>0\) at every point. A trace-free symmetric form
+on a four-dimensional Euclidean space has eigenvalues \(z_i\) with
+\(\sum z_i=0\), so \(z_1^2\le3\sum_{i>1}z_i^2\) and
+\(|z_1|\le\tfrac{\sqrt3}{2}|Z|\). Hence
+\(|Z(\nu,\nu)|\le\tfrac{\sqrt3}{2}|Z|<\tfrac R4\), and
+\(\Ric(\nu,\nu)=\tfrac R4+Z(\nu,\nu)\) lies strictly between \(0\) and
+\(\tfrac R2\).
+\end{proof}
+
+We write \(P(\nu)=R-2\Ric(\nu,\nu)\). In an entering gauge \(P>0\) on the
+unit sphere bundle. In terms of the Einstein tensor \(G\), \(P=-2G(\nu,\nu)\).
+
+\subsection{Cuts}
+Let \(\Sigma\) be a hypersurface with unit normal \(\nu\), induced metric
+\(h\), second fundamental form \(B(X,Y)=g(\nabla_X\nu,Y)\), mean curvature
+\(H=\tr_hB\) and \(B^\circ=B-\tfrac H3h\). Under \(\hat g=e^{2u}g\),
+\begin{equation}\label{eq:conf-B}
+ \hat B=e^{u}\bigl(B+(\partial_\nu u)\,h\bigr),\qquad
+ \hat B^\circ=e^{u}B^\circ .
+\end{equation}
+Thus umbilicity is a property of the class, and an umbilic hypersurface is
+totally geodesic for a suitable representative. The pair
+\(([h],B^\circ)\) is the \emph{Cauchy datum} of the cut. A \emph{free cut}
+is an umbilic cut diffeomorphic to \(S^3\) whose conformal structure is
+the round one. For an umbilic cut the two representatives that make it
+totally geodesic on \(V\) and on \(V'\) glue to a reflection-invariant
+metric of class \(C^{1,1}\) on the double \(\cD V=V\cup_\Sigma\overline V\);
+we call the cut a \emph{seam with positive doubles} if the doubled classes
+on \(\cD V\) and \(\cD V'\) have positive Yamabe type. For a region \(V\)
+we write \(e_V=\tfrac12(E_+(V)+E_-(V))\).
+
+Along a hypersurface the Weyl tensor has an electric and a magnetic part,
+the trace-free symmetric forms on \(T\Sigma\)
+\[
+ \mathcal E(X,Y)=W(X,\nu,Y,\nu),\qquad
+ \mathcal H_{ij}=\tfrac12\varepsilon_i{}^{kl}W_{klj\nu} .
+\]
+
+\section{The chirality ledger}\label{sec:ledger}
+
+For a symmetric form \(B\) on an oriented Riemannian three-manifold let
+\((\curl B)_{il}=\varepsilon_l{}^{jk}\nabla_jB_{ik}\). In a local oriented
+orthonormal coframe \(e^i\) with \(B_i=B_{ij}e^j\),
+\begin{equation}\label{eq:curl-form}
+ \langle B,\curl B\rangle\,d\sigma=\sum_iB_i\wedge(d^\nabla B)_i ,
+\end{equation}
+where \(d^\nabla\) is the covariant exterior derivative on
+\(T^*\Sigma\)-valued forms.
+
+\begin{theorem}[Ledger]\label{thm:ledger}
+Let \((V,g)\) be a compact oriented Riemannian four-manifold with
+boundary \(\Sigma\), oriented by the outward normal followed by an oriented
+frame of \(\Sigma\). Let \(\eta(\Sigma,h)\) be the eta invariant of the
+odd signature operator, normalized so that the signature theorem of
+Atiyah, Patodi and Singer \cite{AtiyahPatodiSinger1975I} reads
+\(\tau(V)=\tfrac13\int_Vp_1-\eta(\Sigma,h)\) for metrics that are products
+near the boundary. Then
+\begin{equation}\label{eq:ledger}
+ E_+(V)-E_-(V)=12\pi^2\bigl(\tau(V)+\eta(\Sigma,h)\bigr)+\cT(\Sigma),
+ \qquad
+ \cT(\Sigma)=\oint_\Sigma\langle B^\circ,\curl B^\circ\rangle\,d\sigma .
+\end{equation}
+The term \(\cT(\Sigma)\) depends only on the Cauchy datum
+\(([h],B^\circ)\), and \(\eta(\Sigma,h)\) depends only on \([h]\).
+\end{theorem}
+\begin{proof}
+Let \(g_0\) be a metric on \(V\) that induces \(h\) on \(\Sigma\) and is
+a product near \(\Sigma\). Let \(\omega\) and \(\omega_0\) be the
+Levi-Civita connections of \(g\) and \(g_0\) on \(TV\), and
+\(\theta=\omega-\omega_0\). With \(\Omega_t\) the curvature of
+\(\omega_0+t\theta\), \(\tfrac{d}{dt}\tr\Omega_t^2=2\,d\tr(\theta\wedge\Omega_t)\)
+and \(\Omega_t=\Omega_0+t\,d_0\theta+t^2\theta\wedge\theta\), so
+\[
+ p_1(g)-p_1(g_0)=d\,Tp_1,\qquad
+ Tp_1=-\frac1{8\pi^2}\Bigl(2\tr(\theta\wedge\Omega_0)
+ +\tr(\theta\wedge d_0\theta)+\tfrac23\tr\theta^3\Bigr).
+\]
+Restrict to \(\Sigma\) and use a frame \((e_1,e_2,e_3,\nu)\). Along
+\(\Sigma\) the connection \(\omega_0\) is the Levi-Civita connection of
+\(h\) on \(T\Sigma\) and is trivial on the normal line, so \(\Omega_0\)
+has only tangential entries, while
+\(\theta(X)e_i=-B(X,e_i)\nu\) and \(\theta(X)\nu=B(X,e_i)e_i\) for
+\(X\) tangent to \(\Sigma\). Thus \(\theta\) is off-diagonal with
+\(\theta^\nu{}_i=-B_i\), \(\theta^i{}_\nu=B_i\). The traces
+\(\tr(\theta\wedge\Omega_0)\) and \(\tr\theta^3\) vanish, and
+\(\tr(\theta\wedge d_0\theta)=-2\sum_iB_i\wedge(d^\nabla B)_i\). By
+Stokes' theorem and \eqref{eq:curl-form},
+\[
+ \int_Vp_1(g)=\int_Vp_1(g_0)+\frac1{4\pi^2}\oint_\Sigma
+ \langle B,\curl B\rangle\,d\sigma .
+\]
+The signature theorem for \(g_0\) and \(p_1=(4\pi^2)^{-1}(|W^+|^2-|W^-|^2)dV\)
+give \eqref{eq:ledger} with \(B\) in place of \(B^\circ\). Write
+\(B=B^\circ+\tfrac H3h\). The cross terms in
+\(\langle B,\curl B\rangle\) are \(\tfrac H3\varepsilon^{ijk}\nabla_jB^\circ_{ik}\)
+and \(\tfrac13\varepsilon^{lji}B^\circ_{il}\nabla_jH\), which vanish by
+symmetry, and the term quadratic in \(H\) vanishes as well. So
+\(\langle B,\curl B\rangle=\langle B^\circ,\curl B^\circ\rangle\).
+
+Under \(\hat g=e^{2u}g\) the one-forms \(B^\circ_i\) taken in the rescaled
+frame are unchanged by \eqref{eq:conf-B}, and the connection forms of
+\(h\) change by \(u_ie^j-u_je^i\). The resulting change of
+\(\sum_iB^\circ_i\wedge(d^\nabla B^\circ)_i\) is
+\(u_iB^\circ_i\wedge B^\circ_j\wedge e^j-u_jB^\circ_i\wedge B^\circ_j\wedge e^i\),
+and both terms vanish because \(B^\circ_j\wedge e^j=0\). So \(\cT\) is
+conformally invariant. Finally let \(h_1=e^{2w}h_0\) and apply
+\eqref{eq:ledger} to \(\Sigma\times[0,1]\) with a metric conformal to
+\(dt^2+h_0\) that induces \(h_0\) and \(h_1\) on the two ends. The
+reflection \(t\mapsto-t\) is an orientation-reversing isometry of the
+product, so \(|W^+|=|W^-|\) pointwise; the ends are umbilic; and the
+signature is zero. Hence \(\eta(\Sigma,h_1)=\eta(\Sigma,h_0)\).
+\end{proof}
+
+The conformal invariance of \(\eta\) is due to Atiyah, Patodi and Singer
+\cite{AtiyahPatodiSinger1975II}; the proof above recovers it. We have not
+tested the sign of \(\cT\) in \eqref{eq:ledger} on an example. No
+statement below depends on it.
+
+\begin{proposition}[Pointwise form]\label{prop:EH}
+Along any hypersurface, for a suitable choice of the sign of
+\(\mathcal H\),
+\[
+ |W^\pm|^2_{\rm HS}=|\mathcal E\pm\mathcal H|^2,\qquad
+ |W^+|^2-|W^-|^2=4\langle\mathcal E,\mathcal H\rangle,\qquad
+ \mathcal H=\pm\tfrac12\bigl(\curl B^\circ+(\curl B^\circ)^{T}\bigr).
+\]
+In particular \(|W^+|=|W^-|\) at every point of an umbilic hypersurface,
+and \(\cT(\Sigma)=\pm\oint_\Sigma\langle B^\circ,\mathcal H\rangle\,d\sigma\).
+\end{proposition}
+\begin{proof}
+The two-forms \(\tfrac1{\sqrt2}(e^i\wedge\nu^\flat\pm\tfrac12\varepsilon_{ijk}e^j\wedge e^k)\)
+are orthonormal bases of \(\Lambda^\pm\). The Weyl tensor is determined by
+\(\mathcal E\) and \(\mathcal H\) through
+\(W_{i\nu j\nu}=\mathcal E_{ij}\),
+\(W_{ijk\nu}=\varepsilon_{ij}{}^{l}\mathcal H_{lk}\) and
+\(W_{ijkl}=-\varepsilon_{ijm}\varepsilon_{kln}\mathcal E^{mn}\), and in the
+bases above \(W^\pm\) has matrix \(\mathcal E\pm\mathcal H\) up to the
+choice of orientation. The Codazzi equation expresses
+\(\nabla_jB_{ik}-\nabla_kB_{ij}\) by \(\Rm(e_j,e_k,\nu,e_i)\). The
+Schouten part of this curvature component is of the form
+\(h_{ij}a_k-h_{ik}a_j\) and contributes to \(\curl B\) an antisymmetric
+form, as does the trace part of \(B\). The symmetric part of
+\(\curl B^\circ\) is therefore \(\pm\mathcal H\).
+\end{proof}
+
+\begin{corollary}[Eta bound]\label{cor:eta}
+Let \(\Sigma\) be an umbilic cut of a class on a homotopy four-sphere
+\(M=V\cup_\Sigma V'\). Then
+\(E_+(V)-E_-(V)=12\pi^2\eta(\Sigma,[h])=-(E_+(V')-E_-(V'))\) and
+\[
+ e\ \ge\ 12\pi^2\,|\eta(\Sigma,[h])|=3T\,|\eta(\Sigma,[h])| .
+\]
+In an entering class \(|\eta(\Sigma,[h])|<\tfrac23\) for every umbilic
+cut, and \(|\eta|<\tfrac13\) if \(e<T\).
+\end{corollary}
+\begin{proof}
+The intersection form of \(V\) vanishes because \(H_2(M)=0\), so
+\(\tau(V)=\tau(V')=0\), and \(\cT=0\). If \(\eta\ge0\) then
+\(E_+(V)\ge12\pi^2\eta\); otherwise \(E_+(V')\ge12\pi^2|\eta|\). In both
+cases \(e=E_+(V)+E_+(V')\ge12\pi^2|\eta|\).
+\end{proof}
+
+For the quotient of the round sphere by a finite subgroup \(\Gamma\) of
+\(SU(2)\) acting by left multiplication, the fixed point formula gives
+\(|\eta|=|\Gamma|^{-1}\sum_{\gamma\ne1}\cot^2(\theta_\gamma/2)\) with
+\(\cos\theta_\gamma=\operatorname{Re}\gamma\): the values are \(0\),
+\(\tfrac29\), \(\tfrac12\), \(\tfrac45\) for the cyclic groups of orders
+two to five, \(\tfrac34\) for the quaternion group and \(\tfrac{49}{36}\)
+for the binary tetrahedral group. The round quaternionic link, for which
+the bound is \(9\pi^2\), is treated by the same formula in
+\cite{Baker2026MarkedNecks}; Corollary~\ref{cor:eta} extends that test to
+an arbitrary conformal structure on an arbitrary umbilic cut.
+
+\begin{corollary}[Collars]\label{cor:collar}
+Let \(C\subset M\) be diffeomorphic to \(\Sigma\times[0,1]\) with ends
+\(\Sigma_0\), \(\Sigma_1\). Then
+\[
+ E_-(C)=E_+(C)-12\pi^2\bigl(\eta(\Sigma_1)-\eta(\Sigma_0)\bigr)
+ -\cT(\Sigma_1)+\cT(\Sigma_0),\qquad
+ |\cT(\Sigma_i)|\le\|B^\circ\|_{L^3(\Sigma_i)}\,\|\curl B^\circ\|_{L^{3/2}(\Sigma_i)} ,
+\]
+where \(\Sigma_0\) carries the orientation it has as a slice. In
+particular a bound for one chiral energy of \(C\), together with the
+conformal structures and the trace-free second fundamental forms of its
+two ends, bounds the other.
+\end{corollary}
+
+Both norms in the estimate are conformally invariant. The corollary
+supplies, on a strip whose ends are close to the same umbilic model, the
+bound for \(W^-\) that an argument controlling \(W^+\) by spinors
+requires \cite{Baker2026DiracTransmission}.
+
+\begin{corollary}[Half-flat pieces]\label{cor:halfflat}
+If \(W^+=0\) on \(V\) and \(\partial V\) is umbilic, then
+\(e_V=6\pi^2|\tau(V)+\eta(\partial V)|\). A class on a homotopy four-sphere
+with \(W^-=0\) on one side of an umbilic cut and \(W^+=0\) on the other
+has \(e=12\pi^2|\eta(\Sigma,[h])|\).
+\end{corollary}
+
+\begin{remark}[Cauchy data]\label{rem:cauchy}
+LeBrun showed that real-analytic data \(([h],B^\circ)\) on a
+three-manifold bound a self-dual conformal metric on a collar, unique as
+a germ \cite{LeBrun1982HSpace}, and Biquard characterized the data near
+the round sphere that bound a self-dual conformal metric on the whole
+ball \cite{Biquard2002Autoduales}. For the first-order constructions of
+\cite{Baker2026TwistorSections} this identifies the datum that two patches
+with \(W^+=0\) must share along a collar, and shows that the existence of
+each patch is a global condition on that datum.
+\end{remark}
+
+\section{Positivity of cuts}\label{sec:positivity}
+
+\begin{theorem}[Positivity]\label{thm:positivity}
+Let \(g\) be an entering gauge and \(\Sigma\) a hypersurface with unit
+normal \(\nu\). Then
+\begin{equation}\label{eq:gauss}
+ R_\Sigma=P(\nu)+\tfrac23H^2-|B^\circ|^2,\qquad P(\nu)>0 .
+\end{equation}
+Consequently:
+\begin{enumerate}
+\item if \(|B^\circ|^2\le\tfrac23H^2\), that is \(\sigma_2(B)\ge0\), then
+the induced metric has positive scalar curvature;
+\item every umbilic hypersurface of an entering class carries a metric of
+positive scalar curvature;
+\item if \(\Sigma\) is closed and
+\(\|B^\circ\|_{L^3(\Sigma)}^2<\inf_{u\ne0}\int_\Sigma\bigl(8|\nabla u|^2
++(P+\tfrac23H^2)u^2\bigr)\big/\|u\|_{L^6}^2\), then \(\Sigma\) has positive
+Yamabe type.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+The Gauss equation is \(R_\Sigma=R-2\Ric(\nu,\nu)+H^2-|B|^2\), and
+\(H^2-|B|^2=\tfrac23H^2-|B^\circ|^2=2\sigma_2(B)\). Lemma~\ref{lem:gauge}
+gives \(P>0\). This proves \eqref{eq:gauss} and (1). An umbilic
+hypersurface is umbilic for the entering gauge by \eqref{eq:conf-B}, which
+gives (2). For (3), the conformal Laplacian \(-8\Delta+R_\Sigma\) of
+\(\Sigma\) has quadratic form
+\(\int(8|\nabla u|^2+(P+\tfrac23H^2)u^2)-\int|B^\circ|^2u^2\), and
+\(\int|B^\circ|^2u^2\le\|B^\circ\|_{L^3}^2\|u\|_{L^6}^2\).
+\end{proof}
+
+\begin{remark}\label{rem:two-convex}
+If \(\sigma_1(B)>0\) and \(\sigma_2(B)>0\) then the sum of any two
+principal curvatures is positive, because
+\(\partial\sigma_2/\partial\kappa_i=\sigma_1-\kappa_i\) is positive on the
+cone \(\{\sigma_1>0,\sigma_2>0\}\). In dimension three the hypersurfaces of
+case (1) with \(H>0\) are therefore two-convex.
+\end{remark}
+
+\begin{corollary}[Topology of umbilic cuts]\label{cor:topology}
+A closed umbilic hypersurface of an entering class is a connected sum of
+spherical space forms and copies of \(S^1\times S^2\). If it is the
+boundary of a tubular neighbourhood of an embedded closed connected surface
+\(F\), then \(F\) is a sphere or a projective plane.
+\end{corollary}
+\begin{proof}
+The first statement is the classification of closed orientable
+three-manifolds of positive scalar curvature
+\cite{GromovLawson1980Surgery,Perelman2003Surgery}. The boundary of a
+tubular neighbourhood of \(F\) is an orientable circle bundle over \(F\).
+If \(\chi(F)\le0\) it is irreducible with infinite fundamental group and
+is not on the list.
+\end{proof}
+
+\begin{corollary}[Recognition at a marked cut]\label{cor:marked}
+Let \(M\) have a reduced mixed presentation with winding row \((1,0)\) in
+the sense of \cite{Baker2026HandleCuts}, with winding-one cut \(Z_a\), and
+let \([g]\) be an entering class on \(M\). If some umbilic hypersurface of
+\([g]\) is diffeomorphic to \(Z_a\), then \(Z_a\cong S^3\) and
+\(M\cong S^4\).
+\end{corollary}
+\begin{proof}
+By Theorem~\ref{thm:positivity}, \(Z_a\) admits positive scalar curvature
+and is in particular dominated by a manifold of positive scalar
+curvature. The mixed-presentation theorem of \cite{Baker2026HandleCuts},
+a working theorem of that manuscript, then gives both conclusions.
+\end{proof}
+
+\begin{corollary}[Conformal reflections]\label{cor:reflection}
+Let \(\rho\) be an orientation-reversing involution of \(M\) whose fixed
+set is a hypersurface \(\Sigma\). If an entering class is
+\(\rho\)-invariant, then \(\Sigma\) admits positive scalar curvature. In
+particular the double of a compact contractible four-manifold whose
+boundary admits no metric of positive scalar curvature has no
+reflection-invariant entering class.
+\end{corollary}
+\begin{proof}
+Averaging a representative gives a \(\rho\)-invariant metric in the class,
+for which the fixed set is totally geodesic. So \(\Sigma\) is umbilic.
+\end{proof}
+
+A generic conformal class has no umbilic hypersurface. Statements (2) and
+the corollaries apply to classes assembled along seams, to invariant
+classes, and to limits in which necks become round; statement (3) is the
+form available for a class that is merely given.
+
+\section{Seams}\label{sec:seams}
+
+We recall the doubling inequality of \cite{Baker2026ChiralMaster}. If
+\(\Sigma=\partial V\) is umbilic, the doubled class on \(\cD V\) satisfies
+\(E_\pm(\cD V)=E_+(V)+E_-(V)=2e_V\), and \(\tau(\cD V)=0\),
+\(\chi(\cD V)=2\chi(V)-\chi(\Sigma)=2\chi(V)\). Gursky's inequalities for
+positive classes \cite{Gursky1998WeylFunctional}, applied to smooth
+approximations of the doubled class, give
+\begin{equation}\label{eq:doubling}
+ e_V\ge T\chi(V)\ \ \text{if } b_1(\cD V)>0,\qquad
+ e_V\ge\tfrac23T\chi(V)\ \ \text{if } b_2(\cD V)>0,
+\end{equation}
+whenever the doubled class has positive Yamabe type.
+
+\begin{lemma}\label{lem:homology}
+Let \(\Sigma\cong\#_kS^1\times S^2\) be a cut of a homotopy four-sphere,
+\(M=V\cup_\Sigma V'\), and \(a=b_1(V)\). Then \(b_1(V')=k-a\),
+\(b_2(V)=k-a\), \(b_3(V)=0\), \(\chi(V)=1+k-2a\), and
+\(b_1(\cD V)=a\), \(b_2(\cD V)=2(k-a)\).
+\end{lemma}
+\begin{proof}
+The Mayer--Vietoris sequence of \(M=V\cup V'\) and the vanishing of
+\(H_j(M)\) for \(0<j<4\) give \(H_j(\Sigma)\cong H_j(V)\oplus H_j(V')\)
+for \(j=1,2\) and \(H_3(V)=0\). So \(H_1(\Sigma)\to H_1(V)\) is onto with
+kernel of rank \(k-a\). The kernels of \(H_1(\Sigma)\to H_1(V)\) and
+\(H_2(\Sigma)\to H_2(V)\) are annihilators of each other for the
+intersection pairing of \(\Sigma\), over the rationals; so the second
+kernel has rank \(a\) and \(b_2(V)=k-a\). For the double, the
+Mayer--Vietoris map \(H_1(\Sigma)\to H_1(V)\oplus H_1(V)\) has rank \(a\),
+which gives \(b_1(\cD V)=a\), and \(\chi(\cD V)=2\chi(V)\) gives \(b_2\).
+\end{proof}
+
+\begin{theorem}[Seam atlas]\label{thm:atlas}
+Let \(\Sigma\cong\#_kS^1\times S^2\) be a seam with positive doubles of a
+class on a homotopy four-sphere, and \(a=b_1(V)\).
+\begin{enumerate}
+\item If \(0<a<k\) then \(e\ge2T\).
+\item If \(a\in\{0,k\}\) and \(k\ge1\) then \(e\ge\tfrac23T(1+k)\).
+\end{enumerate}
+Hence an entering class has such a seam only for \(k\le1\), and for
+\(k=1\) the side with \(b_2=1\) has \(e_V\ge\tfrac43T\) and the other side
+has \(e_{V'}<\tfrac23T\).
+\end{theorem}
+\begin{proof}
+In case (1), \(b_1(\cD V)=a>0\) and \(b_1(\cD V')=k-a>0\), so by
+\eqref{eq:doubling} \(e_V\ge T\chi(V)\) and \(e_{V'}\ge T\chi(V')\), and
+\(\chi(V)+\chi(V')=2\). If one of the Euler characteristics is negative
+the other is at least three, so in all cases \(e=e_V+e_{V'}\ge2T\). In
+case (2) with \(a=0\), \(b_2(\cD V)=2k>0\) and \(\chi(V)=1+k\), so
+\(e\ge e_V\ge\tfrac23T(1+k)\); the case \(a=k\) is symmetric. Both bounds
+are at least \(2T\) when \(k\ge2\).
+\end{proof}
+
+The same argument shows that the Euler characteristics of the two sides of
+any seam with positive doubles of an entering class are \((0,2)\),
+\((1,1)\) or \((2,0)\), and that in the case \((1,1)\) one side is a
+rational homology ball. In the language of \cite{Baker2026HandleCuts}:
+the middle level of a presentation with \(k\ge2\) two-handles and no
+one-handles is never such a seam; in a mixed presentation the
+winding-zero cut never is; and the winding-one cut is, as a seam, a
+three-sphere by Corollary~\ref{cor:marked}. Without the positivity of the
+doubles the weaker bound \(e_V\ge T\chi(V)-Y(\cD V)^2/96\) of
+\cite{Baker2026ChiralMaster} replaces \eqref{eq:doubling}.
+
+\section{One tube}\label{sec:tube}
+
+\subsection{The form}
+By Theorem~\ref{thm:atlas} a class assembled along seams with positive
+doubles has, apart from three-spheres, only seams \(S^1\times S^2\), and
+each of them splits \(M=X\cup_\Sigma T\) with \(\chi(T)=2\), \(b_2(T)=1\)
+and \(\chi(X)=0\). The model is \(T=S^2\times D^2\): then \(K=S^2\times\{0\}\)
+is a two-knot with exterior \(X\), and \(M\) is the result of surgery on a
+circle in the closed manifold \(N=X\cup S^1\times D^3\). We call this the
+\emph{one-tube form}. The two framings of the surgery differ by the Gluck
+twist. A presentation with a split zero-framed unknot among its lower
+two-handles, as in the terminal diagrams of \cite{Baker2026HandleCuts},
+exhibits \(M\) in this form.
+
+\subsection{Circle-symmetric tubes}
+Let \(\Gamma\subset SO(4)\) act freely on \(S^3\), let \(\varphi\) be an
+isometry of \(S^3/\Gamma\) of finite order \(\tau\) with a fixed point
+\(p\), and let
+\[
+ N=\bigl(\mathbb R\times S^3/\Gamma\bigr)\big/\bigl((t+\ell,y)\sim(t,\varphi(y))\bigr)
+\]
+with the product metric, which is conformally flat. Let \(C\) be the
+circle through \(p\), let \(r\) be the distance to \(p\) in \(S^3/\Gamma\),
+and let \(\theta\) be smaller than the injectivity radius at \(p\). The
+differential of \(\varphi\) at \(p\) is a rotation of angle \(\alpha\),
+\(\tau\alpha\in2\pi\mathbb Z\), about an axis. Dividing the metric by
+\(\sin^2r\) gives on \(\{r\ge\theta\}\), near the tube, the twisted product
+\begin{equation}\label{eq:exterior}
+ a_{\rm ext}^2\,d\psi^2+ds^2+d\vartheta^2+\sin^2\vartheta\,(d\phi-\beta\,d\psi)^2,
+ \qquad a_{\rm ext}=\frac{\ell}{2\pi\sin r},\quad ds=\frac{dr}{\sin r},
+\end{equation}
+where \(\psi=2\pi t/\ell\), \((\vartheta,\phi)\) are polar coordinates on
+the unit normal sphere about the axis, and \(\beta=\alpha/2\pi+n\) for an
+integer \(n\) that depends on the choice of the coordinate \(\phi\). The
+two-dimensional factor has curvature \(-1\). We close the tube by a cap
+\(S^2\times D^2\) with the metric
+\begin{equation}\label{eq:cap}
+ g=ds^2+a(s)^2d\psi^2+d\vartheta^2+\sin^2\vartheta\,(d\phi+b(s)\,d\psi)^2,
+ \qquad 0\le s\le S,
+\end{equation}
+and write \(K=-a''/a\) and \(F=b'/a\). The metric is \(C^{1,1}\) at \(s=0\)
+when \(a(0)=0\), \(a'(0)=1\) and \(b(0)=0\) with \(F\) bounded.
+
+\begin{proposition}[Energy of a cap]\label{prop:cap}
+For the metric \eqref{eq:cap},
+\(R=2(K+1)-\tfrac12F^2\sin^2\vartheta\) and
+\begin{equation}\label{eq:cap-energy}
+ e_{\rm cap}=\tfrac12\int|W|^2_{\rm HS}\,dV
+ =\pi^2\int_0^Sa\Bigl[\tfrac43\bigl(K+1-\tfrac23F^2\bigr)^2+4F^2
+ +\tfrac{16}{135}F^4+\tfrac23F'^2\Bigr]ds .
+\end{equation}
+The cap glues to the exterior \eqref{eq:exterior} at radius \(\theta\) to a
+\(C^{1,1}\) metric exactly when
+\[
+ a(S)=\frac{\ell}{2\pi\sin\theta},\qquad a'(S)=-\frac{\ell}{2\pi}\cot\theta,
+ \qquad F(S)=0,\qquad\Bigl|\int_0^SFa\,ds\Bigr|=|\beta| .
+\]
+The glued class has \(e=e_{\rm cap}\), and it has positive Yamabe type if
+\(R\ge0\) on the cap with strict inequality somewhere.
+\end{proposition}
+\begin{proof}
+The formulas for \(R\) and for the integral of \(|W|^2\) over the fibre
+are a direct computation with the metric \eqref{eq:cap}. They were
+verified symbolically for arbitrary \(a\) and \(b\), and tested against
+the Gauss--Bonnet theorem on two closed bundles with varying \(F\); the
+script is recorded with the note cited in the manuscript's source record.
+The matching conditions are the continuity of the metric and of its first
+derivatives; the connection of the exterior is flat, which gives
+\(F(S)=0\), and its holonomy gives \(b(S)=\pm\beta\). The exterior is
+conformally flat and has \(R=0\) in the gauge \eqref{eq:exterior}, so the
+energy is that of the cap, and a metric with \(R\ge0\) that is positive
+somewhere has positive Yamabe type.
+\end{proof}
+
+For \(F=0\) the functional \eqref{eq:cap-energy} is
+\(\tfrac43\pi^2\int a(1+K)^2ds\): the cap is the product of the unit
+sphere with a surface of revolution, which is conformally flat exactly
+where \(K=-1\).
+
+\begin{proposition}\label{prop:tube-bounds}
+\begin{enumerate}
+\item For \(\theta=\pi/2\) the seam is totally geodesic, and every cap
+with positive double has \(e_{\rm cap}\ge\tfrac43T\). Equality holds for
+\(\ell=2\pi\), \(\beta=0\), \(a=\sin s\): the cap is half of the product
+of two unit spheres.
+\item The manifold obtained by closing the tube with a cap
+\eqref{eq:cap} carries an effective circle action, which on the cap rotates
+the disc with weight \(\tau\) and the sphere with weight \(\tau\beta\). If it
+is a homotopy four-sphere it is diffeomorphic to \(S^4\).
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+(1) The cap has \(\chi=2\) and its double is an \(S^2\)-bundle over
+\(S^2\) with \(b_2=2\), so \eqref{eq:doubling} applies; the product of two
+unit spheres has \(E_\pm=\tfrac83T\). (2) The flow \(t\mapsto t+s\) on the
+exterior has period \(\tau\ell\). In the coordinates of \eqref{eq:exterior}
+it is \((\psi,\phi)\mapsto(\psi+2\pi s/\ell,\phi+2\pi\beta s/\ell)\), which
+preserves \eqref{eq:cap} and extends over \(s=0\). Over one period the
+disc turns \(\tau\) times and the sphere \(\tau\beta=\tau\alpha/2\pi+n\tau\)
+times, and these integers are coprime when \(\varphi\) has order exactly
+\(\tau\) at \(p\). A homotopy four-sphere with an effective locally smooth
+circle action is standard by the work of Fintushel and Pao
+\cite{Fintushel1976Circle,Pao1978Nonlinear} together with the Poincar\'e
+conjecture for the orbit space \cite{Perelman2003Surgery}.
+\end{proof}
+
+When \(S^3/\Gamma\) is the \(\tau\)-fold cyclic branched cover of a knot
+and \(\varphi\) generates the covering group, \(N\setminus\) tube is the
+exterior of the \(\tau\)-twist-spun knot by Zeeman's theorem
+\cite{Zeeman1965Twisting}, \(\alpha=2\pi/\tau\), and the two framings give
+the branched twist spins with weights \((\tau,1)\) and \((\tau,1-\tau)\)
+in the sense of \cite{Fukuda2018Gluck}.
+
+\begin{remark}[Supporting computations]\label{rem:numerics}
+Direct minimization of \eqref{eq:cap-energy} over piecewise profiles gives
+admissible caps with \(R>0\) and the following values of \(e/\pi^2\); the
+wall \(2T\) is \(8\). Untwisted caps on \(S^1\times S^3\):
+\(5.3333\) at \(\theta=\pi/2\), then \(7.4196\), \(7.8475\), \(7.9526\) at
+\(\theta=\pi/3,\pi/4,\pi/5\). The flat exterior
+\(S^1\times(\mathbb R^3\setminus B)\): above \(8\) at every radius tried.
+Two-twist-spun trefoil: \(7.6271\). Two-twist-spun figure-eight knot:
+\(7.8025\). Three-twist-spun trefoil: \(7.8928\), and \(7.9736\) for the
+other framing. Four-twist-spun trefoil: \(7.9875\) and \(8.1098\).
+Five-twist-spun trefoil: \(8.0043\). These are floating-point upper
+bounds within the ansatz \eqref{eq:cap}, not certified enclosures, and the
+values within a few hundredths of the wall decide nothing. They show that
+the one-tube form occurs inside the band with a knotted core, and that the
+framing changes the cost.
+\end{remark}
+
+By Proposition~\ref{prop:tube-bounds}(2) no class of this kind lives on a
+nonstandard type. The same holds for the Fuchsian exteriors of
+\cite{Baker2026ChiralMaster} with one tube over a hemisphere, which are
+invariant under the rotations of the sphere factor about the tube.
+
+\section{Sweepouts}\label{sec:sweepouts}
+
+\subsection{Level sets near a critical point}
+For a symmetric form \(Q\) on \(\mathbb R^4\) with eigenvalues
+\(q_1,\dots,q_4\) and unit eigenvectors \(e_i\), let \(s_i(Q)\) be the
+second elementary symmetric function of the three eigenvalues other than
+\(q_i\).
+
+\begin{lemma}\label{lem:restriction}
+For every unit vector \(\nu=\sum\nu_ie_i\),
+\(\ \sigma_2\bigl(Q|_{\nu^\perp}\bigr)=\sum_i\nu_i^2\,s_i(Q)\).
+\end{lemma}
+\begin{proof}
+\(\sigma_2(Q|_{\nu^\perp})=\tfrac12\bigl[(\tr Q-Q(\nu,\nu))^2-(|Q|^2-2|Q\nu|^2+Q(\nu,\nu)^2)\bigr]
+=\sigma_2(Q)-\tr Q\,Q(\nu,\nu)+|Q\nu|^2\), and
+\(\sigma_2(Q)-q_i(\tr Q-q_i)=s_i(Q)\).
+\end{proof}
+
+\begin{theorem}[No index two]\label{thm:index}
+Let \(f\) be a Morse function on a Riemannian four-manifold, \(p\) a
+critical point, \(Q=\Hess f(p)\). For a regular point \(x\) let
+\(R_\Sigma(x)\) be the scalar curvature at \(x\) of the level set through
+\(x\) with its induced metric.
+\begin{enumerate}
+\item If \(s_i(Q)<0\) for some \(i\), then \(R_\Sigma\) is unbounded below
+near \(p\).
+\item If \(s_i(Q)>0\) for all \(i\), then \(R_\Sigma(x)\to+\infty\) as
+\(x\to p\).
+\item The inequalities \(s_i(Q)\ge0\), \(i=1,\dots,4\), hold at every
+critical point of index \(0\) or \(4\), fail at every critical point of
+index \(2\), and hold at a critical point of index \(1\) or \(3\) exactly
+when the eigenvalue \(q\) of exceptional sign satisfies
+\(|q|^{-1}\ge|q_j|^{-1}+|q_k|^{-1}\) for every pair of the other three.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+In normal coordinates at \(p\), \(\nabla f(x)=Qx+O(|x|^2)\) and
+\(\Hess f(x)=Q+O(|x|)\). The level set through \(x\) has unit normal
+\(\nu=Qx/|Qx|+O(|x|)\) and second fundamental form
+\(\pm\Hess f|_{\nu^\perp}/|\nabla f|\). By the Gauss equation and
+Lemma~\ref{lem:restriction},
+\[
+ R_\Sigma(x)=R-2\Ric(\nu,\nu)+\frac{2}{|Qx|^2}\Bigl(\sum_i\nu_i^2s_i(Q)+O(|x|)\Bigr).
+\]
+Along \(x=te_i\) the normal tends to \(\pm e_i\) and the bracket to
+\(s_i(Q)\); this gives (1). If all \(s_i\) are positive the bracket is
+bounded below by a positive constant near \(p\), which gives (2). For (3):
+if all eigenvalues have one sign every \(s_i\) is positive. Let the index
+be two, with eigenvalues \(\alpha_1,\alpha_2>0>-\beta_1,-\beta_2\). The
+four conditions are \(\beta_1\beta_2\ge\alpha_i(\beta_1+\beta_2)\) and
+\(\alpha_1\alpha_2\ge\beta_j(\alpha_1+\alpha_2)\). The first two give
+\(\alpha_i<\min\beta\) and the last two \(\beta_j<\min\alpha\), which is
+absurd. For index one with eigenvalues \(\alpha_1,\alpha_2,\alpha_3>0>-\beta\),
+omitting \(-\beta\) gives a positive value and omitting \(\alpha_i\) gives
+\(\alpha_j\alpha_k-\beta(\alpha_j+\alpha_k)\). Index three is the same
+after changing the sign of \(f\).
+\end{proof}
+
+\begin{corollary}[Recognition by a sweepout]\label{cor:sweepout}
+Let \(M\) be a closed connected oriented four-manifold with a metric and a
+Morse function whose regular level sets have scalar curvature bounded
+below. Then \(M\) is diffeomorphic to \(S^4\) or to a connected sum of
+copies of \(S^1\times S^3\). For a smooth homotopy four-sphere \(M\) the
+following are equivalent: \(M\cong S^4\); for some metric there is a Morse
+function whose regular levels have scalar curvature bounded below; for
+some metric there is a Morse function whose regular levels have positive
+scalar curvature.
+\end{corollary}
+\begin{proof}
+By Theorem~\ref{thm:index} the function has no critical point of index
+two. Rearranging, \(M\) is the union of the handles of index at most one
+and the handles of index at least three, two handlebodies
+\(\natural_kS^1\times B^3\) glued along their boundary. By the theorem of
+Laudenbach and Po\'enaru \cite{LaudenbachPoenaru1972Handlebodies}, and by
+Cerf's theorem \cite{Cerf1968Gamma4} for \(k=0\), every diffeomorphism of
+the boundary extends over one side, so \(M\) is the double. The height
+function of the round sphere gives the converse.
+\end{proof}
+
+In an entering gauge \(R_\Sigma=P+2\sigma_2(B)\) with \(P>0\), so the
+hypothesis holds for a Morse function whose levels satisfy
+\(\sigma_2(B)\ge0\). Statement \textup{(S)} is therefore equivalent to the
+existence of such a function for the metrics it concerns. The condition
+cannot be weakened to a condition on the diffeomorphism type of the levels:
+
+\begin{proposition}[Presentations]\label{prop:presentation}
+Let \(\langle x_1,\dots,x_\ell\mid r_1,\dots,r_\ell\rangle\) be a
+presentation of the trivial group and let \(M_P\) be obtained from
+\(\#_\ell S^1\times S^3\) by surgery on disjoint embedded circles in the
+classes \(r_1,\dots,r_\ell\). Then \(M_P\) is a smooth homotopy
+four-sphere, and it has a Morse function whose regular level sets are all
+connected and diffeomorphic to connected sums of copies of
+\(S^1\times S^2\).
+\end{proposition}
+\begin{proof}
+Write \(\#_\ell S^1\times S^3=N_0\cup N_1\), two copies of
+\(\natural_\ell S^1\times B^3\), and isotope the circles into
+\(\partial N_0\). Surgery on a circle \(K_i\) adds to the handles of the
+manifold a two-handle along \(K_i\) and a two-handle along a zero-framed
+meridian \(U_i\) of \(K_i\). So \(M_P=N_0\cup\{U_i,K_i\}\cup N_1\), with
+fundamental group \(\langle x\mid r\rangle=1\) and Euler characteristic
+two. Attach the handles in the order \(U_1,\dots,U_\ell,K_1,\dots,K_\ell\).
+The \(U_i\) are unknots in \(\partial N_0\), bounding disjoint discs
+\(D_i\), and \(K_i\) meets \(D_i\) once and is disjoint from the other
+discs. After the \(U\)-handles the level is
+\(\#_{2\ell}S^1\times S^2\), and the union of \(D_i\) with the core of the
+\(i\)-th handle is a sphere \(S_i\) in it that meets \(K_i\) once and is
+disjoint from the other \(K_j\). A knot that meets a sphere once is a
+circle factor of an \(S^1\times S^2\) summand, and surgery on it with any
+framing removes that summand. So the levels after \(K_1,\dots,K_\ell\) are
+\(\#_{2\ell-j}S^1\times S^2\), by the uniqueness of the prime
+decomposition, and the spheres \(S_j\), \(j>i\), survive the surgery on
+\(K_i\). The levels inside \(N_0\) and \(N_1\) are of the same kind.
+\end{proof}
+
+When the presentation is trivial under the moves of Andrews and Curtis,
+\(M_P\) is standard; in general this is not known
+\cite{GompfScharlemannThompson2010}. So the diffeomorphism types of all
+levels of a Morse function, even in a prescribed order, do not recognize
+the sphere with present knowledge, while the geometry of the levels near
+the critical points of index two does, by Theorem~\ref{thm:index}. The
+recognition theorem of \cite{Baker2026HandleCuts} concerns presentations
+with two two-handles, where one intermediate level remains.
+
+\subsection{The minimal cut}
+An entering gauge has positive Ricci curvature. By Zhou's theorem
+\cite{Zhou2015MinMax} the min-max hypersurface of the fundamental class is
+then orientable of index one with multiplicity one, or a double cover of a
+stable one-sided hypersurface; the second case does not occur in a
+homotopy sphere, where every closed hypersurface is two-sided.
+
+\begin{proposition}\label{prop:index-one}
+Let \(\Sigma\) be a closed two-sided minimal hypersurface of Morse index
+at most one in a Riemannian four-manifold with \(R>0\). Then the conformal
+Laplacian \(-8\Delta+R_\Sigma\) of \(\Sigma\) has at most one nonpositive
+eigenvalue.
+\end{proposition}
+\begin{proof}
+The Jacobi operator is \(J=-\Delta-(\Ric(\nu,\nu)+|B|^2)\), and the Gauss
+equation with \(H=0\) gives \(\Ric(\nu,\nu)+|B|^2=\tfrac12(R-R_\Sigma+|B|^2)\).
+Hence, as quadratic forms,
+\(-8\Delta+R_\Sigma\ge2J+R+|B|^2\). The right side is positive on a
+subspace of codimension at most one.
+\end{proof}
+
+\section{Free cuts}\label{sec:free}
+
+\begin{proposition}[Descent along a free cut]\label{prop:free}
+Let \(\Sigma\) be a free cut of a class \([g]\) on a homotopy four-sphere
+\(M=V\cup_\Sigma V'\), and let \(\widehat V\), \(\widehat V'\) be the
+closed manifolds obtained by capping each side with a round ball along
+\(\Sigma\).
+\begin{enumerate}
+\item \(M\cong\widehat V\#\widehat V'\), each summand carries a class with
+\(e(\widehat V)=e_V\), \(e(\widehat V')=e_{V'}\), and \(e(M)=e_V+e_{V'}\).
+\item Suppose both capped classes have positive Yamabe type and \(e(M)<2T\).
+Then one summand is diffeomorphic to \(S^4\) and \(M\) is diffeomorphic to
+the other; if \(e_V<T\) and \(e_{V'}<T\) then \(M\cong S^4\).
+\item Suppose in addition that \(M\) is nonstandard and that \([g]\)
+attains the infimum of \(e\) over positive classes on \(M\). Then one side
+of \(\Sigma\) is conformally flat.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+Choose representatives for which \(\Sigma\) is totally geodesic with the
+unit round metric. A round hemisphere glues to each side with a
+\(C^{1,1}\) metric, so the capped classes have the stated energies after
+smoothing, and \(e_V+e_{V'}=e(M)\) because the cut has measure zero. The
+connected sum of the capped manifolds is \(V\cup V'\) glued by a
+diffeomorphism of \(S^3\), which is isotopic to the original gluing by
+Cerf's theorem \cite{Cerf1968Gamma4}. This is (1). In (2) one of the
+energies is below \(T\), and that summand is standard by
+\cite{ChangGurskyYang2003}. In (3) let \(\widehat V\) be the standard
+summand; then \(\widehat V'\cong M\) carries a positive class of energy
+\(e_{V'}=e(M)-e_V\), which is at least \(e(M)\) by minimality. So
+\(E_\pm(V)=0\).
+\end{proof}
+
+A conformally flat simply connected side with free boundary develops onto
+a round ball. So at an attained minimum on a nonstandard type every free
+cut bounds a round ball on one side: such a minimizer is indecomposable
+along free cuts. This is the one-cut descent of
+\cite{Baker2026TwistorSections} in the case where the cap costs nothing.
+
+\section{Outstanding problems}\label{sec:open}
+
+The conjecture follows from entry on every type and statement \textup{(S)}
+\cite{Baker2026ChiralMaster}. The results above bear on both, and each of
+them stops at a definite point.
+
+\emph{1. The sweepout problem.} By Corollary~\ref{cor:sweepout},
+\textup{(S)} is the statement that a homotopy four-sphere with a metric
+satisfying \(R>0\) and \(|Z|^2<R^2/12\) has, for some metric, a Morse
+function whose levels have scalar curvature bounded below. The natural
+candidate is the arrival time of a mean-convex flow from the minimal cut
+into each side. Its singular leaves modelled on \(S^3\) and
+\(S^2\times\mathbb R\) are of the type allowed by Theorem~\ref{thm:index};
+those modelled on \(S^1\times\mathbb R^2\) are the events of index two.
+Whether the condition \(\sigma_2(A)>0\) excludes them, or forces them to
+cancel, is open. Proposition~\ref{prop:presentation} shows that a
+cancellation cannot be read from the topology of the leaves, and
+Proposition~\ref{prop:tube-bounds} gives metrics on the standard sphere,
+with the tube boundary as a natural cut, on which the question can be
+tested. Flows that preserve two-convexity are known under hypotheses on
+the ambient curvature that an entering gauge need not satisfy.
+
+\emph{2. Positivity of the minimal cut.} Is the min-max hypersurface of an
+entering gauge of positive Yamabe type? Proposition~\ref{prop:index-one}
+leaves one eigenvalue. A positive answer would place the cut on the list
+of Corollary~\ref{cor:topology}.
+
+\emph{3. The exterior gap.} By Theorem~\ref{thm:atlas} the exterior \(X\)
+of a tube with umbilic boundary and positive doubles has the rational
+homology of a circle and \(e_X<\tfrac23T\) in an entering class. Is
+\(X\cup S^2\times D^2\) then standard? For \(e_X=0\) the double of \(X\) is
+a conformally flat manifold of positive type, and the answer is positive
+in the cases covered by Proposition~\ref{prop:tube-bounds}.
+
+\emph{4. Seams that are not umbilic.} The doubling inequality, the eta
+bound and Proposition~\ref{prop:free} use an umbilic cut. A quantitative
+version would bound the loss in each by a conformally invariant norm of
+\(B^\circ\) and of the deviation of \([h]\) from a model, as
+Corollary~\ref{cor:collar} does for the chirality. For
+Proposition~\ref{prop:free} this is the cost of a cap for a prescribed
+Cauchy datum, and Remark~\ref{rem:cauchy} indicates the relevant theory.
+
+\emph{5. Tubes without symmetry.} Proposition~\ref{prop:tube-bounds}(2)
+removes every circle-symmetric tube from the search for entry on a
+nonstandard type. The remaining candidates have exteriors with nonabelian
+holonomy on the normal sphere, exteriors that carry Weyl energy, or tubes
+around a projective plane, whose seam is a quotient of the three-sphere by
+the quaternion group with a conformal structure of eta invariant below
+\(\tfrac23\) in absolute value; the round structure has \(\tfrac34\).
+
+\emph{6. The ledger.} The sign in \eqref{eq:ledger} should be fixed on a
+Berger sphere in the complex projective plane. The first variation of
+\(\eta\) is a multiple of the Cotton tensor, which should give
+Corollary~\ref{cor:eta} in a neighbourhood of each model. On the necks of
+\cite{Baker2026BourAttainment} the hypotheses of
+Corollary~\ref{cor:collar} have to be compared with the control actually
+available there.
+
+\emph{7. Certification.} The values in Remark~\ref{rem:numerics} are not
+enclosures. One certified example with a knotted core would give a
+rigorous entering class on the sphere that is not a perturbation of the
+round one.
+
+\bibliographystyle{unsrturl}
+\bibliography{references}
+\end{document}

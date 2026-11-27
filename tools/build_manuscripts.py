@@ -53,6 +53,9 @@ MANUSCRIPTS = {
     '06_bour_flow_and_fixed_type_attainment': (
         'investigations-1', 'fixed_type_attainment.tex'
     ),
+    '08_cut_geometry_and_chirality': (
+        'investigations-1', 'cuts_of_subcritical_conformal_classes.tex'
+    ),
     '01_generalized_isothermal_coordinates': ('initial-investigations', 'generalized_isothermal_wave_metrics.tex'),
     '02_chiral_descent_and_double_copy': ('initial-investigations', 'chiral_connection_descent_and_double_copy.tex'),
 }
