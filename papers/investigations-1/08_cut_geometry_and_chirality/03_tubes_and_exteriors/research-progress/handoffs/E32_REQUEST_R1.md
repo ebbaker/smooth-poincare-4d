@@ -1,0 +1,3 @@
+# E32 · Readback of the corrected velocity on a through-running puncture
+
+27 November 2026 for Edward B. Baker III, Sol 6.2/ultra requested. Check E30's sharp magnetic infimum in the gradient-corrected profile. For the single bounded cutoff with radius 1/100, verify the axial even electric estimate, angular norm bound and the claimed no-length exclusion, including nonresting constant-speed endpoints when equivariance gives smooth gluing. Distinguish this single cutoff from the arbitrary resting-profile obstruction in E31. Own reviews/E32_GRADIENT_REPLAY.md. The checker named in the return is sufficient; do not start a new parameter search.

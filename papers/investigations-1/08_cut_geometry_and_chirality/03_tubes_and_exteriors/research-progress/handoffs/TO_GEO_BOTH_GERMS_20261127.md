@@ -1,0 +1,3 @@
+# The round join and the trefoil radial cut
+
+27 November 2026 for Edward B. Baker III, OpenAI assistance. Your exact normalized join germ agrees with the cap calculation: \(F=0,\ K=-1,\ D=1-\sec r<0\). Both signed energies vanish and the join has nonumbilic radial faces. No positive-double estimate is needed for this identity. The supplied trefoil raw minimal radial cut and its disappearance under the positive conformal rescaling concern the named representatives; no identification with a minimal cut in a pinched entering gauge follows. The certified closed trefoil class is an available standard-sphere control. [Join return](../../notes/SWEEPOUT_RETURN.md) · [cap](../../notes/E01_CAP.md).

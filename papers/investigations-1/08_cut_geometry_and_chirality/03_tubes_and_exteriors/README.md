@@ -14,8 +14,10 @@
 
 **Ownership.** Owns the cap functional and the one-tube statements. Runs no entry trial; candidates return to 07 and master B02 by handoff.
 
-**State.** Overview, plan, register and continuation note set up; nothing is activated. By the author's instruction this child has no manuscript and no working folders yet; notes, handoffs, numerics and reviews are created on first use as the [setup workflow](../../../../INVESTIGATION_SETUP_WORKFLOW.md) describes. Ready on activation: TUBE-B01, TUBE-E01, TUBE-E02, TUBE-B02.
+**State, 27 November 2026.** The zero-Weyl exterior and its two fillings are classified. The two-twist-spun trefoil is a certified positive subcritical control. A specific [order-seventeen prism exterior](notes/MARKED_PRISM_17.md) has positive double and two homotopy-sphere fillings, with all-length obstructions for localized puncture motions. The general positive-energy recognition question and the unrestricted short-axis quaternionic filling remain open. The [dated continuation](continuation-notes/RESUME_20261127.md) gives the next tests and the [register](research-progress/REGISTER.md) records the scope of each result. This child has no manuscript.
 
 26 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum. Setup baseline `4655e38`.
 
 Continuation note added 27 November 2026 by the same session, for handoff to an Astra/ultra lead with Sol 6.2/ultra helpers.
+
+The continued research identifies the underlying lens-space core and both ordinary orbit fillings in the [marked prism proof](notes/MARKED_LENS_CORE.md). The [signed slice obstruction](reviews/E55_RESOLUTION_REPLAY.md) quantifies which smooth replacements of the short-axis orbifold cap can still qualify. The dated continuation incorporates both results.

@@ -1,0 +1,3 @@
+# GEO-E22 • changing the horizontal shear on the same central orbit
+
+27 November 2026, prepared for Edward B. Baker III with OpenAI Codex, base bc2c1bb and working E06, E16. Requested bounded independent Sol/ultra check. On the same endpoint Berger metric, keep a minimal horizontal shear (b,−b,0) and allow arbitrary b and normal acceleration. Test whether an index-one slice in a Ricci-positive completion can make the boundary defect small by changing only b. Verify the coordinate-function Laplace eigenvalue, the min–max argument for possibly nonconstant Ric(ν,ν), and the two rational thresholds. Write only reviews/BERGER_SHEAR_REPLAY.md. Stop after this single-orbit corollary.

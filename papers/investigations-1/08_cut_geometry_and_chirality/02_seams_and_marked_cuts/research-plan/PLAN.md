@@ -20,3 +20,20 @@
 **Stop.** Only at an end state named in the [continuation note](../continuation-notes/CONTINUATION.md), or at an author decision. A return that changes a statement of the parent manuscript or of another branch is handed off and the work continues. The completion of the rows above is not a stop: they are the first horizon, and the lead adds the next rows as that note describes. This rule was revised on 27 November 2026 at the author's instruction. Results go to the parent lead for the lane decision SP4-CUT-B01 in the [parent plan](../../research-plan/PLAN.md). Numerical work stays within the scope stated in its row.
 
 **Launch.** Use the prompt in this child's [continuation note](../continuation-notes/CONTINUATION.md).
+
+## Activated research, 27 November 2026
+
+The launch's end states apply. B02 chose the whole-side Robin test and B01 chose a marked hemisphere extension. The current work and evidence are in the [register](../research-progress/REGISTER.md). In the following table every E packet is routed to Sol 6.2/ultra when available, with the selected lead retaining B decisions. Each packet stops at a proof, a corrected statement or the stated unresolved input.
+
+| ID | Fixed route and readiness | Output and escalation |
+| --- | --- | --- |
+| E04 | After B02/B01, replay reflection, the four-dimensional Robin form and §8 in the limit of smooth caps. | Sign and strict descent tests. Return missing coercivity to B02. |
+| E05 | After choice of B01 extension, independently obtain the analytic lower bound needed for B03 in a fixed entering gauge. | Exact constants, scopes and marked corollary. Return loss of uniformity to B03. |
+| E06 | After first atlas analysis, apply invariant bounds on finite covers, CGY, integral homology and known spherical embedding constraints. | Remaining cases and thresholds. Return missing geometry to B04. |
+| B04 | Lead, once unrestricted spherical factors survive the first inequalities. Select the next test and organize the residual realization question. | Exact shared-boundary filling criterion, model controls or narrower obstruction. |
+| E07 | On written geometry proofs, replay E02, E04 and E05 by a nonauthor for each. | Signed coefficient, regularity and uniformity readbacks. Reopen any failed claim. |
+| E08 | On written applications, replay E01, E03, E06 and the paired filling criterion by nonauthors. | Exact recognition and atlas readbacks, including a search for missed routes in the reduction. |
+| B05 | After E08C proposed a concrete reducible spherical exception, choose a punctured-lens model with its marked deck map. | Try the proposed exception, then identify a sign, marking, or energy obstruction. |
+| E09 | B05 fixed the round punctured lens and a capped half-disk. | Actual matching, signed budget and Robin sign, or the exact obstruction and next test. |
+| E10 | Test the required opposite endpoint signs by the curvature flux and Dirichlet energy, for the unit base and then constant base curvature. | A checked bound in the stated model. Escalate changes of exterior or fibre metric to B04. |
+| E11 | After the side-group refinement and lens estimates, independently replay the marked, analytic and topological conclusions. | Corrected final wording, inputs for the receiving investigations, and explicit scope of the outstanding realization test. |

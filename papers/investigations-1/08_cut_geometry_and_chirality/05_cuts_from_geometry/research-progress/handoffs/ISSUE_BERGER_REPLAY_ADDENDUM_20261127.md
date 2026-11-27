@@ -1,0 +1,6 @@
+# GEO-E19–E20 • independent reading details
+
+27 November 2026. For Edward B. Baker III, Codex, selected Astra/ultra lead. Source base bc2c1bb; E06 and current working issues. Readers requested as Sol/ultra, bound to one pair of checks each.
+
+- E19: Recheck actual lower and upper signed flux magnitudes from the first and second forms, the identity for one cap obtained by doubling using the quaternionic rotation interchanging the two short axes, Euler normalization 8π²χ=E+ + E− + 4∫σ₂(A). Check the optional continuous E06 family 2<t≤√65/4 and the asserted scope beyond invariant caps. Primary sources include APS I Thm 4.14, CGY equation (0.2), and the local chirality derivation. Write only reviews/BERGER_FLUX_REPLAY.md, compare E16/E17 when present.
+- E20: Recheck E18's explicit closed metric and physical scalar failure, meridian cofactor integral, area of ∂{Re q<z}=(1−z²)I, both polar singularities, continuity/no concentration and fundamental class. Check Zhou/The continuous-to-discrete result with its hypotheses (Ricci sign on the actual failed trial is unknown or fails). If needed give smooth sweepouts by rounding the two radial cones uniformly in area. Write only reviews/BERGER_COMPLETION_REPLAY.md. Distinguish a strict width upper bound on the named failed metric from any width conclusion in a genuinely entering metric.

@@ -1,0 +1,3 @@
+# SP4-CUT-TUBE-E11 · The returned native meridians
+
+27 November 2026 for Edward B. Baker III, OpenAI assistance; Sol 6.2/ultra requested. Inputs bc2c1bb and the five actual quaternion words and marked doubled disks in the slide branch's TO_TUBE_NATIVE_DISK_DOUBLE_20261127.md. Replay the exact meridian angles and turn the framed-connection inequality of this branch into an explicit obstruction on these models, including both lift signs if the geometric framing is unavailable. Test whether the identity closing or known Gluck results supply an entry candidate on an unknown smooth type. Own notes/E11_NATIVE_MERIDIANS.md. Include the genuine smooth/topological scope and the first missing geometric input. No entry trial or new enumeration.

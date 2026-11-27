@@ -1,0 +1,3 @@
+# SP4-CUT-TUBE-E18 · Quaternionic pair topology
+
+27 November 2026, for Edward B. Baker III, requested Sol 6.2/ultra. E18 frozen input is SEAM's B04_PAIRED_FILLING, LED's ROUND_ORBIT_MARKING, and the round S4 conjugation action on symmetric trace-free matrices. Test independently that the exact i/j switch gluing of two copies of the standard RP² disk bundle is that smooth S4 diagram. Further test *every* smooth gluing of two such bundles via the round link isometry representative (Bamler–Kleiner), normalizer of Q8 and disk extension of an axis-preserving permutation. Separate same-kernel and distinct-kernel cases, orientation and group. Use actual primary passages of Price and Bamler–Kleiner. Own notes/E18_QUATERNIONIC_PAIR.md. No claim on a knotted complement.

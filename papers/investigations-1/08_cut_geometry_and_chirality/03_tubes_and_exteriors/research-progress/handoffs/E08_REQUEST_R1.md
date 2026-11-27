@@ -1,0 +1,3 @@
+# SP4-CUT-TUBE-E08 · Independent certificate and cap minimum
+
+27 November 2026, for Edward B. Baker III, OpenAI assistance, requested Sol 6.2/ultra. Input bc2c1bb parent Sections 5–6, original check_02 and notes/E01_CAP.md, E02_VARIATION.md, E06_AREA_MINIMUM.md on completion. Replay E01 certificate, matching/global sign and smoothing. Check variational equations, finite-model comparison, quartic area optimization, flat inequality and thin limits independently. Record exactly the lines and reproducible checks covered in reviews/E08_CAP_REPLAY.md. No shared edits or extra trials. Return unresolved points to B02.

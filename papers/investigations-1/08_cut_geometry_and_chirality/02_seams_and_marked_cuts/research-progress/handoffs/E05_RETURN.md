@@ -1,0 +1,15 @@
+# SP4-CUT-SEAM-E05 · return on frozen request r1
+
+27 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. Requested execution setting GPT-6.2 Sol/ultra. Actual serving model and effort unavailable. Input [request r1](E05_REQUEST_R1.md), working HEAD `bc2c1bbccc1d` and parent TeX SHA-256 `ccb52d6a2548fb8f…`. Proof, theorem replay and primary passage receipts are in [E05_UNIFORM_BENDING.md](../../notes/E05_UNIFORM_BENDING.md).
+
+**Analytical result.** Fix one smooth entering gauge \(g\) and one smooth isometric Euclidean embedding \(F:(M,g)\hookrightarrow\mathbb R^{3+m}\), \(m\ge2\). Put \(p_g=\min_{|\nu|=1}(R-2\operatorname{Ric}(\nu,\nu))>0\) on \(M\), \(K_F=\max_{x,L\in\operatorname{Gr}_3(T_xM)}|\operatorname{tr}_L\mathrm{II}_F|\), and \(b_m=3[((m+3)\omega_{m+3})/(m\omega_m)]^{1/3}\). Brendle's Theorem 1 on \(u^4\), using orthogonal components of the Euclidean mean curvature vector, gives
+\[
+ C(g,F)=\frac{b_m^2}{\max\{2,K_F^2/p_g\}}
+ \ \le\ \inf_{u\ne0}
+ \frac{\int_\Sigma[8|\nabla u|^2+(P+\tfrac23 H^2)u^2]}{\|u\|_6^2}
+\]
+simultaneously for all smooth closed embedded cuts. In particular \(Y(\Sigma,[h])\ge C(g,F)-\|B^\circ\|_3^2\). Both the infimum and the bending norm are conformally invariant for a fixed embedding of the cut into \(M\). One chosen pair certifies a whole conformal class, and all marked isotopy classes simultaneously. The bending norm can vary along an isotopy in a fixed gauge. For families of independently chosen metrics and embeddings a uniform value from the formula follows from a dimension bound and a bound on \(K_F^2/p_g\). The fixed-gauge formula can degenerate when the Euclidean embeddings vary.
+
+**Recognition premise.** Under the [05 working mixed-presentation theorem](../../../../05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/manuscript/recognition_from_marked_handle_cuts.tex), the same \(M\) must come with an actual reduced mixed \((1,1,2,1,1)\) presentation, normalized row \((1,0)\), and original markings with the outgoing gluing transported through the chosen moves. An abstract diffeomorphism of the supplied cut to its actual winding-one \(Z_a\) transports a positive scalar curvature metric, hence supplies PSC domination. A strict bound \(\|B^\circ\|_3^2<C(g,F)\) then gives \(Z_a\cong S^3\) and \(M\cong S^4\) under that working theorem. The cited preprint obstruction for the contractible lower trace checks the \(Z_a\cong S^3\) step. The 04 marked theorem supplies the retained premise for \(M\cong S^4\).
+
+**Lead decision.** E05 supplies the positive lower bound and the conditional implication for B03. The derivation assumes compact smooth positive-definite geometry, a smooth closed embedded cut, and \(P>0\) on the whole unit sphere bundle of an entering gauge. The Euclidean embedding exists by Nash's compact smooth theorem. The remaining recognition inputs are the actual normalized reduced mixed presentation and a cut of its winding-one diffeomorphism type that meets the strict threshold. There is no cut construction in the packet.

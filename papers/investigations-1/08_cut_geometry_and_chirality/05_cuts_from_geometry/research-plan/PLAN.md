@@ -20,3 +20,32 @@
 **Stop.** Only at an end state named in the [continuation note](../continuation-notes/CONTINUATION.md), or at an author decision. A return that changes a statement of the parent manuscript or of another branch is handed off and the work continues. The completion of the rows above is not a stop: they are the first horizon, and the lead adds the next rows as that note describes. This rule was revised on 27 November 2026 at the author's instruction. Results go to the parent lead for the lane decision SP4-CUT-B01 in the [parent plan](../../research-plan/PLAN.md). Numerical work stays within the scope stated in its row.
 
 **Launch.** Use the prompt in this child's [continuation note](../continuation-notes/CONTINUATION.md).
+
+## Activated extensions • 27 November 2026
+
+The opening paragraph describes setup. The [live register](../research-progress/REGISTER.md) and [cut selection](../brainstorm/notes/CUT_SELECTION_20261127.md) record activation. All IDs below have prefix SP4-CUT-GEO. Conceptual work stays with the selected lead. Frozen execution requests give inputs, bounds, evidence, output ownership and escalation.
+
+| ID | Fixed method and dependency | Completion or escalation |
+| --- | --- | --- |
+| E04 | Zhou source and parent index estimate; independent of example | Exact width theorem, remaining scalar sign. [Request](../research-progress/handoffs/ISSUE_20261127.md) |
+| E05 | G6, named examples in the 04 manuscripts | Actual axial and transverse levels and a regular sign test at the inserted births. If profiles are unspecified report the affected levels. [Request](../research-progress/handoffs/ISSUE_20261127.md) |
+| E06 | G3, normal jets and projection off Jacobi ground state | A tested strictly pinched germ, and a one-dimensional sign criterion. Global realization returns to B02. [Request](../research-progress/handoffs/ISSUE_SECOND_20261127.md) |
+| E07 | G5, Räde, marked width and calibrated prescribed curvature | Test coercivity, marking and ordinary flow endpoints. Return unforced width to B03. [Request](../research-progress/handoffs/ISSUE_SECOND_20261127.md) |
+| E08 | B01 and model results; direct orbit ODE and metric-generated angular height | Test smooth compact entering gauge, opposite cut and Section 6 applicability. New symmetry assumptions return to B01. [Request](../research-progress/handoffs/ISSUE_REPLAYS_20261127.md) |
+| E09–E11 | Independent readings after each named input has been written | Recompute statements and check sources, return corrections and overlooked approaches for execution. [Assignments](../research-progress/handoffs/ISSUE_REPLAYS_20261127.md) |
+
+E12 tests the global least-area comparison and a spectral choice of height on a smooth neighborhood of the round metric. Its [fixed issue](../research-progress/handoffs/ISSUE_NEAR_ROUND_20261127.md) gives the regularity, source, stop and failure conditions. A general quantitative neighborhood from intrinsic pinching would require a new input.
+
+E13 depends on global one-sheet convergence in E12; the [alignment issue](../research-progress/handoffs/ISSUE_ALIGNMENT_20261127.md) tests whether a metric-selected height can have the *given* first-width hypersurface as its zero set, and whether all resulting levels have positive induced scalar curvature. A different reader checks compactness and alignment together.
+
+E14 reformulates a sufficient spectral height test directly on the entering metric, checks it on round coordinate and orbit heights, and separately replays the missed angular area approach from E11. [Fixed scope](../research-progress/handoffs/ISSUE_INTRINSIC_TEST_20261127.md).
+
+E15 responds to the newly supplied TUBE interval certificate. On the single two-twist trefoil cap compute and compare its radial cuts in the two specified conformal gauges. [Frozen issue](../research-progress/handoffs/ISSUE_TREFOIL_FACE_20261127.md).
+
+## G3 reopening • the fixed Berger germ
+
+GEO-B04 selects a boundary curvature calculation and an explicit smooth test manifold. GEO-E16 computes the nonumbilic APS correction; E17 independently subtracts a flat polar connection; E18 controls a closed two-pole suspension and its meridian. E19 and E20 independently read the signed flux, per-cap Euler budget and full angular sweepout. The [first issue](../research-progress/handoffs/ISSUE_BERGER_COMPLETION_20261127.md) and [reader addendum](../research-progress/handoffs/ISSUE_BERGER_REPLAY_ADDENDUM_20261127.md) give outputs, assumptions and stop conditions.
+
+A bounded [E21 full angular integration](../research-progress/handoffs/ISSUE_BERGER_ANGULAR_INTEGRAL_20261127.md) records the area itself on E18's failed completion, with the analytic strict comparison independently available.
+
+E22 checks the remaining option of changing only the magnitude of the horizontal shear on the fixed endpoint metric. [Bounded task](../research-progress/handoffs/ISSUE_BERGER_SHEAR_20261127.md). The [reopened G3 result](../notes/BERGER_COMPLETION_OBSTRUCTION_20261127.md) settles the prescribed completion question. The [next candidate](../continuation-notes/AFTER_BERGER_OBSTRUCTION_20261127.md) changes the marked Cauchy data.

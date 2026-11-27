@@ -1,0 +1,18 @@
+# The radial minimal cut of the certified trefoil cap disappears under compactification
+
+27 November 2026. Prepared for Edward B. Baker III with OpenAI Codex. Selected lead Astra/ultra, serving settings unavailable. GEO-E15. The inputs are the actual [TUBE-E01 cap](../../03_tubes_and_exteriors/notes/E01_CAP.md) and [rational arithmetic](../../03_tubes_and_exteriors/numerics/trefoil_certificate.py) read over bc2c1bb, respectively SHA-256 072391e9c8a4d2eece4574db716bdf51f922af29a195c550f459c141a783ef06 and 2834f4d1d95d7624ff90f2be52c545820a35525f1ed7e258955e53c6451dad6c. The knot and exterior identifications are those of that input. The energy and positive-Yamabe certificate belong to TUBE. This calculation tests its fixed radial functions and both actual metrics.
+
+Let \(x=s^2/4\), \(0\le s\le2\), \(a=s p(x)\), and keep the prescribed connection \(b(s)d\psi\) with boundary flux −1/2. The cap gauge has radial unit normal \(\partial_s\). The volume density on a regular radial leaf is \(a\sin\vartheta\), so \(H=a'/a\); the conformal factor \(w(x)>0\) used for the compact representative changes this to \((w a'+3a w_s)/(a w^2)\). The following conclusions use exact rational intervals with outward trigonometric enclosures, reproduced by [the radial calculation](../numerics/trefoil_radial_faces.py).
+
+| Cap metric | Minimal regular radial leaves | Ordinary radial MCF in the interior |
+| --- | --- | --- |
+| Raw product-fibre gauge | Exactly one, at \(401/1000<x_*<402/1000\), with full index one and nullity zero. The induced scalar is 2. | Inner parallels shrink to the prescribed core two-sphere in finite time. Outer parallels move toward the exterior. A cap-only calculation stops at the matching face. |
+| Compact conformal gauge \(w^2g\) | None. The numerator \(w a'+3a w_s>2/5\) throughout the cap. | Every interior radial leaf moves toward the core under \(\dot s=-\widehat H/w\). Its initial scalar is \(2/w(s)^2>0\). Near the core the normal radius is \(w(0)s+O(s^3)\), giving finite extinction time. |
+
+For the index, radial distance evolution gives \(q=|B|^2+\operatorname{Ric}(\nu,\nu)=-H'=-a''/a\) at the raw minimal leaf, with \(6/5<q<13/10\). Its scalar Jacobi operator on all smooth normal variations is \(-\Delta_h-q\). The direction \((\partial_\psi-b\partial_\phi)/a\) is the horizontal unit circle direction. Fourier modes in ψ and spherical harmonics in (ϑ,φ) give Laplace eigenvalues
+\[
+ l(l+1)+(m-bn)^2/a^2,\qquad m,n\in\mathbb Z,\quad l\ge |n| .
+\]
+The first positive eigenvalue is at least \(\min(2,1/a^2)>8/5\); constants alone are unstable. Local product structure on each leaf gives its scalar value even when its angular monodromy is nontrivial. For the interval bounds, \(a'=1+3ux+5vx^2+7kx^3\) in the input notation. Its derivative in x is negative throughout the first half interval and \(a'<0\) throughout the second half. On the isolated root interval \(-a''/a=-(3u+10vx+21kx^2)/(2p)\), allowing the spectral gap to be checked without rounding a root.
+
+In the smooth approximation used to prove entry one can leave the full inner cap fixed and smooth only near the seam. The strict positive-numerator bound also survives sufficiently close first-jet perturbations on the cap side of that face. Conversely a smooth choice of representative can agree with the raw metric near its interior minimal cut by a conformal change supported away from the seam. Positive Yamabe sign and the Weyl integrals of the resulting smooth class are conformally invariant. The pointwise entering condition, minimality of this hypersurface, and the first width are gauge dependent. In particular the cap calculation does not identify the unrestricted first-width cut of the smooth entering representative.

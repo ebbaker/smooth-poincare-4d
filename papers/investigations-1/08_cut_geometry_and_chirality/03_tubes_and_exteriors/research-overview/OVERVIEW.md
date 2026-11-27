@@ -18,7 +18,7 @@ The category, orientation, curvature and chirality conventions, the definition o
 - The cap costs of Remark 6.3, from the [checks of the proposing note](../../../../master/brainstorm/notes/claude/USES_OF_THE_FIRST_ORDER_AND_MARKED_CUT_TOOLS_20261126_checks/README.md): floating point, upper bounds within a circle-symmetric ansatz.
 - The Fuchsian exteriors of the master manuscript and the tube trials of 07, used as stated; Zeeman, Fintushel, Pao and Fukuda with the inspection levels of the parent's source record, two of them not inspected.
 
-## Inputs that need a global extension
+## Starting bounds on 26 November 2026
 
 Everything proved is for circle-symmetric caps over a conformally flat exterior with a product structure near the tube. The lower bound over a hemisphere needs a positive double. Nothing is known for tubes without symmetry or for exteriors that carry Weyl energy.
 
@@ -26,10 +26,16 @@ Everything proved is for circle-symmetric caps over a conformally flat exterior 
 
 This child carries the exterior-gap alternative of the [parent route](../../research-overview/OVERVIEW.md#the-proof-target) and returns design rules to entry. A counterexample to the gap, a nonstandard closing with \(e_X<\tfrac23T\), would be an entry candidate and goes to 07. A positive answer finishes the constructions along seams with positive doubles. If neither is reached, the child still fixes which tubes remain: exteriors with nonabelian holonomy, exteriors with Weyl energy, and projective-plane tubes.
 
-## Unresolved decisions
+## Decisions at setup
 
 Which approach to the exterior gap is tried first (TUBE-B01). Which candidate without circle symmetry is examined first (TUBE-B02). Whether tubes around surfaces are taken up with 07 (TUBE-B03, reserved).
 
 ## Ownership
 
 Owns the cap functional and the one-tube statements. Runs no entry trial; candidates return to 07 and master B02 by handoff. The parent keeps the independent reading of the manuscript (SP4-CUT-E02) and the choice of closing lane (SP4-CUT-B01) in its [register](../../research-progress/REGISTER.md).
+
+## Position on 27 November 2026
+
+Zero-energy recognition holds for the marked exterior and both smooth fillings. Positive subcritical exteriors can have torsion in their groups. The homotopy-sphere condition on the filling is essential. A knotted two-sphere on the standard sphere has a certified subcritical closing. Normal sphere connections give a signed holonomy bound, while a quaternionic face imposes different costs depending on the actual collapsing axis. The [register](../research-progress/REGISTER.md) and [dated continuation](../continuation-notes/RESUME_20261127.md) give the current hypotheses and remaining comparisons.
+
+The [marked lens core](../notes/MARKED_LENS_CORE.md) reduces the prism recognition route to the original singular knot in two known three-manifolds. On the quaternionic disk, the remaining comparison is a smaller-sign cost strictly below \(3\pi^2/2\) on a genuinely different fill. See the [continued results](../research-progress/REGISTER.md#results-of-the-continued-research-on-27-november-2026).

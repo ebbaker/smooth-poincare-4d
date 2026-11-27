@@ -1,0 +1,3 @@
+# E60 · The singular pattern on an actual marked fundamental domain
+
+27 November 2026 for Edward B. Baker III. Bounded Sol 6.2/ultra requested. Use the exact rotations of E39 and E54, both sets of great circles, and the E58–59 lens core. On one explicit generic spherical Dirichlet domain for Λ, determine which face pairs and arcs carry the original order-two locus and the regular surgery circle. Seek an explicit marked link or orbifold group presentation in one basic slope, or a finite reconstructible cell/arc description with the unresolved gluing precisely specified. A bounded calculation on the one 816-element group is authorized. Own notes/E60_PRISM_PATTERN.md and optionally numerics/e60_prism_pattern.py. No unbounded triangulation search.

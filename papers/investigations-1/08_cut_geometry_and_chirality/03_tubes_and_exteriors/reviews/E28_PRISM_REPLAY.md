@@ -1,0 +1,81 @@
+# E28 — Independent replay of the marked \(C_{17}\) prism action
+
+27 November 2026. Prepared for Edward B. Baker III with OpenAI assistance. [Frozen E28 request](../research-progress/handoffs/E28_REQUEST_R1.md), baseline `bc2c1bbccc1d244a9d456ffe2fcaf64e368290b0`. Sol 6.2/ultra requested. Actual model and effort unavailable. The marking and path in [the lead note](../notes/MARKED_PRISM_17.md), lines 5–20 of SHA-256 prefix `6014f58094a2a096`, were read back against the construction below. Inputs also include [E05](../notes/E05_TWISTED_EXTERIORS.md), SHA-256 prefix `547b0e4385cc510a`, and the [E26 length identities](../notes/E26_LENGTH_TEST.md), prefix `8345b550f604762d`, also [independently replayed](E27_LENGTH_REPLAY.md). The arguments are analytical in the smooth oriented Riemannian category.
+
+**Disposition.** The round unpointed isometry has order six and a sharp minimum displacement \(\pi/6\). The explicit marked correction gives a based automorphism whose meridian quotient is trivial, so both framings close to smooth homotopy four-spheres. The stationary round construction cannot preserve the puncture. A concrete volume-preserving correction gives positive reflected doubles at sufficiently large length and a bounded possible interval for \(e_X<2T/3\) on that metric family. Passing the finite-length energy test and smooth recognition of the fillings remain open in this packet.
+
+## 1. Free action, normalization and sharp displacement
+
+Let \(\zeta=\exp(2\pi i/17)\), and write the unit round covering sphere as \(S^3\subset\mathbb H\). The action of \(\Gamma=Q_8\times\langle\zeta\rangle\) is \((q,\zeta^r)\cdot p=q p\zeta^{-r}\). A fixed point would conjugate \(q\) to \(\zeta^r\), so their common order divides both four and seventeen. Both elements must be the identity. The action is orientation preserving, by connectedness of the rotation group containing each left and right translation. It is faithful and has order 136. The quotient \(Q\) is a spherical space form with rational homology of the sphere, by transfer.
+
+For \(n=(i+j+k)/\sqrt3\) write \(a=\exp(n\pi/3)=(1+i+j+k)/2\), and put \(J(p)=a p j^{-1}\). Direct quaternion multiplication gives \(a i a^{-1}=j,\ a j a^{-1}=k,\ a k a^{-1}=i\). Conjugation by \(j\) inverts \(\zeta\). Thus \(J\) descends to an orientation-preserving isometry \(h\) of \(Q\), conjugating the deck action by
+\[
+ \alpha(q,\zeta^r)=(a q a^{-1},\zeta^{-r}).
+\]
+The sixth power of \(J\) is the deck map \(p\mapsto-p\), since \(a^6=1\) and \(j^6=-1\). The induced three-cycle on unoriented quaternion axes and the inversion on the cyclic factor have orders three and two even modulo inner automorphisms. Therefore \(h\) has order exactly six.
+
+For every \(p\) the displacement of its quotient class is the minimum of the distances
+\[
+ d_{S^3}(p,q a p\,j^{-1}\zeta^{-r})
+ =d_{S^3}(p^{-1}q a p,\zeta^rj).
+\]
+The first argument on the right has real part \(1/2\) or \(-1/2\) for every \(q\in Q_8\), and consequently angle \(\pi/3\) or \(2\pi/3\) from the identity. The second is purely imaginary and has angle \(\pi/2\). The reverse triangle inequality gives \(\pi/6\) in each case. Choose \(p_0\) with \(p_0^{-1}n p_0=j\), for example the unit normalization of \(1-nj\). Then \(J(p_0)=p_0\exp(-j\pi/6)\), which attains the lower bound with \(q=1,r=0\). The quotient minimum is thus exactly \(\pi/6\).
+
+The same angle argument bounds the injectivity radius below by \(\pi/68\) uniformly. For nontrivial deck elements, compare the angles of \(q\) and \(\zeta^r\). The nonzero angles of \(q\) are \(\pi/2\) and \(\pi\), and the angles of \(\zeta^r\) are \(2\pi s/17\) for integers \(0\le s\le8\). The closest distinct pair across these sets is \(8\pi/17,\pi/2\), whose difference is \(\pi/34\). Conjugating a pure \(q\) to the same axis as the corresponding \(\zeta^r\) attains it. Thus the infimum of pointwise round injectivity radii is \(\pi/68\), using the sphere's conjugate radius \(\pi\). The pure right generator also gives the individual upper bound \(\operatorname{inj}_Q\le\pi/17\) at every point.
+
+## 2. Marked correction and surgeries
+
+Use the local isometries transported by the upstairs path \(G_s(p)=a^{-s}p j^s\), \(0\le s\le1\). Its moving center is
+\[
+ G_s(J(p_0))=p_0\exp\bigl(-(1-s)j\pi/6\bigr).
+\]
+Choose a radius below the uniform injectivity bound from §1. The local velocity of \(G_s\) projects to a smooth Killing field on the corresponding moving ball. It extends to a smooth time-dependent vector field on \(Q\) agreeing with it on smaller moving balls and supported in the larger ones. One may take this extension volume preserving. With \(\nu\) the round volume form, the contraction \(\iota_{Y_s}\nu\) for the local Killing field \(Y_s\) is closed, and a radial homotopy in the moving normal ball gives a smooth-in-\(s\) primitive one-form \(\beta_s\). Prescribe \(\iota_{V_s}\nu=d(\chi_s\beta_s)\) with a smooth cutoff identically one on a smaller ball and zero near the outer boundary. Its extension by zero preserves \(\nu\) and agrees with \(Y_s\) where \(\chi_s=1\). The flow \(\psi_s\) then agrees with the projected \(G_s\) on one fixed neighborhood of \(h([p_0])\) as that neighborhood moves. Reparameterize smoothly with constant end intervals if needed.
+
+Define \(\widehat\varphi=\psi_1 h\). It fixes a neighborhood of \([p_0]\) pointwise. The lift of \(\psi_s\) starting at the identity commutes with \(\Gamma\), by uniqueness of covering lifts. On the indicated neighborhood this lift follows the specific path \(G_s\), starting from the same identity chart. Hence \(\widetilde\psi_1 J\) fixes \(p_0\) and conjugates the deck group by exactly \(\alpha\). This checks the actual based action, including the choice of path, without dropping a possible inner automorphism in an unpointed identification.
+
+The lead uses a forward real-plane transvection \(\Psi_s\). In the coordinates \(p=p_0u\), the transvection of angle \(\theta\) has the form \(u\mapsto e^{j\theta/2}u e^{j\theta/2}\). It translates the great circle and fixes its real orthogonal plane. Thus at the end,
+\[
+ (T_{-\pi/6})^{-1}J:\ u\longmapsto e^{5j\pi/12}u e^{-5j\pi/12}
+\]
+in the \(p_0\) chart. The lead's corrected germ fixes \(p_0\) and preserves the small ball, acting on the tangent space by a rotation through \(5\pi/6\) about \(j\). It has the very same based action on \(\Gamma\) because the lift of \(\Psi_s\) commutes with the entire deck group and sends \(p_0\) to \(J(p_0)\). In the round collar, this finite normal rotation leaves the radial bend invariant. The lead's pullback path therefore has endpoints matched by \((\Psi_1^{-1}h)^{-1}\); reversing the base gives the alternate convention.
+
+The two constructions give boundary-preserving isotopic punctured maps. Indeed, the forward comparison flow \(\widehat\Psi_s=\psi_{1-s}\psi_1^{-1}\) starts at the identity, ends at \(\psi_1^{-1}\), and sends the same small ball onto exactly the same moving ball as \(\Psi_s\). Consequently \(\Psi_s^{-1}\widehat\Psi_s\) is an isotopy preserving the original ball. At the endpoint its inverse, followed by \(\Psi_1^{-1}h\), gives \(\widehat\varphi\). Thus the proof below applies to the lead's marking as well. In the lead's angular framing one uses the pole on the fixed radial axis to identify the meridian with the stable letter.
+
+Take \(P=Q\setminus\operatorname{int}B\) for a smaller round ball fixed by \(\widehat\varphi\), and let \(\varphi=\widehat\varphi|_P\). Its mapping torus has boundary \(S^1\times S^2\) with the product marking. The puncture does not change \(\pi_1\), and the marked boundary meridian is the stable letter \(t\) under the based identification using the fixed collar. In the convention of the relation \(t g t^{-1}=\alpha(g)\), or its inverse with reversed meridian orientation, the meridian quotient identifies \(i=j=k\) and \(\zeta=\zeta^{-1}\). The quaternion relation \(ij=k\) then makes their common image trivial, and the odd order kills \(\zeta\). Both framings kill exactly this normal subgroup, since a boundary self-diffeomorphism acts on \(\pi_1(S^1\times S^2)\) by a sign. Attaching \(D^2\times S^2\) gives Euler characteristic \(0+2-0=2\). Simple connectivity and closed integral oriented duality give the homology of \(S^4\), and Hurewicz followed by the homology Whitehead theorem gives the homotopy equivalence. The exterior has rational circle homology because \(P\) has the rational homology of a point. The group and homology calculations do not distinguish the two smooth fillings.
+
+## 3. Stationary round geometry and exclusion of periodic marked realization
+
+The unpunctured stationary mapping torus \((t+L,p)\sim(t,h(p))\), with product metric on its cover \(\mathbb R\times Q\), is locally conformally flat and has \(R=6\). The puncture in E05's stationary construction needs an invariant round ball. Such a ball within the injectivity radius would give a fixed center, impossible by §1. For a curve projecting degree one around this stationary suspension, lifting gives endpoints \((0,p),(L,h^{-1}(p))\). Product distance proves the sharp bound
+\[
+ \operatorname{length}\ \ge\sqrt{L^2+\pi^2/36}.
+\]
+On the selected axis \(p_0\exp(uj)\), \(J\) acts by the translation \(u\mapsto u-\pi/6\). The product geodesic \((t,p_0\exp(j\pi t/(6L)))\) therefore closes smoothly and attains the bound. For the corresponding marking, the change of suspension coordinates from \(\widehat\varphi\) to \(h\) has fiber map \(h^{-1}\psi_s h\), with the stipulated endpoints. It sends the fixed section to the same projected axis path up to the time reparameterization. The length bound is thus attained also in that degree-one marked class on the unpunctured stationary background.
+
+In fact no isometry of this round quotient inducing a three-cycle of the quaternion axes and inversion on \(C_{17}\) can fix a point. An orientation-preserving lift has form \(p\mapsto A p B^{-1}\) in the two quaternion factors. The normalizer property implies \(A\) normalizes left \(Q_8\) and \(B\) normalizes right \(C_{17}\). The common central sign in the two-factor cover cannot turn a group element of odd order 17 into one of the opposite sign. Inversion on \(C_{17}\) gives \(BiB^{-1}=-i\), hence \(\operatorname{Re}B=0\) and \(B\) remains purely imaginary after multiplying by any \(\zeta^r\). A three-cycle on the unoriented axes gives \(A\in Q_8 a\) or \(A\in Q_8 a^{-1}\): after composing with the corresponding inverse cycle, it preserves all three axes as lines, and the remaining diagonal sign rotations lift to \(Q_8\). These cosets have real parts \(1/2\) or \(-1/2\). Section 1's argument applies to every such lift.
+
+A smooth periodic representative of this boundary-preserving punctured mapping class would extend across the ball as a periodic orientation-preserving action with a fixed center. To construct the extension, use an averaged equivariant collar, conjugate the finite boundary action to an orthogonal rotation of \(S^2\), and attach a linear rotation on the ball with that boundary parametrization. The boundary conjugacy extends as a smooth ball diffeomorphism by the isotopy of orientation-preserving \(S^2\) diffeomorphisms to the identity. Dinkelbach–Leeb Theorem E conjugates the closed finite action into isometries of the original spherical metric. The conjugacy preserves a fixed point and preserves the two automorphism features just used, since the two factors are characteristic, the permutation of axes is still a three-cycle, and inversion on the cyclic factor is central in its automorphism group. This contradicts the normalizer calculation. For the pointwise-fixed correction, stationarity under any smooth metric fails directly, since an isometry fixing an open collar in a connected manifold is the identity. For the lead correction the twelfth power is the identity in that collar by the rotation just computed. If that correction were an isometry, the twelfth power would be the identity everywhere, contrary to the periodic obstruction. [Smale, *Diffeomorphisms of the 2-sphere*, Proc. Amer. Math. Soc. **10** (1959), 621–626, Theorem A](https://doczz.net/doc/8562804/diffeomorphisms-of-the-2) · [Dinkelbach–Leeb, author PDF of 9 January 2009, Corollary 5.4(i) and Theorem E](https://www.math.lmu.de/~leeb/pub/act3mfs.pdf).
+
+## 4. A reflected positive family and the energy test that remains
+
+The correction in §2 can be used in an actual smooth fiber path. Let \(h_{\rm rd}\) denote the unit round metric on \(Q\). The closed metrics \(h^*\psi_s^* h_{\rm rd}\) run from \(h_{\rm rd}\) to \(\widehat\varphi^* h_{\rm rd}\). Each is round, each has the same volume form, and each agrees with \(h_{\rm rd}\) on the fixed smaller ball about \([p_0]\), because the flow is locally the prescribed isometry there after composition with \(h\). Choose the puncture and the E05 fixed positive-scalar product-collar replacement entirely inside that ball. Make the same replacement in each metric and then reflect on the doubled fiber. The resulting \(h_s\) is positive-scalar, reflection invariant, constant on the collar, and has time-independent volume density. Since \(\widehat\varphi\) fixes the entire replacement region, the endpoints are matched by the actual marked diffeomorphism. Constant end intervals give all the mapping-torus jets. Large \(L\) then gives a positive reflective double \(L^2ds^2+h_s\), using the scalar identity from E26. This supplies the scalar sign for a genuine marked metric family.
+
+In E26's notation, \(K=\tfrac12\partial_s h_s,\ H=0\). The traceless intrinsic Ricci tensor vanishes on the varying round region, whereas \(K\) and its spatial derivatives vanish on the replaced collar. Hence the mixed integral \(\langle D_0,U\rangle\) is zero, and
+\[
+ e_X(L)=A L+B/L+C/L^3,\qquad
+ A>0,\quad B=\int_X^{\rm fib}|M|^2\,d\mu\ge0,\quad C>0 .
+\]
+Indeed a product collar of width \(w>0\) and sphere radius \(r>0\) gives \(A\ge 2\pi w/(3r^2)\) from its three-dimensional traceless Ricci norm \(2/(3r^4)\). The path is nonconstant because its endpoints differ by a nontrivial diffeomorphism fixing the collar pointwise. If \(C=0\), then \(U=(-\partial_sK)^\circ=0\) everywhere. Since \(H=0\) gives \(\operatorname{tr}_{h_s}\partial_sK=2|K|^2\), this would make \(\partial_sK=(2/3)|K|^2h_s\) pointwise positive semidefinite. The vanishing of \(K\) at both ends would force it to vanish throughout. Thus the energy goes to infinity at both ends of the length range on this fixed family.
+
+The constant Yamabe test function on the double gives \(q_Y\ge q_0>0\), where
+\[
+ q_0=\frac{\int_D^{\rm fib}|K|^2\,d\mu}{\int_D^{\rm fib}R_{h_s}\,d\mu}.
+\]
+The inequality is exact for that test because the fiber density is time independent. With \(E_*=2T/3=8\pi^2/3\), an admissible length for this path must satisfy
+\[
+ \max\bigl(\sqrt{q_0},(C/E_*)^{1/3}\bigr)<L<E_*/A .
+\]
+These coefficient signs give a bounded interval condition for the time-dependent extension, and the displacement calculation supplies a geometric bound of a different kind on the unpunctured round background. The lead’s subsequent magnetic and electric inequalities for more constrained extensions are audited in their own packets. Without those additional restrictions, a finite-length comparison with \(E_*\) still requires enclosures of the chosen collar and the correction path's curvature and shear. The positive-double construction alone gives no such comparison.
+
+## Source scope
+
+Plotnick and Suciu, *Fibered Knots and Spherical Space Forms*, J. London Math. Soc. (2) **35** (1987), 514–526, §5, Proposition 5.1 and its type-II discussion at pp. 523–524, were checked on 27 November 2026. Their automorphism is the order-three quaternion cycle together with inversion on the odd cyclic factor, up to the stated equivalences. They discuss a nonperiodic realization in the punctured fiber setting. The explicit unpointed order-six round action and separate corrected marked map above exhibit why the fixed-puncture condition matters. The historical table of ambient smooth recognition is outside the audit. The Dinkelbach–Leeb passage and Smale Theorem A cited in §3 were also checked on 27 November 2026. [Plotnick–Suciu published scan](https://deepblue.lib.umich.edu/bitstream/handle/2027.42/135209/jlms0514.pdf?sequence=1).

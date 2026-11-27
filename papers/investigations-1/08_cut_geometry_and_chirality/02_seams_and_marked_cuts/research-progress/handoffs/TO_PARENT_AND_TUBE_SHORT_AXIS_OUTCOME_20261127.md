@@ -1,0 +1,7 @@
+# Short-axis filling result for the parent and TUBE
+
+27 November 2026. Prepared for Edward Baker with OpenAI assistance, at HEAD bc2c1bbccc1d. Selected Astra/ultra lead with bounded Sol/ultra checks. Actual serving details unavailable. This is an outgoing scientific handoff from SEAM.
+
+For the prescribed short \(i\)-bolt and right-invariant lengths \((1,1,\sqrt3)\), the new Robin-positive cap improves the unrestricted side half-sum upper bound to \(6.46666\pi^2\). The final eighth alone adds at least \(1.87399\pi^2\) in its smaller block. Thus a change confined to its core cannot reach the strict \(1.5\pi^2\) target. Both reflected doubles and the smooth switched assembly are positive. The actual closed energy on each chirality lies in \((12.8999,12.9334)\pi^2\). [Marked calculation](../../notes/MARKED_FILLING_RESULT_20261127.md) · [Independent certificate replay](../../reviews/E21_LONG_INTERVAL_READBACK.md).
+
+At the cheaper \(2/3\) collar the incoming lengths and outward derivatives are \((1,1,5/3)\) and \((0,0,8/9)\). The core must spend less than \(19\pi^2/18\) in the smaller block. Four exploratory core fits overspent; the largest measured expense near the join in the best fit is its transverse Weyl component. The universal marked realization question remains open. [Trial results](../../notes/E23_NONUMBILIC_CORE_TRIAL.md) · [Continuation](../../continuation-notes/AFTER_SHORT_AXIS_20261127.md).

@@ -1,0 +1,9 @@
+# Negative Berger germ • return to the parent and chirality ledger
+
+27 November 2026, for Edward B. Baker III with OpenAI Codex. Working parent bc2c1bb, manuscript SHA-256 ccb52d6a2548fb8fbddbab4ab01b9aea3d9cc560bbec477c86e7273a389d7fb0. The selected Astra/ultra lead used bounded Sol/ultra assignments and independent readings. Actual serving settings unavailable.
+
+The actual negative Berger orbit from GEO-E06 is an index-one example with strictly entering ambient jets on a local collar. Its marked first fundamental form and short-axis shear force signed Weyl energies \(-75\pi^2,+75\pi^2\) on the two homology-ball sides of any closed homotopy sphere containing it. In particular the closed energy per chirality is strictly greater than \(75\pi^2\). If the exact E06 germ is retained, doubling either cap by the short-axis interchange gives \(4\int_V\sigma_2(A)<-67\pi^2\) for that cap. The proof carries the sign of the Berger eta in the left quaternionic frame and subtracts the round polar value in both frames. This gives a worked, nonumbilic application of the parent's boundary signature formula and a restriction on candidates for its Section 7. [Derivation](../../notes/BERGER_COMPLETION_OBSTRUCTION_20261127.md) · [independent replay](../../reviews/BERGER_FLUX_REPLAY.md).
+
+On the explicit standard-sphere suspension the central area is \(\pi^2\sqrt{65}/2\), whereas the transverse angular sweep has maximal area between 1.901985 and 1.903738. Each cap of that trial contains a negative scalar-curvature orbit. The example is an explicit width exclusion in that metric and the general question for entering gauges is open. Retain the local counterexample and update its global status if the manuscript discusses its possible realization. [Width reading](../../reviews/BERGER_COMPLETION_REPLAY.md) · [continuation](../../continuation-notes/AFTER_BERGER_OBSTRUCTION_20261127.md).
+
+This handoff is maintained in GEO. Parent and LED integration are pending.

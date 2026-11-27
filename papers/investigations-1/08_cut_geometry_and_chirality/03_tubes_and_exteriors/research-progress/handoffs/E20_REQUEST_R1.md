@@ -1,0 +1,3 @@
+# SP4-CUT-TUBE-E20 · Short-axis and pair readback
+
+27 November 2026 for Edward B. Baker III, requested Sol 6.2/ultra. Independently check the native short-axis switched gluing and the wider two-disk classification in E18, using actual orientation actions, the extension subgroup and smooth isotopy. Inspect the E17 finite trial and E19 validated interval arithmetic when available, with an independent raw curvature and endpoint check. Confirm the limit of the test: the exact positive-sign costs of one cap do not decide the infimum. Read the nonsymmetric impasse note and identify any untested different route with actual available inputs. Own reviews/E20_SHORT_AXIS_READBACK.md. No shared edits or further optimization.

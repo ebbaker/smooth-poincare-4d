@@ -1,0 +1,7 @@
+# SP4-CUT-SEAM-E06 · frozen request r1
+
+27 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. Selected lead Astra/ultra, serving details unavailable. Working HEAD `bc2c1bbccc1d` and parent TeX SHA-256 `ccb52d6a2548fb8f…`. Requested GPT-6.2 Sol/ultra. [Sole register](../REGISTER.md) and [input list](../../continuation-notes/CONTINUATION.md). Positive-definite smooth category, real chiral HS blocks, T=4π².
+
+Start past the rank atlas: for k=0,1 with spherical factors test torsion and finite covers of each positive double, the CGY small-energy sphere theorem and CMM PSC homology-boundary proposition against its exact hypotheses. Look for a stronger alternative via positive integral σ₂ on a *double* with nonzero finite quotient: Ric>0, finite fundamental group, cover classification/bounds. Also test explicit spherical or reducible seam examples in round S4 vs umbilicity. State rigorous exclusions, allowed residual period/energy window and what remains unclassified. Search primary literature for a theorem decisive for the residual. Finite scope: these tests, no new branch. Coordinate no writing with E03.
+
+Write only notes/E06_SPHERICAL_FACTORS.md and research-progress/handoffs/E06_RETURN.md. Supply primary passage receipts for imported results. Stop at proved result or scoped failure; return every extra premise to the lead. No shared edits.

@@ -1,0 +1,7 @@
+# SP4-CUT-SEAM-E08 · frozen request r1
+
+27 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. Selected lead Astra/ultra, serving details unavailable. Working HEAD `bc2c1bbccc1d` and parent TeX SHA-256 `ccb52d6a2548fb8f…`. Requested GPT-6.2 Sol/ultra. [Sole register](../REGISTER.md) and [input list](../../continuation-notes/CONTINUATION.md). Positive-definite smooth category, real chiral HS blocks, T=4π².
+
+Independent line-by-line readers on disjoint outputs. Reader A (original E04) replays E01_DERIVATION and E03_DERIVATION including the 07 actual cases, positive expensive control, mixed rank and integral linking. Write reviews/E08A_SELECTION_ATLAS.md. Reader B (original E01) replays notes/E06_SPHERICAL_FACTORS.md, including the finite-group 59/30 bound, exact external scopes, model costs, and marks corrections. Write reviews/E08B_FINITE_COVERS.md. Reader C (original E05) replays notes/B04_PAIRED_FILLING.md and brainstorm/notes/B04_REALIZATION_IMPASSE.md including incoming LED and GEO, naming any missed approach to S2 and a finite test. Write reviews/E08C_REALIZATION.md. Where inputs are being completed, start with available material and wait for the remaining file. Do not finalize reading a draft that has not yet been written.
+
+Write only only the specifically assigned review per reader. Supply primary passage receipts for imported results. Stop at proved result or scoped failure; return every extra premise to the lead. No shared edits.

@@ -1,0 +1,3 @@
+# SP4-CUT-TUBE-E39 · A topological route on the actual order-seventeen prism
+
+27 November 2026 for Edward B. Baker III, baseline bc2c1bb. Sol 6.2/ultra requested. Audit primary results on surgery of type-II Mackey/Plotnick-Suciu spherical-fiber monodromies, modern prism knot/quandle standard realizations and circle surgery. Check whether any actual argument identifies either or both of the m=17 framed filled manifolds. If not, test an explicit finite covering or equivariant circle surgery with the real section/orbit rather than a group isomorphism. Write notes/E39_PRISM_FILLINGS.md. Stop at verified result or failing geometric premise; no shared edits.

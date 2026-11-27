@@ -1,0 +1,66 @@
+# GEO-E04 · Fundamental-class min–max and the Yamabe sign
+
+27 November 2026 (UTC). Prepared for Edward B. Baker III with OpenAI Codex assistance. This is the bounded execution return for [issue revision 1](ISSUE_20261127.md). GPT-6.2 Sol/ultra was requested for this worker. The actual serving model and reasoning effort were unavailable. The [parent manuscript](../../../manuscript/cuts_of_subcritical_conformal_classes.tex), §§2.1, 4 and 7.3, is the working text at `bc2c1bbccc1d244a9d456ffe2fcaf64e368290b0`, with SHA-256 `ccb52d6a2548fb8fbddbab4ab01b9aea3d9cc560bbec477c86e7273a389d7fb0`. Source inspection and exact calculations only.
+
+The supplied smooth entering gauge gives a connected, separating, smooth embedded minimal three-manifold of multiplicity one and Morse index one realizing the integral fundamental-class width. Its volume is least among all closed embedded minimal hypersurfaces of that metric. The parent’s Proposition 7.5 follows from an exact quadratic-form identity. In an entering gauge the second eigenvalue of the conformal Laplacian is bounded below by \(\min_\Sigma(R+6\operatorname{Ric}(\nu,\nu)+7|B|^2)>0\). The sign of the first eigenvalue in the closed least-area problem remains unestablished.
+
+## The theorem and the proof
+
+Xin Zhou's Theorem 1.1 assumes a connected closed orientable Riemannian \((n+1)\)-manifold, \(2\le n\le 6\), with \(\operatorname{Ric}>0\). It concerns the one-parameter Almgren–Pitts class corresponding to the integral fundamental class \([M]\in H_{n+1}(M;\mathbb Z)\). Its associated width is the infimum of the limiting maximal masses of the discrete sweepouts in this class. It is realized by one connected smooth closed embedded minimal hypersurface with varifold multiplicity one if orientable, and two if nonorientable. In the orientable case the index is exactly one. The width equals the weighted least area in (1.1), with weight one for orientable and two for nonorientable competitors. See also Theorems 1.3 and 1.5 and Remark 1.4. [J. Differential Geom. 100 (2015), 129–160](https://doi.org/10.4310/JDG/1427202766) · [arXiv:1210.2112v2](https://arxiv.org/pdf/1210.2112v2)
+
+For the project, \(n=3\), \(g\) is smooth and Riemannian, and the parent fixes an orientation on \(M\simeq S^4\). The entering gauge satisfies \(R>0\) and \(|Z|^2<R^2/12\) with \(Z=\operatorname{Ric}-Rg/4\). A trace-free symmetric four-by-four tensor has operator norm at most \(\sqrt{3}|Z|/2\). Thus \(r=\operatorname{Ric}(\nu,\nu)\) lies in \((0,R/2)\) for every unit vector. Every connected closed embedded hypersurface separates because a nonseparating hypersurface would admit a loop intersecting it transversely exactly once, contradicting \(H_1(M;\mathbb Z_2)=0\). The boundary orientation of either complementary region makes it orientable, and it admits a global unit normal. In particular the nonorientable branch of Zhou's theorem is excluded for every competitor on the project manifold.
+
+1. Proposition 3.6 puts each orientable competitor into a continuous ambient sweepout whose area has a strict and unique maximum at that competitor. The local collar follows graphs of the positive first Jacobi eigenfunction and has strict quadratic area drop and a mean-convex boundary facing into each chamber. If a chamber's relative width were larger than its boundary area, Theorem 2.7 would produce a closed minimal hypersurface in its interior, disjoint from the original one in violation of Frankel's theorem (Theorem 3.4). Thus each chamber has a partial sweepout with maximum area below that of the original hypersurface. Joining those sweepouts to the local collar gives the required family. Propositions 3.7–3.8 use a connected double cover and one half of its sweepout for the nonorientable case, giving the doubled area bound. The continuous sweepouts supply the area and homotopy data needed for discretization. Smooth foliation is asserted near the central leaf.
+2. Proposition 5.1 and Corollary 5.4 turn the continuous families into flat-continuous integral boundary cycles with no mass concentration, with suprema given by the weighted areas. Theorem 5.5 discretizes with a limiting maximal mass bounded by the original supremum. Theorem 5.8 identifies the discrete class by telescoping successive fillings of the regions from the empty set to \(M\). Theorem 4.5 and Corollary 5.9 identify the class as the same nontrivial class for all competitors. It follows that its width \(\mathcal W\) is at most the weighted least-area value \(W_M\).
+3. By Theorem 4.7 and Frankel's theorem, one obtains a positive-width stationary varifold \(k|\Sigma|\) for one connected smooth closed embedded minimal hypersurface. The definition of \(W_M\) gives \(W_M\le |\Sigma|\) in the orientable case and \(W_M\le 2|\Sigma|\) in the nonorientable case, where \(|\Sigma|\) denotes area in these inequalities. Since \(k|\Sigma|=\mathcal W\le W_M\), the orientable case has \(k=1\) and equality. Section 6 supplies the multiplicity obstruction needed to conclude \(k=2\) and equality in the nonorientable case.
+4. For the two-sided case the area form satisfies \(Q_J(1)=-\int_\Sigma(r+|B|^2)<0\), so there is at least one negative direction. If there were two, choose an \(L^2\)-orthogonal negative eigenfunction \(v\) of the area Hessian operator \(J\) in addition to its positive ground state \(\psi\). An ambient isotopy extending \(v\nu\) applied to the sweepout with central direction \(\psi\nu\) gives a two-parameter area function whose Hessian at the origin is negative definite. Its mixed term is \(Q_J(\psi,v)=0\). Holding the isotopy parameter fixed and small lowers the maximum area near the central leaf by the negative definite Hessian. The strict area gap away from that leaf persists under a small isotopy by continuity of the area there and the uniform Jacobian bound of the isotopy. The pushed-forward regions still sweep from the empty set to \(M\). Reapplying the discretization contradicts the width equality. This proves index one, including the possibility that other Jacobi eigenvalues vanish. Zhou defines \(L_\Sigma=\Delta+(r+|B|^2)=-J\) and writes its eigenvalue equation as \(L_\Sigma\phi=-\lambda\phi\) in §3 (arXiv v2, p. 8). The negative eigenvalues in §7 are the \(\lambda<0\) of this convention, exactly the negative eigenvalues of \(J\). This convention was confirmed on the independent GEO-E11 reading and corrects the earlier annotation in this return.
+
+The 2015 statement gives a multiplicity-two nonorientable stationary varifold. For one-sided stability in §7.3, the separate later Zhou paper gives the matching assertion in Theorem 1.1(ii), with §2.4 and §6, Claim 5, specifying stability on sections of the one-sided normal bundle. These correspond to odd scalar functions on the orientable double cover. Allowing all scalar functions on that cover introduces the negative constant test when \(r>0\). The project application can cite the orientable branch of the 2015 theorem alone. Neither the least-area property nor the class of sweepouts selects a unique support in a nongeneric metric. [Zhou, J. Differential Geom. 105 (2017), 291–343](https://doi.org/10.4310/jdg/1486522816) · [arXiv:1504.00966v2](https://arxiv.org/pdf/1504.00966v2)
+
+**Inspection.** I read all of §7 of the 31-page arXiv:1210.2112v2 PDF (numbered pp. 27–28), the theorem and its introductory corollaries (pp. 2–3), the construction in §3.1 and its Morse extension in the appendix (pp. 9–11 and 29), the double-cover construction of §3.2 (pp. 11–12), and the statements and proof passages cited above in §§2, 4–6. I did not independently reconstruct the full discretization or interior regularity machinery. I also checked the statements of Theorem 1.1 and the pertinent §7 passages in a separate 30-page author-uploaded MathSciDoc copy, whose displayed page numbering differs from the journal pagination. I could not directly inspect the publisher's typeset PDF. The later arXiv v2 Theorem 1.1(ii), its definition of one-sided index in §2.4, and the stability argument in §6, Claim 5, were checked. [MathSciDoc copy](https://archive.ymsc.tsinghua.edu.cn/pacm_download/104/1112-5.pdf)
+
+## The two quadratic forms
+
+Use the parent's \(B(X,Y)=g(\nabla_X\nu,Y)\), \(H=\operatorname{tr}_h B=0\), \(h=g|_{T\Sigma}\), \(r=\operatorname{Ric}_g(\nu,\nu)\), \(b=|B|_h^2\), and \(\Delta_h=\operatorname{div}_h\nabla_h\le0\) in the spectral convention. Ambient scalar curvature along \(\Sigma\) is denoted by \(R\). The contracted Gauss equation reads \(R_h=R-2r+H^2-b=R-2r-b\). On real \(H^1(\Sigma)\), with integration in \(d\mu_h\), the operators and their forms are
+
+\[
+\begin{aligned}
+J&=-\Delta_h-(r+b), &Q_J(u)&=\int_\Sigma \bigl(|\nabla u|^2-(r+b)u^2\bigr)d\mu_h,\\
+L_h&=-8\Delta_h+R_h, &Q_L(u)&=\int_\Sigma \bigl(8|\nabla u|^2+(R-2r-b)u^2\bigr)d\mu_h.
+\end{aligned}
+\]
+
+Consequently
+
+\[
+\begin{aligned}
+Q_L(u)&=2Q_J(u)+\int_\Sigma \bigl(6|\nabla u|^2+(R+b)u^2\bigr)d\mu_h\\
+      &=8Q_J(u)+\int_\Sigma (R+6r+7b)u^2d\mu_h.
+\end{aligned}
+\]
+
+When the Jacobi index is at most one, \(Q_J\ge 0\) on a subspace of codimension at most one, including any Jacobi kernel. The spectral variational principle gives \(\lambda_2(L_h)\ge\min_\Sigma(R+b)>0\) under the parent's assumption \(R>0\). For an index-zero hypersurface the same estimate applies to \(\lambda_1(L_h)\). In the entering gauge the second line improves the bound to \(\lambda_2(L_h)\ge\min_\Sigma(R+6r+7b)>0\). These are eigenvalues counted with multiplicity. Since a positive ground state \(w\) of \(L_h\) satisfies \(R_{w^4h}=w^{-5}L_hw\), the sign of \(\lambda_1(L_h)\) is the Yamabe sign of this induced conformal class. It does not specify the pointwise sign of \(R_h\) or of the scalar curvature on surrounding leaves. [Lee–Parker, §2, (2.7)](https://users.math.msu.edu/users/parker/YamabeProblem.pdf)
+
+To see the needed estimate explicitly, write \(\mu_1=\lambda_1(J)<0\), take its positive ground state \(\psi\), and set \(m=R+6r+7b\). Integration by parts gives
+
+\[
+Q_L(\psi v)=8\int_\Sigma \psi^2|\nabla v|^2d\mu_h
+             +\int_\Sigma(m+8\mu_1)\psi^2 v^2d\mu_h.
+\]
+
+This holds for all real \(v\in H^1(\Sigma)\) since \(\psi\) is smooth and positive on the compact hypersurface. The sign of this form on all such functions is the remaining Yamabe question. In particular, testing \(v=1\) requires \(\int_\Sigma(m+8\mu_1)\psi^2d\mu_h>0\) for a positive answer. A nonpositive test for \(Q_L\) would be negative for \(Q_J\), but it can use the single existing negative direction. Zhou's two-direction deformation does not give an estimate of \(m+8\mu_1\) or produce a second independent direction in this situation.
+
+An exact local check shows why the pinching and index comparison alone cannot give strict positivity. On \((-\delta,\delta)\times(\mathbb R/2\pi\mathbb Z)^3\), let \(0<a<1/3\) and use
+
+\[
+g=dt^2+\sum_{i=1}^3e^{2f_i(t)}dx_i^2,\qquad
+f_i(t)=v_i t-at^2/2,\qquad (v_1,v_2,v_3)=(\sqrt a,-\sqrt a,0).
+\]
+
+In the orthonormal frame \(\partial_t,e^{-f_i}\partial_i\) the normal sectional curvatures are \(-f_i''-(f_i')^2\), and the tangential ones are \(-f_i'f_j'\). The Ricci tensor is diagonal. At \(t=0\) one has \(\sum_i f_i'=0\), \(\sum_i(f_i')^2=2a\), and \(f_i''=-a\). Thus \(\operatorname{Ric}=ag\) at the central torus, and the strict pointwise entering inequalities hold throughout a sufficiently small collar by continuity. The central cut is minimal, has flat induced metric and \(b=2a\). There, \(J=-\Delta_h-3a\) has exactly one negative eigenvalue since the first positive eigenvalue of \(-\Delta_h\) is 1. But \(L_h=-8\Delta_h\) has first eigenvalue 0. This check uses an open collar and leaves the closed, globally least-area case entirely open.
+
+## Literature comparison and return
+
+A bounded search for least-area or index-one minimal hypersurfaces with positive Yamabe sign in positive Ricci and pointwise pinched four-manifolds found no applicable positivity theorem. Mazet–Rosenberg’s Theorem A characterizes least-area realizers by min–max or stability, and §7 controls genus for surfaces in ambient dimension three. Maximo–Reiser–Semola Theorem B and Corollary C give examples in positive Ricci curvature with large first Betti number. Their examples use totally geodesic cuts with positive induced scalar curvature. Chodosh–Li–Stryker Theorem 1.3 assumes a stable two-sided immersion and additional ambient sectional curvature control. The relevant statement and the cited passages of both latter papers were inspected. These checks distinguish intrinsic conformal positivity, topology admitting a positive-scalar-curvature metric, and stability of an area functional. [Mazet–Rosenberg, Theorem A and §7](https://www.idpoisson.fr/mazet/docu/leastminsurf.pdf) · [Maximo–Reiser–Semola, introduction and §2](https://doi.org/10.1007/s00526-026-03283-8) · [Chodosh–Li–Stryker, Theorem 1.3](https://ems.press/content/serial-article-files/52332?nt=1)
+
+G3 can use the checked existence, least-area and index-one conclusions and the strict lower bound for \(\lambda_2(L_h)\). The sign of \(\lambda_1(L_h)\) for a width realizer in the supplied entering gauge goes back to GEO-B02. A least-area cut with positive Yamabe sign would still require a separate argument to control a sweepout away from the cut.

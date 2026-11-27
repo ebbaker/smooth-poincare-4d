@@ -14,7 +14,11 @@
 
 **Ownership.** Owns the ledger and its corollaries. Does not own the neck estimates of 03 and 06; findings about them are returned by handoff.
 
-**State.** Overview, plan, register and continuation note set up; nothing is activated. By the author's instruction this child has no manuscript and no working folders yet; notes, handoffs, numerics and reviews are created on first use as the [setup workflow](../../../../INVESTIGATION_SETUP_WORKFLOW.md) describes. Ready on activation: LED-E01, LED-E02, LED-B01.
+**Research results, 27 November 2026.** The ledger sign, the model and raw-face estimates, and the smooth half-flat obstruction have been checked. The quaternionic calculation distinguishes two invariant lifts on the same marked quotient. The [closing note](continuation-notes/CLOSING_20261127.md) gives the six component results and directions for a new marked input. The [live register](research-progress/REGISTER.md) lists the evidence and the returns to the other investigations.
+
+- [Projective balls](notes/FS_BALLS.md), [quaternionic axes](notes/QUATERNIONIC.md) and [the round matrix sphere](notes/ROUND_ORBIT_MARKING.md).
+- [Neck source table](notes/NECK_TABLE.md), [explicit eta variation](notes/ETA_VARIATION.md) and [arbitrary-cut thresholds](notes/CUT_THRESHOLDS.md).
+- [Opposite-half-flat smooth and weak pieces](notes/HALF_FLAT.md), [independent readings](research-progress/handoffs/PACKET_RETURNS_20261127.md) and [parent manuscript insert](research-progress/handoffs/TO_PARENT_SECTION_3_AND_LANE_20261127.md).
 
 26 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum. Setup baseline `4655e38`.
 

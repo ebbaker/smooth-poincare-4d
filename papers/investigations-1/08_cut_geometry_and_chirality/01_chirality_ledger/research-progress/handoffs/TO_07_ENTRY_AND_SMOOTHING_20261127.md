@@ -1,0 +1,11 @@
+# Cut budget and regularity for entry trials
+
+27 November 2026. Internal handoff for Edward B. Baker III from the chirality-ledger investigation, with OpenAI assistance. Working inputs at bc2c1bbccc1d244a9d456ffe2fcaf64e368290b0. Evidence status is owned by the [register](../REGISTER.md).
+
+For a specified marked cut define \(D=12\pi^2\eta+\mathcal T\). The budget is \(e\ge|D|\) and the exact deficit is the sum of the two opposite-sign residual energies. The [threshold table](../../notes/CUT_THRESHOLDS.md) prices nonumbilic and nonround errors, including the quaternionic margin. Equality at nonzero energy is impossible for a smooth connected class. A weak double can saturate the sum-of-pieces identity; any proposed smoothed trial must budget both signs on an actual transition and prove a positive closed conformal Laplacian. The Pedersen double is a calibration on the known standard sphere. No new entry on a nonstandard type is claimed.
+
+If examining a quaternionic tube, a right-invariant Berger lift on the left quotient passes the intrinsic positive scalar and eta tests for \(\sqrt2<t<2\), with lower bound \(5\pi^2\) at \(t=\sqrt3\). Its marked realization belongs first to TUBE. [Lift and marking](../../notes/QUATERNIONIC_MARKING.md) · [smooth rigidity](../../notes/HALF_FLAT.md)
+
+The weak standard calibration has a measured budget: the reflected Pedersen double with parameter \(k>0\) has one chiral energy per sign \(8\pi^2(k/(1+k))^2\) and a nonzero surface term in the distributional Bach equation. This is energy before any smoothing or closed positivity test.
+
+**Update from TUBE, 27 November.** Its working [projective cap calculation](../../../03_tubes_and_exteriors/notes/PROJECTIVE_CAP.md), read at SHA-256 `b8b4f60c02d3dfef5e0672df5a5792c33bb76d81f753836d13f5d03ad0182393`, tests the biaxial cap whose collapsing normal circle is the stretched Berger axis. The supplied adjoint-moment estimate gives \(\max(E_+,E_-)>(25/3)\pi^2>8\pi^2\) for \(t\ge1\), so this filling fails already on the cap. In the ledger orientation the absolute difference at \(t=\sqrt3\) is \(5\pi^2\), consistent with the independently computed induced eta. Continue with a different normal-circle marking or a triaxial interior. The source branch owns the geometric cap calculation and its independent assessment.

@@ -1,0 +1,3 @@
+# SP4-CUT-TUBE-E09 · Independent double and collapse reading
+
+27 November 2026, for Edward B. Baker III, OpenAI assistance, requested Sol 6.2/ultra. Read notes/E03_EQUALITY.md and notes/E05_TWISTED_EXTERIORS.md on completion, all cited active premises, and the lead’s forthcoming positive-energy impasse. Check the conformal deck action, connected fixed components, regularity, both fillings, torsion examples, marked collapse and sign obstruction. Identify a further attack on the unrestricted marked closing if one exists. Own reviews/E09_EXTERIOR_REPLAY.md only. Stop at a verified conclusion or exact remaining gap; no entry trial.

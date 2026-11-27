@@ -1,0 +1,49 @@
+# Independent replay of the Fubini–Study and quaternionic link calculations
+
+27 November 2026. Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual model identifier and reasoning effort were unavailable to this helper. This is the variation reader's assignment in [SP4-CUT-LED-E09, request 1](../research-progress/handoffs/E09_REQUEST_R1.md), with parent input `bc2c1bbccc1d244a9d456ffe2fcaf64e368290b0`. The evidence covers exact smooth Riemannian model computations and the indicated arithmetic checks.
+
+## Fubini–Study balls
+
+In the affine chart for the complex-oriented metric, \(w=\tan(r)z\) is an orientation-preserving radial parametrization from \(\mathbb C^2\), so the radial normal induces the usual complex boundary orientation on \(S^3\). At \(z=(1,0)\) the three tangent vectors \((0,1),(0,i),(i,0)\) give positive boundary orientation because the permutation of \((\partial_{y_1},\partial_{x_2},\partial_{y_2})\) is cyclic. Their corresponding left Lie algebra matrices are
+
+\[
+X_1=\begin{pmatrix}0&-1\\1&0\end{pmatrix},\quad
+X_2=\begin{pmatrix}0&i\\i&0\end{pmatrix},\quad
+X_3=\begin{pmatrix}i&0\\0&-i\end{pmatrix}.
+\]
+
+Here \(X_1X_2=-X_3\), and the cyclic products give the same sign, so \([X_i,X_j]=-2X_k\) and \(d\sigma_i=+2\sigma_j\wedge\sigma_k\). The quotient of the unit \(S^5\) at \((\cos r,\sin r\,z)\) removes the square of the vertical connection \(\sin^2r\,\sigma_3\). This gives \(a=\sin r\), \(b=\sin r\cos r\) in \(dr^2+a^2(\sigma_1^2+\sigma_2^2)+b^2\sigma_3^2\). The result requires \(0<r<\pi/2\) for a smooth hypersurface.
+
+Write \(v=b^2/a^2\). Cartan's torsion equations give the cyclic entries \(\omega^2{}_3=\sqrt v\,\sigma_1\), \(\omega^3{}_1=\sqrt v\,\sigma_2\), \(\omega^1{}_2=(2-v)\sigma_3\). In general for entries \(f_i\sigma_i\) with positive structure equations, the quadratic trace is \(-4\sum_i f_i^2\sigma_{123}\) by summing the two skew entries for each pair. The cubic trace is \(6f_1f_2f_3\sigma_{123}\) by the six permutations. With \(p_1=-\operatorname{tr}\Omega^2/(8\pi^2)\) and volume \(2\pi^2\) in this frame, the integrated Chern–Simons form is \(2v+(2-v)^2-v(2-v)=2+2(1-v)^2\). On a smooth cylinder with exact product ends the real eta difference is one third of the change in this integral, oriented upper end minus lower end. The round sphere's reflection forces its offset to vanish. Thus \(\eta=+2(1-v)^2/3\). The primary hypothesis used here is the smooth oriented compact Riemannian cylinder and its exact product ends, as in [APS I, Theorem (4.14), p. 66](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/aps001.pdf#page=24), inspected 27 November 2026.
+
+The principal differences in the outward second fundamental form are given by \(q=b'/b-a'/a=-\tan r\), and the connection in the orthonormal coframe has \(\omega^2{}_3=ce^1\), \(\omega^3{}_1=ce^2\) with \(c=b/a^2\). The slice tensor \(B^\circ\) is diagonal with entries \((-q,-q,2q)/3\). For a diagonal tensor with constant entries \(p_i\), \(\nabla_k B^\circ_{ij}=(p_j-p_i)\omega^i{}_j(e_k)\). Thus its curl has diagonal entries \((-qc,-qc,2qc)\). The pairing is \(2q^2c\), and multiplying by slice volume \(2\pi^2a^2b\) gives \(\mathcal T=+4\pi^2\sin^4r\).
+
+As a separate check on chirality, the radial sectional curvatures are \(-a''/a,-a''/a,-b''/b=(1,1,4)\). The unitary isotropy of the quotient metric is transitive on unit tangent vectors, so it is Einstein with \(\operatorname{Ric}=6g\). Subtracting the constant-curvature part gives the radial electric Weyl tensor \(\mathcal E=\operatorname{diag}(-1,-1,2)\). The Codazzi magnetic tensor is the symmetric curl in this convention, so \(qc=-1\) implies \(\mathcal H=-\mathcal E\). The Hodge star sends \(e^i\wedge dr\) to minus the corresponding positively oriented slice two-form. Therefore the self-dual block is \(\mathcal E-\mathcal H=2\mathcal E\) and the anti-self-dual block vanishes. Integrating \(24\) against the ball volume \(\pi^2\sin^4r/2\) gives \(\Delta E=12\pi^2\sin^4r\). This agrees with \(12\pi^2\eta+\mathcal T\), with zero signature because the domain is a ball. Ambient orientation reversal exchanges the two Weyl blocks and negates eta and the oriented curl pairing. The coefficient of the extrinsic term is still plus.
+
+## Both invariant lifts on the quaternionic quotient
+
+In the orientation of the quaternion basis \((1,i,j,k)\), the positively oriented left invariant frame has brackets \([i,j]=2k\), so its structure equations have a minus. The positive Maurer–Cartan sign in the Fubini–Study calculation therefore gives the opposite *relative* eta sign from that of the left-invariant frame in this quaternion marking. At round, left multiplication by \(i\) rotates both positively oriented planes \((1,i),(j,k)\) by \(\pi/2\). The same holds for \(j,k\) after cyclic permutation. By [APS II, Proposition (2.12), p. 412](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/aps002.pdf#page=8), inspected 27 November 2026, the round quotients for these free cyclic order-four actions have eta \(-1/2\), and the central order-two quotient has eta zero. On each nonzero eigenspace upstairs, let \(P_G\) project onto invariants by averaging over \(G\). Then \(\sum_{u=i,j,k}P_{\langle u\rangle}=2P_{Q_8}+P_{\{\pm1\}}\) by comparing group elements. Taking the corresponding eta traces and continuing to zero gives the round offset \(-3/4\).
+
+For an arbitrary positive left-invariant metric, right translations descend because they commute with the left deck action. In the left frame their derivatives realize all of \(SO(3)\) through the adjoint representation. An oriented diagonalization of the metric therefore works on the quotient itself. Let \(A\ge B\ge C>0\) denote the three ordered squared lengths after this diagonalization and \(s_1,s_2,s_3\) the elementary symmetric polynomials. In the negatively signed structure equations the Cartan coefficients are \(f_i=(2A_i-s_1)/\sqrt{A_jA_k}\). The trace computation now gives a positive quadratic trace and the same cubic trace. The integrated Chern–Simons form on the quotient is \(-F/8\) for \(F=\sum f_i^2+f_1f_2f_3\). The round value of \(F\) is \(2\). Expanding over \(s_3\) gives \(s_3(F-2)=2(s_1^3-4s_1s_2+9s_3)\), so the left eta is \(-3/4-(s_1^3-4s_1s_2+9s_3)/(12s_3)\). As an independent coefficient check set \(x=C\), \(p=B-C\), \(q=A-B\). Expansion gives
+
+\[
+s_1^3-4s_1s_2+9s_3=x(p^2+pq+q^2)+2pq^2+q^3.
+\]
+
+It is nonnegative for \(x>0\), \(p,q\ge0\), and vanishes precisely when \(p=q=0\). This proves the strict threshold \(|\eta|<2/3\) is unreachable throughout the left-invariant family. Changing orientation negates the whole formula, preserving the absolute threshold and equality statements.
+
+For a right-invariant metric, the left deck action changes the right frame by \(\operatorname{Ad}(u)\) for \(u\in Q_8\). Commutation with the diagonal matrices \(\operatorname{Ad}(i),\operatorname{Ad}(j),\operatorname{Ad}(k)\), which each reverse two of the three signs, is equivalent to the metric matrix being diagonal. Right translations act transitively and isometrically on the resulting quotient. The right coframe has positive structure equations in the fixed quaternion orientation. Its integrated Chern–Simons form thus gives the opposite relative correction, with the same offset \(-3/4\). This sign is also forced by inversion on the cover. Inversion sends the differential at the identity to \(-I\) and exchanges the two lifts. Since the relative integral pulls back under the degree-eight quotient, its sign reverses between these metrics regardless of the choice of frame downstairs.
+
+For squared lengths \((1,1,t^2)\), substitution gives \(\eta_R=-3/4+(t^2-1)^2/12\). The strict inequality is \(1<(t^2-1)^2<17\), which for \(t>0\) is exactly \(\sqrt 2<t<\sqrt{1+\sqrt{17}}\). The alternative branch \(0<t\le1\) has squared difference less than 1. With left orthonormal brackets \([e_1,e_2]=2t e_3\), \([e_2,e_3]=2e_1/t\), \([e_3,e_1]=2e_2/t\), Koszul gives \(\nabla_1e_2=t e_3\), \(\nabla_2e_3=t e_1\), \(\nabla_3e_2=(t-2/t)e_1\) and their metric-skew partners, with \(\nabla_i e_i=0\). This yields \(K_{12}=-t^2-2t(t-2/t)=4-3t^2\) and \(K_{13}=t(t-2/t)+2=t^2=K_{23}\). Inversion preserves the curvatures in the right metric. Thus \(R=8-2t^2>0\) exactly when \(0<t<2\). At \(t=\sqrt 3\) the values are \(R=2\) and \(\eta_R=-5/12\), with the conditional umbilic-cut energy bound \(5\pi^2\) in the parent setting. Reversal of the quotient orientation again preserves both tests. These are intrinsic calculations on the marked link, and the E10 statements concerning a tube or an umbilic cut are conditional on realizing that datum.
+
+## Replayed files
+
+| Input | SHA-256 |
+| --- | --- |
+| [E01 Fubini–Study note](../notes/FS_BALLS.md) | `d7d9df641d6999356e1b3dc2f4c4008ce3a368b04dd5ad180b14dba113d83be0` |
+| [E04 quaternionic note](../notes/QUATERNIONIC.md) | `108901a43fd1e25e4abb5247c1b9591860112911d0630811a1bba7acd9547321` |
+| [E10 marked families note](../notes/QUATERNIONIC_MARKING.md) | `84c2f83a2a6cfcb31ce018e30054043c3a0033905238920397384ac2c09bc7b8` |
+| [Fubini–Study arithmetic](../numerics/check_fs.py) | `56cf387f226a4baebd42a4c000abf0f1fa5cf0cafc4229f9b1273908b35b6caf` |
+| [Quaternionic arithmetic](../numerics/check_quaternionic.py) | `34a8d6806cb4e91d4916803a1cb8e20287710f4eb80b107c239fc1c9ef04bd08` |
+
+Both scripts passed their defaults. The Fubini–Study script also passed at \(x=1/7,3/10,11/12\), and the quaternionic script returned \(-184939/246400\) at the unordered squared-length triple \((7/5,3/2,11/8)\). The ordered-axis expansion above was also recomputed by integer polynomial multiplication after substitution. The Fubini–Study note was revised during review and the listed hash identifies the version re-read, which explicitly specifies both signs under orientation reversal. The replay found no discrepancy in the signed identities or the threshold calculations.

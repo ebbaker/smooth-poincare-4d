@@ -1,0 +1,3 @@
+# SP4-CUT-TUBE-E35 · Branched and unbranched cap cover test
+
+27 November 2026 for Edward B. Baker III, baseline bc2c1bb. Sol 6.2/ultra requested. On the specified short-axis projective-plane cap lift the conformal class to its twofold cover. Compute the exact boundary group and its embedding in Q8 at that marking, signature, eta and signed difference. Test if Gursky or the sharp positive Yamabe inequality on the cover, or on another smooth closed filling with the same marked boundary, improves the bound on the smaller sign. Read the ledger and primary sources. Write notes/E35_COVER_CAP.md. Stop at verified result or failing geometric premise; no shared edits.

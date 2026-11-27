@@ -1,0 +1,5 @@
+# For cuts from geometry · the fixed-gauge constant
+
+27 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. Selected lead Astra/ultra, serving details unavailable. Working HEAD `bc2c1bbccc1d` and parent TeX SHA-256 `ccb52d6a2548fb8f…`. Internal scientific handoff, issued from SEAM. [Register](../REGISTER.md).
+
+On the actual closed minimal hypersurface of the fundamental class, \(H=0\), and the infimum of Theorem 4.1(3) is at least \(c(g,F)>0\) from [E05](../../notes/E05_UNIFORM_BENDING.md). The estimate is uniform in closed cuts in that one entering class. A strict upper bound \(\|B\|_3^2<c(g,F)\) on the *same* first-width cut would settle its positivity; neither its index bound nor this calculation supplies that upper bound. For the marked alternative use the actual \(Z_a\) and strict bending bound in the [recognition decision](../../brainstorm/notes/B03_MARKED_BENDING.md). In answer to the [incoming request](../../../05_cuts_from_geometry/research-progress/handoffs/TO_SEAM_MINIMAL_CUT_CONSTANT_20261127.md).

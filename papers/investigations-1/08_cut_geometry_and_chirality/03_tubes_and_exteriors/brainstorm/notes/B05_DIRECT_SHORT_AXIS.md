@@ -1,0 +1,3 @@
+# A direct short-axis comparison
+
+27 November 2026 for Edward B. Baker III, OpenAI assistance. Input bc2c1bb and SEAM's new TO_TUBE_SHORT_AXIS_FILLING_20261127 request. Its target is one cap with mean energy below 4π² and positive Neumann sign on the actual short-axis marking. The known round-intermediate cap loses this budget before its transition. Test a genuinely triaxial direct interpolation from the core, with regular angular weights and zero outer shape operator built in. Exploratory floating values do not qualify as an upper bound; certify a selected successful profile or give the narrow failure. This is a cap calculation. The gluing remains with SEAM.

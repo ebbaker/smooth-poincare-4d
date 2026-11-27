@@ -1,0 +1,3 @@
+# SP4-CUT-TUBE-E37 · Collapsing the prism Seifert fibers
+
+27 November 2026 for Edward B. Baker III, baseline bc2c1bb. Sol 6.2/ultra requested. On the actual Q8×C17 quotient use Berger metric of Hopf fiber in the right i circle of size epsilon, round horizontal quotient. Verify J isometry, horizontal displacement for all marked lifts, smooth radius bounds, integrated tracefree Ricci, and a definite finite-length test or obstruction for bent puncture on this changed background. Avoid applying round angular coefficients without a proof. Look for a constructive deformation or two-scale finite criterion. Write notes/E37_BERGER_PRISM.md. Stop at verified result or failing geometric premise; no shared edits.

@@ -1,0 +1,3 @@
+# E28 · Independent test of the marked order-seventeen prism
+
+27 November 2026 for Edward B. Baker III, Sol 6.2/ultra requested. Check the lead's explicit \(Q_8\times C_{17}\) double action on the unit quaternions, the normalizing isometry \(p\mapsto a p j^{-1}\) with \(a=(1+i+j+k)/2\), its sharp minimum displacement \(\pi/6\) on the quotient, the actual point-moving correction and marked meridian quotient. Check how the stationary exterior mechanism fails, both homotopy fillings, and the precise distinction between existence of some positive-double metric and the missing subcritical metric. Own reviews/E28_PRISM_REPLAY.md. This closes the fixed candidate test. No full energy or smooth recognition from topology alone.

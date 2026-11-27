@@ -1,0 +1,7 @@
+# SP4-CUT-SEAM-E11 · frozen request r1
+
+27 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. Selected lead Astra/ultra, serving details unavailable. Working HEAD `bc2c1bbccc1d` and parent TeX SHA-256 `ccb52d6a2548fb8f…`. Requested GPT-6.2 Sol/ultra. [Sole register](../REGISTER.md) and [input list](../../continuation-notes/CONTINUATION.md). Positive-definite smooth category, real chiral HS blocks, T=4π².
+
+Final independent integration. Reader A (original E04) checks independently the stronger 119/60 order wall from E08B_FINITE_COVERS.md, all incoming LED/SLIDE/GEO implications (including the meaning of the S5 constant for GEO and exact SLIDE scopes), and scope of B04's quaternionic twist and paired-infimum equivalence. Reader B (original E02) checks the independent E09B/E10 mathematical derivation and K=1 obstruction using the actual candidate and θ conventions; give independent verdict or limit. Do not assume the new lens example exists. Any new geometric mechanism beyond the named frozen model belongs to the continuation; a necessary missing finite test should be identified by name.
+
+Write only A: reviews/E11A_INTEGRATION.md; B: reviews/E11B_LENS_OBSTRUCTION.md, only your assigned file. Supply primary passage receipts for imported results. Stop at proved result or scoped failure; return every extra premise to the lead. No shared edits.

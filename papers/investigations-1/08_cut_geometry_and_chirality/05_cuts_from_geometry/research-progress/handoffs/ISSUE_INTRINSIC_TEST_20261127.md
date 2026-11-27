@@ -1,0 +1,3 @@
+# GEO-E14 • intrinsic test for an angular or spectral height
+
+27 November 2026, for Edward B. Baker III, OpenAI Codex. Lead owns notes/INTRINSIC_HEIGHT_TEST_20261127.md. A distinct Sol/ultra reader writes reviews/INTRINSIC_TEST_REPLAY.md. Test the Gauss estimate for any f with small Hess f+μfg outside and inside a regular belt, the integrated Bochner identity for a Laplace eigenfunction, and the obstruction at the round orbit-height critical surface. Also independently check the angular competitor and the biaxial maximum in notes/GLOBAL_AREA_TEST_20261127.md. Recompute signs, scale, area and coverage. No claim that the pointwise height conditions hold on all entering metrics.

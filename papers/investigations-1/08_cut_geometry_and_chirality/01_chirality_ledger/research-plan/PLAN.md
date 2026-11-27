@@ -1,6 +1,6 @@
 # Research plan — Chirality ledger
 
-26 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum. Setup baseline `4655e38`. The [overview](../research-overview/OVERVIEW.md) states the question and what is inherited; the [parent overview](../../research-overview/OVERVIEW.md) fixes the conventions and the route; statements are cited by their numbers in the [parent manuscript](../../manuscript/cuts_of_subcritical_conformal_classes.tex). The [register](../research-progress/REGISTER.md) alone owns live status. Nothing here is activated.
+26 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum. Setup baseline `4655e38`. The [overview](../research-overview/OVERVIEW.md) states the question and what is inherited; the [parent overview](../../research-overview/OVERVIEW.md) fixes the conventions and the route; statements are cited by their numbers in the [parent manuscript](../../manuscript/cuts_of_subcritical_conformal_classes.tex). The [register](../research-progress/REGISTER.md) alone owns live status. These are historical launch definitions; the 27 November extension and live register govern execution.
 
 **Routing.** B tasks are conceptual and go to the lead; E tasks have fixed inputs, method and completion test and go to bounded helpers, as in the [model workflow](../../../../../GPT_RESEARCH_MODEL_WORKFLOW.md). In a Claude session Fable leads and takes B tasks and Opus takes E packets, in the roles that workflow gives Astra and Sol; a GPT lead uses Astra/ultra and Sol 6.2/ultra. The lead selected by the author takes precedence.
 
@@ -20,3 +20,17 @@
 **Stop.** Only at an end state named in the [continuation note](../continuation-notes/CONTINUATION.md), or at an author decision. A return that changes a statement of the parent manuscript or of another branch is handed off and the work continues. The completion of the rows above is not a stop: they are the first horizon, and the lead adds the next rows as that note describes. This rule was revised on 27 November 2026 at the author's instruction. Results go to the parent lead for the lane decision SP4-CUT-B01 in the [parent plan](../../research-plan/PLAN.md). Numerical work stays within the scope stated in its row.
 
 **Launch.** Use the prompt in this child's [continuation note](../continuation-notes/CONTINUATION.md).
+
+## 27 November 2026 extension
+
+The [decision](../brainstorm/notes/ROUTING_20261127.md) chooses the marked C² neighbourhood and opens the following packets. These dated rows supersede the setup's inactive routing. The live outcomes and independent readings are in the register.
+
+| ID | Route and readiness at issue | Deliverable, finite test and escalation |
+| --- | --- | --- |
+| E05 | Sol/ultra, E. Fixed Section 3 proof audit, ready | Replay 3.1–3.5, signs, norm transformations, and arbitrary-cut algebra. Send corrections to the lead. |
+| E06 | Sol/ultra, E. Primary source audit, ready | Verify APS conventions and round offsets, plus the scope of the two cited filling results. Identify any inaccessible premise. |
+| E07 | Sol/ultra, E. Smooth regularity test, ready | Check global Bach-flatness and unique continuation across an actual smooth cut; distinguish weak matching and report any missing regularity input. |
+| E08 | Lead derivation, Sol/ultra replay, E. Depends on E03/E05 for the explicit neighbourhood | Give exact thresholds for Section 3 models, quantify the extrinsic term and equality conditions, identify unattained or unproved sharpness. |
+| E09 | Sol/ultra, E. Depends on each finished note | Independent readers recompute L1–L6 on disjoint assigned review files and reproduce symbolic checks. Resolve discrepancies before carrying a result. |
+| B03 / E10 | Lead geometric decision then Sol/ultra verification. Depends on E01 and the same oriented quotient sign | Compare lifts invariant on the opposite side of the deck action. On the Berger subfamily derive the precise admissible interval, exhibit a positive-scalar example, and distinguish marked data from an actual cap. No trial on 07. |
+| E11 | Lead calibration, independent Sol/ultra replay. Depends on E04/E10 | Identify the fixed, existing quadratic-form model of round S⁴, its actual collapsing axes, and eta on principal orbits. Stop at the marked example, without an entry construction. |

@@ -1,0 +1,5 @@
+# For slide filters · quantified exclusion
+
+27 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. Selected lead Astra/ultra, serving details unavailable. Working HEAD `bc2c1bbccc1d` and parent TeX SHA-256 `ccb52d6a2548fb8f…`. Internal scientific handoff, issued from SEAM. [Register](../REGISTER.md).
+
+On every cut type certified not PSC-dominated by your [incoming list](../../../04_slide_filters/research-progress/handoffs/TO_SEAM_MARKED_CUT_CERTIFICATES_20261127.md), every smooth representative embedded in any one fixed entering class must have \(\|B^\circ\|_3^2\ge c(g,F)\); see [the explicit constant](../../notes/E05_UNIFORM_BENDING.md). This includes both native cuts for \(n\ge3\), and the individual successor labels exactly within the scope you certified. The 32 undecided fourth-moving labels in the generic \(n=3\) test remain outside that conclusion unless covered by a distinct specified history. The split-zero tube \(Y_1\) passes the PSC topology test.

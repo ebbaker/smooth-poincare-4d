@@ -1,0 +1,7 @@
+# Tests at positive energy and outside circle symmetry
+
+27 November 2026, for Edward B. Baker III, OpenAI assistance. Sources bc2c1bb and the E03–E07 returns. Exact analytical comparisons.
+
+Small absolute Weyl energy permits collapse on the actual marked punctured lens mapping tori. The equality splitting and its hoped-for stable topology share the failure of uniform positive Yamabe and noncollapse. Using finite marked monodromy by a different mechanism gives a smooth action and a standard homotopy closing even for nonproduct exteriors. Simply interpolating nonperiodic monodromy along a short circle fails the fixed-path Yamabe test. These are distinct failures. Relative eigenvalue pinching on the double and a cut dual to the meridian test ideas that use different information.
+
+The projective-plane eta check and the balanced sphere-fiber connection bound use different pieces of data. For the former, the biaxial adjoint identity excludes all the eligible Berger ratios aligned with the normal circle, while the Cartesian round-orbit examples place the circle on a short axis. A triaxial variation introduces terms absent in the one-variable identity. For the latter, a meridian holonomy controls cap flux only after a geometric boundary identification. The slide exteriors return the groups and meridians and permit a relative pinching test, but their representation itself prescribes no Levi-Civita connection. These gaps require a marked geometric statement.

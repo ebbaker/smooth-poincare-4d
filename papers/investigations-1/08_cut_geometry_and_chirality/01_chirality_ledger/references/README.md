@@ -1,0 +1,1 @@
+Primary-source inspection, hypotheses and versions are in [the dated source record](PRIMARY_20261127.md); the smooth continuation and Pedersen passages are indexed in [the half-flat note](../notes/HALF_FLAT.md#source-and-evidence-record).

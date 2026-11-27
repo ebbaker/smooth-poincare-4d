@@ -1,0 +1,3 @@
+# E06 return
+
+27 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. Selected lead Astra/ultra, serving details unavailable. Working HEAD `bc2c1bbccc1d` and parent TeX SHA-256 `ccb52d6a2548fb8f…`. The lead executed this fixed packet after helper capacity was reached. [Derivation](../../notes/E06_SPHERICAL_FACTORS.md). Finite double group and boundary surjectivity follow below \(T\chi(V)\); the positive-cover bound gives an order-dependent threshold. A nonempty PSC integral homology sphere requires \(e\ge(59/30)T\); a single spherical prime leaves only the sphere and quaternionic candidates. Positive controls and remaining costs have been identified. Independent replay assigned in E08B.

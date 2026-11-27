@@ -1,0 +1,5 @@
+# SP4-CUT-TUBE-E02 · stationarity and three rows
+
+Issued 27 November 2026 for Edward B. Baker III by the OpenAI research lead. Bounded E packet, requested gpt-6.2-sol/ultra. Lead runtime setting unavailable. Input revision bc2c1bb, parent Sections 5–6, original check_01, check_02 and output linked in the [launch note](../../continuation-notes/CONTINUATION.md). The [register](../REGISTER.md) owns status. Use the smooth oriented Riemannian conventions there, T = 4π² and e the mean of the two Hilbert–Schmidt chiral energies. Return analytical, certified and floating evidence separately. Write only the assigned files, record exact sources and limitations, and return to the lead if a different mechanism is needed.
+
+Derive EL, first integrals, free-length and pole endpoint conditions with signed flux using (6.3). Test exactly the first three untwisted rows in check_02. Seek exact or finite mesh analytic comparison, distinguish continuum minimum and discretized estimate. Own notes/E02_VARIATION.md and one small numerics script if necessary. Return precise discrepancies.

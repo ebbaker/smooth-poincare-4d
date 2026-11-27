@@ -33,3 +33,5 @@ The definition of the capping cost (SEAM-B01). The criterion adopted for positiv
 ## Ownership
 
 Owns the positivity and atlas statements for cuts. Does not own the handle-level theorems of 05 or the entry trials of 07. The parent keeps the independent reading of the manuscript (SP4-CUT-E02) and the choice of closing lane (SP4-CUT-B01) in its [register](../../research-progress/REGISTER.md).
+
+**27 November 2026 update.** The register and [closing note](../continuation-notes/CLOSING_20261127.md) give the dispositions of these setup questions, including the uniform fixed-class bending bound, matched-cap descent and the positive-double filling problem.

@@ -1,0 +1,7 @@
+# Relative estimates from the true cover of the projective-plane cap
+
+27 November 2026, second research turn, for Edward B. Baker III with OpenAI assistance. Working checkout bc2c1bb. On the short-axis marked disk, lift the positive Neumann class to the disk over the oriented sphere of Euler magnitude four. Its signature and the actual lens boundary eta may give a stronger *signed* lower bound or a gluing obstruction than the old bound on the mean of the doubled cover. Test enhanced pinching on the cover and finite comparisons using the marked boundary isometries. Separately test a conformal Kähler triaxial filling using the invariant complex-structure equations at the prescribed bolt and face. Retain the original disk normalization and smoothness hypotheses.
+
+The oriented lens cover identifies an actual Fubini–Study conic-side model with the short-axis intrinsic face and wrong first jets. E41 adjusts the radial speed along the genuine orbit shapes and tests the smaller chirality, including the terminal speed demand. E42 supplies an independent readback.
+
+The explicit positive half-flat collar has an asymptotically round opposite end at infinite length. Conformal compactification there may produce an exact orbifold comparison cap at the prescribed face. E49 and E50 test its smooth orbifold jets, the Neumann sign and the resulting signed comparison, separately from smooth disk filling.

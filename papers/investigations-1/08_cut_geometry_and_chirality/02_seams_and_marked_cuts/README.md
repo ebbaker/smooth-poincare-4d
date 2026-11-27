@@ -14,7 +14,9 @@
 
 **Ownership.** Owns the positivity and atlas statements for cuts. Does not own the handle-level theorems of 05 or the entry trials of 07.
 
-**State.** Overview, plan, register and continuation note set up; nothing is activated. By the author's instruction this child has no manuscript and no working folders yet; notes, handoffs, numerics and reviews are created on first use as the [setup workflow](../../../../INVESTIGATION_SETUP_WORKFLOW.md) describes. Ready on activation: SEAM-E01, SEAM-B01, SEAM-B02, SEAM-E03.
+**Current state, 27 November 2026.** The five-component investigation reached its closing disposition. The marked recognition and near-round cap estimates have proofs and independent readings. Actual realization of the remaining spherical-summand seams is reduced to a strict shared-boundary filling problem. The [closing note and continuation prompt](continuation-notes/CLOSING_20261127.md), [assessment](reviews/ASSESSMENT_20261127.md) and [sole register](research-progress/REGISTER.md) supersede the setup snapshot for current status.
+
+The [latest short-axis result](notes/MARKED_FILLING_RESULT_20261127.md) and [continuation after the four core trials](continuation-notes/AFTER_SHORT_AXIS_20261127.md) update the marked realization question.
 
 26 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum. Setup baseline `4655e38`.
 

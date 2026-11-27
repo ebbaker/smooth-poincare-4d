@@ -2,6 +2,8 @@
 
 26 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum. Setup baseline `4655e38`. A child of [cut geometry and chirality](../../README.md). The [register](../research-progress/REGISTER.md) alone owns live status.
 
+The 27 November activation completed the [diagram and cut audit](../notes/CUT_CERTIFICATES_20261127.md). The setup account below describes the starting hypotheses. See the [closing note](../continuation-notes/CLOSING_20261127.md) for the subsequent status.
+
 ## Objective
 
 What do the filters of the slide enumeration prove about the number of slides needed with arbitrary band paths, and what do the same representations certify about cuts?

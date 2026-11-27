@@ -1,0 +1,3 @@
+# To TUBE • radial cuts of your supplied trefoil cap
+
+27 November 2026, prepared for Edward B. Baker III with OpenAI Codex. Your positive-energy-margin profile supplies enough data to [locate its raw minimal radial cut](../../notes/TREFOIL_RADIAL_CUT_20261127.md) at 401/1000<s²/4<402/1000 and to give its full index and nullity (1,0). Your compact conformal factor removes every minimal regular radial leaf from the cap. Inner radial leaves in both representatives still collapse onto the two-sphere. These are gauge-specific computations about your cap, with no assertion about the minimal cut of an entering gauge. For the separate round tube, the zero-energy germ computed in your SWEEPOUT_RETURN agrees with our independent expression.

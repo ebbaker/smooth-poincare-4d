@@ -1,0 +1,7 @@
+# Cut consequence of the existing GST filters
+
+27 November 2026, for Edward B. Baker III, OpenAI Codex. Delivery of SP4-CUT-SLIDE-E02 to the lead of 05, reading the marked-cut manuscript at bc2c1bb.
+
+The nonprimitivity established by your fixed-component, three-slide and fourth-slide tests also obstructs PSC domination of the cut made by the corresponding upper attachment. Under any physical unstabilized slides both dual forward tubes give ordinary integral surgery in \(S^3\) with full boundary \(Y_2\); the surgery matrix is zero. If the cut after \(C\) from above were PSC-dominated, your zero-matrix lemma would give \(Y_1\), and the remaining forward \(C^*\) surgery \(Y_1\to Y_2\) would be on a disk-framed local unknot. Thus the original word of \(C\) would be primitive. The native diagrams furthermore supply upper-side quotients, marked peripheral words and two actual doubled-disk exteriors. [Certificate table](../../notes/CUT_CERTIFICATES_20261127.md) · [Exterior data](TO_TUBE_NATIVE_DISK_DOUBLE_20261127.md)
+
+The [four-item request](../../../research-progress/handoffs/SLIDE_B01_REQUEST_TO_05_20261126.md) remains with 05's lead. To reopen, record which items are accepted and who owns each output either in 05's register or as a dated return beside the request. An answer in the author's continuation prompt also suffices. This delivery neither changes ownership nor decides the direction of the enumeration.

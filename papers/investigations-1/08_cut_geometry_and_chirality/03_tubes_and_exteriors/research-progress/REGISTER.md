@@ -1,20 +1,48 @@
 # Tubes and exteriors — progress register
 
-26 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum. Setup baseline `4655e38`. Sole live owner of the task family `SP4-CUT-TUBE`. Nothing is activated. Tasks that came from the parent family keep their definitions; the [crosswalk](../../research-progress/CROSSWALK_20261126.md) records each change of identifier. [Plan](../research-plan/PLAN.md) · [Overview](../research-overview/OVERVIEW.md) · [Parent register](../../research-progress/REGISTER.md) · [Continuation](../continuation-notes/CONTINUATION.md)
+Sole live register for SP4-CUT-TUBE, prepared for Edward B. Baker III. Setup on 26 November 2026 at 4655e38. The author activated the research on 27 November 2026. OpenAI-assisted lead, actual serving identifier and reasoning effort unavailable. Bounded derivations and independent readers were requested as gpt-6.2-sol/ultra. Input checkout bc2c1bbccc1d244a9d456ffe2fcaf64e368290b0; parent manuscript SHA-256 prefix ccb52d6a2548fb8f. All changes are confined to this child. [Plan](../research-plan/PLAN.md) · [End-state definitions](../continuation-notes/CONTINUATION.md) · [Dated continuation](../continuation-notes/RESUME_20261127.md)
 
-| Task | Current state | Evidence or exact dependency |
-| --- | --- | --- |
-| SP4-CUT-TUBE-B01 | Ready, unactivated | First conceptual decision of this child. Formerly SP4-CUT-B03. |
-| SP4-CUT-TUBE-E01 | Ready, unactivated | Inputs fixed: the functional (6.3) and one profile from check_02 of the proposing note. Formerly SP4-CUT-E04. |
-| SP4-CUT-TUBE-E02 | Ready, unactivated | Inputs fixed: the functional (6.3) with its boundary conditions. |
-| SP4-CUT-TUBE-B02 | Ready, unactivated | The projective-plane case waits for SP4-CUT-LED-E04. |
-| SP4-CUT-TUBE-E03 | Dependent | Needs TUBE-B01 to select the classification approach. |
-| SP4-CUT-TUBE-B03 | Reserved | Needs the agreement of the lead of 07, which lists branched and punctured constructions among its reserves. |
+## Component results on 27 November 2026
 
-**Imported material, not a task.** The statements of the [parent manuscript](../../manuscript/cuts_of_subcritical_conformal_classes.tex) that this child starts from carry the status recorded in the parent register: proofs written out and not read independently (SP4-CUT-E02 is that reading).
+| Component | Evidence and remaining question |
+| --- | --- |
+| **T1. Exterior recognition — reduced** | Under the stated umbilic and positive-double hypotheses, zero Weyl energy gives the marked product exterior and both smooth standard fillings. Positive energies approach zero on nonproduct exteriors with torsion. Both homotopy fillings in the explicit inversion family are standard. The literal version without the homotopy-sphere hypothesis has counterexamples. The relative bound in terms of the double's Yamabe constant recovers the meridian group and the unmarked double. The residual positive-energy statement, the tested mechanisms and the missing marked conclusion are in the [impasse note](../brainstorm/notes/POSITIVE_ENERGY_IMPASSE.md). [Equality](../notes/E03_EQUALITY.md) · [collapse](../notes/E05_TWISTED_EXTERIORS.md) · [relative pinching](../notes/RELATIVE_PINCHING.md) |
+| **T2. Cap functional — launch evidence standard met** | The stationarity and free-end equations reproduce three direct minimizations at the specified discretization. For zero twist and terminal slope at most zero the continuum minimum is exact. Every finite flat untwisted cap lies above the wall. An explicit knotted trefoil cap has a rigorous interval below the wall and smooth positive closings. The general twisted minimum remains open. [Variation](../notes/E02_VARIATION.md) · [exact minimum](../notes/E06_AREA_MINIMUM.md) · [trefoil](../notes/E01_CAP.md) · [independent reading](../reviews/E08_CAP_REPLAY.md) |
+| **T3. Tubes outside circle symmetry — partial** | Round sphere-fiber connections obey both signed holonomy estimates. On the two supplied native GST exteriors both framings are standard. The positive-Weyl exterior must still pass T1's conditions. For projective-plane tubes there are collar and long-axis obstructions, and exact positive short-axis trials on the prescribed face. All homotopy-sphere pairings of the two standard bundles are standard. An arbitrary projective-plane complement remains unclassified. For the unrestricted positive short-axis cap the comparison of its mean energy infimum with \(4\pi^2\) is unresolved. [Three-class assessment](../brainstorm/notes/NONSYMMETRIC_IMPASSE.md) · [connection](../reviews/E16_FULL_CONNECTION.md) · [native topology](../reviews/E13_NATIVE_READBACK.md) · [quaternionic pair](../notes/E18_QUATERNIONIC_PAIR.md) |
+| **T4. Surface tubes — external** | 07 was asked whether to assign a nonumbilic marked tube. No answer assigning one was found on this read. The [request](handoffs/TO_07_SURFACE_TUBES_20261127.md) and the separate [return on framed caps](handoffs/TO_07_CAP_BUDGET_20261127.md) record the division of work. |
 
-**Returns.** Completed tasks return to the parent lead, and to the registers of other branches only by handoff.
+## Decisions, packets and routing
 
-**Outgoing handoffs.** None yet. The lead lists each one here with its date, the branch that receives it and whether it has been acknowledged.
+B01 selected equality and stability. B02 selected the full connection metric and the quaternionic cap. B03 requested 07's input. B04 selected the relative pinching test and both native disk meridians. B05 selected the direct triaxial trial and the switched-pair identification. B06 selected the finite-width round-chamber trial and the fibering, puncture and scale tests. [B01](../brainstorm/notes/B01_EXTERIOR_ROUTES.md) · [B02](../brainstorm/notes/B02_MARKED_CAPS.md) · [B04](../brainstorm/notes/B04_BEYOND_EQUALITY.md) · [B05](../brainstorm/notes/B05_DIRECT_SHORT_AXIS.md) · [B06](../brainstorm/notes/B06_ROUND_CHAMBER.md)
 
-**Questions for the author.** None yet. The lead records a question here and continues unless every remaining step depends on the answer.
+The [dated packet and handoff receipt](handoffs/RETURNS_20261127.md) pairs every frozen request with its output and identifies the six incoming handoffs by their working hashes. Principal results for the parent and 07 are in the [parent return](handoffs/TO_PARENT_CAP_AND_EXTERIOR_20261127.md), [master return](handoffs/TO_MASTER_ONE_TUBE_20261127.md), and [source receipt](../references/READING_20261127.md).
+
+## Questions for the author
+
+None. The missing inputs are mathematical or belong to the named branches. The native chat source was unavailable. The branch holds a dated [unregistered partial public record](../chat-histories/UNREGISTERED_PARTIAL_20261127_TUBES.md).
+
+## Fibered test at a fixed marking
+
+The [fiber criterion](../notes/E22_FIBER_OBSTRUCTION.md) and its [reflective converse](../reviews/E23_FINAL_REPLAY.md) identify the allowed prime types. The [actual puncture on homogeneous space forms](../notes/E24_HOMOGENEOUS_FIBERS.md) and its [independent reading](../reviews/E25_HOMOGENEOUS_REPLAY.md) recognize both fillings for one-sided transitive spheres. The [length polynomial and sign criterion](../notes/E26_LENGTH_TEST.md) have an [independent normalization check](../reviews/E27_LENGTH_REPLAY.md).
+
+The order-seventeen type-II [prism calculation](../notes/MARKED_PRISM_17.md) fixes the peripheral automorphism, both homotopy-sphere closings, the positive double and the physical path. The sharp round displacement is \(\pi/6\). At every allowed shell width and every base length the localized scalar multiple of the transvection overspends the exterior budget. Allowing a gradient correction defeats the magnetic argument alone. A second estimate excludes every steady co-moving velocity extension with speed at rest at both time ends. The fixed prism lies outside the homogeneous recognition theorem; neither the budget on an arbitrary metric nor both smooth types have been decided. [Meridian replay](../reviews/E28_PRISM_REPLAY.md) · [magnetic bound](../reviews/E29_MOVING_PUNCTURE.md) · [gradient alternative](../notes/E30_GRADIENT_PUNCTURE.md) · [electric bound](../reviews/E31_ELECTRIC_CAPACITY.md).
+
+The [gradient readback](../reviews/E32_GRADIENT_REPLAY.md) and the [volume-preserving test](../reviews/E33_VOLUME_PRESERVING.md) add two exclusions without resting endpoints. The latter permits arbitrary time variation in a fixed embedded round shell, and uses the positive Yamabe sign of the same double.
+
+## Results of the continued research on 27 November 2026
+
+**T1.** The first positive-energy test still lacks four-dimensional smooth recognition. In the order-seventeen model the projected section is a Heegaard core of the underlying order-three lens space. The two underlying fillings are \(S^3,\mathbb{RP}^3\) and the orbifold abelianizations are \(C_2,C_4\). The original order-two singular knot has winding of magnitude three in the core complement. Its position after the isotopy determines the remaining branched-cover tests. The regular degree-34 four-dimensional branched cover of either homotopy sphere is \(\#_{16}(S^2\times S^2)\). [Core proof](../notes/MARKED_LENS_CORE.md) · [integer surgery](../notes/E48_LINK_SURGERY.md) · [four-dimensional covers](../notes/E39_PRISM_FILLINGS.md).
+
+For the energy side, unrestricted global support alone does not rescue the round-background construction. The global strain estimate is sharp. The two-endpoint density test excludes a quantified class of compressible paths, including a non-volume-preserving end map. Transport around the entire closed geodesic with round toric shear fails at every length even without a scalar-sign hypothesis. A fixed prism complement with a sufficiently long exact flat torus end has a compact negative test for the physical double. The Yamabe-positive optical hypothesis alone permits larger turning radii than pointwise spatial scalar positivity. [Density test](../notes/GLOBAL_DENSITY_PRISM.md) · [full torus and finite cylinder](../notes/GLOBAL_TORUS_PRISM.md) · [optical bend](../notes/E36_OPTICAL_BEND.md) · [Berger test](../notes/E37_BERGER_PRISM.md).
+
+**T3.** The interval from the combined working evidence is \(8/3\le F_W(h_{\sqrt3})/\pi^2\le6.46666\); SEAM supplied the upper bound on a different triaxial profile. The tested Fubini–Study shapes cost at least \(112\pi^2/27\) in the smaller sign at every admissible speed. The actual Atiyah–Hitchin quotient has the prescribed disk topology but no conformally matching orbit. A compact positive orbifold cap exists; its orientation as a filling puts all \(4\pi^2\) in the plus block. Preserving even its annulus \(2/3\le r\le1\) uses more than \(3\pi^2/2\). The nested-cut obstruction applies to nonsymmetric cores as well. [Conic shapes](../notes/E41_CONIC_SPEED.md) · [monopole orbit](../notes/E52_MONOPOLE_ORBIT.md) · [orbifold cap](../notes/E49_ORBIFOLD_CAP.md) · [signed slice test](../reviews/E55_RESOLUTION_REPLAY.md) · [SEAM certificate and scope](../../02_seams_and_marked_cuts/notes/MARKED_FILLING_RESULT_20261127.md).
+
+**T2 and T4.** The former retains the launch result. The surface-tube assignment remains external.
+
+## Incoming handoffs
+
+The six addressed handoffs are versioned in the [first receipt](handoffs/RETURNS_20261127.md) and rechecked in the [second receipt](handoffs/RETURNS_SECOND_20261127.md). The new SEAM result is an additional working scientific input. No 07 reply assigning a surface tube was located.
+
+## Outgoing handoffs
+
+The [parent return](handoffs/TO_PARENT_PRISM_CORE_AND_QUATERNIONIC_CAP_20261127.md), [master B02 return](handoffs/TO_MASTER_PRISM_FILLINGS_20261127.md), [07 return](handoffs/TO_07_PRISM_TRANSPORT_20261127.md), [SEAM return](handoffs/TO_SEAM_SHORT_AXIS_COLLAR_20261127.md) and [LED return](handoffs/TO_LED_SHORT_AXIS_COLLAR_20261127.md) include the hypotheses under which each new result can be used. B07–B10 record the geometric decisions. Individual packet status and readbacks are in the second receipt. No author decision is pending.

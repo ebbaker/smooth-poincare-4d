@@ -1,0 +1,3 @@
+# SP4-CUT-TUBE-E07 · Independent quaternionic curvature and marking
+
+27 November 2026, for Edward B. Baker III, OpenAI assistance, requested Sol 6.2/ultra. Input bc2c1bb, ledger QUATERNIONIC_MARKING hash 84c2f83a2a6c, B02. Recompute from the structure equations, independently of the lead, the disk-bundle normal circle period, endpoint slopes, signed Weyl norms, mean curvature condition, Jacobian and exponential-moment inequality of notes/PROJECTIVE_CAP.md. Test whether the argument extends to triaxial fillings or different axis markings, identify its precise domain, and compare round eta/signs. Return in reviews/E07_PROJECTIVE.md only. Stop on verification or a counterterm; no entry trial.

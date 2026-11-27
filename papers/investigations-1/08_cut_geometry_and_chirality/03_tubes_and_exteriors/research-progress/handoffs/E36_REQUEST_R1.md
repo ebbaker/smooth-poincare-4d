@@ -1,0 +1,3 @@
+# SP4-CUT-TUBE-E36 · Variable lapse on an actual radial prism bend
+
+27 November 2026 for Edward B. Baker III, baseline bc2c1bb. Sol 6.2/ultra requested. Consider time-independent radial lapse inside the rigid bend, constant outside, with end jets making the seam umbilic. Use 4D conformal equivalence to constant lapse with an optical radial three-metric; it need not have positive scalar curvature. For arbitrary smooth optical radius with round exterior, derive a sharp lower static A, using last increasing or energy methods without spatial R≥0. Test whether 4D Yamabe positivity or a boundary test restores a radius restriction. Write notes/E36_OPTICAL_BEND.md. Stop at verified result or failing geometric premise; no shared edits.

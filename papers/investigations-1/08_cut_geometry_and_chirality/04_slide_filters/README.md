@@ -12,9 +12,9 @@
 | [Continuation](continuation-notes/CONTINUATION.md) | The end states of the whole sub-investigation, the routing table, how the work continues past the first tasks, and the launch prompt. |
 | [Parent](../README.md) | Conventions in the [parent overview](../research-overview/OVERVIEW.md), statements in the [parent manuscript](../manuscript/cuts_of_subcritical_conformal_classes.tex), the parent's own prompts in the [parent continuation note](../continuation-notes/CONTINUATION.md). |
 
-**Ownership.** Owns nothing in 05. Its only ready task is a reading task that changes no file of 05. The [request to 05's lead](../research-progress/handoffs/SLIDE_B01_REQUEST_TO_05_20261126.md) is in the parent's handoffs folder.
+**Result, 27 November 2026.** The [cut certificates](notes/CUT_CERTIFICATES_20261127.md) and [marked exterior holonomies](notes/REPRESENTATIONS_AND_EXTERIORS_20261127.md) are available, with an [independent reading](reviews/INDEPENDENT_TABLE_READING_20261127.md). The [terminal diagram inventory](notes/TERMINAL_DIAGRAM_AUDIT_20261127.md) records the scope of 05's recognition theorems.
 
-**State.** Overview, plan, register and continuation note set up; nothing is activated. By the author's instruction this child has no manuscript and no working folders yet; notes, handoffs, numerics and reviews are created on first use as the [setup workflow](../../../../INVESTIGATION_SETUP_WORKFLOW.md) describes. Ready on activation: SLIDE-E02.
+**Continuation.** The branch has reached the resting state specified at launch. The [closing note](continuation-notes/CLOSING_20261127.md) identifies what can be used now and the decision that would reopen research. Investigation 05 owns the enumeration and the [redirection request](../research-progress/handoffs/SLIDE_B01_REQUEST_TO_05_20261126.md).
 
 26 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum. Setup baseline `4655e38`.
 

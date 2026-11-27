@@ -1,0 +1,3 @@
+# SP4-CUT-LED-E11 · a realized quaternionic cut
+
+27 November 2026, for Edward B. Baker III with OpenAI assistance. Checkout bc2c1bb. Lead derives the existing round SO(3)-orbit test in notes/ROUND_ORBIT_MARKING.md. Independent Sol/ultra reader to check from linear algebra the isotropies, boundary marking (up to orientation), metric axes, eta, non-umbilicity, scalar curvature and whether the Hopf axis being stretched is the normal circle of either side. Check that no assertion requires constructing a new entry class. Record in reviews/ORBIT_REPLAY.md only, including scope and note hash. Stop with proof or return correction.

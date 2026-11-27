@@ -1,0 +1,7 @@
+# SP4-CUT-SEAM-E10 · frozen request r1
+
+27 November 2026 (America/New_York). Prepared for Edward B. Baker III with OpenAI Codex assistance. Selected lead Astra/ultra, serving details unavailable. Working HEAD `bc2c1bbccc1d` and parent TeX SHA-256 `ccb52d6a2548fb8f…`. Requested GPT-6.2 Sol/ultra. [Sole register](../REGISTER.md) and [input list](../../continuation-notes/CONTINUATION.md). Positive-definite smooth category, real chiral HS blocks, T=4π².
+
+Independent check / extension of E09: test marked rotation flux in two round constant-K half-disks at the original K=1, genuine smooth product exterior until the seam, actual embedding L(3,1)#-L(3,1), outside normal Hopf axes. Replay requirement |Φ1|+|Φ2|≥π, F zero on diameter and arc, the general fixed-axis energy density based on K,F,∇F (derive/verify norm coefficient rather than assume from only radial data), and K=1 obstruction. If this works, try the next variable K=constant c route using a spherical-area torsional bound or direct Poincaré/duality to strengthen the ∫|∇F|² cost; record exact result or class still open. Scope: two fixed-axis round base disks, finite analysis only, no numerical campaign or alternate mechanisms. Cross-read E09A/B as available.
+
+Write only reviews/E10_LENS_FLUX.md. Supply primary passage receipts for imported results. Stop at proved result or scoped failure; return every extra premise to the lead. No shared edits.

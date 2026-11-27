@@ -12,6 +12,10 @@ Make the ledger an instrument the other branches can use: fix the sign of its bo
 
 The category, orientation, curvature and chirality conventions, the definition of an entering class and of its gauge, and the vocabulary of cuts (Cauchy datum, umbilic cut, free cut, seam with positive doubles) are those of the [parent overview](../../research-overview/OVERVIEW.md#fixed-setting-and-conventions) and of Section 2 of the [parent manuscript](../../manuscript/cuts_of_subcritical_conformal_classes.tex). Statements are cited by their numbers in that manuscript. This child adds no convention.
 
+## Research outcome, 27 November 2026
+
+The [progress register](../research-progress/REGISTER.md) records the tested ledger, the marked C² eta bound, the two quotient lifts, source-specific collar hypotheses, and the smooth rigidity of a chirally split class. The [return to the parent](../research-progress/handoffs/TO_PARENT_SECTION_3_AND_LANE_20261127.md) gives the corrected sign conventions and intended application. The setup sections below describe the evidence available on 26 November.
+
 ## Inherited, with evidence level
 
 - Parent manuscript, Section 3: the ledger (Theorem 3.1) with the conformal invariance of its boundary term and of \(\eta\); the pointwise form with the electric and magnetic parts of the Weyl tensor (Proposition 3.2); the eta bound \(e\ge12\pi^2\lvert\eta\rvert\) at an umbilic cut (Corollary 3.3); the collar statement (Corollary 3.4); half-flat pieces (Corollary 3.5); the remark on Cauchy data (Remark 3.6). Proofs written out, not read independently; the sign of the boundary term is untested.

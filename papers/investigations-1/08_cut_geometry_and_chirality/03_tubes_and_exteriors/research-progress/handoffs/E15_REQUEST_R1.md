@@ -1,0 +1,3 @@
+# SP4-CUT-TUBE-E15 · Local quaternionic obstruction and short-axis replay
+
+27 November 2026 for Edward B. Baker III, requested Sol 6.2/ultra. Input checked ledger and notes/E14_SHORT_AXIS.md, notes/PROJECTIVE_COLLAR.md, bc2c1bb. Verify independently the round-cap plus slow-cylinder bound and both axis labels. Check that every locally conformally flat conformal structure on the actual compact quaternionic three-manifold is conformally spherical with round absolute eta 3/4. For a regular one-sided conformally flat or half-flat Einstein metric meeting an umbilic seam check the implication, its locality, and one permissible generalization or obstruction to generalization. Use primary references where imported; own reviews/E15_QUATERNIONIC_COLLAR.md only.

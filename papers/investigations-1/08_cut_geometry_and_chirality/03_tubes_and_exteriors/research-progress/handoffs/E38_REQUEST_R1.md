@@ -1,0 +1,3 @@
+# SP4-CUT-TUBE-E38 · Short-axis invariant complex structure
+
+27 November 2026 for Edward B. Baker III, baseline bc2c1bb. Sol 6.2/ultra requested. Test an SU(2)-invariant Kähler/conformally Kähler Bianchi IX metric on the actual marked quaternionic disk, with the collapsing circle short, long axis ratio sqrt3 and positive Neumann double. Use invariant 2-form closure/integrability with possible cover and Q8 signs; test endpoint constraints at exact umbilic face and core. Seek global obstruction on such a class or a fully specified alternative. Write notes/E38_COMPLEX_CAP.md. Stop at verified result or failing geometric premise; no shared edits.

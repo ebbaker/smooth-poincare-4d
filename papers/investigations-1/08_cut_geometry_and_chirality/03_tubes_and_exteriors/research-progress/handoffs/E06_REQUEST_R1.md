@@ -1,0 +1,5 @@
+# SP4-CUT-TUBE-E06 · exact untwisted minimum
+
+Issued 27 November 2026 for Edward B. Baker III by the OpenAI research lead. Bounded E packet, requested gpt-6.2-sol/ultra. Lead runtime setting unavailable. Input revision bc2c1bb, parent Sections 5–6, original check_01, check_02 and output linked in the [launch note](../../continuation-notes/CONTINUATION.md). The [register](../REGISTER.md) owns status. Use the smooth oriented Riemannian conventions there, T = 4π² and e the mean of the two Hilbert–Schmidt chiral energies. Return analytical, certified and floating evidence separately. Write only the assigned files, record exact sources and limitations, and return to the lead if a different mechanism is needed.
+
+For β=0 test the area coordinate u=∫a ds, y=a², K=−y''/2: derive the exact clamped cubic minimizer at fixed area, optimize area including positivity, limits, arbitrary twisted competitors of zero net flux if possible. Use this for flat and Hopf rows and thin asymptotics with regime specified. Compare to floating upper bounds only. Own notes/E06_AREA_MINIMUM.md. Stop at the exact statements or a precise obstruction.

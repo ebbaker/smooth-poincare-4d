@@ -1,0 +1,3 @@
+# SP4-CUT-LED-E04 · request 1
+
+27 November 2026, for Edward B. Baker III. OpenAI lead. Input bc2c1bbccc1d244a9d456ffe2fcaf64e368290b0, E01 all-radius identity and independently signed Berger Chern–Simons calculation returned. Sol/ultra. All positive diagonal left-invariant metrics up to automorphism (justify reduction for the actual quotient). Use fixed orientation for round Q8 offset and intrinsic relative signature Chern–Simons. Give an explicit rational function and settle whether |eta|<2/3 is empty through exact inequalities on the complete positive cone. Write notes/QUATERNIONIC.md and an exact calculation in numerics/check_quaternionic.py. Stop at complete proof or sharp unresolved inequality; return to lead for new B decision if needed.

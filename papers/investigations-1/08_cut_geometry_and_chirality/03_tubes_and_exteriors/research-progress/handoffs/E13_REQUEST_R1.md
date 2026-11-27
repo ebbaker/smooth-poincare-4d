@@ -1,0 +1,3 @@
+# SP4-CUT-TUBE-E13 · Native topology audit
+
+27 November 2026, for Edward B. Baker III, OpenAI assistance, requested Sol 6.2/ultra. Independently inspect the SLIDE native doubled disk handoff and E11's proposed Meier–Zupan recognition route. Does the theorem identify the exact two disk exteriors relative to the boundary marking sufficiently to identify their doubles as spun knots? Does Gordon's smooth theorem cover both framings? Read primary passages for any conclusion and test for an unstated choice or category change. Also replay the framed meridian budget arithmetic in E11 when available. Write reviews/E13_NATIVE_READBACK.md only. Stop at a verified implication or first missing premise.
