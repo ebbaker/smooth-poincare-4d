@@ -2,7 +2,9 @@
 
 Edward B. Baker III, working manuscript, 26 November 2026. [Reading copy (PDF)](../../../output/pdf/master/chiral_weyl_energy_and_smooth_poincare.pdf) · [Editable LaTeX](chiral_weyl_energy_and_smooth_poincare.tex)
 
-The master asks what would rule out a nonstandard smooth structure on a homotopy four-sphere. Its intrinsic argument starts with a positive Yamabe class of one chiral Weyl energy below \(8\pi^2\). The working theorem of investigation 06 attains the infimum on that same oriented manifold. The lower recognition gap and the fixed-band finiteness corollary then delimit the possible nonstandard minimizers. Universal entry and rigidity of the attained minimum are open.
+The master reduces smooth Poincaré to universal positive subcritical entry and smooth recognition of every entered type. The variational route uses 06's working fixed-type attainment theorem and the lower recognition gap to reduce the second assertion to rigidity of an attained minimum. A geometric recognition argument could establish the same assertion directly. The reflective-seam estimates and circle-surgery calibrations in the editable master constrain the current entry trial. [Logical reduction](claude/logical_form.tex) · [Doubling argument](claude/umbilic_doubling.tex)
+
+The 27 November master plan pairs 08's draft geometry of umbilic hypersurfaces with 05's recognition theorem for either marked cut, and specifies the Hopf-double sign tests for 07. Investigation 08 records its independent proof reading and boundary-sign calibration in its own register. The first table below describes the 26 November manuscript. [Current plan](../research-plan/PLAN.md) · [08 manuscript and proof status](../../investigations-1/08_cut_geometry_and_chirality/manuscript/README.md) · [Latest 05 product-double return](../research-progress/handoffs/DOUBLED_TANGLES_AND_GST_SLIDES_20261126.md)
 
 | Part of the master | Where to read the argument |
 | --- | --- |

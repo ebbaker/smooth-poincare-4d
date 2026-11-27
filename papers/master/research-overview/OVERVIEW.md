@@ -1,34 +1,38 @@
 # Research overview — Smooth four-dimensional Poincaré conjecture
 
-## Current proof status · 26 November 2026
+## Entry and recognition · 27 November 2026
 
-The intrinsic program now has two open existence and rigidity questions on a hypothetical nonstandard homotopy four-sphere. **E** asks for a positive class below \(2T\). Given that class, **X** has a working proof of smooth attainment on the original oriented type. **R** asks whether the attained class in \(T+\varepsilon_*<I^+(M)<2T\) can be excluded. The proof of X uses Bour’s fixed-parameter flow and the marked-neck results. [attainment manuscript](../../investigations-1/06_bour_flow_and_fixed_type_attainment/manuscript/fixed_type_attainment.tex) · [06 assessment](../../investigations-1/06_bour_flow_and_fixed_type_attainment/reviews/FIXED_TYPE_ATTAINMENT_20261126.md) · [Master proof of the reduction](../manuscript/attainment_on_the_original_sphere.tex) · [Fixed-band corollary](../manuscript/exact_closed_types.tex)
+**E (entry).** Does every smooth homotopy four-sphere admit a positive Yamabe class with chiral Weyl energy below $8\pi^2$? **S (recognition).** Is every smooth homotopy four-sphere admitting such a class diffeomorphic to $S^4$? Together E and S are equivalent to smooth Poincaré. If the conjecture holds, the round metric pulls back to every type. In the other direction, E supplies the hypothesis of S on each type. Both assertions remain open. [Master reduction](../manuscript/claude/logical_form.tex)
 
-| Step | What would advance it | Scientific owner |
-| --- | --- | --- |
-| E · Entry | Construct a non-product metric on one marked balanced-presentation boundary with positive Yamabe sign and $E_++E_-<16\pi^2$. Record which types it covers. | [07 construction](../../investigations-1/07_positive_subcritical_entry/README.md) · [Master B02 coverage](../research-plan/PLAN.md#e--entry) |
-| X · Fixed-type attainment | Original-flow physical Ricci control excludes multiple ends. Marked compactification and uniform stationary elliptic estimates on the closed outputs give a positive minimum on \(M\). | [attainment manuscript](../../investigations-1/06_bour_flow_and_fixed_type_attainment/manuscript/fixed_type_attainment.tex) · [06 assessment](../../investigations-1/06_bour_flow_and_fixed_type_attainment/reviews/FIXED_TYPE_ATTAINMENT_20261126.md) |
-| R · Attained-minimizer rigidity | Select a Weyl minimizer of least physical \(D=\int|\operatorname{Ric}_0|^2\) in the compact exact Yamabe stratum. Test the actual Weyl Hessian on the physical Ricci directions in the non-Einstein case or use the stronger Einstein gap and a transverse-traceless spectral test. A strict admissible same-type competitor or smooth recognition would also settle a specified survivor. | [Master SP4-MASTER-B06](../research-plan/PLAN.md#r--rigidity-of-an-attained-minimum). |
+Here $M$ is smooth, closed, connected and oriented. For a smooth Riemannian metric let $E_\pm$ be the integrated Hilbert–Schmidt squares of $W^\pm$ acting on real two-forms. Signature zero gives $e=E_+=E_-$ on $M$. On a piece $V$ retain both integrals and write $e_V=(E_+(V)+E_-(V))/2$. Put $T=4\pi^2$ and $I^+(M)=\inf_{Y([g])>0}e(g)$, allowing $+\infty$ for the empty infimum. Entry is $I^+(M)<2T$. By Gauss–Bonnet and Chang–Gursky–Yang this is equivalent to the existence of a metric with $R>0$ and $|Z|^2<R^2/12$, where $Z$ is the trace-free Ricci tensor. [Conventions and entry proposition](../manuscript/chiral_weyl_energy_and_smooth_poincare.tex) · [Chang–Gursky–Yang, Main Theorem](https://annals.math.princeton.edu/2002/155-3/p02)
 
-On a proposed embedded two-sided seam, entry forces $\lambda_1(-8\Delta_h+R_h+|B^\circ|^2)>0$. An umbilic seam must have positive induced Yamabe class. If it bounds a smooth compact contractible four-manifold, its boundary must be $S^3$. This rules out a positive swap-invariant class with $e<8\pi^2$ on the identity Mazur double with face $\Sigma(2,5,7)$. The standalone filling-sign question and asymmetric or nonumbilic constructions retain their own tests. [Entry assessment](../reviews/DIRECT_ENTRY_AND_REDUCIBLE_CUT_PRIORITIES_20261126.md#a-change-to-the-master-entry-problem) · [07 overview](../../investigations-1/07_positive_subcritical_entry/research-overview/OVERVIEW.md)
+| Question | First test and present evidence |
+| --- | --- |
+| **S from a marked cut** | In a reduced mixed presentation with two middle handles and normalized windings, find a closed oriented hypersurface of positive Yamabe type and a nonzero-degree map from it to either native cut. The working theorem of 05 then recognizes the sphere. An umbilic hypersurface in an entering class supplies the positive source. Producing the map to the specified level is open. [05 theorem on both cuts](../../investigations-1/05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/manuscript/recognition_from_marked_handle_cuts.tex) · [08 geometry](../../investigations-1/08_cut_geometry_and_chirality/research-overview/OVERVIEW.md) |
+| **E on a specified type** | On 07's minus Miller–Schupp construction the two hemisphere lifts yield reflected $S^2\times S^2$ doubles. Test their Yamabe signs on the actual trial. Entry there would beat the conjectured Einstein-product Weyl minimum. The signs at the specified width remain open, and 07 reports zero new types entered. [Hopf closing](../manuscript/claude/umbilic_doubling.tex) · [07 coverage](../../investigations-1/07_positive_subcritical_entry/research-progress/REGISTER.md) |
+| **S through attainment and rigidity** | Given entry, 06's working theorem **X** attains $I^+(M)$ on the original oriented type. With the recognition gap, S is then equivalent to **R**, exclusion of an attained minimum on a nonstandard type in $T+\varepsilon_*<I^+(M)<2T$. X has two independent model readings. The fixed-parameter flow, marked return and uniform stationary estimates await human specialist review. [06 assessment](../../investigations-1/06_bour_flow_and_fixed_type_attainment/reviews/FIXED_TYPE_ATTAINMENT_20261126.md) · [Rigidity tests](../research-plan/PLAN.md#r--rigidity-of-an-attained-minimum) |
 
-E and R can proceed independently. For R, compactness at the first exact critical value and strict spherical Yamabe comparison give a positive Yamabe deficit on the exact minimizing stratum. Finiteness gives a common deficit for its nonstandard types at \(I^+(M)\le2T-\delta\) for each fixed \(\delta>0\). This applies after X. At a non-Einstein least-\(D\) minimum the next bounded calculation is the Hessian on \(Z\) and \((Z^2)^0\) in the physical constant-scalar metric. An Einstein minimum would have to avoid a transverse-traceless eigenvalue of \(-\Delta_L\) in \((R/3,R/2)\). A fixed-parameter critical output supplies stationarity. A separate global regularized minimization argument is useful only for a rigidity test that needs finite-parameter stability. [Master plan](../research-plan/PLAN.md#r--rigidity-of-an-attained-minimum) · [Independent priority review](../../../formalization/investigations/reviews/PRIORITIES_AFTER_WHITEHEAD_AND_BOUR_E48_20261126.md)
+The direct approach to S uses the entering geometry and can proceed independently of X. Investigation 08 also studies a Morse sweepout with a uniform lower scalar-curvature bound on its regular levels, and the marked closing of a low-energy exterior with $S^1\times S^2$ boundary. Both need a geometric construction. Its initial manuscript records the extent of its proof checks and the pending calibration of the chirality boundary term. [08 manuscript](../../investigations-1/08_cut_geometry_and_chirality/manuscript/cuts_of_subcritical_conformal_classes.tex) · [08 sole register](../../investigations-1/08_cut_geometry_and_chirality/research-progress/REGISTER.md)
 
-Immersed heights and topological marked surgery can recognize other types independently of E, X and R. Investigation 05 now obtains terminal \(3\to2\) descent from either reducible native single-attachment cut of an integral \(Y_1\to Y_3\) pair, with a split lower zero and its immediate rank-three closing. The next 05 test selects one upper band and belt on an actual terminal pair with both native cuts irreducible, with recognition of an actual rank-two closing as the alternative. The separate 04 folded-height pilot can return a regular direction and framed diagram to the existing height child. [05 plan](../../investigations-1/05_collar_deformation_and_surgery/research-plan/PLAN.md) · [04 folded heights](../../investigations-1/04_hypersurface_immersions/research-plan/PLAN.md#folded-heights) A metric comparison requires a qualifying physical metric on its marked level or the full signed budget of a proposed positive competitor. A universal result requires coverage of every smooth type, whether through independent recognition or through E, X and R. [05 assessment](../../investigations-1/05_collar_deformation_and_surgery/reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md) · [Master handoff](../research-progress/handoffs/REDUCIBLE_NATIVE_CUT_20261126.md) · [Fixed-type descent register](../01_fixed_type_variational_descent/research-progress/REGISTER.md) · [Manuscript and locations of supporting proofs](../manuscript/README.md)
+An actual positive class at $e\le T$, or $I^+(M)\le T+\varepsilon_*$ by the working recognition gap, already settles the type. Attainment and Chang–Qing–Yang give finitely many possible nonstandard oriented types at $I^+(M)\le2T-\delta$ for each fixed $\delta>0$. Such a family could still accumulate at $2T$ as $\delta$ decreases. Independent recognition also includes the induced immersion threshold $e\le64\pi^2/9$ and 05's product doubles of free three-string tangles with a designated boundary-parallel strand and their product closing. On other types the missing universal entry and recognition steps persist. [Recognition gap](../manuscript/recognition_gap.tex) · [Fixed-band finiteness](../manuscript/exact_closed_types.tex) · [Immersed threshold](../manuscript/immersion_entry.tex) · [Product-closing result](../research-progress/handoffs/DOUBLED_TANGLES_AND_GST_SLIDES_20261126.md)
 
-Prepared for Edward B. Baker III with OpenAI Codex assistance, 26 November 2026 (America/New_York). Actual serving model and reasoning effort are unavailable. The planning baseline is `9c80575988ad8915ad39515c64400e3d8590cf46` with the subsequent integrated 05 assessment and E48 priority review. Claude Fable 5.2 reviewed the master at `c8fb08d`. The recognition gap, immersed recognition and fixed-type attainment remain candidates for human specialist review. The 06 assessment records its independent model readings and the scope of the imported theorems. [External review scope](../reviews/claude/EXTERNAL_PROGRAM_REVIEW_20261126.md#1-scope-versions-and-depth) · [E48 formal boundary](../../../formalization/investigations/reviews/ED05_E48_STATIONARY_BALLS_AND_VARIATION.md)
-
-The current assignment and source object IDs are recorded in the [26 November ownership handoff](../research-progress/handoffs/DIRECT_ENTRY_OWNERSHIP_20261126.md).
+Prepared for Edward B. Baker III with OpenAI Codex assistance, 27 November 2026 (America/New_York). This planning revision uses the 05–07 results at de2125d, the master additions at 841d606 and the 08 draft at 4655e38d181c. Actual serving model variant and reasoning effort were unavailable. [Accepted brainstorm](../brainstorm/notes/MASTER_PRIORITIES_AFTER_CUT_GEOMETRY_20261127.md) · [Current plan](../research-plan/PLAN.md) · [Sole master register](../research-progress/REGISTER.md)
 
 ## Earlier results and their sources
 
-The following sections retain the hypotheses, examples and source generations of the working manuscript. Dates and next-step descriptions in those sections belong to the edition recorded there. The [26 November plan](../research-plan/PLAN.md) sets the current priorities and the criteria for reopening a comparison.
+The historical sections below retain the hypotheses and source generations for earlier editions. Their next-step descriptions are dated to those editions.
 
-## Current proof status · 25 November 2026
+### 26 November 2026 · Entry, attainment and rigidity
+
+The previous overview at 1c81a30 assigned positive entry to 07, imported the 06 working attainment theorem, and selected an exact least-$D$ Yamabe minimizer for the Hessian and Einstein tests. It recorded the obstruction at the reflective Mazur seam, the terminal $3\to2$ reduction from a reducible native cut, and the 04 folded-height pilot. The 26 November handoff identifies its input versions, including the priority review after formalization E48. [Ownership and sources](../research-progress/handoffs/DIRECT_ENTRY_OWNERSHIP_20261126.md) · [Seam and folded-height assessment](../reviews/DIRECT_ENTRY_AND_REDUCIBLE_CUT_PRIORITIES_20261126.md) · [Reducible native cut](../research-progress/handoffs/REDUCIBLE_NATIVE_CUT_20261126.md) · [E48 priority review](../../../formalization/investigations/reviews/PRIORITIES_AFTER_WHITEHEAD_AND_BOUR_E48_20261126.md)
+
+### 25 November 2026 · Variational, immersed and marked recognition
+
+#### Charged flow at a selected disk
 
 A clamped variation on the E61 disk can save at most the minimizing excess. At vanishing spectral deficit, a small-ball upper volume bound in the modified metric yields a nonflat positive-time flow with nonnegative isotropic curvature. Its negative Euler trace rules out a smooth complete initial limit in the fixed flow markings. The result addresses sequences in the specified modified gauge. [Assessment and source generations](../research-progress/handoffs/E69_E72_CHARGED_FLOW_20261125.md)
 
-## Current proof status after the marked enlargement
+#### The marked enlargement
 
 One enlarged standard disk can leave both raw chiral charges below the recognition threshold throughout the strict subcritical band. A finite sequence of enlargements forces a definite energy saving on the whole disk side of any subcritical path to a round seam. In the exact closed branch any fixed band supports only finitely many nonstandard types, with strictly positive least spectral deficit when the family is nonempty. Entry, a strict repair on the original marked geometry, and classification of the remaining exact types are open. [Assessment and source generations](../research-progress/handoffs/E63_E67_BALANCED_DISKS_20261125.md)
 
@@ -38,7 +42,7 @@ The parallel organization began with the 33-page master edition committed at 268
 
 The four specialist investigations now have [working papers](../README.md#working-papers-for-the-parallel-investigations), together with a coordinating paper on hypersurface immersion geometry. The master gives the threshold, height and fixed-type implications. The [proof crosswalk](../research-progress/handoffs/E51_COMPANION_DRAFTS_20261125.md) identifies where the underlying arguments are developed.
 
-## What belongs in the master proof
+#### What belongs in the master proof
 
 Develop intermediate results in the working draft of the sub-investigation that owns them. Give the analytical derivation there and link supporting computations or scoped failures in the branch records. Before promoting a result, identify the step in the [master proof plan](../research-plan/PLAN.md) that changes. Specify which hypothesis it discharges, which previously open case it settles, or which part of the proof it shortens under the same or weaker assumptions.
 
@@ -46,19 +50,19 @@ In the master, state the implication with its quantifiers, give the decisive arg
 
 For variational results, say whether the estimate produces a metric or bounds an infimum. A smooth positive repair on the original type with energy at most $4\pi^2$ closes the recognition step, including equality. A finite-class proof alone uses strict inequality when the input is only an infimum. The positive-time compactness proof in this edition now covers equality and a uniform interval above it. Every promotion should identify the metric that supplies an attained class or the theorem that controls the infimum.
 
-## Uniform recognition and the surviving band
+#### Uniform recognition and the surviving band
 
 There is a universal $\eta>0$ such that a smooth homotopy four-sphere is standard if the infimum of $4e+3\int L^2dV$ over its positive Yamabe classes is at most $8T+\eta$. Here $e=E_+=E_-$, $T=4\pi^2$, and $L$ is the larger top eigenvalue of the two Weyl blocks. This also gives the inclusive recognition gap for $I^+(M)$. The width is non-effective. Positive subcritical entry on arbitrary smooth types remains open.
 
 For every surviving $I^+(M)<2T$, a subsequence has a positive-Ricci comparison scale with absolutely continuous chiral mass in the original conformal measures. One marked disk carries positive mass of the same sign on both complete sides, and its bicollar can have arbitrarily small incoming full curvature relative to its core charge. Its normalized chart and its repair cost remain to be controlled. The selected sign has raw complement below $T$ for $I<3T/2$. The full residual of either sign is bounded by $(36\int L^2-Y^2)/6$ up to arbitrarily small tolerance, with the volume form of the integrand understood in its conformal class. [Current assessment](../research-progress/handoffs/E59_E62_SPECTRAL_WINDOWS_20261125.md)
 
-## Current analytical results on the four routes
+#### Analytical results on the four routes
 
 The master now has two ways to test a retained exterior before constructing a global competitor. On an intrinsic exterior with marked round ends there is an exact spectral test for the positive Yamabe sign, and the capped energy is the exterior energy. On an immersed exterior the number of index-two critical points needed on its complement gives an explicit directional lower bound for the exterior's Weyl integral on any hypothetical nonstandard type. At two middle handles the transported one-sided surgery link and the two mixed surgery orders give recognizable smooth subclasses. The quantitative construction and the selection of these subclasses remain open.
 
 For intrinsic minimization, a single sufficiently wide embedded spherical annulus at an intermediate physical scale needs only one point near the common quantile center. The hypotheses include uniform ellipticity and small full curvature on the annulus and metric comparison on the central splice; they imply the entire marking. For a diffuse family of actual standard disks, only their boundary collars enter the simultaneous exterior replacement bound. A separate near-Einstein theorem shows that, in the fixed subcritical band with bounded physical supercritical Ricci norm, a sufficiently small joint trace-free Ricci and one-chirality eigenvalue defect puts the tested volume-one positive Yamabe metric itself below any prescribed positive energy target. The threshold is non-effective. An exact evacuated restart and closed metrics outside this criterion remain viable. [Quantifiers and surviving smooth types](../brainstorm/notes/MARKED_EXTERIORS_AND_ANNULI_20261125.md) · [Working revisions and audits](../research-progress/handoffs/MARKED_TESTS_20261125.md)
 
-## How the four investigations fit the proof
+#### How the four investigations fit the proof
 
 One metric may meet a recognition theorem directly. For an immersion in the wider band \(E_+<8\pi^2\), the existing height count on a putative nonstandard sphere lets one select a Morse height with two middle handles and ask whether its attaching data determine the smooth type. A positive Yamabe class below \(8\pi^2\) gives entry to fixed-type minimization. The master now uses the smooth attainment result from investigation 06, with the earlier specialist investigations available where their hypotheses can be realized. The [master plan](../research-plan/PLAN.md) states the quantifiers and remaining alternatives.
 
@@ -71,7 +75,7 @@ One metric may meet a recognition theorem directly. For an immersion in the wide
 
 The [immersion parent](../../investigations-1/04_hypersurface_immersions/README.md) checks that the constructions and diagram lemmas apply to the same immersion and smooth presentation. Positive entry can also come from an independent intrinsic construction. The master retains responsibility for covering all smooth types and all alternatives on the sequence used in a proof. Each branch develops exploratory work locally and returns an independently checked implication or a scoped failure. [Register crosswalk](../research-progress/handoffs/PARALLEL_OWNERSHIP_20261125.md)
 
-## The variational problem on a fixed smooth type
+#### The variational problem on a fixed smooth type
 
 The [collar deformation and surgery investigation](../../investigations-1/05_collar_deformation_and_surgery/README.md) asks where a cut that simplifies a handle presentation can be realized with controlled curvature on the same manifold. Its [route to smooth recognition](../../investigations-1/05_collar_deformation_and_surgery/research-plan/PLAN.md) tracks the residual attaching tubes after each move and tests the geometric cost separately on the disk supplied by the fixed-type argument.
 
@@ -120,7 +124,7 @@ selection argument or a source of almost critical metrics.
 [Band and entry hypotheses](../../investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/manuscript/marked_necks_and_chiral_energy.tex#L119)
 · [Outstanding problems](../../investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/manuscript/marked_necks_and_chiral_energy.tex#L1359)
 
-## Finite cuts and the geometric alternatives
+#### Finite cuts and the geometric alternatives
 
 A supplied finite family of disjoint smooth spherical cuts admits a
 quantitative test. Let $m_j$ be the raw chiral energy on each piece
@@ -216,7 +220,7 @@ strict energy decrement on $M$.
   [Closed alternatives, `alt:closed`](../../investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/manuscript/closed_and_conformal_alternatives.tex#L641)
   · [Cotton reduction check](../../investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/reviews/COTTON_CHECK_20261125.md)
 
-## Physical volume and the missing marking
+#### Physical volume and the missing marking
 
 For every $0<\epsilon<1$ and $\zeta>0$, a subsequence in the
 physical Yamabe band has uniformly finitely many disjoint smoothly
@@ -246,7 +250,7 @@ to a whole base with the stated comparison scalar bound.
 [Third collar assessment](../../investigations-1/03_first_order_twistor/reviews/THIRD_COLLAR_ASSESSMENT_20261125.md)
 · [Joint continuation](../../investigations-1/03_first_order_twistor/continuation-notes/AFTER_THIRD_COLLAR_RESEARCH_20261125.md)
 
-### Testing individual repairs of the marked balls
+##### Testing individual repairs of the marked balls
 
 The master manuscript adds an elementary consequence of the variational definition to the marked-ball result. Write $m_{ij}$ for the chiral mass of ball $j$, $e_i$ for the source energy and $\gamma_{ij}$ for the net excess of the independently repaired metric over the entire raw exterior. If each repair produces a smooth positive Yamabe class on the original marked smooth type, then
 
@@ -256,7 +260,7 @@ $$
 
 Fix the physical-volume tolerance before selecting the balls. For a fixed number of independent repairs, vanishing aggregate excess forces the marked union to carry vanishing chiral energy in the minimizing limit. If the number grows, the term $N_i(e_i-I^+(M))$ also needs control. The complement can carry the whole infimum in arbitrarily small physical volume. The descent paper gives the joint selection and the uniform absolute continuity test. The master uses the resulting residual bound at the threshold stated above. [Fixed-type descent draft](../01_fixed_type_variational_descent/manuscript/README.md) · [Master repair corollary](../manuscript/chiral_weyl_energy_and_smooth_poincare.tex)
 
-## Other routes to recognition
+#### Other routes to recognition
 
 - **First-order twistor sections and chiral connections.** Three
   local integrable positive twistor sections of the same metric,
@@ -324,7 +328,7 @@ Fix the physical-volume tolerance before selecting the balls. For a fixed number
   · [Descent and double copy §§2–8, `sec:obstruction` and `sec:copies`](../../initial-investigations/02_chiral_descent_and_double_copy/manuscript/chiral_connection_descent_and_double_copy.tex#L72)
   · [Historical project summary](../../research-overview/PROJECT_SUMMARY_2026-11-20.md)
 
-## Investigation records and provenance
+#### Investigation records and provenance
 
 Each investigation register owns its task status. The relative
 manuscript links above point to the working sources. At `5ff7014`,
@@ -369,7 +373,7 @@ the full remainder.
 · [One-cut integration](../../../formalization/investigations/03_single_cut_descent/research-progress/handoffs/INTEGRATION_20261125.md)
 · [Dirac working-tree integration](../../../formalization/investigations/04_dirac_collar_transmission/research-progress/handoffs/INTEGRATION_20261125.md)
 
-## Variational comparison at the infimum · 25 November
+#### Variational comparison at the infimum · 25 November
 
 The master was launched from the working edition on `fc60509a27f6b97f48e2619f9e6f0f6cd4eb36e2`. During the investigation `64a0bfae5759353d49a68cb47e59305566809061` recorded that edition and several issued requests. The initial main, marked cut, first-order splice and physical volume TeX files have SHA-256 prefixes `a499b313e6d5`, `3f3722b56d34`, `f93717b0b73c`, `8ff80d4d42e5`, respectively. The two revisions have identical owning analytical manuscripts used here. SHA-256 prefixes in the checkout were as follows.
 
@@ -387,7 +391,7 @@ The [joint ball selection](../notes/E03_JOINT_SELECTION.md) addresses diffuse ch
 
 The [Route 04 live register](../../../formalization/investigations/04_dirac_collar_transmission/research-progress/REGISTER.md) advanced between the two checkout revisions, including the annular metric identities and cylindrical inverse in their specified presentations. [Route 02](../../../formalization/investigations/02_neck_energy_accounting/research-progress/REGISTER.md) and [Route 03](../../../formalization/investigations/03_single_cut_descent/research-progress/REGISTER.md) still distinguish geometric markings from conditional accounting. None of these receipts proves the new analytic local replacement, complete-limit exclusion or energy-radius result in Lean. No formal declaration is a premise of this edition's new proofs.
 
-## Physical Ricci scales, critical charts and middle-index heights · 25 November
+#### Physical Ricci scales, critical charts and middle-index heights · 25 November
 
 The resumption began from the clean committed edition b3cd11a2b839b6d2cb6262f8210f33d19d6f5a0a. The source note and assessment from the preceding edition were read at SHA-256 prefixes fca4f8885836 and 28695767370a. Its register, overview, plan and initial review were f31aea34f4c5, 38fdde92473a, 4245b74122b2 and c9db9ddc3e0d. The input main, complete limits, local variational comparison, physical volume, first-order splice and marked cut were c8a9f68da492, 8b5692f2bcab, 0c9b1dce4aa6, b972bc546624, f93717b0b73c and 3f3722b56d34. The four owning collar manuscripts in the preceding table have the same working hashes at this revision. The [owning balanced-block derivation](../../investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/notes/E11_BALANCED_BLOCK_AND_NONCOLLAPSE_20261125.md) was 83a16b35c301. Formalization registers 01–04 at integration had respectively dc30012fe8da, 2a9062f6d469, 2ed437169b59, 7b91f1c68116. Route 04's later committed developments are separate from the new analytical theorems.
 

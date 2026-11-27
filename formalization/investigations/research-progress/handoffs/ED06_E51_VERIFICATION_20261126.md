@@ -79,7 +79,7 @@ A root-only file checked the exact public types and axiom dependencies for 164 n
 | e50-exact | 0 | 139 | `eae5b1b2a8f798d2d263b2bae35f5e89df656b2ded54b97cb2a8ea2b744d1f60` |
 | e51 | 27 | 65 | `ccb3b2f005626b82ae4fa6b7a66302369d6876da26af6b20b763885a2fb2c427` |
 
-The E51 applications test one physical estimate constant at two scales, the original captured radius after scaling, the mixed zero-parameter case, the native terminal velocity and dissipation, scalar flatness, the two outward signs and the post-X right derivative. Repository hygiene and staged and unstaged whitespace checks passed.
+The E51 reader ran 27 substantive applications and 65 axiom reports. They used one physical bound at scales one and four, the original captured radius, an actual zero-parameter mixed member and the one-third Hölder modulus of both physical derivatives. The noncompact applications exercised native terminal speed, scalar flatness and the zero-parameter equation on the same metric. Other checks evaluated both outward faces of a nonproduct shell and the post-X derivative. The independent fixture SHA-256 was `8f87512ea968e23964ab1a2a72731267e590feed2021896738397ea39ceedeb4`. The late independent science reading includes the doubled-tangle and finite-width entry updates. Repository hygiene and staged and unstaged whitespace checks passed.
 
 ## Blueprint rendering
 
