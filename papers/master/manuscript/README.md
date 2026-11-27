@@ -15,6 +15,7 @@ The current manuscript includes the fixed-width chiral obstruction, the marked H
 | Fixed smooth type | [Proof outline for original flows, both limiting alternatives and the smooth marking](attainment_on_the_original_sphere.tex) · [Full 06 paper](../../investigations-1/06_bour_flow_and_fixed_type_attainment/manuscript/README.md) · [Assessment and independent readings](../../investigations-1/06_bour_flow_and_fixed_type_attainment/reviews/FIXED_TYPE_ATTAINMENT_20261126.md) |
 | Consequences of attainment | [Finiteness up to a fixed distance below the wall](exact_closed_types.tex) · [Signed Hessian, Einstein alternative and constant-Schouten gauge](chiral_weyl_energy_and_smooth_poincare.tex) |
 | Independent smooth recognition | [Immersed threshold, actual heights and terminal reduction from either reducible native cut](immersion_entry.tex) · [05 localization and exact terminal hypotheses](../../investigations-1/05_collar_deformation_and_surgery/reviews/REDUCIBLE_CUTS_AND_RETURN_COST_20261126.md) |
+| A recognized fibred closing | [The even prism closing: statement, structure of the proof, verification status and the open odd twin](claude/even_prism_closing.tex) · [Tube investigation replay](../../investigations-1/08_cut_geometry_and_chirality/03_tubes_and_exteriors/reviews/E79_EVEN_TRANSFER_REPLAY.md) · [Claude note and checks](../brainstorm/notes/claude/ALTERNATIVE_FRAMEWORKS_AND_INVESTIGATIONS_2_20261127.md) · [Sources](../../../references/claude/SOURCE_NOTES_FRAMEWORKS_AND_PRISM_20261127.md) |
 
 ## Where the supporting proofs now appear
 

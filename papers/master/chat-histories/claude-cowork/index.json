@@ -2,7 +2,7 @@
   "schema_version": 1,
   "timezone": "America/New_York",
   "numbering": "Stable capture/import order within this folder; historical imports retain their original dates and receive the next unused number",
-  "next_number": 3,
+  "next_number": 4,
   "chats": [
     {
       "number": 1,
@@ -39,6 +39,27 @@
       "bytes": 67720,
       "sha256": "3b6b9bdc3a9f5a7797d8c329d821f8c4d513c8ad697914fe3d538a4d9ddf37ba",
       "conversation_content_sha256": "f8442d796a6a478ebf34b4f0d7e0f1f9453127369c4cb09600444bccd51d6bdc",
+      "model_configurations": [
+        {
+          "model": "claude-fable-5-2",
+          "reasoning_effort": "max"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "file": "0003_2026-11-27T15-52-55Z_research-project-assessment.json",
+      "conversation_id": "cse_017B3FcUV44ZRd4Xm1oX6xMi",
+      "title": "Research project assessment",
+      "created_at_utc": "2026-11-27T15:52:55.451Z",
+      "created_at_local": "2026-11-27T10:52:55.451-05:00",
+      "captured_at_utc": "2026-11-27T19:24:07.777Z",
+      "captured_at_local": "2026-11-27T14:24:07.777-05:00",
+      "last_message_at_utc": "2026-11-27T19:22:49.051Z",
+      "message_count": 8,
+      "bytes": 33726,
+      "sha256": "cc704662b8ffa964605bc7906196c7b47cb253d8b7e324b01f9af26f6638205b",
+      "conversation_content_sha256": "2980a663ad5d13e58f501857573f0ecc2607af010bb6ff89d8887a54c19ccfec",
       "model_configurations": [
         {
           "model": "claude-fable-5-2",

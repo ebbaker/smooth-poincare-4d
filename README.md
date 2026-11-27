@@ -18,6 +18,13 @@ The [master manuscript and research program](papers/master/README.md) study fixe
 | `investigations-1` | [06 — Bour's flow and fixed-type attainment](papers/investigations-1/06_bour_flow_and_fixed_type_attainment/README.md) | Working proof of smooth Bach-flat attainment on each strictly entered type, with specialist checks outstanding. |
 | `investigations-1` | [07 — Positive subcritical entry](papers/investigations-1/07_positive_subcritical_entry/README.md) | Construct the first positive subcritical class on a marked smooth type and return its coverage to the master. |
 | Master | [Fixed-type variational descent](papers/master/01_fixed_type_variational_descent/README.md) | Intrinsic competitors, closed minimizers and round restarts |
+| Master 2 | [Self-dual forms with a pole](papers/master-2/README.md) | Second frame for the conjecture, set up 27 November 2026; manuscript draft with an introduction only |
+| `investigations-2` | [01 — Chiral transfer and pole forms](papers/investigations-2/01_chiral_transfer_and_pole_forms/README.md) | Existence of the pole forms and recognition from a zero-free one |
+| `investigations-2` | [02 — Zero circles](papers/investigations-2/02_zero_circles/README.md) | Computed pole forms and the set where they vanish |
+| `investigations-2` | [03 — Lines and broken fibrations](papers/investigations-2/03_lines_and_broken_fibrations/README.md) | Curves, the last zero circle and broken Lefschetz fibrations |
+| `investigations-2` | [04 — Entropy of embeddings](papers/investigations-2/04_entropy_of_embeddings/README.md) | Independent extrinsic frame through entropy |
+| `investigations-2` | [05 — Certificates](papers/investigations-2/05_certificates/README.md) | Finite certificates for named spheres and the ledger of imports |
+| `investigations-2` | [06 — Invariants and candidate spheres](papers/investigations-2/06_invariants_and_candidates/README.md) | Excluded invariants and candidate counterexamples |
 | `initial-investigations` | [01 — Generalized isothermal coordinates](papers/initial-investigations/01_generalized_isothermal_coordinates/README.md) | Earlier coordinate and reconstruction study |
 | `initial-investigations` | [02 — Chiral descent and double copy](papers/initial-investigations/02_chiral_descent_and_double_copy/README.md) | Earlier descent and double-copy study |
 

@@ -1,0 +1,197 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\title{Self-dual forms with a pole and the smooth\\four-dimensional Poincar\'e conjecture}
+\author{Edward B. Baker III}
+\date{Working draft, 27 November 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Let \(M\) be a smooth homotopy four-sphere with a conformal class \(c\).
+The map \(d^-A\mapsto d^+A\) is an isometry from square-integrable
+anti-self-dual two-forms to self-dual two-forms. It is the
+four-dimensional counterpart of the Beurling transform, through which
+the Beltrami equation gives isothermal coordinates on a surface. Its
+kernel at a point \(p\) is a three-dimensional space of closed self-dual
+two-forms on \(M\setminus p\) with a pole of order four at \(p\), the
+analogue of the differential of an isothermal coordinate on the Riemann
+sphere. We state two working propositions. These pole forms exist for
+every class. A pole form without zeros is a symplectic form that is
+standard at infinity, and the theorem of Gromov and McDuff then
+identifies \(M\) with the standard sphere. Given the two propositions,
+smooth Poincar\'e is equivalent to the existence, on each \(M\), of a
+class and a point with a zero-free pole form. That equivalence is a
+reformulation of the conjecture, and the existence is open. This draft
+consists of the introduction. The proofs of the two propositions are
+sketched in a project note and have not been checked.
+\end{abstract}
+
+\section{The problem on a fixed smooth sphere}
+
+Let \(M\) be a closed, connected, oriented smooth manifold homotopy
+equivalent to \(S^4\). Freedman's theorem identifies its homeomorphism
+type \cite{Freedman1982}. We ask for a diffeomorphism. In Riemannian
+dimension four the Hodge star splits real two-forms into two rank-three
+bundles \(\Lambda^\pm\) \cite{AHS1978}. On two-forms the star depends
+only on the conformal class \(c\) of the metric, and so does the \(L^2\)
+inner product. All metrics are smooth and Riemannian. We normalize the
+pointwise norm of two-forms so that
+\(\omega\wedge\omega=|\omega|^2\,dV\) for a self-dual \(\omega\).
+
+For a one-form \(A\) write \(dA=d^+A+d^-A\). Stokes's theorem gives
+\(\|d^+A\|_{L^2}=\|d^-A\|_{L^2}\). Since \(b_2(M)=0\), every
+square-integrable anti-self-dual form is \(d^-A\) for a coclosed \(A\),
+and \(A\) is unique because \(b_1(M)=0\). Hence
+\begin{equation}\label{eq:transfer}
+ T_c\colon L^2(\Lambda^-)\longrightarrow L^2(\Lambda^+),\qquad
+ T_c(d^-A)=d^+A,
+\end{equation}
+is an isometry determined by \(c\). For an abelian connection it
+recovers the self-dual half of the curvature from the anti-self-dual
+half. On a surface the corresponding operator
+\(f_{\bar z}\mapsto f_z\) is the Beurling transform, and the isothermal
+coordinate of a conformal structure with Beltrami coefficient \(\mu\)
+is obtained by inverting \(I-\mu T\). For the four-dimensional operator
+compare the analysis of quasiconformal four-manifolds and of
+quasiregular maps \cite{DonaldsonSullivan1989,IwaniecMartin1993}.
+
+Fix \(p\in M\) and put \(X=M\setminus p\). For a metric \(g\in c\) let
+\begin{equation}\label{eq:pole-space}
+ \mathcal H_p(c)=\bigl\{\omega\in\Omega^2(X):\ d\omega=0,\
+ {*}\omega=\omega,\ |\omega|_g=O\bigl(d_g(p,\cdot)^{-4}\bigr)\bigr\}.
+\end{equation}
+The space does not depend on the choice of \(g\) in \(c\). We call its
+elements the \emph{pole forms} of \((M,c,p)\). They are the columns of
+the kernel of \(T_c\) at \(p\). On the round sphere, stereographic
+projection from \(p\) identifies \(X\) with \(\mathbb R^4\), and the
+three constant self-dual forms of \(\mathbb R^4\) are pole forms. They
+vanish nowhere. They play the part of the differential \(dz\) on the
+Riemann sphere, which has a double pole at infinity and no zeros, and
+whose primitive is the coordinate.
+
+\begin{proposition}[Pole forms; working statement]\label{prop:pole}
+For every smooth conformal class \(c\) on \(M\) and every \(p\in M\),
+the space \(\mathcal H_p(c)\) has dimension three. In normal coordinates
+\(y\) at \(p\) of a metric in \(c\), each of its elements has the form
+\[
+ \omega=|y|^{-4}\,R_y^*\eta+O(|y|^{-2}),
+\]
+where \(R_y\) is the reflection in the hyperplane orthogonal to \(y\)
+and \(\eta\) is a constant anti-self-dual form, and
+\(\eta\mapsto\omega\) is a linear isomorphism of \(\Lambda^-_p\) onto
+\(\mathcal H_p(c)\).
+\end{proposition}
+
+The sketch in \cite{Baker2026PoleFormsProposal} works on \(X\) with the
+metric \(|y|^{-4}g\) near \(p\), which is asymptotically Euclidean in
+the inverted coordinates \(x=y/|y|^2\). A constant self-dual form has a
+linear primitive, and one corrects it by solving an equation for the
+operator \(d^*\oplus d^-\) in weighted spaces. For weights between
+\(-3\) and \(0\) that operator has no kernel, by an integration by
+parts, and no cokernel, because \(b_2(M)=0\). No sign of the Yamabe
+constant enters.
+
+\begin{proposition}[Recognition; working statement]\label{prop:recognition-pole}
+If some nonzero \(\omega\in\mathcal H_p(c)\) has no zero on \(X\), then
+\(M\) is diffeomorphic to \(S^4\).
+\end{proposition}
+
+In the sketch, a zero-free \(\omega\) is a symplectic form on \(X\),
+since \(\omega\wedge\omega>0\), and it is asymptotic to a constant form
+in the coordinates \(x\). Cutting off the correction far out makes it
+standard outside a compact set. Since \(H_2(X)=0\), the theorem of
+Gromov and McDuff applies
+\cite{Gromov1985PseudoHolomorphic},
+\cite[Theorem 9.4.2]{McDuffSalamon2012JHolomorphic}: \(X\) is
+symplectomorphic to the standard \(\mathbb R^4\) by a map that agrees
+with the chart \(x\) near infinity. A diffeomorphism of that kind
+extends over \(p\). The clause on agreement near infinity is needed.
+Without it one would know only that \(X\) is diffeomorphic to
+\(\mathbb R^4\), which leaves a four-dimensional Schoenflies problem.
+
+\begin{corollary}[Conditional on the two propositions]\label{cor:equivalence}
+Assume Propositions~\ref{prop:pole} and~\ref{prop:recognition-pole}.
+The following are equivalent.
+\begin{enumerate}
+\item Every smooth homotopy four-sphere is diffeomorphic to \(S^4\).
+\item Every smooth homotopy four-sphere \(M\) carries a conformal class
+\(c\) and a point \(p\) for which some nonzero element of
+\(\mathcal H_p(c)\) has no zeros.
+\end{enumerate}
+\end{corollary}
+\begin{proof}
+On the round sphere the constant forms are pole forms without zeros,
+and a diffeomorphism transports the class. The converse is
+Proposition~\ref{prop:recognition-pole}.
+\end{proof}
+
+The second statement is a reformulation of the conjecture and carries
+all of its difficulty. What the reformulation changes is where the
+difficulty lies. By Proposition~\ref{prop:pole} the pole forms exist on
+every class, by linear analysis and with no hypothesis on curvature.
+Recognition rests on a published theorem. What is open is the zero set of a closed self-dual two-form.
+For harmonic self-dual forms on closed four-manifolds that set is
+generically a union of circles, and it is the subject of near-symplectic
+geometry \cite{Taubes1999SelfDualHarmonic,Perutz2006ZeroSets}.
+A near-symplectic form on \(X\) that is constant near infinity is
+self-dual for some metric which is flat near infinity, and by
+Proposition~\ref{prop:pole} it is then a pole form of the class of that
+metric; this identification is part of the same sketch. The condition
+of Proposition~\ref{prop:recognition-pole} is not a bound on curvature.
+On an explicit family of conformal classes on \(S^4\) with symmetry
+group \(U(2)\), the three pole forms at a fixed point of the action
+vanish nowhere for every member, while the chiral Weyl energy
+\(\int_M|W^+|^2\,dV\) ranges from zero to more than a thousand times
+\(4\pi^2\) \cite{Baker2026PoleFormsProposal}.
+
+This program began from the search for coordinates in dimension four
+that would do what isothermal coordinates do on a surface, with twistor
+theory as the guide. The normalized pole forms give a map from
+\(X\times S^2\) to the bundle of unit self-dual two-forms of \(X\), its
+twistor space. The map is linear on each fibre and is defined wherever
+the forms do not vanish. It is conformal on the fibres exactly when the
+three forms are pointwise orthogonal and of equal length. They are then
+a hyperk\"ahler triple for a metric in \(c\), so \(W^+=0\), the
+signature formula gives \(W^-=0\), and \(c\) is the round class
+\cite{Kuiper1949}. The first manuscript of the program
+\cite{Baker2026ChiralMaster} works with the energy
+\(\int_M|W^+|^2\,dV\) of that curvature and studies the classes below
+\(8\pi^2\). The two approaches meet in one question, which is open:
+whether every positive class below \(8\pi^2\) on \(S^4\) has a
+zero-free pole form at some point.
+
+Six companion investigations are planned. They concern the proofs of
+the two propositions, the zero set and its first computations, the
+pseudoholomorphic curves and broken fibrations attached to it, an
+independent criterion through the entropy of an embedding in
+\(\mathbb R^5\), finite certificates for named homotopy spheres, and
+the invariants that could detect a counterexample. Their registers
+record what has been established.
+
+\section*{Provenance and assistance}
+Edward B. Baker III developed this research with assistance from OpenAI
+and Anthropic language models. This draft was written for the author on
+27 November 2026 by Claude Fable 5.2, at reasoning effort max as its
+session was configured, from its note of the same date
+\cite{Baker2026PoleFormsProposal} on the repository at
+\texttt{b607bd1}. Propositions~\ref{prop:pole}
+and~\ref{prop:recognition-pole} are proof sketches of that session. No
+one else has read them, and neither has a formal proof. The published
+theorems cited here were read as statements, at the levels recorded in
+the repository's source receipt of that date. The papers
+\cite{DonaldsonSullivan1989} and \cite{IwaniecMartin1993} are cited
+from memory and were not opened. Scripts filed with the note test the
+pointwise identities and the explicit family.
+
+\bibliographystyle{unsrturl}
+\bibliography{references}
+\end{document}

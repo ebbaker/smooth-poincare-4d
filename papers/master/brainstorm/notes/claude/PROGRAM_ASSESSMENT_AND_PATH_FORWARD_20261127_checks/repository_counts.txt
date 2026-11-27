@@ -1,0 +1,85 @@
+== repository ==
+HEAD b607bd1, 2026-11-27 10:52 -0500
+commits: 84
+tracked files: 4516
+  papers/master: 324
+  papers/investigations-1/01_chiral_metric_evolution: 1110
+  papers/investigations-1/02_bach_flow: 20
+  papers/investigations-1/03_first_order_twistor: 814
+  papers/investigations-1/04_hypersurface_immersions: 71
+  papers/investigations-1/05_collar_deformation_and_surgery: 263
+  papers/investigations-1/06_bour_flow_and_fixed_type_attainment: 63
+  papers/investigations-1/07_positive_subcritical_entry: 61
+  papers/investigations-1/08_cut_geometry_and_chirality: 580
+  formalization: 1024
+== added between 841d606 (26 Nov 23:05) and HEAD ==
+papers and formalization: 785 files changed, 54205 insertions(+), 123 deletions(-)
+  papers/master: 84 files changed, 9170 insertions(+), 107 deletions(-)
+  papers/investigations-1/01_chiral_metric_evolution: no change
+  papers/investigations-1/02_bach_flow: no change
+  papers/investigations-1/03_first_order_twistor: no change
+  papers/investigations-1/04_hypersurface_immersions: no change
+  papers/investigations-1/05_collar_deformation_and_surgery: no change
+  papers/investigations-1/06_bour_flow_and_fixed_type_attainment: no change
+  papers/investigations-1/07_positive_subcritical_entry: no change
+  papers/investigations-1/08_cut_geometry_and_chirality: 580 files changed, 29960 insertions(+)
+  formalization: 120 files changed, 15074 insertions(+), 16 deletions(-)
+== investigations 01 to 07 since de2125d (26 Nov 16:17) ==
+ no change
+== Lean libraries (tracked sources) ==
+  SectionsAndConnections: 3 files, 146 lines, 3 theorem or lemma declarations
+  FirstOrderTwistor: 105 files, 16134 lines, 623 theorem or lemma declarations
+  SmoothPoincare: 319 files, 74328 lines, 2490 theorem or lemma declarations
+  together: 427 files, 90608 lines, 3116 theorem or lemma declarations
+  lines containing the word sorry: 0
+  axiom declarations: 0
+  other tracked .lean files (checks and replays under formalization/investigations): 58
+== geometric inputs that enter as hypotheses (evidence lines) ==
+-- the closed signature identity E_+ = E_- is a field of the metric structure:
+131:  signature_zero : chiralFrameEnergy metric (signedCollarWeylBlock o metric frame .plus) =
+-- Bach-flatness is a predicate supplied to the theorem, with its consequences as hypotheses:
+154:    (BachFlat : SmoothRiemannianMetric I M → Prop)
+252:    (BachFlat : SmoothRiemannianMetric I M → Prop)
+294:    (BachFlat : SmoothRiemannianMetric I M → Prop)
+155:    (hVariation : 0 < classYamabeFour oM.dimension_eq source.metric →
+157:    (hContinuation : BachFlat source.metric → ∀ U : Set M, IsOpen U → U.Nonempty →
+160:    (hRecognition : (∀ x sign, signedCollarWeylBlock oM source.metric source.frame sign x = 0) →
+163:  have hBach := hVariation hPositive hAttain
+166:    hRecognition (hContinuation hBach (interior U) isOpen_interior hNonempty fun x hx sign =>
+253:    (hVariation : 0 < classYamabeFour oM.dimension_eq source.metric →
+255:    (hContinuation : BachFlat source.metric → ∀ U : Set M, IsOpen U → U.Nonempty →
+258:    (hRecognition : (∀ x sign, signedCollarWeylBlock oM source.metric source.frame sign x = 0) →
+267:    hCover hOverlap hContinuous BachFlat hVariation hContinuation hRecognition
+295:    (hVariation : 0 < classYamabeFour oM.dimension_eq source.metric →
+297:    (hContinuation : BachFlat source.metric → ∀ U : Set M, IsOpen U → U.Nonempty →
+300:    (hRecognition : (∀ x sign, signedCollarWeylBlock oM source.metric source.frame sign x = 0) →
+-- closed Gauss-Bonnet and the Euler characteristic are fields of the exhaustion structure:
+378:  eulerCharacteristic : DifferentialGeometry.Homology.eulerChar ℚ (TopCat.of N) = 2
+379:  closedGaussBonnet : ∀ n,
+-- the fixed-width theorem takes the strip volume, the jet bound and the band identities as hypotheses:
+66:    (hvol : (32 / 25) * pauseStripReferenceVolume < (riemannianVolumeMeasure I M A).real strip)
+70:    (hjet : ∀ p ∈ strip, pauseStripContrastFloor (x p) ≤
+74:    (hbalance : q.charge .plus band = q.charge .minus band)
+75:    (hexchange : cost.plus 0 = cost.minus 1) :
+-- recognition below 4 pi^2 enters through a hypothesis structure:
+88:structure MarkedSideReplacement {A : Type*} [TopologicalSpace A]
+92:  recognize : discard.cappedEnergy < 4 * Real.pi ^ 2 →
+-- declarations named after Gauss-Bonnet, the signature theorem or the Bach tensor in the three libraries:
+0
+== dependency ==
+library files that import DifferentialGeometry: 173
+7:rev = "788efe97894474c032de6dfb1289d515f613d15a"
+leanprover/lean4:v4.35.0-rc3
+== continuous integration ==
+build-latex.yml
+check-repository.yml
+workflow files that mention lake or lean: 0
+== literature not cited in the manuscripts or bibliography ==
+  arXiv:1809.05918 appears in 0 tracked files under papers/ and references/
+  arXiv:1810.05897 appears in 0 tracked files under papers/ and references/
+  arXiv:2505.17752 appears in 2 tracked files under papers/ and references/
+  arXiv:2604.17547 appears in 0 tracked files under papers/ and references/
+  arXiv:1311.5256 appears in 2 tracked files under papers/ and references/
+  arXiv:2211.09091 appears in 0 tracked files under papers/ and references/
+== half positive isotropic curvature in the research files ==
+  tracked files under papers/ that mention it: 0

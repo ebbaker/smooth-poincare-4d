@@ -1,0 +1,150 @@
+% Added 27 November 2026 for Edward B. Baker III. Drafted by Claude Fable 5.2
+% (Anthropic, Cowork session) from the 08 tube investigation's notes E39, E70,
+% E76 and their replays E73 and E79 at b607bd1, with an independent replay of
+% the group computation filed with the brainstorm note
+% ALTERNATIVE_FRAMEWORKS_AND_INVESTIGATIONS_2_20261127.md (check_05).
+\section{A recognized fibred closing: the even prism sphere}\label{sec:prism}
+
+The tube investigation of the cut-geometry program produced one smooth
+recognition that does not use curvature. We record its statement, the
+structure of its proof and its present level of verification, because it
+is an instance of the problem this paper is about: a homotopy four-sphere
+defined by surgery whose smooth type was not supplied by the sources
+consulted.
+
+Write \(\mathbb H\) for the quaternions and \(S^3\) for the unit
+quaternions. Let \(z=e^{2\pi i/17}\) and let
+\(\Gamma=Q_8\times C_{17}\) act freely on \(S^3\) by
+\((u,z^r)\cdot q=u\,q\,z^{-r}\), with quotient the prism manifold
+\(Y=S^3/\Gamma\). Put \(b=\tfrac12(1+i+j+k)\). The isometry
+\(q\mapsto b\,q\,j^{-1}\) normalizes \(\Gamma\), since conjugation by
+\(b\) cycles \(i,j,k\) and conjugation by \(j\) inverts \(z\). It induces
+an isometry \(J\) of \(Y\) of order six. Comparing real parts of
+\(u^{-1}b^m\) and \(z^{-r}j^m\) shows that \(J\) and \(J^2\) act freely
+on \(Y\), while \(J^3\) fixes circles. Let
+\[
+ N=Y\times[0,1]\big/\,(y,1)\sim(Jy,0)
+\]
+be the mapping torus. Choose \(p_0\in S^3\) with
+\(p_0\,j\,p_0^{-1}=(i+j+k)/\sqrt3\). Then
+\(b\,p_0=p_0e^{j\pi/3}\), so \(J(p_0e^{j\pi/6})=p_0\) and
+\[
+ \gamma(t)=\bigl[\,p_0e^{j\pi t/6},\,t\,\bigr],\qquad 0\le t\le1,
+\]
+is a closed section of \(N\to S^1\). The translation flow of \(N\) is a
+smooth circle action without fixed points. Its orbit space is the
+spherical orbifold \(O=Y/\langle J\rangle\), whose underlying space is
+\(L(3,1)\) and whose singular set is one circle of order two. The image
+\(\ell\) of \(\gamma\) is a closed geodesic in the regular part of
+\(O\), and it is a core of a genus-one Heegaard splitting of
+\(L(3,1)\). Let \(\mu\) be its meridian. Filling the exterior of
+\(\ell\) in the underlying space along a longitude gives a lens space,
+and exactly one longitude \(a\) gives \(S^3\). A longitude of \(\ell\)
+together with the orbit direction frames the normal bundle of
+\(\gamma\). The longitudes \(a+s\mu\) with \(s\) even give one of the two
+framings of \(\gamma\), which we call even, and those with \(s\) odd give
+the other.
+
+\begin{proposition}[The even prism closing]\label{prop:even-prism}
+Let \(\Sigma_{\rm ev}\) and \(\Sigma_{\rm odd}\) be the results of
+surgery on \(\gamma\subset N\) in the even and the odd framing.
+Both are smooth homotopy four-spheres. The even one is diffeomorphic to
+\(S^4\). Consequently the belt sphere \(K\subset\Sigma_{\rm ev}=S^4\)
+is a smooth fibred two-knot with fibre the punctured prism manifold
+\(Y\setminus{\rm int}\,B^3\), monodromy of order six on the closed fibre
+and group \(\Gamma\rtimes\mathbb Z\), and \(\Sigma_{\rm odd}\) is the
+Gluck twist of \(S^4\) along \(K\).
+\end{proposition}
+
+\begin{proof}[Structure of the proof]
+The group of \(N\) is \(\Gamma\rtimes\mathbb Z\) with the class of
+\(\gamma\) as stable letter. Killing it identifies \(i,j,k\), hence
+kills \(Q_8\), and identifies \(z\) with \(z^{-1}\), hence kills
+\(C_{17}\). Each surgery is therefore simply connected with Euler
+characteristic two, which is the realization of Plotnick and Suciu
+\cite[Proposition 5.1]{PlotnickSuciu1987}. The two attaching maps
+differ by the nontrivial loop of \(SO(3)\), which gives the last
+assertion once the even closing is identified.
+
+The preimage of a tube about \(\ell\) is
+\(S^1_a\times D^2_\mu\times S^1_f\), where \(f\) is the orbit direction,
+and the orbit of \(\gamma\) is the torus \(T=S^1_a\times\{0\}\times S^1_f\).
+In \(\Sigma_{\rm ev}\) the surgery compresses \(T\) along the disk
+bounded by \(a\) to an embedded two-sphere \(S_T\) with a product
+neighbourhood. Surgery on \(S_T\) replaces the preimage of the tube by
+\(S^1_\mu\times D^2_a\times S^1_f\). The result \(W\) carries a
+fixed-point-free circle action extending the one on the exterior, and
+its orbit orbifold is the filling \(O(a)\), in which the new core is
+regular and the circle of order two is unchanged. Conversely
+\(\Sigma_{\rm ev}\) is recovered from \(W\) by a framed surgery on the
+core circle \(\delta\) of the new piece.
+
+The computed input is the orbifold group
+\(\pi_1^{\rm orb}O(a)\cong S_3\). It is obtained from a
+four-generator presentation of the orbifold group of the exterior of
+\(\ell\) read from a tangle diagram
+\cite[TUBE, equivariant surgery]{Baker2026MarkedCutCalculations}.
+The Thom isomorphism for \(S_T\) gives \(H_1(W)=\mathbb Z\), generated
+by \(\delta\). The principal orbit \(h\) is central in
+\(\Pi=\pi_1(W)\) and \(\Pi/\langle h\rangle\cong S_3\). Abelianizing
+shows that \(h\) has degree \(\pm2\) and infinite order, so the
+commutator subgroup of \(\Pi\) is \(C_3\) and
+\(\Pi\cong C_3\rtimes\mathbb Z\) with a degree-one element acting by
+inversion. Since squaring is a bijection of \(C_3\), all elements of
+degree one are conjugate. The exceptional orbit \(e\) of order two,
+suitably oriented, has degree one. Hence \(\delta\) is freely homotopic,
+and in dimension four isotopic, to \(e\).
+
+Near \(e\) the action is
+\(u\cdot(w,y)=(u^{m}w,R_{k\arg u}\,y)\) on \(S^1\times D^3\), with
+\(|m|=2\), \(k\) odd and \(R\) the rotation about the slice axis.
+Rotating the product frame once changes the framing class and replaces
+\(k\) by \(k+m\). In either class the same formula on \(D^2\times S^2\)
+extends the action across the surgery. Therefore \(\Sigma_{\rm ev}\)
+carries a smooth effective circle action. A closed simply connected
+smooth four-manifold with a circle action is a connected sum of copies
+of \(S^4\), \(\pm\mathbb{CP}^2\) and \(S^2\times S^2\)
+\cite{Fintushel1976Circle,Pao1978Nonlinear},
+\cite[Theorem 3.2]{GalazGarciaSearle2014}, and \(b_2=0\) leaves \(S^4\).
+\end{proof}
+
+\paragraph{Verification status.}
+The argument is a working proof in the investigation's notes, with two
+independent model replays of the group and of the transfer
+\cite[TUBE, marked surgery and its independent replay]{Baker2026MarkedCutCalculations}.
+For this section the presentation was replayed by a separate
+coset enumeration. With the meridian of \(\ell\) killed it gives a group
+of order \(816\), and an explicit surjection identifies it with the
+orbifold group \((2T\times{\rm Dic}_{17})/\{\pm1\}\) of \(O\). At the
+longitude \(a\) it gives a group of order six. With the two meridians of
+order two also killed, the filling along \(a+s\mu\) has order
+\(|3s-1|\), in agreement with the lens spaces above. The tangle diagram
+from which the presentation is read was not rederived, the proposition
+has not been examined by a topologist, and it has no formal proof. Its
+formalization needs the presentation with its diagram certificate, the
+group lemmas, and the classification of circle actions as a named
+imported theorem.
+
+\paragraph{Relation to earlier work, and what remains.}
+Plotnick and Suciu left open whether these homotopy spheres are
+standard. For the fibres \(S^3/(Q_8\times C_d)\), fibred two-knots in
+\(S^4\) were obtained for \(d=5,11,13,19\) by twisting symmetry-spins of
+two-bridge knots \cite{Teragaito1989Twisting}, and the list reported in
+\cite{Jablonowski2026Prism} is \(d=3,5,11,13,19,21,27\).
+Jab\l{}onowski's recent preprint treats \(d=7\) and states that both
+closings are standard, by a scheme of the same kind: the orbit orbifold
+of the circle action, fillings whose orbifold groups are \(S_3\) and
+\(\mathbb Z/8\), and the classification of circle actions
+\cite{Jablonowski2026Prism}. Proposition~\ref{prop:even-prism} applies
+that scheme to \(d=17\), which appears in neither list. Its second half
+does not transfer. At the adjacent longitudes \(a+\mu\) and \(a-\mu\)
+the orbifold groups have abelianizations \(C_4\) and \(C_8\). The
+investigation's computations find both groups infinite, and the one
+further curve tested there fails the same criterion. The smooth type of
+\(\Sigma_{\rm odd}\) is therefore open here. It is an instance of the
+Gluck twist problem. Pao's theorem settles that problem for branched
+twist spins \cite{Pao1978Nonlinear,Fukuda2018Gluck}, and the closed
+monodromy of \(K\) has no fixed point. Whether the group \(S_3\) at the
+longitude \(a\) persists for the other odd orders prime to three was not
+examined. The proposition is topological. It supplies no positive
+subcritical class on a new smooth type and does not bear on entry.

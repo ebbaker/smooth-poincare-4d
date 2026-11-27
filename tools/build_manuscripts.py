@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 MANUSCRIPTS = {
     'master': ('.', 'chiral_weyl_energy_and_smooth_poincare.tex'),
     'master/01_fixed_type_variational_descent': ('.', 'fixed_type_chiral_energy_descent.tex'),
+    'master-2': ('.', 'self_dual_pole_forms_and_smooth_poincare.tex'),
     '01_chiral_metric_evolution': ('investigations-1', 'chiral_curvature_and_metric_evolution.tex'),
     '02_bach_flow': ('investigations-1', 'bach_flow_and_smooth_poincare.tex'),
     '03_first_order_twistor': ('investigations-1', 'first_order_twistor_and_smooth_poincare.tex'),

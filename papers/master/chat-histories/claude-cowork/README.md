@@ -149,6 +149,63 @@ therefore one read short, and
      next read, so the record of the latest turn lacks its closing reply
      until the session is read again.
 
+3. **Research project assessment** — [0003_2026-11-27T15-52-55Z_research-project-assessment.json](0003_2026-11-27T15-52-55Z_research-project-assessment.json)
+   - *Work.* At Edward's request, reviewed the
+     [master manuscript](../../manuscript/chiral_weyl_energy_and_smooth_poincare.tex),
+     its overview, [research plan](../../research-plan/PLAN.md) and
+     [register](../../research-progress/REGISTER.md), the progress of the
+     sub-investigations and the
+     [formalization](../../../../formalization/README.md) at commit `b607bd1`,
+     and wrote the note
+     [Program assessment and path forward](../../brainstorm/notes/claude/PROGRAM_ASSESSMENT_AND_PATH_FORWARD_20261127.md)
+     with its
+     [checks](../../brainstorm/notes/claude/PROGRAM_ASSESSMENT_AND_PATH_FORWARD_20261127_checks/README.md)
+     (three scripts with 71 checks, and a script for the repository counts).
+     In a second request the same day it added the section
+     [A recognized fibred closing](../../manuscript/claude/even_prism_closing.tex)
+     to the master, with one sentence in the abstract, one in the provenance
+     paragraph, a row in the [manuscript guide](../../manuscript/README.md)
+     and a milestone in the [draft history](../../DRAFT_HISTORY.md); appended
+     records to the shared [bibliography](../../../../references/references.bib),
+     with the receipt
+     [sources for the prism section, the assessment and the frameworks note](../../../../references/claude/SOURCE_NOTES_FRAMEWORKS_AND_PRISM_20261127.md)
+     and an index line in the [reference catalog](../../../../references/README.md);
+     and wrote the note
+     [Alternative frameworks and a proposal for investigations-2](../../brainstorm/notes/claude/ALTERNATIVE_FRAMEWORKS_AND_INVESTIGATIONS_2_20261127.md)
+     with its
+     [checks](../../brainstorm/notes/claude/ALTERNATIVE_FRAMEWORKS_AND_INVESTIGATIONS_2_20261127_checks/README.md)
+     (three scripts with 37 checks). In a third request the same day it set up
+     the [second master](../../../master-2/README.md), with a
+     [manuscript draft](../../../master-2/manuscript/self_dual_pole_forms_and_smooth_poincare.tex)
+     that contains an introduction only, and the
+     [second series](../../../investigations-2/README.md) with six
+     investigations, following the
+     [setup workflow](../../../../INVESTIGATION_SETUP_WORKFLOW.md): 114 new
+     files, each branch with its README, overview, plan, register and
+     continuation note. It added rows to the
+     [papers index](../../../README.md), the [root README](../../../../README.md)
+     and the [root continuation table](../../../../CONTINUATION.md), one
+     paragraph to the setup workflow, one bibliography record, one line to
+     `tools/build_manuscripts.py`, a section to the source receipt and a dated
+     addendum to the frameworks note. It activated no task. Apart from the
+     files named here and this registry it changed no other file, and it did
+     not commit.
+   - *Session.* A Claude Cowork cloud session in project Smooth Poincare
+     Conjecture 4d with Claude Fable 5.2 (`claude-fable-5-2`, reasoning effort
+     max per the session's configuration), started 27 November 2026 at 10:52
+     America/New_York. The session's context was compacted at 11:39 and once more
+     during the second request; later compactions, if any, are marked in the
+     record itself.
+   - *Capture.* Captured from the session's claude.ai event log with
+     `record_Claude_browser_chat.py ingest`, first at 12:19 the same day (1
+     message over 1 turn), and refreshed at the end of every later turn,
+     before that turn's reply; [index.json](index.json) gives the current
+     count. On this runtime the log held no progress updates between tool
+     calls, so the first record has the typed request and the paths of files
+     written through the device bridge. The reply that ends a turn enters at
+     the next read, so the record of the latest turn lacks its closing reply
+     until the session is read again.
+
 ## Awaiting capture
 
 None.

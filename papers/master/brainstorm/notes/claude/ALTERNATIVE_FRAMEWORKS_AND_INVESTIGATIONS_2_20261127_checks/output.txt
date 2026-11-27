@@ -1,0 +1,76 @@
+Python 3.13.18 | sympy 1.14.0 | mpmath 1.3.0 | numpy 2.5.3
+== check_05_prism_groups.py
+ok   (1a) meridian of the regular knot killed: order 816 = 816
+ok   (2a) slope a (s = 0): order 6 = 6
+ok   (1b) abelianization with L = 1 is [6]: cyclic of order 6
+ok   (1c) underlying space of the orbit orbifold: order 3 = 3, as for L(3,1)
+     abelian invariants of G_s: {-3: [20], -2: [14], -1: [8], 0: [2], 1: [4], 2: [10], 3: [16]}
+ok   (2b) abelianizations: s = 0 gives C_2, s = 1 gives C_4, s = -1 gives C_8
+     orders after killing b and c: {-3: 10, -2: 7, -1: 4, 0: 1, 1: 2, 2: 5, 3: 8}
+ok   (2c) underlying-space groups have order |3s - 1|
+ok   (3a) concrete model of (2T x Dic_17)/<(-1,-1)> has 816 elements and is a group
+     involutions in the model: 103
+ok   (3b) the presentation with L = 1 maps onto the model (images of F, b, c: (58, 307, 309)); with (1a) this is an isomorphism
+     image of F: ((Fraction(-1, 2), Fraction(-1, 2), Fraction(-1, 2), Fraction(-1, 2)), (12, 0))  order 51
+     image of b: ((Fraction(0, 1), Fraction(-1, 1), Fraction(0, 1), Fraction(0, 1)), (0, 1))
+     image of c: ((Fraction(0, 1), Fraction(-1, 1), Fraction(0, 1), Fraction(0, 1)), (1, 1))
+info (4) slope a+mu: enumeration did not close below 400000 cosets (consistent with an infinite group; not a proof)
+info (4) slope a-mu: enumeration did not close below 400000 cosets (consistent with an infinite group; not a proof)
+check_05_prism_groups: 8 ok, 0 FAIL
+exit code 0
+== check_06_pole_forms.py
+ok   (a1) inversion pull-back equals |y|^-4 times the reflected form
+ok   (a2) a self-dual constant form pulls back to an anti-self-dual form
+ok   (a3) and an anti-self-dual one to a self-dual one
+ok   (a4) the pulled-back form is closed
+ok   (a5) its pointwise norm squared is 2 |y|^-8 (a pole of order four)
+ok   (b0) d(d s_i) = 0 for the structure equations
+ok   (b1) d(f s1) = (f'/a) e0^e1 + (2 f/(b c)) e2^e3
+ok   (b2) hence self-dual exactly when f' = 2 a f/(b c); for a = b = c = r this gives f = r^2
+ok   (b3) d(f s1) is closed
+ok   (b4) forms d(f_i s_i) for different i have no common components, so the Gram matrix is diagonal
+ok   (c1) flat space: zero curvature
+ok   (c2) round sphere: R = 12 and W = 0
+ok   (c3) Fubini-Study: R = 24, one block diag(4,-2,-2), the other zero (found R = 24, entries [-2, -2, 0, 0, 0, 4])
+ok   (c4) Fubini-Study: integral of |W|^2 over the nonzero block is 12 pi^2 (signature one)
+ok   (d0) h is invariant under r -> 1/r, so the class extends smoothly over the point at infinity
+ok   (d1) f_1 = r^2 exp(-eps/(1+r^2)) solves f' = 2 a f/(b c)
+ok   (d2) (log f_2)' - 2/r = -2 eps h/(r (1 + eps h)) is O(r) at 0 and O(r^-3) at infinity
+ok   (d3) a > 0 for every r exactly when eps > -4 (max of h is 1/4 at r = 1)
+     so for eps > -4 the forms d(f_i s_i), f_i > 0, are closed, self-dual, asymptotic to constant
+     forms and nowhere zero: the pole triple at the point at infinity is definite.
+     eps =   0.5:  E_+ = 6.641382082  E_- = 6.641382082  e/T = 0.168228
+     eps =     1:  E_+ = 31.08359257  E_- = 31.08359257  e/T = 0.787357
+     eps =     2:  E_+ = 167.08038  E_- = 167.08038  e/T = 4.2322
+     eps =     3:  E_+ = 493.7074283  E_- = 493.7074283  e/T = 12.5058
+     eps =     4:  E_+ = 1129.383635  E_- = 1129.383635  e/T = 28.6076
+     eps =     6:  E_+ = 3994.815201  E_- = 3994.815201  e/T = 101.19
+     eps =     8:  E_+ = 10553.66035  E_- = 10553.66035  e/T = 267.327
+     eps =    12:  E_+ = 46285.05064  E_- = 46285.05064  e/T = 1172.41
+     eps =    -1:  E_+ = 15.97490302  E_- = 15.97490302  e/T = 0.404649
+     eps =    -2:  E_+ = 44.65086263  E_- = 44.65086263  e/T = 1.13102
+     eps =    -3:  E_+ = 74.20582271  E_- = 74.20582271  e/T = 1.87966
+     eps =  -3.5:  E_+ = 100.6555079  E_- = 100.6555079  e/T = 2.54963
+ok   (d4) E_+ = E_- for every sampled eps (signature zero), to 1e-9 relative
+     sampled eps with e > 2T = 8 pi^2: [2, 3, 4, 6, 8, 12, -3.5]
+     sampled eps with e < T  = 4 pi^2: [0.5, 1, -1]
+ok   (d5) some sampled classes lie above the wall 2T, and their pole triple is still definite
+ok   (d6) e = O(eps^2) near the round class
+check_06_pole_forms: 21 ok, 0 FAIL
+exit code 0
+== check_07_entropy_and_presentation.py
+     lambda(S^1) = 1.520346901
+     lambda(S^2) = 1.471517765
+     lambda(S^3) = 1.453115374
+     lambda(S^4) = 1.443576355
+     lambda(S^5) = 1.437767801
+ok   (a1) lambda(S^1) = sqrt(2 pi/e) and lambda(S^2) = 4/e
+ok   (a2) lambda(S^4) = 32/(3 e^2)
+ok   (a3) 2 > lambda(S^1) > lambda(S^2) > lambda(S^3) > lambda(S^4) > sqrt(2)
+ok   (a4) the values decrease to sqrt(2) (checked to k = 7, and the limit by Stirling at k = 10^6)
+ok   (a5) the closed formula agrees with the Gaussian area of the sphere of radius sqrt(2k)
+ok   (b1) total relator length 14 = 14, two generators and two relators
+ok   (b2) the presented group has order 1 = 1
+ok   (b3) exponent-sum matrix [[0,-1],[-1,0]] has determinant +-1
+check_07_entropy_and_presentation: 8 ok, 0 FAIL
+exit code 0

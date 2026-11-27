@@ -1,0 +1,86 @@
+# Check run for PROGRAM_ASSESSMENT_AND_PATH_FORWARD_20261127
+# date (UTC): 2026-11-27T17:04:24Z
+# python 3.13.18 | numpy 2.5.3 | sympy 1.14.0 | mpmath 1.3.0
+
+===== check_01_beta_dictionary.py =====
+ok   (a1) round S^4: 4 int sigma_2 = 16 pi^2 = 8 pi^2 chi
+ok   (a2) CP^2: E_+ = 12 pi^2 = 12 pi^2 tau (signature formula)
+ok   (a3) CP^2: 8 pi^2 chi = E_+ + E_- + 4 int sigma_2
+ok   (a4) S^2 x S^2: E_+ = E_- = 32 pi^2/3
+ok   (a5) S^2 x S^2: 8 pi^2 chi = E_+ + E_- + 4 int sigma_2
+ok   (b1) beta(S^4, round) = 0
+ok   (b2) beta(CP^2, Fubini-Study) = 4
+ok   (b3) beta(S^2 x S^2, product) = 8
+ok   (c1) beta = 4 e/(8 pi^2 - e) on a homotopy sphere
+ok   (c2) beta = 4  <=>  e = T = 4 pi^2
+ok   (c3) beta = 8  <=>  e = 4T/3 = 16 pi^2/3
+ok   (c4) beta is increasing in e on (0, 2T)
+ok   (c5) beta -> infinity as e -> 2T = 8 pi^2 from below
+ok   (c6) inverse: e = 8 pi^2 beta/(4 + beta)
+ok   (c7) entry e < 2T  <=>  int sigma_2 > 0
+ok   (d1) int sigma_2(M1 # M2) = int sigma_2(M1) + int sigma_2(M2) - 4 pi^2
+ok   (d2) k CP^2 with additive energy: int sigma_2 = (4 - k) pi^2, positive only for k <= 3
+ok   (e1) 4 int sigma_2 - E_+ = 3 [(4 pi^2/3)(2 chi + 3 tau) - E_+]: the two thresholds coincide
+ok   (e2) on a homotopy sphere Gursky's threshold is 16 pi^2/3 = 4T/3
+ok   (e3) indefinite form: E_+ + E_- >= 16 pi^2 chi/3, and beta = 8 exactly at that value
+ok   (e4) for chi > 0, beta is increasing in the total Weyl energy, so beta >= 8 for indefinite forms
+ok   (f1) the d-fold universal cover has b_2 = 2d - 2 and signature 0, so b_2^+ = b_2^- = d - 1
+ok   (f2) beta is unchanged on a finite cover (both integrals are multiplied by d)
+ok   (f3) hence d >= 2 forces an indefinite form and beta >= 8; beta < 8 leaves d = 1
+ok   (g1) e = T + eps  <=>  beta = 4 + 8 eps/(4 pi^2 - eps)
+check_01: 25 ok, 0 failed
+(exit status 0)
+
+===== check_02_half_pic_band.py =====
+ok   (a1) nu_max/|W| <= sqrt(2/3) on 20000 samples (max ratio 0.816495, bound 0.816497)
+ok   (a2) equality at diag(1, -1/2, -1/2)
+ok   (a3) 6 sqrt(2/3) = 2 sqrt(6)
+ok   (b1) Y^2 = 96 int sigma_2 + 12 D
+ok   (c1) int |W| u^2 <= ||W||_2 ||u||_4^2 on 2000 samples
+ok   (c2) Y^2 - 24 E_+ = 24 (4 int sigma_2 - E_+) + 12 D
+ok   (d1) beta < 8 implies min(E_+, E_-) < 4 int sigma_2 (20000 samples)
+ok   (d2) homotopy sphere: e = 4 int sigma_2 exactly at e = 16 pi^2/3 = 4T/3
+ok   (d3) and e < 4 int sigma_2 below it (test at e = 5 pi^2)
+ok   (e1) 36 * (2/3) = 24
+ok   (e2) 96 sigma >= 24 (E_+ + E_-)  <=>  beta <= 4
+ok   (e3) homotopy sphere: 48 (2T - e) >= 48 e  <=>  e <= T
+ok   (f0) the chosen bases are self-dual and anti-self-dual
+ok   (f1) D = (W+_11 - W+_22) + (W-_11 - W-_22) (max error 1.78e-15)
+ok   (f2) D^2 <= 4(|W+|^2 + |W-|^2) on 5000 samples (max ratio 0.8299)
+ok   (f3) the Schouten part cancels in D (max 8.88e-16)
+ok   (g1) floor 130 gives c > 169 pi^2/25
+ok   (g2) floor 133 gives c > 17689 pi^2/2500
+ok   (g3) 169/25 > 4, so one band alone exceeds T = 4 pi^2
+ok   (h1) P - 8T = D + Delta/12
+ok   (h2) l^2 <= 4e/3 gives P <= 8e, hence e - T >= D/8 + Delta/96 when both are nonnegative
+ok   (i1) R/3 - 2W^+ > 0  <=>  R/6 > nu_+  <=>  the two smallest eigenvalues of W^+ + R/12 have positive sum (5000 samples)
+ok   (j1) |W^+|^2 >= (8/3) det A on the signature (2,2) locus, 20000 samples (min ratio 2.66897)
+ok   (j2) equality at principal curvatures (-1, -1, 1, 1)
+ok   (j3) mean number of index-two points <= 9 E_+/(32 pi^2)
+ok   (j4) mean < 1 iff E_+ < 32 pi^2/9;  mean >= 2 iff E_+ >= 64 pi^2/9;  E_+ < 8 pi^2 gives mean < 9/4
+check_02: 26 ok, 0 failed
+(exit status 0)
+
+===== check_03_bubble_budget.py =====
+ok   (a1) D = 4 ebar + Y^2/12 - 16 pi^2 chi
+ok   (a2) at Y = Y_rd: D = 4 ebar - 16 pi^2 (chi - 2)
+ok   (a3) round S^4 (ebar = 0, chi = 2, Y = Y_rd): D = 0
+ok   (a4) Einstein S^2 x S^2 (Y = 16 pi, ebar = 32 pi^2/3, chi = 4): D = 0
+ok   (a5) Fubini-Study CP^2 (Y = 12 sqrt(2) pi, ebar = 6 pi^2, chi = 3): D = 0
+ok   (b1) D_X = 4 ebar(X) + 16 pi^2 (sum 1/|Gamma| - chi(X))
+ok   (b2) flat R^4 (chi = 1, one trivial end, W = 0): D_X = 0
+ok   (b3) Eguchi-Hanson: E_+ + E_- = 12 pi^2 from the Euler formula
+ok   (b4) which equals 12 pi^2 |tau + eta| with tau = -1 or 1 and eta(RP^3) = 0 (half conformally flat)
+ok   (b5) the neck is scalar-flat
+ok   (b6) int |Ric|^2 over the neck = 32 pi^2 (exact integration)
+ok   (b7) numerical quadrature agrees: 32.0000000000 pi^2
+ok   (b8) formula (b1) with chi = 0, two trivial ends, W = 0 gives 32 pi^2
+ok   (c1) D_X <= 4I - 16 pi^2(chi(M) - 2)  <=>  4 ebar(X) + 16 pi^2 sum(1/|Gamma_j| + chi(V_j)) <= 4I + 32 pi^2
+ok   (d1) with k ends: 4 ebar(X) + 32 pi^2 (k - 1) <= 4 I
+ok   (d2) k = 2, ebar(X) >= 0 would need I >= 8 pi^2 = 2T
+ok   (d3) one trivial end, remaining piece with chi(V) = 1 + b: ebar(X) + 4 pi^2 b <= I
+ok   (e1) CP^2 (I = 6 pi^2 by Gursky's inequality): the bound is 7/2, so one end and b_2(V_1) <= 1
+ok   (e2) S^2 x S^2 (I = 32 pi^2/3): the bound is 14/3, so two ends are not excluded by the budget alone
+ok   (e3) homotopy sphere (I < 8 pi^2): the bound is below 4, so one end
+check_03: 20 ok, 0 failed
+(exit status 0)

@@ -1,5 +1,7 @@
 # Shared reference catalog
 
+The [frameworks and prism source receipt](claude/SOURCE_NOTES_FRAMEWORKS_AND_PRISM_20261127.md) records the sources of the master's prism section, the literature of the 27 November program assessment, and the published theorems on which the proposed second framework would rest, with the level at which each was read.
+
 The [direct-entry and folded-height source receipt](SOURCE_NOTES_DIRECT_ENTRY_20261126.md) records the primary theorems and their limits for the [positive entry investigation](../papers/investigations-1/07_positive_subcritical_entry/README.md) and the [folded-height test](../papers/investigations-1/04_hypersurface_immersions/research-plan/PLAN.md#folded-heights).
 
 The [direct-entry priorities review](../papers/master/reviews/DIRECT_ENTRY_AND_REDUCIBLE_CUT_PRIORITIES_20261126.md) identifies the primary passages on contractible fillings, prescribed folds, Gluck twists and branched covers used to assess the proposed constructions.
