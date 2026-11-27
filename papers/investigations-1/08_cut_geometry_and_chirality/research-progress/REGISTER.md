@@ -1,22 +1,22 @@
 # Cut geometry and chirality — progress register
 
-26 November 2026, for Edward B. Baker III. Prepared by Claude (`claude-fable-5-2`, maximum configured effort). Sole live owner of the task family `SP4-CUT`. Setup baseline `841d606`. Nothing is activated. Until a child scaffold exists, the tasks assigned to that child are held here; when a child is set up its tasks move to its own register with a dated crosswalk. [Plan](../research-plan/PLAN.md) · [Overview](../research-overview/OVERVIEW.md) · [Continuation](../continuation-notes/CONTINUATION.md)
+26 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum. Setup baseline `4655e38`. Sole live owner of the parent task family `SP4-CUT`, which since the split of 26 November 2026 consists of SP4-CUT-E02 and SP4-CUT-B01. The ten tasks assigned to the children moved to the five child registers under new identifiers; the [crosswalk](CROSSWALK_20261126.md) records each. This register links the child registers and does not copy their rows. Nothing is activated. [Plan](../research-plan/PLAN.md) · [Overview](../research-overview/OVERVIEW.md) · [Continuation](../continuation-notes/CONTINUATION.md)
 
 | Task | Current state | Evidence or exact dependency |
 | --- | --- | --- |
-| SP4-CUT-E01 | Ready, unactivated | Inputs fixed: equation (3.2) of the [manuscript](../manuscript/cuts_of_subcritical_conformal_classes.tex) and the Fubini–Study metric. |
-| SP4-CUT-E02 | Ready, unactivated | Inputs fixed: Sections 2 to 5, 7 and 8 of the manuscript at the setup baseline. |
-| SP4-CUT-E03 | Ready, unactivated | Inputs fixed: Corollary 3.4 of the manuscript and the neck estimates of the [marked-neck](../../03_first_order_twistor/01_sections_and_connections/01_neck_geometry/manuscript/marked_necks_and_chiral_energy.tex) and [attainment](../../06_bour_flow_and_fixed_type_attainment/README.md) manuscripts. |
-| SP4-CUT-E04 | Ready, unactivated | Inputs fixed: the functional (6.3) and one profile from [check_02](../../../master/brainstorm/notes/claude/USES_OF_THE_FIRST_ORDER_AND_MARKED_CUT_TOOLS_20261126_checks/check_02_cap_costs.py). |
-| SP4-CUT-E05 | Ready, unactivated | Inputs fixed: Corollary 4.4 and Theorem 5.2 of the manuscript, the [marked-cut manuscript](../../05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/manuscript/recognition_from_marked_handle_cuts.tex), and 07's [seam reading](../../07_positive_subcritical_entry/reviews/SEAM_REPLAY.md). |
-| SP4-CUT-B02 | Ready, unactivated | First conceptual decision of child 05. |
-| SP4-CUT-B03 | Ready, unactivated | First conceptual decision of child 03. |
-| SP4-CUT-B04 | Ready, unactivated | First conceptual decision of child 02. |
-| SP4-CUT-B01 | Dependent | Needs the returns of E01, E02 and at least one of B02, B03, B04. |
-| SP4-CUT-E06 | Dependent | Needs an explicit immersion named by [04](../../04_hypersurface_immersions/README.md) and the B02 statement. |
-| SP4-CUT-B05 | Reserved | Needs the agreement of the lead of [05](../../05_collar_deformation_and_surgery/README.md), which owns the slide enumeration. |
-| SP4-CUT-E07 | Reserved | Needs B05. |
+| SP4-CUT-E02 | Ready, unactivated | Inputs fixed: Sections 2 to 5, 7 and 8 of the [manuscript](../manuscript/cuts_of_subcritical_conformal_classes.tex) as first drafted at `841d606`. |
+| SP4-CUT-B01 | Dependent | Needs the returns of SP4-CUT-LED-E01 and SP4-CUT-E02 and at least one of SP4-CUT-GEO-B01, SP4-CUT-TUBE-B01, SP4-CUT-SEAM-B01. |
 
-**Imported material, not a task.** The manuscript's statements carry the status they had in the session that wrote them: proofs written out and not read independently; the cap functional verified symbolically; the table of cap costs floating point; the sign of the ledger's boundary term untested (E01). The working theorems of 05, 06 and the master are used as stated.
+| Child register | Family | Ready on activation | Dependent or reserved |
+| --- | --- | --- | --- |
+| [Chirality ledger](../01_chirality_ledger/research-progress/REGISTER.md) | `SP4-CUT-LED` | LED-E01, LED-E02, LED-B01 | LED-E03, LED-E04, LED-B02 |
+| [Seams and marked cuts](../02_seams_and_marked_cuts/research-progress/REGISTER.md) | `SP4-CUT-SEAM` | SEAM-E01, SEAM-B01, SEAM-B02, SEAM-E03 | SEAM-E02, SEAM-B03 |
+| [Tubes and exteriors](../03_tubes_and_exteriors/research-progress/REGISTER.md) | `SP4-CUT-TUBE` | TUBE-B01, TUBE-E01, TUBE-E02, TUBE-B02 | TUBE-E03, TUBE-B03 |
+| [Slide filters](../04_slide_filters/research-progress/REGISTER.md) | `SP4-CUT-SLIDE` | SLIDE-E02 | SLIDE-B01, SLIDE-E01, SLIDE-B02 |
+| [Cuts from geometry](../05_cuts_from_geometry/research-progress/REGISTER.md) | `SP4-CUT-GEO` | GEO-B01, GEO-E02, GEO-E03, GEO-B02 | GEO-E01, GEO-B03 |
 
-**Returns owed to other registers once tasks complete.** To master B02 and 07: the selection rules for seams and tubes (after E05). To 03 and 06: the collar statement with its verified hypotheses (after E03). To 05: the corollary at the winding-one cut (after E05) and, if B05 is agreed, the character-arc proposal.
+**Imported material, not a task.** The manuscript's statements carry the status they had in the session that wrote them: proofs written out and not read independently; the cap functional verified symbolically; the table of cap costs floating point; the sign of the ledger's boundary term untested (SP4-CUT-LED-E01). The working theorems of 05, 06 and the master are used as stated.
+
+**Request issued.** [To the lead of 05](handoffs/SLIDE_B01_REQUEST_TO_05_20261126.md), on the redirection of the slide enumeration; not answered.
+
+**Returns owed to other registers once tasks complete.** To master B02 and 07: the selection rules for seams and tubes (after SP4-CUT-SEAM-E01). To 03 and 06: the collar statement with its verified hypotheses (after SP4-CUT-LED-E02). To 05: the corollary at the winding-one cut (after SP4-CUT-SEAM-E01).

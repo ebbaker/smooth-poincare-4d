@@ -1,0 +1,93 @@
+# Continuation — Slide filters
+
+27 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum, for handoff to an Astra/ultra lead with bounded Sol 6.2/ultra helpers. Written at repository state `4655e38`, with the child setup of 26 November 2026 not yet committed. This is a dated snapshot: the [register](../research-progress/REGISTER.md) is authoritative, and saving this note activates nothing.
+
+## The assignment
+
+The assignment is the question of this child, not the list of tasks in its [plan](../research-plan/PLAN.md):
+
+> What do the filters of the slide enumeration prove about the number of slides needed with arbitrary band paths, and what do the same representations certify about cuts?
+
+By the author's instruction to the session that wrote this note, a session launched from it continues until a natural stopping point of the whole sub-investigation, which is one of the end states below, and does not stop at a breakpoint inside it. [AGENTS.md](../../../../../AGENTS.md) and the [model workflow](../../../../../GPT_RESEARCH_MODEL_WORKFLOW.md) let a current instruction of the author override their defaults. For this child that instruction replaces the default ending at a substantial assessed milestone: a milestone is recorded in one dated line and the work goes on.
+
+## Status boundary
+
+Set up on 26 November 2026: the [README](../README.md), [overview](../research-overview/OVERVIEW.md), [plan](../research-plan/PLAN.md) and [register](../research-progress/REGISTER.md). No task is activated, no working folder exists, and by the author's instruction the child has no manuscript. Its starting statements are in the [parent manuscript](../../manuscript/cuts_of_subcritical_conformal_classes.tex) (SHA-256 beginning `ccb52d6a2548fb8f`), with proofs written out and not read independently; the parent's reading task SP4-CUT-E02 has not run. Not done for this child: the [request to the lead of 05](../../research-progress/handoffs/SLIDE_B01_REQUEST_TO_05_20261126.md) is unanswered; the implication from a dominated cut to a standard piece has not been checked against the terminal diagrams of 05.
+
+Unresolved question: whether 05 redirects the enumeration, and on which diagrams its representations certify cuts.
+
+## Where the sub-investigation ends
+
+The question is divided into the components below. A component has a **definite result** when the register records one of the following for it.
+
+- *Established.* A written proof, exact computation or reading table that a Sol reader who did not produce it has replayed line by line, with every imported premise named and checked against its source. This is the internal standard of the program, not review by specialists.
+- *Refuted.* An explicit counterexample, recomputed independently.
+- *Reduced.* One precisely stated open statement, with an impasse note in `brainstorm/notes/` that lists each approach tried and the step at which it fails, the approaches considered and not tried with the reason, and the input that would reopen the question. One failed approach is not an impasse. A Sol reader who did not write the note reads it and names any approach it missed, and a named approach is tried before the component counts as reduced.
+- *External.* The component needs a named input owned by another branch, the handoff that asks for it has been written, and no other step in this child advances it.
+
+| Component | Question | First tasks | Definite when |
+| --- | --- | --- | --- |
+| F1 · Certificates | For which terminal diagrams of 05 does a representation that kills one relator certify that a cut is not dominated by a manifold of positive scalar curvature? | SLIDE-E02 | The table of diagrams, each with the theorem of 05 that gives the implication or the statement that none does, and each certificate with its consequence through Theorem 4.1; the table returned to seams and marked cuts, and the representations that live on an exterior returned to tubes and exteriors. |
+| F2 · The redirection | Does 05 agree to the proposal of the request? | SLIDE-B01, requested | An answer recorded as the Boundaries section describes. Without one the component is external. |
+| F3 · Depth four | Are the 32 surviving four-slide histories excluded, or invisible to \(SU(2)\)? | SLIDE-E01, reserved for F2 | Each history marked, by one exact computation over whole character arcs. |
+| F4 · Slide length | Does the tree argument behind the three-slide theorem give a lower bound for slide length that grows with the depth? | SLIDE-B02, reserved for F2 | A proposal accepted by 05 and then proved, refuted or reduced; or declined by 05. |
+
+**End states.** The sub-investigation ends only at one of these.
+
+1. *Resting on the request.* F1 is definite and delivered, and the request is unanswered. Without an answer nothing else in this child can proceed, so this is its natural stop. Write the closing note as a rest note that says an answer reopens the child.
+2. *Complete after agreement.* F1, F3 and F4 are definite, every item that the answer assigns to this child is done, and the outputs are delivered to 05 with the ownership agreed.
+3. *Closed by refusal.* The lead of 05 declines. The table of F1 is still delivered if it exists, and the README says that the child is closed.
+4. *Author stop.*
+
+This child is small by design. Do not enlarge it to fill a session: it runs no enumeration, edits no file of 05, opens no reserved task without the answer, and adds rows under rule 2 below only for items that 05 has agreed to.
+
+**Not an end.** The return of a packet or of a wave of packets. The completion of every task listed in the plan: those rows are the first horizon. A failed estimate, a refuted claim or a counterexample. A B decision. A result that changes a statement of the parent manuscript or of another branch. A dependency on another branch while any other step can proceed. A question for the author that does not block every remaining step. A milestone that would make a good report.
+
+## How the work continues
+
+1. *The cycle.* Freeze each E packet as a request in `research-progress/handoffs/`, run independent packets in parallel on disjoint files, and integrate each return into the register. At each integration re-read the end states, add one dated line to `DRAFT_HISTORY.md` naming the component advanced and the next step, and take that step in the same session.
+2. *Past the first horizon.* When no listed row is ready and no end state is reached, write a dated B note in `brainstorm/notes/` that chooses the next step toward a definite result for an open component, add rows to the plan and the register, each with the fields the model workflow requires and the next unused identifier of `SP4-CUT-SLIDE` (identifiers are never reused or renumbered), and continue. Prefer a step that could refute the current route to one that assumes it. The directions after the routing table are suggestions; the lead may choose others that serve the question. Work outside the question, or outside the ownership stated in the README, is not started here: propose it to the parent lead by handoff.
+3. *Failures.* Record a failed route for the class actually examined, with its evidence, and take the alternative named in the [overview](../research-overview/OVERVIEW.md#place-in-the-route-to-the-conjecture) or decide a new one. A changed attempt names its new premise or information; a numerical campaign is not enlarged silently. After two failed attempts on one component, and before any impasse note, write a short assessment in `reviews/` of what the attempts share and whether an approach of a different kind exists.
+4. *Dependencies.* When a step needs another branch, write the handoff in `research-progress/handoffs/` as `TO_<receiver>_<subject>_<yyyymmdd>.md`, where the receiver is `PARENT`, a child family (`LED`, `SEAM`, `TUBE`, `SLIDE`, `GEO`) or an investigation (`03` to `07`, `MASTER`); mark the row dependent; list the handoff in the register under "Outgoing handoffs"; and go on with every other row. At each integration read the handoffs that the parent and the other children have addressed to this child in their own handoffs folders. Edit no file of another investigation, of another child or of the parent.
+5. *Questions for the author.* Record them in the register under that heading and continue. Stop for one only when every remaining step depends on it. The author decides: a change of the question or of ownership, a manuscript for this child, a campaign beyond the limits of [LARGE_FILES.md](../../../../../LARGE_FILES.md), and anything sent outside the repository.
+6. *Evidence.* Keep symbolic identities, interval bounds, floating diagnostics and proofs apart, and local or conditional statements apart from global ones. Before a result rests on a statement of the parent manuscript, have that statement and its proof replayed by a Sol reader as a packet of this family, and send any gap to the parent lead. Record new sources as the [reference workflow](../../../../../REFERENCE_WORKFLOW.md) requires, in a dated source note under `references/` of this child. Other children may be running at the same time, so the shared bibliography and the root reference index are not edited from here: entries for them go to the parent lead by handoff.
+7. *Working folders.* Create `research-progress/handoffs/`, `notes/`, `brainstorm/notes/`, `numerics/`, `reviews/`, `references/`, `chat-histories/` and `DRAFT_HISTORY.md` on first use, each folder with a one-line purpose README. Only the lead edits the plan and the register; a helper writes only its assigned return files. Results are written as notes; text meant for the parent manuscript goes to the parent lead as an insert-ready handoff.
+8. *A session that cannot finish.* If a session must end before an end state because of a genuine execution limit, write `continuation-notes/RESUME_<yyyymmdd>.md` with the state of each component, the open packets and their files, the next three steps and what must not be redone, and say in the first line of the reply that the sub-investigation is interrupted, not finished. The prompt below is then pasted again unchanged; the newest RESUME note takes precedence over its start instruction.
+9. *Closing.* At an end state write `continuation-notes/CLOSING_<yyyymmdd>.md` with the result for each component and its evidence level, the handoffs written, and what stays open with what would reopen it; update the README and the register; and send the result to the parent lead, for the lane decision SP4-CUT-B01, by handoff.
+
+## Routing table, 27 November 2026
+
+| ID | Type | Recommendation and reason | Readiness and dependencies | Output |
+| --- | --- | --- | --- | --- |
+| SP4-CUT-SLIDE-E02 | E | Sol 6.2/ultra; a reading task against fixed texts of 05 | Ready | Table of terminal diagrams with the theorem that gives the implication; the certificates |
+| SP4-CUT-SLIDE-B01 | B | Astra/ultra with the lead of 05; the redirection is a decision of the branch that owns the enumeration | Reserved: requested, not answered | Agreement or refusal; on agreement the frozen SLIDE-E01 request and an owner for each output |
+| SP4-CUT-SLIDE-E01 | E | Sol 6.2/ultra; one exact computation over finitely many character arcs | Reserved: needs SLIDE-B01 | Each of the 32 histories marked excluded or invisible to \(SU(2)\) |
+| SP4-CUT-SLIDE-B02 | B | Astra/ultra with the lead of 05; the argument to be extended belongs to 05 | Reserved: needs SLIDE-B01 | A proposal to 05 with the statement sought and the first obstruction |
+
+The definitions, stop tests and escalation triggers of these rows are in the [plan](../research-plan/PLAN.md); live status is in the [register](../research-progress/REGISTER.md). Astra/ultra leads and takes B tasks; Sol 6.2/ultra takes frozen E packets and independent readings. In a Claude session Fable and Opus take those roles, as the [setup workflow](../../../../../INVESTIGATION_SETUP_WORKFLOW.md#claude-sessions) records. The lead selected by the author takes precedence.
+
+## After the first horizon
+
+The rows above are the first horizon. The directions below serve the components and are listed in the order in which they are likely to matter; the lead may replace them. A statement marked † was derived while this note was written and has not been read independently: it is a first packet for a Sol reader, not an input.
+
+- **Certificates** (F1). For each terminal diagram record the theorem of 05 that makes a dominated cut bound a standard piece, the representations in the notes of 05 that kill one relator, and the cut each concerns. Where the implication holds, the cut is not dominated by a manifold of positive scalar curvature, so by Theorem 4.1 it is not an umbilic hypersurface of any entering class. Return the table to [seams and marked cuts](../../02_seams_and_marked_cuts/README.md).
+- **Representations as holonomies** (F1). Where a recorded representation is a representation of the group of the exterior of a one-tube form, return it to [tubes and exteriors](../../03_tubes_and_exteriors/README.md) as a candidate holonomy, with the diagram it comes from. This is reading; nothing is enumerated.
+- **After an agreement** (F3, F4). Freeze SLIDE-E01 against the version of the fourth-slide notes of 05 that the answer names, run it once and stop it whatever the outcome, as the request proposes. Then send the proposal of SLIDE-B02, and work on it here only if 05 assigns it to this branch. If the answer assigns the write-up of the three-slide theorem to this child, write it as a note with a complete proof and have it read independently; a manuscript needs the author.
+
+## Boundaries
+
+This child owns nothing in 05 and changes no file there. A session launched from this note is not the lead of 05, even when it runs on the same model, and does not answer the request for 05. An answer counts when the author writes it into the prompt below, or when it stands in the register of 05 or as a dated return beside the [request](../../research-progress/handoffs/SLIDE_B01_REQUEST_TO_05_20261126.md). Record it as the return to SP4-CUT-SLIDE-B01 in this child's handoffs before acting on it.
+
+## Exact inputs
+
+- 05: the [marked-cut manuscript](../../../05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/manuscript/recognition_from_marked_handle_cuts.tex) with its localization and recognition theorems and terminal diagrams; the notes on the [third](../../../05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/notes/GST_THIRD_SLIDE_QUOTIENTS.md) and [fourth](../../../05_collar_deformation_and_surgery/02_handle_isolation_and_marked_surgery/notes/GST_FOURTH_SLIDE_QUOTIENTS.md) slides; the readers' reviews of the [three-slide](../../../05_collar_deformation_and_surgery/reviews/THREE_SLIDE_QUATERNION_READER.md) and [fourth-slide](../../../05_collar_deformation_and_surgery/reviews/FOURTH_SLIDE_READER.md) results. The request records that 05 was read at `de2125d`.
+- The [request](../../research-progress/handoffs/SLIDE_B01_REQUEST_TO_05_20261126.md) itself and Section 6 of the [proposing note](../../../../master/brainstorm/notes/claude/USES_OF_THE_FIRST_ORDER_AND_MARKED_CUT_TOOLS_20261126.md), whose account of the Akbulut–Kirby presentations rests partly on a secondary source.
+- [Parent manuscript](../../manuscript/cuts_of_subcritical_conformal_classes.tex): Theorem 4.1 and Corollaries 4.3 and 4.4.
+
+The live [register](../research-progress/REGISTER.md) overrides this snapshot. Record the commit at which each input of another branch is read.
+
+## Prompt
+
+Before pasting, replace NOT YET GIVEN by the answer of the lead of 05 if there is one. The [request](../../research-progress/handoffs/SLIDE_B01_REQUEST_TO_05_20261126.md) asks for agreement, agreement in part or refusal on its four items, and for the owner of each output; for example: agreed to items 2, 3 and 4; the write-up of item 2 belongs to 05 and the computation of item 3 to this child.
+
+> Activate sustained research in papers/investigations-1/08_cut_geometry_and_chirality/04_slide_filters. Read AGENTS.md, INVESTIGATION_SETUP_WORKFLOW.md, GPT_RESEARCH_MODEL_WORKFLOW.md, REFERENCE_WORKFLOW.md and tools/CHAT_HISTORY.md; the README, overview and manuscript of the parent 08_cut_geometry_and_chirality; then this child's README, overview, plan, sole register and continuation-notes/CONTINUATION.md, and the newest RESUME note in that folder if there is one, which takes precedence over the start instruction that follows. Lead with Astra/ultra unless I have selected otherwise; bounded gpt-6.2-sol/ultra helpers are authorized for frozen E packets and independent readings on disjoint files. Start with SP4-CUT-SLIDE-E02 as a frozen packet. The answer of the lead of 05 to the request in the parent's research-progress/handoffs/SLIDE_B01_REQUEST_TO_05_20261126.md is: NOT YET GIVEN. You are not the lead of 05 and do not answer for it. Without an answer this child ends at its resting state as soon as SP4-CUT-SLIDE-E02 is returned, assessed and delivered; open no reserved task and do not enlarge the child. This assignment is the whole sub-investigation, not its task list. Continue through every return and decision until one of the end states named in the continuation note is reached and assessed, and do not stop at a packet boundary or to report progress. After an answer from 05, add rows with new identifiers only for the items it agrees to, and carry those to their definite results. A dependency on another branch stops only the rows that need it: write the handoff, continue elsewhere, and read the handoffs addressed to this child at each integration. Record questions for me in the register and continue unless every remaining step depends on the answer. Edit only this child's files, creating its working folders on first use; send whatever concerns the parent manuscript, the parent register, another child, another investigation or the shared bibliography as a dated handoff. Keep symbolic identities, interval bounds, floating diagnostics and proofs apart, have every proof that counts replayed by a Sol helper who did not write it, preserve failed attempts with their evidence, and maintain authentic public chat history in this child's chat-histories folder. If the session must end before an end state, write the RESUME note the continuation note describes and say in the first line of your reply that the sub-investigation is interrupted, not finished. At an end state write the closing note and the handoff to the parent lead. Do not commit.

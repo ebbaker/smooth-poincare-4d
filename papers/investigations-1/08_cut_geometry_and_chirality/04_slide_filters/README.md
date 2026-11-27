@@ -1,11 +1,21 @@
 # Slide filters
 
-**Question.** What do the filters of the slide enumeration prove about the number of slides needed with arbitrary band paths, and what do the same representations certify about cuts and supply as twists for exteriors?
+**Question.** What do the filters of the slide enumeration prove about the number of slides needed with arbitrary band paths, and what do the same representations certify about cuts?
 
-**Origin and ownership.** The slide enumeration, the quaternionic representations, the angle bounds and the use of Christoffel words belong to the second child of [05](../../05_collar_deformation_and_surgery/README.md). This branch proposes a redirection and does not own that material.
+**Origin.** The slide enumeration, the quaternionic representations, the angle bounds and the use of Christoffel words in the second child of [05](../../05_collar_deformation_and_surgery/README.md), which owns them.
 
-**Proposal, from section 6 of the [proposing note](../../../master/brainstorm/notes/claude/USES_OF_THE_FIRST_ORDER_AND_MARKED_CUT_TOOLS_20261126.md).** Stop the depth search as a route to a cancellation; write up the three-slide theorem as a statement about slide length with unbounded conjugators; decide depth four by one exact computation over whole character arcs; use a representation that kills one relator as a certificate that the corresponding cut is not dominated by a manifold of positive scalar curvature, hence by Theorem 4.1 of the parent manuscript not an umbilic cut of any entering class.
+| Start here | What it supplies |
+| --- | --- |
+| [Research overview](research-overview/OVERVIEW.md) | The objective, what is inherited from the parent with its evidence level, what still needs a global extension, and the place of this child in the route. |
+| [Research plan](research-plan/PLAN.md) | The bounded tasks of the family `SP4-CUT-SLIDE`, their routing and stop rules. |
+| [Progress register](research-progress/REGISTER.md) | Sole live status for `SP4-CUT-SLIDE`. |
+| [Continuation](continuation-notes/CONTINUATION.md) | The end states of the whole sub-investigation, the routing table, how the work continues past the first tasks, and the launch prompt. |
+| [Parent](../README.md) | Conventions in the [parent overview](../research-overview/OVERVIEW.md), statements in the [parent manuscript](../manuscript/cuts_of_subcritical_conformal_classes.tex), the parent's own prompts in the [parent continuation note](../continuation-notes/CONTINUATION.md). |
 
-**Tasks, held in the [parent register](../research-progress/REGISTER.md).** SP4-CUT-B05 and SP4-CUT-E07, both reserved until the lead of 05 agrees.
+**Ownership.** Owns nothing in 05. Its only ready task is a reading task that changes no file of 05. The [request to 05's lead](../research-progress/handoffs/SLIDE_B01_REQUEST_TO_05_20261126.md) is in the parent's handoffs folder.
 
-**State.** High-level README only. Nothing is activated. 26 November 2026, prepared for Edward B. Baker III by Claude (`claude-fable-5-2`).
+**State.** Overview, plan, register and continuation note set up; nothing is activated. By the author's instruction this child has no manuscript and no working folders yet; notes, handoffs, numerics and reviews are created on first use as the [setup workflow](../../../../INVESTIGATION_SETUP_WORKFLOW.md) describes. Ready on activation: SLIDE-E02.
+
+26 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum. Setup baseline `4655e38`.
+
+Continuation note added 27 November 2026 by the same session, for handoff to an Astra/ultra lead with Sol 6.2/ultra helpers.

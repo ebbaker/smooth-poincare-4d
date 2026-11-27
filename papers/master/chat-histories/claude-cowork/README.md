@@ -106,13 +106,38 @@ therefore one read short, and
      [source record](../../../../references/claude/SOURCE_NOTES_CUT_GEOMETRY_20261126.md),
      and added one line to the collection index, one registry line to the
      manuscript build tool and a section on Claude model routing to the
-     setup workflow. The session did not commit; Edward committed the
-     earlier turns' work himself before the fourth turn.
+     setup workflow. In a fifth turn, at Edward's request, the session gave
+     each of the five children a research overview, a plan and a register
+     that cross-reference the parent, without manuscripts, moved ten tasks
+     to five child task families with a
+     [crosswalk](../../../investigations-1/08_cut_geometry_and_chirality/research-progress/CROSSWALK_20261126.md),
+     and wrote an unanswered request to the lead of sub-investigation 05
+     about the slide enumeration. In a sixth turn Edward asked for a
+     continuation note for each of the five children, to hand to Astra and
+     Sol, with guidance to continue until a natural stopping point of the
+     whole sub-investigation and not at a breakpoint inside it. The session
+     wrote the notes for the
+     [ledger](../../../investigations-1/08_cut_geometry_and_chirality/01_chirality_ledger/continuation-notes/CONTINUATION.md),
+     [seams](../../../investigations-1/08_cut_geometry_and_chirality/02_seams_and_marked_cuts/continuation-notes/CONTINUATION.md),
+     [tubes](../../../investigations-1/08_cut_geometry_and_chirality/03_tubes_and_exteriors/continuation-notes/CONTINUATION.md),
+     [slide filters](../../../investigations-1/08_cut_geometry_and_chirality/04_slide_filters/continuation-notes/CONTINUATION.md)
+     and
+     [cuts from geometry](../../../investigations-1/08_cut_geometry_and_chirality/05_cuts_from_geometry/continuation-notes/CONTINUATION.md).
+     Each divides the child's question into components, says when a
+     component has a definite result, names the end states and what is not
+     an end, gives rules for continuing past the first tasks and for
+     resuming an interrupted session, and carries one pasteable prompt. The
+     child plans, READMEs and registers and the parent continuation note,
+     README and draft history were revised to match. The files of the fifth
+     and sixth turns were written in place by generators run in the
+     session's shell on Edward's machine, so the record lists no written
+     paths for those turns. The session did not commit; Edward committed
+     the work of the first four turns himself.
    - *Session.* A Claude Cowork cloud session in project Smooth Poincare
      Conjecture 4d with Claude Fable 5.2 (`claude-fable-5-2`, reasoning effort
      max per the session's configuration), started 26 November 2026 at 16:18
-     America/New_York. The session's context was compacted three times, at
-     17:21, at 19:30 and at 22:23.
+     America/New_York. The session's context was compacted four times, at
+     17:21, 19:30 and 22:23 that day and at 00:10 on 27 November.
    - *Capture.* Captured from the session's claude.ai event log with
      `record_Claude_browser_chat.py ingest`, first at 18:19 the same day (2
      messages over 1 turn), and refreshed at the end of every later turn,

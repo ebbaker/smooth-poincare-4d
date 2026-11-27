@@ -54,4 +54,8 @@ This route is a research proposal, not a reduction to routine work. Proposition 
 
 ## Unresolved decisions
 
-Which cut and which flow define the canonical sweepout (B02). Which approach to the exterior gap is tried first (B03). How the cost of a cap for a prescribed Cauchy datum is defined (B04). Which closing lane is pursued after the first returns (B01). Whether the character-arc computation for the slide filters is run, which is for the lead of 05 to agree (B05). The sign of the ledger's boundary term (E01) is a computation, not a decision.
+Which cut and which flow define the canonical sweepout (SP4-CUT-GEO-B01). Which approach to the exterior gap is tried first (SP4-CUT-TUBE-B01). How the cost of a cap for a prescribed Cauchy datum is defined (SP4-CUT-SEAM-B01). Which closing lane is pursued after the first returns (SP4-CUT-B01, kept by the parent). Whether the redirection of the slide enumeration is agreed, which is for the lead of 05 (SP4-CUT-SLIDE-B01). The sign of the ledger's boundary term (SP4-CUT-LED-E01) is a computation, not a decision.
+
+## Children
+
+Each child has its own overview, plan and register, which cite this overview for conventions and the manuscript for statements: [chirality ledger](../01_chirality_ledger/research-overview/OVERVIEW.md), [seams and marked cuts](../02_seams_and_marked_cuts/research-overview/OVERVIEW.md), [tubes and exteriors](../03_tubes_and_exteriors/research-overview/OVERVIEW.md), [slide filters](../04_slide_filters/research-overview/OVERVIEW.md), [cuts from geometry](../05_cuts_from_geometry/research-overview/OVERVIEW.md). The primary route lives in the last; the alternatives in the second and third; the first is an instrument for all; the fourth is not on the route.

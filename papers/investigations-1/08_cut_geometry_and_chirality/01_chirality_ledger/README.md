@@ -4,8 +4,18 @@
 
 **Origin.** The chiral budget on a collar and the eta invariant of a quotient link in [03](../../03_first_order_twistor/README.md).
 
-**Starting point.** Section 3 of the [parent manuscript](../manuscript/cuts_of_subcritical_conformal_classes.tex): the ledger (Theorem 3.1), the pointwise form with the electric and magnetic parts of the Weyl tensor, the eta bound, the collar corollary and the half-flat corollary, and the remark on Cauchy data after LeBrun and Biquard.
+| Start here | What it supplies |
+| --- | --- |
+| [Research overview](research-overview/OVERVIEW.md) | The objective, what is inherited from the parent with its evidence level, what still needs a global extension, and the place of this child in the route. |
+| [Research plan](research-plan/PLAN.md) | The bounded tasks of the family `SP4-CUT-LED`, their routing and stop rules. |
+| [Progress register](research-progress/REGISTER.md) | Sole live status for `SP4-CUT-LED`. |
+| [Continuation](continuation-notes/CONTINUATION.md) | The end states of the whole sub-investigation, the routing table, how the work continues past the first tasks, and the launch prompt. |
+| [Parent](../README.md) | Conventions in the [parent overview](../research-overview/OVERVIEW.md), statements in the [parent manuscript](../manuscript/cuts_of_subcritical_conformal_classes.tex), the parent's own prompts in the [parent continuation note](../continuation-notes/CONTINUATION.md). |
 
-**First tasks, held in the [parent register](../research-progress/REGISTER.md).** SP4-CUT-E01 (sign of the boundary term on Berger spheres) and SP4-CUT-E03 (the hypotheses of the collar corollary against the necks of 03 and 06). Open directions: the first variation of the eta invariant near a model; the ledger as a test for assembled classes.
+**Ownership.** Owns the ledger and its corollaries. Does not own the neck estimates of 03 and 06; findings about them are returned by handoff.
 
-**State.** High-level README only. The full scaffold is created by the second prompt of the [parent continuation note](../continuation-notes/CONTINUATION.md). Nothing is activated. 26 November 2026, prepared for Edward B. Baker III by Claude (`claude-fable-5-2`).
+**State.** Overview, plan, register and continuation note set up; nothing is activated. By the author's instruction this child has no manuscript and no working folders yet; notes, handoffs, numerics and reviews are created on first use as the [setup workflow](../../../../INVESTIGATION_SETUP_WORKFLOW.md) describes. Ready on activation: LED-E01, LED-E02, LED-B01.
+
+26 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum. Setup baseline `4655e38`.
+
+Continuation note added 27 November 2026 by the same session, for handoff to an Astra/ultra lead with Sol 6.2/ultra helpers.
