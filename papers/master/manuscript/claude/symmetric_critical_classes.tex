@@ -1,0 +1,100 @@
+% Additions to the rigidity section of the master: two calibrations.
+% Drafted for Edward B. Baker III by Claude (Anthropic, model claude-fable-5-2,
+% Cowork session, reasoning effort max as configured), 26 November 2026, from
+% papers/master/brainstorm/notes/claude/PATHS_FORWARD_AFTER_ATTAINMENT_AND_ENTRY_TRIALS_20261126.md
+% at repository state de2125d. The formulas were tested by the scripts filed
+% with that note. No independent reading.
+
+\paragraph{Two calibrations.}
+For a positive Einstein class on \(M\) which is not round, Gursky's
+inequality for \(\delta W^+=0\), in its strict form on a homotopy
+sphere, gives \(E_+>\tfrac{4\pi^2}{3}(2\chi+3\tau)\)
+\cite{Gursky2000EinsteinConstants}%
+\cite[Strict half-harmonic bound]{Baker2026MarkedNecks}. With
+\(e=2T-Y^2/48\) this reads
+\[
+ \tfrac43T<e<2T,\qquad Y^2<\tfrac13\,Y_{\rm rd}^2 .
+\]
+An Einstein minimizer on a nonstandard type would therefore lie in the
+part \(e>\tfrac43T\) of the band \eqref{eq:band}.
+
+The second calibration is a symmetric test of the kind just mentioned,
+for the rotations which fix a circle. Let \(SO(3)\) act on
+\(S^4\subset\mathbb R^3\oplus\mathbb R^2\) by rotations of
+\(\mathbb R^3\), with fixed circle \(C\).
+
+\begin{proposition}[Symmetric critical classes on the standard sphere]
+\label{prop:symmetric-critical}
+A Bach-flat conformal class on \(S^4\) which is invariant under this
+action is the round class.
+\end{proposition}
+\begin{proof}
+Average a representative over the group. The complement of \(C\) is the
+product of the open orbit disc \(\mathbb D\) and \(S^2\), and the
+isotropy circle of a point rotates the tangent plane of its orbit while
+fixing that of \(\mathbb D\). The averaged metric is therefore
+\(\tilde q+f^2g_{S^2}\) for a metric \(\tilde q\) and a positive
+function \(f\) on \(\mathbb D\). The class is that of \(q+g_{S^2}\)
+with \(q=f^{-2}\tilde q\). Let \(K\) be the curvature of \(q\).
+
+For a symmetric two-tensor \(k\) with compact support in \(\mathbb D\),
+\eqref{eq:product-energy} and the first variations of curvature and
+area give
+\[
+ \frac{d}{dt}\Big|_{t=0}\big(E_++E_-\big)(q+tk+g_{S^2})
+ =\frac{4\pi}{3}\int_{\mathbb D}\big\langle
+   \nabla^2K-\Delta K\,q+\tfrac12(1-K^2)\,q,\ k\big\rangle\,dA_q ,
+\]
+with the energies taken over a neighborhood of the support. The Bach
+tensor is a nonzero multiple of the gradient of the Weyl integral. It is
+invariant and trace-free, so it has no mixed components and its \(S^2\)
+block is determined by its \(\mathbb D\) block. Hence the class is
+Bach-flat exactly when
+\begin{equation}\label{eq:hessian-K}
+ \nabla^2K=\tfrac12(1-K^2)\,q .
+\end{equation}
+Then \(X=J\nabla K\), with \(J\) the complex structure of \(q\), has
+\(\nabla X=\tfrac12(1-K^2)J\) and is a Killing field of \(q\).
+
+Near \(C\) use coordinates \((\theta,x)\in S^1\times\mathbb R^3\) and
+\(\rho=|x|\). Smoothness and invariance give
+\[
+ \tilde q=a\,d\theta^2+2b\,\rho\,d\theta\,d\rho
+          +(c_1+c_2\rho^2)\,d\rho^2,\qquad f^2=c_1\rho^2 ,
+\]
+with \(a,b,c_1,c_2\) smooth functions of \((\theta,\rho^2)\) and
+\(a,c_1>0\). Thus \(\tilde q\) and \(f\) are smooth on the closed disc
+\(\overline{\mathbb D}\), with \(f=0\) and \(|df|_{\tilde q}=1\) on its
+boundary. By the formula
+\(K=f^2K_{\tilde q}+f\Delta_{\tilde q}f-|df|^2_{\tilde q}\) for the
+conformal change, \(K\) is smooth on \(\overline{\mathbb D}\) and equals
+\(-1\) on the boundary, and \(X=f^2J\nabla^{\tilde q}K\) vanishes there.
+A Killing field of \(q\) is conformal for \(\tilde q\). In a
+uniformizing coordinate \(z\) of \((\overline{\mathbb D},\tilde q)\),
+\(X=F\,\partial_z+\bar F\,\partial_{\bar z}\) with \(F\) holomorphic in
+the open unit disc, continuous on its closure and zero on the unit
+circle. Hence \(F=0\), so \(K\) is constant and equal to \(-1\). By
+\eqref{eq:product-energy} the class is flat on \(S^4\setminus C\), hence
+on \(S^4\), and it is round by Kuiper's theorem \cite{Kuiper1949}.
+\end{proof}
+
+Equation \eqref{eq:hessian-K} has other solutions. The constant
+\(K=1\) is the Einstein product on \(S^2\times S^2\). A complete
+nonconstant solution on the plane is
+\[
+ q=ds^2+a(s)^2\,d\varphi^2,\qquad
+ a=2\operatorname{sech}^2\!\tfrac s2\,\tanh\tfrac s2,\qquad
+ K=-1+3\operatorname{sech}^2\!\tfrac s2 .
+\]
+With \(r=1+\cosh s\) and \(\tau=4\varphi\), the metric
+\(r^2(q+g_{S^2})\) is the Euclidean Schwarzschild metric
+\((1-2/r)\,d\tau^2+(1-2/r)^{-1}dr^2+r^2g_{S^2}\). It is Ricci-flat,
+and \eqref{eq:product-energy} gives
+\[
+ E_\pm=\frac{4\pi^2}{3}\int_0^\infty(K+1)^2a\,ds=8\pi^2=2T ,
+\]
+the value of \eqref{eq:zero-wall} at vanishing Ricci curvature. This
+metric is complete, scalar-flat and Bach-flat, as are the blow-up
+limits in Theorem~\ref{thm:attainment}. It has cubic volume growth and
+exactly the threshold energy, so both the Sobolev estimate and the
+strict energy bound there exclude it.

@@ -1,0 +1,127 @@
+# Check run for PATHS_FORWARD_AFTER_ATTAINMENT_AND_ENTRY_TRIALS_20261126
+# date (UTC): 2026-11-27T00:54:38Z
+# python 3.13.18 | numpy 2.5.3 | scipy 1.18.1 | sympy 1.14.0
+
+===== check_01_products_and_hopf.py =====
+[ok]   (a) |W^+|^2 = |W^-|^2 = (K+1)^2/6, eigenvalues (R/6,-R/12,-R/12), R = 2K+2, |Z|^2 = (K-1)^2 | 6 profiles x 3 points, max error 1.1e-15
+[ok]   (b) Gauss-Bonnet on round S^4 gives chi = 2
+[ok]   (b) Gauss-Bonnet on S^2(r1) x S^2(r2) gives chi = 4 for four radius pairs
+[ok]   (c) Einstein S^2 x S^2: E_+ = E_- = 32 pi^2/3 = 2u
+[ok]   (c) Einstein S^2 x S^2: Y = R Vol^(1/2) = 16 pi
+[ok]   (c) round S^4: Y = 12 Vol^(1/2) = 8 sqrt6 pi | Y(S^4) = 61.5624
+[ok]   (c) hemisphere(K=1) x S^2: E_+- = (2 pi/3) * 4 * 2 pi = u
+[ok]   (b) signature on CP^2: int |W^+|^2 = 12 pi^2 tau
+[ok]   (b) Gauss-Bonnet on CP^2 gives chi = 3
+[ok]   (c) Gursky bound attained on CP^2 and on Einstein S^2 x S^2
+[ok]   (c) Kaehler-Einstein equality E_+ = Y^2/24 on both
+[ok]   (d) S^1 x S^3: R = 6, |Z|^2 = 3, 4 sigma_2 = R^2/24 - |Z|^2/2 = 0, 2 sqrt3 |Z| = R
+[ok]   (e) cos^2(beta) dr^2 = dbeta^2 and cos^2(beta) cosh^2(r) = 1 when cosh r = sec beta | max error 3.3e-15
+[ok]   (e) signed version: tan(beta) = sinh(r), cos(beta) cosh(r) = 1 on 200 random r
+[ok]   (f) tube about the core: <y,E> > cos(theta)  <=>  sinh r > cot(theta) (2000 random samples)
+[ok]   (f) the cut is at r_0 < 0 exactly when theta > pi/2
+[ok]   (f) tube about gamma x {omega_0}: <omega,omega_0> > cos(theta) cosh(d) (2000 random samples)
+[ok]   (f) a tube with theta < pi/2 about {y = y_0}, y_0 orthogonal to E, lies in the open hemisphere <y,y_0> > 0, whose boundary great sphere contains +-E
+[ok]   (g) conformal factor cos^2(beta) = 1 - beta^2 + O(beta^4): value 1 and zero slope at the waist
+[ok]   (h) pi/3 + 5/64 < pi/2 and 2 pi/3 - 5/64 > pi/2 | margin 0.4455 rad
+# check_01: 20 ok, 0 FAIL
+(exit status 0)
+
+===== check_02_symmetric_control.py =====
+[ok]   (a) round cap: cos 2S = -(ell/2pi)^2, tanh w = cot S give a(S) = sin S, a'(S) = cos S; cost u(1 - cos S) | 25 waist lengths in (0, 2pi], max error 5.3e-14
+[ok]   (b) int (K+1)^2 a ds >= 4 (1 - a'(S)) on 300 random profiles, i.e. cost >= u (1 - f) | smallest excess 3.810e-03
+[ok]   (c) flat disc fits when ell sinh w = 2 pi and costs (2 pi^2/3)(1 + (ell/2pi)^2)
+# least Euler-Lagrange cost of one cap, in units of pi^2 (rows: waist length ell; columns: f = ell sinh w / 2pi)
+#   ell          f=0.25    f=0.5     f=0.75    f=1.0     f=1.5     
+#   1            7.936     3.381     1.362     0.680     0.240     
+#   2            7.726     3.061     1.392     0.730     0.268     
+#   2 arccosh 2  6.080     2.881     1.426     0.778     0.296     
+#   pi           5.259     2.775     1.463     0.827     0.324     
+#   4            4.469     2.678     1.551     0.928     0.385     
+#   2 pi         4.014     2.834     1.931     1.308     0.631     
+#   Gauss-Bonnet 4.000     2.667     1.333     0.000     0.000     
+[ok]   (d) least Euler-Lagrange cost lies above the Gauss-Bonnet bound u(1-f) and, at f = 1, below the flat disc | 30 cases
+[ok]   (d) the round-cap cost is bracketed by the least Euler-Lagrange costs at f = cos S -+ 0.02
+[ok]   (d) direct minimisation over piecewise constant curvature reproduces an Euler-Lagrange value and is never below the least one | (3.14,0.5): direct 2.7749, EL 2.7749; (3.14,1.0): direct 0.8269, EL 0.8269; (1.00,0.75): direct 1.3624, EL 1.3624; (6.28,0.25): direct 4.0139, EL 4.0139; (4.00,1.5): direct 0.3847, EL 0.3847; (2.00,0.5): direct 3.0608, EL 3.0607
+[ok]   (d) thin side f < 0: the least cost is at least u(1 + |f|), above u | (2.00,-0.5): 8.19 >= 8.00; (2.00,-1.0): 11.11 >= 10.67; (2.00,-2.0): 19.70 >= 16.00; (6.28,-0.5): 8.15 >= 8.00; (6.28,-1.0): 11.69 >= 10.67; (6.28,-2.0): 20.17 >= 16.00
+[ok]   (e) at the collar-lemma width f <= 1/pi and one cap costs more than 4 pi^2 (two exceed 8 pi^2) | ell=0.25: f=0.317, cost 7.97; ell=0.50: f=0.315, cost 7.96; ell=1.00: f=0.305, cost 7.93; ell=2.00: f=0.271, cost 7.15; ell=2.63: f=0.242, cost 6.22; ell=3.14: f=0.217, cost 5.66; ell=4.00: f=0.176, cost 5.07; ell=5.00: f=0.132, cost 4.81; ell=6.28: f=0.087, cost 4.87
+[ok]   (f) the least cost increases to 8 pi^2 as waist and cut both shrink: (ell, f) = (0.4, 0.1), (0.1, 0.05), (0.02, 0.01) | 7.99097, 7.99937, 7.99998
+[ok]   (f) a cap at the waist costs u for ell = 2 pi and between u and 8 pi^2 for shorter waists, increasing as ell decreases | ell=6.28: 5.333, ell=5.00: 5.556, ell=3.00: 7.471, ell=1.00: 7.949, ell=0.30: 7.995
+[ok]   (f) for waists longer than 2 pi the cost at the waist rises again and exceeds 8 pi^2 at ell = 15 | ell=8: 5.555, ell=10: 6.133, ell=15: 8.109
+[ok]   (g) ell = pi: S = 0.9117, cos S = 0.6124, depth w = 1.0317, two round caps cost 4.134 pi^2 | e = 4.1347 pi^2, swallowed area per cap 3.848, pants area 6.283
+[ok]   (g) collars of depth w around cuffs 1, 2 are disjoint iff m > 6.79 and embedded for every m; they cross waist 3 | m* = 6.785, min self-return half-length 1.415 > w, d(cuff1, cuff3) = 0.569 < w at m*
+[ok]   (g) two swallowed collars exceed the area of the pants core (2 x 3.848 > 2 pi), so no third waist is retained
+[ok]   (h) e >= u + (8 pi/3) A_ret: equals 2u = 32 pi^2/3 at A_ret = 2 pi and 8 pi^2 at A_ret = pi
+[ok]   (h) (K+1)^2 >= 4K with equality only at K = 1
+# check_02: 16 ok, 0 FAIL
+(exit status 0)
+
+===== check_03_bach_flat_symmetric_classes.py =====
+[ok]   (a) B = 0 on the conformally Einstein metric e^{2f}(S^2 x S^2), f = s/3 + s^2/5 | max |B| = 7.1e-30
+[ok]   (a) the opposite relative sign of the two terms does not vanish there | max = 0.500
+[ok]   (a) Bach tensor of S^2 x S^2 is zero
+[ok]   (a) Bach tensor of H^2 x S^2 is zero
+[ok]   (a) Bach tensor of S^2(1) x S^2(2) is not zero | B_ss = 5/32
+[ok]   (b) B_ss = -(1/3)[(1-K^2)/2 - (a'/a)K'] for a generic profile
+[ok]   (b) B_thth/a^2 = -(1/3)[(1-K^2)/2 - K''] for a generic profile
+[ok]   (b) B is diagonal, trace-free, and B_psipsi = sin^2(phi) B_phiphi
+[ok]   (b) (K'/a)' = (K'' - (a'/a)K')/a identically, so the difference of the two equations gives K' = c a
+[ok]   (b) with K' = c a both equations read 2 c a' = 1 - K^2
+[ok]   (d) V(K0) - V(K1) = (K0 - K1)(K0^2 + K0 K1 + K1^2 - 3)/6
+[ok]   (d) K0^2 + K1^2 = 2 and K0^2 + K0 K1 + K1^2 = 3 have only the solutions K0 = K1 = +-1 | solutions [(-1, -1), (1, 1)]
+[ok]   (d) every solution with K_0 in (-1,1) or (1,2) closes at a second pole with cone angle ratio != 1 | K0=-0.9: K1=1.9968, angle/2pi=15.7215; K0=-0.5: K1=1.9271, angle/2pi=3.6180; K0=+0.0: K1=1.7321, angle/2pi=2.0000; K0=+0.5: K1=1.4271, angle/2pi=1.3820; K0=+0.9: K1=1.0968, angle/2pi=1.0679; K0=+1.1: K1=0.8965, angle/2pi=0.9343; K0=+1.5: K1=0.3956, angle/2pi=0.6748; K0=+1.9: K1=-0.4092, angle/2pi=0.3190
+[ok]   (d) for K_0 = 0.99 the cone angle ratio is close to but not equal to 1 | ratio = 1.006678
+[ok]   (e) K = -1 + 3 sech^2(s/2), a = 2 sech^2(s/2) tanh(s/2): K'' = (1-K^2)/2, K' = c a with c = -3/2, K = -a''/a
+[ok]   (e) Schwarzschild in the gauge r^2(q + g_{S^2}) has r = 1 + cosh s and a = 4 sqrt((r-2)/r^3) = the cusp profile | max error 2.2e-16
+[ok]   (e) energy of the cusp solution: int (K+1)^2 a ds = 6, so E_+- = 8 pi^2 = 2T | J = 6.0000000000
+[ok]   (e) Kretschmann integral of Schwarzschild is 64 pi^2, i.e. E_+ + E_- = 16 pi^2 in the operator norm
+[ok]   (f) K_0 > 2 and K_0 < -1: K reaches -50 at finite distance without a second pole | K0=2.05: K=-50 at s=7.684; K0=3.0: K=-50 at s=4.217; K0=6.0: K=-50 at s=2.555; K0=-1.05: K=-50 at s=5.677; K0=-2.0: K=-50 at s=2.652
+[ok]   (f) along solutions with a(0) = 0, a'(0) = 1: K' = c a and 2 c a' = 1 - K^2 with c = (1-K_0^2)/2 | so an end with a' -> infinity and K -> -1 forces c = 0, K = -1 everywhere
+# check_03: 20 ok, 0 FAIL
+(exit status 0)
+
+===== check_04_doubling_and_recognition.py =====
+[ok]   (a) u = 4T/3, 2T = 1.5 u, 4u = 64 pi^2/3 | T = 4.0000 pi^2, u = 5.3333 pi^2, 2T = 8.0000 pi^2
+[ok]   (b) Gauss-Bonnet integrand of q + g_{S^2} equals 2K, so 8 pi^2 chi = 4 pi int 2K dA
+[ok]   (c) W = hemisphere x S^2: w = u and the formula gives u with Y = 16 pi, D = 0
+[ok]   (c) W = S^1(l) x hemisphere of S^3: w = 0 = 4 pi^2 * 0 - Y^2/96 + D/8 for the product metric
+[ok]   (d) chi(W) = 2: 8 pi^2 - Y^2/96 equals u at |Y| = 16 pi and 4 pi^2 at |Y| = 8 sqrt6 pi | 16 pi = 50.265, 8 sqrt6 pi = 61.562
+[ok]   (d) chi(W) = 1: 4 pi^2 - Y^2/96 equals 4 pi^2 at Y = 0
+[ok]   (d) representative form: 8 pi^2 - (1/48) int_W R^2 equals u at int_W R^2 = 128 pi^2
+[ok]   (d) an entering pair c_1 + c_2 < 8 pi^2 has min c_i < 4 pi^2 < u, so 4 min c_i < 16 pi^2 < 64 pi^2/3
+[ok]   (e) chi(N) = -2, chi(M) = 2; three-cuff core 2, its double 4; equator halves 1, doubles 2; Hopf half 2, double 4
+[ok]   (e) Gursky's bound on a double with chi = 4, tau = 0 is 32 pi^2/3 = 2u for E_+ = 2w, so w >= u
+[ok]   (f) exponent sums (0,-1) and (-1,0), determinant -1, total length 14
+[ok]   (f) each one-relator quotient has first homology Z (one exponent-sum row of content 1)
+[ok]   (g) lambda_max <= sqrt(2/3) |W| on 4000 random trace-free matrices, equality at diag(2,-1,-1) | largest ratio seen 0.8164 <= 0.8165
+[ok]   (g) a_1 + a_2 > 0 for A = W^+ + (R/12) Id  <=>  lambda_max(W^+) < R/6 (4000 random cases)
+[ok]   (g) |W^+-|^2 = R^2/24 exactly on the Einstein S^2 x S^2 (R = 4) and on CP^2 (W^+ = diag(R/6,-R/12,-R/12))
+[ok]   (h) int m u^2 <= |m|_2 |u|_4^2 on 500 random weighted samples
+[ok]   (i) e < 16 pi^2/(2+b): T at b = 2, u at b = 1, monotone in between
+[ok]   (j) e >= Y^2/24 with 16 pi^2 = 2e + Y^2/24 gives e >= 16 pi^2/3; at Ric = 3g, Vol <= 8 pi^2/9 = Vol(S^4)/3
+[ok]   (k) on q + g_{S^2}: 3 L^2 = 2 |W^+-|^2 where K > -1 (so P = 6e when K >= -1), and 3 L^2 = |W^+-|^2/2 where K < -1 | P < 8T then reads e < 16 pi^2/3 = u; in general 3 L^2 <= 2 max|W^+-|^2 gives P <= 8e
+# check_04: 19 ok, 0 FAIL
+(exit status 0)
+
+===== check_05_master_manuscript_forms.py =====
+[ok]   (a) (2.4): cos^2(beta) (dr/dbeta)^2 = 1 and cos^2(beta) cosh^2 r = 1 when cosh r = sec beta
+[ok]   (a) y = sin(beta) E + cos(beta) omega is a unit vector and <y, nu> = cos(beta) <omega, nu> for nu in R^3
+[ok]   (b) e_V = T chi + (1/4) int|Z|^2 - (1/48) int R^2 on hemisphere x S^2 (gives 4T/3) and on S^1 x hemisphere of S^3 (gives 0)
+[ok]   (c) 16 pi^2 chi(V) = 4 e_V + Y^2/24 - D/2 gives e_V = T chi(V) - Y^2/96 + D/8
+[ok]   (c) Gursky with E_+ = 2 e_V, tau = 0, chi = 2 chi(V): e_V >= T chi(V) if b_1 > 0, e_V >= (2T/3) chi(V) if b_2^+ > 0
+[ok]   (d) chi(V) = 2: the three bounds are 2T - Y^2/96, 4T/3 and 2T; e < 2T with two pieces needs Y_D <= -sqrt(96 (2T - e))
+[ok]   (e) unit S^2 x S^2: E_+ + E_- = 16T/3 = 64 pi^2/3; 4T is 3/4 of it; (4/3) n T > 2T for n >= 2 | E_+- = 105.275780 = (8/3) T
+[ok]   (f) Y^2 >= 48 (2T - e) on M and Y_D^2 >= 96 (2T - e) on the double, from the two Gauss-Bonnet identities
+[ok]   (g) |Z|^2 < R^2/12 gives R - 2 Ric(nu,nu) > 0 on 4000 random Z; lambda_max = sqrt(3/4)|Z| at diag(3,-1,-1,-1) | least margin/R = 0.0326
+[ok]   (h) (2.5): eigenvalues (K+1)(1/3,-1/6,-1/6) are trace-free with squared norm (K+1)^2/6; 4 pi/6 = 2 pi/3
+[ok]   (h) a unit round cap matches in C^1 at r_0 iff cosh 2r_0 = (2 pi/l)^2, at both roots; its cost is (4T/3)(1 + (l/2pi) sinh r_0); at the negative root (4T/3)(1 - sqrt((1 - l^2/4pi^2)/2)) | l=0.50: 0.394 T; l=1.00: 0.403 T; l=2.00: 0.440 T; l=3.14: 0.517 T; l=5.00: 0.762 T; l=6.20: 1.180 T
+[ok]   (h) collar between r_0 < 0 and the waist has area l sinh|r_0| = 2 pi f, where the bound is (4T/3)(1 - f); a pair of pants has area 2 pi
+[ok]   (i) e = 2T - Y^2/48: e > 4T/3 iff Y^2 < Y_rd^2/3; e = 0 at Y = Y_rd = 8 sqrt6 pi
+[ok]   (j) d/dt (K+1)^2 dA along q_t = e^{2 t phi} q equals <Hess K - Lap K q + (1/2)(1-K^2) q, 2 phi q> dA minus the divergence of 2((K+1) grad phi - phi grad K)
+[ok]   (j) d/dt int (K+1)^2 dA = int <Hess K - Lap K q + (1/2)(1-K^2) q, k> dA for a general symmetric k on a torus (Brioschi curvature, periodic quadrature) | both sides -34.058918146551, -34.058918146551
+[ok]   (k) K -> -1 at rho = 0 for q = (A dtheta^2 + (c_1 + c_2 rho^2) drho^2)/(c_1 rho^2) on four samples; K = -1 identically for the round sphere | limits -1, -1, -1, -1
+[ok]   (l) a = 2 sech^2(s/2) tanh(s/2), K = -1 + 3 sech^2(s/2): K = -a''/a, K'' = (1-K^2)/2 and (a'/a) K' = (1-K^2)/2, the two components of (7.2)
+[ok]   (l) with r = 1 + cosh s and tau = 4 phi: r^2 ds^2 = dr^2/(1 - 2/r) and r^2 a^2 dphi^2 = (1 - 2/r) dtau^2
+[ok]   (l) int_0^infty (K+1)^2 a ds = 6, so E_+- = (4 pi^2/3) * 6 = 8 pi^2 = 2T | closed form 6
+[ok]   (l) the end is a cusp: a ~ 8 e^{-s} and K -> -1
+# check_05: 20 ok, 0 FAIL
+(exit status 0)

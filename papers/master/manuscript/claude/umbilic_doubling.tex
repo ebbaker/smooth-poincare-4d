@@ -1,0 +1,242 @@
+% Additions to Section 2 of the master: reflective seams, half-Hopf pieces
+% and tubes in a conformally flat exterior.
+% Drafted for Edward B. Baker III by Claude (Anthropic, model claude-fable-5-2,
+% Cowork session, reasoning effort max as configured), 26 November 2026, from
+% papers/master/brainstorm/notes/claude/PATHS_FORWARD_AFTER_ATTAINMENT_AND_ENTRY_TRIALS_20261126.md
+% at repository state de2125d. The formulas were tested by the scripts filed
+% with that note. No independent reading.
+
+\paragraph{The two sides of a reflective seam.}
+The seam test gives a sign. A second necessary condition measures the
+energy on each side. Let \((Q,[g])\) be a closed oriented conformal
+four-manifold and \(V\subset Q\) a compact domain with smooth boundary.
+Call \(\partial V\) \emph{reflective} if \([g]\) is invariant under an
+involution of a neighborhood of \(\partial V\) which fixes \(\partial V\)
+pointwise and exchanges its two sides. As for the identity doubles
+above, \(\partial V\) is then totally geodesic in an invariant
+representative, hence umbilic. Conversely an umbilic hypersurface is
+reflective wherever the class is locally conformally flat near it: in
+flat charts it lies in round spheres, and the inversions in these
+spheres agree on overlaps. For reflective \(\partial V\) the double
+\(\mathcal D(V)=V\cup_{\partial V}\overline V\) carries the smooth
+reflected class. Put
+\[
+ e_V=\tfrac12\big(E_+(V)+E_-(V)\big).
+\]
+If a reflective seam separates the homotopy sphere \(M\) into \(V\) and
+\(V'\), then \(e=e_V+e_{V'}\). In a representative \(h\) for which an
+umbilic \(\partial V\) is totally geodesic, Chern--Gauss--Bonnet on
+\(V\) has no boundary term, so that
+\[
+ e_V=T\chi(V)+\tfrac14\int_V|Z_h|^2\,dV_h-\tfrac1{48}\int_VR_h^2\,dV_h .
+\]
+
+\begin{proposition}[Doubling at a reflective seam]\label{prop:doubling}
+Let \(\partial V\) be reflective and let \(Y_{\mathcal D}\) be the Yamabe
+constant of the reflected class on \(\mathcal D(V)\). Then
+\[
+ e_V\ \ge\ T\chi(V)-\frac{Y_{\mathcal D}^2}{96}.
+\]
+If \(Y_{\mathcal D}>0\) and \(b_1(\mathcal D(V))>0\), then
+\(e_V\ge T\chi(V)\). If \(Y_{\mathcal D}>0\) and
+\(b_2(\mathcal D(V))>0\), then \(e_V\ge\tfrac23T\chi(V)\).
+\end{proposition}
+\begin{proof}
+The reflection of \(\mathcal D(V)\) reverses orientation and exchanges
+the two Weyl blocks. Hence \(E_\pm(\mathcal D(V))=2e_V\) and
+\(\tau(\mathcal D(V))=0\), so that \(b_2^+=b_2/2\). Since
+\(\chi(\partial V)=0\), one has \(\chi(\mathcal D(V))=2\chi(V)\).
+Take a volume-one Yamabe representative of the reflected class, of
+constant scalar curvature \(Y_{\mathcal D}\)
+\cite{Schoen1984Yamabe,LeeParker1987Yamabe}. Chern--Gauss--Bonnet reads
+\[
+ 16\pi^2\chi(V)=4e_V+\frac{Y_{\mathcal D}^2}{24}
+       -\frac12\int_{\mathcal D(V)}|Z|^2\,dV ,
+\]
+which gives the first inequality. For a class of positive Yamabe
+constant on a closed oriented four-manifold, Gursky's inequalities are
+\(E_+\ge2\pi^2(2\chi+3\tau)\) when \(b_1>0\) and
+\(E_+\ge\tfrac{4\pi^2}{3}(2\chi+3\tau)\) when \(b_2^+>0\)
+\cite{Gursky1998WeylFunctional}; see
+\cite[Theorems~A and~C]{Fu2018FourManifolds} for the statements, in the
+four-index norm. With \(E_+=2e_V\), \(\tau=0\) and
+\(\chi=2\chi(V)\) they give the other two bounds.
+\end{proof}
+
+A \emph{half-Hopf piece} of length \(\ell\) in \((Q,[g])\) is a compact
+domain conformal to \(S^1_\ell\times\overline{S^3_+}\), the product of a
+circle of length \(\ell\) and a closed hemisphere of the unit
+three-sphere, by a map which extends conformally to a neighborhood in
+\(S^1_\ell\times S^3\). It carries no Weyl energy, and its boundary
+\(S^1_\ell\times S^2\) is reflective.
+
+\begin{corollary}[Half-Hopf pieces]\label{cor:half-hopf}
+Let a class on the homotopy sphere \(M\) contain \(k\ge1\) pairwise
+disjoint half-Hopf pieces, let \(V\) be the closure of their complement,
+and let \(Y_{\mathcal D}\) be the Yamabe constant of \(\mathcal D(V)\).
+Then
+\[
+ e\ \ge\ 2T-\frac{Y_{\mathcal D}^2}{96}.
+\]
+If \(Y_{\mathcal D}>0\), then \(e\ge\tfrac43T\). If
+\(Y_{\mathcal D}>0\) and \(k\ge2\), then \(e\ge2T\). In particular an
+entering class which contains two disjoint half-Hopf pieces has
+\(Y_{\mathcal D}\le-\sqrt{96(2T-e)}\).
+\end{corollary}
+\begin{proof}
+Here \(e_V=e\) and \(\chi(V)=2\). The double is connected. By
+Mayer--Vietoris \(b_1(\mathcal D(V))\ge k-1\), and
+\(b_2(\mathcal D(V))=\chi(\mathcal D(V))-2+2b_1(\mathcal D(V))\ge2\).
+Apply Proposition~\ref{prop:doubling}. If \(Y_{\mathcal D}\ge0\) and
+\(k\ge2\), its first two bounds give \(e\ge2T\), which proves the last
+statement.
+\end{proof}
+
+\paragraph{Tubes in a conformally flat exterior.}
+Half-Hopf pieces occur in a conformally flat exterior from which
+\(\Sigma_P\) is obtained by circle surgeries. Let \(F\) be a compact
+hyperbolic surface with nonempty geodesic boundary, and let
+\(\Gamma\subset SO_0(2,1)\subset SO_0(5,1)\) be the Fuchsian group of
+its completion. On \(S^4\) the limit set \(\Lambda\) of \(\Gamma\) lies
+in a round circle whose complement is conformal to
+\(\mathbb H^2\times S^2\). The quotient
+\(N=(S^4\setminus\Lambda)/\Gamma\) is a flat conformal structure on the
+boundary of \(F\times D^3\), a connected sum of \(n=1-\chi(F)\ge2\)
+copies of \(S^1\times S^3\), with fundamental group \(\Gamma\). For
+\(\gamma\ne1\) in \(\Gamma\), of translation length \(\ell\), let \(r\)
+be the signed distance from its axis in \(\mathbb H^2\) and \(t\) the
+arclength along the axis. Then
+\begin{equation}\label{eq:hopf-coordinates}
+ dt^2+d\beta^2+\cos^2\!\beta\,g_{S^2}
+ =\cos^2\!\beta\,\big(dr^2+\cosh^2\!r\,dt^2+g_{S^2}\big),
+ \qquad \cosh r=\sec\beta ,
+\end{equation}
+and the left side is the product metric of \(S^1_\ell\times S^3\) at
+the point \(y=\sin\beta\,E+\cos\beta\,\omega\) of
+\(S^3\subset\mathbb R\oplus\mathbb R^3\), \(\omega\in S^2\). So the
+quotient of \(S^4\) minus the two fixed points by
+\(\langle\gamma\rangle\) is the Hopf manifold \(S^1_\ell\times S^3\).
+It contains \((S^4\setminus\Lambda)/\langle\gamma\rangle\), and the two
+sides of the axis are the hemispheres \(\pm\langle y,E\rangle>0\).
+The part of \(N\) over the closed funnel beyond a boundary geodesic of
+\(F\), with its circle at infinity, is thus a half-Hopf piece.
+
+\begin{proposition}[One tube, closed on the standard sphere]
+\label{prop:hopf-closing}
+Let \(c\subset N\) be an embedded closed curve freely homotopic to
+\(\gamma\ne1\) in \(\Gamma\), of translation length \(\ell\), and let
+\(\mathcal T\) be a closed tubular neighborhood of \(c\). Replace
+\(\mathcal T\) by \(B\cong D^2\times S^2\), with a conformal class on
+the surgered manifold which is the flat one outside \(B\).
+\begin{enumerate}
+\item \(E_+(B)=E_-(B)\). Write \(c_B\) for this number.
+\item Suppose that the lift of \(\mathcal T\) to
+\(S^1_\ell\times S^3\) lies in \(S^1_\ell\times S^3_+\) for an open
+hemisphere \(S^3_+\). Then there is a reflection-invariant class on
+\(S^2\times S^2\) with \(E_+=E_-=2c_B\), of Yamabe constant
+\(Y_{\mathcal D}\), such that
+\[
+ c_B\ \ge\ 2T-\frac{Y_{\mathcal D}^2}{96},\qquad\text{and}\qquad
+ c_B\ \ge\ \tfrac43T\quad\text{if }Y_{\mathcal D}>0 .
+\]
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+Since \(c\) is freely homotopic to \(\gamma\), the tube lifts
+homeomorphically to a tube \(\widetilde{\mathcal T}\) in
+\((S^4\setminus\Lambda)/\langle\gamma\rangle\) about a closed curve
+which generates the fundamental group of the Hopf manifold. Homotopic
+embedded circles in a four-manifold are isotopic, so this curve is
+isotopic to the circle factor. Replace \(\widetilde{\mathcal T}\) by
+\(B\) with the same class. Surgery on the circle factor of
+\(S^1\times S^3\) gives \(S^4\) for either framing, because the Gluck
+twist of \(S^1\times S^2\) extends over \(S^1\times D^3\). The result
+is therefore a conformal class on \(S^4\) which is flat outside \(B\).
+Its chiral energies are \(E_\pm(B)\), and they agree by the signature
+formula. Under the hypothesis of (2) the complementary closed
+hemisphere gives a half-Hopf piece
+\(S^1_\ell\times(S^3\setminus S^3_+)\) of this class on \(S^4\). The
+closure \(V\) of its complement is the complement of an open tubular
+neighborhood of a circle in \(S^4\). Hence \(V\cong D^2\times S^2\)
+and \(\mathcal D(V)\cong S^2\times S^2\), with
+\(E_\pm(\mathcal D(V))=2c_B\). Corollary~\ref{cor:half-hopf} with
+\(k=1\) gives the bounds.
+\end{proof}
+
+The product of two unit spheres has \(E_++E_-=16T/3\), and Kobayashi
+conjectured that this is the infimum of the Weyl integral over all
+metrics on \(S^2\times S^2\) \cite{Kobayashi1985Conformal}. The
+conjecture holds among classes of positive Yamabe constant, by
+Gursky's inequality, and among classes whose self-dual harmonic form
+has no zero \cite[Theorem~B]{LeBrun2013DelPezzo}. It is open in
+general, and the analogous bound fails for classes of negative Yamabe
+constant on connected sums of many copies of \(S^2\times S^2\)
+\cite[Theorem~A]{LeBrun2023Balance}. A filling with \(c_B<\tfrac43T\)
+in Proposition~\ref{prop:hopf-closing}(2) has \(Y_{\mathcal D}<0\) and
+gives \(E_++E_-=4c_B<16T/3\) on \(S^2\times S^2\). It would be a
+counterexample.
+
+\paragraph{Consequence for circle surgeries.}
+Realize \(\Sigma_P\) from \(N\) by surgery on disjoint tubes
+\(\mathcal T_1,\dots,\mathcal T_n\) about curves in the classes of the
+relators, with fillings \(B_i\) and a class which is flat outside
+them. Then \(e=\sum_i c_{B_i}\), and since \(n\ge2\) entry requires
+\(c_{B_i}<T\) for some \(i\). Suppose that the lift of every tube lies
+over an open hemisphere of its Hopf manifold. If each associated class
+on \(S^2\times S^2\) satisfies Kobayashi's bound, then
+Proposition~\ref{prop:hopf-closing} gives
+\[
+ e\ \ge\ \tfrac43\,nT\ >\ 2T .
+\]
+Entry by such a construction therefore requires a counterexample, and
+indeed a class on \(S^2\times S^2\) with \(E_++E_-<4T\), three quarters
+of the conjectured infimum. The hypothesis holds whenever a tube lies
+in \(\mathbb H^2\times S^2\) modulo \(\Gamma\) and its \(S^2\)
+coordinate stays in an open hemisphere, since
+\(\langle y,\nu\rangle=\cos\beta\,\langle\omega,\nu\rangle\) for
+\(\nu\in\mathbb R^3\). It does not involve the presentation, and the
+conclusion applies equally to the trivial presentation drawn in this
+way. If the tubes also avoid the half-Hopf pieces over the funnels,
+these persist in the resulting homotopy sphere. When there are at
+least two, an entering class has
+\(Y_{\mathcal D}\le-\sqrt{96(2T-e)}\) on the double of their
+complement by Corollary~\ref{cor:half-hopf}, while
+\(Y([g])\ge\sqrt{48(2T-e)}\) on \(M\) by \eqref{eq:budgets}.
+
+These bounds agree with surgery theory for the pointwise condition. By
+Proposition~\ref{prop:entry} an entering class has a representative
+with \(R-2\Ric(\nu,\nu)>0\) for every unit vector \(\nu\). This is
+positivity of the \(1\)-curvature, which is preserved under surgeries
+of codimension at least four \cite{Labbi1997Surgery}. A circle in a
+four-manifold has codimension three.
+
+\paragraph{Symmetric fillings and the retained waist.}
+The hemisphere condition cannot be dropped. On a product
+\(q+g_{S^2}\), with \(q\) a surface metric of curvature \(K\), both
+\(W^\pm\) have eigenvalues \((K+1)(1/3,-1/6,-1/6)\)
+\cite[The cost of a product circle cap]{Baker2026FixedDescent}. Thus
+\begin{equation}\label{eq:product-energy}
+ |W^\pm|_{\rm HS}^2=\frac{(K+1)^2}{6},\qquad
+ E_\pm(U\times S^2)=\frac{2\pi}{3}\int_U(K+1)^2\,dA_q .
+\end{equation}
+Keep the part \(r\le r_0\) of the hyperbolic cylinder
+\(dr^2+\cosh^2\!r\,dt^2\), \(t\in\mathbb R/\ell\mathbb Z\), and close
+it by a disc \(\Delta\) whose metric matches in \(C^1\) along
+\(r=r_0\). With the circle at \(r=-\infty\) this is a class on \(S^4\).
+Since \((K+1)^2\ge4K\), the Gauss--Bonnet theorem on \(\Delta\) gives
+\[
+ E_\pm(\Delta\times S^2)\ \ge\ \frac{8\pi}{3}\int_\Delta K\,dA
+ =\tfrac43T\Big(1+\frac{\ell}{2\pi}\sinh r_0\Big),
+\]
+with equality exactly when \(\Delta\) is a round cap of curvature one,
+which requires \(\cosh2r_0=(2\pi/\ell)^2\) and is approached by smooth
+fillings. For \(r_0\ge0\) the waist
+\(r=0\) and its half-Hopf piece are retained and the cost is at least
+\(\tfrac43T\), in agreement with Proposition~\ref{prop:hopf-closing}.
+For \(r_0<0\) the filling swallows the waist and a collar of area
+\(\ell\sinh|r_0|\), and the round cap costs
+\(\tfrac43T\big(1-\sqrt{(1-\ell^2/4\pi^2)/2}\,\big)\). The constant
+\(\tfrac43T\) thus belongs to a retained waist with its funnel. A
+product filling of cost below \(\tfrac43T(1-f)\) has to swallow a
+collar of area more than \(2\pi f\), and \(2\pi\) is the area of a pair
+of pants.

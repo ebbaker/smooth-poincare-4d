@@ -1,5 +1,9 @@
 # Master manuscript milestones
 
+## 26 November 2026 · Reflective seams, circle surgeries and two calibrations
+
+Added for Edward B. Baker III by Claude Fable 5.2 in a Cowork session, at reasoning effort max as the session was configured, on the repository at `de2125d`. Three inputs in `manuscript/claude/` extend the master. Section 2 gains a doubling inequality at reflective seams. A circle surgery in a Fuchsian conformally flat exterior whose tube lies over a hemisphere then costs at least \(16\pi^2/3\) in each sign, unless a conformal class on \(S^2\times S^2\) contradicts Kobayashi's conjecture. Section 7 gains the strict Einstein bound and the roundness of \(SO(3)\)-invariant Bach-flat classes on the standard sphere. Section 9 gains the logical form of the reduction. In the main file the abstract, three input lines and the provenance paragraph changed. The shared bibliography has four new entries. The plan, register and overview are as they were. No independent reading. [Manuscript](manuscript/README.md) · [Note and checks](brainstorm/notes/claude/PATHS_FORWARD_AFTER_ATTAINMENT_AND_ENTRY_TRIALS_20261126.md) · [Sources](../../references/claude/SOURCE_NOTES_REFLECTIVE_SEAMS_20261126.md)
+
 ## 26 November 2026 · Direct transition obstruction on one marked boundary
 
 B02 received the short-cuff seam exclusion, the positive regular-hexagon seam, and a simultaneous closed-sign and chiral-energy obstruction to controlled thin paths on the same Miller–Schupp marking. Finite-width entry stays open. [07 direct assessment](../investigations-1/07_positive_subcritical_entry/reviews/DIRECT_TRANSITIONS_AND_EQUATOR_20261126.md)

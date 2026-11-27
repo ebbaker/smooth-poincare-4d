@@ -1,0 +1,39 @@
+% Addition to the last section of the master: the logical form of the reduction.
+% Drafted for Edward B. Baker III by Claude (Anthropic, model claude-fable-5-2,
+% Cowork session, reasoning effort max as configured), 26 November 2026, from
+% papers/master/brainstorm/notes/claude/PATHS_FORWARD_AFTER_ATTAINMENT_AND_ENTRY_TRIALS_20261126.md
+% at repository state de2125d. No independent reading.
+
+\begin{proposition}[Logical form of the reduction]\label{prop:logical-form}
+Let \textup{(S)} be the statement that a smooth homotopy four-sphere
+which admits a metric with \(R>0\) and \(|Z|^2<R^2/12\) everywhere is
+diffeomorphic to \(S^4\).
+\begin{enumerate}
+\item The smooth four-dimensional Poincar\'e conjecture holds if and
+only if every smooth homotopy four-sphere satisfies entry and
+\textup{(S)} holds.
+\item If Theorem~\ref{thm:attainment} holds, then \textup{(S)} is
+equivalent to the statement that no nonstandard type carries an
+attained minimum in the band \eqref{eq:band}.
+\item \textup{(S)} implies that a smooth homotopy four-sphere with an
+Einstein metric of positive scalar curvature is diffeomorphic to
+\(S^4\).
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+If the conjecture holds, the round metric gives entry and \textup{(S)}
+holds trivially. Conversely entry and Proposition~\ref{prop:entry} give the
+metric to which \textup{(S)} applies. This proves (1). By
+Proposition~\ref{prop:entry}, \textup{(S)} says that no nonstandard
+type satisfies entry. An attained minimum in \eqref{eq:band} is an
+entering class. Conversely, if a nonstandard type satisfies entry,
+Theorem~\ref{thm:attainment} gives a positive class at
+\(I^+(M)<2T\), and Theorem~\ref{thm:recognition-gap} places it above
+\(T+\varepsilon_*\). This proves (2). A positive Einstein metric has
+\(Z=0\), which proves (3).
+\end{proof}
+
+Thus entry on every type is, modulo \textup{(S)}, the conjecture
+itself. Statement \textup{(S)} alone contains the Einstein statement in
+(3), for which we know no proof. The reduction is silent on a
+nonstandard type with \(I^+(M)\ge2T\), should one exist.

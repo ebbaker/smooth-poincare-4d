@@ -2,7 +2,7 @@
   "schema_version": 1,
   "timezone": "America/New_York",
   "numbering": "Stable capture/import order within this folder; historical imports retain their original dates and receive the next unused number",
-  "next_number": 2,
+  "next_number": 3,
   "chats": [
     {
       "number": 1,
@@ -18,6 +18,27 @@
       "bytes": 27628,
       "sha256": "95861a683d6a2bb19324e461ea6d1072b1cd8fd22db0ab38d76e89624a42f029",
       "conversation_content_sha256": "d89098e2f7a314cffd3e7bb9197f9c645f105dc5f027cf243045b5c64f0cdbe5",
+      "model_configurations": [
+        {
+          "model": "claude-fable-5-2",
+          "reasoning_effort": "max"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "file": "0002_2026-11-26T21-18-45Z_manuscript-review-and-brainstorm.json",
+      "conversation_id": "cse_017B3FcXDgfwzTfcGpyn1Cbe",
+      "title": "Manuscript review and brainstorm",
+      "created_at_utc": "2026-11-26T21:18:45.938Z",
+      "created_at_local": "2026-11-26T16:18:45.938-05:00",
+      "captured_at_utc": "2026-11-27T03:59:32.042Z",
+      "captured_at_local": "2026-11-26T22:59:32.042-05:00",
+      "last_message_at_utc": "2026-11-27T03:25:19.440Z",
+      "message_count": 8,
+      "bytes": 32566,
+      "sha256": "d9a0e654943257b69acbe3d55c6fbdd6f5d0501b4037aebe7ce15556b380125e",
+      "conversation_content_sha256": "767c2424eb6da6eedec00967d50000aa55394213cfe4fb782b82d7d1cb41f715",
       "model_configurations": [
         {
           "model": "claude-fable-5-2",
