@@ -1,0 +1,9 @@
+# SP4-TWA-E19 · Global and spectral replay return
+
+28 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. The [frozen request](E19_REQUEST_v1.md) records GPT-6.2 Astra/ultra as the selected lead and GPT-6.2 Sol/ultra as the configured helper. Actual backend settings were unavailable. All ten frozen input digests matched at HEAD `280376dd7a1820fa2878d0ab0ee2e639facb2eeb`.
+
+**Pass on all three frozen targets.** On the oriented length-two flat unit periodic spin cylinder, with unit parallel positive \(\sigma\), traces \(e^{\pm b}\sigma\), real spinor pairing and \(S=J_g^4\), the [independent review](../../reviews/E19_GLOBAL_SPECTRAL_REPLAY.md) gives the exact E14 Hessian and Fourier signs. Its first crossing is \(b_{\rm H}=51\pi/16\) in absolute slope, with six real null directions and a smooth zero-free strictly cheaper competitor for every \(|b|>b_{\rm H}\).
+
+The E17 comparison gives the unique unrestricted radial minimizer of value \(9b^4/8\) for all \(|b|\le B_*=17\pi/8\) over the full admissible smooth class, including finitely many isolated transverse compatible zeros. The unit constraint and the retained spatial zero-mode term give rigidity at \(|b|=B_*\). B08 then gives the closed radial attainment interval \([-b_{\rm G},b_{\rm G}]\) with \(B_*\le b_{\rm G}\le b_{\rm H}\), strict interior uniqueness, and an additional endpoint minimizer exactly when a nonconstant competitor realizes the infimum of the positive crossing thresholds.
+
+The earlier E12 positive-margin bound is sufficient. E08's local \(H^5\) critical-field statement and E13's \(H^1\) minimizing-sequence conclusion retain their fixed-trace scopes. The review requires no proof repair for the frozen claims and leaves the precise global threshold and nonlinear trial to B08.

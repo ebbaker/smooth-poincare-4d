@@ -1,0 +1,7 @@
+# SP4-TWA-E13 · Global minimum replay return
+
+28 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. The [frozen request v1](E13_REQUEST_v1.md) records the author-selected lead GPT-6.2 Astra/ultra and configured GPT-6.2 Sol/ultra helper. Actual backend serving model and reasoning effort were unavailable. All thirteen frozen input digests matched at HEAD `280376dd7a1820fa2878d0ab0ee2e639facb2eeb`.
+
+**Pass at the frozen scope.** The [independent review](../../reviews/E13_GLOBAL_MINIMUM_REPLAY.md) rederives the squared-\(L^4\) bound, signed boundary cancellation and exact change of variables for the \(J_g^4\) density, including the admissible zeros. It checks the Euclidean Sobolev constant against Talenti's printed theorem, the 27-cell product transfer, and the coercivity coefficient \((29403-1296\sqrt2)/40000>2/3\).
+
+On the length-two flat unit periodic cylinder at \(b=1/200\) and traces \(e^{\pm b}\sigma\), the radial field is the unique global minimizer over the admissible smooth class and has action \(9/(8\cdot200^4)\). Every minimizing sequence converges strongly to it in \(H^1\). The explicit high-frequency sequence has these traces and stays zero-free, with action tending to the minimum and \(H^5\) norms tending to infinity. The formal handoff matches the derived hypotheses and conclusions, with E08's critical-field and E09's varying-jump quantifiers preserved. No proof repair or new B07 decision is needed for the frozen claim.

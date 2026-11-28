@@ -1,0 +1,5 @@
+# Addendum to Formalization · The relative generator in the specified strip
+
+28 November 2026, for Edward B. Baker III with Codex lead assistance. Author-selected GPT-6.2 Astra/ultra; backend telemetry unavailable. Checkout `280376dd7a18`. Supplements the [formal statement request](TO_FORMALIZATION_TWA_FIRST_HORIZON_20261128.md) after the [independent geometric replay](../../reviews/E07_REPLAY.md).
+
+Use exactly the compact torus, strip, loop family \(C_t\), \(K=9/4\) and embedding \(\Phi\) in [E05](../../notes/E05_COBORDISM_CONTROL.md). The relative homotopy groups in degree two of each end pair and of the strip-product/cylinder pair are each infinite cyclic under the boundary map. For the generator with boundary oriented by increasing \(\theta\), request that its symplectic area is \(27\pi/16\) and its Maslov index is 2. For every relative class \(\alpha\) in these groups one then has \(\omega(\alpha)=(27\pi/32)\mu(\alpha)\). On the contractible phase chart the period of the primitive \(-y\,ds-p\,dq\) on the circle generator is \(27\pi/16\). No disk counts or Floer hypotheses are part of the statement. Treat this as a type and prerequisites request only.

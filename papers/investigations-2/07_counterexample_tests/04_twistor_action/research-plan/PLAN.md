@@ -18,3 +18,49 @@ Use \(S_g=J_g^4\) and the [overview conventions](../research-overview/OVERVIEW.m
 | TWA-E07 · E · independent Sol/ultra | After a finite set of E returns is frozen. Replaying a specified proof or control is a fixed request. | `reviews/E07_REPLAY.md`. A reader who authored none of the claims under review checks normalization, boundary signs, zero conditions and the strongest gluing or cobordism claim for the completed sequence. Freeze one set of written claims and source passages. Complete with an evidentiary disposition and exact formal statement where possible. | Return gaps to the owning B task and request formalization only for statements with fixed hypotheses. |
 
 The first sequence ends with the strongest independently assessed fixed-background and boundary result, and either a checked geometric cobordism control or a scoped obstruction or named missing input. An optional comparison can clarify a specific obstruction without changing the primary action. A useful successor should address a precise open statement about trace regularity, composition or symplectic realization. Metric independence, cut invariance and a closed smooth-type test require additional arguments and a separate handoff to the [invariants owner](../../02_invariants/README.md). Follow the [series evidence conventions](../../../README.md#how-sessions-work-in-this-series) and request Lean work by handoff for an exact statement. [Activation prompt](../continuation-notes/CONTINUATION_20261128.md)
+
+## Activated extension on the same collar · 28 November 2026
+
+| Task | Dependency and finite target | Completion or return |
+| --- | --- | --- |
+| TWA-B04 · B · Astra/ultra | Choose a full-trace neighborhood of one nonzero-slope radial field where the quartic Jacobi problem might be invertible. | [Choice and proof strategy](../brainstorm/notes/B04_LOCAL_DIRICHLET.md). |
+| TWA-E08 · E · Sol/ultra | Use B04 on the length-two unit torus cylinder, at slope 1/200. Test coercivity, Dirichlet regularity and local smooth dependence. | One local full-spinor graph or its first failed estimate, then E07 replay. |
+| TWA-B05 · B · Astra/ultra | E02 separates nonattainment of zero from a positive infimum at unequal constant ends. | [Use the affine amplitude extension](../brainstorm/notes/B05_UNEQUAL_TRACE_GAP.md). |
+| TWA-E09 · E · Sol/ultra | B05, fixed endpoints and flat periodic cylinder. | Derive a quantitative lower bound over all admissible smooth spinors on this cylinder and bracket the infimum with the radial trial. Escalate a failed bound to B05. |
+
+### Closing the remaining part of the same seam
+
+| Task | Dependency and finite target | Completion or return |
+| --- | --- | --- |
+| TWA-B06 · B · Astra/ultra | E04 leaves open the interior of the zero-defect seam set. | [Use the tangential twistor jet and the first nonzero normal Taylor coefficient](../brainstorm/notes/B06_ZERO_DEFECT_TRANSMISSION.md). |
+| TWA-E10 · E · Sol/ultra | B06 and E04. | Test the all-order transmission proof on the same flat seam only, then obtain independent replay. |
+
+### Next fixed-cylinder question
+
+| Task | Dependency and finite target | Completion or return |
+| --- | --- | --- |
+| TWA-B07 · B · Astra/ultra | Use E07's conclusions and the exact unequal traces specified in the [closing note](../continuation-notes/CLOSING_20261128.md). A global proof strategy remains to be chosen. | A direct comparison, a justified compactness route into the local neighborhood, or one concrete competitor test. |
+| TWA-E11 · E · Sol/ultra | Reserved for B07's fixed inputs and evidence standard. | Prove the frozen comparison or record its precise failure and return to B07. |
+
+### Global comparison at the prescribed trace pair · 28 November 2026
+
+| Task | Dependency and method | Output and completion |
+| --- | --- | --- |
+| TWA-B07 · lead | Prior local/global results and closing question. Use the radial amplitude to conjugate, then bound a quadratic quotient globally. | [Decision](../brainstorm/notes/B07_GLOBAL_COMPARISON.md). |
+| TWA-E11 · Sol/ultra | B07, conditional on \(\|v\|_4\le24\|\nabla v\|_2\). Check Hölder, Taylor remainder, cancellation, coercivity, equality and sequence topology. | [Frozen comparison](../research-progress/handoffs/E11_REQUEST_v1.md). Return any failed estimate at its stated scope. |
+| TWA-E12 · Sol/ultra | Independent of E11. Check the Euclidean constant, cutoff, supports and absorption at \(b=1/200\). | [Frozen product bound](../research-progress/handoffs/E12_REQUEST_v1.md). |
+| TWA-E13 · independent Sol/ultra | Both written proofs and numerical constants. | Replay the complete unrestricted result and its equality conditions; request exact formal statements. |
+
+### Varying the symmetric logarithmic end data · 28 November 2026
+
+The author reopened the trace-data question on the same product. [B08 decision](../brainstorm/notes/B08_SLOPE_AND_HELICITY.md) · [Sole register](../research-progress/REGISTER.md)
+
+| Task | Method and finite question |
+| --- | --- |
+| E14–E17 | Compute the first full Dirichlet Hessian crossing. Relax the first helical wave, improve E12's coercivity constant, and obtain an unrestricted comparison from polar variables, including the compatible zeros. |
+| E18, E22 | Test two equal perpendicular critical waves with four time levels of each parity. Replay the exact coefficient and a periodic lower certificate for the full second-order correction. |
+| E19–E21 | Independently replay the spectrum, polar bound, interval structure, prescribed-norm comparison and compactness of a putative sequence losing the global bound at \(17\pi/8\). |
+| E23–E24 | Use the one- and two-wave coefficients, translations and the symmetry of the cubic torus to test positivity on the entire first kernel. Replay the \(C^1\)-local estimate at the degenerate crossing. |
+| E25 | Check the action excess and strong physical \(H^1\) convergence on interior slopes by uniform convexity at the known global endpoint. |
+
+The unresolved comparison is the unrestricted one at the single slope \(51\pi/16\). Equality of the global and local thresholds is equivalent to the endpoint inequality for every admissible normalized field. A strict competitor there certifies a subthreshold interval by continuity. The full spatial first-shell quartic and the fixed pointwise norm comparison constrain any such construction.

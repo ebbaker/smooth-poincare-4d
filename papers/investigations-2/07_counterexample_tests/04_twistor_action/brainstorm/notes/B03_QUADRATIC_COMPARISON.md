@@ -1,0 +1,5 @@
+# One control for the vanishing Dirichlet Hessian
+
+28 November 2026, for Edward B. Baker III, Codex lead, author-selected GPT-6.2 Astra/ultra. Backend telemetry unavailable. Baseline `280376dd7a18`. [E01](../../notes/E01_VARIATION.md) and [E02](../../notes/E02_FLAT_TORUS.md) supply the quartic comparison.
+
+Select the single periodic product \([-1,1]\times(\mathbb R^3/\mathbb Z^3)\), volume one per slice, parallel unit \(\sigma\), equal reference traces \(\psi_-=\psi_+=\sigma\). Use the identical radial trace perturbations \(e^{u_\pm}\sigma\) and the same zero-free smooth neighborhood in both actions. Select the positive prescribed conformal density \(\rho=1\) in this fixed flat scale. Compare the loss of a Dirichlet fluctuation operator and of the linear endpoint momentum response at the equal-end parallel field. Compute the full homogeneous Dirichlet quadratic Hessian on this product, its radial on-shell endpoint derivatives, and the quartic counterparts. The purpose is to isolate the effect of the order of the action. A factor \(1/2\) belongs only to the separately defined comparison. The auxiliary scale is fixed through each derivative.

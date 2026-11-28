@@ -1,0 +1,9 @@
+# SP4-TWA-E22 · Return on the independent two-wave replay
+
+28 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance by a reader who did not author E18. [Frozen request v1](E22_REQUEST_v1.md) records the selected lead GPT-6.2 Astra/ultra and configured helper GPT-6.2 Sol/ultra. Actual backend model and reasoning effort were unavailable. HEAD was `280376dd7a1820fa2878d0ab0ee2e639facb2eeb` and all nine frozen SHA-256 digests matched.
+
+**PASS on every frozen E18 claim.** The [independent review](../../reviews/E22_TWO_WAVE_REPLAY.md) recomputes the quaternion sign, quotient expansion, three forced spatial shapes and quadratic form at \(b=51\pi/16\). The physical fourth-order action coefficient is \((\pi/2)^4\mathcal I(z)\) and the time pairing uses \(dt\), giving constant and nonconstant trigonometric weights \(2\) and \(1\). The unforced spatial orthogonal complement is nonnegative in the original Dirichlet domain.
+
+The embedded rational verifier and a separate coefficient assembly with rational \(LDL^\mathsf T\) elimination both reproduce the finite minimum \(29772745866921709978958207563/174281498283558407756021760>170\) for \(\mathcal I\) and the periodic relaxed lower certificate \(42222312899/248709120>169\). Only the three forced time coefficients are relaxed, so the lower certificate applies to all smooth zero-end second-order corrections in the original problem.
+
+The positivity statement covers \(\psi=e^{bt}(1+\varepsilon w+\varepsilon^2z)\) at the prescribed slope, with E18's fixed equal pair of perpendicular first-order helices and each fixed smooth zero-end \(z\). Each such path is more expensive for sufficiently small nonzero \(\varepsilon\). Other first-order directions, finite amplitudes and different traces remain outside this replay. The B08 negative-witness objective remains unachieved by this particular test.

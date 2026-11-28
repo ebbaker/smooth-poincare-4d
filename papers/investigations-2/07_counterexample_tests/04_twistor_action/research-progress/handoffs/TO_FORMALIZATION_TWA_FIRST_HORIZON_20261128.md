@@ -1,0 +1,27 @@
+# To Formalization · Statements requested from the first SP4-TWA horizon
+
+28 November 2026, America/New_York, for Edward B. Baker III with Codex lead assistance. Author-selected GPT-6.2 Astra/ultra; backend telemetry unavailable. Source checkout `280376dd7a1820fa2878d0ab0ee2e639facb2eeb`. Request for exact statements in the series evidence workflow. No edition, Lean source change or proof execution is authorized by this handoff. The repository currently pins Lean `v4.35.0-rc3` and mathlib `c55e6e786f49471c72fbddbec5415808896aec1e`. The [formalization workflow](../../../../../../formalization/FORMALIZATION_SETUP_WORKFLOW.md) governs any subsequent activation.
+
+**Priority 1. Real endpoint composition.** For \(V,L_1,L_2>0\), \(a,b\in\mathbb R\), define
+\[
+ F_L(a,b)=\frac{9V}{16L^3}(b-a)^4,\qquad
+ p_L(a,b)=\frac{9V}{4}\left(\frac{b-a}{L}\right)^3,\qquad
+ m=\frac{L_2a+L_1b}{L_1+L_2}.
+\]
+For every \(z\in\mathbb R\), \(p_{L_1}(a,z)=p_{L_2}(z,b)\) iff \(z=m\). At \(m\), the common momentum equals \(p_{L_1+L_2}(a,b)\) and \(F_{L_1}(a,m)+F_{L_2}(m,b)=F_{L_1+L_2}(a,b)\). The function of \(z\) on the left has this unique minimum. Its second derivative at \(m\) is \((27V/4)((b-a)/(L_1+L_2))^2(1/L_1+1/L_2)\). These statements include \(a=b\). In the graph parametrization \((a,v)\mapsto(a,Kv^3,a+Lv,Kv^3)\), \(K=9V/4\), the seam matching differential has rank two at nonzero common \(v\) and rank one at \(v=0\); the actual matching locus has dimension two everywhere. [E02](../../notes/E02_FLAT_TORUS.md) · [E04](../../notes/E04_GLUING.md)
+
+**Priority 2. Scalar inequality for unequal end traces.** For \(A,H>0\), \(C,x,J\ge0\), if \(\sqrt{A^2+x^2}\le J(H+Cx)\), then \(A/\sqrt{H^2+C^2A^2}\le J\). Request this scalar lemma first. Then request the fixed-cylinder statement with \(A,H,C\), spinor class and boundary values precisely as defined in [E09](../../notes/E09_UNEQUAL_TRACE_GAP.md). For a fixed flat periodic cylinder and unrestricted fixed-end infimum \(I(d)\) there, request \(\lim_{d\to0,\,d\ne0} I(d)/d^4=9V/(16L^3)\) with the stronger one-sided error and the normalization of the competitor estimate in the [asymptotic proof](../../notes/SMALL_TRACE_ASYMPTOTIC.md).
+
+**Priority 3. Normal jet recovery.** In finite-dimensional real inner-product spaces take \(A^*A=(3/4)I,\ s>0\) and a fixed \(C\) in the codomain of \(A\). Set \(N(z)=4s^{-4}A^*(|Az+C|^2(Az+C))\). Then
+\[
+ \langle N(z)-N(w),z-w\rangle \ge (9/16)s^{-4}|z-w|^4.
+\]
+Conclude \(N(z)=N(w)\implies z=w\), including at zero defect. The finite-dimensional inequality supplies the named step in [the seam theorem](../../notes/E04_GLUING.md); the analytic interface theorem has additional hypotheses there.
+
+**Spin and functional-analysis statement requests.** For the conventions in the [overview](../../research-overview/OVERVIEW.md), request the real first derivative with its outward \(4W(\nu)\) density and the zero Hessian at nonvanishing twistor fields as in [E01](../../notes/E01_VARIATION.md), its extension to the fixed finite transverse Clifford jets in [E03](../../notes/E03_FIXED_JETS.md), and the fixed quadratic control in [E06](../../notes/E06_FIXED_SCALE.md). For \(M=[-1,1]\times(\mathbb R/\mathbb Z)^3,\ b=1/200\), unit parallel \(\sigma\), request neighborhoods \(U\) of \((e^{-b}\sigma,e^b\sigma)\) in the product of the two real \(H^{9/2}\) trace spaces and \(O\) of \(e^{bt}\sigma\) in \(H^5\), and a smooth map \(D:U\to O\). For each \(q\in U\), \(D(q)\) is the unique critical field in \(O\) of trace \(q\); it is zero-free and the outward momentum graph equals \({\rm graph}\,d(S\circ D)\) in \(T^*U\). Use the exact Dirichlet estimate, symbol and inverse in [E08](../../notes/E08_LOCAL_DIRICHLET.md). [Local minimality and smooth data](../../notes/LOCAL_MINIMUM_AND_SMOOTH_DATA.md) state two further consequences with their topology and data regularity.
+
+Please return the proposed types and prerequisites before any proof is classified as established. The analytic statements depend on modules for spinors, traces, real Hilbert duality and Sobolev regularity beyond the elementary scalar targets.
+
+**Local Sobolev composition.** For the E08 neighborhoods shrunk as in [the composition proof](../../notes/LOCAL_FULL_TRACE_COMPOSITION.md), with \(F_-\), \(F_+\) the on-shell actions of the two half cylinders, request a smooth middle trace \(r(q_-,q_+)\) locally unique among nearby \(r\) satisfying \(D_2F_-(q_-,r)+D_1F_+(r,q_+)=0\) in \(X'\). Then the full on-shell action equals the sum at this \(r\). Proof inputs are the three product inverse estimates and coercivity on global \(H^1_0\) under piecewise-small first-jet perturbations.
+
+**Smooth seam and geometric control.** For the smooth pieces, fixed finite jets and nowhere-zero seam trace of [B01](../../brainstorm/notes/B01_BOUNDARY_PROBLEM.md), request that the joined field is weakly stationary iff the two outward momenta sum to zero, assuming the two bulk equations. Under this condition it is smooth across the whole flat cut, including the interior of the zero-defect set, by [E10](../../notes/E10_DEGENERATE_SEAM.md). For the geometric control request exactly the embedding \(F:[0,1]\times S^1\hookrightarrow([0,1]\times\mathbb R)\times(\mathbb R/16\mathbb Z)^2\), coordinates, cutoff, split symplectic form and loops of [B02](../../brainstorm/notes/B02_COBORDISM.md). Its pullback of the symplectic form is zero, its strip collars at height one have end loops \(C_0,C_2\), and its infinite cylindrical extension is proper with compact finite slabs.

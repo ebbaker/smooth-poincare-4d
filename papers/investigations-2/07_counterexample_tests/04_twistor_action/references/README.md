@@ -17,3 +17,23 @@
 - **Conformal spin convention.** DIR-E07 and DIR-E10 record inspection of Friedrich, *On the conformal relation between twistors and Killing spinors*, in the digitized published text, §1 equation (1.1) and the conformal-weight paragraph, and §2 at the applicable propositions. The off-kernel formula is the calculation in DIR-E07. [Canonical R51 record](../../../../../references/SOURCE_NOTES_BACH_FLOW_20261123.md#first-order-twistor-discussion--23-november-2026)
 
 Read the exact cited passages before using them. Record any new import with its hypotheses and send its exact statement to [Certificates](../../../05_certificates/README.md) for the series import ledger. [Reference workflow](../../../../../REFERENCE_WORKFLOW.md)
+
+## Sources inspected during the activated session
+
+28 November 2026, America/New_York, Codex lead for Edward B. Baker III. The canonical bibliography and source owners remain as listed above. Fresh passage checks follow.
+
+| Source and exact passage | What enters the argument |
+| --- | --- |
+| Friedrich, published §1, pp. 59–60, (1.1) and following conformal paragraph. [Published scan](https://dml.cz/bitstream/handle/10338.dmlcz/701462/WSGP_09-1989-1_7.pdf#page=2) | Riemannian spin convention and the weight \(\lambda^{1/4}\) under \(g\mapsto\lambda g\) on the kernel. E01 derives the off-shell covector, normal-density and induced-scale laws. |
+| Vankerschaver, Liao and Leok, arXiv:1111.0280v2, §4, Theorems 4.1 and 4.2, printed pp. 16–17. [Version-labelled author PDF](https://arxiv.org/pdf/1111.0280) | They assume manifold structures for the boundary spaces under discussion. On a differentiable family where the boundary one-form pulls back to the differential of the on-shell action its exterior derivative vanishes. Their multisymplectic identity identifies this pullback in their setting. For the two endpoint results here the relevant graph and maximality are proved directly. |
+| Biran and Cornea, journal pp. 296–297, §2.1 and Definition 2.1.1, and p. 306, §4.1. [Journal copy](https://dms.umontreal.ca/~cornea/lcob1-JAMS.pdf) | The compact strip definition uses compact Lagrangian ends, indexed constant heights near the strip boundaries, and a Lagrangian embedding of a compact cobordism. The plane extension has compact finite slabs and horizontal product ends. Their arrow points from the positive ends to the negative ends. The monotonicity, Maslov and comparison hypotheses for their Floer results are separate. |
+
+The branch calculations use ordinary real Sobolev spaces, integration by parts and Hilbert and Banach calculus. The product estimates and inverse specific to the quartic equation are derived in the branch. No external existence theorem for this quartic Dirichlet problem is assumed.
+
+For the critical scalar Sobolev input to [E09](../notes/E09_UNEQUAL_TRACE_GAP.md), the lead inspected Talenti, p. 353, theorem and (1), on 28 November. Its specialization \(m=4,p=2,q=4\) in Euclidean charts gives the required nonsharp cylinder estimate after localization and the homogeneous Dirichlet Poincaré bound. See the [canonical R59 entry](../../../../../references/SOURCE_NOTES_DIRAC_20261124.md), [published scan](https://math.jhu.edu/~js/Math646/talenti.sobolev.pdf#page=1) and the [branch-local handoff to Certificates](../research-progress/handoffs/TO_SP4-CERT_TWA_CLASSICAL_INPUTS_20261128.md).
+
+The mathematical inputs in issued packets are individually pinned. The [version receipt](../research-progress/handoffs/VERSION_RECEIPT_20261128.md) records the small typographic integration changes and the dated plan additions.
+
+For E12 the lead reinspected Talenti, p. 353, theorem and equations (1)–(2), including the printed gamma-function constant. With \(m=4,p=2,q=4\) the Euclidean constant is \(6^{1/4}/\sqrt{8\pi}<1\). Only this upper bound is needed after the explicit cutoff on the unit flat cylinder. [Published page](https://math.jhu.edu/~js/Math646/talenti.sobolev.pdf#page=1) · [Canonical R59](../../../../../references/SOURCE_NOTES_DIRAC_20261124.md)
+
+For B08, the primary inputs were Friedrich, published §1, projection and (1.1), p. 59, and Talenti, p. 353, theorem (1)–(2), at \(m=4,\ p=2,\ q=4\). The former fixes \(P=\Pi\nabla\); the latter supplies the scalar Euclidean constant \(6^{1/4}/\sqrt{8\pi}\) before E16 transfers it to the product. The helicity spectrum, convexity comparison, polar compactness argument and reduced quartic are derived on this product. [Friedrich](https://dml.cz/bitstream/handle/10338.dmlcz/701462/WSGP_09-1989-1_7.pdf#page=2) · [Talenti](https://math.jhu.edu/~js/Math646/talenti.sobolev.pdf#page=1) · [E14](../notes/E14_FIRST_NEGATIVE_MODE.md) · [E16](../notes/E16_GLOBAL_SLOPE_BOUND.md)

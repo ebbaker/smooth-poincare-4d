@@ -1,0 +1,9 @@
+# SP4-TWA-E06 · Return on the fixed-scale comparison
+
+28 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. The request records GPT-6.2 Astra/ultra as the selected lead and GPT-6.2 Sol/ultra as the helper configuration. Actual backend model and reasoning effort were unavailable. HEAD matched `280376dd7a1820fa2878d0ab0ee2e639facb2eeb` and all nine frozen input hashes matched at execution start. The live plan later gained its B05/E09 appendix. [Frozen request v1](E06_REQUEST_v1.md)
+
+**Complete at the frozen scope.** For prescribed \(\rho\), the quadratic Hessian operator is \(P^*\rho^{-6}P\) and the outward density is \(\rho^{-6}(P\psi)(\nu)\,dA_g\). On the B03 periodic unit-torus cylinder with \(\rho=1\), the full homogeneous Dirichlet operator is \(-\tfrac34\Delta_g\), with gap \(3\pi^2/16\). Interpolation is affine in the positive amplitude and is the unique full stationary and minimizing field for the stated endpoint traces. Both radial coordinate systems give an exact Lagrangian graph with smooth momentum inversion at equal endpoints.
+
+At the common unit endpoint the quadratic endpoint Hessian in either coordinate system is \((3/8)\begin{pmatrix}1&-1\\-1&1\end{pmatrix}\). The quartic has zero full Dirichlet and radial endpoint Hessians there, and cubic signed log momentum. A constant prescribed scale change \(\rho\mapsto c\rho\) multiplies the quadratic Hessian, momentum and on-shell function by \(c^{-6}\). The fixed-scale result is a comparison on the matched zero-free cylinder and is available for E07 review.
+
+The nine frozen inputs were checked. The derivation records Friedrich §1, equation (1.1) as the checked primary convention and gives the direct operator and graph calculations. [Proof note](../../notes/E06_FIXED_SCALE.md)

@@ -1,0 +1,7 @@
+# SP4-TWA-E21 · Return on the strict global extension
+
+28 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. The request records GPT-6.2 Astra/ultra as the selected lead and GPT-6.2 Sol/ultra as the configured helper. Actual backend model and reasoning effort were unavailable. HEAD matched `280376dd7a1820fa2878d0ab0ee2e639facb2eeb` and all ten frozen input hashes matched at execution start. [Frozen request v1](E21_REQUEST_v1.md)
+
+**PASS.** Normalization of the hypothetical cheaper sequence, excision of its individual moving zeros, normalized angular compactness and zero-mode rigidity, strong current convergence, orthogonality to every zero-trace gradient, and the limiting sign all pass. The replay obtains strong \(H^1\) convergence of the normalized angles, uses the zero torus mode and the unit-field constraint to force \(d_n\to0\), and gets lower limit at least \(1/4\) for the normalized strictly negative excess. There is no needed correction to the lead proof. [Independent replay](../../reviews/E21_STRICT_EXTENSION_REPLAY.md)
+
+For \(B=17\pi/8\) this gives \(b_{\rm G}>B\) and hence some \(\delta>0\) with radial uniqueness throughout \(|b|\le B+\delta\), in the full E17 smooth admissible class including compatible transverse interior zeros. The argument gives no numerical \(\delta\) or compactness assertion at \(b_{\rm G}\). The proof and source scope are recorded in the replay. The location of the exact global endpoint remains with B08.
