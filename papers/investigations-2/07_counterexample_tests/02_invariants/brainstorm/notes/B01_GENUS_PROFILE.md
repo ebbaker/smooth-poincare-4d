@@ -1,0 +1,5 @@
+# B01 · Genus convention and probe
+
+27 November 2026 (America/New_York). For Edward B. Baker III with OpenAI Codex assistance. Revision 1, checkout e171829f1c59a8a1fc66a2f1bd7ff42b2037aa6b. Lead in the selected session (exact serving variant and effort unavailable). Frozen E assignments use gpt-6.2-sol with ultra effort at dispatch. Only the lead edits shared files. Record primary passages, exact inputs, uncertainties and evidence in each assigned output. Do not infer exhaustion, standardness or exoticity.
+
+Use all positively oriented parametrized small coordinate balls. Identify the model oriented knot sphere with the outward boundary of the complement by a fixed reflection in the chart; orient the surface boundary accordingly. Test the right-handed positive two-braid trefoil. Freeze its positive braid Seifert surface and the two-sided homology-ball tau bound for a lower bound, including the standard control. The native test will use the identical knot marking when available. Compare prior fixed-ambient relative genus and the minimum over all exotic balls; restrict novelty to the specific certified entries.

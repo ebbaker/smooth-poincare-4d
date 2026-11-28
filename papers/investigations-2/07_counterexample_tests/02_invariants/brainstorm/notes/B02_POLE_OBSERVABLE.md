@@ -1,0 +1,5 @@
+# B02 · All classes and a fixed marking
+
+27 November 2026 (America/New_York). For Edward B. Baker III with OpenAI Codex assistance. Revision 1, checkout e171829f1c59a8a1fc66a2f1bd7ff42b2037aa6b. Lead in the selected session (exact serving variant and effort unavailable). Frozen E assignments use gpt-6.2-sol with ultra effort at dispatch. Only the lead edits shared files. Record primary passages, exact inputs, uncertainties and evidence in each assigned output. Do not infer exhaustion, standardness or exoticity.
+
+For oriented smooth homotopy spheres use transverse nonzero projective pole triples (including the empty zero set). Audit the end cutoff, compactly supported merger and realization chain on its nonempty domain. Separately choose the standard sphere with a Taubes local single-circle insertion on a Euclidean constant form and E04-compatible marking. Test one projective disk about the realized transverse direction by nonzero local degree on a normal 3-disk. The round marking is the control. Assess the result under orientation-preserving conformal marked pullback; any size estimate must identify its inputs.

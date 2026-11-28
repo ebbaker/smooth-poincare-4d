@@ -21,3 +21,11 @@ Use the selected lead for B decisions (recommended Astra/ultra). Use an authoriz
 The closed-module idea stays with series 06 until a named class, a comparator on S⁴ and control of all closing relations are available. The parent can match a returned functional with the identified candidate at that point.
 
 One component can finish while the other continues. A verified invariant can be a principal result even if no exotic sphere has been found. Continue through ready dependencies once a session is activated. Keep new B decisions and bounded E tasks under their owning family, with fresh identifiers. Formalization is by handoff under the series rules.
+
+## Activated comparison in the original handle marking
+
+WIT-B01 also fixes the two original cap belt spheres as marked inputs. WIT-E05 replays the genus cost of tubing intersections and the sharper comparison after undoing one surgery. Apply each bound to actual transverse intersection counts; a geometrically disjoint surface can use the other entire cap. WIT-B03 returns the checked claims to the geometric and invariant owners.
+
+## Four full seam sections and their cut paths
+
+WIT-B04 selects the meridional tree, WIT-E06 compares branched-cover fillings, and WIT-E07 replays geometry, signed input and pole calibration. These are the activated second-pass assignments in the [two-cap request](../research-progress/handoffs/REQUEST_TWO_CAPS_R1.md); earlier provisional setup numbers are cross-referenced in the history. WIT-B05 fixes the ordered based seam paths as a new geometric choice. WIT-E08 tests a single free word for commutator length two. WIT-E09 independently reads the surface relation, word certificate, sharp immersed genus and four-tube embedded upper bound. Further native work requires an eligible signed boundary knot and a based word passing the genus-zero test. [Request and limits](../research-progress/handoffs/REQUEST_BASED_EXTERIOR_R1.md) · [Continuation](../continuation-notes/BASED_ROUTES_20261127.md)

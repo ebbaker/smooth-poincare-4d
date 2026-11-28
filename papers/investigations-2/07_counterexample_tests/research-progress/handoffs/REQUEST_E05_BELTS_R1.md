@@ -1,0 +1,3 @@
+# WIT-E05 · Genus penalty for the actual two belts
+
+Frozen revision 1, 27 November 2026 America/New_York, for Edward B. Baker III. OpenAI Codex lead, exact serving variant and effort unavailable; gpt-6.2-sol/ultra non-author dispatch. [Register](../REGISTER.md). Baseline e171829f1c59 and notes/BELT_INTERSECTION_BOUND.md as issued. Independently check each sign, normal meridian tubing and genus, smooth inverse across the two original seams, loop surgery on punctured #²(S¹×S³), marked ball identification and upper bound by collar transfer. Look for failures, including a hidden Schoenflies or Whitney assumption. No new construction or search. Exclusive output reviews/E05_BELTS.md. Return a discrepancy or the exact theorem you can replay.

@@ -17,3 +17,5 @@ Scientific content was imported, not produced by setup tasks. It comes from sect
 - 27 November 2026 · [INV-E06](research-progress/handoffs/RETURN_INV_E06_20261127.md) checked Ren–Yang’s full rational negative-plane computation. CERT-E11 incorporated the invariant bibliography. The final shared-file transfer adds Ren–Yang to the consolidated 05 sequence.
 
 - 27 November 2026 · After 05’s replay of both original-framing identifications, [INV-E07](research-progress/handoffs/RETURN_INV_E07_20261127.md) independently checked the order-eleven specialization. [The closing note](continuation-notes/CLOSING_20261127.md) records all three end states and the concrete inputs that reopen B01.
+
+- 27 November 2026 · [INV-E08](notes/E08_TWO_BELT_KNOT.md) and the [independent filling replay](../07_counterexample_tests/reviews/E07_FILLING.md) determined genus one for the specified positive two-twisted Whitehead double of the right-handed trefoil in the standard ball and every marked homotopy-sphere puncture.

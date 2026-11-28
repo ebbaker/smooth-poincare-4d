@@ -1,0 +1,5 @@
+# B02 · Surface through the first native cap
+
+27 November 2026, America/New_York, for Edward B. Baker III. OpenAI Codex lead, exact variant and effort unavailable. Checkout e171829f1c59. E02 intake fixes the POLE exponential chart, original CERT seams and radius 1/16. [Parent B01](../../../brainstorm/notes/B01_WITNESS_COMPARISON.md).
+
+Test the smallest geometrically useful response to the exterior winding condition: use two opposite cap sections at the first seam, and actually carry their joining surface back to the marked puncture. Use the sphere bounding a thickened cap arc joined to a small chart ball, as specified in the E04 request. Its unknot calibrates a nonlocal route through a cap. For the genus-one profile also transport the positive two-braid surface in the chart collar with the same reflection. The braid is a separate control. For a distinguishing probe an exterior with canceling longitudes and a boundary knot whose ordinary genus exceeds the supplied native genus is still needed. No diagram or exterior band from the GST example has been transported here.

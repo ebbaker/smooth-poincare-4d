@@ -1,0 +1,5 @@
+# B01 · Witness and comparator
+
+27 November 2026 (America/New_York). For Edward B. Baker III with OpenAI Codex assistance. Revision 1, checkout e171829f1c59a8a1fc66a2f1bd7ff42b2037aa6b. Lead in the selected session (exact serving variant and effort unavailable). Frozen E assignments use gpt-6.2-sol with ultra effort at dispatch. Only the lead edits shared files. Record primary passages, exact inputs, uncertainties and evidence in each assigned output. Do not infer exhaustion, standardness or exoticity.
+
+The signed standard-ball disk goes to Dunfield–Gong, Theorem 5.14, through its own Table 11 row. The native test uses the original minus coordinate puncture, boundary identification and genus of a properly embedded connected oriented surface. Compare that boundary knot with its standard four-ball lower bound. Read the siblings through their own registers. Approve the two intakes, the right-handed trefoil control and the two analytic tests below. The diagrams have no given identification across these tests.

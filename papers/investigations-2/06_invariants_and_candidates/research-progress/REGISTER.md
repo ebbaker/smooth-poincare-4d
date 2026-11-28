@@ -12,6 +12,7 @@
 | SP4-INV-E05 | Bibliography transfer validated in scratch | [17 source records and receipt](handoffs/RETURN_INV_E05_20261127.md) · [Prepare and test the shared bibliography transfer](handoffs/REQUEST_INV_E05_20261127.md). |
 | SP4-INV-E06 | Source and bibliography addendum validated | [Ren–Yang formulas and scratch checks](handoffs/RETURN_INV_E06_20261127.md) · [One-source update to the status of the negative-projective-plane example](handoffs/REQUEST_INV_E06_20261127.md). |
 | SP4-INV-E07 | Replayed | [Specialization to the opposite original framing at eleven](handoffs/RETURN_INV_E07_20261127.md) · [Request](handoffs/REQUEST_INV_E07_20261127.md). |
+| SP4-INV-E08 | Replayed for the fixed oriented Whitehead double | For \(J=D_+(T_{2,3},2)\) in the Hedden–Ording convention, \(s_{\mathbb Q}(J)=2\), \(\tau(J)=0\), and \(g_4(J)=1\). The double branched cover is \(+9/2\) surgery on the right-handed trefoil and its orientation reverse. Its correction terms rule out a smooth rational homology ball filling. The branched disk argument then gives \(g_\Sigma(J)=1\) in every smooth homotopy-sphere puncture with the stated mark. [Frozen request](../../07_counterexample_tests/research-progress/handoffs/REQUEST_TWO_CAPS_R1.md) · [Primary reading and calculation](../notes/E08_TWO_BELT_KNOT.md) · [WIT-E07 independent filling replay](../../07_counterexample_tests/reviews/E07_FILLING.md). |
 | SP4-INV-B02 | Reserved | Other invariant families. |
 
 The source and ledger owners receive branch-local handoffs. No question for the author.

@@ -21,3 +21,7 @@ These are questions in smooth oriented four-manifold topology. The movie uses th
 ## Exchange of evidence
 
 This child owns geometric constructions and retains one live [SP4-WEX register](../research-progress/REGISTER.md). Send [SP4-WIN](../../02_invariants/research-progress/REGISTER.md) the signed knot diagram, ambient marking, relative class, orientation, genus and a replayable surface or the precise missing piece. Request the applicable bound and its direction for that same input. Branch 06 owns candidate-specific invariant evaluations. Branch 05 owns certificate formats, formal import provenance and the original marked presentation. The [SP4-WIT parent](../../research-progress/REGISTER.md) integrates returns, routes formal statements, and owns communication with the second master. The finite witness or scoped failure must survive a reader who authored neither its proof nor its input certificate. A project proof is working when written, replayed after a non-author check, and established when proved in Lean under the series rules. Setup supplies only proposals and source pointers. [Series rules](../../../README.md)
+
+## Activated results, 27 November 2026
+
+The original coordinate puncture now has a proper two-section disk for the signed latitude unknot. In standard B⁴ the one-minimum class is excluded for 16n68278; the separately named 18-crossing reserve is smoothly slice. [Register and scope](../research-progress/REGISTER.md).

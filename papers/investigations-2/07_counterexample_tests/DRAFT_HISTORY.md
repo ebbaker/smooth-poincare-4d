@@ -18,3 +18,8 @@ The first plan was a provisional single-family design. No request was issued und
 | WIT-E05 and WIT-B03, replay and integration | Parent WIT-E05 and WIT-B03 still own the complete implication. Child readers replay the local claims within their separate families. |
 
 See the [examples plan](01_examples/research-plan/PLAN.md) and [invariants plan](02_invariants/research-plan/PLAN.md) for detailed boundaries.
+
+- **27 November 2026 · Activation.** Fixed the [comparison interfaces](brainstorm/notes/B01_WITNESS_COMPARISON.md); integrated the [two-belt tubing estimate](notes/BELT_INTERSECTION_BOUND.md), followed by the [independently replayed bound on each belt](reviews/E05_SINGLE_BELT.md).
+- **27 November 2026 · Child integration.** Returned the [native and external geometric tests and the two pole calibrations](notes/WITNESS_COMPARISONS_20261127.md) to their owners. [Closing](continuation-notes/CLOSING_20261127.md).
+
+- **27 November 2026 · Second-pass integration.** Replayed the two-cap tree and native homology-ball control. Derived the immersed commutator-length formula and calibrated embedded genus zero, one and two on fixed path data. [Current continuation](continuation-notes/BASED_ROUTES_20261127.md).

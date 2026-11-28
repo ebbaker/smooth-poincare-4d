@@ -1,0 +1,3 @@
+# WIT-E09D, revision 2
+
+27 November 2026, New York, for Edward Baker. Retain the reader and all finite checks in [R1](REQUEST_EMBEDDED_READING_R1.md). The [lead proof](../../notes/EMBEDDED_FOUR_TUBES.md), SHA-256 8c16a08a970cffb9d51ee531a55b287f408d8622110ca44c64f835bf2b94fa0f, adds exactly the single-tube annulus variant at the end. Replay its parallel based cuts, opposite endpoint offsets, projection, cyclic order, surface connectivity and resulting genus 0 and 1. Its proposed exact controlled family concerns standard slice boundary knots. Append a digest-specific disposition to the same assigned review. No further changes of scope.

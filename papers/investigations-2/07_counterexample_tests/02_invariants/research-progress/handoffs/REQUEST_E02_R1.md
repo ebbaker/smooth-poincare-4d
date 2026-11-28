@@ -1,0 +1,3 @@
+# WIN-E02 · The returned native boundary knot
+
+27 November 2026 America/New_York. For Edward B. Baker III with OpenAI Codex assistance. Lead exact serving variant/effort unavailable, bounded gpt-6.2-sol/ultra dispatch, revision 1 at e171829f1c59. [Register](../REGISTER.md). Use WEX E04_NATIVE_SURFACE.md SHA-256 cd07e974baf735688b2b698e73cc1dc26d935765936ff295246e08e0a9ea548d and WIN E01. Take exactly its reflected oriented latitude knot, identify its diagram, bound its standard and native genus, tau and rational s and assess the equality or strictness. Compare with the other independently supplied trefoil control as a separate entry and preserve which surface passes through which cap. No change of probes. Exclusive output notes/E02_GENUS_ENTRY.md.

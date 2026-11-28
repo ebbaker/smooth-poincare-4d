@@ -1,0 +1,3 @@
+# WEX-E06 · Standard-ball movie obstruction
+
+27 November 2026 America/New_York. For Edward B. Baker III, lead OpenAI Codex (exact model/effort unavailable), bounded gpt-6.2-sol/ultra non-author. Version 1, e171829f1c59; E03_DISK_MOVIES.md at 072fd5490ab67551af1b05de388fd52dc57740fba0805445cf6a68a566b7b817. [Register](../REGISTER.md). Check exact control polynomial, three critical indices/order, disjoint cap, orientation at terminal unknot, reversal and Zemke direction, and named target. Confirm or identify a discrepancy. Separate geometric, finite and general implications. Only reviews/E06_MOVIES.md.

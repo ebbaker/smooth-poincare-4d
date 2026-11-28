@@ -1,0 +1,3 @@
+# WEX-E06 · Native disk replay
+
+27 November 2026 America/New_York. For Edward B. Baker III with OpenAI Codex assistance. Lead exact serving variant/effort unavailable, bounded gpt-6.2-sol/ultra dispatch, revision 1 at e171829f1c59. [Register](../REGISTER.md). E04_NATIVE_SURFACE.md, SHA-256 cd07e974baf735688b2b698e73cc1dc26d935765936ff295246e08e0a9ea548d. Non-author: independently check the auxiliary three-ball, meridian arc in the retained exterior, interpolation of endpoint frames, exact seams, opposite cap intersections, disk properness, product-collar smoothing and boundary mark, signs and rational constants. Check the first two original B04/E07 and E06 charts as needed. Write only reviews/E06_CAP.md. Stop after this check; no new construction.

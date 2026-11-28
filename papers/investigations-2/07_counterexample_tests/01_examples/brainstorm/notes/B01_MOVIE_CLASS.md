@@ -1,0 +1,5 @@
+# B01 · One radial minimum
+
+27 November 2026 (America/New_York), for Edward B. Baker III. OpenAI Codex lead, exact serving variant and effort unavailable. Version 1, checkout e171829f1c59; helpers dispatched as gpt-6.2-sol/ultra. Only the lead writes shared files.
+
+[Knot intake](../../notes/E01_KNOT_INPUT.md). The named smooth knot and the sign on the surgery link are known. The original signed PD bytes are unavailable. A theorem for the named nontrivial knot can still dispose of a movie class independent of its drawing. First keep one outward birth, up to one saddle and one death; include the ordinary and the padded unknot disks. Freeze finite planar encodings before working. A local minimum can be removed from the disk to leave an annulus in a concentric shell. Reverse that annulus and apply Zemke's Theorem 1.5; decide the entire one-birth case regardless of diagram complexity. Larger useful one-maximum searches must allow at least two births. No signed enumeration until the §1.19 row and its marking are available. The primary ribbon scans and the GST worked bands keep their original scopes.
