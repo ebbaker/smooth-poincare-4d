@@ -19,3 +19,6 @@
 - **28 November 2026 · Classical action.** Derived the fixed-metric spinor equation, boundary momentum and exact radial generating function on a flat cylinder. [Derivation and source passages](notes/RELATIVE_TWISTOR_ACTION.md)
 
 - **28 November 2026 · Revised scope.** WIN retains the three smooth-type comparisons, with genus and pole-bound decisions B10 and B11 ready on activation. B09 keeps the marked spectral test. New field-theory and action research have separate sibling registers. [Current continuation](continuation-notes/SMOOTH_TYPE_COMPARISONS_20261128.md) · [Ownership and input crosswalk](../research-progress/handoffs/SIBLING_CROSSWALK_20261128.md)
+
+- **28 November 2026 · Conway genus.** The signed Conway knot has embedded genus one in the actual two-belt puncture and in every marked integral homology ball. Its fourfold cover rules out the proposed disk, even though the four-return immersed disk exists. [B10](brainstorm/notes/B10_CONWAY_PROBE.md) · [Non-author reading](reviews/E35_CONWAY.md)
+- **28 November 2026 · Last-circle period.** Integrated the Gerig disk integral, the \(L^{-2}\) law at fixed pole and numerical residue, and the fixed-germ reduction for zero-free existence. B09 remains a metric comparison. [Non-author reading](reviews/E35_PERIOD.md) · [Closing](continuation-notes/CLOSING_CONWAY_PERIOD_20261128.md)

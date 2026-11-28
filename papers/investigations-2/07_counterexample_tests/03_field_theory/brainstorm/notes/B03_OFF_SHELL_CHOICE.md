@@ -1,0 +1,15 @@
+# B03 · Put the chiral curvature in a spacetime gauge fermion
+
+28 November 2026, for Edward B. Baker III. OpenAI Codex lead, selected Astra/ultra; actual serving variant and effort unavailable. Checkout `7c6bbab9a0a6`. The [spacetime audit](../../research-progress/handoffs/RETURN_FTI_E02.md) and [twistor and infrared audit](../../research-progress/handoffs/RETURN_FTI_E05.md) fix the scope of the precedents.
+
+For the canonical \(Z=S(\Lambda_g^+)\), evaluate \(\bar\partial_J^2 f\) on two \((0,1)\) vector fields. It equals \(df([U,V]^{1,0})\). At a point where involutivity fails one can choose a smooth function detecting the bracket and localize it with a bump. On the round sphere the bracket component vanishes. On the same smooth sphere with E33, \(W^+(0)=\mathrm{diag}(-\epsilon/2,\epsilon/2,0)\) rules out involutivity. Atiyah–Hitchin–Singer use \(P(V_-)\) and \(W_-\); exchanging the orientation gives our plus convention. Mason puts the failure of integrability into a classical action with a variable almost-complex structure. His shift identity gives no scalar cohomological symmetry for the present fields. [AHS, Thm 4.1, pp. 435–436](../../../../../../references/Atiyah.pdf) · [E33](../../../02_invariants/notes/E22_METRIC_AND_SPECTRUM.md) · [Mason §4](https://arxiv.org/pdf/hep-th/0507269)
+
+Select the smooth four-dimensional abelian equivariant complex. It uses the projected chiral curvature tensor in a gauge fermion, so we can determine exactly what survives the formal cohomological test. It is a classical test algebra constructed here, inspired by the spacetime point insertion. The photon and its one-form partner, scalar, and chiral auxiliary pair are dynamical variables. The metric, point and scale are fixed backgrounds for \(Q\), with the metric varied externally. The closed manifold has no boundary. Take \(A,\phi,H^+\) even, \(\psi,\chi^+\) odd, with \(A\) the real charge-one connection on the trivial line, \(A\mapsto A-d\alpha\). On fields
+\[
+ QA=\psi,\quad Q\psi=-d\phi,\quad Q\phi=0,\quad Q\chi=H,\quad QH=0.
+\]
+For fixed \(\ell>0\) define \(P_g=(1+*_g)/2\), \(K_g=1+\ell^4(W_g^+)^2\) on \(\Lambda_g^+\), \(F=dA\) and
+\[
+ V_g=\int_X\chi\wedge\bigl(K_g P_g F-H/2\bigr),\qquad S_g=QV_g,\qquad I_p=\phi(p)^2 .
+\]
+The square in \(K_g\) makes the coefficient invertible at both controls. Its eigenspaces keep only the information in the squared chiral Weyl operator. For a smooth metric path transport both auxiliary fields by the same \(U_t=P_{g_t}|_{\Lambda^+_{g_0}}\) near the base point. This freezes one honest field space for differentiating. Keep the residual constant gauge circle and the constant \(\phi\) mode. The polynomial algebra has no antifields or extra multiplets. The [E04 request](../../research-progress/handoffs/REQUEST_FTI_E04.md) tests classical closure and the first background variation. A quantum pushforward would be a separate construction. The chosen action is independent of the [07/04 quartic problem](../../../04_twistor_action/README.md).

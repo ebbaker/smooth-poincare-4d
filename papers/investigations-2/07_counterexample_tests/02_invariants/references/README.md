@@ -19,3 +19,5 @@ Setup reference map, 27 November 2026, America/New_York, for Edward B. Baker III
 The [centered twistor gap source receipt](TWISTOR_GAP_SOURCES.md) records the primary semicontinuity, continuity, conformal regularity, scalar spectral, volume and spinor inputs for the 27 November sustained activation.
 
 The [28 November primary reading](B08_ROUND_STABILITY_SOURCE.md) records the round-domain Möbius estimate checked in B08 and its relation to the explicit, independently derived harmonic comparison.
+
+[Conway and period source readings](CONWAY_PERIOD_SOURCES.md) record the published ordinary-ball obstruction, the fourfold-cover preprint, the one-crossing input and the two exact ends of the near-symplectic model. [New bibliography records for 05](conway_probes.bib)

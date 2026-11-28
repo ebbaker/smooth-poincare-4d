@@ -5,7 +5,7 @@ OpenAI Codex assistance. Actual serving variant and effort are unavailable.
 Setup at checkout 86b24d9f9c2d and the working-tree inputs pinned in the
 [source index](../references/README.md). The [opening brainstorm](../brainstorm/notes/FIELD_THEORY_START_20261128.md)
 selects a standard boundary control. The papers and earlier calculations
-retain their recorded scope. SP4-FTI is a new, unactivated task family.
+retain their recorded scope. This opening overview describes SP4-FTI at setup. The [register](../research-progress/REGISTER.md) records the subsequently activated research.
 
 ## Domain and comparison
 
@@ -99,3 +99,13 @@ is heuristic, a working or replayed project theorem, a certificate or
 Lean-established under the series rules. A general claim about all
 smooth homotopy spheres requires a globally defined construction on that
 domain and proof of every claimed independence. [Series rules](../../../README.md#working-rules) · [Plan](../research-plan/PLAN.md) · [Sole register](../research-progress/REGISTER.md)
+
+## Assessed first horizon · 28 November 2026
+
+On the actual Gerig ball, the finite orientation-cover sector changes from zero to one when the twisted insertion is replaced by the zero-free control. Its conditional value on the signed minus puncture is fixed by the supplied orientation cover. The closed ordinary monopole unit is constant. The alternative spacetime differential closes on the standard nonround E33 control and gives a nonzero point class; a regulated numerical evaluation remains open. [Assessment on the common inputs](../notes/FIELD_COMPARISON.md) · [Closing and continuation](../continuation-notes/CLOSING_20261128.md).
+
+## Second horizon · Regulating the point class
+
+B05 fixes a finite contour, a current on exact modes and one scalar probability law for the closed spacetime theory. A nonzero smooth mode crosses the actual Gerig seam after reassembly, so the auxiliary Gaussian cancellation can be tested on the original geometry. The [analytical comparison](../notes/B05_POINT_EVALUATION.md) gives the common regulated value and separates removal of the scalar damping from stability of this insertion across finite cutoffs. Exact quartic spinor analysis remains with [07/04](../../04_twistor_action/research-progress/REGISTER.md).
+
+The [non-author replay](../reviews/E13_REGULATED_POINT_REPLAY.md) and [B05 closing](../continuation-notes/CLOSING_B05_20261128.md) assess the tested regulator. The normalized value depends on the common scalar law and supplies no strict comparison on the matched inputs.

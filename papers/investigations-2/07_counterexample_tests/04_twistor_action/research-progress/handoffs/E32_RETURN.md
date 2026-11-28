@@ -1,0 +1,7 @@
+# SP4-TWA-E32 · Buffered-wave replay return
+
+28 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. The [frozen request](E32_REQUEST_v1.md) specifies GPT-6.2 Sol/ultra for the non-author reader. Serving-model and reasoning-effort telemetry were unavailable. The [E28 input](../../notes/E28_PHASE_WAVE.md) matched the frozen digest at checkout `7c6bbab9a0a6`.
+
+**Pass.** The [independent review](../../reviews/E32_BUFFERED_REPLAY.md) verifies the endpoint normalization \(9b^4/8\) for \(S=J_g^4\), the phase reduction through coefficient-zero times, the fixed-time angular inequality including the domain edges, and equality only at \(h=1\). The scope is the zero-free single phase wave with spatially constant perpendicular buffer and full radial end traces on the oriented flat, periodic spin cylinder at \(b=51\pi/16\). The separate unbuffered zero-free complex class comparison also passes for all real slopes.
+
+The reproduced C17 kernel exited zero on Apple clang 15.0.0 / Darwin arm64 at both `-O3` and `-O0`, with contraction disabled. It visited 3,811 boxes and accepted 1,906 leaves at maximum depth 17. The reported minimum positive Riemann-bound margin was \(2.80357093616\times10^{-5}\). The review records the arithmetic assumptions, the exact rational \(\pi\) bracket check, and the coverage argument. No failed part or repair was identified in the frozen scope. The unrestricted global endpoint comparison remains open.

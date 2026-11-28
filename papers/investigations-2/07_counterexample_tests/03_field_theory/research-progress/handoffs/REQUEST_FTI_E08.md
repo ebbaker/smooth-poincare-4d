@@ -1,0 +1,5 @@
+# FTI-E08 request r1 · Independent reading of E01 and E07
+
+28 November 2026. For Edward B. Baker III by Codex lead, selected Astra/ultra, exact lead model unavailable. Assigned separate gpt-6.2-sol/ultra reader. Checkout `7c6bbab9a0a6`, frozen B01 and [E01](RETURN_FTI_E01.md), [E07](RETURN_FTI_E07.md). [Register](../REGISTER.md).
+
+Independently derive the principal seam comparison in the two model metrics: both tangential kernels and boundary gauge quotient, APS zero allocation and transmitted problem, outer gauge restrictions, frame conjugacy vs geometric change, and actual Example 1.7 one-jet, sign/lift and conformal obstruction. Use the original form from PDF p.3 and the B01 parameters. For any primary analytic theorem imported recheck scope. Check proofs for missed options, including the scope of local smooth-germ obstruction. Only write reviews/E08_JET_AND_SEAM.md (relative to branch). State what you recomputed independently, actual available settings, and any needed corrections. No new fields or smoothing experiments.

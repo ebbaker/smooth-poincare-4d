@@ -1,0 +1,9 @@
+# SP4-TWA-E31 · Independent helix replay return
+
+28 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Bounded non-author reviewer configuration GPT-6.2 Sol/ultra was specified. Actual serving model and effort were unavailable. All three frozen SHA-256 digests matched at checkout `7c6bbab9a0a66532d81599b3dd0952f5a371c8d4`. [Request](E31_REQUEST_v1.md) · [Full replay](../../reviews/E31_HELIX_REPLAY.md)
+
+**PASS.** The E26 frequency weights exceed \(15\) at the first periodic frequency and \(32n^2\) thereafter. The zero-trace cost absorbs at most \(173/192\) of that weighted sum, giving the stated \(95/32\) variance coefficient. Both helicities and the equality case check. The fixed-angle multiplier is globally unique and all five quadrature values reproduce.
+
+E27's Jensen arguments hold for an arbitrary smooth real log amplitude with the prescribed zero correction at each end face. Equality in the first average forces independence of \(x_2,x_3\), and equality in the second forces independence of \(x_1\). The same calculation applies to each fixed angle and either helicity in E26. Consequently on the named circular angular family, the radial field uniquely minimizes the original action at \(b=51\pi/16\) even when the amplitude is allowed to vary in all four variables.
+
+For \(\theta=\epsilon\cos(\pi t/2)\) with favorable helicity, the minimum scalar mean excess is \(-(7/48)(\pi/2)^2\epsilon^4+O(\epsilon^6)\) and is strictly negative throughout \(0<|\epsilon|\le1/2\). An alternative amplitude has zero variance for small \(|\epsilon|\) with positive projection penalty and positive size of the minimized scalar defect. The amplitude-minimized original action has positive quartic excess \(12227(\pi/2)^4/6144\) times \(\epsilon^4\). The results concern the specified smooth, zero-free helices at fixed flat metric and full end traces. The unrestricted endpoint comparison remains open.

@@ -64,3 +64,16 @@ The author reopened the trace-data question on the same product. [B08 decision](
 | E25 | Check the action excess and strong physical \(H^1\) convergence on interior slopes by uniform convexity at the known global endpoint. |
 
 The unresolved comparison is the unrestricted one at the single slope \(51\pi/16\). Equality of the global and local thresholds is equivalent to the endpoint inequality for every admissible normalized field. A strict competitor there certifies a subthreshold interval by continuity. The full spatial first-shell quartic and the fixed pointwise norm comparison constrain any such construction.
+
+### The unrestricted amplitude at the crossing
+
+B09 keeps the same full traces. [Decision](../brainstorm/notes/B09_AMPLITUDE_AT_CROSSING.md) · [Sole register](../research-progress/REGISTER.md)
+
+| Packets | Scoped test |
+| --- | --- |
+| E26–E30 | Global time-amplitude comparison on a circular helix, projection and variance, buffered winding, a three-wave trial, and the exact slice identity. |
+| E31–E34 | Independent checks of the finite-amplitude theorems, flux dual and transverse envelopes, and compactness in the relaxed polar space. |
+| E35 | A finite-amplitude trial with nonorthogonal wave planes on two axes. |
+| E36–E38 | Independently check the unrestricted slope bracket and the complete favorable first spatial shell with free amplitude. Test an explicit nonzero relative-degree angular path against the resulting temporal length bound. |
+
+The next decision, B10, concerns the mixed angular spectrum in the [B09 closing](../continuation-notes/CLOSING_B09_ENDPOINT_20261128.md). Compare the full flux against the radial cost, construct a rigorous strict trial there, or use the coexistence theorem to exclude a distinct relaxed minimizer before the crossing. Freeze a particular check once the method and angular field or inequality are specified.

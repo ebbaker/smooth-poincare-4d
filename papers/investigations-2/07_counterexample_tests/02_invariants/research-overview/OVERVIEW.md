@@ -16,6 +16,8 @@ The native test asks for a signed knot \(K\) and a smooth embedded surface in a 
 
 Future spacetime twists, relative gauge theories and their gluing laws belong to [03 Field theory](../../03_field_theory/research-overview/OVERVIEW.md). The stationary equation, puncture variation and boundary momenta of the **single-spinor** action \(J_g^4\) belong to [04 Twistor action](../../04_twistor_action/research-overview/OVERVIEW.md). WIN receives their results if they yield an observable or bound for the smooth-type comparison. The following sections document the original search and its controls. [Dated crosswalk](../../research-progress/handoffs/SIBLING_CROSSWALK_20261128.md)
 
+The signed Conway probe now joins the genus-one controls. A disk in a smooth integral homology ball would fill its fourfold branched cover, contrary to the preprint obstruction. On the pole side a dilation makes the last-circle primitive period arbitrarily small with identical pole, numerical residue and transverse circle. After exact-end realization, the zero-free existence problem can be posed at a prescribed marked end while still varying the class. [Comparisons and scope](../continuation-notes/CLOSING_CONWAY_PERIOD_20261128.md)
+
 ## Constructions considered in the original search
 
 | Starting point | Proposed calculation | What would make the result informative? |

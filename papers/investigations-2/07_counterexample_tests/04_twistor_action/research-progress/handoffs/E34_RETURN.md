@@ -1,0 +1,7 @@
+# SP4-TWA-E34 · Determinant compactness replay return
+
+28 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. The [frozen request](E34_REQUEST_v1.md) specifies GPT-6.2 Sol/ultra for the non-author reader. Serving-model and reasoning-effort telemetry were unavailable. All four frozen input hashes matched at checkout `7c6bbab9a0a6`.
+
+**Pass.** The [review](../../reviews/E34_COMPACTNESS_REPLAY.md) replays the signed quaternionic determinant, critical smooth density with the fixed traces, weak lower-minor continuity, the difference determinant, and strong subsequential convergence of minimizing sequences in polar \(W^{1,4}\) and physical \(H^1\). Smooth and polar infima agree and the polar infimum is attained at each fixed slope. The physical conclusion also holds in \(W^{1,p}\) for \(1\le p<4\). Smooth logarithmic amplitudes show why one cannot assert physical \(W^{1,4}\) compactness even at slope zero.
+
+If \(b_{\rm G}<51\pi/16\), the replay confirms coexistence with a nonradial relaxed minimizer at \(b_{\rm G}\). Such a minimizer has \(\|dg\|_4\ge (8\sqrt3)^{-1}\sqrt{1-b_{\rm G}/b_{\rm H}}\), and coexistence makes the right derivative of the normalized minimum strictly negative at the global endpoint. Neither condition settles the unrestricted comparison at \(b_{\rm H}\). No invalid inference was identified in the frozen compactness note.

@@ -2,7 +2,11 @@
 
 27 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual setup model and effort unavailable. Baseline `6a422ce7814f` and [source inputs](../references/README.md). The [register](../research-progress/REGISTER.md) owns live status. Use `SP4-WIN` as the family prefix on handoffs.
 
-## Current comparison after the sibling split
+## Continuation after the signed Conway and period tests
+
+B10 and B11 reached their stated stopping tests. For another signed genus probe, start with the ordinary lower bound and inexpensive homology-ball exclusions before constructing a native surface. For a proposed pole obstruction, fix one end germ and distinguish a lower bound over all classes from a test on a single class. B09 retains its fixed-metric DIR-E33 comparison. E32 keeps its original dependencies. [Closing and inputs](../continuation-notes/CLOSING_CONWAY_PERIOD_20261128.md) · [Sole register](../research-progress/REGISTER.md)
+
+## Initial comparison after the sibling split
 
 28 November 2026. The first two questions below can advance independently. The lead takes conceptual choices and decides whether a candidate-bound comparison is cheaper to verify than the original geometric test. Each E packet awaits a frozen input and has one writer. Use selected Astra/ultra for B decisions and authorized Sol/ultra for bounded calculations and independent replay. [Current assignment and inputs](../continuation-notes/SMOOTH_TYPE_COMPARISONS_20261128.md) · [Ownership crosswalk](../../research-progress/handoffs/SIBLING_CROSSWALK_20261128.md)
 

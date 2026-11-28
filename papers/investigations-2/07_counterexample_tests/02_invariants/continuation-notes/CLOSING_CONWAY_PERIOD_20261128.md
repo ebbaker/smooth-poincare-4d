@@ -1,0 +1,33 @@
+# The Conway genus and the period of the last pole circle
+
+28 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. WIN resumed at `7c6bbab9a0a66532d81599b3dd0952f5a371c8d4`. The lead retained the selected Astra/ultra session. Four analytical packets and two separate non-author replays were assigned to GPT-6.2 Sol/ultra. Actual serving settings unavailable. [Register](../research-progress/REGISTER.md) · [Original three comparisons](SMOOTH_TYPE_COMPARISONS_20261128.md) · [Owner and formal handoff](../research-progress/handoffs/TO_WIT_WEX_CONWAY_PERIOD_20261128.md)
+
+## The signed knot
+
+The oriented Conway knot \(C\) in Piccirillo's Figure 1 left has
+\[
+g_{\Sigma_P}(C)=g_4(C)=1
+\]
+in the original minus Miller–Schupp puncture with outward mark \(\iota(u)=\chi(Ru/16)\). Attach a smooth genus-one crossing-change cobordism to WEX's latitude disk. The resulting connected embedded surface has one positive and one negative intersection with each original belt. The prescribed four-return word also permits a planar immersed connector. An embedded disk in this puncture, with any paths or belt counts, is excluded. [Native geometry](../notes/E33_CONWAY_SURFACE.md) · [Based connector](../../notes/IMMERSED_EXTERIOR.md)
+
+The exclusion is stronger than an ordinary genus calculation. Piccirillo gives the standard-ball lower bound. Independently, Golla–Pinzón-Caicedo's Theorem 1.2 obstructs a rational homology ball filling of the fourfold cyclic branched cover. A disk in **any** smooth oriented integral homology ball with the specified \(S^3\) boundary would supply such a filling. Its fourfold cover factors into two double covers, each along a disk, and the transfer sequence with \(\mathbb F_2\) coefficients preserves the mod-two homology of a ball at both stages. The genus-one upper bound in any such filling can be placed in a boundary collar. Thus the same equality holds there. This provides a preliminary eligibility check on future knots before looking for framed Whitney disks. The Floer computation is an import from the 2026 preprint. [Primary-source receipt](../references/CONWAY_PERIOD_SOURCES.md) · [Fourfold proof](../brainstorm/notes/B10_CONWAY_PROBE.md) · [Independent reading](../reviews/E35_CONWAY.md)
+
+## The marked period
+
+For \(d\alpha=\omega\), let \(A=|\int_Z\alpha|\) on a one-circle pole input with a specified numerical residue. On Gerig's completed standard example,
+\[
+A=\kappa\pi\epsilon^2/2,\qquad \kappa>0 .
+\]
+The coefficient \(\kappa\) is the core matching multiple. The exterior coefficient is fixed. The complex orientation on the spanning disk gives a negative signed integral. The round zero-free form on the same standard compactification, with the same pole and signed residue, has no zero circle on which to evaluate this period. Its conformal class differs from the one realizing the twisted control. The two controls are endpoint comparisons. [Control and orientation](../notes/E34_GERIG_PERIOD.md)
+
+There is a separate quantitative obstruction to using a positive lower bound for \(A\). Start with an exact-ended one-circle form and the compatible compact class produced by E04, with representative flat near the pole. Dilation by \(L\ge1\) on the far end, extended as the identity on the core, pulls back this class. Multiplying the pulled-back form by \(L^{-2}\) restores the identical end coefficient in the original coordinates. It also sends the period to \(L^{-2}A\). The zero circle and its twist persist for every finite \(L\), so the period has infimum zero on this family even when every member has positive period. Flatness here is a property of the **chosen E04 realization**. For an originally specified compatible metric in normal coordinates the general formula is \(g_{L,ij}(y)=g_{ij}(y/L)\) near the pole. [End and compactification](../notes/E34_END_DILATION.md) · [Independent reading](../reviews/E35_PERIOD.md)
+
+Existence of a zero-free triple with freely varying class can be tested at one prescribed pole, coordinate germ and numerical residue. Straighten the tail, transport the chart germ and rotate and scale the constant form. This equivalence still ranges over compatible smooth Riemannian conformal classes. Neither a small positive period nor the existence of a marked single-circle current decides that search on a candidate. [Fixed-germ argument and LINE hypotheses](../brainstorm/notes/B11_PERIOD_AND_FIXED_END.md)
+
+## Continuation
+
+- **Genus.** The trefoil, earlier Whitehead double and Conway knot are exact genus-one controls. WEX and 06 should return a different *signed* knot with an independently sourced positive ordinary lower bound that survives the homology-ball filters checked for it. A promising surface still needs an embedded exterior on the original reflected chart with the matching collars. The one-belt transfer applies independently to each belt.
+- **Pole.** The remaining issue is to certify an obstruction valid over all classes with the fixed end data, or to exhibit a zero-free class. A proposed obstruction drawn from the last circle must first survive the exact end dilation and the two standard controls. The numerical period alone fails both as a gap and as a certificate from one marking.
+- **B09.** On a supplied compact metric, \(b(g)=0\) characterizes conformal roundness. The round metric and the positive DIR-E33 control are on the same smooth sphere, and the unrestricted infimum within a class is zero. WIN-E32 is reserved for a specified metric and volume representative, separated five-dimensional cluster, and certified diagonal, mixed-derivative and rank bounds on a full cover. No spectral calculation was launched. [Fixed metric](../notes/FIXED_METRIC_GAP.md) · [Extrema](../notes/CENTERED_EXTREMA.md) · [Quantitative control](CLOSING_B08_EFFECTIVE_GAP_20261128.md)
+
+**Pasteable continuation.** Resume SP4-WIN from this closing, its two E35 readings and the sole register. Use the next signed probe supplied by WEX and 06, including the actual diagram in the reflected chart, the standard lower bound and the prime-power filling filters checked on that knot. Compare any embedded native upper bound on those same data. For the pole route fix the pole, coordinate germ and numerical residue and test one genuinely class-uniform obstruction against the round and Gerig controls and the normalized dilation. Keep the centered gap at fixed-metric scope. Preserve the E32 dependencies and the FTI and TWA ownership boundaries. Freeze bounded disjoint author packets, obtain non-author replay, return matched implications to WIT, and leave changes uncommitted.

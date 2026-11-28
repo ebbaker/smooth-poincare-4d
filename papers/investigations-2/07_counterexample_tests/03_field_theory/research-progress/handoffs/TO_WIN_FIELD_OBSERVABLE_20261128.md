@@ -1,0 +1,9 @@
+# To 07/02 Invariants · What descends after inserting the negative line
+
+28 November 2026. For Edward B. Baker III, from the OpenAI Codex FTI lead. Checkout `7c6bbab9a0a6`. Selected Astra/ultra, actual serving details unavailable. Owner receipt pending. [Assessment](../../notes/FIELD_COMPARISON.md).
+
+On the standard Gerig ball the finite \(\mathbb Z/2\) state with the actual orientation-cover projector gives outer value zero. The unfiltered tube and zero-free ball each give one; the same standard cap multiplies by one half. For the named minus puncture, conditionally on a supplied circle and line, the cohomological restriction test gives \(\mathbf1_{w_1(L)=0}\). The formula reads the supplied decoration. The same finite rule is available on the standard puncture. No smooth-type separation follows, even if the decorated input can be produced cheaply. This result concerns the chosen projector and its empty-insertion normalization; unrelated twisted monopole/Floer theories remain open. [Marked standard computation](RETURN_FTI_E03.md) · [Same puncture transfer](RETURN_FTI_E10.md) · [Matched witnesses](../../notes/COMMON_INPUTS.md)
+
+The spacetime comparator has a nonzero polynomial point class and a \(Q\)-exact first metric variation on E33 and round. Its evaluation at the residual scalar is \(c^2\), and the frozen fields supply no canonical numerical pushforward. The marked line is absent from that class. The ordinary closed Bauer–Furuta unit, after smooth-source translation or connected sum, retains its scope. Keep these as distinct controls in any later smooth-type comparison. [Classical calculation](RETURN_FTI_E04.md) · [Closed controls](RETURN_FTI_E02.md)
+
+If a future candidate supplies two marked fillings and a gauge observable that actually uses additional filling data, WIN owns the test that its comparison survives the allowed changes of markings. No acquisition of a new specimen or computation in your branch is required for this return.

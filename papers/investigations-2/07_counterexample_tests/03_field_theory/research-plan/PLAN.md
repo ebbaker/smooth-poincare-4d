@@ -68,3 +68,17 @@ Keep each failed route at its tested scope. Follow the series dispositions
 **refuted**, **reduced** with an independently checked impasse, or
 **external** with a named handoff. Activation stays with the author.
 [Continuation](../continuation-notes/CONTINUATION_20261128.md)
+
+## Activated extension, 28 November 2026
+
+FTI-E07 (bounded Sol/ultra). B01's explicit circle lies inside the unmodified Gerig formula. Compute its normal first jet in the disk frame and the lift of the line-adapted chart. This resolves a marked-identification premise independently of the APS and source packets. Stop at first order. [Request](../research-progress/handoffs/REQUEST_FTI_E07.md).
+
+FTI-E08 (bounded non-author Sol/ultra). E01/E07 give a smooth-germ obstruction on the actual specified input and a separate Fredholm calculation. Reconstruct the two results and their frame dependence before formal handoff. Stop at [this fixed pair](../research-progress/handoffs/REQUEST_FTI_E08.md); E06 retains the finite-gluing and off-shell replay.
+
+FTI-E09 (bounded Sol/ultra). After B02 chooses a finite field theory, specialize the prescribed Reutter test to its two defining algebras. B02 authorizes only the local and fusion pair-of-pants products in the ordinary undecorated theory and their units. [Frozen request](../research-progress/handoffs/REQUEST_FTI_E09.md).
+
+FTI-E10 (bounded Sol/ultra). B04's [same-input decision and frozen request](../research-progress/handoffs/REQUEST_FTI_E10.md) extend the already evaluated finite insertion only to the parent's named minus puncture with its signed probe, conditionally on the marked tube. Test the cohomological implication and the geometric witness cost on that common input.
+
+## Second horizon · Regulated point evaluation, 28 November 2026
+
+[FTI-B05](../brainstorm/notes/B05_REGULATED_POINT.md) selects the finite integration cycle on the original closed capped control. FTI-E11 checks convergence, Ward identity and residual normalization. FTI-E12 checks the smooth geometry, gauge reduction and polynomial doublets. Both are bounded Sol/ultra packets with independent outputs. FTI-E13 is reserved for a separate non-author reconstruction of both returns. The endpoint is a checked evaluation or a scoped failure on the exact prescribed regulator, with the same marked and zero-free inputs and an explicit account of the continuum limit actually tested.
