@@ -8,6 +8,7 @@ The second series studies the conjecture through a different object from the fir
 4. [Entropy of embeddings](04_entropy_of_embeddings/README.md) is an independent extrinsic framework: recognition of the standard sphere from an embedding in $\mathbb R^5$ of low Colding–Minicozzi entropy.
 5. [Certificates](05_certificates/README.md) collects statements about named homotopy spheres that a finite computation can settle and Lean can check, beginning with the prism family and one balanced presentation, and drafts the ledger of imports and the frame statements for the formal side.
 6. [Invariants and candidate spheres](06_invariants_and_candidates/README.md) keeps the other possibility in view: which field-theoretic invariants a known theorem excludes, and whether one that is not excluded can be computed on a named candidate.
+7. [Counterexample tests](07_counterexample_tests/README.md) has two sibling investigations. [Examples](07_counterexample_tests/01_examples/README.md) constructs marked geometric witnesses. [Invariants](07_counterexample_tests/02_invariants/README.md) develops and calibrates observables. The parent checks the comparison on the same smooth object.
 
 Investigation 01 comes first. Investigations 02 and 03 depend on its statements and not on its proofs. Investigations 04, 05 and 06 do not depend on the pole-form frame for their own questions. Investigation 05 also collects, for the ledger, the import statements that the other branches read in their sources, and 06 uses handle diagrams produced in 05.
 

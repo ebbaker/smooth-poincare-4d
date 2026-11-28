@@ -1,0 +1,7 @@
+# SP4-CERT-E04 · request 1
+
+27 November 2026, for Edward B. Baker III. Issued by the selected OpenAI Codex lead (exact lead configuration unavailable here). Assigned GPT-6.2 Sol / ultra. Activated by the author. Input version 6a422ce, plus working files specified in the [continuation](../../continuation-notes/CONTINUATION.md) and [sole register](../REGISTER.md). This is a fixed execution packet.
+
+From first master even_prism_closing.tex, E70, E73, E76, E79, check_05, transcribe d=17 at s=0 only, derive explicit reversible word identities for S3, lower and upper order witnesses and degree-one conjugacy in C3 ⋊ Z. Provide statement package of marked smooth implications, all remaining geometric/import premises separated. For primary verification inspect at most three classification papers Galaz-García–Searle/Fintushel/Pao, <=6 primary retrieval routes each. If not seen, leave the statement a named dependency. No finite enumeration search necessary, optional exact checking at <=6 elements. Outputs notes/E04*.md, numerics/e04* and packet return only. Broken algebra or framing returns to lead.
+
+Use the smooth oriented conventions in the series and master overview. Report the actual model and effort, exact inputs inspected, evidence labels and bounds. Write the return as RETURN_CERT_E04_20261127.md beside this request. No other files, shared index edits, commits or dependent work. Read primary passages before importing published theorems. Stop at the specified result or a precisely bounded missing premise.

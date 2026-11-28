@@ -1,0 +1,623 @@
+diff --git a/references/references.bib b/references/references.bib
+--- a/references/references.bib
++++ b/references/references.bib
+@@ -136,7 +136,9 @@
+  author = {Freedman, Michael H.},
+  title = {The topology of four-dimensional manifolds},
+  journal = {Journal of Differential Geometry}, volume = {17}, number = {3},
+- pages = {357--453}, year = {1982}, doi = {10.4310/jdg/1214437136}
++ pages = {357--453}, year = {1982}, doi = {10.4310/jdg/1214437136},
++  url = {https://www.maths.gla.ac.uk/~mpowell/1982_The%20topology%20of%20four-dimensional%20manifolds.pdf},
++  note = {SP4-CERT inspected Section 1, Theorem 1.6, p.~371, in the original journal scan for the topological four-sphere statement}
+ }
+ @article{FreedmanGompfMorrisonWalker2010,
+  author = {Freedman, Michael H. and Gompf, Robert E. and Morrison, Scott and Walker, Kevin},
+@@ -174,6 +176,7 @@
+  journal = {Annals of Mathematics}, series = {2}, volume = {64}, number = {2},
+  pages = {399--405}, year = {1956}, doi = {10.2307/1969983}
+ }
++% SP4-ENT, 27 November 2026: Theorem M, p. 394, dimension-six check; distinct paper from Smale1961DifferentiableStructures.
+ @article{Smale1961,
+  author = {Smale, Stephen},
+  title = {Generalized {Poincar\'e}'s conjecture in dimensions greater than four},
+@@ -715,7 +718,8 @@
+   author = {Giorgio Talenti}, title = {Best Constant in Sobolev Inequality},
+   journal = {Annali di Matematica Pura ed Applicata},
+   year = {1976}, volume = {110}, pages = {353--372},
+-  doi = {10.1007/BF02418013}
++  doi = {10.1007/BF02418013},
++  note = {SP4-ZERO inspected Section 0, equations (1)--(2), pp. 353--354, at dimension four and exponent two}
+ }
+ 
+ @misc{Hatcher2017VectorBundles,
+@@ -1226,6 +1230,7 @@
+   doi = {10.1007/BF01210797}
+ }
+ 
++% SP4-ENT, 27 November 2026: Theorem B and Corollary 1, pp. 275-276; codimension-zero parametrized disks.
+ @article{Palais1960Extending,
+   author = {Palais, Richard S.},
+   title = {Extending diffeomorphisms},
+@@ -1543,6 +1548,7 @@
+  journal = {Communications on Pure and Applied Mathematics},
+  year = {2002}, volume = {55}, pages = {1461--1506}, doi = {10.1002/cpa.10048}
+ }
++% SP4-ENT, 27 November 2026: pp. 504-505; h-cobordism classes and the low-dimensional table. No four-dimensional diffeomorphism conclusion.
+ @article{KervaireMilnor1963Groups,
+  author = {Kervaire, Michel A. and Milnor, John W.},
+  title = {Groups of homotopy spheres: {I}},
+@@ -1554,6 +1560,7 @@
+  journal = {Transactions of the American Mathematical Society},
+  year = {1959}, volume = {93}, pages = {242--276}, doi = {10.2307/1993453}
+ }
++% SP4-ENT, 27 November 2026: publication metadata only this session. The project comparison computes the two-normal integral directly.
+ @article{ChernLashof1957Curvature,
+  author = {Chern, Shiing-Shen and Lashof, Richard K.},
+  title = {On the total curvature of immersed manifolds},
+@@ -1597,6 +1604,7 @@
+  url = {https://cvgmt.sns.it/document/11018/}
+ }
+ 
++% SP4-ENT, 27 November 2026: internal input: shape conventions, height averages, coverage section; both normal signs in the total integral.
+ @unpublished{Baker2026ImmersionEnergy,
+   author = {Baker, III, Edward B.},
+   title = {Chiral {Weyl} energy and {Morse} heights of immersed homotopy four-spheres},
+@@ -1900,7 +1908,9 @@
+   author = {Gromov, Mikhael and Lawson, Jr., H. Blaine},
+   title = {The classification of simply connected manifolds of positive scalar curvature},
+   journal = {Annals of Mathematics}, volume = {111}, number = {3},
+-  pages = {423--434}, year = {1980}, doi = {10.2307/1971103}
++  pages = {423--434}, year = {1980}, doi = {10.2307/1971103},
++  url = {https://www.ihes.fr/~gromov/wp-content/uploads/2018/08/827.pdf},
++  note = {Journal text inspected for the cylindrical-end construction in the proof of Theorem A}
+ }
+ 
+ @misc{ChodoshMaximoMukherjee2024Complete,
+@@ -1927,6 +1937,7 @@
+   doi = {10.1016/j.aim.2021.107994}
+ }
+ 
++% SP4-ENT, 27 November 2026: Theorem 3, p. 70 and smooth proof paragraph; contractible five-filling.
+ @article{Kervaire1969HomologySpheres,
+   author = {Michel A. Kervaire},
+   title = {Smooth homology spheres and their fundamental groups},
+@@ -2084,6 +2095,7 @@
+   doi = {10.1112/jlms/s1-24.4.247}
+ }
+ 
++% SP4-ENT, 27 November 2026: inherited pointer; no use of a two-convexity assumption on the low-entropy initial image.
+ @article{HuiskenSinestrari2009,
+   author = {Gerhard Huisken and Carlo Sinestrari},
+   title = {Mean curvature flow with surgeries of two-convex hypersurfaces},
+@@ -2091,11 +2103,13 @@
+   year = {2009}, doi = {10.1007/s00222-008-0148-4}
+ }
+ 
++% SP4-ENT, 27 November 2026: arXiv v2 Thm 1.3, Cors 1.5, 1.19, 1.22, Definitions 1.6-1.12 and sec. 6.1. See SP4-ENT E01 on the solid dimension.
+ @misc{ChodoshMantoulidisSchulze2024LowEntropy,
+   author = {Otis Chodosh and Christos Mantoulidis and Felix Schulze},
+   title = {Mean curvature flow with generic low-entropy initial data {II}},
+   year = {2024}, eprint = {2309.03856}, archivePrefix = {arXiv},
+-  note = {Version 2}, url = {https://arxiv.org/abs/2309.03856v2}
++  note = {Version 2, 20 December 2024. Published in Duke Math. J. 174 (2025), no. 13, 2765--2819. SP4-ENT compared arXiv v2 with the Warwick accepted manuscript. Publication metadata verified, publisher full text unavailable},
++  doi = {10.1215/00127094-2024-0080}, url = {https://arxiv.org/abs/2309.03856v2}
+ }
+ 
+ @article{Britton1963Word,
+@@ -2225,28 +2239,34 @@
+   title = {Some presentations of the trivial group},
+   booktitle = {Groups, languages and geometry},
+   series = {Contemporary Mathematics}, volume = {250}, pages = {113--115},
+-  year = {1999}, doi = {10.1090/conm/250/03848}
++  year = {1999}, doi = {10.1090/conm/250/03848},
++  note = {SP4-CERT inspected Theorem 1 on p.~1 of the author manuscript, for the perfect two-generator group criterion}
+ }
+ 
+ @misc{ShehperEtAl2025AC,
+   author = {Shehper, A. and Medina-Mardones, A. and Fagan, L. and Lewandowski, B. and Gruen, A. and Qiu, Y. and Kucharski, P. and Wang, Z. and Gukov, S.},
+   title = {What makes math problems hard for reinforcement learning: a case study},
+   year = {2025}, eprint = {2408.15332}, archivePrefix = {arXiv},
+-  url = {https://arxiv.org/abs/2408.15332v2}
++  url = {https://arxiv.org/abs/2408.15332v2},
++  note = {SP4-CERT inspected arXiv v2, Section 3.3, for the definition of the minus length-14 presentation and its bounded search status}
+ }
+ 
+ @article{GayKirby2007LefschetzType,
+   author = {Gay, David T. and Kirby, Robion},
+   title = {Constructing Lefschetz-type fibrations on four-manifolds},
+   journal = {Geometry and Topology}, volume = {11}, pages = {2075--2115},
+-  year = {2007}, doi = {10.2140/gt.2007.11.2075}
++  year = {2007}, doi = {10.2140/gt.2007.11.2075},
++  eprint = {math/0701084}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/math/0701084v1},
++  note = {SP4-LINE inspected arXiv v1, 3 January 2007, including Theorem 1.1 and its Addendum. SP4-CERT also inspected published Section 4.1, p.~2095, and Lemma 4.7 for the balanced-presentation thickening and double, and Remark 4.9 for the Akbulut--Kirby example}
+ }
+ 
+ @misc{Gabai2024PseudoIsotopies,
+   author = {Gabai, David},
+   title = {3-Spheres in the 4-Sphere and Pseudo-Isotopies of {$S^1\times S^3$}},
+   year = {2024}, eprint = {2212.02004}, archivePrefix = {arXiv},
+-  url = {https://arxiv.org/abs/2212.02004v2}
++  url = {https://arxiv.org/abs/2212.02004v2},
++  note = {SP4-CERT inspected arXiv v2, Remark 13.5(ii) and Problem 13.6, p.~62, for the five-dimensional recognition problem}
+ }
+ 
+ @article{Frances2014ConformalMaps,
+@@ -2617,14 +2637,16 @@
+   author = {Jab{\l}onowski, Micha{\l}},
+   title = {Fibred realizations of the prism quandle {$P_7$} in the standard four-sphere},
+   year = {2026}, eprint = {2609.29839}, archivePrefix = {arXiv},
+-  note = {Version 2, 8 October 2026}, url = {https://arxiv.org/abs/2609.29839v2}
++  note = {Version 2, 8 October 2026. Earlier reader extraction stopped in Section 5. SP4-CERT located rewritten indexed Sections 7--8 and verified conditional group algebra. Original version 2 passages and Figure 1 were inaccessible}, url = {https://arxiv.org/abs/2609.29839v2}
+ }
+ @article{GalazGarciaSearle2014,
+-  author = {Galaz-Garcia, Fernando and Searle, Catherine},
++  author = {Galaz-Garc{\'i}a, Fernando and Searle, Catherine},
+   title = {Nonnegatively curved 5-manifolds with almost maximal symmetry rank},
+   journal = {Geometry \& Topology},
+   volume = {18}, pages = {1397--1435}, year = {2014},
+-  doi = {10.2140/gt.2014.18.1397}
++  doi = {10.2140/gt.2014.18.1397},
++  url = {https://msp.org/gt/2014/18-3/gt-v18-n3-p05-s.pdf},
++  note = {SP4-CERT inspected journal Section 3.2, Theorem 3.2, printed p.~1404, and its attribution to Fintushel and Pao with three-dimensional Poincare}
+ }
+ @misc{ChangGurskyZhang2018GapCP2,
+   author = {Chang, Sun-Yung A. and Gursky, Matthew J. and Zhang, Siyi},
+@@ -2668,47 +2690,64 @@
+ @article{Gromov1985PseudoHolomorphic,
+   author = {Gromov, Mikhael},
+   title = {Pseudo holomorphic curves in symplectic manifolds},
+-  journal = {Inventiones Mathematicae}, volume = {82}, pages = {307--347}, year = {1985}
++  journal = {Inventiones Mathematicae}, volume = {82}, pages = {307--347}, year = {1985},
++  doi = {10.1007/BF01388806},
++  url = {https://www.ihes.fr/~gromov/wp-content/uploads/2018/08/945.pdf},
++  note = {SP4-POLE inspected Section 0.3.C, p.~311, and Section 2.4.A$'_1$--A$_2$, p.~337. The relative equal-area product splitting uses the spherical-period hypothesis}
+ }
+ @book{McDuffSalamon2012JHolomorphic,
+   author = {McDuff, Dusa and Salamon, Dietmar},
+   title = {{$J$}-holomorphic curves and symplectic topology},
+   edition = {Second}, series = {American Mathematical Society Colloquium Publications},
+-  volume = {52}, publisher = {American Mathematical Society}, year = {2012}
++  volume = {52}, publisher = {American Mathematical Society}, year = {2012},
++  note = {Historical citation to Theorem 9.4.2 in the second edition. Earlier inspection was through quotations in other papers. Direct inspection of the exact theorem page is pending. Gromov's original relative product splitting is the SP4-POLE import for A2}
+ }
+ @article{Taubes1999SelfDualHarmonic,
+   author = {Taubes, Clifford Henry},
+   title = {{S}eiberg--{W}itten invariants and pseudo-holomorphic subvarieties for self-dual, harmonic 2-forms},
+-  journal = {Geometry \& Topology}, volume = {3}, pages = {167--210}, year = {1999}
++  journal = {Geometry \& Topology}, volume = {3}, pages = {167--210}, year = {1999},
++  doi = {10.2140/gt.1999.3.167}, eprint = {math/9907199}, archivePrefix = {arXiv},
++  url = {https://msp.org/gt/1999/3-1/gt-v3-n1-p08-p.pdf},
++  note = {Journal text and arXiv v1, 4 July 1999, have the same pagination. SP4-LINE checked Definition 1.1, Theorems 1.2, 2.2 and 2.3, equations (2.4), (2.9), (6.1) and Section 7(f). SP4-ZERO checked published Section 2(c), pp.~172--173, for the normal derivative and splitting}
+ }
+ @article{Gerig2020Taming,
+   author = {Gerig, Chris},
+   title = {Taming the pseudoholomorphic beasts in {$\mathbb{R}\times(S^1\times S^2)$}},
+-  journal = {Geometry \& Topology}, volume = {24}, pages = {1791--1839}, year = {2020},
+-  eprint = {1711.02069}, archivePrefix = {arXiv}
+-}
+-@misc{Gerig2018SWGr,
++  journal = {Geometry \& Topology}, volume = {24}, number = {4}, pages = {1791--1839}, year = {2020},
++  eprint = {1711.02069}, archivePrefix = {arXiv}, doi = {10.2140/gt.2020.24.1791},
++  url = {https://arxiv.org/abs/1711.02069v3},
++  note = {Journal text published 10 November 2020 and arXiv version 3, posted 9 November 2020. See arXiv:1809.03405v2, p.~5 n.~4, for the correction to the proof of Proposition 3.23}
++}
++@article{Gerig2018SWGr,
+   author = {Gerig, Chris},
+   title = {{S}eiberg--{W}itten and {G}romov invariants for self-dual harmonic 2-forms},
+-  year = {2018}, eprint = {1809.03405}, archivePrefix = {arXiv},
+-  note = {Version 2, 29 July 2021}, url = {https://arxiv.org/abs/1809.03405v2}
+-}
+-@misc{Perutz2006ZeroSets,
++  journal = {Geometry \& Topology}, volume = {26}, number = {8},
++  pages = {3307--3365}, year = {2022}, doi = {10.2140/gt.2022.26.3307},
++  eprint = {1809.03405}, archivePrefix = {arXiv},
++  note = {First posted 10 September 2018. The branch inspected arXiv version 2, posted 29 July 2021, with cover date 2 August 2021. The journal record supplies publication metadata}, url = {https://arxiv.org/abs/1809.03405v2}
++}
++@article{Perutz2006ZeroSets,
+   author = {Perutz, Tim},
+   title = {Zero-sets of near-symplectic forms},
+-  year = {2006}, eprint = {math/0601320}, archivePrefix = {arXiv},
+-  note = {Version 2, 15 January 2007. Published in Journal of Symplectic Geometry 4 (2006)},
++  journal = {Journal of Symplectic Geometry}, volume = {4}, number = {3},
++  pages = {237--257}, year = {2006}, doi = {10.4310/JSG.2006.v4.n3.a1},
++  eprint = {math/0601320}, archivePrefix = {arXiv},
++  note = {Author bibliography dates the volume 2006. The journal PDF masthead says 2007. SP4-LINE checked journal text and arXiv v2, posted 15 January 2007, and compared arXiv v1. SP4-ZERO checked journal Definitions 1.1 and 1.3, Theorems 1.4 and 1.8, and Sections 2, 4 and 5. SP4-POLE checked v2 Definition 1.1 and Lemma 2.1(a)--(c)},
+   url = {https://arxiv.org/abs/math/0601320v2}
+ }
+ @article{DonaldsonSullivan1989,
+   author = {Donaldson, S. K. and Sullivan, D. P.},
+   title = {Quasiconformal 4-manifolds},
+-  journal = {Acta Mathematica}, volume = {163}, pages = {181--252}, year = {1989}
++  journal = {Acta Mathematica}, volume = {163}, pages = {181--252}, year = {1989},
++  doi = {10.1007/BF02392736},
++  note = {SP4-POLE checked Section 2(i)--(ii), pp.~187--189, and equations (2.7), (2.9)--(2.14), for the smooth compact homology-sphere graph}
+ }
+ @article{IwaniecMartin1993,
+   author = {Iwaniec, Tadeusz and Martin, Gaven},
+   title = {Quasiregular mappings in even dimensions},
+-  journal = {Acta Mathematica}, volume = {170}, pages = {29--81}, year = {1993}
++  journal = {Acta Mathematica}, volume = {170}, pages = {29--81}, year = {1993},
++  doi = {10.1007/BF02392454},
++  note = {SP4-POLE compared Section 8, pp.~55--61, especially Theorems 8.1(vi), 8.10 and 8.13. This was an attribution and sign comparison}
+ }
+ @article{Reutter2023Semisimple,
+   author = {Reutter, David},
+@@ -2726,20 +2765,26 @@
+ @article{Hayano2011GenusOne,
+   author = {Hayano, Kenta},
+   title = {On genus-1 simplified broken {L}efschetz fibrations},
+-  journal = {Algebraic \& Geometric Topology}, volume = {11}, pages = {1267--1322}, year = {2011},
+-  eprint = {1012.4049}, archivePrefix = {arXiv}
+-}
+-@misc{BaykurSaeki2017Simplifying,
++  journal = {Algebraic \& Geometric Topology}, volume = {11}, number = {3}, pages = {1267--1322}, year = {2011},
++  doi = {10.2140/agt.2011.11.1267}, eprint = {1012.4049}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/1012.4049v4},
++  note = {ArXiv version 4, 23 February 2011. Main Theorem B treats at most five Lefschetz points. Corollary 4.11 gives the positive-definite obstruction}
++}
++@article{BaykurSaeki2017Simplifying,
+   author = {Baykur, R. {\.I}nan{\c{c}} and Saeki, Osamu},
+   title = {Simplifying indefinite fibrations on 4-manifolds},
+-  year = {2017}, eprint = {1705.11169}, archivePrefix = {arXiv},
+-  note = {Version 2, 1 June 2017}, url = {https://arxiv.org/abs/1705.11169v2}
+-}
++  journal = {Transactions of the American Mathematical Society}, volume = {376},
++  number = {5}, pages = {3011--3062}, year = {2023}, doi = {10.1090/tran/8325},
++  eprint = {1705.11169}, archivePrefix = {arXiv},
++  note = {First posted 31 May 2017. SP4-LINE checked arXiv v2, 1 June 2017, for theorem statements and numbering. The lead also checked Theorem 6.5 and the authors' comment after its proof in the later manuscript}, url = {https://arxiv.org/abs/1705.11169v2}
++}
++% SP4-ENT, 27 November 2026: published Lemmas 7.7, 7.10 and proofs; fixed-image centre/scale bounds and the compact round shrinker maximum.
+ @article{ColdingMinicozzi2012Generic,
+   author = {Colding, Tobias H. and Minicozzi, II, William P.},
+   title = {Generic mean curvature flow {I}: generic singularities},
+   journal = {Annals of Mathematics}, volume = {175}, pages = {755--833}, year = {2012}
+ }
++% SP4-ENT, 27 November 2026: inherited pointer in ambient dimension four; different paper from the sharp entropy lower bound.
+ @misc{BernsteinWang2020Isotopy,
+   author = {Bernstein, Jacob and Wang, Lu},
+   title = {Closed hypersurfaces of low entropy in {$\mathbb{R}^4$} are isotopically trivial},
+@@ -2755,3 +2800,343 @@
+     Proof sketches of the two working propositions on pole forms and the checked explicit family;
+     not independently read}
+ }
++
++% Investigations 01--04 and CERT source receipts, 27 November 2026.
++% Canonical-key reconciliation and checked versions are recorded in CERT-E08.
++
++@article{AurouxDonaldsonKatzarkov2005SingularPencils,
++  author = {Auroux, Denis and Donaldson, Simon K. and Katzarkov, Ludmil},
++  title = {Singular {L}efschetz pencils},
++  journal = {Geometry \& Topology}, volume = {9}, pages = {1043--1114}, year = {2005},
++  doi = {10.2140/gt.2005.9.1043}, eprint = {math/0410332}, archivePrefix = {arXiv},
++  url = {https://msp.org/gt/2005/9-2/gt-v9-n2-p09-p.pdf},
++  note = {Journal text, 1 June 2005. SP4-POLE checked Definition 1, Proposition 1 and Section 7.2. SP4-LINE checked Definition 2, Proposition 1, Theorems 1--3 and Sections 7.1--7.2}
++}
++
++@article{Gerig2021NoHomotopySphereInvariants,
++  author = {Gerig, Chris},
++  title = {No homotopy 4-sphere invariants using {ECH} = {SWF}},
++  journal = {Algebraic \& Geometric Topology}, volume = {21}, number = {5},
++  pages = {2543--2569}, year = {2021}, doi = {10.2140/agt.2021.21.2543},
++  eprint = {1905.10938}, archivePrefix = {arXiv}, url = {https://arxiv.org/abs/1905.10938v3},
++  note = {ArXiv version 3, 9 November 2020. Main Result 1, Question 1, Example 1.7 and Section 3 concern the punctured-sphere comparison}
++}
++
++@article{LiLiu1995GeneralWallCrossing,
++  author = {Li, Tian-Jun and Liu, Ai-Ko},
++  title = {General wall crossing formula},
++  journal = {Mathematical Research Letters}, volume = {2}, number = {6},
++  pages = {797--810}, year = {1995}, doi = {10.4310/MRL.1995.v2.n6.a11},
++  url = {https://doi.org/10.4310/MRL.1995.v2.n6.a11},
++  note = {Journal text, Proposition 1.1 and proof, for the wall-crossing evaluation}
++}
++
++@article{KronheimerMrowka1994GenusProjectivePlane,
++  author = {Kronheimer, Peter B. and Mrowka, Tomasz S.},
++  title = {The genus of embedded surfaces in the projective plane},
++  journal = {Mathematical Research Letters}, volume = {1}, number = {6},
++  pages = {797--808}, year = {1994}, doi = {10.4310/MRL.1994.v1.n6.a14},
++  url = {https://www.intlpress.com/site/pub/files/_fulltext/journals/mrl/1994/0001/0006/MRL-1994-0001-0006-a014.pdf},
++  note = {Journal text, Sections 2--5, for gauge-theory estimates, local wall crossing and the scope of the product-tube argument}
++}
++
++@article{KotschickMorganTaubes1995NonSymplectic,
++  author = {Kotschick, Dieter and Morgan, John W. and Taubes, Clifford Henry},
++  title = {Four-manifolds without symplectic structures but with nontrivial {S}eiberg--{W}itten invariants},
++  journal = {Mathematical Research Letters}, volume = {2}, number = {2},
++  pages = {119--124}, year = {1995}, doi = {10.4310/MRL.1995.v2.n2.a1},
++  url = {https://intlpress.com/site/pub/files/_fulltext/journals/mrl/1995/0002/0002/MRL-1995-0002-0002-a001.pdf},
++  note = {Journal text, Proposition 2 and Remark 1. The checked connected-sum argument is for ordinary invariants}
++}
++
++@article{Taubes2006VanishingCircles,
++  author = {Taubes, Clifford Henry},
++  title = {A proof of a theorem of {L}uttinger and {S}impson about the number of vanishing circles of a near-symplectic form on a 4-dimensional manifold},
++  journal = {Mathematical Research Letters}, volume = {13}, number = {4},
++  pages = {557--570}, year = {2006}, doi = {10.4310/MRL.2006.v13.n4.a6},
++  url = {https://doi.org/10.4310/MRL.2006.v13.n4.a6},
++  note = {Journal text. SP4-LINE checked Proposition 2.1 and proof, pp.~558--560, and the opening of Section 3, pp.~561--562. SP4-POLE checked Proposition 2.1 including Part 5. SP4-ZERO checked Proposition 2.1 and the relative endpoint construction, equations (2.2)--(2.16)}
++}
++
++@article{Baykur2008ExistenceBrokenFibrations,
++  author = {Baykur, R. {\.I}nan{\c{c}}},
++  title = {Existence of broken {L}efschetz fibrations},
++  journal = {International Mathematics Research Notices}, volume = {2008}, year = {2008},
++  eid = {rnn101}, doi = {10.1093/imrn/rnn101},
++  eprint = {0801.3139}, archivePrefix = {arXiv}, url = {https://arxiv.org/abs/0801.3139v2},
++  note = {ArXiv version 2, 12 February 2008. Theorem 1.2 and Section 3 specify the positive-square marked surface}
++}
++
++@article{Lekili2009WrinkledFibrations,
++  author = {Lekili, Yank{\i}},
++  title = {Wrinkled fibrations on near-symplectic manifolds},
++  journal = {Geometry \& Topology}, volume = {13}, number = {1},
++  pages = {277--318}, year = {2009}, doi = {10.2140/gt.2009.13.277},
++  eprint = {0712.2202}, archivePrefix = {arXiv},
++  url = {https://msp.org/gt/2009/13-1/gt-v13-n1-p08-s.pdf},
++  note = {The branch checked the journal text for the moves and Theorems 1.2--1.4, 5.1 and 6.1--6.2}
++}
++
++@article{Gay2016TrisectionsOfPencils,
++  author = {Gay, David T.},
++  title = {Trisections of {L}efschetz pencils},
++  journal = {Algebraic \& Geometric Topology}, volume = {16}, number = {6},
++  pages = {3523--3531}, year = {2016}, doi = {10.2140/agt.2016.16.3523},
++  eprint = {1510.08791}, archivePrefix = {arXiv},
++  url = {https://msp.org/agt/2016/16-6/agt-v16-n6-p12-s.pdf},
++  note = {Journal text, Theorem 3 and Remarks 4--7, for the ordinary-pencil conversion and the projective-line example}
++}
++
++@article{BaykurKamada2015SmallFiberGenera,
++  author = {Baykur, R. {\.I}nan{\c{c}} and Kamada, Seiichi},
++  title = {Classification of broken {L}efschetz fibrations with small fiber genera},
++  journal = {Journal of the Mathematical Society of Japan}, volume = {67}, number = {3},
++  pages = {877--901}, year = {2015}, doi = {10.2969/jmsj/06730877},
++  eprint = {1010.5814}, archivePrefix = {arXiv}, url = {https://arxiv.org/abs/1010.5814v2},
++  note = {ArXiv version 2, 11 December 2010. Theorem 13 and Corollary 14 classify genus-one total spaces with the stated allowance for blowups}
++}
++
++@phdthesis{Hayano2013CompleteGenusOne,
++  author = {Hayano, Kenta},
++  title = {Complete classification of genus-1 simplified broken {L}efschetz fibrations},
++  school = {Osaka University}, year = {2013},
++  url = {https://hdl.handle.net/11094/51641},
++  note = {Thesis awarded 25 March 2013. The branch checked Theorem 3.0.1 and Section 3.5 of the thesis. The journal counterpart is in Hiroshima Mathematical Journal 44(2) (2014), 223--234, DOI 10.32917/hmj/1408972909}
++}
++
++@article{Baykur2012BrokenGenera,
++  author = {Baykur, R. {\.I}nan{\c{c}}},
++  title = {Broken {L}efschetz fibrations and smooth structures on 4-manifolds},
++  journal = {Geometry \& Topology Monographs}, volume = {18},
++  pages = {9--34}, year = {2012}, doi = {10.2140/gtm.2012.18.9},
++  url = {https://msp.org/gtm/2012/18/gtm-2012-18-002p.pdf},
++  note = {Journal text, Section 2, Lemma 7 and Theorem 18, for the Euler characteristic and the projective-plane calibration}
++}
++
++@article{GayKirby2016Trisecting,
++  author = {Gay, David T. and Kirby, Robion},
++  title = {Trisecting 4-manifolds},
++  journal = {Geometry \& Topology}, volume = {20}, number = {6},
++  pages = {3097--3132}, year = {2016}, doi = {10.2140/gt.2016.20.3097},
++  eprint = {1205.1565}, archivePrefix = {arXiv}, url = {https://arxiv.org/abs/1205.1565v3},
++  note = {ArXiv version 3, 3 December 2013, Section 2 and Figure 4, for the standard projective-plane trisection}
++}
++
++@article{MeierZupan2017GenusTwoTrisections,
++  author = {Meier, Jeffrey and Zupan, Alexander},
++  title = {Genus-two trisections are standard},
++  journal = {Geometry \& Topology}, volume = {21}, number = {3},
++  pages = {1583--1630}, year = {2017}, doi = {10.2140/gt.2017.21.1583},
++  eprint = {1410.8133}, archivePrefix = {arXiv},
++  url = {https://msp.org/gt/2017/21-3/gt-v21-n3-p04-p.pdf},
++  note = {Journal text, Figure 1 and Theorem 1.3, for low-genus unmarked trisections}
++}
++
++@article{Lerman1995SymplecticCuts,
++  author = {Lerman, Eugene},
++  title = {Symplectic cuts},
++  journal = {Mathematical Research Letters}, volume = {2}, number = {3},
++  pages = {247--258}, year = {1995}, doi = {10.4310/MRL.1995.v2.n3.a2},
++  url = {https://www.intlpress.com/site/pub/files/_fulltext/journals/mrl/1995/0002/0003/MRL-1995-0002-0003-a002.pdf},
++  note = {Journal text, Section 1.1 and Remarks 1.7--1.8, for the collar reduction and choice of side}
++}
++
++@article{Taubes1998LocalStructure,
++  author = {Taubes, Clifford Henry},
++  title = {The structure of pseudo-holomorphic subvarieties for a degenerate almost complex structure and symplectic form on {$S^1\times B^3$}},
++  journal = {Geometry \& Topology}, volume = {2}, pages = {221--332}, year = {1998},
++  doi = {10.2140/gt.1998.2.221}, eprint = {math/9901142}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/math/9901142v1},
++  note = {The volume is dated 1998. Journal text and arXiv version 1 were released 6 January 1999. Section 1.c and Theorem 1.8 give the local model and the boundary regularity scope}
++}
++
++@article{Taubes1999FredholmNearSymplectic,
++  author = {Taubes, Clifford Henry},
++  title = {Moduli spaces and {F}redholm theory for pseudoholomorphic subvarieties associated to self-dual, harmonic 2-forms},
++  journal = {Asian Journal of Mathematics}, volume = {3}, number = {1},
++  pages = {275--324}, year = {1999},
++  url = {https://intlpress.com/site/pub/files/_fulltext/journals/ajm/1999/0003/0001/AJM-1999-0003-0001-a011.pdf},
++  note = {Journal text, March 1999. Section 1 and the proof of Proposition 2.2 in Section 3(c) give the local setup and cutoff antecedent for the core period}
++}
++
++@article{Chen2006EllipticSCobordisms,
++  author = {Chen, Weimin},
++  title = {Smooth {$s$}-cobordisms of elliptic 3-manifolds},
++  journal = {Journal of Differential Geometry}, volume = {73}, number = {3},
++  pages = {413--490}, year = {2006}, doi = {10.4310/jdg/1146169935},
++  eprint = {math/0403396}, archivePrefix = {arXiv}, url = {https://arxiv.org/abs/math/0403396v4},
++  note = {Historical pointer to Problem 1.3, p.~4 of arXiv version 4, 28 March 2006. It asks for an equivariant modification away from the specified sphere and point}
++}
++
++@article{Honda2004Local,
++  author = {Honda, Ko},
++  title = {Local properties of self-dual harmonic 2-forms on a 4-manifold},
++  journal = {Journal f{\"u}r die reine und angewandte Mathematik},
++  year = {2004},
++  volume = {577},
++  pages = {105--116},
++  doi = {10.1515/crll.2004.2004.577.105},
++  url = {https://www.math.ucla.edu/~honda/moser.pdf},
++  note = {SP4-ZERO inspected the 13 January 2004 author revision, equation (3), Lemma 4, Proposition 5 and Theorems 6--7}
++}
++
++@article{LeBrun1997Yamabe,
++  author = {LeBrun, Claude},
++  title = {Yamabe Constants and the Perturbed {Seiberg--Witten} Equations},
++  journal = {Communications in Analysis and Geometry},
++  year = {1997},
++  volume = {5},
++  number = {3},
++  pages = {535--553},
++  doi = {10.4310/CAG.1997.v5.n3.a6},
++  eprint = {dg-ga/9605009},
++  archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/dg-ga/9605009},
++  note = {SP4-ZERO inspected published Section 3, Proposition 1 and Corollary 2}
++}
++
++@article{LockhartMcOwen1985Elliptic,
++  author  = {Lockhart, Robert B. and McOwen, Robert C.},
++  title   = {Elliptic differential operators on noncompact manifolds},
++  journal = {Annali della Scuola Normale Superiore di Pisa, Classe di Scienze},
++  series  = {4},
++  volume  = {12}, number = {3}, pages = {409--447}, year = {1985},
++  url     = {https://www.numdam.org/item/ASNSP_1985_4_12_3_409_0/},
++  note    = {SP4-POLE inspected Theorem 6.2 and Lemma 7.1 on 27 November 2026}
++}
++
++@phdthesis{Perutz2005SurfaceFibrations,
++  author = {Perutz, Timothy}, title = {Surface-fibrations, four-manifolds, and symplectic {Floer} homology},
++  school = {Imperial College, University of London}, year = {2005},
++  url = {https://web.ma.utexas.edu/users/perutz/PDF_files/PerutzThesis.pdf},
++  note = {SP4-POLE inspected Definition 1.1.1, Lemma 1.1.3 and Proposition 1.1.4}
++}
++
++@incollection{LalondeMcDuff1996JCurves,
++  author = {Lalonde, Fran{\c c}ois and McDuff, Dusa},
++  title = {{$J$}-curves and the classification of rational and ruled symplectic 4-manifolds},
++  booktitle = {Contact and Symplectic Geometry}, publisher = {Cambridge University Press},
++  year = {1996}, pages = {3--42},
++  note = {Section 5.1, Theorem 5.1 inspected for comparison only},
++  url = {https://paperzz.com/doc/8143461/j-curves-and-the-classification-of-rational-and-ruled}
++}
++
++@article{GabaiNaylorSchwartz2025DoublesGluckTwists,
++  author = {Gabai, David and Naylor, Patrick and Schwartz, Hannah},
++  title = {Doubles of {Gluck} twists: A five dimensional approach},
++  journal = {Advances in Mathematics}, volume = {480}, pages = {110455}, year = {2025},
++  doi = {10.1016/j.aim.2025.110455}, eprint = {2307.06388}, archivePrefix = {arXiv},
++  url = {https://web.math.princeton.edu/facultypapers/Gabai/Doubles.Gluck.pdf},
++  note = {SP4-CERT lead checked Definition 3.3 and Lemma 3.4 in the author-hosted PDF for the recognition of a balanced five-dimensional handlebody from an {Andrews--Curtis}-trivial presentation. Journal metadata verified separately}
++}
++
++@article{DanielsHolgate2022Surgery,
++  author = {Daniels-Holgate, J. M.},
++  title = {Approximation of mean curvature flow with generic singularities by smooth flows with surgery},
++  journal = {Advances in Mathematics}, year = {2022}, volume = {410}, pages = {108715},
++  doi = {10.1016/j.aim.2022.108715}, eprint = {2104.11647}, archivePrefix = {arXiv},
++  note = {SP4-ENT inspected the published text at Warwick, Definitions 1.1 and 3.17, Theorems 1.2, 5.5 and 5.9, Lemma 6.2 and Theorem 6.4. ArXiv v3 revised 14 October 2022},
++  url = {https://arxiv.org/abs/2104.11647v3}
++}
++
++@article{HaslhoferKleiner2017Surgery,
++  author = {Haslhofer, Robert and Kleiner, Bruce}, title = {Mean curvature flow with surgery},
++  journal = {Duke Mathematical Journal}, year = {2017}, volume = {166}, number = {9}, pages = {1591--1626},
++  eprint = {1404.2332}, archivePrefix = {arXiv},
++  note = {Corollaries 1.25 and 1.26 inspected in the author manuscript for solid domain dimensions},
++  doi = {10.1215/00127094-0000008X},
++  url = {https://www.math.toronto.edu/roberth/papers/HaslhoferKleiner_MCFsurgery.pdf}
++}
++
++@article{BernsteinWang2016SharpEntropy,
++  author = {Bernstein, Jacob and Wang, Lu},
++  title = {A sharp lower bound for the entropy of closed hypersurfaces up to dimension six},
++  journal = {Inventiones Mathematicae}, year = {2016}, volume = {206}, pages = {601--627},
++  doi = {10.1007/s00222-016-0659-3}, eprint = {1406.2966}, archivePrefix = {arXiv},
++  note = {Version 2, Theorem 1.1 inspected for closed surfaces and four-dimensional hypersurfaces},
++  url = {https://arxiv.org/abs/1406.2966v2}
++}
++
++@article{Smale1961DifferentiableStructures,
++  author = {Smale, Stephen}, title = {Differentiable and combinatorial structures on manifolds},
++  journal = {Annals of Mathematics}, series = {2}, year = {1961}, volume = {74}, number = {3},
++  pages = {498--502}, doi = {10.2307/1970294},
++  note = {Theorem (1.1) at dimension six and Corollary (1.3) at ambient dimension five, p. 498}
++}
++
++@article{Smale1962StructureOfManifolds,
++  author = {Smale, Stephen}, title = {On the structure of manifolds},
++  journal = {American Journal of Mathematics}, year = {1962}, volume = {84}, number = {3},
++  pages = {387--399}, doi = {10.2307/2372978},
++  note = {Theorem 1.1, p. 387, boundary and cobordism dimension check}
++}
++
++@incollection{Kervaire1965HigherDimensionalKnots,
++  author = {Kervaire, Michel A.}, title = {On higher dimensional knots},
++  booktitle = {Differential and Combinatorial Topology: A Symposium in Honor of Marston Morse},
++  editor = {Cairns, Stewart S.}, publisher = {Princeton University Press}, year = {1965},
++  pages = {105--120}, doi = {10.1515/9781400874842-008},
++  note = {Proof of Theorem I, p. 112, dimension-four double argument}
++}
++
++@article{GangWang2025CylindricalProfile,
++  author = {Gang, Zhou and Wang, Shengwen},
++  title = {Precise asymptotics near a generic {$\mathbb S^1\times\mathbb R^3$} singularity of mean curvature flow},
++  journal = {Nonlinear Analysis}, year = {2025}, volume = {251}, pages = {113679},
++  doi = {10.1016/j.na.2024.113679}, eprint = {1904.04300}, archivePrefix = {arXiv},
++  note = {Version 2, Theorem 1.2 and (1.13), descriptive reading}
++}
++
++@misc{SunWangXue2025Nondegenerate,
++  author = {Sun, Ao and Wang, Zhihan and Xue, Jinxin}, title = {Passing through nondegenerate singularities in mean curvature flows},
++  year = {2025}, eprint = {2501.16678}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/2501.16678v1}, note = {Version 1. Theorem 1.1, Definition 2.6 and the stated corollaries on passing through a singularity}
++}
++
++@misc{BamlerLai2026MeanConvexNeighborhood,
++  author = {Bamler, Richard H. and Lai, Yi}, title = {Classification of ancient cylindrical mean curvature flows and the Mean Convex Neighborhood Conjecture},
++  year = {2026}, eprint = {2512.24524}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/2512.24524v2}, note = {Version 2. Sections 1.2--1.3, especially Theorems 1.11--1.12 and 1.15; local neighborhoods}
++}
++
++@misc{Szekelyhidi2026MeanConvexSurgery,
++  author = {Sz{\'e}kelyhidi, G{\'a}bor}, title = {Mean convex flows with surgery},
++  year = {2026}, eprint = {2606.00964}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/2606.00964v1}, note = {Version 1. Theorems 2 and 44, Definition 43, Proposition 45 and Conjecture 1}
++}
++
++@misc{SunXue2026Stability,
++  author = {Sun, Ao and Xue, Jinxin}, title = {Mean curvature flows with cylindrical singularities {II}: stability and genericity},
++  year = {2026}, eprint = {2609.19390}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/2609.19390v1}, note = {Version 1. Definition 1.2 and Theorems 1.3, 1.5--1.6, 1.8 and 1.11}
++}
++
++@misc{SunWangXue2025Regularity,
++  author = {Sun, Ao and Wang, Zhihan and Xue, Jinxin}, title = {Regularity of cylindrical singular sets of mean curvature flow},
++  year = {2025}, eprint = {2509.01707}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/2509.01707v1}, note = {Version 1. Theorems 1.1 and 1.4, Section 1.2.3}
++}
++
++@misc{ChenLeeSunZhao2026Prescribed,
++  author = {Chen, Jingwen and Lee, Tang-Kai and Sun, Ao and Zhao, Xinrui}, title = {Closed mean curvature flows with prescribed tangent flows},
++  year = {2026}, eprint = {2607.23879}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/2607.23879v1}, note = {Version 1. Theorem 1.2; realization in constructed data}
++}
++
++@misc{Szekelyhidi2026NondegenerateNecks,
++  author = {Sz{\'e}kelyhidi, G{\'a}bor}, title = {Nondegenerate neck pinches along the mean curvature flow},
++  year = {2026}, eprint = {2603.11022}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/2603.11022v1}, note = {Version 1. Theorem 1; first singular time in ambient dimension three}
++}
++
++@misc{ChoiHaslhofer2025Ancient,
++  author = {Choi, Kyeongsu and Haslhofer, Robert}, title = {Classification of ancient noncollapsed flows in {$\mathbb R^4$}},
++  year = {2025}, eprint = {2412.10581}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/2412.10581v2}, note = {Version 2. Abstract only, for dimension}
++}
++
++@misc{FaganMcCammond2026FakeSurfaces,
++  author = {Fagan, Lucas and McCammond, Jon}, title = {Fake surfaces for some potential {Andrews--Curtis} counterexamples},
++  year = {2026}, eprint = {2611.31420}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/2611.31420v1}, note = {Version 1. Abstract only; Akbulut--Kirby family, no claim imported for the minus presentation}
++}

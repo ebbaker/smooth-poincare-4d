@@ -1,0 +1,21 @@
+# Order-seven primary reading and signed inputs
+
+27 November 2026 for Edward B. Baker III. SP4-CERT lead, OpenAI Codex, exact serving variant and effort unavailable. Read the author’s versioned arXiv HTML, expressly marked 2609.29839v2, 8 October 2026. The earlier E01 packet records a different access channel and remains a historical receipt. This reading clears that source dependency. [Author’s v2](https://arxiv.org/html/2609.29839v2)
+
+**Import, preprint.** Sections 7.1–7.5 identify the orbit model of the indicated order-six suspension, up to orientation. Theorem 7.4(i), Proposition 7.8 and Theorem 7.9 select the mirror of the Whitehead link by the double cover branched along the old cone knot. At fixed coefficient +3 on J the selected cover has first-homology order 21, the opposite mirror gives 3. In the selected orbifold the partner W′ has cone angle π. Theorem 7.10 and Corollary 7.11 give the degree-one unit section on the clasp belt, a band sum of the meridians, and identify the two original surgery outputs as an unordered pair. [Mirror and marking](https://arxiv.org/html/2609.29839v2#S7.SS3) · [Section and framings](https://arxiv.org/html/2609.29839v2#S7.SS4)
+
+**Primary figure and slope receipt.** Figure 1 in the original HTML is the quandle/group dictionary. The marked belt is **Figure 11**, followed by the slopes in Figure 12 and the two resulting singular knots in Figure 13. All four figures were inspected visually as well as against their captions. In Fig. 11 the belt surrounds the two strands of the right bigon between the positive crossings c₀ and c₁. Its upper arc is behind both, its lower arc in front of both. With the indicated orientations, the linking numbers of (J,belt), (W′,belt), and (J,W′) are −1,+1,0. A full twist of sign t changes the last linking number by −t; cancellation of the +1 bigon contribution takes t=+1 and s=−1. The coefficient of J becomes +4. The solid torus exterior has old meridian the fourth power of the positive J meridian. At slope zero the band move removes two kinks and gives the alternating trefoil. [Fig. 11](https://arxiv.org/html/2609.29839v2#S8.F11) · [Fig. 12](https://arxiv.org/html/2609.29839v2#S8.F12) · [Fig. 13](https://arxiv.org/html/2609.29839v2#S8.F13)
+
+**Actual algebra input.** In Remark 8.12 let a,b,c be the based positive meridians of J,W′ and the belt, respectively. They are local to this preprint and a is *not* the native longitude symbol of CERT’s d=11,17 tables. The following transcript uses capitals for inverses of the corresponding single letter; words on the right refer to the same defined generators throughout.
+
+| Intermediate word or relation | Input to the replay |
+| --- | --- |
+| Four arc words | u = Bab, d = Cac, w = CAbac, v = uwU |
+| Three equalities | d = vuV, b = wvW, c = BacAb |
+| Preferred longitudes | λ_J = bVC, λ_A = Ab |
+| Attached slopes | a³ λ_J=1 and cˢ λ_A=1 |
+| Old meridian relation | b²=1 |
+
+Here w is the five-letter word (c⁻¹, a⁻¹, b, a, c). For s=−1 the oriented old meridian equals a⁴ in the infinite cyclic exterior before imposing cone order two. For s=0 it is a meridian of the trefoil. These signs refine the earlier E01 inputs. [Remark 8.12 and both peripheral presentations](https://arxiv.org/html/2609.29839v2#S8.SS3)
+
+**Import, preprint.** For a closed oriented smooth four-manifold with effective locally free circle action, a loop in the free base, a section of its orbit torus and an integer longitude, Definition 8.2, Lemma 8.3 and Proposition 8.4 specify the two framings, compression, sphere surgery, regular replacement and framed reverse core. In §8.2 the intermediate has an embedded circle on which a framed surgery gives a homotopy four-sphere. Proposition 8.7 applies when the orbit orbifold group is finite cyclic. Proposition 8.8 applies when that group is dihedral of order 2p for odd p and an old orbit of stabilizer two survives. Theorem 8.10, Remarks 8.11–8.12 and §8.4 then yield Theorem 8.1 for the paper’s two order-seven closings. This inspection imports that preprint result at its stated scope. The two local reductions at eleven and seventeen have their own marked geometric proofs. [Relative surgery](https://arxiv.org/html/2609.29839v2#S8.SS1) · [Recognition hypotheses](https://arxiv.org/html/2609.29839v2#S8.SS2) · [Proof of Theorem 8.1](https://arxiv.org/html/2609.29839v2#S8.SS4)

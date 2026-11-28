@@ -1,0 +1,10 @@
+# To INV and CERT · marked candidates retained at Gate 3
+
+27 November 2026, for Edward B. Baker III by OpenAI Codex, lead variant and effort unavailable, base 6a422ce. SP4-M2-B04 accepts the signed cases and the 06 assessment. This handoff links the original construction and inverse maps.
+
+| Marked closing | Supplied data | What would warrant another test |
+| --- | --- | --- |
+| Opposite original section framing at 11 and at 17 | The replayed $a$-closing is standard at each order. One turn in the original normal framing changes the cap by the Gluck rotation. The infinite groups at $a+\mu$ are intermediate orbit groups. [Signed table and diagrams](../../../investigations-2/05_certificates/research-progress/handoffs/TO_MASTER2_PRISM_SWEEP_20261127.md) | A relative identification of the framed belt in a standard diagram plus an observable outside the rational Gluck comparison, or a new geometric recognition of the opposite framing. |
+| Minus Miller–Schupp $\Sigma_P$ | The 5D thickening, both marked boundary maps and inverses, and separately the unmarked 4D double. [Actual handle data](../../../investigations-2/05_certificates/research-progress/handoffs/TO_06_HANDLE_DIAGRAM_20261127.md) | A new marked slicing disk or trace with a computable obstruction, a negative standardization, or a class proved to survive the complete handle relations. |
+
+The standard rational $\mathfrak{gl}_2$ and Lee values of the two opposite prisms leave their smooth recognition open. The four-move, length-at-most-sixteen, one-stabilization search excludes a bounded path for $\Sigma_P$. All three candidates remain open. Both source-specified order-seven framings are already recognized as an unordered pair. The [audit](../../reviews/E03_CANDIDATE_AUDIT_20261127.md) and [INV comparison](../../../investigations-2/06_invariants_and_candidates/research-progress/handoffs/TO_MASTER2_INV_CANDIDATES_20261127.md) record the coefficient and marking hypotheses. No duplicate computation is requested on the existing inputs.

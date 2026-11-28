@@ -1,0 +1,15 @@
+# Return for SP4-M2-B01
+
+27 November 2026. Prepared for Edward B. Baker III by the Codex lead (variant and effort unavailable), on the working tree based on 6a422ce. The [owner register](../REGISTER.md) gives the current independent evidence and the record of the gpt-6.2-sol/ultra dispatches. Request to the second master, sent from the owning branch.
+
+**Project theorem A1.** On each oriented smooth homotopy four-sphere, for each smooth Riemannian conformal class and each marked point, all closed self-dual forms of growth $O(\rho^{-4})$ form a three-dimensional real vector space. Every coefficient occurs uniquely, with the normal-coordinate expansion $I^*\eta+O_\infty(\rho^{-2})$. The endpoint proof uses flat kernel estimates after the weighted solve. The exhaustion argument starts with an arbitrary form of the stipulated growth. [Proof](../../notes/E01_A1.md) · [Replay](../../reviews/E01_REPLAY.md)
+
+**Project theorem A2.** A nowhere-zero member on $M\setminus p$ gives a diffeomorphism $M\to S^4$. A1 supplies the decaying primitive. After the cutoff the end form is exactly constant; an orthogonal transformation and a dilation suffice to normalize it. The cap in a product of two spheres preserves the prescribed splitting near the divisor. The resulting diffeomorphism agrees with the selected chart sufficiently far out and extends smoothly in the given compactification. [Proof](../../notes/E02_A2.md) · [Original source](../../references/A2_ORIGINAL.md) · [Replay](../../reviews/E02_REPLAY.md)
+
+**Requested convention changes.** Adopt the [density and kernel conventions](TO_MASTER2_NORMALIZATION_20261127.md) in the second master's overview. Replace the broad identification in proposal §3.4 by the [marked-end criterion](../../notes/E04_REALIZATION.md). Mark transversality at the zeros as a separate hypothesis; pole forms can have a genuine remainder in a marked normal chart. Replace any global chart claim by the rank-three locus when a full fibre chart is meant. [Draft comparison](../../notes/E05_DRAFTS.md)
+
+**Research consequence.** The surviving problem is the quantifier asserting a zero-free direction for some class and some pole on every smooth homotopy four-sphere. The smooth openness result, the parameterized calibration and the historical comparisons do not discharge it. The second master's bridge and zero-circle gates remain its decisions. [Zero-circle handoff](TO_02_03_MARKED_END_20261127.md) · [Formal request](TO_FORMALIZATION_POLE_20261127.md)
+
+E06 supplies a counterexample to automatic transversality on the standard sphere. Following one fixed nonzero coefficient in a path from a zero-free form to a form with a transverse zero circle forces a first zero of rank less than three. This distinguishes all pole forms from the near-symplectic subfamily even apart from the exact choice of end germ. [Proof](../../reviews/E04_REPLAY.md) · [Independent reading](../../reviews/E06_REPLAY.md)
+
+**Source record for the master manuscript.** Cite Gromov's relative criterion in the proof. Direct inspection of the McDuff–Salamon second-edition theorem page is still outstanding and is not a premise of this return.

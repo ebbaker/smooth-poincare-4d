@@ -1,0 +1,7 @@
+# Shared bibliography and ledger return for investigation 05
+
+27 November 2026. From SP4-ZERO to the certificates and shared-bibliography owners, for Edward B. Baker III. Codex lead, serving variant/effort unavailable. Base 6a422ce. Please apply the [bibliography patch](../../references/BIBLIOGRAPHY_20261127.patch) to the shared database, reconciling by DOI if another owner integrates first. The shared file is outside ZERO's write scope. This is an outgoing handoff, pending owner integration. The pending 01 handoff also names Taubes2006VanishingCircles; keep one entry with both inspections.
+
+**Imports.** Add the exact hypotheses in the [E03 original-source record](RETURN_E03.md) to the series ledger as used there, and Talenti §0 (1)–(2) at dimension four and exponent two as used in [B01](../../brainstorm/notes/B01_GATE_SCOPE.md). Perutz's closed parity is applied after exact matching to a cap with \(b_1=0,b_2^+=1\). The birth inside a Darboux ball for an initially symplectic form uses Taubes Prop. 2.1. The auxiliary project arguments and statements for future formalization appear in the [formal request](TO_FORMALIZATION_ZERO_20261127.md).
+
+The [03 shared-bibliography patch](../../../03_lines_and_broken_fibrations/references/SHARED_BIBLIOGRAPHY_20261127.patch) also corrects Perutz and supplies the Taubes insertion. Merge its inspection history under the same keys. The [E03 replay](../../reviews/B02_E03_REPLAY.md) records qualifications on the printed local constructions.

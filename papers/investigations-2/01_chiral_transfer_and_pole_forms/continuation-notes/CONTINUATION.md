@@ -1,5 +1,7 @@
 # Continuation — Chiral transfer and pole forms
 
+The [closing result and continuation prompt](CLOSING_HANDLE_ATLAS_20261127.md) give the next signed collar test. The [original marked pilot](HANDLE_ATLAS_20261127.md) fixes the assignment and its acceptance criteria. The [closing note](CLOSING_20261127.md) records the outcome of the original assignment below.
+
 27 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum, in a Cowork session. Setup baseline `b607bd1`. This is a dated snapshot: the [register](../research-progress/REGISTER.md) is the live status, and saving this note activates nothing. The shared conventions for sessions, including what a definite result is, are in the [series README](../../README.md#how-sessions-work-in-this-series).
 
 ## The assignment

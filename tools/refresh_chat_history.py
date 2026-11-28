@@ -158,6 +158,7 @@ def find_registered(repo, thread_id, preferred=None):
     # and can allow a second registration in a branch.
     indices = [repo / name / "index.json" for name in ("chat-histories", "chat_histories")]
     indices.append(repo / EARLY_HISTORY / "index.json")
+    indices.extend((repo / "formalization" / "investigations").rglob("index.json"))
     indices.extend(papers.rglob("index.json"))
     for path in indices:
         if not path.exists() and not path.is_symlink():

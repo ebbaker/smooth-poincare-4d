@@ -1,0 +1,87 @@
+{
+  "format": "sp4-cert-e06-5d-v1",
+  "setting": {
+    "ambient_orientation": ["X", "Y", "u", "v", "w"],
+    "boundary_orientation": "outward-first",
+    "outer_radius": "4",
+    "hole_radius": "1/4",
+    "rounding_width": "1/64",
+    "corner_profile": "psi(b/delta)+psi(d/delta)<=1",
+    "corner_delta": "1/128",
+    "product_fiber": "closed-unit-D3",
+    "disk_piece": "pants-minus-open-strip-interiors"
+  },
+  "one_handles": [
+    {
+      "generator": "x", "center_x": "-1", "strip_half_width": "1/8",
+      "positive_core": {"start_radial": [1, 0], "winding": 1},
+      "feet": {"minus": [-1, "s", "z"], "plus": [1, "s", "z"]}
+    },
+    {
+      "generator": "y", "center_x": "1", "strip_half_width": "1/8",
+      "positive_core": {"start_radial": [-1, 0], "winding": 1},
+      "feet": {"minus": [-1, "s", "z"], "plus": [1, "s", "z"]}
+    }
+  ],
+  "geometry": {
+    "positive_core_radius": "1",
+    "strip_chart": ["a-d*U", "(1-s)*inner(X)+s*outer(X)", "z"],
+    "strip_lower_edge": "positive-hole-semicircle",
+    "strip_upper_edge": "positive-outer-semicircle",
+    "time_chart": "flat-step-on-equal-slots",
+    "tube_scale": "1/16",
+    "enlarged_radius": "5/4",
+    "sphere_chart": ["sin(phi)*cos(theta)", "sin(phi)*sin(theta)", "cos(phi)"],
+    "height": ["colatitude", "longitude-mod-one"],
+    "collar_half_width": "1/8"
+  },
+  "two_handles": [
+    {
+      "id": "r1", "colatitude_in_pi": "1/3", "longitude_turns": 1,
+      "framing": "coordinate",
+      "slots": [
+        ["x", -1, "plus", "minus"], ["y", 1, "minus", "plus"],
+        ["y", 1, "minus", "plus"], ["x", 1, "minus", "plus"],
+        ["y", -1, "plus", "minus"], ["y", -1, "plus", "minus"],
+        ["y", -1, "plus", "minus"]
+      ]
+    },
+    {
+      "id": "r2", "colatitude_in_pi": "2/3", "longitude_turns": 1,
+      "framing": "coordinate",
+      "slots": [
+        ["x", -1, "plus", "minus"], ["y", 1, "minus", "plus"],
+        ["x", 1, "minus", "plus"], ["x", 1, "minus", "plus"],
+        ["y", -1, "plus", "minus"], ["x", -1, "plus", "minus"],
+        ["x", -1, "plus", "minus"]
+      ]
+    }
+  ],
+  "framings": {
+    "attaching_coordinates": ["u", "v", "w"],
+    "tangent_first_normal": ["u", "v", "-w"],
+    "coordinate": {"fiber_operation": "identity", "turns": 0},
+    "opposite_parity": {"fiber_operation": "rotate-u-v-positive", "turns": 1},
+    "spin_reference": "ambient-Euclidean-trivialization",
+    "coordinate_extends_spin": true,
+    "opposite_parity_extends_spin": false
+  },
+  "gluing": {
+    "handle": "D2xD3",
+    "attaching_face": "S1xD3",
+    "free_face": "D2xS2",
+    "retained": "full-boundary-minus-two-open-tubes",
+    "charts": {
+      "tube": ["c_i(t)+epsilon*(u,v)", "phi_i+epsilon*w", "t"],
+      "untube": ["longitude", "(q-c_i(longitude))/epsilon", "(phi-phi_i)/epsilon"]
+    },
+    "attach_2handle": ["tube", "i", "t", "z"],
+    "end": ["tube", "i", "t", "p"],
+    "cradle": ["tube", "i", "t", "p"],
+    "end_inverse": ["untube", "i", "point"],
+    "cradle_inverse": ["untube", "i", "point"],
+    "exterior_collar": ["tube", "i", "t", "(1+s)*p"],
+    "cap_collar": ["disk-polar", "t", "1+s", "p"],
+    "cradle_collar": ["tube", "i", "t", "(1+s)*p"]
+  }
+}

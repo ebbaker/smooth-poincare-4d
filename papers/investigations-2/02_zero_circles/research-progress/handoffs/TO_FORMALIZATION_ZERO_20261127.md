@@ -1,0 +1,14 @@
+# Formal statements requested for SP4-ZERO
+
+27 November 2026, from SP4-ZERO to the formalization lead and branch 05, for Edward B. Baker III. Codex lead, serving variant/effort unavailable. Base 6a422ce. These are requested declarations for the next owner-authorized edition under the [formalization workflow](../../../../../formalization/FORMALIZATION_SETUP_WORKFLOW.md). The source papers, [shared bibliography delta](TO_05_BIBLIOGRAPHY_20261127.md) and [register](../REGISTER.md) retain their own evidence levels.
+
+| Requested statement | Acceptance check and premises |
+| --- | --- |
+| Spatial derivative and rank of the kernel line | At a zero of a smooth closed self-dual two-form on an oriented Riemannian four-manifold, exclude rank one by alternation and the nonzero square. For a smooth family linear in a three-dimensional coefficient, at a rank-two point of evaluation with nonzero determinant derivative identify the rank of the kernel projection on the hypersurface as spatial rank minus one. [B02](../../brainstorm/notes/B02_INCIDENCE.md) |
+| Global incidence and rank-one chart | Given A1's uniform end on a finite basis, prove compactness, the projective fibres, the bad-direction boundary quantifier and the conditional rank-one model. Use the Schur complement coordinate hypothesis and retain the actual direction under varying basis changes. |
+| Pole parity | Given the A1 end with decaying primitive, pointwise transverse zeros and the closed Perutz import, cut off and cap with the product collar to derive the parity of the actual zero circles. [E03](../../notes/E03_LOCAL_SOURCES.md) |
+| Flat chiral transfer | Prove the explicit normalized symbol identity and compact-graph contraction, then the Fourier integral norm estimate of B01, including unit constant leading coefficients and scalar-profile multiplication. Treat original radial calibration inputs with their endpoint subtraction. [E01](../../notes/E01_FLAT.md) · [B01](../../brainstorm/notes/B01_GATE_SCOPE.md) |
+| Two gate profiles | Formalize the polynomial, convolution, translation moments and rational direction bounds. For stress membership verify the trace-free transverse Hessian identity, compactified scalar quotient and the two finite interval certificates on the actual smooth mollification. Accept analytic test-function density and Talenti only with the stated hypotheses. The periodic FFT and its residual are diagnostics. [E02](../../notes/E02_GATE_TABLE.md) · [E05](../../notes/E05_STRESS_GEOMETRY.md) |
+| Coordinate dependence and exterior | Formalize the zero-energy pullback counterexample to fixed-chart norm control and the off-support bound on the marked A row. [B03](../../brainstorm/notes/B03_ENERGY_AND_REMAINING_CORE.md) |
+
+No Lean edition or declaration is asserted here. The universal bridge, generic transversality of pole triples, and the remaining A compact-core sign are not premises of the requested finite claims.

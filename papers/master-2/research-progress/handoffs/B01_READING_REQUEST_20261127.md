@@ -1,0 +1,6 @@
+# SP4-M2-B01 · bounded integration checks
+
+27 November 2026. Prepared for Edward B. Baker III by the Codex lead, exact variant and effort unavailable. Working tree at 6a422ce. The pre-integration manuscript SHA-256 begins ad0071ad65acd621. Both checks use gpt-6.2-sol, ultra, and the [B01 register](../REGISTER.md). No scientific gate is assigned.
+
+1. Owner check. Read the five pole returns named in the author's request. Inspect the receiving 05 and formalization registers, declarations and shared bibliography for explicit acknowledgment or application. Report each external disposition and the evidence to the lead, without editing any files or opening a formal edition. An unacknowledged request remains pending.
+2. Independent reader. Compare the lead's revised A1 and A2, coefficient, density, reciprocity, compactification, first-zero scope and two open questions against those same five returns, the proofs and their non-author readings. Verify the imported and project steps are distinguished. Write only reviews/B01_INTEGRATION_REPLAY_20261127.md, reporting the versions inspected and any corrections; recheck any amended mathematical text. This is a reading of the integration, not a new proof of the pole theorems.

@@ -14,7 +14,13 @@ refresh, locks, supported content and bounded after-turn capture. Existing
 registrations are refreshed in place. Include completed public text only;
 never fabricate records or save an unsent final answer as authentic history.
 
-24 November DIR activation: the [unregistered partial public text](PARTIAL_UNREGISTERED_DIR_20261124.md) records the source limitation and the public research invocation and updates. If an authentic export later becomes available, verify its native identity, title and original timestamps before the canonical registration.
+The 26 November account export supplied the transcripts of
+[Research Variational Result](0001_2026-11-24T15-07-53Z_research-variational-result.json)
+and [Summarize Research Results](0002_2026-11-24T17-32-29Z_summarize-research-results.json).
+
+The [DIR activation excerpt](PARTIAL_UNREGISTERED_DIR_20261124.md) records
+the local source limitation on 24 November alongside the public research
+invocation and updates.
 
 24 November research discussion and manuscript. The local source and app history reader were unavailable. The [unregistered partial public record](PARTIAL_UNREGISTERED_DIR_DISCUSSION_20261124.md) preserves the completed discussion reply, requests and visible progress updates.
 

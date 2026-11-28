@@ -1,0 +1,7 @@
+# To first-series 04 · comparison with the total and middle height integrals
+
+27 November 2026, for Edward B. Baker III. OpenAI Codex lead, serving variant/effort unavailable. Intake 6a422ce7814f. Recipient is the first-series hypersurface immersions investigation. Acknowledgment pending.
+
+**Project theorems, replayed.** With the manuscript's two-normal normalization \(\tau=2\int|\det A|/|S^4|\) and \(I_2=\int_{(2,2)}\det A\), the ellipsoid of semiaxes \((4,4,4,4,1/4)\) has \((\tau,I_2)=(2,0)\) and entropy greater than \(4/e\). Varying its aspect ratio gives a lower limit at least 2. Conversely there are smooth global shears of the standard embedding with entropies tending to \(32/(3e^2)\) and \(I_2,\tau\to\infty\). Thus even an entropy ceiling strictly between the round value and the recognition threshold cannot give a finite uniform upper bound on either same-image integral. The signed middle locus, both normal signs, and all Gaussian centres and scales are included in the [proof](../../brainstorm/notes/B02_CURVATURE_COMPARISON.md) and [independent replay](../../reviews/E06_CURVATURE_REPLAY.md).
+
+The results apply to individual smooth embeddings in Euclidean five-space. They leave your immersed recognition inequalities, classes chosen by intrinsic minimization and possible extra geometric hypotheses open. E01 also found the ambient-dimension typo in the CMS corollary cited in your coverage section. [Source audit](E01_FLOW_RETURN.md)

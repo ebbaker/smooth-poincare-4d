@@ -1,0 +1,23 @@
+# Research plan for testing counterexamples
+
+27 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Exact serving variant and effort unavailable. Baseline `6a422ce7814f` plus [working-tree inputs](../references/README.md). Family `SP4-WIT`. This plan sets the first horizon of the parent. The [examples plan](../01_examples/research-plan/PLAN.md) owns concrete geometries and the [invariants plan](../02_invariants/research-plan/PLAN.md) owns observables and their calibrations.
+
+## Sequence
+
+| ID | Scope, prerequisites and reason | Deliverable and completion |
+| --- | --- | --- |
+| WIT-B01 | On activation, the lead fixes the interface for the two children. Start with one published zero-surgery implication and one marked presentation sphere. Conceptual work determines which input and comparison would settle which claim. | `brainstorm/notes/B01_WITNESS_COMPARISON.md`. Identify the exact named target, orientation or mirror, chart/puncture if needed, necessary geometric certificate, comparison theorem and owner. Route disjoint questions to the children. |
+| WIT-E05 | Once there is an authored candidate implication or a proposed obstruction to combining two returns, an independent reader checks the entire comparison. This bounded task can also check a useful invariant calibration offered as a standalone result. | One `reviews/E05_<claim>.md` per distinct claim. Reconstruct the shared input, ambient category, direction of inequality, scope and source hypotheses. Confirm, correct or reject. A mismatch goes back to B01 and the appropriate owner. |
+| WIT-B03 | As child results arrive, the lead integrates any independently checked implication, scoped failure or owner dependency. Evaluation across scientific scopes stays with the lead. | Dated handoff and closing or resumption note recording the exact outcome. Send a true candidate distinction to the second master, the specific invariant question to 06 and certificate or formalization requests to the relevant owners. Do not infer global exoticity from a relative obstruction. |
+
+Use the selected lead for B decisions (recommended Astra/ultra). Use an authorized bounded `gpt-6.2-sol`/ultra non-author reader for E05. Freeze its input and output in a dated request. Record actual settings rather than inferring them from these recommendations. Give sibling work disjoint files. The parent integrates by handoff and links each child's sole register.
+
+## What could finish an investigation
+
+- **Named counterexample.** Verify that a proper smooth disk in the standard B⁴ and the published zero-surgery row refer to the same knot. For the native route verify that a surface lies in the coordinate puncture of the very sphere under comparison, with a standard-ball lower genus bound strictly exceeding the supplied genus on that boundary knot. Both implications require non-author replay.
+- **Invariant with practical content.** Record its domain and equivalence relation, sensitivity to orientation or markings, known predecessors, standard value, and a reproducible bound on at least one specified input. A marked statistic can be useful to the examples branch even while its dependence on the conformal class prevents an intrinsic conclusion. Record any proof that an optimization collapses to a previously known yes/no question.
+- **Scoped failure.** A single invalid movie, a proved exhaustive exclusion on a frozen finite set, a current inability to build a cap, and a theorem excluding every smooth disk have different scopes. State the actual quantifiers. If reduced to one open lemma, obtain an independent review of the reduction and the alternatives. A timeout establishes no exclusion.
+
+The closed-module idea stays with series 06 until a named class, a comparator on S⁴ and control of all closing relations are available. The parent can match a returned functional with the identified candidate at that point.
+
+One component can finish while the other continues. A verified invariant can be a principal result even if no exotic sphere has been found. Continue through ready dependencies once a session is activated. Keep new B decisions and bounded E tasks under their owning family, with fresh identifiers. Formalization is by handoff under the series rules.

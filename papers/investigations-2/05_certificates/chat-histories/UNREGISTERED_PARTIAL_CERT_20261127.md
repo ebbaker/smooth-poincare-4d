@@ -1,0 +1,18 @@
+# Unregistered partial public record · SP4-CERT
+27 November 2026. Branch research for Edward B. Baker III. Thread identifier from the running environment: 6b09e185-fe14-83e9-827c-e4e93f6510d1. The exact-source diagnostic returned unregistered, no local thread history or matching rollout. The supported app reader failed. No verified native title, turn ID or original timestamps were available. This partial selection contains completed public text only; it is not a registered capture.
+
+**User**
+
+> You are the research lead of the investigation `05_certificates` in the smooth-poincare-4d repository, `papers/investigations-2/05_certificates`. Read `AGENTS.md`, `INVESTIGATION_SETUP_WORKFLOW.md`, `GPT_RESEARCH_MODEL_WORKFLOW.md`, `REFERENCE_WORKFLOW.md` and `papers/investigations-2/README.md` with its working rules and session conventions. Then read `papers/master-2/research-overview/OVERVIEW.md` for the frame and the conventions, and this investigation's README, overview, plan, register and `continuation-notes/CONTINUATION.md` with the exact inputs it lists. The author activates the task family `SP4-CERT`. Your assignment is the question in the continuation note, not the task list. Lead the B tasks yourself and issue E tasks as frozen requests to bounded helpers with disjoint outputs. Start CERT-E01, E02, E04 and E05 as parallel packets on disjoint files and take CERT-B01 and CERT-B02 yourself; state the bounds of every search in its request; draft the ledger as soon as the readings of the other branches exist. Read every published theorem in its primary source before you use it, and record what you inspected in the reference file and the shared bibliography. Label every statement as import, project theorem, certificate or heuristic, and call nothing established that Lean has not proved. Continue through ready dependencies until an end state of the continuation note or a question that blocks every remaining step. Edit only this investigation, send results for other branches as handoffs, record the model and effort you actually ran with, and do not commit.
+
+**Assistant commentary**
+
+> I’ll read the continuation note and repository conventions first, then freeze the four helper packets with explicit bounds. I’ll handle the certificate scope and ledger decisions myself.
+
+> The order-seventeen calculation depends on two separate checks: the algebra of the presented group and the identification of its longitude in the actual orbifold. A comparison with order eleven gives a concrete test of that identification. The order-seven search has found summaries, but the original preprint pages are still missing.
+
+> The order-seventeen reconstruction now recovers the same eight crossings and native longitude from the quaternionic model. The bounded Andrews–Curtis search also finished: two implementations found the same 628 states and no trivialization within four moves. The order-eleven calculation is undergoing a separate check of the framing and the reverse surgery.
+
+> The independent check confirms that the marked even closing at order eleven is diffeomorphic to \(S^4\). Its orbifold group is \(C_2\), and the framing check shows that the circle action extends across the inverse surgery. I’m recording that result for the second master and formalization. The original order-seven figure is still the only missing input.
+
+> The two independent enumerations of the original order-seven presentation closed at 6 and 8 elements. Both agree with the signed certificates. I’ve also checked the clasp and slope conventions against the versioned PDF, so all eight completion conditions now have results.

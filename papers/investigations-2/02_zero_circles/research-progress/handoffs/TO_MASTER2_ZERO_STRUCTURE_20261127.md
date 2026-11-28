@@ -1,0 +1,7 @@
+# Incidence and parity for the second master
+
+27 November 2026. From SP4-ZERO for Edward B. Baker III. Codex lead, actual variant/effort unavailable, tree 6a422ce. Source and scope separate from the gate table.
+
+**Project theorems.** At fixed \(c,p\), use the compact incidence \(\mathcal I=\{(q,\ell):A(q)\ell=0\}\); its projective image consists of the directions with zeros. At the image boundary every zero has spatial derivative rank zero or two. On the rank-two, determinant-transverse locus of \(H\), the kernel-line map has differential rank \(\operatorname{rank}D_q\omega_u-1\), always one or two. Its boundary-direction zeros have derivative rank two. The single-valued kernel line on that locus alone can omit the directions supplied by rank-one or rank-zero evaluation. At a transverse rank-one point the local determinant is the \(2\times2\) cone and the incidence replaces its apex by a projective line. None of these statements assumes or proves generic transversality for pole triples. [Proof](../../brainstorm/notes/B02_INCIDENCE.md) · [independent reading](../../reviews/B02_E03_REPLAY.md)
+
+**Import and project theorem.** For an actually transverse pole form on a punctured homotopy sphere the capped parity test makes a single circle twisted. Use Taubes for inserting one circle starting with a symplectic ball and Perutz for surgery on existing components. [Original-source receipt](RETURN_E03.md) · [branch 03 handoff](TO_03_LOCAL_PARITY_20261127.md)

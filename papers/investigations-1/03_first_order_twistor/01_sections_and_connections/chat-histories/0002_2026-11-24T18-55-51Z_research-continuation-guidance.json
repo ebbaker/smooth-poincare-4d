@@ -1,0 +1,473 @@
+[
+  {
+    "id": "6b05ddb4-dfa8-83e9-bead-e5f91b3b58e0",
+    "conversation_id": "6b05ddb4-dfa8-83e9-bead-e5f91b3b58e0",
+    "title": "Research continuation guidance",
+    "create_time": 1795546551.725784,
+    "update_time": 1795558138.435207,
+    "current_node": "bbe6bf2f-17a5-5bbd-a45e-d8c991acbba4",
+    "mapping": {
+      "client-created-root": {
+        "id": "client-created-root",
+        "parent": null,
+        "children": [
+          "a2fb248c-8a42-48ee-9b6f-33f472427990"
+        ],
+        "message": null
+      },
+      "a2fb248c-8a42-48ee-9b6f-33f472427990": {
+        "id": "a2fb248c-8a42-48ee-9b6f-33f472427990",
+        "parent": "client-created-root",
+        "children": [
+          "20edd26d-642e-5edc-89f2-d1a074253a90"
+        ],
+        "message": {
+          "id": "a2fb248c-8a42-48ee-9b6f-33f472427990",
+          "author": {
+            "role": "user",
+            "name": null
+          },
+          "create_time": 1795546569.725,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Please read the manuscript in /papers/investigations-1/03_first_order_twistor/01_sections_and_connections, and the note /continuation-notes/02_AFTER_SPHERICAL_TRANSMISSION_AND_YAMABE_WALL_20261124, and perform the research outlined there. Track your progress in the research progress folder, write research notes in the notes folder, and if possible record chat history in the chat-histories folder. Please provide guidance for the continuation at the end of your research."
+            ]
+          },
+          "metadata": {}
+        }
+      },
+      "20edd26d-642e-5edc-89f2-d1a074253a90": {
+        "id": "20edd26d-642e-5edc-89f2-d1a074253a90",
+        "parent": "a2fb248c-8a42-48ee-9b6f-33f472427990",
+        "children": [
+          "11b3bc46-ab5b-5a4f-888c-13e8c912bf47"
+        ],
+        "message": {
+          "id": "20edd26d-642e-5edc-89f2-d1a074253a90",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795546578.631026,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "I’ll read the manuscript and handoff, check the branch register and chat-capture instructions, and use the handoff’s open questions to guide the research."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "11b3bc46-ab5b-5a4f-888c-13e8c912bf47": {
+        "id": "11b3bc46-ab5b-5a4f-888c-13e8c912bf47",
+        "parent": "20edd26d-642e-5edc-89f2-d1a074253a90",
+        "children": [
+          "0687d5d6-c52d-5e0e-bf8b-843c7f516962"
+        ],
+        "message": {
+          "id": "11b3bc46-ab5b-5a4f-888c-13e8c912bf47",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795546634.700505,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The handoff identifies a finite-dimensional obstruction to prescribing \\(W^+\\). I’ll first test whether any variation confined to the round patch can change it. I’ll also examine how an exterior metric perturbation moves the adjoint kernel, including when its dimension changes."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "0687d5d6-c52d-5e0e-bf8b-843c7f516962": {
+        "id": "0687d5d6-c52d-5e0e-bf8b-843c7f516962",
+        "parent": "11b3bc46-ab5b-5a4f-888c-13e8c912bf47",
+        "children": [
+          "6140922f-5afd-52ac-af64-c1a870baf893"
+        ],
+        "message": {
+          "id": "0687d5d6-c52d-5e0e-bf8b-843c7f516962",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795546856.699769,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The exterior calculation has produced a full-rank test for the missing curvature directions. If it survives the proof check, an arbitrarily small change outside the cap makes every sufficiently small \\(W^+\\) target attainable. I’m also checking the harder case where the reference and its original radial target must stay fixed."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "6140922f-5afd-52ac-af64-c1a870baf893": {
+        "id": "6140922f-5afd-52ac-af64-c1a870baf893",
+        "parent": "0687d5d6-c52d-5e0e-bf8b-843c7f516962",
+        "children": [
+          "44d67e8e-ba61-5a02-ba23-6be84047b3d3"
+        ],
+        "message": {
+          "id": "6140922f-5afd-52ac-af64-c1a870baf893",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795547091.913598,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The proof check confirms that regular references are dense even when the round ball and volume form are fixed. The reference can also be changed at exactly the original Weyl energy. I’m using the manuscript’s Taub–NUT sequence to test how expensive a radial curvature decrease can become despite that local solvability."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "44d67e8e-ba61-5a02-ba23-6be84047b3d3": {
+        "id": "44d67e8e-ba61-5a02-ba23-6be84047b3d3",
+        "parent": "6140922f-5afd-52ac-af64-c1a870baf893",
+        "children": [
+          "4dafd315-ebc5-5834-b485-02bbca6015b8"
+        ],
+        "message": {
+          "id": "44d67e8e-ba61-5a02-ba23-6be84047b3d3",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795547375.784196,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The workspace disconnected during the final file writes. The main exterior proof and energy-preserving construction were saved and verified beforehand. I’m trying to restore access so I can finish the register, continuation note, and chat excerpt."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "4dafd315-ebc5-5834-b485-02bbca6015b8": {
+        "id": "4dafd315-ebc5-5834-b485-02bbca6015b8",
+        "parent": "44d67e8e-ba61-5a02-ba23-6be84047b3d3",
+        "children": [
+          "89ef8a0d-9a83-43e3-aa5c-56d81d9c41cd"
+        ],
+        "message": {
+          "id": "4dafd315-ebc5-5834-b485-02bbca6015b8",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795547581.129454,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "**The finite exterior correction can be removed locally on the given homotopy four-sphere.** Starting from any smooth metric \\(r\\) that is round near a marked ball, an arbitrarily small perturbation outside the ball produces a reference \\(\\tilde r\\) with the same volume form and exactly the same chiral Weyl energy. Through \\(\\tilde r\\) there is a smooth family satisfying, for sufficiently small \\(t\\),\n\\[\nF_{\\tilde r}(h(t))=(1-t)W^+_{\\tilde r},\n\\qquad\nE_+(g(t))=(1-t)^2E_+(r).\n\\]\nThe cap stays anti-self-dual along this deformation, although its metric can change. A separate, explicit sign condition on the adjoint kernel gives a local path through the **original** reference, smooth in \\(\\sqrt t\\). [Research assessment](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/reviews/SEC_EXTERIOR_REGULARITY_AND_RADIAL_COST_20261124.md)\n\n**The remaining difficulty is how far the deformation can travel.** Every radial tangent \\(L_gh=-W_g^+\\) satisfies\n\\[\n\\|h\\|_{L^\\infty(g)}\\int_M |B_g|\\,dV_g\\ \\ge\\ 4E_+(g),\n\\]\nwhere \\(B_g\\) is the Bach tensor. On marked standard-sphere examples approaching \\(E_+=8\\pi^2\\), every small curvature target is attainable, yet the strain required for the radial direction diverges. This occurs both at exactly zero Yamabe constant and along positive-Yamabe classes approaching zero. [Derivation and examples](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/notes/SEC_E48_20261124.md)\n\nI recommend testing whether the same degeneration can occur with \\(Y>0\\) and a **fixed margin** \\(4\\pi^2\\le E_+\\le8\\pi^2-\\delta\\). The first question is whether \\(\\int|B|/E_+\\) can tend to zero in that band. A global deformation to a recognizing metric remains open. [Continuation note](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/continuation-notes/03_AFTER_EXTERIOR_REGULARITY_AND_RADIAL_COST_20261124.md)\n\nAll nine proofs and checks are recorded in the [progress register](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/research-progress/REGISTER.md). The full chat source was unavailable, so I saved the request and completed public updates as an [unregistered partial record](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/chat-histories/UNREGISTERED_PARTIAL_SEC_EXTERIOR_20261124.md)."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "89ef8a0d-9a83-43e3-aa5c-56d81d9c41cd": {
+        "id": "89ef8a0d-9a83-43e3-aa5c-56d81d9c41cd",
+        "parent": "4dafd315-ebc5-5834-b485-02bbca6015b8",
+        "children": [
+          "33920698-3a7a-58c1-9df2-c6a7846cc82c"
+        ],
+        "message": {
+          "id": "89ef8a0d-9a83-43e3-aa5c-56d81d9c41cd",
+          "author": {
+            "role": "user",
+            "name": null
+          },
+          "create_time": 1795547860.022,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Please continue with the research as described in the continuation note"
+            ]
+          },
+          "metadata": {}
+        }
+      },
+      "33920698-3a7a-58c1-9df2-c6a7846cc82c": {
+        "id": "33920698-3a7a-58c1-9df2-c6a7846cc82c",
+        "parent": "89ef8a0d-9a83-43e3-aa5c-56d81d9c41cd",
+        "children": [
+          "aba40e1f-dc23-5aea-b5cd-6813eecf06cf"
+        ],
+        "message": {
+          "id": "33920698-3a7a-58c1-9df2-c6a7846cc82c",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795547865.700601,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "I’ll check the handoff and the current register, then test whether the positive Yamabe and energy bounds rule out the curvature concentration that made radial deformation expensive in the previous examples."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "aba40e1f-dc23-5aea-b5cd-6813eecf06cf": {
+        "id": "aba40e1f-dc23-5aea-b5cd-6813eecf06cf",
+        "parent": "33920698-3a7a-58c1-9df2-c6a7846cc82c",
+        "children": [
+          "04fe56e1-e03c-50ff-a737-1a664d05d3a0"
+        ],
+        "message": {
+          "id": "aba40e1f-dc23-5aea-b5cd-6813eecf06cf",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795548162.163753,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The fixed energy margin rules out a smooth limit with two or more ALE ends. The argument compares the Yamabe inequality on each end with the curvature carried by the whole limit. I’m now checking which one-ended limits survive and whether they can carry all of the original Weyl energy."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "04fe56e1-e03c-50ff-a737-1a664d05d3a0": {
+        "id": "04fe56e1-e03c-50ff-a737-1a664d05d3a0",
+        "parent": "aba40e1f-dc23-5aea-b5cd-6813eecf06cf",
+        "children": [
+          "c2cd64bb-f0c0-5c96-99d3-68b1828b3b50"
+        ],
+        "message": {
+          "id": "04fe56e1-e03c-50ff-a737-1a664d05d3a0",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795548378.491847,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The one-ended case is now much narrower. Its link must be \\(S^3\\), and any nonflat limit uses more than \\(4\\pi^2\\) in each chirality while leaving positive energy elsewhere. I’m checking whether that leftover energy gives a uniform gap and what happens when the marked metrics converge on the original manifold."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "c2cd64bb-f0c0-5c96-99d3-68b1828b3b50": {
+        "id": "c2cd64bb-f0c0-5c96-99d3-68b1828b3b50",
+        "parent": "04fe56e1-e03c-50ff-a737-1a664d05d3a0",
+        "children": [
+          "e4f12b67-91cb-5b3a-92de-1169bc0ecc8e"
+        ],
+        "message": {
+          "id": "c2cd64bb-f0c0-5c96-99d3-68b1828b3b50",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795548678.819079,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "For exactly Bach-flat metrics, the compactness argument gives a gap above \\(4\\pi^2\\). If any positive critical energy lies below \\(8\\pi^2\\), the least such value is attained. The remaining question is whether metrics with merely small total Bach norm can lose energy along a long neck. I’m recording that as the next test."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "e4f12b67-91cb-5b3a-92de-1169bc0ecc8e": {
+        "id": "e4f12b67-91cb-5b3a-92de-1169bc0ecc8e",
+        "parent": "c2cd64bb-f0c0-5c96-99d3-68b1828b3b50",
+        "children": [
+          "174f0420-1959-45ba-b7ff-8ae969ce9601"
+        ],
+        "message": {
+          "id": "e4f12b67-91cb-5b3a-92de-1169bc0ecc8e",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795548757.124008,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The research establishes a **gap above \\(4\\pi^2\\) in the chiral Weyl energy of exactly Bach-flat metrics**. Across all smooth homotopy four-spheres, if any positive-Yamabe Bach-flat metric has \\(0<E_+<8\\pi^2\\), then the least such energy is attained and is strictly greater than \\(4\\pi^2\\). The proof combines closed Bach-flat rigidity with compactness for exact critical metrics. It gives no numerical width for the gap. [Proof](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/notes/SEC_E58_20261124.md) genui{\"citation\":{\"refs\":[\"turn231366059view0\",\"turn795811778view1\"]}}\n\nFor the handoff’s **approximately Bach-flat sequences** with \\(4\\pi^2\\le E_+\\le8\\pi^2-\\delta\\), two results narrow the possibilities.\n\n- **If curvature concentrates in a complete smooth ALE limit with its full core embedded**, the limit has exactly one end with link \\(S^3\\). If it is nonflat, its energy satisfies \\(4\\pi^2<e_X\\le e-\\kappa_\\delta\\), where \\(e\\) is the limiting source energy and \\(\\kappa_\\delta>0\\) is uniform. Only one such component can fit, and it must leave positive Weyl energy elsewhere. [Concentration assessment](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/reviews/SEC_SUBCRITICAL_BACH_CONCENTRATION_20261124.md)\n- **If the metrics instead admit uniformly elliptic, bounded \\(W^{2,q}\\) conformal gauges on the original manifold**, for some \\(q>2\\), their Weyl tensors converge strongly in \\(L^2\\) along a subsequence. The limit represents a smooth Bach-flat class with the full limiting energy. The round marks must shrink to zero volume in those gauges. [Compact-gauge proof](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/notes/SEC_E57_20261124.md)\n\nThe original question remains open: can \\(\\int|B|/E_+\\) tend to zero at a fixed subcritical margin? The next test is whether a long annulus can carry the residual Weyl energy while its total Bach norm tends to zero. The handoff specifies the coordinate bounds, boundary terms and estimate to test. [Continuation note](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/continuation-notes/04_AFTER_SUBCRITICAL_BACH_CONCENTRATION_20261124.md)\n\nAll ten proof notes are indexed in the [progress register](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/research-progress/REGISTER.md). The authentic chat source remained unavailable, so I saved a [partial public transcript](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/chat-histories/UNREGISTERED_PARTIAL_SEC_EXTERIOR_20261124.md)."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm",
+            "content_reference_labels": [
+              {
+                "type": "grouped_webpages",
+                "alt": "([nzjmath.org](https://nzjmath.org/index.php/NZJMATH/article/download/152/60/450?utm_source=chatgpt.com), [web.math.princeton.edu](https://web.math.princeton.edu/~chang/042606head.pdf?utm_source=chatgpt.com))"
+              },
+              {
+                "type": "sources_footnote",
+                "alt": ""
+              }
+            ]
+          }
+        }
+      },
+      "174f0420-1959-45ba-b7ff-8ae969ce9601": {
+        "id": "174f0420-1959-45ba-b7ff-8ae969ce9601",
+        "parent": "e4f12b67-91cb-5b3a-92de-1169bc0ecc8e",
+        "children": [
+          "c15bf361-7012-5ee5-8db5-233eee1362aa"
+        ],
+        "message": {
+          "id": "174f0420-1959-45ba-b7ff-8ae969ce9601",
+          "author": {
+            "role": "user",
+            "name": null
+          },
+          "create_time": 1795557582.531,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Please include all of the results in the manuscript"
+            ]
+          },
+          "metadata": {}
+        }
+      },
+      "c15bf361-7012-5ee5-8db5-233eee1362aa": {
+        "id": "c15bf361-7012-5ee5-8db5-233eee1362aa",
+        "parent": "174f0420-1959-45ba-b7ff-8ae969ce9601",
+        "children": [
+          "7584f1ac-534e-5aec-bb5b-2cacc2101939"
+        ],
+        "message": {
+          "id": "c15bf361-7012-5ee5-8db5-233eee1362aa",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795557589.892544,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "I’ll check where the manuscript stops, then integrate the later results in proof order, with the hypotheses for the exact and approximately Bach-flat cases stated separately. I’ll also rebuild and check the PDF."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "7584f1ac-534e-5aec-bb5b-2cacc2101939": {
+        "id": "7584f1ac-534e-5aec-bb5b-2cacc2101939",
+        "parent": "c15bf361-7012-5ee5-8db5-233eee1362aa",
+        "children": [
+          "91b50c4d-c6f8-52d4-87a4-12f2401822de"
+        ],
+        "message": {
+          "id": "7584f1ac-534e-5aec-bb5b-2cacc2101939",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795557830.191711,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The manuscript now connects two results that were previously in separate notes: an exterior perturbation can make the radial Weyl equation solvable at exactly the original energy, yet the strain of that solution can diverge near the Yamabe-zero threshold. I’m checking the later energy-gap proofs against the earlier sections and restoring a few estimates that the first draft had only summarized."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "91b50c4d-c6f8-52d4-87a4-12f2401822de": {
+        "id": "91b50c4d-c6f8-52d4-87a4-12f2401822de",
+        "parent": "7584f1ac-534e-5aec-bb5b-2cacc2101939",
+        "children": [
+          "bbe6bf2f-17a5-5bbd-a45e-d8c991acbba4"
+        ],
+        "message": {
+          "id": "91b50c4d-c6f8-52d4-87a4-12f2401822de",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795558084.048974,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The manuscript now covers the assessed results through SEC-E58. Its final section identifies exactly where the compactness argument stops for sequences with small total Bach norm. I’m checking the compiled equations, references, and page layout."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "bbe6bf2f-17a5-5bbd-a45e-d8c991acbba4": {
+        "id": "bbe6bf2f-17a5-5bbd-a45e-d8c991acbba4",
+        "parent": "91b50c4d-c6f8-52d4-87a4-12f2401822de",
+        "children": [],
+        "message": {
+          "id": "bbe6bf2f-17a5-5bbd-a45e-d8c991acbba4",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795558130.32942,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The [revised manuscript, 67 pages](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/output/pdf/03_first_order_twistor/01_sections_and_connections/twistor_sections_and_chiral_weyl_curvature.pdf) now includes all assessed results through SEC-E58. The [LaTeX source](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/manuscript/twistor_sections_and_chiral_weyl_curvature.tex) is updated, and all citations and cross-references resolve.\n\nSections 4–5 and 10 connect local solvability to its geometric cost. An arbitrarily small exterior perturbation can preserve the chiral Weyl energy and make exact local curvature prescription possible. Yet along explicit metrics approaching the Yamabe-zero threshold, every unit radial contraction requires unbounded strain.\n\nSections 11–13 give the concentration and energy-gap results. In particular, Theorem 12.4 shows that **if positive Bach-flat critical energies below \\(8\\pi^2\\) exist** in positive-Yamabe classes on smooth homotopy four-spheres, the least such energy is attained and lies strictly above \\(4\\pi^2\\).\n\nFor sequences with small total Bach norm, a smooth nonflat ALE limit satisfying the embedded-core hypotheses leaves a uniformly positive energy remainder. Whether that remainder can persist on a long annulus is the next research question. Section 14 and the [continuation note](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/continuation-notes/04_AFTER_SUBCRITICAL_BACH_CONCENTRATION_20261124.md) specify the proposed estimate.\n\nI updated the [research register](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/research-progress/REGISTER.md). The full conversation source was unavailable, so the [chat record](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/chat-histories/UNREGISTERED_PARTIAL_SEC_EXTERIOR_20261124.md) is partial."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      }
+    },
+    "archive_metadata": {
+      "format": "ChatGPT-style mapping of public export text",
+      "source_kind": "ChatGPT account export; public text",
+      "source_file": "conversations-004.json",
+      "source_sha256": "dd00ec4463ea0549dbebdf02ecac5d734c02bbbf687aed8b2f3e9b5706fa8331",
+      "source_project_id": "g-p-675d0cc42194819189f2dc5651b8dade",
+      "coverage": "User and assistant text in the supplied snapshot, including exported alternate branches. The export does not mark commentary, turn completion or per-message update times.",
+      "attachment_coverage": "File and inline image descriptors and reference labels only. No binary attachments, embedded media or expanded reference and search data.",
+      "omitted_source_records": {
+        "assistant/reasoning_recap": 3,
+        "assistant/thoughts": 74
+      },
+      "source_export_label": "2026-11-26-18-03-31",
+      "first_captured_at_utc": "2026-11-27T19:53:51.026Z",
+      "first_captured_at_local": "2026-11-27T14:53:51.026-05:00",
+      "history_number": 2,
+      "captured_at_utc": "2026-11-27T19:53:51.026Z",
+      "captured_at_local": "2026-11-27T14:53:51.026-05:00"
+    }
+  }
+]

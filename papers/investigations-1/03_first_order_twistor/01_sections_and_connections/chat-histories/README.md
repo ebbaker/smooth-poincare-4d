@@ -14,22 +14,27 @@ refresh, locks, supported content and bounded after-turn capture. Existing
 registrations are refreshed in place. Include completed public text only;
 never fabricate records or save an unsent final answer as authentic history.
 
-## Awaiting verified source · 24 November 2026
+## Authenticated transcripts
 
-The SEC activation thread has runtime identity `6b05cd4c-0ec0-83ea-a5ac-d2550864b0ff`. The local source was absent and the app reader returned −32000. Its [unregistered partial public record](UNREGISTERED_PARTIAL_SEC_ACTIVATION_20261124.md) preserves the invocation and completed interim text. Native title and turn ID were unavailable. Verify and register this thread here only when an authentic source and title are available.
+The 26 November account export supplied both branch conversations from
+24 November. Their local runtime IDs and the earlier capture diagnostics
+remain in the linked excerpts.
 
-The continuation ran the exact-id diagnostic and checked the app history reader again. The same [unregistered excerpt](UNREGISTERED_PARTIAL_SEC_ACTIVATION_20261124.md) includes the continuation request and completed public updates. The verified-source registration is still pending.
+- [Twistor Research Update](0001_2026-11-24T17-45-46Z_twistor-research-update.json)
+  records the activation, continuation and manuscript drafting.
+  [Earlier public excerpt](UNREGISTERED_PARTIAL_SEC_ACTIVATION_20261124.md)
+- [Research continuation guidance](0002_2026-11-24T18-55-51Z_research-continuation-guidance.json)
+  records the exterior-curvature continuation and manuscript revision.
+  [Earlier public excerpt](UNREGISTERED_PARTIAL_SEC_EXTERIOR_20261124.md)
 
-The exterior-curvature session used runtime thread ID `6b05ddcd-08b0-83ea-9898-a0951389e0da`. Its [unregistered public excerpt](UNREGISTERED_PARTIAL_SEC_EXTERIOR_20261124.md) contains the request and completed public updates. Both local checks found no source, and the app reader did not supply the conversation.
+## Lean scoping discussion · 25 November 2026
 
-The [same unregistered public excerpt](UNREGISTERED_PARTIAL_SEC_EXTERIOR_20261124.md#continuation-on-subcritical-concentration--partial-public-excerpt) also contains completed messages from the subcritical-concentration continuation. Its exact source and native title were still unavailable.
-
-The same [partial public excerpt](UNREGISTERED_PARTIAL_SEC_EXTERIOR_20261124.md#manuscript-revision-through-sec-e58--partial-public-excerpt) includes the request and completed progress updates for the manuscript revision through SEC-E58.
-
-## Awaiting verified source · 25 November 2026
-
-The Lean scoping discussion has runtime thread ID `6b070119-5344-83ea-96ee-6bdf91c9f0d9`. The exact local source was unavailable, and the app reader returned −32000. The native title and turn ID were unavailable. The recommendations and source inspection are in the [Lean pilot note](../brainstorm/notes/LEAN_FORMALIZATION_PILOT_20261125.md).
+The local check for runtime thread `6b070119-5344-83ea-96ee-6bdf91c9f0d9`
+found no exact source on 25 November. The recommendations and source
+inspection are in the [Lean pilot note](../brainstorm/notes/LEAN_FORMALIZATION_PILOT_20261125.md).
+The exported conversation is registered with
+[Formalize Curvature Conventions](../../../../../formalization/investigations/chat-histories/0001_2026-11-25T15-39-07Z_formalize-curvature-conventions.json).
 
 ## Claude Cowork conversations · 24 November 2026
 
-Added for Edward B. Baker III with LLM assistance: Claude Fable 5.2 (`claude-fable-5-2`), Claude Cowork, reasoning effort max as configured. Claude conversations about this investigation are registered separately in [claude-cowork](claude-cowork/README.md), from the session's claude.ai event log, under the Claude section of [tools/CHAT_HISTORY.md](../../../../../tools/CHAT_HISTORY.md#claude-cowork-sessions). The first record is the session that executed SEC-B34, B35 and E59–E61. The Codex registrations and the pending items above are unchanged.
+Added for Edward B. Baker III with LLM assistance: Claude Fable 5.2 (`claude-fable-5-2`), Claude Cowork, reasoning effort max as configured. Claude conversations about this investigation are registered separately in [claude-cowork](claude-cowork/README.md), from the session's claude.ai event log, under the Claude section of [tools/CHAT_HISTORY.md](../../../../../tools/CHAT_HISTORY.md#claude-cowork-sessions). The first record is the session that executed SEC-B34, B35 and E59–E61.

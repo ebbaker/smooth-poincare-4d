@@ -1,0 +1,1211 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1.06in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[strings]{underscore}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Chiral transfer and pole forms on smooth homotopy four-spheres},pdfauthor={Edward B. Baker III}}
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{corollary}[proposition]{Corollary}
+\title{Chiral transfer and pole forms\\on smooth homotopy four-spheres}
+\author{Edward B. Baker III}
+\date{27 November 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let \(M\) be a smooth homotopy four-sphere, \(c\) a smooth Riemannian
+conformal class and \(p\in M\). We construct all closed self-dual
+two-forms on \(M\setminus\{p\}\) with growth at most that of a quartic pole.
+Their leading coefficients at \(p\) form a real three-dimensional space,
+and each coefficient determines a unique global solution. We identify
+this solution operator with the off-diagonal kernel of the chiral transfer
+\(d^-A\mapsto d^+A\), including its normalization. A single nowhere-zero
+solution gives a symplectic structure on the punctured manifold. Its
+asymptotics allow us to prescribe the chart at infinity in a relative
+symplectic recognition argument and to extend the resulting diffeomorphism
+across the original smooth puncture. Thus smooth Poincar\'e is equivalent
+to the existence, on each smooth type, of one class, one pole and one
+coefficient direction that works everywhere. We express the remaining
+condition on a finite cover and examine what can happen when a direction
+first acquires a zero.
+\end{abstract}
+
+\section{From isothermal coordinates to a recognition question}
+
+On the Riemann sphere a stereographic coordinate \(z\) has a simple pole.
+Its differential is closed, has a double pole, and is nowhere zero on the
+complement of that pole. It records a global fact about the coordinate in
+a form that can be checked locally. The present approach grew out of
+work on generalized isothermal coordinates \cite{BakerCurved2025,BakerIsothermal2026}
+and a proposal to use pole forms for smooth recognition
+\cite{Baker2026PoleFormsProposal}. There is a second feature of the
+two-dimensional construction worth retaining. For a map of the plane
+normalized as \(f=z+\text{correction}\), its two complex derivatives
+are related by \(f_z=1+Bf_{\bar z}\), with \(B\) the Beurling transform.
+The Beltrami equation \(f_{\bar z}=\mu f_z\) then becomes a linear
+equation for \(f_{\bar z}\). The transfer between two halves of a
+differential is the part of the analogy we use in four dimensions.
+
+Fix a closed, connected, oriented smooth four-manifold \(M\) homotopy
+equivalent to \(S^4\). Freedman's theorem identifies its underlying
+topological manifold \cite[Theorem~1.6]{Freedman1982}. Smooth
+recognition asks for a diffeomorphism with the given smooth structure.
+Our object is a real two-form on \(X=M\setminus\{p\}\). It has two
+properties with different consequences. Closedness and self-duality
+give a linear elliptic problem. Nonvanishing turns a solution into a
+symplectic form, since
+\[
+                    \omega\wedge\omega=|\omega|_g^2\,dV_g .
+\]
+It is this change from linear analysis to symplectic geometry that
+makes a single solution sufficient for recognition.
+
+The first main result, Proposition~\ref{prop:pole}, solves the linear
+problem for every smooth conformal class and every marked point.
+The second, Proposition~\ref{prop:recognition-pole}, recognizes the
+original compact manifold whenever one of those solutions is nowhere
+zero. The quantifiers matter. With \(u\) a direction in the coefficient
+space, the outstanding assertion is
+\begin{equation}\label{eq:openquant}
+   \forall M\quad \exists\,c,p,[u]\quad
+   \forall q\in M\setminus\{p\},\qquad \omega_u(q)\ne0 .
+\end{equation}
+The coefficient line may depend on \(M,c,p\). It is fixed as \(q\)
+varies. Section~\ref{sec:directions} gives an exact criterion for
+\eqref{eq:openquant} on compact pieces of a handle atlas. For a second
+connection with generalized isothermal coordinates we examine the
+resulting map on twistor directions and identify when it gives a
+whole fibre chart.
+
+\paragraph{Evidence and conventions.}
+An \emph{import} is used with its hypotheses and source at the point
+of application. The mathematical results derived here are project
+theorems. A1, A2, the normalization and the marked-end results have
+independent written proof replays. The finite-cover criterion is an
+elementary consequence derived below. A \emph{certificate} verifies
+the specified finite inequalities in the supporting example.
+The geometric results await formal verification in Lean.
+All conformal classes and forms in the main argument are smooth and
+real, and all metrics positive definite.
+
+\section{The chiral transfer on a closed manifold}
+\label{sec:transfer}
+
+Normalize the two-form norm by \(|e^i\wedge e^j|=1\) for \(i\ne j\)
+in an orthonormal coframe. Under \(\widehat g=e^{2f}g\) the inner
+product on \(k\)-forms scales by \(e^{-2kf}\) and volume by \(e^{4f}\).
+The defining wedge identity gives
+\(
+*_{\widehat g}|_{\Lambda^k}=e^{(4-2k)f}*_g.
+\)
+In degree two both the star and the \(L^2\) inner product are
+conformal invariants. The star squares to the identity, splitting
+two-forms into two oriented rank-three bundles \(\Lambda^\pm\).
+Write \(P^\pm=(1\pm *)/2\) and \(d^\pm=P^\pm d\).
+
+For a smooth one-form \(A\), Stokes's theorem gives
+\[
+   0=\int_M d(A\wedge dA)=
+   \int_M\bigl(|d^+A|^2-|d^-A|^2\bigr)\,dV_g .
+\]
+Density extends the identity to \(W^{1,2}\). It shows that the exact
+two-form \(dA\) is determined by either chiral part. To see that every
+\(L^2\) input occurs, use \(D_g=(d_g^*,\sqrt2\,d^-)\) on one-forms.
+Integration by parts gives \(D_g^*D_g=\Delta_1\) and
+\(D_gD_g^*=\Delta_0\oplus\Delta_2^-\). The first kernel vanishes since
+\(H^1(M;\mathbb R)=0\). The second consists of constant functions in
+the scalar slot since \(H^2(M;\mathbb R)=0\).
+Compact Hodge theory therefore solves
+\(D_g A=(0,\sqrt2\,\alpha)\) uniquely for every
+\(\alpha\in L^2(\Lambda^-)\), with \(A\in W^{1,2}\). Reversal of
+orientation gives the opposite construction. Thus
+\begin{equation}\label{eq:transfer}
+ T_c:L^2(\Lambda^-)\longrightarrow L^2(\Lambda^+),\qquad
+ T_c(d^-A)=d^+A
+\end{equation}
+is a surjective isometry. The potential in Coulomb gauge uses a
+representative of \(c\); the graph of exact forms and hence \(T_c\)
+depend only on \(c\). For \(F=dA\) in real abelian curvature
+normalization, \(F^+=T_c F^-\). Donaldson and Sullivan give the
+inverse arrow \cite[\S2(ii), (2.9)--(2.13)]{DonaldsonSullivan1989}.
+For the Euclidean operator on differential forms see Iwaniec and
+Martin \cite[\S8]{IwaniecMartin1993}.
+
+At \(p\), a concentrated anti-self-dual source should therefore generate
+a self-dual field elsewhere. We first classify fields by growth, without
+choosing a normalization for a point source. Set
+\begin{equation}\label{eq:pole-space}
+ \mathcal H_p(c)=\bigl\{\omega\in\Omega^2(X):
+   d\omega=0,\quad *_c\omega=\omega,\quad
+   |\omega|_g=O(d_g(p,\cdot)^{-4})\bigr\}.
+\end{equation}
+Smooth conformal representatives have locally comparable norms and
+distances, so the growth condition is intrinsic. On the round sphere
+every constant self-dual form in oriented stereographic coordinates
+belongs to this space. Inversion of the coordinates accounts for the
+power four: each covector contributes a factor of inverse distance
+squared. The analytic question is whether every such constant at the
+marked end extends, uniquely, on an arbitrary \(X\).
+
+\section{Existence and classification of pole forms}\label{sec:pole-existence}
+
+Fix \(g\in c\) and oriented orthonormal \(g\)-normal coordinates \(y\) at
+\(p\). Put \(\rho=|y|\), \(x=I(y)=y/\rho^2\), and \(r=|x|\).
+For a coefficient array in these Cartesian charts,
+\(O_\infty(r^\gamma)\) means that each derivative of order \(j\) is
+\(O(r^{\gamma-j})\). We use the same convention with \(\rho\) near
+the puncture. Let \(R_y=\mathrm{Id}-2\hat y\otimes\hat y\), with
+\(\hat y=y/|y|\).
+
+\begin{proposition}[A1, replayed project theorem]\label{prop:pole}
+For every smooth conformal class \(c\) and every \(p\in M\), the space
+\(\mathcal H_p(c)\) of \eqref{eq:pole-space} is three-dimensional.
+Each \(\eta\in\Lambda_p^-\) determines a unique member \(\omega_\eta\)
+with expansion
+\[
+ \omega_\eta=\rho^{-4}R_y^*\eta+O_\infty(\rho^{-2}),
+\]
+where the coefficients of \(\eta\) are held constant in the normal
+chart. The assignment \(\eta\mapsto\omega_\eta\) is a linear
+isomorphism. On the inverted end there is a one-form
+\(a=O_\infty(r^{-1})\) such that \(\omega_\eta=\omega^0+da\), where
+\(\omega^0\) is the constant two-form with the coefficients of \(\eta\)
+in the \(x\)-chart.
+\end{proposition}
+
+\begin{proof}
+Choose a smooth positive conformal multiple \(h\) of \(g\) on \(X\)
+equal to \(\rho^{-4}g\) near \(p\). From \(D_xy=r^{-2}R_x\) we obtain
+\[
+ h(x)=R_x^{\mathsf T}g(x/r^2)R_x=\mathrm{Id}+O_\infty(r^{-2}).
+\]
+In normal coordinates \(g-\mathrm{Id}\) vanishes to second order
+in \(y\). Since \(y=x/r^2\) is homogeneous of degree \(-1\) and \(R_x\)
+is homogeneous of degree zero, each Cartesian derivative in \(x\)
+improves the decay by one order. The puncture supplies the only end of
+\(X\), and uniform comparability with the Euclidean metric there gives
+completeness of \(h\). The inversion reverses orientation, so
+Euclidean self-duality for the orientation of \(X\) is anti-self-duality
+for the usual coordinate orientation of \(x\). The stars of \(h\) and
+\(g\) agree on two-forms, and near \(p\) their two-form norms satisfy
+\(|\omega|_h=\rho^4|\omega|_g\).
+
+\paragraph{The weighted operator.}
+Let \(P_h^-=(1-*_h)/2\) on two-forms, let \(d_h^*\) be the formal
+adjoint of \(d\), and write \(\Delta_h=dd_h^*+d_h^*d\). Set
+\[
+ D=(d_h^*,\sqrt{2}\,P_h^-d),\qquad
+ D^*(f,\beta)=df+\sqrt{2}\,d_h^*\beta
+ \quad(\beta\in\Lambda_h^-).
+\]
+The identities \(D^*D=\Delta_h\) on one-forms and
+\(DD^*=\Delta_h\) on functions and anti-self-dual two-forms give
+square ellipticity. The first uses \(d_h^**_hd=0\). For the second,
+\(d_h^*\beta=*_h d\beta\) implies
+\(d_h^*d\beta=-*_h dd_h^*\beta\), so
+\(2P_h^-dd_h^*\beta=\Delta_h\beta\). The off-diagonal terms vanish
+by \(d^2=(d_h^*)^2=0\).
+
+Use \(W^{k,2}_\delta\) with the usual Sobolev norm on the compact part
+and squared norm on the end equivalent to
+\[
+ \sum_{j=0}^k\int r^{2(j-\delta)}|\partial^j u|^2\,r^{-4}\,d^4x,
+ \qquad L^2_\delta=W^{0,2}_\delta.
+\]
+For large \(r\), the restriction of \(P_h^-\) identifies the flat
+anti-self-dual bundle with \(\Lambda_h^-\), using the same orientation
+for both. In these end frames the flat operator is \(D_0\).
+The first- and zeroth-order coefficients of \(D-D_0\) have orders
+\(O_\infty(r^{-2})\) and \(O_\infty(r^{-3})\), respectively.
+The same bounds hold for \(D^*-D_0^*\) and for
+\(Q-Q_0\), where \(Q=d+d_h^*\) and \(Q_0=d+d_0^*\) act on all forms.
+
+To apply the cylindrical Fredholm theorem, set \(z=\log(r/R_0)\) on
+the end and \(A=rD\), extending \(r\) smoothly and positively on the
+compact part. In cylindrical coordinates with Cartesian component
+frames, \(rD_0\) is translation invariant, and the coefficients of
+\(rD-rD_0\) and all their cylindrical derivatives are \(O(r^{-2})\).
+A global comparison operator is obtained by interpolating between
+\(A\) on the compact part and \(rD_0\) on the end. On a sufficiently
+distant interpolation annulus the principal symbols are uniformly close
+on unit cylindrical covectors, so the comparison operator remains
+elliptic. The end measure is \(r^{-4}d^4x=dz\,dS\) and the exponential
+factor in the cylindrical norm is \(e^{-\delta z}\), up to a constant.
+Multiplying the target by \(r\) shifts its weight from \(\delta-1\)
+to \(\delta\). Thus the weighted Fredholm theorem for a smooth square
+elliptic system with coefficients converging to a translation-invariant
+elliptic system on a cylindrical end applies to
+\[
+ D\colon W^{1,2}_\delta\longrightarrow L^2_{\delta-1}.
+\]
+In the notation of the theorem the exceptional cylindrical weights are
+\(\operatorname{Im}\lambda\) for nonzero pencil modes
+\(e^{i\lambda z}v(\theta)\) of the limit operator. With \(q=i\lambda\),
+these are the Cartesian weights \(\delta=\operatorname{Re}q\) for
+which \(D_0(r^qv)=0\) with \(v\) smooth on \(S^3\).
+Generalized modes with polynomial factors in \(z\) introduce no new
+weights, since their highest coefficient solves the ordinary pencil
+equation. The index and nullspaces are constant between consecutive
+exceptional weights
+\cite[Theorem~6.2 and Lemma~7.1]{LockhartMcOwen1985Elliptic}.
+
+Since \(D_0^*D_0=\Delta_0\), every Cartesian coefficient of
+\(r^qv\) is harmonic. The eigenvalues \(\ell(\ell+2)\) on the unit
+\(S^3\) give \(q(q+2)=\ell(\ell+2)\) for \(\ell=0,1,\ldots\).
+They follow from restricting homogeneous harmonic polynomials to the
+sphere, whose restrictions span by the harmonic decomposition of
+polynomials. In \([-3,0]\) the candidates are \(-3,-2,0\).
+At \(-2\), the coefficient vector has the form \(r^{-2}v\) with
+\(v\) constant, so its codifferential is \(2r^{-4}x\cdot v\).
+This vanishes identically only for \(v=0\).
+The one-form \(d(r^{-2})\) realizes \(-3\), and constant one-forms
+realize \(0\). These are the only exceptional weights in the interval.
+
+Local elliptic regularity gives smoothness for distributional solutions
+with smooth data. To track decay, rescale \(x=Rs\) on fixed nested
+annuli \(B\Subset B'\). For \(P=D,D^*,Q\) or their flat versions, the
+operator \(P_R\) induced by \(RP\) has coefficients converging in every
+\(C^m\) norm on \(B'\) to those of the corresponding flat operator in
+\(s\). The interior parametrix estimates
+\cite[estimate~(2.4)]{LockhartMcOwen1985Elliptic} take the uniform form
+\[
+ \|u_R\|_{H^{m+1}(B)}
+ \le C_m\bigl(\|R(Pu)_R\|_{H^m(B')}+\|u_R\|_{L^2(B')}\bigr),
+ \qquad u_R(s)=u(Rs).
+\]
+Uniformity on the end also follows by absorbing the small coefficient
+error in the flat estimates. The rescaled \(L^2\) term for \(u\in
+L^2_\delta\) is bounded by \(C R^\delta\|u\|_{L^2_\delta}\), and a
+pointwise \(O(r^\delta)\) bound gives the same power of \(R\).
+If \(Pu=O_\infty(r^\gamma)\), the rescaled source term is
+\(O(R^{\gamma+1})\). Sobolev embedding gives derivative bounds
+\(R^j|\partial^j u|\le C_j(R^\delta+R^{\gamma+1})\) on the smaller
+annulus, with only the first term for a homogeneous solution.
+
+\paragraph{The kernel and cokernel.}
+Work first at \(\delta=-3/2\). If \(Da=0\), regularity gives
+\(a=O_\infty(r^{-3/2})\), and \(da\) is self-dual. For the
+truncation \(X_R\) at \(r=R\), Stokes gives
+\[
+ \int_{X_R}|da|_h^2\,dV_h
+ =\int_{\partial X_R}a\wedge da=O(R^{-1}),
+\]
+using boundary area \(O(R^3)\) and coefficient orders \(-3/2\)
+and \(-5/2\). Hence \(da=0\).
+By excision \(H^2(M,X;\mathbb R)\) is the local cohomology group
+\(H^2(B^4,B^4\setminus\{0\};\mathbb R)=0\). As \(H^1(M;\mathbb R)=0\),
+the relative sequence gives \(H^1(X;\mathbb R)=0\). Thus \(a=dF\)
+with \(\Delta_hF=0\).
+Integrating \(dF\) along rays shows that \(F\) converges uniformly
+along them with tail \(O(r^{-1/2})\). The oscillation on each sphere is
+also \(O(r^{-1/2})\), since the sphere diameters grow linearly. Thus
+\(F\) has a common limit at infinity. The maximum principle on \(X_R\)
+gives \(F\) constant.
+
+The \(h\)-volume pairing identifies the dual of \(L^2_{\delta-1}\)
+with \(L^2_{-3-\delta}\). Indeed the two weight exponents sum to
+\(-4\), so the product of the norm factors \(r^{-\delta+1}\) and
+\(r^{3+\delta}\) converts \(r^{-4}d^4x\) to \(d^4x\). The density
+and pointwise inner product for \(h\) are uniformly equivalent to
+their Euclidean versions. A cokernel representative at \(\delta=-3/2\)
+therefore solves
+\(D^*(f,\beta)=0\) distributionally in \(L^2_{-3/2}\).
+It is smooth and \(O_\infty(r^{-3/2})\).
+Applying \(d_h^*\) gives \(\Delta_h f=0\), and the maximum principle
+with \(f\to0\) gives \(f=0\). Then \(d_h^*\beta=0\) and chirality
+implies \(d\beta=0\). In the compact metric,
+\(|\beta|_g=O(\rho^{-5/2})\).
+
+For either chirality, a closed two-form with compact-metric norm
+\(O(\rho^{-b})\) for \(b<3\) has a removable singularity. The form
+is locally integrable, and testing its exterior derivative with a cutoff
+that changes from zero to one on \(\epsilon<\rho<2\epsilon\) costs
+\(O(\epsilon^{3-b})\). The factor \(\epsilon^{-1}\) from the cutoff
+derivative is multiplied by \(O(\epsilon^{-b})\) from the form and
+\(O(\epsilon^4)\) from the annular volume. The extension is therefore
+closed distributionally across \(p\). The chiral identity gives distributional coclosedness, and
+elliptic regularity for \(d+d_g^*\) gives a smooth extension. Since
+\(H^2(M;\mathbb R)=0\), the extension is exact, and Stokes and
+\(\beta\wedge\beta=\pm|\beta|_g^2dV_g\) make it zero. This applies to
+the cokernel form with \(b=5/2\).
+
+Fredholmness now gives the inverse at \(-3/2\). Nullspace and index
+constancy give an inverse for every \(-3<\delta<0\). The same inverse
+maps \(W^{k,2}_{\delta-1}\) boundedly to \(W^{k+1,2}_\delta\) for
+each integer \(k\ge0\). Indeed the local rescaled bounds, summed in
+weighted squares over dyadic annuli of finite overlap and combined
+with compact interior estimates, bound the higher domain norm by the
+higher data norm and the \(L^2_\delta\) norm of the solution. The
+order-one inverse controls this last term.
+
+\paragraph{The endpoint estimates.}
+For \(P_0=D_0\) or \(Q_0\), let
+\(E=P_0^*\Gamma\), where \(\Gamma(x)=(4\pi^2|x|^2)^{-1}\)
+is the four-dimensional fundamental solution for the positive
+Laplacian. It has this normalization by flux through a sphere.
+Since \(P_0P_0^*=\Delta_0\), \(P_0E=\delta_0\mathrm{Id}\)
+and \(|E(x)|\le C|x|^{-3}\).
+If \(G\) is smooth on \(\mathbb R^4\) and \(G=O(r^{-k})\) for
+\(k=2\) or \(3\), then \(E*G\) converges absolutely and has
+order \(O(r^{1-k})\). Split the convolution integral at
+\(|w|=r/2\) and \(2r\). The respective bounds are
+\[
+ Cr^{-3}\int_{|w|\le r/2}(1+|w|)^{-k}d^4w,qquad
+ Cr^{-k}\int_{|x-w|\le3r}|x-w|^{-3}d^4w,qquad
+ C\int_{2r}^\infty t^{-k}dt.
+\]
+Each is \(O(r^{1-k})\). Local integrability and the same tail bound
+justify testing the convolution against compactly supported functions,
+so \(P_0(E*G)=G\) in distributions. If a bounded section \(u\) solves
+\(P_0u=G\) globally, its difference from \(E*G\) is entire
+coefficientwise harmonic and hence constant. This constant is zero
+when \(u\to0\).
+
+\paragraph{Existence and exhaustion.}
+For the prescribed \(\eta\), let \(\omega^0\) be its constant form
+on the end, Euclidean self-dual for the orientation of \(X\).
+Use the radial vector field \(\mathcal R=\sum_j x^j\partial_{x^j}\).
+Cut off \(A^0=\tfrac12\iota_{\mathcal R}\omega^0\) so that it extends
+smoothly by zero on the compact part and \(dA^0=\omega^0\) far out.
+Then \(P_h^-dA^0=O_\infty(r^{-2})\). Solve
+\[
+ Da=(0,-\sqrt{2}\,P_h^-dA^0)
+\]
+at any \(-1<\delta<0\), since the source lies in
+\(L^2_{\delta-1}\). The rescaled estimates give
+\(a=O_\infty(r^\delta)\). Thus \(D_0a=O_\infty(r^{-2})\), since
+the additional error \((D_0-D)a\) is \(O_\infty(r^{\delta-3})\).
+Cut off \(a\) in the flat end frames and extend by zero to
+\(\mathbb R^4\). The preceding convolution estimate with \(k=2\)
+applies, and the entire harmonic residual vanishes because the cutoff
+section tends to zero. This gives \(a=O(r^{-1})\), which the flat annular estimates
+upgrade to \(O_\infty(r^{-1})\). The two-form \(d(A^0+a)\) is closed by
+construction and self-dual by the second component of the equation
+for \(a\). It equals \(\omega^0+da\) far out with
+\(da=O_\infty(r^{-2})\). The convolution is what gives the stated
+endpoint, since the weighted step gives only
+\(da=O_\infty(r^{\delta-1})\).
+
+Conversely, every \(\omega\in\mathcal H_p(c)\) is bounded in the
+Cartesian end frames by the compact-to-end norm relation. Closedness
+and self-duality imply \(Q\omega=0\). The rescaled estimates give
+\(\omega=O_\infty(1)\), so \(Q_0\omega=O_\infty(r^{-3})\).
+Cut off \(\omega\) on the end and apply the convolution estimate
+with \(k=3\). The constant harmonic residual is a two-form because
+the cutoff section is a two-form and the convolution tends to zero.
+Hence \(\omega=\omega^0+O(r^{-2})\) for a constant two-form.
+Passing to the limit in \(P_h^-\omega=0\) gives
+\(P_0^-\omega^0=0\), and flat interior estimates give the differentiated
+remainder. Pullback under \(I\), with \(D_yI=\rho^{-2}R_y\),
+takes \(\omega^0\) to \(\rho^{-4}R_y^*\eta\) and takes
+\(O_\infty(r^{-2})\) to \(O_\infty(\rho^{-2})\).
+Subtracting the constructed solution for this \(\eta\) leaves a
+removable closed self-dual form with \(b=2\), which vanishes by the
+removability argument above. The construction and uniqueness are linear,
+and the constant chiral space has dimension three.
+\end{proof}
+
+The order of the remainder can be attained in normal coordinates.
+On \(S^4\), take \(g\) equal near \(p\) to the product of a spherical
+surface of curvature one and a flat plane, and interpolate with a
+smooth metric away from \(p\). On the ray \(y=(\rho,0,0,0)\) in product
+normal coordinates, the spherical polar metric gives
+\(g=\mathrm{diag}(1,b^2,1,1)\), where \(b=\sin\rho/\rho\).
+Reflection in the inversion formula preserves this diagonal matrix,
+so \(h\) has the same entries on the corresponding ray. If
+\(dx^{ij}=dx^i\wedge dx^j\) and \(\omega^0=dx^{12}-dx^{34}\), the star
+of the reversed orientation gives
+\[
+ (*_h-1)\omega^0
+ =(b-1)dx^{12}+(1-b^{-1})dx^{34}
+ =-\frac{r^{-2}}6(dx^{12}+dx^{34})+O(r^{-4}).
+\]
+If the pole form with this coefficient had error \(o(r^{-2})\) on the
+ray, its self-duality and boundedness of \(*_h\) would force
+\((*_h-1)\omega^0=o(r^{-2})\), contrary to the displayed coefficient.
+
+This completes the growth classification. To identify these solutions as the
+columns of \eqref{eq:transfer}, it remains to compute the normalization
+of a point source.
+
+\section{The transfer kernel and its pole coefficient}
+\label{sec:transfer-kernel}
+
+Fix a representative \(g\in c\) and let \(dV_g\) denote its positive
+volume density. We write \(K_g(q,p)\) for the kernel of \eqref{eq:transfer}
+relative to this density at the source \(p\). Thus for a smooth input
+\(\alpha\) whose support omits \(q\),
+\[
+ (T_c\alpha)(q)=\int_M K_g(q,p)\alpha(p)\,dV_g(p).
+\]
+For distinct \(p,q\), the map \(K_g(q,p)\) takes \(\Lambda^-_p\) to
+\(\Lambda^+_q\). Write \(P_g(q,p)\eta=\omega_\eta(q)\) for the solution
+of Proposition~\ref{prop:pole} with leading coefficient
+\(\eta\in\Lambda^-_p\). The relation is
+\begin{equation}\label{eq:kernel-pole-normalization}
+ K_g(q,p)=\frac{2}{\pi^2}P_g(q,p),\qquad q\ne p.
+\end{equation}
+
+To see the smoothness needed for the pointwise kernel, let
+\(\Delta_g=dd_g^*+d_g^*d\) be the Hodge Laplacian on two-forms and
+\(\pi_g^+\) the self-dual projection. As \(H^2(M;\mathbb R)=0\),
+\(dd_g^*\Delta_g^{-1}\) is the orthogonal projection onto exact
+two-forms. The exact graph gives
+\(T_c=2\pi_g^+dd_g^*\Delta_g^{-1}|_{\Lambda^-}\).
+Indeed, the projection of \(\alpha\in\Lambda^-\) onto the graph is the
+exact form \((\alpha+T_c\alpha)/2\), since the difference is
+orthogonal to the graph by the isometry of \(T_c\). It follows that
+\(\Delta_g T_c\) and \(T_c\Delta_g\) both equal the differential operator
+\(2\pi_g^+dd_g^*|_{\Lambda^-}\). Off the diagonal the distributional
+kernel is therefore annihilated by the Hodge Laplacians acting at the
+target and, by formal adjunction, at the source. Their sum is elliptic on
+the product, which gives joint smoothness there.
+
+For the normalization, use the oriented orthonormal normal coordinates
+\(y\) at \(p\) of Proposition~\ref{prop:pole}. Set \(\rho=|y|\),
+\(n=y/\rho\), and \(I(y)=y/\rho^2\), and identify \(\eta\) with its
+constant-coefficient extension in the chart. The locally integrable
+one-form \(b=\tfrac12\rho^{-4}\iota_y\eta\) satisfies
+\(db=I^*\eta\) for \(y\ne0\), since it is the pullback under \(I\) of the
+linear primitive of the constant form. The angular mean of the leading term
+\(I^*\eta=\rho^{-4}(\eta-2n^\flat\wedge\iota_n\eta)\) vanishes.
+Indeed \(\int_{S^3}n_i n_j\,dS=(2\pi^2/4)\delta_{ij}\), and
+\(\sum_i e^i\wedge\iota_{e_i}\eta=2\eta\) for a Euclidean orthonormal
+frame. The spherical principal value thus exists. Differentiating
+\(\mathbf{1}_{\{\rho>\varepsilon\}}b\) gives a boundary term with
+positive radial conormal \(d\rho\). Its limit is a point mass with
+coefficient
+\[
+ \frac12\int_{S^3}n^\flat\wedge\iota_n\eta\,dS
+ =\frac{\pi^2}{2}\eta .
+\]
+In coefficient distributions in the normal chart this reads
+\[
+ db=\operatorname{pv}(I^*\eta)+\frac{\pi^2}{2}\eta\,\delta_0 .
+\]
+
+Let \(\delta_p^g\) be the scalar point mass relative to \(dV_g\), so
+that pairing \(\eta\delta_p^g\) with a smooth two-form \(\gamma\)
+gives \(\langle\eta,\gamma(p)\rangle_g\). The normal-coordinate volume
+density at \(p\) is one. The remainder \(\omega_\eta-I^*\eta\) is closed
+on the deleted ball and is \(O(\rho^{-2})\). Its locally integrable
+extension is closed across \(p\), since the boundary integral against a
+smooth test one-form is \(O(\rho^3\rho^{-2})\). Consequently the
+two-form distribution
+\[
+ F=\operatorname{pv}(\omega_\eta)+\frac{\pi^2}{2}\eta\delta_p^g
+\]
+is closed on \(M\). Its principal-value term is self-dual, as follows by
+testing self-duality on every deleted ball and passing to the limit.
+
+Reverse the orientation \(o\) to exchange the two chiral projections.
+The graph in \eqref{eq:transfer} then gives
+\(T_c^{-o}=(T_c^o)^{-1}=(T_c^o)^*\).
+For a smooth self-dual test form \(\beta\), take a smooth potential \(B\)
+with \(d^+B=\beta\), using the compact inverse on a homology
+four-sphere \cite[\S2(ii), (2.9)--(2.13)]{DonaldsonSullivan1989}.
+Then \(d^-B=(T_c^o)^*\beta\). Distributional Stokes gives
+\[
+ 0=\int_M F\wedge dB
+  =\big\langle\operatorname{pv}(\omega_\eta),\beta\big\rangle_{L^2(g)}
+   -\frac{\pi^2}{2}\big\langle\eta,[(T_c^o)^*\beta](p)\big\rangle_g .
+\]
+The minus sign is the wedge pairing on anti-self-dual forms. Thus
+\((2/\pi^2)\operatorname{pv}(\omega_\eta)\) is the distributional output
+of \(T_c^o\) on \(\eta\delta_p^g\). For test forms supported away from
+\(p\), this output is represented by the smooth off-diagonal kernel
+column. This proves \eqref{eq:kernel-pole-normalization}, with the
+positive constant for the arrow \(d^-A\mapsto d^+A\).
+
+The conformal class fixes both \(T_c\) and the chiral bundles. Its
+density-valued kernel \(K_g(q,p)dV_g(p)\) is therefore independent of
+\(g\). In particular, for \(\widehat g=e^{2f}g\),
+\[
+ K_{\widehat g}(q,p)=e^{-4f(p)}K_g(q,p)
+\]
+as maps on the same covariant source forms. If \(\eta_g\) and
+\(\eta_{\widehat g}\) label a fixed output two-form under
+\(P_g\) and \(P_{\widehat g}\), respectively,
+\eqref{eq:kernel-pole-normalization} and uniqueness of the coefficient
+give \(\eta_{\widehat g}=e^{4f(p)}\eta_g\). Thus the intrinsic label is
+\(\eta_g\otimes dV_g(p)^{-1}\). In aligned orthonormal coframes the
+components of that fixed output's coefficient acquire a factor
+\(e^{2f(p)}\) because each coframe covector scales by \(e^{f(p)}\).
+
+The change of normal coordinates gives the same weight for a
+nonconstant conformal factor. Let \(z\) be the new coordinate with
+aligned frames, \(a=e^{f(p)}\), and \(v=\nabla_g f(p)\) in the old
+frame. At \(p\) the difference of the two connections on \((u,u)\) is
+\(2(v\cdot u)u-|u|^2v\). The geodesic equation and inversion of its
+Taylor expansion give
+\[
+ z=a\bigl(y+(v\cdot y)y-\tfrac12|y|^2v+O(|y|^3)\bigr).
+\]
+The squared radius is
+\(a^2|y|^2(1+v\cdot y+O(|y|^2))\). Setting \(x=I(y)\) consequently
+gives \(I(z)=a^{-1}(x-v/2+O(|x|^{-1}))\). The differentiated Taylor
+remainder gives \(D_xI(z)=a^{-1}(\mathrm{Id}+O(|x|^{-2}))\).
+The translation leaves the constant two-form unchanged. The linear
+factor contributes twice to its pullback, and the residual term has
+the decay of the remainder in the inverted chart.
+
+Finally, taking the \(L^2\) adjoint exchanges source and target in the
+kernel. Since \(T_c^{-o}=(T_c^o)^*\), this gives
+\begin{equation}\label{eq:kernel-orientation-reciprocity}
+ K_g^{-o}(p,q)=K_g^o(q,p)^{*_{g(p),g(q)}},\qquad p\ne q,
+\end{equation}
+where the adjoint uses the positive fibre inner products at the two
+points. In orientation \(-o\), the source at \(q\) is
+\(\Lambda^+_{o,q}\) and the target at \(p\) is \(\Lambda^-_{o,p}\).
+
+\section{Recognition from a nowhere-zero pole form}
+
+\begin{proposition}[A2, replayed project theorem]\label{prop:recognition-pole}
+Let \(M\) be a closed, connected, oriented smooth homotopy four-sphere
+with a smooth Riemannian conformal class \(c\) and a point \(p\).
+If some \(\omega\in\mathcal H_p(c)\) is nowhere zero on
+\(X=M\setminus\{p\}\), then \(M\) is diffeomorphic to the standard
+smooth \(S^4\).
+\end{proposition}
+
+\begin{proof}
+For \(g\in c\), self-duality gives
+\(\omega\wedge\omega=|\omega|_g^2\,dV_g>0\) on \(X\).
+Thus the closed form \(\omega\) is symplectic and induces the given
+orientation. In the inverted normal chart \(x=y/|y|^2\), write
+\(\omega=\beta+da\), with \(|a|=O(r^{-1})\) and \(|da|=O(r^{-2})\)
+in the Euclidean norm, where \(r=|x|\). These are the end estimates
+from Proposition~\ref{prop:pole} and its proof. The constant
+\(\beta\) is nonzero by the leading-coefficient isomorphism.
+It is Euclidean self-dual in the inherited orientation, which is
+opposite to the usual orientation of the \(x\)-coordinates.
+
+Take a smooth cutoff \(\chi_R\) equal to one for \(r\le R\) and zero
+for \(r\ge 2R\), with \(|d\chi_R|\le C/R\). On the end put
+\(\Omega_X=\beta+d(\chi_Ra)\) and retain \(\omega\) on the core.
+The expressions agree on an open overlap and define a closed smooth
+form. On the transition annulus,
+\[
+ \Omega_X-\beta=\chi_R\,da+d\chi_R\wedge a=O(R^{-2}).
+\]
+In a Euclidean orthonormal coframe for the inherited orientation,
+\(\beta=b(e^1\wedge e^2+e^3\wedge e^4)\), with
+\(b=|\beta|/\sqrt2>0\). As a skew map it has least singular value
+\(b\). Take \(R\) large enough that the annular error has operator
+norm less than \(b\). The segment from \(\beta\) to \(\Omega_X\)
+then consists of nondegenerate forms at each annular point and
+preserves the orientation. Hence \(\Omega_X\) is symplectic everywhere
+and is exactly \(\beta\) for \(r\ge 2R\).
+
+Let \(\omega_{\mathrm{std}}=dz^1\wedge dz^2+dz^3\wedge dz^4\).
+The coframe above gives an orthogonal \(Q\) with
+\(Q^*\omega_{\mathrm{std}}=\beta/b\), where \(\det Q=-1\) in
+the usual \(x\)-orientation. The map \(e\colon x\mapsto z=sQx\),
+where \(s=\sqrt b\), is therefore a symplectic end chart for
+\(\Omega_X\). As a similarity it sends round exteriors to round
+exteriors. Fix a round truncation sphere in this chart and let \(K\)
+be its compact core in \(X\). Then \(X\) deformation retracts onto
+\(K\) by radial retraction on the end. Excision gives
+\(H_i(M,X;\mathbb Z)\cong H_i(B^4,B^4\setminus\{0\};\mathbb Z)\),
+concentrated in degree four, so the exact sequence of the pair and
+\(H_2(M;\mathbb Z)=0\) imply \(H_2(K;\mathbb Z)=0\).
+
+Choose \(L\) large enough that the truncating ball and an open
+annulus around its boundary lie inside the polydisc
+\(P_L=D^2(L)\times D^2(L)\). In
+\(Y_0=(S^2\times S^2,\sigma\oplus\sigma)\) take the same round
+area form \(\sigma\) on each factor, scaled to total area
+\(A=\pi L^2\). Let
+\(D=S_1\cup S_2\), where \(S_1=S^2\times\{q\}\) and
+\(S_2=\{q\}\times S^2\). Area coordinates on the two factors identify
+\(Y_0\setminus D\) with \((P_L,\omega_{\mathrm{std}})\). In a
+stereographic coordinate \(\zeta\) on \(S^2\setminus\{q\}\),
+the disk map \(\zeta\mapsto L\zeta/\sqrt{1+|\zeta|^2}\)
+has area Jacobian \(L^2(1+|\zeta|^2)^{-2}\), the density of
+\(\sigma\) in that chart.
+
+Replace the truncating ball in this product with \(K\), identifying
+collars by \(e\). The collars fill opposite sides of the seam and
+the forms on them are both \(\omega_{\mathrm{std}}\) in the same
+coordinates. The result is a closed symplectic manifold
+\((Y,\Omega_Y)\) with its prescribed split neighborhood of \(D\).
+The spheres there have trivial normal bundles, area \(A\), and
+one transverse intersection of sign \(+1\) in their symplectic
+orientations. Since the seam is a three-sphere, Mayer--Vietoris
+in degree two identifies \(H_2(Y;\mathbb Z)\) with
+\(H_2(Y_0;\mathbb Z)\), using \(H_2(K;\mathbb Z)=0\) and the
+fact that removing a ball from \(Y_0\) leaves its second homology
+unchanged. The two divisor classes are thus an integral basis.
+A smooth map from a sphere with image class \(m[S_1]+n[S_2]\) has
+\(\Omega_Y\)-period \((m+n)A\).
+
+Gromov's criterion and relative extension
+\cite[\S2.4, product criterion and following remark, p.~337]{Gromov1985PseudoHolomorphic}
+apply to this sphere pair. The symplectomorphism
+\(Y\to Y_0\) extends the prescribed product identification on a
+neighborhood of \(D\). After removing \(D\), its target is
+\(P_L\), and its domain is the portion of \(X\) inside this
+polydisc in the capped description. The complement of the
+neighborhood of agreement in \(Y_0\) is compact and contained
+in \(P_L\). Choose \(\ell<L\) so that \(P_\ell\) contains
+that complement as well as the truncating ball and its collar.
+On \(P_L\setminus\overline{P_\ell}\) the relative map is
+exactly the prescribed chart \(e\). The map and its inverse
+therefore paste with \(e\) and \(e^{-1}\) across this open region
+to give a global symplectomorphism
+\(F\colon(X,\Omega_X)\to(\mathbb R^4,\omega_{\mathrm{std}})\).
+Since \(P_L\) is bounded, \(F=sQx\) on a whole Euclidean tail.
+
+Use \(w=z/|z|^2\) as the smooth target coordinate at infinity
+of the standard \(S^4\). In the original smooth chart \(y\) near
+\(p\), the map is exactly
+\[
+ w(F(y))=\frac{sQ(y/|y|^2)}{|sQ(y/|y|^2)|^2}
+       =s^{-1}Qy .
+\]
+It extends across \(p\) with an invertible derivative and a
+smooth linear inverse in these charts. This extends \(F\)
+to the desired diffeomorphism.
+\end{proof}
+
+\begin{corollary}[Reformulation]\label{cor:equivalence}
+Every smooth homotopy four-sphere is diffeomorphic to \(S^4\) if
+and only if each such \(M\) admits a smooth Riemannian conformal
+class \(c\) and a point \(p\) for which one element of
+\(\mathcal H_p(c)\) is nowhere zero on \(M\setminus\{p\}\).
+\end{corollary}
+
+\begin{proof}
+Proposition~\ref{prop:recognition-pole} gives one implication.
+For the other, take an orientation-preserving diffeomorphism to
+the standard sphere, composing with a round reflection if necessary.
+The round class has conformally Euclidean stereographic coordinates
+away from the pole. A nonzero constant self-dual two-form in coordinates
+oriented as the punctured sphere is closed and nowhere zero. Its
+coefficients in the inverted smooth chart are \(O(|w|^{-4})\),
+as required for membership in \(\mathcal H_p(c)\). Pull back the
+round class, the pole and the form by the diffeomorphism.
+\end{proof}
+
+In the existence statement the class and the pole can depend on
+the smooth sphere. For any chosen \((c,p)\), A1 identifies a single
+pole form with a fixed leading coefficient. Rescaling a nonzero
+coefficient to unit norm gives the equivalent requirement of one
+unit direction whose form is nonvanishing throughout \(X\).
+
+\section{One coefficient direction on a finite cover}
+\label{sec:directions}
+
+Fix \((c,p)\) and a representative \(g\). Put \(V=\Lambda^-_p\),
+with its \(g(p)\) inner product. The three-dimensional space furnished
+by A1 gives an evaluation map at every point,
+\[
+      L_q:V\longrightarrow\Lambda^+_q,\qquad L_qu=\omega_u(q).
+\]
+Changing \(u\) by a nonzero scalar changes no zero set. Thus the
+natural space of choices for recognition is \(\mathbb P(V)\simeq
+\mathbb{RP}^2\). At a point with \(\operatorname{rank} L_q=2\), one
+projective direction vanishes; at rank one, a whole projective line
+vanishes. A rank-zero point excludes every direction for this
+particular class and pole.
+
+\begin{proposition}[A finite-cover criterion]\label{prop:cover}
+Choose the asymptotically Euclidean representative \(h\) of A1.
+There is a compact core \(C\subset X\) outside which \(L_q\) is
+invertible. Cover \(C\) by finitely many compact pieces \(C_j\) in
+smooth coordinate charts. For a unit \(u\in V\), define
+\[
+ m_j(u)=\min_{q\in C_j}|L_qu|_h,\qquad
+ m(u)=\min_j m_j(u).
+\]
+There is a zero-free member of \(\mathcal H_p(c)\) if and only if
+\(\max_{|u|=1}m(u)>0\). Equivalently the compact set
+\[
+  \mathcal B(c,p)=
+  \bigcup_{q\in C}\mathbb P(\ker L_q)
+  \ \subseteq\ \mathbb P(V)
+\]
+is a proper subset, with \(\mathbb P(0)=\varnothing\).
+\end{proposition}
+
+\begin{proof}
+Apply the \(O(r^{-2})\) end estimate to an orthonormal basis of \(V\).
+In the Cartesian end frame the limit of \(u\mapsto L_qu\) is the
+inclusion of \(V\) as constant two-forms, an isometry for the flat end
+norm. The errors on a basis bound the operator norm of the error for
+every unit \(u\) at once. As \(h\) tends to the Euclidean metric, we
+may take \(C\) so that \(|L_qu|_h\ge 1/2\) outside \(C\) for every
+unit \(u\). Each \(m_j\) is continuous: its change between \(u\) and
+\(v\) is bounded by \(\sup_{C_j}\|L_q\|\,|u-v|\).
+The maximum over the coefficient sphere is therefore attained. A
+positive maximum supplies one direction with a positive minimum on
+all the pieces, and the exterior estimate completes the argument. In
+the opposite direction a nonvanishing form has a positive minimum on
+\(C\) by compactness. Finally the incidence relation \(L_qu=0\) is
+closed on \(C\times\mathbb P(V)\), so its projection \(\mathcal B(c,p)\)
+is compact. Its complement consists exactly of the desired lines.
+\end{proof}
+
+The order of the extrema is important. The quantity
+\(\min_j\max_{|u|=1}m_j(u)\) allows the best direction to change between
+pieces. Even strict positivity of this quantity leaves the common
+direction undecided. Conversely the estimates themselves may vary
+from chart to chart: if approximate linear maps \(A_j(q)\) in local
+frames obey \(\|L_q-A_j(q)\|\le\epsilon_j\) and
+\(\min_{C_j}|A_j(q)u|>\epsilon_j\) for the same \(u\), the triangle
+inequality proves the required positivity.
+
+\subsection{What a handle presentation supplies}
+
+A handle presentation can be chosen on each individual smooth \(M\).
+For example, Gay and Kirby's
+trisection theorem \cite[Theorem~4]{GayKirby2016Trisecting}
+gives an oriented closed connected smooth four-manifold a balanced
+trisection of some type \((g_{\rm tr},k)\), with handle numbers
+\[
+       (n_0,n_1,n_2,n_3,n_4)=(1,k,g_{\rm tr}-k,k,1).
+\]
+On a homotopy sphere \(\chi=2\), so \(2+g_{\rm tr}-3k=2\).
+One can thus start with counts \((1,k,2k,k,1)\) for some \(k\).
+The attaching data, including the embeddings and framings of the
+attaching solid tori for the two-handles, are still part of the input.
+The identity of handle counts does not cancel these handles.
+
+Give each \(D^i\times D^{4-i}\) product charts on its interior.
+Near an attachment use charts on the attaching region and extend by a
+signed collar coordinate, smoothing the product corners. If a local
+attaching embedding is \(a\), the overlap in product collars is
+represented, up to the choice of boundary coordinates, by
+\((z,t)\mapsto(a(z),t)\) using a common signed normal coordinate.
+Restricting such open sets to smaller compact pieces gives the cover
+in Proposition~\ref{prop:cover}. A metric can likewise be chosen
+using a partition of unity on this atlas, since positive-definite
+quadratic forms form a convex cone. This supplies a conformal class;
+the choice still affects \(L_q\) throughout \(X\).
+
+The same construction works separately for every presented smooth
+type. No classification of smooth structures is required as input.
+If instead one transports the stereographic atlas by a homeomorphism
+\(M\to S^4\), compatibility of the transported atlas with the given
+smooth structure is precisely a smooth recognition question. The
+handle construction respects the given smoothing from the outset.
+Its transition functions organize the search for estimates; they
+carry no lower bound on \(m(u)\) by themselves.
+
+\subsection{Evaluation and generalized isothermal coordinates}
+
+Fix a \(g(p)\)-orthonormal basis \(u_i\) of \(V\) and write
+\(\omega_i=\omega_{u_i}\). The Gram matrix
+\[
+      Q_{ij}\,dV_g=\omega_i\wedge\omega_j,\qquad
+      u^{\mathsf T}Q(q)u=|L_qu|_g^2
+\]
+is positive semidefinite. Its rank is the rank of \(L_q\). Where
+\(L_qu\ne0\), the map \(u\mapsto L_qu/|L_qu|_g\) selects a point
+of the twistor sphere \(S(\Lambda^+_q)\). If \(L_q\) is invertible,
+normalization of \(L_q^{-1}\) gives the inverse map on spheres. At
+lower rank the image lies in the unit sphere of a proper subspace.
+Thus one global zero-free direction gives a smooth section of the
+twistor sphere on \(X\); a chart covering the entire direction sphere
+at \(q\) requires rank three there.
+
+The additional condition for that whole-fibre chart to be conformal for the round sphere metrics is
+\(Q(q)=\lambda(q)I\) with \(\lambda(q)>0\). Indeed, take orthonormal
+right singular vectors of \(L_q\) with singular values \(s_1,s_2,s_3\).
+At the first singular vector the derivative on the sphere stretches
+the two orthogonal tangent directions by \(s_2/s_1\) and \(s_3/s_1\).
+At the second it stretches them by \(s_1/s_2\) and \(s_3/s_2\).
+Conformality forces all three values equal, and this condition suffices.
+
+There is a differential consequence if scalar Gram holds throughout
+an open set. The metric \(\widehat g=\sqrt{\lambda}\,g\) makes the
+closed triple orthonormal. Locally orient the triple positively by a
+constant sign change and set \(J_i b=\sqrt2\,*_{\widehat g}(b\wedge
+\omega_i)\) on one-forms. In a standard self-dual frame
+\(J_iJ_j=-\delta_{ij}+\sum_k\varepsilon_{ijk}J_k\). Write
+\(\nabla\omega_i=\sum_j B_{ij}\otimes\omega_j\), \(B_{ij}=-B_{ji}\),
+and put \((b_1,b_2,b_3)=(B_{23},B_{31},B_{12})\).
+Alternating the covariant derivatives and using \(d\omega_i=0\)
+gives \(J_2 b_3=J_3 b_2\) and its cyclic permutations. Thus
+\(b_2=-J_3b_1\) and \(b_3=J_2b_1\); substituting in the first
+equation gives \(2b_1=0\). The triple is parallel. This explains
+the strength of requiring a conformal chart on every fibre.
+Recognition only used a single coefficient line.
+
+In the holomorphic correspondence-space formulation
+motivated by the author's earlier work \cite{BakerCurved2025,BakerIsothermal2026},
+a particularly strong generalized chart is a local biholomorphism
+from \(U\times\mathbb{CP}^1\), defined on each entire \(\mathbb{CP}^1\) in its domain,
+with base image in one holomorphic coordinate neighborhood, carrying
+the flat \(\alpha\)-plane distribution to the curved distribution.
+For each fixed point of \(U\) the projected coordinate functions are
+holomorphic on \(\mathbb{CP}^1\), hence constant. The projection
+therefore descends to a base map with invertible derivative. The
+fibre maps are automorphisms of \(\mathbb{CP}^1\), so that derivative
+preserves the full family of \(\alpha\)-planes and hence their union,
+the null cone. The base map is conformal and its image is locally
+conformally flat. A weaker construction can use separate patches in
+the direction fibre. It would have to prove that the local data glue
+and recover the intended curved geometry. An ordinary smooth handle
+atlas and the real evaluation family do not supply that holomorphic
+descent theorem.
+
+\section{Smooth variation and zeros}\label{sec:pole-zeros}
+
+\subsection{Moving the pole}
+
+\begin{proposition}\label{prop:pole-openness}
+On a fixed oriented smooth homotopy four-sphere, pole forms depend
+continuously in every spatial derivative on compact sets away from the
+moving pole. Along smooth finite-dimensional families of conformal
+classes, poles and coefficients the dependence is smooth there. In the
+bundle of nonzero coefficients over pairs \((c,p)\), the triples
+\((c,p,\eta)\) with a zero-free pole form constitute an open set for
+the smooth topology on conformal classes. The classes admitting such
+a triple form an open set as well.
+\end{proposition}
+
+\begin{proof}
+Fix a positive volume density to select a unique representative of
+each class. Use nearby oriented orthonormal frames to trivialize
+\(\Lambda^-_p\) and the framed exponential maps to compare nearby
+punctures. More precisely, on a common small normal ball the composition
+of the new framed exponential with the inverse reference exponential
+sends the reference pole to the new pole. It extends to a diffeomorphism
+of \(M\) by cutting off the displacement from the identity in a fixed
+chart. For nearby data the displacement has derivative of norm less than
+one, so the cut-off map has a smooth inverse by contraction and local
+inversion.
+
+Pull back to the reference punctured manifold, use the common inversion,
+and multiply by the same factor \(|y|^{-4}\) on the end. In the framed
+normal coordinates the compact metric is \(\delta_y+O(|y|^2)\), with
+constant zeroth and first Taylor coefficients. Taylor's formula and
+differentiation of the inversion give \(h=\delta_x+O_\infty(r^{-2})\)
+for the blown-up metric, continuously in the corresponding symbol
+bounds and smoothly along smooth finite-dimensional families. The
+anti-self-dual target bundles of \(D=(d_h^*,\sqrt2\,d_h^-)\) can be
+identified by projection onto the reference target. Take
+\(\delta=-1/2\) in the weighted inverse used in A1. On a dyadic
+annulus, rescaling to unit size bounds the operator difference
+\(D-D_{\rm ref}\) by the differences of its rescaled coefficients in
+\(C^k\), uniformly over the annuli. This gives continuity as a map
+\(W^{k+1,2}_\delta\to W^{k,2}_{\delta-1}\). The inverse varies by the
+convergent geometric series about the global reference inverse \(D_{\rm ref}^{-1}\). The same coefficient
+estimates for parameter derivatives give smooth dependence of the
+inverse in smooth families.
+
+Let \(A^0=\chi\,\iota_x\beta/2\), where \(\chi=1\) far out and
+\(\beta\) is the end two-form corresponding to \(\eta\). The wrong
+projection \(d_h^-A^0\) is \(O_\infty(r^{-2})\). Its weighted target
+norm on the annulus of radius \(R\) is \(O(R^{-1/2})\), so the right
+side \((0,-\sqrt2\,d_h^-A^0)\) of the correction equation is continuous
+in the target and smooth along smooth families. A1 identifies \(d(A^0+a)\), with \(a\)
+the resulting correction, as the prescribed pole form. For \(k>2\),
+Sobolev embedding on rescaled annuli gives
+\[
+ \sup_{A_R}|da|\le C R^{\delta-1}\|a\|_{W^{k+1,2}_\delta}.
+\]
+Thus \(\omega=\beta+O(r^{-3/2})\) uniformly for nearby data. Increasing
+\(k\) gives the asserted dependence on compact sets. If the base form
+is zero-free, its coefficient stays bounded away from zero nearby,
+so one exterior radius suffices for the end. On the compact core the
+base form has a positive minimum norm, which persists by uniform
+convergence. Projection onto the class coordinate is open by local
+triviality of the coefficient bundle.
+\end{proof}
+
+\subsection{Realization in a fixed inverted chart}
+
+At a zero \(z\) of a two-form, the derivative
+\(D_z\omega\colon T_zX\to\Lambda^2T_z^*X\) is intrinsic because the
+terms from differentiating a local frame are multiplied by the vanishing
+coefficients. If \(\omega\) is self-dual, the derivative takes values
+in \(\Lambda_z^+\) by using a frame of that bundle. Thus a nonzero pole
+form is positive symplectic off its zero set and is near-symplectic
+precisely when this derivative has rank three at every zero, equivalently
+when the section of \(\Lambda^+\) is transverse to the zero section.
+Here the intrinsic near-symplectic condition for a closed form is
+positive wedge-square away from its zeros and a wedge-positive
+three-dimensional derivative image at each zero
+\cite[Definition~1.1.1 and Proposition~1.1.4]{Perutz2005SurfaceFibrations}.
+
+\begin{proposition}\label{prop:pole-marked-realization}
+Let \(M\) be a closed oriented smooth four-manifold with a fixed
+positive chart \(y\) centered at \(p\), and prescribe \(x=I(y)\) by
+Euclidean inversion. Let \(\omega\) be near-symplectic or positive
+symplectic on \(X=M\setminus\{p\}\), with \(\omega=\beta\)
+sufficiently far out in \(x\) for a nonzero positive constant
+two-form \(\beta\). A smooth conformal class on \(M\) makes this
+\(\omega\) self-dual if and only if \(\beta\) is Euclidean self-dual
+for the inherited orientation of \(X\). Its conformal value at
+\(p\) is then \([\delta_y]\), and a compatible metric can be chosen
+equal to \(\delta_y\) near \(p\).
+\end{proposition}
+
+\begin{proof}
+The inherited orientation in \(x\) is opposite to the numerical
+orientation since \(DI(\rho\nu)=\rho^{-2}R_\nu\), with \(R_\nu\)
+the reflection normal to the unit vector \(\nu\). On each ray,
+\(\rho^4\omega=R_\nu^*\beta\) in the \(y\) coframe. Continuity of
+the compactified Hodge star forces all these reflected values into
+the positive three-plane at \(p\). In an orthonormal coframe positively
+oriented for the inherited end orientation, write
+\(\beta=a e^{12}+b e^{34}\) with \(a,b>0\). Reflections normal to
+\((e_1+e_3)/\sqrt2\) and \((e_2+e_4)/\sqrt2\) give
+\(a e^{23}-b e^{14}\) and \(b e^{23}-a e^{14}\). If \(a\ne b\)
+their span contains the nonzero square-zero form \(e^{23}\),
+contradicting positivity. Hence \(a=b\). The reflected values are
+then Euclidean self-dual in \(y\). The first reflection above together
+with reflections normal to \(e_1\) and \((e_1+e_4)/\sqrt2\) gives
+three independent such values, determining the plane at \(p\).
+
+For sufficiency, use the correspondence between smooth wedge-positive
+three-plane fields and Riemannian conformal classes
+\cite[\S7.2, p.~1106]{AurouxDonaldsonKatzarkov2005SingularPencils}.
+In a background metric splitting \(E_+\oplus E_-\), each positive
+three-plane is the graph of a map \(B:E_+\to E_-\) with \(\|B\|<1\).
+Containing the form imposes the affine equation
+\(B\omega_+=\omega_-\). At a nonzero point the rank-one map
+\(v\mapsto\langle v,\omega_+\rangle\omega_-/|\omega_+|^2\) works.
+At a zero, first extend the derivative image to a local positive
+plane field and use its splitting. The positive component of the form
+is a submersion, so in local coordinates \((s,u)\) the components
+are \((u,b(s,u))\). Wedge-positivity off the zeros forces
+\(b(s,0)=0\). Hence
+\[
+ b(s,u)=\left(\int_0^1 \partial_u b(s,\lambda u)\,d\lambda\right)u.
+\]
+The operator in parentheses vanishes at the original zero by the choice
+of splitting. It has norm less than one on a smaller neighbourhood.
+The zero set there is \(u=0\), so the compact zero set is a finite
+union of embedded circles when nonempty.
+
+Use the Euclidean positive plane on the end. Express all local graphs
+in a common background splitting and average with a partition of unity
+whose end term equals one sufficiently far out. Convexity preserves
+positivity and the affine equation. Choose the metric representative equal to \(\delta_x\) there. Since
+\(I^*\delta_x=|y|^{-4}\delta_y\), the conformal rescaling by \(|y|^4\) near
+\(p\) gives the compatible extension \(\delta_y\). On a homotopy sphere, \(y\) is now a normal chart and
+A1 identifies the given form with the pole form of the specified
+leading coefficient.
+\end{proof}
+
+The chart germ at \(p\), its Euclidean inversion and the end
+coefficient are part of this realization. A linear change \(x'=Lx\)
+induces the homogeneous map \(y'=|y|^2Ly/|Ly|^2\). Differentiability
+at the origin would make it linear, so composing with \(L^{-1}\)
+would give a linear map preserving each line and hence a scalar.
+Thus the smooth compactifying changes of this kind are similarities.
+For a general positive \(\beta\), one can instead modify the form
+on the distant end. Choose \(L\in GL^+(4,\mathbb R)\) with
+\(L^*\beta\) Euclidean self-dual. The flow generated by cutting off
+\(\dot L_tL_t^{-1}x\) along a path from the identity to \(L\) fixes a
+core containing the zeros. It exists for the full time interval by
+at-most-linear growth. The least singular values of \(L_t\) are bounded
+away from zero, so trajectories starting far enough out follow \(L_t x\).
+Pullback gives the required end in the original chart. In the
+other direction a pole form with transverse zeros has
+\(\omega=\beta+da\) on the end by A1. Replacing \(a\) by
+\(\chi_R a\) as in the recognition proof preserves positivity since
+\(\chi_R da+d\chi_R\wedge a=O(R^{-2})\) on the transition annulus.
+This gives an exactly constant end and preserves all its zeros.
+
+\subsection{A first degenerate zero on the standard sphere}
+
+\begin{proposition}\label{prop:pole-degenerate-first-zero}
+On the standard smooth \(S^4\) there is a smooth path of metrics
+with one fixed flat germ at a marked pole and one fixed nonzero
+leading coefficient for which a zero first appears at a positive
+parameter. Every zero at that parameter has intrinsic derivative of
+rank at most two.
+\end{proposition}
+
+\begin{proof}
+Choose \(y\) so its inverse \(x\) extends to global stereographic
+coordinates on the punctured sphere. Identify the Euclidean \(x\)-space
+with \(\mathbb C^2\) by an isometry respecting the inherited
+orientation, and take \(\omega_0=\beta\) to be the constant K\"ahler
+form. Taubes's local construction with zero initial circles gives a
+closed form \(\omega_1\) with one zero circle and positive square
+elsewhere, equal to \(\beta\) outside a ball
+\cite[Proposition~2.1 and Part~5, following (2.16)]{Taubes2006VanishingCircles}.
+Near the circle \(w=0,\ |z|^2=\varepsilon\), its coefficients in
+the Euclidean self-dual plane are, up to constant invertible changes
+of basis, \(-\varepsilon+|z|^2-|w|^2\) and the two real components
+of \(zw-R\bar w\)
+\cite[(2.2)--(2.5)]{Taubes2006VanishingCircles}.
+The first coefficient has nonzero radial \(z\)-derivative there. The
+last two have derivative \(v\mapsto zv-R\bar v\) in the \(w\)-plane
+with real determinant \(\varepsilon-R^2\ne0\). Thus the derivative
+image is the full Euclidean self-dual plane, as required by
+Proposition~\ref{prop:pole-marked-realization}.
+
+Choose compatible metrics \(g_0,g_1\) that both equal \(\delta_y\)
+on a common neighbourhood of \(p\). The path
+\(g_t=(1-t)g_0+tg_1\) preserves this germ, hence the chart and the
+coefficient represented by \(\beta\). By A1 the endpoint pole forms
+are exactly \(\omega_0,\omega_1\). By Proposition~\ref{prop:pole-openness}
+and a finite parameter cover, a single compact core contains all zeros
+of the family. The zero locus in the product of the interval with
+this core is closed and compact. Its projection therefore has a
+least element \(t_*>0\), since the first endpoint has no zero.
+
+Near any zero at \(t_*\), a smooth frame of the family of self-dual
+bundles represents the pole form by three functions. If the spatial
+derivative had rank three, restricting to a three-dimensional slice
+would make that derivative invertible. The implicit function theorem
+would then give zeros on this slice for earlier nearby parameters,
+contradicting minimality. If needed, the affine metric path extends
+slightly past its endpoint by compactness and positive definiteness.
+\end{proof}
+
+\section{Supporting evidence on the standard sphere}
+\label{sec:evidence}
+
+\paragraph{An exact family.}
+A model with a nonconstant metric illustrates how little symmetry of the
+Gram matrix is needed for recognition. On \(\mathbb R^4\) write \(x=rq\),
+\(q\in S^3\), and take a unit round coframe
+\(\sigma_i=-(q^{-1}dq)_i\), so \(d\sigma_i=2\sigma_j\wedge\sigma_k\)
+for cyclic \(i,j,k\). Orient by \(dr\wedge\sigma_1\wedge\sigma_2
+\wedge\sigma_3\). For \(g=dr^2+\sum a_i^2\sigma_i^2\) put
+\(\omega_i=d(f_i\sigma_i)\). In the orthonormal coframe
+\((dr,a_i\sigma_i)\), self-duality reduces to the scalar equations
+\[
+       \frac{f_i'}{a_i}=\frac{2f_i}{a_j a_k}.
+\]
+Take \(t=r^2\), \(A=1+\varepsilon t/(1+t)^2\), \(a_1=rA\), and
+\(a_2=a_3=r\). Then \(A>0\) exactly for \(\varepsilon>-4\) on the
+whole radial interval. The solutions normalized by
+\(f_i(r)/r^2\to1\) at infinity are \(f_i=r^2F_i(t)\), with
+\[
+ F_1(t)=e^{-\varepsilon/(1+t)},\qquad
+ F_2(t)=F_3(t)=
+ \exp\!\left(\varepsilon\int_t^\infty
+          \frac{ds}{(1+s)^2+\varepsilon s}\right).
+\]
+Indeed the logarithmic derivatives of \(f_1,f_2,f_3\) in \(r\)
+are \(2A/r,2/(rA),2/(rA)\), respectively. The \(F_i\) are smooth
+and positive at zero. With \(\alpha_i=r^2\sigma_i\), a one-form
+linear in Cartesian coordinates, \(d(F_i\alpha_i)\) at the origin
+is \(F_i(0)d\alpha_i\); the three \(d\alpha_i\) form a constant
+self-dual basis. Away from the origin the three solutions have
+positive, diagonal Gram entries \(8f_i^2/(a_j a_k)^2\).
+
+For smoothness of the metric at the two poles, its Cartesian expression
+is \(g_{\rm euc}+[2\varepsilon/(1+t)^2+
+\varepsilon^2 t/(1+t)^4]\alpha_1^2\), with
+\(\alpha_1^2=\alpha_1\otimes\alpha_1\). Inversion preserves
+\(t/(1+t)^2\); multiplication by \(4/(1+t)^2\) gives a smooth
+representative on the compact sphere in both charts.
+Since \(F_i=1+O(r^{-2})\) and \(dF_i=O(r^{-3})\) at infinity, the
+three forms tend to \(d\alpha_i\) in this end chart. Inversion gives
+quartic growth, so each belongs to the pole space. Their independent
+end limits and A1 show that they form a basis. Thus every nonzero coefficient works at this fixed
+pole on the full \(\varepsilon>-4\) family. This conclusion follows
+from the differential equations. The sampled curvature integrals
+reported in the proposal \cite{Baker2026PoleFormsProposal} are
+numerical diagnostics.
+
+\paragraph{A certified compactly supported perturbation.}
+The second master studies a different class of metrics in an oriented
+stereographic chart \((x_0,y)\). For its specified smooth translated
+profile \(F\ge0\) the asymptotically Euclidean representative is
+\[
+     g_t=\left(\frac{1+tF}{1-tF}\right)^2dx_0^2+|dy|^2 .
+\]
+The profile, mollification and end coefficient basis are fixed in that
+experiment. In flat chiral frames the graph of physical self-duality is
+\(\omega^-=tF\omega^+\). The closed graph of the flat transfer then gives
+\(\omega^+=u+T_{\rm flat}\omega^-\), with the constant identified with
+the prescribed unit coefficient \(u\). This exhibits the same linear
+transfer as in \eqref{eq:transfer} on the Euclidean end model. A
+Fourier estimate and an independently replayed finite rational
+certificate give \(|\omega_{t,u}(x)|_{g_t}\ge1/100\) for every \(x\),
+every unit \(u\), and \(t\in[-3/4,0]\) for profile A.
+At the endpoint \(t=-3/4\), separate enclosures on that class give
+\(Y>2.21\) and \(0.00590\le E_+/(4\pi^2)\le1.00731\).
+The pole estimate is uniform along the indicated segment. The quoted
+curvature and Yamabe bounds concern the endpoint. The full argument
+and the integer certificate are in the second master's
+\emph{A uniform lower bound for the pole triple on profile A}
+(27 November 2026). Neither main theorem uses a numerical estimate.
+
+\paragraph{Draft provenance.}
+Prepared for Edward B. Baker III with OpenAI Codex assistance on
+27 November 2026, from the investigation's written proofs and independent
+readings on repository base \texttt{6a422ce}. The exposition and
+independent review used bounded \texttt{gpt-6.2-sol} helpers requested
+at ultra effort; the exact serving variant and effort of the lead were
+unavailable. The companion computations have the limited scope stated
+above.
+
+\section{Outstanding challenges}
+\label{sec:open}
+
+\paragraph{Selecting a direction on an arbitrary smooth type.}
+For a fixed \((c,p)\), Proposition~\ref{prop:cover} describes the
+entire obstruction as a compact subset of one projective plane.
+The goal is to choose \(c,p\) so that \(\mathcal B(c,p)\) omits a projective point
+\([u]\). An atlas from handles gives explicit domains on which to
+estimate the same global solution. The missing step is an estimate on
+the actual attaching regions and the interiors that leaves at least one
+common direction. Its constants may depend on the presentation. A
+bound on all three singular values everywhere would be sufficient;
+a lower bound for just \(|L_qu|\) along the chosen \(u\) suffices.
+Openness continues a witness once one is known. It supplies no
+starting witness on an unknown smooth type.
+
+\paragraph{What happens at a zero.}
+A transverse zero set consists of circles; the first-zero argument of
+Proposition~\ref{prop:pole-degenerate-first-zero} shows why one must
+justify transversality when varying the original smooth data.
+For a prepared single transverse twisted circle in the companion
+positive cap construction, there exists a finite-energy
+pseudoholomorphic current with one irreducible component of
+multiplicity one.\footnote{The cap, chamber and period arguments are in
+the companion investigation \emph{Lines and broken fibrations},
+\emph{Relative degree on the marked projective cap} and \emph{A period test for components in the punctured
+core} (27 November 2026). The marked line and the transverse circle
+are essential hypotheses.} Its intersection degree with the
+marked line is zero, while its algebraic meridional degree about the
+circle has absolute value one. These are different pairings. Even
+a unit meridional degree leaves open whether the closure is a
+smooth embedded half-sheet all along the circle. To use such a
+boundary for removal one must also control the interior of a
+spanning surface and construct a deformation compatible with the
+marked cap. In particular a local operation on the prepared form
+would need to return a zero-free closed form on the specified smooth
+compactification. The fixed-end criterion in
+Proposition~\ref{prop:pole-marked-realization} describes that last
+compatibility requirement.
+
+\paragraph{Connecting curvature to the pole criterion.}
+The first master \cite{Baker2026ChiralMaster} studies the band
+\(Y(c)>0\), \(E_+(c)<8\pi^2\), with
+\(E_+=\int_M |W^+|_{\rm HS}^2\,dV\) in the curvature-operator
+normalization and \(Y(c)\) the Yamabe constant. Even on standard
+\(S^4\) it is open whether \emph{each} class in this band has
+\emph{some} pole and a zero-free direction. A failure at one
+prescribed pole or a zero for one prescribed direction would leave
+that question open. To obtain recognition on an unknown smooth type
+by this route one would need the implication on that type; proving
+entry into the band is a further, separate problem.
+
+\paragraph{Coordinates and recognition.}
+The stronger coordinate problem is to construct generalized charts
+on patches of the correspondence space whose overlap data recover the
+geometry and extend over the required direction fibres. A solution
+would need hypotheses ensuring that descent and estimates connecting
+it to the smooth Riemannian data. The pole criterion already has a
+global closed form for each leading coefficient. Its remaining
+question is exactly whether on every smooth type one of those forms
+can be made symplectic everywhere on the punctured manifold.
+
+\bibliographystyle{unsrturl}
+\bibliography{references}
+\end{document}

@@ -1,6 +1,6 @@
 # Research plan — Invariants and candidate spheres
 
-27 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum, in a Cowork session. Setup baseline `b607bd1`. The [overview](../research-overview/OVERVIEW.md) states the question and what is inherited; the [second master's overview](../../../master-2/research-overview/OVERVIEW.md) fixes the conventions and the route. The [register](../research-progress/REGISTER.md) alone owns live status. Nothing here is activated. The first horizon consists of readings; no computation is planned before the decision INV-B01.
+27 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum, in a Cowork session. Setup baseline `b607bd1`. The [overview](../research-overview/OVERVIEW.md) states the question and what is inherited; the [second master's overview](../../../master-2/research-overview/OVERVIEW.md) fixes the conventions and the route. The [register](../research-progress/REGISTER.md) alone owns live status. At setup no task was activated. The first horizon consists of readings; no computation is planned before the decision INV-B01.
 
 **Routing.** B tasks are conceptual and go to the lead; E tasks have fixed inputs, method and completion test and go to bounded helpers, as in the [model workflow](../../../../GPT_RESEARCH_MODEL_WORKFLOW.md). In a Claude session Fable leads and takes B tasks and Opus takes E packets, in the roles that workflow gives Astra and Sol; a GPT lead uses Astra/ultra and Sol 6.2/ultra. The lead selected by the author takes precedence, and the model and effort actually used are recorded in every return.
 
@@ -19,3 +19,17 @@
 **Stop.** Only at an end state named in the [continuation note](../continuation-notes/CONTINUATION.md), or at an author decision. The rows above are the first horizon; the lead adds the next rows as the [series README](../../README.md#how-sessions-work-in-this-series) describes. A return that changes a statement of the second master or of another branch is handed off and the work continues. Computations stay within the scope stated in their rows.
 
 **Launch.** Use the prompt in the [continuation note](../continuation-notes/CONTINUATION.md).
+
+## Activated sequence, 27 November 2026
+
+The author activated SP4-INV at `6a422ce7814f`. The statement of the assignment and the three component end states in the original continuation govern this session.
+
+| Additional task | Route, inputs and output | Stop and escalation |
+| --- | --- | --- |
+| SP4-INV-E04 | Independent Sol 6.2/ultra reading of the two Gluck specializations, the proposed zero-framing filter and the native double's first cancellation test. [Frozen request](../research-progress/handoffs/REQUEST_INV_E04_20261127.md). | Return one review after these tests. A genuinely new finite route returns to the lead for B01. |
+
+SP4-INV-E05 is a bounded Sol 6.2/ultra bibliography packet. Its inputs are the three readings, the candidate geometry note and the current shared file. It ends with a checked owner patch and receipt. [Request](../research-progress/handoffs/REQUEST_INV_E05_20261127.md).
+
+SP4-INV-E06 is a bounded primary-reading and bibliography addendum for the November 2026 rational negative-projective-plane computation discovered during validation. Its single source and two disjoint outputs are in the [frozen request](../research-progress/handoffs/REQUEST_INV_E06_20261127.md). A new candidate consequence returns to the lead.
+
+SP4-INV-E07 is a bounded independent replay of the opposite original section framing at order eleven after 05's marked sweep. It uses the existing coefficient theorems and stops at a [single receipt](../research-progress/handoffs/REQUEST_INV_E07_20261127.md).

@@ -8,6 +8,7 @@ from datetime import datetime, timezone
 import json
 import math
 from pathlib import Path
+import re
 
 from extract_project_chats import conversation_id, conversation_list
 import refresh_chat_history as history
@@ -27,13 +28,47 @@ def timestamp(value):
 
 def attachment_descriptor(attachment):
     fields = ("id", "name", "mime_type")
+    dimensions = ("width", "height")
     if (not isinstance(attachment, dict)
-            or set(attachment) - {*fields, "size", "file_token_size", "is_big_paste", "source"}
+            or set(attachment) - {*fields, *dimensions, "size", "file_token_size",
+                                  "is_big_paste", "source", "library_file_id"}
             or any(not isinstance(attachment.get(key), str) for key in fields)
             or attachment.get("is_big_paste", False) is not False
             or type(attachment.get("size")) is not int or attachment["size"] < 0):
         raise ValueError("Unsupported attachment in the ChatGPT export")
-    return {key: attachment[key] for key in (*fields, "size")}
+    if "library_file_id" in attachment and not isinstance(attachment["library_file_id"], str):
+        raise ValueError("Invalid library attachment identity in the ChatGPT export")
+    descriptor = {key: attachment[key] for key in (*fields, "size")}
+    if any(key in attachment for key in dimensions):
+        if (not attachment["mime_type"].startswith("image/")
+                or any(type(attachment.get(key)) is not int or attachment[key] <= 0 for key in dimensions)):
+            raise ValueError("Invalid image dimensions in the ChatGPT export")
+        descriptor.update({key: attachment[key] for key in dimensions})
+    return descriptor
+
+
+def inline_image_descriptor(part, attachments):
+    fields = ("content_type", "asset_pointer", "width", "height", "size_bytes")
+    if (not isinstance(part, dict) or part.get("content_type") != "image_asset_pointer"
+            or set(part) - {*fields, "fovea", "metadata"} or part.get("fovea") is not None):
+        raise ValueError("Unsupported inline public content in the ChatGPT export")
+    pointer = part.get("asset_pointer")
+    match = re.fullmatch(r"sediment://(file_[0-9a-f]{32})", pointer) if isinstance(pointer, str) else None
+    if not match or any(type(part.get(key)) is not int or part[key] <= 0 for key in fields[2:]):
+        raise ValueError("Invalid inline image descriptor in the ChatGPT export")
+    metadata = part.get("metadata")
+    if metadata is not None and (not isinstance(metadata, dict) or any(
+            value is not None and (key != "sanitized" or not isinstance(value, bool))
+            for key, value in metadata.items())):
+        raise ValueError("Unsupported inline image metadata in the ChatGPT export")
+    matches = [a for a in attachments if a["id"] == match[1]]
+    if len(matches) != 1:
+        raise ValueError("Inline image lacks its matching exported attachment")
+    attachment = matches[0]
+    if (not attachment["mime_type"].startswith("image/") or attachment["size"] != part["size_bytes"]
+            or any(attachment.get(key) != part[key] for key in ("width", "height"))):
+        raise ValueError("Inline image and attachment descriptors disagree")
+    return {key: part[key] for key in fields}
 
 
 def public_message(message):
@@ -48,8 +83,7 @@ def public_message(message):
     if (role not in {"user", "assistant"} or set(message["author"]) - {"role", "name"}
             or message["author"].get("name") is not None
             or set(message) - {"id", "author", "create_time", "content", "metadata"}
-            or set(content) != {"content_type", "parts"} or content["content_type"] != "text"
-            or not isinstance(content["parts"], list) or not all(isinstance(part, str) for part in content["parts"])
+            or set(content) != {"content_type", "parts"} or not isinstance(content["parts"], list)
             or not isinstance(metadata, dict) or set(metadata) - METADATA_FIELDS):
         raise ValueError("Unsupported public message structure in the ChatGPT export")
     public_metadata = {}
@@ -60,8 +94,15 @@ def public_message(message):
     if (not isinstance(attachments, list) or not isinstance(references, list)
             or any(not isinstance(ref, dict) or not isinstance(ref.get("type"), str) for ref in references)):
         raise ValueError("Malformed ChatGPT export references")
-    if attachments:
-        public_metadata["attachments"] = [attachment_descriptor(a) for a in attachments]
+    descriptors = [attachment_descriptor(a) for a in attachments]
+    if descriptors:
+        public_metadata["attachments"] = descriptors
+    if role == "user" and content["content_type"] == "multimodal_text":
+        content = {"content_type": "multimodal_text",
+                   "parts": [part if isinstance(part, str) else inline_image_descriptor(part, descriptors)
+                             for part in content["parts"]]}
+    elif content["content_type"] != "text" or not all(isinstance(part, str) for part in content["parts"]):
+        raise ValueError("Unsupported public message structure in the ChatGPT export")
     # Preserve displayed citation labels, excluding hidden and runtime fields.
     labels = [{key: ref[key] for key in ("type", "name", "alt") if isinstance(ref.get(key), str)}
               for ref in references if ref["type"] != "hidden"]
@@ -127,7 +168,7 @@ def public_conversation(chat, source_name, source_sha256):
             "source_project_id": chat.get("conversation_template_id"),
             "coverage": "User and assistant text in the supplied snapshot, including exported alternate branches. "
                         "The export does not mark commentary, turn completion or per-message update times.",
-            "attachment_coverage": "File descriptors and reference labels only. "
+            "attachment_coverage": "File and inline image descriptors and reference labels only. "
                                    "No binary attachments, embedded media or expanded reference and search data.",
             "omitted_source_records": {f"{role}/{kind}": count for (role, kind), count in sorted(omitted.items())},
         },

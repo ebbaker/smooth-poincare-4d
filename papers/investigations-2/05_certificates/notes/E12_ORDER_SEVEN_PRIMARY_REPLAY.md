@@ -1,0 +1,52 @@
+# SP4-CERT-E12 · Replay of the order-seven primary presentation
+
+27 November 2026, for Edward B. Baker III with OpenAI Codex assistance. The launcher recorded GPT-6.2 Sol with ultra reasoning effort. Serving settings beyond that record are unavailable. Source generation 6a422ce7814f. Exactly the two order-seven clasp-belt fillings \(s=0,-1\) are used, in the smooth oriented orbit model with the stated positive meridians. [Frozen request](../research-progress/handoffs/REQUEST_CERT_E12_20261127.md) · [Lead's v2 source record](../references/ORDER_SEVEN_V2_20261127.md)
+
+## What was read and what is checked
+
+**Primary reading by the lead.** The lead opened Jabłonowski's author HTML, explicitly marked arXiv:2609.29839v2 dated 8 October 2026, and visually inspected Figures 1 and 11–13. Its receipt fixes the mirror, the oriented belt and the signed words in Remark 8.12. In particular, Figure 1 is the algebra dictionary. Figure 11 shows the marked clasp belt. The lead's receipt also records the author's identification of the two four-dimensional outputs as an unordered pair. This helper read that signed transcription and the earlier E01 comparison, and used those inputs for the replay. The physical diagram and source typography were inspected by the lead. [Author HTML, §8.3](https://arxiv.org/html/2609.29839v2#S8.SS3) · [Lead's reading receipt](../references/ORDER_SEVEN_V2_20261127.md) · [E01](E01_ORDER_SEVEN_COMPARISON.md)
+
+**Transcribed presentation.** Write \(a_7,b_7,c_7\) for the author's \(a,b,c\), the positive based meridians of \(J,W',\ell_A\) respectively. In the formulas of this section abbreviate those three letters by \(a,b,c\). The \(d=17\) native longitude will be denoted \(a_{17}\). The arc words and defining relations of Remark 8.12 are
+\[
+\begin{gathered}
+u=b^{-1}ab,\qquad d=c^{-1}ac,\qquad
+w=c^{-1}a^{-1}bac,\qquad v=uwu^{-1},\\
+d=vuv^{-1},\qquad b=wvw^{-1},\qquad c=b^{-1}aca^{-1}b.
+\end{gathered}
+\]
+The preferred longitudes are \(\lambda_J=bv^{-1}c^{-1}\) and \(\lambda_A=a^{-1}b\). Add \(a^3\lambda_J=1\), \(c^s\lambda_A=1\) and \(b^2=1\). The cone relation is on the old singular meridian \(b\).
+
+**Independent sign check against the supplied figure evidence.** For abelian coordinates \((a,b,c)\), the arc words \(u,d,w,v\) have classes \(a,a,b,b\). The three link equations have zero exponent vectors. The longitude vectors are \([\lambda_J]=-c\) and \([\lambda_A]=-a+b\). These match the lead's signed figure receipt, with \(\operatorname{lk}(J,\ell_A)=-1\), \(\operatorname{lk}(W',\ell_A)=+1\), \(\operatorname{lk}(J,W')=0\). The added abelian relations are \(3a-c=0\), \(-a+b+sc=0\) and \(2b=0\). Thus \(c=3a\), \(b=(1-3s)a\) and the respective abelianizations are \(C_2,C_8\). Killing \(b\) instead gives first-homology orders \(1,4\). The sign of \(b=4a\) at \(s=-1\) uses the actual meridian orientation. This checks the transcription's peripheral exponents separately from the nonabelian reductions.
+
+## Slope zero
+
+**Project theorem, working.** The belt equation \(a^{-1}b=1\) gives \(b=a\), hence \(a^2=1\). The substituted arc words are \(u=a,\ w=d=c^{-1}ac,\ v=ada^{-1}\), so \(d,v\) are involutions. The \(J\) surgery becomes \(a^4v^{-1}c^{-1}=1\), giving \(c=v^{-1}=v\). It follows that \(c^2=1\), \(d=cac\), and \(c=ada\) becomes \(aca=cac\).
+
+Conversely, let \(a,c\) be involutions satisfying \(aca=cac\) and put \(b=a\). The definitions give \(u=a,\ w=d=cac,\ v=a(cac)a=c\) by the braid relation. Then \(d=vuv^{-1}\). The equality \(b=wvw^{-1}\) reads \(a=(cac)c(cac)\), which follows from \(c a c a c=a\). The third link relation reduces to \(c=c\). The two filling words and \(b^2\) are trivial. The substitutions give mutually inverse identifications with
+\[
+\langle a,c\mid a^2=c^2=1,\ aca=cac\rangle .
+\]
+Set \(r=ca\). Then \(r^3=(cac)(aca)=1\), \(a=cr\), and \(crc=r^{-1}\). Every word on the original generators therefore has a representative \(r^j c^e\) with \(0\le j<3\) and \(e\in\{0,1\}\). This proves the upper bound six in the original presentation.
+
+**Certificate, lower bound.** The signed table uses six rows indexed by \(2j+e\). On these rows the right actions of \(a,b\) are \((j,e)\mapsto(j+2e-1\bmod3,1-e)\), and that of \(c\) is \((j,e)\mapsto(j,1-e)\). Inverse columns equal their positive columns. The independent checker evaluates every original relator on every row. The six representative words reach distinct rows from row zero, so the order is six. The reduced presentation maps onto \(S_3\) by taking \(a,c\) to adjacent transpositions. This identifies the group with \(S_3\).
+
+## Slope minus one and the old meridian
+
+**Project theorem, working.** First omit \(b^2=1\). The belt equation \(c^{-1}a^{-1}b=1\) gives \(b=ac\), so \(u=d=c^{-1}ac\) and \(w=ac=b\). Thus \(v=d b d^{-1}\). The relation \(b=wvw^{-1}=b v b^{-1}\) gives \(v=b\). The \(J\)-filling relation reduces to \(a^3c^{-1}=1\). In particular \(c=a^3\), \(b=a^4\), \(u=d=a\), and \(w=v=b\).
+
+Conversely, in the infinite cyclic group generated by \(a\), substitute \(b=a^4,\ c=a^3\). All the defining arc words have exactly the displayed values. They commute, so \(d=vuv^{-1}\), \(b=wvw^{-1}\), and \(c=b^{-1}aca^{-1}b\) hold. Both surgery equations hold, giving the reverse map on the cone-free exterior. Each composite fixes the original generators. Thus this exterior group is infinite cyclic with positive meridian \(a_7\) as generator and with **the oriented old meridian \(b_7=a_7^4\)**. The lead's geometric receipt identifies the exterior as a solid torus. Restoring the cone relation adds \(a_7^8=1\). This gives the upper bound eight for the orbifold group.
+
+**Certificate, lower bound.** Right translations on \(\mathbb Z/8\) by \((1,4,3)\) are the images of \((a,b,c)\); the inverse translations are by \((-1,-4,-3)\). The checker verifies all original presentation relations at each point and the orbit of zero has eight points. The same displacements checked over \(\mathbb Z\) preserve all the cone-free words, with \(b^2\) translating by eight. Thus the order is eight and the orbifold group is \(C_8\). Its ordinary quotient is \(C_4\) on killing \(b_7=a_7^4\). At slope zero, killing \(b=a\) in the braid presentation also kills \(c\), giving the trivial ordinary group.
+
+## Framing roles at seven and seventeen
+
+**Comparison from the reviewed inputs.** Both columns are normalized by their ordinary \(S^3\) filling. In the order-seven model, \(\beta_s=\lambda_A+s\mu_A\); in the order-seventeen model the basis is \((a_{17},\mu_{17})\). The sign \(-1\) for the order-seven slope is explicit in the recovered marking. One additional normal turn has the same relative class for either sign in \(\pi_1(SO(3))\). The integer slopes still specify separate orbit fillings.
+
+| Relative framing role | Order-seven clasp belt | Order-seventeen projected section |
+| --- | --- | --- |
+| Ordinary \(S^3\) longitude | \(\beta_0=\lambda_A\). Original old cone knot becomes a trefoil. Orbifold \(S_3\), with the old order-two meridian present. The lead's primary reading supplies the odd-dihedral recognition criterion. | \(a_{17}\). Orbifold \(S_3\). E01 identifies the same odd-dihedral role for the even closing. |
+| One turn from the ordinary \(S^3\) longitude | \(\beta_{-1}=\lambda_A-\mu_A\). The \(+4\) ordinary filling has old singular knot a Heegaard core, and its oriented exterior meridian is \(a_7^4\). Orbifold \(C_8\). The lead's primary reading supplies the finite-cyclic recognition criterion. | \(a_{17}-\mu_{17}\) has infinite orbifold group with abelianization \(C_8\). The alternative one-turn slope \(a_{17}+\mu_{17}\) also has infinite group, with abelianization \(C_4\). The odd smooth closing remains open in the comparison. |
+
+This compares the two framing roles without a signed isotopy identification between different marked sections. The recovered primary order-seven result concerns both outputs, with no assignment of individual \(\Sigma_+(7)\) and \(\Sigma_-(7)\) labels. The group computations agree with E01's conditional finite models. They use the full order-seven presentation with its actual meridians. [E01 role comparison](E01_ORDER_SEVEN_COMPARISON.md#comparison) · [Primary reading and recognition passages](../references/ORDER_SEVEN_V2_20261127.md)
+
+**Verification.** Run the independent checker against the two frozen signed tables. All word evaluations are exact. Enumeration use was zero. The reversible reductions are written working proofs. Neither the geometric reading nor the group reductions were formalized in Lean in this packet. [Checker](../numerics/e12_check.py) · [Signed data](../numerics/e12_signed_tables.json)

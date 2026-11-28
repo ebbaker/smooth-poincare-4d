@@ -1,0 +1,3 @@
+# B01 independent reading, revision 1
+
+27 November 2026, for Edward B. Baker III. Codex lead, variant/effort unavailable. Bounded gpt-6.2-sol/ultra reader. [Register](../REGISTER.md), base 6a422ce. Recompute the Fourier probability bound, metric norm, curvature, polynomial integrals, Talenti specialization, compact sign and constants for the two profiles in brainstorm/notes/B01_GATE_SCOPE.md independently of the author. Read Talenti's theorem from the primary article. Test the stress cases and quantifiers. If there is a material mathematical defect, alert lead immediately. Write only reviews/B01_REPLAY.md. No E02 computations, modifications to B01 or decisions about scope.

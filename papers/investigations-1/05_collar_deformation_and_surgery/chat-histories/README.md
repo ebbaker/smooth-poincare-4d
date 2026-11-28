@@ -1,3 +1,8 @@
 # Public conversation records
 
-The [project's shared conversation archive](../../../../chat-histories/README.md) is the destination for the founding setup conversation. On 26 November 2026 its exact public transcript was unavailable to the recorder and the live thread reader. The authored [decision note](../brainstorm/notes/MARKED_COLLAR_AND_CUT_20261126.md) records the research design. Later conversations devoted to joint collar and surgery research belong here. [Recorder and source requirements](../../../../tools/CHAT_HISTORY.md)
+The founding setup conversation, [Explain Two Steps](../../../../chat-histories/0005_2026-11-26T14-16-20Z_explain-two-steps.json),
+is registered in the shared conversation archive. The
+[decision note](../brainstorm/notes/MARKED_COLLAR_AND_CUT_20261126.md)
+records the research design. The [local registry](index.json) indexes the
+three later joint collar and surgery conversations from the 26 November
+export. [Recorder and source requirements](../../../../tools/CHAT_HISTORY.md)

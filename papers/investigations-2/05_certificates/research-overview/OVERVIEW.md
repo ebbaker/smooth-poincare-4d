@@ -41,3 +41,11 @@ The certificate formats and what each leaves as an import (CERT-B02). The statem
 ## Ownership
 
 Owns certificate formats, the prism computations beyond $\Sigma_{\rm ev}(17)$, the search for $P$, handle diagrams of the named spheres and the ledger draft. It does not own the tube investigation, investigation 07 or `formalization/`.
+
+## Activated results, 27 November
+
+The preceding inherited evidence is the setup snapshot. The lead selected the intrinsic three-sphere longitude on the marked quaternionic geodesic at eleven and seventeen, and its positive meridian neighbour. The individual checks, smooth transfer prerequisites and primary-source receipts are recorded in the [sole register](../research-progress/REGISTER.md). The [ledger](../notes/IMPORT_LEDGER.md) is the deliverable for the second master. The [handle model](../notes/E06_PRESENTATION_HANDLES.md) realizes the actual two attaching charts of 07 and transfers to 06. The accepted [certificate formats](../brainstorm/notes/B02_CERTIFICATE_FORMATS.md) separate the proof that a word belongs to the relations from a permutation lower witness.
+
+**Project theorem, replayed.** The actual order-eleven even closing is smoothly standard by the cyclic transfer. The independently checked groups for the two native longitudes at eleven and seventeen are C₂ and S₃. The corresponding positive meridian neighbours have infinite groups. The original opposite framings remain open here. [Four cases and their smooth scope](../research-progress/handoffs/TO_MASTER2_PRISM_SWEEP_20261127.md)
+
+**Import, preprint, and certificates.** Jabłonowski’s two original closings at seven are standard as an unordered pair. The selected Whitehead clasp belt has orbifold groups S₃ at slope zero and C₈ at slope −1. The lead recovered the source and identified the full peripheral presentation in Remark 8.12. [Original marking](../references/ORDER_SEVEN_V2_20261127.md) · [Reversible reductions of the actual words and signed tables](../notes/E12_ORDER_SEVEN_PRIMARY_REPLAY.md)

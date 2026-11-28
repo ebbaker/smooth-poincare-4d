@@ -1,0 +1,12 @@
+# Formal statement request · entropy and the bounded side
+
+27 November 2026, for Edward B. Baker III. OpenAI Codex lead, exact serving variant/effort unavailable, intake 6a422ce7814f. For the formalization owner, contingent on its independent scheduling. This handoff opens no Lean edition. All supplied proofs are on paper. [Import candidates](TO_05_ENTROPY_IMPORTS_20261127.md) · [Register](../REGISTER.md)
+
+| Requested statement | Inputs and public conclusion |
+| --- | --- |
+| Existence and bounded side | For smooth closed \(M\simeq S^4\), some smooth embedding into \(\mathbb R^5\) exists. For every such embedding, the closure of the bounded side is diffeomorphic, as an unmarked manifold with boundary, to \(D^5\) iff \(M\cong_{\rm diff} S^4\). Use Kervaire and Smale at the dimensions in [E02](E02_EMBEDDING_RETURN.md) and [E07](../../reviews/E07_EMBEDDING_REPLAY.md). |
+| Infimum logic | With nonempty smooth embedding space and lower-bounded entropy, use CMS recognition only for an individual smooth embedded image with \(\lambda\le c\). A round witness has \(\lambda_4<c=4/e\). Prove equivalence of standardness, existence of a witness at the inclusive ceiling, and the strict infimum inequality; prove nonattainment conditional on equality at \(c\). The sharp lower-bound import identifies the attained round value on the standard type. |
+| Local Gaussian tests | For the orthogonal round-normal product disk and the two disjoint displaced disks, use the radii, centre, time and constants of [B01](../../brainstorm/notes/B01_SPINE_AND_ENTRY.md). For embedded images with patches converging locally to \(\mathbb R^2\times\Gamma\), prove the liminf lower bound \(\lambda(\Gamma)\); equality characterization for the comparison with \(4/e\) uses Bernstein–Wang on \(\Gamma\). |
+| Same-embedding curvature comparisons | For globally invertible \(K\)-bilipschitz smooth ambient maps in dimension five, entropy changes by factors between \(K^{-8}\) and \(K^8\). For \(E_4\) obtain \(\tau=2, I_2=0,\lambda>4/e\). For the sheared unit four-spheres prove convergence of entropy to the round value with \(I_2,\tau\to\infty\). Use [B02](../../brainstorm/notes/B02_CURVATURE_COMPARISON.md) and [E06](../../reviews/E06_CURVATURE_REPLAY.md). |
+
+Return feasibility, import keys and actual declaration names to this branch if accepted. Formal status remains unproved here. No axiom for existence of an entered embedding or a uniform gap above \(4/e\) is requested.

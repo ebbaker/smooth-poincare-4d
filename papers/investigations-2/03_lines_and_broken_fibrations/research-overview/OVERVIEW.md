@@ -2,6 +2,10 @@
 
 27 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum, in a Cowork session. Setup baseline `b607bd1`. An investigation of the [second series](../../README.md). The [register](../research-progress/REGISTER.md) alone owns live status.
 
+## Return of 27 November 2026
+
+**Project theorem, replayed.** In the transverse marked setting, the single zero circle bounds a degree-zero finite-energy Taubes current disjoint from the line. Exactness gives one global irreducible component, weight one, and area equal to the absolute primitive period on the circle. Both chamber values have independent proofs. The first open boundary lemma asks for a single regular half-sheet along the entire twisted circle. The six original components and the fibration alternative are summarized in the [closing](../continuation-notes/CLOSING_20261127.md). The earlier expectations below are preserved as setup history.
+
 ## Objective
 
 For a pole form with zeros, what do the pseudoholomorphic curves of the closed manifold $M\#\mathbb{CP}^2$ and the broken Lefschetz fibrations attached to the form say about removing its last zero circle?
@@ -17,7 +21,7 @@ The conventions are those of the [second master's overview](../../../master-2/re
 - *The last circle.* By Perutz's moves a form with zeros can be brought to one with a single circle, and by his parity statement a single circle on this manifold is twisted. The last-circle problem is to decide when it can be removed.
 - *Lines.* Pseudoholomorphic curves in the class of $L_\infty$ for an almost complex structure compatible with $\bar\omega$ off its zero set.
 
-## Inherited, with evidence level
+## Inherited at setup, with its original evidence level
 
 - **Number and parity of zero circles.** Perutz. Import; abstracts of both versions and excerpts of the statement of results.
 - **Curves that bound the zero set.** Taubes: a nonzero Seiberg–Witten invariant gives a pseudoholomorphic curve in the complement of the zero set that bounds it homologically. Import; read only as quoted in Gerig's introduction.
@@ -26,15 +30,15 @@ The conventions are those of the [second master's overview](../../../master-2/re
 - **Broken Lefschetz fibrations and trisections.** Auroux, Donaldson and Katzarkov; Gay and Kirby; Lekili; Baykur and Saeki; Hayano's classification in genus one. Pointers and abstracts.
 - **Gromov's proof.** The recognition theorem is proved by a family of lines that fills the manifold. A pointer; the proof was not read.
 
-## Inputs that need a global extension
+## Global extensions identified at setup
 
 Gerig's theorem assumes untwisted circles, while the last circle here is twisted. The chamber in which the invariants are computed must be matched with the chamber of $\bar\omega$. The connected-sum statement is needed for a summand that is a homotopy sphere, with $b_2^+=1$ on the other side. Taubes's theorem gives one curve that bounds the zero set, not a family that fills the manifold, and the passage from such curves to a diffeomorphism is the whole difficulty. The dictionary with broken fibrations is proved for closed manifolds and must be checked for a form with a prescribed line at infinity.
 
-## Place in the route to the conjecture
+## Place in the route at setup
 
 This investigation and [02](../../02_zero_circles/README.md) feed [gate 2](../../../master-2/research-overview/OVERVIEW.md#the-route-and-its-gates): is there a mechanism that removes or constrains the last circle? Nothing here is on the route before the readings return, because every statement about curves is at present an import that has not been read or a heuristic.
 
-## Unresolved decisions
+## Decisions originally reserved
 
 Whether the analytic path through curves or the combinatorial path through fibrations is tried first (LINE-B02). Whether a certificate format for the standardness of a diagram of fixed genus is worth defining (LINE-B03, reserved).
 

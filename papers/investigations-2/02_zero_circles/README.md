@@ -2,7 +2,7 @@
 
 **Question.** Where do pole forms vanish? In particular, does every positive conformal class on $S^4$ with chiral energy below $8\pi^2$ have a zero-free pole form at some point, and what is the structure of the set on which the pole triple degenerates?
 
-**Origin.** Sections 3.5 to 3.7 of the [proposing note](../../master/brainstorm/notes/claude/ALTERNATIVE_FRAMEWORKS_AND_INVESTIGATIONS_2_20261127.md), tasks A-4 and A-5 there; the local theory of zeros of closed self-dual forms; and Perutz's construction of zero circles inside a ball.
+**Origin.** Sections 3.5 to 3.7 of the [proposing note](../../master/brainstorm/notes/claude/ALTERNATIVE_FRAMEWORKS_AND_INVESTIGATIONS_2_20261127.md), tasks A-4 and A-5 there; the local theory of zeros of closed self-dual forms; Taubes's insertion in a symplectic ball and Perutz's surgeries on existing zero circles.
 
 | Start here | What it supplies |
 | --- | --- |
@@ -15,6 +15,6 @@
 
 **Ownership.** Owns the computation of pole forms on the standard sphere, the experiment behind gate 1 of the [second master](../../master-2/research-overview/OVERVIEW.md#the-route-and-its-gates), and the local and structural theory of the degeneracy set. It does not own the proofs of A1 and A2 ([01](../01_chiral_transfer_and_pole_forms/README.md)) or the pseudoholomorphic and fibration side of the zero set ([03](../03_lines_and_broken_fibrations/README.md)).
 
-**State.** Set up on 27 November 2026 at the author's request. Nothing is activated. The working folders exist with purpose notes and hold no scientific material, and there is no manuscript. Ready on activation: ZERO-E01, ZERO-E03 and ZERO-B01.
+**27 November 2026 return.** The [gate table for the second master](research-progress/handoffs/TO_MASTER2_GATE1_20261127.md) gives the two chiral energies, the Yamabe sign and continuum zero tests for two smooth deformations at a fixed marked pole. The [incidence argument](brainstorm/notes/B02_INCIDENCE.md) describes what closedness forces at the boundary of the directions with zeros. The [closing note](continuation-notes/CLOSING_20261127.md) identifies the surviving compact-core question. The [register](research-progress/REGISTER.md) owns status and independent readings.
 
 27 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum, in a Cowork session. Setup baseline `b607bd1`.

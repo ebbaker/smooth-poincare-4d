@@ -21,25 +21,26 @@ The map \(d^-A\mapsto d^+A\) is an isometry from square-integrable
 anti-self-dual two-forms to self-dual two-forms. It is the
 four-dimensional counterpart of the Beurling transform, through which
 the Beltrami equation gives isothermal coordinates on a surface. Its
-kernel at a point \(p\) is a three-dimensional space of closed self-dual
-two-forms on \(M\setminus p\) with a pole of order four at \(p\), the
-analogue of the differential of an isothermal coordinate on the Riemann
-sphere. We state two working propositions. These pole forms exist for
-every class. A pole form without zeros is a symplectic form that is
-standard at infinity, and the theorem of Gromov and McDuff then
-identifies \(M\) with the standard sphere. Given the two propositions,
-smooth Poincar\'e is equivalent to the existence, on each \(M\), of a
-class and a point with a zero-free pole form. That equivalence is a
-reformulation of the conjecture, and the existence is open. This draft
-consists of the introduction. The proofs of the two propositions are
-sketched in a project note and have not been checked.
+kernel with source at a marked point \(p\) generates a three-dimensional
+space of closed self-dual two-forms on \(M\setminus\{p\}\). Each possible
+leading coefficient of the quartic pole occurs exactly once. If a member
+has no zero, modifying its distant end and applying Gromov's relative
+splitting theorem identifies \(M\) smoothly with \(S^4\). Both project
+theorems have independently replayed mathematical proofs. Whether every
+smooth homotopy four-sphere admits a class, point and coefficient with a
+zero-free pole form remains open and is equivalent to smooth Poincar\'e.
+For one compactly supported graph family on the standard sphere, we give
+a uniform positive lower bound on every normalized pole direction.
+For a single twisted zero circle in a marked positive cap, we characterize
+a smooth boundary collar of the degree-one current by a local energy test.
+
 \end{abstract}
 
 \section{The problem on a fixed smooth sphere}
 
 Let \(M\) be a closed, connected, oriented smooth manifold homotopy
 equivalent to \(S^4\). Freedman's theorem identifies its homeomorphism
-type \cite{Freedman1982}. We ask for a diffeomorphism. In Riemannian
+type \cite[Theorem~1.6]{Freedman1982}. We ask for a diffeomorphism. In Riemannian
 dimension four the Hodge star splits real two-forms into two rank-three
 bundles \(\Lambda^\pm\) \cite{AHS1978}. On two-forms the star depends
 only on the conformal class \(c\) of the metric, and so does the \(L^2\)
@@ -49,15 +50,15 @@ pointwise norm of two-forms so that
 
 For a one-form \(A\) write \(dA=d^+A+d^-A\). Stokes's theorem gives
 \(\|d^+A\|_{L^2}=\|d^-A\|_{L^2}\). Since \(b_2(M)=0\), every
-square-integrable anti-self-dual form is \(d^-A\) for a coclosed \(A\),
-and \(A\) is unique because \(b_1(M)=0\). Hence
+square-integrable anti-self-dual form is \(d^-A\) for a potential \(A\in W^{1,2}\)
+that is coclosed for the chosen metric, and \(A\) is unique because
+\(b_1(M)=0\). Hence
 \begin{equation}\label{eq:transfer}
  T_c\colon L^2(\Lambda^-)\longrightarrow L^2(\Lambda^+),\qquad
  T_c(d^-A)=d^+A,
 \end{equation}
-is an isometry determined by \(c\). For an abelian connection it
-recovers the self-dual half of the curvature from the anti-self-dual
-half. On a surface the corresponding operator
+is an isometry determined by \(c\). For exact abelian curvature \(F=dA\) in real normalization it
+recovers the self-dual half from the anti-self-dual half. On a surface the corresponding operator
 \(f_{\bar z}\mapsto f_z\) is the Beurling transform, and the isothermal
 coordinate of a conformal structure with Beltrami coefficient \(\mu\)
 is obtained by inverting \(I-\mu T\). For the four-dimensional operator
@@ -70,20 +71,19 @@ Fix \(p\in M\) and put \(X=M\setminus p\). For a metric \(g\in c\) let
  {*}\omega=\omega,\ |\omega|_g=O\bigl(d_g(p,\cdot)^{-4}\bigr)\bigr\}.
 \end{equation}
 The space does not depend on the choice of \(g\) in \(c\). We call its
-elements the \emph{pole forms} of \((M,c,p)\). They are the columns of
-the kernel of \(T_c\) at \(p\). On the round sphere, stereographic
+elements the \emph{pole forms} of \((M,c,p)\). On the round sphere, stereographic
 projection from \(p\) identifies \(X\) with \(\mathbb R^4\), and the
-three constant self-dual forms of \(\mathbb R^4\) are pole forms. They
-vanish nowhere. They play the part of the differential \(dz\) on the
+constant self-dual forms of \(\mathbb R^4\) form a three-dimensional
+space of pole forms. Each nonzero member vanishes nowhere. They play the part of the differential \(dz\) on the
 Riemann sphere, which has a double pole at infinity and no zeros, and
 whose primitive is the coordinate.
 
-\begin{proposition}[Pole forms; working statement]\label{prop:pole}
+\begin{proposition}[A1, replayed project theorem]\label{prop:pole}
 For every smooth conformal class \(c\) on \(M\) and every \(p\in M\),
-the space \(\mathcal H_p(c)\) has dimension three. In normal coordinates
+the space \(\mathcal H_p(c)\) has dimension three. In oriented orthonormal normal coordinates
 \(y\) at \(p\) of a metric in \(c\), each of its elements has the form
 \[
- \omega=|y|^{-4}\,R_y^*\eta+O(|y|^{-2}),
+ \omega=|y|^{-4}\,R_y^*\eta+O_\infty(|y|^{-2}),
 \]
 where \(R_y\) is the reflection in the hyperplane orthogonal to \(y\)
 and \(\eta\) is a constant anti-self-dual form, and
@@ -91,35 +91,81 @@ and \(\eta\) is a constant anti-self-dual form, and
 \(\mathcal H_p(c)\).
 \end{proposition}
 
-The sketch in \cite{Baker2026PoleFormsProposal} works on \(X\) with the
-metric \(|y|^{-4}g\) near \(p\), which is asymptotically Euclidean in
-the inverted coordinates \(x=y/|y|^2\). A constant self-dual form has a
-linear primitive, and one corrects it by solving an equation for the
-operator \(d^*\oplus d^-\) in weighted spaces. For weights between
-\(-3\) and \(0\) that operator has no kernel, by an integration by
-parts, and no cokernel, because \(b_2(M)=0\). No sign of the Yamabe
-constant enters.
+Here \(O_\infty(|y|^{-2})\) means that each Cartesian derivative of
+order \(j\) is \(O(|y|^{-2-j})\). With \(I(y)=y/|y|^2\), the leading
+term is \(I^*\eta\). The inverted chart reverses orientation.
+Write \(P_g(q,p)\eta=\omega_\eta(q)\) for the solution with precisely
+this leading coefficient. Against the source volume \(dV_g(p)\) the
+off-diagonal kernel of \eqref{eq:transfer} is \(K_g=(2/\pi^2)P_g\).
+For a fixed solution and \(\widehat g=e^{2f}g\), the covariant source
+tensor satisfies \(\eta_{\widehat g}=e^{4f(p)}\eta_g\).
+Thus \(\eta_g/dV_g(p)\) is independent of the representative.
+Reversing orientation interchanges the points and takes the fibre adjoint,
+\(K_g^{-o}(p,q)=K_g^{o}(q,p)^*\).
 
-\begin{proposition}[Recognition; working statement]\label{prop:recognition-pole}
+\begin{proof}[Proof of A1, in outline]
+Set \(x=I(y)\), \(r=|x|\), and extend the end representative
+\(h=|y|^{-4}g\) positively on \(X\). Its Cartesian coefficients in
+\(x\) are Euclidean up to \(O_\infty(r^{-2})\).
+For \(D=(d_h^*,\sqrt2\,d_h^-)\) the only flat exceptional weights in
+\([-3,0]\) are the endpoints. After passing to \(rD\) on the log-radius
+cylinder, the weighted Fredholm theorem and nullspace stability of
+\href{https://www.numdam.org/item/ASNSP_1985_4_12_3_409_0/}
+{Lockhart and McOwen (Theorem 6.2 and Lemma 7.1)} apply.
+At weight \(-3/2\) the boundary term in the kernel energy identity
+vanishes. A kernel one-form is then the differential of a harmonic
+function tending to a constant, hence constant by the maximum principle.
+In the adjoint kernel the scalar vanishes
+by the maximum principle, and the remaining closed anti-self-dual form
+extends over \(p\) and vanishes since \(H^2(M)=0\).
+This gives invertibility throughout \((-3,0)\).
+
+Cut off a linear primitive of the desired constant end form and solve for
+a correction at weight \(-1<\delta<0\). Convolution with the flat
+first-order fundamental kernel, of size \(O(r^{-3})\), sharpens the
+end bounds to \(a=O_\infty(r^{-1})\), \(da=O_\infty(r^{-2})\).
+For exhaustion, any form of the stipulated growth is bounded in \(x\).
+The flat Hodge--de Rham operator applied to it has size \(O_\infty(r^{-3})\)
+on the end. The same kernel estimate leaves a bounded entire harmonic
+remainder after cutting off and subtracting the convolution, hence a
+constant. Subtraction of the constructed solution with that coefficient
+leaves \(O(|y|^{-2})\) at the puncture. It extends distributionally as
+a closed self-dual form, hence smoothly by elliptic regularity, and
+\(H^2(M)=0\) gives uniqueness. The construction uses no curvature bound.
+\end{proof}
+
+\begin{proposition}[A2, replayed project theorem]\label{prop:recognition-pole}
 If some nonzero \(\omega\in\mathcal H_p(c)\) has no zero on \(X\), then
 \(M\) is diffeomorphic to \(S^4\).
 \end{proposition}
 
-In the sketch, a zero-free \(\omega\) is a symplectic form on \(X\),
-since \(\omega\wedge\omega>0\), and it is asymptotic to a constant form
-in the coordinates \(x\). Cutting off the correction far out makes it
-standard outside a compact set. Since \(H_2(X)=0\), the theorem of
-Gromov and McDuff applies
-\cite{Gromov1985PseudoHolomorphic},
-\cite[Theorem 9.4.2]{McDuffSalamon2012JHolomorphic}: \(X\) is
-symplectomorphic to the standard \(\mathbb R^4\) by a map that agrees
-with the chart \(x\) near infinity. A diffeomorphism of that kind
-extends over \(p\). The clause on agreement near infinity is needed.
-Without it one would know only that \(X\) is diffeomorphic to
-\(\mathbb R^4\), which leaves a four-dimensional Schoenflies problem.
+\begin{proof}
+A nowhere-zero self-dual form is symplectic on \(X\). In the marked end
+write it as \(\beta+da\) using A1. Replace \(a\) by \(\chi_R a\), where
+\(\chi_R=1\) up to \(R\), vanishes past \(2R\), and has derivative
+\(O(R^{-1})\). The annular error from the nonzero constant \(\beta\) is
+\(O(R^{-2})\), so the modified form stays symplectic. An orthogonal map
+\(Q\) and a dilation \(s>0\) put \(\beta\) in standard form in the chart
+\(z=sQx\).
 
-\begin{corollary}[Conditional on the two propositions]\label{cor:equivalence}
-Assume Propositions~\ref{prop:pole} and~\ref{prop:recognition-pole}.
+Cap the compact core in this chart by the complement of a ball in a
+product of two equal-area spheres. The two coordinate spheres in the cap
+are symplectic, have trivial normal bundles, meet positively once, and
+have the same area \(A\). Excision gives \(H_2(X;\mathbb Z)=0\);
+Mayer--Vietoris along the gluing three-sphere gives the two coordinate
+classes as an integral basis of the capped manifold's second homology.
+Its spherical periods are therefore multiples of \(A\).
+Gromov's criterion and relative clause
+\cite[\S2.4.A$'_1$ and A$'_2$, p.~337]{Gromov1985PseudoHolomorphic}
+extend the prescribed product splitting near the coordinate spheres.
+Deleting them and pasting along the common polydisc collar gives a
+diffeomorphism \(X\to\mathbb R^4\) equal to \(z=sQx\) sufficiently
+far out. In the inverted target coordinates the map near \(p\) is
+exactly \(y\mapsto s^{-1}Qy\). It extends smoothly with smooth inverse
+across the marked point.
+\end{proof}
+
+\begin{corollary}[Reformulation]\label{cor:equivalence}
 The following are equivalent.
 \begin{enumerate}
 \item Every smooth homotopy four-sphere is diffeomorphic to \(S^4\).
@@ -134,48 +180,225 @@ and a diffeomorphism transports the class. The converse is
 Proposition~\ref{prop:recognition-pole}.
 \end{proof}
 
-The second statement is a reformulation of the conjecture and carries
-all of its difficulty. What the reformulation changes is where the
-difficulty lies. By Proposition~\ref{prop:pole} the pole forms exist on
-every class, by linear analysis and with no hypothesis on curvature.
-Recognition rests on a published theorem. What is open is the zero set of a closed self-dual two-form.
-For harmonic self-dual forms on closed four-manifolds that set is
-generically a union of circles, and it is the subject of near-symplectic
-geometry \cite{Taubes1999SelfDualHarmonic,Perutz2006ZeroSets}.
-A near-symplectic form on \(X\) that is constant near infinity is
-self-dual for some metric which is flat near infinity, and by
-Proposition~\ref{prop:pole} it is then a pole form of the class of that
-metric; this identification is part of the same sketch. The condition
-of Proposition~\ref{prop:recognition-pole} is not a bound on curvature.
-On an explicit family of conformal classes on \(S^4\) with symmetry
-group \(U(2)\), the three pole forms at a fixed point of the action
-vanish nowhere for every member, while the chiral Weyl energy
-\(\int_M|W^+|^2\,dV\) ranges from zero to more than a thousand times
-\(4\pi^2\) \cite{Baker2026PoleFormsProposal}.
+In a basis \(\omega_1,\omega_2,\omega_3\) of the pole space, the
+existence question asks for one fixed \(u\in S^2\) such that
+\(\sum_i u_i\omega_i(q)\ne0\) for every \(q\in X\).
+The class and pole may be chosen separately on each smooth type. Zero-freeness is open under smooth variation of the
+conformal class, pole and nonzero coefficient. On the standard sphere,
+an explicit \(U(2)\)-invariant family has invertible evaluation at every
+point away from its marked pole for all \(\varepsilon>-4\).
+The chiral-energy samples in \cite{Baker2026PoleFormsProposal} are
+numerical diagnostics.
+
+There are two restrictions on near-symplectic methods. In a fixed
+inverted smooth chart, a positive near-symplectic form that is exactly
+constant on the end is itself a pole form of a smooth compactifying
+class precisely when the constant is Euclidean self-dual for the
+inherited orientation. A general positive constant allows modification
+far out while fixing the zero set. Conversely, near-symplecticity of a
+pole form requires rank three of its intrinsic derivative at every zero.
+This condition can fail on \(S^4\). Use
+\href{https://doi.org/10.4310/MRL.2006.v13.n4.a6}{Taubes's local birth
+(Proposition 2.1)} to obtain a transverse zero circle with unchanged
+standard end. Join compact metrics realizing the zero-free and
+one-circle endpoints, fixing the end germ and coefficient.
+Smooth dependence and the uniform exterior estimate keep all zeros in
+one compact core. At the first parameter with a zero, a rank-three zero would
+persist at earlier parameters by the implicit function theorem.
+This example concerns one marked direction.
 
 This program began from the search for coordinates in dimension four
 that would do what isothermal coordinates do on a surface, with twistor
-theory as the guide. The normalized pole forms give a map from
-\(X\times S^2\) to the bundle of unit self-dual two-forms of \(X\), its
-twistor space. The map is linear on each fibre and is defined wherever
-the forms do not vanish. It is conformal on the fibres exactly when the
-three forms are pointwise orthogonal and of equal length. They are then
-a hyperk\"ahler triple for a metric in \(c\), so \(W^+=0\), the
-signature formula gives \(W^-=0\), and \(c\) is the round class
-\cite{Kuiper1949}. The first manuscript of the program
+theory as the guide. Linear evaluation at \(q\) induces a sphere map
+\(u\mapsto\omega_u(q)/|\omega_u(q)|\) wherever the numerator is nonzero.
+It gives a full fibre chart precisely at rank three. In an orthonormal
+source basis, that fibre map is conformal precisely when the Gram matrix
+at \(q\) is a positive scalar multiple of the identity.
+
+The first manuscript of the program
 \cite{Baker2026ChiralMaster} works with the energy
 \(\int_M|W^+|^2\,dV\) of that curvature and studies the classes below
 \(8\pi^2\). The two approaches meet in one question, which is open:
-whether every positive class below \(8\pi^2\) on \(S^4\) has a
-zero-free pole form at some point.
+whether every class \(c\) on the standard \(S^4\) satisfying
+\(Y(c)>0\) and \(E_+(c)<8\pi^2\) admits some pole and some
+zero-free direction.
 
-Six companion investigations are planned. They concern the proofs of
+Six companion investigations concern the proofs of
 the two propositions, the zero set and its first computations, the
 pseudoholomorphic curves and broken fibrations attached to it, an
 independent criterion through the entropy of an embedding in
 \(\mathbb R^5\), finite certificates for named homotopy spheres, and
 the invariants that could detect a counterexample. Their registers
-record what has been established.
+record their mathematical and formal evidence separately.
+
+\section{A definite pole triple on a compactly supported graph}
+
+Use the oriented stereographic chart $x=(x_0,y)$ of the standard sphere
+with pole at infinity. In the orthonormal flat bases
+$E_i^\pm=(dx^{0i}\pm dx^{jk})/\sqrt2$, take the graph
+$\omega^-=tF\omega^+$, where
+\[
+ g_t=a^2dx_0^2+|dy|^2,\qquad a=(1+tF)/(1-tF).
+\]
+The compact representative is $4g_t/(1+|x|^2)^2$.
+Define $h$ to be $3/2$ times the fourth convolution power of
+$\mathbf1_{[-1/2,1/2]}$, and $\rho$ the probability density
+proportional to $\exp[-1/(1-(64z)^2)]$ on $|z|<1/64$, zero elsewhere.
+Set $F(x)=\sum_{j=0}^4 w_j\prod_{k=0}^3(h*\rho)(x_k-c_{j,k})$.
+In order, the centres are $0,e_0/2,2e_1/3,3e_2/4,4e_3/5$ and the
+weights are $(16,8,4,2,1)/31$. The forms have unit Euclidean leading
+coefficient in the oriented end chart.
+
+\begin{proposition}[Marked profile A]\label{prop:marked-profile}
+For $-3/4\le t\le0$ every unit leading direction $u$ satisfies
+$|\omega_{t,u}(x)|_{g_t}\ge1/100$ at every $x\in\mathbb R^4$.
+At $t=-3/4$ this same conformal class has $Y>2.21$ and
+$0.00590\le E_+/(4\pi^2)\le1.00731$.
+\end{proposition}
+
+\begin{proof}[Proof of the pole estimate]
+The flat plus field $V_tu$ equals $u+T\psi$, with minus field
+$\psi=tF(u+T\psi)$. Here $T(\xi)$ is the orthogonal symbol taking the
+minus component of a closed form to its plus component. The symbol is
+fixed by $\iota_\xi\omega^+=\iota_\xi\omega^-$.
+Let $X$ have the probability Fourier measure of $\prod_k h(x_k)$.
+For fixed $x$ let $H(X)$ be $e^{ix\cdot X}$ times the mollifier's
+characteristic function times $\sum_jw_j e^{-ic_j\cdot X}$. Write
+$f=\mathbb E H=F(x)$, $m=\mathbb E H^2$ and
+$b^2=4403963/6150400$. Positivity of the twice-mollified tensor spline
+and the translation second moment give $0\le m\le\mathbb E|H|^2\le b^2$.
+
+Put $s=|t|$. The series of successive Fourier graph corrections
+converges absolutely since $sb<1$. Write its $n$th term using independent
+frequency increments $X_1,\ldots,X_n$ and the multipliers at their
+partial sums. Exchanging $X_1,X_2$ in terms of order at least two replaces
+$T(X_1)u$ by $(T(X_1)+T(X_2))u/2$ and fixes every later partial sum.
+The squared norm of this average has expectation $1/2$ since
+$\mathbb E T(X)=0$. The real part of the product of the $n$ phase
+factors has second moment at most $(b^{2n}+m^n)/2$. At first order
+one can subtract $f$ from the real part of $H$. With the uniform
+angular bound $\mathbb E(u^{\mathsf T}T(X)u)^2\le4/5$,
+Cauchy--Schwarz and the geometric sum give
+\[
+ |u^{\mathsf T}(V_t-I)u|\le
+ s\sqrt{\tfrac45\{(b^2+m)/2-f^2\}}+
+ \frac{s^2\sqrt{b^4+m^2}}{2(1-sb)}.
+\]
+For the angular bound it suffices that two distinct coordinate components
+$X^{(0)},X^{(1)}$ of one increment satisfy
+$\mathbb E[(X^{(0)}X^{(1)})^2/|X|^4]>1/80$, as follows by bounding its integral
+below on sixteen intervals per absolute coordinate.
+The remaining functions $f$ and $m$ admit pointwise enclosures on
+spatial boxes by monotonicity of $h$ and the support of $\rho$.
+At $s=3/4$ the integer certificate covers $[-2,2]^4$ and bounds the
+display by $99/100$. Outside, $m=0$ suffices. The right hand side
+increases with $s$ and $|\omega_{t,u}|_{g_t}=(1-tF)|V_tu|$, where
+$1-tF\ge1$. The analytic proof, rounding rules and executable certificate
+are in the second master's note \emph{A uniform lower bound for the pole
+triple on profile A}. The independent curvature and Yamabe enclosures
+are in the zero-circle investigation's E05 geometry certificate.
+\end{proof}
+
+This resolves the previously undecided row of the marked experiment.
+The existence of a zero-free direction for an arbitrary positive
+subcritical class remains open.
+
+\section{The boundary of the current at a single twisted circle}
+
+Suppose the transverse input admits the prepared Taubes tube about a single
+twisted zero circle $Z$ after capping on $Y=M\#\mathbb{CP}^2$. Write
+$L_\infty$ for the actual square-one line, with its Kähler neighborhood.
+The determinant $3\,\mathrm{PD}[L_\infty]$ in the chamber of the capped
+form $\bar\omega$ supplies a finite-energy current $T$ disjoint from
+$L_\infty$ \cite[Theorem~2.2 and \S7(f)]{Taubes1999SelfDualHarmonic}.
+Here the chamber and the avoidance of the line use the positive-cap
+calculation in investigation~03. In Taubes's orientation the outward
+normal meridian pairs to $+1$ with $T$, since the canonical bundle has
+degree two there, the determinant extends across the normal ball, and
+$2[T]=\mathrm{PD}(c_1(\mathcal L\otimes K))$. If $d\alpha=\bar\omega$ on $Y\setminus L_\infty$,
+the area of each global component is its exterior boundary degree times
+$P=\int_Z\alpha$. Positivity and total degree one imply that $P>0$ and
+there is one component of weight one with area $P$.
+
+\begin{proposition}[Local density and the marked collar]\label{prop:twisted-collar}
+Use the exact flat model on the normal double cover, with
+$f=(x^2+y^2)/2-z^2$, $h=z(x^2+y^2)$ and
+$\bar\omega=dt\wedge df+d\phi\wedge dh$, where $\phi=\arg(x+iy)$.
+At $v\in Z$ measure flat distance $r_v$ from a single lift.
+For a smooth nonincreasing radial cutoff $\chi$, equal to one on $[0,1]$
+and zero on $[2,\infty)$, let
+\[
+ D_s(v)=\frac{\int_T\chi(r_v/s)\bar\omega}{b_\chi s^3},
+ \qquad b_\chi=3\int_0^\infty \chi(a)a^2\,da .
+\]
+Take $2s<\min(R_{\rm exact},\ell/2)$, where $R_{\rm exact}$ is
+the tube radius and $\ell$ is the base circle length. The full current has an embedded annular collar at $Z$ if and only if
+$D_0(v)=\lim_{s\downarrow0}D_s(v)=2/3$ for all $v$. A sufficient and,
+for some $s$ and some finite net, necessary test is
+\[
+ \max_j D_s(v_j)+\frac{\|\chi'\|_\infty P a}{b_\chi s^4}
+       <\frac23+\frac1{50},
+\]
+where $a$ is the covering radius of the net on $Z$.
+\end{proposition}
+
+\begin{proof}
+With the positive current orientation, the signed meridian reads
+$p-q=1$, with $p$ equatorial and $q$ axial tangent half-planes, counted
+with multiplicity. Taubes's monotonicity, tangent classification and
+regularity theorem apply in the exact lifted tube.\footnote{Taubes,
+\href{https://arxiv.org/pdf/math/9901142}{\emph{Geom. Topol.} 2 (1998),
+221--332}, Examples 1.3--1.5, Theorem 1.8, Propositions 2.1, 3.2, 4.1
+and 7.1, and \S\S6--9.}
+The weighted densities equal sharp unit-ball energies on homogeneous
+tangents by the choice of $b_\chi$. Tangent convergence off the axis
+suffices, since rescaled area on a fixed ball is bounded and the form
+vanishes linearly on the axis. Equatorial and axial energies are $2/3$
+and $4/3$. Each remaining cone has energy $\delta>1/50$.
+Indeed Taubes's unit link $w=(\pm3u'/2,\sqrt{c/u}\cos\tau,
+\sqrt{c/u}\sin\tau,\pm u)$ gives
+$3\delta=\int\sqrt{c/u+4u^2}\,|w'|\,d\tau$.
+For $c\ge1/100$ both factors exceed or equal $\sqrt{c/u}$,
+$u\le1$ and the interval has length at least $2\pi$.
+For $c<1/100$, $\max u\ge1/\sqrt3$ and $|u'|\le2/3$ give
+$u>2/5$ on an interval of length $1/2$ centred at a maximum.
+There $3|u''|/2=2u/3-c/(3u^2)>1/5$ and the first factor exceeds $4/5$.
+
+Consequently $D_0=2/3+2q+\sum\delta$. Below the displayed threshold
+every tangent has $p=1$ and no axial or cone terms. The isolated-cone part in Taubes's \S6 splitting is empty and
+$p\equiv1$, so every point satisfies his local-minimum criterion for regularity.
+The unique analytic half-sheets glue. The deck transformation
+$(t,x,y,z)\mapsto(t+\ell,x,-y,-z)$ fixes the radial parameter
+$\rho=(x^2+y^2)^{1/2}$, so the graph descends to an embedded collar.
+Conversely that collar has one positive equatorial tangent everywhere.
+The functions $D_s$ are nondecreasing in $s$, and at fixed $s$ their
+Lipschitz constant in $v$ is at most $\|\chi'\|_\infty P/(b_\chi s^4)$.
+If the pointwise limit is $2/3$, compactness makes convergence uniform
+along decreasing scales. Taking a sufficiently fine net at one such
+scale proves necessity. The same Lipschitz and monotonicity bounds prove
+sufficiency.
+\end{proof}
+
+There is also a cap-relative choice of adapted metric for which the
+resulting current has one equatorial half-sheet away from finitely many
+points. Choose a smaller exact tube and make compatible perturbations in
+two balls centred on the axial half-planes away from the zero circle, inside the original exact region,
+outside this smaller tube and disjoint from the marked cap. Taubes's annulus exclusion and
+unique continuation rule out every actual regular axial germ.\footnote{Taubes,
+\href{https://intlpress.com/site/pub/files/_fulltext/journals/ajm/1999/0003/0001/AJM-1999-0003-0001-a011.pdf}{\emph{Asian J. Math.} 3 (1999),
+275--324}, (1.4), Proposition 2.11 and the localized Lemma 6.1.}
+The form stays fixed and the chamber argument supplies a current for the
+perturbed metric. Exceptional axial tangents and isolated cones still
+enter Proposition~\ref{prop:twisted-collar}.
+
+For example, add to the fixed equatorial ray along positive $x$ the
+nappe $t=t_0$, $x^2+y^2=2z^2$, $z>0$, together with its deck image.
+The descended local model has one regular sheet, total meridional degree
+one and a cone at a single point of $Z$. Its restriction to the punctured
+tube has two components. Its realization inside a globally irreducible
+marked current is open. Upper bounds for the required sample integrals
+on a general marked current, interior disk topology and a deformation
+removing the circle relative to the cap are further questions.
 
 \section*{Provenance and assistance}
 Edward B. Baker III developed this research with assistance from OpenAI
@@ -183,14 +406,20 @@ and Anthropic language models. This draft was written for the author on
 27 November 2026 by Claude Fable 5.2, at reasoning effort max as its
 session was configured, from its note of the same date
 \cite{Baker2026PoleFormsProposal} on the repository at
-\texttt{b607bd1}. Propositions~\ref{prop:pole}
-and~\ref{prop:recognition-pole} are proof sketches of that session. No
-one else has read them, and neither has a formal proof. The published
-theorems cited here were read as statements, at the levels recorded in
-the repository's source receipt of that date. The papers
-\cite{DonaldsonSullivan1989} and \cite{IwaniecMartin1993} are cited
-from memory and were not opened. Scripts filed with the note test the
-pointwise identities and the explicit family.
+\texttt{b607bd1}. The second master integrated the mathematical proofs and
+non-author readings of investigation 01 on 27 November 2026, on the
+working tree based on \texttt{6a422ce}, with OpenAI Codex assistance.
+The exact integration-lead model variant and effort are unavailable.
+Propositions~\ref{prop:pole} and~\ref{prop:recognition-pole} are replayed
+project theorems and await Lean proofs. The original relative statement
+of Gromov was inspected directly. Direct inspection of Theorem~9.4.2 in
+McDuff and Salamon \cite{McDuffSalamon2012JHolomorphic} remains outstanding.
+
+The marked profile estimate was derived in the second master on the same
+working tree with bounded independent OpenAI Codex calculations and
+integer certificate checks. It has a mathematical replay and awaits a
+formal proof. The marked collar criterion and local obstruction received
+independent mathematical replays in the same investigation.
 
 \bibliographystyle{unsrturl}
 \bibliography{references}

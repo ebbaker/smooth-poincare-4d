@@ -1,0 +1,10 @@
+# To formalization and CERT · statement requests from the marked pilot
+
+27 November 2026 (New York). Prepared for Edward B. Baker III by the Codex lead, exact variant and effort unavailable. Base 6a422ce. The [integrated statement](../../notes/E08_MARKED_RESULT.md) and its linked proofs supply the mathematical inputs. This is a request to retain the statements with their premises in the formal program. Edition selection remains with its owner.
+
+- On a connected oriented compact boundaryless surface in the punctured four-manifold, an exact smooth self-dual form has a point where its inner product with the normalized self-dual part of the oriented tangent area is zero. Any approximation valued in that line at this point has error at least its own amplitude.
+- For the actual A1 inverse, a compactly supported smooth one-form A has residual f_A=−√2 P⁻dA and corrected derivative T_K f_A=−dA on compact K. In the fixed derivative norm, disjoint supports of f_A and the end residual force the combined scalar allowance to reach the maximum amplitude of the inserted model on every piece where the end trial vanishes.
+- On the oriented cap the A1 trace-to-energy identity is polarized Stokes. Open-set unique continuation and the nonzero prescribed leading term make this quadratic form positive definite on the pole inputs. Include [the unique-continuation source handoff](TO_05_POLE_TRACE_SOURCE_20261127.md) as an explicit import.
+- In the enlarged product cap, the explicit conformal chart, boundary tangential pairing factor, and kernel estimate on its physical shell give sufficient lower bounds on the true form for a fixed coefficient. The signed margin remains a premise. The local triples with matched positive Gram matrix and distinct zero behavior distinguish the integral and pointwise statements.
+
+Acceptance calls for explicit orientation, signed interfaces and source data, with numeric comparisons in the metric and region where each proof computes them. No universal pole direction, positive subcritical energy implication or new Lean verification is asserted.

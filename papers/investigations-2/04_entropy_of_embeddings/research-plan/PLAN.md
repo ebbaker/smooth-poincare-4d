@@ -1,6 +1,6 @@
 # Research plan — Entropy of embeddings
 
-27 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum, in a Cowork session. Setup baseline `b607bd1`. The [overview](../research-overview/OVERVIEW.md) states the question and what is inherited; the [second master's overview](../../../master-2/research-overview/OVERVIEW.md) fixes the conventions and the route. The [register](../research-progress/REGISTER.md) alone owns live status. Nothing here is activated. Nothing in this investigation can be formalized soon; its imports go to the ledger as named hypotheses.
+27 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum, in a Cowork session. Setup baseline `b607bd1`. The [overview](../research-overview/OVERVIEW.md) states the question and what is inherited; the [second master's overview](../../../master-2/research-overview/OVERVIEW.md) fixes the conventions and the route. The [register](../research-progress/REGISTER.md) alone owns live status. The original horizon below is preserved at its setup date. The activation and replay packets follow it. Formal statement requests go to the formalization owner, and published import candidates go to the shared ledger.
 
 **Routing.** B tasks are conceptual and go to the lead; E tasks have fixed inputs, method and completion test and go to bounded helpers, as in the [model workflow](../../../../GPT_RESEARCH_MODEL_WORKFLOW.md). In a Claude session Fable leads and takes B tasks and Opus takes E packets, in the roles that workflow gives Astra and Sol; a GPT lead uses Astra/ultra and Sol 6.2/ultra. The lead selected by the author takes precedence, and the model and effort actually used are recorded in every return.
 
@@ -20,3 +20,13 @@
 **Stop.** Only at an end state named in the [continuation note](../continuation-notes/CONTINUATION.md), or at an author decision. The rows above are the first horizon; the lead adds the next rows as the [series README](../../README.md#how-sessions-work-in-this-series) describes. A return that changes a statement of the second master or of another branch is handed off and the work continues. Computations stay within the scope stated in their rows.
 
 **Launch.** Use the prompt in the [continuation note](../continuation-notes/CONTINUATION.md).
+
+## Activated continuation · 27 November 2026
+
+The author activated SP4-ENT on intake 6a422ce7814f. The lead took B01; the [three original readings](../research-progress/handoffs/REQUEST_E01_E02_E04_20261127.md) were issued in parallel. B01 declined a finite junction list. B02 was opened on the same-embedding threshold comparison with the first-series height integral. The following E packets complete independent checks. The [register](../research-progress/REGISTER.md) owns their outcomes.
+
+| ID | Input and finite target | Routing and disposition |
+| --- | --- | --- |
+| ENT-E05 | B01, the two local Gaussian lower tests, infimum quantifier and missed approaches to the named embedding | Independent Sol 6.2/ultra reader; return one [review](../reviews/E05_SPINE_REPLAY.md), escalate any mismatch to B01 |
+| ENT-E06 | B02, ellipsoid and global shear, including both normalizations and unrestricted Gaussian centres | Independent Sol 6.2/ultra reader; return one [review](../reviews/E06_CURVATURE_REPLAY.md), escalate any mismatch to B02 |
+| ENT-E07 | Completed E02 and its primary passages, smooth categories and critical dimensions | Independent Sol 6.2/ultra reader; return one [review](../reviews/E07_EMBEDDING_REPLAY.md), report a gap to the lead |

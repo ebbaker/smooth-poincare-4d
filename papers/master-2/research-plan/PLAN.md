@@ -1,6 +1,6 @@
 # Research plan — second master
 
-27 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum, in a Cowork session. Setup baseline `b607bd1`. The [overview](../research-overview/OVERVIEW.md) states the frame, the conventions and the gates. The [register](../research-progress/REGISTER.md) alone owns live status. Nothing here is activated. The scientific tasks belong to the six registers of the [second series](../../investigations-2/README.md); this plan holds only the reading of the manuscript, its integration, the gates and the request to the formal side.
+27 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum, in a Cowork session. Setup baseline `b607bd1`. The [overview](../research-overview/OVERVIEW.md) states the frame, the conventions and the gates. The [register](../research-progress/REGISTER.md) alone owns live status. This first-horizon table records the setup routing. The [current handoff](../continuation-notes/RESUME_20261127.md) incorporates the activated master work. The scientific tasks belong to the six registers of the [second series](../../investigations-2/README.md); this plan holds only the reading of the manuscript, its integration, the gates and the request to the formal side.
 
 **Routing.** B tasks are conceptual and go to the lead; E tasks have fixed inputs, method and completion test and go to bounded helpers, as in the [model workflow](../../../GPT_RESEARCH_MODEL_WORKFLOW.md). In a Claude session Fable leads and takes B tasks and Opus takes E packets, in the roles that workflow gives Astra and Sol; a GPT lead uses Astra/ultra and Sol 6.2/ultra. The lead selected by the author takes precedence, and the model and effort actually used are recorded in every return.
 
@@ -20,3 +20,23 @@
 **Stop.** Only at an end state named in the [continuation note](../continuation-notes/CONTINUATION.md), or at an author decision. A return that changes a statement used by a child is recorded in the overview before the child continues.
 
 **Launch.** Use a prompt in the [continuation note](../continuation-notes/CONTINUATION.md).
+
+
+## Beyond the setup horizon, 27 November 2026
+
+Prepared for Edward B. Baker III by the OpenAI Codex lead on 6a422ce. B06 tests the compact core and entire remaining negative segment of ZERO profile A at its original pole. A continuum lower bound uniform in the leading direction completes this finite question. Every helper was bounded to one return. The register owns the dispositions.
+
+| Tasks | Method, bound and completion criterion |
+| --- | --- |
+| E02, E03, E04 | Fixed checks of six-branch inputs for B02–B05. [Requests, disjoint outputs and escalation](../research-progress/handoffs/MASTER_READING_PACKETS_20261127.md). |
+| B06, E05 and reserved E06 | Select scalar projection of the physical Fourier field on an actual incoming direction. Bound its directional moments and symmetric Picard terms. Compare against one at the exact endpoint. [Request](../research-progress/handoffs/REQUEST_M2_DIRECTIONAL_BOUND_20261127.md). |
+| E07, E08 | Retain the real phase, centre the first scalar term and certify the bound on the exact mollified graph using spatial interval arithmetic. Complete at independent proof and integer replay or a failed bound. [Requests](../research-progress/handoffs/REQUEST_M2_PHASE_REPLAY_20261127.md). |
+| E09, E10 | Bound the angular second moment for every unit coefficient. Independently check all spatial boxes, the exterior and the transfer from scalar projection to physical singular value. [Requests](../research-progress/handoffs/REQUEST_M2_UNIFORM_DIRECTION_20261127.md). |
+
+**B07 · last twisted circle.** The lead tested the marked current supplied by LINE. E11–E14 checked exceptional points, deck action, signs and the cone model. E15 and E16 replayed the energy criterion and integrated proof. The stopping test was a proof or an obstruction scoped to the actual hypotheses. The next geometric input is a bound on localized pairings for a specified current. [Fixed packets](../research-progress/handoffs/REQUEST_M2_TWISTED_MODEL_20261127.md) · [Continuation](../continuation-notes/TWISTED_CIRCLE_20261127.md)
+
+## Handle-atlas integration
+
+**SP4-M2-B08 · Assess the handle-atlas return.** Investigation 01 owns the marked pilot on $\Sigma_P$. The finite-cover criterion in its manuscript is already available. The new input sought from the branch is an estimate for the physical pole field on the actual cover, or a precise account of which interface, transition or analytic bound prevents it. This line can proceed alongside the last-circle analysis. [POLE plan](../../investigations-2/01_chiral_transfer_and_pole_forms/research-plan/PLAN.md#handle-atlas-work) · [Marked presentation](../../investigations-2/05_certificates/research-progress/handoffs/TO_06_HANDLE_DIAGRAM_20261127.md)
+
+On receipt, compare the pole marking, coefficient normalization and conformal representative across the end, handle interiors and both sides of each seam. Accept a named recognition by A2 only when an independently checked positive margin for the **same** $u$ covers them all. If a margin is inconclusive, record the precise scope of that estimate. If a zero is proved, record the specific $(c,p,[u])$ it excludes. For a positive return, identify which constants or matching hypotheses came from the particular attachments and formulate the first one that would need a proof for arbitrary presentations. Record any energy implication only when the Yamabe and strict chiral-energy hypotheses have independently been verified on the same class. The universal existence and energy-bridge questions remain open.

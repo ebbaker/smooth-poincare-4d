@@ -1,0 +1,5 @@
+# SP4-INV-E06 · November source addendum
+
+27 November 2026, for Edward B. Baker III, from the GPT-6-family lead, precise serving variant and effort unavailable. Bounded Sol 6.2/ultra packet. [Register](../REGISTER.md), checkout 6a422ce7814f and [completed E05 receipt](RETURN_INV_E05_20261127.md). One additional primary source found while checking the bibliography changes the literature status of the example in E03.
+
+Read Ren–Yang, arXiv:2611.10885v1, Theorem 1.4(4), Equations (2)–(3) and §4.4, from the primary HTML. Record the precise scope of the computation of the classical rational module of the negative projective plane. Is there a new hypothesis or an immediate computation for either of the two named homotopy spheres? Write a short return in research-progress/handoffs/RETURN_INV_E06_20261127.md, including one additive BibTeX record with inspection data in a separate references/INV_REN_YANG_ADDENDUM_20261127.patch. Check the patch against the completed chain in scratch. No change to E05 or shared files. Report scratch applications, actual versions and limitations. Stop there.

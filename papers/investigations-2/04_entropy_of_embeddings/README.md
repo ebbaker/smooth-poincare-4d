@@ -15,6 +15,6 @@
 
 **Ownership.** Owns the definition of the least entropy $I_{\rm ent}$, the exact statements of the flow theorems it imports, the embedding lemma and entropy estimates for model embeddings. It is independent of the pole-form frame. It does not own anything in [investigation 04 of the first series](../../investigations-1/04_hypersurface_immersions/README.md), to which results are sent by handoff.
 
-**State.** Set up on 27 November 2026 at the author's request. Nothing is activated. The working folders exist with purpose notes and hold no scientific material, and there is no manuscript. Ready on activation: ENT-E01, ENT-E02, ENT-E04 and ENT-B01.
+**Outcome, 27 November 2026.** The activation reached all five end states in the [closing note](continuation-notes/CLOSING_20261127.md). Individual embedded images are recognized at the inclusive wall $4/e$. The corresponding least-entropy criterion is strict. The thin two-cell calculation gives a local lower bound and the named presentation sphere still lacks a recognition-scale upper bound. [Spine and infimum](brainstorm/notes/B01_SPINE_AND_ENTRY.md) · [Total curvature comparison](brainstorm/notes/B02_CURVATURE_COMPARISON.md) · [Handoffs and evidence levels](research-progress/REGISTER.md)
 
-27 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum, in a Cowork session. Setup baseline `b607bd1`.
+Setup provenance, 27 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum, in a Cowork session. Setup baseline `b607bd1`.

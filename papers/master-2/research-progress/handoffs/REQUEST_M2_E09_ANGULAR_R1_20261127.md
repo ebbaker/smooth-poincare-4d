@@ -1,0 +1,5 @@
+# B06 follow-up, all directions on the same profile
+
+27 November 2026 for Edward B. Baker III, OpenAI Codex lead (variant and effort unavailable), working base 6a422ce. The phase estimate of E07 and the integer endpoint box test now pass for the balanced direction. Keep that test as a separate witness. B06 now tests every unit direction on the same graph with the same pole, scale and parameter. No alternative metric, Fourier quadrature for the pole equation, or new curvature bound.
+
+SP4-M2-E09 (bounded Sol 6.2/ultra). For the iid tensor spline Fourier law, put q=ξ/|ξ|, β=E q₀²q₁². Prove E(uᵀT(ξ)u)² is affine in Σuᵢ⁴ for unit u, its balanced and axial values 1/3 and 1−16β. Lower-bound β by a finite positive sum using bins for |ξ_i| of width 1/4 or 1/2 up to 4 and the lower density (3/(2π))(1−ξ²/24)^4 there. Use π<22/7 or π<4. Target E(uᵀTu)²≤9/10 (or a stronger bound), with reproducible rational arithmetic. Write only reviews/E09_ANGULAR_MOMENT_20261127.md. Stop at a rigorous moment bound or failure for the stated grid. Source is ZERO-E01 multiplier and ZERO-B01 fourfold convolution. Lead writes and checks the uniform box test.

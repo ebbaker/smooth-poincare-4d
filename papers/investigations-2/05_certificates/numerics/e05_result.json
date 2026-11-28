@@ -1,0 +1,50 @@
+{
+  "schema": "SP4-CERT-E05/1",
+  "start": "0|XyyxYYY,XyxxYXX",
+  "goal": "0|x,y",
+  "limits": {
+    "moves": 4,
+    "length": 16,
+    "active_z": 1,
+    "stabilization_operations": 1,
+    "states": 500000,
+    "seconds": 120
+  },
+  "status": "exhausted",
+  "cap_hit": null,
+  "distinct_states": 628,
+  "layers": [
+    {
+      "depth": 0,
+      "count": 1,
+      "stabilization_used_count": 0,
+      "sha256": "d288d04274eb824207dcbbca49bc213e91bce9f6071a9bf98713419a85c12f13"
+    },
+    {
+      "depth": 1,
+      "count": 11,
+      "stabilization_used_count": 1,
+      "sha256": "c11a6bc7c123aabda370fd8e6d2b4e2e0383dbffc2a030592b1f1c9ff01f8bae"
+    },
+    {
+      "depth": 2,
+      "count": 52,
+      "stabilization_used_count": 11,
+      "sha256": "c5dc2b2fe94eaefbafb5198d18d335c55d37259b9837f7f50935a03055e5559a"
+    },
+    {
+      "depth": 3,
+      "count": 163,
+      "stabilization_used_count": 63,
+      "sha256": "eed92353ea4539fff3ef3892e9b332a93ea98eec009c502f90f4c3c43b0d0617"
+    },
+    {
+      "depth": 4,
+      "count": 401,
+      "stabilization_used_count": 229,
+      "sha256": "e0102542cb2b05d9fef994be19db16098b0d53065e75aefb40569a9c61c6df12"
+    }
+  ],
+  "witness": null,
+  "elapsed_seconds": 0.007396
+}

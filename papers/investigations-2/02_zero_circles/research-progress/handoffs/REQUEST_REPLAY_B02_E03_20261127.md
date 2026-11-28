@@ -1,0 +1,3 @@
+# Independent incidence and local-source reading, revision 1
+
+27 November 2026, for Edward B. Baker III. Codex lead, serving variant and effort unavailable; gpt-6.2-sol/ultra reader. [Register](../REGISTER.md), base 6a422ce. Check the specific theorems in brainstorm/notes/B02_INCIDENCE.md, including the spatial rank-one obstruction, compact direction-boundary quantifiers, cokernel derivative, Schur coordinates and actual projective lines. Also check E03's cap, first-jet invariant, birth versus saddle and parity hypotheses directly in the linked original passages; recheck the Taubes insertion, Honda and Perutz and LeBrun qualifications. Do not claim genericity for poles. Flag changes to lead. Own only reviews/B02_E03_REPLAY.md. No other files or gate computations.

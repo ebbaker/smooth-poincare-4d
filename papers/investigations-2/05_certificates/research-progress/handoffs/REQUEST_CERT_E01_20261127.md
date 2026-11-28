@@ -1,0 +1,7 @@
+# SP4-CERT-E01 · request 1
+
+27 November 2026, for Edward B. Baker III. Issued by the selected OpenAI Codex lead (exact lead configuration unavailable here). Assigned GPT-6.2 Sol / ultra. Activated by the author. Input version 6a422ce, plus working files specified in the [continuation](../../continuation-notes/CONTINUATION.md) and [sole register](../REGISTER.md). This is a fixed execution packet.
+
+Read Jabłonowski arXiv:2609.29839v2 §§7–8 in original, figures and peripheral conventions, using at most six primary retrieval routes, plus section/figures needed to decode slopes. Compare exactly d=7 and the two framings of that source to the first-master TeX, using independent computation from the preprint's actual relations. For each presented filling, cap enumeration at 20,000 provisional cosets, 60 seconds; at most four runs. Return exact comparison, finite independently checkable data where feasible, primary passage receipt and explicit unavailability if inaccessible. Never substitute d=17 words. Outputs notes/E01*.md, numerics/e01* and this packet's return.
+
+Use the smooth oriented conventions in the series and master overview. Report the actual model and effort, exact inputs inspected, evidence labels and bounds. Write the return as RETURN_CERT_E01_20261127.md beside this request. No other files, shared index edits, commits or dependent work. Read primary passages before importing published theorems. Stop at the specified result or a precisely bounded missing premise.

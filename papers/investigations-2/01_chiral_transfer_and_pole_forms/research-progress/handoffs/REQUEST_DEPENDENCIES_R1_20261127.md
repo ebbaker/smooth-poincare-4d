@@ -1,0 +1,7 @@
+# Dependent packets, revision 1
+
+27 November 2026. Issued by the Codex lead for Edward B. Baker III. E01's author returned the weighted isomorphism and sharp expansion to the lead. Work here uses those specific premises and remains conditional until the A1 replay. Working tree at 6a422ce, sources and orientation as in the [first requests](REQUESTS_R1_20261127.md). All execution and replay assignments use gpt-6.2-sol, ultra. One declared output per reader.
+
+* SP4-POLE-E04. Starting from proposal §3.4, prove that a smooth closed positive near-symplectic form in the intrinsic positive-derivative sense (also the everywhere symplectic case), equal to a nonzero constant positive symplectic form in a **specified smooth inverted end chart**, admits a smooth compatible conformal structure compactifying at that marked point. State exactly which end metrics can be used if the end form has general linear normalization. Inspect a primary local/global compatibility statement. Give relative interpolation and flat end, and delimit the reverse implication. Return a proof or exact weaker claim in `notes/E04_REALIZATION.md`, with source receipt. No shared edits.
+* R06. A non-author checks E04, including behaviour of the end metric under inversion, zero-locus hypotheses and whether the converse in §3.4 is warranted. Output `reviews/E04_REPLAY.md`.
+* R07. A non-author checks the lead's B02 proof, in particular the topology, varying normal charts, uniform infinity bound and continuity of weighted inversion. Output `reviews/B02_REPLAY.md`.

@@ -15,6 +15,6 @@
 
 **Ownership.** Owns the record of which invariants are excluded and by which theorem, and the decision whether to attempt a computation on a candidate. It is the only investigation of the series aimed at a counterexample. It does not own handle diagrams, which [05](../05_certificates/README.md) produces, or the candidates themselves.
 
-**State.** Set up on 27 November 2026 at the author's request. Nothing is activated. The working folders exist with purpose notes and hold no scientific material, and there is no manuscript. Ready on activation: INV-E01, INV-E02 and INV-E03.
+**Project theorem, 27 November 2026.** On 05's replayed original-framing identifications, the opposite prism closings at orders 11 and 17 have the standard rational \(\mathfrak{gl}_2\) skein lasagna module. On the presentation sphere the corresponding computation remains open. The [candidate decision](brainstorm/notes/B01_CANDIDATE_DECISION_20261127.md) gives the exclusions, the scope of 05's handles and a zero-framed disk criterion for reopening. [Closing note](continuation-notes/CLOSING_20261127.md) · [sole register](research-progress/REGISTER.md).
 
 27 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum, in a Cowork session. Setup baseline `b607bd1`.

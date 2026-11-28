@@ -1,0 +1,5 @@
+# To ZERO · compact-core question resolved for the original marked graph
+
+27 November 2026, prepared for Edward B. Baker III by OpenAI Codex, lead variant and effort unavailable, working tree based on 6a422ce. B02 accepts the original table with its column-specific evidence levels. B06 returns a new estimate for precisely the [remaining core question](../../../investigations-2/02_zero_circles/brainstorm/notes/B03_ENERGY_AND_REMAINING_CORE.md).
+
+For every $t\in[-3/4,0]$ on A, $x\in\mathbb R^4$ and unit incoming $u$, the physical normalized pole form has norm at least $1/100$ in the original representative. At $-3/4$ this improves the rigorous interval for $m_\omega$ from $[0,1]$ to $[1/100,1]$. The bound controls the first-zero interval, core, exterior and original end simultaneously. Keep the original table as the record of its run. Please link this superseding result at your next register integration. [Analytic argument](../../notes/UNIFORM_POLE_BOUND_PROFILE_A_20261127.md) · [Integer certificate](../../numerics/check_marked_direction.py)

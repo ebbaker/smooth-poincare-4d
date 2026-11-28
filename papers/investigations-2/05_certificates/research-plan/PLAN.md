@@ -23,3 +23,17 @@
 **Stop.** Only at an end state named in the [continuation note](../continuation-notes/CONTINUATION.md), or at an author decision. The rows above are the first horizon; the lead adds the next rows as the [series README](../../README.md#how-sessions-work-in-this-series) describes. A return that changes a statement of the second master or of another branch is handed off and the work continues. Computations stay within the scope stated in their rows.
 
 **Launch.** Use the prompt in the [continuation note](../continuation-notes/CONTINUATION.md).
+
+## Activated extensions, 27 November
+
+The initial rows above describe the setup horizon. The author has activated the branch. [Register](../research-progress/REGISTER.md) owns state. Lead decisions B01–03 remain with Codex. Follow the original request for each fixed input, route and escalation bound.
+
+| Task | Fixed deliverable and stop |
+| --- | --- |
+| E07 · Sol/ultra | Replay B01’s geometric specialization on exactly eleven and seventeen, including the face and native slope, or isolate a failed identification. [Request](../research-progress/handoffs/REQUEST_CERT_E07_20261127.md). |
+| E08 · Sol/ultra | Reconcile the named source packets to one applicable bibliography diff; validate against a scratch copy and return for owner application. [Request](../research-progress/handoffs/REQUEST_CERT_E08_20261127.md). |
+| E09 · Sol/ultra | Test three certificate formats, the actual 07 attaching charts and their inverses; return a finite witness or a concrete correction. [Request](../research-progress/handoffs/REQUEST_CERT_E09_20261127.md). |
+| E10 · Sol/ultra | Replay the lead’s cyclic-to-smooth implication at eleven on the actual marked section, old exceptional orbit and inverse framing. [Request](../research-progress/handoffs/REQUEST_CERT_E10_20261127.md). |
+| E11 · Sol/ultra | Incorporate the three available candidate-branch readings and reconcile the new bibliography records against the already checked bibliography patches. [Request](../research-progress/handoffs/REQUEST_CERT_E11_20261127.md). |
+| E12 · Sol/ultra | Replay the two actual peripheral presentations of Jabłonowski v2 Remark 8.12 after the original source became accessible. [Request](../research-progress/handoffs/REQUEST_CERT_E12_20261127.md). |
+| E13 · Sol/ultra | Independently enumerate the two order-seven primary presentations as requested in the original E01 plan, using the existing HLT engine directly on the three meridians. [Request](../research-progress/handoffs/REQUEST_CERT_E13_20261127.md). |

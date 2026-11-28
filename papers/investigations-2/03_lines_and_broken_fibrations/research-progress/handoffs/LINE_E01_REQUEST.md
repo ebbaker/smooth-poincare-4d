@@ -1,0 +1,9 @@
+# SP4-LINE-E01 · Taubes and Gerig
+
+Frozen request r1, 27 November 2026, for Edward B. Baker III. Issued by the Codex lead. Helper dispatch set to gpt-6.2-sol / ultra. Lead variant and effort are unreported. [Sole register](../REGISTER.md).
+
+Use the activated [plan](../../research-plan/PLAN.md) at SHA-256 prefix 0c32748aea0e1381, the [continuation](../../continuation-notes/CONTINUATION.md) at 53a397ce7e7bb8ef, including its exact inputs (proposal 091aa015355ef938 §3.6, source receipt 536bb672a70af507 §3, bibliography b8e4a31dc40480a0). Apply the second master's oriented, smooth Riemannian conventions. Assume only a standard-ended transverse form on a punctured smooth homotopy sphere, with positive line at infinity after the proposed cap, for testing hypotheses. This reading is independent of the other returns.
+
+Read Taubes 1999 (the main theorem and its source conventions) and both Gerig papers in the bibliography, checking errata/later versions and twisted-orbit exceptions. Give a table with b+, perturbation chamber, genericity, transverse zeros and types, minimality, class/index, boundary multiplicities, and precise conclusion. Test specifically a single twisted circle on the capped manifold. Stop at the applicability table.
+
+Write only [the return](LINE_E01_RETURN.md), including the bibliographic data, stable URLs, inspected version/date and exact theorem/page/hypothesis at point of dependence. Mark all mathematical content as import, project theorem (status), certificate or heuristic. Primary text only for imports. State genuine access or hypothesis gaps, do not turn pointers into imports. Routine alternative primary versions/sources within this question are allowed. Escalate a change of target to LINE-B02. No other files, register edits or commits. Return references and any corrections to the lead.

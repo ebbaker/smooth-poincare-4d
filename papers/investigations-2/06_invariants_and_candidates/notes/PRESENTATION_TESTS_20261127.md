@@ -1,0 +1,22 @@
+# Two finite tests for the presentation-sphere input
+
+27 November 2026, for Edward B. Baker III with OpenAI Codex assistance. Selected GPT-6-family lead, exact serving variant and effort unavailable. Input checkout `6a422ce7814f` and [05's marked delivery](../../05_certificates/research-progress/handoffs/TO_06_HANDLE_DIAGRAM_20261127.md). [Source and double conventions](CANDIDATE_INPUTS_20261127.md). These are elementary project implications, initially working. They use no candidate invariant evaluation.
+
+## Which knot trace could decide vanishing?
+
+**Project theorem.** Let an oriented smooth integral homology four-sphere contain an oriented copy of the single two-handle trace \(X_n(K)\), with integral framing relative to the Seifert longitude. Then \(n=0\). Push the interior of a Seifert surface of \(K\) into the zero-handle and cap it by the core disk of the two-handle. This is a closed embedded oriented surface. Its normal Euler number is \(n\): the extension of the boundary normal push-off over the surface in the zero-handle measures precisely the difference between the attaching and Seifert framings at the core. An oriented embedding preserves the normal bundle and this number. Its image represents zero in the ambient integral second homology, so its self-intersection is zero.
+
+**Import and application.** Ren–Willis, Theorem 1.4, gives vanishing of the ordinary Khovanov skein lasagna module for an oriented embedding of \(X_n(K)\) with \(n\ge -TB(-K)\). Their Corollary 1.5 expresses this as an obstruction to a framed slice disk in the punctured ambient manifold. Thus either a marked embedded zero-trace with \(TB(-K)\ge0\), or equivalently the corresponding zero-framed disk for the mirror knot with its sign convention, would suffice. In the disk formulation the condition on the disk's own boundary knot \(J\) is \(TB(J)\ge 0\). A single Legendrian front with that lower bound suffices. A proved zero value over \(\mathbb Q\) would differ from the standard sphere value. These are reopening criteria. No such trace or disk is present in the returned marking. [Ren–Willis, §§1.1, 3](https://arxiv.org/html/2402.10452v3) · [Manolescu–Walker–Wedrich, Corollary 3.5](https://arxiv.org/pdf/2206.04616).
+
+## Can the displayed double start by cancelling a one-handle?
+
+**Project theorem.** In the unmarked Gay–Kirby double of the specified lower presentation realization, none of the four *unchanged* attaching curves of the two-handles can make a geometric cancelling pair with a one-handle, even after a change of basis of the lower free group. A curve meeting the selected belt sphere transversely once represents a primitive conjugacy class: cut along the one-handle to read a word \(u a^{\pm1}v\) in a free basis, with \(u,v\) involving only the other generator. Substitution of the word for \(a\) is an automorphism. In rank two, quotienting by the normal closure of a primitive word leaves an infinite cyclic group.
+
+For the first native word impose only \(x^{-1}y^2x=y^3\). For the second impose only \(yx^2y^{-1}=x^3\), the cyclic rearrangement of \(x^{-1}yx^2y^{-1}x^{-2}=1\). Write \(T(t)=t+1\) and \(D_a(t)=at\) on the rational line. The following assignments satisfy their respective single relation.
+
+| Relator retained | Image of \(x\) | Image of \(y\) | Equality of maps |
+| --- | --- | --- | --- |
+| First | \(D_{2/3}\) | \(T\) | \(D_{2/3}^{-1}T^2D_{2/3}=T^3\) |
+| Second | \(T\) | \(D_{3/2}\) | \(D_{3/2}T^2D_{3/2}^{-1}=T^3\) |
+
+The images in each row fail to commute, since \(D_aT(0)=a\) and \(TD_a(0)=1\). Consequently neither single-relator quotient is cyclic, in any basis. The two dual two-handles run over zero-framed small meridians in the original attaching boundary. Each meridian bounds a transverse disk there when the other curves are forgotten, hence represents the identity in the lower free group. This excludes the two dual curves as first primitive relators as well. The test allows isotopy, conjugacy, inversion and a free-basis change. It says nothing against a two-handle slide, stabilization, a different handle decomposition, or a relative calculation using all handles. In particular it gives no topological distinction between this sphere and the standard sphere. [07 ordered relators](../../../investigations-1/07_positive_subcritical_entry/notes/PRESENTATION_SOURCES.md) · [Gay–Kirby, §§4–4.1](https://msp.org/gt/2007/11-4/gt-v11-n4-p03-p.pdf).

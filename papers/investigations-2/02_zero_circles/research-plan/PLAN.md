@@ -1,6 +1,6 @@
 # Research plan — Zero circles
 
-27 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum, in a Cowork session. Setup baseline `b607bd1`. The [overview](../research-overview/OVERVIEW.md) states the question and what is inherited; the [second master's overview](../../../master-2/research-overview/OVERVIEW.md) fixes the conventions and the route. The [register](../research-progress/REGISTER.md) alone owns live status. Nothing here is activated. No computation runs until a task is activated.
+27 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum, in a Cowork session. Setup baseline `b607bd1`. The [overview](../research-overview/OVERVIEW.md) states the question and what is inherited; the [second master's overview](../../../master-2/research-overview/OVERVIEW.md) fixes the conventions and the route. The [register](../research-progress/REGISTER.md) alone owns live status. The following table is the setup horizon. Its activation and dispositions are recorded in the register.
 
 **Routing.** B tasks are conceptual and go to the lead; E tasks have fixed inputs, method and completion test and go to bounded helpers, as in the [model workflow](../../../../GPT_RESEARCH_MODEL_WORKFLOW.md). In a Claude session Fable leads and takes B tasks and Opus takes E packets, in the roles that workflow gives Astra and Sol; a GPT lead uses Astra/ultra and Sol 6.2/ultra. The lead selected by the author takes precedence, and the model and effort actually used are recorded in every return.
 
@@ -21,3 +21,7 @@
 **Stop.** Only at an end state named in the [continuation note](../continuation-notes/CONTINUATION.md), or at an author decision. The rows above are the first horizon; the lead adds the next rows as the [series README](../../README.md#how-sessions-work-in-this-series) describes. A return that changes a statement of the second master or of another branch is handed off and the work continues. Computations stay within the scope stated in their rows.
 
 **Launch.** Use the prompt in the [continuation note](../continuation-notes/CONTINUATION.md).
+
+## Activated additions, 27 November 2026
+
+Lead decision following B01. The global derivative envelope is too coarse to certify entry for the predeclared high-amplitude stress cases. Preserve B01 and its constants. Add SP4-ZERO-E05 (bounded Sol/ultra) to integrate upper bounds on the *same* curvature and scalar coefficients on those two profiles by interval cells. Accept exact or directed enclosures; if they fail, return the bounds attained. This strengthens the geometry columns only. E02 retains its dependency on E01 and B01 and its numerical and spatial scope.

@@ -1,0 +1,44 @@
+# What the thin two-cell measures
+
+27 November 2026, for Edward B. Baker III. ENT-B01, OpenAI Codex lead, exact serving model/effort unavailable. Intake 6a422ce7814f. Inputs are the [proposal and check listed at launch](../../continuation-notes/CONTINUATION.md#exact-inputs), the [marked presentation return](../../../../investigations-1/07_positive_subcritical_entry/reviews/FIRST_MARKED_ENTRY_20261126.md), and [CMS v2, Corollary 1.5](https://arxiv.org/html/2309.03856v2). This note concerns smooth embedded hypersurfaces in Euclidean five-space, with multiplicity one and the induced four-area. Orientations do not enter the estimates.
+
+**Decision (heuristic assessment).** Decline a recognition-scale upper bound from the present minus Miller–Schupp spine data. No list of junctions is frozen for E03. The native construction gives both framed attaching tubes and their closing identifications. It gives an abstract five-dimensional thickening and intrinsic boundary metrics. The missing datum is quantitative Euclidean control of a realization of its whole boundary, including the relative placements of pieces. A qualitative diffeomorphism of the double to the sphere is sufficient for embedding existence. It gives no distortion estimate. The cell count suggests where a Gaussian test should be centred. The following calculation determines what that test can prove.
+
+**Project theorem (working at issue), local lower test.** Suppose the image contains an isometric Euclidean product patch as a subset of the ambient orthogonal splitting,
+\[
+ B_R^2(0)\times S^2_\epsilon(0)\subset\mathbb R^2\times\mathbb R^3.
+\]
+At centre zero and time \(t=\epsilon^2/4\) the contribution of the patch alone is
+\[
+ (\pi\epsilon^2)^{-2}
+ \left(\pi\epsilon^2(1-e^{-R^2/\epsilon^2})\right)
+ (4\pi\epsilon^2)e^{-1}
+ =\frac4e(1-e^{-R^2/\epsilon^2}).
+\]
+It is a lower bound for the entropy of the *entire image*, since the omitted contribution is nonnegative. More generally suppose dilations about cell interiors by \(1/\epsilon_j\), with rigid motions, contain patches converging smoothly with multiplicity one on compact subsets to \(\mathbb R^2\times S^2_1\). Test at the rescaled time \(1/4\), restrict first to every fixed compact cylinder piece, take the lower limit, then let its radius increase. This gives \(\liminf_j\lambda(\Sigma_j)\ge4/e\). Additional sheets only increase the lower test. For a flat \(k\)-cell the same Gaussian factorization gives the round normal sphere \(S^{4-k}\) times \(\mathbb R^k\), with centred time optimal for the complete product \(\epsilon^2/(2(4-k))\) for \(0\le k\le2\). None of these limiting statements assumes such an asymptotic for the actual marked sphere.
+
+**Project theorem (working at issue), obstruction for specified placements.** A hypersurface containing two disjoint copies of the displayed patch, with common tangential disk and normal centres at distance \(3\epsilon\), already has entropy strictly above \(4/e\) if \(R\ge4\epsilon\). At the first centre, every point of the second normal sphere has distance at most \(4\epsilon\) in the normal coordinates. Relative to the first patch its weight is at least \(e^{-15}\). The total is therefore at least
+\[
+ \frac4e(1-e^{-16})(1+e^{-15})>\frac4e.
+\]
+The last inequality is equivalent to \(e>1+e^{-15}\). This test uses only regular regions. It excludes these relative placements in **any** proposed entry image. Whether a given spine has them is a separate geometric question. No proximity between the two physical marked tubes of the presentation is assumed.
+
+**Project theorem (working at issue), the infimum quantifier.** Write \(I(M)=\inf_{F:M\hookrightarrow\mathbb R^5}\lambda(FM)\), \(c=4/e\), for a smooth homotopy four-sphere. The published recognition test uses one \(F\) with \(\lambda(FM)\le c\). Thus \(I(M)<c\) suffices by the defining property of the infimum. Equality suffices *with attainment*. Standardness supplies a round embedding of entropy \(32/(3e^2)<c\) by [Colding–Minicozzi, Lemma 7.10 and its proof](https://annals.math.princeton.edu/wp-content/uploads/annals-v175-n2-p07-p.pdf), applied to the compact shrinking sphere of radius \(\sqrt8\), followed by direct integration. Consequently standardness, existence of an embedding in the inclusive band, and \(I(M)<c\) are equivalent using the simply connected consequence of [the flow reading](../../research-progress/handoffs/E01_FLOW_RETURN.md). If \(I(M)=c\), an attaining embedding would itself imply \(I(M)<c\), a contradiction. Neither a proof that equality is impossible nor an example of equality is supplied. The sequence of numbers \(c+1/j\) explains the logical gap in the inherited infimum implication. It is not a sequence of constructed embeddings.
+
+**Heuristic assessment of alternatives.** One could choose a PL realization and smooth the regular neighbourhood. Apart from verifying the marked boundary and framings, this requires specifying angles and thicknesses at the relator returns and a smoothing on adjoining pieces. Even a sharp upper bound for each infinite local model would need a uniform estimate for centres drifting between models, interaction of neighbouring sheets, and the intermediate and large Gaussian scales. The two-cell limit already exhausts the recognition budget, so an unsigned error tending to zero cannot certify the endpoint. One could instead choose a geometry with no long round-normal two-cell regions, or a quantitative parametrization by a round sphere. The former needs a new actual embedding with estimates. The latter would already recognize the smooth type if it were a diffeomorphism. Bounds much larger than the recognition band or on a sphere identified beforehand as standard would answer a different feasibility question.
+
+**Project theorem (working at issue), sufficient global test.** For \(A_x(r)=\mathcal H^4(\Sigma\cap B_r(x))\), layer integration gives
+\[
+ F_{x,t}=(4\pi t)^{-2}\int_0^\infty \frac{r}{2t}e^{-r^2/(4t)} A_x(r)\,dr .
+\]
+In particular an estimate \(A_x(r)\le c\,|B_1^4|r^4\) for all \(x,r\) would suffice, since the plane has Gaussian area one. This sufficient test is too strong even for the round sphere: the centred ball just enclosing the unit sphere has limiting ratio $|S^4|/|B_1^4|=16/3$. On an exact two-cell patch with $R\ge\epsilon$, the axial ball of radius $\sqrt2\epsilon$ contains area $4\pi^2\epsilon^4$, twice the four-ball comparison area. The exact Gaussian bound is weaker. **Open statement for the named type (heuristic target):** construct one verified embedding of the minus presentation boundary with \(F_{x,t}\le4/e\) for every centre and every positive scale. The reviewed inputs supply no such embedding. Nothing excludes a different realization or a different method.
+
+**Import and project corollary (working at issue), the value on the standard type.** Bernstein–Wang, [Theorem 1.1, p. 1 of arXiv:1406.2966v2](https://arxiv.org/pdf/1406.2966v2), prove in dimensions two through six that every smooth closed hypersurface has entropy at least that of the round sphere, with equality precisely for a round sphere up to translation and dilation. Thus the round embedding attains \(I(S^4)=32/(3e^2)\). Combining this with the strict criterion above, the possible least entropies of smooth homotopy four-spheres lie in \(\{32/(3e^2)\}\cup[4/e,\infty)\). The second interval has no example supplied here.
+
+**Project theorem, nonround normal profile (independent refinement).** Suppose a sequence of rescaled interiors contains patches converging smoothly on compact sets, with multiplicity one, to \(\mathbb R^2\times\Gamma\subset\mathbb R^2\times\mathbb R^3\) for a fixed closed smooth embedded surface \(\Gamma\). For every centre and time the Gaussian integral on the full limit factors as the integral on \(\Gamma\) times the normalized tangential Gaussian integral one. For each fixed test, compact truncation and positivity as above give a liminf bound by that limit test. Taking their supremum proves
+\[
+ \liminf_j\lambda(\Sigma_j)\ \ge\ \lambda(\Gamma)\ \ge\ 4/e.
+\]
+The last inequality is the dimension-two specialization of Bernstein–Wang. For fixed nonround \(\Gamma\) it is strict, so every sufficiently far member misses the inclusive band. Thus changing the normal cross section alone cannot yield a limiting improvement in this class. Profiles varying to round, finite thickenings and embeddings without a product limit retain their separate quantifiers. [Independent reading](../../reviews/E05_SPINE_REPLAY.md)
+
+Evidence at integration: project statements above were independently replayed in [E05](../../reviews/E05_SPINE_REPLAY.md). The local optimal-time wording and strength of the area-ratio condition were clarified after that reading. Formal statements have been [requested](../../research-progress/handoffs/TO_FORMALIZATION_ENTROPY_20261127.md).

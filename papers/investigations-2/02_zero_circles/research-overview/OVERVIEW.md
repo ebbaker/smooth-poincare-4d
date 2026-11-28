@@ -17,10 +17,10 @@ The conventions are those of the [second master's overview](../../../master-2/re
 - *The bridge question.* For a class $c$ on $S^4$ with $Y(c)>0$ and $e(c)<8\pi^2$: is there a point $p$ and a direction $u$ for which $\omega_u$ has no zero on $S^4\setminus p$?
 - *Detection.* A computed form is called zero-free on a grid only with a bound that controls the form between grid points. What counts as evidence, and what would count as a counterexample given that the question quantifies over every $p$, is decided by ZERO-B01.
 
-## Inherited, with evidence level
+## Inherited at setup, with the original evidence level
 
 - **The calibration family $c_\varepsilon$.** Closed-form pole forms at the fixed point of a $U(2)$-invariant family, with energies from $0.17\,T$ to $1172\,T$ in the sampled range, all with a definite triple. `check_06` of the [checks](../../../master/brainstorm/notes/claude/ALTERNATIVE_FRAMEWORKS_AND_INVESTIGATIONS_2_20261127_checks/README.md). Checked case. It is the validation target of ZERO-E01.
-- **Zeros can be created.** Perutz: a near-symplectic or symplectic form can be modified inside a ball so that its zero set gains a circle. Import; abstract and excerpts only. The modified form is a pole form of some class, but nothing is known about the other pole forms of that class or about its energy.
+- **Zeros can be created.** Setup attributed single-circle creation from a symplectic ball to Perutz, from abstracts and excerpts. **Import, corrected after primary inspection:** use Taubes Prop. 2.1 from an initially symplectic form; Perutz Thm. 1.4 performs a saddle on existing circles. The [source reading](../notes/E03_LOCAL_SOURCES.md) gives the precise distinction and boundary conditions.
 - **Generic zero sets are circles.** Proved for harmonic self-dual forms on closed manifolds (Honda; LeBrun). Import; unread. Not proved for pole forms.
 - **A1 and the leading term.** Statement of [investigation 01](../../01_chiral_transfer_and_pole_forms/README.md); a proof sketch. This investigation uses the statement.
 
@@ -39,3 +39,11 @@ The families and the standard of evidence for the gate experiment (ZERO-B01). Wh
 ## Ownership
 
 Owns the computation of pole forms on $S^4$, the gate experiment and the structure theory of $H$ and $\kappa$. It does not own A1 and A2 ([01](../../01_chiral_transfer_and_pole_forms/README.md)), the curves and fibrations of [03](../../03_lines_and_broken_fibrations/README.md), or the gate decision, which belongs to the [second master](../../../master-2/research-plan/PLAN.md).
+
+## Deductions and checks on activation, 27 November 2026
+
+**Project theorem.** The flat transfer equation for a compact graph and the sufficient Fourier integral norm criterion give a continuum test for the whole marked triple. A compactly supported pullback of the round class shows that chiral energy cannot control this sufficient norm in fixed coordinates. [Derivation](../notes/E01_FLAT.md) · [Criterion](../brainstorm/notes/B01_GATE_SCOPE.md) · [Coordinate dependence](../brainstorm/notes/B03_ENERGY_AND_REMAINING_CORE.md)
+
+**Certificate / heuristic.** The exact geometry enclosures certify positivity and subcritical energy at all frozen parameter rows. Twelve of the thirteen profile/parameter rows have a positive continuum minimum bound at the marked pole, counting the common round control in both profiles. The other row has a positive grid minimum and an unresolved compact core. [Gate handoff](../research-progress/handoffs/TO_MASTER2_GATE1_20261127.md)
+
+**Import / project theorem.** The primary local and parity readings and their application with a marked end appear in [E03](../notes/E03_LOCAL_SOURCES.md). The compact incidence space keeps all kernel directions at lower-rank points. Closedness excludes a rank-one spatial derivative at any zero, and at direction-boundary zeros on the simple determinant locus the spatial rank equals two. [Incidence argument](../brainstorm/notes/B02_INCIDENCE.md)

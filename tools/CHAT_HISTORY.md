@@ -90,8 +90,9 @@ python3 tools/refresh_chat_history.py --thread-id ACTUAL_THREAD_ID
 
 An unregistered chat is skipped; `skipped_unregistered` is not a capture.
 Automatic registration lookup covers the repository-root history folders,
-`chat-histories/early-chats`, and the investigation history folders under
-`papers/`. Check for an existing registration before importing.
+`chat-histories/early-chats`, and the history folders under `papers/` and
+`formalization/investigations/`. Check for an existing registration before
+importing.
 Verify the returned success status and the registry's recorded counts,
 source/configuration metadata, sizes and hashes. Hashes establish byte
 identity, not scientific validity. Never hand-edit a registered JSON archive.
@@ -144,8 +145,11 @@ reviewed before adding an adapter.
 an author-provided export. Inspect its diagnostic report before importing.
 For a reduced ChatGPT account export, select one authenticated conversation by
 ID using `import_public_chat_export.py`. It records the public text, exported
-alternate branches and file descriptors with the source chunk hash. It uses
-the same index lock and installation transaction as a Codex capture.
+alternate branches and file descriptors with the source chunk hash. An inline
+image descriptor can enter the archive alongside its caption when it matches
+the exported attachment by identity, dimensions and size. The binary stays
+with the export. The importer uses the same index lock and installation
+transaction as a Codex capture.
 
 ```sh
 python3 tools/import_public_chat_export.py \

@@ -1,0 +1,3 @@
+# ENT-E05 · supplementary source check on the infimum quantifier
+
+27 November 2026, for Edward B. Baker III. Issued by the OpenAI Codex lead, exact serving variant/effort unavailable, to the same Sol 6.2/ultra E05 reader. [Original request](REQUEST_E05_E06_20261127.md), intake 6a422ce7814f. The lead has read Bernstein–Wang, [arXiv:1406.2966v2, Theorem 1.1, p. 1](https://arxiv.org/pdf/1406.2966v2). Check precisely the dimension-four specialization and whether the round embedding attains the standard smooth type's infimum. Combine it with the existing strict infimum argument to check the excluded interval. Sole output is the same E05 review, or a dated supplement to that review. Do not change the previously frozen local Gaussian tests or open an E03 model list.

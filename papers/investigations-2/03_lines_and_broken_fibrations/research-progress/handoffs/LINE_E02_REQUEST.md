@@ -1,0 +1,9 @@
+# SP4-LINE-E02 · Two SW chambers
+
+Frozen request r1, 27 November 2026, for Edward B. Baker III. Issued by the Codex lead. Helper dispatch set to gpt-6.2-sol / ultra. Lead variant and effort are unreported. [Sole register](../REGISTER.md).
+
+Use the activated [plan](../../research-plan/PLAN.md) at SHA-256 prefix 0c32748aea0e1381, the [continuation](../../continuation-notes/CONTINUATION.md) at 53a397ce7e7bb8ef, including its exact inputs (proposal 091aa015355ef938 §3.6, source receipt 536bb672a70af507 §3, bibliography b8e4a31dc40480a0). Apply the second master's oriented, smooth Riemannian conventions. Assume only a standard-ended transverse form on a punctured smooth homotopy sphere, with positive line at infinity after the proposed cap, for testing hypotheses. This reading is independent of the other returns.
+
+Find and read original gluing and wall-crossing results. For each spin-c class c1=kH and permitted insertions (state orientations, signs or mod 2), compute both chambers or give the exact remaining gap. Check alternatives such as sphere/adjunction or a long neck to fix an absolute chamber without assuming positive scalar curvature or standard smoothness of M. Identify the sign of the large perturbation in actual conventions. Stop at the chamber note.
+
+Write only [the return](LINE_E02_RETURN.md), including the bibliographic data, stable URLs, inspected version/date and exact theorem/page/hypothesis at point of dependence. Mark all mathematical content as import, project theorem (status), certificate or heuristic. Primary text only for imports. State genuine access or hypothesis gaps, do not turn pointers into imports. Routine alternative primary versions/sources within this question are allowed. Escalate a change of target to LINE-B02. No other files, register edits or commits. Return references and any corrections to the lead.

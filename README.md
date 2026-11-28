@@ -25,6 +25,7 @@ The [master manuscript and research program](papers/master/README.md) study fixe
 | `investigations-2` | [04 — Entropy of embeddings](papers/investigations-2/04_entropy_of_embeddings/README.md) | Independent extrinsic frame through entropy |
 | `investigations-2` | [05 — Certificates](papers/investigations-2/05_certificates/README.md) | Finite certificates for named spheres and the ledger of imports |
 | `investigations-2` | [06 — Invariants and candidate spheres](papers/investigations-2/06_invariants_and_candidates/README.md) | Excluded invariants and candidate counterexamples |
+| `investigations-2` | [07 — Counterexample tests](papers/investigations-2/07_counterexample_tests/README.md) | Marked examples and smooth invariants for testing candidate spheres |
 | `initial-investigations` | [01 — Generalized isothermal coordinates](papers/initial-investigations/01_generalized_isothermal_coordinates/README.md) | Earlier coordinate and reconstruction study |
 | `initial-investigations` | [02 — Chiral descent and double copy](papers/initial-investigations/02_chiral_descent_and_double_copy/README.md) | Earlier descent and double-copy study |
 

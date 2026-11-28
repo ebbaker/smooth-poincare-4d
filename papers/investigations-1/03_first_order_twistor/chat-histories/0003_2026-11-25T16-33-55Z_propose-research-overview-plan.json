@@ -1,0 +1,509 @@
+[
+  {
+    "id": "6b070df1-3be8-83ea-9138-fc60b2e851c3",
+    "conversation_id": "6b070df1-3be8-83ea-9138-fc60b2e851c3",
+    "title": "Propose research overview plan",
+    "create_time": 1795624435.939189,
+    "update_time": 1795628100.271356,
+    "current_node": "d0475349-46e7-597c-9e10-b03314a24410",
+    "mapping": {
+      "client-created-root": {
+        "id": "client-created-root",
+        "parent": null,
+        "children": [
+          "dc84500e-d7f4-4ff7-bfb6-b37c42376ef9"
+        ],
+        "message": null
+      },
+      "dc84500e-d7f4-4ff7-bfb6-b37c42376ef9": {
+        "id": "dc84500e-d7f4-4ff7-bfb6-b37c42376ef9",
+        "parent": "client-created-root",
+        "children": [
+          "1111eb58-5e4b-5842-9305-f8c88820ae1a"
+        ],
+        "message": {
+          "id": "dc84500e-d7f4-4ff7-bfb6-b37c42376ef9",
+          "author": {
+            "role": "user",
+            "name": null
+          },
+          "create_time": 1795624558.595,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Please review the manuscript in /papers/investigations-1/03_first_order_twistor/01_sections_and_connections, and the brainstorm and README in /01_neck_geometry. I would like to finish setting up the sub-investigation in accordance with INVESTIGATION_SETUP_WORKFLOW. Please propose a research overview and plan, and I will tell you if there are any modifications I suggest before finalizing the overview, plan and progress files."
+            ]
+          },
+          "metadata": {}
+        }
+      },
+      "1111eb58-5e4b-5842-9305-f8c88820ae1a": {
+        "id": "1111eb58-5e4b-5842-9305-f8c88820ae1a",
+        "parent": "dc84500e-d7f4-4ff7-bfb6-b37c42376ef9",
+        "children": [
+          "373c779c-cd00-5fd5-915a-e80f49c2a982"
+        ],
+        "message": {
+          "id": "1111eb58-5e4b-5842-9305-f8c88820ae1a",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795624564.126384,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "I’ll read the parent manuscript, the neck-geometry notes, and the setup workflow, then propose an overview and plan for your review. I’ll leave the overview, plan, and progress files pending your feedback."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "373c779c-cd00-5fd5-915a-e80f49c2a982": {
+        "id": "373c779c-cd00-5fd5-915a-e80f49c2a982",
+        "parent": "1111eb58-5e4b-5842-9305-f8c88820ae1a",
+        "children": [
+          "686bb0e4-81f0-5fbb-a7a0-06faffb93ae2"
+        ],
+        "message": {
+          "id": "373c779c-cd00-5fd5-915a-e80f49c2a982",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795624624.405157,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Section 14 gives two ways to bound neck energy, each with a geometric input the sequence still has to supply. I’m proposing an early test on a spherical annulus, alongside a separate question about what one controlled collar would let you prove by cutting and capping. The parent register already owns the choice of the first annular test."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "686bb0e4-81f0-5fbb-a7a0-06faffb93ae2": {
+        "id": "686bb0e4-81f0-5fbb-a7a0-06faffb93ae2",
+        "parent": "373c779c-cd00-5fd5-915a-e80f49c2a982",
+        "children": [
+          "47a8b601-7609-5a9f-9557-21a5396f92e0"
+        ],
+        "message": {
+          "id": "686bb0e4-81f0-5fbb-a7a0-06faffb93ae2",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795624841.874938,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The draft now includes a specific one-collar test. If a smooth bubble’s full core is already embedded, the manuscript’s residual bound may let us recognize the capped exterior as standard and identify the compactified bubble with the original manifold. I’ve marked that implication as a proposed theorem to check."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "47a8b601-7609-5a9f-9557-21a5396f92e0": {
+        "id": "47a8b601-7609-5a9f-9557-21a5396f92e0",
+        "parent": "686bb0e4-81f0-5fbb-a7a0-06faffb93ae2",
+        "children": [
+          "1c7847e6-3aeb-4ed5-88c6-19de3d6cf4f1"
+        ],
+        "message": {
+          "id": "47a8b601-7609-5a9f-9557-21a5396f92e0",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795624925.066323,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "I recommend making **vanishing Weyl energy across the entire neck** the main objective, and **recognition from one spherical cut** the first geometric milestone. A single controlled collar could tell us which piece carries the smooth structure of the original manifold even while the energy elsewhere in the neck remains unaccounted for.\n\nI saved the proposed overview and plan for your revisions. [PROPOSED_OVERVIEW_AND_PLAN_20261125.md](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/brainstorm/notes/PROPOSED_OVERVIEW_AND_PLAN_20261125.md)\n\n### Proposed research sequence\n\n1. **Test a length-independent estimate on a round annulus.** Section 14 identifies the first homogeneous modes carrying linearized Weyl curvature at exponents \\(\\pm2\\). The next question is whether the **sum** of the \\(L^2\\) Weyl norms over dyadic shells can be bounded by the two end shells and the total \\(L^1\\) Bach forcing, uniformly in neck length. I recommend this as the first test considered by the existing parent decision SEC-B36. SEC-E62 remains reserved for its choice.\n\n2. **Determine how to find one usable collar.** First audit the cap construction on a supplied collar, including the Weyl cost and the positive Yamabe bound on both capped pieces. Then ask which of its hypotheses follow on a selected low-curvature block. The distinction matters because Chang–Qing–Yang obtain their annular comparison using exact Bach-flatness, while our sequence supplies only \\(\\|B\\|_{L^1}\\to0\\). genui{\"citation\":{\"refs\":[\"turn918658969view0\",\"turn453876901view0\"]}}\n\n3. **Test whether one smooth bubble identifies the original smooth type.** This is the first conditional theorem I would pursue. Suppose a nonflat smooth ALE bubble \\(X\\) and its full embedded core are supplied. The manuscript gives \\(e_X>4\\pi^2\\) and \\(0<\\kappa_\\delta\\le e-e_X<4\\pi^2-\\delta\\). A cut sufficiently far out its Euclidean end could leave the capped exterior below \\(4\\pi^2\\) with positive Yamabe constant, where smooth recognition applies. If the cap estimates and gluing identification hold, the compactification \\(\\widehat X\\) would be diffeomorphic to the original \\(M\\), yielding an exact Bach-flat class of strictly lower energy **on that same smooth type**. genui{\"citation\":{\"ref\":\"turn453876901view1\"}}\n\n4. **Pass from one neck to complete accounting.** Derive either a compatible chart across all scales or a transverse field with vanishing conformal Killing defect. Then show that the controlled regions exhaust the complement of the base and bubble truncations. Under the manuscript’s smooth comparison hypotheses, the resulting energy identity would contradict the positive residual of any nonflat bubble. A positive closed critical value on the base would remain possible.\n\nThe draft assigns collar extraction to this branch and Dirac transmission on a supplied collar to its sibling. The official overview, plan, and progress register await your feedback. The exact chat source was unavailable, so the branch contains a labeled partial public record."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm",
+            "content_reference_labels": [
+              {
+                "type": "grouped_webpages",
+                "alt": "([arxiv.org](https://arxiv.org/pdf/math/0508621?utm_source=chatgpt.com), [arxiv.org](https://arxiv.org/pdf/math/0508621?utm_source=chatgpt.com))"
+              },
+              {
+                "type": "grouped_webpages",
+                "alt": "([numdam.org](https://www.numdam.org/item/10.1007/s10240-003-0017-z.pdf?utm_source=chatgpt.com))"
+              },
+              {
+                "type": "sources_footnote",
+                "alt": ""
+              }
+            ]
+          }
+        }
+      },
+      "1c7847e6-3aeb-4ed5-88c6-19de3d6cf4f1": {
+        "id": "1c7847e6-3aeb-4ed5-88c6-19de3d6cf4f1",
+        "parent": "47a8b601-7609-5a9f-9557-21a5396f92e0",
+        "children": [
+          "e480b6d6-efc3-5337-8011-8a5c93559849"
+        ],
+        "message": {
+          "id": "1c7847e6-3aeb-4ed5-88c6-19de3d6cf4f1",
+          "author": {
+            "role": "user",
+            "name": null
+          },
+          "create_time": 1795625399.948,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "This sounds like a good plan, but I am wondering if the split with the sibling investigation is optimal. I'm wondering if there should be an additional sub-investigation within 01_sections_and_connections that considers finding collars that are more suitable for the Dirac tools, because it seems that this sub-branch is focused on collars that are more suitable for the tools in 01_chiral_metric_evolution, unless I'm mistaken."
+            ]
+          },
+          "metadata": {}
+        }
+      },
+      "e480b6d6-efc3-5337-8011-8a5c93559849": {
+        "id": "e480b6d6-efc3-5337-8011-8a5c93559849",
+        "parent": "1c7847e6-3aeb-4ed5-88c6-19de3d6cf4f1",
+        "children": [
+          "fc1e6f53-1cfa-5e33-80c9-dba3a7d6ff83"
+        ],
+        "message": {
+          "id": "e480b6d6-efc3-5337-8011-8a5c93559849",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795625409.12059,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "I’ll compare what the neck proposal is trying to extract with what the Dirac branch actually needs for transmission, then revise the draft to show where that work should live."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "fc1e6f53-1cfa-5e33-80c9-dba3a7d6ff83": {
+        "id": "fc1e6f53-1cfa-5e33-80c9-dba3a7d6ff83",
+        "parent": "e480b6d6-efc3-5337-8011-8a5c93559849",
+        "children": [
+          "af745b01-543f-596e-886c-073525c01108"
+        ],
+        "message": {
+          "id": "fc1e6f53-1cfa-5e33-80c9-dba3a7d6ff83",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795625506.26665,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The round cylinder clarifies the distinction. Its tangential Dirac operator has a spectral gap, while its chiral curvature forms have zero wedge products. I found a concrete first task for a separate extraction branch in §14.3: check what its annular metric estimate supplies for the Dirac comparison on one fixed strip."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "af745b01-543f-596e-886c-073525c01108": {
+        "id": "af745b01-543f-596e-886c-073525c01108",
+        "parent": "fc1e6f53-1cfa-5e33-80c9-dba3a7d6ff83",
+        "children": [
+          "06be4465-5bd8-4cf2-8397-43c71e9169f7"
+        ],
+        "message": {
+          "id": "af745b01-543f-596e-886c-073525c01108",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795625597.481192,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Yes. I recommend adding **`02_dirac_collar_extraction` under `01_sections_and_connections`**. The previous draft treated a collar suitable for Dirac analysis as a possible byproduct of finding a collar suitable for surgery. It deserves a direct existence question.\n\nThe current neck branch is primarily about **Weyl-energy accounting and metric cut-and-cap estimates**. Chiral metric evolution is one possible later application. The round product cylinder illustrates the distinction. Its chiral Levi–Civita curvature satisfies \\(F_i\\wedge F_j=0\\), so definite reconstruction degenerates there. Yet the very same cylinder is the natural Dirac model, with tangential spectral gap \\(3/2\\) on the unit \\(S^3\\). genui{\"citation\":{\"ref\":\"turn721855328view0\"}}\n\n| Investigation | Question it would own |\n| --- | --- |\n| **`01_neck_geometry`** | Where are the candidate annuli, what are their links, and can we control Weyl energy across the neck or perform a metric cut and cap? |\n| **`02_dirac_collar_extraction`** *(proposed)* | Can we select an embedded strip, a slicing, and a conformal gauge on the original manifold for which the Dirac comparison estimates apply? |\n| **`01_dirac_collar_matching`** *(existing Dirac branch)* | Given such a collar, which hypotheses suffice for transmission, and can the spinor traces from the two adjoining pieces actually be matched? |\n\nThe reason for a separate extraction branch is that **the Dirac equation can use weaker metric control**. Its first proposed test asks for uniform closeness to the product metric and small first derivatives in \\(L^4\\) on each unit slab. The metric cap argument uses \\(C^2\\) control for the Weyl cost and \\(C^4\\) control for its Bach error. A strip could therefore be useful for Dirac analysis even when those cap estimates are out of reach. It can also have nonzero Weyl curvature.\n\nI would start with one fixed-width strip. Section 14.3 already bounds the \\(L^4\\) norm of the first metric derivatives in a supplied annular chart. The first check is to carry that bound into cylindrical coordinates. The substantive next question is whether the almost Bach-flat sequence actually supplies **one** strip meeting the Dirac bound. That gives the proposed branch a concrete target independent of solving the whole-neck problem.\n\nI revised the proposal to reflect this split. The new branch and official planning files remain pending your review. Chat capture is still limited to the labeled partial record. [PROPOSED_OVERVIEW_AND_PLAN_20261125.md](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/brainstorm/notes/PROPOSED_OVERVIEW_AND_PLAN_20261125.md)"
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm",
+            "content_reference_labels": [
+              {
+                "type": "grouped_webpages",
+                "alt": "([math.uni-potsdam.de](https://www.math.uni-potsdam.de/fileadmin/user_upload/Prof-Geometrie/Dokumente/Publikationen/sphere.pdf?utm_source=chatgpt.com))"
+              },
+              {
+                "type": "sources_footnote",
+                "alt": ""
+              }
+            ]
+          }
+        }
+      },
+      "06be4465-5bd8-4cf2-8397-43c71e9169f7": {
+        "id": "06be4465-5bd8-4cf2-8397-43c71e9169f7",
+        "parent": "af745b01-543f-596e-886c-073525c01108",
+        "children": [
+          "f98ca337-fe12-5338-b522-095bcb0534ab"
+        ],
+        "message": {
+          "id": "06be4465-5bd8-4cf2-8397-43c71e9169f7",
+          "author": {
+            "role": "user",
+            "name": null
+          },
+          "create_time": 1795626306.011,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Excellent, please proceed with creating the files for all three branches. Please make sure that the overview clearly states the goals of the sub-investigation and how it fits in with the overall project, with links to the relevant sections of the manuscripts in the parent or parallel / sibling investigations. Make sure that the research plan is flexible enough that it allows for trying a number of different paths if one approach does not work, creating mechanisms to revisit initial constructions if it is found that they don't work out as planned. Make sure that, together, the plans form a coherent picture that could potentially lead to a proof of spc4."
+            ]
+          },
+          "metadata": {}
+        }
+      },
+      "f98ca337-fe12-5338-b522-095bcb0534ab": {
+        "id": "f98ca337-fe12-5338-b522-095bcb0534ab",
+        "parent": "06be4465-5bd8-4cf2-8397-43c71e9169f7",
+        "children": [
+          "85930d60-b9f1-5b1b-86a6-40d19818468f"
+        ],
+        "message": {
+          "id": "f98ca337-fe12-5338-b522-095bcb0534ab",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795626311.966664,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "I’ll set up all three branches around their agreed questions and connect their plans. Each overview will show how its results could contribute to smooth four-sphere recognition, and each plan will say what to revisit if an estimate fails or a later stage needs different input."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "85930d60-b9f1-5b1b-86a6-40d19818468f": {
+        "id": "85930d60-b9f1-5b1b-86a6-40d19818468f",
+        "parent": "f98ca337-fe12-5338-b522-095bcb0534ab",
+        "children": [
+          "3aa2f669-0070-5946-8d6f-d71342e142b6"
+        ],
+        "message": {
+          "id": "85930d60-b9f1-5b1b-86a6-40d19818468f",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795626500.773597,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The manuscripts give the three branches different starting points. A metric cut needs control of the cap’s curvature and Yamabe sign. Dirac transmission can start with first-order control on a fixed strip, but using it to bound Weyl energy takes an additional estimate. I’m building those distinctions into the tasks so a failed cap construction won’t block the spinor work."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "3aa2f669-0070-5946-8d6f-d71342e142b6": {
+        "id": "3aa2f669-0070-5946-8d6f-d71342e142b6",
+        "parent": "85930d60-b9f1-5b1b-86a6-40d19818468f",
+        "children": [
+          "e78a3fed-89b7-58fd-8af3-25b3b91acb0b"
+        ],
+        "message": {
+          "id": "3aa2f669-0070-5946-8d6f-d71342e142b6",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795626742.402668,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The shared proof map now distinguishes two ways a collar could help. One controlled cut could identify the capped exterior as standard and lower the energy on the original smooth type. Complete control across every neck could instead rule out a smooth bubble. The plans also address what happens if a positive closed Bach-flat limit survives either argument."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "e78a3fed-89b7-58fd-8af3-25b3b91acb0b": {
+        "id": "e78a3fed-89b7-58fd-8af3-25b3b91acb0b",
+        "parent": "3aa2f669-0070-5946-8d6f-d71342e142b6",
+        "children": [
+          "ec024da9-affd-5740-9cda-b96645349a19"
+        ],
+        "message": {
+          "id": "e78a3fed-89b7-58fd-8af3-25b3b91acb0b",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795626957.296062,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "All three overviews, plans, and progress registers are in place. I’m checking the manuscript links against the cited passages and verifying that each task appears in exactly one live register, including the existing parent tasks on annular estimates and spectral rigidity."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "ec024da9-affd-5740-9cda-b96645349a19": {
+        "id": "ec024da9-affd-5740-9cda-b96645349a19",
+        "parent": "e78a3fed-89b7-58fd-8af3-25b3b91acb0b",
+        "children": [
+          "1acc14a0-1104-4cbc-a8de-c31e33d1ee36"
+        ],
+        "message": {
+          "id": "ec024da9-affd-5740-9cda-b96645349a19",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795627051.201171,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Created the overview, research plan, progress register, and continuation prompt for all three branches. The [shared proof map](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/brainstorm/notes/COLLAR_PROGRAM_AND_SPC4_20261125.md) connects their results to smooth four-sphere recognition and identifies the global assumptions each route still needs.\n\n| Branch | Research question | Files |\n| --- | --- | --- |\n| Neck geometry and Weyl energy | Can one spherical cut lower the energy on the original smooth type, or can complete neck accounting exclude a nonflat bubble? | [Overview](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/research-overview/OVERVIEW.md) · [Plan](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/research-plan/PLAN.md) · [Register](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/research-progress/REGISTER.md) |\n| Geometric extraction of Dirac collars | Can the degenerating sequence itself supply an embedded spin collar with the first-order or spectral bounds needed for transmission? | [Overview](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/02_dirac_collar_extraction/research-overview/OVERVIEW.md) · [Plan](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/02_dirac_collar_extraction/research-plan/PLAN.md) · [Register](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/02_dirac_collar_extraction/research-progress/REGISTER.md) |\n| Dirac matching on a supplied collar | Can a uniform collar inverse match the actual core and cap spinors, with enough control to estimate curvature? | [Overview](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/01_dirac_collar_matching/research-overview/OVERVIEW.md) · [Plan](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/01_dirac_collar_matching/research-plan/PLAN.md) · [Register](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/01_dirac_collar_matching/research-progress/REGISTER.md) |\n\nThe main connection is that the smooth-bubble contradiction needs an energy identity in **one chirality**. If matched spinors give \\(E_+\\) bounds whose sum vanishes over the regions left between components, they could close that identity. A separate route uses one controlled cut around a full smooth bubble to try to recognize the capped exterior as standard and transfer a lower-energy class to the original manifold. Both routes leave open how to enter the required regime on every homotopy four-sphere and how to handle a surviving positive closed Bach-flat critical class.\n\nEach plan specifies when to revisit an initial choice. For example, failure of the \\(C^2\\) cap estimate leaves the first-order Dirac strip available for testing. If the collar inverse succeeds but the actual boundary traces fail to match, the matching branch can identify the offending modes and send a precise request back to extraction for a different cut.\n\nAll 23 tasks and the links to 35 distinct manuscript passages passed verification. Research awaits activation. The exact chat source was unavailable, so the setup discussion has a [partial public record](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/chat-histories/UNREGISTERED_PARTIAL_NECK_SETUP_20261125.md)."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "1acc14a0-1104-4cbc-a8de-c31e33d1ee36": {
+        "id": "1acc14a0-1104-4cbc-a8de-c31e33d1ee36",
+        "parent": "ec024da9-affd-5740-9cda-b96645349a19",
+        "children": [
+          "45c61b6b-efe1-5153-a614-ada63737c311"
+        ],
+        "message": {
+          "id": "1acc14a0-1104-4cbc-a8de-c31e33d1ee36",
+          "author": {
+            "role": "user",
+            "name": null
+          },
+          "create_time": 1795627455.653,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Excellent, can you write a continuation prompt for a new Astra session on ultra to begin work on all three projects? Please give the model broad authority to continue trying different routes, and to create helpers using Sol 6.2."
+            ]
+          },
+          "metadata": {}
+        }
+      },
+      "45c61b6b-efe1-5153-a614-ada63737c311": {
+        "id": "45c61b6b-efe1-5153-a614-ada63737c311",
+        "parent": "1acc14a0-1104-4cbc-a8de-c31e33d1ee36",
+        "children": [
+          "702cae59-4144-515b-be3a-af551dbdf828"
+        ],
+        "message": {
+          "id": "45c61b6b-efe1-5153-a614-ada63737c311",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795627460.065953,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "I’ll write one pasteable prompt for an Astra/ultra lead to run all three branches together, with authority to revise the research routes and delegate bounded work to Sol 6.2/ultra helpers."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "702cae59-4144-515b-be3a-af551dbdf828": {
+        "id": "702cae59-4144-515b-be3a-af551dbdf828",
+        "parent": "45c61b6b-efe1-5153-a614-ada63737c311",
+        "children": [
+          "d0475349-46e7-597c-9e10-b03314a24410"
+        ],
+        "message": {
+          "id": "702cae59-4144-515b-be3a-af551dbdf828",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795627520.332416,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "All three registers still list independent opening checks. The prompt will let Astra assign one to each helper while it decides which collars the geometry can supply and which estimates the Dirac argument actually needs."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      },
+      "d0475349-46e7-597c-9e10-b03314a24410": {
+        "id": "d0475349-46e7-597c-9e10-b03314a24410",
+        "parent": "702cae59-4144-515b-be3a-af551dbdf828",
+        "children": [],
+        "message": {
+          "id": "d0475349-46e7-597c-9e10-b03314a24410",
+          "author": {
+            "role": "assistant",
+            "name": null
+          },
+          "create_time": 1795627589.089501,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Saved the [joint continuation prompt](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/continuation-notes/JOINT_COLLAR_RESEARCH_20261125.md). It gives Astra three independent checks to delegate immediately: the cost of a spherical cut and its two caps, the first-order geometry of a Dirac collar, and the Dirac inverse on a round cylinder. Astra retains responsibility for choosing the research directions and integrating the results into the SPC4 argument.\n\nPaste this into a new **GPT-6.2 Astra** session set to **ultra**:\n\n```text\nWork in /Users/ebbaker/Documents/smooth-poincare-4d with GPT-6.2 Astra\non ultra as the research lead. Read and execute the joint prompt in\npapers/investigations-1/03_first_order_twistor/continuation-notes/JOINT_COLLAR_RESEARCH_20261125.md.\n\nI activate sustained research in all three branches: neck geometry,\nDirac collar extraction, and Dirac collar matching. You have broad\nauthority to try alternative constructions, revisit assumptions, consult\nprimary sources, and create or revise research tasks without asking me\nto approve each change of direction.\n\nCreate gpt-6.2-sol helpers on ultra for bounded derivations and\nindependent proof checks. Start the ready work in parallel, assess the\nreturns yourself, and continue through useful follow-on work. If one\nroute fails, record exactly what failed and pursue the remaining routes.\nKeep the three registers current and explain what the combined results\nestablish toward smooth recognition on the original homotopy four-sphere.\n```\n\nI verified the prompt against all six opening tasks. The exact chat source remained unavailable, so this exchange has a [partial public record](sandbox:/Users/ebbaker/Documents/smooth-poincare-4d/papers/investigations-1/03_first_order_twistor/01_sections_and_connections/01_neck_geometry/chat-histories/UNREGISTERED_PARTIAL_NECK_SETUP_20261125.md)."
+            ]
+          },
+          "metadata": {
+            "model_slug": "gpt-6.2-astra-wm"
+          }
+        }
+      }
+    },
+    "archive_metadata": {
+      "format": "ChatGPT-style mapping of public export text",
+      "source_kind": "ChatGPT account export; public text",
+      "source_file": "conversations-004.json",
+      "source_sha256": "dd00ec4463ea0549dbebdf02ecac5d734c02bbbf687aed8b2f3e9b5706fa8331",
+      "source_project_id": "g-p-675d0cc42194819189f2dc5651b8dade",
+      "coverage": "User and assistant text in the supplied snapshot, including exported alternate branches. The export does not mark commentary, turn completion or per-message update times.",
+      "attachment_coverage": "File and inline image descriptors and reference labels only. No binary attachments, embedded media or expanded reference and search data.",
+      "omitted_source_records": {
+        "assistant/reasoning_recap": 4,
+        "assistant/thoughts": 59
+      },
+      "source_export_label": "2026-11-26-18-03-31",
+      "first_captured_at_utc": "2026-11-27T19:53:51.278Z",
+      "first_captured_at_local": "2026-11-27T14:53:51.278-05:00",
+      "history_number": 3,
+      "captured_at_utc": "2026-11-27T19:53:51.278Z",
+      "captured_at_local": "2026-11-27T14:53:51.278-05:00"
+    }
+  }
+]

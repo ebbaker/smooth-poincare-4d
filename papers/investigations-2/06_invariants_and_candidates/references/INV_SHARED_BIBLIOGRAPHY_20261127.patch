@@ -1,0 +1,175 @@
+--- a/references/references.bib
++++ b/references/references.bib
+@@ -144,7 +144,10 @@
+  author = {Freedman, Michael H. and Gompf, Robert E. and Morrison, Scott and Walker, Kevin},
+  title = {Man and machine thinking about the smooth 4-dimensional {Poincar\'e} conjecture},
+  journal = {Quantum Topology}, volume = {1}, number = {2}, pages = {171--208},
+- year = {2010}, doi = {10.4171/QT/5}
++ year = {2010}, doi = {10.4171/QT/5},
++ eprint = {0906.5177}, archivePrefix = {arXiv},
++ url = {https://ems.press/journals/qt/articles/2877},
++ note = {SP4-INV checked published Sections 1--2, pp.~173--178, especially (2.1) for the Rasmussen test and pp.~174--175 for the two mapping-torus closings. Author arXiv v2, 17 September 2009.}
+ }
+ @article{Hamilton1982,
+  author = {Hamilton, Richard S.},
+@@ -2253,12 +2256,12 @@
+ 
+ @article{GayKirby2007LefschetzType,
+   author = {Gay, David T. and Kirby, Robion},
+-  title = {Constructing Lefschetz-type fibrations on four-manifolds},
+-  journal = {Geometry and Topology}, volume = {11}, pages = {2075--2115},
++  title = {Constructing {Lefschetz}-type fibrations on four-manifolds},
++  journal = {Geometry \& Topology}, volume = {11}, number = {4}, pages = {2075--2115},
+   year = {2007}, doi = {10.2140/gt.2007.11.2075},
+   eprint = {math/0701084}, archivePrefix = {arXiv},
+   url = {https://arxiv.org/abs/math/0701084v1},
+-  note = {SP4-LINE inspected arXiv v1, 3 January 2007, including Theorem 1.1 and its Addendum. SP4-CERT also inspected published Section 4.1, p.~2095, and Lemma 4.7 for the balanced-presentation thickening and double, and Remark 4.9 for the Akbulut--Kirby example}
++  note = {SP4-LINE inspected arXiv v1, 3 January 2007, including Theorem 1.1 and its Addendum. SP4-CERT also inspected published Section 4.1, p.~2095, and Lemma 4.7 for the balanced-presentation thickening and double, and Remark 4.9 for the Akbulut--Kirby example. SP4-INV checked published Section 4, p.~2091, for the zero-framed meridians and dual 3-handles, and Section 4.1, Lemma 4.7, p.~2095, for the unmarked presentation double.}
+ }
+ 
+ @misc{Gabai2024PseudoIsotopies,
+@@ -2644,10 +2647,10 @@
+   author = {Galaz-Garc{\'i}a, Fernando and Searle, Catherine},
+   title = {Nonnegatively curved 5-manifolds with almost maximal symmetry rank},
+   journal = {Geometry \& Topology},
+-  volume = {18}, pages = {1397--1435}, year = {2014},
++  volume = {18}, number = {3}, pages = {1397--1435}, year = {2014},
+   doi = {10.2140/gt.2014.18.1397},
+   url = {https://msp.org/gt/2014/18-3/gt-v18-n3-p05-s.pdf},
+-  note = {SP4-CERT inspected journal Section 3.2, Theorem 3.2, printed p.~1404, and its attribution to Fintushel and Pao with three-dimensional Poincare}
++  note = {SP4-CERT inspected journal Section 3.2, Theorem 3.2, printed p.~1404, and its attribution to Fintushel and Pao with three-dimensional Poincare. SP4-INV checked the same passage for the smooth circle-action recognition input to the even prism closing.}
+ }
+ @misc{ChangGurskyZhang2018GapCP2,
+   author = {Chang, Sun-Yung A. and Gursky, Matthew J. and Zhang, Siyi},
+@@ -2753,16 +2756,127 @@
+ @article{Reutter2023Semisimple,
+   author = {Reutter, David},
+   title = {Semisimple four-dimensional topological field theories cannot detect exotic smooth structure},
+-  journal = {Journal of Topology}, volume = {16}, pages = {542--566}, year = {2023},
+-  doi = {10.1112/topo.12288}, eprint = {2001.02288}, archivePrefix = {arXiv}
++  journal = {Journal of Topology}, volume = {16}, number = {2}, pages = {542--566}, year = {2023},
++  doi = {10.1112/topo.12288}, eprint = {2001.02288}, archivePrefix = {arXiv},
++  url = {https://doi.org/10.1112/topo.12288},
++  note = {SP4-INV checked the version of record from 11 April 2023, including Definitions 2.1 and 2.6, Theorem A, Corollaries B(2) and 3.9, and Proposition 4.5 on the relatively stabilized Gluck cylinder.}
+ }
+ @misc{RenWillis2024Khovanov,
+   author = {Ren, Qiuyu and Willis, Michael},
+-  title = {Khovanov homology and exotic 4-manifolds},
++  title = {{Khovanov} homology and exotic 4-manifolds},
+   year = {2024}, eprint = {2402.10452}, archivePrefix = {arXiv},
+-  note = {Version 3, 18 December 2025. Listed by Annals of Mathematics},
++  note = {SP4-INV checked arXiv v3 from 18 December 2025, including Theorems 1.1, 1.3--1.4, 1.11, 1.13, 4.1 and 4.11(4), Corollary 1.5, Propositions 1.14, 2.4, 2.6 and 6.16--6.17, and Sections 6.9--6.10. The Annals of Mathematics lists the article as forthcoming. The later manuscript was revised 18 June 2026 and accepted 24 June 2026.},
+   url = {https://arxiv.org/abs/2402.10452v3}
+ }
++
++@article{MorrisonWalkerWedrich2022FourManifolds,
++  author = {Morrison, Scott and Walker, Kevin and Wedrich, Paul},
++  title = {Invariants of 4-manifolds from {Khovanov--Rozansky} link homology},
++  journal = {Geometry \& Topology}, volume = {26}, number = {8},
++  pages = {3367--3420}, year = {2022}, doi = {10.2140/gt.2022.26.3367},
++  eprint = {1907.12194}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/1907.12194v5},
++  note = {SP4-INV checked arXiv v5, 23 March 2023 (pagination differs from the journal), Section 4.2, Definitions 5.3--5.4 and Example 5.6, for sweep-around, fillings, relations and ball evaluation.}
++}
++
++@article{ManolescuNeithalath2022TwoHandlebodies,
++  author = {Manolescu, Ciprian and Neithalath, Ikshu},
++  title = {Skein lasagna modules for 2-handlebodies},
++  journal = {Journal f{\"u}r die reine und angewandte Mathematik}, volume = {788},
++  pages = {37--76}, year = {2022}, doi = {10.1515/crelle-2022-0021},
++  eprint = {2009.08520}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/2009.08520v2},
++  note = {SP4-INV checked arXiv v2, 23 March 2022, Theorems 1.1--1.2, Proposition 1.6 and Sections 2--4, for cabled link homology, examples and the 4-handle cap.}
++}
++
++@article{ManolescuWalkerWedrich2023HandleDecompositions,
++  author = {Manolescu, Ciprian and Walker, Kevin and Wedrich, Paul},
++  title = {Skein lasagna modules and handle decompositions},
++  journal = {Advances in Mathematics}, volume = {425}, pages = {109071}, year = {2023},
++  doi = {10.1016/j.aim.2023.109071}, eprint = {2206.04616}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/2206.04616v2},
++  note = {SP4-INV checked arXiv v2, 25 April 2023, Definition 3.1, Theorems 3.2, 3.7, 3.10, 4.7 and 4.23, Proposition 3.4 and Corollaries 3.5 and 4.2, for handle presentations and closed examples.}
++}
++
++@article{ManolescuMarengonSarkarWillis2023Rasmussen,
++  author = {Manolescu, Ciprian and Marengon, Marco and Sarkar, Sucharit and Willis, Michael},
++  title = {A generalization of {Rasmussen's} invariant, with applications to surfaces in some four-manifolds},
++  journal = {Duke Mathematical Journal}, volume = {172}, number = {2},
++  pages = {231--311}, year = {2023}, doi = {10.1215/00127094-2022-0039},
++  eprint = {1910.08195}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/1910.08195v2},
++  note = {SP4-INV checked arXiv v2, 5 January 2022, Definitions 3.1 and 6.2, Corollaries 1.9 and 1.13, Theorem 6.12 and Section 9.3, for characteristic different from two, strong sliceness and Gluck stabilization.}
++}
++
++@article{Ren2024LeeFiltration,
++  author = {Ren, Qiuyu},
++  title = {{Lee} filtration structure of torus links},
++  journal = {Geometry \& Topology}, volume = {28}, number = {8},
++  pages = {3935--3960}, year = {2024}, doi = {10.2140/gt.2024.28.3935},
++  eprint = {2305.16089}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/2305.16089v3},
++  note = {SP4-INV checked the journal and arXiv v3, 20 January 2024, Theorem 1.1, Corollaries 1.4--1.5 and Sections 2.2--2.3, for the definite adjunction inequality over every field for links in the 3-sphere.}
++}
++
++@misc{RenSullivanWedrichWillisZhang2025OneDimensionalInputs,
++  author = {Ren, Qiuyu and Sullivan, Ian and Wedrich, Paul and Willis, Michael and Zhang, Melissa},
++  title = {{Khovanov} skein lasagna modules with 1-dimensional inputs},
++  year = {2025}, eprint = {2510.05273}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/2510.05273v1},
++  note = {SP4-INV checked arXiv v1, 6 October 2025, Definition 3.4 for the variant and Theorem 7.1 and Corollary 7.2, pp.~49--50, for the Gluck comparison of classical rational modules.}
++}
++
++@article{Rasmussen2010SliceGenus,
++  author = {Rasmussen, Jacob},
++  title = {{Khovanov} homology and the slice genus},
++  journal = {Inventiones Mathematicae}, volume = {182}, number = {2},
++  pages = {419--447}, year = {2010}, doi = {10.1007/s00222-010-0275-6},
++  eprint = {math/0402131}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/math/0402131v1},
++  note = {SP4-INV checked Theorem 1 and the rational Lee coefficient convention in arXiv v1, 9 February 2004.}
++}
++
++@misc{Schuetz2025LinkS,
++  author = {Sch{\"u}tz, Dirk},
++  title = {Efficient calculations of {$S$}-invariants for links},
++  year = {2025}, eprint = {2508.11373}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/2508.11373v1},
++  note = {SP4-INV checked arXiv v1, 15 August 2025, Definition 2.1 and Lemma 2.3, for the unlink normalization and the split-union formula.}
++}
++
++@article{SullivanZhang2024KirbyBelts,
++  author = {Sullivan, Ian A. and Zhang, Melissa},
++  title = {Kirby belts, categorified projectors, and the skein lasagna module of {$S^2\times S^2$}},
++  journal = {Quantum Topology}, year = {2024}, doi = {10.4171/QT/227},
++  eprint = {2402.01081}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/2402.01081v3},
++  note = {Published online first 11 December 2024. SP4-INV checked arXiv v3, 10 November 2024, Corollary 1.2, for vanishing over characteristic-zero fields.}
++}
++
++@misc{BlackwellKrushkalLuo2025CorneredLasagna,
++  author = {Blackwell, Sarah and Krushkal, Vyacheslav and Luo, Yangxiao},
++  title = {Cornered skein lasagna theory},
++  year = {2025}, eprint = {2512.05861}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/2512.05861v1},
++  note = {SP4-INV checked arXiv v1, 5 December 2025, Theorems 3.14--3.15 and Corollary 3.19, for the trisection gluing presentation.}
++}
++
++@misc{MartinStelowWattal2026HandleAttachments,
++  author = {Martin, Gage and Stelow, Mary and Wattal, Mira},
++  title = {4-dimensional Skein modules, Handle attachments, and Tangles},
++  year = {2026}, eprint = {2602.17825}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/2602.17825v1},
++  note = {SP4-INV checked arXiv v1, 19 February 2026, Theorems 1.1--1.4 and 4.1 and Sections 2 and 4--5, for gluing and handle formulas.}
++}
++
++@misc{MontagueSullivan2026OneDimensionalHandles,
++  author = {Montague, Imogen and Sullivan, Ian A.},
++  title = {Handle decompositions and the 1-dimensional inputs skein lasagna module},
++  year = {2026}, eprint = {2606.29452}, archivePrefix = {arXiv},
++  url = {https://arxiv.org/abs/2606.29452v1},
++  note = {SP4-INV checked the abstract of arXiv v1, 28 June 2026, for the scope of the rational one-dimensional-input variant.}
++}
++
+ @article{Hayano2011GenusOne,
+   author = {Hayano, Kenta},
+   title = {On genus-1 simplified broken {L}efschetz fibrations},

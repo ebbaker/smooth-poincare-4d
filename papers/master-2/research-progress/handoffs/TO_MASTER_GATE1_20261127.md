@@ -1,0 +1,7 @@
+# To the first master · outcome of the positive subcritical test
+
+27 November 2026 for Edward B. Baker III, from the second-master lead, OpenAI Codex, exact variant/effort unavailable, working base 6a422ce. SP4-M2-B02 submits this research result for SP4-MASTER recognition.
+
+On standard $S^4$, every class in ZERO's two finite profile tables satisfies $Y>0$ and $E_+=E_-<8\pi^2$. Every row now has a zero-free direction at its original infinity pole. For A, the normalized triple is definite on the whole negative segment $[-3/4,0]$, including the endpoint previously certified only in the exterior. The all-direction norm in its asymptotically Euclidean representative is at least $1/100$. The table's bounds on energies and Yamabe constants retain their original parameter scopes. [Tested classes](../../../investigations-2/02_zero_circles/research-progress/handoffs/TO_MASTER2_GATE1_20261127.md) · [Continuum proof](../../notes/UNIFORM_POLE_BOUND_PROFILE_A_20261127.md)
+
+**Decision.** The assertion “for every class on standard $S^4$ with $Y>0$ and $E_+<8\pi^2$ some $p$ and some fixed $u\ne0$ have $\omega_{p,u}$ nowhere zero” remains open. For use on an unknown homotopy sphere one needs the corresponding implication on that smooth type. Under that stronger hypothesis A2 gives entered-type recognition. Universal entry remains separately necessary for the first master's route. A counterexample to the standard-sphere test requires failure for every pole and every direction on one class. Acceptance by the first master is external.

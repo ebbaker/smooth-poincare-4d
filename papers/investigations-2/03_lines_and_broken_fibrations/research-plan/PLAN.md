@@ -1,6 +1,6 @@
 # Research plan — Lines and broken fibrations
 
-27 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum, in a Cowork session. Setup baseline `b607bd1`. The [overview](../research-overview/OVERVIEW.md) states the question and what is inherited; the [second master's overview](../../../master-2/research-overview/OVERVIEW.md) fixes the conventions and the route. The [register](../research-progress/REGISTER.md) alone owns live status. Nothing here is activated. Five of the seven tasks are readings of primary sources, because nothing in this investigation can be used before they return.
+27 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum, in a Cowork session. Setup baseline `b607bd1`. The [overview](../research-overview/OVERVIEW.md) states the question and what is inherited; the [second master's overview](../../../master-2/research-overview/OVERVIEW.md) fixes the conventions and the route. The [register](../research-progress/REGISTER.md) alone owns live status. At setup nothing was activated. Five of the seven tasks are readings of primary sources, because nothing in this investigation can be used before they return.
 
 **Routing.** B tasks are conceptual and go to the lead; E tasks have fixed inputs, method and completion test and go to bounded helpers, as in the [model workflow](../../../../GPT_RESEARCH_MODEL_WORKFLOW.md). In a Claude session Fable leads and takes B tasks and Opus takes E packets, in the roles that workflow gives Astra and Sol; a GPT lead uses Astra/ultra and Sol 6.2/ultra. The lead selected by the author takes precedence, and the model and effort actually used are recorded in every return.
 
@@ -21,3 +21,11 @@
 **Stop.** Only at an end state named in the [continuation note](../continuation-notes/CONTINUATION.md), or at an author decision. The rows above are the first horizon; the lead adds the next rows as the [series README](../../README.md#how-sessions-work-in-this-series) describes. A return that changes a statement of the second master or of another branch is handed off and the work continues. Computations stay within the scope stated in their rows.
 
 **Launch.** Use the prompt in the [continuation note](../continuation-notes/CONTINUATION.md).
+
+## Activated horizon, 27 November 2026
+
+The seven setup rows above are preserved as issued. SP4-LINE-E05 is the independent reader of B01, bounded to its hypotheses, flat model and marked gluing. [Frozen request](../research-progress/handoffs/LINE_E05_REQUEST.md).
+
+SP4-LINE-E06 checks the conditional period lemma for a given proper finite-energy component, including the count when the relative boundary has one generator. [Request](../research-progress/handoffs/LINE_E06_REQUEST.md). SP4-LINE-E07 checks the opposite-sign cap-line argument after E01/E02 and compares it with the independent long-neck proof. [Request](../research-progress/handoffs/LINE_E07_REQUEST.md). Both stop at a replay or a scoped error.
+
+SP4-LINE-E08 prepares the source-owner update to the canonical bibliography from the inspected primary passages and tests patch applicability without changing the shared file. [Request](../research-progress/handoffs/LINE_E08_REQUEST.md). The scientific endpoint and the possible next lemma are in the [closing note](../continuation-notes/CLOSING_20261127.md).

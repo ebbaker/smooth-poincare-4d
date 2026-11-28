@@ -7,6 +7,11 @@ registered conversations by original creation time. The
 [early chats](early-chats/README.md) cover the period before **Review thread
 history**.
 
+The 26 November data export includes the authenticated transcripts of the
+[repository audit](0003_2026-11-22T02-05-03Z_repository-audit-verification.json)
+and the [archive reconstruction](0004_2026-11-25T04-28-45Z_reconstruct-chat-history.json).
+The [chronology](CHRONOLOGY.md) links all 33 conversations from this import.
+
 25 November 2026 screenshot recovery: [Repository audit verification](screenshots/S01_repository_audit_verification.md)
 now includes both earlier completed replies. The chronology also links five
 branch conversation supplements, recovered from the 30 images in `omitted/`.

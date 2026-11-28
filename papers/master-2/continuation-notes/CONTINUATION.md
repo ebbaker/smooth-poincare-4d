@@ -1,5 +1,7 @@
 # Continuation — second master
 
+**Current continuation (27 November).** The [twisted-circle energy test](TWISTED_CIRCLE_20261127.md) gives the next marked-current measurements. The [preceding handoff](RESUME_20261127.md) contains the uniform marked pole bound and earlier gate decisions. The original activation record follows.
+
 27 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum, in a Cowork session. Setup baseline `b607bd1`. This is a dated snapshot: the [register](../research-progress/REGISTER.md) is the live status, and saving this note activates nothing. The shared conventions for sessions are in the [series README](../../investigations-2/README.md#how-sessions-work-in-this-series).
 
 ## The assignment

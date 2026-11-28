@@ -1,0 +1,5 @@
+# SP4-INV-E07 · Opposite framing at eleven
+
+27 November 2026, for Edward B. Baker III. Frozen by the SP4-INV lead, OpenAI Codex (exact serving variant and effort unavailable), checkout 6a422ce7814f plus the [marked sweep](../../../05_certificates/research-progress/handoffs/TO_MASTER2_PRISM_SWEEP_20261127.md).
+
+**Project theorem, bounded independent reading.** On the newly replayed order-eleven original section surgery, check just the specialization of the already reviewed invariant conclusions to its opposite original framing. Inputs are 05's sweep, its linked E07 section-framing paragraph and E10 verdict, the existing 06 B01 proof and E04 review. Distinguish the belt of the original section surgery from the subsequently compressed torus and reverse core. Check cap gluing, null homology and scope of the rational module, Lee filtration and ordinary boundary Rasmussen comparison. No new classification or sources. Return one paragraph with verdict and specific premises in `RETURN_INV_E07_20261127.md` in this directory. Stop at this receipt or a concrete discrepancy. No other outputs or edits.

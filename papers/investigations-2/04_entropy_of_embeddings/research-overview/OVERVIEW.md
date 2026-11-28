@@ -1,40 +1,33 @@
-# Research overview — Entropy of embeddings
+# Research overview — entropy of embeddings
 
-27 November 2026, America/New_York. Prepared for Edward B. Baker III by Claude (Anthropic), model `claude-fable-5-2`, reasoning effort at the session's configured maximum, in a Cowork session. Setup baseline `b607bd1`. An investigation of the [second series](../../README.md). The [register](../research-progress/REGISTER.md) alone owns live status.
+27 November 2026, for Edward B. Baker III. OpenAI Codex integration at 6a422ce7814f, exact serving variant/effort unavailable. Setup by Claude Fable 5.2 is recorded in [history](../DRAFT_HISTORY.md). [Sole register](../research-progress/REGISTER.md) · [Original question and fixed inputs](../continuation-notes/CONTINUATION.md) · [Exact source receipts](../references/README.md)
 
-## Objective
+## Which entropy would recognize a smooth type?
 
-Can a given homotopy four-sphere be embedded in $\mathbb R^5$ with Colding–Minicozzi entropy in the band where recognition of the standard sphere is a published theorem, and what does the entropy of the natural embeddings measure?
+Fix a closed, connected smooth homotopy four-sphere \(M\). In this investigation an embedding is smooth, the ambient metric on \(\mathbb R^5\) is Euclidean, the induced four-area counts a single sheet, and neither chirality nor a conformal class is prescribed. Define
+\[
+ \lambda(\Sigma)=\sup_{a\in\mathbb R^5,\ t>0}(4\pi t)^{-2}
+   \int_\Sigma e^{-|x-a|^2/(4t)}\,d\mathcal H^4(x),\qquad
+ I_{\rm ent}(M)=\inf_{F:M\hookrightarrow\mathbb R^5}\lambda(FM).
+\]
 
-State the imported flow theorems exactly, write the embedding lemma, and decide whether an upper bound for the least entropy of a named sphere is within reach. This is the second-ranked framework of the proposing note: its recognition band is settled by a published theorem, and its open step, lowering the entropy of an embedding, has no known method.
+**Project theorem, replayed from classical imports.** The embedding space is nonempty. Kervaire supplies a smooth contractible five-filling. Its rounded product with an interval has simply connected boundary and is a standard six-disk by Smale. The seam of its boundary gives the embedding. For every embedding the bounded side is a standard five-ball exactly when \(M\) is diffeomorphic to \(S^4\), by the separate smooth Schönflies corollary in ambient dimension five. [Primary sources and proof](../research-progress/handoffs/E02_EMBEDDING_RETURN.md) · [Independent replay](../reviews/E07_EMBEDDING_REPLAY.md)
 
-## Setting
+**Imports.** For an individual closed connected smooth embedded four-dimensional hypersurface, CMS Corollary 1.5 gives isotopy to a round sphere at \(\lambda\le\lambda(S^3)\), and to a standard handlebody boundary at \(\lambda\le\lambda(S^2)=4/e\). The construction permits an initial perturbation. In the latter range the intended solid has dimension five, with one-handles \(B^4\times S^1\). The printed indices in the pinned primary source are one too small. At entropy at most two Corollary 1.19 instead gives arbitrarily small smooth graphs for which all flows in its specified class have generic singularities. The four possible spherical factors are \(S^1,S^2,S^3,S^4\), with Euclidean factors making each hypersurface four-dimensional. [CMS and Daniels-Holgate reading with quantifiers](../research-progress/handoffs/E01_FLOW_RETURN.md)
 
-- *Category.* $M$ is a smooth homotopy four-sphere and $F:M\to\mathbb R^5$ a smooth embedding with image $\Sigma$. No metric on $M$ is fixed; the induced metric plays no role in the definition. Orientation is irrelevant here.
-- *Entropy.* $\lambda(\Sigma)=\sup_{x_0,t_0}(4\pi t_0)^{-2}\int_\Sigma e^{-|x-x_0|^2/4t_0}$, which does not increase along mean curvature flow. The shrinking sphere of dimension $k$ and the cylinder $S^k\times\mathbb R^{4-k}$ have entropy $\lambda(S^k)=\operatorname{Area}(S^k)\,(k/2\pi e)^{k/2}$: about $1.5203$, $1.4715$, $1.4531$ and $1.4436$ for $k=1,2,3,4$.
-- *Least entropy.* $I_{\rm ent}(M)$ is the infimum of $\lambda$ over smooth embeddings of $M$ in $\mathbb R^5$.
-- The conventions of the [second master's overview](../../../master-2/research-overview/OVERVIEW.md#fixed-setting-and-conventions) apply where the pole-form frame is mentioned; nothing here depends on it.
+**Project theorem, replayed.** A homotopy sphere's vanishing first homology forces the handlebody above to have no one-handles. Therefore
+\[
+ M\cong_{\rm diff} S^4\quad\Longleftrightarrow\quad
+ \exists F,\ \lambda(FM)\le4/e\quad\Longleftrightarrow\quad I_{\rm ent}(M)<4/e .
+\]
+The round embedding attains \(I_{\rm ent}(S^4)=32/(3e^2)\) by the sharp lower bound of Bernstein–Wang. An infimum of \(4/e\), if realized as the value for some smooth type, would be unattained. Recognition at the inclusive threshold for individual images gives no compactness for a minimizing sequence of embeddings. Universal strict entry is a reformulation of smooth Poincaré. [B01](../brainstorm/notes/B01_SPINE_AND_ENTRY.md) · [Independent replay](../reviews/E05_SPINE_REPLAY.md)
 
-## Inherited, with evidence level
+## What the natural embeddings measure
 
-- **Every homotopy four-sphere embeds in $\mathbb R^5$.** Classical: it bounds a contractible five-manifold whose double is $S^5$. Stated in the proposing note from memory, with the argument in outline. ENT-E02 writes it with sources.
-- **Recognition at low entropy.** Chodosh, Mantoulidis and Schulze, Corollary 1.5: for a closed connected embedded $M^4\subset\mathbb R^5$, entropy at most $\lambda(S^3)$ gives an isotopy to a round sphere, and entropy at most $\lambda(S^2)$ gives an isotopy to the boundary of a standard handlebody, by the flow with the surgery of Daniels-Holgate. Their Theorem 1.3: entropy at most $2$ gives generic flows with multiplicity-one singularities of four cylindrical types. Import; read through a summarizing reader, whose rendering of the dimension of the handlebody was inconsistent.
-- **Two-convex hypersurfaces.** Huisken and Sinestrari. Import; an existing bibliography entry, not reopened.
-- **Entropy values.** `check_07` of the note's [checks](../../../master/brainstorm/notes/claude/ALTERNATIVE_FRAMEWORKS_AND_INVESTIGATIONS_2_20261127_checks/README.md). Checked.
-- **Entropy of thin neighbourhoods of a spine.** The proposing note's count that cells of dimension $k$ contribute entropy near $\lambda(S^{4-k})$. Heuristic; no proof and no computation.
+**Project theorem, replayed.** With a rescaled two-cell interior converging on compact sets to \(\mathbb R^2\times\Gamma\), for smooth closed embedded \(\Gamma\subset\mathbb R^3\), the entropy liminf is at least \(\lambda(\Gamma)\ge4/e\). Every fixed nonround cross section gives a strict excess in the limit. A finite pair of nearby round-normal product patches with the dimensions in B01 already forces strict excess at a single test centre. **Heuristic assessment.** The minus Miller–Schupp sphere has actual attaching maps and framings in first-series 07. Its presented thickening and intrinsic assembly supply no complete Euclidean image with controlled Gaussian areas. The decision is to decline a recognition-band upper estimate from these inputs. No junction table was issued. Another embedding of the same type remains possible. [Named-spine decision](../brainstorm/notes/B01_SPINE_AND_ENTRY.md)
 
-## Inputs that need a global extension
+**Project theorems, replayed.** Minimal total absolute curvature and zero middle-signature mass coexist with entropy above the recognition threshold on a flattened ellipsoid. In the other direction, globally sheared standard spheres have entropies tending to the round value while both integrals diverge. The statements concern the given embedding. [Calculations](../brainstorm/notes/B02_CURVATURE_COMPARISON.md) · [Independent replay](../reviews/E06_CURVATURE_REPLAY.md)
 
-Recognition is published only up to $\lambda(S^2)$. Between that value and $2$ the flow meets singularities modelled on $S^2\times\mathbb R^2$ and $S^1\times\mathbb R^3$, for which no surgery exists; a statement about them would be new mathematics in geometric analysis, not a consequence of anything in this repository. The heuristic for spines ignores the junctions where cells meet, whose Gaussian densities are not computed. No relation between entropy and the curvature integrals of the first series is known.
+**Heuristic assessment of the dated literature.** Higher-cylinder surgery has local results under nondegeneracy, and a global almost-flow construction under initial strict mean convexity. A cylindrical tangent, a local surgery, and an ambient isotopy carry different hypotheses. The checked sources yield no enlargement of the recognition band for arbitrary smooth closed connected embedded hypersurfaces in this dimension. [27 November reading](../research-progress/handoffs/E04_BEYOND_NECKS_RETURN.md)
 
-## Place in the route to the conjecture
-
-Independent of the route through pole forms and of its gates. If $I_{\rm ent}(M)\le\lambda(S^2)$ then $M$ is standard, so the conjecture is equivalent to that bound for every $M$, which is again a reformulation. The investigation supplies exact import statements to the ledger that [05](../../05_certificates/README.md) drafts, and a second frame to move to if the first is recorded as a reformulation at gate 2.
-
-## Unresolved decisions
-
-Whether a rigorous upper bound for the least entropy of the presentation spheres of [investigation 07](../../../investigations-1/07_positive_subcritical_entry/README.md) is feasible and worth a computation (ENT-B01). Whether to compare entropy with the Chern–Lashof integral behind the immersed inequality of the first series (ENT-B02, reserved).
-
-## Ownership
-
-Owns $I_{\rm ent}$, the import statements of the flow theorems, the embedding lemma and model estimates. It does not own [investigation 04 of the first series](../../../investigations-1/04_hypersurface_immersions/README.md) or its immersed inequality.
+This independent framework has no premise involving the pole forms of the [second master](../../../master-2/research-overview/OVERVIEW.md). Its named open problem is to produce one embedded representative of the minus presentation sphere whose Gaussian area is at most \(4/e\) for every centre and time.

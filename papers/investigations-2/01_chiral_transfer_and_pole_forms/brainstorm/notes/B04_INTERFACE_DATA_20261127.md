@@ -1,0 +1,7 @@
+# B04 · Which part of the seam data can be recovered qualitatively?
+
+27 November 2026 (New York). For Edward B. Baker III by the Codex lead on base 6a422ce. Exact serving variant and effort unavailable. Supplement to the [analytic decision](B04_ANALYTIC_METHOD_20261127.md). This is the scope of a third bounded E08 comparison on the same metric.
+
+For each cap, or for the second cap enlarged through s=1/16, consider the three-by-three Gram form given by the integral of the wedge products of the true A1 columns. Express it in terms of the oriented tangential traces and an arbitrary choice of their primitives. Test positive definiteness using A1 and [Aronszajn–Krzywicki–Szarski, Theorem 1](../../references/AKS_TRACE_20261127.md). This is one way to ascertain that the actual boundary carries information about *every* pole coefficient even though only its angularly resolved values can enter the flat component estimate.
+
+Test the strength of this data on the very same product cap. In oriented Euclidean coordinates from B04 compare a constant chiral triple with the real forms constructed from (z1-a) dz1∧dz2, i(z1-a) dz1∧dz2, and (z2-b) dz1∧dz2; take (a,b) at a specified interior point. Verify closure, self-duality, exactness, linear independence as fields, fibre periods and the pointwise evaluation there. Use an invertible constant combination of the columns to match the two energy Gram forms exactly. The test is local and prescribes no A1 pole or global trace. It decides what the aggregate boundary data alone could certify.
