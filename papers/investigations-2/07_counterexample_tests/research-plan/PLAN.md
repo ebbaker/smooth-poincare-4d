@@ -2,11 +2,15 @@
 
 27 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Exact serving variant and effort unavailable. Baseline `6a422ce7814f` plus [working-tree inputs](../references/README.md). Family `SP4-WIT`. This plan sets the first horizon of the parent. The [examples plan](../01_examples/research-plan/PLAN.md) owns concrete geometries and the [invariants plan](../02_invariants/research-plan/PLAN.md) owns observables and their calibrations.
 
-## Sequence
+## Current coordination after the 28 November split
+
+The [invariant comparison plan](../02_invariants/research-plan/PLAN.md) prioritizes one signed genus witness and an independent bound for the all-class pole minimum. The [field-theory plan](../03_field_theory/research-plan/PLAN.md) can return a relative observable with its admissible choices. The [action plan](../04_twistor_action/research-plan/PLAN.md) can return a boundary equation or relation with its puncture hypotheses. WIT integrates a result when its data and quantifiers match the proposed comparison on a candidate and on the standard control. [Ownership and provenance](../research-progress/handoffs/SIBLING_CROSSWALK_20261128.md)
+
+## Original sequence
 
 | ID | Scope, prerequisites and reason | Deliverable and completion |
 | --- | --- | --- |
-| WIT-B01 | On activation, the lead fixes the interface for the two children. Start with one published zero-surgery implication and one marked presentation sphere. Conceptual work determines which input and comparison would settle which claim. | `brainstorm/notes/B01_WITNESS_COMPARISON.md`. Identify the exact named target, orientation or mirror, chart/puncture if needed, necessary geometric certificate, comparison theorem and owner. Route disjoint questions to the children. |
+| WIT-B01 | On activation, the lead fixes the interface for the original examples and invariants children. Start with one published zero-surgery implication and one marked presentation sphere. Conceptual work determines which input and comparison would settle which claim. | `brainstorm/notes/B01_WITNESS_COMPARISON.md`. Identify the exact named target, orientation or mirror, chart/puncture if needed, necessary geometric certificate, comparison theorem and owner. Route disjoint questions to the children. |
 | WIT-E05 | Once there is an authored candidate implication or a proposed obstruction to combining two returns, an independent reader checks the entire comparison. This bounded task can also check a useful invariant calibration offered as a standalone result. | One `reviews/E05_<claim>.md` per distinct claim. Reconstruct the shared input, ambient category, direction of inequality, scope and source hypotheses. Confirm, correct or reject. A mismatch goes back to B01 and the appropriate owner. |
 | WIT-B03 | As child results arrive, the lead integrates any independently checked implication, scoped failure or owner dependency. Evaluation across scientific scopes stays with the lead. | Dated handoff and closing or resumption note recording the exact outcome. Send a true candidate distinction to the second master, the specific invariant question to 06 and certificate or formalization requests to the relevant owners. Do not infer global exoticity from a relative obstruction. |
 

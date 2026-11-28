@@ -1,6 +1,8 @@
 # Sources and input versions
 
-27 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance, exact variant and effort unavailable. This is the common index for 07 and its two children. The [shared reference catalog](../../../../references/README.md) and [BibTeX file](../../../../references/references.bib) remain canonical. The [05 bibliography-owner handoff](../../05_certificates/research-progress/handoffs/TO_REFERENCES_BIBLIOGRAPHY_20261127.md) records pending additions on the owner's baseline. [Further source transfer](../research-progress/handoffs/TO_05_GENUS_SOURCES_20261127.md).
+27 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance, exact variant and effort unavailable. This is the common index for 07 and its children. The [shared reference catalog](../../../../references/README.md) and [BibTeX file](../../../../references/references.bib) remain canonical. The [05 bibliography-owner handoff](../../05_certificates/research-progress/handoffs/TO_REFERENCES_BIBLIOGRAPHY_20261127.md) records pending additions on the owner's baseline. [Further source transfer](../research-progress/handoffs/TO_05_GENUS_SOURCES_20261127.md).
+
+The [field-theory source map](../03_field_theory/references/README.md) and [action source map](../04_twistor_action/references/README.md) link the existing passage records and bibliography owners.
 
 ## External primary sources
 

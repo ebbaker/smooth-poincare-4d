@@ -1,0 +1,7 @@
+# WIN-E29 · non-author readings of marked inputs
+
+28 November 2026, New York. For Edward B. Baker III. Selected lead Astra/ultra, dispatch GPT-6.2 Sol/ultra, separate serving metadata unavailable. Baseline 86b24d9f9c2d, [R1](REQUEST_B08_FROZEN_METRIC_R1.md), [R1 comparisons](REQUEST_B08_COMPARISONS_R1.md), [register](../REGISTER.md) and the deposited author notes of each row. Check frozen note hashes on intake. Each reader writes solely to the file indicated; do not edit author inputs or shared files. Stop at proof replay, or report the first discrepancy to the lead.
+ 
+* E29 A, reviews/E29_METRIC_SPECTRUM.md. Reconstruct E22 including two inverted caps, actual determinant, normalized volume error, center and the strict upper bound below the scalar threshold on this specific metric. Discriminate first-curvature jet from any claim about a Green spinor at this numerical amplitude.
+* E29 B, reviews/E29_STABILITY_HARMONICS.md. Independently read the primary Guerra–Lamy–Zemas statement and compare E23. Verify E24's round probability inequality with constants, orientation, mean correction and target orthogonal comparison. Stop at their domains; do not assume a round or variable-metric barycenter is interchangeable.
+* E29 C, reviews/E29_TENSOR_TRANSFER.md. Reconstruct E25 test tensor including its sup and the precise εa⁶ probability constant, and E26 signed quartic deficit with constants and metric conversions. Use a reader who authored neither component.

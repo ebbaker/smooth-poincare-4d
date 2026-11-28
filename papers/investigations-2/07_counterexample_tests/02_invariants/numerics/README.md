@@ -1,3 +1,7 @@
 # Computations
 
 Store authorized finite computation inputs and small reproducible execution records here. Record bounds, conventions and the exact probe.
+
+**27 November 2026, WIN-E11/E14 replay aid.** From this child run `python3 numerics/check_twistor_controls.py`. Python standard library, exact integer and fraction arithmetic, no solver, grid or seed. The three representatives are the lifts in the [unit round cap calculation](../notes/E11_ORDERED_LOOPS.md) up to real factors that cancel in a commutator. The [angular control](../notes/E14_ANGULAR_RESIDUE.md) uses E(u)=u₁, B(u)=v u₂ with |v|=1 and a relative cutoff ε. The program checks the cutoff antiderivative and endpoint and prints the traces 2, 0, −2, log coefficient 12 and finite part −11. The geometric identifications, existence and compactness proofs have separate mathematical readings.
+
+**28 November 2026, WIN-B08.** Run `python3 numerics/check_b08_constants.py` in this child. Exact integer and rational arithmetic checks the TT contraction, cap-volume coefficients, powers of the two-metric error and localized contradiction, and compatible upper constants at a=2⁻²⁵⁶. There is no grid, random sample or floating-point subtraction of the nearly equal volumes. The signed derivatives, harmonic projection, continuum integrals and spin correspondence have their own [proof replays](../research-progress/handoffs/RETURN_B08_EFFECTIVE_GAP_20261128.md).

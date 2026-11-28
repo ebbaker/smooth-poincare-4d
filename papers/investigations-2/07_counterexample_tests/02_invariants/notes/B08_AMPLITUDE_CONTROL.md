@@ -1,0 +1,13 @@
+# Varying the E33 amplitude at fixed support and compactification
+
+28 November 2026 (New York). For Edward B. Baker III, lead B08 with OpenAI Codex assistance. Selected Astra/ultra; exact serving settings unavailable. Control for the [frozen metric](../research-progress/handoffs/REQUEST_B08_FROZEN_METRIC_R1.md), checkout 86b24d9f9c2d plus [B08 lower proof revision 1](B08_EFFECTIVE_LOWER.md). In this control only, replace the amplitude ε by η, |η|≤a⁴. Keep a=2⁻²⁵⁶, both radial profiles, pole, orientation and coordinate chart. Each g_η has its own normalized compact volume, always used for its own centering. The original input is η=+a⁴.
+
+For these metrics the same bounds give
+\[
+  2^{-80}\eta^2 a^6\ \le\ b(g_\eta)\ \le\ 4\sqrt2\,\pi\,\eta^2 a^6 .
+\]
+In particular the response at this fixed support has quadratic order in amplitude. At η=0 the conformally round pencil attains zero. Here are the extra estimates needed to retain that order as η tends to zero.
+
+Write t=|η|a², w=dμ_{gη}/dν, ν the unit round probability. The [volume comparison](E22_METRIC_AND_SPECTRUM.md) gives ||w−1||∞≤32a² uniformly, since reducing |η| preserves the eigenvalue and density bounds used there. More precisely M=|∫x w dν|≤6t²a⁴: at zero amplitude the radial inversion-symmetric weight gives M=0; its change is multiplication by √(1−η²χ²(y¹)⁴), which differs from 1 by at most t² on the cap of round probability at most 3a⁴. The unperturbed relative volume density on that cap is at most (1+a²)⁴≤2, and the total relative mass, with 4g used against q, remains at least one. Integrating the vector x of norm one yields the claimed estimate. Thus the [mean absorption inequality](E24_ROUND_HARMONICS.md) applies with ||w−1||₂²≤1/384.
+
+For r=R^{1/4}≤2⁻⁴⁰t a the transfer in E26 uses t in place of τ and gives e≤50000t². With the actual volume mean absorbed, D≤10e+1520M²≤2⁴⁰t². This replaces the single-amplitude rough mean bound in the lead proof. The localized Hölder estimate, all singular-value comparisons and cap constants now hold exactly as before with t≤a⁶. Reversing the sign of the test when η<0 gives a probability pairing at least 2⁻¹⁶ t a⁴ in absolute value. The upper estimate for this pairing is at most 2⁴⁹ t²+2¹⁷a³ r. Dividing by t a⁴ for t>0 bounds it by 2⁴⁹a²+2⁻²³, a contradiction. The [centered compatible upper construction](E28_MATCHED_UPPER.md) depends on the distortion through t, with unchanged bracketing for the axial parameter because the density change is bounded by t² and has fixed sign. It gives b(g_η)≤4√2 π t²a². The case η=0 follows directly from the zero-amplitude symmetry and round twistor transport. No normalization over representatives is taken.

@@ -23,3 +23,5 @@ See the [examples plan](01_examples/research-plan/PLAN.md) and [invariants plan]
 - **27 November 2026 · Child integration.** Returned the [native and external geometric tests and the two pole calibrations](notes/WITNESS_COMPARISONS_20261127.md) to their owners. [Closing](continuation-notes/CLOSING_20261127.md).
 
 - **27 November 2026 · Second-pass integration.** Replayed the two-cap tree and native homology-ball control. Derived the immersed commutator-length formula and calibrated embedded genus zero, one and two on fixed path data. [Current continuation](continuation-notes/BASED_ROUTES_20261127.md).
+
+- **28 November 2026 · Sibling investigations.** Opened field theory and the classical twistor action as separate task families. WIN retains the genus, minimum-circle and centered-gap comparisons. The [crosswalk](research-progress/handoffs/SIBLING_CROSSWALK_20261128.md) preserves the original evidence and activation history.

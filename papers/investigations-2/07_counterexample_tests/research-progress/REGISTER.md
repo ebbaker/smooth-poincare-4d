@@ -4,7 +4,7 @@
 
 [Current continuation and geometric results](../continuation-notes/BASED_ROUTES_20261127.md). Earlier entries below retain their original input status.
 
-Sole live parent register. The author activated SP4-WIT, SP4-WEX and SP4-WIN together. Child execution is owned by the [examples register](../01_examples/research-progress/REGISTER.md) and [invariants register](../02_invariants/research-progress/REGISTER.md). [Setup snapshot](../continuation-notes/CONTINUATION_20261127.md) · [Closing and continuation](../continuation-notes/CLOSING_20261127.md).
+Sole live parent register. The author activated SP4-WIT, SP4-WEX and SP4-WIN together. The [examples register](../01_examples/research-progress/REGISTER.md) and [invariants register](../02_invariants/research-progress/REGISTER.md) retain those results. On 28 November the author requested two more siblings. The [field-theory register](../03_field_theory/research-progress/REGISTER.md) and [twistor-action register](../04_twistor_action/research-progress/REGISTER.md) open at setup. [Dated ownership crosswalk](handoffs/SIBLING_CROSSWALK_20261128.md). [Setup snapshot](../continuation-notes/CONTINUATION_20261127.md) · [Closing and continuation](../continuation-notes/CLOSING_20261127.md).
 
 | Parent ID | Disposition | Evidence |
 | --- | --- | --- |

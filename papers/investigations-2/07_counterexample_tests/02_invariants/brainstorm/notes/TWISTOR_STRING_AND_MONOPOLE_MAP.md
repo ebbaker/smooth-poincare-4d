@@ -1,0 +1,38 @@
+# What a twistor-string effective action could retain
+
+28 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Selected lead Astra/ultra, bounded literature checks and independent readings dispatched to Sol/ultra. Actual serving model and effort unavailable. Input checkout `86b24d9f9c2d` with the working [E33 control](../../notes/E22_METRIC_AND_SPECTRUM.md) and the [pole-circle minimum](../../notes/E03_COUNT.md). Scope is a literature comparison, two short mathematical checks, and a proposed experiment. [Primary texts, versions and exact locators](../../references/TWISTOR_STRING_BAUER_FURUTA_SOURCES.md)
+
+## Two meanings of effective action
+
+Witten’s open B-model has holomorphic Chern–Simons theory as its target-space field theory. In its self-dual gauge sector, spacetime fields are reconstructed on twistor lines. Witten adds D-instantons in the proposed correspondence with perturbative N=4 Yang–Mills. The original string contains conformal supergravity. Boels–Mason–Skinner give a separate pure gauge twistor action with an integral of log determinants along lines. These results identify interactions and perturbative amplitudes. A spacetime topological twist and nonperturbative control of its observables are further steps. [Witten, §4](https://arxiv.org/pdf/hep-th/0312171v2) · [Berkovits–Witten, §1](https://arxiv.org/pdf/hep-th/0406051v2) · [Boels–Mason–Skinner, §3](https://arxiv.org/pdf/hep-th/0604040v1)
+
+There are direct precedents for a spacetime twist. Nair–Schiff give a supertwistor expression for the topological Yang–Mills action and the point operator used in Donaldson polynomials. Their conformally flat formulation leaves arbitrary metric variation unresolved. Popov–Wolf derive a classical self-dual truncation of topological gauge theory from a weighted supertwistor B-model on flat spacetime. Vafa–Witten study the partition function of a spacetime twist of N=4. For the Seiberg–Witten analogy, an SU(2) adjoint-hypermultiplet mass gives an explicit N=4 to N=2 deformation. The infrared description near a monopole singularity and spacetime twisting explain why curvature and Dirac equations enter. Deriving a pole observable under that deformation on an arbitrary closed Riemannian homotopy sphere remains open. [Nair–Schiff, (11), (18) and last paragraph](https://u.math.biu.ac.il/~schiff/Papers/pap1.pdf) · [Popov–Wolf, (4.16)–(4.17)](https://arxiv.org/pdf/hep-th/0406224v2) · [Vafa–Witten, §2](https://arxiv.org/pdf/hep-th/9408074v2) · [Seiberg–Witten, §16](https://arxiv.org/pdf/hep-th/9408099v1) · [Witten, §§1–2](https://arxiv.org/pdf/hep-th/9411102v1)
+
+## The ordinary Dolbeault differential on the standard nonround control
+
+Use the Levi-Civita twistor almost-complex structure $J$ on $Z=S(\Lambda^+_g)$, with the branch orientation. For $U,V$ of type $(0,1)$, the projection of the exterior derivative gives
+
+\[
+ (\bar\partial_J^2 f)(U,V)= U(Vf)-V(Uf)-df([U,V]^{0,1})
+                          =df([U,V]^{1,0}).
+\]
+
+On the E33 compact standard sphere, $W^+(0)=\operatorname{diag}(-\epsilon/2,\epsilon/2,0)$ with $\epsilon\ne0$. By the Atiyah–Hitchin–Singer integrability criterion, some local pair has a nonzero projected bracket. Choose a smooth real function in a chart whose first derivative detects its real or imaginary part, and multiply by a cutoff equal to one there. This exhibits failure already in the composition from gauge parameters to $(0,1)$-forms to $(0,2)$-forms at the trivial partial connection. On the round control the composition vanishes. More generally integrability would require $W^+=0$. Signature zero then gives $W^-=0$. The conformal developing map of the compact simply connected sphere is a covering of the round sphere, hence a diffeomorphism. Requiring an integrable canonical twistor target would therefore assume recognition on this domain. Mason’s variable almost-complex fields provide a distinct starting point for an off-shell theory. [AHS, Theorem 4.1 and orientation](../../../../../../references/SOURCE_NOTES_CME_REAL_TWISTOR_20261122.md) · [E33](../../notes/E22_METRIC_AND_SPECTRUM.md) · [Signature and development, claim 6](../../../../../investigations-1/01_chiral_metric_evolution/reviews/E01C_AUDIT_20261122.md) · [Mason, §4](https://arxiv.org/pdf/hep-th/0507269v2)
+
+## What happens if the pole is a source in the monopole equation
+
+For every closed connected oriented smooth homotopy four-sphere $\Sigma$, Bauer’s Proposition 2.3 gives $[\mu_\Sigma]=[\mathrm{id}]=1$ in the degree-zero circle-equivariant group $\mathbb Z$, since $b_1=b_2=0$. His Theorem 1.1 also gives $[\mu_{X\#\Sigma}]=[\mu_X]$ with the induced spinᶜ structures. Thus even a comparison after connected sum with a manifold carrying a nonzero ordinary Seiberg–Witten invariant loses the sphere in this construction. The finite-dimensional approximation keeps the monopole map up to stable homotopy. This is the aspect of Bauer–Furuta that could transfer to a different field theory. [Bauer–Furuta, Theorem 1.1](https://arxiv.org/pdf/math/0204340v1) · [Bauer, Theorem 1.1 and Proposition 2.3](https://arxiv.org/pdf/math/0204267v1)
+
+Take any **fixed smooth regularization** $\eta\in i\Omega^+_g(\Sigma)$ of a self-dual pole source. Insert it only in the curvature equation of the ordinary closed monopole map. Let $e$ be the target vector with curvature component $\eta$ and all other components zero. The maps $\mu_t=\mu-te$, $0\le t\le1$, retain the same Fredholm linear part, have a compact nonlinear perturbation on bounded sets, and are circle-equivariant. Uniformly in $t$,
+
+\[
+ \mu_t^{-1}(B_R)\subseteq\mu^{-1}(B_{R+\|e\|}).
+\]
+
+Bauer–Furuta’s bounded-preimage estimate and homotopy construction identify the endpoint classes. Every such smooth source gives the same closed unit. The estimate depends on the source norm. A singular pole condition on a punctured domain requires its own spaces, boundary data and compactness proof. An ordinary fixed curvature translation has only the circle-equivariance used here. [Bauer–Furuta, Theorem 2.6 and Proposition 3.1](https://arxiv.org/pdf/math/0204340v1)
+
+## A test at the twisted circle
+
+Gerig’s relative curve count gives the common value one modulo two under the asymptotically standard end and **no twisted zero-circles** hypothesis. His Example 1.7 also gives a standard R⁴ control containing one twisted circle. Consequently the presence of the twisted circle alone cannot identify its ambient smooth type. [Gerig, Main Results 1–2, Example 1.7 and Theorem 6.2](https://arxiv.org/pdf/1905.10938v3)
+
+The proposed experiment is to excise a tube around the standard twisted circle and ask what space of linearized boundary fields the twisted spacetime equations assign to its boundary, keeping the normal derivative’s negative eigenline and the pole normalization at infinity. Specify the fields, gauge action, elliptic boundary conditions and grading before assigning a state. Compute how the boundary fields transform on changing the normal trivialization and which classes survive gluing the actual standard tube back. A candidate for a sphere invariant must also continue across changes of metric, pole and zero set, including disappearance of this circle in the standard control. If all the retained data enter the closed equations only through the smooth source above, the unit calculation settles that model. A relative class with a proved continuation and gluing law would be a new construction. [Local first-jet and end data](../../../../02_zero_circles/notes/E03_LOCAL_SOURCES.md) · [Earlier field-theory proposal](../../continuation-notes/SMOOTH_INVARIANTS_ASTRA_20261127.md)

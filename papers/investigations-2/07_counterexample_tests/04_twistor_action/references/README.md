@@ -1,0 +1,19 @@
+# Twistor action inputs and primary source locators
+
+28 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual serving variant and reasoning effort unavailable. Setup used `86b24d9f9c2d6d634236f723eae0de4dd99fc5a7` and the working-tree bytes below. The primary inspections described here are inherited from the linked notes. No new primary-source audit was conducted in setup.
+
+| Canonical input | Branch use | Working-tree SHA-256 |
+| --- | --- | --- |
+| [Relative twistor action](../../02_invariants/notes/RELATIVE_TWISTOR_ACTION.md) | Fixed-background variation, transverse-zero warning, radial flat cylinder and optional quadratic comparison at \(S_{\mathrm{old}}=J_g^4/4\). The [overview](../research-overview/OVERVIEW.md) records the conversion to \(S_g=J_g^4\). | `c83d2a1e1002537c80e05e3d10b0a4226612d9b04c3271e4ed2924f2581f92b6` |
+| [Variational boundary bibliography](../../02_invariants/references/variational_boundary.bib) | Canonical BibTeX entries for boundary generating functionals and geometric Lagrangian cobordism. [Owning source index](../../02_invariants/references/README.md) | `ca9cd830ee5f5e396bd578a36d1717d6626176302801915d344505087f066887` |
+| [DIR-E06](../../../../investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/notes/DIR_E06_20261124.md) | Prescribed zero construction on a fixed-metric smooth oriented homotopy four-sphere, sign and finite-cost first jet. | `6fde85f36d0ab14db70293e5023d6372d1cb9174f0340fe87a4da4fc6940e136` |
+| [DIR-E07](../../../../investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/notes/DIR_E07_20261124.md) | Transverse-zero criterion, off-kernel conformal weights and fixed-class gap with its metric dependence. | `54542c510feec3c530e467533660b82ab884d115f7d48ac78d0ebb9d478a932d` |
+| [DIR-E10](../../../../investigations-1/03_first_order_twistor/02_dirac_and_twistor_spinors/notes/DIR_E10_20261124.md) | Spinor-induced metric and unit spinor on the punctured manifold, chiral-connection comparison under its specified jet. | `b77a5b12eac3ebe11e0883d916e3794729277207cdff1250d9217a79dff23468` |
+
+## Where to read at activation
+
+- **Boundary generating functionals.** The [canonical action note](../../02_invariants/notes/RELATIVE_TWISTOR_ACTION.md#primary-reference-passages) records inspection of Vankerschaver, Liao and Leok, arXiv:1111.0280v2, §4, Theorems 4.1–4.2, on 28 November 2026. Use those passages to distinguish isotropy for a differentiable on-shell generating functional on admissible boundary data from the additional maximality and trace questions here. [Primary text](https://arxiv.org/pdf/1111.0280v2)
+- **Geometric cobordism.** The same [canonical note](../../02_invariants/notes/RELATIVE_TWISTOR_ACTION.md#primary-reference-passages) records inspection of Biran and Cornea, *Lagrangian cobordism. I*, Definition 2.1.1 and §4.1, in the authors' journal copy on 28 November. Use the definition for the symplectic product and the cylindrical Lagrangian ends. Apply any Floer theorem only after its separate hypotheses are matched. [Primary text](https://dms.umontreal.ca/~cornea/lcob1-JAMS.pdf)
+- **Conformal spin convention.** DIR-E07 and DIR-E10 record inspection of Friedrich, *On the conformal relation between twistors and Killing spinors*, in the digitized published text, §1 equation (1.1) and the conformal-weight paragraph, and §2 at the applicable propositions. The off-kernel formula is the calculation in DIR-E07. [Canonical R51 record](../../../../../references/SOURCE_NOTES_BACH_FLOW_20261123.md#first-order-twistor-discussion--23-november-2026)
+
+Read the exact cited passages before using them. Record any new import with its hypotheses and send its exact statement to [Certificates](../../../05_certificates/README.md) for the series import ledger. [Reference workflow](../../../../../REFERENCE_WORKFLOW.md)

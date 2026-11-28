@@ -2,7 +2,30 @@
 
 27 November 2026, America/New_York. Prepared for Edward B. Baker III with OpenAI Codex assistance. Actual setup model and effort unavailable. Baseline `6a422ce7814f` and [source inputs](../references/README.md). The [register](../research-progress/REGISTER.md) owns live status. Use `SP4-WIN` as the family prefix on handoffs.
 
-## Next phase — compare ways to simplify the test
+## Current comparison after the sibling split
+
+28 November 2026. The first two questions below can advance independently. The lead takes conceptual choices and decides whether a candidate-bound comparison is cheaper to verify than the original geometric test. Each E packet awaits a frozen input and has one writer. Use selected Astra/ultra for B decisions and authorized Sol/ultra for bounded calculations and independent replay. [Current assignment and inputs](../continuation-notes/SMOOTH_TYPE_COMPARISONS_20261128.md) · [Ownership crosswalk](../../research-progress/handoffs/SIBLING_CROSSWALK_20261128.md)
+
+| ID | Inputs, route and dependency | Deliverable, stopping test and fallback |
+| --- | --- | --- |
+| WIN-B10 | On a future activation, choose one signed knot for the punctured minus presentation. Use the [based exterior](../../continuation-notes/BASED_ROUTES_20261127.md), [examples register](../../01_examples/research-progress/REGISTER.md) and [filling control](../../reviews/E07_FILLING.md). Check that the chosen standard lower bound could exceed a viable native upper bound. | Record the knot, reflected boundary map, sought upper bound and the precise standard comparison in a dated decision. If the proposed bounds for every available probe already hold in every smooth integral homology ball with that marked boundary, return the missing eligibility condition to WEX and 06. |
+| WIN-E33 | After B10, compare one documented properly embedded surface or proved candidate upper bound to one sourced standard lower bound on that same knot. | Write a signed inequality in a new note with a witness/source for each side. An immersed surface, an unidentified mirror or an inequality in the wrong direction returns to B10. |
+| WIN-B11 | On a future activation, choose one proposed obstruction to removing the last pole circle and identify the changes of class, point and residue over which it would have to persist. Use the [minimum proof](../notes/E03_COUNT.md), its [review](../reviews/E04_COUNT.md) and the [marked one-circle input](../../../03_lines_and_broken_fibrations/research-progress/handoffs/TO_MASTER2_LAST_CIRCLE_20261127.md). | State the proposed quantity, its admissible data, the standard zero-free and single-twisted-circle controls, and the implication that would give a uniform lower bound. If it only depends on a marked filling, send that question to FTI when field theory is needed. |
+| WIN-E34 | After B11 freezes a quantity and one change of data, test the two standard controls and that change. | Give a transport proof or the first precise choice dependence. Itemize the remaining moves and global coverage before any inference about \(m(\Sigma)\). Failure goes back to B11. |
+| WIN-B09 / WIN-E32 | B09 retains its [five-mode spectral proposal](../continuation-notes/CLOSING_B08_EFFECTIVE_GAP_20261128.md). E32 is reserved until a metric, separated five-mode cluster, allowed representative and certification bounds are specified. | Test one basis-independent evaluation map with its mixed first derivatives on the frozen domain. Report the geometric input and extent of rank control. A failed rank test on one metric permits no exoticity conclusion. Return a metric-only result to the controls if naturality is unavailable. |
+| WIN-E35 | When one of E32–E34 yields a proposed claim, freeze that claim and its evidence for a non-author. | Write one independent review of that claim, including chart and orientation conventions, quantifiers and the cost of checking its premise. Route a surviving same-input implication to WIT or correct it before reuse. |
+
+Historical WIN-E08 was reserved for a relative filling theory. New work on that theory uses FTI's [plan](../../03_field_theory/research-plan/PLAN.md). TWA's [plan](../../04_twistor_action/research-plan/PLAN.md) owns the variational action. The earlier WIN assignments below preserve their original numbering and scope.
+
+## Earlier plan after the effective E33 calculation
+
+WIN-B08 completed the marked two-sided estimate. The [closing](../continuation-notes/CLOSING_B08_EFFECTIVE_GAP_20261128.md) routes WIN-B09 to an intrinsic candidate-side comparison. Centering and full-cover verification remain explicit. The [register](../research-progress/REGISTER.md) owns live status and free IDs.
+
+## Effective lower bound after the centered-gap theorem
+
+The 27 November plan asked WIN-B08 to seek a quantitative estimate on one explicitly frozen DIR-E33 standard metric from the nonzero curvature patch and the normalized volume. Compare with the conditional scalar spectral bound. The qualitative compactness proof alone gives no computable magnitude below threshold. The [closing](../continuation-notes/CLOSING_TWISTOR_GAP_20261127.md) describes the experiment and the separate requirement for a smooth-type result. WIN-B05–B07 and E09–E21 are tracked in the [register](../research-progress/REGISTER.md). Their new calculations were, in order, evaluation and actual transport (E10–E13), angular integration and singular scale (E14–E15), centering and spectrum (E16–E18), then weak compactness, regularity and replay (E19–E21).
+
+## Original comparison of ways to simplify the test
 
 Start from the cost of deciding whether a chosen knot bounds a surface of the required genus in the candidate puncture. Compare what can be read off the same handle presentation, and what extra geometry or analysis a certificate would still require. Include both constructions drawn directly from the repository and constructions inspired by topological field theory, Donaldson invariants or Floer homology. The lead may begin this comparison with the standard controls already on file. A new embedded surface is an input to a later genus comparison. [Overview and method sources](../research-overview/OVERVIEW.md) · [Marked controls](../../continuation-notes/BASED_ROUTES_20261127.md)
 
